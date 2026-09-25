@@ -1,0 +1,49 @@
+{
+  "main": {
+    "url": "https://github.com/dresco/STM32H7xx.git",
+    "commit": "bfe5d4f6ec271cc9929336244c3b1c8e55d1d040"
+  },
+  "submodules": {
+    "grbl": {
+      "url": "https://github.com/grblHAL/core",
+      "commit": "26d44fe733292b0c1f453237f3c9c2bdbac2ac67"
+    },
+    "motors": {
+      "url": "https://github.com/grblHAL/Plugins_motor.git",
+      "commit": "7567c340cf97c7d2e1c212d1b1f94b023fd51cbe"
+    },
+    "trinamic": {
+      "url": "https://github.com/terjeio/Trinamic-library.git",
+      "commit": "9b304175318d93818c8967faadc89dd101b17e92"
+    },
+    "plasma": {
+      "url": "https://github.com/grblHAL/Plugin_plasma",
+      "commit": "a5e94494542f881f57a2833c75426461d7480a8d"
+    },
+    "plugins": {
+      "url": "https://github.com/grblHAL/Plugins_misc",
+      "commit": "3af21190621b2af892526b29cb084d2d9966f162"
+    }
+  },
+  "tools": {
+    "platformio": "6.2.0",
+    "ststm32": "20.0.0",
+    "stm32cubeh7": "1.12.1",
+    "gccarmnoneeabi": "7.2.1"
+  },
+  "local_changes": [
+    "boards/my_machine_map.h",
+    "Src/kraken_board.c",
+    "kraken.ini",
+    "plasma/thc.c arc-attempt guard/default/range"
+  ],
+  "physical_validation": "not performed",
+  "image_sha256": {
+    "kraken-v11-hybrid.bin": "ce192b7053ad457d6b0d750456bbf06ff5ab782b60c6ccf8c6cac158725594ac",
+    "kraken-v11-hybrid.elf": "bb48e6eb72f22451d02938115fad5e8d9b21e9e97c9de8e98c72c89d96c54a1d"
+  },
+  "BTT_pin_reference": {
+    "url": "https://github.com/bigtreetech/BIGTREETECH-Kraken/blob/master/Firmware/generic-bigtreetech-kraken.cfg",
+    "sha256": "43e8fb4c1b571cd91b43cdd5ba05171ea60e43cc0982e11edb8afdb0f7b961ab"
+  }
+}

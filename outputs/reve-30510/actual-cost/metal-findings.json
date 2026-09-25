@@ -1,0 +1,3475 @@
+{
+  "date": "2026-09-24",
+  "currency": "USD",
+  "destination": "Alto GA30510",
+  "scope": "Frozen RevE CAD material audit, no design geometry changes, owner fabrication labor $0. Posted public stock alternatives are NOT a complete delivered machine quote.",
+  "source_hashes": {
+    "cutlist.json": "1f63ac932ff9c6a879c4a26bae2cbebb1a46f9e783567ac9b306ffdef1a6004f",
+    "nesting\\sheet-nesting.json": "398098c229ef56456ff89c96997d64c629563f13400feddc5e14a5e281e564ff",
+    "tube-cut-plan.json": "9a6bc6754cc5a762990a42158d97b4833bd8c7555a7156e22793161392778038"
+  },
+  "published_stock_candidates": [
+    {
+      "id": "MET01",
+      "replaces_or_contributes_to": "S01",
+      "item": "2 x 2 x .120 inch A500 square tube, full 20 ft",
+      "quantity": 6,
+      "unit_usd": 155.15,
+      "goods_usd": 930.9,
+      "shipping_usd": null,
+      "url": "https://www.blueskysupplies.com/products/2inch-x-2-inch-x-120-a500-tube",
+      "allocation": "All 36 square-tube blanks in existing six-bar cut plan. Net 35,976.8 mm. No blanket 10 ft transport cuts permitted.",
+      "status": "High retail reference, not a lowest-price buying recommendation. Posted goods price; delivery unquoted. Cheaper exact-spec Bobco goods benchmark is $585 for six bars, LA pickup advertised, Georgia delivery unquoted. Local SteelMart/Sabel quotes pending; see TUBE-PRICE-COMPARISON.md."
+    },
+    {
+      "id": "MET02",
+      "replaces_or_contributes_to": "S02",
+      "item": "JEGS555-35000 1 x 1 x .083 inch square tube,8 ft",
+      "quantity": 2,
+      "unit_usd": 23.9,
+      "goods_usd": 47.8,
+      "shipping_usd": null,
+      "url": "https://www.jegs.com/i/jegs-555-35000-mild-steel-square-tubing-1-in-x-1-in-x-0-083-in-thickness-x-8-ft-length",
+      "allocation": "Bar1:1213.178+912.995 mm; bar2:912.995+912.995 mm; remaining short brace from MET03. 3mm cuts and10mm trim each bar fit.",
+      "status": "Posted goods price; delivery unquoted"
+    },
+    {
+      "id": "MET03",
+      "replaces_or_contributes_to": "S02",
+      "item": "JEGS555-35008 same brace tube,4 ft",
+      "quantity": 1,
+      "unit_usd": 12.99,
+      "goods_usd": 12.99,
+      "shipping_usd": null,
+      "url": "https://www.jegs.com/i/jegs-555-35008-mild-steel-square-tubing-1-in-x-1-in-x-0-083-in-thickness-x-4-ft-length",
+      "allocation": "One912.995 mm brace; five braces total4,865.1534 mm. This replaces one unquoted20 ft bar; buying only two8 ft bars is insufficient once kerfs/trim are included.",
+      "status": "Posted goods price; delivery unquoted"
+    },
+    {
+      "id": "MET04",
+      "replaces_or_contributes_to": "S03",
+      "item": "A36 flat bar5/16 x4 x60 in; ZoroG423029500",
+      "quantity": 2,
+      "unit_usd": 45.79,
+      "goods_usd": 91.58,
+      "shipping_usd": null,
+      "url": "https://www.zoro.com/online-metal-supply-516-in-x-4-in-x-60-in-a36-steel-flat-bar-hot-rolled-a36fbt0313w4l601/i/G423029500/",
+      "allocation": "One1450x100 rail cap from each1524x101.6 bar. Nominal7.9375 thickness has no guaranteed cleanup allowance: flatness/finished top datum must be verified; thicker raw stock may be necessary.",
+      "status": "Posted goods price; delivery unquoted"
+    },
+    {
+      "id": "MET05",
+      "replaces_or_contributes_to": "S04",
+      "item": "A36 flat bar1/4 x2-1/4 x60 in; ZoroG123040102",
+      "quantity": 2,
+      "unit_usd": 22.35,
+      "goods_usd": 44.7,
+      "shipping_usd": null,
+      "url": "https://www.zoro.com/online-metal-supply-14-in-x-2-14-in-x-60-in-a36-steel-flat-bar-hot-rolled-a36fbt0250w225l601/i/G123040102/",
+      "allocation": "Two cap spacers1450x50.8, finish to6.000 mm. Wider57.15 stock leaves edge-finishing margin; do not assume nominal2in hot rolled width cleans up at50.8.",
+      "status": "Posted goods price; delivery unquoted"
+    },
+    {
+      "id": "MET06",
+      "replaces_or_contributes_to": "S09",
+      "item": "6061-T6511 flat bar1/4 x1 x72 in; OnlineMetals1143",
+      "quantity": 4,
+      "unit_usd": 17.32,
+      "goods_usd": 69.28,
+      "shipping_usd": null,
+      "url": "https://www.onlinemetals.com/en/buy/aluminum/0-25-x-1-aluminum-rectangle-bar-6061-t6511-extruded/pid/1143",
+      "allocation": "Three500 mm cassette ties per bar;12ties total,3mm kerfs+10mmtrim fits. Use stock width/thickness tolerance in fit review.",
+      "status": "Posted goods price; delivery unquoted"
+    },
+    {
+      "id": "MET07",
+      "replaces_or_contributes_to": "S08",
+      "item": "6061-T6511 flat bar1/2 x8 x72 in; OnlineMetals20670",
+      "quantity": 1,
+      "unit_usd": 215.39,
+      "goods_usd": 215.39,
+      "shipping_usd": null,
+      "url": "https://www.onlinemetals.com/en/buy/aluminum/0-5-x-8-aluminum-rectangle-bar-6061-t6511-extruded/pid/20670",
+      "allocation": "Sequential length1200+280+280+three3mmcuts+10mmtrim=1779<1828.8. X guide face112wide;2Yshoes131.3wide. Face side offcut takes110x70tool interface. Two65x48drive shoes can be milled to6.35 from remaining71.9x280 side strip; no separate1/4 stock for them.",
+      "status": "Posted goods price; delivery unquoted"
+    },
+    {
+      "id": "MET08",
+      "replaces_or_contributes_to": "S08",
+      "item": "6061-T6511 flat bar1/2 x8 x12 in; OnlineMetals20670",
+      "quantity": 1,
+      "unit_usd": 58.74,
+      "goods_usd": 58.74,
+      "shipping_usd": null,
+      "url": "https://www.onlinemetals.com/en/buy/aluminum/0-5-x-8-aluminum-rectangle-bar-6061-t6511-extruded/pid/20670",
+      "allocation": "Z carrier260x170.2 fits304.8x203.2. Exact thickness/flatness cleanup allowance unresolved for nominal12.7finished geometry.",
+      "status": "Posted goods price; delivery unquoted"
+    },
+    {
+      "id": "MET09",
+      "replaces_or_contributes_to": "S08",
+      "item": "6061-T6511 billet3.5 x6 x12 in; BuyMetalF613.126T6511",
+      "quantity": 1,
+      "unit_usd": 296.31,
+      "goods_usd": 296.31,
+      "shipping_usd": null,
+      "url": "https://store.buymetal.com/aluminum-rectangular-bar-6061-t6511-3-5-6.html",
+      "allocation": "Cut two gantry bracket blanks150x80x82.7 with80axis along length:2*80+2*3+10=176mm. Remainder128.8x152.4x88.9 holds both103.1x32x46.35 Y supports side-by-side (2*32+3=67mm). Integral shapes retain frozen CAD geometry.",
+      "status": "Posted goods price; delivery unquoted"
+    },
+    {
+      "id": "MET10",
+      "replaces_or_contributes_to": "S08",
+      "item": "6061-T6511 flat bar1.5 x5 x12 in; OnlineMetals15243",
+      "quantity": 1,
+      "unit_usd": 114.36,
+      "goods_usd": 114.36,
+      "shipping_usd": null,
+      "url": "https://www.onlinemetals.com/en/buy/aluminum/1-5-x-5-aluminum-rectangle-bar-6061-t6511-extruded/pid/15243",
+      "allocation": "X integral support156x120.8x36.35 fits304.8x127x38.1. Subject to stock thickness tolerance/cleanup.",
+      "status": "Posted goods price; delivery unquoted"
+    },
+    {
+      "id": "MET11",
+      "replaces_or_contributes_to": "S08",
+      "item": "6061-T6511 bar1.5 x2 x12 in; OnlineMetals7019",
+      "quantity": 1,
+      "unit_usd": 57.46,
+      "goods_usd": 57.46,
+      "shipping_usd": null,
+      "url": "https://www.onlinemetals.com/en/buy/aluminum/1-5-x-2-aluminum-rectangle-bar-6061-t6511-extruded/pid/7019",
+      "allocation": "Six clevis blanks40x48x32; cut40axis length;240+18kerf+10trim=268<304.8. Ball-width or linkage redesign changes these.",
+      "status": "Posted goods price; delivery unquoted"
+    },
+    {
+      "id": "MET12",
+      "replaces_or_contributes_to": "S08",
+      "item": "6061-T6511 square bar 2 x 2 x 12 in; OnlineMetals1120",
+      "quantity": 1,
+      "unit_usd": 71.07,
+      "goods_usd": 71.07,
+      "shipping_usd": null,
+      "url": "https://www.onlinemetals.com/en/buy/aluminum/2-aluminum-square-bar-6061-t6511-extruded/pid/1120",
+      "allocation": "Two spindle clamp halves 100x45.25x40 and 100x44.75x40 plus 65x48x19.05 X drive shoe. Length needed 284mm including three 3mm kerfs and 10mm trim, versus 301.625mm minimum at published length tolerance. Cross section minimum 50.1904mm exceeds 48mm maximum part width. Same alloy/temper and geometry as prior blank; see COSTDOWN-DECISION.md.",
+      "status": "Current exact 12in offer checked 24 Sep 2026: $71.07 for one. Replaces $102.42 BuyMetal source; goods saving $31.35. Delivery and tax unquoted."
+    },
+    {
+      "id": "MET13",
+      "replaces_or_contributes_to": "S04",
+      "item": "A36 plate1/4 x24 x48 in; OnlineMetals9610",
+      "quantity": 1,
+      "unit_usd": 175.24,
+      "goods_usd": 175.24,
+      "shipping_usd": null,
+      "url": "https://www.onlinemetals.com/en/buy/carbon-steel/0-25-carbon-steel-plate-a36-hot-rolled/pid/9610",
+      "allocation": "96 original nominal6mm flats after separating2spacers; add2toolcradles and9motionstopplate blanks. Updated107piece layout passes. Mainparts finish6mm where specified; Ystop bases/posts remain6.35mm, Xswitch arm finishes5mm. No extra sheet for those missing flats.",
+      "status": "Posted goods price; delivery unquoted"
+    },
+    {
+      "id": "MET14",
+      "replaces_or_contributes_to": "S04",
+      "item": "A36 plate3/8 x12 x24 in; ShapiroSupply",
+      "quantity": 1,
+      "unit_usd": 66.0,
+      "goods_usd": 66.0,
+      "shipping_usd": null,
+      "url": "https://www.shapirosupply.com/steel-hot-cold-galvanized/sheet-and-plate/sheet-and-plate/mild-steel-sheets-and-plates/3-8-375",
+      "allocation": "Twelve80wide hangers/endplates, finish thickness8mm from9.525; do not substitute5/16in(7.9375mm).",
+      "status": "Posted goods price; delivery unquoted"
+    },
+    {
+      "id": "MET15",
+      "replaces_or_contributes_to": "S04",
+      "item": "A36 plate1/2 x12 x12 in; HarnessSteel/Bonanza",
+      "quantity": 1,
+      "unit_usd": 23.5,
+      "goods_usd": 23.5,
+      "shipping_usd": 14.0,
+      "url": "https://www.bonanza.com/listings/1-2-50-Hot-Rolled-Steel-Sheet-Plate-12-X-12-Flat-Bar-A36/954557774?goog_pla=1",
+      "allocation": "Six80x80 footpads in3x2array fit with6mmspacing10mmedges.",
+      "status": "Posted goods and US shipping; Alto-specific arrival not confirmed"
+    }
+  ],
+  "published_goods_subtotal_partial_usd": 2275.32,
+  "known_shipping_subtotal_partial_usd": 14.0,
+  "delivered_total_usd": null,
+  "aluminum_S08_goods_subtotal_usd": 813.33,
+  "remove_from_current_budget": [
+    {
+      "id": "S06",
+      "amount_usd": 200,
+      "reason": "No distinct appearance-skin panels are in current CAD cutlist. Existing tank lid/cabinet dripshield and supports already occur in flat-stock takeoff. If new decorative skins are wanted they require explicit added geometry/material."
+    }
+  ],
+  "tube_plan_audit": {
+    "part_count": 36,
+    "net_mm": 35976.8,
+    "minimum_20ft_bars_by_net_length": 6,
+    "current_plan_bars": 6,
+    "minimum_offcut_mm": 0,
+    "note": "Six-bars plan is not robust to undersize stock, widerkerf or additional trimming. Onebar has zero surplus after modeled3mmkerfs10mmtrim. Owner must measurestock first; do not promise six damaged/shortbars suffice."
+  },
+  "small_sheet_stock_plans": [
+    {
+      "material": "carbon_steel",
+      "finished_thickness_mm": 1.5,
+      "stock_rectangle_mm": [
+        609.6,
+        609.6
+      ],
+      "part_count": 1,
+      "verification": "PASS rectangular envelopes;6mmspacing10mmedge",
+      "parts": [
+        {
+          "part_number": "CAB_DRIP_SHIELD",
+          "copy": 1,
+          "w": 548.0273993150342,
+          "h": 446.4,
+          "x": 10.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 548.0273993150342,
+          "placed_h": 446.4
+        }
+      ]
+    },
+    {
+      "material": "carbon_steel",
+      "finished_thickness_mm": 3,
+      "stock_rectangle_mm": [
+        914.4,
+        1219.2
+      ],
+      "part_count": 31,
+      "verification": "PASS rectangular envelopes;6mmspacing10mmedge",
+      "parts": [
+        {
+          "part_number": "RACK_BEAM_WEB_R",
+          "copy": 1,
+          "w": 430.0,
+          "h": 340.08666756735136,
+          "x": 10.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 430.0,
+          "placed_h": 340.08666756735136
+        },
+        {
+          "part_number": "CAB_SHIELD_STAND_R",
+          "copy": 1,
+          "w": 446.4,
+          "h": 232.35400000000004,
+          "x": 446.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 446.4,
+          "placed_h": 232.35400000000004
+        },
+        {
+          "part_number": "CAB_SHIELD_STAND_L",
+          "copy": 1,
+          "w": 446.4,
+          "h": 226.904,
+          "x": 446.0,
+          "y": 248.35400000000004,
+          "rotated_90": false,
+          "placed_w": 446.4,
+          "placed_h": 226.904
+        },
+        {
+          "part_number": "STAGING_TRAY_BACK",
+          "copy": 1,
+          "w": 508.0,
+          "h": 65.0,
+          "x": 10.0,
+          "y": 481.25800000000004,
+          "rotated_90": true,
+          "placed_w": 65.0,
+          "placed_h": 508.0
+        },
+        {
+          "part_number": "FB_TRIANGLE_160_-1",
+          "copy": 1,
+          "w": 160.0,
+          "h": 160.0,
+          "x": 10.0,
+          "y": 995.258,
+          "rotated_90": false,
+          "placed_w": 160.0,
+          "placed_h": 160.0
+        },
+        {
+          "part_number": "FB_REAR_GUSSET_LOW",
+          "copy": 1,
+          "w": 160.0,
+          "h": 160.0,
+          "x": 176.0,
+          "y": 356.08666756735136,
+          "rotated_90": false,
+          "placed_w": 160.0,
+          "placed_h": 160.0
+        },
+        {
+          "part_number": "FB_TRIANGLE_160_-1",
+          "copy": 4,
+          "w": 160.0,
+          "h": 160.0,
+          "x": 81.0,
+          "y": 522.0866675673514,
+          "rotated_90": false,
+          "placed_w": 160.0,
+          "placed_h": 160.0
+        },
+        {
+          "part_number": "FB_TRIANGLE_160_1",
+          "copy": 3,
+          "w": 160.0,
+          "h": 160.0,
+          "x": 81.0,
+          "y": 688.0866675673514,
+          "rotated_90": false,
+          "placed_w": 160.0,
+          "placed_h": 160.0
+        },
+        {
+          "part_number": "FB_TRIANGLE_160_1",
+          "copy": 2,
+          "w": 160.0,
+          "h": 160.0,
+          "x": 176.0,
+          "y": 854.0866675673514,
+          "rotated_90": false,
+          "placed_w": 160.0,
+          "placed_h": 160.0
+        },
+        {
+          "part_number": "FB_TRIANGLE_160_1",
+          "copy": 1,
+          "w": 160.0,
+          "h": 160.0,
+          "x": 176.0,
+          "y": 1020.0866675673514,
+          "rotated_90": false,
+          "placed_w": 160.0,
+          "placed_h": 160.0
+        },
+        {
+          "part_number": "FB_REAR_GUSSET_HIGH",
+          "copy": 1,
+          "w": 160.0,
+          "h": 160.0,
+          "x": 247.0,
+          "y": 522.0866675673514,
+          "rotated_90": false,
+          "placed_w": 160.0,
+          "placed_h": 160.0
+        },
+        {
+          "part_number": "FB_TRIANGLE_160_-1",
+          "copy": 2,
+          "w": 160.0,
+          "h": 160.0,
+          "x": 247.0,
+          "y": 688.0866675673514,
+          "rotated_90": false,
+          "placed_w": 160.0,
+          "placed_h": 160.0
+        },
+        {
+          "part_number": "FB_TRIANGLE_160_1",
+          "copy": 4,
+          "w": 160.0,
+          "h": 160.0,
+          "x": 342.0,
+          "y": 854.0866675673514,
+          "rotated_90": false,
+          "placed_w": 160.0,
+          "placed_h": 160.0
+        },
+        {
+          "part_number": "FB_TRIANGLE_160_-1",
+          "copy": 3,
+          "w": 160.0,
+          "h": 160.0,
+          "x": 342.0,
+          "y": 1020.0866675673514,
+          "rotated_90": false,
+          "placed_w": 160.0,
+          "placed_h": 160.0
+        },
+        {
+          "part_number": "STAGING_TRAY_FLOOR",
+          "copy": 1,
+          "w": 508.0,
+          "h": 30.0,
+          "x": 342.0,
+          "y": 481.25800000000004,
+          "rotated_90": false,
+          "placed_w": 508.0,
+          "placed_h": 30.0
+        },
+        {
+          "part_number": "RACK_BEAM_WEB_L",
+          "copy": 1,
+          "w": 430.0,
+          "h": 28.54454459523268,
+          "x": 856.0,
+          "y": 481.25800000000004,
+          "rotated_90": true,
+          "placed_w": 28.54454459523268,
+          "placed_h": 430.0
+        },
+        {
+          "part_number": "STAGING_TRAY_GUSSET",
+          "copy": 1,
+          "w": 69.2,
+          "h": 77.0,
+          "x": 81.0,
+          "y": 854.0866675673514,
+          "rotated_90": true,
+          "placed_w": 77.0,
+          "placed_h": 69.2
+        },
+        {
+          "part_number": "STAGING_TRAY_GUSSET",
+          "copy": 2,
+          "w": 69.2,
+          "h": 77.0,
+          "x": 81.0,
+          "y": 356.08666756735136,
+          "rotated_90": true,
+          "placed_w": 77.0,
+          "placed_h": 69.2
+        },
+        {
+          "part_number": "Y_STOP_SWITCH_BACK_3",
+          "copy": 2,
+          "w": 42,
+          "h": 50,
+          "x": 10.0,
+          "y": 431.28666756735134,
+          "rotated_90": true,
+          "placed_w": 50,
+          "placed_h": 42
+        },
+        {
+          "part_number": "Y_STOP_SWITCH_BACK_3",
+          "copy": 1,
+          "w": 42,
+          "h": 50,
+          "x": 66.0,
+          "y": 431.28666756735134,
+          "rotated_90": true,
+          "placed_w": 50,
+          "placed_h": 42
+        },
+        {
+          "part_number": "STAGING_TRAY_SIDE",
+          "copy": 1,
+          "w": 27.0,
+          "h": 65.0,
+          "x": 10.0,
+          "y": 356.08666756735136,
+          "rotated_90": true,
+          "placed_w": 65.0,
+          "placed_h": 27.0
+        },
+        {
+          "part_number": "STAGING_TRAY_SIDE",
+          "copy": 2,
+          "w": 27.0,
+          "h": 65.0,
+          "x": 10.0,
+          "y": 389.08666756735136,
+          "rotated_90": true,
+          "placed_w": 65.0,
+          "placed_h": 27.0
+        },
+        {
+          "part_number": "X_STOP_SWITCH_BACK_3",
+          "copy": 1,
+          "w": 45,
+          "h": 18,
+          "x": 10.0,
+          "y": 1161.258,
+          "rotated_90": true,
+          "placed_w": 18,
+          "placed_h": 45
+        },
+        {
+          "part_number": "CAB_ROOF_LOCATOR",
+          "copy": 4,
+          "w": 30.0,
+          "h": 15.0,
+          "x": 81.0,
+          "y": 479.28666756735134,
+          "rotated_90": true,
+          "placed_w": 15.0,
+          "placed_h": 30.0
+        },
+        {
+          "part_number": "CAB_ROOF_LOCATOR",
+          "copy": 2,
+          "w": 30.0,
+          "h": 15.0,
+          "x": 102.0,
+          "y": 479.28666756735134,
+          "rotated_90": true,
+          "placed_w": 15.0,
+          "placed_h": 30.0
+        },
+        {
+          "part_number": "RACK_STRAP_EYE",
+          "copy": 4,
+          "w": 12.0,
+          "h": 35.0,
+          "x": 890.5445445952327,
+          "y": 481.25800000000004,
+          "rotated_90": false,
+          "placed_w": 12.0,
+          "placed_h": 35.0
+        },
+        {
+          "part_number": "RACK_STRAP_EYE",
+          "copy": 2,
+          "w": 12.0,
+          "h": 35.0,
+          "x": 890.5445445952327,
+          "y": 522.258,
+          "rotated_90": false,
+          "placed_w": 12.0,
+          "placed_h": 35.0
+        },
+        {
+          "part_number": "CAB_ROOF_LOCATOR",
+          "copy": 1,
+          "w": 30.0,
+          "h": 15.0,
+          "x": 34.0,
+          "y": 1186.0866675673515,
+          "rotated_90": false,
+          "placed_w": 30.0,
+          "placed_h": 15.0
+        },
+        {
+          "part_number": "RACK_STRAP_EYE",
+          "copy": 1,
+          "w": 12.0,
+          "h": 35.0,
+          "x": 890.5445445952327,
+          "y": 563.258,
+          "rotated_90": false,
+          "placed_w": 12.0,
+          "placed_h": 35.0
+        },
+        {
+          "part_number": "CAB_ROOF_LOCATOR",
+          "copy": 3,
+          "w": 30.0,
+          "h": 15.0,
+          "x": 34.0,
+          "y": 1161.258,
+          "rotated_90": false,
+          "placed_w": 30.0,
+          "placed_h": 15.0
+        },
+        {
+          "part_number": "RACK_STRAP_EYE",
+          "copy": 3,
+          "w": 12.0,
+          "h": 35.0,
+          "x": 890.5445445952327,
+          "y": 604.258,
+          "rotated_90": false,
+          "placed_w": 12.0,
+          "placed_h": 35.0
+        }
+      ],
+      "note": "6 mm main group uses 6.35 mm raw stock; named stop blanks remain 6.35 mm, X switch arm finishes to 5 mm."
+    },
+    {
+      "material": "carbon_steel",
+      "finished_thickness_mm": 6,
+      "stock_rectangle_mm": [
+        609.6,
+        1219.2
+      ],
+      "part_count": 107,
+      "verification": "PASS rectangular envelopes;6mmspacing10mmedge",
+      "parts": [
+        {
+          "part_number": "WP_COMB",
+          "copy": 2,
+          "w": 1120.0,
+          "h": 56.40184760380987,
+          "x": 10.0,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 56.40184760380987,
+          "placed_h": 1120.0
+        },
+        {
+          "part_number": "WP_COMB",
+          "copy": 1,
+          "w": 1120.0,
+          "h": 56.40184760380987,
+          "x": 72.40184760380987,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 56.40184760380987,
+          "placed_h": 1120.0
+        },
+        {
+          "part_number": "WT_RIM_REAR",
+          "copy": 1,
+          "w": 966.096,
+          "h": 30.0,
+          "x": 134.80369520761974,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 30.0,
+          "placed_h": 966.096
+        },
+        {
+          "part_number": "WT_RIM_FRONT",
+          "copy": 1,
+          "w": 966.096,
+          "h": 30.0,
+          "x": 170.80369520761974,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 30.0,
+          "placed_h": 966.096
+        },
+        {
+          "part_number": "TOOL_PARK_CRADLE",
+          "copy": 1,
+          "w": 110,
+          "h": 166.856,
+          "x": 134.80369520761974,
+          "y": 982.096,
+          "rotated_90": false,
+          "placed_w": 110,
+          "placed_h": 166.856
+        },
+        {
+          "part_number": "WP_CRADLE_WEB_1_2",
+          "copy": 1,
+          "w": 900.0,
+          "h": 15.79200000000003,
+          "x": 206.80369520761974,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 15.79200000000003,
+          "placed_h": 900.0
+        },
+        {
+          "part_number": "WP_CRADLE_WEB_1_1",
+          "copy": 1,
+          "w": 900.0,
+          "h": 16.24000000000001,
+          "x": 228.59569520761977,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 16.24000000000001,
+          "placed_h": 900.0
+        },
+        {
+          "part_number": "TOOL_PARK_CRADLE",
+          "copy": 2,
+          "w": 110,
+          "h": 166.856,
+          "x": 250.80369520761974,
+          "y": 916.0,
+          "rotated_90": false,
+          "placed_w": 110,
+          "placed_h": 166.856
+        },
+        {
+          "part_number": "WT_RIM_LEFT",
+          "copy": 1,
+          "w": 30.0,
+          "h": 606.096,
+          "x": 366.80369520761974,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 30.0,
+          "placed_h": 606.096
+        },
+        {
+          "part_number": "WT_RIM_RIGHT",
+          "copy": 1,
+          "w": 30.0,
+          "h": 606.096,
+          "x": 250.83569520761978,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 30.0,
+          "placed_h": 606.096
+        },
+        {
+          "part_number": "RACK_PANEL_HANGER",
+          "copy": 2,
+          "w": 80.0,
+          "h": 127.848,
+          "x": 250.80369520761974,
+          "y": 1088.856,
+          "rotated_90": true,
+          "placed_w": 127.848,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "RACK_PANEL_HANGER",
+          "copy": 1,
+          "w": 80.0,
+          "h": 127.848,
+          "x": 402.80369520761974,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 127.848,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "RACK_PANEL_HANGER",
+          "copy": 4,
+          "w": 80.0,
+          "h": 127.848,
+          "x": 402.80369520761974,
+          "y": 96.0,
+          "rotated_90": true,
+          "placed_w": 127.848,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "WP_CRADLE_WEB_2_2",
+          "copy": 1,
+          "w": 900.0,
+          "h": 10.79200000000003,
+          "x": 286.8356952076198,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 10.79200000000003,
+          "placed_h": 900.0
+        },
+        {
+          "part_number": "RACK_PANEL_HANGER",
+          "copy": 3,
+          "w": 80.0,
+          "h": 127.848,
+          "x": 402.80369520761974,
+          "y": 182.0,
+          "rotated_90": true,
+          "placed_w": 127.848,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "WP_CRADLE_WEB_2_1",
+          "copy": 1,
+          "w": 900.0,
+          "h": 11.240000000000009,
+          "x": 303.6276952076198,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 11.240000000000009,
+          "placed_h": 900.0
+        },
+        {
+          "part_number": "WP_CRADLE_WEB_3_1",
+          "copy": 1,
+          "w": 900.0,
+          "h": 6.490000000000009,
+          "x": 320.8676952076198,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 6.490000000000009,
+          "placed_h": 900.0
+        },
+        {
+          "part_number": "BR_END_DIAPHRAGM",
+          "copy": 1,
+          "w": 101.6,
+          "h": 50.8,
+          "x": 10.0,
+          "y": 1154.952,
+          "rotated_90": false,
+          "placed_w": 101.6,
+          "placed_h": 50.8
+        },
+        {
+          "part_number": "BR_END_DIAPHRAGM",
+          "copy": 5,
+          "w": 101.6,
+          "h": 50.8,
+          "x": 117.6,
+          "y": 1154.952,
+          "rotated_90": false,
+          "placed_w": 101.6,
+          "placed_h": 50.8
+        },
+        {
+          "part_number": "BR_END_DIAPHRAGM",
+          "copy": 6,
+          "w": 101.6,
+          "h": 50.8,
+          "x": 536.6516952076197,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 50.8,
+          "placed_h": 101.6
+        },
+        {
+          "part_number": "BR_END_DIAPHRAGM",
+          "copy": 7,
+          "w": 101.6,
+          "h": 50.8,
+          "x": 536.6516952076197,
+          "y": 117.6,
+          "rotated_90": true,
+          "placed_w": 50.8,
+          "placed_h": 101.6
+        },
+        {
+          "part_number": "BR_END_DIAPHRAGM",
+          "copy": 2,
+          "w": 101.6,
+          "h": 50.8,
+          "x": 536.6516952076197,
+          "y": 225.2,
+          "rotated_90": true,
+          "placed_w": 50.8,
+          "placed_h": 101.6
+        },
+        {
+          "part_number": "BR_END_DIAPHRAGM",
+          "copy": 8,
+          "w": 101.6,
+          "h": 50.8,
+          "x": 402.80369520761974,
+          "y": 268.0,
+          "rotated_90": false,
+          "placed_w": 101.6,
+          "placed_h": 50.8
+        },
+        {
+          "part_number": "BR_END_DIAPHRAGM",
+          "copy": 4,
+          "w": 101.6,
+          "h": 50.8,
+          "x": 402.80369520761974,
+          "y": 324.8,
+          "rotated_90": false,
+          "placed_w": 101.6,
+          "placed_h": 50.8
+        },
+        {
+          "part_number": "WP_CRADLE_WEB_3_2",
+          "copy": 1,
+          "w": 900.0,
+          "h": 6.04200000000003,
+          "x": 333.3576952076198,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 6.04200000000003,
+          "placed_h": 900.0
+        },
+        {
+          "part_number": "BR_SEAT_2",
+          "copy": 5,
+          "w": 40.0,
+          "h": 90.0,
+          "x": 510.40369520761976,
+          "y": 332.79999999999995,
+          "rotated_90": false,
+          "placed_w": 40.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "BR_FOOT_TOP",
+          "copy": 6,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 556.4036952076198,
+          "y": 332.79999999999995,
+          "rotated_90": false,
+          "placed_w": 36.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "BR_FOOT_BOTTOM",
+          "copy": 3,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 402.80369520761974,
+          "y": 381.6,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "BR_FOOT_TOP",
+          "copy": 7,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 402.80369520761974,
+          "y": 423.6,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "BR_SEAT_2",
+          "copy": 3,
+          "w": 40.0,
+          "h": 90.0,
+          "x": 498.80369520761974,
+          "y": 428.79999999999995,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "BR_FOOT_TOP",
+          "copy": 4,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 402.80369520761974,
+          "y": 465.6,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "BR_FOOT_BOTTOM",
+          "copy": 2,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 498.80369520761974,
+          "y": 474.79999999999995,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "BR_FOOT_TOP",
+          "copy": 2,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 402.80369520761974,
+          "y": 507.6,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "BR_SEAT_1",
+          "copy": 2,
+          "w": 40.0,
+          "h": 90.0,
+          "x": 498.80369520761974,
+          "y": 516.8,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "BR_FOOT_BOTTOM",
+          "copy": 6,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 402.80369520761974,
+          "y": 549.6,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "BR_FOOT_TOP",
+          "copy": 5,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 498.80369520761974,
+          "y": 562.8,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "BR_FOOT_BOTTOM",
+          "copy": 5,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 402.80369520761974,
+          "y": 591.6,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "BR_END_DIAPHRAGM",
+          "copy": 3,
+          "w": 101.6,
+          "h": 50.8,
+          "x": 345.39969520761986,
+          "y": 622.096,
+          "rotated_90": true,
+          "placed_w": 50.8,
+          "placed_h": 101.6
+        },
+        {
+          "part_number": "BR_FOOT_TOP",
+          "copy": 8,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 498.80369520761974,
+          "y": 604.8,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "BR_SEAT_2",
+          "copy": 4,
+          "w": 40.0,
+          "h": 90.0,
+          "x": 402.19969520761987,
+          "y": 633.6,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "BR_SEAT_1",
+          "copy": 5,
+          "w": 40.0,
+          "h": 90.0,
+          "x": 498.19969520761987,
+          "y": 646.8,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "BR_SEAT_1",
+          "copy": 4,
+          "w": 40.0,
+          "h": 90.0,
+          "x": 402.19969520761987,
+          "y": 679.6,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "BR_FOOT_TOP",
+          "copy": 3,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 498.19969520761987,
+          "y": 692.8,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "BR_FOOT_BOTTOM",
+          "copy": 7,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 402.19969520761987,
+          "y": 725.6,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "FT_LEG_CLOSURE",
+          "copy": 5,
+          "w": 50.8,
+          "h": 50.8,
+          "x": 345.39969520761986,
+          "y": 729.696,
+          "rotated_90": false,
+          "placed_w": 50.8,
+          "placed_h": 50.8
+        },
+        {
+          "part_number": "FT_LEG_CLOSURE",
+          "copy": 4,
+          "w": 50.8,
+          "h": 50.8,
+          "x": 498.19969520761987,
+          "y": 734.8,
+          "rotated_90": false,
+          "placed_w": 50.8,
+          "placed_h": 50.8
+        },
+        {
+          "part_number": "FT_LEG_CLOSURE",
+          "copy": 2,
+          "w": 50.8,
+          "h": 50.8,
+          "x": 402.19969520761987,
+          "y": 767.6,
+          "rotated_90": false,
+          "placed_w": 50.8,
+          "placed_h": 50.8
+        },
+        {
+          "part_number": "BR_FOOT_BOTTOM",
+          "copy": 1,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 554.9996952076199,
+          "y": 734.8,
+          "rotated_90": false,
+          "placed_w": 36.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "Y_STOP_FRONT_BASE_RAW_6p35",
+          "copy": 2,
+          "w": 43.3,
+          "h": 71,
+          "x": 345.39969520761986,
+          "y": 786.496,
+          "rotated_90": false,
+          "placed_w": 43.3,
+          "placed_h": 71
+        },
+        {
+          "part_number": "BR_FOOT_TOP",
+          "copy": 1,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 458.9996952076199,
+          "y": 791.5999999999999,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "Y_STOP_FRONT_BASE_RAW_6p35",
+          "copy": 1,
+          "w": 43.3,
+          "h": 71,
+          "x": 554.9996952076199,
+          "y": 830.8,
+          "rotated_90": false,
+          "placed_w": 43.3,
+          "placed_h": 71
+        },
+        {
+          "part_number": "BR_SEAT_1",
+          "copy": 3,
+          "w": 40.0,
+          "h": 90.0,
+          "x": 345.39969520761986,
+          "y": 863.496,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "BR_FOOT_BOTTOM",
+          "copy": 4,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 441.39969520761986,
+          "y": 833.5999999999999,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "FT_LEG_CLOSURE",
+          "copy": 3,
+          "w": 50.8,
+          "h": 50.8,
+          "x": 441.39969520761986,
+          "y": 875.5999999999999,
+          "rotated_90": false,
+          "placed_w": 50.8,
+          "placed_h": 50.8
+        },
+        {
+          "part_number": "BR_FOOT_BOTTOM",
+          "copy": 8,
+          "w": 36.0,
+          "h": 90.0,
+          "x": 498.19969520761987,
+          "y": 907.8,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "BR_SEAT_1",
+          "copy": 1,
+          "w": 40.0,
+          "h": 90.0,
+          "x": 384.65169520761975,
+          "y": 909.496,
+          "rotated_90": false,
+          "placed_w": 40.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "FT_LEG_CLOSURE",
+          "copy": 6,
+          "w": 50.8,
+          "h": 50.8,
+          "x": 430.65169520761975,
+          "y": 932.3999999999999,
+          "rotated_90": false,
+          "placed_w": 50.8,
+          "placed_h": 50.8
+        },
+        {
+          "part_number": "RACK_PANEL_FLANGE",
+          "copy": 2,
+          "w": 31.4,
+          "h": 80.0,
+          "x": 225.2,
+          "y": 1174.856,
+          "rotated_90": true,
+          "placed_w": 80.0,
+          "placed_h": 31.4
+        },
+        {
+          "part_number": "BR_SEAT_2",
+          "copy": 2,
+          "w": 40.0,
+          "h": 90.0,
+          "x": 487.45169520761976,
+          "y": 949.8,
+          "rotated_90": true,
+          "placed_w": 90.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "RACK_PANEL_FLANGE",
+          "copy": 3,
+          "w": 31.4,
+          "h": 80.0,
+          "x": 311.2,
+          "y": 1174.856,
+          "rotated_90": true,
+          "placed_w": 80.0,
+          "placed_h": 31.4
+        },
+        {
+          "part_number": "BR_SEAT_2",
+          "copy": 1,
+          "w": 40.0,
+          "h": 90.0,
+          "x": 430.65169520761975,
+          "y": 989.1999999999998,
+          "rotated_90": false,
+          "placed_w": 40.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "FT_LEG_CLOSURE",
+          "copy": 1,
+          "w": 50.8,
+          "h": 50.8,
+          "x": 366.80369520761974,
+          "y": 1005.496,
+          "rotated_90": false,
+          "placed_w": 50.8,
+          "placed_h": 50.8
+        },
+        {
+          "part_number": "Y_STOP_REAR_BASE_RAW_6p35",
+          "copy": 1,
+          "w": 43.3,
+          "h": 50,
+          "x": 384.65169520761975,
+          "y": 1085.1999999999998,
+          "rotated_90": false,
+          "placed_w": 43.3,
+          "placed_h": 50
+        },
+        {
+          "part_number": "Y_STOP_REAR_BASE_RAW_6p35",
+          "copy": 2,
+          "w": 43.3,
+          "h": 50,
+          "x": 397.2,
+          "y": 1141.1999999999998,
+          "rotated_90": false,
+          "placed_w": 43.3,
+          "placed_h": 50
+        },
+        {
+          "part_number": "RACK_PANEL_FLANGE",
+          "copy": 1,
+          "w": 31.4,
+          "h": 80.0,
+          "x": 433.95169520761976,
+          "y": 1085.1999999999998,
+          "rotated_90": true,
+          "placed_w": 80.0,
+          "placed_h": 31.4
+        },
+        {
+          "part_number": "RACK_PANEL_FLANGE",
+          "copy": 4,
+          "w": 31.4,
+          "h": 80.0,
+          "x": 476.65169520761975,
+          "y": 995.8,
+          "rotated_90": false,
+          "placed_w": 31.4,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 7,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 397.2,
+          "y": 1197.1999999999998,
+          "rotated_90": false,
+          "placed_w": 90.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 16,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 433.95169520761976,
+          "y": 1122.6,
+          "rotated_90": false,
+          "placed_w": 90.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 12,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 10.0,
+          "y": 1136.0,
+          "rotated_90": false,
+          "placed_w": 90.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 4,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 345.39969520761986,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 3,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 345.39969520761986,
+          "y": 106.0,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 9,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 345.39969520761986,
+          "y": 202.0,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 8,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 345.39969520761986,
+          "y": 298.0,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 10,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 345.39969520761986,
+          "y": 394.0,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 1,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 345.39969520761986,
+          "y": 490.0,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 2,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 583.4516952076198,
+          "y": 949.8,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "Y_STOP_POST_RAW_6p35",
+          "copy": 3,
+          "w": 15.8,
+          "h": 50,
+          "x": 446.5,
+          "y": 1140.6,
+          "rotated_90": false,
+          "placed_w": 15.8,
+          "placed_h": 50
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 11,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 493.2,
+          "y": 1140.6,
+          "rotated_90": false,
+          "placed_w": 90.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "WP_HOLD_TAB_3",
+          "copy": 1,
+          "w": 26.0,
+          "h": 30.0,
+          "x": 250.83569520761978,
+          "y": 622.096,
+          "rotated_90": true,
+          "placed_w": 30.0,
+          "placed_h": 26.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 6,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 493.2,
+          "y": 1158.6,
+          "rotated_90": false,
+          "placed_w": 90.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 14,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 468.3,
+          "y": 1176.6,
+          "rotated_90": false,
+          "placed_w": 90.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "WP_HOLD_TAB_1",
+          "copy": 1,
+          "w": 26.0,
+          "h": 30.0,
+          "x": 250.83569520761978,
+          "y": 654.096,
+          "rotated_90": true,
+          "placed_w": 30.0,
+          "placed_h": 26.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 15,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 493.2,
+          "y": 1194.6,
+          "rotated_90": false,
+          "placed_w": 90.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "Y_STOP_POST_RAW_6p35",
+          "copy": 2,
+          "w": 15.8,
+          "h": 50,
+          "x": 498.19969520761987,
+          "y": 875.5999999999999,
+          "rotated_90": true,
+          "placed_w": 50,
+          "placed_h": 15.8
+        },
+        {
+          "part_number": "Y_STOP_POST_RAW_6p35",
+          "copy": 1,
+          "w": 15.8,
+          "h": 50,
+          "x": 366.80369520761974,
+          "y": 1062.296,
+          "rotated_90": true,
+          "placed_w": 50,
+          "placed_h": 15.8
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 5,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 250.83569520761978,
+          "y": 686.096,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "BR_FOOT_LONG_WALL",
+          "copy": 13,
+          "w": 90.0,
+          "h": 12.0,
+          "x": 268.8356952076198,
+          "y": 686.096,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 90.0
+        },
+        {
+          "part_number": "Y_STOP_POST_RAW_6p35",
+          "copy": 4,
+          "w": 15.8,
+          "h": 50,
+          "x": 510.40369520761976,
+          "y": 268.0,
+          "rotated_90": false,
+          "placed_w": 15.8,
+          "placed_h": 50
+        },
+        {
+          "part_number": "WP_HOLD_TAB_4",
+          "copy": 1,
+          "w": 26.0,
+          "h": 30.0,
+          "x": 250.83569520761978,
+          "y": 782.096,
+          "rotated_90": true,
+          "placed_w": 30.0,
+          "placed_h": 26.0
+        },
+        {
+          "part_number": "WP_HOLD_TAB_2",
+          "copy": 1,
+          "w": 26.0,
+          "h": 30.0,
+          "x": 250.83569520761978,
+          "y": 814.096,
+          "rotated_90": true,
+          "placed_w": 30.0,
+          "placed_h": 26.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 11,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 564.3,
+          "y": 1176.6,
+          "rotated_90": false,
+          "placed_w": 24.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 13,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 345.39969520761986,
+          "y": 586.0,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 24.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 4,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 458.9996952076199,
+          "y": 767.6,
+          "rotated_90": false,
+          "placed_w": 24.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 12,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 468.3,
+          "y": 1140.6,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 24.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 5,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 250.83569520761978,
+          "y": 846.096,
+          "rotated_90": false,
+          "placed_w": 24.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 1,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 250.83569520761978,
+          "y": 864.096,
+          "rotated_90": false,
+          "placed_w": 24.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 15,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 250.83569520761978,
+          "y": 882.096,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 24.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 7,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 268.8356952076198,
+          "y": 882.096,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 24.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 6,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 394.69969520761987,
+          "y": 824.4,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 24.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 3,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 412.69969520761987,
+          "y": 824.4,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 24.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 2,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 514.0516952076198,
+          "y": 1045.8,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 24.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 8,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 206.80369520761974,
+          "y": 916.0,
+          "rotated_90": false,
+          "placed_w": 24.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 14,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 206.80369520761974,
+          "y": 934.0,
+          "rotated_90": false,
+          "placed_w": 24.0,
+          "placed_h": 12.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 16,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 206.80369520761974,
+          "y": 952.0,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 24.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 10,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 224.80369520761974,
+          "y": 952.0,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 24.0
+        },
+        {
+          "part_number": "BR_FOOT_END_WALL",
+          "copy": 9,
+          "w": 24.0,
+          "h": 12.0,
+          "x": 519.9516952076198,
+          "y": 1075.8,
+          "rotated_90": true,
+          "placed_w": 12.0,
+          "placed_h": 24.0
+        },
+        {
+          "part_number": "X_SWITCH_ARM_RAW_finish5",
+          "copy": 1,
+          "w": 16,
+          "h": 12.4,
+          "x": 106.0,
+          "y": 1136.0,
+          "rotated_90": false,
+          "placed_w": 16,
+          "placed_h": 12.4
+        }
+      ],
+      "note": "6 mm main group uses 6.35 mm raw stock; named stop blanks remain 6.35 mm, X switch arm finishes to 5 mm."
+    },
+    {
+      "material": "carbon_steel",
+      "finished_thickness_mm": 8,
+      "stock_rectangle_mm": [
+        304.8,
+        609.6
+      ],
+      "part_count": 12,
+      "verification": "PASS rectangular envelopes;6mmspacing10mmedge",
+      "parts": [
+        {
+          "part_number": "PB_END",
+          "copy": 1,
+          "w": 80.0,
+          "h": 130.0,
+          "x": 10.0,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 130.0,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "PB_END",
+          "copy": 2,
+          "w": 80.0,
+          "h": 130.0,
+          "x": 146.0,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 130.0,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "PB_END",
+          "copy": 3,
+          "w": 80.0,
+          "h": 130.0,
+          "x": 10.0,
+          "y": 96.0,
+          "rotated_90": true,
+          "placed_w": 130.0,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "PB_HANGER",
+          "copy": 6,
+          "w": 80.0,
+          "h": 144.2,
+          "x": 146.0,
+          "y": 96.0,
+          "rotated_90": true,
+          "placed_w": 144.2,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "PB_HANGER",
+          "copy": 3,
+          "w": 80.0,
+          "h": 144.2,
+          "x": 10.0,
+          "y": 182.0,
+          "rotated_90": true,
+          "placed_w": 144.2,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "PB_END",
+          "copy": 5,
+          "w": 80.0,
+          "h": 130.0,
+          "x": 160.2,
+          "y": 182.0,
+          "rotated_90": true,
+          "placed_w": 130.0,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "PB_HANGER",
+          "copy": 1,
+          "w": 80.0,
+          "h": 144.2,
+          "x": 10.0,
+          "y": 268.0,
+          "rotated_90": true,
+          "placed_w": 144.2,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "PB_HANGER",
+          "copy": 4,
+          "w": 80.0,
+          "h": 144.2,
+          "x": 160.2,
+          "y": 268.0,
+          "rotated_90": false,
+          "placed_w": 80.0,
+          "placed_h": 144.2
+        },
+        {
+          "part_number": "PB_END",
+          "copy": 6,
+          "w": 80.0,
+          "h": 130.0,
+          "x": 10.0,
+          "y": 354.0,
+          "rotated_90": true,
+          "placed_w": 130.0,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "PB_HANGER",
+          "copy": 2,
+          "w": 80.0,
+          "h": 144.2,
+          "x": 146.0,
+          "y": 418.2,
+          "rotated_90": true,
+          "placed_w": 144.2,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "PB_END",
+          "copy": 4,
+          "w": 80.0,
+          "h": 130.0,
+          "x": 10.0,
+          "y": 440.0,
+          "rotated_90": true,
+          "placed_w": 130.0,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "PB_HANGER",
+          "copy": 5,
+          "w": 80.0,
+          "h": 144.2,
+          "x": 146.0,
+          "y": 504.2,
+          "rotated_90": true,
+          "placed_w": 144.2,
+          "placed_h": 80.0
+        }
+      ]
+    },
+    {
+      "material": "carbon_steel",
+      "finished_thickness_mm": 12.7,
+      "stock_rectangle_mm": [
+        304.8,
+        304.8
+      ],
+      "part_count": 6,
+      "verification": "PASS rectangular envelopes;6mmspacing10mmedge",
+      "parts": [
+        {
+          "part_number": "FT_PAD",
+          "copy": 1,
+          "w": 80.0,
+          "h": 80.0,
+          "x": 10.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 80.0,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "FT_PAD",
+          "copy": 2,
+          "w": 80.0,
+          "h": 80.0,
+          "x": 96.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 80.0,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "FT_PAD",
+          "copy": 5,
+          "w": 80.0,
+          "h": 80.0,
+          "x": 182.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 80.0,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "FT_PAD",
+          "copy": 3,
+          "w": 80.0,
+          "h": 80.0,
+          "x": 10.0,
+          "y": 96.0,
+          "rotated_90": false,
+          "placed_w": 80.0,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "FT_PAD",
+          "copy": 6,
+          "w": 80.0,
+          "h": 80.0,
+          "x": 10.0,
+          "y": 182.0,
+          "rotated_90": false,
+          "placed_w": 80.0,
+          "placed_h": 80.0
+        },
+        {
+          "part_number": "FT_PAD",
+          "copy": 4,
+          "w": 80.0,
+          "h": 80.0,
+          "x": 96.0,
+          "y": 96.0,
+          "rotated_90": false,
+          "placed_w": 80.0,
+          "placed_h": 80.0
+        }
+      ]
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "finished_thickness_mm": 1,
+      "stock_rectangle_mm": [
+        304.8,
+        304.8
+      ],
+      "part_count": 25,
+      "verification": "PASS rectangular envelopes;6mmspacing10mmedge",
+      "parts": [
+        {
+          "part_number": "FLOAT_PAN_HH_GUARD_SIDE_2",
+          "copy": 1,
+          "w": 40.0,
+          "h": 61.0,
+          "x": 10.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 40.0,
+          "placed_h": 61.0
+        },
+        {
+          "part_number": "FLOAT_PAN_MIN_GUARD_SIDE_2",
+          "copy": 1,
+          "w": 40.0,
+          "h": 61.0,
+          "x": 10.0,
+          "y": 77.0,
+          "rotated_90": false,
+          "placed_w": 40.0,
+          "placed_h": 61.0
+        },
+        {
+          "part_number": "FLOAT_PAN_EMPTY_GUARD_SIDE_2",
+          "copy": 1,
+          "w": 40.0,
+          "h": 61.0,
+          "x": 10.0,
+          "y": 144.0,
+          "rotated_90": false,
+          "placed_w": 40.0,
+          "placed_h": 61.0
+        },
+        {
+          "part_number": "FLOAT_TANK_LOW_GUARD_SIDE_2",
+          "copy": 1,
+          "w": 40.0,
+          "h": 61.0,
+          "x": 10.0,
+          "y": 211.0,
+          "rotated_90": false,
+          "placed_w": 40.0,
+          "placed_h": 61.0
+        },
+        {
+          "part_number": "FLOAT_GUARD_SIDE",
+          "copy": 1,
+          "w": 40.0,
+          "h": 61.0,
+          "x": 56.0,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 61.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "FLOAT_GUARD_SIDE",
+          "copy": 2,
+          "w": 40.0,
+          "h": 61.0,
+          "x": 123.0,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 61.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "FLOAT_PAN_FILL_GUARD_SIDE_2",
+          "copy": 1,
+          "w": 40.0,
+          "h": 61.0,
+          "x": 190.0,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 61.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "FLOAT_PAN_HH_GUARD_END_1",
+          "copy": 1,
+          "w": 34.0,
+          "h": 61.0,
+          "x": 257.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 34.0,
+          "placed_h": 61.0
+        },
+        {
+          "part_number": "FLOAT_PAN_HH_GUARD_END_2",
+          "copy": 1,
+          "w": 34.0,
+          "h": 61.0,
+          "x": 56.0,
+          "y": 56.0,
+          "rotated_90": true,
+          "placed_w": 61.0,
+          "placed_h": 34.0
+        },
+        {
+          "part_number": "FLOAT_GUARD_SIDE",
+          "copy": 5,
+          "w": 40.0,
+          "h": 61.0,
+          "x": 123.0,
+          "y": 56.0,
+          "rotated_90": true,
+          "placed_w": 61.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "FLOAT_PAN_EMPTY_GUARD_END_2",
+          "copy": 1,
+          "w": 34.0,
+          "h": 61.0,
+          "x": 56.0,
+          "y": 96.0,
+          "rotated_90": true,
+          "placed_w": 61.0,
+          "placed_h": 34.0
+        },
+        {
+          "part_number": "FLOAT_GUARD_SIDE",
+          "copy": 3,
+          "w": 40.0,
+          "h": 61.0,
+          "x": 190.0,
+          "y": 56.0,
+          "rotated_90": true,
+          "placed_w": 61.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "FLOAT_TANK_LOW_GUARD_END_1",
+          "copy": 1,
+          "w": 34.0,
+          "h": 61.0,
+          "x": 257.0,
+          "y": 77.0,
+          "rotated_90": false,
+          "placed_w": 34.0,
+          "placed_h": 61.0
+        },
+        {
+          "part_number": "FLOAT_PAN_FILL_GUARD_END_1",
+          "copy": 1,
+          "w": 34.0,
+          "h": 61.0,
+          "x": 123.0,
+          "y": 102.0,
+          "rotated_90": true,
+          "placed_w": 61.0,
+          "placed_h": 34.0
+        },
+        {
+          "part_number": "FLOAT_GUARD_SIDE",
+          "copy": 4,
+          "w": 40.0,
+          "h": 61.0,
+          "x": 56.0,
+          "y": 136.0,
+          "rotated_90": true,
+          "placed_w": 61.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "FLOAT_PAN_MIN_GUARD_END_1",
+          "copy": 1,
+          "w": 34.0,
+          "h": 61.0,
+          "x": 190.0,
+          "y": 102.0,
+          "rotated_90": true,
+          "placed_w": 61.0,
+          "placed_h": 34.0
+        },
+        {
+          "part_number": "FLOAT_TANK_LOW_GUARD_END_2",
+          "copy": 1,
+          "w": 34.0,
+          "h": 61.0,
+          "x": 56.0,
+          "y": 182.0,
+          "rotated_90": false,
+          "placed_w": 34.0,
+          "placed_h": 61.0
+        },
+        {
+          "part_number": "FLOAT_PAN_EMPTY_GUARD_END_1",
+          "copy": 1,
+          "w": 34.0,
+          "h": 61.0,
+          "x": 56.0,
+          "y": 249.0,
+          "rotated_90": true,
+          "placed_w": 61.0,
+          "placed_h": 34.0
+        },
+        {
+          "part_number": "FLOAT_PAN_MIN_GUARD_END_2",
+          "copy": 1,
+          "w": 34.0,
+          "h": 61.0,
+          "x": 96.0,
+          "y": 182.0,
+          "rotated_90": false,
+          "placed_w": 34.0,
+          "placed_h": 61.0
+        },
+        {
+          "part_number": "FLOAT_PAN_FILL_GUARD_END_2",
+          "copy": 1,
+          "w": 34.0,
+          "h": 61.0,
+          "x": 123.0,
+          "y": 142.0,
+          "rotated_90": true,
+          "placed_w": 61.0,
+          "placed_h": 34.0
+        },
+        {
+          "part_number": "FLOAT_GUARD_FLOOR",
+          "copy": 2,
+          "w": 36.0,
+          "h": 40.0,
+          "x": 123.0,
+          "y": 249.0,
+          "rotated_90": false,
+          "placed_w": 36.0,
+          "placed_h": 40.0
+        },
+        {
+          "part_number": "FLOAT_GUARD_FLOOR",
+          "copy": 5,
+          "w": 36.0,
+          "h": 40.0,
+          "x": 190.0,
+          "y": 142.0,
+          "rotated_90": true,
+          "placed_w": 40.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "FLOAT_GUARD_FLOOR",
+          "copy": 4,
+          "w": 36.0,
+          "h": 40.0,
+          "x": 136.0,
+          "y": 182.0,
+          "rotated_90": true,
+          "placed_w": 40.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "FLOAT_GUARD_FLOOR",
+          "copy": 1,
+          "w": 36.0,
+          "h": 40.0,
+          "x": 236.0,
+          "y": 144.0,
+          "rotated_90": true,
+          "placed_w": 40.0,
+          "placed_h": 36.0
+        },
+        {
+          "part_number": "FLOAT_GUARD_FLOOR",
+          "copy": 3,
+          "w": 36.0,
+          "h": 40.0,
+          "x": 182.0,
+          "y": 184.0,
+          "rotated_90": true,
+          "placed_w": 40.0,
+          "placed_h": 36.0
+        }
+      ]
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "finished_thickness_mm": 1.5,
+      "stock_rectangle_mm": [
+        609.6,
+        914.4
+      ],
+      "part_count": 12,
+      "verification": "PASS rectangular envelopes;6mmspacing10mmedge",
+      "parts": [
+        {
+          "part_number": "OVERFLOW_CATCH_FLOOR",
+          "copy": 1,
+          "w": 600.0,
+          "h": 250.0,
+          "x": 10.0,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 250.0,
+          "placed_h": 600.0
+        },
+        {
+          "part_number": "OVERFLOW_CATCH_END",
+          "copy": 1,
+          "w": 597.0,
+          "h": 60.0,
+          "x": 266.0,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 60.0,
+          "placed_h": 597.0
+        },
+        {
+          "part_number": "OVERFLOW_CATCH_END",
+          "copy": 2,
+          "w": 597.0,
+          "h": 60.0,
+          "x": 332.0,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 60.0,
+          "placed_h": 597.0
+        },
+        {
+          "part_number": "WT_BASKET_SPLASH_COVER",
+          "copy": 1,
+          "w": 180.0,
+          "h": 140.0,
+          "x": 398.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 180.0,
+          "placed_h": 140.0
+        },
+        {
+          "part_number": "WT_BASKET_BASE",
+          "copy": 1,
+          "w": 160.0,
+          "h": 120.0,
+          "x": 398.0,
+          "y": 156.0,
+          "rotated_90": false,
+          "placed_w": 160.0,
+          "placed_h": 120.0
+        },
+        {
+          "part_number": "WT_BASKET_END",
+          "copy": 2,
+          "w": 157.0,
+          "h": 98.5,
+          "x": 398.0,
+          "y": 282.0,
+          "rotated_90": false,
+          "placed_w": 157.0,
+          "placed_h": 98.5
+        },
+        {
+          "part_number": "OVERFLOW_CATCH_SIDE",
+          "copy": 2,
+          "w": 250.0,
+          "h": 60.0,
+          "x": 10.0,
+          "y": 616.0,
+          "rotated_90": true,
+          "placed_w": 60.0,
+          "placed_h": 250.0
+        },
+        {
+          "part_number": "WT_BASKET_SIDE",
+          "copy": 2,
+          "w": 120.0,
+          "h": 98.5,
+          "x": 398.0,
+          "y": 386.5,
+          "rotated_90": false,
+          "placed_w": 120.0,
+          "placed_h": 98.5
+        },
+        {
+          "part_number": "WT_BASKET_END",
+          "copy": 1,
+          "w": 157.0,
+          "h": 98.5,
+          "x": 398.0,
+          "y": 491.0,
+          "rotated_90": false,
+          "placed_w": 157.0,
+          "placed_h": 98.5
+        },
+        {
+          "part_number": "OVERFLOW_CATCH_SIDE",
+          "copy": 1,
+          "w": 250.0,
+          "h": 60.0,
+          "x": 76.0,
+          "y": 616.0,
+          "rotated_90": true,
+          "placed_w": 60.0,
+          "placed_h": 250.0
+        },
+        {
+          "part_number": "WT_BASKET_SIDE",
+          "copy": 1,
+          "w": 120.0,
+          "h": 98.5,
+          "x": 398.0,
+          "y": 595.5,
+          "rotated_90": false,
+          "placed_w": 120.0,
+          "placed_h": 98.5
+        },
+        {
+          "part_number": "VENT_PERFORATED_CAP",
+          "copy": 1,
+          "w": 39.4,
+          "h": 39.4,
+          "x": 524.0,
+          "y": 386.5,
+          "rotated_90": false,
+          "placed_w": 39.4,
+          "placed_h": 39.4
+        }
+      ]
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "finished_thickness_mm": 2,
+      "stock_rectangle_mm": [
+        304.8,
+        304.8
+      ],
+      "part_count": 1,
+      "verification": "PASS rectangular envelopes;6mmspacing10mmedge",
+      "parts": [
+        {
+          "part_number": "WT_BASKET_RIM",
+          "copy": 1,
+          "w": 180.0,
+          "h": 140.0,
+          "x": 10.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 180.0,
+          "placed_h": 140.0
+        }
+      ]
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "finished_thickness_mm": 3.048,
+      "stock_rectangle_mm": [
+        304.8,
+        304.8
+      ],
+      "part_count": 10,
+      "verification": "PASS rectangular envelopes;6mmspacing10mmedge",
+      "parts": [
+        {
+          "part_number": "FLOAT_LEDGE",
+          "copy": 1,
+          "w": 35.952,
+          "h": 44.0,
+          "x": 10.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 35.952,
+          "placed_h": 44.0
+        },
+        {
+          "part_number": "FLOAT_LEDGE",
+          "copy": 2,
+          "w": 35.952,
+          "h": 44.0,
+          "x": 10.0,
+          "y": 60.0,
+          "rotated_90": false,
+          "placed_w": 35.952,
+          "placed_h": 44.0
+        },
+        {
+          "part_number": "FLOAT_LEDGE",
+          "copy": 5,
+          "w": 35.952,
+          "h": 44.0,
+          "x": 10.0,
+          "y": 110.0,
+          "rotated_90": false,
+          "placed_w": 35.952,
+          "placed_h": 44.0
+        },
+        {
+          "part_number": "FLOAT_LEDGE",
+          "copy": 3,
+          "w": 35.952,
+          "h": 44.0,
+          "x": 10.0,
+          "y": 160.0,
+          "rotated_90": false,
+          "placed_w": 35.952,
+          "placed_h": 44.0
+        },
+        {
+          "part_number": "FLOAT_LEDGE",
+          "copy": 4,
+          "w": 35.952,
+          "h": 44.0,
+          "x": 10.0,
+          "y": 210.0,
+          "rotated_90": false,
+          "placed_w": 35.952,
+          "placed_h": 44.0
+        },
+        {
+          "part_number": "FLOAT_SLIDER",
+          "copy": 2,
+          "w": 44.0,
+          "h": 25.0,
+          "x": 10.0,
+          "y": 260.0,
+          "rotated_90": false,
+          "placed_w": 44.0,
+          "placed_h": 25.0
+        },
+        {
+          "part_number": "FLOAT_SLIDER",
+          "copy": 5,
+          "w": 44.0,
+          "h": 25.0,
+          "x": 60.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 44.0,
+          "placed_h": 25.0
+        },
+        {
+          "part_number": "FLOAT_SLIDER",
+          "copy": 4,
+          "w": 44.0,
+          "h": 25.0,
+          "x": 110.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 44.0,
+          "placed_h": 25.0
+        },
+        {
+          "part_number": "FLOAT_SLIDER",
+          "copy": 1,
+          "w": 44.0,
+          "h": 25.0,
+          "x": 160.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 44.0,
+          "placed_h": 25.0
+        },
+        {
+          "part_number": "FLOAT_SLIDER",
+          "copy": 3,
+          "w": 44.0,
+          "h": 25.0,
+          "x": 210.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 44.0,
+          "placed_h": 25.0
+        }
+      ]
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "finished_thickness_mm": 6,
+      "stock_rectangle_mm": [
+        304.8,
+        304.8
+      ],
+      "part_count": 5,
+      "verification": "PASS rectangular envelopes;6mmspacing10mmedge",
+      "parts": [
+        {
+          "part_number": "FLOAT_BACKRAIL_PAN",
+          "copy": 1,
+          "w": 50.0,
+          "h": 155.0,
+          "x": 10.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 50.0,
+          "placed_h": 155.0
+        },
+        {
+          "part_number": "FLOAT_BACKRAIL_PAN",
+          "copy": 2,
+          "w": 50.0,
+          "h": 155.0,
+          "x": 10.0,
+          "y": 171.0,
+          "rotated_90": true,
+          "placed_w": 155.0,
+          "placed_h": 50.0
+        },
+        {
+          "part_number": "FLOAT_BACKRAIL_PAN",
+          "copy": 3,
+          "w": 50.0,
+          "h": 155.0,
+          "x": 66.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 50.0,
+          "placed_h": 155.0
+        },
+        {
+          "part_number": "FLOAT_BACKRAIL_PAN",
+          "copy": 4,
+          "w": 50.0,
+          "h": 155.0,
+          "x": 122.0,
+          "y": 10.0,
+          "rotated_90": false,
+          "placed_w": 50.0,
+          "placed_h": 155.0
+        },
+        {
+          "part_number": "FLOAT_BACKRAIL_TANK",
+          "copy": 1,
+          "w": 50.0,
+          "h": 115.0,
+          "x": 178.0,
+          "y": 10.0,
+          "rotated_90": true,
+          "placed_w": 115.0,
+          "placed_h": 50.0
+        }
+      ]
+    }
+  ],
+  "nonflat_and_missing_thickness_rows": [
+    {
+      "part_number": "RAIL_CAP_1_BLANK",
+      "quantity": 1,
+      "procured_stock": "steel",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        1450.0,
+        7.9375
+      ],
+      "notes": "1450 x 100 x 7.9375 mm blank; 5/16-inch US-stock adaptation | Welded structure: nominal square tube corners; stock corner radii are not precision mating datums. | Raised6mm:underside1056/top1063.9375;continuousmachinedspacerunderrailcap. | Y stop/switch bracket: Ø6.6 holes at X66.5/1083.5, Y90/140/1410/1442; within inboard cap overhang, clear of spacer. | Y stop/switch bracket: Ø6.6 holes at X66.5/1083.5, Y90/140/1410/1442; within inboard cap overhang, clear of spacer. | Y stop/switch bracket: Ø6.6 holes at X66.5/1083.5, Y90/140/1410/1442; within inboard cap overhang, clear of spacer. | Y stop/switch bracket: Ø6.6 holes at X66.5/1083.5, Y90/140/1410/1442; within inboard cap overhang, clear of spacer."
+    },
+    {
+      "part_number": "RAIL_CAP_2_BLANK",
+      "quantity": 1,
+      "procured_stock": "steel",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        1450.0,
+        7.9375
+      ],
+      "notes": "1450 x 100 x 7.9375 mm blank; 5/16-inch US-stock adaptation | Welded structure: nominal square tube corners; stock corner radii are not precision mating datums. | Raised6mm:underside1056/top1063.9375;continuousmachinedspacerunderrailcap. | Y stop/switch bracket: Ø6.6 holes at X66.5/1083.5, Y90/140/1410/1442; within inboard cap overhang, clear of spacer. | Y stop/switch bracket: Ø6.6 holes at X66.5/1083.5, Y90/140/1410/1442; within inboard cap overhang, clear of spacer. | Y stop/switch bracket: Ø6.6 holes at X66.5/1083.5, Y90/140/1410/1442; within inboard cap overhang, clear of spacer. | Y stop/switch bracket: Ø6.6 holes at X66.5/1083.5, Y90/140/1410/1442; within inboard cap overhang, clear of spacer."
+    },
+    {
+      "part_number": "SAND_M20_BUNG",
+      "quantity": 18,
+      "procured_stock": "Machinedmildsteel",
+      "bounds_local_mm": [
+        -15.0,
+        -15.0,
+        0.0,
+        15.0,
+        15.0,
+        10.0
+      ],
+      "notes": "OD30×10;M20×1.5female,predrill18.5beforetap;nominalthreadenvelopeinSTEP. Continuouswatertightweldtotube."
+    },
+    {
+      "part_number": "SAND_M20_PLUG",
+      "quantity": 18,
+      "procured_stock": "CustomM20×1.5steelplug",
+      "bounds_local_mm": [
+        -14.0,
+        -14.0,
+        0.0,
+        14.0,
+        14.0,
+        16.0
+      ],
+      "notes": "Turn20mmthread×10long,28mmhead×6,6mmhexsocket4deep;sealwasherorremovabledustsealant."
+    },
+    {
+      "part_number": "VENT_SCREEN_SLEEVE",
+      "quantity": 1,
+      "procured_stock": "304stainlessmachinedsleeve",
+      "bounds_local_mm": [
+        -19.7,
+        -19.7,
+        -0.0,
+        19.7,
+        19.7,
+        12.0
+      ],
+      "notes": "ID33.8OD39.4length12;2×M4radialtap,opposed. Perforatedcapweldedtosleeve;removeforscreenwashing."
+    },
+    {
+      "part_number": "VENT_PERFORATED_CAP",
+      "quantity": 1,
+      "procured_stock": "304stainless1.5mm",
+      "bounds_local_mm": [
+        -19.7,
+        -19.7,
+        0.0,
+        19.7,
+        19.7,
+        1.5
+      ],
+      "notes": "Ø39.4×1.5disc,16Ø3holesat±3/±9grid;113mm²nominalopenarea,neverpaintorplug. Coarsedebrisguard,notfiltermedia."
+    },
+    {
+      "part_number": "FLOAT_PAN_MIN_GUARD_SIDE_2",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        40.0,
+        61.0
+      ],
+      "notes": "Slottedremovableguard;upperedgesweldtofloatledgeunderside. Brushcleanandtestfreefloattravel. | Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_PAN_MIN_GUARD_END_1",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        -0.0,
+        0.0,
+        34.0,
+        1.0,
+        61.0
+      ],
+      "notes": "Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_PAN_MIN_GUARD_END_2",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        -0.0,
+        0.0,
+        34.0,
+        1.0,
+        61.0
+      ],
+      "notes": "Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_PAN_FILL_GUARD_SIDE_2",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        40.0,
+        61.0
+      ],
+      "notes": "Slottedremovableguard;upperedgesweldtofloatledgeunderside. Brushcleanandtestfreefloattravel. | Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_PAN_FILL_GUARD_END_1",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        -0.0,
+        0.0,
+        34.0,
+        1.0,
+        61.0
+      ],
+      "notes": "Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_PAN_FILL_GUARD_END_2",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        -0.0,
+        0.0,
+        34.0,
+        1.0,
+        61.0
+      ],
+      "notes": "Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_PAN_HH_GUARD_SIDE_2",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        40.0,
+        61.0
+      ],
+      "notes": "Slottedremovableguard;upperedgesweldtofloatledgeunderside. Brushcleanandtestfreefloattravel. | Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_PAN_HH_GUARD_END_1",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        -0.0,
+        0.0,
+        34.0,
+        1.0,
+        61.0
+      ],
+      "notes": "Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_PAN_HH_GUARD_END_2",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        -0.0,
+        0.0,
+        34.0,
+        1.0,
+        61.0
+      ],
+      "notes": "Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_PAN_EMPTY_GUARD_SIDE_2",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        40.0,
+        61.0
+      ],
+      "notes": "Slottedremovableguard;upperedgesweldtofloatledgeunderside. Brushcleanandtestfreefloattravel. | Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_PAN_EMPTY_GUARD_END_1",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        -0.0,
+        0.0,
+        34.0,
+        1.0,
+        61.0
+      ],
+      "notes": "Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_PAN_EMPTY_GUARD_END_2",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        -0.0,
+        0.0,
+        34.0,
+        1.0,
+        61.0
+      ],
+      "notes": "Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_TANK_LOW_GUARD_SIDE_2",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        40.0,
+        61.0
+      ],
+      "notes": "Slottedremovableguard;upperedgesweldtofloatledgeunderside. Brushcleanandtestfreefloattravel. | Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_TANK_LOW_GUARD_END_1",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        -0.0,
+        0.0,
+        34.0,
+        1.0,
+        61.0
+      ],
+      "notes": "Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "FLOAT_TANK_LOW_GUARD_END_2",
+      "quantity": 1,
+      "procured_stock": "304stainless1mm",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        34.0,
+        1.0,
+        61.0
+      ],
+      "notes": "Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
+    },
+    {
+      "part_number": "TOOL_PARK_CRADLE",
+      "quantity": 2,
+      "procured_stock": "A36 steel",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        110.0,
+        166.856,
+        6.0
+      ],
+      "notes": "110mm wide,6mm thick;65.6mm open-top cradle centered at Y1080/Z600. Weld bottom to base with3mm fillets. | Two6x16mm strap slots at local X10/100,Z130. Use two25mm cam straps to retain the spindle."
+    },
+    {
+      "part_number": "GANTRY_END_BRACKET_L",
+      "quantity": 1,
+      "procured_stock": "6061-T6 machined billet",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        -70.0,
+        150.0,
+        80.0,
+        12.7
+      ],
+      "notes": "Integral12.7 thick horizontal flange and70 mm downstand. No welded aluminum joint. | 4M8 underside T-slot fasteners. FourM6 threaded downstand holes,5.0 pilot; thread representation nominal."
+    },
+    {
+      "part_number": "Y_LINK_SUPPORT_L",
+      "quantity": 1,
+      "procured_stock": "6061-T6 machined integral bracket",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        -40.0,
+        103.1,
+        32.0,
+        6.35
+      ],
+      "notes": "103.1×32×6.35 horizontal flange with8×32×40 downstand. FourØ5.0 pilot holes cross downstand; tapM6×1 through8 mm. | TwoØ3.3 pilots on horizontal flange:tapM4×0.7 through. M4×12 clevis screws engage6 mm. FourM6×20 shoe screws engage7.3 mm."
+    },
+    {
+      "part_number": "MOTION_CLEVIS_BILLET",
+      "quantity": 6,
+      "procured_stock": "6061-T6 machined billet40×48×32",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        40.0,
+        48.0,
+        32.0
+      ],
+      "notes": "Mill7 mm gap between6 mm side ears. Pin axis19 mm above mounting sole. Ream common pin bore6H7 through both ears in one setup. | TwoØ4.5 base holes at(20,5)/(20,43); mount withM4×12 into6 mm minimum M4×0.7 engagement."
+    },
+    {
+      "part_number": "LINK_COUPLER_M6_RHLH_28",
+      "quantity": 3,
+      "procured_stock": "1215 steel12AF hex,28 long",
+      "bounds_local_mm": [
+        -0.0,
+        0.0,
+        -0.0,
+        12.0,
+        28.0,
+        13.8564
+      ],
+      "notes": "DrillØ5 through. TapM6×1 RH fromone end andLH fromother end, each12 deep. MarkLH end withcircumferential groove. | Set80 mm eye centers:10 mm thread engagement each end,8 mm internalgap. Never reduce engagement below9 mm."
+    },
+    {
+      "part_number": "GANTRY_END_BRACKET_R",
+      "quantity": 1,
+      "procured_stock": "6061-T6 machined billet",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        -70.0,
+        150.0,
+        80.0,
+        12.7
+      ],
+      "notes": "Integral12.7 thick horizontal flange and70 mm downstand. No welded aluminum joint. | 4M8 underside T-slot fasteners. FourM6 threaded downstand holes,5.0 pilot; thread representation nominal."
+    },
+    {
+      "part_number": "Y_LINK_SUPPORT_R",
+      "quantity": 1,
+      "procured_stock": "6061-T6 machined integral bracket",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        -40.0,
+        103.1,
+        32.0,
+        6.35
+      ],
+      "notes": "103.1×32×6.35 horizontal flange with8×32×40 downstand. FourØ5.0 pilot holes cross downstand; tapM6×1 through8 mm. | TwoØ3.3 pilots on horizontal flange:tapM4×0.7 through. M4×12 clevis screws engage6 mm. FourM6×20 shoe screws engage7.3 mm."
+    },
+    {
+      "part_number": "X_LINK_SUPPORT",
+      "quantity": 1,
+      "procured_stock": "6061-T6 machined integral bracket",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        -30.0,
+        156.0,
+        120.8,
+        6.35
+      ],
+      "notes": "156 mm front flange narrows to36 mm at rear;120.8 projection,6.35 thick. Integral156×8×30 downstand. FourØ5 pilots cross downstand;tapM6×1 through8. | TwoØ3.3 upper pilots:tapM4×0.7 through6.35. Bridge transfers thrust to X carrier with4M6×20,7.3 mm engagement."
+    },
+    {
+      "part_number": "SPINDLE_SPLIT_CLAMP_REAR",
+      "quantity": 1,
+      "procured_stock": "6061-T6 aluminum billet",
+      "bounds_local_mm": [
+        0.0,
+        -0.0,
+        0.0,
+        100.0,
+        45.25,
+        40.0
+      ],
+      "notes": "Width100, height40, assembled depth90.5; split gap0.50. BoreØ65.00/+0.03 with the split shim installed and both pinch bolts snug. | Rear:four blindM6×1 holes, Ø5 pilot17 deep, tap15 deep; mount screwsM6×20 engage13.3 through6.7 mm adapter web. | Pinch screws2×M6×60. Rear split face:Ø5 pilot17 deep,tapM6×1 depth15. Front halfØ6.6 through; nominal engagement14.75. | Deburr bore edges0.3 maximum. Initial pinch torque3 N·m, verify spindle housing is retained without local deformation. Remove tool before bed swap."
+    },
+    {
+      "part_number": "SPINDLE_SPLIT_CLAMP_FRONT",
+      "quantity": 1,
+      "procured_stock": "6061-T6 aluminum billet",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        100.0,
+        44.75,
+        40.0
+      ],
+      "notes": "Width100, height40, assembled depth90.5; split gap0.50. BoreØ65.00/+0.03 with the split shim installed and both pinch bolts snug. | Rear:four blindM6×1 holes, Ø5 pilot17 deep, tap15 deep; mount screwsM6×20 engage13.3 through6.7 mm adapter web. | Pinch screws2×M6×60. Rear split face:Ø5 pilot17 deep,tapM6×1 depth15. Front halfØ6.6 through; nominal engagement14.75. | Deburr bore edges0.3 maximum. Initial pinch torque3 N·m, verify spindle housing is retained without local deformation. Remove tool before bed swap."
+    },
+    {
+      "part_number": "Y_STOP_L_FRONT_BRACKET",
+      "quantity": 1,
+      "procured_stock": "Welded A36 steel6.35 base/post,3 switch upright",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        43.3,
+        71.0,
+        56.35
+      ],
+      "notes": "Mechanical contact atY carriage268/1282;2 mm software margin to electrical trip273/1277,then5 mm to buffer. | Weld steel bracket continuously3 mm fillets along base/post. Switch holesØ2.5 pilot,tapM3×0.5 through3. Buffer holesØ3.3 pilot,tapM4×0.7 through6.35. | Low-speed commissioning crash buffer only. At600 mm/min and20 mm/s² stopping distance2.5 mm before latency; higher feeds need measured stop-distance verification."
+    },
+    {
+      "part_number": "Y_STOP_L_FRONT_BUFFER",
+      "quantity": 1,
+      "procured_stock": "EPDM70A rubber8 mm",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        15.8,
+        8.0,
+        30.0
+      ],
+      "notes": "Mechanical contact atY carriage268/1282;2 mm software margin to electrical trip273/1277,then5 mm to buffer. | Weld steel bracket continuously3 mm fillets along base/post. Switch holesØ2.5 pilot,tapM3×0.5 through3. Buffer holesØ3.3 pilot,tapM4×0.7 through6.35. | Low-speed commissioning crash buffer only. At600 mm/min and20 mm/s² stopping distance2.5 mm before latency; higher feeds need measured stop-distance verification."
+    },
+    {
+      "part_number": "Y_STOP_L_REAR_BRACKET",
+      "quantity": 1,
+      "procured_stock": "Welded A36 steel6.35 base/post,3 switch upright",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        43.3,
+        50.0,
+        56.35
+      ],
+      "notes": "Mechanical contact atY carriage268/1282;2 mm software margin to electrical trip273/1277,then5 mm to buffer. | Weld steel bracket continuously3 mm fillets along base/post. Switch holesØ2.5 pilot,tapM3×0.5 through3. Buffer holesØ3.3 pilot,tapM4×0.7 through6.35. | Low-speed commissioning crash buffer only. At600 mm/min and20 mm/s² stopping distance2.5 mm before latency; higher feeds need measured stop-distance verification."
+    },
+    {
+      "part_number": "Y_STOP_L_REAR_BUFFER",
+      "quantity": 1,
+      "procured_stock": "EPDM70A rubber8 mm",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        15.8,
+        8.0,
+        30.0
+      ],
+      "notes": "Mechanical contact atY carriage268/1282;2 mm software margin to electrical trip273/1277,then5 mm to buffer. | Weld steel bracket continuously3 mm fillets along base/post. Switch holesØ2.5 pilot,tapM3×0.5 through3. Buffer holesØ3.3 pilot,tapM4×0.7 through6.35. | Low-speed commissioning crash buffer only. At600 mm/min and20 mm/s² stopping distance2.5 mm before latency; higher feeds need measured stop-distance verification."
+    },
+    {
+      "part_number": "Y_CAM_L_FRONT",
+      "quantity": 1,
+      "procured_stock": "Machined A36 steel cam and3 mm attachment web",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        26.8,
+        30.0,
+        28.3
+      ],
+      "notes": "10 mm ramp reduces underside from1127 to1120.7, followed by20 mm flat land. Cam is a switch actuator, not a hard stop. | TwoM4×10 screws into8 mm-deep threads; adjust switch trip with bracket before final pinning."
+    },
+    {
+      "part_number": "Y_STOP_R_FRONT_BRACKET",
+      "quantity": 1,
+      "procured_stock": "Welded A36 steel6.35 base/post,3 switch upright",
+      "bounds_local_mm": [
+        -0.0,
+        0.0,
+        0.0,
+        43.3,
+        71.0,
+        56.35
+      ],
+      "notes": "Mechanical contact atY carriage268/1282;2 mm software margin to electrical trip273/1277,then5 mm to buffer. | Weld steel bracket continuously3 mm fillets along base/post. Switch holesØ2.5 pilot,tapM3×0.5 through3. Buffer holesØ3.3 pilot,tapM4×0.7 through6.35. | Low-speed commissioning crash buffer only. At600 mm/min and20 mm/s² stopping distance2.5 mm before latency; higher feeds need measured stop-distance verification."
+    },
+    {
+      "part_number": "Y_STOP_R_FRONT_BUFFER",
+      "quantity": 1,
+      "procured_stock": "EPDM70A rubber8 mm",
+      "bounds_local_mm": [
+        -0.0,
+        0.0,
+        0.0,
+        15.8,
+        8.0,
+        30.0
+      ],
+      "notes": "Mechanical contact atY carriage268/1282;2 mm software margin to electrical trip273/1277,then5 mm to buffer. | Weld steel bracket continuously3 mm fillets along base/post. Switch holesØ2.5 pilot,tapM3×0.5 through3. Buffer holesØ3.3 pilot,tapM4×0.7 through6.35. | Low-speed commissioning crash buffer only. At600 mm/min and20 mm/s² stopping distance2.5 mm before latency; higher feeds need measured stop-distance verification."
+    },
+    {
+      "part_number": "Y_STOP_R_REAR_BRACKET",
+      "quantity": 1,
+      "procured_stock": "Welded A36 steel6.35 base/post,3 switch upright",
+      "bounds_local_mm": [
+        -0.0,
+        0.0,
+        0.0,
+        43.3,
+        50.0,
+        56.35
+      ],
+      "notes": "Mechanical contact atY carriage268/1282;2 mm software margin to electrical trip273/1277,then5 mm to buffer. | Weld steel bracket continuously3 mm fillets along base/post. Switch holesØ2.5 pilot,tapM3×0.5 through3. Buffer holesØ3.3 pilot,tapM4×0.7 through6.35. | Low-speed commissioning crash buffer only. At600 mm/min and20 mm/s² stopping distance2.5 mm before latency; higher feeds need measured stop-distance verification."
+    },
+    {
+      "part_number": "Y_STOP_R_REAR_BUFFER",
+      "quantity": 1,
+      "procured_stock": "EPDM70A rubber8 mm",
+      "bounds_local_mm": [
+        -0.0,
+        0.0,
+        0.0,
+        15.8,
+        8.0,
+        30.0
+      ],
+      "notes": "Mechanical contact atY carriage268/1282;2 mm software margin to electrical trip273/1277,then5 mm to buffer. | Weld steel bracket continuously3 mm fillets along base/post. Switch holesØ2.5 pilot,tapM3×0.5 through3. Buffer holesØ3.3 pilot,tapM4×0.7 through6.35. | Low-speed commissioning crash buffer only. At600 mm/min and20 mm/s² stopping distance2.5 mm before latency; higher feeds need measured stop-distance verification."
+    },
+    {
+      "part_number": "Y_CAM_R_FRONT",
+      "quantity": 1,
+      "procured_stock": "Machined A36 steel cam and3 mm attachment web",
+      "bounds_local_mm": [
+        -0.0,
+        0.0,
+        0.0,
+        26.8,
+        30.0,
+        28.3
+      ],
+      "notes": "10 mm ramp reduces underside from1127 to1120.7, followed by20 mm flat land. Cam is a switch actuator, not a hard stop. | TwoM4×10 screws into8 mm-deep threads; adjust switch trip with bracket before final pinning."
+    },
+    {
+      "part_number": "X_STOP_LEFT_BODY",
+      "quantity": 1,
+      "procured_stock": "Machined A36 steel stop block; left switch bracket welded3 mm fillets",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        47.0,
+        52.4,
+        49.0
+      ],
+      "notes": "Hard contact atheadX168/982. Normal soft travel175..975; home trip173 adjusted atlow speed. | Block20×45×26,2×Ø6.6 through45. Buffer screw threads:M4×0.7 depth10,Ø3.3 pilot11 frominner side. | Left switch bracket holes:Ø2.5 pilot,TAP M3×0.5 through3;switch screw torque0.39–0.59 N·m."
+    },
+    {
+      "part_number": "X_STOP_LEFT_BUFFER",
+      "quantity": 1,
+      "procured_stock": "EPDM70A rubber8",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        8.0,
+        14.0,
+        20.0
+      ],
+      "notes": "Hard contact atheadX168/982. Normal soft travel175..975; home trip173 adjusted atlow speed. | Block20×45×26,2×Ø6.6 through45. Buffer screw threads:M4×0.7 depth10,Ø3.3 pilot11 frominner side. | Left switch bracket holes:Ø2.5 pilot,TAP M3×0.5 through3;switch screw torque0.39–0.59 N·m."
+    },
+    {
+      "part_number": "X_STOP_RIGHT_BODY",
+      "quantity": 1,
+      "procured_stock": "Machined A36 steel stop block; left switch bracket welded3 mm fillets",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        20.0,
+        45.0,
+        26.0
+      ],
+      "notes": "Hard contact atheadX168/982. Normal soft travel175..975; home trip173 adjusted atlow speed. | Block20×45×26,2×Ø6.6 through45. Buffer screw threads:M4×0.7 depth10,Ø3.3 pilot11 frominner side. | Left switch bracket holes:Ø2.5 pilot,TAP M3×0.5 through3;switch screw torque0.39–0.59 N·m."
+    },
+    {
+      "part_number": "X_STOP_RIGHT_BUFFER",
+      "quantity": 1,
+      "procured_stock": "EPDM70A rubber8",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        8.0,
+        14.0,
+        20.0
+      ],
+      "notes": "Hard contact atheadX168/982. Normal soft travel175..975; home trip173 adjusted atlow speed. | Block20×45×26,2×Ø6.6 through45. Buffer screw threads:M4×0.7 depth10,Ø3.3 pilot11 frominner side. | Left switch bracket holes:Ø2.5 pilot,TAP M3×0.5 through3;switch screw torque0.39–0.59 N·m."
+    },
+    {
+      "part_number": "X_HOME_CAM",
+      "quantity": 1,
+      "procured_stock": "A36 steel machined cam",
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        30.0,
+        20.0,
+        28.3
+      ],
+      "notes": "30×20 ramp cam,10 mm ramp followed by20 mm land. TwoØ4.5 attachment holes."
+    }
+  ],
+  "unpriced_or_unqualified_scope": [
+    "Two48x96in .120 steel sheets: Looper public11ga price$173.60each is only a regional goods benchmark, with stock confirmation andfreightrequired. https://www.loopersmetalworks.com/metal-products/ . FixSupplyAN7323 is posted$607.14each but not economical; freightunquoted. SteelMartGainesville remains best local quote candidate.",
+    "Other exact-thickness1.5mm and3mm carbonsteel sheets, stainlessgroups1,1.5,2,3.048,6mm; plans enumerate economical cut rectangles but no full deliveredquote. NominalUSgauges differ; do not silently substitute them into frozenCAD.",
+    "Steel round/hexstock for18sandbungs18plugs, threeM6RHLHcouplers, stop/cam bodies and stainlessvent sleeve. Theseare fabricated, notfree purchasedhardware.",
+    "EPDM2mm gasket966.096x666.096, other liners/stops, MDF3/4 sheet andfour15mmfinish stagingbars. No priced assumed scrap.",
+    "Final railcap cleanup stockthickness:7.9375raw equalsnominalmodeled thickness, no marginforflatnessclean-up.",
+    "Allfreight except onepublished$14USdelivery is unquoted. Zoro offers free standardshipping for signedin$50+orders withsize/weight exceptions; no Alto checkoutverified. No no-costfreightassumption."
+  ],
+  "simplification_notes": [
+    "Deleteonlythe unsupported$200appearance-skinallowance now.",
+    "Allmetricfinishedthicknessgroupsshouldbe rationalized toUSstock in a deliberateCAD revision ifuserwants cheaperfabrication; currentCADtreatsthicknessasfitdimension.",
+    "Integralaluminumgantryfeetandlinkbridges arethe clearest cost-reductionredesign: fabricatedplatejoints couldavoid largebillets, but bolting/welds,dowels,rail alignmentandstiffnessneedexplicit redesign beforecreditingsavings.",
+    "Four72in6061tiebarsticks avoidfullsheets and oversized12ftfreight; noCADchange.",
+    "Small-sheetplans buycutrectangles, notone4x8sheetforeverythickness.",
+    "UseMDFoffcutfrommainspoilsheetto surfacefour500x20stagingbars to15mm; noextraMDFsheetrequired."
+  ],
+  "quote_only_raw_stock_schedule": [
+    {
+      "item": "A1011 raw sheet, nominal .120 in",
+      "quantity": 2,
+      "size": "48 x96 in",
+      "required_for": "Current pan, tank, slats and matching .120 parts; use active two-sheet layout."
+    },
+    {
+      "item": "A36 carbon steel sheet, finish3.000 mm",
+      "quantity": 1,
+      "size": "36 x48 in",
+      "required_for": "28 original flats plus2 Ystop switch backs and1 Xstop switch back. Obtain actual3mm or enough oversize stock to finish3mm; inch1/8 is not dimensionally identical."
+    },
+    {
+      "item": "Carbon steel sheet, finish1.500 mm",
+      "quantity": 1,
+      "size": "24 x24 in",
+      "required_for": "Cabinet drip shield548.0274 x446.4 mm; avoid assuming16ga equals1.5mm."
+    },
+    {
+      "item": "304 stainless,1.000 mm",
+      "quantity": 1,
+      "size": "12 x12 in",
+      "required_for": "All25 float-guard flat parts, including15 missing from old nest."
+    },
+    {
+      "item": "304 stainless,1.500 mm",
+      "quantity": 1,
+      "size": "24 x36 in",
+      "required_for": "Overflow catch, basket/splash parts and39.4mm vent cap;12 parts."
+    },
+    {
+      "item": "304 stainless,2.000 mm",
+      "quantity": 1,
+      "size": "12 x12 in",
+      "required_for": "One180x140 mm basket rim; a200x160 mm cut blank also suffices with10mm edge margin."
+    },
+    {
+      "item": "304 stainless,3.048 mm finished",
+      "quantity": 1,
+      "size": "12 x12 in",
+      "required_for": "Five float ledges andfive sliders. Confirm metric/USstock treatment before substituting."
+    },
+    {
+      "item": "304 stainless,6.000 mm finished",
+      "quantity": 1,
+      "size": "12 x12 in",
+      "required_for": "Four50x155mm andone50x115mm backrails."
+    },
+    {
+      "item": "Weldable mild-steel round bar",
+      "quantity": 1,
+      "size": "1.25 in diameter x24 in",
+      "required_for": "18 bungs OD30x10mm and18 plugs OD28x16mm. 18*(10+3)+18*(16+3)+10=586 mm, within609.6mm; turn OD andthreads."
+    },
+    {
+      "item": "1215 steel hex bar",
+      "quantity": 1,
+      "size": "1/2 in AF x6 in",
+      "required_for": "Three12AF x28mm link couplers; mill12AF, drill andtap M6 RH/LH. Do not credit unowned scrap."
+    },
+    {
+      "item": "A36 steel rectangular bar",
+      "quantity": 1,
+      "size": "1.25 x2 x12 in",
+      "required_for": "Two20x45x26mm Xstop blocks;two26.8x30x28.3mm Ycams;one30x20x28.3mm Xcam. Saw/billet machining route includes cam web from sameblank, preservinggeometry."
+    },
+    {
+      "item": "304 stainless round bar",
+      "quantity": 1,
+      "size": "1.75 in diameter x2 in",
+      "required_for": "One OD39.4x12mm machinedvent sleeve."
+    },
+    {
+      "item": "EPDM gasket sheet",
+      "quantity": 1,
+      "size": "2mm thick, at least986.096x686.096mm raw",
+      "required_for": "One-piece966.096x666.096 mm reservoirgasket with10mm cuttingmargin. Any strips/splices are adesignchange."
+    },
+    {
+      "item": "3/4 in MDF sheet",
+      "quantity": 1,
+      "size": "48 x96 in",
+      "required_for": "Six495x397mm spoilboards; use remainder forfour500x20mm staging bars surfaced to15mm. Do not purchase asecond MDF sheet."
+    }
+  ],
+  "unadopted_plate_bracket_option": {
+    "status": "PROPOSAL ONLY; frozenCAD unchanged and no price credit in baseline",
+    "gantry_feet": {
+      "quantity": 2,
+      "material": "A36 steel",
+      "per_foot_parts_mm": [
+        "flange150x80x12.7",
+        "downstand80x70x12.7"
+      ],
+      "interface": "Preserve existing flange hole centers, counterbores andM6 downstand hole centers. Preserve web xpositions126.5(left)/10.8(right) in existing local150x80 frame. Existing9.3mm threadengagement needs12.7mm web, so1/4in substitution is rejected.",
+      "stock": "One extra1/2 x12 x12 in A36 plate is sufficient for both feet. Arrange two80x150 rotated flanges at(10,10),(96,10); two80x70 webs at(10,166),(96,166),10mm margins,6mm gaps.",
+      "extra_goods_usd": 23.5,
+      "extra_posted_US_shipping_usd": 14.0,
+      "source": "https://www.bonanza.com/listings/1-2-50-Hot-Rolled-Steel-Sheet-Plate-12-X-12-Flat-Bar-A36/954557774?goog_pla=1"
+    },
+    "link_supports": {
+      "material": "A36 steel",
+      "Y_parts": "2 horizontal103.1x32x6.35 mm flanges and2 vertical32x40x8mm webs; preserveleft/right weboffset andexistingholes.",
+      "X_parts": "1 flange6.35mm thick withoutline[(0,0),(156,0),(156,30),(96,30),(96,120.8),(60,120.8),(60,30),(0,30)], plus156x30x8mmweb atlocalY12.7.",
+      "stock": "Candidate existing1/4 sheet and3/8 sheet offcuts, finish8mm webs; nest must be formally revised before takingzeroextra-stockcredit."
+    },
+    "gross_replaced_billet_goods_usd": 410.67,
+    "conditional_goods_saving_usd": 387.17,
+    "calculation": "MET09 $296.31 + MET10 $114.36 - additionalfootsteel$23.50. This requires bothfeet ANDthree bridges tochange. Freight, weldconsumables andanyadditionalplate to be added; not a deliveredsaving.",
+    "mass_effect": "Estimated gross addedmovingmassabout3.1kg for steelversusaluminum atidenticalidealizedshape, beforeholes/welds; recompute inCAD.",
+    "required_review": [
+      "Weld joint details and access; keep weld toes clear of the shoe contact faces, bolt heads and slot clearance. Fullpenetration/ground contact joints or joint relief may be needed.",
+      "Weld first, then finish machine datum/contact faces and hole locations.",
+      "Re-run motion clearances and bed swap, stiffness and motor-force/current screening with changed mass.",
+      "Do not weld the existing6061 shapes and claim originalT6properties at the heat affected zone."
+    ]
+  },
+  "checks": {
+    "rectangular_stock_bounds": "PASS",
+    "rectangular_stock_6mm_spacing": "PASS",
+    "listed_price_arithmetic": "PASS",
+    "delivered_complete": "NO"
+  },
+  "additional_retail_offers": [
+    {
+      "id": "RET-MDF-01",
+      "item": "A-grade MDF, 3/4 inch x 4 ft x 8 ft, one sheet",
+      "quantity": 1,
+      "unit_usd": 35.0,
+      "goods_usd": 35.0,
+      "shipping_usd": null,
+      "tax_usd": null,
+      "delivered_usd": null,
+      "vendor": "Peach State Lumber Products, Kennesaw GA",
+      "url": "https://cdn.hibuwebsites.com/8146c0f71b4c4391ae7a534b644b0c01/files/uploaded/plywood-price-list-01-peach-state-lumber-products.pdf",
+      "support_url": "https://www.peachstatelumber.com/products",
+      "price_evidence": "Price PDF reached through current products page Plywood Price List link on 2026-09-24; PDF page2 lists 3/4 x 4ft x 8ft MDF (A GRADE) $35.00 and MDF (ELITE) $41.00. PDF contains a 2025 last-updated mark and prices subject to change.",
+      "fulfillment_status": "Regional pickup candidate only, not a ZIP30510 delivery quote. Seller states no minimum retail order and in-store pickup available at4000 Moon Station Rd NW, Kennesaw GA30144. Item-specific inventory, refreshed price, tax and collection travel are unconfirmed.",
+      "allocation": "Six495 x397 mm spoilboards; four500 x20 mm staging strips surfaced to15mm from offcut. One1219.2 x2438.4mm sheet is sufficient: six main rectangles in2columns x3rows occupy996 x1203mm allowing6mm between cuts; four strips in2columns x2rows occupy1006 x46mm in remainder. Add10mm outer edge margin. Main spoilboard finished thickness must match CAD, actual raw thickness to be checked.",
+      "status": "Posted regional pickup-price candidate; price document age and inventory require verification",
+      "include_in_verified_delivered_total": false
+    },
+    {
+      "id": "RET-SAND-01",
+      "item": "QUIKRETE Commercial Grade Medium Sand, washed and kiln dried, 50lb bag, Live Oak SKU SANDMEDIUM",
+      "quantity": 3,
+      "unit_usd": 11.0,
+      "goods_usd": 33.0,
+      "shipping_usd": null,
+      "tax_usd": null,
+      "delivered_usd": null,
+      "vendor": "Live Oak Supply, Norcross GA",
+      "url": "https://liveoaksupply.com/SANDMEDIUM/",
+      "support_urls": [
+        "https://liveoaksupply.com/faqs/",
+        "https://liveoaksupply.com/norcross/",
+        "https://www.quikrete.com/productlines/sandcommercialgrade.asp"
+      ],
+      "price_evidence": "Public product page displays Now $11.00 per50lb bag. Product and QUIKRETE manufacturer page explicitly state kiln dried.",
+      "fulfillment_status": "Regional counter-purchase candidate at4225 Steve Reynolds Blvd,Norcross GA30093. Page permits adding quantity, but branch-specific stock and pickup reservation unconfirmed. FAQ requires order over$500 for local delivery; this$33 sand order alone does not qualify. No freight or ZIP30510 quote obtained.",
+      "allocation": "Three bags =150lb purchased allowance. Final bag count remains dependent on which sealed tube cavities are filled; not a claim that150lb fills every tube in the chassis.",
+      "status": "Posted goods price; branch availability, pickup arrangement and transport cost unresolved",
+      "include_in_verified_delivered_total": false
+    }
+  ],
+  "additional_retail_offers_note": "Append-only regional offers. $68.00 goods combined is NOT a delivered subtotal and is not included in the prior $2306.67 metal-only published subtotal. MDF price PDF age and local inventory remain open. Browser inventory was empty, preventing ZIP-specific retailer cart checks."
+}

@@ -1,0 +1,117 @@
+{
+  "status": "NOT RELEASED - SOLID GEOMETRY STUDY ONLY",
+  "coordinate_system": "mm; X right, Y rear, Z above floor",
+  "mainframe_nominal_mm": [
+    1150,
+    1450,
+    1050
+  ],
+  "tube_section_mm": [
+    50.8,
+    50.8,
+    3.048
+  ],
+  "rail_cap_thickness_mm": 7.9375,
+  "sheet_normal_thickness_mm": 3.048,
+  "pan_plan_mm": [
+    920,
+    1200
+  ],
+  "pan_rim_z_mm": 835,
+  "pan_floor_bottom_z_mm": {
+    "front": 747,
+    "rear": 735
+  },
+  "pan_floor_slope": 0.01,
+  "fixed_pan_bearer_top_mm": 730,
+  "pan_cradle_gap_mm": {
+    "frontmost_bearer_near_edge": 16,
+    "rearmost_bearer_near_edge": 6
+  },
+  "pan_cradle_status": "HOLD: sloping pan does not rest directly on bearers; measured gaps vary across width of each bearer.",
+  "panel_count": 6,
+  "panel_xy_mm": [
+    500,
+    397
+  ],
+  "deck_xy_mm": [
+    1003,
+    1197
+  ],
+  "deck_x_limits_mm": [
+    73.5,
+    1076.5
+  ],
+  "deck_y_limits_mm": [
+    76.5,
+    1273.5
+  ],
+  "beam_y_centers_mm": [
+    75,
+    475,
+    875,
+    1275
+  ],
+  "beam_bottom_z_mm": 870,
+  "beam_top_z_mm": 920.8,
+  "paired_beam_finished_mm": [
+    1044,
+    101.6,
+    50.8
+  ],
+  "cassette_strip_count": 30,
+  "cassette_strip_outer_mm": [
+    100,
+    397,
+    20
+  ],
+  "strip_end_bearing_each_mm": 49.3,
+  "strip_clear_span_mm": 298.4,
+  "underside_ties_per_panel": 2,
+  "underside_tie_blank_mm": [
+    500,
+    25,
+    6
+  ],
+  "underside_tie_local_y_mm": [
+    75,
+    297
+  ],
+  "bare_workplane_z_mm": 940.8,
+  "optional_mdf_mm": 19,
+  "optional_mdf_workplane_z_mm": 959.8,
+  "stowed_panel_envelope_mm": [
+    397,
+    45,
+    500
+  ],
+  "stowed_panel_x_origins_mm": [
+    130,
+    623
+  ],
+  "stowed_panel_y_origins_mm": [
+    525,
+    580,
+    635
+  ],
+  "stowed_panel_base_z_mm": 150,
+  "stowed_beam_origin_x_mm": 111.5,
+  "stowed_beam_y_centers_mm": [
+    120,
+    230,
+    340,
+    450
+  ],
+  "stowed_beam_origin_z_mm": 185,
+  "stowed_beam_angle_deg": 25,
+  "storage_clear_box_minmax_mm": [
+    75,
+    65,
+    150,
+    1080,
+    745,
+    700
+  ],
+  "profile_source_url": "https://www.amazon.com/dp/B0BXNWK99C",
+  "reference_parameters": "../../bed-system/design-parameters.json"
+}

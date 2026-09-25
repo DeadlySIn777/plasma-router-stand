@@ -1,0 +1,303 @@
+{
+  "revision": "RevE water engineering selection",
+  "observed_local_date": "2026-09-24",
+  "destination_zip": "30510",
+  "currency": "USD",
+  "status": "Engineering selection with explicit unquoted allowances; not a fully delivered purchase quote or hardware-tested release",
+  "charge_limit_litres": 115,
+  "reservoir_gross_litres": 135,
+  "items": [
+    {
+      "id": "W-PUMP",
+      "description": "SEAFLO SFDP2-018-120-31, 24V continuous-duty diaphragm pump",
+      "quantity": 1,
+      "unit_usd": 71.99,
+      "extended_usd": 71.99,
+      "shipping_usd": 0,
+      "price_status": "Observed product page",
+      "shipping_status": "FREE Oct2 delivery displayed to Alto30510; seller ships",
+      "seller": "SEAFLO Direct",
+      "url": "https://www.amazon.com/dp/B0DW67Z14F",
+      "technical_source": "https://seaflolatinamerica.com/wp-content/uploads/2024/03/2018-industrial-pumps-7mcom.pdf",
+      "spec": {
+        "voltage_dc": 24,
+        "open_flow_lpm": 7,
+        "max_current_A": 6,
+        "pressure_switch_psi": 120,
+        "ports": "3/8-18 FNPT",
+        "envelope_mm": [
+          210,
+          86,
+          114.5
+        ],
+        "mount_holes_mm": {
+          "diameter": 5,
+          "longitudinal_pitch": 58,
+          "transverse_pitch": 85,
+          "rear_column_from_tail": 46
+        }
+      },
+      "notes": [
+        "Exact model is in manufacturer's continuous-duty table, printed page04.",
+        "Allow13-18min fill estimate; actual flow must be measured.",
+        "Primary product photo includes another31-series model label; select title/model SFDP2-018-120-31 and receipt-check exact nameplate."
+      ]
+    },
+    {
+      "id": "W-DRAIN",
+      "description": "U.S.Solid USS-MSV00009, 1in NPT SS304 two-wire auto-return NC valve",
+      "quantity": 1,
+      "unit_usd": 59.79,
+      "extended_usd": 59.79,
+      "shipping_usd": 0,
+      "price_status": "Observed product page by root",
+      "shipping_status": "FREE Sep29 to Alto30510",
+      "seller": "The highest quality shop; ships Amazon",
+      "url": "https://www.amazon.com/dp/B06WWR1FRK",
+      "technical_source": "https://ussolid.com/products/u-s-solid-motorized-ball-valve-1-stainless-steel-electrical-ball-valve-with-full-port-9-24-v-ac-dc-2-wire-auto-return-html",
+      "spec": {
+        "supply_used_vdc": 24,
+        "maximum_watts": 5,
+        "operating_time_seconds": [
+          6,
+          8
+        ],
+        "capacitor_charge_seconds_approx": 60,
+        "manual_operation": false,
+        "feedback_contacts": false
+      },
+      "notes": [
+        "Reserve125mm clearance cube; manufacturer port datums/face-to-face dimension not published in recovered source.",
+        "Never assume fail-closed before capacitor charging; entire inventory remains contained in either state."
+      ]
+    },
+    {
+      "id": "W-STRAINER",
+      "description": "SEAFLO SFWS-500-02, 1/2NPT inline strainer, 50mesh316 stainless screen",
+      "quantity": 1,
+      "unit_usd": 19.99,
+      "extended_usd": 19.99,
+      "shipping_usd": 0,
+      "price_status": "Observed product page",
+      "shipping_status": "FREE Sep29 on eligible Amazon-shipped order over35USD, satisfied by listed batch",
+      "seller": "SEAFLO Direct; ships Amazon",
+      "url": "https://www.amazon.com/dp/B0H7K7G8GF",
+      "notes": [
+        "Two1/2NPTmale-to1/2hosebarb fittings included in fitting allowance.",
+        "Clean-bowl removal access required. Sediment must settle before pumping; screen does not remove all abrasive fines."
+      ]
+    },
+    {
+      "id": "W-FLOAT",
+      "description": "FOCMKEAS A250601FTD004, two-pack M10 x65mm stainless vertical float switches",
+      "quantity": 3,
+      "unit_usd": 9.99,
+      "extended_usd": 29.97,
+      "shipping_usd": 0,
+      "price_status": "Observed product page",
+      "shipping_status": "FREE Sep29 on eligible Amazon-shipped order over35USD, satisfied by listed batch",
+      "seller": "Dimove; ships Amazon",
+      "url": "https://www.amazon.com/dp/B0FFG7B54S",
+      "used_quantity": 5,
+      "spare_quantity": 1,
+      "spec": {
+        "stem_total_mm": 65,
+        "float_diameter_mm": 26,
+        "mount_thread": "M10; pitch not specified",
+        "switch_max_A": 0.5,
+        "switch_max_W": 10
+      },
+      "notes": [
+        "Reversible float changes NO/NC state. Low-power relay coils only; no pump/valve direct switching.",
+        "No manufacturer wet-trip datum or tolerance published: adjustable brackets and wet calibration required."
+      ]
+    },
+    {
+      "id": "W-AUX-RELAYS",
+      "description": "Finder 40.52.9.024.0000 DPDT 24 VDC relay with 95.05 DIN socket",
+      "quantity": 6,
+      "unit_usd": 14.87,
+      "extended_usd": 89.22,
+      "shipping_usd": null,
+      "price_status": "Observed distributor relay plus associated socket",
+      "shipping_status": "Shipping to 30510 unquoted",
+      "seller": "VAMRONE; ships Amazon",
+      "url": "https://www.digikey.com/en/products/detail/finder-relays-inc/40-52-9-024-0000/10055849",
+      "used_quantity": 6,
+      "spare_quantity": 0,
+      "notes": [
+        "K_ARM, K_FILL, K_DRAIN, K_MIN, K_EMPTY, K_READY. Published nominal coil current 27 mA; IEC terminal allocation in WATER-ELECTRICAL-REVIEW.md.",
+        "K_ARM requires release of the FILL button before restarting after loss of FILL_ALLOWED.",
+        "No pump load is switched by these auxiliary contacts; controller-interface wetting current remains a design item."
+      ]
+    },
+    {
+      "id": "W-CLOSE-TIMER",
+      "description": "BAOMAIN AH3-3 AC/DC24V 60-second-range power-on-delay timer with socket",
+      "quantity": 1,
+      "unit_usd": 9.99,
+      "extended_usd": 9.99,
+      "shipping_usd": 0,
+      "price_status": "Observed product page",
+      "shipping_status": "FREE Sep29 on eligible Amazon-shipped order over35USD, satisfied by listed batch",
+      "seller": "Baomain; ships Amazon",
+      "url": "https://www.amazon.com/dp/B01JCIA9ME",
+      "notes": [
+        "One timed changeover pole plus one instantaneous pole; do not treat both as timed.",
+        "Use10s for drain close only. Confirm measured delay on delivered unit."
+      ]
+    },
+    {
+      "id": "W-DRAIN-TIMER",
+      "description": "BAOMAIN AH3-3-24V-3Min power-on-delay timer with socket, 24 VDC, 3-minute range",
+      "quantity": 1,
+      "shipping_usd": null,
+      "price_status": "Observed manufacturer offer; exact 3Min variant available",
+      "url": "https://baomain.com/products/baomain-ah3-3-24v?variant=42107472478393",
+      "notes": [
+        "Set nominally to 75 seconds, then measure and adjust to at least 60 seconds.",
+        "Three-minute range replaces the unselected six-minute-range allowance. Same control function; one timed contact plus one instantaneous contact.",
+        "Verify printed terminal diagram and timer DC contact suitability for selected low-power relay coil."
+      ],
+      "unit_usd": 10.79,
+      "extended_usd": 10.79,
+      "shipping_status": "Unquoted to Alto GA 30510; covered by planning reserve, not treated as free"
+    },
+    {
+      "id": "W-MOTOR-RELAYS",
+      "description": "Carlo Gavazzi RM1D060D20 DC solid-state pump switch",
+      "quantity": 2,
+      "shipping_usd": null,
+      "price_status": "Observed distributor exact MPN",
+      "url": "https://www.digikey.com/en/products/detail/carlo-gavazzi-inc/RM1D060D20/13277978",
+      "notes": [
+        "Two series devices, 20 A continuous subject to thermal conditions, 30 A for 1 second repetitive overload.",
+        "Required motor flyback diode, heat-dissipating mounting and measured pump inrush verification. Not a service isolator."
+      ],
+      "unit_usd": 66.5,
+      "extended_usd": 133.0,
+      "shipping_status": "Shipping to 30510 unquoted"
+    },
+    {
+      "id": "W-FITTINGS",
+      "description": "NPT reducer, union, cleanout cap, six barb adapters, short nipples and thread sealant",
+      "quantity": 1,
+      "allowance_usd": 55,
+      "shipping_usd": null,
+      "price_status": "Allowance, final fittings not quoted",
+      "url": null,
+      "takeoff": [
+        "1x1.5FNPT-to1MNPT reducer",
+        "1x1in union",
+        "1x1MNPT-to1in barb",
+        "1x1.5FNPT cleanout cap",
+        "1x1/2FNPT-to1/2in barb",
+        "2x1/2MNPT-to1/2in barb",
+        "2x3/8MNPT-to1/2in barb",
+        "Nipples/sealant as required by actual thread engagement"
+      ],
+      "notes": [
+        "Six barb adapters are enumerated; no separate fitting is needed at the open refill hose outlet.",
+        "Use trueNPT components or documented face-seal adapters; NPSM is not automatically interchangeable."
+      ]
+    },
+    {
+      "id": "W-HOSES",
+      "description": "1.5m1in drain hose,3m1/2in reinforced suction/discharge hose and12stainless clamps",
+      "quantity": 1,
+      "allowance_usd": 35,
+      "shipping_usd": null,
+      "price_status": "Allowance, exact hose/fitting working pressure to verify",
+      "url": null,
+      "notes": [
+        "Pump plumbing at least150PSIworking rating at operating temperature; suction hose must resist collapse.",
+        "Gravity drain hose kept continuously downhill. Refill ends with25mm air gap above pan maximum surface."
+      ]
+    },
+    {
+      "id": "W-WATER-BUTTONS",
+      "description": "Guarded momentary FILL with linked NO+NC contacts, NC STOP, guarded AUTO/DRAIN override and labels",
+      "quantity": 1,
+      "allowance_usd": 20,
+      "shipping_usd": null,
+      "price_status": "Allowance",
+      "url": null,
+      "notes": [
+        "Main keyed ROUTER/OFF/PLASMA and SETUP/RUN controls are shared and excluded here."
+      ]
+    },
+    {
+      "id": "W-BRANCH-WIRING",
+      "description": "Specified branch fuse holders/fuses, MBR20100CTG, ten 1N4007-E3/54, terminals, cable and glands",
+      "quantity": 1,
+      "allowance_usd": 45,
+      "shipping_usd": null,
+      "price_status": "Allowance",
+      "url": null,
+      "notes": [
+        "Exact small-parts quantities in electrical-selection.json; unquoted $45 lot allowance supersedes $22 placeholder.",
+        "No duplicate main E-stop, enclosure, DIN rail, contactor or controller isolation charge. Pump fuse starts at 10 A conductor protection; actual pump instruction and inrush still require checking."
+      ]
+    },
+    {
+      "id": "W-GUARDS",
+      "description": "Float guards, splash baffle, outlet restraint, coarse vent mesh and small mounting consumables",
+      "quantity": 1,
+      "allowance_usd": 12,
+      "shipping_usd": null,
+      "price_status": "Material allowance, fabricated brackets counted in metal/cutlist package",
+      "url": null
+    }
+  ],
+  "shared_controls_reference": {
+    "description": "MEAN WELL LRS-350-24 24V14.6A supply",
+    "quantity": 1,
+    "observed_unit_usd": 31.4,
+    "incremental_water_usd": 0,
+    "url": "https://www.amazon.com/dp/B013ETVO12",
+    "technical_source": "https://www.meanwell.com/Upload/PDF/LRS-350/LRS-350-SPEC.PDF",
+    "shipping": "FREE Sep29 eligible Amazon batch to30510",
+    "seller": "power supply mall; shipsAmazon",
+    "notes": [
+      "Reserve at least8A supply capacity for water functions; count this supply once in common-controls BOM.",
+      "Supplier Amazon dimension order is inconsistent with factory drawing; use factory datasheet for enclosure CAD."
+    ]
+  },
+  "summary": {
+    "observed_goods_usd": 424.74,
+    "observed_shipping_usd": 0,
+    "unquoted_goods_allowance_usd": 167,
+    "unquoted_shipping_reserve_usd": 20,
+    "planning_subtotal_before_tax_usd": 611.74,
+    "previous_allowance_usd": 360,
+    "planning_increase_usd": 251.74,
+    "tax_usd": null,
+    "actual_delivered_total_usd": null
+  },
+  "exclusions": [
+    "Fabricated pan/slats/tank/pipework and brackets counted in metal/cutlist package",
+    "Shared24VPSU/enclosure/DINrail/main stop and tool-power circuits",
+    "Bed-clear/bed-locked mechanisms and sensors owned by overall mechanical design",
+    "Paid fabrication labor above existing project allowance",
+    "Water additives and disposal consumables",
+    "Optional unpowered manual pan-drain bypass"
+  ],
+  "release_items": [
+    "Complete shared selector/contact-block and isolation-interface selection and physical panel layout using the defined terminal allocation.",
+    "Confirm AH3-3 DC contact suitability or substitute a documented timer; terminal mapping is now sourced.",
+    "Verify pump fuse instructions, actual inrush waveform, SSR thermal mounting, supply recovery and suppression heating.",
+    "Define B_CLEAR/B_LOCK keyed confirmation or sensing contacts and their mounting; do not claim automatic fastener-preload verification.",
+    "Verify selected fittings, hose pressure ratings, adjustable assembly lengths and shipping.",
+    "Measure actual fabricated volume and verify the visible overflow vessel; conservative modeled internal-solid displacement 0.592 L is below the 1 L reserve.",
+    "Subsequent commissioning: wet-calibrate floats; test overflow, all-return, stop chain, held-button restart prevention and thermal performance.",
+    "Calibrate the three-minute drain timer to at least 60 seconds; verify short interruption and held-button behavior."
+  ],
+  "reservoir_internal_mm": [
+    900,
+    600,
+    250
+  ],
+  "reservoir_low_trip_above_floor_mm": 55,
+  "reservoir_pickup_axis_above_floor_mm": 25,
+  "reservoir_overflow_crest_above_floor_mm": 242
+}

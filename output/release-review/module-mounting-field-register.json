@@ -1,0 +1,301 @@
+{
+  "observed_date": "2026-09-24",
+  "scope": "Exact Amazon ASINs B0C7GQTRRX (HMS40, 800 mm travel, 10 mm lead), B0C7GN24S1 (HMS40, 1000 mm travel, 10 mm lead), and B09MVYGLNQ (RATTMMOTOR ZBX80, 100 mm travel).",
+  "status": "HMS40 NOMINAL MATING DIMENSIONS RECOVERED; ZBX80 OUTPUT INTERFACE PARTIAL",
+  "definition": "Verified here means a legible nominal dimension printed by the seller on the exact ASIN gallery, not a measured or tolerance-controlled manufacturing dimension. No hole coordinates have been estimated from pixels.",
+  "source_urls": {
+    "hms40_x": "https://www.amazon.com/dp/B0C7GQTRRX?th=1",
+    "hms40_y": "https://www.amazon.com/dp/B0C7GN24S1?th=1",
+    "hms40_envelope_image": "https://m.media-amazon.com/images/I/71NCKGwiHAL._SL1500_.jpg",
+    "hms40_official": "https://www.khmos.com/high-performance-easy-access/hms40",
+    "hms40_2d_download": "https://www.khmos.com/download/1930836141977767936.html",
+    "hms40_3d_download": "https://www.khmos.com/download/1930836162129567744.html",
+    "z": "https://www.amazon.com/dp/B09MVYGLNQ?th=1",
+    "z_top_drawing": "https://m.media-amazon.com/images/I/61WxScULDML._SL1500_.jpg",
+    "z_side_drawing": "https://m.media-amazon.com/images/I/61HH-r4RqQL._SL1500_.jpg",
+    "z_bottom_drawing": "https://m.media-amazon.com/images/I/51wBxuUiRML._SL1500_.jpg",
+    "z_output_hole_identity_image": "https://m.media-amazon.com/images/I/71E5oziXi9L._SL1500_.jpg",
+    "hms40_engineering_drawing": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e029d02f-52aa-453f-bd88-9a2b586ceecb.jpg"
+  },
+  "hms40": {
+    "asins": [
+      "B0C7GQTRRX",
+      "B0C7GN24S1"
+    ],
+    "same_gallery_verified": true,
+    "drawing_path": "sources/HMS40-dimensioned-drawing-2026-02-10.jpg",
+    "nominal_fields": [
+      {
+        "field": "inline motor overall length",
+        "value": "stroke + 201 mm",
+        "use": "S+145 bracket plus 56 motor; supersedes rounded marketing S+200"
+      },
+      {
+        "field": "800 mm overall length",
+        "value_mm": 1001
+      },
+      {
+        "field": "1000 mm overall length",
+        "value_mm": 1201
+      },
+      {
+        "field": "module body length excluding motor bracket",
+        "value": "stroke + 125 mm"
+      },
+      {
+        "field": "carriage along travel × transverse",
+        "value_mm": [
+          65,
+          48
+        ]
+      },
+      {
+        "field": "carriage top above base mounting plane",
+        "value_mm": 65.5
+      },
+      {
+        "field": "carriage top output fasteners",
+        "value": "4 × M4, depth 10 mm"
+      },
+      {
+        "field": "output hole pitch along × transverse",
+        "value_mm": [
+          30,
+          30
+        ]
+      },
+      {
+        "field": "along-travel hole distances from nonmotor carriage face",
+        "value_mm": [
+          16,
+          46
+        ]
+      },
+      {
+        "field": "transverse edge margins",
+        "value_mm": [
+          9,
+          9
+        ],
+        "use": "derived from 48 width and centered 30 pitch"
+      },
+      {
+        "field": "bottom slot nut threads",
+        "value": "M4"
+      },
+      {
+        "field": "bottom slot centerline separation",
+        "value_mm": 28
+      },
+      {
+        "field": "side slot thread",
+        "value": "M3"
+      },
+      {
+        "field": "side slot height from bottom",
+        "value_mm": 19
+      },
+      {
+        "field": "side carriage holes",
+        "value": "4 × M3 depth 6 mm, bilateral; center 32.5 from nonmotor face, first 15 below top, second 10 lower"
+      },
+      {
+        "field": "end cap width / nonmotor height",
+        "value_mm": [
+          42,
+          60
+        ]
+      },
+      {
+        "field": "motor bracket height",
+        "value_mm": 75
+      },
+      {
+        "field": "motor width × length",
+        "value_mm": [
+          57,
+          56
+        ]
+      },
+      {
+        "field": "screw axis above bottom",
+        "value_mm": 45
+      },
+      {
+        "field": "screw diameter / selected lead",
+        "value_mm": [
+          16,
+          10
+        ]
+      },
+      {
+        "field": "800 mm module net mass",
+        "value_kg": 3.9
+      },
+      {
+        "field": "1000 mm module net mass",
+        "value_kg": 4.6
+      },
+      {
+        "field": "printed repeatability",
+        "value": "±0.03 mm",
+        "use": "supplier claim; not finished-machine accuracy"
+      },
+      {
+        "field": "10 mm lead advertised thrust / maximum speed",
+        "value": "251 N / 350 mm/s",
+        "use": "not a motor torque-speed curve or a warranted DIY feed rate"
+      }
+    ],
+    "missing_fields": [
+      "Base slot opening/undercut and actual supplied nut engagement geometry.",
+      "Exact motor current, torque-speed curve and wiring connector/cable envelope.",
+      "Travel-end output-face datum and available overtravel need unambiguous confirmation before homing limits are released.",
+      "Module moment/stiffness qualifications for intended cutting loads; additional guides under engineering review."
+    ],
+    "public_cad_search": "The exact listing A+ detailed engineering drawing was recovered after the earlier main-gallery-only search. It closes carriage-hole thread/depth/pitch, output height, slot centerline and inline-motor geometry gaps. No supplier STEP recovered.",
+    "fabrication_release": false,
+    "drawing_identification": {
+      "title": "HMS40-L□□-S□□-M57-BC",
+      "manufacturer": "Sichuan Khmos Technology Co., Ltd.",
+      "printed_date": "2026-02-10",
+      "variant": "57×56 inline stepper; bracketed dimensions apply to alternate servo flange"
+    }
+  },
+  "zbx80": {
+    "asin": "B09MVYGLNQ",
+    "drawing_paths": [
+      "sources/B09MVYGLNQ-gallery-2.jpg",
+      "sources/B09MVYGLNQ-gallery-3.jpg",
+      "sources/B09MVYGLNQ-gallery-4.jpg"
+    ],
+    "nominal_fields": [
+      {
+        "field": "effective travel",
+        "value_mm": 100,
+        "source": "exact ASIN title and top drawing; drawing placement of this callout is not a usable endpoint datum"
+      },
+      {
+        "field": "overall length including inline motor",
+        "value_mm": 330,
+        "source": "top drawing"
+      },
+      {
+        "field": "base length between outer end faces",
+        "value_mm": 219,
+        "source": "top drawing"
+      },
+      {
+        "field": "length between inside faces of end plates",
+        "value_mm": 195,
+        "source": "side drawing"
+      },
+      {
+        "field": "end plate thickness",
+        "value_mm": 12,
+        "source": "top drawing, both ends"
+      },
+      {
+        "field": "base transverse width",
+        "value_mm": 80,
+        "source": "top and bottom drawings"
+      },
+      {
+        "field": "carriage length along travel",
+        "value_mm": 50,
+        "source": "top and side drawings"
+      },
+      {
+        "field": "carriage transverse width",
+        "value_mm": 90,
+        "source": "top drawing"
+      },
+      {
+        "field": "motor width",
+        "value_mm": 57,
+        "source": "top drawing"
+      },
+      {
+        "field": "nonmotor end plate height from bottom plane",
+        "value_mm": 67,
+        "source": "side drawing"
+      },
+      {
+        "field": "motor end plate height from bottom plane",
+        "value_mm": 78,
+        "source": "side drawing"
+      },
+      {
+        "field": "base extrusion height",
+        "value_mm": 20,
+        "source": "side drawing"
+      },
+      {
+        "field": "carriage body height",
+        "value_mm": 35,
+        "source": "side drawing; not mounting-plane-to-carriage-output height"
+      },
+      {
+        "field": "base fastening nuts",
+        "value": "M5 movable nuts, bottom and side slots",
+        "source": "side drawing and gallery 5"
+      },
+      {
+        "field": "output fixing hole count",
+        "value": 4,
+        "source": "gallery 8 labels four corner holes; no full coordinate schedule"
+      },
+      {
+        "field": "small hole diameter notation",
+        "value_mm": 5,
+        "source": "top drawing uses diameter symbol, not a thread callout"
+      },
+      {
+        "field": "small hole transverse separation",
+        "value_mm": 70,
+        "source": "top drawing dimension only; not a complete 70 by unknown rectangle pattern"
+      },
+      {
+        "field": "larger hole diameter notation",
+        "value_mm": 7,
+        "source": "top drawing; these holes are not established as usable output mounting holes"
+      },
+      {
+        "field": "bottom drawing additional width annotations",
+        "value_mm": [
+          14,
+          26,
+          54,
+          66
+        ],
+        "source": "bottom drawing",
+        "use": "retain as uninterpreted profile annotations; no slot centerline pitch inferred"
+      }
+    ],
+    "missing_fields": [
+      "Output fixing hole coordinates along travel, exact thread form/size and engagement depth; diameter5 label does not establish M5 thread.",
+      "Complete output-hole datum and tolerance scheme; do not derive symmetric offsets or an absent rectangle dimension.",
+      "Base slot centerline pitch, slot opening/undercut and nut geometry; bottom annotations are not sufficient for a complete mounting interface.",
+      "Assembled bottom mounting plane to carriage output face height.",
+      "Carriage center location at both usable travel endpoints, end clearance and limit-switch overtravel.",
+      "Motor connector/lead exit swept volume and minimum cable bend radius.",
+      "Revision-controlled manufacturing drawing or STEP linked to this exact 100 mm product."
+    ],
+    "inconsistency": "Gallery 5 calls the extrusion '30150' although dimensioned drawings show 80 mm base width. Treat that label as conflicting marketing text, not alternate geometry. Photos appear to show threaded corner output holes, while the top sketch only labels diameter5; supplier must reconcile.",
+    "public_cad_search": "Main gallery and all observed A+ source images inspected. None publishes the missing along-travel output-hole pitch, usable tapped depth or assembled output height. An unverified customer-reported 30 mm pitch is deliberately not used as a manufacturing dimension.",
+    "fabrication_release": false
+  },
+  "action_before_order": "Complete the Rev E mating/support design from the recovered nominal drawings, resolve remaining Z output interface and actual motor/plasma interfaces, then reconcile BOM, geometry and commissioning requirements. Recovery of a drawing is not validation of the entire machine.",
+  "actions_performed": {
+    "supplier_messages": false,
+    "purchases": false,
+    "pixel_derived_dimensions": false
+  },
+  "drawing_hashes_sha256": {
+    "HMS40-dimensioned-drawing-2026-02-10.jpg": "fc1235138b5f3224c5a92d9ff1a0a78fe0fa23767d31b5e39582c06eeba7df1a",
+    "IXGNIJ-20100-section.jpg": "1ab52141f6167b4ab8a535fe97ebbf2f104341e12b6bc3cc36a81dd062955b69",
+    "B09MVYGLNQ-gallery-2.jpg": "7438f858f4694965e4a6fbb0c03acd4b66071d94d9b8cee21576d02e3c4c8dd3",
+    "B09MVYGLNQ-gallery-3.jpg": "4cebbf0621a8e22ac5bdc3eb0bac914ce706fe6338098f4334e5b683c65382f2",
+    "B09MVYGLNQ-gallery-4.jpg": "6c29288b37b625de54ed8d832e98b027ac3ae089b718a3b760982c8a3e05b5a3"
+  }
+}

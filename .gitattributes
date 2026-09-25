@@ -1,0 +1,10 @@
+# Preserve source bytes: validation records contain SHA-256 hashes.
+* -text
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.xlsx binary
+*.bin binary
+*.elf binary
+*.step -diff -merge

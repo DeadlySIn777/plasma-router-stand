@@ -1,0 +1,552 @@
+{
+  "revision": "C",
+  "observed_date": "2026-09-24",
+  "currency": "USD",
+  "destination": "Alto, Georgia30510",
+  "status": "Source-backed takeoff and price benchmarks, not released drawings or delivered quotations",
+  "amazon_first": "Searched first; no verified exact1200mm standard8080 or497x397x8mmplate price obtained",
+  "takeoff": [
+    {
+      "id": "top_y_tubes",
+      "material": "2 x2 x.120 steel tube",
+      "quantity": 2,
+      "dimensions_mm": [
+        1450
+      ]
+    },
+    {
+      "id": "receiver_ledgers",
+      "material": "2 x2 x.120 steel tube",
+      "quantity": 2,
+      "dimensions_mm": [
+        1450
+      ]
+    },
+    {
+      "id": "legs",
+      "material": "2 x2 x.120 steel tube",
+      "quantity": 6,
+      "dimensions_mm": [
+        949.2
+      ]
+    },
+    {
+      "id": "lower_side_ties",
+      "material": "2 x2 x.120 steel tube",
+      "quantity": 4,
+      "dimensions_mm": [
+        648.8
+      ]
+    },
+    {
+      "id": "end_ties",
+      "material": "2 x2 x.120 steel tube",
+      "quantity": 4,
+      "dimensions_mm": [
+        1048.4
+      ]
+    },
+    {
+      "id": "pan_bearer_tubes",
+      "material": "2 x2 x.120 steel tube",
+      "quantity": 3,
+      "dimensions_mm": [
+        1032.4
+      ]
+    },
+    {
+      "id": "bridge_tube_blanks",
+      "material": "2 x2 x.120 steel tube",
+      "quantity": 8,
+      "dimensions_mm": [
+        1032
+      ]
+    },
+    {
+      "id": "panel_long_members",
+      "material": "25 x25 x2 steel tube",
+      "quantity": 12,
+      "dimensions_mm": [
+        497
+      ]
+    },
+    {
+      "id": "panel_short_members",
+      "material": "25 x25 x2 steel tube",
+      "quantity": 18,
+      "dimensions_mm": [
+        347
+      ]
+    },
+    {
+      "id": "side_braces_front",
+      "material": "30 x30 x3 steel angle",
+      "quantity": 2,
+      "dimensions_mm": [
+        907.331
+      ]
+    },
+    {
+      "id": "side_braces_rear",
+      "material": "30 x30 x3 steel angle",
+      "quantity": 2,
+      "dimensions_mm": [
+        904.06
+      ]
+    },
+    {
+      "id": "rear_brace",
+      "material": "30 x30 x3 steel angle",
+      "quantity": 1,
+      "dimensions_mm": [
+        1206.493
+      ]
+    },
+    {
+      "id": "rail_caps",
+      "material": "steel plate",
+      "quantity": 2,
+      "dimensions_mm": [
+        1450,
+        100,
+        8
+      ]
+    },
+    {
+      "id": "beam_diaphragms",
+      "material": "steel plate",
+      "quantity": 8,
+      "dimensions_mm": [
+        101.6,
+        50.8,
+        6
+      ]
+    },
+    {
+      "id": "base_plates",
+      "material": "steel plate",
+      "quantity": 6,
+      "dimensions_mm": [
+        80,
+        80,
+        12
+      ]
+    },
+    {
+      "id": "deck_subplates",
+      "material": "aluminum; alloy and flatness to specify",
+      "quantity": 6,
+      "dimensions_mm": [
+        497,
+        397,
+        8
+      ]
+    },
+    {
+      "id": "deck_mdf",
+      "material": "MDF",
+      "quantity": 6,
+      "dimensions_mm": [
+        497,
+        397,
+        19
+      ]
+    },
+    {
+      "id": "gantry_extrusion",
+      "material": "documented standard8080 aluminum extrusion",
+      "quantity": 1,
+      "dimensions_mm": [
+        1200
+      ]
+    },
+    {
+      "id": "slats",
+      "material": "steel sheet",
+      "quantity": 19,
+      "dimensions_mm": [
+        880,
+        75,
+        3
+      ]
+    },
+    {
+      "id": "pan",
+      "material": "fabricated3mmsteel; external envelope",
+      "quantity": 1,
+      "dimensions_mm": [
+        920,
+        1200,
+        100
+      ]
+    },
+    {
+      "id": "reservoir",
+      "material": "compatible vented material; internal envelope",
+      "quantity": 1,
+      "dimensions_mm": [
+        900,
+        500,
+        350
+      ]
+    },
+    {
+      "id": "front_light_covers",
+      "material": "1.5–2mm flangedAl; nominalface; thicknessvisual ignored",
+      "quantity": 2,
+      "dimensions_mm": [
+        503,
+        566
+      ]
+    },
+    {
+      "id": "side_skins",
+      "material": "1.5–2mm flangedAl; nominalface",
+      "quantity": 4,
+      "dimensions_mm": [
+        615,
+        498
+      ]
+    }
+  ],
+  "stationary_2in_tube_m": 18.284,
+  "total_2in_tube_m": 29.6372,
+  "panel_25mm_tube_m": 12.21,
+  "brace_angle_centerline_m": 4.829275925459,
+  "sand_kg_estimate": 58,
+  "stock_nesting_file": "cut_stock_check.json",
+  "price_options": [
+    {
+      "id": "tube_local_benchmark",
+      "supplier": "Looper’s Metal Works",
+      "description": "2 x 2 11-gauge tube, 20 ft",
+      "unit_price_usd": 80.6,
+      "purchase_quantity": 5,
+      "extended_usd": 403.0,
+      "url": "https://www.loopersmetalworks.com/metal-products/",
+      "match": "confirm actual .120 wall",
+      "notes": "Oklahoma stock-price benchmark dated2026-09-17; cuts $3 each; not Georgia delivered price.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    },
+    {
+      "id": "tube_bobco_benchmark",
+      "supplier": "Bobco",
+      "description": "2 x 2 x .120 A500B tube, 20 ft",
+      "unit_price_usd": 97.5,
+      "purchase_quantity": 5,
+      "extended_usd": 487.5,
+      "url": "https://www.bobcometal.com/hot-rolled-steel-square-tube-2-inch-x-0-12.html",
+      "match": "exact",
+      "notes": "Los Angeles pickup listing; freight to Georgia unknown.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "supplier search-index listing; direct open403"
+    },
+    {
+      "id": "tube_olm20",
+      "supplier": "Online Metals",
+      "description": "2 x 2 x .120 A500/A513 tube, 20 ft",
+      "unit_price_usd": 202.3,
+      "purchase_quantity": 5,
+      "extended_usd": 1011.5,
+      "url": "https://www.onlinemetals.com/en/buy/carbon-steel/2-x-0-12-carbon-steel-square-tube-a500-a513-hot-rolled/pid/10343",
+      "match": "exact",
+      "notes": "Confirm actual supplied ASTM grade; processing and freight extra.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    },
+    {
+      "id": "tube_olm12",
+      "supplier": "Online Metals",
+      "description": "2 x 2 x .120 A500/A513 tube, 12 ft",
+      "unit_price_usd": 100.72,
+      "purchase_quantity": 9,
+      "extended_usd": 906.48,
+      "url": "https://www.onlinemetals.com/en/buy/carbon-steel/2-x-0-12-carbon-steel-square-tube-a500-a513-hot-rolled/pid/10343",
+      "match": "exact",
+      "notes": "Alternative stock nesting, not additional to five20ft bars.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    },
+    {
+      "id": "panel_tube_metric",
+      "supplier": "Parker Steel / Metric Metal",
+      "description": "25 x 25 x 2 metric square tube cut list",
+      "unit_price_usd": null,
+      "purchase_quantity": 1,
+      "extended_usd": null,
+      "url": "https://www.metricmetal.com/wp-content/uploads/2024/05/RG-201123-FULL-CATALOG-COMPRESSED.pdf",
+      "match": "exact",
+      "notes": "Catalog lists size,1.442kg/m; current stock, length options and price require quote.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "official catalog"
+    },
+    {
+      "id": "panel_tube_imperial",
+      "supplier": "Online Metals / A-Z Metals",
+      "description": "1 x 1 x .083 tube, 60 inches",
+      "unit_price_usd": 15.58,
+      "purchase_quantity": 9,
+      "extended_usd": 140.22,
+      "url": "https://www.onlinemetals.com/en/buy/carbon-steel/1-inch-x-083-inch-carbon-steel-square-tube-a500-a513/pid/mp-00064364",
+      "match": "dimensional substitution",
+      "notes": "25.4mm external,2.1082mm wall; changes innercuts to346.2mm and stack+.4mm. Page says2business-day ship lead fromMesaAZ; arrival unknown.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    },
+    {
+      "id": "brace_angle_imperial",
+      "supplier": "Steel Supply LP",
+      "description": "1.25 x 1.25 x .125 angle, 20 ft",
+      "unit_price_usd": 24.19,
+      "purchase_quantity": 1,
+      "extended_usd": 24.19,
+      "url": "https://www.steelsupplylp.com/sku/100002",
+      "match": "dimensional substitution",
+      "notes": "31.75 x31.75 x3.175 differs from30 x30 x3. Freight shipment; page stock messaging ambiguous.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    },
+    {
+      "id": "pan_slat_sheet_benchmark",
+      "supplier": "Looper’s Metal Works",
+      "description": "11-gauge 4 x 8 ft raw steel sheet",
+      "unit_price_usd": 173.6,
+      "purchase_quantity": 2,
+      "extended_usd": 347.2,
+      "url": "https://www.loopersmetalworks.com/metal-products/",
+      "match": "dimensional substitution",
+      "notes": "Oklahoma benchmark; confirm wall for3mm design. Separate pan/slat nesting. Shearing, bending, welding, fittings and leak test extra.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    },
+    {
+      "id": "slat_flat_alternative",
+      "supplier": "Online Metals",
+      "description": "3 x 1/8 inch flat bar, 72 inches",
+      "unit_price_usd": 18.14,
+      "purchase_quantity": 10,
+      "extended_usd": 181.4,
+      "url": "https://www.onlinemetals.com/en/buy/carbon-steel/0-125-x-3-carbon-steel-rectangle-bar-commercial-quality-hot-rolled/pid/10007",
+      "match": "dimensional substitution",
+      "notes": "Yields20 x880mm slats including one spare;76.2mm high x3.175 thick requires dimensional adjustment. Alternative to sheet-cut slats.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    },
+    {
+      "id": "panel_al_8mm",
+      "supplier": "Online Metals",
+      "description": "8mm5754 plate, 24 x36 inches",
+      "unit_price_usd": 902.42,
+      "purchase_quantity": 3,
+      "extended_usd": 2707.26,
+      "url": "https://www.onlinemetals.com/en/buy/aluminum/8mm-aluminum-plate-grade-5754/pid/29508",
+      "match": "exact thickness; alloy and flatness pending",
+      "notes": "Three blanks yield two panels each. Public high-cost comparison; obtain local finished-blank quote first.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    },
+    {
+      "id": "panel_al_5_16",
+      "supplier": "Online Metals",
+      "description": "5/16-inch6061-T651 plate, 48 x48 inches",
+      "unit_price_usd": 759.54,
+      "purchase_quantity": 1,
+      "extended_usd": 759.54,
+      "url": "https://www.onlinemetals.com/en/buy/aluminum/0-3125-aluminum-plate-6061-t651/pid/14480",
+      "match": "dimensional substitution",
+      "notes": "7.9375mm vs8mm; six panels nest2 x3. Latest directly readable759.54 supersedes indexed915.25. Cutting and datum finishing extra.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    },
+    {
+      "id": "gantry_8080",
+      "supplier": "80/20",
+      "description": "40-8080 standard extrusion, cut1200mm",
+      "unit_price_usd": 151.73,
+      "purchase_quantity": 1,
+      "extended_usd": 151.73,
+      "url": "https://8020.net/40-8080.html",
+      "match": "exact",
+      "notes": "Calculated from0.1231USD/mm plus4.01cut.6063-T6,Ix=Iy171.6341cm4,about7.64kg for1200mm. Shipping,taps/machining extra.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    },
+    {
+      "id": "skins_al_bci",
+      "supplier": "BCI Imaging Supplies",
+      "description": ".080-inch5052-H32, 48 x96 inches",
+      "unit_price_usd": 510.0,
+      "purchase_quantity": 1,
+      "extended_usd": 510.0,
+      "url": "https://bciimage.com/product/aluminium-sheet-080-5052-h32-0-08-x-48-x-96/",
+      "match": "2.032mm near-size stock",
+      "notes": "For external faces only pending final unfolded shapes. Supplier says oversized shipping requires quote; not free delivery.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    },
+    {
+      "id": "skins_al_benchmark",
+      "supplier": "Looper’s Metal Works",
+      "description": ".080-inch5052, 4 x10 ft sheet",
+      "unit_price_usd": 254.64,
+      "purchase_quantity": 1,
+      "extended_usd": 254.64,
+      "url": "https://www.loopersmetalworks.com/metal-products/",
+      "match": "2.032mm near-size stock",
+      "notes": "Oklahoma raw material benchmark; fabrication and freight extra; availability to confirm.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    },
+    {
+      "id": "mdf",
+      "supplier": "Home Depot",
+      "description": "3/4-inch MDF nominal4 x8 ft actual49 x97 inches",
+      "unit_price_usd": null,
+      "purchase_quantity": 1,
+      "extended_usd": null,
+      "url": "https://www.homedepot.com/p/309177124",
+      "match": "19.05mm near-size stock",
+      "notes": "No price observable; store stock and pickup/delivery price to confirm. One sheet yields six plus spares.",
+      "shipping_usd": null,
+      "delivery_to_30510": "Unquoted/unconfirmed",
+      "evidence": "direct page"
+    }
+  ],
+  "unpriced_or_unreleased": [
+    {
+      "id": "pan_bearer_end_plates",
+      "qty": 6,
+      "material": "8mm steel",
+      "status": "outline,bolts,fitclearance unresolved"
+    },
+    {
+      "id": "beam_riser_feet",
+      "qty": 8,
+      "finished_rise_mm": 30,
+      "render_envelope_mm": [
+        40,
+        90,
+        30
+      ],
+      "status": "finalconstruction/contactpads unresolved; do not assume solid blocks"
+    },
+    {
+      "id": "rack_cabinet_supports",
+      "qty": 1,
+      "clear_space_mm": [
+        1005,
+        550,
+        680
+      ],
+      "status": "loadbearingrackcrossmembers separate from light skins; fabricationquote"
+    },
+    {
+      "id": "cabinet_liners_shields",
+      "qty": 1,
+      "status": "unfoldedblanks/area unresolved; no5mmcabinet counted"
+    },
+    {
+      "id": "reservoir_fabrication",
+      "qty": 1,
+      "status": "wallmaterial/thickness,baffles,sump,lid,vent,fittings,shelf unspecified"
+    },
+    {
+      "id": "interface_plates_hardware",
+      "qty": null,
+      "status": "gantryheadadapters,receiverseats,datum pads,gussets,caps,bungs,locators,clamps and fasteners pending drawings"
+    },
+    {
+      "id": "finish_fabrication",
+      "qty": 1,
+      "status": "cuts,welding,datum finishing,panleaktest,powdercoat/paint remain quote-required"
+    },
+    {
+      "id": "shipping_tax",
+      "qty": 1,
+      "status": "no supplier freight amount to30510 obtained; not zero"
+    }
+  ],
+  "regional_suppliers": [
+    {
+      "name": "SteelMart Gainesville",
+      "url": "https://steelmartatlanta.com/steelmart-gainesville-ga/",
+      "address": "455 Industrial Boulevard,GainesvilleGA30501",
+      "phone": "770-297-6675",
+      "price": "quote required",
+      "fulfillment": "willcall,countercuts,deliveryoffered;Altochargeunconfirmed"
+    },
+    {
+      "name": "Metal Supermarkets Buford",
+      "url": "https://www.metalsupermarkets.com/location/buford/",
+      "address": "4908 Golden Parkway,Suite400,BufordGA30518",
+      "price": "quote required",
+      "fulfillment": "cut-to-size;Corneliainservicearea;Altochargeunconfirmed"
+    },
+    {
+      "name": "Cherokee Steel",
+      "url": "https://cherokeesteel.com/",
+      "address": "196 Leroy Anderson Road,MonroeGA30655",
+      "phone": "770-207-4621",
+      "price": "quote required",
+      "fulfillment": "bandsaw,platesaw,waterjet;freightunconfirmed"
+    }
+  ],
+  "total_price": null,
+  "total_note": "Alternative rows must not be added together; incomplete fabrication and freight scope.",
+  "procurement_addendum": {
+    "title": "US-stock procurement adjustments to Rev C",
+    "status": "Procurement adaptation for quoting; original concept drawings unchanged",
+    "preferred_quote_route": "Local cut-to-size stock; quote both metric original and US-stock adaptation. No local dollar allowance represented as a supplier quote.",
+    "panel_tube": {
+      "section_in": [
+        1,
+        1,
+        0.083
+      ],
+      "quantity_long": 12,
+      "long_cut_mm": 497,
+      "quantity_short": 18,
+      "short_cut_mm": 346.2,
+      "net_length_m": 12.1956
+    },
+    "panel_subplate_mm": [
+      497,
+      397,
+      7.9375
+    ],
+    "mdf_nominal_mm": [
+      497,
+      397,
+      19.05
+    ],
+    "panel_raw_stack_mm": 52.3875,
+    "router_top_before_skim_mm": 973.1875,
+    "rail_cap": {
+      "quantity": 2,
+      "nominal_dimensions_mm": [
+        1450,
+        100,
+        7.9375
+      ],
+      "cap_datum_delta_mm": -0.0625
+    },
+    "unknowns": "Actual stock tolerances, finished geometry, bed skim, contact sleeves/clamps and complete tool clearance require verification.",
+    "metric_8mm5754_price_role": "Rejected high-price benchmark, excluded from proposed purchasing subtotal",
+    "small_tube_stock_options": "Prefer2 x24ft if stocked; or2 x20ft plus a short drop. Do not silently use only2 x20ft:12.1956m finished still exceeds12.192m before kerf."
+  }
+}

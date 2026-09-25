@@ -1,0 +1,248 @@
+{
+  "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\tube-cut-plan.json",
+  "source_sha256": "9a6bc6754cc5a762990a42158d97b4833bd8c7555a7156e22793161392778038",
+  "calculation_date": "2026-09-24",
+  "stock": "2 x 2 inch square steel tube; existing model wall 0.120 inch",
+  "candidate_advertised_wall": "1/8 inch, seller claim; grade and actual measured wall unverified",
+  "stock_qty": 5,
+  "bar_length_mm": 7315.2,
+  "kerf_per_cut_mm": 3.0,
+  "trim_per_bar_mm": 10.0,
+  "part_count": 36,
+  "net_length_mm": 35976.8,
+  "five_24ft_fit": true,
+  "min_offcut_mm": 73.0,
+  "total_offcut_mm": 441.2,
+  "candidate_goods_usd": 575.0,
+  "prior_six_20ft_goods_usd": 930.9,
+  "candidate_goods_difference_usd": 355.9,
+  "verification": "All 36 source blanks assigned exactly once. All five bars fit with 3 mm kerf per blank and 10 mm total end trim per bar.",
+  "limitations": "Blank-length feasibility only. Seller claims and usable lengths must be verified. Weathering/straightness/coating/grade are unqualified. Wall is advertised 1/8 inch, not verified 0.120 inch; qualify against design before substitution. Pickup, tax, inspection and cleanup are not priced. No CAD or purchase total changed.",
+  "bars": [
+    {
+      "bar": 1,
+      "cuts": [
+        {
+          "part": "MF_TOP_Y_1",
+          "copy": 1,
+          "length_mm": 1450.0
+        },
+        {
+          "part": "MF_LEG_1_1",
+          "copy": 1,
+          "length_mm": 949.2
+        },
+        {
+          "part": "MF_LEG_1_2",
+          "copy": 1,
+          "length_mm": 949.2
+        },
+        {
+          "part": "MF_LEG_1_3",
+          "copy": 1,
+          "length_mm": 949.2
+        },
+        {
+          "part": "MF_LEG_2_1",
+          "copy": 1,
+          "length_mm": 949.2
+        },
+        {
+          "part": "MF_LOWER_SIDE_1_1",
+          "copy": 1,
+          "length_mm": 648.8
+        },
+        {
+          "part": "MF_LOWER_SIDE_1_2",
+          "copy": 1,
+          "length_mm": 648.8
+        },
+        {
+          "part": "MF_LOWER_SIDE_2_1",
+          "copy": 1,
+          "length_mm": 648.8
+        }
+      ],
+      "net_mm": 7193.2,
+      "kerf_total_mm": 24,
+      "end_trim_total_mm": 10,
+      "offcut_mm": 88.0
+    },
+    {
+      "bar": 2,
+      "cuts": [
+        {
+          "part": "MF_TOP_Y_2",
+          "copy": 1,
+          "length_mm": 1450.0
+        },
+        {
+          "part": "MF_END_FRONT_LOW",
+          "copy": 1,
+          "length_mm": 1048.4
+        },
+        {
+          "part": "MF_END_REAR_LOW",
+          "copy": 1,
+          "length_mm": 1048.4
+        },
+        {
+          "part": "RACK_PANEL_TUBE",
+          "copy": 1,
+          "length_mm": 1036.4
+        },
+        {
+          "part": "BEAM_1_TUBE_1",
+          "copy": 1,
+          "length_mm": 1016
+        },
+        {
+          "part": "MF_LEG_2_2",
+          "copy": 1,
+          "length_mm": 949.2
+        },
+        {
+          "part": "MF_LOWER_SIDE_2_2",
+          "copy": 1,
+          "length_mm": 648.8
+        }
+      ],
+      "net_mm": 7197.2,
+      "kerf_total_mm": 21,
+      "end_trim_total_mm": 10,
+      "offcut_mm": 87.0
+    },
+    {
+      "bar": 3,
+      "cuts": [
+        {
+          "part": "MF_RECEIVER_LEDGER_1",
+          "copy": 1,
+          "length_mm": 1450.0
+        },
+        {
+          "part": "MF_END_FRONT_UPPER",
+          "copy": 1,
+          "length_mm": 1048.4
+        },
+        {
+          "part": "MF_END_REAR_UPPER",
+          "copy": 1,
+          "length_mm": 1048.4
+        },
+        {
+          "part": "RACK_PANEL_TUBE",
+          "copy": 2,
+          "length_mm": 1036.4
+        },
+        {
+          "part": "BEAM_1_TUBE_2",
+          "copy": 1,
+          "length_mm": 1016
+        },
+        {
+          "part": "MF_LEG_2_3",
+          "copy": 1,
+          "length_mm": 949.2
+        },
+        {
+          "part": "TS_OUTER_TIE",
+          "copy": 1,
+          "length_mm": 648.8
+        }
+      ],
+      "net_mm": 7197.2,
+      "kerf_total_mm": 21,
+      "end_trim_total_mm": 10,
+      "offcut_mm": 87.0
+    },
+    {
+      "bar": 4,
+      "cuts": [
+        {
+          "part": "MF_RECEIVER_LEDGER_2",
+          "copy": 1,
+          "length_mm": 1450.0
+        },
+        {
+          "part": "TS_CROSS",
+          "copy": 1,
+          "length_mm": 1048.4
+        },
+        {
+          "part": "BEAM_2_TUBE_1",
+          "copy": 1,
+          "length_mm": 1016
+        },
+        {
+          "part": "BEAM_2_TUBE_2",
+          "copy": 1,
+          "length_mm": 1016
+        },
+        {
+          "part": "BEAM_3_TUBE_1",
+          "copy": 1,
+          "length_mm": 1016
+        },
+        {
+          "part": "BEAM_3_TUBE_2",
+          "copy": 1,
+          "length_mm": 1016
+        },
+        {
+          "part": "TS_OUTER_TIE",
+          "copy": 2,
+          "length_mm": 648.8
+        }
+      ],
+      "net_mm": 7211.2,
+      "kerf_total_mm": 21,
+      "end_trim_total_mm": 10,
+      "offcut_mm": 73.0
+    },
+    {
+      "bar": 5,
+      "cuts": [
+        {
+          "part": "TS_CROSS",
+          "copy": 2,
+          "length_mm": 1048.4
+        },
+        {
+          "part": "TS_CROSS",
+          "copy": 3,
+          "length_mm": 1048.4
+        },
+        {
+          "part": "PAN_BEARER_1",
+          "copy": 1,
+          "length_mm": 1016.4
+        },
+        {
+          "part": "PAN_BEARER_2",
+          "copy": 1,
+          "length_mm": 1016.4
+        },
+        {
+          "part": "PAN_BEARER_3",
+          "copy": 1,
+          "length_mm": 1016.4
+        },
+        {
+          "part": "BEAM_4_TUBE_1",
+          "copy": 1,
+          "length_mm": 1016
+        },
+        {
+          "part": "BEAM_4_TUBE_2",
+          "copy": 1,
+          "length_mm": 1016
+        }
+      ],
+      "net_mm": 7178.0,
+      "kerf_total_mm": 21,
+      "end_trim_total_mm": 10,
+      "offcut_mm": 106.2
+    }
+  ]
+}

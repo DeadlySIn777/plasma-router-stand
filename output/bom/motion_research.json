@@ -1,0 +1,142 @@
+{
+  "bom_revision": "C",
+  "observed_date": "2026-09-24",
+  "observed_at_utc": "2026-09-24T19:02:59Z",
+  "requested_currency": "USD",
+  "shipping_destination": {
+    "city": "Alto",
+    "region": "Georgia",
+    "postal_code": "30510",
+    "country": "US"
+  },
+  "destination_applied_to_amazon_session": true,
+  "delivered_total_verified": false,
+  "method": "Direct read-only Amazon.com product HTML retrieved on 2026-09-24 explicitly displays Delivering to Alto 30510 and featured new offers with FREE delivery. No cart or purchase actions were performed.",
+  "items": [
+    {
+      "item": "X axis KHMOS HMS40 ball-screw linear module, 800 mm stroke, 10 mm lead",
+      "quantity": 1,
+      "asin": "B0C7GQTRRX",
+      "url": "https://www.amazon.com/dp/B0C7GQTRRX",
+      "currency": "USD",
+      "observable_unit_price": 236.0,
+      "observable_line_price": 236.0,
+      "price_status": "Current featured new offer, displayed for Alto 30510; no coupon deducted.",
+      "shipping_amount": 0,
+      "shipping_status": "FREE delivery advertised to Alto 30510. Final checkout total and tax are not verified.",
+      "observed_date": "2026-09-24",
+      "included_confirmed": [
+        "800 mm stroke, 10 mm lead HMS40 module",
+        "NEMA23 stepper motor"
+      ],
+      "conditional_accessories": "A+ section advertises a limited 100-customer free driver and photoelectric switch promotion requiring contact with the seller. Eligibility and quantity are not verified; do not assume included for this BOM.",
+      "uncertainty": [
+        "Sales tax and final checkout total not verified",
+        "Accessories and coupon eligibility as noted"
+      ],
+      "seller": "KHMOS",
+      "ships_from": "Amazon",
+      "availability": "Only 2 left",
+      "delivery_advertised": "2026-09-29 standard free delivery; faster Prime options shown",
+      "raw_evidence_path": "C:\\Users\\Gluis\\AppData\\Local\\Temp\\amazon-B0C7GQTRRX.txt"
+    },
+    {
+      "item": "Dual Y axis KHMOS HMS40 ball-screw linear module, 1000 mm stroke, 10 mm lead",
+      "quantity": 2,
+      "asin": "B0C7GN24S1",
+      "url": "https://www.amazon.com/dp/B0C7GN24S1",
+      "currency": "USD",
+      "observable_unit_price": 260.0,
+      "observable_line_price": 520.0,
+      "price_status": "Current featured new offer, displayed for Alto 30510; no coupon deducted.",
+      "shipping_amount": 0,
+      "shipping_status": "FREE delivery advertised to Alto 30510. Final checkout total and tax are not verified.",
+      "observed_date": "2026-09-24",
+      "included_confirmed": [
+        "1000 mm stroke, 10 mm lead HMS40 module per unit",
+        "One NEMA23 stepper motor per unit"
+      ],
+      "conditional_accessories": "A+ section advertises a limited 100-customer free driver and photoelectric switch promotion requiring contact with the seller. Eligibility and quantity are not verified; do not assume included for this BOM.",
+      "uncertainty": [
+        "Sales tax and final checkout total not verified",
+        "Accessories and coupon eligibility as noted"
+      ],
+      "seller": "KHMOS",
+      "ships_from": "Amazon",
+      "availability": "Only 4 left",
+      "delivery_advertised": "2026-09-29 standard free delivery; faster Prime options shown",
+      "raw_evidence_path": "C:\\Users\\Gluis\\AppData\\Local\\Temp\\amazon-B0C7GN24S1.txt"
+    },
+    {
+      "item": "Z axis RATTMMOTOR ZBX80 linear stage, 100 mm stroke, SFU1605 ball screw",
+      "quantity": 1,
+      "asin": "B09MVYGLNQ",
+      "url": "https://www.amazon.com/dp/B09MVYGLNQ",
+      "currency": "USD",
+      "observable_unit_price": 112.0,
+      "observable_line_price": 112.0,
+      "price_status": "Current featured new offer, displayed for Alto 30510; no coupon deducted.",
+      "shipping_amount": 0,
+      "advertised_shipping_amount": 0.0,
+      "shipping_status": "FREE delivery advertised to Alto 30510. Final checkout total and tax are not verified.",
+      "observed_date": "2026-09-24",
+      "included_confirmed": [
+        "100 mm ZBX80 module with SFU1605 ball screw",
+        "NEMA23 57 x 57 x 56 mm stepper motor, advertised 1.2 N m and 3 A",
+        "Motor bracket and coupling described with assembly"
+      ],
+      "included_not_confirmed": [
+        "Stepper driver",
+        "Power supply",
+        "Home or limit switches",
+        "Spindle clamp",
+        "CNC controller"
+      ],
+      "uncertainty": [
+        "Sales tax and final checkout total not verified",
+        "Accessories and coupon eligibility as noted"
+      ],
+      "price_evidence_excerpt": "Featured new offer USD 112.00, FREE delivery Tuesday September 29, Delivering to Alto 30510",
+      "seller": "Kuku Tech",
+      "ships_from": "Amazon",
+      "availability": "In Stock",
+      "delivery_advertised": "2026-09-29 standard free delivery; faster Prime options shown",
+      "raw_evidence_path": "C:\\Users\\Gluis\\AppData\\Local\\Temp\\amazon-B09MVYGLNQ.txt",
+      "conditional_coupon": "5% coupon displayed; not applied or deducted"
+    }
+  ],
+  "unpriced_scope_gaps": [
+    {
+      "item": "Stepper driver channels",
+      "required_quantity": 4,
+      "status": "Three KHMOS promotional drivers are conditional; RATTMMOTOR driver not confirmed. Keep four required channels in scope until included accessories are verified."
+    },
+    {
+      "item": "Motion controller",
+      "status": "Needs independent Y1 and Y2 outputs/homing as well as X and Z; not included in module evidence. No replacement selected."
+    },
+    {
+      "item": "Motor power supply, branch protection and enclosure wiring",
+      "status": "Not included in module evidence; voltage/current sizing pending confirmed motor and driver data."
+    },
+    {
+      "item": "Home/limit switches and shielded wiring",
+      "status": "KHMOS promotional photoelectric switch inclusion is conditional. Independent dual-Y homing and suitable axis limits remain in scope."
+    },
+    {
+      "item": "Cable management, module brackets, spindle/torch mounts and safety interfaces",
+      "status": "Not included in confirmed module contents; retain separate BOM lines."
+    }
+  ],
+  "secondary_price_not_used": {
+    "asin": "B09MVYGLNQ",
+    "amount": 115.0,
+    "currency": "USD",
+    "source": "https://www.merchantwords.com/asin/us/B09MVYGLNQ",
+    "reason": "Third-party price index excluded; current featured new Amazon offer USD112 supersedes earlier starting-offer research."
+  },
+  "purchase_actions_performed": false,
+  "seller_messages_sent": false,
+  "subtotal_before_tax_including_advertised_shipping": 868.0,
+  "previous_starting_offer": "Z Other Sellers USD105 starting offer remains seller/terms unverified; budget uses USD112 featured new offer."
+}

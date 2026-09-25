@@ -1,0 +1,94 @@
+{
+  "checked": "2026-09-24",
+  "currency": "USD",
+  "destination_zip": "30510",
+  "basis": "Approximate 1000 × 1200 mm top, 1.2 m²; raw extrusion only, supports/fasteners/cutting extra.",
+  "exact_20300": "No current economical purchasable 20 mm high × 300 mm wide CNC T-slot extrusion verified. Numerous false results are 20×20×300 length; excluded.",
+  "candidates": [
+    {
+      "seller": "DIYCNCMart",
+      "model": "20240",
+      "height_mm": 20,
+      "width_mm": 240,
+      "length_mm": 1000,
+      "qty": 5,
+      "unit_price": 124.69,
+      "goods_total": 623.45,
+      "coverage_mm": "1000 × 1200, five 240-wide rows; slots run across X",
+      "shipping": null,
+      "availability": "Live variant purchasable/in-stock true with backorders allowed; ship from Canada. Stock quantity 0 in HTML means physical availability is not independently established.",
+      "url": "https://diycncmart.com/product/t-slot-cnc-spoil-board-aluminum-profile/",
+      "notes": [
+        "Live raw HTML 2026-09-24 shows sku12557-100 USD124.69. Search/web cached text still $89.49; don't use stale lower price.",
+        "Custom length variant $1.25 per cm, pricing unit must be confirmed via custom-cut instructions.",
+        "Five 1000mm lengths could be cut once at ~498.5 each for ten 240×498.5 removable pieces using 3mm kerf; rack/support redesign necessary."
+      ],
+      "evidence_path": "C:/Users/Gluis/AppData/Local/Temp/diycncmart-20240.html"
+    },
+    {
+      "seller": "80/20",
+      "model": "40-1620",
+      "height_mm": 20,
+      "width_mm": 160,
+      "length_mm": 1000,
+      "qty": 8,
+      "price_per_mm": 0.1133,
+      "cut_charge_each": 4.47,
+      "unit_price": 117.77,
+      "goods_total": 942.16,
+      "coverage_mm": "1000 × 1280; would need trim/reduce row width for 1200",
+      "shipping": null,
+      "url": "https://8020.net/40-1620.html",
+      "notes": [
+        "Primary live page $0.1133/mm + $4.47 cut. Not budget competitive; 6×1200 covers only960×1200 goods $842.58, 7×1200 covers1120×1200 goods983.01.",
+        "Illustrates width trap: 20×160 is not20×300."
+      ]
+    },
+    {
+      "seller": "Alibaba seller listing",
+      "model": "20240",
+      "height_mm": 20,
+      "width_mm": 240,
+      "length_mm": 1000,
+      "qty": 5,
+      "unit_price": 44.52,
+      "goods_total": 222.6,
+      "coverage_mm": "1000 × 1200",
+      "shipping": null,
+      "url": "https://www.alibaba.com/product-introduction/20240-Aluminum-Profile-Tabletop-DIY-CNC_1601223603761.html",
+      "status": "Inquiry only, NOT a delivered quote or verified purchasable basket",
+      "notes": [
+        "Advertised $44.52/m, MOQ1m. Quantity/finish/tariff/freight/leadtime unverified. Don't present as landed $223 bed."
+      ]
+    },
+    {
+      "seller": "BZT manufacturer eBay",
+      "height_mm": 20,
+      "width_mm": 250,
+      "length_mm": "300–400 assorted",
+      "unit_price_currency": "EUR",
+      "unit_price": 49,
+      "goods_total": null,
+      "shipping": null,
+      "url": "https://www.ebay.com/itm/396637346791",
+      "status": "Offcuts unsuitable for exact current cut plan without seller guaranteeing length",
+      "notes": [
+        "Quoted international freight EUR30 shown to UK EC2N3AR, notAlto; exclude freight claim.",
+        "Need at least12×400 exact for1000×1200 =>EUR588 but listing guarantees only300–400 so not valid fullbed quote.",
+        "15mm hollow and20mm solid profile offered;20mm solid is not an economical 20300 extrusion equivalent."
+      ]
+    }
+  ],
+  "rejected": [
+    {
+      "source": "Flux Workshop15180",
+      "url": "https://fluxworkshop.com/products/fw-edaa-100009_15180_500mm_t-slot_silver",
+      "reason": "15×180×500 alternate dimensions, no current price visible; live Shopify endpoint402UnavailableShop."
+    },
+    {
+      "source": "VXB15180",
+      "url": "https://vxb.com/products/solid-15180-aluminum-profile-extrusion-at-1000mm-l",
+      "reason": "$941.95 each1000mm and clearly poor technical content; reject budgetcandidate."
+    }
+  ]
+}

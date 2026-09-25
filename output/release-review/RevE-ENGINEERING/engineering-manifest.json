@@ -1,0 +1,221 @@
+{
+  "frame": {
+    "feet_count": 6,
+    "level_adjustment_mm": 8,
+    "pan_bearer_cut_mm": 1016.4,
+    "pan_bearer_M8_count": 24,
+    "additional_tank_support_tube_m": 4.4428,
+    "brace_tube": "25.4\u00d725.4\u00d72.1082",
+    "side_brace_structural_x_mm": [
+      -28.4,
+      1178.4
+    ],
+    "gusset_legs_mm": 160,
+    "sand_ports": 18,
+    "ballast_note": "Stationaryframeonly;actualmassdeterminedbyweighingfill. No sand inbedbeams/cassettes/gantry."
+  },
+  "water": {
+    "reservoir_internal_mm": [
+      900,
+      600,
+      250
+    ],
+    "gross_litres": 135.0,
+    "weir_top_z_mm": 228.048,
+    "reservoir_cover_top_z_mm": 433.096,
+    "overflow_start_approx_z_mm": 420.048,
+    "water_charge_limit_litres": 115,
+    "minimum_return_capacity_litres": 125,
+    "pan_normal_level_z_mm": 820,
+    "pan_minimum_level_z_mm": 810,
+    "pan_high_high_z_mm": 827,
+    "pan_overflow_crest_z_mm": 825,
+    "reservoir_pump_low_trip_z_mm": 233.048,
+    "pipe_dimensional_source": "https://www.wheatland.com/wp-content/uploads/2017/12/Schedule-40-Submittal-Sheet.pdf",
+    "pan_drain_xyz_mm": [
+      900,
+      1270.0,
+      738.3981523961902
+    ],
+    "unmodeled_purchased_connections": [
+      "Selected motorized valve, reducers/unions and refill pump connections require selected manufacturer dimensions.",
+      "External emergency-overflow destination must be defined before commissioning."
+    ]
+  },
+  "water_accessories": {
+    "pump_mount_plate_mm": [
+      250,
+      126,
+      3.048
+    ],
+    "pump_foot_hole_pattern_mm": [
+      58,
+      85
+    ],
+    "purchased_pump_envelope_mm": [
+      210,
+      86,
+      114.5
+    ],
+    "pump_unknowns": [
+      "Exactfootthickness:M4boltlengthselectedafterreceipt",
+      "Portaxis:centeredrigidpipesnotreleased"
+    ],
+    "vent_cap_open_area_mm2": 84.82300164692441,
+    "float_brackets_status": "Verticalfloattrip-planeandthreadengagementdimensionsareunpublished;wet-calibratedadjustablemountsremainunreleased."
+  },
+  "sensor_mounts": {
+    "count": 5,
+    "mount_z_mm": {
+      "PAN_MIN": 860,
+      "PAN_FILL": 870,
+      "PAN_HH": 877,
+      "PAN_EMPTY": 802,
+      "TANK_LOW": 283.048
+    },
+    "target_trip_z_mm": {
+      "PAN_MIN": 810,
+      "PAN_FILL": 820,
+      "PAN_HH": 827,
+      "PAN_EMPTY": null,
+      "TANK_LOW": 233.048
+    },
+    "commissioning": "Wet-setactualreedtripwithmountslots;independentlyprovenormalstop,minimum,HH,andtanklow. SetPAN_EMPTYjustabovephysicalfloorwithfreemovement,then60sdrain.",
+    "guard_service": "Release2M6screwsandliftslider/sensor/guardasonepiece. Removebracketassembliesbeforelongsheetoverhangoutsidenominal800mmcuttingwidth."
+  },
+  "bed": {
+    "bare_deck_mm": [
+      1000,
+      1197,
+      20
+    ],
+    "workplane_z_mm": 940.8,
+    "module_stack": "Ledger 840 > rail top 890.8 > crossmember (2x1.5 flat) top 895.4 > MDF 25.4 > strip bottom 920.8 > bare T-slot 940.8 > optional spoilboard 959.8",
+    "profile_nominal_section_area_mm2": 612.9738130458965,
+    "profile_nominal_Ixx_mm4": 27207.732889279723,
+    "profile_section_properties_status": "Computed from nominal reconstructed supplier section;not manufacturer-certified.",
+    "module_drawdown_M8": 4,
+    "deck_M5_fasteners": 50,
+    "frame_TEK_fasteners": 16,
+    "lift_ears": 4,
+    "module_mass_estimate_kg": 87.0,
+    "module_mass_basis": "Nominal solids: steel 7850, MDF 750, aluminum from reconstructed section area; plus 2.5 kg fastener allowance. Weigh before first hoist.",
+    "handling": "Owner overhead winch, rated 567 kg (1250 lb); estimated module below 90 kg. 4-leg sling to four \u00d816 ear holes.",
+    "sequence": "Remove four M8 drawdowns to the tray, take slack in the sling, lift 60, winch forward out the front window, hoist clear. Reverse to install; dowels engage on the final descent.",
+    "surfacing": "Torque frame screws, then face the upper MDF 1.0 nominal in-machine before strip installation. Reface only after module reinstallation, never after strips are fitted.",
+    "source_profile": "https://m.media-amazon.com/images/I/71myeCep6iL._SL1500_.jpg",
+    "source_square_nut": "https://norelem.co.uk/medias/07209-01-Datasheet-34408-Square-nuts-DIN-562-low-type-en.pdf"
+  },
+  "storage": {
+    "racks": "None. Module is hoisted clear and parked outside the machine on the owner winch/track.",
+    "stored_inside": "Spindle cradle and the four M8 drawdowns in the internal tray."
+  },
+  "tool_parking": {
+    "spindle_axis_start_xyz_mm": [
+      760.5,
+      1080,
+      599.7
+    ],
+    "spindle_envelope_mm": [
+      65,
+      259
+    ],
+    "strap_count": 2,
+    "hardware_tray_bounds_mm": [
+      800,
+      725,
+      433.096,
+      1000,
+      825,
+      463.096
+    ],
+    "handling": "The spindle and the four removed drawdowns park inside the footprint. Prove the handheld tool transfer slowly while unpowered; the module hoist sweep does not certify that transfer."
+  },
+  "controls_packaging": {
+    "enclosure_reserve_xyz_mm": [
+      371.8,
+      251.8,
+      165.0
+    ],
+    "enclosure_dimensions_mm": [
+      406.4,
+      203.2,
+      508.0
+    ],
+    "orientation": "Upright in the front bay under the water table, door forward through the open front window.",
+    "service": "Isolate electrical power and open the front door. No draining, no pan or bed removal; lift the drip cap for top access.",
+    "unreleased_interfaces": [
+      "Vendor back-panel mounting hole pattern (transfer-drill the cage rails)",
+      "VFD thermal layout and wiring segregation",
+      "Cable glands and chain routes",
+      "Panel layout and legend set"
+    ],
+    "drip_shield": "Clip-on 1.5 mm cap at Z673.5-675 with front drip hem; pan floor above remains the primary umbrella."
+  },
+  "motion": {
+    "configuration": {
+      "gantry_y": 1275.0,
+      "beam_center_y": 1355.0,
+      "head_x": 575.0,
+      "z_lift": 100.0,
+      "tool": "router"
+    },
+    "travel_mm": {
+      "X": 800,
+      "Y": 1000,
+      "Z": 100
+    },
+    "guide_midpoint_y_limits": [
+      275,
+      1275
+    ],
+    "x_head_limits": [
+      175,
+      975
+    ],
+    "gantry_beam_z": [
+      1155,
+      1235
+    ],
+    "y_guide_center_z": 1033,
+    "y_block_spacing": 180,
+    "x_block_spacing": 160,
+    "Y_rail_count_length": [
+      2,
+      1420
+    ],
+    "X_rail_count_length": [
+      2,
+      1200
+    ],
+    "guide_blocks_count": 8,
+    "tool_axis_y_nominal_limits": [
+      121.4,
+      1121.4
+    ],
+    "readiness": "DETAILED STRUCTURAL MOTION LAYOUT WITH EXPLICIT SUPPLIER/CONNECTION HOLDS",
+    "holds": [
+      "Z slide: owner-supplied listing drawing closed the plan dims (body 219x80, ends 12, carriage 90x50, phi7/phi5 holes, 70 across). Output mounting-plane height, along-travel hole pitch/thread and base-slot fastening remain measure-on-receipt; the slotted TOOL_ADAPTER_110 is PROVISIONAL until transfer-verified.",
+      "HGR20: seller P40/E20/1500 hole dimensions conflict. Actual factory holes must be verified before rail cutting or custom datum drilling.",
+      "HMS40: base nut cavity and endpoint datum not published. Rail caps require a verified base clamp/nut design; motor current and torque-speed curves missing.",
+      "Z power-loss retention: no selected normally-engaged brake/counterbalance. A ballscrew must not be assumed self-locking. Do not enable a suspended tool until retention is designed and tested.",
+      "Head projection uses an explicit80 mm Z stack assumption. Final tool sweep and claimed usable1000 Y must be recalculated when supplier datum is recovered.",
+      "X/Y physical stops and three home switches are modeled. Z home bracket and travel stops depend on the unresolved Z supplier endpoint/output geometry. Cable-chain anchors, way covers and spindle/torch cable bend envelopes still require final integration."
+    ],
+    "scope_note": "No unverified purchased bolt hole was invented. Geometry checks cannot close the listed missing interfaces."
+  },
+  "status": "ENGINEERING DEFINITION - NOT A COMMISSIONED MACHINE",
+  "geometry_checks": {
+    "solid_count": 967,
+    "step_readback": {
+      "passed": true,
+      "solids": 967,
+      "volume_delta_mm3": 0.1009010374546051,
+      "volume_tolerance_mm3": 17.191352819157107,
+      "sha256": "9b91ead659255e07514f9844d604b3aa79b34cdbb5e3e7542574d38670d9eb2a",
+      "file": "RevE_ASSEMBLED_ENGINEERING.step"
+    },
+    "unresolved_intersections": []
+  },
+  "elapsed_seconds": 35.75
+}

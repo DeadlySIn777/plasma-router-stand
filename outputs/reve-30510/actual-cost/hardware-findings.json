@@ -1,0 +1,848 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-09-24",
+  "destination": "Alto GA 30510",
+  "currency": "USD",
+  "owner_fabrication_labor_usd": 0,
+  "design_changed": false,
+  "complete_delivered_quote": false,
+  "scope": "Mechanical hardware, router/plasma accessories and consumables only. Metals and controls audited separately.",
+  "research_limits": [
+    "Amazon-first searches attempted; public Amazon product pages lacked reliable current prices; no browser surface was available for destination-specific checkout reads.",
+    "Distributor posted prices are goods offers. Null shipping is unknown, not zero.",
+    "No shopping carts, orders, external messages or supplier contacts were submitted.",
+    "Do not replace whole allowance rows with partial priced subcomponents."
+  ],
+  "offers": [
+    {
+      "id": "N1",
+      "budget_id": "H05",
+      "vendor": "Nutty",
+      "sku": "XMSQNT5",
+      "item": "M5 x 0.8 DIN 562 thin square nut",
+      "required": 240,
+      "buy_quantity": 260,
+      "pack_size": 1,
+      "minimum_order": null,
+      "unit_usd": 0.076,
+      "goods_usd": 19.76,
+      "shipping_group": "Nutty",
+      "compatibility": "Current design: receive-check 8 x 8 x 2.7 mm maximum.",
+      "url": "https://www.nutty.com/m5-x-8-stainless-metric-square-nut-thin/",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N2",
+      "budget_id": "H06",
+      "vendor": "Nutty",
+      "sku": "MFSC512",
+      "item": "M5 x 12 DIN 7991 class 12.9 flat socket screw",
+      "required": 120,
+      "buy_quantity": 120,
+      "pack_size": 1,
+      "minimum_order": 50,
+      "unit_usd": 0.103,
+      "goods_usd": 12.36,
+      "shipping_group": "Nutty",
+      "compatibility": "Current dimensional fit; retain specified assembly torque, do not raise torque to class 12.9 capability.",
+      "url": "https://www.nutty.com/m5-x-0-80-x-12-ft-flat-head-socket-cap-screws-12-9-din-7991-blk-ox/",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N3",
+      "budget_id": "H08",
+      "vendor": "Nutty",
+      "sku": "MFSC520",
+      "item": "M5 x 20 DIN 7991 class 12.9 MDF screws",
+      "required": 60,
+      "buy_quantity": 60,
+      "pack_size": 1,
+      "minimum_order": 25,
+      "unit_usd": 0.155,
+      "goods_usd": 9.3,
+      "shipping_group": "Nutty",
+      "compatibility": "Current dimensional fit. Square nuts already in H05.",
+      "url": "https://www.nutty.com/m5-x-0-80-x-20-ft-flat-head-socket-cap-screws-12-9-din-7991-blk-ox/",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N4",
+      "budget_id": "H03/H04",
+      "vendor": "Nutty",
+      "sku": "MSHC816",
+      "item": "M8 x 16 DIN 912 class 12.9 socket screws",
+      "required": 40,
+      "buy_quantity": 40,
+      "pack_size": 1,
+      "minimum_order": 25,
+      "unit_usd": 0.214,
+      "goods_usd": 8.56,
+      "shipping_group": "Nutty",
+      "compatibility": "24 frame/pan plus 16 motion. Standard geometry; retain design torque. Direct product price is higher than stale category $0.194.",
+      "url": "https://www.nutty.com/m8-x-1-25-x-16-socket-head-cap-screw-12-9-din-912-blk-ox/",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N5",
+      "budget_id": "H07",
+      "vendor": "Nutty",
+      "sku": "MSHC880",
+      "item": "M8 x 80 DIN 912 class 12.9 beam drawdown screws",
+      "required": 16,
+      "buy_quantity": 16,
+      "pack_size": 1,
+      "minimum_order": 10,
+      "unit_usd": 0.678,
+      "goods_usd": 10.848,
+      "shipping_group": "Nutty",
+      "compatibility": "Current geometry; standard partial thread runs through tube sleeve and engages nut at end. Do not increase design torque.",
+      "url": "https://www.nutty.com/m8-x-1-25-x-80-socket-head-cap-screw-12-9-din-912-blk-ox/",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N6",
+      "budget_id": "H06",
+      "vendor": "Nutty",
+      "sku": "XMHN5",
+      "item": "M5 x 0.8 DIN 934 A2 nuts",
+      "required": 120,
+      "buy_quantity": 120,
+      "pack_size": 1,
+      "minimum_order": 100,
+      "unit_usd": 0.031,
+      "goods_usd": 3.72,
+      "shipping_group": "Nutty",
+      "compatibility": "Superseded candidate. Prefer N16 class 8 steel nuts at $1.44/120. Excluded from basket to avoid duplicate nuts.",
+      "url": "https://www.nutty.com/m5-x-0-8-hex-nut-a2-stainless-steel-din-934/",
+      "accepted_current_design": false
+    },
+    {
+      "id": "W1",
+      "budget_id": "H06",
+      "vendor": "Norelem",
+      "sku": "07305-05-050",
+      "item": "M5 DIN 7349 steel washer 15 OD x 5.3 ID x 2",
+      "required": 60,
+      "buy_quantity": 60,
+      "pack_size": 1,
+      "minimum_order": null,
+      "unit_usd": 0.66,
+      "goods_usd": 39.6,
+      "shipping_usd": null,
+      "compatibility": "Exact selected size/material offer; confirm order-level hardness certification per retaining-joint specification. Generic thin fender washer is not equivalent.",
+      "url": "https://www.norelemusa.com/en-us/Product-Overview/Flexible-standard-component-system/07000/Nuts-screws-washers-securing-elements/Washers-DIN-7349-for-bolts-with-heavy-duty-clamping-bodies/p/agid.28087",
+      "accepted_current_design": false
+    },
+    {
+      "id": "T1",
+      "budget_id": "H11",
+      "vendor": "80/20",
+      "sku": "40-3915",
+      "item": "40-series M8 T-nut",
+      "required": 16,
+      "buy_quantity": 16,
+      "pack_size": 1,
+      "unit_usd": 2.58,
+      "goods_usd": 41.28,
+      "shipping_usd": null,
+      "compatibility": "Frozen design fit 22 x 13.7 x 5.9. Generic 2020/3030 T-nuts not substitutes.",
+      "url": "https://8020.net/40-3915.html",
+      "accepted_current_design": true
+    },
+    {
+      "id": "V1",
+      "budget_id": "H09/H10",
+      "vendor": "VXB",
+      "sku": "Kit215",
+      "item": "POS6 four-pack, two right and two left hand",
+      "required": 6,
+      "buy_quantity": 2,
+      "pack_size": 4,
+      "unit_usd": 19.99,
+      "goods_usd": 39.98,
+      "shipping_usd": 0,
+      "shipping_basis": "Advertised free shipping to all US states; 5–10 business days processing. Not checkout confirmation.",
+      "compatibility": "REDESIGN REQUIRED: ball width 9 versus SKF 6; frozen clevis gap 7. Excluded from current-design cash basket.",
+      "url": "https://vxb.com/products/4-male-rod-end-6mm-pos6-2-right-and-2-left-ha",
+      "accepted_current_design": false
+    },
+    {
+      "id": "D1",
+      "budget_id": "R02",
+      "vendor": "SainSmart",
+      "sku": "101-63-DS69-CL",
+      "item": "65–69 mm dust shoe, 38 mm hose port",
+      "required": 1,
+      "buy_quantity": 1,
+      "pack_size": 1,
+      "unit_usd": 39.99,
+      "goods_usd": 39.99,
+      "shipping_usd": null,
+      "shipping_basis": "US free shipping only at $50 merchandise threshold; shoe plus $8.99 probe totals $48.98, so does not qualify.",
+      "compatibility": "Spindle diameter match. Brush/tool extension and bed clearance need mounted check. Hose excluded.",
+      "amazon_first_lead": "https://www.amazon.com/dp/B0CKZ7NTQK",
+      "url": "https://www.sainsmart.com/products/genmitsu-cnc-dust-shoe-for-proverxl-4030",
+      "accepted_current_design": false
+    },
+    {
+      "id": "D2",
+      "budget_id": "R04",
+      "vendor": "SainSmart",
+      "sku": "101-60-386",
+      "item": "Passive wired touch plate",
+      "required": 1,
+      "buy_quantity": 1,
+      "pack_size": 1,
+      "unit_usd": 8.99,
+      "goods_usd": 8.99,
+      "shipping_usd": null,
+      "compatibility": "Simple plate option; confirm isolation and input wiring in control design. Measure actual plate thickness.",
+      "url": "https://www.sainsmart.com/products/sainsmart-cnc-router-z-axis-tool-setting-touch-probe",
+      "accepted_current_design": false
+    },
+    {
+      "id": "C1",
+      "budget_id": "F01",
+      "vendor": "Harbor Freight",
+      "sku": "63496",
+      "item": "Vulcan E71T-GS 0.030 inch flux wire, 2 lb",
+      "required": 2,
+      "buy_quantity": 2,
+      "pack_size": 1,
+      "unit_usd": 24.99,
+      "goods_usd": 49.98,
+      "shipping_usd": null,
+      "compatibility": "Planning quantity only if owner welder/process supports this wire. Main pan/reservoir are 0.120 inch carbon steel. Four pounds is not a demonstrated weld-consumption total; small stainless accessories may need separate joining consumables.",
+      "url": "https://www.harborfreight.com/0030-in-e71t-gs-flux-core-welding-wire-2-lb-roll-63496.html",
+      "accepted_current_design": false
+    },
+    {
+      "id": "C2",
+      "budget_id": "F01",
+      "vendor": "Harbor Freight",
+      "sku": null,
+      "item": "Bauer 4.5 x 1/16 x 7/8 inch type 01 metal cutoff wheel ten-pack",
+      "required": 20,
+      "buy_quantity": 2,
+      "pack_size": 10,
+      "unit_usd": 8.99,
+      "goods_usd": 17.98,
+      "shipping_usd": null,
+      "compatibility": "Planning quantity; match grinder/arbor/speed. Any required joining/abrasives for small stainless accessories are additional; main pan is carbon steel.",
+      "url": "https://www.harborfreight.com/power-tools/grinding-cutting-wheels/cut-off-wheels/4-1-2-in.html",
+      "accepted_current_design": false
+    },
+    {
+      "id": "C3",
+      "budget_id": "S12",
+      "vendor": "Home Depot",
+      "sku": "7780502",
+      "item": "Rust-Oleum Clean Metal Primer one quart",
+      "required": 1,
+      "buy_quantity": 1,
+      "pack_size": 1,
+      "unit_usd": 17.48,
+      "goods_usd": 17.48,
+      "shipping_usd": null,
+      "compatibility": "Bare cleaned steel exterior; coverage quantity remains allowance until exterior area is reconciled. No coating on rail datums or bonding points.",
+      "url": "https://www.homedepot.com/b/Paint-Primers/Rust-Oleum-Stops-Rust/1-Quart/Metal/N-5yc1vZbt0tZblwZ1z0o7guZ1z1dqtd",
+      "accepted_current_design": false
+    },
+    {
+      "id": "C4",
+      "budget_id": "S12",
+      "vendor": "Home Depot",
+      "sku": "7786502",
+      "item": "Rust-Oleum Gloss Smoke Gray one quart",
+      "required": 2,
+      "buy_quantity": 2,
+      "pack_size": 1,
+      "unit_usd": 17.48,
+      "goods_usd": 34.96,
+      "shipping_usd": null,
+      "compatibility": "Lower-cost brush/roller finish candidate; smoke gray differs from graphite rendering. Local price/stock and delivery unconfirmed.",
+      "url": "https://www.homedepot.com/p/100196872",
+      "accepted_current_design": false
+    },
+    {
+      "id": "N7",
+      "budget_id": "H04",
+      "vendor": "Nutty",
+      "sku": "MSHC316",
+      "item": "M3 x 16 socket; finish six to 14 mm",
+      "required": 6,
+      "buy_quantity": 100,
+      "pack_size": 1,
+      "minimum_order": 100,
+      "unit_usd": 0.11,
+      "goods_usd": 11.0,
+      "compatibility": "DIN 912 class 12.9. Keep existing design torque; no increase to preload or rated joint load. Owner shorten six to finished 14 mm under head; deburr and chamfer without heat damage.",
+      "url": "https://www.nutty.com/m3-x-0-5-x-16-socket-head-cap-screw-12-9-din-912-blk-ox/",
+      "shipping_group": "Nutty",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N8",
+      "budget_id": "H04",
+      "vendor": "Nutty",
+      "sku": "MSHC410",
+      "item": "M4 x 10 socket",
+      "required": 16,
+      "buy_quantity": 100,
+      "pack_size": 1,
+      "minimum_order": 100,
+      "unit_usd": 0.089,
+      "goods_usd": 8.9,
+      "compatibility": "DIN 912 class 12.9. Keep existing design torque; no increase to preload or rated joint load. ",
+      "url": "https://www.nutty.com/m4-x-0-7-x-10-socket-head-cap-screw-12-9-din-912-blk-ox/",
+      "shipping_group": "Nutty",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N9",
+      "budget_id": "H04",
+      "vendor": "Nutty",
+      "sku": "MSHC412",
+      "item": "M4 x 12 socket",
+      "required": 24,
+      "buy_quantity": 100,
+      "pack_size": 1,
+      "minimum_order": 100,
+      "unit_usd": 0.089,
+      "goods_usd": 8.9,
+      "compatibility": "DIN 912 class 12.9. Keep existing design torque; no increase to preload or rated joint load. ",
+      "url": "https://www.nutty.com/m4-x-0-7-x-12-socket-head-cap-screw-12-9-din-912-blk-ox/",
+      "shipping_group": "Nutty",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N10",
+      "budget_id": "H04",
+      "vendor": "Nutty",
+      "sku": "MSHC520",
+      "item": "M5 x 20 socket; finish 32 to 18 mm",
+      "required": 32,
+      "buy_quantity": 50,
+      "pack_size": 1,
+      "minimum_order": 50,
+      "unit_usd": 0.11,
+      "goods_usd": 5.5,
+      "compatibility": "DIN 912 class 12.9. Keep existing design torque; no increase to preload or rated joint load. Owner shorten 32 to 18 mm under head. Do not install untrimmed 20 mm in HGH20CA blind taps; 18 mm gives 5.3 mm engagement through 12.7 mm plate.",
+      "url": "https://www.nutty.com/m5-x-0-8-x-20-socket-head-cap-screw-12-9-din-912-blk-ox/",
+      "shipping_group": "Nutty",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N11",
+      "budget_id": "H04",
+      "vendor": "Nutty",
+      "sku": "MSHC620",
+      "item": "M6 x 20 socket",
+      "required": 16,
+      "buy_quantity": 50,
+      "pack_size": 1,
+      "minimum_order": 50,
+      "unit_usd": 0.113,
+      "goods_usd": 5.65,
+      "compatibility": "DIN 912 class 12.9. Keep existing design torque; no increase to preload or rated joint load. ",
+      "url": "https://www.nutty.com/m6-x-1-0-x-20-socket-head-cap-screw-12-9-din-912-blk-ox/",
+      "shipping_group": "Nutty",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N12",
+      "budget_id": "H04",
+      "vendor": "Nutty",
+      "sku": "MSHC625",
+      "item": "M6 x 25 socket; eight finished to 22 mm",
+      "required": 16,
+      "buy_quantity": 50,
+      "pack_size": 1,
+      "minimum_order": 50,
+      "unit_usd": 0.128,
+      "goods_usd": 6.4,
+      "compatibility": "DIN 912 class 12.9. Keep existing design torque; no increase to preload or rated joint load. Use eight at 25 mm and shorten eight to 22 mm under head.",
+      "url": "https://www.nutty.com/m6-x-1-0-x-25-socket-head-cap-screw-12-9-din-912-blk-ox/",
+      "shipping_group": "Nutty",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N13",
+      "budget_id": "H04",
+      "vendor": "Nutty",
+      "sku": "MSHC660",
+      "item": "M6 x 60 socket; four finished to 55 mm",
+      "required": 6,
+      "buy_quantity": 25,
+      "pack_size": 1,
+      "minimum_order": 25,
+      "unit_usd": 0.327,
+      "goods_usd": 8.175,
+      "compatibility": "DIN 912 class 12.9. Keep existing design torque; no increase to preload or rated joint load. Use two spindle pinch screws at 60 mm; shorten four to 55 mm under head.",
+      "url": "https://www.nutty.com/m6-x-1-0-x-60-socket-head-cap-screw-12-9-din-912-blk-ox/",
+      "shipping_group": "Nutty",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N14",
+      "budget_id": "H04",
+      "vendor": "Nutty",
+      "sku": "MBSC48",
+      "item": "M4 x 8 ISO7380 class 12.9 button screw",
+      "required": 2,
+      "buy_quantity": 50,
+      "pack_size": 1,
+      "minimum_order": 50,
+      "unit_usd": 0.115,
+      "goods_usd": 5.75,
+      "compatibility": "Exact M4x0.7x8 ISO7380 class12.9 standard size and head type; retain original design torque.",
+      "url": "https://www.nutty.com/m4-x-0-70-x-8-ft-button-head-socket-cap-12-9-iso-7380-blk-ox/",
+      "shipping_group": "Nutty",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N15",
+      "budget_id": "H01",
+      "vendor": "Nutty",
+      "sku": "MHN16-8Z",
+      "item": "M16 x 2 DIN934 class 8 nut",
+      "required": 12,
+      "buy_quantity": 12,
+      "pack_size": 1,
+      "minimum_order": 0,
+      "unit_usd": 0.279,
+      "goods_usd": 3.348,
+      "compatibility": "Current design class 8, 24 AF x 13 mm. Keep original class 8.8 assembly capacity/torque; do not exploit the stronger replacement bolt.",
+      "url": "https://www.nutty.com/m16-2-00-hex-nut-cl-8-din-934-coarse-plated/",
+      "shipping_group": "Nutty",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N16",
+      "budget_id": "H06",
+      "vendor": "Nutty",
+      "sku": "MHN5Z",
+      "item": "M5 x 0.8 DIN934 class 8 full nuts",
+      "required": 120,
+      "buy_quantity": 120,
+      "pack_size": 1,
+      "minimum_order": 0,
+      "unit_usd": 0.012,
+      "goods_usd": 1.44,
+      "compatibility": "Exact steel class 8 replacement for prior conditional A2 offer. Two full nuts per stud; not thin DIN439 jam nuts.",
+      "url": "https://www.nutty.com/m5-0-80-hex-nut-cl-8-din-934-coarse-plated/",
+      "shipping_group": "Nutty",
+      "accepted_current_design": true
+    },
+    {
+      "id": "N17",
+      "budget_id": "H04",
+      "vendor": "Nutty",
+      "sku": "MHN6-8Z",
+      "item": "M6 x 1 DIN934 class 8 nuts",
+      "required": 11,
+      "buy_quantity": 11,
+      "pack_size": 1,
+      "minimum_order": 0,
+      "unit_usd": 0.02,
+      "goods_usd": 0.22,
+      "compatibility": "Eight ordinary motion nuts plus three right-hand link nuts; 10 AF x 5 mm.",
+      "url": "https://www.nutty.com/m6-1-00-hex-nut-cl-8-din-934-coarse-plated/",
+      "shipping_group": "Nutty",
+      "accepted_current_design": true
+    },
+    {
+      "id": "B1",
+      "budget_id": "H01",
+      "vendor": "BelMetric",
+      "sku": "BH16X100FBLK",
+      "item": "M16 x 2 x 100 DIN933 fully threaded hex bolt, class 10.9 black",
+      "required": 6,
+      "buy_quantity": 6,
+      "pack_size": 1,
+      "minimum_order": 1,
+      "unit_usd": 5.48,
+      "goods_usd": 32.88,
+      "compatibility": "Exact thread/length/head envelope, stronger bolt than design class 8.8. Retain original lower class 8 nut/joint load and tightening limit; seller recommends class 10 nuts for exploiting full 10.9 bolt capability. Receive-check full thread.",
+      "url": "https://belmetric.com/hex-bolts-10-9-m16x2-0-coarse-din-931-933/?sku=BH16X100FBLK",
+      "shipping_usd": null,
+      "drawing_url": "https://belmetric.com/content/A-PDF_Drawings/BH16X100FBLK.pdf",
+      "accepted_current_design": true
+    },
+    {
+      "id": "B2",
+      "budget_id": "H04",
+      "vendor": "BelMetric",
+      "sku": "NL6CLZ",
+      "item": "M6 x 1 left-hand DIN934 class 8 nut",
+      "required": 3,
+      "buy_quantity": 3,
+      "pack_size": 1,
+      "minimum_order": 1,
+      "unit_usd": 0.3,
+      "goods_usd": 0.9,
+      "compatibility": "Official drawing confirms class 8, LEFT M6x1, 10 AF x 5 mm; matches frozen nut envelope.",
+      "url": "https://belmetric.com/m4-m20-coarse-hex-nut-left-hand-steel-din-934/?sku=NL6CLZ",
+      "shipping_usd": null,
+      "drawing_url": "https://belmetric.com/content/A-PDF_Drawings/NL6CLZ.pdf",
+      "accepted_current_design": true
+    },
+    {
+      "id": "FM1",
+      "budget_id": "H04",
+      "vendor": "Fastener Mart",
+      "sku": "BJA618-610",
+      "item": "M5 x 0.8 shoulder bolt, shoulder diameter 6 x length 20, ISO7379 class 12.9",
+      "required": 6,
+      "buy_quantity": 1,
+      "pack_size": 25,
+      "minimum_order": 1,
+      "unit_usd": 17.4,
+      "goods_usd": 17.4,
+      "compatibility": "Correct shoulder diameter and length for current SKF clevis. Full 25-piece pack cash price; 19 spares. Current opened page $17.40 supersedes older cached $16.13.",
+      "url": "https://www.fastenermart.com/BJA618-610.html",
+      "shipping_usd": null,
+      "accepted_current_design": true
+    },
+    {
+      "id": "FM2",
+      "budget_id": "H06",
+      "vendor": "Fastener Mart",
+      "sku": "SGA618-615",
+      "item": "M5 x 0.8 x 25 DIN913 flat-point set screw, class 45H",
+      "required": 60,
+      "buy_quantity": 1,
+      "pack_size": 100,
+      "minimum_order": 1,
+      "unit_usd": 13.82,
+      "goods_usd": 13.82,
+      "compatibility": "DIMENSIONAL CANDIDATE ONLY. Supplier DIN913 page restricts these screws to compression, not tensile loading. Bed retaining studs carry clamp tension: do not adopt this as a qualified retaining stud without a separately rated stud design.",
+      "url": "https://www.fastenermart.com/SGA618-615.html",
+      "shipping_usd": null,
+      "excluded_from_current_design_basket": true,
+      "restriction_url": "https://www.fastenermart.com/din-913-hex-socket-set-screws-flat-point.html",
+      "accepted_current_design": false,
+      "adopted": false
+    }
+  ],
+  "audits": [
+    {
+      "budget_id": "H01",
+      "current_usd": 45,
+      "status": "Goods priced; freight unknown",
+      "finding": "6 exact full-thread M16x2x100 class 10.9 BelMetric bolts $32.88 plus 12 current class 8 Nutty nuts $3.348 = $36.228 goods. Keep original class 8.8 design load/torque; do not claim 10.9 assembly rating. BelMetric freight unknown."
+    },
+    {
+      "budget_id": "H02",
+      "current_usd": 45,
+      "status": "Owner-made parts; seals unquoted",
+      "finding": "18 custom M20 x 1.5 plugs are owner turned. Do not pay a separate custom-parts charge over the round stock. Commercial DIN908 plugs have different head/thread lengths. Gaskets still required."
+    },
+    {
+      "budget_id": "H03",
+      "current_usd": 75,
+      "status": "Partial priced",
+      "finding": "24 M8 x 16 screws cost $5.136 from N4; 24 M8 washers, 36 M6 weld nuts, 20 M8 weld nuts, liners and straps remain. Metals for covers/eyes already elsewhere."
+    },
+    {
+      "budget_id": "H04",
+      "current_usd": 165,
+      "status": "Most ordinary screws priced; precision items remain",
+      "finding": "Ordinary Nutty motion screw packs N7-N14 total $60.275, plus 11 class 8 M6 nuts $0.22 and existing 16 M8x16 allocation $3.424. BelMetric three class 8 LH nuts $0.90; FastenerMart 25 shoulder screws $17.40. Precision shims/washers, six M5 locking nuts and supplier-dependent rail/HMS fastener count remain. Purchased long screws require specified owner shortening before assembly."
+    },
+    {
+      "budget_id": "H05",
+      "current_usd": 30.71,
+      "status": "Goods priced; combined free shipment",
+      "finding": "260 square nuts $19.76. Consolidated Nutty basket now qualifies for advertised free ground shipping; remove old separate $10.95 shipping allocation."
+    },
+    {
+      "budget_id": "H06",
+      "current_usd": 80,
+      "status": "Nuts/screws/washers priced; tensile stud unresolved",
+      "finding": "120 M5x12 screws $12.36 + 120 class 8 M5 nuts $1.44 + 60 heavy washers $39.60 = $53.40 goods before Norelem freight. Exact DIN913 M5x25 100-pack $13.82 is excluded because supplier disclaims tensile use. Select a tensile-rated stud or reviewed owner-fabricated grade-rated stud route."
+    },
+    {
+      "budget_id": "H07",
+      "current_usd": 45,
+      "status": "Partial priced",
+      "finding": "16 M8 x 80 screws $10.848. Compression sleeves are owner cut from metal stock, labor $0. Weld nuts count with H03 exactly once."
+    },
+    {
+      "budget_id": "H08",
+      "current_usd": 70,
+      "status": "Partial priced",
+      "finding": "60 M5 x 20 MDF screws $9.30. H05 already includes matching 60 square nuts. Owner-fabricated handles have $0 labor but retain raw-stock allocation. Work clamps not priced/qualified."
+    },
+    {
+      "budget_id": "H09",
+      "current_usd": 147.96,
+      "status": "Existing benchmark",
+      "finding": "3 SKF SA6C at $49.32 is related-product benchmark, not confirmed landed offer. VXB alternative is separate."
+    },
+    {
+      "budget_id": "H10",
+      "current_usd": 138.81,
+      "status": "Existing goods offer",
+      "finding": "3 SKF SAL6C at $46.27; shipping unknown. VXB alternative is separate."
+    },
+    {
+      "budget_id": "H11",
+      "current_usd": 41.28,
+      "status": "Existing goods offer",
+      "finding": "16 selected 80/20 nuts at $2.58; freight unknown. Keep actual cavity-compatible profile nut, no generic wrong-series substitution."
+    },
+    {
+      "budget_id": "R02",
+      "current_usd": 65,
+      "status": "Partial priced",
+      "finding": "65–69 mm SainSmart shoe $39.99. Add 38 mm hose and support; actual extractor port and available hose unknown. No extractor purchase silently included."
+    },
+    {
+      "budget_id": "R03",
+      "current_usd": 90,
+      "status": "Still unquoted complete set",
+      "finding": "SpeTool WD-1 initially showed $64.99 USD, subsequent source localized to SGD and sold out; not accepted as a stable purchasing quote. Four bits omit a surfacing tool. Need quarter-inch collet and quarter-inch shank surfacer."
+    },
+    {
+      "budget_id": "R04",
+      "current_usd": 25,
+      "status": "Goods offer; wiring review",
+      "finding": "Simple SainSmart plate $8.99, freight unquoted. $16.01 goods reduction possible, not a delivered reduction."
+    },
+    {
+      "budget_id": "R05",
+      "current_usd": 70,
+      "status": "Design-dependent hold",
+      "finding": "Exact Z anti-drop/brake not selected; cannot claim a random $70 brake fits the unknown Z shaft/interface."
+    },
+    {
+      "budget_id": "P01",
+      "current_usd": 90,
+      "status": "Design-dependent hold",
+      "finding": "Owned torch dimensions/model unresolved. Owner-machined plates $0 labor, but spring, switch, magnets/retention hardware must follow actual breakaway design."
+    },
+    {
+      "budget_id": "P02",
+      "current_usd": 85,
+      "status": "Electrical scope hold",
+      "finding": "Do not duplicate controller agent's torch-start/THC components. Cutter interface and HF start behavior unresolved; no substitute universal relay declared safe."
+    },
+    {
+      "budget_id": "P03",
+      "current_usd": 40,
+      "status": "Unquoted exact fittings",
+      "finding": "Dedicated work return, cable strain relief and shield remain; do not double count cable supports in controls drag-chain purchase."
+    },
+    {
+      "budget_id": "F01",
+      "current_usd": 175,
+      "status": "Partial consumables basket",
+      "finding": "4 lb flux wire $49.98 plus 20 cutoff wheels $17.98 = $67.96 goods. Main pan/reservoir are 0.120 inch carbon steel. Grinding media, any required joining/abrasives for small stainless accessories, drill/tap wear, lubricants and freight remain; no automatic stainless-pan filler charge."
+    },
+    {
+      "budget_id": "S11",
+      "current_usd": 36,
+      "status": "Quantity/price not yet validated",
+      "finding": "Three 50 lb bags remain allowance. Prefer dry kiln-dried sand; cheap washed play/all-purpose sand is not guaranteed dry. 50 lb Quikrete196152 source confirms kiln dried but local 30510 price missing. Do not count all purchased tube lengths as filled: moving beams must remain empty."
+    },
+    {
+      "budget_id": "S12",
+      "current_usd": 100,
+      "status": "Partial materials basket",
+      "finding": "Primer one quart $17.48 plus two finish quarts $34.96 = $52.44 goods, plus degreaser/rollers/masking. Owner finishing labor $0. Coverage and delivery are not verified."
+    }
+  ],
+  "shipping_groups": [
+    {
+      "vendor": "Nutty",
+      "included_offer_ids": [
+        "N1",
+        "N2",
+        "N3",
+        "N4",
+        "N5",
+        "N7",
+        "N8",
+        "N9",
+        "N10",
+        "N11",
+        "N12",
+        "N13",
+        "N14",
+        "N15",
+        "N16",
+        "N17"
+      ],
+      "goods_usd": 126.111,
+      "shipping_usd": 0,
+      "total_before_tax_usd": 126.111,
+      "basis": "Combined eligible online merchandise exceeds $100, qualifying for advertised free US48 ground shipping. No checkout/stock promise.",
+      "url": "https://www.nutty.com/shipping-returns/",
+      "notes": "Supersedes earlier $10.95 once-per-order allocation. Threaded rod/L anchors excluded; none included here."
+    },
+    {
+      "vendor": "BelMetric",
+      "included_offer_ids": [
+        "B1",
+        "B2"
+      ],
+      "goods_usd": 33.78,
+      "shipping_usd": null,
+      "total_before_tax_usd": null,
+      "basis": "Below advertised $99 free US shipping threshold. Destination freight not exposed; consolidate these two lines.",
+      "url": "https://belmetric.com/shipping/"
+    },
+    {
+      "vendor": "Fastener Mart",
+      "included_offer_ids": [
+        "FM1"
+      ],
+      "goods_usd": 17.4,
+      "shipping_usd": null,
+      "total_before_tax_usd": null,
+      "basis": "Discounted UPS calculated before order; no flat/free rate verified. FM2 is excluded tensile-load candidate.",
+      "url": "https://www.fastenermart.com/shipping-and-return-policy.html"
+    }
+  ],
+  "vxb_alternative": {
+    "goods_and_advertised_shipping_usd": 39.98,
+    "current_skf_goods_usd": 286.77,
+    "potential_goods_saving_usd": 246.79,
+    "current_design_compatible": false,
+    "drawing_url": "https://vxb.com/products/pos6-male-rod-end-6mm-right-hand-bearing",
+    "dimensions_mm": {
+      "bore": 6,
+      "thread": "M6 x 1",
+      "head_od": 18,
+      "housing_width": 6.75,
+      "ball_width": 9,
+      "overall_length": 45,
+      "eye_to_thread_end": 36,
+      "listed_L2": 22
+    },
+    "required_changes": [
+      "Widen clevis gap from 7 to 10 mm if retaining two 0.5 mm race shims.",
+      "Recalculate shoulder pin stack: 6+10+6+1 = 23 mm, versus current 20 mm shoulder. A 25 mm shoulder needs an explicit 2 mm external spacer; not a bare screw substitution.",
+      "Verify rod-end articulation/clearances and threaded length; rerun CAD collisions and endpoint sweeps.",
+      "Use VXB stated load data only, not SKF ratings. Qualify play/wear in CNC axial service."
+    ],
+    "notes": "Two packs provide 4 RH and 4 LH, six installed and two spare. Owner redesign labor $0; changed pin/spacer goods cost additional and unquoted."
+  },
+  "remaining_motion_takeoff": [
+    [
+      "M3 x 14 socket",
+      6
+    ],
+    [
+      "M4 x 10 socket",
+      16
+    ],
+    [
+      "M4 x 12 socket",
+      24
+    ],
+    [
+      "M5 x 18 socket",
+      32
+    ],
+    [
+      "M6 x 20 socket",
+      16
+    ],
+    [
+      "M6 x 22 socket",
+      8
+    ],
+    [
+      "M6 x 25 socket",
+      8
+    ],
+    [
+      "M6 x 55 socket",
+      4
+    ],
+    [
+      "M6 x 60 socket pinch screws",
+      2
+    ],
+    [
+      "M4 x 8 ISO7380 button",
+      2
+    ],
+    [
+      "ISO7379 shoulder D6 L20 M5",
+      6
+    ],
+    [
+      "Shim 6.1 ID x 10 OD x 0.5",
+      12
+    ],
+    [
+      "Washer 6.4 ID x 12 OD x 1",
+      6
+    ],
+    [
+      "Washer 5.3 ID x 10 OD x 1",
+      6
+    ],
+    [
+      "M5 prevailing locknut",
+      6
+    ],
+    [
+      "M6 LH nut 10AF x 5",
+      3
+    ],
+    [
+      "M6 RH nut 10AF x 5",
+      3
+    ],
+    [
+      "M6 ordinary nut",
+      8
+    ]
+  ],
+  "no_double_count": [
+    "Nutty shipping is order-level.",
+    "MDF square nuts are in H05, screws in H08.",
+    "Custom clevises, couplers, clamps, sand plugs, feet and sleeves use raw stock plus owner labor $0; do not add separate shop fees.",
+    "End switches belong in controls BOM.",
+    "Do not credit unknown owned screws/paint/filler as already present."
+  ],
+  "audit_timezone": "America/Halifax",
+  "latest_research_utc": "2026-09-25T03:10:00Z",
+  "motion_takeoff_status": {
+    "priced_with_owner_shortening": [
+      "M3x14: shorten M3x16 six",
+      "M5x18: shorten M5x20 thirty-two",
+      "M6x22: shorten M6x25 eight",
+      "M6x55: shorten M6x60 four"
+    ],
+    "still_unpriced": [
+      [
+        "Shim 6.1 ID x 10 OD x 0.5 hardened",
+        12
+      ],
+      [
+        "Washer 6.4 ID x 12 OD x 1 hardened",
+        6
+      ],
+      [
+        "Washer 5.3 ID x 10 OD x 1",
+        6
+      ],
+      [
+        "M5 prevailing locknut",
+        6
+      ]
+    ],
+    "unresolved_count": "Rail/HMS mounting holes await supplier verification; retain allowance rather than inventing count."
+  },
+  "parent_coordination_note": "H11 goods unchanged. Root has verified combined 80/20 beam + 16 nuts cart: goods193.01 shipping61.30 estimatedtax17.80 total272.11. Do not add separate T-nut shipping to that basket.",
+  "owner_process_notes": [
+    "Shortening is owner fabrication labor $0: measure under-head length, retain socket/head, keep cool, deburr/chamfer and verify free running engagement. Price includes entire supplier minimum quantity, not just used pieces.",
+    "Current S08 billet route remains current geometry; no alternatives adopted.",
+    "Dimensional offers with explicit compatibility restrictions are excluded from purchasing release."
+  ]
+}

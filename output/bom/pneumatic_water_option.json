@@ -1,0 +1,43 @@
+{
+  "observed_date": "2026-09-24",
+  "owned_compressor_cfm_claim": 12,
+  "owned_air_valves_cost_usd": 0,
+  "owned_air_valves_status": "conditional reuse; need voltage, pressure, Cv, normal states and part numbers",
+  "air_displacement": {
+    "price_usd": null,
+    "scope": "engineered pressure/vacuum-qualified chamber, regulation, independent protection, overflow/vent, testing",
+    "status": "excluded from baseline until assembly drawing and quote",
+    "existing_tank": "vented; do not pressurize",
+    "usable_return_L_min": 125,
+    "static_lift_m_example": 0.65,
+    "ideal_static_pressure_psi": 0.925,
+    "flat_panel_force_N_at_1psi": 3103,
+    "fit": "current 930 x 530 x 380 mm envelope; catalog 150 L cylinder not proven to fit"
+  },
+  "aodd_alternative": {
+    "manufacturer": "Graco",
+    "part": "D32966",
+    "model": "Husky 307",
+    "pump_price_usd": 668,
+    "supplier": "FastoolNow",
+    "price_url": "https://fastoolnow.com/graco-d32966-husky-307-polypropylene-aodd-plastic-pump-w-npt-standard-air-valve/",
+    "manufacturer_url": "https://www.graco.com/co/es/in-plant-manufacturing/product/d32966-husky-307.html",
+    "family_data_url": "https://www.graco.com/content/dam/graco/ipd/literature/flyers/345059/345059EN-B.pdf",
+    "dimensions_source_url": "https://www.grainger.com/product/GRACO-Diaphragm-Pump-Polypropylene-911UF4",
+    "advertised_ship_lead": "5\u20137 business days",
+    "shipping_to_30510_usd": null,
+    "max_air_scfm": 5.5,
+    "max_flow_gpm": 6.5,
+    "max_solids_mm": 1.588,
+    "body_dimensions_mm_approx": [
+      206,
+      135,
+      206
+    ],
+    "fit_status": "rear upper service mounting candidate; hoses/exhaust/travel clearance not yet verified",
+    "architecture": "vented settling tank + gravity drain + AODD refill; no pressure in tank headspace",
+    "additional_costs": "regulator/filter/isolation, muffler, hose/adapters, mounts, wiring quote required",
+    "comparison": "replace electric refill pump; do not double-count"
+  },
+  "reference_url": "https://torchmate.com/uploads/manuals/5100-Users-Guide.pdf"
+}

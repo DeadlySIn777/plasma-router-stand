@@ -1,0 +1,143 @@
+{
+  "status": "ENGINEERING PACKAGE \u2014 NOT A PURCHASE OR MANUFACTURING RELEASE",
+  "file_integrity_checks": [
+    {
+      "check": "RevE_ASSEMBLED_ENGINEERING.step: STEP readback and current file hash",
+      "passed": true
+    },
+    {
+      "check": "RevE_ASSEMBLED_ENGINEERING.step: no unresolved static intersections",
+      "passed": true
+    },
+    {
+      "check": "RevE_ASSEMBLED_ENGINEERING.step: current mechanical component count",
+      "passed": true
+    },
+    {
+      "check": "RevE_PLASMA_SETUP.step: STEP readback and current file hash",
+      "passed": true
+    },
+    {
+      "check": "RevE_PLASMA_SETUP.step: no unresolved static intersections",
+      "passed": true
+    },
+    {
+      "check": "RevE_PLASMA_SETUP.step: current mechanical component count",
+      "passed": true
+    },
+    {
+      "check": "RevE_ROUTER.step: STEP readback and current file hash",
+      "passed": true
+    },
+    {
+      "check": "RevE_ROUTER.step: no unresolved static intersections",
+      "passed": true
+    },
+    {
+      "check": "RevE_ROUTER.step: current mechanical component count",
+      "passed": true
+    },
+    {
+      "check": "Motion definition included in assembly manifest",
+      "passed": true
+    },
+    {
+      "check": "Sampled motion configurations free of unresolved intersections",
+      "passed": true
+    },
+    {
+      "check": "Motion report source hash and local/world geometry agree",
+      "passed": false
+    },
+    {
+      "check": "Sampled one-piece module hoist path report passed",
+      "passed": true
+    },
+    {
+      "check": "Hoist report matches current geometry and checker source hashes",
+      "passed": true
+    },
+    {
+      "check": "Nesting quantity, edge, DXF audit checks",
+      "passed": true
+    },
+    {
+      "check": "Controller static/compiled-image checks",
+      "passed": true
+    },
+    {
+      "check": "Water logic/inventory analytical screen",
+      "passed": true
+    },
+    {
+      "check": "Current concept PDF content checks and file hash",
+      "passed": true
+    },
+    {
+      "check": "All eight current concept PDF pages visually reviewed",
+      "passed": true
+    },
+    {
+      "check": "Source-priced scope and grouped shipping reconcile",
+      "passed": true
+    },
+    {
+      "check": "Unknown complete delivered total remains blank",
+      "passed": true
+    },
+    {
+      "check": "Price register matches current research files",
+      "passed": true
+    }
+  ],
+  "assembly_exports": [
+    {
+      "file": "RevE_ASSEMBLED_ENGINEERING.step",
+      "solids": 967,
+      "clashes": 0
+    },
+    {
+      "file": "RevE_PLASMA_SETUP.step",
+      "solids": 731,
+      "clashes": 0
+    },
+    {
+      "file": "RevE_ROUTER.step",
+      "solids": 967,
+      "clashes": 0
+    }
+  ],
+  "motion_design_holds": [
+    "Z slide: owner-supplied listing drawing closed the plan dims (body 219x80, ends 12, carriage 90x50, phi7/phi5 holes, 70 across). Output mounting-plane height, along-travel hole pitch/thread and base-slot fastening remain measure-on-receipt; the slotted TOOL_ADAPTER_110 is PROVISIONAL until transfer-verified.",
+    "HGR20: seller P40/E20/1500 hole dimensions conflict. Actual factory holes must be verified before rail cutting or custom datum drilling.",
+    "HMS40: base nut cavity and endpoint datum not published. Rail caps require a verified base clamp/nut design; motor current and torque-speed curves missing.",
+    "Z power-loss retention: no selected normally-engaged brake/counterbalance. A ballscrew must not be assumed self-locking. Do not enable a suspended tool until retention is designed and tested.",
+    "Head projection uses an explicit80 mm Z stack assumption. Final tool sweep and claimed usable1000 Y must be recalculated when supplier datum is recovered.",
+    "X/Y physical stops and three home switches are modeled. Z home bracket and travel stops depend on the unresolved Z supplier endpoint/output geometry. Cable-chain anchors, way covers and spindle/torch cable bend envelopes still require final integration."
+  ],
+  "stale_swap_sources": [],
+  "additional_tool_clearance_hold": "Upper float guards begin at X978, only 3 mm beyond nominal maximum head-axis X975. Final torch body and mount offsets must clear guards at Y600/660/720. Nominal 800 mm X stroke is not a verified 800 mm plasma cutting width.",
+  "water_electrical_release_items": [
+    "Complete shared selector/contact-block and isolation-interface selection and physical panel layout using the defined terminal allocation.",
+    "Confirm AH3-3 DC contact suitability or substitute a documented timer; terminal mapping is now sourced.",
+    "Verify pump fuse instructions, actual inrush waveform, SSR thermal mounting, supply recovery and suppression heating.",
+    "Define B_CLEAR/B_LOCK keyed confirmation or sensing contacts and their mounting; do not claim automatic fastener-preload verification.",
+    "Verify selected fittings, hose pressure ratings, adjustable assembly lengths and shipping.",
+    "Measure actual fabricated volume and verify the visible overflow vessel; conservative modeled internal-solid displacement 0.592 L is below the 1 L reserve.",
+    "Subsequent commissioning: wet-calibrate floats; test overflow, all-return, stop chain, held-button restart prevention and thermal performance.",
+    "Calibrate the three-minute drain timer to at least 60 seconds; verify short interruption and held-button behavior."
+  ],
+  "controls_packaging_holds": [
+    "Vendor back-panel mounting hole pattern (transfer-drill the cage rails)",
+    "VFD thermal layout and wiring segregation",
+    "Cable glands and chain routes",
+    "Panel layout and legend set"
+  ],
+  "controls_service_access": "Isolate electrical power and open the front door. No draining, no pan or bed removal; lift the drip cap for top access.",
+  "priced_scope_before_tax_usd": 5810.24,
+  "priced_goods_usd": 5734.94,
+  "known_shipping_usd": 75.3,
+  "actual_delivered_quote_usd": null,
+  "physical_commissioning": "Not performed; normal subsequent work, separate from missing design data.",
+  "fusion_opened": false
+}

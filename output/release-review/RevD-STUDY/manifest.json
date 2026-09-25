@@ -1,0 +1,198 @@
+{
+  "revision": "Rev D STUDY",
+  "status": "NOT RELEASED - SOLID GEOMETRY STUDY ONLY",
+  "parameters": {
+    "status": "NOT RELEASED - SOLID GEOMETRY STUDY ONLY",
+    "coordinate_system": "mm; X right, Y rear, Z above floor",
+    "mainframe_nominal_mm": [
+      1150,
+      1450,
+      1050
+    ],
+    "tube_section_mm": [
+      50.8,
+      50.8,
+      3.048
+    ],
+    "rail_cap_thickness_mm": 7.9375,
+    "sheet_normal_thickness_mm": 3.048,
+    "pan_plan_mm": [
+      920,
+      1200
+    ],
+    "pan_rim_z_mm": 835,
+    "pan_floor_bottom_z_mm": {
+      "front": 747,
+      "rear": 735
+    },
+    "pan_floor_slope": 0.01,
+    "fixed_pan_bearer_top_mm": 730,
+    "pan_cradle_gap_mm": {
+      "frontmost_bearer_near_edge": 16,
+      "rearmost_bearer_near_edge": 6
+    },
+    "pan_cradle_status": "HOLD: sloping pan does not rest directly on bearers; measured gaps vary across width of each bearer.",
+    "panel_count": 6,
+    "panel_xy_mm": [
+      500,
+      397
+    ],
+    "deck_xy_mm": [
+      1003,
+      1197
+    ],
+    "deck_x_limits_mm": [
+      73.5,
+      1076.5
+    ],
+    "deck_y_limits_mm": [
+      76.5,
+      1273.5
+    ],
+    "beam_y_centers_mm": [
+      75,
+      475,
+      875,
+      1275
+    ],
+    "beam_bottom_z_mm": 870,
+    "beam_top_z_mm": 920.8,
+    "paired_beam_finished_mm": [
+      1044,
+      101.6,
+      50.8
+    ],
+    "cassette_strip_count": 30,
+    "cassette_strip_outer_mm": [
+      100,
+      397,
+      20
+    ],
+    "strip_end_bearing_each_mm": 49.3,
+    "strip_clear_span_mm": 298.4,
+    "underside_ties_per_panel": 2,
+    "underside_tie_blank_mm": [
+      500,
+      25,
+      6
+    ],
+    "underside_tie_local_y_mm": [
+      75,
+      297
+    ],
+    "bare_workplane_z_mm": 940.8,
+    "optional_mdf_mm": 19,
+    "optional_mdf_workplane_z_mm": 959.8,
+    "stowed_panel_envelope_mm": [
+      397,
+      45,
+      500
+    ],
+    "stowed_panel_x_origins_mm": [
+      130,
+      623
+    ],
+    "stowed_panel_y_origins_mm": [
+      525,
+      580,
+      635
+    ],
+    "stowed_panel_base_z_mm": 150,
+    "stowed_beam_origin_x_mm": 111.5,
+    "stowed_beam_y_centers_mm": [
+      120,
+      230,
+      340,
+      450
+    ],
+    "stowed_beam_origin_z_mm": 185,
+    "stowed_beam_angle_deg": 25,
+    "storage_clear_box_minmax_mm": [
+      75,
+      65,
+      150,
+      1080,
+      745,
+      700
+    ],
+    "profile_source_url": "https://www.amazon.com/dp/B0BXNWK99C",
+    "reference_parameters": "../../bed-system/design-parameters.json"
+  },
+  "configuration_files": [
+    "assembled_bare_extrusion_NOT_RELEASED.step",
+    "assembled_with_optional_mdf_NOT_RELEASED.step",
+    "stowed_with_optional_mdf_NOT_RELEASED.step"
+  ],
+  "omissions_and_release_holds": [
+    {
+      "id": "H01",
+      "part_scope": "HMS40 X/Y, ZBX80, gantry and heads",
+      "reason": "Not modeled in this bounded study. Supplier mounting drawings, payload/moment ratings, actual head geometry and full travel needed."
+    },
+    {
+      "id": "H02",
+      "part_scope": "20100 purchased profiles",
+      "reason": "Solid outer envelopes only; supplier cavities/slots, tolerances, alloy evidence and mounting hardware require verification."
+    },
+    {
+      "id": "H03",
+      "part_scope": "Panel joining/locating/clamping",
+      "reason": "Tie blanks exist, but hole patterns, T-nuts, pin/bushing fits, retained hardware and load paths are unspecified."
+    },
+    {
+      "id": "H04",
+      "part_scope": "Primary beam clamps and receiver seats",
+      "reason": "Old illustrative clamps interfered with panel corners. Omitted here; positive hold-down/locating interfaces must be designed below the beam top or outside panel footprint."
+    },
+    {
+      "id": "H05",
+      "part_scope": "Beam riser feet",
+      "reason": "Only clearance reservations modeled; no assertion that these are solid blocks or finished parts."
+    },
+    {
+      "id": "H06",
+      "part_scope": "Mainframe diagonal braces and their joints",
+      "reason": "30 x 30 x 3 angle requirement remains. Mitered lengths, placement/attachment and connections not sufficiently defined for a released solid."
+    },
+    {
+      "id": "H07",
+      "part_scope": "Pan cradles and slat combs",
+      "reason": "Missing from original geometry; pan sits 5-17 mm above bearer top depending Y, and slats need independent supports. Must be detailed."
+    },
+    {
+      "id": "H08",
+      "part_scope": "Pan manufacturing",
+      "reason": "No drain, sump, overflow holes, weld/bend definitions, corner reliefs or sheet flat-pattern release. Floor now has physical 1% slope."
+    },
+    {
+      "id": "H09",
+      "part_scope": "Reservoir and water controls",
+      "reason": "Outer envelope only. Vented versus pressure-rated architecture, walls, supports, valves, ports, service access and plumbing need selected design."
+    },
+    {
+      "id": "H10",
+      "part_scope": "Cabinet and storage rack",
+      "reason": "Validated containment is inside a reserved clear box, not actual racks/retainers or collision-free insertion/removal. Handles, clamps, fasteners and covers omitted."
+    },
+    {
+      "id": "H11",
+      "part_scope": "Welded tube fabrication",
+      "reason": "Nominal square corner hollow tubes; stock radii/tolerances, weld prep, tube venting/sand fill, weld sequence and machined/shimmed rail datums remain."
+    },
+    {
+      "id": "H12",
+      "part_scope": "Feet, ground supports and total loads",
+      "reason": "Plates and height envelopes shown; actual rated feet/thread blocks, reinforcement and load capacity must be verified."
+    },
+    {
+      "id": "H13",
+      "part_scope": "CAM and manufacturing release",
+      "reason": "No G-code, toolpaths, sheet DXFs or fabrication authorization produced. Machines, tools, stock, workholding, tolerances and inspection plan unknown."
+    }
+  ],
+  "all_modeled_solids_valid": true,
+  "all_step_roundtrips_passed": true,
+  "all_modeled_static_part_pairs_clear": true,
+  "what_passing_checks_mean": "The represented solids are valid and avoid positive-volume overlaps; this does not prove completeness, stiffness, load capacity, purchased-part accuracy or manufacturing readiness.",
+  "runtime_seconds": 4.61
+}

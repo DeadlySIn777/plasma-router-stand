@@ -1,0 +1,58 @@
+{
+  "revision": "C",
+  "chassis_mm": [
+    1150,
+    1450,
+    1050
+  ],
+  "axis_travel_mm": {
+    "X": 800,
+    "Y_left": 1000,
+    "Y_right": 1000,
+    "Z": 100
+  },
+  "water_pan_external_mm": [
+    920,
+    1200,
+    100
+  ],
+  "planes_mm": {
+    "pan_low_floor": 735,
+    "pan_rim": 835,
+    "plasma_slats": 850,
+    "fixed_ledger": 840,
+    "removable_beam_bottom": 870,
+    "panel_datum": 920.8,
+    "router_before_skim": 972.8,
+    "gantry_underside": 1127
+  },
+  "deck_panel_mm": [
+    497,
+    397,
+    52
+  ],
+  "deck_panel_count": 6,
+  "bridge_beam_count": 4,
+  "bridge_beam_finished_length_mm": 1044,
+  "reservoir_internal_mm": [
+    900,
+    500,
+    350
+  ],
+  "reservoir_gross_L": 157.5,
+  "required_usable_return_L": 125,
+  "proposed_total_charge_L": 110,
+  "storage_clear_mm": [
+    1005,
+    550,
+    680
+  ],
+  "status": "Engineering concept; not released for fabrication",
+  "pending": [
+    "Exact ER17 spindle and torch geometry",
+    "Supplier mounting holes and ratings",
+    "Clamp/locator hardware drawings",
+    "Fluid media compatibility",
+    "Electrical review and physical commissioning"
+  ]
+}

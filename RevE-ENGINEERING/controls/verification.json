@@ -1,0 +1,261 @@
+{
+  "status": "STATIC_AND_COMPILE_CHECKS_PASSED_NOT_BENCH_TESTED",
+  "checks": [
+    {
+      "check": "S1 STEP matches official map",
+      "pass": true
+    },
+    {
+      "check": "S1 DIRECTION matches official map",
+      "pass": true
+    },
+    {
+      "check": "S1 ENABLE matches official map",
+      "pass": true
+    },
+    {
+      "check": "S1 LIMIT matches official map",
+      "pass": true
+    },
+    {
+      "check": "S2 STEP matches official map",
+      "pass": true
+    },
+    {
+      "check": "S2 DIRECTION matches official map",
+      "pass": true
+    },
+    {
+      "check": "S2 ENABLE matches official map",
+      "pass": true
+    },
+    {
+      "check": "S2 LIMIT matches official map",
+      "pass": true
+    },
+    {
+      "check": "S3 STEP matches official map",
+      "pass": true
+    },
+    {
+      "check": "S3 DIRECTION matches official map",
+      "pass": true
+    },
+    {
+      "check": "S3 ENABLE matches official map",
+      "pass": true
+    },
+    {
+      "check": "S3 LIMIT matches official map",
+      "pass": true
+    },
+    {
+      "check": "S4 STEP matches official map",
+      "pass": true
+    },
+    {
+      "check": "S4 DIRECTION matches official map",
+      "pass": true
+    },
+    {
+      "check": "S4 ENABLE matches official map",
+      "pass": true
+    },
+    {
+      "check": "S4 LIMIT matches official map",
+      "pass": true
+    },
+    {
+      "check": "MOTOR_CSX matches official CS map",
+      "pass": true
+    },
+    {
+      "check": "MOTOR_CSY matches official CS map",
+      "pass": true
+    },
+    {
+      "check": "MOTOR_CSM3 matches official CS map",
+      "pass": true
+    },
+    {
+      "check": "MOTOR_CSZ matches official CS map",
+      "pass": true
+    },
+    {
+      "check": "AUXINPUT0 equals official EXP1_8",
+      "pass": true
+    },
+    {
+      "check": "AUXINPUT1 equals official EXP1_7",
+      "pass": true
+    },
+    {
+      "check": "AUXINPUT2 equals official EXP1_6",
+      "pass": true
+    },
+    {
+      "check": "AUXINPUT3 equals official EXP1_2",
+      "pass": true
+    },
+    {
+      "check": "AUXINPUT4 equals official EXP1_3",
+      "pass": true
+    },
+    {
+      "check": "AUXINPUT5 equals official EXP1_1",
+      "pass": true
+    },
+    {
+      "check": "AUXINPUT6 equals official EXP2_4",
+      "pass": true
+    },
+    {
+      "check": "AUXINPUT7 equals official EXP2_7",
+      "pass": true
+    },
+    {
+      "check": "AUXOUTPUT0 equals official EXP1_4",
+      "pass": true
+    },
+    {
+      "check": "PWM is official BLTouch PE9",
+      "pass": true
+    },
+    {
+      "check": "No assigned physical GPIO overlap",
+      "pass": true
+    },
+    {
+      "check": "Every interrupt input has a unique EXTI line",
+      "pass": true
+    },
+    {
+      "check": "V1.1 S1-S4 use 50 milliohm sense value",
+      "pass": true
+    },
+    {
+      "check": "S1-S4 exclusively selected",
+      "pass": true
+    },
+    {
+      "check": "Zero stored arc-attempt count is guarded before decrement",
+      "pass": true
+    },
+    {
+      "check": "Only one initial arc attempt by default",
+      "pass": true
+    },
+    {
+      "check": "Arc-attempt setting rejects zero",
+      "pass": true
+    },
+    {
+      "check": "Unused driver EN/CS do not conflict with assigned pins",
+      "pass": true
+    },
+    {
+      "check": "All unused driver pins appear in official configuration",
+      "pass": true
+    },
+    {
+      "check": "Hybrid ELF and BIN exist",
+      "pass": true
+    },
+    {
+      "check": "ELF links board_init",
+      "pass": true
+    },
+    {
+      "check": "ELF links plasma_init",
+      "pass": true
+    },
+    {
+      "check": "ELF links TMC5160_Init",
+      "pass": true
+    },
+    {
+      "check": "ELF links st2_motor_init",
+      "pass": true
+    },
+    {
+      "check": "ELF links tmc_spi_init",
+      "pass": true
+    },
+    {
+      "check": "ELF links stepperOutputStep",
+      "pass": true
+    },
+    {
+      "check": "Vector begins after 128KiB bootloader",
+      "pass": true
+    },
+    {
+      "check": "BIN stays below NVS sector at 0x080E0000",
+      "pass": true
+    }
+  ],
+  "pin_allocation": {
+    "X_STEP": "PC14",
+    "X_DIRECTION": "PC13",
+    "X_ENABLE": "PE6",
+    "X_LIMIT": "PC15",
+    "MOTOR_CSX": "PD6",
+    "Y_STEP": "PE5",
+    "Y_DIRECTION": "PE4",
+    "Y_ENABLE": "PE3",
+    "Y_LIMIT": "PF0",
+    "MOTOR_CSY": "PD5",
+    "M3_STEP": "PE2",
+    "M3_DIRECTION": "PE1",
+    "M3_ENABLE": "PE0",
+    "M3_LIMIT": "PF1",
+    "MOTOR_CSM3": "PD4",
+    "Z_STEP": "PB9",
+    "Z_DIRECTION": "PB8",
+    "Z_ENABLE": "PB7",
+    "Z_LIMIT": "PF2",
+    "MOTOR_CSZ": "PD3",
+    "TRINAMIC_MOSI": "PC8",
+    "TRINAMIC_MISO": "PC7",
+    "TRINAMIC_SCK": "PC6",
+    "AUXINPUT0": "PD12",
+    "AUXINPUT1": "PD13",
+    "AUXINPUT2": "PD14",
+    "AUXINPUT3": "PG4",
+    "AUXINPUT4": "PG3",
+    "AUXINPUT5": "PG5",
+    "AUXINPUT6": "PE11",
+    "AUXINPUT7": "PG6",
+    "AUXOUTPUT0": "PG2",
+    "AUXOUTPUT1": "PE9"
+  },
+  "exti_lines": [
+    15,
+    0,
+    1,
+    2,
+    12,
+    13,
+    14,
+    4,
+    3,
+    5,
+    11,
+    6
+  ],
+  "binary": "grblhal-h7\\.pio\\build\\kraken_v11_hybrid\\firmware.bin",
+  "binary_bytes": 248704,
+  "binary_sha256": "ce192b7053ad457d6b0d750456bbf06ff5ab782b60c6ccf8c6cac158725594ac",
+  "explicitly_not_tested": [
+    "MCU boot",
+    "SPI communication and RMS current",
+    "physical direction and enable polarity",
+    "USB enumeration",
+    "Y auto-squaring",
+    "pulse timing",
+    "live THC response",
+    "E-stop hardware chain",
+    "EMI immunity",
+    "VFD/torch interfaces"
+  ]
+}

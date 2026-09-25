@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-24",
+  "summary": "A browser inspection found an active-looking Sylvania Facebook Marketplace offer at $115 per 24-foot length. Five full usable 24-foot lengths fit the existing 36-blank tube cut list, giving $575 in candidate goods versus the $930.90 retail reference. Seller claims, material condition/grade/wall and pickup cost are unverified, so this is not a delivered quotation or an adopted CAD substitution.",
+  "observation_method": "Parent agent inspected the live Facebook Marketplace page through the normal browser after dismissing a login overlay. Public search/fetch had not returned usable listings. No seller contact or order.",
+  "search_location": "Alto, GA, within 40 miles selected; Marketplace also surfaced wider-area results. Do not infer every returned listing is within that radius.",
+  "five_24ft_fit": true,
+  "candidate_goods_5x24ft": 575.0,
+  "prior_goods_6x20ft": 930.9,
+  "candidate_goods_saving_before_pickup_tax_qualification": 355.9,
+  "proof_file": "marketplace-24ft-cut-proof.json",
+  "listings": [
+    {
+      "title": "Square Steel Tubing 2x2x24ft x 1/8 inch walls",
+      "url": "https://www.facebook.com/marketplace/item/1367277908682890/",
+      "location": "Sylvania, GA",
+      "price_display": "$115 per piece",
+      "spec": "Seller advertises 2 × 2 inch square steel tubing, 24 ft length, 1/8 inch walls; description says 28 pieces remain. Page says In stock, Condition New, Door pickup. Description calls the tube weathered with a brown rusted surface and green interior coating.",
+      "qualification": "Candidate only. Live page and price observed, but inventory, grade, actual wall, straightness, coating and usable length are seller claims requiring confirmation/inspection. Sylvania is outside the requested local search area. Five usable 24 ft bars fit the existing blank lengths; goods $575 before tax/pickup. No material substitution or budget saving adopted.",
+      "unit_price_usd": 115.0,
+      "candidate_quantity": 5,
+      "candidate_goods_usd": 575.0,
+      "shipping_usd": null,
+      "availability_status": "Page displayed In stock; seller stock not confirmed",
+      "candidate_accepted_in_build_total": false
+    },
+    {
+      "title": "2x2 square steel tubing $6 Each",
+      "url": "https://www.facebook.com/marketplace/item/1721520526249054/",
+      "location": "Jefferson, GA",
+      "price_display": "$6 each; five-piece minimum ($30)",
+      "spec": "Live page says In stock, Condition Used - Like New. Description says 5 tube minimum, square tubing 2x2x31.5, $6 each. Wall and grade are not stated.",
+      "qualification": "Short-stock lead only. At 31.5 inches (800.1 mm), these cannot supply the 949.2–1450 mm chassis blanks. No splices assumed. Potentially usable for 648.8 mm members/accessories only after wall, grade, condition and dimensions are confirmed; a mixed-stock cutting plan would be required. Not a replacement for the full tube lot.",
+      "unit_price_usd": 6.0,
+      "minimum_quantity": 5,
+      "minimum_goods_usd": 30.0,
+      "shipping_usd": null,
+      "candidate_accepted_in_build_total": false
+    },
+    {
+      "title": "Square Tubing",
+      "url": "https://www.facebook.com/marketplace/item/1586230069744711/",
+      "location": "Temple, GA",
+      "price_display": "$110 per 20 ft piece; $70 for one 13 ft piece ($1 headline is a placeholder)",
+      "spec": "Live page says listed four weeks ago, Used - Fair. Description: two 2 × 2 inch, quarter-inch-wall, 20 ft pieces at $110 each; one 2 × 2 inch, quarter-inch-wall, 13 ft piece at $70.",
+      "qualification": "Not adopted. Advertised 0.250 inch wall is much thicker than the modeled 0.120 inch wall and would increase weight; fit and load effects require review. Listed quantity is insufficient for the full frame lot. Headline $1 is not the actual stock price. Inventory and condition unconfirmed with seller.",
+      "shipping_usd": null,
+      "candidate_accepted_in_build_total": false
+    },
+    {
+      "title": "Steel tubing — 2 × 4 inch, quarter-inch wall",
+      "url": "https://www.facebook.com/marketplace/item/919614894399066/",
+      "location": "Clayton, GA",
+      "price_display": "$20 per FOOT; $400 per 20 ft piece",
+      "spec": "Description advertises 2 × 4 inch tubing with quarter-inch wall, 20 ft length; two pieces left.",
+      "qualification": "Rejected for current chassis: wrong cross-section and wall. Headline $20 is a per-foot rate, not a 20-foot-bar price. Seller inventory unconfirmed.",
+      "candidate_accepted_in_build_total": false
+    }
+  ]
+}

@@ -1,0 +1,1100 @@
+{
+  "date": "2026-09-24",
+  "destination": "Alto GA 30510",
+  "scope": "Read-only controls/water allowance audit; no CAD, master BOM, purchases or supplier messages changed.",
+  "currency_default": "USD",
+  "actual_delivered_total": null,
+  "summary": "Partial source-backed itemization. Unpriced and candidate rows must not be treated as zero or released drop-in replacements.",
+  "rows": [
+    {
+      "id": "CA-01",
+      "replaces_old_ids": [
+        "E12"
+      ],
+      "item": "GCX1470-22 keyed three-position selector",
+      "qty": 1,
+      "unitprice": 34.5,
+      "currency": "USD",
+      "source": "https://www.automationdirect.com/adc/shopping/catalog/pushbuttons_-z-_switches_-z-_indicators/selector_switches/gcx1470-22",
+      "shipping": {
+        "vendor_group": "AutomationDirect",
+        "amount": null,
+        "status": "Advertised free US small-package shipping when the combined order exceeds $49; no ZIP-specific cart checked."
+      },
+      "basis": "Observed live manufacturer/distributor page, 2026-09-24",
+      "fitproof": "22 mm; four supplied blocks are 2 NO + 2 NC. Replace both NC blocks with the two CA-02 NO blocks; use two stacked NO per actuated side for R1/R2 and P1/P2.",
+      "openitems": [
+        "Verify center-off and mutually exclusive closure against manufacturer cam chart; key is removable in every position.",
+        "Reuse the two removed NC blocks on CA-03; not discarded."
+      ],
+      "status": "partial",
+      "extended": 34.5
+    },
+    {
+      "id": "CA-02",
+      "replaces_old_ids": [
+        "E12"
+      ],
+      "item": "ECX1040-2 normally-open contact blocks, pack of two",
+      "qty": 1,
+      "unitprice": 8.75,
+      "currency": "USD",
+      "source": "https://www.automationdirect.com/adc/shopping/catalog/pushbuttons_-z-_switches_-z-_indicators/pushbutton_-z-_switch_-z-_indicator_accessories/contact_blocks_-z-_mounting_flanges/ecx1040-2",
+      "shipping": {
+        "vendor_group": "AutomationDirect",
+        "amount": null,
+        "status": "Advertised free US small-package shipping when the combined order exceeds $49; no ZIP-specific cart checked."
+      },
+      "basis": "Observed live page",
+      "fitproof": "Two additional NO contacts for CA-01; manufacturer allows three blocks deep by two wide.",
+      "openitems": [],
+      "status": "partial",
+      "extended": 8.75
+    },
+    {
+      "id": "CA-03",
+      "replaces_old_ids": [
+        "E12",
+        "W-WATER-BUTTONS"
+      ],
+      "item": "GCX1300 maintained two-position selector with one NO contact",
+      "qty": 2,
+      "unitprice": 12,
+      "currency": "USD",
+      "source": "https://www.automationdirect.com/adc/shopping/catalog/pushbuttons_-z-_switches_-z-_indicators/selector_switches/gcx1300",
+      "shipping": {
+        "vendor_group": "AutomationDirect",
+        "amount": null,
+        "status": "Advertised free US small-package shipping when the combined order exceeds $49; no ZIP-specific cart checked."
+      },
+      "basis": "Observed live page",
+      "fitproof": "SETUP/RUN and AUTO/DRAIN; add one recovered NC contact from CA-01 to each for the complementary contact.",
+      "openitems": [
+        "Final panel labels and a drain-override guard still needed."
+      ],
+      "status": "partial",
+      "extended": 24
+    },
+    {
+      "id": "CA-04",
+      "replaces_old_ids": [
+        "E12",
+        "W-WATER-BUTTONS"
+      ],
+      "item": "GCX1102 green momentary pushbutton with protective ring and NO contact",
+      "qty": 2,
+      "unitprice": 9,
+      "currency": "USD",
+      "source": "https://www.automationdirect.com/adc/shopping/catalog/pushbuttons_-z-_switches_-z-_indicators/pushbuttons?searchStatus=bad",
+      "shipping": {
+        "vendor_group": "AutomationDirect",
+        "amount": null,
+        "status": "Advertised free US small-package shipping when the combined order exceeds $49; no ZIP-specific cart checked."
+      },
+      "basis": "Observed current catalog page",
+      "fitproof": "One CYCLE START; one FILL. Add CA-07 NC contact to FILL for release-to-rearm.",
+      "openitems": [
+        "Verify FILL contact operating order with selected stacked block; a flush protective ring is not a hinged guard."
+      ],
+      "status": "partial",
+      "extended": 18
+    },
+    {
+      "id": "CA-05",
+      "replaces_old_ids": [
+        "E12"
+      ],
+      "item": "GCX1104 blue momentary reset pushbutton, NO",
+      "qty": 1,
+      "unitprice": 9,
+      "currency": "USD",
+      "source": "https://www.automationdirect.com/adc/shopping/catalog/pushbuttons_-z-_switches_-z-_indicators/pushbuttons?searchStatus=bad",
+      "shipping": {
+        "vendor_group": "AutomationDirect",
+        "amount": null,
+        "status": "Advertised free US small-package shipping when the combined order exceeds $49; no ZIP-specific cart checked."
+      },
+      "basis": "Observed current catalog page",
+      "fitproof": "Deliberate machine reset input.",
+      "openitems": [
+        "Final stop-chain reset wiring remains open."
+      ],
+      "status": "partial",
+      "extended": 9
+    },
+    {
+      "id": "CA-06",
+      "replaces_old_ids": [
+        "E12",
+        "W-WATER-BUTTONS"
+      ],
+      "item": "GCX1101 red momentary pushbutton, NC",
+      "qty": 2,
+      "unitprice": 9,
+      "currency": "USD",
+      "source": "https://www.automationdirect.com/adc/shopping/catalog/pushbuttons_-z-_switches_-z-_indicators/pushbuttons?searchStatus=bad",
+      "shipping": {
+        "vendor_group": "AutomationDirect",
+        "amount": null,
+        "status": "Advertised free US small-package shipping when the combined order exceeds $49; no ZIP-specific cart checked."
+      },
+      "basis": "Observed current catalog page",
+      "fitproof": "One FEED HOLD; one WATER STOP. Distinct functions; does not replace the latching E-stop.",
+      "openitems": [],
+      "status": "partial",
+      "extended": 18
+    },
+    {
+      "id": "CA-07",
+      "replaces_old_ids": [
+        "E12",
+        "W-WATER-BUTTONS"
+      ],
+      "item": "ECX1030-2 normally-closed contact blocks, pack of two",
+      "qty": 1,
+      "unitprice": 8.75,
+      "currency": "USD",
+      "source": "https://www.automationdirect.com/adc/shopping/catalog/pushbuttons_-z-_switches_-z-_indicators/pushbutton_-z-_switch_-z-_indicator_accessories/contact_blocks_-z-_mounting_flanges/ecx1030-2",
+      "shipping": {
+        "vendor_group": "AutomationDirect",
+        "amount": null,
+        "status": "Advertised free US small-package shipping when the combined order exceeds $49; no ZIP-specific cart checked."
+      },
+      "basis": "Observed live page",
+      "fitproof": "One additional NC for FILL; one for a second E-stop channel if the final E-stop uses this family.",
+      "openitems": [
+        "Page says backordered, earliest 2026-10-02; date not guaranteed.",
+        "E-stop exact operator is not priced in this audit."
+      ],
+      "status": "partial",
+      "extended": 8.75
+    },
+    {
+      "id": "CA-08",
+      "replaces_old_ids": [
+        "E12",
+        "W-WATER-BUTTONS"
+      ],
+      "item": "GCX1131 latching twist-release emergency-stop operator with one NC contact",
+      "qty": 1,
+      "unitprice": 17.5,
+      "currency": "USD",
+      "source": "https://www.automationdirect.com/adc/shopping/catalog/pushbuttons_-z-_switches_-z-_indicators/emergency_stop_pushbuttons/gcx1131",
+      "shipping": {
+        "vendor_group": "AutomationDirect",
+        "amount": null,
+        "status": "Advertised free US small-package shipping when the combined order exceeds $49; no ZIP-specific cart checked."
+      },
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase.",
+      "fitproof": "22 mm mounting, 40 mm red mushroom, IP65, twist-to-release. Supplied ECX1030 family NC block matches the selected GCX system; manufacturer catalog specifies positive-opening contacts. CA-07 spare NC can provide the second contact if required by the finalized stop circuit.",
+      "manufacturer_source": "https://cdn.automationdirect.com/static/specs/cents22mmmush.pdf",
+      "openitems": [
+        "Latest page shows backorder with forecast 2026-09-28; not guaranteed delivery.",
+        "Final stop-chain circuit and contact architecture remain unpriced under CA-14.",
+        "Legends and any required operating-button guards are CA-39."
+      ],
+      "status": "partial",
+      "extended": 17.5
+    },
+    {
+      "id": "CA-09",
+      "replaces_old_ids": [
+        "E15",
+        "W-BRANCH-WIRING"
+      ],
+      "item": "DN-R35S1-2 plated-steel DIN rail, two 1 m pieces",
+      "qty": 1,
+      "unitprice": 9.25,
+      "currency": "USD",
+      "source": "https://www.automationdirect.com/adc/shopping/catalog/wire_-a-_cable_management/din_rail/din_rail/dn-r35s1-2",
+      "shipping": {
+        "vendor_group": "AutomationDirect",
+        "amount": null,
+        "status": "Advertised free US small-package shipping when the combined order exceeds $49; no ZIP-specific cart checked."
+      },
+      "basis": "Observed live page",
+      "fitproof": "Shared rail for main controls and water relays; count this purchase once.",
+      "openitems": [
+        "2 m is a proposed cabinet purchase quantity pending panel layout, not a measured installed route."
+      ],
+      "status": "partial",
+      "extended": 9.25
+    },
+    {
+      "id": "CA-10",
+      "replaces_old_ids": [
+        "E17"
+      ],
+      "item": "Adafruit 4474 USB Type-A to Type-C data cable, approximately 1 m",
+      "qty": 1,
+      "unitprice": 4.95,
+      "currency": "USD",
+      "source": "https://www.adafruit.com/product/4474",
+      "shipping": {
+        "vendor_group": "Adafruit",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Observed live page",
+      "fitproof": "Host USB-A to Kraken USB-C data connection; matches controller and Pi4B connector type.",
+      "openitems": [
+        "Confirm internal routing fits 1 m; shield/strain relief and power-backfeed configuration remain to finalize.",
+        "No Ethernet cable is required for the Kraken USB motion link. An optional host-network cable is separate."
+      ],
+      "status": "partial",
+      "extended": 4.95
+    },
+    {
+      "id": "CA-11",
+      "replaces_old_ids": [
+        "E22"
+      ],
+      "item": "CNC4PC C41S isolated PWM-to-0–10 V spindle board",
+      "qty": 1,
+      "unitprice": 45.9,
+      "currency": "USD",
+      "source": "https://www.cnc4pc.com/shop/integration-electronics-spindle-control-436/c41s-c41s-pwm-variable-speed-control-board-1044",
+      "shipping": {
+        "vendor_group": "CNC4PC",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Observed manufacturer price; conditional candidate",
+      "fitproof": "Primary manual documents isolated analog and relay outputs, but inputs are 5 V TTL. The present Kraken output is 3.3 V.",
+      "openitems": [
+        "Needs a fail-off 3.3→5 V buffer, supply and verified 5 kHz PWM operation; not a drop-in released substitute.",
+        "Board derives run state from PWM; existing separate PG2 run request must still be independently gated through the hardware tool-permission circuit.",
+        "VFD exact control terminals/parameters and isolation/power layout are unresolved."
+      ],
+      "status": "candidate_not_adopted",
+      "extended": 45.9
+    },
+    {
+      "id": "CA-12",
+      "replaces_old_ids": [
+        "E22"
+      ],
+      "item": "Adafruit 1787 74AHCT125 3.3→5 V buffer IC",
+      "qty": 1,
+      "unitprice": 1.5,
+      "currency": "USD",
+      "source": "https://www.adafruit.com/product/1787",
+      "shipping": {
+        "vendor_group": "Adafruit",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Observed manufacturer price, OUT OF STOCK",
+      "fitproof": "Suitable logic-level family for 3.3 V-high detection at 5 V supply; requires an actual circuit.",
+      "openitems": [
+        "Out of stock; not a purchasable completed interface.",
+        "PCB, bypassing, pull-downs, output enable defaults and mounting are not included."
+      ],
+      "status": "candidate_not_adopted",
+      "extended": 1.5
+    },
+    {
+      "id": "CA-13",
+      "replaces_old_ids": [
+        "E09"
+      ],
+      "item": "Twelve field-input isolation channels and normally-off PG2 output interface",
+      "qty": 1,
+      "unitprice": null,
+      "currency": "USD",
+      "source": "https://github.com/bigtreetech/BIGTREETECH-Kraken",
+      "shipping": {
+        "vendor_group": "unselected",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Unpriced; final interface schematic required",
+      "fitproof": "Twelve mapped inputs: four homes; Arc OK/UP/DOWN; E-stop/feed-hold/cycle-start; probe; permissive. Do not treat 5 V header power as 5 V-tolerant GPIO.",
+      "openitems": [
+        "Select exact 24 V field-current / 3.3 V output circuits, input polarity, isolation spacing and surge protection.",
+        "K_READY wetting load must be supported; do not connect an AgNi relay contact directly to an unverified microamp GPIO.",
+        "SparkFun BOB-09118 ($5.95, two channels) was researched but not adopted as a native 24 V field-input board."
+      ],
+      "status": "partial",
+      "extended": null
+    },
+    {
+      "id": "CA-14",
+      "replaces_old_ids": [
+        "E13"
+      ],
+      "item": "Main disconnect, independent stop circuit, contactors, branch protection and EMI filter",
+      "qty": 1,
+      "unitprice": null,
+      "currency": "USD",
+      "source": "https://cdn.automationdirect.com/static/catalog/images/product-pdf/MS-Motor-Controls.pdf",
+      "shipping": {
+        "vendor_group": "unknown",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Unpriced engineered assembly",
+      "fitproof": "Keep all required power interruption and tool-permission functions independent of firmware.",
+      "openitems": [
+        "Exact supply topology, input branch current, VFD inrush, cutter branch and restart/monitoring circuit are missing.",
+        "Do not infer a contactor's electronic-drive input suitability from its AC-3 motor rating.",
+        "Separate water SSRs and water fuse branches below are excluded from this row."
+      ],
+      "status": "partial",
+      "extended": null
+    },
+    {
+      "id": "CA-15",
+      "replaces_old_ids": [
+        "E14"
+      ],
+      "item": "Continuous-flex shielded motor and field-signal cable; shield clamps and protective bonding",
+      "qty": 1,
+      "unitprice": null,
+      "currency": "USD",
+      "source": null,
+      "shipping": {
+        "vendor_group": "unknown",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Unpriced route-dependent cut list",
+      "fitproof": "Existing 25–30 m motor +25–30 m signal figures are allowances. All four bipolar motor leads require functional conductors; PE must remain dedicated.",
+      "openitems": [
+        "Final chain routes and motor current are not established; exact gauge, conductors, lengths and connectors remain open.",
+        "Do not adopt LUTZE A6021604-1 as four motor leads: its four conductors include green/yellow PE.",
+        "Supplied spindle kit VFD cable is not charged again."
+      ],
+      "status": "partial",
+      "extended": null
+    },
+    {
+      "id": "CA-16",
+      "replaces_old_ids": [
+        "E15",
+        "W-BRANCH-WIRING"
+      ],
+      "item": "Shared terminal blocks, end stops/covers, glands, ferrules, wire duct, labels and panel hookup wire",
+      "qty": 1,
+      "unitprice": null,
+      "currency": "USD",
+      "source": null,
+      "shipping": {
+        "vendor_group": "unknown",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Unpriced after removal of duplicate lots",
+      "fitproof": "One panel-wide termination schedule must contain the water XW terminals; water branch wiring must not buy them a second time.",
+      "openitems": [
+        "Quantities require completed panel layout and actual cable outside diameters.",
+        "CA-09 DIN rail and dedicated fuse/diode rows are excluded here."
+      ],
+      "status": "partial",
+      "extended": null
+    },
+    {
+      "id": "CA-17",
+      "replaces_old_ids": [
+        "E16"
+      ],
+      "item": "Cabinet filtered ventilation and segregated VFD housing",
+      "qty": 1,
+      "unitprice": null,
+      "currency": "USD",
+      "source": null,
+      "shipping": {
+        "vendor_group": "unknown",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Unpriced thermal/layout dependent",
+      "fitproof": "The selected enclosure is a fit envelope, not a verified thermal design.",
+      "openitems": [
+        "Need VFD losses, permitted orientation, airflow paths and actual usable backplate space before fan/housing selection.",
+        "Do not replace filtered ventilation with an unprotected PC fan exposed to plasma debris."
+      ],
+      "status": "partial",
+      "extended": null
+    },
+    {
+      "id": "CA-18",
+      "replaces_old_ids": [
+        "E21"
+      ],
+      "item": "Host microSD, Kraken firmware microSD and CB1 heatsink/fan",
+      "qty": 1,
+      "unitprice": null,
+      "currency": "USD",
+      "source": "https://github.com/bigtreetech/CB1",
+      "shipping": {
+        "vendor_group": "unknown",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Unpriced exact-stock selection",
+      "fitproof": "Two cards are distinct when CB1 remains installed: boot media and removable controller update media.",
+      "openitems": [
+        "No zero-cost ownership assumption. Candidate Adafruit2820 was rejected because no longer stocked.",
+        "Use CB1-specific cooling; confirm any host power supply omitted from E19/E20."
+      ],
+      "status": "partial",
+      "extended": null
+    },
+    {
+      "id": "CA-19",
+      "replaces_old_ids": [
+        "E08"
+      ],
+      "item": "PoLabs PlasmaSensCompact standalone UP/DOWN/ARC-OK THC",
+      "qty": 1,
+      "unitprice": 148.9,
+      "currency": "EUR",
+      "source": "https://www.poscope.com/product/plasmasenscompact/",
+      "shipping": {
+        "vendor_group": "PoLabs",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Observed manufacturer EUR price, excluding VAT and shipping",
+      "fitproof": "6–36 V power, isolated Arc OK/UP/DOWN outputs; matches firmware function concept.",
+      "openitems": [
+        "EUR price is not a USD checkout price; no invented exchange conversion.",
+        "Unknown cutter model, voltage interface, HF-start behavior and torch trigger prevent unconditional compatibility approval.",
+        "Use documented cutter CNC connections; do not treat pilot-arc torch identity as proof of power-source compatibility."
+      ],
+      "status": "conditional_plasma",
+      "extended": 148.9
+    },
+    {
+      "id": "CA-20",
+      "replaces_old_ids": [
+        "W-BRANCH-WIRING"
+      ],
+      "item": "Littelfuse 0FHA0001ZXJ inline ATO fuse holder",
+      "qty": 3,
+      "unitprice": 11.7,
+      "currency": "USD",
+      "source": "https://www.digikey.com/en/products/detail/littelfuse-commercial-vehicle-products/0FHA0001ZXJ/2004051",
+      "shipping": {
+        "vendor_group": "DigiKey",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Observed USD distributor price",
+      "fitproof": "Three branch holders: pump, control, valve/timers. Primary rating20 A/32 VDC.",
+      "openitems": [
+        "Holder leads are a local gauge transition; verify conductor protection/termination in final drawing.",
+        "Tariff may apply in cart."
+      ],
+      "status": "partial",
+      "extended": 35.1
+    },
+    {
+      "id": "CA-21",
+      "replaces_old_ids": [
+        "W-BRANCH-WIRING"
+      ],
+      "item": "Littelfuse 0287010.U 10 A ATO fuse",
+      "qty": 1,
+      "unitprice": 0.47,
+      "currency": "USD",
+      "source": "https://www.digikey.com/en/products/detail/littelfuse-inc/0287010-U/3996901",
+      "shipping": {
+        "vendor_group": "DigiKey",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Observed USD distributor price",
+      "fitproof": "Pump conductor protection, per current water electrical design.",
+      "openitems": [
+        "Actual pump instruction and startup pulse must support10 A; do not increase blindly."
+      ],
+      "status": "partial",
+      "extended": 0.47
+    },
+    {
+      "id": "CA-22",
+      "replaces_old_ids": [
+        "W-BRANCH-WIRING"
+      ],
+      "item": "Littelfuse 0287001.U 1 A ATO fuse",
+      "qty": 2,
+      "unitprice": 0.47,
+      "currency": "USD",
+      "source": "https://www.digikey.com/en/products/detail/littelfuse-inc/0287001-U/3996891",
+      "shipping": {
+        "vendor_group": "DigiKey",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Observed USD distributor price",
+      "fitproof": "Control and valve/timer branches; U is bulk packaging sold individually and replaces the previous L packing code electrically.",
+      "openitems": [],
+      "status": "partial",
+      "extended": 0.94
+    },
+    {
+      "id": "CA-23",
+      "replaces_old_ids": [
+        "W-BRANCH-WIRING"
+      ],
+      "item": "Vishay 1N4007-E3/54 diode, cut tape",
+      "qty": 10,
+      "unitprice": 0.342,
+      "currency": "USD",
+      "source": "https://www.digikey.com/en/products/detail/vishay-general-semiconductor-diodes-division/1N4007-E3-54/754813",
+      "shipping": {
+        "vendor_group": "DigiKey",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Observed qty10 price",
+      "fitproof": "Six relay suppression diodes; two drain-command OR diodes; two ready-OR diodes. Not eight.",
+      "openitems": [
+        "Insulated supported installation and polarity inspection required; possible cart tariff."
+      ],
+      "status": "partial",
+      "extended": 3.42
+    },
+    {
+      "id": "CA-24",
+      "replaces_old_ids": [
+        "W-BRANCH-WIRING"
+      ],
+      "item": "STMicroelectronics STPS20100CT pump flyback diode",
+      "qty": 1,
+      "unitprice": 1.57,
+      "currency": "USD",
+      "source": "https://www.digikey.com/en/products/detail/stmicroelectronics/STPS20100CT/2827118",
+      "shipping": {
+        "vendor_group": "DigiKey",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Observed active-part USD distributor price",
+      "fitproof": "Manufacturer datasheet: dual10 A,100 V common cathode, TO-220; pin1/3 anodes, pin2/tab cathode. Functional replacement candidate for obsolete onsemi MBR20100CTG.",
+      "openitems": [
+        "Validate pump stop-pulse thermal duty, insulated tab mounting and final protection; component substitution only, not a tested motor-protection system.",
+        "Primary data: https://www.digikey.com/htmldatasheets/production/1010540/0/0/1/stps20100ct.pdf"
+      ],
+      "status": "recommended_substitution",
+      "extended": 1.57
+    },
+    {
+      "id": "CA-25",
+      "replaces_old_ids": [
+        "W-CLOSE-TIMER",
+        "W-DRAIN-TIMER"
+      ],
+      "item": "Finder39.81.0.024.0060 DIN on-delay timers, alternative to AH3-3",
+      "qty": 2,
+      "unitprice": 38.59,
+      "currency": "USD",
+      "source": "https://www.digikey.com/en/products/detail/finder-relays-inc/39-81-0-024-0060/10055832",
+      "shipping": {
+        "vendor_group": "DigiKey",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Observed USD price; conditional alternative",
+      "fitproof": "24 V, one timed SPDT, on-delay mode, ranges include10 s and75 s;6.2 mm width. Primary data https://cdn.findernet.com/app/uploads/S39EN.pdf",
+      "openitems": [
+        "Not pin-compatible with AH3-3; revise terminal schedule if chosen.",
+        "Published minimum load500 mW (12 V/10 mA) may be missed when T_CLOSE feeds only an SSR input. A calculated wetting load or lower-minimum-load timer is required.",
+        "This pair costs$77.18 versus old$20.78; do not book as savings or a fully released substitution."
+      ],
+      "status": "candidate_not_adopted",
+      "extended": 77.18
+    },
+    {
+      "id": "CA-26",
+      "replaces_old_ids": [
+        "W-HOSES"
+      ],
+      "item": "Parker 801-8-BLU-RL 1/2-inch Push-Lok hose, cut length",
+      "qty": 10,
+      "unitprice": 3.98,
+      "currency": "USD",
+      "source": "https://www.wilson-company.com/product/801-8-blu-rl/801-series",
+      "shipping": {
+        "vendor_group": "Wilson Company",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase. Quantity is feet: 10 ft = 3.048 m.",
+      "fitproof": "Parker publishes 300 PSI, 28 inHg vacuum, 125 mm minimum bend radius, water temperature limit 85 C, and matching 82-series fittings. Use as one matched set with CA-33/34/35/40.",
+      "openitems": [
+        "Parker excludes extreme pulsation. Confirm the selected diaphragm pump's pulsation is acceptable or obtain a qualified crimped alternative before adoption.",
+        "Confirm water-treatment chemical compatibility, actual route length and 125 mm bends.",
+        "Do not add worm clamps or generic hose barbs to the 82-series Push-Lok connections."
+      ],
+      "status": "candidate_not_adopted",
+      "extended": 39.8,
+      "option_group": "Parker matched pump-hose option",
+      "manufacturer_source": "https://www.parker.com/content/dam/Parker-com/Literature/Hose-Products-Division/Websphere-Supporting-Literature/FCG_HPD-Thermal-Management-Hoses-Bulletin.pdf"
+    },
+    {
+      "id": "CA-27",
+      "replaces_old_ids": [
+        "W-HOSES"
+      ],
+      "item": "Kuriyama K3150-16X100 Clearbraid 1-inch gravity drain hose, cut length",
+      "qty": 5,
+      "unitprice": 3.23,
+      "currency": "USD",
+      "source": "https://www.centralstateshose.com/Kuriyama-Clearbraid-K3150-multi-purpose-pvc-hose-1-inch-id-per-foot_p_23416.html",
+      "shipping": {
+        "vendor_group": "Central States Hose",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase. Quantity is feet: 5 ft = 1.524 m; page says in stock.",
+      "fitproof": "1-inch ID reinforced PVC water hose, 125 PSI at 70 F / 75 PSI at 122 F. Selected only for gravity drain, never for the 120 PSI pump circuit.",
+      "openitems": [
+        "Keep a continuously descending, supported route without kinks; protect from hot slag.",
+        "Verify water-treatment compatibility and required installed length."
+      ],
+      "status": "partial",
+      "extended": 16.15,
+      "manufacturer_source": "https://www.kuriyama.com/library/Kuriyama-Kuri-Tec-Catalog.pdf"
+    },
+    {
+      "id": "CA-28",
+      "replaces_old_ids": [
+        "W-HOSES"
+      ],
+      "item": "Breeze 63016 all-stainless hose clamps, 10-piece minimum purchase",
+      "qty": 10,
+      "unitprice": 1.34,
+      "currency": "USD",
+      "source": "https://www.qualityfarmsupply.com/products/13-16-inch-1-1-2-inch-range-stainless-steel-hose-clamp",
+      "shipping": {
+        "vendor_group": "Quality Farm Supply",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "basis": "Public indexed offer 2026-09-24; minimum/multiple 10, $1.34 each. Direct fetch returned 403; recheck cart.",
+      "fitproof": "13/16 to 1-1/2-inch range covers the nominal 1.3-inch OD gravity hose. All-stainless band and screw. Allow two for gravity drain retention, eight spare.",
+      "openitems": [
+        "This reduced clamp count applies only if the matched Parker push-on pump set is adopted; otherwise original small-hose clamps still require selection.",
+        "Do not fit these over Parker 82-series connections.",
+        "Confirm barb engagement and installed hose OD before tightening."
+      ],
+      "status": "candidate_not_adopted",
+      "extended": 13.4,
+      "option_group": "Parker matched pump-hose option",
+      "manufacturer_source": "https://www.hoseclampkings.com/DSN/hoseclampkings/Content/PDF/Breeze-Power-Seal.pdf"
+    },
+    {
+      "id": "CA-29",
+      "replaces_old_ids": [
+        "W-FITTINGS"
+      ],
+      "item": "Pro Flow CP150/100-304 1.5 x 1-inch FNPT bell reducer",
+      "qty": 1,
+      "unitprice": 8.17,
+      "currency": "USD",
+      "source": "https://www.proflow-dynamics.com/bell-reducer-coupling.html",
+      "shipping": {
+        "vendor_group": "Pro Flow Dynamics",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase.",
+      "fitproof": "304 stainless, female NPT at both ends. This is an explicit two-part replacement for the original F1.5-to-M1 reducer: pair with one CA-36 nipple.",
+      "openitems": [
+        "Confirm the assembled reducer/union/valve length within the reserved adjustable plumbing envelope; no CAD change made here."
+      ],
+      "status": "partial",
+      "extended": 8.17
+    },
+    {
+      "id": "CA-30",
+      "replaces_old_ids": [
+        "W-FITTINGS"
+      ],
+      "item": "Pro Flow U100-304 1-inch FNPT union",
+      "qty": 1,
+      "unitprice": 12.8,
+      "currency": "USD",
+      "source": "https://www.proflow-dynamics.com/pipe-union.html",
+      "shipping": {
+        "vendor_group": "Pro Flow Dynamics",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase.",
+      "fitproof": "304 stainless, female NPT both sides, separable service union; gravity-drain use.",
+      "openitems": [
+        "Requires the two CA-36 male nipples to connect female reducer and female valve.",
+        "Check wrench/service clearance after actual parts arrive."
+      ],
+      "status": "partial",
+      "extended": 12.8
+    },
+    {
+      "id": "CA-31",
+      "replaces_old_ids": [
+        "W-FITTINGS"
+      ],
+      "item": "Pro Flow HB100-304 1-inch MNPT x 1-inch hose barb",
+      "qty": 1,
+      "unitprice": 7.86,
+      "currency": "USD",
+      "source": "https://www.proflow-dynamics.com/hose-barb-fittings.html",
+      "shipping": {
+        "vendor_group": "Pro Flow Dynamics",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase.",
+      "fitproof": "304 stainless barb matches the valve's 1-inch female NPT and the 1-inch drain hose ID; gravity side only.",
+      "openitems": [
+        "Check inserted barb length and supported route."
+      ],
+      "status": "partial",
+      "extended": 7.86
+    },
+    {
+      "id": "CA-32",
+      "replaces_old_ids": [
+        "W-FITTINGS"
+      ],
+      "item": "Pro Flow CAP150-304 1.5-inch FNPT cleanout cap",
+      "qty": 1,
+      "unitprice": 7.28,
+      "currency": "USD",
+      "source": "https://www.proflow-dynamics.com/1-1-2-threaded-cap.html",
+      "shipping": {
+        "vendor_group": "Pro Flow Dynamics",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase.",
+      "fitproof": "304 stainless female NPT cap fits the 1.5-inch male cleanout thread; removable for sediment service.",
+      "openitems": [
+        "Maintain hand/tool access and use compatible thread sealant."
+      ],
+      "status": "partial",
+      "extended": 7.28
+    },
+    {
+      "id": "CA-33",
+      "replaces_old_ids": [
+        "W-FITTINGS"
+      ],
+      "item": "Parker 30182-8-8 1/2-inch MNPTF x 1/2-inch Push-Lok fitting, pickup adapter portion",
+      "qty": 1,
+      "unitprice": 11.35,
+      "currency": "USD",
+      "source": "https://www.partsgopher.com/product/30182-8-8/82-series-30182",
+      "shipping": {
+        "vendor_group": "PartsGopher",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase.",
+      "fitproof": "Catalog 82 series fits Parker 801 hose. Combine with CA-40 female coupling to connect the male pickup pipe; do not substitute a female NPSM swivel.",
+      "openitems": [
+        "Adoption depends on CA-26 hose/pump confirmation.",
+        "Plated-steel fitting water-treatment/corrosion compatibility must be confirmed."
+      ],
+      "status": "candidate_not_adopted",
+      "extended": 11.35,
+      "option_group": "Parker matched pump-hose option"
+    },
+    {
+      "id": "CA-34",
+      "replaces_old_ids": [
+        "W-FITTINGS"
+      ],
+      "item": "Parker 30182-8-8 1/2-inch MNPTF x 1/2-inch Push-Lok fittings for strainer",
+      "qty": 2,
+      "unitprice": 11.35,
+      "currency": "USD",
+      "source": "https://www.partsgopher.com/product/30182-8-8/82-series-30182",
+      "shipping": {
+        "vendor_group": "PartsGopher",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase.",
+      "fitproof": "1/2-inch tapered male pipe ends match the selected strainer's 1/2-inch female NPT; 82-series hose ends match 801 hose.",
+      "openitems": [
+        "Adoption depends on CA-26 hose/pump confirmation.",
+        "Avoid over-torquing the strainer's plastic ports; follow the strainer installation limit.",
+        "Plated-steel corrosion compatibility remains to verify."
+      ],
+      "status": "candidate_not_adopted",
+      "extended": 22.7,
+      "option_group": "Parker matched pump-hose option"
+    },
+    {
+      "id": "CA-35",
+      "replaces_old_ids": [
+        "W-FITTINGS"
+      ],
+      "item": "Parker 30182-6-8 3/8-inch MNPTF x 1/2-inch Push-Lok fittings for pump",
+      "qty": 2,
+      "unitprice": 8.49,
+      "currency": "USD",
+      "source": "https://www.partsgopher.com/product/30182-6-8/82-series-30182",
+      "shipping": {
+        "vendor_group": "PartsGopher",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase.",
+      "fitproof": "3/8-18 male tapered pipe ends match the selected pump's 3/8-18 female NPT ports; 82 series matches 801 hose.",
+      "openitems": [
+        "Adoption depends on CA-26 pulsation, chemical and bend-radius checks.",
+        "Follow pump port tightening limits; not interchangeable with G3/8 BSP."
+      ],
+      "status": "candidate_not_adopted",
+      "extended": 16.98,
+      "option_group": "Parker matched pump-hose option"
+    },
+    {
+      "id": "CA-36",
+      "replaces_old_ids": [
+        "W-FITTINGS"
+      ],
+      "item": "Pro Flow NP100-CL-304 1-inch close nipples",
+      "qty": 2,
+      "unitprice": 2.62,
+      "currency": "USD",
+      "source": "https://www.proflow-dynamics.com/1-close-nipple-ss-304.html",
+      "shipping": {
+        "vendor_group": "Pro Flow Dynamics",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase.",
+      "fitproof": "Two male-to-male 1-inch NPT nipples connect reducer-to-union and union-to-valve. Sealant separated into CA-41.",
+      "openitems": [
+        "Thread engagement and tool clearance determine whether close nipples or slightly longer 2-inch nipples are needed. The latter is a separately observed $2.77 each option, not added to this subtotal."
+      ],
+      "status": "partial",
+      "extended": 5.24
+    },
+    {
+      "id": "CA-37",
+      "replaces_old_ids": [
+        "W-GUARDS",
+        "W-METAL-EXTRA"
+      ],
+      "item": "Fabricated float guards and sensor brackets already in CAD sheet takeoff",
+      "qty": 1,
+      "unitprice": 0,
+      "currency": "USD",
+      "source": "../../../output/release-review/RevE-ENGINEERING/cutlist.json",
+      "shipping": {
+        "vendor_group": "unknown",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Duplicate-material exclusion only",
+      "fitproof": "Fabricated guards and sensor brackets are represented in the CAD cutlist and the material-specific metal audit, including separate stainless-steel groups. They are NOT all covered by the two 0.120-inch mild-steel sheets. Count each specified stock group once; owner fabrication labor is zero external cash.",
+      "openitems": [
+        "Keep separate stainless sheet purchases in the metal audit; do not replace them with a claim that two mild-steel sheets cover the guards.",
+        "Vent mesh, gasket, seals, pipe blanks and ordinary screws remain separate purchases unless already counted.",
+        "Do not remove the whole $12/$85 old lots without reconciling residual non-sheet items."
+      ],
+      "status": "partial",
+      "extended": 0
+    },
+    {
+      "id": "CA-38",
+      "replaces_old_ids": [
+        "W-GUARDS",
+        "W-METAL-EXTRA"
+      ],
+      "item": "EPDM gasket, vent mesh, pipe/fitting blanks, seals and float mounting consumables",
+      "qty": 1,
+      "unitprice": null,
+      "currency": "USD",
+      "source": null,
+      "shipping": {
+        "vendor_group": "unknown",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Unpriced residual after excluding duplicate sheet-metal parts",
+      "fitproof": "Keep gasket/mesh/pipe stock distinct from hose adapters, sheet blanks and main fastener purchases.",
+      "openitems": [
+        "Trace actual CAD tube/pipe stock and existing fastener coverage before adding costs."
+      ],
+      "status": "partial",
+      "extended": null
+    },
+    {
+      "currency": "USD",
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase.",
+      "status": "partial",
+      "id": "CA-39",
+      "replaces_old_ids": [
+        "E12",
+        "W-WATER-BUTTONS"
+      ],
+      "item": "Control legends and any specified FILL/RESET guards",
+      "qty": 1,
+      "unitprice": null,
+      "extended": null,
+      "source": null,
+      "shipping": {
+        "vendor_group": "unknown",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "fitproof": "Separate from the priced GCX1131 E-stop operator. Do not obstruct emergency access with a hinged guard.",
+      "openitems": [
+        "Choose actual label count and dimensions from final control panel; FILL guard geometry remains unresolved."
+      ]
+    },
+    {
+      "currency": "USD",
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase.",
+      "status": "candidate_not_adopted",
+      "id": "CA-40",
+      "replaces_old_ids": [
+        "W-FITTINGS"
+      ],
+      "item": "Pro Flow CP050-M-304 1/2-inch FNPT coupling for pickup",
+      "qty": 1,
+      "unitprice": 2.74,
+      "extended": 2.74,
+      "source": "https://www.proflow-dynamics.com/pipe-couplings.html",
+      "shipping": {
+        "vendor_group": "Pro Flow Dynamics",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "fitproof": "Female NPT both ends joins the male pickup pipe to CA-33 male adapter. Only used with the matched Parker option.",
+      "openitems": [
+        "Adoption depends on CA-26; verify support and extra adapter length."
+      ],
+      "option_group": "Parker matched pump-hose option"
+    },
+    {
+      "currency": "USD",
+      "basis": "Public offer observed 2026-09-24; goods only, no cart or purchase.",
+      "status": "partial",
+      "id": "CA-41",
+      "replaces_old_ids": [
+        "W-FITTINGS"
+      ],
+      "item": "RectorSeal T Plus 2 23710 thread sealant, 1.75 oz tube",
+      "qty": 1,
+      "unitprice": 5.87,
+      "extended": 5.87,
+      "source": "https://www.lowes.com/pd/rectorseal-t-plus-2-sealant/1000092785",
+      "shipping": {
+        "vendor_group": "Lowe's",
+        "amount": null,
+        "status": "Shipping to Alto GA 30510 is unquoted; do not assume free."
+      },
+      "fitproof": "Manufacturer approves water and metal/plastic threaded pipe, including stainless and brass. Apply to male pipe threads; not a substitute for hose retention.",
+      "manufacturer_source": "https://rectorseal.com/rectorseal-t-plus-2-group/",
+      "openitems": [
+        "Price is public offer without ZIP-specific pickup/delivery confirmation; one-time purchase, no subscription discount.",
+        "Follow pump/strainer fitting installation and sealant instructions."
+      ]
+    }
+  ],
+  "shipping_groups": [
+    {
+      "id": "AutomationDirect",
+      "amount_usd": 0,
+      "basis": "Published US small-package free shipping when combined order exceeds$49; listed selected hardware exceeds threshold.",
+      "condition": "Consolidate one order. No ZIP 30510 cart or promised delivery date; NC contact pack and latest E-stop page show backorder."
+    },
+    {
+      "id": "DigiKey",
+      "amount_usd": null,
+      "basis": "One consolidated order; shipping and item-specific tariffs unquoted."
+    },
+    {
+      "id": "Adafruit",
+      "amount_usd": null,
+      "basis": "One order if used; no free-shipping assumption."
+    },
+    {
+      "id": "CNC4PC",
+      "amount_usd": null,
+      "basis": "Conditional candidate order; unquoted."
+    },
+    {
+      "id": "PoLabs",
+      "amount_usd": null,
+      "basis": "Conditional plasma purchase; EUR goods price, international freight/tariff/currency charge unresolved."
+    },
+    {
+      "id": "Wilson Company",
+      "amount_usd": null,
+      "basis": "One eventual consolidated order per vendor. Shipping, taxes and any minimum-order charge to 30510 have not been quoted."
+    },
+    {
+      "id": "PartsGopher",
+      "amount_usd": null,
+      "basis": "One eventual consolidated order per vendor. Shipping, taxes and any minimum-order charge to 30510 have not been quoted."
+    },
+    {
+      "id": "Pro Flow Dynamics",
+      "amount_usd": null,
+      "basis": "One eventual consolidated order per vendor. Shipping, taxes and any minimum-order charge to 30510 have not been quoted."
+    },
+    {
+      "id": "Central States Hose",
+      "amount_usd": null,
+      "basis": "One eventual consolidated order per vendor. Shipping, taxes and any minimum-order charge to 30510 have not been quoted."
+    },
+    {
+      "id": "Quality Farm Supply",
+      "amount_usd": null,
+      "basis": "One eventual consolidated order per vendor. Shipping, taxes and any minimum-order charge to 30510 have not been quoted."
+    },
+    {
+      "id": "Lowe's",
+      "amount_usd": null,
+      "basis": "One eventual consolidated order per vendor. Shipping, taxes and any minimum-order charge to 30510 have not been quoted."
+    }
+  ],
+  "retained_current_water_rows": [
+    "W-PUMP",
+    "W-DRAIN",
+    "W-STRAINER",
+    "W-FLOAT",
+    "W-AUX-RELAYS",
+    "W-MOTOR-RELAYS"
+  ],
+  "simplifications": [
+    {
+      "proposal": "Use an existing suitable PC as the USB G-code sender.",
+      "cash_reduction_condition": "Only after user confirms suitable owned PC. CB1+carrier alone would remove current$61.97; host cooling/storage share ofE21 can then be recalculated. Kraken firmware update media and USB cable still needed.",
+      "adopted": false
+    },
+    {
+      "proposal": "One cabinet-wide termination/cable/label schedule, including water wiring.",
+      "cash_reduction_condition": "Remove duplicate quantities, not whole protective functions. Current lots cannot be summed as exact purchases.",
+      "adopted": false
+    },
+    {
+      "proposal": "Retain automatic drain/refill with independent high-high/low-water interruption.",
+      "cash_reduction_condition": "No compressor pressure/vacuum is applied to the vented tank. No cheap generic relay substitution credited against documented SSRs.",
+      "adopted": true
+    }
+  ],
+  "source_notes": [
+    "Amazon-first targeted searches did not establish a complete, traceable exact offer for the added control interfaces and modular switches. Manufacturer/distributor sources were used for those items.",
+    "Current core Amazon offers are being rechecked separately by the parent; existing observed water prices are not reasserted as newly verified by this audit.",
+    "Prices are goods prices before tax, unknown shipping and any cart tariff. Positive-priced candidate rows are NOT all additive to a selected BOM.",
+    "Follow-up: exact GCX1131 and gravity plumbing prices added; selected subtotal is partial goods, not a whole controls/water quote. Parker pump hose/fittings and reduced clamp count remain a separate conditional option."
+  ],
+  "totals": {
+    "selected_source_backed_usd": 257.57,
+    "unpriced_rows": 8,
+    "scope_is_complete": false,
+    "conditional_pump_hose_option_usd": 106.97
+  }
+}

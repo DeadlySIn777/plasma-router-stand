@@ -1,0 +1,84 @@
+{
+  "currency": "USD",
+  "destination": "Alto GA 30510",
+  "observed_date": "2026-09-24",
+  "not_a_delivered_quote": true,
+  "items": [
+    {
+      "item": "SKF SA6C RH rod end",
+      "quantity": 3,
+      "unit_price_observed": 49.32,
+      "shipping": null,
+      "price_status": "Retail benchmark from related exact-SKU price on SAL6C page, not a checkout quote",
+      "source": "https://www.sp-spareparts.com/en/p/sal6-c-skf"
+    },
+    {
+      "item": "SKF SAL6C LH rod end",
+      "quantity": 3,
+      "unit_price_observed": 46.27,
+      "shipping": null,
+      "price_status": "Advertised exact-SKU price; shipping to ZIP not quoted",
+      "source": "https://www.sp-spareparts.com/en/p/sal6-c-skf"
+    },
+    {
+      "item": "80/20 40-3915 M8 T-nut",
+      "quantity": 16,
+      "unit_price_observed": 2.58,
+      "shipping": null,
+      "price_status": "Manufacturer advertised custom-quantity unit price",
+      "source": "https://8020.net/40-3915.html"
+    },
+    {
+      "item": "Omron D2VW-01L2-1MS gold roller switch",
+      "quantity": 4,
+      "modeled_quantity": 3,
+      "unit_price_observed": 14.09,
+      "shipping": null,
+      "price_status": "Mouser advertised USD unit price for UL-wire variant; fourth Z switch mounting is held. Page warns possible 10 percent US tariff, not included as an observed charge.",
+      "source": "https://www.mouser.com/ProductDetail/Omron-Electronics/D2VW-01L2-1MS?qs=ImaqFqjHA4nlTsHd7%252BPS7w%3D%3D"
+    }
+  ],
+  "observed_goods_and_benchmark_subtotal": 384.41,
+  "unquoted_items": [
+    {
+      "scope": "Six ISO7379 6x20 M5 shoulder screws, six M5 locknuts, twelve race shims, twelve washers, three RH and three LH M6 jamnuts",
+      "planning_allowance": 50,
+      "quote": null
+    },
+    {
+      "scope": "Remaining motion commodity screws and nuts; exact modeled quantities in motion-component-quantities.json",
+      "planning_allowance": 75,
+      "quote": null
+    },
+    {
+      "scope": "Rail-to-datum screws and HMS bottom-slot mounting hardware, after source dimensions resolve",
+      "planning_allowance": 40,
+      "quote": null,
+      "quantity": null
+    },
+    {
+      "scope": "Custom motion machining: three couplers, six clevises, three drive shoes, three link supports, two beam feet, two spindle clamp halves, stop blocks/cams, tapping and counterbores. Raw stock remains in the metal BOM and must not be counted twice.",
+      "planning_allowance": 0,
+      "quote": null,
+      "note": "User is the fabricator. Required custom machining operations remain; raw stock is counted separately. An outside-shop quote is not part of the owner-build cash estimate.",
+      "prior_outside_shop_allowance": 900,
+      "cost_basis": "Owner-performed fabrication; no outside labor cash cost"
+    },
+    {
+      "scope": "Incremental hardware shipping reserve",
+      "planning_allowance": 30,
+      "quote": null
+    }
+  ],
+  "planning_total_for_this_incremental_scope": 579.41,
+  "delivered_total": null,
+  "exclusions": [
+    "Purchased HMS40 and ZBX80 modules already priced elsewhere",
+    "HGR20 rail kits already priced elsewhere",
+    "Spindle kit and 8080 beam already priced elsewhere",
+    "Raw plate and billet stock already priced in metals, if present",
+    "Tax, possible tariff and actual shipping quotation",
+    "Z brake or counterbalance, torch mount and unresolved Z adapter"
+  ],
+  "reconciliation_note": "Replace overlapping old allowances; do not simply add this entire scope to a BOM that already includes switches, screw packs, machining or raw stock. The old 100 dollar allowance for all rails, links and nuts is insufficient for the selected sourced SKF hardware."
+}

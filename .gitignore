@@ -1,0 +1,30 @@
+# Machine-local runtimes and dependencies
+**/node_modules/
+**/.venv/
+**/venv/
+**/.platformio/
+**/.pio/
+**/__pycache__/
+**/.pytest_cache/
+/tmp/
+
+# Regenerable intermediate files and duplicate bundles
+*.pyc
+*.pyo
+*.o
+*.obj
+*.dblite
+*.npz
+*.log
+*.inspect.ndjson
+*.zip
+
+# Credentials and local settings
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+.DS_Store
+Thumbs.db

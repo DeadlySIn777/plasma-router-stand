@@ -1,0 +1,33 @@
+diff --git a/thc.c b/thc.c
+index 48081d6..bd40cad 100644
+--- a/thc.c
++++ b/thc.c
+@@ -1063,7 +1063,9 @@ static void arcSetState (spindle_ptrs_t *spindle, spindle_state_t state, float r
+ 
+     } else {
+ 
+-        uint_fast8_t retries = plasma.arc_retries;
++        // Kraken engineering port: a stored zero must not underflow --retries.
++        // One means one initial attempt with no automatic retry.
++        uint_fast8_t retries = plasma.arc_retries ? plasma.arc_retries : 1;
+ 
+         if(job.pierce_height != 0.0f)
+             moveto(job.pierce_height);
+@@ -1336,7 +1338,7 @@ PROGMEM static const setting_detail_t plasma_settings[] = {
+     { Setting_THC_VoidOverride, Group_Plasma, "Plasma THC Void override", "percent", Format_Integer, "##0", "0", "100", Setting_NonCore, &plasma.thc_override, NULL, is_setting_available },
+     { Setting_Arc_FailTimeout, Group_Plasma, "Plasma Arc fail timeout", "seconds", Format_Decimal, "#0.0", NULL, NULL, Setting_NonCore, &plasma.arc_fail_timeout, NULL, NULL },
+     { Setting_Arc_RetryDelay, Group_Plasma, "Plasma Arc retry delay", "seconds", Format_Decimal, "#0.0", NULL, NULL, Setting_NonCore, &plasma.arc_retry_delay, NULL, NULL },
+-    { Setting_Arc_MaxRetries, Group_Plasma, "Plasma Arc max retries", NULL, Format_Int8, "#0", NULL, NULL, Setting_NonCore, &plasma.arc_retries, NULL, NULL },
++    { Setting_Arc_MaxRetries, Group_Plasma, "Plasma Arc max retries", NULL, Format_Int8, "#0", "1", "255", Setting_NonCore, &plasma.arc_retries, NULL, NULL },
+     { Setting_Arc_VoltageScale, Group_Plasma, "Plasma Arc voltage scale", NULL, Format_Decimal, "###0.000##", NULL, NULL, Setting_NonCore, &plasma.arc_voltage_scale, NULL, is_setting_available },
+     { Setting_Arc_VoltageOffset, Group_Plasma, "Plasma Arc voltage offset", NULL, Format_Decimal, "###0.000", NULL, NULL, Setting_NonCore, &plasma.arc_voltage_offset, NULL, is_setting_available },
+     { Setting_Arc_HeightPerVolt, Group_Plasma, "Plasma Arc height per volt", "mm", Format_Decimal, "###0.000", NULL, NULL, Setting_NonCore, &plasma.arc_height_per_volt, NULL, is_setting_available },
+@@ -1396,7 +1398,7 @@ static void plasma_settings_restore (void)
+         .pierce_delay = 0.0f,
+         .pierce_height = 1.0f,
+         .arc_fail_timeout = 3.0f,
+-        .arc_retries = 3,
++        .arc_retries = 1, // One attempt, no automatic re-strike by default.
+         .arc_retry_delay = 3.0f,
+         .arc_fail_timeout = 3.0f,
+         .arc_voltage_scale = 1.0f,

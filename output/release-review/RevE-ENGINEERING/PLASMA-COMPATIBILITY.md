@@ -1,0 +1,51 @@
+# Existing cutter and straight torch compatibility
+
+Status on September 24, 2026: **compatibility not established**. The user owns a pilot-arc cutter bought from Amazon, but its brand/model is not known. The user supplied [AG-60 straight torch body B07B8CWGB5](https://www.amazon.com/dp/B07B8CWGB5), previously described as similar to the owned torch. That link identifies a proposed torch body, not the power source driving it.
+
+## Can it work with modifications?
+
+Possibly, if the power source already supports the same torch starting system and the gas, electrode, pilot lead, trigger connections, current rating and duty cycle are compatible. Connector shape or the words “pilot arc” do not prove those conditions. A straight body is also not necessarily a complete torch, cable and machine connector assembly.
+
+An [AG-60/SG-55 manufacturer description](https://cnaweld.en.made-in-china.com/product/QFwtAJNHbyak/China-Cnaweld-AG60-Plasma-Non-Contact-Cutting-Torch-with-Yellow-Handle-4m.html) identifies this torch family as high-frequency starting. This is evidence about the family, not a verified schematic or pinout for the particular Amazon body. A compatible HF AG-60 cutter may accept a properly matched straight torch conversion. A blowback cutter cannot be assumed compatible with this body just by changing a fitting.
+
+Pilot arc describes the initial arc before it transfers to the workpiece; it does not specify whether that arc is initiated by HF or blowback. [Langmuir's compatibility guidance](https://www.langmuirsystems.com/pages/plasma-cutters) explains the distinction and excludes HF-start equipment from its own CrossFire controls because of interference and electronics damage. That exclusion is specific to its equipment; HF plasma is not universally incompatible with CNC. [Hypertherm's HPR260 documentation](https://xnet.hypertherm.com/Xnet/library/library.jsp?file=HYP118188) describes an industrial system with both pilot-arc and HF starting components.
+
+The present Kraken installation has **not** been designed and qualified as an HF-compatible control system. A different torch body does not establish that the cutter's HF source has disappeared. Generic ferrites, a metal box or an isolated trigger alone are not proof of compatibility.
+
+## What closes this interface
+
+1. Identify the power-source brand, exact model and revision from its external nameplate or original order. A photo of the front and external label is sufficient for identification; opening the case is unnecessary.
+2. Obtain that model's documented torch type, start method, gas requirement, output rating and connector pinout. Use its supported torch or a documented compatible conversion.
+3. Define a normally-off isolated CNC start interface and isolated arc-voltage/Arc OK interface appropriate to that exact cutter. The controller package expects external Arc OK, UP and DOWN signals; it does not accept raw arc voltage.
+4. Complete the chosen torch's clamp, floating touch-off, breakaway and cable-service envelope using actual dimensions.
+
+Do not connect the torch's pilot lead to the work clamp as a conversion, bypass torch interlocks, guess trigger pins or bring raw arc voltage into the Kraken. The existing cutter remains an owned item with no replacement cost charged; any required replacement or documented conversion is still unpriced.
+
+## Controller decision constraints and owned hardware (updated 25 Sep 2026)
+
+Owner-set HARD constraints: **exactly one controller board**, **no LinuxCNC**, no Mesa FPGA card, no PC-based control, no separate standalone THC box. Preference: ESP32/FluidNC-style standalone operation (WiFi UI, SD, no tethered PC). LinuxCNC/Mesa-card architectures are REJECTED and must not be re-proposed.
+
+Owned or bought hardware this decision must use or explicitly retire:
+- **BTT Kraken V1.1** with the compiled grblHAL port in `controls/` (owned).
+- **Mesa THCAD-300** isolated arc-voltage-to-frequency converter (owned). The THCAD manual limits DIRECT plasma connection of the -300 to touch-start torches; HF-start machines require the -5/-10 arrangement with appropriately selected external high-voltage resistance. A documented forum conversion (ten 300 k input resistors to 10 k 0.1 %, then recalibrate) turns a -300 into a -10-range board; the conversion alone does NOT make anything HF-safe — the external HV input resistance question stands separately. Verify board revision before modifying.
+- **AG-60/SG-55 straight torch body** (bought): a torch BODY, not a complete torch-and-lead assembly. Rear connection details and consumable fit against the actual cutter are unconfirmed.
+- **Plasma cutter**: believed Bestarc HF-start pilot-arc family; exact model STILL UNCONFIRMED (external nameplate photo closes this). 'Pilot arc' by itself does not distinguish HF from blowback start. HF start raises the isolation/noise bar for every arc-voltage sensing option and remains the gating fact for the torch conversion.
+
+### One-board decision record (source-verified 25 Sep 2026)
+
+**Selected direction: BTT Rodent hardware running grblHAL** — one ESP32 board, standalone (WiFi/WebUI/SD), no LinuxCNC, no Mesa card, no external THC box. FluidNC on the same board is REJECTED for this dual-mode machine on its own maintainers' record. Verified facts behind the decision, each held to a fetched primary source:
+
+1. **FluidNC has no torch height control and none is coming**: issues #310/#1105 deferred by both maintainers since 2022 ("long term dec list"); the FluidNC wiki plasma page itself lists THC up/down as unsupported, anti-dive unsupported, and rejects the ESP32 ADC for arc voltage. Its whole plasma toolkit is PlasmaSpindle (torch on/off + arc-OK wait, 0–3000 ms) plus M62–M67. No fork provides THC. Rodent+FluidNC would cut plasma with NO height control.
+2. **grblHAL ships an official BTT Rodent board map** (`grblHAL/ESP32 main/boards/btt_rodent_map.h`, maintainer-authored 2024–2026, four I2S-driven motors, marked UNTESTED — commissioning risk we carry knowingly, as with the Kraken port).
+3. **grblHAL's plasma plugin has real internal THC** (mode `$350=1`, PID on arc voltage from an analog aux ioport `$366`), plus external up/down (mode 2) and arc-OK-only (mode 3) fallbacks.
+4. **The THCAD counting shim is precedented in-tree but NOT finished anywhere**: maintainer-committed `thcad2.c` exists for RP2040, STM32F4xx and iMXRT1062, surfacing the THCAD frequency as an analog aux port — and the maintainer flags it "tentative … Not complete!" in every location. No ESP32 or STM32H7 version exists (dresco/STM32H7xx verified to carry no thcad file). Porting it to the Rodent (ESP32 PCNT) is contained, pattern-established firmware work of the same class as this package's existing Kraken port, and Mesa's own manual sanctions microcontroller counting ("counted directly by our FPGA cards or uControllers") — but it is development, not configuration.
+5. **Router mode**: grblHAL Modbus RS485 VFD plugin is mainline, and the Rodent has native RS485 — simpler than the Kraken's PWM-to-0-10V converter.
+6. **The owned Kraken V1.1 + compiled grblHAL port stays the zero-purchase fallback**: the dresco STM32H7xx driver supports up to two native ADC analog aux inputs (in real-world use per driver issue reports), so Kraken can run THC mode 1 with an isolated 0–10 V arc-voltage front end after a board-map edit and recompile — the CURRENT image was compiled with no analog aux port, so it supports only mode 2/3 as flashed. It is USB-tethered (no WiFi UI) and keeps the PWM VFD converter.
+
+**Decision gates and definitions (from the adversarial review)**: (a) the cutter nameplate photo is the gate for EVERYTHING — with a DP-family HF unit, no controller of any kind can fire or monitor the torch without modifying the cutter's trigger circuit and adding HF-hardened sensing, so the plasma side of the current Kraken baseline was never functional either; with an XP-family unit, arc volts, start and Arc-OK plug in. (b) "One board" is defined as: one motion-controller board. The isolated arc-voltage front end (THCAD or divider/ADC channel) and the torch-start relay are interface CHANNELS on the machine's existing isolation panel — already in scope — not a second controller; a Proma-class standalone THC brain WOULD be a second controller and stays excluded. (c) Until the cutter is identified, commission the Rodent in router mode and plasma mode 3 (arc-OK only, no THC); THC firmware work starts only after the cutter question lands.
+
+**Cutter reality check (blocks all controllers equally)**: the BTC500DP HF family exposes NO CNC interface — no arc-voltage output, no start input, no arc-OK (the manual's complete connection list is torch, earth, air, power). CNC torch start on it means an isolated normally-off relay across the machine-side torch-trigger pins, HF-hardened. Bestarc's BTC500XP 11GEN sibling (~$399–499) is Non-HF blowback with a 2-pin RAW 1:1 arc-voltage port and a 5-pin start/arc-OK connector — the plug-in match for a THCAD and the plasma plugin. NOTE: "DP" does not reliably mean HF (the BTC550DP ULTRA is blowback), so the nameplate photo still decides the actual unit.
+
+**THCAD-300 usage rules (Mesa manual v1.2, verified)**: direct plasma connection is touch-start only; HF-start requires the THCAD-5/-10 arrangement with an appropriately selected EXTERNAL high-voltage resistance. The documented conversion (ten 300 kΩ 1% HVR through-hole input resistors → 10 kΩ 0.1%, then recalibrate; confirmed by Mesa's PCW on the LinuxCNC forum) turns the -300 into a -10-range board, and the external HV resistor question is then handled per the manual. The THCAD's isolated differential frequency output is what the grblHAL counter shim reads. Raw arc voltage never lands on controller logic pins under any option.
+
+Whichever controller is commissioned, the water-permissive isolation boundary and the normally-off torch-start interface in this document are unchanged.

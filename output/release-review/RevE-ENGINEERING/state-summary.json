@@ -1,0 +1,164 @@
+{
+  "RevE_ROUTER": {
+    "part_count": 967,
+    "step_readback": {
+      "passed": true,
+      "solids": 967,
+      "volume_delta_mm3": 0.1009010374546051,
+      "volume_tolerance_mm3": 17.191352819157107,
+      "sha256": "fb5e3fb817a31e4533bf5473d19250dc1450f84fa6fe4440fcf03093c8b846c6",
+      "file": "RevE_ROUTER.step"
+    },
+    "unresolved_intersections": []
+  },
+  "RevE_PLASMA_SETUP": {
+    "part_count": 731,
+    "step_readback": {
+      "passed": true,
+      "solids": 731,
+      "volume_delta_mm3": 0.08282770216464996,
+      "volume_tolerance_mm3": 11.158325736150392,
+      "sha256": "807c7008023d3f77508d4a3bb73250ce63adc2ee14537c4d8cb2327c8e1e4c9b",
+      "file": "RevE_PLASMA_SETUP.step"
+    },
+    "unresolved_intersections": []
+  },
+  "normal_pan_water_model_litres": 79.61551402718209,
+  "tank_displacement_at_overflow_litres": 0.5316261701040549,
+  "tank_displacement_components": [
+    {
+      "id": "WT_SETTLING_WEIR",
+      "litres": 0.13605342268245912
+    },
+    {
+      "id": "WT_PICKUP_PIPE",
+      "litres": 0.09054717981130594
+    },
+    {
+      "id": "WT_EMERGENCY_OVERFLOW",
+      "litres": 0.12545899996628349
+    },
+    {
+      "id": "WT_BASKET_BASE",
+      "litres": 0.02583119494235759
+    },
+    {
+      "id": "WT_BASKET_LEFT",
+      "litres": 0.015381359999999998
+    },
+    {
+      "id": "WT_BASKET_RIGHT",
+      "litres": 0.015381359999999998
+    },
+    {
+      "id": "WT_BASKET_FRONT",
+      "litres": 0.020123946
+    },
+    {
+      "id": "WT_BASKET_REAR",
+      "litres": 0.020123946
+    },
+    {
+      "id": "PUMP_TRAY_BOLT_1",
+      "litres": 0.00014272883743789201
+    },
+    {
+      "id": "PUMP_TRAY_BOLT_2",
+      "litres": 0.00014272883743789201
+    },
+    {
+      "id": "PUMP_TRAY_BOLT_3",
+      "litres": 0.00014272883743789201
+    },
+    {
+      "id": "PUMP_TRAY_BOLT_4",
+      "litres": 0.00014272883743789201
+    },
+    {
+      "id": "FLOAT_TANK_LOW_BACKRAIL",
+      "litres": 0.02788017667202891
+    },
+    {
+      "id": "FLOAT_TANK_LOW_STANDOFF_1",
+      "litres": 0.0008993500121284565
+    },
+    {
+      "id": "FLOAT_TANK_LOW_STANDOFF_2",
+      "litres": 0.0008993500121284567
+    },
+    {
+      "id": "FLOAT_TANK_LOW_SLIDER",
+      "litres": 0.003144243989390675
+    },
+    {
+      "id": "FLOAT_TANK_LOW_LEDGE",
+      "litres": 0.004557667854375596
+    },
+    {
+      "id": "FLOAT_TANK_LOW_BOLT_1",
+      "litres": 0.0009236282401554012
+    },
+    {
+      "id": "FLOAT_TANK_LOW_NUT_1",
+      "litres": 0.0002916410324806771
+    },
+    {
+      "id": "FLOAT_TANK_LOW_BOLT_2",
+      "litres": 0.0009236282401554012
+    },
+    {
+      "id": "FLOAT_TANK_LOW_NUT_2",
+      "litres": 0.0002916410324806771
+    },
+    {
+      "id": "FLOAT_TANK_LOW_SENSOR_ENVELOPE",
+      "litres": 0.032487837949302795
+    },
+    {
+      "id": "FLOAT_TANK_LOW_SENSOR_NUT",
+      "litres": 0.0008587076267697887
+    },
+    {
+      "id": "FLOAT_TANK_LOW_GUARD_FLOOR",
+      "litres": 0.0012389380701702526
+    },
+    {
+      "id": "FLOAT_TANK_LOW_GUARD_SIDE_1",
+      "litres": 0.0020903008881569232
+    },
+    {
+      "id": "FLOAT_TANK_LOW_GUARD_SIDE_2",
+      "litres": 0.0019083275262483732
+    },
+    {
+      "id": "FLOAT_TANK_LOW_GUARD_END_1",
+      "litres": 0.0016584371040093526
+    },
+    {
+      "id": "FLOAT_TANK_LOW_GUARD_END_2",
+      "litres": 0.001658437104009352
+    },
+    {
+      "id": "TOOL_PARK_BOLT_1_1",
+      "litres": 0.00011038299947653142
+    },
+    {
+      "id": "TOOL_PARK_BOLT_1_2",
+      "litres": 0.00011038299947653142
+    },
+    {
+      "id": "TOOL_PARK_BOLT_2_1",
+      "litres": 0.00011038299947653142
+    },
+    {
+      "id": "TOOL_PARK_BOLT_2_2",
+      "litres": 0.00011038299947653142
+    }
+  ],
+  "limits": [
+    "Plasma setup depicts the water/slat bed with the one-piece module hoisted clear; the module itself is outside the machine and not in that STEP.",
+    "The blue water volume appears only in previews; mechanical STEP and interference checks exclude fluid display geometry.",
+    "Spindle is parked in its internal cradle. Retained tool-clamp geometry remains on the Z head.",
+    "All purchased interface and Z retention holds in the engineering manifest remain applicable."
+  ]
+}

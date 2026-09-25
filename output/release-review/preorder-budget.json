@@ -1,0 +1,40 @@
+{
+  "revision": "D study budget",
+  "date": "2026-09-24",
+  "currency": "USD",
+  "destination": "Alto GA 30510",
+  "procurement_release": false,
+  "complete_operating_machine_price_verified": false,
+  "water_basis": "Unselected pump/vented-reservoir automatic fill and drain allowance; not the compressed-air option",
+  "controller_basis": "Kraken hardware allowance; complete live plasma THC configuration unverified",
+  "categories": [
+    {"name": "Four motion modules", "amount": 868, "basis": "Advertised price observations earlier on review date; suitability not released"},
+    {"name": "Chassis, braces, feet, paint, skins, internal storage", "amount": 1096, "basis": "Allowance"},
+    {"name": "Gantry beam and mounting parts", "amount": 300, "basis": "Allowance"},
+    {"name": "Extrusion cassettes, joining parts, MDF and ordinary clamps", "amount": 795, "basis": "Includes 399.95 advertised extrusion price; remainder allowance"},
+    {"name": "Controls and electrical hardware provisions", "amount": 861, "basis": "Mixed observed components and allowances; firmware gap unpriced"},
+    {"name": "Spindle and basic routing accessories", "amount": 455, "basis": "Includes 309.99 spindle kit; remainder allowance"},
+    {"name": "Torch mount and isolated interface provision", "amount": 135, "basis": "Allowance"},
+    {"name": "Pan, slats and DIY vented reservoir materials", "amount": 400, "basis": "Allowance; nesting and fabrication not released"},
+    {"name": "Automatic water hardware", "amount": 360, "basis": "Pump-route allowance; exact components unselected"},
+    {"name": "Fabrication consumables and limited services", "amount": 175, "basis": "Allowance"},
+    {"name": "Shipping reserve", "amount": 300, "basis": "Allowance, not a carrier quote"}
+  ],
+  "total_before_tax": 5745,
+  "extrusion_purchase_arithmetic": {
+    "asin": "B0BXNWK99C",
+    "url": "https://www.amazon.com/dp/B0BXNWK99C",
+    "packs": 5,
+    "sticks_per_pack": 2,
+    "nominal_stick_length_mm": 1220,
+    "pack_price": 79.99,
+    "total": 399.95,
+    "advertised_shipping": 0,
+    "tax_included": false,
+    "order_recommendation_retracted_pending_design_review": true
+  },
+  "owned_excluded": ["Plasma cutter and compatible torch subject to identification", "12 CFM compressor", "CV-15HS vacuum generator", "Existing solenoids subject to verification"],
+  "other_exclusions": ["Sales tax", "Paid fabrication labor beyond limited allowance", "Shop dust/fume extraction", "Paid CAD/CAM software", "Firmware/interface development", "Design changes needed to qualify motion modules"],
+  "supersedes_workbook": false,
+  "note": "Older workbook remains a separate former-design estimate; neither document is a released purchase list."
+}
