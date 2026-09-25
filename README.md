@@ -6,7 +6,7 @@ Private working repository for the hybrid CNC router and plasma machine. Nominal
 
 ## Current review status
 
-The imported working files contain a newer one-piece hoisted bed design (called Rev F inside folders still named Rev E), alongside records from the previous six-cassette design. The full re-audit requested on 25 September 2026 has already identified unresolved mechanical, controller and BOM inconsistencies. See [the re-audit reports](output/reaudit-2026-09-25/) before relying on any drawing or cost total.
+The imported working files contain a newer one-piece hoisted bed design (called Rev F inside folders still named Rev E), alongside records from the previous six-cassette design. Three source-audit reports dated 25 September 2026 record mechanical, controller and BOM findings with source references and stated limits. See [the re-audit reports](output/reaudit-2026-09-25/) before relying on any drawing or cost total.
 
 In particular, verify the bed support and fastening geometry, actual tool reach for the proposed MDF surfacing operation, the lifting/footprint requirements, the controller baseline, and the current purchased-parts quantities. The existing plasma cutter is not identified by its AG-60 torch listing. Historical reports remain as evidence; they are not independent approval of the latest design.
 

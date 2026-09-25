@@ -1,0 +1,365 @@
+{
+  "audit_utc": "2026-09-25T06:09:02.991764+00:00",
+  "status": "NOT RELEASED: confirmed mechanical defects and unresolved interfaces",
+  "scope": "Bounded independent audit of current one-piece-bed snapshot. No CAD implementation changes or export regeneration. User task subsequently switched to private GitHub snapshot publication.",
+  "version_warning": "Directory/file names say RevE, bed source and mechanical document say Rev F. This report applies only to listed hashes.",
+  "findings": [
+    {
+      "id": "M01",
+      "severity": "high",
+      "title": "Five deck fastener stations have inadequate MDF support",
+      "status": "confirmed source geometry",
+      "evidence": "MDF spans X105.8–1044.2. For strip 1, alternating screw X103.5 at Y176.5/676.5/1176.5 is 2.3 mm outside its left edge. For strip 10, X1043.5 at Y426.5/926.5 is only 0.9 mm inside the right edge. These are Ø5.5 through holes with Ø16 underside pockets and Ø15 washers.",
+      "consequence": "Three screws have axes outside the board; two more through holes and all five washer/pocket seats break the board edge. The specified 50 sound clamping stations are not achieved.",
+      "required_action": "Move these five fasteners to supported bottom-slot centers, then recheck all washer footprints against the notched MDF and crossmembers and regenerate affected CAD/DXF.",
+      "references": [
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 18
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 115
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 119
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 124
+        }
+      ]
+    },
+    {
+      "id": "M02",
+      "severity": "high",
+      "title": "Promised in-machine surfacing cannot reach the complete MDF support face with the stated travel",
+      "status": "confirmed dimensions; cutter and alternative setup unresolved",
+      "evidence": "MDF is X105.8–1044.2/Y76.5–1273.5. The nominal tool axis is X175–975/Y121.4–1121.4. Unreachable axis margins are 69.2 mm each X side, 44.9 mm front and 152.1 mm rear. Reaching the rear outer corners in this setup would require cutter radius at least hypot(69.2,152.1)=167.1 mm, before collision checks.",
+      "consequence": "Flatness is made dependent on a machining operation that the chosen motion envelope does not support. A normal small-router surfacing bit cannot create the full bearing plane in one installed setup.",
+      "required_action": "Define a feasible datum/surfacing process, resize/reposition the support, or use independently referenced shop machining. Verify actual cutter reach and collisions; do not assert all weld/ledger tolerance disappears.",
+      "references": [
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 18
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 135
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\motion_details.py",
+          "line": 614
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\motion_details.py",
+          "line": 617
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\MECHANICAL-ENGINEERING.md",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "id": "M03",
+      "severity": "high",
+      "title": "Bottom-slot lips still carry screw preload",
+      "status": "confirmed incorrect load-path statement",
+      "evidence": "M5 screws run upward from washers below MDF into square nuts located above the extrusion bottom lips (TOP+1.3 mm). Tightening pulls each nut down against the lips and the screw head/washer up against MDF. Both the lips and MDF lie in the preload load path.",
+      "consequence": "The statements that the nut bears on lips only under uplift and that torque is reacted by MDF instead of lips are mechanically incorrect. Removing the prior torque restriction and using snug-plus-quarter-turn is not justified.",
+      "required_action": "Calculate or test the selected nut/lip/washer/MDF joint for assembly preload and service uplift; issue an appropriate controlled tightening method. Do not infer that the former 0.35 N m value is automatically correct either.",
+      "references": [
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 164
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 167
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\strength-screen.py",
+          "line": 49
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\MECHANICAL-ENGINEERING.md",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "id": "M04",
+      "severity": "high",
+      "title": "Current motion verification is failing while prose claims zero clashes",
+      "status": "confirmed report inconsistency; physical collision diagnosis unresolved",
+      "evidence": "Current motion-validation.json contains 22 clashes in each of five states, 295 parts per state, and a source SHA matching current motion_details.py. The first reported overlap is RAIL_CAP_1_BLANK/Y_DATUM_L at 63,800 mm³. MOTION-VERIFICATION.md still claims 291 solids and zero unpermitted intersections. Full assembly validation separately reports zero unresolved intersections.",
+      "consequence": "The motion subsystem test and assembled geometry disagree. This may reflect the standalone test fixture using unmodified rail caps; it is not evidence that all 22 are physical machine collisions. It is nevertheless a failed current verification that cannot be presented as passing.",
+      "required_action": "Reconcile the standalone fixture with the assembled frame, rerun the actual supported configurations and update prose/package status from the resulting report.",
+      "references": [
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\motion-validation.json",
+          "line": 3
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\motion-validation.json",
+          "line": 13
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\motion-validation.json",
+          "line": 14
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\check_motion_states.py",
+          "line": 29
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\MOTION-VERIFICATION.md",
+          "line": 3
+        }
+      ]
+    },
+    {
+      "id": "M05",
+      "severity": "high",
+      "title": "Current exchange path leaves the machine footprint",
+      "status": "confirmed requirement conflict against visible user instruction",
+      "evidence": "The present one-piece bed route is +60 mm lift, −1400 mm Y translation, then +500 mm hoist. Recorded moving envelope extends to Y−1376 mm. Storage explicitly parks the module outside the machine. The visible user requirement was to keep the swap within the machine footprint.",
+      "consequence": "The modeled architecture does not satisfy the user’s footprint requirement. References to an owner 567 kg winch are not supported by the user messages available to this audit agent.",
+      "required_action": "Restore an in-footprint architecture or obtain an explicit scope change. Treat the hoist, anchorage, track and park position as unresolved, not existing verified infrastructure.",
+      "references": [
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\MECHANICAL-ENGINEERING.md",
+          "line": 100
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\engineering-manifest.json",
+          "line": 104
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\build_reve_engineering.py",
+          "line": 48
+        }
+      ]
+    },
+    {
+      "id": "M06",
+      "severity": "medium",
+      "title": "One-millimeter surfacing allowance is absent from modeled final stack",
+      "status": "confirmed dimensional inconsistency",
+      "evidence": "The model builds two finished 12.7 mm MDF layers from Z895.4 to Z920.8, then places strips at Z920.8. Assembly instructions remove 1.0 mm from the upper MDF before fitting strips. That operation would lower the support face and bare/spoil workplanes by 1.0 mm relative to the modeled values unless stock allowance or compensating placement is added.",
+      "consequence": "Final datums, screw engagement and clearance checks do not describe the stated fabrication sequence exactly.",
+      "required_action": "Define rough and final layer thicknesses and a final support plane, then propagate it through strip/spoilboard/fastener heights and CAM setup notes.",
+      "references": [
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 18
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 135
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 138
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 203
+        }
+      ]
+    },
+    {
+      "id": "M07",
+      "severity": "medium",
+      "title": "Stiffness commentary credits an unmodeled bond and overstates the bound",
+      "status": "confirmed unsupported analysis premise",
+      "evidence": "strength-screen.py says strips are bonded to the MDF; the bed assembly instead defines 50 screws, bare MDF top and glue only between MDF layers. The 0.148 mm/100 N sum excludes MDF compression, joint rotation and full frame deformation. MECHANICAL-ENGINEERING.md calls this a bounding case and claims actual deflection is substantially lower.",
+      "consequence": "Correct simple-member arithmetic does not bound whole-bed/tool compliance. The proposed MDF joint may help load sharing, but its magnitude is not established by these calculations.",
+      "required_action": "Remove unsupported bond/bound statements or define and qualify a real composite joint. Establish a target and verify complete bed-to-tool displacement, joint creep and reinstallation repeatability.",
+      "references": [
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\strength-screen.py",
+          "line": 37
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\MECHANICAL-ENGINEERING.md",
+          "line": 61
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\MECHANICAL-ENGINEERING.md",
+          "line": 63
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 129
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 136
+        }
+      ]
+    },
+    {
+      "id": "M08",
+      "severity": "medium",
+      "title": "TEK thread-pitch arithmetic and restraint description need correction",
+      "status": "confirmed arithmetic error; capacity remains unresolved",
+      "evidence": "#12-14 has nominal pitch 25.4/14 = 1.8143 mm. A 3.048 mm wall spans 1.68 pitches, not the claimed about 1.1. Actual effective threads also depend on the screw drill point and thread geometry. Calling TEKs only registration ignores possible local strip/clamp uplift transferred through the MDF.",
+      "consequence": "The fastening screen is not a selected screw’s tested connection capacity.",
+      "required_action": "Use the exact screw product and load path to establish pullout/pull-through and tightening limits; retain the physical drive/strip test.",
+      "references": [
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\strength-screen.py",
+          "line": 53
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\bed_details.py",
+          "line": 144
+        }
+      ]
+    },
+    {
+      "id": "M09",
+      "severity": "high",
+      "title": "Known motion interface and power-loss restraint holds remain open",
+      "status": "confirmed unresolved design inputs",
+      "evidence": "Current motion source explicitly leaves Z output mounting height/pitch/base slot fastening, HGR rail-hole datums, HMS base mounting and endpoint/current data, Z brake/counterbalance, cable-chain anchors and tool cable sweep unresolved. The Z mounting stack still assumes 80 mm.",
+      "consequence": "The model is not ready to order all interface hardware or issue complete manufacturing/CAM setup instructions; nominal X800/Y1000/Z100 is not a certified usable cutting envelope.",
+      "required_action": "Close supplier/measured interface drawings and select/test power-loss retention, then recalculate usable tool motion and issue guarded parts only when their inputs are resolved.",
+      "references": [
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\motion_details.py",
+          "line": 603
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\motion_details.py",
+          "line": 607
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\engineering-manifest.json",
+          "line": 197
+        }
+      ]
+    },
+    {
+      "id": "M10",
+      "severity": "medium",
+      "title": "Winch rating ratio is not a complete lifting-system margin",
+      "status": "confirmed unverified rigging assumptions",
+      "evidence": "The manifest estimates 87.0 kg; the swap report estimates 85.1 kg under a different mass basis; prose says about 86 kg. A 567 kg winch rating divided by module mass is only a load/rating ratio. Sling load sharing, sling angle, ear out-of-plane loading, anchorage and trolley track are not modeled; four equal leg reactions are assumed in the under-300 N ear statement.",
+      "consequence": "A greater-than-six ratio cannot release the complete hoist arrangement, and a cable winch capacity alone does not establish suitability for a suspended load.",
+      "required_action": "Identify a lifting-rated device and full support/rigging arrangement, calculate credible unequal sling loading and ear/weld forces, verify mass, and provide a stable parking/support method if the architecture is retained.",
+      "references": [
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\strength-screen.py",
+          "line": 56
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\MECHANICAL-ENGINEERING.md",
+          "line": 102
+        },
+        {
+          "file": "C:\\Users\\Gluis\\OneDrive\\Documents\\ChatGPT\\New project\\plasma_router_stand\\output\\release-review\\RevE-ENGINEERING\\engineering-manifest.json",
+          "line": 101
+        }
+      ]
+    }
+  ],
+  "independent_checks": [
+    {
+      "check": "tube bar 1 remaining arithmetic",
+      "passed": true,
+      "remaining_mm": 6.0
+    },
+    {
+      "check": "tube bar 2 remaining arithmetic",
+      "passed": true,
+      "remaining_mm": 6.0
+    },
+    {
+      "check": "tube bar 3 remaining arithmetic",
+      "passed": true,
+      "remaining_mm": 6.0
+    },
+    {
+      "check": "tube bar 4 remaining arithmetic",
+      "passed": true,
+      "remaining_mm": 91.60000000000036
+    },
+    {
+      "check": "tube bar 5 remaining arithmetic",
+      "passed": true,
+      "remaining_mm": 1880.3999999999996
+    },
+    {
+      "check": "tube cut identities and quantities match current 2x2 cutlist",
+      "passed": true,
+      "details": "Independently selected nominal 50.8 x 50.8 steel/A500 length rows below.",
+      "pieces": 28,
+      "net_mm": 28356.0
+    },
+    {
+      "check": "RevE_ASSEMBLED_ENGINEERING STEP current file SHA matches validation",
+      "passed": true,
+      "sha256": "9b91ead659255e07514f9844d604b3aa79b34cdbb5e3e7542574d38670d9eb2a",
+      "solids": 967,
+      "reported_unresolved_intersections": 0
+    },
+    {
+      "check": "RevE_ROUTER STEP current file SHA matches validation",
+      "passed": true,
+      "sha256": "fb5e3fb817a31e4533bf5473d19250dc1450f84fa6fe4440fcf03093c8b846c6",
+      "solids": 967,
+      "reported_unresolved_intersections": 0
+    },
+    {
+      "check": "RevE_PLASMA_SETUP STEP current file SHA matches validation",
+      "passed": true,
+      "sha256": "807c7008023d3f77508d4a3bb73250ce63adc2ee14537c4d8cb2327c8e1e4c9b",
+      "solids": 731,
+      "reported_unresolved_intersections": 0
+    },
+    {
+      "check": "motion source SHA matches current source",
+      "passed": true
+    },
+    {
+      "check": "motion five-state collision screen",
+      "passed": false,
+      "clashes_per_state": [
+        22,
+        22,
+        22,
+        22,
+        22
+      ]
+    },
+    {
+      "check": "swap source hashes match current sources",
+      "passed": true,
+      "sample_count": 92,
+      "boolean_check_count": 22,
+      "reported_failures": 0
+    }
+  ],
+  "source_sha256": {
+    "bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "motion_details.py": "0d3ab505d0ccdb6d4863c89fb6f95f562a90fd7771ba1549115a7c945442bfb9",
+    "build_reve_engineering.py": "ea2ce133c79fa9dda0a24f0db08817a587e2f1d3d5c0143c51d4fec3142e52b0",
+    "strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "engineering-manifest.json": "d38bfeddf300bd0c671baf4cecfb53a18a39a2f0372b54386930be4b47731127",
+    "cutlist.json": "f93886046375ea415cb5b228ece7fc8311bda2e8cadcbd6f20ccd1c39b84cfe9",
+    "tube-cut-plan.json": "0587ce2131a1eb78b5322fe842accced3bffeca686ebebd1038c1eac8b4bcd9b",
+    "motion-validation.json": "3b139737e7c1ff058479e9dc9834273443d31ed5a358552f6b8bb5cd561f97c2",
+    "swap-path-checks.json": "be88dd7806374398fe8e4c39be3bb946575086f73ff634d41dc2ac947b2f73f1",
+    "MECHANICAL-ENGINEERING.md": "93721ec3a23ae0153b08fa261a6ba8b75f31092f11eaac6b5edb1a3e30fe3c4b",
+    "MOTION-VERIFICATION.md": "c654638206f0dc166b2bca6b7eaa9a3c5f70ee89433a0727287f761d12011590"
+  },
+  "limitations": [
+    "Source geometry/arithmetic and existing exported report consistency inspected; no fresh CAD collision run or physical test performed.",
+    "No supplier capacities were newly certified. Actual manufactured stock, weld quality, interfaces and rigging are unverified.",
+    "Existing STEP roundtrip hashes establish file/report identity, not complete source-to-export provenance or mechanical fitness."
+  ]
+}

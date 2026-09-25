@@ -1,0 +1,311 @@
+{
+  "audit_date": "2026-09-25",
+  "status": "BOUNDED_SOURCE_AUDIT_WITH_OPEN_RELEASE_FINDINGS",
+  "scope": "Controls and water source/documents currently in workspace; interrupted broad audit intentionally bounded for private repository snapshot. No implementation changes, flashing, supplier contact or purchases.",
+  "scope_checked": [
+    "Kraken map, build configuration, board initialization and verification-script coverage",
+    "Delivered firmware identity against manifests and existing verification result",
+    "Water terminal allocation, defined relay logic, inventory/overflow screening and release gates",
+    "Current controller-decision compatibility document",
+    "Current cabinet packaging source"
+  ],
+  "not_performed": [
+    "Fresh firmware build or board boot",
+    "Physical electrical/hydraulic tests",
+    "Independent primary-source revalidation of every component rating",
+    "Exhaustive firmware code review or electrical safety certification",
+    "Reconciliation of controller decision with any other thread or owner authorization"
+  ],
+  "fresh_checks": [
+    {
+      "check": "Delivered kraken-v11-hybrid.bin equals source-manifest hash",
+      "pass": true,
+      "actual_sha256": "ce192b7053ad457d6b0d750456bbf06ff5ab782b60c6ccf8c6cac158725594ac"
+    },
+    {
+      "check": "Delivered kraken-v11-hybrid.elf equals source-manifest hash",
+      "pass": true,
+      "actual_sha256": "bb48e6eb72f22451d02938115fad5e8d9b21e9e97c9de8e98c72c89d96c54a1d"
+    },
+    {
+      "check": "Delivered hybrid BIN equals verification.json binary hash",
+      "pass": true
+    }
+  ],
+  "existing_reports": {
+    "firmware_status": "STATIC_AND_COMPILE_CHECKS_PASSED_NOT_BENCH_TESTED",
+    "firmware_stored_checks": 48,
+    "firmware_stored_all_pass": true,
+    "water_status": "PASS analytical screen; physical acceptance unperformed",
+    "water_stored_logic_states": 147456,
+    "note": "Existing reports were inspected, not newly rerun. Their file hashes and modification dates are in source_snapshot."
+  },
+  "findings": [
+    {
+      "id": "CW-01",
+      "severity": "P1",
+      "status": "confirmed_package_conflict",
+      "title": "Two incompatible controller baselines are presented as current",
+      "evidence": [
+        {
+          "path": "output/release-review/RevE-ENGINEERING/PLASMA-COMPATIBILITY.md",
+          "lines": "24-45"
+        },
+        {
+          "path": "RevE-ENGINEERING/controls/README.md",
+          "lines": "3-15, 34-55"
+        },
+        {
+          "path": "RevE-ENGINEERING/controls/grblhal-h7/kraken.ini",
+          "lines": "70-84"
+        }
+      ],
+      "detail": "The appended Sep 25 decision selects BTT Rodent/grblHAL and declares no PC control or standalone THC. The delivered map, compiled image, commissioning sequence and water interface remain Kraken V1.1 with USB host and external Arc OK/UP/DOWN THC. The appended ownership/preferences are file claims, not independently confirmed authorization in this audit. A reader cannot choose a coherent released controller or harness from this package.",
+      "required_resolution": "Resolve the authoritative owner-approved controller decision, then update the BOM, interface pin map, firmware, commissioning and water-permissive wiring together. Keep both options explicitly provisional until that is done."
+    },
+    {
+      "id": "CW-02",
+      "severity": "P1",
+      "status": "confirmed_unresolved_release_interface",
+      "title": "No completed cutter-facing start or height-sensing interface",
+      "evidence": [
+        {
+          "path": "output/release-review/RevE-ENGINEERING/PLASMA-COMPATIBILITY.md",
+          "lines": "3-22, 30-49"
+        },
+        {
+          "path": "RevE-ENGINEERING/controls/README.md",
+          "lines": "47-55"
+        },
+        {
+          "path": "RevE-ENGINEERING/controls/COMMISSIONING.md",
+          "lines": "13-14"
+        }
+      ],
+      "detail": "The cutter model/start circuit remains unconfirmed. The current Kraken image explicitly does not decode THCAD frequency or accept raw arc voltage; it requires a compatible isolated external THC/interface. The Rodent alternative says its THCAD counting shim is development work. Neither route supplies a completed, tested start/sense chain for the unidentified owned cutter.",
+      "required_resolution": "Identify the power source and document its supported trigger/sense interface before finalizing isolation, wiring and THC implementation. Do not label this snapshot CNC plasma ready."
+    },
+    {
+      "id": "CW-03",
+      "severity": "P1",
+      "status": "confirmed_design_incomplete",
+      "title": "Machine-level permissive and tool-power circuits are interfaces, not finished wiring",
+      "evidence": [
+        {
+          "path": "output/release-review/RevE-ENGINEERING/WATER-ELECTRICAL-REVIEW.md",
+          "lines": "3, 47-59, 69-74"
+        },
+        {
+          "path": "output/release-review/RevE-ENGINEERING/WATER-CONTROL.md",
+          "lines": "94-96"
+        },
+        {
+          "path": "RevE-ENGINEERING/controls/README.md",
+          "lines": "53-55"
+        }
+      ],
+      "detail": "The water circuit has a terminal allocation, but the exact mode selector/contact blocks, B_CLEAR/B_LOCK mechanism, controller isolation, hardware stop/tool-enable chain and complete panel are still open. The selector requires four independent mode contacts. The controller input is merely a status path and cannot replace the hardware tool inhibit.",
+      "required_resolution": "Complete one terminal-numbered overall schematic and panel layout with selected devices, normal/fault states and defined bed-confirmation method. Preserve the explicit not-released status until checked."
+    },
+    {
+      "id": "CW-04",
+      "severity": "P2",
+      "status": "confirmed_verification_scope_limit",
+      "title": "Stored PASS results do not demonstrate live control behavior",
+      "evidence": [
+        {
+          "path": "RevE-ENGINEERING/controls/verify_port.py",
+          "lines": "28-103"
+        },
+        {
+          "path": "RevE-ENGINEERING/controls/COMMISSIONING.md",
+          "lines": "3-14, 24-32"
+        },
+        {
+          "path": "output/release-review/RevE-ENGINEERING/verify_water_design.py",
+          "lines": "41-104, 143-147"
+        },
+        {
+          "path": "output/release-review/RevE-ENGINEERING/WATER-ELECTRICAL-REVIEW.md",
+          "lines": "67"
+        }
+      ],
+      "detail": "Firmware checks compare pin strings and inspect an existing ELF; they do not boot the board or verify timing, current, SPI, homing or THC. The water truth table encodes intended Boolean behavior; it is not a simulation of the allocated relay terminals, pickup/dropout or wiring faults. This audit inspected those scripts and stored results, and verified delivered firmware hashes; it did not rerun a fresh compile or execute bench tests.",
+      "required_resolution": "Retain labels stating static/analytical evidence only. Run physical acceptance in the documented order and record results before release."
+    },
+    {
+      "id": "CW-05",
+      "severity": "P2",
+      "status": "confirmed_unresolved_component_suitability",
+      "title": "Timer contact duty and relay wetting current remain unclosed",
+      "evidence": [
+        {
+          "path": "output/release-review/RevE-ENGINEERING/WATER-ELECTRICAL-REVIEW.md",
+          "lines": "61, 65, 71-74"
+        },
+        {
+          "path": "output/release-review/RevE-ENGINEERING/electrical-selection.json",
+          "lines": "154-163"
+        }
+      ],
+      "detail": "The AH3-3 terminal map is documented, but suitability of its timed contact for the actual low-current 24 VDC control load has not been established. K_READY uses standard AgNi contacts while the isolation input wetting current is unknown. This is an acknowledged selection gap, not evidence that the chosen parts necessarily fail.",
+      "required_resolution": "Document DC control-load suitability or choose a timer with that rating; define interface wetting current or a suitable gold-contact relay. Confirm pump inrush/SSR thermal performance in the finished panel."
+    },
+    {
+      "id": "CW-06",
+      "severity": "P2",
+      "status": "confirmed_efficiency_limit",
+      "title": "Refill is a 13-18 minute operation and bed conversion remains manual",
+      "evidence": [
+        {
+          "path": "output/release-review/RevE-ENGINEERING/WATER-CONTROL.md",
+          "lines": "35, 43-49, 96"
+        }
+      ],
+      "detail": "The selected 7 L/min open-flow pump is expected to take approximately 13-18 minutes to refill about 80 L through plumbing. ROUTER selection commands draining, but there is no independent machine IDLE proof or automated bed swap. B_CLEAR/B_LOCK are unsolved interface conditions and cannot prove every hold-down is tight.",
+      "required_resolution": "Keep realistic swap/refill timing in the design. If fast conversion is required, select and qualify a faster transfer system and improved fastening/confirmation method rather than presenting those improvements as implemented."
+    },
+    {
+      "id": "CW-07",
+      "severity": "P2",
+      "status": "confirmed_physical_acceptance_pending",
+      "title": "Water reserve and overflow are analytical screens with a small operating margin",
+      "evidence": [
+        {
+          "path": "output/release-review/RevE-ENGINEERING/WATER-CONTROL.md",
+          "lines": "9-41, 90, 106-113"
+        },
+        {
+          "path": "output/release-review/RevE-ENGINEERING/verify_water_design.py",
+          "lines": "8-39, 113-139"
+        }
+      ],
+      "detail": "The inventory screen uses 115 L total, approximately 79.9 L pan volume, 1 L hose allowance and about 4.5 L remaining above reservoir low trip. The reported return-capacity margin is about 14 L. Passive-overflow flow is a simplified circular-weir estimate, without installed pipe losses or fouling. The documents correctly require wet validation; automatic recovery or spill containment has not been demonstrated.",
+      "required_resolution": "Wet-calibrate levels/hysteresis, measure whole-circuit inventory and actual fill flow, test maximum-flow overflow, verify the air gap and continuously downhill returns, and verify held-button/power-loss behavior."
+    },
+    {
+      "id": "CW-08",
+      "severity": "P2",
+      "status": "confirmed_packaging_incomplete",
+      "title": "Improved cabinet location is modeled but detailed thermal and cable design is unfinished",
+      "evidence": [
+        {
+          "path": "output/release-review/RevE-ENGINEERING/controls_packaging.py",
+          "lines": "3-8, 56-71"
+        }
+      ],
+      "detail": "The current source relocates the 20 x 16 x 8 cabinet upright in the front bay for door access without draining or bed removal. Its own release fields retain vendor mounting, VFD thermal layout, wiring segregation, glands and panel layout as unresolved. No older claim that pan removal is required should be carried forward.",
+      "required_resolution": "Check final enclosure/vendor dimensions, door sweep, cooling and segregated routing, and finish the internal equipment/panel design."
+    }
+  ],
+  "source_snapshot": [
+    {
+      "path": "RevE-ENGINEERING/controls/README.md",
+      "sha256": "051f673f5a9d1e62685ae149a6273419aff6edffa4cf2a67add4cbedf88688b4",
+      "bytes": 8137,
+      "modified_utc": "2026-09-25T01:07:19.602262+00:00"
+    },
+    {
+      "path": "RevE-ENGINEERING/controls/COMMISSIONING.md",
+      "sha256": "5ce2612f08a584f6ffd81d02e3473a41448c1f381e0138a3085db54aa2c68884",
+      "bytes": 6916,
+      "modified_utc": "2026-09-25T01:05:10.424116+00:00"
+    },
+    {
+      "path": "RevE-ENGINEERING/controls/verify_port.py",
+      "sha256": "65c1e25cbdfd79640e4d1f943713a27eafd1913ba46bc086e52d88014dd21696",
+      "bytes": 5666,
+      "modified_utc": "2026-09-25T01:06:21.399350+00:00"
+    },
+    {
+      "path": "RevE-ENGINEERING/controls/verification.json",
+      "sha256": "0cd5b45ba6b1daed8ff2cc64b38402ca68d7dcc13e066f081c617f0e1c0c5aed",
+      "bytes": 5766,
+      "modified_utc": "2026-09-25T01:06:26.481639+00:00"
+    },
+    {
+      "path": "RevE-ENGINEERING/controls/source-manifest.json",
+      "sha256": "746e2f63493d08b6374f5a5eb9230e1d4ee3fefce12278c41950a6b87ec6a4ea",
+      "bytes": 1667,
+      "modified_utc": "2026-09-25T01:07:20.367129+00:00"
+    },
+    {
+      "path": "RevE-ENGINEERING/controls/grblhal-h7/kraken.ini",
+      "sha256": "29452a2fd126f850c7b2af3fca1f0c210b412936bdceadc7e3440bf924143242",
+      "bytes": 2713,
+      "modified_utc": "2026-09-25T00:59:20.959735+00:00"
+    },
+    {
+      "path": "RevE-ENGINEERING/controls/grblhal-h7/boards/my_machine_map.h",
+      "sha256": "3878c82b9ea583e9d7c4d846e07e0b58a29d677dd68b2d9294bd5149e00b7797",
+      "bytes": 4077,
+      "modified_utc": "2026-09-25T01:06:21.397839+00:00"
+    },
+    {
+      "path": "RevE-ENGINEERING/controls/grblhal-h7/Src/kraken_board.c",
+      "sha256": "c1fa773aa982dee95cb274f996a9c8d31c078ab03ffb80ca0c1bdc81f90bcdac",
+      "bytes": 930,
+      "modified_utc": "2026-09-25T00:54:20.149545+00:00"
+    },
+    {
+      "path": "RevE-ENGINEERING/controls/grblhal-h7/plasma/thc.c",
+      "sha256": "5a6ffe558d429babcdd4d647380404bc4e32b27e7e502f095b7d78a372f6c721",
+      "bytes": 51316,
+      "modified_utc": "2026-09-25T01:01:53.628366+00:00"
+    },
+    {
+      "path": "RevE-ENGINEERING/controls/firmware/kraken-v11-hybrid.bin",
+      "sha256": "ce192b7053ad457d6b0d750456bbf06ff5ab782b60c6ccf8c6cac158725594ac",
+      "bytes": 248704,
+      "modified_utc": "2026-09-25T01:02:02.418146+00:00"
+    },
+    {
+      "path": "RevE-ENGINEERING/controls/firmware/kraken-v11-hybrid.elf",
+      "sha256": "bb48e6eb72f22451d02938115fad5e8d9b21e9e97c9de8e98c72c89d96c54a1d",
+      "bytes": 531252,
+      "modified_utc": "2026-09-25T01:02:02.352103+00:00"
+    },
+    {
+      "path": "output/release-review/RevE-ENGINEERING/WATER-CONTROL.md",
+      "sha256": "750b88ce9947fab0fa7a72fd765df975c50d7735bb59872716e9b1c49d42458c",
+      "bytes": 19044,
+      "modified_utc": "2026-09-25T02:32:14.317547+00:00"
+    },
+    {
+      "path": "output/release-review/RevE-ENGINEERING/WATER-ELECTRICAL-REVIEW.md",
+      "sha256": "1cdc12c1be1e1c44e826d34eabfeae87f4499cf18f2c8552645277b1fee85e77",
+      "bytes": 14657,
+      "modified_utc": "2026-09-25T02:34:58.958134+00:00"
+    },
+    {
+      "path": "output/release-review/RevE-ENGINEERING/verify_water_design.py",
+      "sha256": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+      "bytes": 8345,
+      "modified_utc": "2026-09-25T02:32:14.317547+00:00"
+    },
+    {
+      "path": "output/release-review/RevE-ENGINEERING/water-verification.json",
+      "sha256": "f88dec639fdd2023033f4c48686a828ca2d567da31d7e9262c449c669232146d",
+      "bytes": 4031,
+      "modified_utc": "2026-09-25T02:32:14.796447+00:00"
+    },
+    {
+      "path": "output/release-review/RevE-ENGINEERING/electrical-selection.json",
+      "sha256": "a84ff17485e770f2ddaae9d423754e9f4c8864ff8e5656db18dd39d018f86e78",
+      "bytes": 5899,
+      "modified_utc": "2026-09-25T02:27:35.883153+00:00"
+    },
+    {
+      "path": "output/release-review/RevE-ENGINEERING/PLASMA-COMPATIBILITY.md",
+      "sha256": "49baa658fc6c89a03e3c262887d43c06808ea298b9c3c37178c2390158a82ecb",
+      "bytes": 9992,
+      "modified_utc": "2026-09-25T05:51:36.724378+00:00"
+    },
+    {
+      "path": "output/release-review/RevE-ENGINEERING/controls_packaging.py",
+      "sha256": "1eef72a5cb40c433e505f146e553370a6d9658f63803d74ad9b58f605f37a110",
+      "bytes": 7121,
+      "modified_utc": "2026-09-25T05:42:43.272565+00:00"
+    }
+  ]
+}
