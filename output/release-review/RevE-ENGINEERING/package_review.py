@@ -87,7 +87,7 @@ def main():
             '## Remaining motion design work','']
     lines += ['- '+h for h in holds] or ['- Complete motion manifest has not yet been generated.']
     lines += ['','## Remaining electrical and procurement definition','',
-        '- Identify the existing Amazon plasma power source and use its documented trigger, start type and arc-sensing interface. The supplied AG-60 torch-body link does not identify the power source. See PLASMA-COMPATIBILITY.md.',
+        '- Confirm the owner-reported VIV ARC CUT-50 against its exact model/revision and document its trigger, starting method and arc-sensing interface. The AG-60 body listing does not establish those interfaces. Live plasma compatibility remains unverified. See PLASMA-COMPATIBILITY.md.',
         '- Complete shared selector/contact blocks, bed/guard confirmation, isolated interfaces and physical panel layout. Water-circuit relays, suppression, branch fuses and terminal allocation are now specified in WATER-ELECTRICAL-REVIEW.md; timer DC contact suitability and pump starting-current/fuse instructions remain open.',
         '- Obtain actual material, purchased-hardware and delivery prices. Custom cutting, finishing and machining are owner-performed; their operations remain in the drawings with no outside-shop labor budget. No supplier inquiry or purchase has been sent.',
         '- Resolve guarded supplier interfaces and final full-travel clearances before manufacturing. Final process-specific CAM needs the fabricator’s machine, tooling and postprocessor.',

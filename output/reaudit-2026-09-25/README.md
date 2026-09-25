@@ -15,3 +15,7 @@ Confirmed concerns include MDF surfacing beyond nominal tool reach, bed screw po
 **T-slot cutting conflict:** current Rev F source uses ten strips cut to 1197 mm, while older purchasing records still instruct thirty 397 mm cuts. Five two-packs contain ten bars in both cases, so an unchanged pack count does not validate the cutting instruction. Resolve the adopted bed revision before cutting.
 
 The original user requirement was for mode conversion within the machine footprint. The newer hoisted-module source requires a separate scope check against that requirement and any subsequent owner instructions. Do not infer ownership or approval of a hoist from a comment in a source file alone.
+
+## Owner identification follow-up
+
+The owner subsequently identified the cutter as **VIV ARC CUT-50**. See the [identity follow-up](CUTTER-IDENTITY-FOLLOWUP.md). The historical reports above retain their original evidence; CW-02 remains open for the exact version and cutter-facing interfaces.
