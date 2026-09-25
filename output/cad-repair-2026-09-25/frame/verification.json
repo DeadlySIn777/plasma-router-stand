@@ -1,0 +1,823 @@
+{
+  "scope": "FW02 cabinet stringer bores, FW03 welded drip-shield definition and FW05 PAN_EMPTY floor clearance. Purchased interfaces and full-machine motion are not qualified by this check.",
+  "source_sha256": {
+    "controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+  },
+  "design_details": {
+    "sensors": {
+      "count": 5,
+      "mount_z_mm": {
+        "PAN_MIN": 860,
+        "PAN_FILL": 870,
+        "PAN_HH": 877,
+        "PAN_EMPTY": 812.0,
+        "TANK_LOW": 283.048
+      },
+      "target_trip_z_mm": {
+        "PAN_MIN": 810,
+        "PAN_FILL": 820,
+        "PAN_HH": 827,
+        "PAN_EMPTY": null,
+        "TANK_LOW": 233.048
+      },
+      "pan_empty_clearance": {
+        "mount_nominal_range_z_mm": [
+          812.0,
+          832.0
+        ],
+        "mount_lowest_with_slot_play_z_mm": 811.7,
+        "guard_underside_at_nominal_min_z_mm": 750.0,
+        "minimum_as_built_gap_mm": 8.0,
+        "pan_floor_check_footprint_xy_mm": [
+          978,
+          1177,
+          1014,
+          1217
+        ],
+        "release": "WET CALIBRATION HOLD: prove actual trip and drained state; unknown supplier trip offset is not inferred from carrier height."
+      },
+      "commissioning": "Wet-set actual reed trips with mount slots; independently prove normal stop, minimum, HH and tank low. PAN_EMPTY mount must remain Z812..832 nominal and its entire guard must retain >=8 mm actual floor clearance. Prove the actual low trip followed by 60 s drain before mode-swap release; do not lower the carrier to chase an assumed trip.",
+      "guard_service": "Release2M6screwsandliftslider/sensor/guardasonepiece. Removebracketassembliesbeforelongsheetoverhangoutsidenominal800mmcuttingwidth."
+    },
+    "cabinet": {
+      "enclosure_reserve_xyz_mm": [
+        371.8,
+        251.8,
+        165.0
+      ],
+      "enclosure_dimensions_mm": [
+        406.4,
+        203.2,
+        508.0
+      ],
+      "stringer_drilling": {
+        "diameter_mm": 6.0,
+        "local_xy_mm": [
+          [
+            12.7,
+            12.599999999999994
+          ],
+          [
+            12.7,
+            486.8
+          ]
+        ],
+        "direction": "Local +Z through both tube walls",
+        "shank_nominal_radial_clearance_mm": 0.25
+      },
+      "orientation": "Upright in the front bay under the water table, door forward through the open front window.",
+      "service": "Isolate electrical power before cabinet work. For shield removal take out four M5 retaining fasteners and withdraw the cap forward on its 1% slope; verify the selected enclosure door and hinge envelope before release.",
+      "unreleased_interfaces": [
+        "Vendor back-panel mounting hole pattern (transfer-drill the cage rails)",
+        "Selected enclosure roof, door, hinge and latch envelope; confirm drip-shield and service clearance",
+        "VFD thermal layout and wiring segregation",
+        "Cable glands and chain routes",
+        "Panel layout and legend set"
+      ],
+      "drip_shield": {
+        "roof_flat_mm": [
+          436.4,
+          233.21165970851453,
+          1.5
+        ],
+        "front_lip_flat_mm": [
+          436.4,
+          20,
+          1.5
+        ],
+        "datum_world_mm": [
+          356.8,
+          236.8,
+          675.5
+        ],
+        "slope_rear_high": 0.01,
+        "mount_holes_local_xy_mm": [
+          [
+            8.0,
+            63.2
+          ],
+          [
+            8.0,
+            183.2
+          ],
+          [
+            428.4,
+            63.2
+          ],
+          [
+            428.4,
+            183.2
+          ]
+        ],
+        "attachment": "Four welded cage tabs, four M5x20 socket screws and M5 nyloc nuts; no vendor enclosure penetrations.",
+        "fabrication": "Two flat sheets, continuously seal-welded at front lip. No bends, K factor or developed bend allowance required.",
+        "service": "Remove four M5 retaining bolts and nuts; withdraw roof/lip weldment 230 mm forward parallel to its slope, then lower 100 mm into front bay. Actual selected enclosure projection remains a hold."
+      }
+    }
+  },
+  "stringers": [
+    {
+      "id": "CAB_STRINGER_1",
+      "local_volume_mm3": 97811.98164440526,
+      "removed_volume_mm3": 238.43180276275962,
+      "expected_removed_volume_mm3": 238.43180276272807,
+      "screw_intersections_mm3": [
+        0.0,
+        0.0
+      ],
+      "step_readback_valid": true
+    },
+    {
+      "id": "CAB_STRINGER_2",
+      "local_volume_mm3": 97811.98164440526,
+      "removed_volume_mm3": 238.43180276275962,
+      "expected_removed_volume_mm3": 238.43180276272807,
+      "screw_intersections_mm3": [
+        0.0,
+        0.0
+      ],
+      "step_readback_valid": true
+    }
+  ],
+  "subset_validation": {
+    "part_count": 443,
+    "broadphase_pairs": 485,
+    "unresolved_intersections": [],
+    "documented_intersections": [
+      {
+        "a": "PAN_BEARER_1",
+        "b": "CAB_TEK_1_1",
+        "intersection_mm3": 72.41528,
+        "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+      },
+      {
+        "a": "PAN_BEARER_1",
+        "b": "CAB_TEK_2_1",
+        "intersection_mm3": 72.41528,
+        "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+      },
+      {
+        "a": "PAN_BEARER_2",
+        "b": "CAB_TEK_1_2",
+        "intersection_mm3": 72.41528,
+        "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+      },
+      {
+        "a": "PAN_BEARER_2",
+        "b": "CAB_TEK_2_2",
+        "intersection_mm3": 72.41528,
+        "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+      },
+      {
+        "a": "CAB_RAIL_1",
+        "b": "CAB_BOLT_1_1",
+        "intersection_mm3": 119.2159,
+        "reason": "M6 through-bolt crosses both rail walls."
+      },
+      {
+        "a": "CAB_RAIL_1",
+        "b": "CAB_BOLT_1_2",
+        "intersection_mm3": 119.2159,
+        "reason": "M6 through-bolt crosses both rail walls."
+      },
+      {
+        "a": "CAB_BOLT_1_1",
+        "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+        "intersection_mm3": 513.6504,
+        "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+      },
+      {
+        "a": "CAB_BOLT_1_2",
+        "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+        "intersection_mm3": 513.6504,
+        "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+      },
+      {
+        "a": "CAB_RAIL_2",
+        "b": "CAB_BOLT_2_1",
+        "intersection_mm3": 119.2159,
+        "reason": "M6 through-bolt crosses both rail walls."
+      },
+      {
+        "a": "CAB_RAIL_2",
+        "b": "CAB_BOLT_2_2",
+        "intersection_mm3": 119.2159,
+        "reason": "M6 through-bolt crosses both rail walls."
+      },
+      {
+        "a": "CAB_BOLT_2_1",
+        "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+        "intersection_mm3": 513.6504,
+        "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+      },
+      {
+        "a": "CAB_BOLT_2_2",
+        "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+        "intersection_mm3": 513.6504,
+        "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+      }
+    ]
+  },
+  "pan_empty": {
+    "nominal_guard_floor_distance_mm": 10.671314051445803,
+    "distance_at_lowest_slot_play_mm": 10.371329050320938,
+    "minimum_as_built_gap_mm": 8.0,
+    "remaining_fabrication_variation_allowance_mm": 2.371329050320938,
+    "guard_bounds_mm": [
+      978.0,
+      1177.0,
+      750.0,
+      1014.0,
+      1217.0,
+      751.0
+    ],
+    "adjustment_pose_clashes": {
+      "-0.3": [],
+      "0": [],
+      "2": [],
+      "4": [],
+      "6": [],
+      "8": [],
+      "10": [],
+      "12": [],
+      "14": [],
+      "16": [],
+      "18": [],
+      "20": [],
+      "20.3": []
+    },
+    "restricted_backrail_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          50,
+          0
+        ],
+        [
+          50,
+          155
+        ],
+        [
+          0,
+          155
+        ]
+      ],
+      "thickness_mm": 6,
+      "holes": [],
+      "slots": [
+        [
+          8,
+          54.5,
+          26.6,
+          6.6,
+          90
+        ],
+        [
+          42,
+          54.5,
+          26.6,
+          6.6,
+          90
+        ]
+      ],
+      "internal": []
+    }
+  },
+  "drip_shield": {
+    "weldment_single_valid_solid": true,
+    "roof_bounds_mm": [
+      356.8,
+      236.78500074994383,
+      675.5,
+      793.2,
+      470.00000000000006,
+      679.3319250056245
+    ],
+    "nominal_enclosure_gap_mm": 2.649867509936732,
+    "tab_contact_distances_mm": {
+      "CAB_CAP_TAB_1_1": 1.1368683772161603e-13,
+      "CAB_CAP_TAB_1_2": 0.0,
+      "CAB_CAP_TAB_2_1": 1.1368683772161603e-13,
+      "CAB_CAP_TAB_2_2": 0.0
+    },
+    "withdrawal_poses": {
+      "0": {
+        "translation_mm": [
+          0,
+          0.0,
+          0.0
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          236.78500074994383,
+          655.5009999250066,
+          793.2,
+          470.0000000000001,
+          679.3319250056245
+        ]
+      },
+      "10": {
+        "translation_mm": [
+          0,
+          -9.999500037496876,
+          -0.09999500037496876
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          226.78550071244695,
+          655.4010049246316,
+          793.2,
+          460.0004999625032,
+          679.2319300052495
+        ]
+      },
+      "20": {
+        "translation_mm": [
+          0,
+          -19.999000074993752,
+          -0.19999000074993753
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          216.78600067495003,
+          655.3010099242566,
+          793.2,
+          450.00099992500634,
+          679.1319350048745
+        ]
+      },
+      "30": {
+        "translation_mm": [
+          0,
+          -29.998500112490632,
+          -0.2999850011249063
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          206.78650063745317,
+          655.2010149238816,
+          793.2,
+          440.00149988750945,
+          679.0319400044996
+        ]
+      },
+      "40": {
+        "translation_mm": [
+          0,
+          -39.998000149987504,
+          -0.39998000149987506
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          196.7870005999563,
+          655.1010199235067,
+          793.2,
+          430.00199985001257,
+          678.9319450041246
+        ]
+      },
+      "50": {
+        "translation_mm": [
+          0,
+          -49.997500187484384,
+          -0.49997500187484384
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          186.7875005624594,
+          655.0010249231317,
+          793.2,
+          420.0024998125157,
+          678.8319500037497
+        ]
+      },
+      "60": {
+        "translation_mm": [
+          0,
+          -59.997000224981264,
+          -0.5999700022498126
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          176.78800052496254,
+          654.9010299227567,
+          793.2,
+          410.0029997750188,
+          678.7319550033748
+        ]
+      },
+      "70": {
+        "translation_mm": [
+          0,
+          -69.99650026247814,
+          -0.6999650026247813
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          166.78850048746565,
+          654.8010349223817,
+          793.2,
+          400.00349973752196,
+          678.6319600029998
+        ]
+      },
+      "80": {
+        "translation_mm": [
+          0,
+          -79.99600029997501,
+          -0.7999600029997501
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          156.7890004499688,
+          654.7010399220068,
+          793.2,
+          390.0039997000251,
+          678.5319650026248
+        ]
+      },
+      "90": {
+        "translation_mm": [
+          0,
+          -89.9955003374719,
+          -0.8999550033747189
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          146.7895004124719,
+          654.6010449216318,
+          793.2,
+          380.0044996625282,
+          678.4319700022498
+        ]
+      },
+      "100": {
+        "translation_mm": [
+          0,
+          -99.99500037496877,
+          -0.9999500037496877
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          136.79000037497502,
+          654.5010499212568,
+          793.2,
+          370.00499962503136,
+          678.3319750018749
+        ]
+      },
+      "110": {
+        "translation_mm": [
+          0,
+          -109.99450041246564,
+          -1.0999450041246563
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          126.79050033747815,
+          654.4010549208818,
+          793.2,
+          360.0054995875345,
+          678.2319800014999
+        ]
+      },
+      "120": {
+        "translation_mm": [
+          0,
+          -119.99400044996253,
+          -1.1999400044996251
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          116.79100029998126,
+          654.301059920507,
+          793.2,
+          350.0059995500376,
+          678.1319850011249
+        ]
+      },
+      "130": {
+        "translation_mm": [
+          0,
+          -129.9935004874594,
+          -1.299935004874594
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          106.79150026248442,
+          654.201064920132,
+          793.2,
+          340.0064995125407,
+          678.0319900007499
+        ]
+      },
+      "140": {
+        "translation_mm": [
+          0,
+          -139.99300052495627,
+          -1.3999300052495627
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          96.79200022498753,
+          654.101069919757,
+          793.2,
+          330.0069994750438,
+          677.931995000375
+        ]
+      },
+      "150": {
+        "translation_mm": [
+          0,
+          -149.99250056245316,
+          -1.4999250056245315
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          86.79250018749065,
+          654.0010749193821,
+          793.2,
+          320.0074994375469,
+          677.832
+        ]
+      },
+      "160": {
+        "translation_mm": [
+          0,
+          -159.99200059995002,
+          -1.5999200059995002
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          76.79300014999379,
+          653.9010799190071,
+          793.2,
+          310.00799940005004,
+          677.732004999625
+        ]
+      },
+      "170": {
+        "translation_mm": [
+          0,
+          -169.9915006374469,
+          -1.699915006374469
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          66.7935001124969,
+          653.8010849186321,
+          793.2,
+          300.00849936255315,
+          677.63200999925
+        ]
+      },
+      "180": {
+        "translation_mm": [
+          0,
+          -179.9910006749438,
+          -1.7999100067494378
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          56.79400007499996,
+          653.7010899182571,
+          793.2,
+          290.00899932505627,
+          677.5320149988751
+        ]
+      },
+      "190": {
+        "translation_mm": [
+          0,
+          -189.99050071244065,
+          -1.8999050071244066
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          46.794500037503155,
+          653.6010949178822,
+          793.2,
+          280.00949928755944,
+          677.4320199985001
+        ]
+      },
+      "200": {
+        "translation_mm": [
+          0,
+          -199.99000074993754,
+          -1.9999000074993754
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          36.79500000000621,
+          653.5010999175072,
+          793.2,
+          270.0099992500625,
+          677.3320249981251
+        ]
+      },
+      "210": {
+        "translation_mm": [
+          0,
+          -209.98950078743442,
+          -2.0998950078743444
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          26.795499962509325,
+          653.4011049171322,
+          793.2,
+          260.0104992125656,
+          677.2320299977501
+        ]
+      },
+      "220": {
+        "translation_mm": [
+          0,
+          -219.98900082493128,
+          -2.1998900082493127
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          16.795999925012467,
+          653.3011099167572,
+          793.2,
+          250.01099917506875,
+          677.1320349973752
+        ]
+      },
+      "230": {
+        "translation_mm": [
+          0,
+          -229.98850086242817,
+          -2.2998850086242815
+        ],
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          6.79649988751558,
+          653.2011149163823,
+          793.2,
+          240.01149913757186,
+          677.0320399970002
+        ]
+      }
+    },
+    "lowering_poses": {
+      "0": {
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          6.796499887515523,
+          653.2011149163823,
+          793.2,
+          240.01149913757186,
+          677.0320399970002
+        ]
+      },
+      "10": {
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          6.796499887515523,
+          643.2011149163823,
+          793.2,
+          240.01149913757186,
+          667.0320399970002
+        ]
+      },
+      "20": {
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          6.796499887515495,
+          633.2011149163823,
+          793.2,
+          240.01149913757186,
+          657.0320399970002
+        ]
+      },
+      "30": {
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          6.796499887515523,
+          623.2011149163823,
+          793.2,
+          240.0114991375719,
+          647.0320399970002
+        ]
+      },
+      "40": {
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          6.796499887515523,
+          613.2011149163823,
+          793.2,
+          240.01149913757186,
+          637.0320399970002
+        ]
+      },
+      "50": {
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          6.796499887515495,
+          603.2011149163822,
+          793.2,
+          240.01149913757186,
+          627.0320399970002
+        ]
+      },
+      "60": {
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          6.796499887515523,
+          593.2011149163822,
+          793.2,
+          240.01149913757186,
+          617.0320399970002
+        ]
+      },
+      "70": {
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          6.796499887515495,
+          583.2011149163823,
+          793.2,
+          240.01149913757186,
+          607.0320399970003
+        ]
+      },
+      "80": {
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          6.796499887515523,
+          573.2011149163823,
+          793.2,
+          240.0114991375719,
+          597.0320399970003
+        ]
+      },
+      "90": {
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          6.796499887515523,
+          563.2011149163823,
+          793.2,
+          240.01149913757186,
+          587.0320399970002
+        ]
+      },
+      "100": {
+        "clashes": [],
+        "bounds_mm": [
+          356.8,
+          6.796499887515495,
+          553.2011149163823,
+          793.2,
+          240.01149913757186,
+          577.0320399970002
+        ]
+      }
+    }
+  },
+  "remaining_holds": [
+    "PAN_EMPTY exact reed trip and post-trip drainage must be wet-tested; no bone-dry claim.",
+    "FW03 nominal manufactured geometry is defined, but selected enclosure projection and fabrication tolerances need verification together with FW08 door/cable/thermal integration.",
+    "FW01 plumbing service routes, FW04 tank service and FW07 whole-frame rigidity remain open."
+  ]
+}

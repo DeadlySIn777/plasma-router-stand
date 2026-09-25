@@ -537,25 +537,22 @@ def make_motion(m,gantry_y=1275.0,head_x=575.0,z_lift=100.0,tool='router'):
     output_y=zbase_y-80
     envelope(m,'ZBX80_OUTPUT_HOLD',box(90,35,50),(head_x-45,output_y,out_z),
         pn='ZBX80_OUTPUT_INTERFACE_HOLD',material='ZBX80 partial sourced carriage envelope',
-        notes=['Owner-supplied listing drawing (25 Sep 2026): carriage plate 90 across x 50 along travel with phi7 and phi5 holes; the dimensioned phi7 pair spacing ACROSS the body is 70 mm.',
+        notes=['Exact-ASIN seller top view: carriage plate90 across x50 along travel; the70 mm transverse dimension connects the smallerØ5 holes. Gallery8 identifies four small output fixing holes. The largerØ7 bores are not established as usable tool-mount holes.',
                'Along-travel hole pitch, tapped-vs-through, and the mounting-plane-to-output height are NOT dimensioned in that drawing: the adapter uses vertical slots and the 80 mm output stack stays an assumption until the unit is measured.'])
     adapter=m.add_plate('TOOL_ADAPTER_110',110,110,12.7,
         slots=[(20,45,30,7,90),(90,45,30,7,90)],origin=(head_x-55,output_y,out_z-10),
         u=(1,0,0),v=(0,0,1),pn='TOOL_ADAPTER_110',group='removable_tool',
-        material='6061-T6 aluminum12.7',release='PROVISIONAL - TRANSFER-VERIFY CARRIAGE PATTERN ON RECEIPT',
-        notes=['Adapter plate to the Z-slide carriage: two vertical 7 x 30 slots on the 70 mm across-pattern absorb the undimensioned along-travel hole pitch (covers 15-45 mm pitches).',
-               'Front-face 11 x 30 counterslots, 6.6 deep, fully recess the M6 socket heads beneath the clamp mating face.',
-               'M6 x 16 socket screws into the carriage phi7 holes if tapped M6; if the phi7 holes are plain through-holes, use M6 nuts behind the carriage plate.',
+        material='6061-T6 aluminum12.7',release='PROVISIONAL - INDIVIDUAL EXPORT GUARDED UNTIL CARRIAGE DRAWING',
+        notes=['Provisional adapter: two vertical 7 x 30 slots on 70 mm transverse centers. Their approximately24 mm center travel for a6 mm shank does not verify carriage hole spacing, bolt count or a15-45 mm longitudinal pitch.',
+               'Front-face11 x30 counter-slots,6.6 deep, are provisional geometry; the actual carriage screw/head/washer stack remains unselected.',
+               'No carriage fasteners are modeled: the listing identifies fourØ5 fixing holes but omits their thread and along-travel spacing. The former two M6 x16 candidates have been removed. A trueØ7 plain bore cannot be tappedM6.',
+               'Interface load path and fastening capacity remain HOLD. Do not manufacture this adapter or select its carriage fasteners from this model.',
                'Shared spindle/torch clamp pattern: four Ø6.6 at X±45, Z+12/+38 from the output datum, Ø10.5 counterbore 6 deep on the carriage-side face.'])
     cslot=cq.Compound.makeCompound([cq.Workplane('XY').center(sx,45).slot2D(30,11,90).extrude(7.6).translate((0,0,6.1)).val() for sx in (20,90)])
     adapter.local=adapter.local.cut(cslot).clean()
     adapter.shape=place(adapter.local,(head_x-55,output_y,out_z-10),(1,0,0),(0,0,1))
-    adapter.flat.setdefault('operations',[]).extend({'type':'slot','x':sx,'y':45,'length':30,'width':11,'layer':'MILL_FRONT_COUNTERSLOT_DEPTH_6_6'} for sx in (20,90))
-    adapter.flat.setdefault('machining_notes',[]).append('Front-face counterslots 11 wide x 6.6 deep over both carriage slots; M6 socket heads finish at least 0.6 below the clamp face.')
-    for j,(sx,sz) in enumerate([(20,45),(90,45)],1):
-        b=bolt(m,f'Z_CARRIAGE_BOLT_{j}',6,16,(head_x-55+sx,output_y+9.9,out_z-10+sz),u=(1,0,0),v=(0,0,1))
-        m.permit(b.id,'ZBX80_OUTPUT_HOLD','M6 engages the carriage phi7 hole inside the conservative purchased envelope.')
-        m.permit(b.id,'TOOL_ADAPTER_110','Screw shank passes the adapter slot at its verified position.')
+    adapter.flat.setdefault('operations',[]).extend({'type':'slot','x':sx,'y':45,'length':30,'width':11,'angle':90,'depth_mm':6.6,'face':'front','layer':'MILL_FRONT_COUNTERSLOT_DEPTH_6_6'} for sx in (20,90))
+    adapter.flat.setdefault('machining_notes',[]).append('PROVISIONAL: front-face counter-slots11 wide x6.6 deep; dimensions match the STEP but actual carriage fastening is unresolved. Individual fabrication export is guarded.')
     if tool=='router':
         # This full259 mm envelope prevents the earlier180 mm spindle error.
         spindle_y=output_y-12.7-45.5
@@ -601,7 +598,7 @@ def make_motion(m,gantry_y=1275.0,head_x=575.0,z_lift=100.0,tool='router'):
     make_y_stops(m,gantry_y)
     make_x_stops(m,head_x,face_y)
     holds=[
-        'Z slide: owner-supplied listing drawing closed the plan dims (body 219x80, ends 12, carriage 90x50, phi7/phi5 holes, 70 across). Output mounting-plane height, along-travel hole pitch/thread and base-slot fastening remain measure-on-receipt; the slotted TOOL_ADAPTER_110 is PROVISIONAL until transfer-verified.',
+        'Z slide: exact-ASIN drawing gives body219x80, end blocks12 and carriage90x50;70 mm transverse spacing belongs to the smallerØ5 fixing holes, not the largerØ7 bores. Output mounting-plane height, along-travel hole pitch/thread/depth and base-slot fastening remain unresolved. No carriage fasteners are modeled; the tool has no released attachment load path and TOOL_ADAPTER_110 individual export is guarded.',
         'HGR20: seller P40/E20/1500 hole dimensions conflict. Actual factory holes must be verified before rail cutting or custom datum drilling.',
         'HMS40: base nut cavity and endpoint datum not published. Rail caps require a verified base clamp/nut design; motor current and torque-speed curves missing.',
         'Z power-loss retention: no selected normally-engaged brake/counterbalance. A ballscrew must not be assumed self-locking. Do not enable a suspended tool until retention is designed and tested.',

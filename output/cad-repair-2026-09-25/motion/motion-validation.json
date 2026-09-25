@@ -1,0 +1,100 @@
+{
+  "source_file": "motion_details.py",
+  "source_sha256": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+  "fixture_source_sha256": {
+    "frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230"
+  },
+  "rail_caps_before_motion_drilling": [
+    {
+      "id": "RAIL_CAP_1_BLANK",
+      "bounds_mm": [
+        -24.6,
+        0.0,
+        1056.0,
+        75.4,
+        1450.0,
+        1063.9375
+      ]
+    },
+    {
+      "id": "RAIL_CAP_2_BLANK",
+      "bounds_mm": [
+        1074.6000000000001,
+        0.0,
+        1056.0,
+        1174.6000000000001,
+        1450.0,
+        1063.9375
+      ]
+    }
+  ],
+  "fixture": "Original two rail-cap blanks after frame_details.make_frame sets their assembled datum, before make_motion drills holes. Other frame parts and spacers are excluded from this subsystem screen.",
+  "states": [
+    {
+      "configuration": {
+        "gantry_y": 1275,
+        "beam_center_y": 1355,
+        "head_x": 575,
+        "z_lift": 100,
+        "tool": "router"
+      },
+      "parts": 293,
+      "clashes": [],
+      "documented_intersection_count": 52
+    },
+    {
+      "configuration": {
+        "gantry_y": 275,
+        "beam_center_y": 355,
+        "head_x": 175,
+        "z_lift": 0,
+        "tool": "router"
+      },
+      "parts": 293,
+      "clashes": [],
+      "documented_intersection_count": 52
+    },
+    {
+      "configuration": {
+        "gantry_y": 275,
+        "beam_center_y": 355,
+        "head_x": 975,
+        "z_lift": 100,
+        "tool": "router"
+      },
+      "parts": 293,
+      "clashes": [],
+      "documented_intersection_count": 52
+    },
+    {
+      "configuration": {
+        "gantry_y": 1275,
+        "beam_center_y": 1355,
+        "head_x": 175,
+        "z_lift": 100,
+        "tool": "router"
+      },
+      "parts": 293,
+      "clashes": [],
+      "documented_intersection_count": 52
+    },
+    {
+      "configuration": {
+        "gantry_y": 1275,
+        "beam_center_y": 1355,
+        "head_x": 975,
+        "z_lift": 0,
+        "tool": "router"
+      },
+      "parts": 293,
+      "clashes": [],
+      "documented_intersection_count": 52
+    }
+  ],
+  "local_world_geometry_mismatches": [],
+  "switch_actuation_handling": "For a roller on the 0.63-slope cam ramp, roller top is lowered by R*(sqrt(1+slope^2)-1), in addition to the cam underside at its center. Flat-land position follows the underside without intersection. The small lever and internal switch mechanism are not modeled. No positive overlap is permitted merely because a part is a switch.",
+  "scope": "Five configurations of the motion subsystem only. No claim of continuous swept-volume clearance or complete machine strength/commissioning."
+}

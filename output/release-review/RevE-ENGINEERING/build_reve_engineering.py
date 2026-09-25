@@ -24,7 +24,7 @@ def normalized_add(m,p):
 def update_part(m,id,shape,notes=()):
     p=m.find(id);bb=bbox(shape);p.shape=shape;p.local=shape.translate(tuple(-x for x in bb[:3]));p.flat=None;p.notes.extend(notes)
 
-def build_model():
+def build_model(*, bed_builder=None, with_motion=True, legacy_tool_parking=True):
     m=Model()
     for p in base.fixed:
         if p.group in ('main_frame','rail_cap'):
@@ -42,19 +42,24 @@ def build_model():
     details['water_accessories']=make_water_accessories(m)
     from sensor_mounts import make_sensor_mounts
     details['sensor_mounts']=make_sensor_mounts(m)
-    if (ROOT/'bed_details.py').exists():
+    if bed_builder is not None:
+        details['bed']=bed_builder(m)
+    elif (ROOT/'bed_details.py').exists():
         from bed_details import make_bed
         details['bed']=make_bed(m)
     # Rev F: no fixed storage racks. The one-piece bed module leaves on the
     # owner's overhead winch; nothing is parked inside the frame but the tool
     # cradle and the four-drawdown tray.
-    details['storage']={'racks':'None. Module is hoisted clear and parked outside the machine on the owner winch/track.',
-                        'stored_inside':'Spindle cradle and the four M8 drawdowns in the internal tray.'}
+    if bed_builder is None:
+        details['storage']={'racks':'Legacy Rev F: module outside the machine. Superseded; violates the required footprint.',
+                            'stored_inside':'Spindle cradle and the four M8 drawdowns in the internal tray.'}
+    else:
+        details['storage']=details['bed'].get('storage',{})
     from tool_parking import make_tool_parking
-    details['tool_parking']=make_tool_parking(m)
+    details['tool_parking']=make_tool_parking(m, include_legacy_torch_clamps=legacy_tool_parking)
     from controls_packaging import make_controls_packaging
     details['controls_packaging']=make_controls_packaging(m)
-    if (ROOT/'motion_details.py').exists():
+    if with_motion and (ROOT/'motion_details.py').exists():
         from motion_details import make_motion
         details['motion']=make_motion(m)
     return m,details

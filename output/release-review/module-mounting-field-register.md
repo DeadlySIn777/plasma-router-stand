@@ -1,5 +1,7 @@
 # Exact module drawing field register — 24 September 2026
 
+**25 September correction:** the ZBX80 70 mm transverse dimension belongs to the smaller Ø5 output fixing-hole row, not the larger Ø7 bores. The earlier appended adapter/M6 interpretation below is superseded by the [corrected source evidence](../cad-repair-2026-09-25/motion/z-interface-resolution.md). Output-face height, longitudinal hole pitch and thread/depth remain unresolved. The corrected model omits the unsupported M6 carriage screws and guards the adapter from individual fabrication export.
+
 **HMS40 nominal mating dimensions recovered; ZBX80 output interface remains partial.** This register now includes the detailed HMS40 engineering drawing from the exact listing's A+ images. The earlier main-gallery search missed that drawing.
 
 “Verified” below means a legible nominal seller dimension on the exact ASIN gallery. It does not mean a measured, revision-controlled or toleranced manufacturing dimension. No holes were scaled from photographs.

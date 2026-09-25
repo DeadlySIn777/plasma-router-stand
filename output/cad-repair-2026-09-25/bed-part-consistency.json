@@ -1,0 +1,84 @@
+{
+  "source_sha256": {
+    "bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+  },
+  "sources_unchanged": true,
+  "scope": "All G_ bed parts, all revised WP_SLAT_ parts and the two modified receiver ledgers; all shared-PN instances included even when their IDs are outside that prefix.",
+  "method": "Compare actual B-rep symmetric volume after all24 proper orthogonal rotations and translation. Reject reflections. Flat metadata compared exactly within each shared PN. Compare each selected local solid to its installed and stored world solid.",
+  "selected_components": 572,
+  "selected_part_numbers": 59,
+  "shared_pn_comparisons": 541,
+  "part_number_geometry_conflicts": [],
+  "part_number_flat_conflicts": [],
+  "local_world_geometry_failures": [],
+  "receiver_ledgers": [
+    {
+      "id": "MF_RECEIVER_LEDGER_1",
+      "part_number": "MF_RECEIVER_LEDGER_1",
+      "local_volume_mm3": 838921.9664499301,
+      "local_bounds": [
+        0.0,
+        0.0,
+        0.0,
+        50.8,
+        1450.0,
+        50.8
+      ],
+      "flat": null,
+      "notes": [
+        "50.8 x 50.8 x 3.048 mm nominal hollow tube; square-corner idealization",
+        "Welded structure: nominal square tube corners; stock corner radii are not precision mating datums.",
+        "Sandserviceport:\u00d830weldbung,M20\u00d71.5removableplug. Fillonlyafterallwelding/coating;weightactualdryballast.",
+        "Front removable seat: two OD18 compression/thread sleeves at global X88.0, Y45/85; bores through both walls. Weld sleeves before ballast; finish top flush Z840. Do not drill a sand-filled member."
+      ]
+    },
+    {
+      "id": "MF_RECEIVER_LEDGER_2",
+      "part_number": "MF_RECEIVER_LEDGER_2",
+      "local_volume_mm3": 838921.9664499306,
+      "local_bounds": [
+        0.0,
+        0.0,
+        0.0,
+        50.8,
+        1450.0,
+        50.8
+      ],
+      "flat": null,
+      "notes": [
+        "50.8 x 50.8 x 3.048 mm nominal hollow tube; square-corner idealization",
+        "Welded structure: nominal square tube corners; stock corner radii are not precision mating datums.",
+        "Sandserviceport:\u00d830weldbung,M20\u00d71.5removableplug. Fillonlyafterallwelding/coating;weightactualdryballast.",
+        "Front removable seat: two OD18 compression/thread sleeves at global X1062.0, Y45/85; bores through both walls. Weld sleeves before ballast; finish top flush Z840. Do not drill a sand-filled member."
+      ]
+    }
+  ],
+  "pass": true
+}

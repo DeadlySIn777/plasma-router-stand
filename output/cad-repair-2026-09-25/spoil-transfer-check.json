@@ -1,0 +1,441 @@
+{
+  "scope": "All prescribed bare-board motions from installed state through internal storage, after all spoilboard screws are already removed. Human handling, finger clearance and hardware-transfer paths excluded.",
+  "hardware_sequence": "All24 spoilboard screws are pre-stored; the24 top-slot nuts remain installed during every board movement. Nuts are removed/stored only after all boards and before the panels; that small-part transfer is not proven here.",
+  "source_sha256": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+  "source_unchanged_during_check": true,
+  "method": "Exact B-rep midpoint minimum distance with conservative per-point displacement bound; adaptive subdivision. Coordinates use exact prescribed linear and sinusoidal transforms. Existing parked boards remain fixed obstacles.",
+  "analytic_xy_swept_bounds_mm": [
+    135,
+    0,
+    970,
+    1110
+  ],
+  "footprint_check": "The entire prescribed XY path lies inside the nominal frame rectangle X0..1150/Y0..1450. Linear segments stay between their endpoints. Horizontal quarter-turn maximum X is 135+hypot(393.5,397)<695 and Y is 0..790.5; standing turn stays X135..532 and Y0..411.5; lower yaw stays X135..135+hypot(397,18)<533 and Y0..hypot(397,18)<398.",
+  "maximum_prescribed_height_mm": 1374.7114748265149,
+  "model_parts": 1283,
+  "order": [
+    4,
+    3,
+    2,
+    1,
+    6,
+    5
+  ],
+  "records": [
+    {
+      "board": 4,
+      "slot": 6,
+      "handling_width_mm": 397.0,
+      "standing_height_mm": 393.5,
+      "final_bounds_delta_mm": 2.2737367544323206e-13,
+      "phases": {
+        "lift_from_panel": {
+          "status": "CLEAR",
+          "distance_queries": 20,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_horizontal_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "turn_horizontal_board": {
+          "status": "CLEAR",
+          "distance_queries": 367,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "stand_board_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 159,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_standing_board_to_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "vertical_front_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "yaw_below_pan": {
+          "status": "CLEAR",
+          "distance_queries": 124,
+          "max_subdivision_depth": 3,
+          "failures": []
+        },
+        "move_to_slot_x": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "slide_rear": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_to_runner": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "board": 3,
+      "slot": 5,
+      "handling_width_mm": 397.0,
+      "standing_height_mm": 393.5,
+      "final_bounds_delta_mm": 2.2737367544323206e-13,
+      "phases": {
+        "lift_from_panel": {
+          "status": "CLEAR",
+          "distance_queries": 20,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_horizontal_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "turn_horizontal_board": {
+          "status": "CLEAR",
+          "distance_queries": 364,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "stand_board_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 158,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_standing_board_to_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "vertical_front_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "yaw_below_pan": {
+          "status": "CLEAR",
+          "distance_queries": 138,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_to_slot_x": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "slide_rear": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_to_runner": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "board": 2,
+      "slot": 4,
+      "handling_width_mm": 343.5,
+      "standing_height_mm": 393.5,
+      "final_bounds_delta_mm": 2.2737367544323206e-13,
+      "phases": {
+        "lift_from_panel": {
+          "status": "CLEAR",
+          "distance_queries": 10,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_horizontal_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "turn_horizontal_board": {
+          "status": "CLEAR",
+          "distance_queries": 308,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "stand_board_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 137,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_standing_board_to_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "vertical_front_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "yaw_below_pan": {
+          "status": "CLEAR",
+          "distance_queries": 116,
+          "max_subdivision_depth": 3,
+          "failures": []
+        },
+        "move_to_slot_x": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "slide_rear": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_to_runner": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "board": 1,
+      "slot": 3,
+      "handling_width_mm": 343.5,
+      "standing_height_mm": 393.5,
+      "final_bounds_delta_mm": 2.2737367544323206e-13,
+      "phases": {
+        "lift_from_panel": {
+          "status": "CLEAR",
+          "distance_queries": 10,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_horizontal_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "turn_horizontal_board": {
+          "status": "CLEAR",
+          "distance_queries": 305,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "stand_board_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 134,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_standing_board_to_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "vertical_front_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "yaw_below_pan": {
+          "status": "CLEAR",
+          "distance_queries": 132,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_to_slot_x": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "slide_rear": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_to_runner": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "board": 6,
+      "slot": 2,
+      "handling_width_mm": 219.5,
+      "standing_height_mm": 393.5,
+      "final_bounds_delta_mm": 2.2737367544323206e-13,
+      "phases": {
+        "lift_from_panel": {
+          "status": "CLEAR",
+          "distance_queries": 10,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_horizontal_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "turn_horizontal_board": {
+          "status": "CLEAR",
+          "distance_queries": 194,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "stand_board_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 110,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_standing_board_to_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "vertical_front_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "yaw_below_pan": {
+          "status": "CLEAR",
+          "distance_queries": 51,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_to_slot_x": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "slide_rear": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_to_runner": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "board": 5,
+      "slot": 1,
+      "handling_width_mm": 219.5,
+      "standing_height_mm": 393.5,
+      "final_bounds_delta_mm": 2.2737367544323206e-13,
+      "phases": {
+        "lift_from_panel": {
+          "status": "CLEAR",
+          "distance_queries": 10,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_horizontal_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "turn_horizontal_board": {
+          "status": "CLEAR",
+          "distance_queries": 194,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "stand_board_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 110,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_standing_board_to_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "vertical_front_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "yaw_below_pan": {
+          "status": "CLEAR",
+          "distance_queries": 52,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_to_slot_x": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "slide_rear": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_to_runner": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      }
+    }
+  ],
+  "pass": true
+}

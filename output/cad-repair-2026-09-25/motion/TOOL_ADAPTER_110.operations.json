@@ -1,0 +1,135 @@
+{
+  "part_number": "TOOL_ADAPTER_110",
+  "release": "PROVISIONAL - INDIVIDUAL EXPORT GUARDED UNTIL CARRIAGE DRAWING",
+  "scope": "Provisional adapter. Rotation/depth alignment verified; supplier interface remains open.",
+  "manufacturing_flat": {
+    "outline": [
+      [
+        0,
+        0
+      ],
+      [
+        110,
+        0
+      ],
+      [
+        110,
+        110
+      ],
+      [
+        0,
+        110
+      ]
+    ],
+    "thickness_mm": 12.7,
+    "holes": [
+      [
+        10.0,
+        22.0,
+        6.6
+      ],
+      [
+        10.0,
+        48.0,
+        6.6
+      ],
+      [
+        100.0,
+        22.0,
+        6.6
+      ],
+      [
+        100.0,
+        48.0,
+        6.6
+      ]
+    ],
+    "slots": [
+      [
+        20,
+        45,
+        30,
+        7,
+        90
+      ],
+      [
+        90,
+        45,
+        30,
+        7,
+        90
+      ]
+    ],
+    "internal": [],
+    "operations": [
+      {
+        "type": "slot",
+        "x": 20,
+        "y": 45,
+        "length": 30,
+        "width": 11,
+        "angle": 90,
+        "depth_mm": 6.6,
+        "face": "front",
+        "layer": "MILL_FRONT_COUNTERSLOT_DEPTH_6_6"
+      },
+      {
+        "type": "slot",
+        "x": 90,
+        "y": 45,
+        "length": 30,
+        "width": 11,
+        "angle": 90,
+        "depth_mm": 6.6,
+        "face": "front",
+        "layer": "MILL_FRONT_COUNTERSLOT_DEPTH_6_6"
+      },
+      {
+        "type": "circle",
+        "x": 10.0,
+        "y": 22.0,
+        "diameter": 10.5,
+        "layer": "MILL_REAR_COUNTERBORE_DEPTH_6"
+      },
+      {
+        "type": "circle",
+        "x": 10.0,
+        "y": 48.0,
+        "diameter": 10.5,
+        "layer": "MILL_REAR_COUNTERBORE_DEPTH_6"
+      },
+      {
+        "type": "circle",
+        "x": 100.0,
+        "y": 22.0,
+        "diameter": 10.5,
+        "layer": "MILL_REAR_COUNTERBORE_DEPTH_6"
+      },
+      {
+        "type": "circle",
+        "x": 100.0,
+        "y": 48.0,
+        "diameter": 10.5,
+        "layer": "MILL_REAR_COUNTERBORE_DEPTH_6"
+      }
+    ],
+    "machining_notes": [
+      "PROVISIONAL: front-face counter-slots11 wide x6.6 deep; dimensions match the STEP but actual carriage fastening is unresolved. Individual fabrication export is guarded."
+    ]
+  },
+  "notes": [
+    "Provisional adapter: two vertical 7 x 30 slots on 70 mm transverse centers. Their approximately24 mm center travel for a6 mm shank does not verify carriage hole spacing, bolt count or a15-45 mm longitudinal pitch.",
+    "Front-face11 x30 counter-slots,6.6 deep, are provisional geometry; the actual carriage screw/head/washer stack remains unselected.",
+    "No carriage fasteners are modeled: the listing identifies four\u00d85 fixing holes but omits their thread and along-travel spacing. The former two M6 x16 candidates have been removed. A true\u00d87 plain bore cannot be tappedM6.",
+    "Interface load path and fastening capacity remain HOLD. Do not manufacture this adapter or select its carriage fasteners from this model.",
+    "Shared spindle/torch clamp pattern: four \u00d86.6 at X\u00b145, Z+12/+38 from the output datum, \u00d810.5 counterbore 6 deep on the carriage-side face.",
+    "Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots.",
+    "\u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush.",
+    "Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots.",
+    "\u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush.",
+    "Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots.",
+    "\u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush.",
+    "Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots.",
+    "\u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush."
+  ]
+}

@@ -1,14 +1,15 @@
-# CNC / plasma machine — Rev F
+# CNC / plasma machine — current Rev G working design
 
-The [latest full CAD re-audit](output/cad-reaudit-2026-09-25/README.md) records **29 open findings**. The current one-piece bed design does not meet the user's requirement for conversion within the machine footprint, and several fabrication features and component interfaces remain incomplete. No purchase or manufacturing release has been issued, and Fusion has not been opened. The working Rev F engineering files remain in the [RevE-ENGINEERING directory](output/release-review/RevE-ENGINEERING/PACKAGE-STATUS.md).
+Open the [Rev G CAD package](output/release-review/RevG-CAD/README.md) and [updated concept PDF](output/pdf/plasma-router-stand-concept.pdf). The [repair report](output/cad-repair-2026-09-25/README.md) states exactly what changed, what was checked and what remains unresolved.
 
-- [Current cost workbook](outputs/reve-30510/CNC-plasma-RevE-budget.xlsx)
-- [Current Rev F concept PDF](output/pdf/plasma-router-stand-concept.pdf)
-- [Design and efficiency review](output/release-review/RevE-ENGINEERING/DESIGN-EFFICIENCY-REVIEW.md)
-- [Actual-price audit and remaining requirements](outputs/reve-30510/actual-cost/REAL-COST.md)
-- [Manufacturing handoff](output/release-review/RevE-ENGINEERING/MANUFACTURING-HANDOFF.md)
-- [Sampled module hoist review](output/release-review/RevE-ENGINEERING/SWAP-REVIEW.md)
-- [Kraken onboard-driver firmware](RevE-ENGINEERING/controls/README.md)
-- [Current cut list](output/release-review/RevE-ENGINEERING/cutlist.csv)
+Rev G uses six manual panels and four beams stored inside the stand. Five two-packs means ten 1220 mm bars; each supplies three 397 mm lengths. Separate finished spoilboards lie within the nominal center-travel rectangle. The old one-piece hoisted bed, external parking and assumed winch are obsolete.
 
-The Rev C superseded PDF, Rev C workbook and Rev D study files are historical records. The stable plasma-router-stand-concept.pdf filename contains the current Rev F design brief. Pricing remains in the workbook; the extrusion purchase is unchanged (five B0BXNWK99C two-packs) but each 1220 mm bar now takes ONE cut to 1197 instead of three cuts to 397, and the cassette anchor hardware, tie bars, storage racks and staging trays are deleted from scope.
+**Not finished or released for fabrication.** Exact purchased interfaces, plasma tooling, whole-machine rigidity, retention, water hardware and human handling still require closure. No current complete build price is asserted. Do not use older drawings, procurement quantities, strength screens or firmware as a Rev G manufacturing package.
+
+- [Router assembly](output/release-review/RevG-CAD/step/RevG_ROUTER.step)
+- [Stored-bed layout](output/release-review/RevG-CAD/step/RevG_BED_STORED.step)
+- [Current cut list](output/release-review/RevG-CAD/cutlist.csv)
+- [Historical full CAD audit](output/cad-reaudit-2026-09-25/README.md)
+- [Unsent supplier dimension request](output/cad-repair-2026-09-25/SUPPLIER-DRAWING-REQUEST.md)
+
+The source directory remains named RevE-ENGINEERING, but current generated files are in RevG-CAD. Fusion has not been verified to load this revision.

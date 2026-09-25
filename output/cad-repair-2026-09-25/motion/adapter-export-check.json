@@ -1,0 +1,101 @@
+{
+  "finding": "MT01",
+  "result": "PASS",
+  "scope": "Provisional adapter. Rotation/depth alignment verified; supplier interface remains open.",
+  "step_valid": true,
+  "step_solids": 1,
+  "step_volume_delta_mm3": 2.0372681319713593e-10,
+  "dxf_units": "mm",
+  "dxf_audit_errors": false,
+  "recess_checks": [
+    {
+      "center_x_mm": 20,
+      "dxf_bounds_xy_mm": [
+        14.5,
+        30.0,
+        25.5,
+        60.0
+      ],
+      "expected_bounds_xy_mm": [
+        14.5,
+        30,
+        25.5,
+        60
+      ],
+      "step_recess_end_faces": [
+        {
+          "bounds_mm": [
+            14.5,
+            54.5,
+            6.1,
+            25.5,
+            60.0,
+            12.7
+          ],
+          "depth_mm": 6.6
+        },
+        {
+          "bounds_mm": [
+            14.5,
+            30.0,
+            6.1,
+            25.5,
+            35.5,
+            12.7
+          ],
+          "depth_mm": 6.6
+        }
+      ],
+      "front_slice_dxf_step_symmetric_difference_mm3": -5.4569682106375694e-11
+    },
+    {
+      "center_x_mm": 90,
+      "dxf_bounds_xy_mm": [
+        84.5,
+        30.0,
+        95.5,
+        60.0
+      ],
+      "expected_bounds_xy_mm": [
+        84.5,
+        30,
+        95.5,
+        60
+      ],
+      "step_recess_end_faces": [
+        {
+          "bounds_mm": [
+            84.5,
+            54.5,
+            6.1,
+            95.5,
+            60.0,
+            12.7
+          ],
+          "depth_mm": 6.6
+        },
+        {
+          "bounds_mm": [
+            84.5,
+            30.0,
+            6.1,
+            95.5,
+            35.5,
+            12.7
+          ],
+          "depth_mm": 6.6
+        }
+      ],
+      "front_slice_dxf_step_symmetric_difference_mm3": -5.4569682106375694e-11
+    }
+  ],
+  "sources_sha256": {
+    "cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230"
+  },
+  "artifacts_sha256": {
+    "TOOL_ADAPTER_110.PROVISIONAL.step": "a9885bf7b5e945ff0246dc69e9949dba18969c403343f0a89c97a738b3f9b39f",
+    "TOOL_ADAPTER_110.PROVISIONAL.dxf": "ce74418634c93f599a1fa7c356c9017ad170add97facb726eff0ea5ec2c6e9c4"
+  }
+}

@@ -1,3 +1,5 @@
+> **HISTORICAL REV F EXPORTS — SUPERSEDED.** Current corrected geometry is in [RevG-CAD](../RevG-CAD/README.md), with [repair evidence](../../cad-repair-2026-09-25/README.md). The old one-piece hoist, assumed owner winch, cost quantities, service claims and readiness checklist below do not describe Rev G. Shared generator sources in this directory have been repaired, but old exports are retained as historical evidence. Use `build_revg.py` for the current model.
+
 # Rev F package status
 
 > **Later CAD audit — 25 September 2026:** [Read the full re-audit](../../cad-reaudit-2026-09-25/README.md) before using this package. It records 29 open findings and fresh source/STEP/DXF checks. The table below is an earlier saved checklist, not the latest audit result. In particular, its motion rows describe inconsistent snapshots. The actual within-footprint requirement is unmet, and ownership/approval of the asserted overhead winch is unverified. Existing CAD remains unreleased.

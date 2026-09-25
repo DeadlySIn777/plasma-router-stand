@@ -87,6 +87,13 @@ class Model:
         p.notes.append('Assembly modification applied; see assembly hole coordinates. Individual blank export is guarded.')
         p.release='ASSEMBLY DETAIL - INDIVIDUAL EXPORT GUARDED'
 
+def slot_vertices(x,y,length,width,angle=0):
+    """Closed DXF capsule, using the same local-XY angle as CadQuery slot2D."""
+    r=width/2;a=(length-width)/2;theta=math.radians(angle)
+    return [(x+xx*math.cos(theta)-yy*math.sin(theta),
+             y+xx*math.sin(theta)+yy*math.cos(theta),bulge)
+            for xx,yy,bulge in [(-a,-r,0),(a,-r,1),(a,r,0),(-a,r,1)]]
+
 def write_dxf(path,flat):
     doc=ezdxf.new('R2010');doc.units=4;doc.header['$INSUNITS']=4
     for name in ('CUT_OUTER','CUT_HOLES','CUT_INNER'):
@@ -97,20 +104,15 @@ def write_dxf(path,flat):
     for wire in flat['internal']:ms.add_lwpolyline(wire,close=True,dxfattribs={'layer':'CUT_INNER'})
     for x,y,L,w,angle in flat['slots']:
         # Closed bulged polyline: two parallel lines and semicircular ends.
-        r=w/2;a=(L-w)/2;theta=math.radians(angle)
-        def rotate(xx,yy):return (x+xx*math.cos(theta)-yy*math.sin(theta),y+xx*math.sin(theta)+yy*math.cos(theta))
-        pts=[]
-        for xx,yy,bulge in [(-a,-r,0),(a,-r,1),(a,r,0),(-a,r,1)]:
-            px,py=rotate(xx,yy);pts.append((px,py,bulge))
-        ms.add_lwpolyline(pts,format='xyb',close=True,dxfattribs={'layer':'CUT_HOLES'})
+        ms.add_lwpolyline(slot_vertices(x,y,L,w,angle),format='xyb',close=True,dxfattribs={'layer':'CUT_HOLES'})
     # Non-through machining features are deliberately separate from laser contours.
     for op in flat.get('operations',[]):
         layer=op['layer']
         if layer not in doc.layers:doc.layers.new(layer)
         if op['type']=='circle':ms.add_circle((op['x'],op['y']),op['diameter']/2,dxfattribs={'layer':layer})
         elif op['type']=='slot':
-            x,y,L,w=op['x'],op['y'],op['length'],op['width'];r=w/2;a=(L-w)/2
-            ms.add_lwpolyline([(x-a,y-r,0),(x+a,y-r,1),(x+a,y+r,0),(x-a,y+r,1)],format='xyb',close=True,dxfattribs={'layer':layer})
+            pts=slot_vertices(op['x'],op['y'],op['length'],op['width'],op.get('angle',0))
+            ms.add_lwpolyline(pts,format='xyb',close=True,dxfattribs={'layer':layer})
     notes=flat.get('machining_notes',[])
     if notes:
         doc.layers.new('MACHINING_NOTES')

@@ -1,0 +1,171 @@
+{
+  "result": "PASS",
+  "checks": {
+    "clear_translation": {
+      "method": "Full translation enclosed by endpoint-AABB union",
+      "status": "CLEAR",
+      "moving_part_count": 1,
+      "fixed_part_count": 1,
+      "clearance_mm": 0,
+      "boolean_volume_tolerance_mm3": 1e-06,
+      "bound_tests": 0,
+      "candidates": [],
+      "caller_exclusions": [],
+      "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+      "delta_xyz_mm": [
+        10.0,
+        0.0,
+        0.0
+      ],
+      "all_pairs_included": true
+    },
+    "intermediate_translation_collision": {
+      "method": "Full translation enclosed by endpoint-AABB union",
+      "status": "CANDIDATE_NOT_PROVEN",
+      "moving_part_count": 1,
+      "fixed_part_count": 1,
+      "clearance_mm": 0,
+      "boolean_volume_tolerance_mm3": 1e-06,
+      "bound_tests": 1,
+      "candidates": [
+        {
+          "moving": "block",
+          "fixed": "wall",
+          "bound_mm": [
+            0.0,
+            0.0,
+            0.0,
+            11.0,
+            1.0,
+            1.0
+          ],
+          "bound_intersection_mm3": 0.1280000000000001,
+          "exact_probe_interferences": [
+            {
+              "pose": {
+                "fraction": 0.5
+              },
+              "intersection_mm3": 0.1280000000000001
+            }
+          ],
+          "interpretation": "Actual overlap confirmed at listed probe poses."
+        }
+      ],
+      "caller_exclusions": [],
+      "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+      "delta_xyz_mm": [
+        10.0,
+        0.0,
+        0.0
+      ],
+      "all_pairs_included": true
+    },
+    "conservative_false_positive": {
+      "method": "Full translation enclosed by endpoint-AABB union",
+      "status": "CANDIDATE_NOT_PROVEN",
+      "moving_part_count": 1,
+      "fixed_part_count": 1,
+      "clearance_mm": 0,
+      "boolean_volume_tolerance_mm3": 1e-06,
+      "bound_tests": 1,
+      "candidates": [
+        {
+          "moving": "ring",
+          "fixed": "rod",
+          "bound_mm": [
+            -5.0,
+            -5.0,
+            0.0,
+            5.0,
+            5.0,
+            11.0
+          ],
+          "bound_intersection_mm3": 34.557519189487714,
+          "exact_probe_interferences": [],
+          "interpretation": "Conservative bound intersects; actual collision has not been proved."
+        }
+      ],
+      "caller_exclusions": [],
+      "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+      "delta_xyz_mm": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "all_pairs_included": true
+    },
+    "between_probe_rotation_collision": {
+      "method": "Mid-angle AABB plus rigorous radial displacement bound",
+      "status": "CANDIDATE_NOT_PROVEN",
+      "moving_part_count": 1,
+      "fixed_part_count": 1,
+      "clearance_mm": 0,
+      "boolean_volume_tolerance_mm3": 1e-06,
+      "bound_tests": 1,
+      "candidates": [
+        {
+          "moving": "arm",
+          "fixed": "obstacle",
+          "bound_mm": [
+            -1.2123740352880468,
+            -1.2123740352880468,
+            0.0,
+            8.99054862834007,
+            8.99054862834007,
+            1.0
+          ],
+          "bound_intersection_mm3": 0.007999999999999985,
+          "exact_probe_interferences": [],
+          "interpretation": "Conservative bound intersects; actual collision has not been proved.",
+          "angular_cell_deg": [
+            0.0,
+            90.0
+          ],
+          "radial_expansion_mm": 4.712552602161457
+        }
+      ],
+      "caller_exclusions": [],
+      "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+      "axis": "Z",
+      "axis_origin_mm": [
+        0,
+        0,
+        0
+      ],
+      "start_deg": 0,
+      "end_deg": 90,
+      "angular_cells": 1,
+      "actual_step_deg": 90.0,
+      "part_radius_bounds_mm": {
+        "arm": 6.0002083297165605
+      },
+      "all_pairs_included": true
+    },
+    "clear_rotation": {
+      "method": "Mid-angle AABB plus rigorous radial displacement bound",
+      "status": "CLEAR",
+      "moving_part_count": 1,
+      "fixed_part_count": 1,
+      "clearance_mm": 0,
+      "boolean_volume_tolerance_mm3": 1e-06,
+      "bound_tests": 0,
+      "candidates": [],
+      "caller_exclusions": [],
+      "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+      "axis": "Z",
+      "axis_origin_mm": [
+        0,
+        0,
+        0
+      ],
+      "start_deg": 0,
+      "end_deg": 90,
+      "angular_cells": 18,
+      "actual_step_deg": 5.0,
+      "part_radius_bounds_mm": {
+        "arm": 6.0002083297165605
+      },
+      "all_pairs_included": true
+    }
+  }
+}

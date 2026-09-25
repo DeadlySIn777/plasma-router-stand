@@ -1,0 +1,210 @@
+{
+  "revision": "G working repair",
+  "manufacturing_release": false,
+  "historical_audit_unchanged": true,
+  "findings": [
+    {
+      "id": "BED01",
+      "historical_priority": "P1",
+      "finding": "The exchange route violates the within-footprint requirement",
+      "current_status": "PARTIAL",
+      "evidence_or_remaining_action": "Six panels, separate boards and four beams now store inside the frame. Prescribed large-part paths are checked continuously. Manual preference, small-part transfers, human access and positive retention remain open."
+    },
+    {
+      "id": "BED02",
+      "historical_priority": "P1",
+      "finding": "Five deck clamping stations break the MDF support edge",
+      "current_status": "OLD DEFECT REMOVED",
+      "evidence_or_remaining_action": "Unsupported MDF sub-bed and its five broken-edge seats are absent. New 20 mm ties carry 15 mm washers with nominal full bearing; slot/preload qualification remains BED04."
+    },
+    {
+      "id": "BED03",
+      "historical_priority": "P1",
+      "finding": "The required full-face surfacing operation is outside the tool envelope",
+      "current_status": "PARTIAL",
+      "evidence_or_remaining_action": "No unreachable full sub-bed surfacing is specified. Six spoilboard faces lie inside nominal center travel. Final cutter/guard clearance, seat map and repeat-installation accuracy remain unqualified."
+    },
+    {
+      "id": "BED04",
+      "historical_priority": "P1",
+      "finding": "The selected M5 joint still loads the extrusion lips under tightening",
+      "current_status": "OPEN",
+      "evidence_or_remaining_action": "Actual T-slot lips and M5 nuts still carry preload. No unsupported torque, uplift or creep rating is issued."
+    },
+    {
+      "id": "BED05",
+      "historical_priority": "P1",
+      "finding": "Four drawdown weldnuts have an unclosed physical attachment detail",
+      "current_status": "PARTIAL",
+      "evidence_or_remaining_action": "Gap-bridging weldnuts replaced by bearing plates, attached bosses and real compression sleeves. Weld strength, local tube-wall loads and tightening method still need qualification."
+    },
+    {
+      "id": "BED06",
+      "historical_priority": "P1",
+      "finding": "Locator fits and receiver engagement are not manufacturing-defined",
+      "current_status": "PARTIAL",
+      "evidence_or_remaining_action": "Round/relieved locator geometry is defined. Front seats are removable with clearance bolts; no automatic return-to-zero is claimed. Map seats and re-probe; qualify repeatability and fits."
+    },
+    {
+      "id": "BED07",
+      "historical_priority": "P2",
+      "finding": "Nominal strip-width tolerance is not absorbed solely at free edges",
+      "current_status": "PARTIAL",
+      "evidence_or_remaining_action": "10 x 5.5 mm tie slots provide +/-2.25 mm nominal lateral M5-shank movement. Actual accumulated profile tolerances must fit that allowance."
+    },
+    {
+      "id": "BED08",
+      "historical_priority": "P2",
+      "finding": "The modeled final stack omits the instructed1 mm skim",
+      "current_status": "GEOMETRY CORRECTED",
+      "evidence_or_remaining_action": "Finished spoilboards are 18 mm, explicitly skimmed 1 mm from rough 19 mm stock. The STEP now represents that finished stack."
+    },
+    {
+      "id": "BED09",
+      "historical_priority": "P2",
+      "finding": "The stiffness screen is not an upper bound on full machine compliance",
+      "current_status": "OPEN",
+      "evidence_or_remaining_action": "Legacy strength screen is not used as whole-machine evidence. Tool, gantry, frame, seats, joints and feet require a combined load/deflection analysis."
+    },
+    {
+      "id": "BED10",
+      "historical_priority": "P2",
+      "finding": "TEK restraint and pull-through are not qualified for the actual assembly",
+      "current_status": "OLD JOINT REMOVED",
+      "evidence_or_remaining_action": "MDF-to-steel TEK restraint is absent from the new bed. Independent cabinet TEK fasteners are a separate detail; new panel/beam joints still need qualification."
+    },
+    {
+      "id": "BED11",
+      "historical_priority": "P1",
+      "finding": "The sling and support system is outside the collision and load analysis",
+      "current_status": "PARTIAL",
+      "evidence_or_remaining_action": "No assumed owner winch, sling or external parking. Manual components have nominal masses and routes. Handling preference, reach and restraint remain unqualified."
+    },
+    {
+      "id": "BED12",
+      "historical_priority": "P2",
+      "finding": "Sampled positive-volume checks do not certify tolerance or continuous clearance",
+      "current_status": "PARTIAL",
+      "evidence_or_remaining_action": "New continuous geometric checks cover ordered panel, board and beam paths with previously stored parts. They exclude fingers, tolerance stack, small-part transfers and retention; nine router poses are still discrete samples."
+    },
+    {
+      "id": "BED13",
+      "historical_priority": "P2",
+      "finding": "Lifting mass has inconsistent estimation bases",
+      "current_status": "PARTIAL",
+      "evidence_or_remaining_action": "Nominal panel mass ~3.866 kg and beam mass ~5.060 kg use modeled solids and stated densities. Weigh finished assemblies; real hardware, welds and residue are not validated by those estimates."
+    },
+    {
+      "id": "BED14",
+      "historical_priority": "P2",
+      "finding": "Frame and pan support assumptions do not define a released structural rating",
+      "current_status": "OPEN",
+      "evidence_or_remaining_action": "Frame, feet, pan and reservoir support/load stability have no released structural rating."
+    },
+    {
+      "id": "MT01",
+      "historical_priority": "P1",
+      "finding": "Adapter front counter-slots are rotated 90 degrees in the delivered DXF",
+      "current_status": "GEOMETRY CORRECTED",
+      "evidence_or_remaining_action": "Both adapter front recesses have matching vertical STEP/DXF orientation; reconstructed void comparison passes. The physical purchased mating interface remains guarded."
+    },
+    {
+      "id": "MT02",
+      "historical_priority": "P1",
+      "finding": "Exported torch-clamp halves do not contain their claimed fastening features",
+      "current_status": "GUARDED, NOT COMPLETED",
+      "evidence_or_remaining_action": "Invalid legacy torch-clamp solids are excluded from Rev G and guarded in source. A real measured torch clamp still needs design."
+    },
+    {
+      "id": "MT03",
+      "historical_priority": "P1",
+      "finding": "Plasma setup CAD has no installed plasma cutting tool",
+      "current_status": "OPEN",
+      "evidence_or_remaining_action": "No installed, dimensioned plasma torch, floating head or breakaway. The second assembly is named BED_STORED and is not an operational plasma setup."
+    },
+    {
+      "id": "MT04",
+      "historical_priority": "P2",
+      "finding": "The 22 stored motion clashes come from an unraised cap fixture",
+      "current_status": "CHECK FIXED",
+      "evidence_or_remaining_action": "Motion fixture uses the actual raised rail-cap datum; the earlier22 clashes were fixture errors. Targeted and full-machine pose results are reported separately."
+    },
+    {
+      "id": "MT05",
+      "historical_priority": "P1",
+      "finding": "Z output attachment is provisional and its slot/thread claims are not sufficient to choose hardware",
+      "current_status": "OPEN / CLAIM CORRECTED",
+      "evidence_or_remaining_action": "Supplier70 mm spacing applies to smaller5 mm holes; thread, longitudinal pitch and output height are unconfirmed. Removed guessedM6 screws; adapter production export is guarded."
+    },
+    {
+      "id": "MT06",
+      "historical_priority": "P1",
+      "finding": "HMS/HGR/Z mounting and power-off Z retention are still unresolved",
+      "current_status": "OPEN",
+      "evidence_or_remaining_action": "HMS/HGR/Z mounting, actual motor/driver requirements and power-loss Z retention are unresolved."
+    },
+    {
+      "id": "MT07",
+      "historical_priority": "P2",
+      "finding": "Travel and service checks omit operational cutters, leads and dual-Y skew",
+      "current_status": "OPEN",
+      "evidence_or_remaining_action": "Operational cutters, torch geometry, cable/lead bends, workholding and independent dual-Y skew still need integrated checks."
+    },
+    {
+      "id": "FW-01",
+      "historical_priority": "P1",
+      "finding": "Selected water hardware and its complete service route are missing from the CAD",
+      "current_status": "OPEN",
+      "evidence_or_remaining_action": "Selected valve, pump, fittings and complete hoses/service route are not fully modeled. The CAD pan/tank does not imply an operational automatic water system."
+    },
+    {
+      "id": "FW-02",
+      "historical_priority": "P2",
+      "finding": "Cabinet stringers claim predrilled clearance holes but export as plain tubes",
+      "current_status": "GEOMETRY CORRECTED",
+      "evidence_or_remaining_action": "Cabinet stringers now contain the specified6 mm bores through both walls; unsupported screw/stringer collision allowances removed."
+    },
+    {
+      "id": "FW-03",
+      "historical_priority": "P2",
+      "finding": "Drip-cap flat pattern does not define the instructed folded part",
+      "current_status": "GEOMETRY CORRECTED",
+      "evidence_or_remaining_action": "Undefined folded cap replaced by actual sloped roof, separate welded lip, four cage tabs and M5 fasteners. Sampled shield service path checked against the frame subset; actual cabinet door still unknown."
+    },
+    {
+      "id": "FW-04",
+      "historical_priority": "P2",
+      "finding": "Reservoir lid removal has no demonstrated route past the rear brace",
+      "current_status": "OPEN",
+      "evidence_or_remaining_action": "A fully demonstrated reservoir lid removal route past the rear brace is still absent. Trays on the lid must be emptied for service."
+    },
+    {
+      "id": "FW-05",
+      "historical_priority": "P2",
+      "finding": "Drained-level guard has only 0.672 mm clearance to the pan floor",
+      "current_status": "GEOMETRY CORRECTED",
+      "evidence_or_remaining_action": "Drained-level guard moved upward. Minimum nominal clearance including slot play is10.3713 mm, with8 mm as-built requirement. Wet calibration remains open."
+    },
+    {
+      "id": "FW-06",
+      "historical_priority": "P2",
+      "finding": "Pan guards are outside center travel but very close to its right edge",
+      "current_status": "OPEN",
+      "evidence_or_remaining_action": "Right pan guards remain close to maximum nominal tool center. Actual cutting tool/torch and useful plasma area need verification."
+    },
+    {
+      "id": "FW-07",
+      "historical_priority": "P1",
+      "finding": "Whole-frame rigidity and support stability remain unverified",
+      "current_status": "OPEN",
+      "evidence_or_remaining_action": "Full frame stiffness, fastening, foot reactions, leveling and overturning are not qualified."
+    },
+    {
+      "id": "FW-08",
+      "historical_priority": "P2",
+      "finding": "Cabinet access is plausible but an enclosure block does not prove service clearance",
+      "current_status": "OPEN",
+      "evidence_or_remaining_action": "Stored parts occupy the cabinet access zone: reinstall the bed to empty racks before cabinet service. Actual enclosure door, thermal layout, glands and hose separation remain open."
+    }
+  ]
+}

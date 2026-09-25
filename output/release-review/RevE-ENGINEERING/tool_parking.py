@@ -3,7 +3,7 @@ import cadquery as cq
 from cad_helpers import *
 from frame_details import hexpart
 
-def make_tool_parking(m):
+def make_tool_parking(m, include_legacy_torch_clamps=True):
     lidtop=433.096;t=3.048;allholes=[]
     for i,x in enumerate((805,975),1):
         m.add_plate(f'TOOL_PARK_BASE_{i}',30,110,t,holes=[(5,10,6.6),(5,100,6.6)],origin=(x-15,1025,lidtop),pn='TOOL_PARK_BASE',group='tool_parking',
@@ -30,13 +30,13 @@ def make_tool_parking(m):
     # Plasma torch split clamp (bore Ø28 for the AG-60 straight machine body,
     # M22x1.5 head thread interface) parks flat on the tank lid beside the
     # spindle cradle. It shares the TOOL_ADAPTER_110 mount pattern (X±45).
-    for name,py,depth in [('REAR',1180,45.25),('FRONT',1230,44.75)]:
+    for name,py,depth in ([('REAR',1180,45.25),('FRONT',1230,44.75)] if include_legacy_torch_clamps else []):
         half=box(110,depth,40).cut(place(cyl(28,depth+2),(55,depth+1,40),u=(1,0,0),v=(0,0,1))).clean()
         m.add('TORCH_CLAMP_'+name,half,origin=(300,py,lidtop),pn='TORCH_SPLIT_CLAMP_'+name,group='tool_parking',material='6061-T6 aluminum billet',
-              notes=['Plasma torch split clamp half, boreØ28.00/+0.05 for the AG-60 straight body (Ø27.9 nominal barrel); torch head thread M22x1.5 documented for any future custom body.',
-                     'Same mount pattern as the spindle clamp: fourM6 atX±45, Z+12/+38 on TOOL_ADAPTER_110; pinchM6×60 atX±47. Machine both halves together with a0.50 split shim.',
-                     'Generic AG-60 heads have documented HF insulation failures (punch-through after few starts): keep spare heads, keep the clamp OFF the head zone, and clamp only the barrel.',
-                     'Parked flat on the tank lid; fit only in plasma mode after the spindle is cradled.'])
+              release='LEGACY INVALID CLAMP - INDIVIDUAL EXPORT GUARDED',
+              notes=['Historical Rev F placeholder only. It has no mounting or pinch holes and is not a usable torch clamp.',
+                     'The owned torch barrel diameter, insulated clamping zone, nozzle datum and lead attachment have not been measured. The former 27.9 mm claim is not verified.',
+                     'Excluded from the corrected Rev G assembly. Do not fabricate this shape or treat it as a compatible tool interface.'])
     return {'spindle_axis_start_xyz_mm':[760.5,1080,599.7],'spindle_envelope_mm':[65,259],'strap_count':2,
         'hardware_tray_bounds_mm':[800,725,433.096,1000,825,463.096],
         'handling':'The spindle and the four removed drawdowns park inside the footprint. Prove the handheld tool transfer slowly while unpowered; the module hoist sweep does not certify that transfer.'}

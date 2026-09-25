@@ -1,0 +1,4918 @@
+{
+  "stock_mm": [
+    1219.2,
+    2438.4
+  ],
+  "edge_margin_mm": 10.0,
+  "part_spacing_mm": 6.0,
+  "scope": "Nominal manufacturing geometry and labeled machining references. Only CUT layers are through-cut paths; tap/pocket/mark layers require their named operations. CAM lead-ins, kerf offsets, tabs and cut order require the fabrication shop.",
+  "procurement_note": "Sheet counts are geometric layouts, not a requirement to buy a full sheet for every small material group. Buy flat bars or quoted cut blanks where cheaper. Thickness is the finished CAD thickness; procured stock and finish machining follow cutlist.json.",
+  "groups": [
+    {
+      "material": "EPDM_knife_cut",
+      "thickness_mm": 2,
+      "sheets": 1,
+      "part_count": 1,
+      "rectangular_blank_area_m2": 0.643512681216,
+      "layouts": [
+        {
+          "file": "EPDM_knife_cut_2mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "WT_GASKET",
+              "copy": 1,
+              "w": 966.096,
+              "h": 666.096,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_GASKET.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 966.096,
+              "placed_h": 666.096
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "MDF_18_mm_finished",
+      "thickness_mm": 18,
+      "sheets": 1,
+      "part_count": 6,
+      "rectangular_blank_area_m2": 0.75552,
+      "layouts": [
+        {
+          "file": "MDF_18_mm_finished_18mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "G_SPOIL_R2_1",
+              "copy": 1,
+              "w": 393.5,
+              "h": 397.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_SPOIL_R2_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 397.0,
+              "placed_h": 393.5
+            },
+            {
+              "part_number": "G_SPOIL_R2_2",
+              "copy": 1,
+              "w": 393.5,
+              "h": 397.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_SPOIL_R2_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 413.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 397.0,
+              "placed_h": 393.5
+            },
+            {
+              "part_number": "G_SPOIL_R1_1",
+              "copy": 1,
+              "w": 393.5,
+              "h": 343.5,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_SPOIL_R1_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 816.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 343.5,
+              "placed_h": 393.5
+            },
+            {
+              "part_number": "G_SPOIL_R1_2",
+              "copy": 1,
+              "w": 393.5,
+              "h": 343.5,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_SPOIL_R1_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 409.5,
+              "rotated_90": false,
+              "placed_w": 393.5,
+              "placed_h": 343.5
+            },
+            {
+              "part_number": "G_SPOIL_R3_1",
+              "copy": 1,
+              "w": 393.5,
+              "h": 219.5,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_SPOIL_R3_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 409.5,
+              "y": 409.5,
+              "rotated_90": false,
+              "placed_w": 393.5,
+              "placed_h": 219.5
+            },
+            {
+              "part_number": "G_SPOIL_R3_2",
+              "copy": 1,
+              "w": 393.5,
+              "h": 219.5,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_SPOIL_R3_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 809.0,
+              "y": 409.5,
+              "rotated_90": false,
+              "placed_w": 393.5,
+              "placed_h": 219.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "aluminum_confirm_alloy",
+      "thickness_mm": 6.35,
+      "sheets": 1,
+      "part_count": 2,
+      "rectangular_blank_area_m2": 0.00624,
+      "layouts": [
+        {
+          "file": "aluminum_confirm_alloy_6.35mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "HMS40_DRIVE_SHOE_6p35",
+              "copy": 1,
+              "w": 65.0,
+              "h": 48.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\HMS40_DRIVE_SHOE_6p35.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 65.0,
+              "placed_h": 48.0
+            },
+            {
+              "part_number": "HMS40_DRIVE_SHOE_6p35",
+              "copy": 2,
+              "w": 65.0,
+              "h": 48.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\HMS40_DRIVE_SHOE_6p35.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 81.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 65.0,
+              "placed_h": 48.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "aluminum_confirm_alloy",
+      "thickness_mm": 9.525,
+      "sheets": 1,
+      "part_count": 24,
+      "rectangular_blank_area_m2": 0.12,
+      "layouts": [
+        {
+          "file": "aluminum_confirm_alloy_9.525mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "G_PANEL_TIE_1",
+              "copy": 1,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_1",
+              "copy": 2,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 266.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_1",
+              "copy": 3,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 522.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_1",
+              "copy": 4,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 778.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_1",
+              "copy": 5,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1034.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 20.0,
+              "placed_h": 250.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_1",
+              "copy": 6,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1060.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 20.0,
+              "placed_h": 250.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_1",
+              "copy": 7,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1086.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 20.0,
+              "placed_h": 250.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_1",
+              "copy": 8,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1112.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 20.0,
+              "placed_h": 250.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_1",
+              "copy": 9,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1138.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 20.0,
+              "placed_h": 250.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_1",
+              "copy": 10,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1164.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 20.0,
+              "placed_h": 250.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_1",
+              "copy": 11,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 36.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_1",
+              "copy": 12,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 266.0,
+              "y": 36.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_2",
+              "copy": 1,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 522.0,
+              "y": 36.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_2",
+              "copy": 2,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 778.0,
+              "y": 36.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_2",
+              "copy": 3,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 62.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_2",
+              "copy": 4,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 266.0,
+              "y": 62.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_2",
+              "copy": 5,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 522.0,
+              "y": 62.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_2",
+              "copy": 6,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 778.0,
+              "y": 62.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_2",
+              "copy": 7,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 88.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_2",
+              "copy": 8,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 266.0,
+              "y": 88.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_2",
+              "copy": 9,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 522.0,
+              "y": 88.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_2",
+              "copy": 10,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 778.0,
+              "y": 88.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_2",
+              "copy": 11,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 114.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_TIE_2",
+              "copy": 12,
+              "w": 250.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_TIE_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 266.0,
+              "y": 114.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 20.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "aluminum_confirm_alloy",
+      "thickness_mm": 12.7,
+      "sheets": 1,
+      "part_count": 2,
+      "rectangular_blank_area_m2": 0.073528,
+      "layouts": [
+        {
+          "file": "aluminum_confirm_alloy_12.7mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "Y_SHOE_L",
+              "copy": 1,
+              "w": 280.0,
+              "h": 131.3,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\Y_SHOE_L.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 280.0,
+              "placed_h": 131.3
+            },
+            {
+              "part_number": "Y_SHOE_R",
+              "copy": 1,
+              "w": 280.0,
+              "h": 131.3,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\Y_SHOE_R.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 296.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 280.0,
+              "placed_h": 131.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "aluminum_confirm_alloy",
+      "thickness_mm": 19.05,
+      "sheets": 1,
+      "part_count": 1,
+      "rectangular_blank_area_m2": 0.00312,
+      "layouts": [
+        {
+          "file": "aluminum_confirm_alloy_19.05mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "HMS40_DRIVE_SHOE_19p05",
+              "copy": 1,
+              "w": 65.0,
+              "h": 48.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\HMS40_DRIVE_SHOE_19p05.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 65.0,
+              "placed_h": 48.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 1.5,
+      "sheets": 1,
+      "part_count": 2,
+      "rectangular_blank_area_m2": 0.11050156829679574,
+      "layouts": [
+        {
+          "file": "carbon_steel_1.5mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "CAB_DRIP_CAP",
+              "copy": 1,
+              "w": 436.4,
+              "h": 233.21165970851453,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\CAB_DRIP_CAP.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 436.4,
+              "placed_h": 233.21165970851453
+            },
+            {
+              "part_number": "CAB_DRIP_FRONT_LIP",
+              "copy": 1,
+              "w": 436.4,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\CAB_DRIP_FRONT_LIP.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 452.4,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 436.4,
+              "placed_h": 20.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 2,
+      "sheets": 1,
+      "part_count": 28,
+      "rectangular_blank_area_m2": 0.01995,
+      "layouts": [
+        {
+          "file": "carbon_steel_2mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 1,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 2,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 56.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 3,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 102.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 4,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 148.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 5,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 194.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 6,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 240.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 7,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 286.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 8,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 332.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 9,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 378.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 10,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 424.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 11,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 470.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 12,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 516.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 13,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 562.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_GUIDE",
+              "copy": 14,
+              "w": 40.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 608.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 40.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 1,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 654.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 2,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 685.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 3,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 716.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 4,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 747.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 5,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 778.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 6,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 809.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 7,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 840.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 8,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 871.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 9,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 902.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 10,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 933.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 11,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 964.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 12,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 995.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 13,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1026.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_GUIDE",
+              "copy": 14,
+              "w": 17.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1057.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 25.0,
+              "placed_h": 17.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 3,
+      "sheets": 1,
+      "part_count": 28,
+      "rectangular_blank_area_m2": 0.375659,
+      "layouts": [
+        {
+          "file": "carbon_steel_3mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "FB_TRIANGLE_160_1",
+              "copy": 1,
+              "w": 160.0,
+              "h": 160.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FB_TRIANGLE_160_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 160.0
+            },
+            {
+              "part_number": "FB_TRIANGLE_160_1",
+              "copy": 2,
+              "w": 160.0,
+              "h": 160.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FB_TRIANGLE_160_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 176.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 160.0
+            },
+            {
+              "part_number": "FB_TRIANGLE_160_1",
+              "copy": 3,
+              "w": 160.0,
+              "h": 160.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FB_TRIANGLE_160_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 342.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 160.0
+            },
+            {
+              "part_number": "FB_TRIANGLE_160_1",
+              "copy": 4,
+              "w": 160.0,
+              "h": 160.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FB_TRIANGLE_160_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 508.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 160.0
+            },
+            {
+              "part_number": "FB_TRIANGLE_160_-1",
+              "copy": 1,
+              "w": 160.0,
+              "h": 160.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FB_TRIANGLE_160_-1.dxf",
+              "source_xmin": -160.0,
+              "source_ymin": -160.0,
+              "x": 674.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 160.0
+            },
+            {
+              "part_number": "FB_TRIANGLE_160_-1",
+              "copy": 2,
+              "w": 160.0,
+              "h": 160.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FB_TRIANGLE_160_-1.dxf",
+              "source_xmin": -160.0,
+              "source_ymin": -160.0,
+              "x": 840.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 160.0
+            },
+            {
+              "part_number": "FB_TRIANGLE_160_-1",
+              "copy": 3,
+              "w": 160.0,
+              "h": 160.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FB_TRIANGLE_160_-1.dxf",
+              "source_xmin": -160.0,
+              "source_ymin": -160.0,
+              "x": 1006.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 160.0
+            },
+            {
+              "part_number": "FB_TRIANGLE_160_-1",
+              "copy": 4,
+              "w": 160.0,
+              "h": 160.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FB_TRIANGLE_160_-1.dxf",
+              "source_xmin": -160.0,
+              "source_ymin": -160.0,
+              "x": 10.0,
+              "y": 176.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 160.0
+            },
+            {
+              "part_number": "FB_REAR_GUSSET_LOW",
+              "copy": 1,
+              "w": 160.0,
+              "h": 160.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FB_REAR_GUSSET_LOW.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 176.0,
+              "y": 176.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 160.0
+            },
+            {
+              "part_number": "FB_REAR_GUSSET_HIGH",
+              "copy": 1,
+              "w": 160.0,
+              "h": 160.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FB_REAR_GUSSET_HIGH.dxf",
+              "source_xmin": -160.0,
+              "source_ymin": -160.0,
+              "x": 342.0,
+              "y": 176.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 160.0
+            },
+            {
+              "part_number": "G_FRONT_SEAT_TRAY_FLOOR",
+              "copy": 1,
+              "w": 210.0,
+              "h": 120.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_FRONT_SEAT_TRAY_FLOOR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 508.0,
+              "y": 176.0,
+              "rotated_90": false,
+              "placed_w": 210.0,
+              "placed_h": 120.0
+            },
+            {
+              "part_number": "G_HW_TRAY_FLOOR",
+              "copy": 1,
+              "w": 45.0,
+              "h": 405.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_HW_TRAY_FLOOR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 724.0,
+              "y": 176.0,
+              "rotated_90": true,
+              "placed_w": 405.0,
+              "placed_h": 45.0
+            },
+            {
+              "part_number": "G_HW_TRAY_SIDE",
+              "copy": 1,
+              "w": 405.0,
+              "h": 28.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_HW_TRAY_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1172.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 28.0,
+              "placed_h": 405.0
+            },
+            {
+              "part_number": "G_HW_TRAY_SIDE",
+              "copy": 2,
+              "w": 405.0,
+              "h": 28.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_HW_TRAY_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1135.0,
+              "y": 176.0,
+              "rotated_90": true,
+              "placed_w": 28.0,
+              "placed_h": 405.0
+            },
+            {
+              "part_number": "G_RACK_BEAM_GUSSET_2_80",
+              "copy": 1,
+              "w": 114.2,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_BEAM_GUSSET_2_80.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 724.0,
+              "y": 227.0,
+              "rotated_90": false,
+              "placed_w": 114.2,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "G_RACK_BEAM_GUSSET_2_80",
+              "copy": 2,
+              "w": 114.2,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_BEAM_GUSSET_2_80.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 508.0,
+              "y": 302.0,
+              "rotated_90": false,
+              "placed_w": 114.2,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "G_RACK_BEAM_GUSSET_1_80",
+              "copy": 1,
+              "w": 79.2,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_BEAM_GUSSET_1_80.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 628.2,
+              "y": 302.0,
+              "rotated_90": true,
+              "placed_w": 80.0,
+              "placed_h": 79.2
+            },
+            {
+              "part_number": "G_RACK_BEAM_GUSSET_1_80",
+              "copy": 2,
+              "w": 79.2,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_BEAM_GUSSET_1_80.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 844.2,
+              "y": 227.0,
+              "rotated_90": true,
+              "placed_w": 80.0,
+              "placed_h": 79.2
+            },
+            {
+              "part_number": "G_FRONT_SEAT_TRAY_END",
+              "copy": 1,
+              "w": 204.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_FRONT_SEAT_TRAY_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1169.0,
+              "y": 421.0,
+              "rotated_90": true,
+              "placed_w": 20.0,
+              "placed_h": 204.0
+            },
+            {
+              "part_number": "G_FRONT_SEAT_TRAY_END",
+              "copy": 2,
+              "w": 204.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_FRONT_SEAT_TRAY_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 844.2,
+              "y": 312.2,
+              "rotated_90": false,
+              "placed_w": 204.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_HW_DRAWBOLT_GUIDE",
+              "copy": 1,
+              "w": 45.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_HW_DRAWBOLT_GUIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1054.2,
+              "y": 227.0,
+              "rotated_90": false,
+              "placed_w": 45.0,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "G_FRONT_SEAT_TRAY_SIDE",
+              "copy": 1,
+              "w": 120.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_FRONT_SEAT_TRAY_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1105.2,
+              "y": 227.0,
+              "rotated_90": true,
+              "placed_w": 20.0,
+              "placed_h": 120.0
+            },
+            {
+              "part_number": "G_FRONT_SEAT_TRAY_SIDE",
+              "copy": 2,
+              "w": 120.0,
+              "h": 20.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_FRONT_SEAT_TRAY_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 714.2,
+              "y": 313.0,
+              "rotated_90": false,
+              "placed_w": 120.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_HW_MOUNT_WEB",
+              "copy": 1,
+              "w": 25.0,
+              "h": 90.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_HW_MOUNT_WEB.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1054.2,
+              "y": 313.0,
+              "rotated_90": false,
+              "placed_w": 25.0,
+              "placed_h": 90.0
+            },
+            {
+              "part_number": "G_HW_TRAY_END",
+              "copy": 1,
+              "w": 45.0,
+              "h": 28.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_HW_TRAY_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1085.2,
+              "y": 353.0,
+              "rotated_90": true,
+              "placed_w": 28.0,
+              "placed_h": 45.0
+            },
+            {
+              "part_number": "G_HW_TRAY_END",
+              "copy": 2,
+              "w": 45.0,
+              "h": 28.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_HW_TRAY_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1085.2,
+              "y": 404.0,
+              "rotated_90": true,
+              "placed_w": 28.0,
+              "placed_h": 45.0
+            },
+            {
+              "part_number": "G_HW_DRAWBOLT_GUIDE_RISER",
+              "copy": 1,
+              "w": 80.0,
+              "h": 8.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_HW_DRAWBOLT_GUIDE_RISER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1119.2,
+              "y": 353.0,
+              "rotated_90": true,
+              "placed_w": 8.0,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "G_HW_DRAWBOLT_GUIDE_RISER",
+              "copy": 2,
+              "w": 80.0,
+              "h": 8.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_HW_DRAWBOLT_GUIDE_RISER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1119.2,
+              "y": 439.0,
+              "rotated_90": true,
+              "placed_w": 8.0,
+              "placed_h": 80.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 3.048,
+      "sheets": 2,
+      "part_count": 51,
+      "rectangular_blank_area_m2": 4.844575855388317,
+      "layouts": [
+        {
+          "file": "carbon_steel_3.048mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "WP_FLOOR",
+              "copy": 1,
+              "w": 920.0,
+              "h": 1200.059998500075,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_FLOOR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 920.0,
+              "placed_h": 1200.059998500075
+            },
+            {
+              "part_number": "WT_LID",
+              "copy": 1,
+              "w": 966.096,
+              "h": 666.096,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_LID.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1216.059998500075,
+              "rotated_90": false,
+              "placed_w": 966.096,
+              "placed_h": 666.096
+            },
+            {
+              "part_number": "WT_FRONT",
+              "copy": 1,
+              "w": 900.0,
+              "h": 250.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_FRONT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 936.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 250.0,
+              "placed_h": 900.0
+            },
+            {
+              "part_number": "WT_SIDE",
+              "copy": 1,
+              "w": 606.096,
+              "h": 250.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1888.155998500075,
+              "rotated_90": false,
+              "placed_w": 606.096,
+              "placed_h": 250.0
+            },
+            {
+              "part_number": "WT_SIDE",
+              "copy": 2,
+              "w": 606.096,
+              "h": 250.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 2144.155998500075,
+              "rotated_90": false,
+              "placed_w": 606.096,
+              "placed_h": 250.0
+            },
+            {
+              "part_number": "WP_SIDE",
+              "copy": 1,
+              "w": 1200.0,
+              "h": 96.95184760380982,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 3.0481523961901758,
+              "x": 982.096,
+              "y": 916.0,
+              "rotated_90": true,
+              "placed_w": 96.95184760380982,
+              "placed_h": 1200.0
+            },
+            {
+              "part_number": "WP_SIDE",
+              "copy": 2,
+              "w": 1200.0,
+              "h": 96.95184760380982,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 3.0481523961901758,
+              "x": 1085.0478476038097,
+              "y": 916.0,
+              "rotated_90": true,
+              "placed_w": 96.95184760380982,
+              "placed_h": 1200.0
+            }
+          ]
+        },
+        {
+          "file": "carbon_steel_3.048mm_sheet_02.dxf",
+          "parts": [
+            {
+              "part_number": "WT_FLOOR",
+              "copy": 1,
+              "w": 906.096,
+              "h": 606.096,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_FLOOR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 906.096,
+              "placed_h": 606.096
+            },
+            {
+              "part_number": "WT_REAR",
+              "copy": 1,
+              "w": 900.0,
+              "h": 250.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_REAR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 922.096,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 250.0,
+              "placed_h": 900.0
+            },
+            {
+              "part_number": "WP_END_REAR",
+              "copy": 1,
+              "w": 913.904,
+              "h": 96.92136760380981,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_END_REAR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 916.0,
+              "rotated_90": false,
+              "placed_w": 913.904,
+              "placed_h": 96.92136760380981
+            },
+            {
+              "part_number": "WP_END_FRONT",
+              "copy": 1,
+              "w": 913.904,
+              "h": 84.95184760380982,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_END_FRONT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 929.904,
+              "y": 916.0,
+              "rotated_90": true,
+              "placed_w": 84.95184760380982,
+              "placed_h": 913.904
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 1,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 622.096,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 2,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 703.096,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 3,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 784.096,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 4,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1018.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 5,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1099.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 6,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1180.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 7,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1261.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 8,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1342.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 9,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1423.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 10,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1504.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 11,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1585.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 12,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1666.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 13,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1747.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 14,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1828.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 15,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1020.8558476038098,
+              "y": 916.0,
+              "rotated_90": true,
+              "placed_w": 75.0,
+              "placed_h": 880.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 16,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1101.8558476038097,
+              "y": 916.0,
+              "rotated_90": true,
+              "placed_w": 75.0,
+              "placed_h": 880.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 17,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1909.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 18,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 1990.9213676038098,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WP_SLAT",
+              "copy": 19,
+              "w": 880.0,
+              "h": 75.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_SLAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 2071.92136760381,
+              "rotated_90": false,
+              "placed_w": 880.0,
+              "placed_h": 75.0
+            },
+            {
+              "part_number": "WT_SETTLING_WEIR",
+              "copy": 1,
+              "w": 900.0,
+              "h": 50.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_SETTLING_WEIR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 2152.92136760381,
+              "rotated_90": false,
+              "placed_w": 900.0,
+              "placed_h": 50.0
+            },
+            {
+              "part_number": "PUMP_TRAY",
+              "copy": 1,
+              "w": 250.0,
+              "h": 126.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PUMP_TRAY.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 916.0,
+              "y": 1835.904,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 126.0
+            },
+            {
+              "part_number": "HW_BOLT_BIN_FLOOR",
+              "copy": 1,
+              "w": 200.0,
+              "h": 100.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\HW_BOLT_BIN_FLOOR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 2208.92136760381,
+              "rotated_90": true,
+              "placed_w": 100.0,
+              "placed_h": 200.0
+            },
+            {
+              "part_number": "HW_BOLT_BIN_END",
+              "copy": 1,
+              "w": 193.904,
+              "h": 26.952,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\HW_BOLT_BIN_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 896.0,
+              "y": 1018.9213676038098,
+              "rotated_90": true,
+              "placed_w": 26.952,
+              "placed_h": 193.904
+            },
+            {
+              "part_number": "HW_BOLT_BIN_END",
+              "copy": 2,
+              "w": 193.904,
+              "h": 26.952,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\HW_BOLT_BIN_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 896.0,
+              "y": 1218.8253676038098,
+              "rotated_90": true,
+              "placed_w": 26.952,
+              "placed_h": 193.904
+            },
+            {
+              "part_number": "TOOL_PARK_BASE",
+              "copy": 1,
+              "w": 30.0,
+              "h": 110.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\TOOL_PARK_BASE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1178.096,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 30.0,
+              "placed_h": 110.0
+            },
+            {
+              "part_number": "TOOL_PARK_BASE",
+              "copy": 2,
+              "w": 30.0,
+              "h": 110.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\TOOL_PARK_BASE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1178.096,
+              "y": 126.0,
+              "rotated_90": false,
+              "placed_w": 30.0,
+              "placed_h": 110.0
+            },
+            {
+              "part_number": "HW_BOLT_BIN_SIDE",
+              "copy": 1,
+              "w": 100.0,
+              "h": 26.952,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\HW_BOLT_BIN_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1020.8558476038098,
+              "y": 1802.0,
+              "rotated_90": false,
+              "placed_w": 100.0,
+              "placed_h": 26.952
+            },
+            {
+              "part_number": "HW_BOLT_BIN_SIDE",
+              "copy": 2,
+              "w": 100.0,
+              "h": 26.952,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\HW_BOLT_BIN_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 896.0,
+              "y": 1418.7293676038098,
+              "rotated_90": true,
+              "placed_w": 26.952,
+              "placed_h": 100.0
+            },
+            {
+              "part_number": "SAND_ENDCAP_2IN",
+              "copy": 1,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\SAND_ENDCAP_2IN.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 896.0,
+              "y": 1967.904,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "SAND_ENDCAP_2IN",
+              "copy": 2,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\SAND_ENDCAP_2IN.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 896.0,
+              "y": 2024.704,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "SAND_ENDCAP_2IN",
+              "copy": 3,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\SAND_ENDCAP_2IN.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 896.0,
+              "y": 2081.504,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "SAND_ENDCAP_2IN",
+              "copy": 4,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\SAND_ENDCAP_2IN.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 116.0,
+              "y": 2208.92136760381,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "SAND_ENDCAP_2IN",
+              "copy": 5,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\SAND_ENDCAP_2IN.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 116.0,
+              "y": 2265.72136760381,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "SAND_ENDCAP_2IN",
+              "copy": 6,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\SAND_ENDCAP_2IN.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 116.0,
+              "y": 2322.52136760381,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "SAND_ENDCAP_2IN",
+              "copy": 7,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\SAND_ENDCAP_2IN.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 172.8,
+              "y": 2208.92136760381,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "SAND_ENDCAP_2IN",
+              "copy": 8,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\SAND_ENDCAP_2IN.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 172.8,
+              "y": 2265.72136760381,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "CAB_CAP_TAB_LEFT",
+              "copy": 1,
+              "w": 19.100000000000023,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\CAB_CAP_TAB_LEFT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 896.0,
+              "y": 622.096,
+              "rotated_90": false,
+              "placed_w": 19.100000000000023,
+              "placed_h": 30.0
+            },
+            {
+              "part_number": "CAB_CAP_TAB_LEFT",
+              "copy": 2,
+              "w": 19.100000000000023,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\CAB_CAP_TAB_LEFT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 896.0,
+              "y": 658.096,
+              "rotated_90": false,
+              "placed_w": 19.100000000000023,
+              "placed_h": 30.0
+            },
+            {
+              "part_number": "CAB_CAP_TAB_RIGHT",
+              "copy": 1,
+              "w": 19.09999999999991,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\CAB_CAP_TAB_RIGHT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 896.0,
+              "y": 694.096,
+              "rotated_90": false,
+              "placed_w": 19.09999999999991,
+              "placed_h": 30.0
+            },
+            {
+              "part_number": "CAB_CAP_TAB_RIGHT",
+              "copy": 2,
+              "w": 19.09999999999991,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\CAB_CAP_TAB_RIGHT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 896.0,
+              "y": 730.096,
+              "rotated_90": false,
+              "placed_w": 19.09999999999991,
+              "placed_h": 30.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 6,
+      "sheets": 1,
+      "part_count": 83,
+      "rectangular_blank_area_m2": 0.6955866986325342,
+      "layouts": [
+        {
+          "file": "carbon_steel_6mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "CAP_SPACER",
+              "copy": 1,
+              "w": 50.8,
+              "h": 1450.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\CAP_SPACER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 1450.0
+            },
+            {
+              "part_number": "CAP_SPACER",
+              "copy": 2,
+              "w": 50.8,
+              "h": 1450.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\CAP_SPACER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 66.8,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 1450.0
+            },
+            {
+              "part_number": "WP_COMB",
+              "copy": 1,
+              "w": 1120.0,
+              "h": 56.40184760380987,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_COMB.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 3.5981523961901303,
+              "x": 10.0,
+              "y": 1466.0,
+              "rotated_90": false,
+              "placed_w": 1120.0,
+              "placed_h": 56.40184760380987
+            },
+            {
+              "part_number": "WP_COMB",
+              "copy": 2,
+              "w": 1120.0,
+              "h": 56.40184760380987,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_COMB.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 3.5981523961901303,
+              "x": 1136.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 56.40184760380987,
+              "placed_h": 1120.0
+            },
+            {
+              "part_number": "WT_RIM_FRONT",
+              "copy": 1,
+              "w": 966.096,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_RIM_FRONT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 123.6,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 966.096,
+              "placed_h": 30.0
+            },
+            {
+              "part_number": "WT_RIM_REAR",
+              "copy": 1,
+              "w": 966.096,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_RIM_REAR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1095.696,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 966.096
+            },
+            {
+              "part_number": "G_RACK_BEAM_SHELF_2",
+              "copy": 1,
+              "w": 114.2,
+              "h": 172.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_BEAM_SHELF_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 123.6,
+              "y": 1136.0,
+              "rotated_90": false,
+              "placed_w": 114.2,
+              "placed_h": 172.0
+            },
+            {
+              "part_number": "WT_RIM_LEFT",
+              "copy": 1,
+              "w": 30.0,
+              "h": 606.096,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_RIM_LEFT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1136.0,
+              "y": 1136.0,
+              "rotated_90": false,
+              "placed_w": 30.0,
+              "placed_h": 606.096
+            },
+            {
+              "part_number": "WT_RIM_RIGHT",
+              "copy": 1,
+              "w": 30.0,
+              "h": 606.096,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_RIM_RIGHT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1172.0,
+              "y": 1136.0,
+              "rotated_90": false,
+              "placed_w": 30.0,
+              "placed_h": 606.096
+            },
+            {
+              "part_number": "WP_CRADLE_WEB_1_1",
+              "copy": 1,
+              "w": 900.0,
+              "h": 16.24000000000001,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_CRADLE_WEB_1_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 123.6,
+              "y": 46.0,
+              "rotated_90": false,
+              "placed_w": 900.0,
+              "placed_h": 16.24000000000001
+            },
+            {
+              "part_number": "WP_CRADLE_WEB_1_2",
+              "copy": 1,
+              "w": 900.0,
+              "h": 15.79200000000003,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_CRADLE_WEB_1_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1029.6,
+              "y": 46.0,
+              "rotated_90": true,
+              "placed_w": 15.79200000000003,
+              "placed_h": 900.0
+            },
+            {
+              "part_number": "G_RACK_BEAM_SHELF_1",
+              "copy": 1,
+              "w": 79.2,
+              "h": 172.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_BEAM_SHELF_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 123.6,
+              "y": 952.0,
+              "rotated_90": false,
+              "placed_w": 79.2,
+              "placed_h": 172.0
+            },
+            {
+              "part_number": "WP_CRADLE_WEB_2_1",
+              "copy": 1,
+              "w": 900.0,
+              "h": 11.240000000000009,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_CRADLE_WEB_2_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 123.6,
+              "y": 68.24000000000001,
+              "rotated_90": false,
+              "placed_w": 900.0,
+              "placed_h": 11.240000000000009
+            },
+            {
+              "part_number": "G_RACK_PANEL_SEAT",
+              "copy": 1,
+              "w": 40.0,
+              "h": 245.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_SEAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 123.6,
+              "y": 1314.0,
+              "rotated_90": true,
+              "placed_w": 245.0,
+              "placed_h": 40.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_SEAT",
+              "copy": 2,
+              "w": 40.0,
+              "h": 245.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_SEAT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 123.6,
+              "y": 1360.0,
+              "rotated_90": true,
+              "placed_w": 245.0,
+              "placed_h": 40.0
+            },
+            {
+              "part_number": "WP_CRADLE_WEB_2_2",
+              "copy": 1,
+              "w": 900.0,
+              "h": 10.79200000000003,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_CRADLE_WEB_2_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 123.6,
+              "y": 85.48000000000002,
+              "rotated_90": false,
+              "placed_w": 900.0,
+              "placed_h": 10.79200000000003
+            },
+            {
+              "part_number": "G_RACK_SPOIL_DROP",
+              "copy": 1,
+              "w": 160.0,
+              "h": 49.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_DROP.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 123.6,
+              "y": 1406.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 49.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_DROP",
+              "copy": 2,
+              "w": 160.0,
+              "h": 49.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_DROP.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 289.6,
+              "y": 1406.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 49.0
+            },
+            {
+              "part_number": "G_FRONT_SEAT_ROUND",
+              "copy": 1,
+              "w": 90.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_FRONT_SEAT_ROUND.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 208.8,
+              "y": 982.096,
+              "rotated_90": true,
+              "placed_w": 80.0,
+              "placed_h": 90.0
+            },
+            {
+              "part_number": "G_FRONT_SEAT_RELIEVED",
+              "copy": 1,
+              "w": 90.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_FRONT_SEAT_RELIEVED.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 243.8,
+              "y": 1078.096,
+              "rotated_90": true,
+              "placed_w": 80.0,
+              "placed_h": 90.0
+            },
+            {
+              "part_number": "G_SEAT_ROUND",
+              "copy": 1,
+              "w": 90.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_SEAT_ROUND.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 294.8,
+              "y": 982.096,
+              "rotated_90": true,
+              "placed_w": 80.0,
+              "placed_h": 90.0
+            },
+            {
+              "part_number": "G_SEAT_ROUND",
+              "copy": 2,
+              "w": 90.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_SEAT_ROUND.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 243.8,
+              "y": 1174.096,
+              "rotated_90": true,
+              "placed_w": 80.0,
+              "placed_h": 90.0
+            },
+            {
+              "part_number": "G_SEAT_ROUND",
+              "copy": 3,
+              "w": 90.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_SEAT_ROUND.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 329.8,
+              "y": 1078.096,
+              "rotated_90": true,
+              "placed_w": 80.0,
+              "placed_h": 90.0
+            },
+            {
+              "part_number": "G_SEAT_RELIEVED",
+              "copy": 1,
+              "w": 90.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_SEAT_RELIEVED.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 380.8,
+              "y": 982.096,
+              "rotated_90": true,
+              "placed_w": 80.0,
+              "placed_h": 90.0
+            },
+            {
+              "part_number": "G_SEAT_RELIEVED",
+              "copy": 2,
+              "w": 90.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_SEAT_RELIEVED.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 329.8,
+              "y": 1174.096,
+              "rotated_90": true,
+              "placed_w": 80.0,
+              "placed_h": 90.0
+            },
+            {
+              "part_number": "G_SEAT_RELIEVED",
+              "copy": 3,
+              "w": 90.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_SEAT_RELIEVED.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 374.6,
+              "y": 1270.096,
+              "rotated_90": true,
+              "placed_w": 80.0,
+              "placed_h": 90.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_ARM",
+              "copy": 1,
+              "w": 219.2,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_ARM.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 374.6,
+              "y": 1366.096,
+              "rotated_90": false,
+              "placed_w": 219.2,
+              "placed_h": 30.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_ARM",
+              "copy": 2,
+              "w": 219.2,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_ARM.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 46.0,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 219.2
+            },
+            {
+              "part_number": "G_RACK_SPOIL_RUNNER",
+              "copy": 1,
+              "w": 18.0,
+              "h": 365.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_RUNNER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 208.8,
+              "y": 952.0,
+              "rotated_90": true,
+              "placed_w": 365.0,
+              "placed_h": 18.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_RUNNER",
+              "copy": 2,
+              "w": 18.0,
+              "h": 365.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_RUNNER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 466.8,
+              "y": 982.096,
+              "rotated_90": false,
+              "placed_w": 18.0,
+              "placed_h": 365.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_RUNNER",
+              "copy": 3,
+              "w": 18.0,
+              "h": 365.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_RUNNER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 490.8,
+              "y": 982.096,
+              "rotated_90": false,
+              "placed_w": 18.0,
+              "placed_h": 365.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_RUNNER",
+              "copy": 4,
+              "w": 18.0,
+              "h": 365.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_RUNNER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 514.8,
+              "y": 982.096,
+              "rotated_90": false,
+              "placed_w": 18.0,
+              "placed_h": 365.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_RUNNER",
+              "copy": 5,
+              "w": 18.0,
+              "h": 365.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_RUNNER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 538.8,
+              "y": 982.096,
+              "rotated_90": false,
+              "placed_w": 18.0,
+              "placed_h": 365.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_RUNNER",
+              "copy": 6,
+              "w": 18.0,
+              "h": 365.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_RUNNER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 562.8,
+              "y": 982.096,
+              "rotated_90": false,
+              "placed_w": 18.0,
+              "placed_h": 365.0
+            },
+            {
+              "part_number": "WP_CRADLE_WEB_3_1",
+              "copy": 1,
+              "w": 900.0,
+              "h": 6.490000000000009,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_CRADLE_WEB_3_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 123.6,
+              "y": 102.27200000000005,
+              "rotated_90": false,
+              "placed_w": 900.0,
+              "placed_h": 6.490000000000009
+            },
+            {
+              "part_number": "WP_CRADLE_WEB_3_2",
+              "copy": 1,
+              "w": 900.0,
+              "h": 6.04200000000003,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_CRADLE_WEB_3_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 123.6,
+              "y": 114.76200000000006,
+              "rotated_90": false,
+              "placed_w": 900.0,
+              "placed_h": 6.04200000000003
+            },
+            {
+              "part_number": "G_RACK_SPOIL_FOOT",
+              "copy": 1,
+              "w": 160.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_FOOT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 271.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 160.0
+            },
+            {
+              "part_number": "G_RACK_SPOIL_FOOT",
+              "copy": 2,
+              "w": 160.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_SPOIL_FOOT.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 437.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 160.0
+            },
+            {
+              "part_number": "G_RACK_PANEL_WEB",
+              "copy": 1,
+              "w": 245.0,
+              "h": 17.4,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_WEB.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 579.8,
+              "y": 952.0,
+              "rotated_90": false,
+              "placed_w": 245.0,
+              "placed_h": 17.4
+            },
+            {
+              "part_number": "G_RACK_PANEL_WEB",
+              "copy": 2,
+              "w": 245.0,
+              "h": 17.4,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_RACK_PANEL_WEB.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 830.8,
+              "y": 952.0,
+              "rotated_90": false,
+              "placed_w": 245.0,
+              "placed_h": 17.4
+            },
+            {
+              "part_number": "FT_LEG_CLOSURE",
+              "copy": 1,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FT_LEG_CLOSURE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 455.6,
+              "y": 1402.096,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "FT_LEG_CLOSURE",
+              "copy": 2,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FT_LEG_CLOSURE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 512.4,
+              "y": 1402.096,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "FT_LEG_CLOSURE",
+              "copy": 3,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FT_LEG_CLOSURE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 569.1999999999999,
+              "y": 1402.096,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "FT_LEG_CLOSURE",
+              "copy": 4,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FT_LEG_CLOSURE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 586.8,
+              "y": 982.096,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "FT_LEG_CLOSURE",
+              "copy": 5,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FT_LEG_CLOSURE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 586.8,
+              "y": 1038.896,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "FT_LEG_CLOSURE",
+              "copy": 6,
+              "w": 50.8,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FT_LEG_CLOSURE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 586.8,
+              "y": 1095.696,
+              "rotated_90": false,
+              "placed_w": 50.8,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_STACK_PAD",
+              "copy": 1,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_STACK_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 586.8,
+              "y": 1152.4959999999999,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_STACK_PAD",
+              "copy": 2,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_STACK_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 586.8,
+              "y": 1209.2959999999998,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_STACK_PAD",
+              "copy": 3,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_STACK_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 586.8,
+              "y": 1266.0959999999998,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_STACK_PAD",
+              "copy": 4,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_STACK_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 599.8,
+              "y": 1322.8959999999997,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_STACK_PAD",
+              "copy": 5,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_STACK_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 625.9999999999999,
+              "y": 1379.6959999999997,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_STACK_PAD",
+              "copy": 6,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_STACK_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 642.8,
+              "y": 1152.4959999999999,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_STACK_PAD",
+              "copy": 7,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_STACK_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 642.8,
+              "y": 1209.2959999999998,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_STACK_PAD",
+              "copy": 8,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_STACK_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 642.8,
+              "y": 1266.0959999999998,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_FOOT_BASE",
+              "copy": 1,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_FOOT_BASE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 655.8,
+              "y": 1322.8959999999997,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_FOOT_BASE",
+              "copy": 2,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_FOOT_BASE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 681.9999999999999,
+              "y": 1379.6959999999997,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_FOOT_BASE",
+              "copy": 3,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_FOOT_BASE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 643.5999999999999,
+              "y": 982.096,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_FOOT_BASE",
+              "copy": 4,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_FOOT_BASE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 643.5999999999999,
+              "y": 1038.896,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_FOOT_BASE",
+              "copy": 5,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_FOOT_BASE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 643.5999999999999,
+              "y": 1095.696,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_FOOT_BASE",
+              "copy": 6,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_FOOT_BASE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 698.8,
+              "y": 1152.4959999999999,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_FOOT_BASE",
+              "copy": 7,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_FOOT_BASE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 698.8,
+              "y": 1209.2959999999998,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_BEAM_FOOT_BASE",
+              "copy": 8,
+              "w": 50.0,
+              "h": 50.8,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_BEAM_FOOT_BASE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 698.8,
+              "y": 1266.0959999999998,
+              "rotated_90": false,
+              "placed_w": 50.0,
+              "placed_h": 50.8
+            },
+            {
+              "part_number": "G_HW_MOUNT_SHELF",
+              "copy": 1,
+              "w": 49.3,
+              "h": 40.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_HW_MOUNT_SHELF.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 711.8,
+              "y": 1322.8959999999997,
+              "rotated_90": true,
+              "placed_w": 40.0,
+              "placed_h": 49.3
+            },
+            {
+              "part_number": "WP_HOLD_TAB_1",
+              "copy": 1,
+              "w": 26.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_HOLD_TAB_1.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 208.8,
+              "y": 1078.096,
+              "rotated_90": false,
+              "placed_w": 26.0,
+              "placed_h": 30.0
+            },
+            {
+              "part_number": "WP_HOLD_TAB_2",
+              "copy": 1,
+              "w": 26.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_HOLD_TAB_2.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 243.8,
+              "y": 1270.096,
+              "rotated_90": false,
+              "placed_w": 26.0,
+              "placed_h": 30.0
+            },
+            {
+              "part_number": "WP_HOLD_TAB_3",
+              "copy": 1,
+              "w": 26.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_HOLD_TAB_3.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 275.8,
+              "y": 1270.096,
+              "rotated_90": false,
+              "placed_w": 26.0,
+              "placed_h": 30.0
+            },
+            {
+              "part_number": "WP_HOLD_TAB_4",
+              "copy": 1,
+              "w": 26.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WP_HOLD_TAB_4.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 307.8,
+              "y": 1270.096,
+              "rotated_90": false,
+              "placed_w": 26.0,
+              "placed_h": 30.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 1,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 625.9999999999999,
+              "y": 1436.4959999999996,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 2,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 661.9999999999999,
+              "y": 1436.4959999999996,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 3,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 697.9999999999999,
+              "y": 1436.4959999999996,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 4,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 733.9999999999999,
+              "y": 1436.4959999999996,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 5,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 339.8,
+              "y": 1270.096,
+              "rotated_90": false,
+              "placed_w": 20.0,
+              "placed_h": 30.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 6,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 603.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 7,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 629.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 8,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 655.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 9,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 681.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 10,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 707.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 11,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 733.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 12,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 759.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 13,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 785.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 14,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 811.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 15,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 837.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            },
+            {
+              "part_number": "G_PANEL_CLAMP_20x30",
+              "copy": 16,
+              "w": 20.0,
+              "h": 30.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\G_PANEL_CLAMP_20x30.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1051.3919999999998,
+              "y": 863.2,
+              "rotated_90": true,
+              "placed_w": 30.0,
+              "placed_h": 20.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 8,
+      "sheets": 1,
+      "part_count": 12,
+      "rectangular_blank_area_m2": 0.131616,
+      "layouts": [
+        {
+          "file": "carbon_steel_8mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "PB_HANGER",
+              "copy": 1,
+              "w": 80.0,
+              "h": 144.2,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PB_HANGER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 144.2,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "PB_HANGER",
+              "copy": 2,
+              "w": 80.0,
+              "h": 144.2,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PB_HANGER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 160.2,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 144.2,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "PB_HANGER",
+              "copy": 3,
+              "w": 80.0,
+              "h": 144.2,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PB_HANGER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 310.4,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 144.2,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "PB_HANGER",
+              "copy": 4,
+              "w": 80.0,
+              "h": 144.2,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PB_HANGER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 460.59999999999997,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 144.2,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "PB_HANGER",
+              "copy": 5,
+              "w": 80.0,
+              "h": 144.2,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PB_HANGER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 610.8,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 144.2,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "PB_HANGER",
+              "copy": 6,
+              "w": 80.0,
+              "h": 144.2,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PB_HANGER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 761.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 144.2,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "PB_END",
+              "copy": 1,
+              "w": 80.0,
+              "h": 130.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PB_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 911.2,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 130.0,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "PB_END",
+              "copy": 2,
+              "w": 80.0,
+              "h": 130.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PB_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1047.2,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 130.0,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "PB_END",
+              "copy": 3,
+              "w": 80.0,
+              "h": 130.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PB_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 96.0,
+              "rotated_90": true,
+              "placed_w": 130.0,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "PB_END",
+              "copy": 4,
+              "w": 80.0,
+              "h": 130.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PB_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 146.0,
+              "y": 96.0,
+              "rotated_90": true,
+              "placed_w": 130.0,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "PB_END",
+              "copy": 5,
+              "w": 80.0,
+              "h": 130.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PB_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 282.0,
+              "y": 96.0,
+              "rotated_90": true,
+              "placed_w": 130.0,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "PB_END",
+              "copy": 6,
+              "w": 80.0,
+              "h": 130.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\PB_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 418.0,
+              "y": 96.0,
+              "rotated_90": true,
+              "placed_w": 130.0,
+              "placed_h": 80.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 12.7,
+      "sheets": 1,
+      "part_count": 6,
+      "rectangular_blank_area_m2": 0.0384,
+      "layouts": [
+        {
+          "file": "carbon_steel_12.7mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "FT_PAD",
+              "copy": 1,
+              "w": 80.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FT_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 80.0,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "FT_PAD",
+              "copy": 2,
+              "w": 80.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FT_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 96.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 80.0,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "FT_PAD",
+              "copy": 3,
+              "w": 80.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FT_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 182.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 80.0,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "FT_PAD",
+              "copy": 4,
+              "w": 80.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FT_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 268.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 80.0,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "FT_PAD",
+              "copy": 5,
+              "w": 80.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FT_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 354.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 80.0,
+              "placed_h": 80.0
+            },
+            {
+              "part_number": "FT_PAD",
+              "copy": 6,
+              "w": 80.0,
+              "h": 80.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FT_PAD.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 440.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 80.0,
+              "placed_h": 80.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "thickness_mm": 1,
+      "sheets": 1,
+      "part_count": 10,
+      "rectangular_blank_area_m2": 0.0194,
+      "layouts": [
+        {
+          "file": "stainless_confirm_grade_1mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "FLOAT_GUARD_SIDE",
+              "copy": 1,
+              "w": 40.0,
+              "h": 61.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_GUARD_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 61.0,
+              "placed_h": 40.0
+            },
+            {
+              "part_number": "FLOAT_GUARD_SIDE",
+              "copy": 2,
+              "w": 40.0,
+              "h": 61.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_GUARD_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 77.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 61.0,
+              "placed_h": 40.0
+            },
+            {
+              "part_number": "FLOAT_GUARD_SIDE",
+              "copy": 3,
+              "w": 40.0,
+              "h": 61.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_GUARD_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 144.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 61.0,
+              "placed_h": 40.0
+            },
+            {
+              "part_number": "FLOAT_GUARD_SIDE",
+              "copy": 4,
+              "w": 40.0,
+              "h": 61.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_GUARD_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 211.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 61.0,
+              "placed_h": 40.0
+            },
+            {
+              "part_number": "FLOAT_GUARD_SIDE",
+              "copy": 5,
+              "w": 40.0,
+              "h": 61.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_GUARD_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 278.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 61.0,
+              "placed_h": 40.0
+            },
+            {
+              "part_number": "FLOAT_GUARD_FLOOR",
+              "copy": 1,
+              "w": 36.0,
+              "h": 40.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_GUARD_FLOOR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 345.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 40.0,
+              "placed_h": 36.0
+            },
+            {
+              "part_number": "FLOAT_GUARD_FLOOR",
+              "copy": 2,
+              "w": 36.0,
+              "h": 40.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_GUARD_FLOOR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 391.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 40.0,
+              "placed_h": 36.0
+            },
+            {
+              "part_number": "FLOAT_GUARD_FLOOR",
+              "copy": 3,
+              "w": 36.0,
+              "h": 40.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_GUARD_FLOOR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 437.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 40.0,
+              "placed_h": 36.0
+            },
+            {
+              "part_number": "FLOAT_GUARD_FLOOR",
+              "copy": 4,
+              "w": 36.0,
+              "h": 40.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_GUARD_FLOOR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 483.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 40.0,
+              "placed_h": 36.0
+            },
+            {
+              "part_number": "FLOAT_GUARD_FLOOR_PAN_EMPTY",
+              "copy": 1,
+              "w": 36.0,
+              "h": 40.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_GUARD_FLOOR_PAN_EMPTY.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 529.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 40.0,
+              "placed_h": 36.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "thickness_mm": 1.5,
+      "sheets": 1,
+      "part_count": 11,
+      "rectangular_blank_area_m2": 0.350609,
+      "layouts": [
+        {
+          "file": "stainless_confirm_grade_1.5mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "OVERFLOW_CATCH_FLOOR",
+              "copy": 1,
+              "w": 600.0,
+              "h": 250.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\OVERFLOW_CATCH_FLOOR.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 600.0,
+              "placed_h": 250.0
+            },
+            {
+              "part_number": "OVERFLOW_CATCH_END",
+              "copy": 1,
+              "w": 597.0,
+              "h": 60.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\OVERFLOW_CATCH_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 616.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 60.0,
+              "placed_h": 597.0
+            },
+            {
+              "part_number": "OVERFLOW_CATCH_END",
+              "copy": 2,
+              "w": 597.0,
+              "h": 60.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\OVERFLOW_CATCH_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 266.0,
+              "rotated_90": false,
+              "placed_w": 597.0,
+              "placed_h": 60.0
+            },
+            {
+              "part_number": "WT_BASKET_SPLASH_COVER",
+              "copy": 1,
+              "w": 180.0,
+              "h": 140.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_BASKET_SPLASH_COVER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 682.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 180.0,
+              "placed_h": 140.0
+            },
+            {
+              "part_number": "WT_BASKET_BASE",
+              "copy": 1,
+              "w": 160.0,
+              "h": 120.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_BASKET_BASE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 868.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 160.0,
+              "placed_h": 120.0
+            },
+            {
+              "part_number": "WT_BASKET_END",
+              "copy": 1,
+              "w": 157.0,
+              "h": 98.5,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_BASKET_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1034.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 157.0,
+              "placed_h": 98.5
+            },
+            {
+              "part_number": "WT_BASKET_END",
+              "copy": 2,
+              "w": 157.0,
+              "h": 98.5,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_BASKET_END.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 1034.0,
+              "y": 114.5,
+              "rotated_90": false,
+              "placed_w": 157.0,
+              "placed_h": 98.5
+            },
+            {
+              "part_number": "OVERFLOW_CATCH_SIDE",
+              "copy": 1,
+              "w": 250.0,
+              "h": 60.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\OVERFLOW_CATCH_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 682.0,
+              "y": 156.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 60.0
+            },
+            {
+              "part_number": "OVERFLOW_CATCH_SIDE",
+              "copy": 2,
+              "w": 250.0,
+              "h": 60.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\OVERFLOW_CATCH_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 938.0,
+              "y": 219.0,
+              "rotated_90": false,
+              "placed_w": 250.0,
+              "placed_h": 60.0
+            },
+            {
+              "part_number": "WT_BASKET_SIDE",
+              "copy": 1,
+              "w": 120.0,
+              "h": 98.5,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_BASKET_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 682.0,
+              "y": 222.0,
+              "rotated_90": false,
+              "placed_w": 120.0,
+              "placed_h": 98.5
+            },
+            {
+              "part_number": "WT_BASKET_SIDE",
+              "copy": 2,
+              "w": 120.0,
+              "h": 98.5,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_BASKET_SIDE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 808.0,
+              "y": 222.0,
+              "rotated_90": false,
+              "placed_w": 120.0,
+              "placed_h": 98.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "thickness_mm": 2,
+      "sheets": 1,
+      "part_count": 1,
+      "rectangular_blank_area_m2": 0.0252,
+      "layouts": [
+        {
+          "file": "stainless_confirm_grade_2mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "WT_BASKET_RIM",
+              "copy": 1,
+              "w": 180.0,
+              "h": 140.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\WT_BASKET_RIM.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 180.0,
+              "placed_h": 140.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "thickness_mm": 3.048,
+      "sheets": 1,
+      "part_count": 10,
+      "rectangular_blank_area_m2": 0.013409439999999998,
+      "layouts": [
+        {
+          "file": "stainless_confirm_grade_3.048mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "FLOAT_LEDGE",
+              "copy": 1,
+              "w": 35.952,
+              "h": 44.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_LEDGE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 44.0,
+              "placed_h": 35.952
+            },
+            {
+              "part_number": "FLOAT_LEDGE",
+              "copy": 2,
+              "w": 35.952,
+              "h": 44.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_LEDGE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 60.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 44.0,
+              "placed_h": 35.952
+            },
+            {
+              "part_number": "FLOAT_LEDGE",
+              "copy": 3,
+              "w": 35.952,
+              "h": 44.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_LEDGE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 110.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 44.0,
+              "placed_h": 35.952
+            },
+            {
+              "part_number": "FLOAT_LEDGE",
+              "copy": 4,
+              "w": 35.952,
+              "h": 44.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_LEDGE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 160.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 44.0,
+              "placed_h": 35.952
+            },
+            {
+              "part_number": "FLOAT_LEDGE",
+              "copy": 5,
+              "w": 35.952,
+              "h": 44.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_LEDGE.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 210.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 44.0,
+              "placed_h": 35.952
+            },
+            {
+              "part_number": "FLOAT_SLIDER",
+              "copy": 1,
+              "w": 44.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_SLIDER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 260.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 44.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "FLOAT_SLIDER",
+              "copy": 2,
+              "w": 44.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_SLIDER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 310.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 44.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "FLOAT_SLIDER",
+              "copy": 3,
+              "w": 44.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_SLIDER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 360.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 44.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "FLOAT_SLIDER",
+              "copy": 4,
+              "w": 44.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_SLIDER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 410.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 44.0,
+              "placed_h": 25.0
+            },
+            {
+              "part_number": "FLOAT_SLIDER",
+              "copy": 5,
+              "w": 44.0,
+              "h": 25.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_SLIDER.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 460.0,
+              "y": 10.0,
+              "rotated_90": false,
+              "placed_w": 44.0,
+              "placed_h": 25.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "thickness_mm": 6,
+      "sheets": 1,
+      "part_count": 5,
+      "rectangular_blank_area_m2": 0.03675,
+      "layouts": [
+        {
+          "file": "stainless_confirm_grade_6mm_sheet_01.dxf",
+          "parts": [
+            {
+              "part_number": "FLOAT_BACKRAIL_PAN",
+              "copy": 1,
+              "w": 50.0,
+              "h": 155.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_BACKRAIL_PAN.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 10.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 155.0,
+              "placed_h": 50.0
+            },
+            {
+              "part_number": "FLOAT_BACKRAIL_PAN",
+              "copy": 2,
+              "w": 50.0,
+              "h": 155.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_BACKRAIL_PAN.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 171.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 155.0,
+              "placed_h": 50.0
+            },
+            {
+              "part_number": "FLOAT_BACKRAIL_PAN",
+              "copy": 3,
+              "w": 50.0,
+              "h": 155.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_BACKRAIL_PAN.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 332.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 155.0,
+              "placed_h": 50.0
+            },
+            {
+              "part_number": "FLOAT_BACKRAIL_PAN_EMPTY",
+              "copy": 1,
+              "w": 50.0,
+              "h": 155.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_BACKRAIL_PAN_EMPTY.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 493.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 155.0,
+              "placed_h": 50.0
+            },
+            {
+              "part_number": "FLOAT_BACKRAIL_TANK",
+              "copy": 1,
+              "w": 50.0,
+              "h": 115.0,
+              "source": "C:\\Users\\Gluis\\OneDrive\\Documents\\GitHub\\plasma-router-stand\\output\\release-review\\RevG-CAD\\dxf\\FLOAT_BACKRAIL_TANK.dxf",
+              "source_xmin": 0.0,
+              "source_ymin": 0.0,
+              "x": 654.0,
+              "y": 10.0,
+              "rotated_90": true,
+              "placed_w": 115.0,
+              "placed_h": 50.0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "excluded_nonflat_or_purchased": [
+    {
+      "part_number": "MF_LEG_1_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_LEG_1_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_LEG_1_3",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_TOP_Y_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_LOWER_SIDE_1_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_LOWER_SIDE_1_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "RAIL_CAP_1_BLANK",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_LEG_2_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_LEG_2_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_LEG_2_3",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_TOP_Y_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_LOWER_SIDE_2_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_LOWER_SIDE_2_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "RAIL_CAP_2_BLANK",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_END_FRONT_LOW",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_END_REAR_LOW",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_END_FRONT_UPPER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_END_REAR_UPPER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_RECEIVER_LEDGER_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MF_RECEIVER_LEDGER_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M16_NUT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M16x100_HEX",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FB_SIDE_L_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FB_SIDE_L_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FB_SIDE_R_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FB_SIDE_R_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FB_REAR",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "PAN_BEARER_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M8x16_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M8_WASHER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6_WELDNUT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "PAN_BEARER_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "PAN_BEARER_3",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "TS_OUTER_TIE",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "TS_CROSS",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "SAND_M20_BUNG",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "SAND_M20_PLUG",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "WP_DRAIN_NECK",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "WP_OVERFLOW_STANDPIPE",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "WP_HOLD_SPACER_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6x40_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "WP_HOLD_SPACER_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "WP_HOLD_SPACER_3",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "WP_HOLD_SPACER_4",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "WT_PICKUP_PIPE",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "WT_EMERGENCY_OVERFLOW",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "WT_CLEANOUT_NECK",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6x20_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "WT_VENT_NECK",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "PUMP_SPACER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6x35_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "BUY_SFDP2_018_120_31",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "VENT_SCREEN_SLEEVE",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "VENT_PERFORATED_CAP",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M4x3_GRUB",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "OVERFLOW_CATCH_PAD",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_STANDOFF",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6x16_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6_STAINLESS_NUT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "BUY_FOCMKEAS_M10_65MM",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "BUY_FLOAT_M10_MOUNTNUT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_PAN_MIN_GUARD_SIDE_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_PAN_MIN_GUARD_END_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_PAN_MIN_GUARD_END_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_PAN_FILL_GUARD_SIDE_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_PAN_FILL_GUARD_END_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_PAN_FILL_GUARD_END_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_PAN_HH_GUARD_SIDE_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_PAN_HH_GUARD_END_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_PAN_HH_GUARD_END_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_PAN_EMPTY_GUARD_SIDE_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_PAN_EMPTY_GUARD_END_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_PAN_EMPTY_GUARD_END_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_TANK_LOW_GUARD_SIDE_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_TANK_LOW_GUARD_END_1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "FLOAT_TANK_LOW_GUARD_END_2",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "G_FRONT_LEDGER_M8_SLEEVE",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M8x20_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "G_M8_SEAT_BOSS",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "G_BED_BEAM_924",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "G_BEAM_FOOT_18",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "G_BEAM_COMPRESSION_SLEEVE",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "G_LOCATOR_6x12",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M8x80_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "G_M6_BEAM_BOSS",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "G_CLAMP_SPACER_19_5",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6_WASHER_12",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "BUY_20100_CUT_397",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M5x16_BUTTON",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M5_WASHER_15",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_DIN562_M5",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M5x20_CSK",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "G_RACK_PANEL_FORK",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "TOOL_PARK_CRADLE",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "CAB_STRINGER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_12-14x38_TEK",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "CAB_UPRIGHT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "CAB_RAIL",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6x45_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6_NYLOC",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "BUY_CONTROL_ENCLOSURE_20x16x8",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M5x20_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M5_NYLOC",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_DATUM_BAR",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "PURCHASED_HGR20_1420",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "PURCHASED_HGH20CA",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M5x18_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "GANTRY_END_BRACKET_L",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6x22_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "PURCHASED_HMS40_1000",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "HMS40_M57_MOTOR",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "HMS40_MOTOR_BRACKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "HMS40_CARRIAGE_INTERFACE",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M4x10_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_LINK_SUPPORT_L",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "MOTION_CLEVIS_BILLET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "ISO7379_D6_L20_M5",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "SHIM_6p1x10x0p5",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "WASHER_6p4x12x1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "WASHER_5p3x10x1",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "M5_PREVAILING_NUT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M4x12_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "SKF_SA6C",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "INCLUDED_SKF_ROD_END_SHANK",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "SKF_SAL6C",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "LINK_COUPLER_M6_RHLH_28",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "M6_RH_JAM_NUT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "M6_LH_JAM_NUT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "GANTRY_END_BRACKET_R",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_LINK_SUPPORT_R",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "8020_40-8080_1200",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "8020_40-3915_M8_TNUT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "X_GUIDE_FACE",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "PURCHASED_HGR20_1200",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Z_CARRIER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "PURCHASED_HMS40_800",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "X_LINK_SUPPORT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "RATTMOTOR_ZBX80_100",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "ZBX80_END_BOTTOM",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "ZBX80_END_TOP",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "ZBX80_MOTOR",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "ZBX80_UPPER_CLEARANCE",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "ZBX80_OUTPUT_INTERFACE_HOLD",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "TOOL_ADAPTER_110",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "SPINDLE_B0BF5R3LNC",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6x60_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "SPINDLE_SPLIT_CLAMP_REAR",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "SPINDLE_SPLIT_CLAMP_FRONT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M3x14_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_STOP_L_FRONT_BRACKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_STOP_L_FRONT_BUFFER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6x25_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6_NUT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "OMRON_D2VW-01L2-1M",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "INCLUDED_D2VW_ROLLER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_STOP_L_REAR_BRACKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_STOP_L_REAR_BUFFER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_CAM_L_FRONT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_STOP_R_FRONT_BRACKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_STOP_R_FRONT_BUFFER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_STOP_R_REAR_BRACKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_STOP_R_REAR_BUFFER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "Y_CAM_R_FRONT",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "STD_M6x55_SOCKET",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "X_STOP_LEFT_BODY",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "X_STOP_LEFT_BUFFER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "X_STOP_RIGHT_BODY",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "X_STOP_RIGHT_BUFFER",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "ISO7380_M4x8_BUTTON",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    },
+    {
+      "part_number": "X_HOME_CAM",
+      "reason": "Purchased, guarded, or no 2D flat export"
+    }
+  ],
+  "verification": {
+    "all_parts_counted_once": true,
+    "stock_edge_clearance_and_rectangle_nonoverlap": true,
+    "DXF_units_mm_and_audit": true
+  }
+}

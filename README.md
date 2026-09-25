@@ -1,36 +1,34 @@
 # Plasma / router CNC stand
 
-Public working repository for the hybrid CNC router and plasma machine. Nominal requested travel is **800 mm X, 1000 mm Y and 100 mm Z**. This repository contains the design sources, CAD exports, drawings, engineering reports, firmware work and bill of materials.
+Public working design for **800 mm X / 1000 mm Y / 100 mm Z nominal travel**.
 
-**Engineering work in progress. Not released for purchasing, fabrication, firmware deployment or machine operation.** A successful file/hash or collision check does not establish whole-machine rigidity, safe lifting, electrical compatibility or machining accuracy.
+**Current revision: Rev G corrected working CAD. It is not a finished, fabrication-ready or operational plasma machine.** The historical Rev F hoisted bed failed the required within-footprint conversion. Rev G replaces it with six small panels, four beams and separate spoilboards stored inside the frame. Manual handling is the working assumption; it is not recorded as an owner-approved preference.
 
-## Current review status
+## Open the current design
 
-The latest [full CAD re-audit](output/cad-reaudit-2026-09-25/README.md) covers all 253 STEP/DXF files and a fresh rebuild of the current 967-component design. It records **29 findings: 14 high priority and 15 medium priority**. All nine sampled full-machine router positions are free of unresolved nominal-solid intersections, but the design is not fabrication-ready.
+- [Current CAD package and limitations](output/release-review/RevG-CAD/README.md)
+- [Router assembly STEP](output/release-review/RevG-CAD/step/RevG_ROUTER.step)
+- [Bed stored assembly STEP](output/release-review/RevG-CAD/step/RevG_BED_STORED.step) — storage layout, with no invented plasma head
+- [Updated concept PDF](output/pdf/plasma-router-stand-concept.pdf)
+- [Repair evidence and finding-by-finding status](output/cad-repair-2026-09-25/README.md)
+- [Current component schedule](output/release-review/RevG-CAD/cutlist.csv)
 
-The next revision must resolve the out-of-footprint bed swap, unsupported fastener seats, unreachable surfacing, adapter drawing error, incomplete plasma tooling and unqualified joints/interfaces. The audit includes a [repair checklist](output/cad-reaudit-2026-09-25/repair-checklist.md), measured evidence and reproducible checks. Earlier [source audits](output/reaudit-2026-09-25/) remain historical evidence; the fresh CAD audit corrects the earlier motion-fixture interpretation.
+![Current router CAD](output/release-review/RevG-CAD/previews/RevG_ROUTER.png)
 
-The owner identifies the cutter as **VIV ARC CUT-50**; its exact version, starting method and CNC interfaces remain unverified. See the [identity follow-up](output/reaudit-2026-09-25/CUTTER-IDENTITY-FOLLOWUP.md).
+## What changed
 
-## Project files
+The ten purchased 1220 mm extrusion bars yield thirty 397 mm strips, assembled into six 500 x 397 mm panels. Full bearing seats, beam compression sleeves, round/relieved locators, supported aluminum ties, separate reachable spoilboards and internal racks replace the one-piece module. The front seats unbolt after the first beam is independently parked, opening a path for the four beams to lower inside the frame. Loose spoilboard nuts are removed before any panel rotates.
 
-| Area | Location |
-|---|---|
-| Design navigation supplied with the working project | [README-FIRST.md](README-FIRST.md) |
-| Main CAD generators, cut lists, DXFs and engineering reports | [Engineering folder](output/release-review/RevE-ENGINEERING/) |
-| STEP assemblies | [Assembly exports](output/release-review/RevE-ENGINEERING/step/) |
-| Current concept document | [Concept PDF](output/pdf/plasma-router-stand-concept.pdf) |
-| Controller source, compiled prototype and commissioning notes | [Controls](RevE-ENGINEERING/controls/) |
-| BOM workbook and supporting data | [Budget folder](outputs/reve-30510/) |
-| Re-audit findings | [Re-audit](output/reaudit-2026-09-25/) |
-| Imported file hashes and exclusions | [Snapshot manifest](REPOSITORY-SNAPSHOT.json) |
+The revision also corrects adapter slot orientation, cabinet stringer bores, the two-piece welded drip shield and drained-level guard clearance. Unknown Z-carriage fastening and defective legacy torch clamps are guarded; the model no longer supplies guessed M6 carriage bolts or calls the stored-bed view an operating plasma setup.
 
-## Snapshot and rebuild notes
+Nominal CAD and path checks do not establish whole-machine stiffness, joint capacity, actual interface compatibility, operator access, physical retention or machining accuracy. See the current evidence for exact scope and limits. The **VIV ARC CUT-50** identification still needs exact version/interface information; an AG-60 listing does not identify the owner's actual torch geometry or starting circuitry.
 
-This repository is a point-in-time copy of the `plasma_router_stand` project, not the surrounding multi-project workspace or its Git history. File bytes are preserved so recorded hashes remain meaningful. The import manifest records each copied file and exclusions.
+## Sources, history and cost
 
-Python CAD scripts use CadQuery/OpenCascade; document generation uses ReportLab and pypdf. Spreadsheet builders use the local artifact runtime. Some scripts contain original Windows runtime paths and need environment configuration on another machine. Firmware tool versions and upstream revisions are recorded in [the source manifest](RevE-ENGINEERING/controls/source-manifest.json). A clean-machine rebuild has not been certified by this upload.
+The active generator is [build_revg.py](output/release-review/RevE-ENGINEERING/build_revg.py). Shared Python sources remain in the legacy-named directory for reproducibility; **current exports are only in RevG-CAD**. The [29-finding audit](output/cad-reaudit-2026-09-25/README.md) and old Rev E/F exports are historical evidence. They have not been relabeled as the new design.
 
-Local virtual environments, Node modules, PlatformIO/build caches, logs, raw web captures, transient render data and duplicate ZIP packages are excluded. Relevant CAD exports, PDFs, spreadsheets and explicitly delivered firmware outputs are retained. Upstream firmware sources are included as ordinary files with their existing license notices; nested Git metadata is excluded. This import grants no new license over third-party source code or supplier documents.
+[Earlier price workbook](outputs/reve-30510/CNC-plasma-RevE-budget.xlsx) and [actual-price audit](outputs/reve-30510/actual-cost/REAL-COST.md) are historical procurement research. Quantities changed in Rev G; neither is a current complete build total. No purchase, vendor message, hardware flashing or manufacturing release occurred.
 
-The repository has no automatic deployment, hardware flashing or manufacturing release workflow. Publishing this snapshot does not finish the design audit.
+CadQuery/OpenCascade generate the model; ReportLab generates the concept brief. Runtime paths are local Windows paths. A clean-machine rebuild and Fusion import have not been certified. [Controller work](RevE-ENGINEERING/controls/) is a separate prototype and was not redesigned or deployed with this mechanical repair.
+
+The [original snapshot manifest](REPOSITORY-SNAPSHOT.json) describes the initial import only. Third-party sources retain their existing license notices; this repository grants no new rights over supplier material.

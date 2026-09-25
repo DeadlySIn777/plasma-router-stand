@@ -1,0 +1,146 @@
+WORKSHOP / CNC + PLASMA
+REV G / 25 SEP 2026
+A machine built around the work.
+Actual Rev G CAD: a steel chassis, a removable router bed and a fixed water pan. The design is corrected, with remaining interfaces identified.
+WORKING DESIGN / DIMENSIONS IN mm / NOT RELEASED FOR ORDERING OR FABRICATION
+1 / 4
+ROUTER BED INSTALLED
+The image is rendered from the exported CAD. Amber geometry represents purchased-part envelopes; appearance does not
+establish a verified supplier interface.
+800 X / 1000 Y / 100 Z
+Required nominal axis travel. The usable
+tool-and-workpiece envelope still depends on the final
+cutting tool, clamps and purchased motion interfaces.
+A shorter path for cutting loads
+The removable bed seats on dedicated supports in the
+steel chassis. The water pan remains a separate process
+component.
+Parts stored in the stand
+Six separate panels, four removable beams and separate
+spoilboards replace the earlier one-piece hoisted bed. The
+manual handling method is a working assumption pending
+your preference.
+Review the design before ordering.
+This brief replaces the previous hoisted-bed concept. It
+does not establish a finished machine or a revised build
+price.
+
+WORKSHOP / CNC + PLASMA
+REV G / 25 SEP 2026
+Change the bed. Keep the footprint.
+Manual conversion: 52 screws / clamp assemblies removed, plus 24 loose nuts retrieved. This is a budget-oriented design assumption, with no quick-change or
+automatic-handling claim.
+WORKING DESIGN / DIMENSIONS IN mm / NOT RELEASED FOR ORDERING OR FABRICATION
+2 / 4
+STORED CONFIGURATION / ISOMETRIC
+STORED CONFIGURATION / FRONT
+Scope: bed and router tools are stored; a verified plasma torch, floating head and breakaway are still missing. Empty the front and left racks by reinstalling the bed before opening the
+controls cabinet.
+01 / Boards and loose nuts
+With the machine isolated and tool removed, take out 24
+board screws. Store boards in order 4, 3, 2, 1, 6, 5. Retrieve
+all 24 loose top-slot nuts before rotating the panels.
+02 / Panels and front seats
+Remove 16 clamp assemblies and store six panels, rear
+slots first. The beam-1 parking pose on beam 2 permits
+removal of two front seats and their four screws; parking
+restraint remains unresolved.
+03 / Beams and reinstallation
+Release eight beam screws and store four beams in the
+specified order. Reverse to reinstall, remap the front seats
+and re-probe work zero. Physical restraint and hand access
+still require verification.
+
+WORKSHOP / CNC + PLASMA
+REV G / 25 SEP 2026
+Geometry that can be checked.
+Dimensions below describe the current model. Nominal shape checks, supplier measurements and structural qualification are separate pieces of evidence.
+WORKING DESIGN / DIMENSIONS IN mm / NOT RELEASED FOR ORDERING OR FABRICATION
+3 / 4
+BED AND MATERIAL DEFINITION
+Assembled deck
+1003 x 1211 overall X x Y; includes panel gaps
+Removable panels
+6 at 500 x 397 x 33.775; panel + ties / hardware
+envelope
+Panel dry mass
+3.87 kg each estimated; weigh finished panels
+Removable beams
+4 at 924 long, 50.8 square x 3.048 wall tube; 5.06
+kg estimated each
+Working surfaces
+Bare T-slot Z940.8; finished spoilboard Z958.8
+Separate spoilboards
+Six pieces: 19 rough to 18 finished. Only the
+reachable pieces are skimmed.
+Removable retention
+16 M6 clamps / 8 M8 beam screws / 24 M5 board
+screws / 4 M8 front-seat screws
+Plasma slat support
+Central 810 mm remains at Z850; 35 x 22 end
+reliefs clear the bed supports
+Stock count: 5 two-packs = 10 bars. At three 397 mm lengths per bar, 1191 mm is assigned to
+finished pieces; 29 mm remains for saw kerfs and end trim. Confirm stock length and profile
+before cutting.
+Drilled cabinet stringers
+Two actual 6 mm bores now pass through both walls of each stringer. Their axes are
+local X12.7 and Y12.6 / 486.8. The screw-to-stringer collision exceptions were
+removed.
+A defined drip shield
+A two-piece welded steel roof and front lip, four cage tabs and four M5 fasteners
+replace the undefined bent sheet. The roof falls 1% toward the front. Its sampled
+withdrawal path clears the nominal enclosure.
+Room below the drained-level guard
+PAN_EMPTY has 10.37 mm nominal pan-floor clearance at its lowest slot-play
+position. The drawing requires at least 8 mm actual clearance after welding. Its real
+water trip and drain delay still need wet testing.
+Matching adapter machining geometry
+The two non-through adapter slots now retain their vertical orientation in DXF. The
+drawing-to-solid comparison passes. The purchased Z-carriage mating interface
+remains guarded.
+
+WORKSHOP / CNC + PLASMA
+REV G / 25 SEP 2026
+What is verified. What closes the design.
+Use the corrected CAD to resolve the remaining interfaces and load cases. A clean geometric model alone is not a fabrication release.
+WORKING DESIGN / DIMENSIONS IN mm / NOT RELEASED FOR ORDERING OR FABRICATION
+4 / 4
+EVIDENCE IN THIS REVISION
+Router state
+1283 components; 0 unresolved static overlaps
+Stored-bed state
+1283 components; 0 unresolved static overlaps
+STEP readback
+Both state exports reimported successfully; solid
+counts and total volumes checked
+Motion samples
+9 full-machine router poses clear; corners and
+center, without actual cutter / cable envelopes
+Large-part paths
+36 panel, 25 beam and 60 spoilboard continuous
+segments checked, including previously stored
+parts
+Drip shield service
+24 forward positions + 11 lowering positions
+checked against the frame / enclosure reserve
+Path clearance is not restraint. Stored parts and beam 1 in its temporary parking pose
+have no qualified anti-slide / anti-tip retention. Small hardware, front-seat and tool
+transfers, fingers, operator reach, cables and actual tooling remain outside these checks.
+Current package: output/release-review/RevG-CAD
+Repair evidence: output/cad-repair-2026-09-25
+Project: github.com/DeadlySIn777/plasma-router-stand
+Purchased motion and tools
+Verify actuator/guide interfaces, Z-carriage mounting and retention, tool projection and the
+owned torch. The Z drawing assigns 70 mm transverse spacing to the smaller 5 mm holes;
+thread and along-travel pitch remain unverified.
+Rigidity and repeatability
+Set a tool-to-work deflection target and cutting load cases. Qualify frame, beam, seat,
+fastener and foot behavior together; do not credit sand as added elastic stiffness.
+Process and service hardware
+Complete the selected drain valve, fittings, hoses, refill outlet, tank service path and
+enclosure door/cable/thermal arrangement. Verify wet operation and electrical interlocks
+using the actual equipment.
+Handling, stock and cost
+Confirm manual handling and design positive restraint. Twenty-four aluminum ties are
+required; one 12 x 12-inch plate does not supply them all. Verify owned quantity/alloy and
+recost the bill of materials. No new build total is asserted.

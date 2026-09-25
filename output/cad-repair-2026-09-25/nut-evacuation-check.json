@@ -1,0 +1,1339 @@
+{
+  "scope": "Check nominal top-slot nut evacuation, not hand/pickup access or tray transfer.",
+  "sources_sha256": {
+    "bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6"
+  },
+  "sources_unchanged": true,
+  "nut_count": 24,
+  "assumptions": [
+    "All spoilboards and their screws have already been removed and stored.",
+    "Each8mm square nut slides forward along its actual nominal open slot and lifts through a10mm panel joint.",
+    "Magnetic pickup, fingers, tool access, real profile tolerance, and travel from the gap to its paired screw in the tray remain unverified.",
+    "The final model stores nuts threaded onto removed screws; none is assumed captive in a vertical panel."
+  ],
+  "results": [
+    {
+      "id": "G_SPOIL_1_NUT_1",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -83.5,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          219.5,
+          67.5,
+          936.8,
+          227.5,
+          159.0,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          219.5,
+          67.5,
+          936.8,
+          227.5,
+          75.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_1_NUT_2",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -377.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          219.5,
+          67.5,
+          936.8,
+          227.5,
+          452.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          219.5,
+          67.5,
+          936.8,
+          227.5,
+          75.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_1_NUT_3",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -83.5,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          419.5,
+          67.5,
+          936.8,
+          427.5,
+          159.0,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          419.5,
+          67.5,
+          936.8,
+          427.5,
+          75.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_1_NUT_4",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -377.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          419.5,
+          67.5,
+          936.8,
+          427.5,
+          452.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          419.5,
+          67.5,
+          936.8,
+          427.5,
+          75.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_2_NUT_1",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -83.5,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          722.5,
+          67.5,
+          936.8,
+          730.5,
+          159.0,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          722.5,
+          67.5,
+          936.8,
+          730.5,
+          75.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_2_NUT_2",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -377.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          722.5,
+          67.5,
+          936.8,
+          730.5,
+          452.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          722.5,
+          67.5,
+          936.8,
+          730.5,
+          75.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_2_NUT_3",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -83.5,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          922.5,
+          67.5,
+          936.8,
+          930.5,
+          159.0,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          922.5,
+          67.5,
+          936.8,
+          930.5,
+          75.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_2_NUT_4",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -377.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          922.5,
+          67.5,
+          936.8,
+          930.5,
+          452.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          922.5,
+          67.5,
+          936.8,
+          930.5,
+          75.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_3_NUT_1",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -30.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          219.5,
+          474.5,
+          936.8,
+          227.5,
+          512.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          219.5,
+          474.5,
+          936.8,
+          227.5,
+          482.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_3_NUT_2",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -377.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          219.5,
+          474.5,
+          936.8,
+          227.5,
+          859.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          219.5,
+          474.5,
+          936.8,
+          227.5,
+          482.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_3_NUT_3",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -30.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          419.5,
+          474.5,
+          936.8,
+          427.5,
+          512.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          419.5,
+          474.5,
+          936.8,
+          427.5,
+          482.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_3_NUT_4",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -377.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          419.5,
+          474.5,
+          936.8,
+          427.5,
+          859.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          419.5,
+          474.5,
+          936.8,
+          427.5,
+          482.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_4_NUT_1",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -30.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          722.5,
+          474.5,
+          936.8,
+          730.5,
+          512.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          722.5,
+          474.5,
+          936.8,
+          730.5,
+          482.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_4_NUT_2",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -377.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          722.5,
+          474.5,
+          936.8,
+          730.5,
+          859.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          722.5,
+          474.5,
+          936.8,
+          730.5,
+          482.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_4_NUT_3",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -30.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          922.5,
+          474.5,
+          936.8,
+          930.5,
+          512.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          922.5,
+          474.5,
+          936.8,
+          930.5,
+          482.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_4_NUT_4",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -377.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          922.5,
+          474.5,
+          936.8,
+          930.5,
+          859.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          922.5,
+          474.5,
+          936.8,
+          930.5,
+          482.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_5_NUT_1",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -30.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          219.5,
+          881.5,
+          936.8,
+          227.5,
+          919.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          219.5,
+          881.5,
+          936.8,
+          227.5,
+          889.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_5_NUT_2",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -199.5,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          219.5,
+          881.5,
+          936.8,
+          227.5,
+          1089.0,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          219.5,
+          881.5,
+          936.8,
+          227.5,
+          889.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_5_NUT_3",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -30.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          419.5,
+          881.5,
+          936.8,
+          427.5,
+          919.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          419.5,
+          881.5,
+          936.8,
+          427.5,
+          889.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_5_NUT_4",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -199.5,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          419.5,
+          881.5,
+          936.8,
+          427.5,
+          1089.0,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          419.5,
+          881.5,
+          936.8,
+          427.5,
+          889.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_6_NUT_1",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -30.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          722.5,
+          881.5,
+          936.8,
+          730.5,
+          919.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          722.5,
+          881.5,
+          936.8,
+          730.5,
+          889.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_6_NUT_2",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -199.5,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          722.5,
+          881.5,
+          936.8,
+          730.5,
+          1089.0,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          722.5,
+          881.5,
+          936.8,
+          730.5,
+          889.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_6_NUT_3",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -30.0,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          922.5,
+          881.5,
+          936.8,
+          930.5,
+          919.5,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          922.5,
+          881.5,
+          936.8,
+          930.5,
+          889.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    },
+    {
+      "id": "G_SPOIL_6_NUT_4",
+      "slide_to_open_end": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 1,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          -199.5,
+          0.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          922.5,
+          881.5,
+          936.8,
+          930.5,
+          1089.0,
+          939.5
+        ],
+        "all_pairs_included": true
+      },
+      "lift20_through_gap": {
+        "method": "Full translation enclosed by endpoint-AABB union",
+        "status": "CLEAR",
+        "moving_part_count": 1,
+        "fixed_part_count": 1282,
+        "clearance_mm": 0,
+        "boolean_volume_tolerance_mm3": 1e-06,
+        "bound_tests": 0,
+        "candidates": [],
+        "caller_exclusions": [],
+        "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+        "delta_xyz_mm": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "swept_enclosing_bounds_mm": [
+          922.5,
+          881.5,
+          936.8,
+          930.5,
+          889.5,
+          959.5
+        ],
+        "all_pairs_included": true
+      }
+    }
+  ],
+  "pass": true
+}

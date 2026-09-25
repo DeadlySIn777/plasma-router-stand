@@ -1,0 +1,399 @@
+{
+  "frame": {
+    "feet_count": 6,
+    "level_adjustment_mm": 8,
+    "pan_bearer_cut_mm": 1016.4,
+    "pan_bearer_M8_count": 24,
+    "additional_tank_support_tube_m": 4.4428,
+    "brace_tube": "25.4\u00d725.4\u00d72.1082",
+    "side_brace_structural_x_mm": [
+      -28.4,
+      1178.4
+    ],
+    "gusset_legs_mm": 160,
+    "sand_ports": 18,
+    "ballast_note": "Stationaryframeonly;actualmassdeterminedbyweighingfill. No sand inbedbeams/cassettes/gantry."
+  },
+  "water": {
+    "reservoir_internal_mm": [
+      900,
+      600,
+      250
+    ],
+    "gross_litres": 135.0,
+    "weir_top_z_mm": 228.048,
+    "reservoir_cover_top_z_mm": 433.096,
+    "overflow_start_approx_z_mm": 420.048,
+    "water_charge_limit_litres": 115,
+    "minimum_return_capacity_litres": 125,
+    "pan_normal_level_z_mm": 820,
+    "pan_minimum_level_z_mm": 810,
+    "pan_high_high_z_mm": 827,
+    "pan_overflow_crest_z_mm": 825,
+    "reservoir_pump_low_trip_z_mm": 233.048,
+    "pipe_dimensional_source": "https://www.wheatland.com/wp-content/uploads/2017/12/Schedule-40-Submittal-Sheet.pdf",
+    "pan_drain_xyz_mm": [
+      900,
+      1270.0,
+      738.3981523961902
+    ],
+    "unmodeled_purchased_connections": [
+      "Selected motorized valve, reducers/unions and refill pump connections require selected manufacturer dimensions.",
+      "External emergency-overflow destination must be defined before commissioning."
+    ]
+  },
+  "water_accessories": {
+    "pump_mount_plate_mm": [
+      250,
+      126,
+      3.048
+    ],
+    "pump_foot_hole_pattern_mm": [
+      58,
+      85
+    ],
+    "purchased_pump_envelope_mm": [
+      210,
+      86,
+      114.5
+    ],
+    "pump_unknowns": [
+      "Exactfootthickness:M4boltlengthselectedafterreceipt",
+      "Portaxis:centeredrigidpipesnotreleased"
+    ],
+    "vent_cap_open_area_mm2": 84.82300164692441,
+    "float_brackets_status": "Verticalfloattrip-planeandthreadengagementdimensionsareunpublished;wet-calibratedadjustablemountsremainunreleased."
+  },
+  "sensor_mounts": {
+    "count": 5,
+    "mount_z_mm": {
+      "PAN_MIN": 860,
+      "PAN_FILL": 870,
+      "PAN_HH": 877,
+      "PAN_EMPTY": 812.0,
+      "TANK_LOW": 283.048
+    },
+    "target_trip_z_mm": {
+      "PAN_MIN": 810,
+      "PAN_FILL": 820,
+      "PAN_HH": 827,
+      "PAN_EMPTY": null,
+      "TANK_LOW": 233.048
+    },
+    "pan_empty_clearance": {
+      "mount_nominal_range_z_mm": [
+        812.0,
+        832.0
+      ],
+      "mount_lowest_with_slot_play_z_mm": 811.7,
+      "guard_underside_at_nominal_min_z_mm": 750.0,
+      "minimum_as_built_gap_mm": 8.0,
+      "pan_floor_check_footprint_xy_mm": [
+        978,
+        1177,
+        1014,
+        1217
+      ],
+      "release": "WET CALIBRATION HOLD: prove actual trip and drained state; unknown supplier trip offset is not inferred from carrier height."
+    },
+    "commissioning": "Wet-set actual reed trips with mount slots; independently prove normal stop, minimum, HH and tank low. PAN_EMPTY mount must remain Z812..832 nominal and its entire guard must retain >=8 mm actual floor clearance. Prove the actual low trip followed by 60 s drain before mode-swap release; do not lower the carrier to chase an assumed trip.",
+    "guard_service": "Release2M6screwsandliftslider/sensor/guardasonepiece. Removebracketassembliesbeforelongsheetoverhangoutsidenominal800mmcuttingwidth."
+  },
+  "bed": {
+    "revision": "Rev G manual cassette repair",
+    "architecture_assumption": "Manual panels and beams; optional user preference question pending. No winch or off-machine parking assumed.",
+    "bare_deck_mm": [
+      1003,
+      1211,
+      20
+    ],
+    "workplane_z_mm": 940.8,
+    "finished_spoilboard_z_mm": 958.8,
+    "rough_spoilboard_thickness_mm": 19,
+    "finished_spoilboard_thickness_mm": 18,
+    "panels": 6,
+    "panel_envelope_mm": [
+      500,
+      397,
+      33.775
+    ],
+    "panel_mass_kg": [
+      3.866,
+      3.866,
+      3.866,
+      3.866,
+      3.866,
+      3.866
+    ],
+    "beams": 4,
+    "beam_mass_kg": [
+      5.06,
+      5.06,
+      5.06,
+      5.06
+    ],
+    "purchased_1220_bars": 10,
+    "cuts_per_bar": "three 397 mm pieces, total residual 29 mm for kerfs/end trim",
+    "panel_clamp_M6": 16,
+    "beam_drawdown_M8": 8,
+    "spoilboard_M5": 24,
+    "procedure": "Remove stock, clean and dry. Park gantry rear and isolate drives. Remove/store 24 spoil screws and six boards; retrieve all 24 loose top-slot nuts through the panel-end gaps and thread each onto its stored screw. Remove/store 16 panel clamps and six panels. Release beam 1 and park it on its side on beam 2. Remove the two front seats and four seat bolts to their lid tray; the front lowering portal is now clear. Store beam 1 rear/lower, beam 2 front/lower, beam 3 rear/upper, beam 4 front/upper after releasing the eight beam bolts. Reverse for router mode. Map seats and re-probe after conversion.",
+    "front_portal": "Two removable front seats; four M8 mount screws into welded ledger sleeves. Temporary beam-on-beam parking and every handling path require explicit checks.",
+    "cabinet_service": "Reinstall bed and spoilboards to empty the front and left storage racks before opening controls cabinet. Fixed holders remain outside door width.",
+    "release_holds": [
+      "Manual handling architecture preference confirmation",
+      "Full ordered handling sweeps with already stored parts and fingers/clearances",
+      "Actual supplier section/flatness, T-nut fit and controlled preload test",
+      "Seat welding, frame and complete tool-loop rigidity qualification",
+      "Actual aluminum inventory/alloy and shop machining capability",
+      "Measured seat/beam/panel tolerance stack and repeat installation map"
+    ],
+    "storage_envelopes_mm": {
+      "panels": [
+        325,
+        7,
+        175,
+        825,
+        240.775,
+        572
+      ],
+      "beams": [
+        113,
+        0,
+        585,
+        1037,
+        168.8,
+        698.6
+      ],
+      "spoilboards": [
+        135,
+        250,
+        175,
+        268,
+        647,
+        568.5
+      ]
+    }
+  },
+  "storage": {},
+  "tool_parking": {
+    "spindle_axis_start_xyz_mm": [
+      760.5,
+      1080,
+      599.7
+    ],
+    "spindle_envelope_mm": [
+      65,
+      259
+    ],
+    "strap_count": 2,
+    "hardware_tray_bounds_mm": [
+      800,
+      725,
+      433.096,
+      1000,
+      825,
+      463.096
+    ],
+    "handling": "Spindle rests in the existing internal cradle. Removed clamps and small fasteners use the lid/tray in the bed-stored layout. Exact lead routes remain open."
+  },
+  "controls_packaging": {
+    "enclosure_reserve_xyz_mm": [
+      371.8,
+      251.8,
+      165.0
+    ],
+    "enclosure_dimensions_mm": [
+      406.4,
+      203.2,
+      508.0
+    ],
+    "stringer_drilling": {
+      "diameter_mm": 6.0,
+      "local_xy_mm": [
+        [
+          12.7,
+          12.599999999999994
+        ],
+        [
+          12.7,
+          486.8
+        ]
+      ],
+      "direction": "Local +Z through both tube walls",
+      "shank_nominal_radial_clearance_mm": 0.25
+    },
+    "orientation": "Upright in the front bay under the water table, door forward through the open front window.",
+    "service": "Isolate electrical power before cabinet work. For shield removal take out four M5 retaining fasteners and withdraw the cap forward on its 1% slope; verify the selected enclosure door and hinge envelope before release.",
+    "unreleased_interfaces": [
+      "Vendor back-panel mounting hole pattern (transfer-drill the cage rails)",
+      "Selected enclosure roof, door, hinge and latch envelope; confirm drip-shield and service clearance",
+      "VFD thermal layout and wiring segregation",
+      "Cable glands and chain routes",
+      "Panel layout and legend set"
+    ],
+    "drip_shield": {
+      "roof_flat_mm": [
+        436.4,
+        233.21165970851453,
+        1.5
+      ],
+      "front_lip_flat_mm": [
+        436.4,
+        20,
+        1.5
+      ],
+      "datum_world_mm": [
+        356.8,
+        236.8,
+        675.5
+      ],
+      "slope_rear_high": 0.01,
+      "mount_holes_local_xy_mm": [
+        [
+          8.0,
+          63.2
+        ],
+        [
+          8.0,
+          183.2
+        ],
+        [
+          428.4,
+          63.2
+        ],
+        [
+          428.4,
+          183.2
+        ]
+      ],
+      "attachment": "Four welded cage tabs, four M5x20 socket screws and M5 nyloc nuts; no vendor enclosure penetrations.",
+      "fabrication": "Two flat sheets, continuously seal-welded at front lip. No bends, K factor or developed bend allowance required.",
+      "service": "Remove four M5 retaining bolts and nuts; withdraw roof/lip weldment 230 mm forward parallel to its slope, then lower 100 mm into front bay. Actual selected enclosure projection remains a hold."
+    }
+  },
+  "motion": {
+    "configuration": {
+      "gantry_y": 1275.0,
+      "beam_center_y": 1355.0,
+      "head_x": 575.0,
+      "z_lift": 100.0,
+      "tool": "router"
+    },
+    "travel_mm": {
+      "X": 800,
+      "Y": 1000,
+      "Z": 100
+    },
+    "guide_midpoint_y_limits": [
+      275,
+      1275
+    ],
+    "x_head_limits": [
+      175,
+      975
+    ],
+    "gantry_beam_z": [
+      1155,
+      1235
+    ],
+    "y_guide_center_z": 1033,
+    "y_block_spacing": 180,
+    "x_block_spacing": 160,
+    "Y_rail_count_length": [
+      2,
+      1420
+    ],
+    "X_rail_count_length": [
+      2,
+      1200
+    ],
+    "guide_blocks_count": 8,
+    "tool_axis_y_nominal_limits": [
+      121.4,
+      1121.4
+    ],
+    "readiness": "DETAILED STRUCTURAL MOTION LAYOUT WITH EXPLICIT SUPPLIER/CONNECTION HOLDS",
+    "holds": [
+      "Z slide: exact-ASIN drawing gives body219x80, end blocks12 and carriage90x50;70 mm transverse spacing belongs to the smaller\u00d85 fixing holes, not the larger\u00d87 bores. Output mounting-plane height, along-travel hole pitch/thread/depth and base-slot fastening remain unresolved. No carriage fasteners are modeled; the tool has no released attachment load path and TOOL_ADAPTER_110 individual export is guarded.",
+      "HGR20: seller P40/E20/1500 hole dimensions conflict. Actual factory holes must be verified before rail cutting or custom datum drilling.",
+      "HMS40: base nut cavity and endpoint datum not published. Rail caps require a verified base clamp/nut design; motor current and torque-speed curves missing.",
+      "Z power-loss retention: no selected normally-engaged brake/counterbalance. A ballscrew must not be assumed self-locking. Do not enable a suspended tool until retention is designed and tested.",
+      "Head projection uses an explicit80 mm Z stack assumption. Final tool sweep and claimed usable1000 Y must be recalculated when supplier datum is recovered.",
+      "X/Y physical stops and three home switches are modeled. Z home bracket and travel stops depend on the unresolved Z supplier endpoint/output geometry. Cable-chain anchors, way covers and spindle/torch cable bend envelopes still require final integration."
+    ],
+    "scope_note": "No unverified purchased bolt hole was invented. Geometry checks cannot close the listed missing interfaces."
+  },
+  "revision": "G working repair",
+  "status": "CORRECTED WORKING CAD \u2014 NOT A FABRICATION RELEASE",
+  "architecture_assumption": "Manual small panels, beams and separate spoilboards; all stored in the machine. Owner preference pending.",
+  "state_checks": {
+    "router": {
+      "part_count": 1283,
+      "step_readback": {
+        "passed": true,
+        "solids": 1283,
+        "volume_delta_mm3": 0.23017588257789612,
+        "volume_tolerance_mm3": 13.759016832215076,
+        "sha256": "dff8cfddf9e16aa41f84f3e1d51b321d83a8db59a42a161a2c994108b77b9eda",
+        "file": "RevG_ROUTER.step"
+      },
+      "unresolved_intersections": []
+    },
+    "bed_stored_layout": {
+      "part_count": 1283,
+      "step_readback": {
+        "passed": true,
+        "solids": 1283,
+        "volume_delta_mm3": 0.806580662727356,
+        "volume_tolerance_mm3": 13.759016832215076,
+        "sha256": "350fdc082856a81e65bb4d4840ce883d6b9680b15775332e4b01ac918831529f",
+        "file": "RevG_BED_STORED.step"
+      },
+      "unresolved_intersections": []
+    }
+  },
+  "holds": [
+    "HGR20: seller P40/E20/1500 hole dimensions conflict. Actual factory holes must be verified before rail cutting or custom datum drilling.",
+    "HMS40: base nut cavity and endpoint datum not published. Rail caps require a verified base clamp/nut design; motor current and torque-speed curves missing.",
+    "Head projection uses an explicit80 mm Z stack assumption. Final tool sweep and claimed usable1000 Y must be recalculated when supplier datum is recovered.",
+    "Manual panel conversion is the working architecture, pending the owner preference requested on 25 September 2026.",
+    "The owned torch barrel/clamping zone, nozzle datum and lead connection are not measured. No compatible torch mount, floating head or breakaway assembly is released.",
+    "This revision corrects nominal CAD geometry. Full frame/tool/work stiffness, joint capacities, purchased interfaces and physical commissioning remain separate release requirements.",
+    "X/Y physical stops and three home switches are modeled. Z home bracket and travel stops depend on the unresolved Z supplier endpoint/output geometry. Cable-chain anchors, way covers and spindle/torch cable bend envelopes still require final integration.",
+    "Z power-loss retention: no selected normally-engaged brake/counterbalance. A ballscrew must not be assumed self-locking. Do not enable a suspended tool until retention is designed and tested.",
+    "Z slide: exact-ASIN drawing gives body219x80, end blocks12 and carriage90x50;70 mm transverse spacing belongs to the smaller\u00d85 fixing holes, not the larger\u00d87 bores. Output mounting-plane height, along-travel hole pitch/thread/depth and base-slot fastening remain unresolved. No carriage fasteners are modeled; the tool has no released attachment load path and TOOL_ADAPTER_110 individual export is guarded."
+  ],
+  "bed_stored_state_scope": "Router bed and tools stored inside the frame. The actual plasma tool is still missing; this is a storage/layout configuration, not an operational plasma assembly.",
+  "source_sha256": {
+    "bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+  },
+  "elapsed_seconds": 165.61
+}
