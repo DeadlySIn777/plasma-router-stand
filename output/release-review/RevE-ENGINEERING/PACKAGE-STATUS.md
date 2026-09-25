@@ -1,10 +1,12 @@
 # Rev F package status
 
+> **Later CAD audit — 25 September 2026:** [Read the full re-audit](../../cad-reaudit-2026-09-25/README.md) before using this package. It records 29 open findings and fresh source/STEP/DXF checks. The table below is an earlier saved checklist, not the latest audit result. In particular, its motion rows describe inconsistent snapshots. The actual within-footprint requirement is unmet, and ownership/approval of the asserted overhead winch is unverified. Existing CAD remains unreleased.
+
 **Not released for ordering or fabrication. Fusion has not been opened.**
 
 Rev F replaces the six-cassette bed with a ONE-PIECE hoisted module: welded steel ladder on the receiver ledgers, two machine-surfaced 12.7 mm MDF layers, ten cut-only full-length 20100 strips, four lift ears and four M8 drawdowns. Mode change is four bolts and the owner overhead winch. The engineering files below are current working deliverables. Successful solid checks and compiled firmware do not resolve the missing component interfaces.
 
-| Evidence | Current result |
+| Earlier saved evidence | Earlier saved result |
 |---|---|
 | RevE_ASSEMBLED_ENGINEERING.step: STEP readback and current file hash | PASS |
 | RevE_ASSEMBLED_ENGINEERING.step: no unresolved static intersections | PASS |

@@ -1,14 +1,16 @@
 # Plasma / router CNC stand
 
-Private working repository for the hybrid CNC router and plasma machine. Nominal requested travel is **800 mm X, 1000 mm Y and 100 mm Z**. This repository contains the design sources, CAD exports, drawings, engineering reports, firmware work and bill of materials.
+Public working repository for the hybrid CNC router and plasma machine. Nominal requested travel is **800 mm X, 1000 mm Y and 100 mm Z**. This repository contains the design sources, CAD exports, drawings, engineering reports, firmware work and bill of materials.
 
 **Engineering work in progress. Not released for purchasing, fabrication, firmware deployment or machine operation.** A successful file/hash or collision check does not establish whole-machine rigidity, safe lifting, electrical compatibility or machining accuracy.
 
 ## Current review status
 
-The imported working files contain a newer one-piece hoisted bed design (called Rev F inside folders still named Rev E), alongside records from the previous six-cassette design. Three source-audit reports dated 25 September 2026 record mechanical, controller and BOM findings with source references and stated limits. See [the re-audit reports](output/reaudit-2026-09-25/) before relying on any drawing or cost total.
+The latest [full CAD re-audit](output/cad-reaudit-2026-09-25/README.md) covers all 253 STEP/DXF files and a fresh rebuild of the current 967-component design. It records **29 findings: 14 high priority and 15 medium priority**. All nine sampled full-machine router positions are free of unresolved nominal-solid intersections, but the design is not fabrication-ready.
 
-In particular, verify the bed support and fastening geometry, actual tool reach for the proposed MDF surfacing operation, the lifting/footprint requirements, the controller baseline, and the current purchased-parts quantities. The owner identifies the existing plasma cutter as **VIV ARC CUT-50**; its exact version, starting method and CNC interfaces remain unverified. See the [identity follow-up](output/reaudit-2026-09-25/CUTTER-IDENTITY-FOLLOWUP.md). Historical reports remain as evidence; they are not independent approval of the latest design.
+The next revision must resolve the out-of-footprint bed swap, unsupported fastener seats, unreachable surfacing, adapter drawing error, incomplete plasma tooling and unqualified joints/interfaces. The audit includes a [repair checklist](output/cad-reaudit-2026-09-25/repair-checklist.md), measured evidence and reproducible checks. Earlier [source audits](output/reaudit-2026-09-25/) remain historical evidence; the fresh CAD audit corrects the earlier motion-fixture interpretation.
+
+The owner identifies the cutter as **VIV ARC CUT-50**; its exact version, starting method and CNC interfaces remain unverified. See the [identity follow-up](output/reaudit-2026-09-25/CUTTER-IDENTITY-FOLLOWUP.md).
 
 ## Project files
 

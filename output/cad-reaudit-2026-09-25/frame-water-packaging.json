@@ -1,0 +1,468 @@
+{
+  "date": "2026-09-25",
+  "scope": "Independent frame, water and controls-packaging CAD audit; current Rev F source remains under RevE-ENGINEERING folder",
+  "status": "NOT RELEASED FOR FABRICATION / COMPLETE MACHINE CAD INCOMPLETE",
+  "design_changes_made": false,
+  "checks": {
+    "cad_runtime": "CadQuery 2.7.0",
+    "targeted_source_rebuild_components": 430,
+    "invalid_or_multisolid_components": [],
+    "targeted_rebuild_final_exit_code": 0,
+    "runtime_note": "Initial runs emitted complete evidence but returned 1 at Windows interpreter teardown. Final run follows existing project exporter convention: flush streams and os._exit(0) after all geometry assertions/evidence writes. No exceptions suppressed.",
+    "water_logic_states_rerun": 147456,
+    "water_release_to_rearm_scenarios_rerun": 3,
+    "water_analysis_exit_code": 0,
+    "fluid_calculation": {
+      "inventory_litres": 115,
+      "pan_at_Z820_litres": 79.912,
+      "assumed_lines_litres": 1.0,
+      "remaining_reservoir_litres": 34.088,
+      "reservoir_depth_above_floor_mm": 63.447,
+      "reservoir_internal_mm": [
+        900,
+        600,
+        250
+      ],
+      "low_trip_depth_mm": 55,
+      "usable_margin_litres": 4.538,
+      "tank_capacity_to_overflow_before_pipe_displacement_litres": 130.016,
+      "all_return_margin_before_pipe_displacement_litres": 15.016,
+      "internal_displacement_reserve_litres": 1.0,
+      "conservative_return_capacity_litres": 129.016,
+      "conservative_all_return_margin_litres": 14.016,
+      "pan_overflow_circular_weir_at_10mm_head_lpm": 13.659
+    },
+    "tank_CAD_volume_comparison_source": "Existing state-summary.json, not a new full water-solid integration in this bounded audit"
+  },
+  "findings": [
+    {
+      "id": "FW-01",
+      "priority": "P1",
+      "classification": "confirmed_incomplete_CAD_interface",
+      "title": "Selected water hardware and its complete service route are missing from the CAD",
+      "detail": "The pan and tank fabricate real pipe stubs, but the selected motorized valve, reducers, union, strainer, hoses, pipe supports and elevated refill outlet are not modeled. Even the 125 mm valve clearance cube requested by WATER-CONTROL is absent. The CAD therefore does not verify the drain-to-basket route, valve actuator access, filter-bowl removal, hose bends, or the specified 25 mm refill air gap. Pump geometry is explicitly a family envelope with unverified port datums. This is an acknowledged incomplete interface, not a claim those parts cannot fit.",
+      "quantified_evidence": {
+        "pan_drain_neck_lower_z_mm": 693.3981523961902,
+        "basket_splash_cover_top_z_mm": 436.596,
+        "available_vertical_separation_before_selected_hardware_mm": 256.8021523961902,
+        "cleanout_neck_to_rear_shelf_crossmember_mm": 10.049999999999955,
+        "required_refill_outlet_min_z_if_pan_rim_limits_surface_mm": 860.0
+      },
+      "repair": "Use verified selected valve/pump/strainer envelopes and connection datums; model supported gravity plumbing, hose bend envelopes, the anti-siphon discharge and removal spaces. Include an installation drawing with fitting/thread types and receipt-selected nipple lengths. Do not invent supplier dimensions.",
+      "evidence": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+          "start_line": 29,
+          "end_line": 34,
+          "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+          "start_line": 83,
+          "end_line": 92,
+          "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+          "start_line": 132,
+          "end_line": 139,
+          "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/water_accessories.py",
+          "start_line": 29,
+          "end_line": 35,
+          "sha256": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/WATER-CONTROL.md",
+          "start_line": 35,
+          "end_line": 41,
+          "sha256": "750b88ce9947fab0fa7a72fd765df975c50d7735bb59872716e9b1c49d42458c"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/WATER-CONTROL.md",
+          "start_line": 98,
+          "end_line": 102,
+          "sha256": "750b88ce9947fab0fa7a72fd765df975c50d7735bb59872716e9b1c49d42458c"
+        }
+      ]
+    },
+    {
+      "id": "FW-02",
+      "priority": "P2",
+      "classification": "confirmed_manufacturing_geometry_defect",
+      "title": "Cabinet stringers claim predrilled clearance holes but export as plain tubes",
+      "detail": "CAB_STRINGER creation makes only the hollow rectangular section. The fixed screw stations at world Y213.4 and Y687.6 do not cut holes. Positive screw-to-stringer intersections are explicitly permitted with the reason that the holes are predrilled. Consequently the individual stringer STEP has no required clearance holes, although these holes are not vendor-dependent.",
+      "quantified_evidence": {
+        "stringer_length_mm": 499.2,
+        "required_hole_diameter_mm": 5.5,
+        "local_hole_x_mm": 12.7,
+        "local_hole_y_mm": [
+          12.6,
+          486.8
+        ],
+        "holes_per_stringer_through_both_walls": 2,
+        "stringers": 2,
+        "actual_volume_mm3": 98050.4134471679,
+        "unperforated_tube_volume_mm3": 98050.41344716802,
+        "one_screw_intersection_mm3": 100.17447268850984
+      },
+      "repair": "Cut the two through-clearance holes into each stringer solid and individual export, add their local dimensions to fabrication operations, and narrow/remove the exception once the clearance is real. Retain the separate intentional self-drilling penetration in the bearer wall.",
+      "evidence": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/controls_packaging.py",
+          "start_line": 25,
+          "end_line": 36,
+          "sha256": "1eef72a5cb40c433e505f146e553370a6d9658f63803d74ad9b58f605f37a110"
+        }
+      ]
+    },
+    {
+      "id": "FW-03",
+      "priority": "P2",
+      "classification": "confirmed_manufacturing_definition_incomplete",
+      "title": "Drip-cap flat pattern does not define the instructed folded part",
+      "detail": "CAB_DRIP_CAP is one flat rectangle, with no bend lines, bend radii, developed allowance or corner reliefs. Its notes require 12 mm down-turned hems on both 436.4 mm edges and a 20 mm front drip hem; the front long edge is not distinguished from the two long-edge hems. The modeled sheet cannot verify the folded fit over the enclosure or the hook/door clearances. This is not a production-ready sheet-metal flat.",
+      "quantified_evidence": {
+        "flat_rectangle_mm": [
+          436.4,
+          233.2,
+          1.5
+        ],
+        "enclosure_top_mm": [
+          406.4,
+          203.2
+        ],
+        "nominal_flat_sheet_z_mm": [
+          673.5,
+          675.0
+        ],
+        "cabinet_top_z_mm": 673.0,
+        "door_top_to_bearer_bottom_projection_mm": 6.2
+      },
+      "repair": "Choose the actual folded cap geometry and attachment, model the installed folded shape, then supply a developed flat with bend lines, radii, bend allowance and corner reliefs. Check door swing and lifting/removal using the selected enclosure.",
+      "evidence": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/controls_packaging.py",
+          "start_line": 15,
+          "end_line": 23,
+          "sha256": "1eef72a5cb40c433e505f146e553370a6d9658f63803d74ad9b58f605f37a110"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/controls_packaging.py",
+          "start_line": 56,
+          "end_line": 71,
+          "sha256": "1eef72a5cb40c433e505f146e553370a6d9658f63803d74ad9b58f605f37a110"
+        }
+      ]
+    },
+    {
+      "id": "FW-04",
+      "priority": "P2",
+      "classification": "confirmed_collision_for_tested_service_motion_other_routes_unverified",
+      "title": "Reservoir lid removal has no demonstrated route past the rear brace",
+      "detail": "The tank is described as having a removable cover for washout, but no cover-removal motion is checked. Even a simplified bare lid shifted 100 mm rearward intersects the fixed rear diagonal. A second probe, 60 mm rearward with 15 mm lift, also intersects it. These tests reject those simple routes only; they do not prove every hand-service maneuver impossible. The real cover also carries a welded vent, pump supports, tool cradles and a hardware tray, so a full service sequence must identify what is disconnected or removed.",
+      "quantified_evidence": {
+        "lid_plan_mm": [
+          966.096,
+          666.096
+        ],
+        "lid_as_installed_z_mm": [
+          430.048,
+          433.096
+        ],
+        "bare_lid_translation_1_mm": [
+          0,
+          100,
+          0
+        ],
+        "rear_brace_intersection_1_mm3": 1053.8258022024581,
+        "bare_lid_translation_2_mm": [
+          0,
+          60,
+          15
+        ],
+        "rear_brace_intersection_2_mm3": 1053.825802202438,
+        "basket_lift100_probe_clashes": 0
+      },
+      "repair": "Define and collision-check a practical washout service sequence with lid-mounted equipment, cable/hose disconnects and handling clearance. If that needs pan removal, state it. Otherwise introduce a suitable service hatch or a structurally justified removable obstruction, then rerun the assembled route.",
+      "evidence": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/frame_details.py",
+          "start_line": 59,
+          "end_line": 65,
+          "sha256": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+          "start_line": 94,
+          "end_line": 117,
+          "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+          "start_line": 119,
+          "end_line": 131,
+          "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/water_accessories.py",
+          "start_line": 10,
+          "end_line": 35,
+          "sha256": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/tool_parking.py",
+          "start_line": 6,
+          "end_line": 29,
+          "sha256": "77bc83b4f618e5055d490568f30c57ba50a53c3c150165fd39a3572090f67c08"
+        }
+      ]
+    },
+    {
+      "id": "FW-05",
+      "priority": "P2",
+      "classification": "confirmed_small_nominal_clearance_requires_tolerance_verification",
+      "title": "Drained-level guard has only 0.672 mm clearance to the pan floor",
+      "detail": "The PAN_EMPTY guard is nominally collision-free, but its floor sits less than 0.7 mm above the sloped welded pan at the closest point. No guard/floor fabrication, flatness, welding or debris tolerance is allocated. The wet-calibrated float is not a bone-dry detector, and raising this carrier changes its trip relation. A zero-interference result alone is insufficient to release this near-floor guard.",
+      "quantified_evidence": {
+        "minimum_CAD_distance_mm": 0.6718140139488296,
+        "guard_floor_bounds_mm": [
+          978,
+          1177,
+          740,
+          1014,
+          1217,
+          741
+        ],
+        "sensor_body_bottom_z_mm": 742,
+        "carrier_mount_z_mm": 802
+      },
+      "repair": "Allocate a minimum as-built/debris clearance and adjust the guard or sensor arrangement accordingly. Preserve adequate adjustment travel and wet-calibrate the resulting drained threshold and delay. Check access for cleaning the narrow gap.",
+      "evidence": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+          "start_line": 7,
+          "end_line": 11,
+          "sha256": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+          "start_line": 32,
+          "end_line": 46,
+          "sha256": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+          "start_line": 58,
+          "end_line": 60,
+          "sha256": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+          "start_line": 10,
+          "end_line": 20,
+          "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+        }
+      ]
+    },
+    {
+      "id": "FW-06",
+      "priority": "P2",
+      "classification": "tool_and_stock_envelope_verification_required",
+      "title": "Pan guards are outside center travel but very close to its right edge",
+      "detail": "The pan guard floor begins at X978, only 3 mm outside the nominal X975 rightmost tool-center location. Pan guards and carriers extend through the Z850 slat/work plane. The instruction to remove assemblies for overhanging sheet acknowledges one conflict, but there is no verified complete plasma torch, clamp, lead or intended-stock envelope proving the remaining cutting range. This audit does not assert a torch collision because the actual cutter/torch interface is not established.",
+      "quantified_evidence": {
+        "nominal_rightmost_tool_center_x_mm": 975,
+        "nearest_guard_x_mm": 978,
+        "centerline_only_margin_mm": 3,
+        "pan_min_guard_z_mm": [
+          798,
+          860
+        ],
+        "pan_hh_guard_z_mm": [
+          815,
+          877
+        ],
+        "slat_top_z_mm": 850
+      },
+      "repair": "Integrate the selected torch/nozzle/clamp and stock envelopes in plasma operating states. Define any reduced usable cut region or relocate guards outside the complete envelope; do not equate center travel with clear tool clearance.",
+      "evidence": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+          "start_line": 7,
+          "end_line": 18,
+          "sha256": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+          "start_line": 40,
+          "end_line": 60,
+          "sha256": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+          "start_line": 65,
+          "end_line": 67,
+          "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "start_line": 595,
+          "end_line": 609,
+          "sha256": "0d3ab505d0ccdb6d4863c89fb6f95f562a90fd7771ba1549115a7c945442bfb9"
+        }
+      ]
+    },
+    {
+      "id": "FW-07",
+      "priority": "P1",
+      "classification": "structural_release_verification_missing_not_a_predicted_failure",
+      "title": "Whole-frame rigidity and support stability remain unverified",
+      "detail": "The design has a real two-inch tube frame, five braces and six custom screw feet, but the supplied strength screen treats ideal members and excludes joint rotation, gusset bending and complete-frame flexibility. Lowering the front upper tie removes the front high-level brace path; the documentation itself says racking must pass through the rear/side braces and connections. The 650 kg design mass is an assumption, and the foot check is axial compression plus gross pad pressure. No complete machine load/deflection budget, assembled mass/center-of-gravity or anchorage/floor acceptance is shown. Sand is correctly not credited as added elastic stiffness.",
+      "quantified_evidence": {
+        "frame_square_tube_mm": [
+          50.8,
+          50.8,
+          3.048
+        ],
+        "brace_square_tube_mm": [
+          25.4,
+          25.4,
+          2.1082
+        ],
+        "feet": 6,
+        "nominal_front_tie_top_z_mm": 151.6,
+        "assumed_gross_machine_mass_kg": 650,
+        "foot_worst_case_fraction_of_weight": 0.3333333333333333
+      },
+      "repair": "Set a required tool-to-work deflection budget and actual load cases, then check the assembled frame, connections, feet and support surface with appropriate analysis and/or a measured load test. Determine mass/center of gravity for router/plasma/service configurations and close anchoring/leveling requirements. Preserve the member-screen qualification.",
+      "evidence": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/build_reve_engineering.py",
+          "start_line": 27,
+          "end_line": 34,
+          "sha256": "ea2ce133c79fa9dda0a24f0db08817a587e2f1d3d5c0143c51d4fec3142e52b0"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/frame_details.py",
+          "start_line": 27,
+          "end_line": 65,
+          "sha256": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/strength-screen.py",
+          "start_line": 9,
+          "end_line": 14,
+          "sha256": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/strength-screen.py",
+          "start_line": 24,
+          "end_line": 30,
+          "sha256": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/strength-screen.py",
+          "start_line": 57,
+          "end_line": 67,
+          "sha256": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+          "start_line": 63,
+          "end_line": 67,
+          "sha256": "93721ec3a23ae0153b08fa261a6ba8b75f31092f11eaac6b5edb1a3e30fe3c4b"
+        }
+      ]
+    },
+    {
+      "id": "FW-08",
+      "priority": "P2",
+      "classification": "confirmed_purchased_enclosure_integration_incomplete",
+      "title": "Cabinet access is plausible but an enclosure block does not prove service clearance",
+      "detail": "The upright front location improves access and the nominal top/bottom door projection clears the frame. However the purchase is represented by a solid external envelope, not its door, hinges, latch, mounting panel or cable entries. The nominal cage holes are transfer-drilled, cable routes and VFD heat rejection are unreleased, and no door/tool-access sweep is represented. These known gaps must remain visible despite the package-status claim that cabinet service is resolved.",
+      "quantified_evidence": {
+        "cabinet_dimensions_mm": [
+          406.4,
+          203.2,
+          508
+        ],
+        "cabinet_bounds_mm": [
+          371.8,
+          251.8,
+          165,
+          778.2,
+          455,
+          673
+        ],
+        "door_top_to_bearer_bottom_projection_mm": 6.2,
+        "door_bottom_to_front_tie_projection_mm": 13.4
+      },
+      "repair": "Use the selected enclosure drawing to model or conservatively bound the door/hinges/latch and removable panel; verify access, transfer holes, cable bend/entry spaces and thermal layout. Retain packaging-envelope release status until closed.",
+      "evidence": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/controls_packaging.py",
+          "start_line": 41,
+          "end_line": 71,
+          "sha256": "1eef72a5cb40c433e505f146e553370a6d9658f63803d74ad9b58f605f37a110"
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/package_review.py",
+          "start_line": 93,
+          "end_line": 98,
+          "sha256": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51"
+        }
+      ]
+    }
+  ],
+  "passing_observations": [
+    "430 freshly built subsystem solids are each valid single solids. This is not a fresh full-assembly clash certification.",
+    "Pan floor has the intended 1% rearward nominal slope, 3.048 mm normal plate thickness and weld-neck clearances.",
+    "Drain/overflow pipes do not nominally intersect the sloped floor: respective closest gaps 0.070727 and 0.068309 mm, to be closed by the specified welds.",
+    "Reservoir pickup runs through the sealed settling-weir penetration into the clarified front bay; TANK_LOW is located in that bay.",
+    "Reservoir cleanout neck clears the last support crossmember by 10.05 mm before any purchased cap/valve is added.",
+    "Catch-basket 100 mm straight lift endpoint clears the modeled frame; not a complete swept service test with missing drain plumbing.",
+    "All-return analytic capacity 129.016 L remains above 115 L charge by 14.016 L; pan-normal inventory leaves 4.538 L above low trip. Actual installed hydraulics and fouling remain untested.",
+    "Fabricated tank stays permanently vented; no compressor/CV-15HS pressure or vacuum connection is modeled.",
+    "Current front cabinet is no longer the prior above-tank enclosure; no obsolete claim that cabinet electrical service requires pan removal is made."
+  ],
+  "limitations": [
+    "No CAD design changes or physical machine tests.",
+    "No new supplier dimensions, live price checks, assumed owned parts, torch pinouts or electrical compatibility approvals.",
+    "Purchased envelopes and unmodeled fittings prevent complete interference/assembly/service certification.",
+    "No whole-machine FEA, weld qualification, thermal analysis, hose hydraulic model, continuous swept-volume service check or physical floor/anchorage verification.",
+    "Source geometry and existing artifact records are inspected; root audit handles whole-package rebuild, STEP/DXF coverage and stale-export checks.",
+    "The owned 12x12-inch aluminum pieces are not assumed to replace specified steel/stainless frame/water parts; nesting and alloy suitability are separate release checks."
+  ],
+  "evidence_files": [
+    "frame-water-geometry-evidence.json",
+    "frame-water-water-verification.json",
+    "frame-water-geometry-check.py"
+  ],
+  "source_sha256": {
+    "bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "build_reve_engineering.py": "ea2ce133c79fa9dda0a24f0db08817a587e2f1d3d5c0143c51d4fec3142e52b0",
+    "cad_helpers.py": "5c85f6c5c5312225a7e2fa06ae1b5894ece273b62a3d58d0a09d0ff86ff14fbe",
+    "check_motion_states.py": "934b573db6640ec0bb4e63966a4ebc5b6f51a6931d05d8d321b98d156cc82464",
+    "controls_packaging.py": "1eef72a5cb40c433e505f146e553370a6d9658f63803d74ad9b58f605f37a110",
+    "export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "motion_details.py": "0d3ab505d0ccdb6d4863c89fb6f95f562a90fd7771ba1549115a7c945442bfb9",
+    "nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "sensor_mounts.py": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05",
+    "strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "tool_parking.py": "77bc83b4f618e5055d490568f30c57ba50a53c3c150165fd39a3572090f67c08",
+    "update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+  }
+}

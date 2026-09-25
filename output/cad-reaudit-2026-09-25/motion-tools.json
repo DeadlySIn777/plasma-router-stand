@@ -1,0 +1,496 @@
+{
+  "audit_date": "2026-09-25",
+  "scope": "Independent motion, tooling and motion-related sensor CAD audit of current RevE-folder/RevF architecture. CAD and historical reports were not modified.",
+  "source_git_head": "554530196701756bd5db9a71d199fd89334f35f1",
+  "status": "NOT RELEASED: confirmed manufacturing/configuration defects and unresolved supplier/retention interfaces",
+  "source_sha256": {
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "0d3ab505d0ccdb6d4863c89fb6f95f562a90fd7771ba1549115a7c945442bfb9",
+    "output/release-review/RevE-ENGINEERING/tool_parking.py": "77bc83b4f618e5055d490568f30c57ba50a53c3c150165fd39a3572090f67c08",
+    "output/release-review/RevE-ENGINEERING/sensor_mounts.py": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05",
+    "output/release-review/RevE-ENGINEERING/check_motion_states.py": "934b573db6640ec0bb4e63966a4ebc5b6f51a6931d05d8d321b98d156cc82464",
+    "output/release-review/RevE-ENGINEERING/frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "output/release-review/RevE-ENGINEERING/geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "output/release-review/RevE-ENGINEERING/export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "5c85f6c5c5312225a7e2fa06ae1b5894ece273b62a3d58d0a09d0ff86ff14fbe",
+    "output/release-review/RevE-ENGINEERING/motion-validation.json": "3b139737e7c1ff058479e9dc9834273443d31ed5a358552f6b8bb5cd561f97c2",
+    "output/release-review/RevE-ENGINEERING/MOTION-VERIFICATION.md": "c654638206f0dc166b2bca6b7eaa9a3c5f70ee89433a0727287f761d12011590",
+    "output/release-review/RevE-ENGINEERING/dxf/TOOL_ADAPTER_110.dxf": "abcc0b9e2cc15e358ad98a223e0ce9e5a9ac52d32b262c5d653920c655641e2b",
+    "output/release-review/RevE-ENGINEERING/parts/TOOL_ADAPTER_110.step": "313c1f42b769b15f4d0fac03f2d39cce3ade9291382da0acb0dd049dce0c353c",
+    "output/release-review/RevE-ENGINEERING/parts/TORCH_SPLIT_CLAMP_REAR.step": "dc2477d75b4e8f13b548981fedcdb409820965855c399c6f88834f9320a6c47a",
+    "output/release-review/RevE-ENGINEERING/parts/TORCH_SPLIT_CLAMP_FRONT.step": "ee6c706f9a9855b6102ee0942b13f3e70790aa94ac77d59cb88a641aeda177d4",
+    "output/release-review/RevE-ENGINEERING/RevE_PLASMA_SETUP-validation.json": "1b67304a07427b76912659643e7f317ccbdbcfc2767d165f45d736afee4c32a9"
+  },
+  "findings": [
+    {
+      "id": "MT01",
+      "priority": "P1",
+      "kind": "confirmed manufacturing defect",
+      "title": "Adapter front counter-slots are rotated 90 degrees in the delivered DXF",
+      "evidence": "motion_details.py makes each front recess with slot2D(30,11,90), so the recess must be vertical in local XY. Its operation record omits angle, and cad_helpers.write_dxf emits every operation-slot horizontally. Fresh ezdxf extents show the first recess spans X5..35/Y39.5..50.5, whereas the solid recess requires X14.5..25.5/Y30..60; the second spans X75..105 instead of X84.5..95.5. Through-slots are correctly vertical.",
+      "impact": "Following the supplied milling-operation DXF will cut recesses across the adapter instead of along its carriage adjustment slots, leaving unrecessed screw positions and removing different material. The generic DXF syntax/audit pass cannot detect this.",
+      "action": "Carry the slot angle in non-through operation metadata, rotate operation geometry in write_dxf, regenerate adapter STEP/DXF/operations, and compare the recess orientations and depths explicitly.",
+      "references": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 543
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 550
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 553
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/cad_helpers.py",
+          "line": 111
+        }
+      ]
+    },
+    {
+      "id": "MT02",
+      "priority": "P1",
+      "kind": "confirmed incomplete manufactured geometry",
+      "title": "Exported torch-clamp halves do not contain their claimed fastening features",
+      "evidence": "tool_parking.py creates each half with one cylindrical subtraction only. Importing TORCH_SPLIT_CLAMP_REAR.step and FRONT.step confirms one radius14 cylindrical trough on local Y, with no M6 mounting bores or pinch bores. The rear stock is110x45.25x40 and front110x44.75x40. Both trough axes are at localX55/Z40 on the upper stock face; no installed assembly transform defines how those two open troughs become the claimed spindle-compatible clamp. Notes nonetheless specify four M6 mounting holes and two M6x60 pinch screws.",
+      "impact": "The provided solids cannot be fabricated into the described bolted clamp without redesign/missing operations. These parts are exported with ordinary engineering status, rather than being guarded incomplete purchased interfaces. The user-reported VIV ARC CUT-50 and a similar AG-60 listing do not verify an exact27.9mm owned barrel diameter.",
+      "action": "Define the actual owned torch barrel/insulated clamping zone from measurement or its exact drawing, design and model both clamp halves and every fastening operation, prove the installed orientation, and guard the incomplete parts until that is done.",
+      "references": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/tool_parking.py",
+          "line": 33
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/tool_parking.py",
+          "line": 34
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/tool_parking.py",
+          "line": 37
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 600
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/cad_helpers.py",
+          "line": 166
+        }
+      ]
+    },
+    {
+      "id": "MT03",
+      "priority": "P1",
+      "kind": "confirmed configuration omission",
+      "title": "Plasma setup CAD has no installed plasma cutting tool",
+      "evidence": "export_states.plasma_model removes MOD_* bed parts and parks TOOL_SPINDLE_65x259, but otherwise retains the router head and its65mm split clamp. Both TORCH_CLAMP halves remain on the tank lid. The saved RevE_PLASMA_SETUP validation inventory agrees. There is no torch body, nozzle/tip datum, installed28mm clamp, float/breakaway stack, gas lead or torch cable envelope in this state.",
+      "impact": "A zero-intersection plasma setup result only verifies the bed-conversion display. It cannot verify plasma cut reach, torch-to-slat/float-bracket clearance, pierce/retract height, touch-off, or the tool-change geometry.",
+      "action": "Create the real plasma-tool assembly and a distinct installed plasma configuration with its measured nozzle datum, mount, floating/breakaway mechanism and cable envelope; then verify travel and state transitions.",
+      "references": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/export_states.py",
+          "line": 27
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/export_states.py",
+          "line": 35
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/export_states.py",
+          "line": 42
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 559
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/tool_parking.py",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "id": "MT04",
+      "priority": "P2",
+      "kind": "confirmed verification-fixture defect; physical-collision claim disproved for these pairs",
+      "title": "The 22 stored motion clashes come from an unraised cap fixture",
+      "evidence": "geometry_base defines caps atZ1050. Integrated make_frame raises them6mm before make_motion cuts the stop holes. check_motion_states omits make_frame and therefore checks caps6mm too low. All22 saved pairs involve those caps: two datum overlaps63800mm3 each, four guide-block overlaps6432.5mm3 each, eight cap-bolt overlaps141.37167mm3 each and eight nuts285.70342mm3 each. Fresh checks using caps initiallyZ1056, then the unchanged make_motion, pass all five original states:295 valid parts/state,0 unresolved overlaps,0 local/world volume mismatches. There are54 explicitly permitted overlaps/state.",
+      "impact": "The committed standalone test is genuinely failing, but those22 clashes are not evidence of physical collisions in the assembled geometry. MOTION-VERIFICATION.md also carries obsolete291-part zero-clash prose.",
+      "action": "Make the test share the assembled cap datum before hole generation and regenerate its report/prose from actual results. Do not waive the overlaps or translate already-drilled caps, which moves the holes to the wrong height.",
+      "references": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/geometry_base.py",
+          "line": 135
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/frame_details.py",
+          "line": 23
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/check_motion_states.py",
+          "line": 29
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 74
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/MOTION-VERIFICATION.md",
+          "line": 3
+        }
+      ]
+    },
+    {
+      "id": "MT05",
+      "priority": "P1",
+      "kind": "confirmed release hold plus unsupported fastening instructions",
+      "title": "Z output attachment is provisional and its slot/thread claims are not sufficient to choose hardware",
+      "evidence": "The adapter has two7x30 vertical slots70mm apart and only two M6x16 screws, both at localY45. The note claims these cover15..45mm along-travel hole pitches, but a30mm-long slot cannot span two45mm-separated rows. For a centered6mm shank, the available center travel in that7x30 slot is approximately24mm. The note also proposes M6 screws into a diameter7 hole if tappedM6: a true7mm existing bore has no material to form a6mm-major-diameter internal thread. A through-bolt/nut solution is possible in principle, but carriage thickness, rear access, engagement and screw length remain unverified. The source explicitly leaves the Z base slots, output plane height and longitudinal pattern unresolved.",
+      "impact": "The listed screw/nut alternatives and15..45mm claim must not be treated as a manufacturing specification. Two modeled bolt axes do not establish actual supplier hole fit or joint capacity.",
+      "action": "Resolve a measured or supplier-approved mating drawing; specify the exact hole type, number of bolts, washers/nuts and engagement, and revise the slot claim and provisional adapter. Preserve the hold until the joint has a defined load path.",
+      "references": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 538
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 543
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 546
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 548
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 555
+        }
+      ]
+    },
+    {
+      "id": "MT06",
+      "priority": "P1",
+      "kind": "confirmed open design interfaces",
+      "title": "HMS/HGR/Z mounting and power-off Z retention are still unresolved",
+      "evidence": "The source guards the HGR20 rail-hole pattern, HMS40 bottom-slot nut cavity/base fastening and endpoint datum, motor current/torque/cable outlet, and ZBX80 base/output geometry. No normally engaged brake or counterbalance is selected or represented. X/Y stops and three home switches are modeled; the Z home bracket and Z travel stops are not. The nominal100mm Z travel assertion is not a restraint or limit design.",
+      "impact": "The purchased modules cannot yet be ordered with a complete verified attachment package, and the suspended tool is not released for powered commissioning or a power-loss condition.",
+      "action": "Close exact supplier/measured interfaces, select the Z retention arrangement and its attachments, add its envelope and release criteria, and complete Z limits/homing before freezing the CAD.",
+      "references": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 364
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 494
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 524
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 604
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 605
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 606
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 607
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 609
+        }
+      ]
+    },
+    {
+      "id": "MT07",
+      "priority": "P2",
+      "kind": "confirmed validation coverage limitation; no new physical collision asserted",
+      "title": "Travel and service checks omit operational cutters, leads and dual-Y skew",
+      "evidence": "make_motion accepts one common gantry_y, so both Y sides always move together; neither the five corrected motion-subsystem states nor the nine fresh full-machine router poses exercise independent-Y homing/skew or a stalled-side condition. The parent check_full_machine_poses.py checked all eight nominal X/Y/Z travel-box corners plus center, with 967 valid solids and zero unresolved intersections in every pose (full-machine-poses.json). The spindle is a 65 x 259 mm cylinder with an explicitly assumed body/tip reference; no collet, cutting bit or workholding/toolpath envelope is installed. Cable chains, connector projections, hose bend radii and way covers are explicit remaining holds.",
+      "impact": "The nine full-machine router poses establish sampled static clearance for the represented solids. Nominal X800/Y1000/Z100 and those poses cannot certify continuous clearance, usable machining volume with actual tools/workpieces, service access, operational plasma geometry or auto-squaring behavior.",
+      "action": "Define actual cutting-tool and plasma-tip datums and permissible stickout/workholding, include leads/covers, then extend the full-machine checks to the completed operational assemblies, continuous/swept motion and a bounded dual-Y squaring/skew scenario. Keep the test scope visible.",
+      "references": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 356
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 357
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 561
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 564
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 608
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+          "line": 609
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/check_motion_states.py",
+          "line": 17
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/check_motion_states.py",
+          "line": 43
+        },
+        {
+          "file": "output/cad-reaudit-2026-09-25/full-machine-poses.json",
+          "line": 1
+        }
+      ]
+    }
+  ],
+  "fresh_checks": {
+    "corrected_fixture_five_states": {
+      "executed_fresh": true,
+      "process_exit_code": 0,
+      "method": "No source edits. In-memory Model with two100x1450x7.9375 caps atX-24.6/1074.6,Y0,Z1056; call unmodified make_motion for the five STATES; call unmodified validate and check local/world volumes. Cap datum must be applied before make_motion drills stop holes.",
+      "results": [
+        {
+          "state_gantry_y_head_x_z_lift_tool": [
+            1275,
+            575,
+            100,
+            "router"
+          ],
+          "valid_single_solid_parts": 295,
+          "broadphase_pairs": 463,
+          "unresolved_intersections": [],
+          "documented_intersections": 54,
+          "local_world_volume_mismatches": []
+        },
+        {
+          "state_gantry_y_head_x_z_lift_tool": [
+            275,
+            175,
+            0,
+            "router"
+          ],
+          "valid_single_solid_parts": 295,
+          "broadphase_pairs": 484,
+          "unresolved_intersections": [],
+          "documented_intersections": 54,
+          "local_world_volume_mismatches": []
+        },
+        {
+          "state_gantry_y_head_x_z_lift_tool": [
+            275,
+            975,
+            100,
+            "router"
+          ],
+          "valid_single_solid_parts": 295,
+          "broadphase_pairs": 479,
+          "unresolved_intersections": [],
+          "documented_intersections": 54,
+          "local_world_volume_mismatches": []
+        },
+        {
+          "state_gantry_y_head_x_z_lift_tool": [
+            1275,
+            175,
+            100,
+            "router"
+          ],
+          "valid_single_solid_parts": 295,
+          "broadphase_pairs": 470,
+          "unresolved_intersections": [],
+          "documented_intersections": 54,
+          "local_world_volume_mismatches": []
+        },
+        {
+          "state_gantry_y_head_x_z_lift_tool": [
+            1275,
+            975,
+            0,
+            "router"
+          ],
+          "valid_single_solid_parts": 295,
+          "broadphase_pairs": 465,
+          "unresolved_intersections": [],
+          "documented_intersections": 54,
+          "local_world_volume_mismatches": []
+        }
+      ],
+      "limitations": "Caps plus motion only, not full frame/spacers/bed or continuous sweep. Preserves54 documented conservative purchased-envelope overlaps per state."
+    },
+    "dxf_recess_measurement": {
+      "executed_fresh": true,
+      "method": "ezdxf readfile and bbox.extents of LWPOLYLINE entities on MILL_FRONT_COUNTERSLOT_DEPTH_6_6",
+      "actual_xy_bounds": [
+        [
+          5,
+          39.5,
+          35,
+          50.5
+        ],
+        [
+          75,
+          39.5,
+          105,
+          50.5
+        ]
+      ],
+      "required_from_source_xy_bounds": [
+        [
+          14.5,
+          30,
+          25.5,
+          60
+        ],
+        [
+          84.5,
+          30,
+          95.5,
+          60
+        ]
+      ]
+    },
+    "exported_torch_clamp_solids": {
+      "executed_fresh": true,
+      "method": "CadQuery STEP import; inspect Face.geomType and cylinder axis; both valid single solids",
+      "rear": {
+        "bounds_local_mm": [
+          0,
+          0,
+          0,
+          110,
+          45.25,
+          40
+        ],
+        "volume_mm3": 185168.60737765545,
+        "cylinders": [
+          {
+            "radius_mm": 14,
+            "axis": [
+              0,
+              1,
+              0
+            ]
+          }
+        ]
+      },
+      "front": {
+        "bounds_local_mm": [
+          0,
+          0,
+          0,
+          110,
+          44.75,
+          40
+        ],
+        "volume_mm3": 183122.54541768137,
+        "cylinders": [
+          {
+            "radius_mm": 14,
+            "axis": [
+              0,
+              1,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    "nominal_kinematic_arithmetic": {
+      "head_x_limits_mm": [
+        175,
+        975
+      ],
+      "gantry_y_limits_mm": [
+        275,
+        1275
+      ],
+      "spindle_y_offset_from_gantry_mm": -153.6,
+      "spindle_axis_y_limits_mm": [
+        121.4,
+        1121.4
+      ],
+      "z_lift_limits_mm": [
+        0,
+        100
+      ],
+      "spindle_body_bottom_z_limits_mm": [
+        960,
+        1060
+      ],
+      "interpretation": "Source geometry only; no actual tool-tip length or cutter envelope established."
+    },
+    "fastener_arithmetic_spot_checks": {
+      "HGH_M5x18_minus12_7_plate_engagement_mm": 5.3,
+      "HMS_M4x10_minus2_web_engagement_mm": 8,
+      "clevis_M4x12_minus6_base_engagement_mm": 6,
+      "beam_M8x16_minus4_7_web_projection_mm": 11.3,
+      "coupler28_minus2x10_engagement_internal_gap_mm": 8,
+      "scope": "Nominal source stack arithmetic agrees; no preload, thread quality, purchased cavity or connection strength test performed."
+    },
+    "sensors_service_review": {
+      "coverage": "Read all sensor_mounts.py; five float assemblies use adjustable slotted carriers and guarded supplier envelopes. No new certain sensor CAD defect assigned. Mount Z does not establish wet trip; native supplier float travel/form is missing. Guard removal, fouling clearance and cable routing still require physical/service verification.",
+      "pan_backrail_top_z_mm": 910,
+      "sensor_envelope_mm": [
+        26,
+        60
+      ],
+      "references": [
+        {
+          "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+          "line": 7
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+          "line": 34
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+          "line": 59
+        },
+        {
+          "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+          "line": 60
+        }
+      ]
+    },
+    "full_machine_router_poses_parent_check": {
+      "executed_fresh_by_parent": true,
+      "script": "check_full_machine_poses.py",
+      "evidence_file": "output/cad-reaudit-2026-09-25/full-machine-poses.json",
+      "evidence_sha256": "7091b545d99576a4148fa4bb98f10c11607030565f7b81be37a0098a8c90f698",
+      "poses": 9,
+      "coverage": "All eight nominal X/Y/Z travel-box corners plus center",
+      "valid_single_solid_parts_per_pose": 967,
+      "unresolved_intersections_per_pose": 0,
+      "limits": "Sampled static represented-solid checks; operational cutters, workpieces, plasma-tool assembly, cables/hoses and independent-Y skew remain outside the checked geometry."
+    }
+  },
+  "not_performed": [
+    "No physical hardware measurement or commissioning",
+    "No independent new supplier-drawing verification",
+    "No continuous all-machine swept-volume check",
+    "No controller/firmware qualification or electrical interface modification",
+    "No complete structural or fastener proof calculation"
+  ],
+  "runtime_note": "Fresh five-state corrected-fixture run returned exit0. An earlier diagnostic printed all pair/DXF/STEP results before an exit1 during interpreter teardown; the definitive five-state run explicitly flushed and exited0."
+}

@@ -1,0 +1,51 @@
+{
+  "baseline_commit": "554530196701756bd5db9a71d199fd89334f35f1",
+  "cad_release": "NOT RELEASED",
+  "findings": 29,
+  "priority_counts": {
+    "P1": 14,
+    "P2": 15
+  },
+  "fresh_checks": {
+    "cad_files": 253,
+    "step_files": 168,
+    "dxf_files": 85,
+    "current_individual_steps": 162,
+    "current_assembly_steps": 3,
+    "historical_assembly_steps": 3,
+    "current_component_count": 967,
+    "plasma_setup_component_count": 731,
+    "full_router_poses": 9,
+    "unresolved_intersections_per_router_pose": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "individual_dxf_source_matches": 67,
+    "module_rail_shared_part_number": "Confirmed congruent under rotation",
+    "nominal_square_tube_schedule": "28 pieces; five full 20-ft bars"
+  },
+  "unchanged_design_sources": true,
+  "unchanged_existing_cad_exports": true,
+  "physical_commissioning": false,
+  "operational_plasma_head_validated": false,
+  "prior_audit_corrections": [
+    "22 motion overlaps were incorrect test fixture, not physical collisions",
+    "Right edge fastener margin is0.7mm, not0.9mm"
+  ],
+  "not_covered": [
+    "Physical commissioning",
+    "Full structural qualification",
+    "Continuous swept volumes",
+    "Real cutter/workpiece/cable/hoses and dual-Y skew",
+    "Historical design qualification",
+    "Final machine-specific CAM",
+    "Firmware and live supplier pricing"
+  ]
+}

@@ -1,0 +1,4774 @@
+{
+  "scope": "Nine fresh full-machine router poses; no source CAD or exports overwritten.\n\nAll eight nominal travel-box corners plus center. These are sampled static\nchecks of represented solids; no cutter, workpiece, hose or cable sweep is\ninvented, and no operational plasma configuration exists in the source model.\n",
+  "sources_sha256": {
+    "bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "build_reve_engineering.py": "ea2ce133c79fa9dda0a24f0db08817a587e2f1d3d5c0143c51d4fec3142e52b0",
+    "cad_helpers.py": "5c85f6c5c5312225a7e2fa06ae1b5894ece273b62a3d58d0a09d0ff86ff14fbe",
+    "check_motion_states.py": "934b573db6640ec0bb4e63966a4ebc5b6f51a6931d05d8d321b98d156cc82464",
+    "controls_packaging.py": "1eef72a5cb40c433e505f146e553370a6d9658f63803d74ad9b58f605f37a110",
+    "export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "motion_details.py": "0d3ab505d0ccdb6d4863c89fb6f95f562a90fd7771ba1549115a7c945442bfb9",
+    "nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "sensor_mounts.py": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05",
+    "strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "tool_parking.py": "77bc83b4f618e5055d490568f30c57ba50a53c3c150165fd39a3572090f67c08",
+    "update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+  },
+  "states": [
+    {
+      "gantry_y": 275,
+      "head_x": 175,
+      "z_lift": 0,
+      "tool": "router",
+      "part_count": 967,
+      "broadphase_pairs": 1467,
+      "unresolved_intersections": [],
+      "documented_intersections": [
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_3",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_4",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_5",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_6",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_7",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_8",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_9",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_10",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_11",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_12",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_13",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_14",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_15",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_16",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_1_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_1_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_2_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_2_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_L_A_ROD_END",
+          "b": "Y_LINK_L_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_L_B_ROD_END",
+          "b": "Y_LINK_L_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_R_A_ROD_END",
+          "b": "Y_LINK_R_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_R_B_ROD_END",
+          "b": "Y_LINK_R_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_1",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_2",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_3",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_4",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_5",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_5",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_6",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_6",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_7",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_7",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_8",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_8",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "X_LINK_A_ROD_END",
+          "b": "X_LINK_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "X_LINK_B_ROD_END",
+          "b": "X_LINK_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_BOTTOM",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_TOP",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_1",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_2",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        }
+      ]
+    },
+    {
+      "gantry_y": 275,
+      "head_x": 175,
+      "z_lift": 100,
+      "tool": "router",
+      "part_count": 967,
+      "broadphase_pairs": 1467,
+      "unresolved_intersections": [],
+      "documented_intersections": [
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_3",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_4",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_5",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_6",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_7",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_8",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_9",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_10",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_11",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_12",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_13",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_14",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_15",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_16",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_1_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_1_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_2_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_2_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_L_A_ROD_END",
+          "b": "Y_LINK_L_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_L_B_ROD_END",
+          "b": "Y_LINK_L_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_R_A_ROD_END",
+          "b": "Y_LINK_R_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_R_B_ROD_END",
+          "b": "Y_LINK_R_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_1",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_2",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_3",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_4",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_5",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_5",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_6",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_6",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_7",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_7",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_8",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_8",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "X_LINK_A_ROD_END",
+          "b": "X_LINK_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "X_LINK_B_ROD_END",
+          "b": "X_LINK_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_BOTTOM",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_TOP",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_1",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_2",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        }
+      ]
+    },
+    {
+      "gantry_y": 275,
+      "head_x": 975,
+      "z_lift": 0,
+      "tool": "router",
+      "part_count": 967,
+      "broadphase_pairs": 1462,
+      "unresolved_intersections": [],
+      "documented_intersections": [
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_3",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_4",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_5",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_6",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_7",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_8",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_9",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_10",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_11",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_12",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_13",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_14",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_15",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_16",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_1_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_1_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_2_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_2_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_L_A_ROD_END",
+          "b": "Y_LINK_L_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_L_B_ROD_END",
+          "b": "Y_LINK_L_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_R_A_ROD_END",
+          "b": "Y_LINK_R_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_R_B_ROD_END",
+          "b": "Y_LINK_R_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_1",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_2",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_3",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_4",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_5",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_5",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_6",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_6",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_7",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_7",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_8",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_8",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "X_LINK_A_ROD_END",
+          "b": "X_LINK_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "X_LINK_B_ROD_END",
+          "b": "X_LINK_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_BOTTOM",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_TOP",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_1",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_2",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        }
+      ]
+    },
+    {
+      "gantry_y": 275,
+      "head_x": 975,
+      "z_lift": 100,
+      "tool": "router",
+      "part_count": 967,
+      "broadphase_pairs": 1462,
+      "unresolved_intersections": [],
+      "documented_intersections": [
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_3",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_4",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_5",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_6",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_7",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_8",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_9",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_10",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_11",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_12",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_13",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_14",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_15",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_16",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_1_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_1_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_2_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_2_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_L_A_ROD_END",
+          "b": "Y_LINK_L_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_L_B_ROD_END",
+          "b": "Y_LINK_L_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_R_A_ROD_END",
+          "b": "Y_LINK_R_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_R_B_ROD_END",
+          "b": "Y_LINK_R_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_1",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_2",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_3",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_4",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_5",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_5",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_6",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_6",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_7",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_7",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_8",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_8",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "X_LINK_A_ROD_END",
+          "b": "X_LINK_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "X_LINK_B_ROD_END",
+          "b": "X_LINK_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_BOTTOM",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_TOP",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_1",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_2",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        }
+      ]
+    },
+    {
+      "gantry_y": 1275,
+      "head_x": 175,
+      "z_lift": 0,
+      "tool": "router",
+      "part_count": 967,
+      "broadphase_pairs": 1453,
+      "unresolved_intersections": [],
+      "documented_intersections": [
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_3",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_4",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_5",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_6",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_7",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_8",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_9",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_10",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_11",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_12",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_13",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_14",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_15",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_16",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_1_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_1_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_2_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_2_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_L_A_ROD_END",
+          "b": "Y_LINK_L_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_L_B_ROD_END",
+          "b": "Y_LINK_L_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_R_A_ROD_END",
+          "b": "Y_LINK_R_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_R_B_ROD_END",
+          "b": "Y_LINK_R_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_1",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_2",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_3",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_4",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_5",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_5",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_6",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_6",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_7",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_7",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_8",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_8",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "X_LINK_A_ROD_END",
+          "b": "X_LINK_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "X_LINK_B_ROD_END",
+          "b": "X_LINK_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_BOTTOM",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_TOP",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_1",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_2",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        }
+      ]
+    },
+    {
+      "gantry_y": 1275,
+      "head_x": 175,
+      "z_lift": 100,
+      "tool": "router",
+      "part_count": 967,
+      "broadphase_pairs": 1453,
+      "unresolved_intersections": [],
+      "documented_intersections": [
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_3",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_4",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_5",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_6",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_7",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_8",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_9",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_10",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_11",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_12",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_13",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_14",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_15",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_16",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_1_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_1_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_2_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_2_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_L_A_ROD_END",
+          "b": "Y_LINK_L_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_L_B_ROD_END",
+          "b": "Y_LINK_L_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_R_A_ROD_END",
+          "b": "Y_LINK_R_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_R_B_ROD_END",
+          "b": "Y_LINK_R_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_1",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_2",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_3",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_4",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_5",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_5",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_6",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_6",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_7",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_7",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_8",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_8",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "X_LINK_A_ROD_END",
+          "b": "X_LINK_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "X_LINK_B_ROD_END",
+          "b": "X_LINK_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_BOTTOM",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_TOP",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_1",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_2",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        }
+      ]
+    },
+    {
+      "gantry_y": 1275,
+      "head_x": 975,
+      "z_lift": 0,
+      "tool": "router",
+      "part_count": 967,
+      "broadphase_pairs": 1448,
+      "unresolved_intersections": [],
+      "documented_intersections": [
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_3",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_4",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_5",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_6",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_7",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_8",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_9",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_10",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_11",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_12",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_13",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_14",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_15",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_16",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_1_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_1_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_2_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_2_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_L_A_ROD_END",
+          "b": "Y_LINK_L_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_L_B_ROD_END",
+          "b": "Y_LINK_L_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_R_A_ROD_END",
+          "b": "Y_LINK_R_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_R_B_ROD_END",
+          "b": "Y_LINK_R_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_1",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_2",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_3",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_4",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_5",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_5",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_6",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_6",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_7",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_7",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_8",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_8",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "X_LINK_A_ROD_END",
+          "b": "X_LINK_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "X_LINK_B_ROD_END",
+          "b": "X_LINK_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_BOTTOM",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_TOP",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_1",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_2",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        }
+      ]
+    },
+    {
+      "gantry_y": 1275,
+      "head_x": 975,
+      "z_lift": 100,
+      "tool": "router",
+      "part_count": 967,
+      "broadphase_pairs": 1448,
+      "unresolved_intersections": [],
+      "documented_intersections": [
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_3",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_4",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_5",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_6",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_7",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_8",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_9",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_10",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_11",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_12",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_13",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_14",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_15",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_16",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_1_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_1_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_2_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_2_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_L_A_ROD_END",
+          "b": "Y_LINK_L_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_L_B_ROD_END",
+          "b": "Y_LINK_L_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_R_A_ROD_END",
+          "b": "Y_LINK_R_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_R_B_ROD_END",
+          "b": "Y_LINK_R_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_1",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_2",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_3",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_4",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_5",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_5",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_6",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_6",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_7",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_7",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_8",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_8",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "X_LINK_A_ROD_END",
+          "b": "X_LINK_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "X_LINK_B_ROD_END",
+          "b": "X_LINK_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_BOTTOM",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_TOP",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_1",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_2",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        }
+      ]
+    },
+    {
+      "gantry_y": 775,
+      "head_x": 575,
+      "z_lift": 50,
+      "tool": "router",
+      "part_count": 967,
+      "broadphase_pairs": 1448,
+      "unresolved_intersections": [],
+      "documented_intersections": [
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_3",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_1",
+          "b": "MOD_TEK_4",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_5",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_6",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_7",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_2",
+          "b": "MOD_TEK_8",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_9",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_10",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_11",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_3",
+          "b": "MOD_TEK_12",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_13",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_14",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_15",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "MOD_XM_4",
+          "b": "MOD_TEK_16",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the 3.048 crossmember top wall."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_1",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_STRINGER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 100.17447,
+          "reason": "Screw passes the pre-drilled stringer walls it clamps."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_1",
+          "b": "CAB_BOLT_1_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_1_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_1_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_1",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_RAIL_2",
+          "b": "CAB_BOLT_2_2",
+          "intersection_mm3": 119.2159,
+          "reason": "M6 through-bolt crosses both rail walls."
+        },
+        {
+          "a": "CAB_BOLT_2_1",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "CAB_BOLT_2_2",
+          "b": "BUY_CONTROL_ENCLOSURE_RESERVE",
+          "intersection_mm3": 513.6504,
+          "reason": "Bolt crosses the purchased enclosure back-panel envelope at its vendor mounting holes."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_L_A_ROD_END",
+          "b": "Y_LINK_L_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_L_B_ROD_END",
+          "b": "Y_LINK_L_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_R_A_ROD_END",
+          "b": "Y_LINK_R_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_R_B_ROD_END",
+          "b": "Y_LINK_R_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_1",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_2",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_3",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_4",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_5",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_5",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_6",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_6",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_7",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_7",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_8",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_8",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "X_LINK_A_ROD_END",
+          "b": "X_LINK_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "X_LINK_B_ROD_END",
+          "b": "X_LINK_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_BOTTOM",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_TOP",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_1",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        },
+        {
+          "a": "ZBX80_OUTPUT_HOLD",
+          "b": "Z_CARRIAGE_BOLT_2",
+          "intersection_mm3": 279.91591,
+          "reason": "M6 engages the carriage phi7 hole inside the conservative purchased envelope."
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 97.42,
+  "all_sampled_poses_clear": true
+}

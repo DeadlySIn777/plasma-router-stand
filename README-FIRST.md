@@ -1,6 +1,6 @@
 # CNC / plasma machine — Rev F
 
-The current engineering package is in [Rev F](output/release-review/RevE-ENGINEERING/PACKAGE-STATUS.md) (directory name retained from Rev E). Rev F replaces the six-cassette bed with a one-piece hoisted module: a welded steel ladder riding the receiver ledgers, two machine-surfaced 12.7 mm MDF layers, and ten full-length cut-only 20100 strips. Mode change is four M8 bolts and the owner's overhead winch out the open front window. No purchase or manufacturing release has been issued, and Fusion has not been opened.
+The [latest full CAD re-audit](output/cad-reaudit-2026-09-25/README.md) records **29 open findings**. The current one-piece bed design does not meet the user's requirement for conversion within the machine footprint, and several fabrication features and component interfaces remain incomplete. No purchase or manufacturing release has been issued, and Fusion has not been opened. The working Rev F engineering files remain in the [RevE-ENGINEERING directory](output/release-review/RevE-ENGINEERING/PACKAGE-STATUS.md).
 
 - [Current cost workbook](outputs/reve-30510/CNC-plasma-RevE-budget.xlsx)
 - [Current Rev F concept PDF](output/pdf/plasma-router-stand-concept.pdf)

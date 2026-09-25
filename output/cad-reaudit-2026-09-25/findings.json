@@ -1,0 +1,1491 @@
+{
+  "audit": "Full CAD re-audit",
+  "date": "2026-09-25",
+  "baseline_commit": "554530196701756bd5db9a71d199fd89334f35f1",
+  "status": "NOT RELEASED FOR FABRICATION OR FINAL CAD/CAM",
+  "counts": {
+    "P1": 14,
+    "P2": 15
+  },
+  "findings": [
+    {
+      "id": "BED01",
+      "priority": "P1",
+      "area": "Bed and structure",
+      "title": "The exchange route violates the within-footprint requirement",
+      "classification": "confirmed requirement conflict",
+      "required_action": "Select a mechanically defined in-footprint exchange/storage architecture, or record an explicit user-approved requirement change before treating this as the chosen design. Include support, retention and storage in CAD.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED01",
+        "severity": "high",
+        "title": "The exchange route violates the within-footprint requirement",
+        "evidence_status": "confirmed requirement conflict",
+        "evidence": "The source commands +60 mm Z, -1400 mm Y and then +500 mm Z. The saved moving envelope is Y -1376 to 1326 mm; only X footprint is checked. build_reve_engineering explicitly parks the module outside the machine. The visible user instruction rejects front clearance and requires the swap within the machine footprint. An owner-supplied 567 kg overhead winch is a source assertion, not an established user input.",
+        "impact": "A passing sampled path does not satisfy the selected architecture requirement. The design requires a front corridor and off-machine support/parking that the user rejected.",
+        "required_action": "Select a mechanically defined in-footprint exchange/storage architecture, or record an explicit user-approved requirement change before treating this as the chosen design. Include support, retention and storage in CAD.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/swap-path-checks.py",
+            "lines": [
+              19,
+              20,
+              49,
+              50,
+              70,
+              139,
+              140,
+              141
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/build_reve_engineering.py",
+            "lines": [
+              48,
+              51
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "lines": [
+              31,
+              100,
+              102
+            ]
+          }
+        ],
+        "prior_finding": "M05"
+      }
+    },
+    {
+      "id": "BED02",
+      "priority": "P1",
+      "area": "Bed and structure",
+      "title": "Five deck clamping stations break the MDF support edge",
+      "classification": "confirmed geometry defect",
+      "required_action": "Relocate the five stations to supported bottom-slot centers or redesign the support width; recheck the full washer and pocket footprint against edges, notches and crossmembers, then regenerate both MDF layers and drawings.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED02",
+        "severity": "high",
+        "title": "Five deck clamping stations break the MDF support edge",
+        "evidence_status": "confirmed geometry defect",
+        "evidence": "MDF spans X105.8 to 1044.2. Strip 1 screws at X103.5 and Y176.5/676.5/1176.5 have axes2.3 mm outside the MDF. Strip 10 screws at X1043.5 and Y426.5/926.5 have axes only 0.7 mm inside the right edge (the earlier audit incorrectly said0.9 mm). Their \u00c3\u02dc5.5 holes, \u00c3\u02dc16 underside pockets and \u00c3\u02dc15 washers therefore lack complete seats. All fifty CAD fasteners exist; five complete bearing stations do not.",
+        "impact": "The intended MDF/washer/screw load path is absent or truncated at these stations. Valid B-rep solids and zero interference cannot detect the missing bearing area.",
+        "required_action": "Relocate the five stations to supported bottom-slot centers or redesign the support width; recheck the full washer and pocket footprint against edges, notches and crossmembers, then regenerate both MDF layers and drawings.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/bed_details.py",
+            "lines": [
+              18,
+              22,
+              23,
+              115,
+              119,
+              124,
+              164,
+              166
+            ]
+          }
+        ],
+        "prior_finding": "M01"
+      }
+    },
+    {
+      "id": "BED03",
+      "priority": "P1",
+      "area": "Bed and structure",
+      "title": "The required full-face surfacing operation is outside the tool envelope",
+      "classification": "confirmed process-envelope conflict",
+      "required_action": "Define a feasible machined datum process with fixture and cutter access, change the support/motion placement, or specify external machining from measured final datums. Do not claim weld and ledger errors disappear until the operation is achievable and reinstallation repeatability is checked.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED03",
+        "severity": "high",
+        "title": "The required full-face surfacing operation is outside the tool envelope",
+        "evidence_status": "confirmed process-envelope conflict",
+        "evidence": "The MDF support is X105.8..1044.2/Y76.5..1273.5. The nominal tool center is X175..975/Y121.4..1121.4. Required center overreach margins are 69.2 mm in X,44.9 mm at the front and 152.1 mm at the rear. Reaching a rear outside corner in this unchanged setup would require cutter radius 167.102 mm, before any spindle, clamp or guard collision check. Reface instructions also require removing and reinstalling this surface-dependent module.",
+        "impact": "The proposed datum-making operation cannot be completed over the whole support with normal small-router tooling in the stated setup. Unsurfaced regions would support the extrusion differently.",
+        "required_action": "Define a feasible machined datum process with fixture and cutter access, change the support/motion placement, or specify external machining from measured final datums. Do not claim weld and ledger errors disappear until the operation is achievable and reinstallation repeatability is checked.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/bed_details.py",
+            "lines": [
+              18,
+              135,
+              138,
+              141,
+              210
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "lines": [
+              614,
+              617
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "lines": [
+              35,
+              90,
+              91
+            ]
+          }
+        ],
+        "prior_finding": "M02"
+      }
+    },
+    {
+      "id": "BED04",
+      "priority": "P1",
+      "area": "Bed and structure",
+      "title": "The selected M5 joint still loads the extrusion lips under tightening",
+      "classification": "confirmed incorrect load-path claim",
+      "required_action": "Qualify the actual extrusion/nut/washer/MDF joint for assembly preload, local uplift, shear and creep; issue a controlled fastening method and replacement/reinspection limits. Do not automatically reinstate the prior0.35 N m number without validation.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED04",
+        "severity": "high",
+        "title": "The selected M5 joint still loads the extrusion lips under tightening",
+        "evidence_status": "confirmed incorrect load-path claim",
+        "evidence": "The upward screw head and washer bear under the MDF; the square nut is above the bottom-slot lips at TOP+1.3. Tightening pulls that nut downward against the lips. Both the lips and MDF are in the preload path. The strength screen says the nut loads the lips only under uplift and removes the earlier tightening limit. Snug plus a quarter turn is not a quantified preload; nominal M5 \u00c3\u2014 0.8 advances0.2 mm per quarter turn.",
+        "impact": "Assembly preload may govern this thin-lip/MDF joint. A600 N pull test does not establish a safe uncontrolled tightening method or sustained MDF compression/creep limit.",
+        "required_action": "Qualify the actual extrusion/nut/washer/MDF joint for assembly preload, local uplift, shear and creep; issue a controlled fastening method and replacement/reinspection limits. Do not automatically reinstate the prior0.35 N m number without validation.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/bed_details.py",
+            "lines": [
+              163,
+              164,
+              166,
+              167,
+              168
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/strength-screen.py",
+            "lines": [
+              48,
+              49,
+              50,
+              51,
+              52,
+              54
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "lines": [
+              39
+            ]
+          }
+        ],
+        "prior_finding": "M03"
+      }
+    },
+    {
+      "id": "BED05",
+      "priority": "P1",
+      "area": "Bed and structure",
+      "title": "Four drawdown weldnuts have an unclosed physical attachment detail",
+      "classification": "confirmed nominal separation; actual joint capacity unverified",
+      "required_action": "Detail the actual purchased weldnut, weld/bearing seat and assembly access. Use a compatible hole/seat or a designed bridge plate/boss; specify the weld and qualify local tube-wall load transfer at the chosen preload before releasing the ledger machining.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED05",
+        "severity": "high",
+        "title": "Four drawdown weldnuts have an unclosed physical attachment detail",
+        "evidence_status": "confirmed nominal separation; actual joint capacity unverified",
+        "evidence": "The ledger receives an \u00c3\u02dc18 top-wall pocket. The modeled nut is AF13,6.5 mm tall at Z833.5..840; its maximum corner diameter is 15.011 mm, entirely inside the pocket. Fresh B-rep distance from BED_WELDNUT_1_1 to the ledger is 1.4944465 mm. It therefore has no bearing or contact with parent ledger metal in the model, while notes say weld it below the top wall. The strength screen applies an estimated 7.5 kN preload per M8 and checks only bolt/sleeve stress.",
+        "impact": "The welded nut is the stationary anchor for the removable bed. A gap-bridging weld may be designable, but its preparation, effective throat, load path and compatibility with the selected purchased nut are absent. This is not proof that a properly redesigned weld would fail.",
+        "required_action": "Detail the actual purchased weldnut, weld/bearing seat and assembly access. Use a compatible hole/seat or a designed bridge plate/boss; specify the weld and qualify local tube-wall load transfer at the chosen preload before releasing the ledger machining.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/bed_details.py",
+            "lines": [
+              60,
+              61,
+              62,
+              65,
+              67,
+              68,
+              81,
+              85
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/strength-screen.py",
+            "lines": [
+              44,
+              45,
+              46
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "lines": [
+              37,
+              86
+            ]
+          }
+        ],
+        "prior_finding": null
+      }
+    },
+    {
+      "id": "BED06",
+      "priority": "P1",
+      "area": "Bed and structure",
+      "title": "Locator fits and receiver engagement are not manufacturing-defined",
+      "classification": "confirmed missing fit definition and mislabeled receiver detail",
+      "required_action": "Define a datum/fit scheme, typically one round locator plus a relieved locator or an equivalently justified alternative, with actual bushings if required. Specify machining after welding, positional/height tolerances, lead-in and retention, and measure repeated install flatness.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED06",
+        "severity": "high",
+        "title": "Locator fits and receiver engagement are not manufacturing-defined",
+        "evidence_status": "confirmed missing fit definition and mislabeled receiver detail",
+        "evidence": "Two round \u00c3\u02dc10 pins are spaced 1442.573 mm diagonally. They are to be pressed into nominal \u00c3\u02dc10 rail bores and enter nominal \u00c3\u02dc10.05 ledger holes. No press/sliding fit class, relative position tolerance, match-ream sequence or relieved second locator is specified. The ledger receiver is only the 3.048 mm top wall; no separate bushing is modeled or listed. A6 mm projecting pin therefore has3.048 mm actual wall engagement, not6 mm of bushing support.",
+        "impact": "Weld distortion, location error and relative thermal movement can prevent seating or force the rails away from their intended support. Repeatability and wear cannot be inferred from nominal CAD coordinates. This is a missing verification, not proof that a correctly match-machined two-pin assembly cannot fit.",
+        "required_action": "Define a datum/fit scheme, typically one round locator plus a relieved locator or an equivalently justified alternative, with actual bushings if required. Specify machining after welding, positional/height tolerances, lead-in and retention, and measure repeated install flatness.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/bed_details.py",
+            "lines": [
+              58,
+              62,
+              65,
+              74,
+              86,
+              87,
+              88,
+              89
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "lines": [
+              25,
+              37,
+              86,
+              87,
+              91
+            ]
+          }
+        ],
+        "prior_finding": null
+      }
+    },
+    {
+      "id": "BED07",
+      "priority": "P2",
+      "area": "Bed and structure",
+      "title": "Nominal strip-width tolerance is not absorbed solely at free edges",
+      "classification": "confirmed omission in tolerance analysis",
+      "required_action": "Inspect the actual profile and nut, calculate the cumulative lateral fit, and define independent strip datums, compensated hole locations or designed transverse clearance without weakening bearing seats. Carry the supplier tolerance and water-guard clearance through the check.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED07",
+        "severity": "medium",
+        "title": "Nominal strip-width tolerance is not absorbed solely at free edges",
+        "evidence_status": "confirmed omission in tolerance analysis",
+        "evidence": "Documentation assumes ten butted strips each100 \u00c2\u00b10.2 mm and says width stack is absorbed at free edges. However MDF \u00c3\u02dc5.5 screw holes and spoilboard holes are laid out on exact 100 mm pitch, while nuts move with each bottom/top slot. Nine width increments can shift the last strip origin by \u00c2\u00b11.8 mm relative to the fixed-hole pattern. M5-in-\u00c3\u02dc5.5 clearance alone is only 0.25 mm radial; actual nut/slot lateral freedom must be included rather than assumed. A strip 10 pocket at X1003.5/Y676.5 ends at X1011.5, only 0.5 mm from the notch at X1012.",
+        "impact": "The chosen manufacturing tolerance stack can misalign fasteners or consume a notch bearing margin even after the five edge stations are corrected. The actual vendor tolerance has not been certified.",
+        "required_action": "Inspect the actual profile and nut, calculate the cumulative lateral fit, and define independent strip datums, compensated hole locations or designed transverse clearance without weakening bearing seats. Carry the supplier tolerance and water-guard clearance through the check.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "lines": [
+              29
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MANUFACTURING-HANDOFF.md",
+            "lines": [
+              11
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/bed_details.py",
+            "lines": [
+              23,
+              24,
+              113,
+              115,
+              119,
+              124,
+              153,
+              155,
+              176,
+              177
+            ]
+          }
+        ],
+        "prior_finding": null
+      }
+    },
+    {
+      "id": "BED08",
+      "priority": "P2",
+      "area": "Bed and structure",
+      "title": "The modeled final stack omits the instructed1 mm skim",
+      "classification": "confirmed dimensional inconsistency",
+      "required_action": "Separate rough and final thicknesses, define the finished support plane and remaining reface limit, and propagate those dimensions to screw lengths, nut engagement, work offsets and clearance checks.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED08",
+        "severity": "medium",
+        "title": "The modeled final stack omits the instructed1 mm skim",
+        "evidence_status": "confirmed dimensional inconsistency",
+        "evidence": "CAD uses two finished 12.7 mm layers fromZ895.4 to920.8, then 20 mm extrusion and 19 mm spoilboard. The process removes 1.0 mm from the top layer without initial stock allowance or compensating positions. Following that process produces support Z919.8, bare top 939.8 and spoil top 958.8, one millimeter below the nominal exported planes. A further permitted 1 mm reface changes the stack again.",
+        "impact": "Model workplanes, remaining screw/cavity clearance and fabrication instructions do not describe the same final condition.",
+        "required_action": "Separate rough and final thicknesses, define the finished support plane and remaining reface limit, and propagate those dimensions to screw lengths, nut engagement, work offsets and clearance checks.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/bed_details.py",
+            "lines": [
+              12,
+              18,
+              19,
+              135,
+              138,
+              164,
+              167,
+              193,
+              201,
+              202,
+              210
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "lines": [
+              17,
+              20,
+              21,
+              90
+            ]
+          }
+        ],
+        "prior_finding": "M06"
+      }
+    },
+    {
+      "id": "BED09",
+      "priority": "P2",
+      "area": "Bed and structure",
+      "title": "The stiffness screen is not an upper bound on full machine compliance",
+      "classification": "confirmed unsupported interpretation",
+      "required_action": "Retain the member arithmetic as a limited screening result, remove unsupported bond/bound claims, establish acceptable bed-to-tool deflection, and verify the complete structural loop under representative loads and humidity/reinstallation cycles.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED09",
+        "severity": "medium",
+        "title": "The stiffness screen is not an upper bound on full machine compliance",
+        "evidence_status": "confirmed unsupported interpretation",
+        "evidence": "Fresh nominal section properties are area 612.973813 mm\u00c2\u00b2 and Ixx 27207.732889 mm4. The one crossmember/one strip simple-beam arithmetic gives about0.148 mm/100 N and0.74 mm/500 N, but excludes MDF local compression, contact seating, joint rotation and whole-frame/tool compliance. The screen credits strips bonded to MDF; the model specifies screws and glue only between the MDF layers. Continuous contact between unmachined rail/ledger surfaces is also an idealization, not a verified bearing condition.",
+        "impact": "The statement that actual displacement is substantially lower or bounded by this sum is unsupported. Static strength, stiffness, accuracy and repeatability are separate properties.",
+        "required_action": "Retain the member arithmetic as a limited screening result, remove unsupported bond/bound claims, establish acceptable bed-to-tool deflection, and verify the complete structural loop under representative loads and humidity/reinstallation cycles.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/strength-screen.py",
+            "lines": [
+              27,
+              28,
+              32,
+              33,
+              37,
+              38,
+              39,
+              40,
+              43,
+              89
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/bed_details.py",
+            "lines": [
+              77,
+              79,
+              129,
+              136
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "lines": [
+              35,
+              53,
+              54,
+              61,
+              63
+            ]
+          }
+        ],
+        "prior_finding": "M07"
+      }
+    },
+    {
+      "id": "BED10",
+      "priority": "P2",
+      "area": "Bed and structure",
+      "title": "TEK restraint and pull-through are not qualified for the actual assembly",
+      "classification": "confirmed arithmetic error; strength verification open",
+      "required_action": "Select the exact screw and characterize its joint in the actual tube/MDF stack for pullout, head pull-through and assembly stripping, including representative local clamp loads. Correct the pitch arithmetic and retain a realistic load path.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED10",
+        "severity": "medium",
+        "title": "TEK restraint and pull-through are not qualified for the actual assembly",
+        "evidence_status": "confirmed arithmetic error; strength verification open",
+        "evidence": "A #12-14 screw has nominal pitch25.4/14=1.814286 mm; a 3.048 mm wall spans 1.68 nominal pitches, not 1.1. Effective formed engagement still depends on the selected drill point and thread geometry. The screen calls TEKs registration only, although router clamp/uplift reactions pass from strip to MDF and then require restraint to the steel ladder. Sixteen screws are modeled; their published pullout/pull-through and the glued MDF connection are not established.",
+        "impact": "Counting nominal wall pitches or deadweight compression does not qualify local uplift, shear, MDF crushing or preload retention.",
+        "required_action": "Select the exact screw and characterize its joint in the actual tube/MDF stack for pullout, head pull-through and assembly stripping, including representative local clamp loads. Correct the pitch arithmetic and retain a realistic load path.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/bed_details.py",
+            "lines": [
+              117,
+              118,
+              131,
+              142,
+              143,
+              144,
+              147
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/strength-screen.py",
+            "lines": [
+              50,
+              52,
+              53,
+              54
+            ]
+          }
+        ],
+        "prior_finding": "M08"
+      }
+    },
+    {
+      "id": "BED11",
+      "priority": "P1",
+      "area": "Bed and structure",
+      "title": "The sling and support system is outside the collision and load analysis",
+      "classification": "confirmed missing verification",
+      "required_action": "After resolving the footprint architecture, define a lifting-rated device, support/parking mechanism, actual rigging and credible unequal sharing; verify ear/weld/anchor loads and sweep the full rigging envelope. Weigh the finished module and include an operating stability/load case.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED11",
+        "severity": "high",
+        "title": "The sling and support system is outside the collision and load analysis",
+        "evidence_status": "confirmed missing verification",
+        "evidence": "The saved path excludes sling legs, hook, track, anchorage and off-machine support. At 87 kg, four equal vertical reactions are 213 N each; a two-leg share is 427 N per leg before sling angle or dynamic effects. With a central hook 1.2 m above ears and roughly 815 mm horizontal corner reach, equal four-leg tension is about 258 N and two-leg tension about 516 N. End ears are plates in XZ, so fore-aft sling forces bend them out of plane. The source claim that each ear sees under 300 N assumes favorable sharing.",
+        "impact": "A 567 kg/87 kg ratio is a component nameplate ratio, not a complete lifting system margin. No evidence establishes the assumed winch or that it is suitable to hold a suspended bed. Rigging can also collide when the rigid module solids do not.",
+        "required_action": "After resolving the footprint architecture, define a lifting-rated device, support/parking mechanism, actual rigging and credible unequal sharing; verify ear/weld/anchor loads and sweep the full rigging envelope. Weigh the finished module and include an operating stability/load case.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/bed_details.py",
+            "lines": [
+              95,
+              98,
+              100,
+              102,
+              208
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/strength-screen.py",
+            "lines": [
+              55,
+              56
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/swap-path-checks.py",
+            "lines": [
+              127,
+              129,
+              156,
+              159
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "lines": [
+              98,
+              100,
+              102
+            ]
+          }
+        ],
+        "prior_finding": "M10"
+      }
+    },
+    {
+      "id": "BED12",
+      "priority": "P2",
+      "area": "Bed and structure",
+      "title": "Sampled positive-volume checks do not certify tolerance or continuous clearance",
+      "classification": "confirmed verification limitation",
+      "required_action": "Define and check a swept-volume or justified adaptive clearance analysis for all retained hardware and attachments, include uncertainty margins and the actual footprint, and then verify physical clearances during commissioning.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED12",
+        "severity": "medium",
+        "title": "Sampled positive-volume checks do not certify tolerance or continuous clearance",
+        "evidence_status": "confirmed verification limitation",
+        "evidence": "The saved path has 92 poses and 22 actual-solid checks, with source hashes matching current files. It samples the initial lift at 5 mm and translations/hoist at 25 mm, ignores intersections<=0.02 mm\u00c2\u00b3 and enforces X limits only. Reported narrow nominal clearances include 7.3 mm over float backrails and 10 mm under guide shoes; no fabrication, deformation, cable or rigging envelope is included. The result is honestly labeled PASS SAMPLED PATH but cannot clear these excluded requirements.",
+        "impact": "Intermediate contact, protrusions or tolerance accumulation can remain undetected. A fresh identical nominal run would not close the missing physical clearances.",
+        "required_action": "Define and check a swept-volume or justified adaptive clearance analysis for all retained hardware and attachments, include uncertainty margins and the actual footprint, and then verify physical clearances during commissioning.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/swap-path-checks.py",
+            "lines": [
+              49,
+              50,
+              91,
+              104,
+              113,
+              114,
+              127,
+              129,
+              139,
+              140,
+              141
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "lines": [
+              77,
+              96,
+              100
+            ]
+          }
+        ],
+        "prior_finding": null
+      }
+    },
+    {
+      "id": "BED13",
+      "priority": "P2",
+      "area": "Bed and structure",
+      "title": "Lifting mass has inconsistent estimation bases",
+      "classification": "confirmed bookkeeping discrepancy, not an overweight finding",
+      "required_action": "Use one explicit mass basis, correct the washer density classification, include additions/uncertainty and compute center of gravity for the selected rigging. Replace the estimate with a weighed value before use.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED13",
+        "severity": "medium",
+        "title": "Lifting mass has inconsistent estimation bases",
+        "evidence_status": "confirmed bookkeeping discrepancy, not an overweight finding",
+        "evidence": "The manifest gives 87.0 kg using selected steel/MDF/aluminum solids plus 2.5 kg allowance; saved path gives 85.10 kg using all MOD_* nominal solids and material-name density mapping. The path incorrectly treats material containing fender as aluminum. Fresh component sum with the M5 fender washers treated as steel is about 85.16 kg. Neither includes real weld metal, glue, coating or measured hardware variations; no verified center of gravity is recorded.",
+        "impact": "The difference is small but the differing values and claimed lifting margin should not be presented as a single verified mass or load distribution.",
+        "required_action": "Use one explicit mass basis, correct the washer density classification, include additions/uncertainty and compute center of gravity for the selected rigging. Replace the estimate with a weighed value before use.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/bed_details.py",
+            "lines": [
+              197,
+              198,
+              199,
+              200,
+              206,
+              207
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/swap-path-checks.py",
+            "lines": [
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "lines": [
+              102
+            ]
+          }
+        ],
+        "prior_finding": null
+      }
+    },
+    {
+      "id": "BED14",
+      "priority": "P2",
+      "area": "Bed and structure",
+      "title": "Frame and pan support assumptions do not define a released structural rating",
+      "classification": "confirmed scope gap in strength verification",
+      "required_action": "Define the actual mass/load envelope and performance targets; evaluate complete operating cases and load transfer through welds, feet, pan bearers and frame, then measure tool-to-bed deflection and repeatability. Keep the documented sand limitation.",
+      "status": "OPEN",
+      "report": "bed-structure.md",
+      "evidence": {
+        "id": "BED14",
+        "severity": "medium",
+        "title": "Frame and pan support assumptions do not define a released structural rating",
+        "evidence_status": "confirmed scope gap in strength verification",
+        "evidence": "The screen assumes 650 kg gross machine mass, a 200 kg pan/slat/stock case, 200 kg tank support, 25 kg workstock and 100 N cutting force without a measured load inventory or user-approved performance target. Six feet with all pads touching do not alone prove a worst reaction of exactly one third of total weight; reactions depend on load placement, floor and frame compliance. Ideal brace buckling and simple beam checks omit welded joint behavior, frame racking, floor/anchors, dynamic cutting and tolerance-induced contact.",
+        "impact": "These are useful preliminary cases, but they do not certify rigidity, load capacity or accuracy for every operating configuration. Filling tubes with sand adds mass/damping rather than a demonstrated elastic stiffness increase.",
+        "required_action": "Define the actual mass/load envelope and performance targets; evaluate complete operating cases and load transfer through welds, feet, pan bearers and frame, then measure tool-to-bed deflection and repeatability. Keep the documented sand limitation.",
+        "sources": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/strength-screen.py",
+            "lines": [
+              24,
+              27,
+              28,
+              29,
+              41,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              64,
+              65,
+              66,
+              67,
+              89
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/frame_details.py",
+            "lines": [
+              27,
+              33,
+              38,
+              40,
+              43,
+              53,
+              58,
+              67,
+              80,
+              97,
+              105,
+              106
+            ]
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "lines": [
+              65,
+              67
+            ]
+          }
+        ],
+        "prior_finding": null
+      }
+    },
+    {
+      "id": "MT01",
+      "priority": "P1",
+      "area": "Motion and tools",
+      "title": "Adapter front counter-slots are rotated 90 degrees in the delivered DXF",
+      "classification": "confirmed manufacturing defect",
+      "required_action": "Carry the slot angle in non-through operation metadata, rotate operation geometry in write_dxf, regenerate adapter STEP/DXF/operations, and compare the recess orientations and depths explicitly.",
+      "status": "OPEN",
+      "report": "motion-tools.md",
+      "evidence": {
+        "id": "MT01",
+        "priority": "P1",
+        "kind": "confirmed manufacturing defect",
+        "title": "Adapter front counter-slots are rotated 90 degrees in the delivered DXF",
+        "evidence": "motion_details.py makes each front recess with slot2D(30,11,90), so the recess must be vertical in local XY. Its operation record omits angle, and cad_helpers.write_dxf emits every operation-slot horizontally. Fresh ezdxf extents show the first recess spans X5..35/Y39.5..50.5, whereas the solid recess requires X14.5..25.5/Y30..60; the second spans X75..105 instead of X84.5..95.5. Through-slots are correctly vertical.",
+        "impact": "Following the supplied milling-operation DXF will cut recesses across the adapter instead of along its carriage adjustment slots, leaving unrecessed screw positions and removing different material. The generic DXF syntax/audit pass cannot detect this.",
+        "action": "Carry the slot angle in non-through operation metadata, rotate operation geometry in write_dxf, regenerate adapter STEP/DXF/operations, and compare the recess orientations and depths explicitly.",
+        "references": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 543
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 550
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 553
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/cad_helpers.py",
+            "line": 111
+          }
+        ]
+      }
+    },
+    {
+      "id": "MT02",
+      "priority": "P1",
+      "area": "Motion and tools",
+      "title": "Exported torch-clamp halves do not contain their claimed fastening features",
+      "classification": "confirmed incomplete manufactured geometry",
+      "required_action": "Define the actual owned torch barrel/insulated clamping zone from measurement or its exact drawing, design and model both clamp halves and every fastening operation, prove the installed orientation, and guard the incomplete parts until that is done.",
+      "status": "OPEN",
+      "report": "motion-tools.md",
+      "evidence": {
+        "id": "MT02",
+        "priority": "P1",
+        "kind": "confirmed incomplete manufactured geometry",
+        "title": "Exported torch-clamp halves do not contain their claimed fastening features",
+        "evidence": "tool_parking.py creates each half with one cylindrical subtraction only. Importing TORCH_SPLIT_CLAMP_REAR.step and FRONT.step confirms one radius14 cylindrical trough on local Y, with no M6 mounting bores or pinch bores. The rear stock is110x45.25x40 and front110x44.75x40. Both trough axes are at localX55/Z40 on the upper stock face; no installed assembly transform defines how those two open troughs become the claimed spindle-compatible clamp. Notes nonetheless specify four M6 mounting holes and two M6x60 pinch screws.",
+        "impact": "The provided solids cannot be fabricated into the described bolted clamp without redesign/missing operations. These parts are exported with ordinary engineering status, rather than being guarded incomplete purchased interfaces. The user-reported VIV ARC CUT-50 and a similar AG-60 listing do not verify an exact27.9mm owned barrel diameter.",
+        "action": "Define the actual owned torch barrel/insulated clamping zone from measurement or its exact drawing, design and model both clamp halves and every fastening operation, prove the installed orientation, and guard the incomplete parts until that is done.",
+        "references": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/tool_parking.py",
+            "line": 33
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/tool_parking.py",
+            "line": 34
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/tool_parking.py",
+            "line": 37
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 600
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/cad_helpers.py",
+            "line": 166
+          }
+        ]
+      }
+    },
+    {
+      "id": "MT03",
+      "priority": "P1",
+      "area": "Motion and tools",
+      "title": "Plasma setup CAD has no installed plasma cutting tool",
+      "classification": "confirmed configuration omission",
+      "required_action": "Create the real plasma-tool assembly and a distinct installed plasma configuration with its measured nozzle datum, mount, floating/breakaway mechanism and cable envelope; then verify travel and state transitions.",
+      "status": "OPEN",
+      "report": "motion-tools.md",
+      "evidence": {
+        "id": "MT03",
+        "priority": "P1",
+        "kind": "confirmed configuration omission",
+        "title": "Plasma setup CAD has no installed plasma cutting tool",
+        "evidence": "export_states.plasma_model removes MOD_* bed parts and parks TOOL_SPINDLE_65x259, but otherwise retains the router head and its65mm split clamp. Both TORCH_CLAMP halves remain on the tank lid. The saved RevE_PLASMA_SETUP validation inventory agrees. There is no torch body, nozzle/tip datum, installed28mm clamp, float/breakaway stack, gas lead or torch cable envelope in this state.",
+        "impact": "A zero-intersection plasma setup result only verifies the bed-conversion display. It cannot verify plasma cut reach, torch-to-slat/float-bracket clearance, pierce/retract height, touch-off, or the tool-change geometry.",
+        "action": "Create the real plasma-tool assembly and a distinct installed plasma configuration with its measured nozzle datum, mount, floating/breakaway mechanism and cable envelope; then verify travel and state transitions.",
+        "references": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/export_states.py",
+            "line": 27
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/export_states.py",
+            "line": 35
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/export_states.py",
+            "line": 42
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 559
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/tool_parking.py",
+            "line": 39
+          }
+        ]
+      }
+    },
+    {
+      "id": "MT04",
+      "priority": "P2",
+      "area": "Motion and tools",
+      "title": "The 22 stored motion clashes come from an unraised cap fixture",
+      "classification": "confirmed verification-fixture defect; physical-collision claim disproved for these pairs",
+      "required_action": "Make the test share the assembled cap datum before hole generation and regenerate its report/prose from actual results. Do not waive the overlaps or translate already-drilled caps, which moves the holes to the wrong height.",
+      "status": "OPEN",
+      "report": "motion-tools.md",
+      "evidence": {
+        "id": "MT04",
+        "priority": "P2",
+        "kind": "confirmed verification-fixture defect; physical-collision claim disproved for these pairs",
+        "title": "The 22 stored motion clashes come from an unraised cap fixture",
+        "evidence": "geometry_base defines caps atZ1050. Integrated make_frame raises them6mm before make_motion cuts the stop holes. check_motion_states omits make_frame and therefore checks caps6mm too low. All22 saved pairs involve those caps: two datum overlaps63800mm3 each, four guide-block overlaps6432.5mm3 each, eight cap-bolt overlaps141.37167mm3 each and eight nuts285.70342mm3 each. Fresh checks using caps initiallyZ1056, then the unchanged make_motion, pass all five original states:295 valid parts/state,0 unresolved overlaps,0 local/world volume mismatches. There are54 explicitly permitted overlaps/state.",
+        "impact": "The committed standalone test is genuinely failing, but those22 clashes are not evidence of physical collisions in the assembled geometry. MOTION-VERIFICATION.md also carries obsolete291-part zero-clash prose.",
+        "action": "Make the test share the assembled cap datum before hole generation and regenerate its report/prose from actual results. Do not waive the overlaps or translate already-drilled caps, which moves the holes to the wrong height.",
+        "references": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/geometry_base.py",
+            "line": 135
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/frame_details.py",
+            "line": 23
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/check_motion_states.py",
+            "line": 29
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 74
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MOTION-VERIFICATION.md",
+            "line": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "MT05",
+      "priority": "P1",
+      "area": "Motion and tools",
+      "title": "Z output attachment is provisional and its slot/thread claims are not sufficient to choose hardware",
+      "classification": "confirmed release hold plus unsupported fastening instructions",
+      "required_action": "Resolve a measured or supplier-approved mating drawing; specify the exact hole type, number of bolts, washers/nuts and engagement, and revise the slot claim and provisional adapter. Preserve the hold until the joint has a defined load path.",
+      "status": "OPEN",
+      "report": "motion-tools.md",
+      "evidence": {
+        "id": "MT05",
+        "priority": "P1",
+        "kind": "confirmed release hold plus unsupported fastening instructions",
+        "title": "Z output attachment is provisional and its slot/thread claims are not sufficient to choose hardware",
+        "evidence": "The adapter has two7x30 vertical slots70mm apart and only two M6x16 screws, both at localY45. The note claims these cover15..45mm along-travel hole pitches, but a30mm-long slot cannot span two45mm-separated rows. For a centered6mm shank, the available center travel in that7x30 slot is approximately24mm. The note also proposes M6 screws into a diameter7 hole if tappedM6: a true7mm existing bore has no material to form a6mm-major-diameter internal thread. A through-bolt/nut solution is possible in principle, but carriage thickness, rear access, engagement and screw length remain unverified. The source explicitly leaves the Z base slots, output plane height and longitudinal pattern unresolved.",
+        "impact": "The listed screw/nut alternatives and15..45mm claim must not be treated as a manufacturing specification. Two modeled bolt axes do not establish actual supplier hole fit or joint capacity.",
+        "action": "Resolve a measured or supplier-approved mating drawing; specify the exact hole type, number of bolts, washers/nuts and engagement, and revise the slot claim and provisional adapter. Preserve the hold until the joint has a defined load path.",
+        "references": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 538
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 543
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 546
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 548
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 555
+          }
+        ]
+      }
+    },
+    {
+      "id": "MT06",
+      "priority": "P1",
+      "area": "Motion and tools",
+      "title": "HMS/HGR/Z mounting and power-off Z retention are still unresolved",
+      "classification": "confirmed open design interfaces",
+      "required_action": "Close exact supplier/measured interfaces, select the Z retention arrangement and its attachments, add its envelope and release criteria, and complete Z limits/homing before freezing the CAD.",
+      "status": "OPEN",
+      "report": "motion-tools.md",
+      "evidence": {
+        "id": "MT06",
+        "priority": "P1",
+        "kind": "confirmed open design interfaces",
+        "title": "HMS/HGR/Z mounting and power-off Z retention are still unresolved",
+        "evidence": "The source guards the HGR20 rail-hole pattern, HMS40 bottom-slot nut cavity/base fastening and endpoint datum, motor current/torque/cable outlet, and ZBX80 base/output geometry. No normally engaged brake or counterbalance is selected or represented. X/Y stops and three home switches are modeled; the Z home bracket and Z travel stops are not. The nominal100mm Z travel assertion is not a restraint or limit design.",
+        "impact": "The purchased modules cannot yet be ordered with a complete verified attachment package, and the suspended tool is not released for powered commissioning or a power-loss condition.",
+        "action": "Close exact supplier/measured interfaces, select the Z retention arrangement and its attachments, add its envelope and release criteria, and complete Z limits/homing before freezing the CAD.",
+        "references": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 364
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 494
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 524
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 604
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 605
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 606
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 607
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 609
+          }
+        ]
+      }
+    },
+    {
+      "id": "MT07",
+      "priority": "P2",
+      "area": "Motion and tools",
+      "title": "Travel and service checks omit operational cutters, leads and dual-Y skew",
+      "classification": "confirmed validation coverage limitation; no new physical collision asserted",
+      "required_action": "Define actual cutting-tool and plasma-tip datums and permissible stickout/workholding, include leads/covers, then extend the full-machine checks to the completed operational assemblies, continuous/swept motion and a bounded dual-Y squaring/skew scenario. Keep the test scope visible.",
+      "status": "OPEN",
+      "report": "motion-tools.md",
+      "evidence": {
+        "id": "MT07",
+        "priority": "P2",
+        "kind": "confirmed validation coverage limitation; no new physical collision asserted",
+        "title": "Travel and service checks omit operational cutters, leads and dual-Y skew",
+        "evidence": "make_motion accepts one common gantry_y, so both Y sides always move together; neither the five corrected motion-subsystem states nor the nine fresh full-machine router poses exercise independent-Y homing/skew or a stalled-side condition. The parent check_full_machine_poses.py checked all eight nominal X/Y/Z travel-box corners plus center, with 967 valid solids and zero unresolved intersections in every pose (full-machine-poses.json). The spindle is a 65 x 259 mm cylinder with an explicitly assumed body/tip reference; no collet, cutting bit or workholding/toolpath envelope is installed. Cable chains, connector projections, hose bend radii and way covers are explicit remaining holds.",
+        "impact": "The nine full-machine router poses establish sampled static clearance for the represented solids. Nominal X800/Y1000/Z100 and those poses cannot certify continuous clearance, usable machining volume with actual tools/workpieces, service access, operational plasma geometry or auto-squaring behavior.",
+        "action": "Define actual cutting-tool and plasma-tip datums and permissible stickout/workholding, include leads/covers, then extend the full-machine checks to the completed operational assemblies, continuous/swept motion and a bounded dual-Y squaring/skew scenario. Keep the test scope visible.",
+        "references": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 356
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 357
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 561
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 564
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 608
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "line": 609
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/check_motion_states.py",
+            "line": 17
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/check_motion_states.py",
+            "line": 43
+          },
+          {
+            "file": "output/cad-reaudit-2026-09-25/full-machine-poses.json",
+            "line": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "FW-01",
+      "priority": "P1",
+      "area": "Frame, water and packaging",
+      "title": "Selected water hardware and its complete service route are missing from the CAD",
+      "classification": "confirmed_incomplete_CAD_interface",
+      "required_action": "Use verified selected valve/pump/strainer envelopes and connection datums; model supported gravity plumbing, hose bend envelopes, the anti-siphon discharge and removal spaces. Include an installation drawing with fitting/thread types and receipt-selected nipple lengths. Do not invent supplier dimensions.",
+      "status": "OPEN",
+      "report": "frame-water-packaging.md",
+      "evidence": {
+        "id": "FW-01",
+        "priority": "P1",
+        "classification": "confirmed_incomplete_CAD_interface",
+        "title": "Selected water hardware and its complete service route are missing from the CAD",
+        "detail": "The pan and tank fabricate real pipe stubs, but the selected motorized valve, reducers, union, strainer, hoses, pipe supports and elevated refill outlet are not modeled. Even the 125 mm valve clearance cube requested by WATER-CONTROL is absent. The CAD therefore does not verify the drain-to-basket route, valve actuator access, filter-bowl removal, hose bends, or the specified 25 mm refill air gap. Pump geometry is explicitly a family envelope with unverified port datums. This is an acknowledged incomplete interface, not a claim those parts cannot fit.",
+        "quantified_evidence": {
+          "pan_drain_neck_lower_z_mm": 693.3981523961902,
+          "basket_splash_cover_top_z_mm": 436.596,
+          "available_vertical_separation_before_selected_hardware_mm": 256.8021523961902,
+          "cleanout_neck_to_rear_shelf_crossmember_mm": 10.049999999999955,
+          "required_refill_outlet_min_z_if_pan_rim_limits_surface_mm": 860.0
+        },
+        "repair": "Use verified selected valve/pump/strainer envelopes and connection datums; model supported gravity plumbing, hose bend envelopes, the anti-siphon discharge and removal spaces. Include an installation drawing with fitting/thread types and receipt-selected nipple lengths. Do not invent supplier dimensions.",
+        "evidence": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+            "start_line": 29,
+            "end_line": 34,
+            "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+            "start_line": 83,
+            "end_line": 92,
+            "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+            "start_line": 132,
+            "end_line": 139,
+            "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/water_accessories.py",
+            "start_line": 29,
+            "end_line": 35,
+            "sha256": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/WATER-CONTROL.md",
+            "start_line": 35,
+            "end_line": 41,
+            "sha256": "750b88ce9947fab0fa7a72fd765df975c50d7735bb59872716e9b1c49d42458c"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/WATER-CONTROL.md",
+            "start_line": 98,
+            "end_line": 102,
+            "sha256": "750b88ce9947fab0fa7a72fd765df975c50d7735bb59872716e9b1c49d42458c"
+          }
+        ]
+      }
+    },
+    {
+      "id": "FW-02",
+      "priority": "P2",
+      "area": "Frame, water and packaging",
+      "title": "Cabinet stringers claim predrilled clearance holes but export as plain tubes",
+      "classification": "confirmed_manufacturing_geometry_defect",
+      "required_action": "Cut the two through-clearance holes into each stringer solid and individual export, add their local dimensions to fabrication operations, and narrow/remove the exception once the clearance is real. Retain the separate intentional self-drilling penetration in the bearer wall.",
+      "status": "OPEN",
+      "report": "frame-water-packaging.md",
+      "evidence": {
+        "id": "FW-02",
+        "priority": "P2",
+        "classification": "confirmed_manufacturing_geometry_defect",
+        "title": "Cabinet stringers claim predrilled clearance holes but export as plain tubes",
+        "detail": "CAB_STRINGER creation makes only the hollow rectangular section. The fixed screw stations at world Y213.4 and Y687.6 do not cut holes. Positive screw-to-stringer intersections are explicitly permitted with the reason that the holes are predrilled. Consequently the individual stringer STEP has no required clearance holes, although these holes are not vendor-dependent.",
+        "quantified_evidence": {
+          "stringer_length_mm": 499.2,
+          "required_hole_diameter_mm": 5.5,
+          "local_hole_x_mm": 12.7,
+          "local_hole_y_mm": [
+            12.6,
+            486.8
+          ],
+          "holes_per_stringer_through_both_walls": 2,
+          "stringers": 2,
+          "actual_volume_mm3": 98050.4134471679,
+          "unperforated_tube_volume_mm3": 98050.41344716802,
+          "one_screw_intersection_mm3": 100.17447268850984
+        },
+        "repair": "Cut the two through-clearance holes into each stringer solid and individual export, add their local dimensions to fabrication operations, and narrow/remove the exception once the clearance is real. Retain the separate intentional self-drilling penetration in the bearer wall.",
+        "evidence": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/controls_packaging.py",
+            "start_line": 25,
+            "end_line": 36,
+            "sha256": "1eef72a5cb40c433e505f146e553370a6d9658f63803d74ad9b58f605f37a110"
+          }
+        ]
+      }
+    },
+    {
+      "id": "FW-03",
+      "priority": "P2",
+      "area": "Frame, water and packaging",
+      "title": "Drip-cap flat pattern does not define the instructed folded part",
+      "classification": "confirmed_manufacturing_definition_incomplete",
+      "required_action": "Choose the actual folded cap geometry and attachment, model the installed folded shape, then supply a developed flat with bend lines, radii, bend allowance and corner reliefs. Check door swing and lifting/removal using the selected enclosure.",
+      "status": "OPEN",
+      "report": "frame-water-packaging.md",
+      "evidence": {
+        "id": "FW-03",
+        "priority": "P2",
+        "classification": "confirmed_manufacturing_definition_incomplete",
+        "title": "Drip-cap flat pattern does not define the instructed folded part",
+        "detail": "CAB_DRIP_CAP is one flat rectangle, with no bend lines, bend radii, developed allowance or corner reliefs. Its notes require 12 mm down-turned hems on both 436.4 mm edges and a 20 mm front drip hem; the front long edge is not distinguished from the two long-edge hems. The modeled sheet cannot verify the folded fit over the enclosure or the hook/door clearances. This is not a production-ready sheet-metal flat.",
+        "quantified_evidence": {
+          "flat_rectangle_mm": [
+            436.4,
+            233.2,
+            1.5
+          ],
+          "enclosure_top_mm": [
+            406.4,
+            203.2
+          ],
+          "nominal_flat_sheet_z_mm": [
+            673.5,
+            675.0
+          ],
+          "cabinet_top_z_mm": 673.0,
+          "door_top_to_bearer_bottom_projection_mm": 6.2
+        },
+        "repair": "Choose the actual folded cap geometry and attachment, model the installed folded shape, then supply a developed flat with bend lines, radii, bend allowance and corner reliefs. Check door swing and lifting/removal using the selected enclosure.",
+        "evidence": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/controls_packaging.py",
+            "start_line": 15,
+            "end_line": 23,
+            "sha256": "1eef72a5cb40c433e505f146e553370a6d9658f63803d74ad9b58f605f37a110"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/controls_packaging.py",
+            "start_line": 56,
+            "end_line": 71,
+            "sha256": "1eef72a5cb40c433e505f146e553370a6d9658f63803d74ad9b58f605f37a110"
+          }
+        ]
+      }
+    },
+    {
+      "id": "FW-04",
+      "priority": "P2",
+      "area": "Frame, water and packaging",
+      "title": "Reservoir lid removal has no demonstrated route past the rear brace",
+      "classification": "confirmed_collision_for_tested_service_motion_other_routes_unverified",
+      "required_action": "Define and collision-check a practical washout service sequence with lid-mounted equipment, cable/hose disconnects and handling clearance. If that needs pan removal, state it. Otherwise introduce a suitable service hatch or a structurally justified removable obstruction, then rerun the assembled route.",
+      "status": "OPEN",
+      "report": "frame-water-packaging.md",
+      "evidence": {
+        "id": "FW-04",
+        "priority": "P2",
+        "classification": "confirmed_collision_for_tested_service_motion_other_routes_unverified",
+        "title": "Reservoir lid removal has no demonstrated route past the rear brace",
+        "detail": "The tank is described as having a removable cover for washout, but no cover-removal motion is checked. Even a simplified bare lid shifted 100 mm rearward intersects the fixed rear diagonal. A second probe, 60 mm rearward with 15 mm lift, also intersects it. These tests reject those simple routes only; they do not prove every hand-service maneuver impossible. The real cover also carries a welded vent, pump supports, tool cradles and a hardware tray, so a full service sequence must identify what is disconnected or removed.",
+        "quantified_evidence": {
+          "lid_plan_mm": [
+            966.096,
+            666.096
+          ],
+          "lid_as_installed_z_mm": [
+            430.048,
+            433.096
+          ],
+          "bare_lid_translation_1_mm": [
+            0,
+            100,
+            0
+          ],
+          "rear_brace_intersection_1_mm3": 1053.8258022024581,
+          "bare_lid_translation_2_mm": [
+            0,
+            60,
+            15
+          ],
+          "rear_brace_intersection_2_mm3": 1053.825802202438,
+          "basket_lift100_probe_clashes": 0
+        },
+        "repair": "Define and collision-check a practical washout service sequence with lid-mounted equipment, cable/hose disconnects and handling clearance. If that needs pan removal, state it. Otherwise introduce a suitable service hatch or a structurally justified removable obstruction, then rerun the assembled route.",
+        "evidence": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/frame_details.py",
+            "start_line": 59,
+            "end_line": 65,
+            "sha256": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+            "start_line": 94,
+            "end_line": 117,
+            "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+            "start_line": 119,
+            "end_line": 131,
+            "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/water_accessories.py",
+            "start_line": 10,
+            "end_line": 35,
+            "sha256": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/tool_parking.py",
+            "start_line": 6,
+            "end_line": 29,
+            "sha256": "77bc83b4f618e5055d490568f30c57ba50a53c3c150165fd39a3572090f67c08"
+          }
+        ]
+      }
+    },
+    {
+      "id": "FW-05",
+      "priority": "P2",
+      "area": "Frame, water and packaging",
+      "title": "Drained-level guard has only 0.672 mm clearance to the pan floor",
+      "classification": "confirmed_small_nominal_clearance_requires_tolerance_verification",
+      "required_action": "Allocate a minimum as-built/debris clearance and adjust the guard or sensor arrangement accordingly. Preserve adequate adjustment travel and wet-calibrate the resulting drained threshold and delay. Check access for cleaning the narrow gap.",
+      "status": "OPEN",
+      "report": "frame-water-packaging.md",
+      "evidence": {
+        "id": "FW-05",
+        "priority": "P2",
+        "classification": "confirmed_small_nominal_clearance_requires_tolerance_verification",
+        "title": "Drained-level guard has only 0.672 mm clearance to the pan floor",
+        "detail": "The PAN_EMPTY guard is nominally collision-free, but its floor sits less than 0.7 mm above the sloped welded pan at the closest point. No guard/floor fabrication, flatness, welding or debris tolerance is allocated. The wet-calibrated float is not a bone-dry detector, and raising this carrier changes its trip relation. A zero-interference result alone is insufficient to release this near-floor guard.",
+        "quantified_evidence": {
+          "minimum_CAD_distance_mm": 0.6718140139488296,
+          "guard_floor_bounds_mm": [
+            978,
+            1177,
+            740,
+            1014,
+            1217,
+            741
+          ],
+          "sensor_body_bottom_z_mm": 742,
+          "carrier_mount_z_mm": 802
+        },
+        "repair": "Allocate a minimum as-built/debris clearance and adjust the guard or sensor arrangement accordingly. Preserve adequate adjustment travel and wet-calibrate the resulting drained threshold and delay. Check access for cleaning the narrow gap.",
+        "evidence": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+            "start_line": 7,
+            "end_line": 11,
+            "sha256": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+            "start_line": 32,
+            "end_line": 46,
+            "sha256": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+            "start_line": 58,
+            "end_line": 60,
+            "sha256": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+            "start_line": 10,
+            "end_line": 20,
+            "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+          }
+        ]
+      }
+    },
+    {
+      "id": "FW-06",
+      "priority": "P2",
+      "area": "Frame, water and packaging",
+      "title": "Pan guards are outside center travel but very close to its right edge",
+      "classification": "tool_and_stock_envelope_verification_required",
+      "required_action": "Integrate the selected torch/nozzle/clamp and stock envelopes in plasma operating states. Define any reduced usable cut region or relocate guards outside the complete envelope; do not equate center travel with clear tool clearance.",
+      "status": "OPEN",
+      "report": "frame-water-packaging.md",
+      "evidence": {
+        "id": "FW-06",
+        "priority": "P2",
+        "classification": "tool_and_stock_envelope_verification_required",
+        "title": "Pan guards are outside center travel but very close to its right edge",
+        "detail": "The pan guard floor begins at X978, only 3 mm outside the nominal X975 rightmost tool-center location. Pan guards and carriers extend through the Z850 slat/work plane. The instruction to remove assemblies for overhanging sheet acknowledges one conflict, but there is no verified complete plasma torch, clamp, lead or intended-stock envelope proving the remaining cutting range. This audit does not assert a torch collision because the actual cutter/torch interface is not established.",
+        "quantified_evidence": {
+          "nominal_rightmost_tool_center_x_mm": 975,
+          "nearest_guard_x_mm": 978,
+          "centerline_only_margin_mm": 3,
+          "pan_min_guard_z_mm": [
+            798,
+            860
+          ],
+          "pan_hh_guard_z_mm": [
+            815,
+            877
+          ],
+          "slat_top_z_mm": 850
+        },
+        "repair": "Integrate the selected torch/nozzle/clamp and stock envelopes in plasma operating states. Define any reduced usable cut region or relocate guards outside the complete envelope; do not equate center travel with clear tool clearance.",
+        "evidence": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+            "start_line": 7,
+            "end_line": 18,
+            "sha256": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/sensor_mounts.py",
+            "start_line": 40,
+            "end_line": 60,
+            "sha256": "73521eb665d8887a6df48fe21a53630a6c29aeb14e74952bb55fa3c84a53ff05"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/water_system.py",
+            "start_line": 65,
+            "end_line": 67,
+            "sha256": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+            "start_line": 595,
+            "end_line": 609,
+            "sha256": "0d3ab505d0ccdb6d4863c89fb6f95f562a90fd7771ba1549115a7c945442bfb9"
+          }
+        ]
+      }
+    },
+    {
+      "id": "FW-07",
+      "priority": "P1",
+      "area": "Frame, water and packaging",
+      "title": "Whole-frame rigidity and support stability remain unverified",
+      "classification": "structural_release_verification_missing_not_a_predicted_failure",
+      "required_action": "Set a required tool-to-work deflection budget and actual load cases, then check the assembled frame, connections, feet and support surface with appropriate analysis and/or a measured load test. Determine mass/center of gravity for router/plasma/service configurations and close anchoring/leveling requirements. Preserve the member-screen qualification.",
+      "status": "OPEN",
+      "report": "frame-water-packaging.md",
+      "evidence": {
+        "id": "FW-07",
+        "priority": "P1",
+        "classification": "structural_release_verification_missing_not_a_predicted_failure",
+        "title": "Whole-frame rigidity and support stability remain unverified",
+        "detail": "The design has a real two-inch tube frame, five braces and six custom screw feet, but the supplied strength screen treats ideal members and excludes joint rotation, gusset bending and complete-frame flexibility. Lowering the front upper tie removes the front high-level brace path; the documentation itself says racking must pass through the rear/side braces and connections. The 650 kg design mass is an assumption, and the foot check is axial compression plus gross pad pressure. No complete machine load/deflection budget, assembled mass/center-of-gravity or anchorage/floor acceptance is shown. Sand is correctly not credited as added elastic stiffness.",
+        "quantified_evidence": {
+          "frame_square_tube_mm": [
+            50.8,
+            50.8,
+            3.048
+          ],
+          "brace_square_tube_mm": [
+            25.4,
+            25.4,
+            2.1082
+          ],
+          "feet": 6,
+          "nominal_front_tie_top_z_mm": 151.6,
+          "assumed_gross_machine_mass_kg": 650,
+          "foot_worst_case_fraction_of_weight": 0.3333333333333333
+        },
+        "repair": "Set a required tool-to-work deflection budget and actual load cases, then check the assembled frame, connections, feet and support surface with appropriate analysis and/or a measured load test. Determine mass/center of gravity for router/plasma/service configurations and close anchoring/leveling requirements. Preserve the member-screen qualification.",
+        "evidence": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/build_reve_engineering.py",
+            "start_line": 27,
+            "end_line": 34,
+            "sha256": "ea2ce133c79fa9dda0a24f0db08817a587e2f1d3d5c0143c51d4fec3142e52b0"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/frame_details.py",
+            "start_line": 27,
+            "end_line": 65,
+            "sha256": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/strength-screen.py",
+            "start_line": 9,
+            "end_line": 14,
+            "sha256": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/strength-screen.py",
+            "start_line": 24,
+            "end_line": 30,
+            "sha256": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/strength-screen.py",
+            "start_line": 57,
+            "end_line": 67,
+            "sha256": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/MECHANICAL-ENGINEERING.md",
+            "start_line": 63,
+            "end_line": 67,
+            "sha256": "93721ec3a23ae0153b08fa261a6ba8b75f31092f11eaac6b5edb1a3e30fe3c4b"
+          }
+        ]
+      }
+    },
+    {
+      "id": "FW-08",
+      "priority": "P2",
+      "area": "Frame, water and packaging",
+      "title": "Cabinet access is plausible but an enclosure block does not prove service clearance",
+      "classification": "confirmed_purchased_enclosure_integration_incomplete",
+      "required_action": "Use the selected enclosure drawing to model or conservatively bound the door/hinges/latch and removable panel; verify access, transfer holes, cable bend/entry spaces and thermal layout. Retain packaging-envelope release status until closed.",
+      "status": "OPEN",
+      "report": "frame-water-packaging.md",
+      "evidence": {
+        "id": "FW-08",
+        "priority": "P2",
+        "classification": "confirmed_purchased_enclosure_integration_incomplete",
+        "title": "Cabinet access is plausible but an enclosure block does not prove service clearance",
+        "detail": "The upright front location improves access and the nominal top/bottom door projection clears the frame. However the purchase is represented by a solid external envelope, not its door, hinges, latch, mounting panel or cable entries. The nominal cage holes are transfer-drilled, cable routes and VFD heat rejection are unreleased, and no door/tool-access sweep is represented. These known gaps must remain visible despite the package-status claim that cabinet service is resolved.",
+        "quantified_evidence": {
+          "cabinet_dimensions_mm": [
+            406.4,
+            203.2,
+            508
+          ],
+          "cabinet_bounds_mm": [
+            371.8,
+            251.8,
+            165,
+            778.2,
+            455,
+            673
+          ],
+          "door_top_to_bearer_bottom_projection_mm": 6.2,
+          "door_bottom_to_front_tie_projection_mm": 13.4
+        },
+        "repair": "Use the selected enclosure drawing to model or conservatively bound the door/hinges/latch and removable panel; verify access, transfer holes, cable bend/entry spaces and thermal layout. Retain packaging-envelope release status until closed.",
+        "evidence": [
+          {
+            "file": "output/release-review/RevE-ENGINEERING/controls_packaging.py",
+            "start_line": 41,
+            "end_line": 71,
+            "sha256": "1eef72a5cb40c433e505f146e553370a6d9658f63803d74ad9b58f605f37a110"
+          },
+          {
+            "file": "output/release-review/RevE-ENGINEERING/package_review.py",
+            "start_line": 93,
+            "end_line": 98,
+            "sha256": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51"
+          }
+        ]
+      }
+    }
+  ],
+  "related_findings": [
+    [
+      "BED09",
+      "BED14",
+      "FW-07"
+    ],
+    [
+      "MT07",
+      "FW-06"
+    ],
+    [
+      "BED11",
+      "BED12"
+    ]
+  ],
+  "counting_note": "29 review records; related records may concern the same underlying system. Findings include confirmed defects and missing verification."
+}
