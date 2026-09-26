@@ -1,0 +1,2622 @@
+{
+  "parts": [
+    {
+      "id": "I_HEAD_BACKPLATE",
+      "part_number": "I_HEAD_BACKPLATE",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium 3/8 in",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 134518.00959,
+      "bounds_mm": [
+        0.0,
+        0.0,
+        0.0,
+        110.0,
+        130.0,
+        9.525
+      ],
+      "notes": [
+        "Four M6x1 tapped holes on custom 90 x 26 mm tool-side pattern. Minor diameter5 modeled; tap through.",
+        "This plate bolts to Rev H custom adapter from its rear. It does not establish the purchased Z output fixing pattern.",
+        "Rod and stop tapped coordinates are defined in the local STEP. Crossbars are matched and jig-bored."
+      ]
+    },
+    {
+      "id": "I_HEAD_CROSSBAR_1",
+      "part_number": "I_HEAD_CROSSBAR_1",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 31410.74682,
+      "bounds_mm": [
+        0.0,
+        -0.0,
+        9.525,
+        110.0,
+        12.0,
+        34.525
+      ],
+      "notes": [
+        "\u00d88 H7 matched rod sockets depth6; nominal geometry shown. \u00d84.5 coaxial end-screw access.",
+        "Two \u00d84.5 front mounting holes. M4x30 screws engage5mm into tapped backplate. Jig bore both rod centers together."
+      ]
+    },
+    {
+      "id": "I_HEAD_BAR_1_45",
+      "part_number": "I_STD_M4x30_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 530.92916,
+      "bounds_mm": [
+        41.5,
+        2.5,
+        4.525,
+        48.5,
+        9.5,
+        38.525
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_BAR_1_65",
+      "part_number": "I_STD_M4x30_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 530.92916,
+      "bounds_mm": [
+        61.5,
+        2.5,
+        4.525,
+        68.5,
+        9.5,
+        38.525
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_CROSSBAR_2",
+      "part_number": "I_HEAD_CROSSBAR_2",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 31241.61918,
+      "bounds_mm": [
+        0.0,
+        118.0,
+        9.525,
+        110.0,
+        130.0,
+        34.525
+      ],
+      "notes": [
+        "\u00d88 H7 matched rod sockets depth6; nominal geometry shown. \u00d84.5 coaxial end-screw access.",
+        "Two \u00d84.5 front mounting holes. M4x30 screws engage5mm into tapped backplate. Jig bore both rod centers together."
+      ]
+    },
+    {
+      "id": "I_HEAD_BAR_2_45",
+      "part_number": "I_STD_M4x30_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 530.92916,
+      "bounds_mm": [
+        41.5,
+        120.5,
+        4.525,
+        48.5,
+        127.5,
+        38.525
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_BAR_2_65",
+      "part_number": "I_STD_M4x30_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 530.92916,
+      "bounds_mm": [
+        61.5,
+        120.5,
+        4.525,
+        68.5,
+        127.5,
+        38.525
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_ROD_25",
+      "part_number": "I_HEAD_ROD_8x118_M4_ENDS",
+      "group": "plasma_head_hardware",
+      "material": "Ground stainless shaft \u00d88 h6",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 5726.05527,
+      "bounds_mm": [
+        21.0,
+        6.0,
+        18.0,
+        29.0,
+        124.0,
+        26.0
+      ],
+      "notes": [
+        "Finish length118.0; axial M4x0.7 blind tap each end, usable depth10, pilot12. Hardened stock requires machinable ends or ground shaft made to drawing."
+      ]
+    },
+    {
+      "id": "I_HEAD_ROD_TOP_25",
+      "part_number": "I_STD_M4x16_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 354.99997,
+      "bounds_mm": [
+        21.5,
+        114.0,
+        18.5,
+        28.5,
+        134.0,
+        25.5
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_ROD_BOTTOM_25",
+      "part_number": "I_STD_M4x16_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 354.99997,
+      "bounds_mm": [
+        21.5,
+        -4.0,
+        18.5,
+        28.5,
+        16.0,
+        25.5
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_ROD_85",
+      "part_number": "I_HEAD_ROD_8x118_M4_ENDS",
+      "group": "plasma_head_hardware",
+      "material": "Ground stainless shaft \u00d88 h6",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 5726.05527,
+      "bounds_mm": [
+        81.0,
+        6.0,
+        18.0,
+        89.0,
+        124.0,
+        26.0
+      ],
+      "notes": [
+        "Finish length118.0; axial M4x0.7 blind tap each end, usable depth10, pilot12. Hardened stock requires machinable ends or ground shaft made to drawing."
+      ]
+    },
+    {
+      "id": "I_HEAD_ROD_TOP_85",
+      "part_number": "I_STD_M4x16_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 354.99997,
+      "bounds_mm": [
+        81.5,
+        114.0,
+        18.5,
+        88.5,
+        134.0,
+        25.5
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_ROD_BOTTOM_85",
+      "part_number": "I_STD_M4x16_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 354.99997,
+      "bounds_mm": [
+        81.5,
+        -4.0,
+        18.5,
+        88.5,
+        16.0,
+        25.5
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_FLOAT_CARRIAGE",
+      "part_number": "I_HEAD_FLOAT_CARRIAGE",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 142529.79078,
+      "bounds_mm": [
+        0.0,
+        28.0,
+        12.0,
+        110.0,
+        100.0,
+        34.0
+      ],
+      "notes": [
+        "Two \u00d815 slip-fit bearing housings. Bearing retention comes from bolted end caps, never crush-fit preload.",
+        "Internal pocket X43..67 / Y45..59 / Z11..27 captures the fixed8mm tall stop: metal lower/upper travel limits0 and6.",
+        "Ream housings and jig align with ground shafts. Verify gravity return over full travel after wiring/lead installation."
+      ]
+    },
+    {
+      "id": "I_HEAD_BUSH_25_28",
+      "part_number": "IGUS_RJ4JP_01_08",
+      "group": "plasma_head_hardware",
+      "material": "igus J4 polymer bearing",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 3022.68463,
+      "bounds_mm": [
+        17.5,
+        28.0,
+        14.5,
+        32.5,
+        52.0,
+        29.5
+      ],
+      "notes": [
+        "Manufacturer nominal ID8 / OD15 / length24. Internal clearance shown0.04; installed fit must be checked.",
+        "https://igus.partcommunity.com/3d-cad-models/rj4jp-01-linear-bearings-igus?info=igus%2Fdrylin_lineargleitlager%2Fr_runde_wellen_schnell_leise%2Frj4jp_01.prj"
+      ]
+    },
+    {
+      "id": "I_HEAD_BUSH_25_75.85",
+      "part_number": "IGUS_RJ4JP_01_08",
+      "group": "plasma_head_hardware",
+      "material": "igus J4 polymer bearing",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 3022.68463,
+      "bounds_mm": [
+        17.5,
+        75.85,
+        14.5,
+        32.5,
+        99.85,
+        29.5
+      ],
+      "notes": [
+        "Manufacturer nominal ID8 / OD15 / length24. Internal clearance shown0.04; installed fit must be checked.",
+        "https://igus.partcommunity.com/3d-cad-models/rj4jp-01-linear-bearings-igus?info=igus%2Fdrylin_lineargleitlager%2Fr_runde_wellen_schnell_leise%2Frj4jp_01.prj"
+      ]
+    },
+    {
+      "id": "I_HEAD_BUSH_SPACER_25",
+      "part_number": "I_HEAD_BUSH_SPACER_23p85",
+      "group": "plasma_head_hardware",
+      "material": "Acetal bearing spacer",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 2585.73025,
+      "bounds_mm": [
+        17.6,
+        52.0,
+        14.6,
+        32.4,
+        75.85,
+        29.4
+      ],
+      "notes": [
+        "OD14.8 / ID9 / length23.85. Combined nominal bushing/spacer stack71.85 leaves0.15mm axial clearance between caps72mm apart. Verify actual0.10..0.20mm clearance after assembly."
+      ]
+    },
+    {
+      "id": "I_HEAD_BUSH_85_28",
+      "part_number": "IGUS_RJ4JP_01_08",
+      "group": "plasma_head_hardware",
+      "material": "igus J4 polymer bearing",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 3022.68463,
+      "bounds_mm": [
+        77.5,
+        28.0,
+        14.5,
+        92.5,
+        52.0,
+        29.5
+      ],
+      "notes": [
+        "Manufacturer nominal ID8 / OD15 / length24. Internal clearance shown0.04; installed fit must be checked.",
+        "https://igus.partcommunity.com/3d-cad-models/rj4jp-01-linear-bearings-igus?info=igus%2Fdrylin_lineargleitlager%2Fr_runde_wellen_schnell_leise%2Frj4jp_01.prj"
+      ]
+    },
+    {
+      "id": "I_HEAD_BUSH_85_75.85",
+      "part_number": "IGUS_RJ4JP_01_08",
+      "group": "plasma_head_hardware",
+      "material": "igus J4 polymer bearing",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 3022.68463,
+      "bounds_mm": [
+        77.5,
+        75.85,
+        14.5,
+        92.5,
+        99.85,
+        29.5
+      ],
+      "notes": [
+        "Manufacturer nominal ID8 / OD15 / length24. Internal clearance shown0.04; installed fit must be checked.",
+        "https://igus.partcommunity.com/3d-cad-models/rj4jp-01-linear-bearings-igus?info=igus%2Fdrylin_lineargleitlager%2Fr_runde_wellen_schnell_leise%2Frj4jp_01.prj"
+      ]
+    },
+    {
+      "id": "I_HEAD_BUSH_SPACER_85",
+      "part_number": "I_HEAD_BUSH_SPACER_23p85",
+      "group": "plasma_head_hardware",
+      "material": "Acetal bearing spacer",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 2585.73025,
+      "bounds_mm": [
+        77.6,
+        52.0,
+        14.6,
+        92.4,
+        75.85,
+        29.4
+      ],
+      "notes": [
+        "OD14.8 / ID9 / length23.85. Combined nominal bushing/spacer stack71.85 leaves0.15mm axial clearance between caps72mm apart. Verify actual0.10..0.20mm clearance after assembly."
+      ]
+    },
+    {
+      "id": "I_HEAD_BEARING_CAP_1",
+      "part_number": "I_HEAD_BEARING_CAP_1",
+      "group": "plasma_head_hardware",
+      "material": "304 stainless 2mm",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 4524.08144,
+      "bounds_mm": [
+        0.0,
+        26.0,
+        12.0,
+        110.0,
+        28.0,
+        34.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "I_HEAD_CAP_1_7_17",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 127.82355,
+      "bounds_mm": [
+        4.25,
+        23.0,
+        14.25,
+        9.75,
+        34.0,
+        19.75
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_CAP_1_7_29",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 127.82355,
+      "bounds_mm": [
+        4.25,
+        23.0,
+        26.25,
+        9.75,
+        34.0,
+        31.75
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_CAP_1_103_17",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 127.82355,
+      "bounds_mm": [
+        100.25,
+        23.0,
+        14.25,
+        105.75,
+        34.0,
+        19.75
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_CAP_1_103_29",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 127.82355,
+      "bounds_mm": [
+        100.25,
+        23.0,
+        26.25,
+        105.75,
+        34.0,
+        31.75
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_BEARING_CAP_2",
+      "part_number": "I_HEAD_BEARING_CAP_2",
+      "group": "plasma_head_hardware",
+      "material": "304 stainless 2mm",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 4524.08144,
+      "bounds_mm": [
+        0.0,
+        100.0,
+        12.0,
+        110.0,
+        102.0,
+        34.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "I_HEAD_CAP_2_7_17",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 127.82355,
+      "bounds_mm": [
+        4.25,
+        94.0,
+        14.25,
+        9.75,
+        105.0,
+        19.75
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_CAP_2_7_29",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 127.82355,
+      "bounds_mm": [
+        4.25,
+        94.0,
+        26.25,
+        9.75,
+        105.0,
+        31.75
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_CAP_2_103_17",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 127.82355,
+      "bounds_mm": [
+        100.25,
+        94.0,
+        14.25,
+        105.75,
+        105.0,
+        19.75
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_CAP_2_103_29",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 127.82355,
+      "bounds_mm": [
+        100.25,
+        94.0,
+        26.25,
+        105.75,
+        105.0,
+        31.75
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_FLOAT_STOP",
+      "part_number": "I_HEAD_FLOAT_STOP",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1757.56685,
+      "bounds_mm": [
+        45.0,
+        51.0,
+        9.525,
+        65.0,
+        59.0,
+        25.0
+      ],
+      "notes": [
+        "Rigid captured block controls both float travel ends; fit before carriage. No spring is needed to carry a falling head: the closed slot retains it.",
+        "Replaceable0.2mm stop shims may be fitted only with corresponding travel and probe offset recalibration. Nominal definition has no shim."
+      ]
+    },
+    {
+      "id": "I_HEAD_STOP_49",
+      "part_number": "I_STD_M4x16_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 354.99997,
+      "bounds_mm": [
+        45.5,
+        51.5,
+        5.0,
+        52.5,
+        58.5,
+        25.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_STOP_61",
+      "part_number": "I_STD_M4x16_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 354.99997,
+      "bounds_mm": [
+        57.5,
+        51.5,
+        5.0,
+        64.5,
+        58.5,
+        25.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_SEAT_CONE",
+      "part_number": "I_HEAD_SEAT_CONE",
+      "group": "plasma_head_hardware",
+      "material": "Hardened steel contact insert",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 479.61648,
+      "bounds_mm": [
+        5.0,
+        35.0,
+        28.0,
+        15.0,
+        45.0,
+        40.0
+      ],
+      "notes": [
+        "M4x0.7 integral6mm spigot into float body; fixture-machine contact height after assembly.",
+        "Cone90deg / V90deg / flat establishes a six-constraint coupling. Harden/contact polish; inspect contact blue before force tests."
+      ]
+    },
+    {
+      "id": "I_HEAD_BUTTON_CONE",
+      "part_number": "I_HEAD_BALL_BUTTON_R3",
+      "group": "plasma_head_hardware",
+      "material": "Hardened spherical steel contact R3",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 80.22667,
+      "bounds_mm": [
+        7.0,
+        37.0,
+        37.242641,
+        13.0,
+        43.0,
+        44.0
+      ],
+      "notes": [
+        "Custom R3 hemispherical contact, \u00d83.8 shank; M3 internal fixing thread. All three identical."
+      ]
+    },
+    {
+      "id": "I_HEAD_SEAT_V",
+      "part_number": "I_HEAD_SEAT_V",
+      "group": "plasma_head_hardware",
+      "material": "Hardened steel contact insert",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1195.39822,
+      "bounds_mm": [
+        90.0,
+        34.0,
+        28.0,
+        110.0,
+        46.0,
+        40.0
+      ],
+      "notes": [
+        "M4x0.7 integral6mm spigot into float body; fixture-machine contact height after assembly.",
+        "Cone90deg / V90deg / flat establishes a six-constraint coupling. Harden/contact polish; inspect contact blue before force tests."
+      ]
+    },
+    {
+      "id": "I_HEAD_BUTTON_V",
+      "part_number": "I_HEAD_BALL_BUTTON_R3",
+      "group": "plasma_head_hardware",
+      "material": "Hardened spherical steel contact R3",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 80.22667,
+      "bounds_mm": [
+        97.0,
+        37.0,
+        37.242641,
+        103.0,
+        43.0,
+        44.0
+      ],
+      "notes": [
+        "Custom R3 hemispherical contact, \u00d83.8 shank; M3 internal fixing thread. All three identical."
+      ]
+    },
+    {
+      "id": "I_HEAD_SEAT_FLAT",
+      "part_number": "I_HEAD_SEAT_FLAT",
+      "group": "plasma_head_hardware",
+      "material": "Hardened steel contact insert",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 330.07463,
+      "bounds_mm": [
+        50.0,
+        85.0,
+        28.0,
+        60.0,
+        95.0,
+        37.242641
+      ],
+      "notes": [
+        "M4x0.7 integral6mm spigot into float body; fixture-machine contact height after assembly.",
+        "Cone90deg / V90deg / flat establishes a six-constraint coupling. Harden/contact polish; inspect contact blue before force tests."
+      ]
+    },
+    {
+      "id": "I_HEAD_BUTTON_FLAT",
+      "part_number": "I_HEAD_BALL_BUTTON_R3",
+      "group": "plasma_head_hardware",
+      "material": "Hardened spherical steel contact R3",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 80.22667,
+      "bounds_mm": [
+        52.0,
+        87.0,
+        37.242641,
+        58.0,
+        93.0,
+        44.0
+      ],
+      "notes": [
+        "Custom R3 hemispherical contact, \u00d83.8 shank; M3 internal fixing thread. All three identical."
+      ]
+    },
+    {
+      "id": "I_HEAD_RELEASE_PLATE",
+      "part_number": "I_HEAD_RELEASE_PLATE",
+      "group": "plasma_head_hardware",
+      "material": "Low carbon steel 1/4in",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 64115.88431,
+      "bounds_mm": [
+        0.0,
+        15.0,
+        44.0,
+        110.0,
+        112.0,
+        50.35
+      ],
+      "notes": [
+        "Steel back face is the magnet target. Three kinematic locator buttons fasten from the front.",
+        "Keep mating face uncoated/flat; corrosion film and swarf change both retention and repeatability. Clean before seating."
+      ]
+    },
+    {
+      "id": "I_HEAD_BUTTON_SCREW_CONE",
+      "part_number": "I_STD_M3x7_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 120.75497,
+      "bounds_mm": [
+        7.25,
+        37.25,
+        40.35,
+        12.75,
+        42.75,
+        50.35
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_BUTTON_SCREW_V",
+      "part_number": "I_STD_M3x7_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 120.75497,
+      "bounds_mm": [
+        97.25,
+        37.25,
+        40.35,
+        102.75,
+        42.75,
+        50.35
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_BUTTON_SCREW_FLAT",
+      "part_number": "I_STD_M3x7_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 120.75497,
+      "bounds_mm": [
+        52.25,
+        87.25,
+        40.35,
+        57.75,
+        92.75,
+        50.35
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_MAGNET_SPACER_1",
+      "part_number": "I_HEAD_MAGNET_SPACER_3p8",
+      "group": "plasma_head_hardware",
+      "material": "Aluminium",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1193.80521,
+      "bounds_mm": [
+        6.75,
+        77.75,
+        34.0,
+        27.25,
+        98.25,
+        37.8
+      ],
+      "notes": [
+        "3.8 mm nominal spacer leaves0.2mm magnet-to-target gap. Force qualification requires actual gap, coating and measured lead load."
+      ]
+    },
+    {
+      "id": "I_HEAD_MAGNET_1",
+      "part_number": "SUPERMAGNETE_CSN_20",
+      "group": "plasma_head_hardware",
+      "material": "Purchased N38 magnet in Q235 cup",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 1730.0822,
+      "bounds_mm": [
+        7.0,
+        78.0,
+        37.8,
+        27.0,
+        98.0,
+        43.8
+      ],
+      "notes": [
+        "Manufacturer20x6mm, bore4.5 / countersink9.46x2.48;87.3N nominal direct steel pull,80C maximum.",
+        "https://www.supermagnete.de/eng/data_sheet_CSN-20.pdf",
+        "The catalog direct-contact pull is NOT the release force at this0.2mm gap. Set and record actual force after assembly."
+      ]
+    },
+    {
+      "id": "I_HEAD_MAGNET_SCREW_1",
+      "part_number": "I_STD_M4x16_CSK",
+      "group": "plasma_head_hardware",
+      "material": "M4 countersunk steel screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 255.67893,
+      "bounds_mm": [
+        12.52,
+        83.52,
+        27.8,
+        21.48,
+        92.48,
+        43.8
+      ],
+      "notes": [
+        "ISO10642 M4x16 overall length, head diameter8.96 and height2.48;90deg conservative cone envelope. Supplier countersink diameter9.46 leaves0.25mm radial clearance.",
+        "https://www.accu.co.uk/countersunk-socket-head-screws/251236-SSK-M4-16-A2-R360"
+      ]
+    },
+    {
+      "id": "I_HEAD_MAGNET_SPACER_2",
+      "part_number": "I_HEAD_MAGNET_SPACER_3p8",
+      "group": "plasma_head_hardware",
+      "material": "Aluminium",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1193.80521,
+      "bounds_mm": [
+        82.75,
+        79.75,
+        34.0,
+        103.25,
+        100.25,
+        37.8
+      ],
+      "notes": [
+        "3.8 mm nominal spacer leaves0.2mm magnet-to-target gap. Force qualification requires actual gap, coating and measured lead load."
+      ]
+    },
+    {
+      "id": "I_HEAD_MAGNET_2",
+      "part_number": "SUPERMAGNETE_CSN_20",
+      "group": "plasma_head_hardware",
+      "material": "Purchased N38 magnet in Q235 cup",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 1730.0822,
+      "bounds_mm": [
+        83.0,
+        80.0,
+        37.8,
+        103.0,
+        100.0,
+        43.8
+      ],
+      "notes": [
+        "Manufacturer20x6mm, bore4.5 / countersink9.46x2.48;87.3N nominal direct steel pull,80C maximum.",
+        "https://www.supermagnete.de/eng/data_sheet_CSN-20.pdf",
+        "The catalog direct-contact pull is NOT the release force at this0.2mm gap. Set and record actual force after assembly."
+      ]
+    },
+    {
+      "id": "I_HEAD_MAGNET_SCREW_2",
+      "part_number": "I_STD_M4x16_CSK",
+      "group": "plasma_head_hardware",
+      "material": "M4 countersunk steel screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 255.67893,
+      "bounds_mm": [
+        88.52,
+        85.52,
+        27.8,
+        97.48,
+        94.48,
+        43.8
+      ],
+      "notes": [
+        "ISO10642 M4x16 overall length, head diameter8.96 and height2.48;90deg conservative cone envelope. Supplier countersink diameter9.46 leaves0.25mm radial clearance.",
+        "https://www.accu.co.uk/countersunk-socket-head-screws/251236-SSK-M4-16-A2-R360"
+      ]
+    },
+    {
+      "id": "I_HEAD_MAGNET_SPACER_3",
+      "part_number": "I_HEAD_MAGNET_SPACER_3p8",
+      "group": "plasma_head_hardware",
+      "material": "Aluminium",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1193.80521,
+      "bounds_mm": [
+        44.75,
+        29.75,
+        34.0,
+        65.25,
+        50.25,
+        37.8
+      ],
+      "notes": [
+        "3.8 mm nominal spacer leaves0.2mm magnet-to-target gap. Force qualification requires actual gap, coating and measured lead load."
+      ]
+    },
+    {
+      "id": "I_HEAD_MAGNET_3",
+      "part_number": "SUPERMAGNETE_CSN_20",
+      "group": "plasma_head_hardware",
+      "material": "Purchased N38 magnet in Q235 cup",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 1730.0822,
+      "bounds_mm": [
+        45.0,
+        30.0,
+        37.8,
+        65.0,
+        50.0,
+        43.8
+      ],
+      "notes": [
+        "Manufacturer20x6mm, bore4.5 / countersink9.46x2.48;87.3N nominal direct steel pull,80C maximum.",
+        "https://www.supermagnete.de/eng/data_sheet_CSN-20.pdf",
+        "The catalog direct-contact pull is NOT the release force at this0.2mm gap. Set and record actual force after assembly."
+      ]
+    },
+    {
+      "id": "I_HEAD_MAGNET_SCREW_3",
+      "part_number": "I_STD_M4x16_CSK",
+      "group": "plasma_head_hardware",
+      "material": "M4 countersunk steel screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 255.67893,
+      "bounds_mm": [
+        50.52,
+        35.52,
+        27.8,
+        59.48,
+        44.48,
+        43.8
+      ],
+      "notes": [
+        "ISO10642 M4x16 overall length, head diameter8.96 and height2.48;90deg conservative cone envelope. Supplier countersink diameter9.46 leaves0.25mm radial clearance.",
+        "https://www.accu.co.uk/countersunk-socket-head-screws/251236-SSK-M4-16-A2-R360"
+      ]
+    },
+    {
+      "id": "I_HEAD_CLAMP_REAR",
+      "part_number": "I_HEAD_CLAMP_REAR",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 71604.60507,
+      "bounds_mm": [
+        10.0,
+        25.0,
+        50.35,
+        100.0,
+        65.0,
+        80.35
+      ],
+      "notes": [
+        "Finish\u00d848 bore across matched assembled halves with0.5mm spacer in split. Rear half attaches through steel release plate.",
+        "FourM4 rear attachment taps depth12 usable; twoM4 pinch screws. Pinch torque must be set by actual torch allowable clamp load."
+      ]
+    },
+    {
+      "id": "I_HEAD_CLAMP_FRONT",
+      "part_number": "I_HEAD_CLAMP_FRONT",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 71334.58518,
+      "bounds_mm": [
+        10.0,
+        25.0,
+        80.85,
+        100.0,
+        65.0,
+        110.85
+      ],
+      "notes": [
+        "Finish\u00d848 bore across matched assembled halves with0.5mm spacer in split. Rear half attaches through steel release plate.",
+        "FourM4 rear attachment taps depth12 usable; twoM4 pinch screws. Pinch torque must be set by actual torch allowable clamp load."
+      ]
+    },
+    {
+      "id": "I_HEAD_CLAMP_MOUNT_25_35",
+      "part_number": "I_STD_M4x14_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 329.86723,
+      "bounds_mm": [
+        21.5,
+        31.5,
+        44.0,
+        28.5,
+        38.5,
+        62.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_CLAMP_MOUNT_25_55",
+      "part_number": "I_STD_M4x14_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 329.86723,
+      "bounds_mm": [
+        21.5,
+        51.5,
+        44.0,
+        28.5,
+        58.5,
+        62.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_CLAMP_MOUNT_85_35",
+      "part_number": "I_STD_M4x14_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 329.86723,
+      "bounds_mm": [
+        81.5,
+        31.5,
+        44.0,
+        88.5,
+        38.5,
+        62.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_CLAMP_MOUNT_85_55",
+      "part_number": "I_STD_M4x14_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 329.86723,
+      "bounds_mm": [
+        81.5,
+        51.5,
+        44.0,
+        88.5,
+        58.5,
+        62.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_CLAMP_PINCH_15",
+      "part_number": "I_STD_M4x40_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 656.59286,
+      "bounds_mm": [
+        11.5,
+        41.5,
+        70.85,
+        18.5,
+        48.5,
+        114.85
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_CLAMP_PINCH_95",
+      "part_number": "I_STD_M4x40_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 656.59286,
+      "bounds_mm": [
+        91.5,
+        41.5,
+        70.85,
+        98.5,
+        48.5,
+        114.85
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_INSERT_REAR",
+      "part_number": "I_HEAD_INSERT_REAR",
+      "group": "plasma_head_hardware",
+      "material": "Machinable insulating insert blank; grade/temperature verify",
+      "status": "MEASURED INTERFACE REQUIRED - INDIVIDUAL EXPORT GUARDED",
+      "purchased_envelope": false,
+      "volume_mm3": 35711.15605,
+      "bounds_mm": [
+        31.001302,
+        25.0,
+        56.6,
+        78.998698,
+        65.0,
+        80.35
+      ],
+      "notes": [
+        "Default is an unbored physical split blank, not an assumed torch diameter.",
+        "Bore only from explicit diameter/roundness/40mm straight-zone record. Actual torch thermal limits and allowed clamp force remain required."
+      ]
+    },
+    {
+      "id": "I_HEAD_INSERT_FRONT",
+      "part_number": "I_HEAD_INSERT_FRONT",
+      "group": "plasma_head_hardware",
+      "material": "Machinable insulating insert blank; grade/temperature verify",
+      "status": "MEASURED INTERFACE REQUIRED - INDIVIDUAL EXPORT GUARDED",
+      "purchased_envelope": false,
+      "volume_mm3": 35711.15605,
+      "bounds_mm": [
+        31.001302,
+        25.0,
+        80.85,
+        78.998698,
+        65.0,
+        104.6
+      ],
+      "notes": [
+        "Default is an unbored physical split blank, not an assumed torch diameter.",
+        "Bore only from explicit diameter/roundness/40mm straight-zone record. Actual torch thermal limits and allowed clamp force remain required."
+      ]
+    },
+    {
+      "id": "I_HEAD_SPLASH_SCREEN",
+      "part_number": "I_HEAD_SPLASH_SCREEN",
+      "group": "plasma_head_hardware",
+      "material": "304 stainless 1.5mm",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 7037.25689,
+      "bounds_mm": [
+        0.0,
+        12.0,
+        50.35,
+        110.0,
+        13.5,
+        110.85
+      ],
+      "notes": [
+        "Flat110x60.5x1.5 screen, \u00d850 clearance opening. Weld two separate10x10x1.5 tabs; no unspecified bends.",
+        "Does not replace thermal qualification: magnet maximum80C and actual insert/lead temperatures must be measured. No aluminum-water plasma cutting is authorized by this model."
+      ]
+    },
+    {
+      "id": "I_HEAD_SPLASH_TAB_5",
+      "part_number": "I_HEAD_SPLASH_TAB_5",
+      "group": "plasma_head_hardware",
+      "material": "304 stainless 1.5mm",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 136.3812,
+      "bounds_mm": [
+        0.0,
+        13.5,
+        50.35,
+        10.0,
+        23.5,
+        51.85
+      ],
+      "notes": [
+        "Bottom10mm edge welded to screen rear upper edge; local hole at5,6."
+      ]
+    },
+    {
+      "id": "I_HEAD_SPLASH_5",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 113.68638,
+      "bounds_mm": [
+        2.25,
+        16.75,
+        45.85,
+        7.75,
+        22.25,
+        54.85
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_SPLASH_TAB_105",
+      "part_number": "I_HEAD_SPLASH_TAB_105",
+      "group": "plasma_head_hardware",
+      "material": "304 stainless 1.5mm",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 136.3812,
+      "bounds_mm": [
+        100.0,
+        13.5,
+        50.35,
+        110.0,
+        23.5,
+        51.85
+      ],
+      "notes": [
+        "Bottom10mm edge welded to screen rear upper edge; local hole at5,6."
+      ]
+    },
+    {
+      "id": "I_HEAD_SPLASH_105",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 113.68638,
+      "bounds_mm": [
+        102.25,
+        16.75,
+        45.85,
+        107.75,
+        22.25,
+        54.85
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_FLOAT_CAM",
+      "part_number": "I_HEAD_FLOAT_CAM",
+      "group": "plasma_head_hardware",
+      "material": "Acetal cam",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 2174.53457,
+      "bounds_mm": [
+        0.0,
+        88.0,
+        34.0,
+        22.0,
+        120.0,
+        50.0
+      ],
+      "notes": [
+        "Pin mount datum39.5; conservative2.2mm pin has lowest contact edge atY111.55. Ramp crosses real switch range at1.0..1.65mm float.",
+        "Dwell maintains6.1mm normal position from the datum through remaining travel; TTPmax5.1 leaves1mm mechanical reserve.",
+        "Probe initially at1mm/s and calibrate actual offset and stopping distance. Cam clears a defined corner relief in the release plate."
+      ]
+    },
+    {
+      "id": "I_HEAD_CAM_91",
+      "part_number": "I_STD_M3x10_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        0.25,
+        88.25,
+        28.0,
+        5.75,
+        93.75,
+        41.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_CAM_96.5",
+      "part_number": "I_STD_M3x10_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        0.25,
+        93.75,
+        28.0,
+        5.75,
+        99.25,
+        41.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_CASE",
+      "part_number": "OMRON_D2HW_C202MR",
+      "group": "plasma_head_hardware",
+      "material": "Omron sealed switch mating envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 613.19992,
+      "bounds_mm": [
+        0.0,
+        108.5,
+        36.0,
+        18.5,
+        116.8,
+        42.5
+      ],
+      "notes": [
+        "https://omronfs.omron.com/en_US/ecb/products/pdf/en-d2hw.pdf",
+        "18.5x5.3x6.5 conservative case; M3mount centers13mm. Locating post\u00d83 projects1.5.",
+        "Pin-plunger operating position6.4\u00b10.2 from mount datum; FPmax7.2 / TTPmax5.1. IP67 body, protect unsealed lead ends."
+      ]
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_PIN",
+      "part_number": "I_SWITCH_PLUNGER_FLOAT_SWITCH",
+      "group": "plasma_head_hardware",
+      "material": "Switch plunger kinematic envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 15.96557,
+      "bounds_mm": [
+        1.55,
+        111.55,
+        42.5,
+        3.75,
+        113.75,
+        46.7
+      ],
+      "notes": []
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_BRACKET",
+      "part_number": "I_HEAD_FLOAT_SWITCH_BRACKET",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium machined L bracket",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1554.39376,
+      "bounds_mm": [
+        0.0,
+        115.3,
+        35.3,
+        26.0,
+        129.3,
+        43.3
+      ],
+      "notes": [
+        "Upper mounting face faces the switch.13mm M3/post centers; foot supports from upper guide crossbar front."
+      ]
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_M3",
+      "part_number": "I_STD_M3x10_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        12.9,
+        107.0,
+        36.75,
+        18.4,
+        120.0,
+        42.25
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_0",
+      "part_number": "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_0",
+      "group": "plasma_head_hardware",
+      "material": "Aluminium spacer",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 14.87623,
+      "bounds_mm": [
+        0.0,
+        122.3,
+        34.525,
+        6.0,
+        128.3,
+        35.3
+      ],
+      "notes": []
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_FOOT_0",
+      "part_number": "I_STD_M3x8_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 127.82355,
+      "bounds_mm": [
+        0.25,
+        122.55,
+        29.3,
+        5.75,
+        128.05,
+        40.3
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_1",
+      "part_number": "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_1",
+      "group": "plasma_head_hardware",
+      "material": "Aluminium spacer",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 14.87623,
+      "bounds_mm": [
+        20.0,
+        122.3,
+        34.525,
+        26.0,
+        128.3,
+        35.3
+      ],
+      "notes": []
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_FOOT_1",
+      "part_number": "I_STD_M3x8_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 127.82355,
+      "bounds_mm": [
+        20.25,
+        122.55,
+        29.3,
+        25.75,
+        128.05,
+        40.3
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_CASE",
+      "part_number": "OMRON_D2HW_C203MR",
+      "group": "plasma_head_hardware",
+      "material": "Omron sealed switch mating envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 613.19992,
+      "bounds_mm": [
+        0.0,
+        67.5,
+        34.7,
+        18.5,
+        75.8,
+        41.2
+      ],
+      "notes": [
+        "https://omronfs.omron.com/en_US/ecb/products/pdf/en-d2hw.pdf",
+        "18.5x5.3x6.5 conservative case; M3mount centers13mm. Locating post\u00d83 projects1.5.",
+        "Pin-plunger operating position6.4\u00b10.2 from mount datum; FPmax7.2 / TTPmax5.1. IP67 body, protect unsealed lead ends."
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_PIN",
+      "part_number": "I_SWITCH_PLUNGER_PRESENCE_LEFT",
+      "group": "plasma_head_hardware",
+      "material": "Switch plunger kinematic envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 10.64372,
+      "bounds_mm": [
+        1.55,
+        70.55,
+        41.2,
+        3.75,
+        72.75,
+        44.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_BRACKET",
+      "part_number": "I_HEAD_PRESENCE_LEFT_BRACKET",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium machined L bracket",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1554.39376,
+      "bounds_mm": [
+        0.0,
+        55.0,
+        34.0,
+        26.0,
+        69.0,
+        42.0
+      ],
+      "notes": [
+        "6mm thick upright tappedM3; \u00d83.05 locating pocket and screw centers13.0. TwoM3 feet fasten into supporting plate/body.",
+        "Locating post pocket is clearance in this envelope; fit switch and set trip using measured shim stack, then record installed actuation."
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_M3",
+      "part_number": "I_STD_M3x10_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        12.9,
+        64.3,
+        35.45,
+        18.4,
+        77.3,
+        40.95
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_FOOT_0",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 113.68638,
+      "bounds_mm": [
+        0.25,
+        56.25,
+        30.0,
+        5.75,
+        61.75,
+        39.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_FOOT_1",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 113.68638,
+      "bounds_mm": [
+        20.25,
+        56.25,
+        30.0,
+        25.75,
+        61.75,
+        39.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_CASE",
+      "part_number": "OMRON_D2HW_C203MR",
+      "group": "plasma_head_hardware",
+      "material": "Omron sealed switch mating envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 613.19992,
+      "bounds_mm": [
+        91.5,
+        67.5,
+        34.7,
+        110.0,
+        75.8,
+        41.2
+      ],
+      "notes": [
+        "https://omronfs.omron.com/en_US/ecb/products/pdf/en-d2hw.pdf",
+        "18.5x5.3x6.5 conservative case; M3mount centers13mm. Locating post\u00d83 projects1.5.",
+        "Pin-plunger operating position6.4\u00b10.2 from mount datum; FPmax7.2 / TTPmax5.1. IP67 body, protect unsealed lead ends."
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_PIN",
+      "part_number": "I_SWITCH_PLUNGER_PRESENCE_RIGHT",
+      "group": "plasma_head_hardware",
+      "material": "Switch plunger kinematic envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 10.64372,
+      "bounds_mm": [
+        93.05,
+        70.55,
+        41.2,
+        95.25,
+        72.75,
+        44.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_BRACKET",
+      "part_number": "I_HEAD_PRESENCE_RIGHT_BRACKET",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium machined L bracket",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1554.39376,
+      "bounds_mm": [
+        84.0,
+        55.0,
+        34.0,
+        110.0,
+        69.0,
+        42.0
+      ],
+      "notes": [
+        "6mm thick upright tappedM3; \u00d83.05 locating pocket and screw centers13.0. TwoM3 feet fasten into supporting plate/body.",
+        "Locating post pocket is clearance in this envelope; fit switch and set trip using measured shim stack, then record installed actuation."
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_M3",
+      "part_number": "I_STD_M3x10_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        104.4,
+        64.3,
+        35.45,
+        109.9,
+        77.3,
+        40.95
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_FOOT_0",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 113.68638,
+      "bounds_mm": [
+        84.25,
+        56.25,
+        30.0,
+        89.75,
+        61.75,
+        39.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_FOOT_1",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 113.68638,
+      "bounds_mm": [
+        104.25,
+        56.25,
+        30.0,
+        109.75,
+        61.75,
+        39.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_CASE",
+      "part_number": "OMRON_D2HW_C203MR",
+      "group": "plasma_head_hardware",
+      "material": "Omron sealed switch mating envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 613.19992,
+      "bounds_mm": [
+        52.35,
+        101.5,
+        34.7,
+        70.85,
+        109.8,
+        41.2
+      ],
+      "notes": [
+        "https://omronfs.omron.com/en_US/ecb/products/pdf/en-d2hw.pdf",
+        "18.5x5.3x6.5 conservative case; M3mount centers13mm. Locating post\u00d83 projects1.5.",
+        "Pin-plunger operating position6.4\u00b10.2 from mount datum; FPmax7.2 / TTPmax5.1. IP67 body, protect unsealed lead ends."
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_PIN",
+      "part_number": "I_SWITCH_PLUNGER_PRESENCE_TOP",
+      "group": "plasma_head_hardware",
+      "material": "Switch plunger kinematic envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 10.64372,
+      "bounds_mm": [
+        53.9,
+        104.55,
+        41.2,
+        56.1,
+        106.75,
+        44.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_BRACKET",
+      "part_number": "I_HEAD_PRESENCE_TOP_BRACKET",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium machined L bracket",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 2057.408,
+      "bounds_mm": [
+        44.0,
+        89.0,
+        34.0,
+        80.0,
+        103.0,
+        42.0
+      ],
+      "notes": [
+        "6mm thick upright tappedM3; \u00d83.05 locating pocket and screw centers13.0. TwoM3 feet fasten into supporting plate/body.",
+        "Locating post pocket is clearance in this envelope; fit switch and set trip using measured shim stack, then record installed actuation."
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_M3",
+      "part_number": "I_STD_M3x10_y_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        65.25,
+        98.3,
+        35.45,
+        70.75,
+        111.3,
+        40.95
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_FOOT_0",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 113.68638,
+      "bounds_mm": [
+        44.25,
+        90.25,
+        30.0,
+        49.75,
+        95.75,
+        39.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_FOOT_1",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 113.68638,
+      "bounds_mm": [
+        74.25,
+        90.25,
+        30.0,
+        79.75,
+        95.75,
+        39.0
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_LEAD_SADDLE",
+      "part_number": "I_HEAD_LEAD_SADDLE",
+      "group": "plasma_head_hardware",
+      "material": "Aluminium fixed lead saddle",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 3779.04957,
+      "bounds_mm": [
+        76.0,
+        118.0,
+        34.525,
+        108.0,
+        130.0,
+        49.525
+      ],
+      "notes": [
+        "Open saddle accepts reusable insulated strap up to20mm wide. Fixed upper-crossbar attachment takes supply-lead drag off floating carriage.",
+        "Actual lead OD, minimum bend radius, slack loop and strap selection remain measurement inputs. No unmeasured cable is modeled."
+      ]
+    },
+    {
+      "id": "I_HEAD_LEAD_84",
+      "part_number": "I_STD_M3x10_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        81.25,
+        121.25,
+        30.525,
+        86.75,
+        126.75,
+        43.525
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_LEAD_100",
+      "part_number": "I_STD_M3x10_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        97.25,
+        121.25,
+        30.525,
+        102.75,
+        126.75,
+        43.525
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=642039"
+      ]
+    },
+    {
+      "id": "I_HEAD_TETHER_EYE_FIXED",
+      "part_number": "I_HEAD_TETHER_EYE_FIXED",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium eye block",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1962.3518,
+      "bounds_mm": [
+        49.0,
+        119.0,
+        34.525,
+        61.0,
+        135.0,
+        46.525
+      ],
+      "notes": [
+        "Separate4mm tether passage and4.5mm screw clearance. Fit rated nonconductive tether with enough slack for6mm float/8mm normal release; qualify arrest load."
+      ]
+    },
+    {
+      "id": "I_HEAD_TETHER_FIXED",
+      "part_number": "I_STD_M4x16_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 354.99997,
+      "bounds_mm": [
+        51.5,
+        118.5,
+        30.525,
+        58.5,
+        125.5,
+        50.525
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    },
+    {
+      "id": "I_HEAD_TETHER_EYE_RELEASE",
+      "part_number": "I_HEAD_TETHER_EYE_RELEASE",
+      "group": "plasma_head_hardware",
+      "material": "6061-T6 aluminium eye block",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1962.3518,
+      "bounds_mm": [
+        101.0,
+        94.0,
+        50.35,
+        117.0,
+        106.0,
+        62.35
+      ],
+      "notes": [
+        "Separate4mm tether passage and4.5mm screw clearance. Fit rated nonconductive tether with enough slack for6mm float/8mm normal release; qualify arrest load."
+      ]
+    },
+    {
+      "id": "I_HEAD_TETHER_RELEASE",
+      "part_number": "I_STD_M4x16_z_SOCKET",
+      "group": "plasma_head_hardware",
+      "material": "Steel ISO4762 socket screw, nominal thread envelope",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 354.99997,
+      "bounds_mm": [
+        100.5,
+        96.5,
+        46.35,
+        107.5,
+        103.5,
+        66.35
+      ],
+      "notes": [
+        "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+        "https://www.accu.co.uk/api/product-datasheet?id=151797"
+      ]
+    }
+  ],
+  "part_count": 103,
+  "broadphase_pairs": 158,
+  "unresolved_intersections": [],
+  "documented_intersections": [
+    {
+      "a": "I_HEAD_BACKPLATE",
+      "b": "I_HEAD_BAR_1_45",
+      "intersection_mm3": 20.06692,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_BACKPLATE",
+      "b": "I_HEAD_BAR_1_65",
+      "intersection_mm3": 20.06692,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_BACKPLATE",
+      "b": "I_HEAD_BAR_2_45",
+      "intersection_mm3": 20.06692,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_BACKPLATE",
+      "b": "I_HEAD_BAR_2_65",
+      "intersection_mm3": 20.06692,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_BACKPLATE",
+      "b": "I_HEAD_STOP_49",
+      "intersection_mm3": 18.16057,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_BACKPLATE",
+      "b": "I_HEAD_STOP_61",
+      "intersection_mm3": 18.16057,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_CROSSBAR_2",
+      "b": "I_HEAD_FLOAT_SWITCH_FOOT_0",
+      "intersection_mm3": 11.28519,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_CROSSBAR_2",
+      "b": "I_HEAD_FLOAT_SWITCH_FOOT_1",
+      "intersection_mm3": 11.28519,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_CROSSBAR_2",
+      "b": "I_HEAD_LEAD_84",
+      "intersection_mm3": 8.63938,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_CROSSBAR_2",
+      "b": "I_HEAD_LEAD_100",
+      "intersection_mm3": 8.63938,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_CROSSBAR_2",
+      "b": "I_HEAD_TETHER_FIXED",
+      "intersection_mm3": 16.05354,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_ROD_25",
+      "b": "I_HEAD_ROD_TOP_25",
+      "intersection_mm3": 40.13385,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_ROD_25",
+      "b": "I_HEAD_ROD_BOTTOM_25",
+      "intersection_mm3": 40.13385,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_ROD_85",
+      "b": "I_HEAD_ROD_TOP_85",
+      "intersection_mm3": 40.13385,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_ROD_85",
+      "b": "I_HEAD_ROD_BOTTOM_85",
+      "intersection_mm3": 40.13385,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_CAP_1_7_17",
+      "intersection_mm3": 12.95907,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_CAP_1_7_29",
+      "intersection_mm3": 12.95907,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_CAP_1_103_17",
+      "intersection_mm3": 12.95907,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_CAP_1_103_29",
+      "intersection_mm3": 12.95907,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_CAP_2_7_17",
+      "intersection_mm3": 12.95907,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_CAP_2_7_29",
+      "intersection_mm3": 12.95907,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_CAP_2_103_17",
+      "intersection_mm3": 12.95907,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_CAP_2_103_29",
+      "intersection_mm3": 12.95907,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_SEAT_CONE",
+      "intersection_mm3": 24.08031,
+      "reason": "Integral M4 seat thread in matching tapped float body."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_SEAT_V",
+      "intersection_mm3": 24.08031,
+      "reason": "Integral M4 seat thread in matching tapped float body."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_SEAT_FLAT",
+      "intersection_mm3": 24.08031,
+      "reason": "Integral M4 seat thread in matching tapped float body."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_MAGNET_SCREW_1",
+      "intersection_mm3": 24.88298,
+      "reason": "M4 screw engages6.2mm in tapped carriage."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_MAGNET_SCREW_2",
+      "intersection_mm3": 24.88298,
+      "reason": "M4 screw engages6.2mm in tapped carriage."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_MAGNET_SCREW_3",
+      "intersection_mm3": 24.88298,
+      "reason": "M4 screw engages6.2mm in tapped carriage."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_CAM_91",
+      "intersection_mm3": 12.95907,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_CAM_96.5",
+      "intersection_mm3": 12.95907,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_PRESENCE_LEFT_FOOT_0",
+      "intersection_mm3": 8.63938,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_PRESENCE_LEFT_FOOT_1",
+      "intersection_mm3": 8.63938,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_PRESENCE_RIGHT_FOOT_0",
+      "intersection_mm3": 8.63938,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_PRESENCE_RIGHT_FOOT_1",
+      "intersection_mm3": 8.63938,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_PRESENCE_TOP_FOOT_0",
+      "intersection_mm3": 8.63938,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_CARRIAGE",
+      "b": "I_HEAD_PRESENCE_TOP_FOOT_1",
+      "intersection_mm3": 8.63938,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_BUTTON_CONE",
+      "b": "I_HEAD_BUTTON_SCREW_CONE",
+      "intersection_mm3": 7.88343,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_BUTTON_V",
+      "b": "I_HEAD_BUTTON_SCREW_V",
+      "intersection_mm3": 7.88343,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_BUTTON_FLAT",
+      "b": "I_HEAD_BUTTON_SCREW_FLAT",
+      "intersection_mm3": 7.88343,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_RELEASE_PLATE",
+      "b": "I_HEAD_SPLASH_5",
+      "intersection_mm3": 9.7193,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_RELEASE_PLATE",
+      "b": "I_HEAD_SPLASH_105",
+      "intersection_mm3": 9.7193,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_RELEASE_PLATE",
+      "b": "I_HEAD_TETHER_RELEASE",
+      "intersection_mm3": 16.05354,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_CLAMP_REAR",
+      "b": "I_HEAD_CLAMP_MOUNT_25_35",
+      "intersection_mm3": 46.75593,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_CLAMP_REAR",
+      "b": "I_HEAD_CLAMP_MOUNT_25_55",
+      "intersection_mm3": 46.75593,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_CLAMP_REAR",
+      "b": "I_HEAD_CLAMP_MOUNT_85_35",
+      "intersection_mm3": 46.75593,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_CLAMP_REAR",
+      "b": "I_HEAD_CLAMP_MOUNT_85_55",
+      "intersection_mm3": 46.75593,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_CLAMP_REAR",
+      "b": "I_HEAD_CLAMP_PINCH_15",
+      "intersection_mm3": 38.12715,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_CLAMP_REAR",
+      "b": "I_HEAD_CLAMP_PINCH_95",
+      "intersection_mm3": 38.12715,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_FLOAT_SWITCH_BRACKET",
+      "b": "I_HEAD_FLOAT_SWITCH_M3",
+      "intersection_mm3": 10.15127,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_PRESENCE_LEFT_BRACKET",
+      "b": "I_HEAD_PRESENCE_LEFT_M3",
+      "intersection_mm3": 10.15127,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_PRESENCE_RIGHT_BRACKET",
+      "b": "I_HEAD_PRESENCE_RIGHT_M3",
+      "intersection_mm3": 10.15127,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    },
+    {
+      "a": "I_HEAD_PRESENCE_TOP_BRACKET",
+      "b": "I_HEAD_PRESENCE_TOP_M3",
+      "intersection_mm3": 10.15127,
+      "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+    }
+  ],
+  "note": "Positive-volume static interference test, not a strength or motion certification.",
+  "step_readback": {
+    "passed": true,
+    "solids": 103,
+    "volume_delta_mm3": 0.0034220635425299406,
+    "volume_tolerance_mm3": 0.2,
+    "sha256": "57b873310f3a7a2e66199ae947461e0fac522f3a54f4116bf6ee88094d0b6fc5",
+    "file": "RevI_FLOAT_BREAKAWAY_HEAD_BLANK.step"
+  },
+  "individual_step_readback": [
+    {
+      "part_number": "I_HEAD_BACKPLATE",
+      "valid": true,
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "part_number": "I_HEAD_CROSSBAR_1",
+      "valid": true,
+      "volume_delta_mm3": 2.1827872842550278e-11
+    },
+    {
+      "part_number": "I_HEAD_CROSSBAR_2",
+      "valid": true,
+      "volume_delta_mm3": 3.2741809263825417e-11
+    },
+    {
+      "part_number": "I_HEAD_ROD_8x118_M4_ENDS",
+      "valid": true,
+      "volume_delta_mm3": 1.064108801074326e-10
+    },
+    {
+      "part_number": "I_HEAD_FLOAT_CARRIAGE",
+      "valid": true,
+      "volume_delta_mm3": 0.0031619580986443907
+    },
+    {
+      "part_number": "I_HEAD_BUSH_SPACER_23p85",
+      "valid": true,
+      "volume_delta_mm3": 5.775291356258094e-11
+    },
+    {
+      "part_number": "I_HEAD_BEARING_CAP_1",
+      "valid": true,
+      "volume_delta_mm3": 7.275957614183426e-12
+    },
+    {
+      "part_number": "I_HEAD_BEARING_CAP_2",
+      "valid": true,
+      "volume_delta_mm3": 7.275957614183426e-12
+    },
+    {
+      "part_number": "I_HEAD_FLOAT_STOP",
+      "valid": true,
+      "volume_delta_mm3": 4.320099833421409e-12
+    },
+    {
+      "part_number": "I_HEAD_SEAT_CONE",
+      "valid": true,
+      "volume_delta_mm3": 8.526512829121202e-13
+    },
+    {
+      "part_number": "I_HEAD_BALL_BUTTON_R3",
+      "valid": true,
+      "volume_delta_mm3": 1.8474111129762605e-12
+    },
+    {
+      "part_number": "I_HEAD_SEAT_V",
+      "valid": true,
+      "volume_delta_mm3": 2.9558577807620168e-12
+    },
+    {
+      "part_number": "I_HEAD_SEAT_FLAT",
+      "valid": true,
+      "volume_delta_mm3": 2.148681232938543e-11
+    },
+    {
+      "part_number": "I_HEAD_RELEASE_PLATE",
+      "valid": true,
+      "volume_delta_mm3": 9.458744898438454e-11
+    },
+    {
+      "part_number": "I_HEAD_MAGNET_SPACER_3p8",
+      "valid": true,
+      "volume_delta_mm3": 2.637534635141492e-11
+    },
+    {
+      "part_number": "I_HEAD_CLAMP_REAR",
+      "valid": true,
+      "volume_delta_mm3": 8.87666828930378e-10
+    },
+    {
+      "part_number": "I_HEAD_CLAMP_FRONT",
+      "valid": true,
+      "volume_delta_mm3": 9.89530235528946e-10
+    },
+    {
+      "part_number": "I_HEAD_SPLASH_SCREEN",
+      "valid": true,
+      "volume_delta_mm3": 1.0368239600211382e-10
+    },
+    {
+      "part_number": "I_HEAD_SPLASH_TAB_5",
+      "valid": true,
+      "volume_delta_mm3": 4.831690603168681e-13
+    },
+    {
+      "part_number": "I_HEAD_SPLASH_TAB_105",
+      "valid": true,
+      "volume_delta_mm3": 4.831690603168681e-13
+    },
+    {
+      "part_number": "I_HEAD_FLOAT_CAM",
+      "valid": true,
+      "volume_delta_mm3": 2.955857780762017e-11
+    },
+    {
+      "part_number": "I_HEAD_FLOAT_SWITCH_BRACKET",
+      "valid": true,
+      "volume_delta_mm3": 4.774847184307873e-12
+    },
+    {
+      "part_number": "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_0",
+      "valid": true,
+      "volume_delta_mm3": 3.517186542012496e-13
+    },
+    {
+      "part_number": "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_1",
+      "valid": true,
+      "volume_delta_mm3": 3.517186542012496e-13
+    },
+    {
+      "part_number": "I_HEAD_PRESENCE_LEFT_BRACKET",
+      "valid": true,
+      "volume_delta_mm3": 4.774847184307873e-12
+    },
+    {
+      "part_number": "I_HEAD_PRESENCE_RIGHT_BRACKET",
+      "valid": true,
+      "volume_delta_mm3": 7.73070496506989e-12
+    },
+    {
+      "part_number": "I_HEAD_PRESENCE_TOP_BRACKET",
+      "valid": true,
+      "volume_delta_mm3": 4.092726157978177e-11
+    },
+    {
+      "part_number": "I_HEAD_LEAD_SADDLE",
+      "valid": true,
+      "volume_delta_mm3": 3.183231456205249e-12
+    },
+    {
+      "part_number": "I_HEAD_TETHER_EYE_FIXED",
+      "valid": true,
+      "volume_delta_mm3": 6.366462912410498e-12
+    },
+    {
+      "part_number": "I_HEAD_TETHER_EYE_RELEASE",
+      "valid": true,
+      "volume_delta_mm3": 5.4569682106375694e-12
+    }
+  ]
+}

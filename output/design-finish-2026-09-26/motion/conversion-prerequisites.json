@@ -1,0 +1,3797 @@
+{
+  "builder": "build_revi",
+  "scope": "Bind changed tool obstacles to existing complete-machine path proofs.\n\nDisjoint exact enclosing boxes establish that newly installed tool solids cannot\nintersect the recorded motions. This supplements, never replaces, the underlying\nfull-obstacle proofs. Small hardware motions, fingers, cables and torch are out\nof scope, as in those proofs.\n",
+  "source_sha256": {
+    "output/release-review/RevE-ENGINEERING/bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "output/release-review/RevE-ENGINEERING/bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "output/release-review/RevE-ENGINEERING/bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "output/release-review/RevE-ENGINEERING/build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "output/release-review/RevE-ENGINEERING/build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "output/release-review/RevE-ENGINEERING/build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "output/release-review/RevE-ENGINEERING/build_revi.py": "2756268a5dca6ce3588d4b2ac0ebde43c87390bed8d6caa21e706fc7f83af462",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "output/release-review/RevE-ENGINEERING/check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "output/release-review/RevE-ENGINEERING/controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "output/release-review/RevE-ENGINEERING/export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "output/release-review/RevE-ENGINEERING/frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "output/release-review/RevE-ENGINEERING/geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "output/release-review/RevE-ENGINEERING/package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "output/release-review/RevE-ENGINEERING/plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "output/release-review/RevE-ENGINEERING/reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "output/release-review/RevE-ENGINEERING/render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "output/release-review/RevE-ENGINEERING/render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "output/release-review/RevE-ENGINEERING/render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "output/release-review/RevE-ENGINEERING/render_revi.py": "991d641ba4baa19a0f5147b4d29aa9d300c163973c15cadbd62d6cbe2b5ebab5",
+    "output/release-review/RevE-ENGINEERING/sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "output/release-review/RevE-ENGINEERING/service_finish.py": "9738b260ce8f61c7ca45b46c212b1559057bdb1b1505885bcc0616045bc228e5",
+    "output/release-review/RevE-ENGINEERING/strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "output/release-review/RevE-ENGINEERING/structure_finish.py": "b0e6e7f5fc7bd5d3b9e901bc13f7186f78395c78584ab3238ba249613bea9778",
+    "output/release-review/RevE-ENGINEERING/swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "output/release-review/RevE-ENGINEERING/sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "output/release-review/RevE-ENGINEERING/tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "output/release-review/RevE-ENGINEERING/update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "output/release-review/RevE-ENGINEERING/verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "output/release-review/RevE-ENGINEERING/verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "output/release-review/RevE-ENGINEERING/verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "output/release-review/RevE-ENGINEERING/water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "output/release-review/RevE-ENGINEERING/water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "output/release-review/RevE-ENGINEERING/water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811",
+    "output/design-finish-2026-09-26/motion/check_conversion_prerequisites.py": "7e53e0722ef8d534204e99f508a3de807cd2f61c7bfb8f20553690388d816171",
+    "output/design-finish-2026-09-26/motion/check_transfer_staging.py": "5eb15e7d426e8bfb13d90d6fb5340f424f58237d813e1f9e6735b379ddd491a3",
+    "output/design-finish-2026-09-26/structure/check_reinforced_paths.py": "0be42f7f957efa89edd80bba5a9a6f5a798ece6be5869e8ec66a19bbdcb23e8a",
+    "output/design-finish-2026-09-26/structure/check_temp_fixture_transfer.py": "87caaba99cbbd56ac17748c8e5fa4d7a122ecb9ef9a07d41a6b4616d85a60a48",
+    "output/design-finish-2026-09-26/verify_revi_routes.py": "be4fc38927a00f7e0194f1270380b0927d483dfcd0e1fa1f6cddab6ac87ae50d",
+    "output/cad-repair-2026-09-25/check_spoil_transfer.py": "1397e268b4136f0436db0f07bd23256c35d980cb38eca42c2c6a40c56e4af9fe",
+    "output/cad-repair-2026-09-25/verify_revg_beam_path.py": "cf9cffeb4ebeddc6048fc977c888b13f0f90ee0779b7006549f745fd5f56e6c3"
+  },
+  "evidence_report_sha256": {
+    "output/design-finish-2026-09-26/routes/spoil-transfer-check.json": "cd4bb935d62bc0e56b408a8a4100ffeefbb73c3ea8d57104eba09a8026ca3f35",
+    "output/design-finish-2026-09-26/routes/panel-path-check.json": "1ddee7a45f11bd253d04096b2c9635d67fd07617a6710bfe6d2fb9d0468cce88",
+    "output/design-finish-2026-09-26/routes/beam-path-check.json": "eba01a0833e780f1a07380ae40a4455e595bfbd3afab1acc552f9d96a69da0e5",
+    "output/design-finish-2026-09-26/structure/reinforced-restraint-paths.json": "97f7152506fcef9b1fe0f85f2de3ab6943d4232d5347f8399237401c602ab7fa",
+    "output/design-finish-2026-09-26/structure/temporary-fixture-transfer.json": "f43947f497c888971d2e965b0553a037656525fefb088f643a14c2a423cfa757",
+    "output/design-finish-2026-09-26/motion/transfer-staging-verification.json": "5c006573141b16920614781946222447d8d580421172e459d0da85b016d2012c"
+  },
+  "evidence_bindings": [
+    {
+      "report": "routes/spoil-transfer-check.json",
+      "passed": true,
+      "source_mismatches": []
+    },
+    {
+      "report": "routes/panel-path-check.json",
+      "passed": true,
+      "source_mismatches": []
+    },
+    {
+      "report": "routes/beam-path-check.json",
+      "passed": true,
+      "source_mismatches": []
+    },
+    {
+      "report": "structure/reinforced-restraint-paths.json",
+      "passed": true,
+      "source_mismatches": []
+    },
+    {
+      "report": "structure/temporary-fixture-transfer.json",
+      "passed": true,
+      "source_mismatches": []
+    },
+    {
+      "report": "motion/transfer-staging-verification.json",
+      "passed": true,
+      "source_mismatches": []
+    }
+  ],
+  "changed_obstacles": {
+    "mounted_router": {
+      "TOOL_SPINDLE_65x259": [
+        542.5,
+        1088.8999999999999,
+        1060.0,
+        607.5,
+        1153.8999999999999,
+        1319.0
+      ],
+      "TOOL_CLAMP_MOUNT_-45_12": [
+        525.0,
+        1153.6,
+        1187.0,
+        535.0,
+        1179.6,
+        1197.0
+      ],
+      "TOOL_CLAMP_MOUNT_-45_38": [
+        525.0,
+        1153.6,
+        1213.0,
+        535.0,
+        1179.6,
+        1223.0
+      ],
+      "TOOL_CLAMP_MOUNT_45_12": [
+        615.0,
+        1153.6,
+        1187.0,
+        625.0,
+        1179.6,
+        1197.0
+      ],
+      "TOOL_CLAMP_MOUNT_45_38": [
+        615.0,
+        1153.6,
+        1213.0,
+        625.0,
+        1179.6,
+        1223.0
+      ],
+      "TOOL_CLAMP_PINCH_1": [
+        523.0,
+        1070.3999999999999,
+        1200.0,
+        533.0,
+        1136.3999999999999,
+        1210.0
+      ],
+      "TOOL_CLAMP_PINCH_2": [
+        617.0,
+        1070.3999999999999,
+        1200.0,
+        627.0,
+        1136.3999999999999,
+        1210.0
+      ],
+      "TOOL_SPLIT_CLAMP_REAR": [
+        520.0,
+        1121.6499999999999,
+        1185.0,
+        630.0,
+        1166.8999999999999,
+        1225.0
+      ],
+      "TOOL_SPLIT_CLAMP_FRONT": [
+        520.0,
+        1076.3999999999999,
+        1185.0,
+        630.0,
+        1121.1499999999999,
+        1225.0
+      ]
+    },
+    "installed_head_and_relocated_mounting_hardware": {
+      "I_PARK_BOLT_1": [
+        922.75,
+        802.75,
+        436.144,
+        931.25,
+        811.25,
+        459.144
+      ],
+      "I_PARK_BOLT_2": [
+        942.75,
+        802.75,
+        436.144,
+        951.25,
+        811.25,
+        459.144
+      ],
+      "I_TOOL_MOUNT_1": [
+        524.9,
+        1157.6,
+        1186.9,
+        535.1,
+        1179.6,
+        1197.1
+      ],
+      "I_TOOL_MOUNT_2": [
+        524.9,
+        1157.6,
+        1212.9,
+        535.1,
+        1179.6,
+        1223.1
+      ],
+      "I_TOOL_MOUNT_3": [
+        614.9,
+        1157.6,
+        1186.9,
+        625.1,
+        1179.6,
+        1197.1
+      ],
+      "I_TOOL_MOUNT_4": [
+        614.9,
+        1157.6,
+        1212.9,
+        625.1,
+        1179.6,
+        1223.1
+      ],
+      "I_HEAD_BACKPLATE": [
+        520.0,
+        1157.3749999999998,
+        1170.0,
+        630.0,
+        1166.8999999999999,
+        1300.0
+      ],
+      "I_HEAD_CROSSBAR_1": [
+        520.0,
+        1132.3749999999998,
+        1170.0,
+        630.0,
+        1157.3749999999998,
+        1182.0
+      ],
+      "I_HEAD_BAR_1_45": [
+        561.5,
+        1128.3749999999998,
+        1172.5,
+        568.5,
+        1162.3749999999998,
+        1179.5
+      ],
+      "I_HEAD_BAR_1_65": [
+        581.5,
+        1128.3749999999998,
+        1172.5,
+        588.5,
+        1162.3749999999998,
+        1179.5
+      ],
+      "I_HEAD_CROSSBAR_2": [
+        520.0,
+        1132.3749999999998,
+        1288.0,
+        630.0,
+        1157.3749999999998,
+        1300.0
+      ],
+      "I_HEAD_BAR_2_45": [
+        561.5,
+        1128.3749999999998,
+        1290.5,
+        568.5,
+        1162.3749999999998,
+        1297.5
+      ],
+      "I_HEAD_BAR_2_65": [
+        581.5,
+        1128.3749999999998,
+        1290.5,
+        588.5,
+        1162.3749999999998,
+        1297.5
+      ],
+      "I_HEAD_ROD_25": [
+        541.0,
+        1140.8999999999999,
+        1176.0,
+        549.0,
+        1148.8999999999999,
+        1294.0
+      ],
+      "I_HEAD_ROD_TOP_25": [
+        541.5,
+        1141.3999999999999,
+        1284.0,
+        548.5,
+        1148.3999999999999,
+        1304.0
+      ],
+      "I_HEAD_ROD_BOTTOM_25": [
+        541.5,
+        1141.3999999999999,
+        1166.0,
+        548.5,
+        1148.3999999999999,
+        1186.0
+      ],
+      "I_HEAD_ROD_85": [
+        601.0,
+        1140.8999999999999,
+        1176.0,
+        609.0,
+        1148.8999999999999,
+        1294.0
+      ],
+      "I_HEAD_ROD_TOP_85": [
+        601.5,
+        1141.3999999999999,
+        1284.0,
+        608.5,
+        1148.3999999999999,
+        1304.0
+      ],
+      "I_HEAD_ROD_BOTTOM_85": [
+        601.5,
+        1141.3999999999999,
+        1166.0,
+        608.5,
+        1148.3999999999999,
+        1186.0
+      ],
+      "I_HEAD_FLOAT_CARRIAGE": [
+        520.0,
+        1132.8999998999998,
+        1197.9999999,
+        630.0,
+        1154.9000001,
+        1270.0000001
+      ],
+      "I_HEAD_BUSH_25_28": [
+        537.5,
+        1137.3999999999999,
+        1198.0,
+        552.5,
+        1152.3999999999999,
+        1222.0
+      ],
+      "I_HEAD_BUSH_25_75.85": [
+        537.5,
+        1137.3999999999999,
+        1245.85,
+        552.5,
+        1152.3999999999999,
+        1269.85
+      ],
+      "I_HEAD_BUSH_SPACER_25": [
+        537.6,
+        1137.4999999999998,
+        1222.0,
+        552.4,
+        1152.3,
+        1245.85
+      ],
+      "I_HEAD_BUSH_85_28": [
+        597.5,
+        1137.3999999999999,
+        1198.0,
+        612.5,
+        1152.3999999999999,
+        1222.0
+      ],
+      "I_HEAD_BUSH_85_75.85": [
+        597.5,
+        1137.3999999999999,
+        1245.85,
+        612.5,
+        1152.3999999999999,
+        1269.85
+      ],
+      "I_HEAD_BUSH_SPACER_85": [
+        597.6,
+        1137.4999999999998,
+        1222.0,
+        612.4,
+        1152.3,
+        1245.85
+      ],
+      "I_HEAD_BEARING_CAP_1": [
+        520.0,
+        1132.8999999999999,
+        1196.0,
+        630.0,
+        1154.8999999999999,
+        1198.0
+      ],
+      "I_HEAD_CAP_1_7_17": [
+        524.25,
+        1147.1499999999999,
+        1193.0,
+        529.75,
+        1152.6499999999999,
+        1204.0
+      ],
+      "I_HEAD_CAP_1_7_29": [
+        524.25,
+        1135.1499999999999,
+        1193.0,
+        529.75,
+        1140.6499999999999,
+        1204.0
+      ],
+      "I_HEAD_CAP_1_103_17": [
+        620.25,
+        1147.1499999999999,
+        1193.0,
+        625.75,
+        1152.6499999999999,
+        1204.0
+      ],
+      "I_HEAD_CAP_1_103_29": [
+        620.25,
+        1135.1499999999999,
+        1193.0,
+        625.75,
+        1140.6499999999999,
+        1204.0
+      ],
+      "I_HEAD_BEARING_CAP_2": [
+        520.0,
+        1132.8999999999999,
+        1270.0,
+        630.0,
+        1154.8999999999999,
+        1272.0
+      ],
+      "I_HEAD_CAP_2_7_17": [
+        524.25,
+        1147.1499999999999,
+        1264.0,
+        529.75,
+        1152.6499999999999,
+        1275.0
+      ],
+      "I_HEAD_CAP_2_7_29": [
+        524.25,
+        1135.1499999999999,
+        1264.0,
+        529.75,
+        1140.6499999999999,
+        1275.0
+      ],
+      "I_HEAD_CAP_2_103_17": [
+        620.25,
+        1147.1499999999999,
+        1264.0,
+        625.75,
+        1152.6499999999999,
+        1275.0
+      ],
+      "I_HEAD_CAP_2_103_29": [
+        620.25,
+        1135.1499999999999,
+        1264.0,
+        625.75,
+        1140.6499999999999,
+        1275.0
+      ],
+      "I_HEAD_FLOAT_STOP": [
+        565.0,
+        1141.8999999999999,
+        1221.0,
+        585.0,
+        1157.3749999999998,
+        1229.0
+      ],
+      "I_HEAD_STOP_49": [
+        565.5,
+        1141.8999999999999,
+        1221.5,
+        572.5,
+        1161.8999999999999,
+        1228.5
+      ],
+      "I_HEAD_STOP_61": [
+        577.5,
+        1141.8999999999999,
+        1221.5,
+        584.5,
+        1161.8999999999999,
+        1228.5
+      ],
+      "I_HEAD_SEAT_CONE": [
+        525.0,
+        1126.8999999999999,
+        1205.0,
+        535.0,
+        1138.8999999999999,
+        1215.0
+      ],
+      "I_HEAD_BUTTON_CONE": [
+        527.0,
+        1122.8999999999996,
+        1207.0,
+        533.0,
+        1129.6573593128805,
+        1213.0
+      ],
+      "I_HEAD_SEAT_V": [
+        610.0,
+        1126.8999999999999,
+        1204.0,
+        630.0,
+        1138.8999999999999,
+        1216.0
+      ],
+      "I_HEAD_BUTTON_V": [
+        617.0,
+        1122.8999999999996,
+        1207.0,
+        623.0,
+        1129.6573593128805,
+        1213.0
+      ],
+      "I_HEAD_SEAT_FLAT": [
+        570.0,
+        1129.6573593128805,
+        1255.0,
+        580.0,
+        1138.8999999999999,
+        1265.0
+      ],
+      "I_HEAD_BUTTON_FLAT": [
+        572.0,
+        1122.8999999999996,
+        1257.0,
+        578.0,
+        1129.6573593128805,
+        1263.0
+      ],
+      "I_HEAD_RELEASE_PLATE": [
+        520.0,
+        1116.55,
+        1185.0,
+        630.0,
+        1122.8999999999999,
+        1282.0
+      ],
+      "I_HEAD_BUTTON_SCREW_CONE": [
+        527.25,
+        1116.55,
+        1207.25,
+        532.75,
+        1126.55,
+        1212.75
+      ],
+      "I_HEAD_BUTTON_SCREW_V": [
+        617.25,
+        1116.55,
+        1207.25,
+        622.75,
+        1126.55,
+        1212.75
+      ],
+      "I_HEAD_BUTTON_SCREW_FLAT": [
+        572.25,
+        1116.55,
+        1257.25,
+        577.75,
+        1126.55,
+        1262.75
+      ],
+      "I_HEAD_MAGNET_SPACER_1": [
+        526.75,
+        1129.1,
+        1247.75,
+        547.25,
+        1132.8999999999999,
+        1268.25
+      ],
+      "I_HEAD_MAGNET_1": [
+        527.0,
+        1123.1,
+        1248.0,
+        547.0,
+        1129.1,
+        1268.0
+      ],
+      "I_HEAD_MAGNET_SCREW_1": [
+        532.52,
+        1123.1,
+        1253.52,
+        541.48,
+        1139.1,
+        1262.48
+      ],
+      "I_HEAD_MAGNET_SPACER_2": [
+        602.75,
+        1129.1,
+        1249.75,
+        623.25,
+        1132.8999999999999,
+        1270.25
+      ],
+      "I_HEAD_MAGNET_2": [
+        603.0,
+        1123.1,
+        1250.0,
+        623.0,
+        1129.1,
+        1270.0
+      ],
+      "I_HEAD_MAGNET_SCREW_2": [
+        608.52,
+        1123.1,
+        1255.52,
+        617.48,
+        1139.1,
+        1264.48
+      ],
+      "I_HEAD_MAGNET_SPACER_3": [
+        564.75,
+        1129.1,
+        1199.75,
+        585.25,
+        1132.8999999999999,
+        1220.25
+      ],
+      "I_HEAD_MAGNET_3": [
+        565.0,
+        1123.1,
+        1200.0,
+        585.0,
+        1129.1,
+        1220.0
+      ],
+      "I_HEAD_MAGNET_SCREW_3": [
+        570.52,
+        1123.1,
+        1205.52,
+        579.48,
+        1139.1,
+        1214.48
+      ],
+      "I_HEAD_CLAMP_REAR": [
+        530.0,
+        1086.55,
+        1195.0,
+        620.0,
+        1116.55,
+        1235.0
+      ],
+      "I_HEAD_CLAMP_FRONT": [
+        530.0,
+        1056.05,
+        1195.0,
+        620.0,
+        1086.05,
+        1235.0
+      ],
+      "I_HEAD_CLAMP_MOUNT_25_35": [
+        541.5,
+        1104.8999999999999,
+        1201.5,
+        548.5,
+        1122.8999999999999,
+        1208.5
+      ],
+      "I_HEAD_CLAMP_MOUNT_25_55": [
+        541.5,
+        1104.8999999999999,
+        1221.5,
+        548.5,
+        1122.8999999999999,
+        1228.5
+      ],
+      "I_HEAD_CLAMP_MOUNT_85_35": [
+        601.5,
+        1104.8999999999999,
+        1201.5,
+        608.5,
+        1122.8999999999999,
+        1208.5
+      ],
+      "I_HEAD_CLAMP_MOUNT_85_55": [
+        601.5,
+        1104.8999999999999,
+        1221.5,
+        608.5,
+        1122.8999999999999,
+        1228.5
+      ],
+      "I_HEAD_CLAMP_PINCH_15": [
+        531.5,
+        1052.05,
+        1211.5,
+        538.5,
+        1096.05,
+        1218.5
+      ],
+      "I_HEAD_CLAMP_PINCH_95": [
+        611.5,
+        1052.05,
+        1211.5,
+        618.5,
+        1096.05,
+        1218.5
+      ],
+      "I_HEAD_INSERT_REAR": [
+        551.0013021186566,
+        1086.55,
+        1195.0,
+        598.9986978813434,
+        1110.3,
+        1235.0
+      ],
+      "I_HEAD_INSERT_FRONT": [
+        551.0013021186566,
+        1062.3,
+        1195.0,
+        598.9986978813434,
+        1086.05,
+        1235.0
+      ],
+      "I_HEAD_SPLASH_SCREEN": [
+        520.0,
+        1056.05,
+        1182.0,
+        630.0,
+        1116.55,
+        1183.5
+      ],
+      "I_HEAD_SPLASH_TAB_5": [
+        520.0,
+        1115.05,
+        1183.5,
+        530.0,
+        1116.55,
+        1193.5
+      ],
+      "I_HEAD_SPLASH_5": [
+        522.25,
+        1112.05,
+        1186.75,
+        527.75,
+        1121.05,
+        1192.25
+      ],
+      "I_HEAD_SPLASH_TAB_105": [
+        620.0,
+        1115.05,
+        1183.5,
+        630.0,
+        1116.55,
+        1193.5
+      ],
+      "I_HEAD_SPLASH_105": [
+        622.25,
+        1112.05,
+        1186.75,
+        627.75,
+        1121.05,
+        1192.25
+      ],
+      "I_HEAD_FLOAT_CAM": [
+        520.0,
+        1116.8999999999999,
+        1258.0,
+        542.0,
+        1132.8999999999999,
+        1290.0
+      ],
+      "I_HEAD_CAM_91": [
+        520.25,
+        1125.8999999999999,
+        1258.25,
+        525.75,
+        1138.8999999999999,
+        1263.75
+      ],
+      "I_HEAD_CAM_96.5": [
+        520.25,
+        1125.8999999999999,
+        1263.75,
+        525.75,
+        1138.8999999999999,
+        1269.25
+      ],
+      "I_HEAD_FLOAT_SWITCH_CASE": [
+        520.0,
+        1124.3999999999999,
+        1278.5,
+        538.5,
+        1130.8999999999999,
+        1286.8
+      ],
+      "I_HEAD_FLOAT_SWITCH_PIN": [
+        521.55,
+        1120.1999999999998,
+        1281.5500000000002,
+        523.75,
+        1124.3999999999999,
+        1283.75
+      ],
+      "I_HEAD_FLOAT_SWITCH_BRACKET": [
+        520.0,
+        1123.6,
+        1285.3,
+        546.0,
+        1131.6,
+        1299.3
+      ],
+      "I_HEAD_FLOAT_SWITCH_M3": [
+        532.9,
+        1124.6499999999999,
+        1277.0,
+        538.4,
+        1130.1499999999999,
+        1290.0
+      ],
+      "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_0": [
+        520.0,
+        1131.5999999999997,
+        1292.3,
+        526.0,
+        1132.3749999999998,
+        1298.3
+      ],
+      "I_HEAD_FLOAT_SWITCH_FOOT_0": [
+        520.25,
+        1126.6,
+        1292.55,
+        525.75,
+        1137.6,
+        1298.05
+      ],
+      "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_1": [
+        540.0,
+        1131.5999999999997,
+        1292.3,
+        546.0,
+        1132.3749999999998,
+        1298.3
+      ],
+      "I_HEAD_FLOAT_SWITCH_FOOT_1": [
+        540.25,
+        1126.6,
+        1292.55,
+        545.75,
+        1137.6,
+        1298.05
+      ],
+      "I_HEAD_PRESENCE_LEFT_CASE": [
+        520.0,
+        1125.6999999999998,
+        1237.5,
+        538.5,
+        1132.1999999999998,
+        1245.8
+      ],
+      "I_HEAD_PRESENCE_LEFT_PIN": [
+        521.55,
+        1122.8999999999999,
+        1240.5500000000002,
+        523.75,
+        1125.6999999999998,
+        1242.75
+      ],
+      "I_HEAD_PRESENCE_LEFT_BRACKET": [
+        520.0,
+        1124.8999999999999,
+        1225.0,
+        546.0,
+        1132.8999999999999,
+        1239.0
+      ],
+      "I_HEAD_PRESENCE_LEFT_M3": [
+        532.9,
+        1125.9499999999998,
+        1234.3,
+        538.4,
+        1131.4499999999998,
+        1247.3
+      ],
+      "I_HEAD_PRESENCE_LEFT_FOOT_0": [
+        520.25,
+        1127.8999999999999,
+        1226.25,
+        525.75,
+        1136.8999999999999,
+        1231.75
+      ],
+      "I_HEAD_PRESENCE_LEFT_FOOT_1": [
+        540.25,
+        1127.8999999999999,
+        1226.25,
+        545.75,
+        1136.8999999999999,
+        1231.75
+      ],
+      "I_HEAD_PRESENCE_RIGHT_CASE": [
+        611.5,
+        1125.6999999999998,
+        1237.5,
+        630.0,
+        1132.1999999999998,
+        1245.8
+      ],
+      "I_HEAD_PRESENCE_RIGHT_PIN": [
+        613.05,
+        1122.8999999999999,
+        1240.5500000000002,
+        615.25,
+        1125.6999999999998,
+        1242.75
+      ],
+      "I_HEAD_PRESENCE_RIGHT_BRACKET": [
+        604.0,
+        1124.8999999999999,
+        1225.0,
+        630.0,
+        1132.8999999999999,
+        1239.0
+      ],
+      "I_HEAD_PRESENCE_RIGHT_M3": [
+        624.4,
+        1125.9499999999998,
+        1234.3,
+        629.9,
+        1131.4499999999998,
+        1247.3
+      ],
+      "I_HEAD_PRESENCE_RIGHT_FOOT_0": [
+        604.25,
+        1127.8999999999999,
+        1226.25,
+        609.75,
+        1136.8999999999999,
+        1231.75
+      ],
+      "I_HEAD_PRESENCE_RIGHT_FOOT_1": [
+        624.25,
+        1127.8999999999999,
+        1226.25,
+        629.75,
+        1136.8999999999999,
+        1231.75
+      ],
+      "I_HEAD_PRESENCE_TOP_CASE": [
+        572.35,
+        1125.6999999999998,
+        1271.5,
+        590.85,
+        1132.1999999999998,
+        1279.8
+      ],
+      "I_HEAD_PRESENCE_TOP_PIN": [
+        573.9,
+        1122.8999999999999,
+        1274.5500000000002,
+        576.1,
+        1125.6999999999998,
+        1276.75
+      ],
+      "I_HEAD_PRESENCE_TOP_BRACKET": [
+        564.0,
+        1124.8999999999999,
+        1259.0,
+        600.0,
+        1132.8999999999999,
+        1273.0
+      ],
+      "I_HEAD_PRESENCE_TOP_M3": [
+        585.25,
+        1125.9499999999998,
+        1268.3,
+        590.75,
+        1131.4499999999998,
+        1281.3
+      ],
+      "I_HEAD_PRESENCE_TOP_FOOT_0": [
+        564.25,
+        1127.8999999999999,
+        1260.25,
+        569.75,
+        1136.8999999999999,
+        1265.75
+      ],
+      "I_HEAD_PRESENCE_TOP_FOOT_1": [
+        594.25,
+        1127.8999999999999,
+        1260.25,
+        599.75,
+        1136.8999999999999,
+        1265.75
+      ],
+      "I_HEAD_LEAD_SADDLE": [
+        596.0,
+        1117.3749999999998,
+        1288.0,
+        628.0,
+        1132.3749999999998,
+        1300.0
+      ],
+      "I_HEAD_LEAD_84": [
+        601.25,
+        1123.3749999999998,
+        1291.25,
+        606.75,
+        1136.3749999999998,
+        1296.75
+      ],
+      "I_HEAD_LEAD_100": [
+        617.25,
+        1123.3749999999998,
+        1291.25,
+        622.75,
+        1136.3749999999998,
+        1296.75
+      ],
+      "I_HEAD_TETHER_EYE_FIXED": [
+        569.0,
+        1120.3749999999998,
+        1289.0,
+        581.0,
+        1132.3749999999998,
+        1305.0
+      ],
+      "I_HEAD_TETHER_FIXED": [
+        571.5,
+        1116.3749999999998,
+        1288.5,
+        578.5,
+        1136.3749999999998,
+        1295.5
+      ],
+      "I_HEAD_TETHER_EYE_RELEASE": [
+        621.0,
+        1104.55,
+        1264.0,
+        637.0,
+        1116.55,
+        1276.0
+      ],
+      "I_HEAD_TETHER_RELEASE": [
+        620.5,
+        1100.55,
+        1266.5,
+        627.5,
+        1120.55,
+        1273.5
+      ]
+    }
+  },
+  "checks": [
+    {
+      "phase": "Panels6..2 stored while router remains mounted",
+      "segments": [
+        {
+          "segment": "panel6/lift60",
+          "swept_bounds_mm": [
+            576.5,
+            890.5,
+            907.025,
+            1076.5,
+            1287.5,
+            1000.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 59.200000000000045,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel6/translate_to_front_rotation_datum",
+          "swept_bounds_mm": [
+            325.0,
+            20.0,
+            967.025,
+            1076.5,
+            1287.5,
+            1000.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 59.200000000000045,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel6/rotate90_about_X",
+          "swept_bounds_mm": [
+            325.0,
+            -6.934698052567099,
+            966.826927637891,
+            825.0,
+            423.87727912652656,
+            1385.2403885718638
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 646.5227208734733,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel6/lower_front_drop_lane",
+          "swept_bounds_mm": [
+            325.0,
+            -2.2737367544323206e-13,
+            205.0,
+            825.0,
+            33.77500000000009,
+            1377.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 1036.6249999999998,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel6/slide_rearward_to_storage_slot",
+          "swept_bounds_mm": [
+            325.0,
+            -2.2737367544323206e-13,
+            205.0,
+            825.0,
+            240.7750000000001,
+            602.0
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 829.6249999999998,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel6/lower30_into_slot",
+          "swept_bounds_mm": [
+            325.0,
+            206.99999999999977,
+            175.0,
+            825.0,
+            240.7750000000001,
+            602.0
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 829.6249999999998,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel5/lift60",
+          "swept_bounds_mm": [
+            73.5,
+            890.5,
+            907.025,
+            573.5,
+            1287.5,
+            1000.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 59.200000000000045,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel5/translate_to_front_rotation_datum",
+          "swept_bounds_mm": [
+            73.5,
+            20.0,
+            967.025,
+            825.0,
+            1287.5,
+            1000.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 59.200000000000045,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel5/rotate90_about_X",
+          "swept_bounds_mm": [
+            325.0,
+            -6.934698052567099,
+            966.826927637891,
+            825.0,
+            423.87727912652656,
+            1385.2403885718638
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 646.5227208734733,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel5/lower_front_drop_lane",
+          "swept_bounds_mm": [
+            325.0,
+            -2.2737367544323206e-13,
+            205.0,
+            825.0,
+            33.77500000000009,
+            1377.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 1036.6249999999998,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel5/slide_rearward_to_storage_slot",
+          "swept_bounds_mm": [
+            325.0,
+            -2.2737367544323206e-13,
+            205.0,
+            825.0,
+            200.7750000000001,
+            602.0
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 869.6249999999998,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel5/lower30_into_slot",
+          "swept_bounds_mm": [
+            325.0,
+            166.99999999999977,
+            175.0,
+            825.0,
+            200.7750000000001,
+            602.0
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 869.6249999999998,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel4/lift60",
+          "swept_bounds_mm": [
+            576.5,
+            483.49999999999994,
+            907.025,
+            1076.5,
+            880.5,
+            1000.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 195.89999999999986,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel4/translate_to_front_rotation_datum",
+          "swept_bounds_mm": [
+            325.0,
+            19.999999999999943,
+            967.025,
+            1076.5,
+            880.5,
+            1000.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 195.89999999999986,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel4/rotate90_about_X",
+          "swept_bounds_mm": [
+            325.0,
+            -6.934698052567099,
+            966.8272725240647,
+            825.0,
+            423.8772791265266,
+            1385.2403885718638
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 646.5227208734732,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel4/lower_front_drop_lane",
+          "swept_bounds_mm": [
+            325.0,
+            -4.413136522884997e-14,
+            205.0,
+            825.0,
+            33.77500000000009,
+            1377.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 1036.6249999999998,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel4/slide_rearward_to_storage_slot",
+          "swept_bounds_mm": [
+            325.0,
+            -4.413136522884997e-14,
+            205.0,
+            825.0,
+            160.7750000000001,
+            602.0
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 909.6249999999998,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel4/lower30_into_slot",
+          "swept_bounds_mm": [
+            325.0,
+            126.99999999999996,
+            175.0,
+            825.0,
+            160.7750000000001,
+            602.0
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 909.6249999999998,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel3/lift60",
+          "swept_bounds_mm": [
+            73.5,
+            483.49999999999994,
+            907.025,
+            573.5,
+            880.5,
+            1000.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 195.89999999999986,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel3/translate_to_front_rotation_datum",
+          "swept_bounds_mm": [
+            73.5,
+            19.999999999999943,
+            967.025,
+            825.0,
+            880.5,
+            1000.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 195.89999999999986,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel3/rotate90_about_X",
+          "swept_bounds_mm": [
+            325.0,
+            -6.934698052567099,
+            966.8272725240647,
+            825.0,
+            423.8772791265266,
+            1385.2403885718638
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 646.5227208734732,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel3/lower_front_drop_lane",
+          "swept_bounds_mm": [
+            325.0,
+            -4.413136522884997e-14,
+            205.0,
+            825.0,
+            33.77500000000009,
+            1377.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 1036.6249999999998,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel3/slide_rearward_to_storage_slot",
+          "swept_bounds_mm": [
+            325.0,
+            -4.413136522884997e-14,
+            205.0,
+            825.0,
+            120.77500000000009,
+            602.0
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 949.6249999999998,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel3/lower30_into_slot",
+          "swept_bounds_mm": [
+            325.0,
+            86.99999999999996,
+            175.0,
+            825.0,
+            120.77500000000009,
+            602.0
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 949.6249999999998,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel2/lift60",
+          "swept_bounds_mm": [
+            576.5,
+            76.49999999999994,
+            907.025,
+            1076.5,
+            473.5,
+            1000.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 596.8999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel2/translate_to_front_rotation_datum",
+          "swept_bounds_mm": [
+            325.0,
+            19.999999999999943,
+            967.025,
+            1076.5,
+            473.5,
+            1000.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 596.8999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel2/rotate90_about_X",
+          "swept_bounds_mm": [
+            325.0,
+            -6.934698052567174,
+            966.831471177849,
+            825.0,
+            423.8772791265265,
+            1385.2403885718638
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 646.5227208734734,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel2/lower_front_drop_lane",
+          "swept_bounds_mm": [
+            325.0,
+            -5.684341886080802e-14,
+            205.0,
+            825.0,
+            33.77499999999998,
+            1377.8
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 1036.625,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel2/slide_rearward_to_storage_slot",
+          "swept_bounds_mm": [
+            325.0,
+            -5.684341886080802e-14,
+            205.0,
+            825.0,
+            80.77499999999998,
+            602.0
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 989.6249999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "panel2/lower30_into_slot",
+          "swept_bounds_mm": [
+            325.0,
+            46.99999999999994,
+            175.0,
+            825.0,
+            80.77499999999998,
+            602.0
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 989.6249999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "phase": "Earlier rack/guard preparation with mounted router",
+      "segments": [
+        {
+          "segment": "stage_top_bar_1/1",
+          "swept_bounds_mm": [
+            300.0,
+            0.0,
+            553.5,
+            330.0,
+            247.0,
+            636.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 823.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_1/2",
+          "swept_bounds_mm": [
+            265.0,
+            0.0,
+            613.5,
+            330.0,
+            247.0,
+            636.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 823.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_1/3",
+          "swept_bounds_mm": [
+            265.0,
+            0.0,
+            613.5,
+            295.0,
+            903.5,
+            636.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 423.5,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_1/4",
+          "swept_bounds_mm": [
+            265.0,
+            656.5,
+            613.5,
+            295.0,
+            903.5,
+            636.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 423.5,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_1/5",
+          "swept_bounds_mm": [
+            265.0,
+            656.5,
+            613.5,
+            295.0,
+            1105.0,
+            636.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 423.5,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_1/6",
+          "swept_bounds_mm": [
+            265.0,
+            858.0,
+            548.596,
+            295.0,
+            1105.0,
+            636.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 423.5,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_1/7",
+          "swept_bounds_mm": [
+            265.0,
+            857.9635681266453,
+            443.4870474826042,
+            295.0,
+            1106.608952517396,
+            692.1324318733547
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 367.8675681266453,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_1/8",
+          "swept_bounds_mm": [
+            265.0,
+            918.5000000000001,
+            445.096,
+            295.0,
+            1001.5000000000001,
+            692.096
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 367.904,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_1/9",
+          "swept_bounds_mm": [
+            265.0,
+            918.5000000000001,
+            445.096,
+            295.0,
+            941.5000000000001,
+            692.096
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 367.904,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_1/10",
+          "swept_bounds_mm": [
+            265.0,
+            918.5000000000001,
+            433.096,
+            295.0,
+            941.5000000000001,
+            692.096
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 367.904,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_2/1",
+          "swept_bounds_mm": [
+            820.0,
+            0.0,
+            553.5,
+            850.0,
+            247.0,
+            636.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 823.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_2/2",
+          "swept_bounds_mm": [
+            292.0,
+            0.0,
+            613.5,
+            850.0,
+            247.0,
+            636.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 823.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_2/3",
+          "swept_bounds_mm": [
+            292.0,
+            0.0,
+            613.5,
+            322.0,
+            903.5,
+            636.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 423.5,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_2/4",
+          "swept_bounds_mm": [
+            292.0,
+            656.5,
+            613.5,
+            327.0,
+            903.5,
+            636.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 423.5,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_2/5",
+          "swept_bounds_mm": [
+            297.0,
+            656.5,
+            613.5,
+            327.0,
+            1140.0,
+            636.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 423.5,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_2/6",
+          "swept_bounds_mm": [
+            297.0,
+            893.0,
+            548.596,
+            327.0,
+            1140.0,
+            636.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 423.5,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_2/7",
+          "swept_bounds_mm": [
+            297.0,
+            892.9635681266453,
+            443.4870474826042,
+            327.0,
+            1141.608952517396,
+            692.1324318733547
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 367.8675681266453,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_2/8",
+          "swept_bounds_mm": [
+            297.0,
+            953.5000000000001,
+            445.096,
+            327.0,
+            1036.5,
+            692.096
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 367.904,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_2/9",
+          "swept_bounds_mm": [
+            292.0,
+            953.5000000000001,
+            445.096,
+            327.0,
+            976.5000000000001,
+            692.096
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 367.904,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_top_bar_2/10",
+          "swept_bounds_mm": [
+            292.0,
+            953.5000000000001,
+            433.096,
+            322.0,
+            976.5000000000001,
+            692.096
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 367.904,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_1/1",
+          "swept_bounds_mm": [
+            308.0,
+            103.0,
+            175.0,
+            322.0,
+            117.0,
+            633.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 953.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_1/2",
+          "swept_bounds_mm": [
+            308.0,
+            103.0,
+            235.0,
+            367.0,
+            117.0,
+            633.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 953.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_1/3",
+          "swept_bounds_mm": [
+            353.0,
+            103.0,
+            235.0,
+            367.0,
+            409.0,
+            633.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 661.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_1/4",
+          "swept_bounds_mm": [
+            353.0,
+            3.4385241898057757,
+            228.0,
+            367.0,
+            409.0,
+            633.5614758101942
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 661.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_1/5",
+          "swept_bounds_mm": [
+            353.0,
+            3.500000000000056,
+            228.0,
+            367.0,
+            402.00000000000006,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 668.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_1/6",
+          "swept_bounds_mm": [
+            353.0,
+            3.500000000000056,
+            544.596,
+            367.0,
+            1380.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_1/7",
+          "swept_bounds_mm": [
+            273.0,
+            981.5,
+            544.596,
+            367.0,
+            1380.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_1/8",
+          "swept_bounds_mm": [
+            273.0,
+            921.5,
+            544.596,
+            287.0,
+            1380.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_1/9",
+          "swept_bounds_mm": [
+            273.0,
+            921.5,
+            536.096,
+            287.0,
+            1320.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_2/1",
+          "swept_bounds_mm": [
+            828.0,
+            103.0,
+            175.0,
+            842.0,
+            117.0,
+            633.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 953.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_2/2",
+          "swept_bounds_mm": [
+            353.0,
+            103.0,
+            235.0,
+            842.0,
+            117.0,
+            633.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 953.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_2/3",
+          "swept_bounds_mm": [
+            353.0,
+            103.0,
+            235.0,
+            367.0,
+            409.0,
+            633.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 661.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_2/4",
+          "swept_bounds_mm": [
+            353.0,
+            3.4385241898057757,
+            228.0,
+            367.0,
+            409.0,
+            633.5614758101942
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 661.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_2/5",
+          "swept_bounds_mm": [
+            353.0,
+            3.500000000000056,
+            228.0,
+            367.0,
+            402.00000000000006,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 668.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_2/6",
+          "swept_bounds_mm": [
+            353.0,
+            3.500000000000056,
+            544.596,
+            367.0,
+            1355.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_2/7",
+          "swept_bounds_mm": [
+            300.0,
+            956.5,
+            544.596,
+            367.0,
+            1355.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_2/8",
+          "swept_bounds_mm": [
+            300.0,
+            956.5,
+            544.596,
+            314.0,
+            1355.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "stage_bare_rod_2/9",
+          "swept_bounds_mm": [
+            300.0,
+            956.5,
+            536.096,
+            314.0,
+            1355.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "close_spoil_guard_H_SPOIL_GUARD_TOP/1",
+          "swept_bounds_mm": [
+            111.0,
+            240.0,
+            573.0,
+            275.0,
+            651.0,
+            725.26107045876
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 437.89999999999986,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "close_spoil_guard_H_SPOIL_GUARD_FRONT/1",
+          "swept_bounds_mm": [
+            117.0,
+            243.0,
+            563.0,
+            275.15798400340213,
+            246.0,
+            725.0290295396317
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 824.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "close_spoil_guard_H_SPOIL_GUARD_REAR/1",
+          "swept_bounds_mm": [
+            117.0,
+            648.0,
+            563.0,
+            275.15798400340213,
+            651.0,
+            725.0290295396317
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 437.89999999999986,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "close_spoil_guard_H_SPOIL_GUARD_RIGHT/1",
+          "swept_bounds_mm": [
+            117.0,
+            246.0,
+            563.0,
+            273.16004700965584,
+            648.0,
+            723.0294089382822
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 440.89999999999986,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "close_spoil_guard_carrier_sleeve/1",
+          "swept_bounds_mm": [
+            112.0,
+            484.0,
+            562.0,
+            128.0,
+            506.0,
+            578.0
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 582.8999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "close_spoil_guard_carrier_front_bridge/1",
+          "swept_bounds_mm": [
+            111.0,
+            484.0,
+            573.0,
+            265.0,
+            490.0,
+            715.2790418470607
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 580.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "close_spoil_guard_carrier_rear_bridge/1",
+          "swept_bounds_mm": [
+            111.0,
+            503.5,
+            573.0,
+            265.0,
+            509.5,
+            715.2790418470607
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 560.8999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "close_spoil_guard_carrier_index_tab/1",
+          "swept_bounds_mm": [
+            115.0,
+            503.5,
+            565.0,
+            145.4950975679639,
+            509.5,
+            595.495097567964
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 579.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_2/1",
+          "swept_bounds_mm": [
+            300.0,
+            956.5,
+            536.096,
+            314.0,
+            1355.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_2/2",
+          "swept_bounds_mm": [
+            300.0,
+            956.5,
+            544.596,
+            314.0,
+            1355.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_2/3",
+          "swept_bounds_mm": [
+            300.0,
+            956.5,
+            544.596,
+            367.0,
+            1355.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_2/4",
+          "swept_bounds_mm": [
+            353.0,
+            3.499999999999999,
+            544.596,
+            367.0,
+            1355.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_2/5",
+          "swept_bounds_mm": [
+            353.0,
+            3.499999999999999,
+            228.0,
+            367.0,
+            402.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 668.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_2/6",
+          "swept_bounds_mm": [
+            353.0,
+            3.4385241898057792,
+            228.0,
+            367.0,
+            409.00000000000006,
+            633.5614758101942
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 661.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_2/7",
+          "swept_bounds_mm": [
+            353.0,
+            103.0,
+            235.0,
+            367.0,
+            409.0,
+            633.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 661.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_2/8",
+          "swept_bounds_mm": [
+            353.0,
+            103.0,
+            235.0,
+            842.0,
+            117.0,
+            633.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 953.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_2/9",
+          "swept_bounds_mm": [
+            828.0,
+            103.0,
+            175.0,
+            842.0,
+            117.0,
+            633.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 953.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_1/1",
+          "swept_bounds_mm": [
+            273.0,
+            921.5,
+            536.096,
+            287.0,
+            1320.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_1/2",
+          "swept_bounds_mm": [
+            273.0,
+            921.5,
+            544.596,
+            287.0,
+            1380.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_1/3",
+          "swept_bounds_mm": [
+            273.0,
+            981.5,
+            544.596,
+            367.0,
+            1380.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_1/4",
+          "swept_bounds_mm": [
+            353.0,
+            3.499999999999999,
+            544.596,
+            367.0,
+            1380.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 501.404,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_1/5",
+          "swept_bounds_mm": [
+            353.0,
+            3.499999999999999,
+            228.0,
+            367.0,
+            402.0,
+            558.596
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 668.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_1/6",
+          "swept_bounds_mm": [
+            353.0,
+            3.4385241898057792,
+            228.0,
+            367.0,
+            409.00000000000006,
+            633.5614758101942
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 661.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_1/7",
+          "swept_bounds_mm": [
+            353.0,
+            103.0,
+            235.0,
+            367.0,
+            409.0,
+            633.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 661.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_1/8",
+          "swept_bounds_mm": [
+            308.0,
+            103.0,
+            235.0,
+            367.0,
+            117.0,
+            633.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 953.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "restore_bare_rod_1/9",
+          "swept_bounds_mm": [
+            308.0,
+            103.0,
+            175.0,
+            322.0,
+            117.0,
+            633.5
+          ],
+          "obstacle_count": 9,
+          "minimum_axis_separation_mm": 953.3999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "phase": "All six spoilboard routes already use mounted-router builder",
+      "passed": true,
+      "basis": "Source-bound check_spoil_transfer.main obtains its model directly from the injected build_revi builder and never calls store_router_tool; prepare_handling_model only moves rack restraints."
+    },
+    {
+      "phase": "Normal four-beam storage with installed plasma head",
+      "segments": [
+        {
+          "segment": "1/lift_clear_of_seats",
+          "swept_bounds_mm": [
+            113.0,
+            39.6,
+            842.0,
+            1037.0,
+            96.4,
+            1000.8
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 706.35,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "1/move_lifted_beam_to_front",
+          "swept_bounds_mm": [
+            113.0,
+            39.6,
+            922.0,
+            1037.0,
+            135.6,
+            1000.8
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 667.15,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "1/rotate_on_side_above_front",
+          "swept_bounds_mm": [
+            113.0,
+            4.263256414560601e-14,
+            922.0,
+            1037.0,
+            135.6,
+            1019.1374284197393
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 667.15,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "1/raise_for_temporary_park_approach",
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            922.0,
+            1037.0,
+            78.79999999999995,
+            997.6
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 723.95,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "1/move_above_second_beam",
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            940.8,
+            1037.0,
+            517.9,
+            997.6
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 481.65599999999995,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "1/lower_onto_second_beam",
+          "swept_bounds_mm": [
+            113.0,
+            439.09999999999997,
+            920.8,
+            1037.0,
+            517.9,
+            997.6
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 461.65599999999995,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "1/lift_from_temporary_park",
+          "swept_bounds_mm": [
+            113.0,
+            439.09999999999997,
+            920.8,
+            1037.0,
+            517.9,
+            997.6
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 461.65599999999995,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "1/return_on_side_to_front_portal",
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            940.8,
+            1037.0,
+            517.9,
+            997.6
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 481.65599999999995,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "1/lower_in_open_front_portal",
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            588.0,
+            1037.0,
+            78.79999999999995,
+            997.6
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 723.95,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "1/move_into_rear_lower_rack",
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            588.0,
+            1037.0,
+            168.79999999999995,
+            644.8000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 633.95,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "1/lower_onto_rear_shelf",
+          "swept_bounds_mm": [
+            113.0,
+            89.99999999999991,
+            585.0,
+            1037.0,
+            168.79999999999995,
+            644.8000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 633.95,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "2/lift_clear_of_seats",
+          "swept_bounds_mm": [
+            113.0,
+            453.1,
+            842.0,
+            1037.0,
+            509.90000000000003,
+            1000.8
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 382.856,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "2/move_lifted_beam_to_front",
+          "swept_bounds_mm": [
+            113.0,
+            78.79999999999995,
+            922.0,
+            1037.0,
+            509.90000000000003,
+            1000.8
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 462.856,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "2/rotate_on_side_above_front",
+          "swept_bounds_mm": [
+            113.0,
+            4.263256414560601e-14,
+            922.0,
+            1037.0,
+            135.59999999999997,
+            1019.1374284197393
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 667.1500000000001,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "2/lower_onto_front_shelf",
+          "swept_bounds_mm": [
+            113.0,
+            -1.1468603844377867e-13,
+            584.9999999999999,
+            1037.0,
+            78.7999999999999,
+            978.8
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 723.95,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "3/lift_clear_of_seats",
+          "swept_bounds_mm": [
+            113.0,
+            860.1,
+            842.0,
+            1037.0,
+            916.9,
+            1000.8
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 181.20000000000005,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "3/move_lifted_beam_to_front",
+          "swept_bounds_mm": [
+            113.0,
+            78.79999999999991,
+            922.0,
+            1037.0,
+            916.9,
+            1000.8
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 181.20000000000005,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "3/rotate_on_side_above_front",
+          "swept_bounds_mm": [
+            113.0,
+            4.263256414560601e-14,
+            921.9999999999999,
+            1037.0,
+            135.59999999999997,
+            1019.1374284197393
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 667.1500000000001,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "3/lower_above_front_lower_beam",
+          "swept_bounds_mm": [
+            113.0,
+            -4.263256414560601e-14,
+            644.8,
+            1037.0,
+            78.79999999999995,
+            978.8
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 723.95,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "3/move_above_rear_lower_beam",
+          "swept_bounds_mm": [
+            113.0,
+            -4.263256414560601e-14,
+            644.8,
+            1037.0,
+            168.79999999999995,
+            701.6
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 633.95,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "3/lower_onto_rear_stacking_pads",
+          "swept_bounds_mm": [
+            113.0,
+            89.99999999999996,
+            641.8,
+            1037.0,
+            168.79999999999995,
+            701.6
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 633.95,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "4/lift_clear_of_seats",
+          "swept_bounds_mm": [
+            113.0,
+            1273.6,
+            842.0,
+            1037.0,
+            1330.4,
+            1000.8
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 165.20000000000005,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "4/move_lifted_beam_to_front",
+          "swept_bounds_mm": [
+            113.0,
+            78.79999999999995,
+            922.0,
+            1037.0,
+            1330.4,
+            1000.8
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 165.20000000000005,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "4/rotate_on_side_above_front",
+          "swept_bounds_mm": [
+            113.0,
+            4.263256414560601e-14,
+            922.0,
+            1037.0,
+            135.60000000000036,
+            1019.1374284197396
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 667.1499999999996,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "4/lower_onto_front_stacking_pads",
+          "swept_bounds_mm": [
+            113.0,
+            -4.263256414560601e-14,
+            641.8,
+            1037.0,
+            78.79999999999995,
+            978.8000000000002
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 723.95,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "phase": "Later rack and temporary-fixture paths with installed plasma head",
+      "segments": [
+        {
+          "segment": "install_panel_top_bar_2/1",
+          "swept_bounds_mm": [
+            292.0,
+            953.5,
+            433.0960000000001,
+            322.0,
+            976.5,
+            692.0960000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 473.9039999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_2/2",
+          "swept_bounds_mm": [
+            292.0,
+            953.5,
+            445.0960000000001,
+            327.0,
+            976.5,
+            692.0960000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 473.9039999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_2/3",
+          "swept_bounds_mm": [
+            297.0,
+            953.5,
+            445.0960000000001,
+            327.0,
+            1036.5,
+            692.0960000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 473.9039999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_2/4",
+          "swept_bounds_mm": [
+            297.0,
+            892.9635681266454,
+            443.4870474826043,
+            327.0,
+            1141.608952517396,
+            692.1324318733548
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 473.8675681266452,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_2/5",
+          "swept_bounds_mm": [
+            297.0,
+            893.0,
+            548.596,
+            327.0,
+            1140.0,
+            636.5000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 529.4999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_2/6",
+          "swept_bounds_mm": [
+            297.0,
+            656.5,
+            613.5,
+            327.0,
+            1140.0,
+            636.5000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 529.4999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_2/7",
+          "swept_bounds_mm": [
+            292.0,
+            656.5,
+            613.5,
+            327.0,
+            903.5000000000001,
+            636.5000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 529.4999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_2/8",
+          "swept_bounds_mm": [
+            292.0,
+            0.0,
+            613.5,
+            322.0,
+            903.5000000000001,
+            636.5000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 529.4999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_2/9",
+          "swept_bounds_mm": [
+            292.0,
+            0.0,
+            613.5,
+            850.0,
+            247.0000000000001,
+            636.5000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 555.7499999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_2/10",
+          "swept_bounds_mm": [
+            820.0,
+            0.0,
+            553.5,
+            850.0,
+            247.0000000000001,
+            636.5000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 555.7499999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_1/1",
+          "swept_bounds_mm": [
+            265.0,
+            918.5,
+            433.0960000000001,
+            295.0,
+            941.5,
+            692.0960000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 473.9039999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_1/2",
+          "swept_bounds_mm": [
+            265.0,
+            918.5,
+            445.0960000000001,
+            295.0,
+            941.5,
+            692.0960000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 473.9039999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_1/3",
+          "swept_bounds_mm": [
+            265.0,
+            918.5,
+            445.0960000000001,
+            295.0,
+            1001.5,
+            692.0960000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 473.9039999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_1/4",
+          "swept_bounds_mm": [
+            265.0,
+            857.9635681266454,
+            443.4870474826043,
+            295.0,
+            1106.608952517396,
+            692.1324318733548
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 473.8675681266452,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_1/5",
+          "swept_bounds_mm": [
+            265.0,
+            858.0,
+            548.596,
+            295.0,
+            1105.0,
+            636.5000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 529.4999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_1/6",
+          "swept_bounds_mm": [
+            265.0,
+            656.5,
+            613.5,
+            295.0,
+            1105.0,
+            636.5000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 529.4999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_1/7",
+          "swept_bounds_mm": [
+            265.0,
+            656.5,
+            613.5,
+            295.0,
+            903.5000000000001,
+            636.5000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 529.4999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_1/8",
+          "swept_bounds_mm": [
+            265.0,
+            0.0,
+            613.5,
+            295.0,
+            903.5000000000001,
+            636.5000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 529.4999999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_1/9",
+          "swept_bounds_mm": [
+            265.0,
+            0.0,
+            613.5,
+            330.0,
+            247.0000000000001,
+            636.5000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 592.75,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "install_panel_top_bar_1/10",
+          "swept_bounds_mm": [
+            300.0,
+            0.0,
+            553.5,
+            330.0,
+            247.0000000000001,
+            636.5000000000001
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 592.75,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "insert_temporary_box_1/1",
+          "swept_bounds_mm": [
+            350.0,
+            428.0,
+            863.0,
+            362.7,
+            646.0,
+            979.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 406.04999999999995,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "insert_temporary_box_2/1",
+          "swept_bounds_mm": [
+            780.0,
+            428.0,
+            863.0,
+            792.7,
+            646.0,
+            979.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 403.856,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_1/1",
+          "swept_bounds_mm": [
+            145.0,
+            900.0,
+            436.096,
+            243.0,
+            1016.0,
+            632.7
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 533.3,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_1/2",
+          "swept_bounds_mm": [
+            145.0,
+            900.0,
+            620.0,
+            298.0,
+            1016.0,
+            632.7
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 533.3,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_1/3",
+          "swept_bounds_mm": [
+            200.0,
+            68.0,
+            620.0,
+            298.0,
+            1016.0,
+            632.7
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 533.3,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_1/4",
+          "swept_bounds_mm": [
+            200.0,
+            55.299999999999955,
+            620.0,
+            298.0,
+            184.0,
+            736.6931446144117
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 624.75,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_1/5",
+          "swept_bounds_mm": [
+            200.0,
+            55.3,
+            619.9999999999999,
+            298.0,
+            68.00000000000001,
+            1116.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 734.75,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_1/6",
+          "swept_bounds_mm": [
+            200.0,
+            55.3,
+            999.9999999999999,
+            298.81948188489963,
+            166.0,
+            1116.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 636.75,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_1/7",
+          "swept_bounds_mm": [
+            200.0,
+            68.0,
+            999.9999999999999,
+            362.7,
+            166.0,
+            1116.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 636.75,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_1/8",
+          "swept_bounds_mm": [
+            350.0,
+            68.0,
+            999.9999999999999,
+            362.7,
+            646.0,
+            1116.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 406.04999999999995,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_1/9",
+          "swept_bounds_mm": [
+            350.0,
+            548.0,
+            862.9999999999999,
+            362.7,
+            646.0,
+            1116.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 406.04999999999995,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_1/10",
+          "swept_bounds_mm": [
+            350.0,
+            428.0,
+            862.9999999999999,
+            362.7,
+            646.0,
+            978.9999999999999
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 406.04999999999995,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_2/1",
+          "swept_bounds_mm": [
+            145.0,
+            1030.0,
+            436.096,
+            243.0,
+            1146.0,
+            632.7
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 533.3,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_2/2",
+          "swept_bounds_mm": [
+            145.0,
+            1030.0,
+            620.0,
+            298.0,
+            1146.0,
+            632.7
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 533.3,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_2/3",
+          "swept_bounds_mm": [
+            200.0,
+            68.0,
+            620.0,
+            298.0,
+            1146.0,
+            632.7
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 533.3,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_2/4",
+          "swept_bounds_mm": [
+            200.0,
+            55.299999999999955,
+            620.0,
+            298.0,
+            184.0,
+            736.6931446144117
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 624.75,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_2/5",
+          "swept_bounds_mm": [
+            200.0,
+            55.299999999999955,
+            619.9999999999999,
+            298.0,
+            68.00000000000001,
+            1116.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 734.75,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_2/6",
+          "swept_bounds_mm": [
+            200.0,
+            55.299999999999955,
+            999.9999999999999,
+            298.81948188489963,
+            166.0,
+            1116.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 636.75,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_2/7",
+          "swept_bounds_mm": [
+            200.0,
+            68.0,
+            999.9999999999999,
+            792.7,
+            166.0,
+            1116.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 636.75,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_2/8",
+          "swept_bounds_mm": [
+            780.0,
+            68.0,
+            999.9999999999999,
+            792.7,
+            646.0,
+            1116.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 406.04999999999995,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_2/9",
+          "swept_bounds_mm": [
+            780.0,
+            548.0,
+            862.9999999999999,
+            792.7,
+            646.0,
+            1116.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 403.8559999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        },
+        {
+          "segment": "H_TEMP_BOX_2/10",
+          "swept_bounds_mm": [
+            780.0,
+            428.0,
+            862.9999999999999,
+            792.7,
+            646.0,
+            979.0
+          ],
+          "obstacle_count": 109,
+          "minimum_axis_separation_mm": 403.8559999999999,
+          "unresolved_enclosing_boxes": {},
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "reconstructed_beam_paths": [
+    {
+      "beam": 1,
+      "segments": [
+        {
+          "name": "lift_clear_of_seats",
+          "swept_bounds_mm": [
+            113.0,
+            39.6,
+            842.0,
+            1037.0,
+            96.4,
+            1000.8
+          ]
+        },
+        {
+          "name": "move_lifted_beam_to_front",
+          "swept_bounds_mm": [
+            113.0,
+            39.6,
+            922.0,
+            1037.0,
+            135.6,
+            1000.8
+          ]
+        },
+        {
+          "name": "rotate_on_side_above_front",
+          "swept_bounds_mm": [
+            113.0,
+            4.263256414560601e-14,
+            922.0,
+            1037.0,
+            135.6,
+            1019.1374284197393
+          ]
+        },
+        {
+          "name": "raise_for_temporary_park_approach",
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            922.0,
+            1037.0,
+            78.79999999999995,
+            997.6
+          ]
+        },
+        {
+          "name": "move_above_second_beam",
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            940.8,
+            1037.0,
+            517.9,
+            997.6
+          ]
+        },
+        {
+          "name": "lower_onto_second_beam",
+          "swept_bounds_mm": [
+            113.0,
+            439.09999999999997,
+            920.8,
+            1037.0,
+            517.9,
+            997.6
+          ]
+        },
+        {
+          "name": "lift_from_temporary_park",
+          "swept_bounds_mm": [
+            113.0,
+            439.09999999999997,
+            920.8,
+            1037.0,
+            517.9,
+            997.6
+          ]
+        },
+        {
+          "name": "return_on_side_to_front_portal",
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            940.8,
+            1037.0,
+            517.9,
+            997.6
+          ]
+        },
+        {
+          "name": "lower_in_open_front_portal",
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            588.0,
+            1037.0,
+            78.79999999999995,
+            997.6
+          ]
+        },
+        {
+          "name": "move_into_rear_lower_rack",
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            588.0,
+            1037.0,
+            168.79999999999995,
+            644.8000000000001
+          ]
+        },
+        {
+          "name": "lower_onto_rear_shelf",
+          "swept_bounds_mm": [
+            113.0,
+            89.99999999999991,
+            585.0,
+            1037.0,
+            168.79999999999995,
+            644.8000000000001
+          ]
+        }
+      ],
+      "final_symmetric_difference_mm3": 0.0
+    },
+    {
+      "beam": 2,
+      "segments": [
+        {
+          "name": "lift_clear_of_seats",
+          "swept_bounds_mm": [
+            113.0,
+            453.1,
+            842.0,
+            1037.0,
+            509.90000000000003,
+            1000.8
+          ]
+        },
+        {
+          "name": "move_lifted_beam_to_front",
+          "swept_bounds_mm": [
+            113.0,
+            78.79999999999995,
+            922.0,
+            1037.0,
+            509.90000000000003,
+            1000.8
+          ]
+        },
+        {
+          "name": "rotate_on_side_above_front",
+          "swept_bounds_mm": [
+            113.0,
+            4.263256414560601e-14,
+            922.0,
+            1037.0,
+            135.59999999999997,
+            1019.1374284197393
+          ]
+        },
+        {
+          "name": "lower_onto_front_shelf",
+          "swept_bounds_mm": [
+            113.0,
+            -1.1468603844377867e-13,
+            584.9999999999999,
+            1037.0,
+            78.7999999999999,
+            978.8
+          ]
+        }
+      ],
+      "final_symmetric_difference_mm3": 0.0
+    },
+    {
+      "beam": 3,
+      "segments": [
+        {
+          "name": "lift_clear_of_seats",
+          "swept_bounds_mm": [
+            113.0,
+            860.1,
+            842.0,
+            1037.0,
+            916.9,
+            1000.8
+          ]
+        },
+        {
+          "name": "move_lifted_beam_to_front",
+          "swept_bounds_mm": [
+            113.0,
+            78.79999999999991,
+            922.0,
+            1037.0,
+            916.9,
+            1000.8
+          ]
+        },
+        {
+          "name": "rotate_on_side_above_front",
+          "swept_bounds_mm": [
+            113.0,
+            4.263256414560601e-14,
+            921.9999999999999,
+            1037.0,
+            135.59999999999997,
+            1019.1374284197393
+          ]
+        },
+        {
+          "name": "lower_above_front_lower_beam",
+          "swept_bounds_mm": [
+            113.0,
+            -4.263256414560601e-14,
+            644.8,
+            1037.0,
+            78.79999999999995,
+            978.8
+          ]
+        },
+        {
+          "name": "move_above_rear_lower_beam",
+          "swept_bounds_mm": [
+            113.0,
+            -4.263256414560601e-14,
+            644.8,
+            1037.0,
+            168.79999999999995,
+            701.6
+          ]
+        },
+        {
+          "name": "lower_onto_rear_stacking_pads",
+          "swept_bounds_mm": [
+            113.0,
+            89.99999999999996,
+            641.8,
+            1037.0,
+            168.79999999999995,
+            701.6
+          ]
+        }
+      ],
+      "final_symmetric_difference_mm3": 0.0
+    },
+    {
+      "beam": 4,
+      "segments": [
+        {
+          "name": "lift_clear_of_seats",
+          "swept_bounds_mm": [
+            113.0,
+            1273.6,
+            842.0,
+            1037.0,
+            1330.4,
+            1000.8
+          ]
+        },
+        {
+          "name": "move_lifted_beam_to_front",
+          "swept_bounds_mm": [
+            113.0,
+            78.79999999999995,
+            922.0,
+            1037.0,
+            1330.4,
+            1000.8
+          ]
+        },
+        {
+          "name": "rotate_on_side_above_front",
+          "swept_bounds_mm": [
+            113.0,
+            4.263256414560601e-14,
+            922.0,
+            1037.0,
+            135.60000000000036,
+            1019.1374284197396
+          ]
+        },
+        {
+          "name": "lower_onto_front_stacking_pads",
+          "swept_bounds_mm": [
+            113.0,
+            -4.263256414560601e-14,
+            641.8,
+            1037.0,
+            78.79999999999995,
+            978.8000000000002
+          ]
+        }
+      ],
+      "final_symmetric_difference_mm3": 0.0
+    }
+  ],
+  "explicit_limits": [
+    "Only named nominal rigid parts and recorded prescribed paths are covered; no hands, leads, hoses, actual torch or tolerance/strength claim.",
+    "Removing old parked obstacles cannot introduce an intersection; all newly located installed solids are checked. Underlying full-obstacle path reports must independently pass with current sources.",
+    "Revised panel1 rear-table route, router removal and split-head exchange have separate full-obstacle reports; those are not replaced here.",
+    "Fastener handling and gate/pin insertion remain excluded wherever excluded by the underlying reports."
+  ],
+  "sources_unchanged": true,
+  "reports_unchanged": true,
+  "passed": true
+}

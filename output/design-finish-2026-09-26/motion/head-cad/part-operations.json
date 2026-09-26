@@ -1,0 +1,1011 @@
+[
+  {
+    "part_number": "I_HEAD_BACKPLATE",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          110,
+          0
+        ],
+        [
+          110,
+          130
+        ],
+        [
+          0,
+          130
+        ]
+      ],
+      "thickness_mm": 9.525,
+      "holes": [
+        [
+          10.0,
+          22.0,
+          5.0
+        ],
+        [
+          10.0,
+          48.0,
+          5.0
+        ],
+        [
+          100.0,
+          22.0,
+          5.0
+        ],
+        [
+          100.0,
+          48.0,
+          5.0
+        ],
+        [
+          45,
+          6,
+          3.3
+        ],
+        [
+          45,
+          124,
+          3.3
+        ],
+        [
+          65,
+          6,
+          3.3
+        ],
+        [
+          65,
+          124,
+          3.3
+        ],
+        [
+          49,
+          55,
+          3.3
+        ],
+        [
+          61,
+          55,
+          3.3
+        ],
+        [
+          105,
+          112,
+          5.5
+        ],
+        [
+          105,
+          17.5,
+          5.5
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Four M6x1 tapped holes on custom 90 x 26 mm tool-side pattern. Minor diameter5 modeled; tap through.",
+      "This plate bolts to Rev H custom adapter from its rear. It does not establish the purchased Z output fixing pattern.",
+      "Rod and stop tapped coordinates are defined in the local STEP. Crossbars are matched and jig-bored."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_CROSSBAR_1",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "\u00d88 H7 matched rod sockets depth6; nominal geometry shown. \u00d84.5 coaxial end-screw access.",
+      "Two \u00d84.5 front mounting holes. M4x30 screws engage5mm into tapped backplate. Jig bore both rod centers together."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_STD_M4x30_z_SOCKET",
+    "quantity": 4,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+      "https://www.accu.co.uk/api/product-datasheet?id=151797"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_CROSSBAR_2",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "\u00d88 H7 matched rod sockets depth6; nominal geometry shown. \u00d84.5 coaxial end-screw access.",
+      "Two \u00d84.5 front mounting holes. M4x30 screws engage5mm into tapped backplate. Jig bore both rod centers together."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_ROD_8x118_M4_ENDS",
+    "quantity": 2,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Finish length118.0; axial M4x0.7 blind tap each end, usable depth10, pilot12. Hardened stock requires machinable ends or ground shaft made to drawing."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_STD_M4x16_y_SOCKET",
+    "quantity": 4,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+      "https://www.accu.co.uk/api/product-datasheet?id=151797"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_FLOAT_CARRIAGE",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Two \u00d815 slip-fit bearing housings. Bearing retention comes from bolted end caps, never crush-fit preload.",
+      "Internal pocket X43..67 / Y45..59 / Z11..27 captures the fixed8mm tall stop: metal lower/upper travel limits0 and6.",
+      "Ream housings and jig align with ground shafts. Verify gravity return over full travel after wiring/lead installation."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "IGUS_RJ4JP_01_08",
+    "quantity": 4,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Manufacturer nominal ID8 / OD15 / length24. Internal clearance shown0.04; installed fit must be checked.",
+      "https://igus.partcommunity.com/3d-cad-models/rj4jp-01-linear-bearings-igus?info=igus%2Fdrylin_lineargleitlager%2Fr_runde_wellen_schnell_leise%2Frj4jp_01.prj"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_BUSH_SPACER_23p85",
+    "quantity": 2,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "OD14.8 / ID9 / length23.85. Combined nominal bushing/spacer stack71.85 leaves0.15mm axial clearance between caps72mm apart. Verify actual0.10..0.20mm clearance after assembly."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_BEARING_CAP_1",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          110,
+          0
+        ],
+        [
+          110,
+          22
+        ],
+        [
+          0,
+          22
+        ]
+      ],
+      "thickness_mm": 2,
+      "holes": [
+        [
+          25,
+          10,
+          8.8
+        ],
+        [
+          85,
+          10,
+          8.8
+        ],
+        [
+          7,
+          5,
+          3.4
+        ],
+        [
+          7,
+          17,
+          3.4
+        ],
+        [
+          103,
+          5,
+          3.4
+        ],
+        [
+          103,
+          17,
+          3.4
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_STD_M3x8_y_SOCKET",
+    "quantity": 8,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+      "https://www.accu.co.uk/api/product-datasheet?id=642039"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_BEARING_CAP_2",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          110,
+          0
+        ],
+        [
+          110,
+          22
+        ],
+        [
+          0,
+          22
+        ]
+      ],
+      "thickness_mm": 2,
+      "holes": [
+        [
+          25,
+          10,
+          8.8
+        ],
+        [
+          85,
+          10,
+          8.8
+        ],
+        [
+          7,
+          5,
+          3.4
+        ],
+        [
+          7,
+          17,
+          3.4
+        ],
+        [
+          103,
+          5,
+          3.4
+        ],
+        [
+          103,
+          17,
+          3.4
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_FLOAT_STOP",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Rigid captured block controls both float travel ends; fit before carriage. No spring is needed to carry a falling head: the closed slot retains it.",
+      "Replaceable0.2mm stop shims may be fitted only with corresponding travel and probe offset recalibration. Nominal definition has no shim."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_STD_M4x16_z_SOCKET",
+    "quantity": 4,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+      "https://www.accu.co.uk/api/product-datasheet?id=151797"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_SEAT_CONE",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "M4x0.7 integral6mm spigot into float body; fixture-machine contact height after assembly.",
+      "Cone90deg / V90deg / flat establishes a six-constraint coupling. Harden/contact polish; inspect contact blue before force tests."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_BALL_BUTTON_R3",
+    "quantity": 3,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Custom R3 hemispherical contact, \u00d83.8 shank; M3 internal fixing thread. All three identical."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_SEAT_V",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "M4x0.7 integral6mm spigot into float body; fixture-machine contact height after assembly.",
+      "Cone90deg / V90deg / flat establishes a six-constraint coupling. Harden/contact polish; inspect contact blue before force tests."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_SEAT_FLAT",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "M4x0.7 integral6mm spigot into float body; fixture-machine contact height after assembly.",
+      "Cone90deg / V90deg / flat establishes a six-constraint coupling. Harden/contact polish; inspect contact blue before force tests."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_RELEASE_PLATE",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          110,
+          0
+        ],
+        [
+          110,
+          97
+        ],
+        [
+          28,
+          97
+        ],
+        [
+          28,
+          84.5
+        ],
+        [
+          0,
+          84.5
+        ]
+      ],
+      "thickness_mm": 6.35,
+      "holes": [
+        [
+          10,
+          25,
+          3.4
+        ],
+        [
+          100,
+          25,
+          3.4
+        ],
+        [
+          55,
+          75,
+          3.4
+        ],
+        [
+          25,
+          20,
+          4.5
+        ],
+        [
+          25,
+          40,
+          4.5
+        ],
+        [
+          85,
+          20,
+          4.5
+        ],
+        [
+          85,
+          40,
+          4.5
+        ],
+        [
+          5,
+          4.5,
+          2.5
+        ],
+        [
+          105,
+          4.5,
+          2.5
+        ],
+        [
+          104,
+          85,
+          3.3
+        ]
+      ],
+      "slots": [],
+      "internal": [],
+      "operations": [
+        {
+          "type": "circle",
+          "x": 10,
+          "y": 25,
+          "diameter": 6.0,
+          "layer": "MILL_FRONT_CB_DEPTH_3"
+        },
+        {
+          "type": "circle",
+          "x": 100,
+          "y": 25,
+          "diameter": 6.0,
+          "layer": "MILL_FRONT_CB_DEPTH_3"
+        },
+        {
+          "type": "circle",
+          "x": 55,
+          "y": 75,
+          "diameter": 6.0,
+          "layer": "MILL_FRONT_CB_DEPTH_3"
+        },
+        {
+          "type": "circle",
+          "x": 25,
+          "y": 20,
+          "diameter": 8,
+          "layer": "MILL_REAR_CB_DEPTH_4"
+        },
+        {
+          "type": "circle",
+          "x": 25,
+          "y": 40,
+          "diameter": 8,
+          "layer": "MILL_REAR_CB_DEPTH_4"
+        },
+        {
+          "type": "circle",
+          "x": 85,
+          "y": 20,
+          "diameter": 8,
+          "layer": "MILL_REAR_CB_DEPTH_4"
+        },
+        {
+          "type": "circle",
+          "x": 85,
+          "y": 40,
+          "diameter": 8,
+          "layer": "MILL_REAR_CB_DEPTH_4"
+        }
+      ]
+    },
+    "notes": [
+      "Steel back face is the magnet target. Three kinematic locator buttons fasten from the front.",
+      "Keep mating face uncoated/flat; corrosion film and swarf change both retention and repeatability. Clean before seating."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_STD_M3x7_z_SOCKET",
+    "quantity": 3,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+      "https://www.accu.co.uk/api/product-datasheet?id=642039"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_MAGNET_SPACER_3p8",
+    "quantity": 3,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "3.8 mm nominal spacer leaves0.2mm magnet-to-target gap. Force qualification requires actual gap, coating and measured lead load."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "SUPERMAGNETE_CSN_20",
+    "quantity": 3,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Manufacturer20x6mm, bore4.5 / countersink9.46x2.48;87.3N nominal direct steel pull,80C maximum.",
+      "https://www.supermagnete.de/eng/data_sheet_CSN-20.pdf",
+      "The catalog direct-contact pull is NOT the release force at this0.2mm gap. Set and record actual force after assembly."
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_STD_M4x16_CSK",
+    "quantity": 3,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "ISO10642 M4x16 overall length, head diameter8.96 and height2.48;90deg conservative cone envelope. Supplier countersink diameter9.46 leaves0.25mm radial clearance.",
+      "https://www.accu.co.uk/countersunk-socket-head-screws/251236-SSK-M4-16-A2-R360"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_CLAMP_REAR",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Finish\u00d848 bore across matched assembled halves with0.5mm spacer in split. Rear half attaches through steel release plate.",
+      "FourM4 rear attachment taps depth12 usable; twoM4 pinch screws. Pinch torque must be set by actual torch allowable clamp load."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_CLAMP_FRONT",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Finish\u00d848 bore across matched assembled halves with0.5mm spacer in split. Rear half attaches through steel release plate.",
+      "FourM4 rear attachment taps depth12 usable; twoM4 pinch screws. Pinch torque must be set by actual torch allowable clamp load."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_STD_M4x14_z_SOCKET",
+    "quantity": 4,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+      "https://www.accu.co.uk/api/product-datasheet?id=151797"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_STD_M4x40_z_SOCKET",
+    "quantity": 2,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+      "https://www.accu.co.uk/api/product-datasheet?id=151797"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_INSERT_REAR",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Default is an unbored physical split blank, not an assumed torch diameter.",
+      "Bore only from explicit diameter/roundness/40mm straight-zone record. Actual torch thermal limits and allowed clamp force remain required."
+    ],
+    "release": "MEASURED INTERFACE REQUIRED - INDIVIDUAL EXPORT GUARDED"
+  },
+  {
+    "part_number": "I_HEAD_INSERT_FRONT",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Default is an unbored physical split blank, not an assumed torch diameter.",
+      "Bore only from explicit diameter/roundness/40mm straight-zone record. Actual torch thermal limits and allowed clamp force remain required."
+    ],
+    "release": "MEASURED INTERFACE REQUIRED - INDIVIDUAL EXPORT GUARDED"
+  },
+  {
+    "part_number": "I_HEAD_SPLASH_SCREEN",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          110,
+          0
+        ],
+        [
+          110,
+          60.5
+        ],
+        [
+          0,
+          60.5
+        ]
+      ],
+      "thickness_mm": 1.5,
+      "holes": [
+        [
+          55,
+          30.25,
+          50
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Flat110x60.5x1.5 screen, \u00d850 clearance opening. Weld two separate10x10x1.5 tabs; no unspecified bends.",
+      "Does not replace thermal qualification: magnet maximum80C and actual insert/lead temperatures must be measured. No aluminum-water plasma cutting is authorized by this model."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_SPLASH_TAB_5",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "thickness_mm": 1.5,
+      "holes": [
+        [
+          5,
+          6,
+          3.4
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Bottom10mm edge welded to screen rear upper edge; local hole at5,6."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_STD_M3x6_z_SOCKET",
+    "quantity": 8,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+      "https://www.accu.co.uk/api/product-datasheet?id=642039"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_SPLASH_TAB_105",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "thickness_mm": 1.5,
+      "holes": [
+        [
+          5,
+          6,
+          3.4
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Bottom10mm edge welded to screen rear upper edge; local hole at5,6."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_FLOAT_CAM",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Pin mount datum39.5; conservative2.2mm pin has lowest contact edge atY111.55. Ramp crosses real switch range at1.0..1.65mm float.",
+      "Dwell maintains6.1mm normal position from the datum through remaining travel; TTPmax5.1 leaves1mm mechanical reserve.",
+      "Probe initially at1mm/s and calibrate actual offset and stopping distance. Cam clears a defined corner relief in the release plate."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_STD_M3x10_z_SOCKET",
+    "quantity": 4,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+      "https://www.accu.co.uk/api/product-datasheet?id=642039"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "OMRON_D2HW_C202MR",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "https://omronfs.omron.com/en_US/ecb/products/pdf/en-d2hw.pdf",
+      "18.5x5.3x6.5 conservative case; M3mount centers13mm. Locating post\u00d83 projects1.5.",
+      "Pin-plunger operating position6.4\u00b10.2 from mount datum; FPmax7.2 / TTPmax5.1. IP67 body, protect unsealed lead ends."
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_SWITCH_PLUNGER_FLOAT_SWITCH",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_FLOAT_SWITCH_BRACKET",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Upper mounting face faces the switch.13mm M3/post centers; foot supports from upper guide crossbar front."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_STD_M3x10_y_SOCKET",
+    "quantity": 4,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+      "https://www.accu.co.uk/api/product-datasheet?id=642039"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_0",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_STD_M3x8_z_SOCKET",
+    "quantity": 2,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Specified unknurled socket heads: M3 diameter5.5/height3; M4 diameter7/height4. Enlarged knurled heads require new clearance check.",
+      "https://www.accu.co.uk/api/product-datasheet?id=642039"
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_1",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "OMRON_D2HW_C203MR",
+    "quantity": 3,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "https://omronfs.omron.com/en_US/ecb/products/pdf/en-d2hw.pdf",
+      "18.5x5.3x6.5 conservative case; M3mount centers13mm. Locating post\u00d83 projects1.5.",
+      "Pin-plunger operating position6.4\u00b10.2 from mount datum; FPmax7.2 / TTPmax5.1. IP67 body, protect unsealed lead ends."
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_SWITCH_PLUNGER_PRESENCE_LEFT",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_PRESENCE_LEFT_BRACKET",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "6mm thick upright tappedM3; \u00d83.05 locating pocket and screw centers13.0. TwoM3 feet fasten into supporting plate/body.",
+      "Locating post pocket is clearance in this envelope; fit switch and set trip using measured shim stack, then record installed actuation."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_SWITCH_PLUNGER_PRESENCE_RIGHT",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_PRESENCE_RIGHT_BRACKET",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "6mm thick upright tappedM3; \u00d83.05 locating pocket and screw centers13.0. TwoM3 feet fasten into supporting plate/body.",
+      "Locating post pocket is clearance in this envelope; fit switch and set trip using measured shim stack, then record installed actuation."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_SWITCH_PLUNGER_PRESENCE_TOP",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "I_HEAD_PRESENCE_TOP_BRACKET",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "6mm thick upright tappedM3; \u00d83.05 locating pocket and screw centers13.0. TwoM3 feet fasten into supporting plate/body.",
+      "Locating post pocket is clearance in this envelope; fit switch and set trip using measured shim stack, then record installed actuation."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_LEAD_SADDLE",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Open saddle accepts reusable insulated strap up to20mm wide. Fixed upper-crossbar attachment takes supply-lead drag off floating carriage.",
+      "Actual lead OD, minimum bend radius, slack loop and strap selection remain measurement inputs. No unmeasured cable is modeled."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_TETHER_EYE_FIXED",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Separate4mm tether passage and4.5mm screw clearance. Fit rated nonconductive tether with enough slack for6mm float/8mm normal release; qualify arrest load."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "I_HEAD_TETHER_EYE_RELEASE",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Separate4mm tether passage and4.5mm screw clearance. Fit rated nonconductive tether with enough slack for6mm float/8mm normal release; qualify arrest load."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  }
+]

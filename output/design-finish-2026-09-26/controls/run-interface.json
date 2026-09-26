@@ -1,0 +1,151 @@
+{
+  "status": "SCHEMATIC_SCREEN_PASS",
+  "scope": "Calculate the specified normally-off low-voltage run isolator limits.\n\nThis verifies a schematic, not a PCB, EMC, every transient or a safety function.\nSemiconductor catalogue values are subject to their published test conditions.\n",
+  "checks": {
+    "LED minimum reaches recommended5mA": true,
+    "Buffer output current stays below24mA guarantee": true,
+    "LED maximum stays below recommended30mA": true,
+    "Series resistor below half0.25W": true,
+    "LED dissipation below75mW": true,
+    "Input pull-down holds below specified3V lower threshold0.89V": true,
+    "Unpowered buffer leakage shunted below LED forward region": true,
+    "Field steady voltage below48V recommended": true,
+    "Specified one-coil cap below0.1A design limit": true,
+    "Catalogue reference-condition DC pickup17.5V has voltage margin": true,
+    "Off leakage cannot operate a nominal900ohm coil": true
+  },
+  "connections": [
+    [
+      "J_LOGIC:1",
+      "3V3"
+    ],
+    [
+      "J_LOGIC:2",
+      "PG2"
+    ],
+    [
+      "J_LOGIC:3",
+      "LOGIC_0"
+    ],
+    [
+      "3V3",
+      "U1:5"
+    ],
+    [
+      "U1:3",
+      "LOGIC_0"
+    ],
+    [
+      "3V3",
+      "C1:1"
+    ],
+    [
+      "C1:2",
+      "LOGIC_0"
+    ],
+    [
+      "PG2",
+      "R1:1"
+    ],
+    [
+      "R1:2",
+      "U1:2"
+    ],
+    [
+      "U1:2",
+      "R2:1"
+    ],
+    [
+      "R2:2",
+      "LOGIC_0"
+    ],
+    [
+      "U1:4",
+      "R3:1"
+    ],
+    [
+      "R3:2",
+      "U2:1"
+    ],
+    [
+      "U2:2",
+      "LOGIC_0"
+    ],
+    [
+      "U2:1",
+      "R4:1"
+    ],
+    [
+      "R4:2",
+      "LOGIC_0"
+    ],
+    [
+      "J_FIELD:13",
+      "U2:4"
+    ],
+    [
+      "U2:3",
+      "J_FIELD:14"
+    ],
+    [
+      "J_FIELD:13",
+      "C"
+    ],
+    [
+      "J_FIELD:14",
+      "K_REQUEST:A1"
+    ],
+    [
+      "K_REQUEST:A2",
+      "FIELD_0"
+    ],
+    [
+      "D1:K",
+      "K_REQUEST:A1"
+    ],
+    [
+      "D1:A",
+      "FIELD_0"
+    ]
+  ],
+  "parts": {
+    "U1": "Texas Instruments SN74LVC1G17DBVR; pin1 NC",
+    "U2": "Panasonic AQY212GS; pins1/2 LED; pins3/4 NO output",
+    "R1": "1kohm1%0.25W series at GPIO",
+    "R2": "10kohm1%0.25W buffer-input pull-down",
+    "R3": "154ohm1%0.25W LED series resistor",
+    "R4": "22kohm1%0.25W across LED",
+    "C1": "100nF X7R 16V atU1 supply pins",
+    "D1": "1N4007 at request-relay coil; cathode towardA1",
+    "K_REQUEST": "Finder40.52.9.024.0000 with95.05 socket, included in control inventory"
+  },
+  "sources": {
+    "U1": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf",
+    "U2": "https://industry.panasonic.com/ac/cdn/e/control/relay/photomos/catalog/semi_eng_gu1a_aqy21_gs.pdf",
+    "K_REQUEST": "https://cdn.findernet.com/app/uploads/S40EN.pdf"
+  },
+  "calculated": {
+    "LED_min_mA": 5.074500956589165,
+    "LED_max_mA_zero_Vf_bound": 23.612750885478157,
+    "series_resistor_max_W": 0.08500590318772137,
+    "LED_power_bound_W": 0.03541912632821724,
+    "input_open_voltage_bound_V": 0.0505,
+    "unpowered_LED_voltage_bound_V": 0.22220000000000004,
+    "specified_coil_current_limit_mA": 40.0,
+    "output_drop_at_limit_V": 0.027999999999999997
+  },
+  "limits": [
+    "No copper layout, creepage/clearance qualification, EMC or PCB fabrication release.",
+    "5ms turn-on and0.5ms turn-off are catalogue25C test values; verify actual board, supply, load and temperature.",
+    "No floating-ground connection; field and controller returns remain separate.",
+    "An output short can hold K_REQUEST on. Hardware permission removal still gates tool relay coils; this is not redundant safety logic.",
+    "GPIO high glitches may be valid run requests after arming. Verify boot/reset/shutdown waveforms with actual firmware and hardware.",
+    "Intended only for24V command coil, never raw plasma voltage, mains, motor power or5kHz speed PWM."
+  ],
+  "source_sha256": {
+    "verify_run_interface.py": "028c82310a5983448b16b35771e60bf547ecedb42d3ae887f204cf0b1243a154"
+  },
+  "artifact_sha256": {
+    "output/design-finish-2026-09-26/controls/RUN-INTERFACE.md": "b0884dea3dde9de450f07358d0da581b4deba2672751ec605866eade6c9038f8"
+  }
+}

@@ -1,0 +1,2041 @@
+{
+  "status": "PASS_WITH_EXPLICIT_LIMITS",
+  "checks": [
+    {
+      "check": "Every contact tag is unique",
+      "passed": true
+    },
+    {
+      "check": "Every physical relay uses at most its purchased poles",
+      "passed": true
+    },
+    {
+      "check": "No fill without deliberate press",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Deliberate fill starts",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Fill self-holds after release",
+      "passed": true
+    },
+    {
+      "check": "Normal fill stop removes pump",
+      "passed": true
+    },
+    {
+      "check": "Held fill does not restart after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Release then press rearms after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "drain_override": true
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "setup": false
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "plasma": false
+      }
+    },
+    {
+      "check": "Held FILL on power-up never starts pump",
+      "passed": true
+    },
+    {
+      "check": "No fill without deliberate press",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Deliberate fill starts",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Fill self-holds after release",
+      "passed": true
+    },
+    {
+      "check": "Normal fill stop removes pump",
+      "passed": true
+    },
+    {
+      "check": "Held fill does not restart after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Release then press rearms after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "drain_override": true
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "setup": false
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "plasma": false
+      }
+    },
+    {
+      "check": "Held FILL on power-up never starts pump",
+      "passed": true
+    },
+    {
+      "check": "No fill without deliberate press",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Deliberate fill starts",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Fill self-holds after release",
+      "passed": true
+    },
+    {
+      "check": "Normal fill stop removes pump",
+      "passed": true
+    },
+    {
+      "check": "Held fill does not restart after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Release then press rearms after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "drain_override": true
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "setup": false
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "plasma": false
+      }
+    },
+    {
+      "check": "Held FILL on power-up never starts pump",
+      "passed": true
+    },
+    {
+      "check": "No fill without deliberate press",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Deliberate fill starts",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Fill self-holds after release",
+      "passed": true
+    },
+    {
+      "check": "Normal fill stop removes pump",
+      "passed": true
+    },
+    {
+      "check": "Held fill does not restart after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Release then press rearms after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "drain_override": true
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "setup": false
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "plasma": false
+      }
+    },
+    {
+      "check": "Held FILL on power-up never starts pump",
+      "passed": true
+    },
+    {
+      "check": "No fill without deliberate press",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Deliberate fill starts",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Fill self-holds after release",
+      "passed": true
+    },
+    {
+      "check": "Normal fill stop removes pump",
+      "passed": true
+    },
+    {
+      "check": "Held fill does not restart after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Release then press rearms after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "drain_override": true
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "setup": false
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "plasma": false
+      }
+    },
+    {
+      "check": "Held FILL on power-up never starts pump",
+      "passed": true
+    },
+    {
+      "check": "No fill without deliberate press",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Deliberate fill starts",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Fill self-holds after release",
+      "passed": true
+    },
+    {
+      "check": "Normal fill stop removes pump",
+      "passed": true
+    },
+    {
+      "check": "Held fill does not restart after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Release then press rearms after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "drain_override": true
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "setup": false
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "plasma": false
+      }
+    },
+    {
+      "check": "Held FILL on power-up never starts pump",
+      "passed": true
+    },
+    {
+      "check": "No fill without deliberate press",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Deliberate fill starts",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Fill self-holds after release",
+      "passed": true
+    },
+    {
+      "check": "Normal fill stop removes pump",
+      "passed": true
+    },
+    {
+      "check": "Held fill does not restart after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Release then press rearms after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "drain_override": true
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "setup": false
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "plasma": false
+      }
+    },
+    {
+      "check": "Held FILL on power-up never starts pump",
+      "passed": true
+    },
+    {
+      "check": "No fill without deliberate press",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Deliberate fill starts",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Fill self-holds after release",
+      "passed": true
+    },
+    {
+      "check": "Normal fill stop removes pump",
+      "passed": true
+    },
+    {
+      "check": "Held fill does not restart after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Release then press rearms after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "drain_override": true
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "setup": false
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "plasma": false
+      }
+    },
+    {
+      "check": "Held FILL on power-up never starts pump",
+      "passed": true
+    },
+    {
+      "check": "No fill without deliberate press",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Deliberate fill starts",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Fill self-holds after release",
+      "passed": true
+    },
+    {
+      "check": "Normal fill stop removes pump",
+      "passed": true
+    },
+    {
+      "check": "Held fill does not restart after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Release then press rearms after fill-stop",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: high_high_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: reservoir_healthy",
+      "passed": true
+    },
+    {
+      "check": "Fault stops pump: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Held button does not recover: bed_clear",
+      "passed": true
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "drain_override": true
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "setup": false
+      }
+    },
+    {
+      "check": "Mode/setup/override stops pump",
+      "passed": true,
+      "change": {
+        "plasma": false
+      }
+    },
+    {
+      "check": "Held FILL on power-up never starts pump",
+      "passed": true
+    },
+    {
+      "check": "Single SSR short interrupted by healthy-chain loss",
+      "passed": true,
+      "short": "P_CMD",
+      "field": "high_high_healthy"
+    },
+    {
+      "check": "Single SSR short interrupted by healthy-chain loss",
+      "passed": true,
+      "short": "P_CMD",
+      "field": "reservoir_healthy"
+    },
+    {
+      "check": "Single SSR short interrupted by healthy-chain loss",
+      "passed": true,
+      "short": "P_LIMIT",
+      "field": "high_high_healthy"
+    },
+    {
+      "check": "Single SSR short interrupted by healthy-chain loss",
+      "passed": true,
+      "short": "P_LIMIT",
+      "field": "reservoir_healthy"
+    },
+    {
+      "check": "Power loss removes fill and arm",
+      "passed": true
+    },
+    {
+      "check": "Held FILL after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Only selected tool can run: router",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Only selected tool can run: router",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Only selected tool can run: router",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Only selected tool can run: router",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Only selected tool can run: router",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Only selected tool can run: router",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Only selected tool can run: router",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Only selected tool can run: router",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Only selected tool can run: router",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Only selected tool can run: plasma",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Only selected tool can run: plasma",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Only selected tool can run: plasma",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Only selected tool can run: plasma",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Only selected tool can run: plasma",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Only selected tool can run: plasma",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Only selected tool can run: plasma",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Only selected tool can run: plasma",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Held request cannot start tool after cold power-up",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Only selected tool can run: plasma",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: hardware_stop_ok",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: door_closed",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Hardware chain stops tools: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Hardware permission loss also reaches controller PG6: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Held run cannot resume after permission recovery: breakaway_seated",
+      "passed": true
+    },
+    {
+      "check": "Fresh run request after recovery starts selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held run after power restoration stays off",
+      "passed": true
+    },
+    {
+      "check": "Drain timer cannot ready early",
+      "passed": true
+    },
+    {
+      "check": "Drain dwell eventually permits ready",
+      "passed": true
+    },
+    {
+      "check": "Lost empty contact inhibits router ready",
+      "passed": true
+    },
+    {
+      "check": "Drain override does not backfeed mode relays",
+      "passed": true
+    },
+    {
+      "check": "Model exposes short-interruption limitation",
+      "passed": true
+    },
+    {
+      "check": "Timer output minimum resistive load exceeds 500mW",
+      "passed": true,
+      "minimum_W": 0.6534453781512606
+    },
+    {
+      "check": "Timer load resistor remains below half 3W rating",
+      "passed": true,
+      "maximum_W": 1.0788854489164086
+    },
+    {
+      "check": "Ready input meets 300mW/5V/5mA minimum",
+      "passed": true,
+      "minimum_mA": 19.23809523809524
+    },
+    {
+      "check": "Input resistor below half 2W rating",
+      "passed": true,
+      "maximum_W": 0.6791157894736842
+    },
+    {
+      "check": "Conservative common float load stays below200mA",
+      "passed": true,
+      "maximum_mA": 152.86687306501548
+    }
+  ],
+  "passed_checks": 450,
+  "dynamic_delay_combinations": 9,
+  "input_domain_v": [
+    21.6,
+    26.4
+  ],
+  "input_led_current_ma": [
+    19.23809523809524,
+    26.736842105263158
+  ],
+  "simulation_assumptions": {
+    "pickup_s": [
+      0.005,
+      0.01,
+      0.02
+    ],
+    "dropout_s": [
+      0.005,
+      0.02,
+      0.05
+    ],
+    "timer_recovery_s": 0.1,
+    "tested_fill_fault_duration_s": 0.15,
+    "tested_tool_fault_duration_s": 0.3,
+    "photomos_catalogue_on_s": 0.005,
+    "photomos_catalogue_off_s": 0.0005
+  },
+  "short_interrupt_counterexample": {
+    "interruption_s": 0.005,
+    "relay_dropout_s": 0.05,
+    "held_button_restarts": true
+  },
+  "limits": [
+    "Relays with unspecified suppressed dropout do not guarantee release-to-rearm for arbitrary brief interruptions. Bench-record dropout and qualify a minimum interruption; use a separately latched monitored fault if shorter events must latch.",
+    "Mutually exclusive selector contacts are a normal-operation prerequisite. Welded mode/command contacts and multiple failures are not safety-qualified.",
+    "XH stop/door/breakaway contacts, output isolator hardware, dry tool interface, firmware pin polarity, wet levels and actual relay timing require commissioning.",
+    "No MCU firmware, mains switching, safety category, brake sequencing or raw arc-voltage isolation is modeled."
+  ],
+  "source_sha256": {
+    "circuit.py": "a9370143297125a4f7a0da8843ba2ca8d9570003969337a2448bd8a327a4152b",
+    "verify_circuit.py": "840a15c8edd31d42c7c04a5a98c3bba0891b269a73968c12608640b9330780c0"
+  },
+  "artifact_sha256": {
+    "output/design-finish-2026-09-26/controls/terminal-netlist.json": "47e6c469c9c7780e9eb8482af59c0a9fee998aa08da9ff8a3b3f6f3e918bfb4b",
+    "output/design-finish-2026-09-26/controls/TERMINALS.md": "ff7a91d6a16987cc78e5e0af1ff7a5d708d3de29d6dd76d3d0558c1afc9c66a2",
+    "output/design-finish-2026-09-26/controls/RUN-INTERFACE.md": "b0884dea3dde9de450f07358d0da581b4deba2672751ec605866eade6c9038f8",
+    "output/design-finish-2026-09-26/controls/SPEED-INTERFACE.md": "1e2b1783ee2b3b1d58b5632450d758cb03049d27c1626d938367dfce54768aa6",
+    "output/design-finish-2026-09-26/controls/selected-components.json": "c9e9873eb5ca426d0715a21d9f7f473082ed19de82992606f71f596b3f5f8392",
+    "output/design-finish-2026-09-26/controls/README.md": "584072edb100def7b2244ade355816b111baf12dd98da2002e0efd3e16756544",
+    "output/design-finish-2026-09-26/controls/head-interface.json": "0e2030c10ef980cf7316634915b8622cabcc11fc3b17d4d22f9e507519c727f6",
+    "output/design-finish-2026-09-26/controls/HEAD-INTERFACE.md": "b4ee4c529e70959f0a6f7eb23cd4c226e531ccb27cf4ea9a0c195bf0b2bda104"
+  }
+}

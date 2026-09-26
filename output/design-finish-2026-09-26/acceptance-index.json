@@ -1,0 +1,317 @@
+{
+  "status": "PASS",
+  "scope": "Explicit nominal geometry, named handling/service paths, conditional structural arithmetic and bounded circuit-model behavior. This is not a complete fabrication, physical rigidity, electrical safety, HF compatibility or operating-machine release.",
+  "checks": [
+    {
+      "check": "Three assembly states; shared parts; nine router and nine head poses",
+      "report": "output/design-finish-2026-09-26/verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "6ddfdc9c095f528ab684111c54ab28d4897d902ce0c5c6a59afd983157080df5",
+      "source_mismatches": []
+    },
+    {
+      "check": "Independent current STEP readback",
+      "report": "output/design-finish-2026-09-26/step-verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "db6d06bf71bff0c763e7e48ce347173632266527c4419001d6c62d49bae8ac80",
+      "source_mismatches": []
+    },
+    {
+      "check": "Six spoilboard routes",
+      "report": "output/design-finish-2026-09-26/routes/spoil-transfer-check.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "cd4bb935d62bc0e56b408a8a4100ffeefbb73c3ea8d57104eba09a8026ca3f35",
+      "source_mismatches": []
+    },
+    {
+      "check": "Six panel routes",
+      "report": "output/design-finish-2026-09-26/routes/panel-path-check.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "1ddee7a45f11bd253d04096b2c9635d67fd07617a6710bfe6d2fb9d0468cce88",
+      "source_mismatches": []
+    },
+    {
+      "check": "Four support-beam routes",
+      "report": "output/design-finish-2026-09-26/routes/beam-path-check.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "eba01a0833e780f1a07380ae40a4455e595bfbd3afab1acc552f9d96a69da0e5",
+      "source_mismatches": []
+    },
+    {
+      "check": "Structural arithmetic and nominal states; full-machine rigidity remains unqualified",
+      "report": "output/design-finish-2026-09-26/structure/calculations.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "6a433af691a5eb1e344ec3f54aeebea547628cccbadb4c3e3fbe8db0c9de5807",
+      "source_mismatches": []
+    },
+    {
+      "check": "Reinforced storage restraint routes",
+      "report": "output/design-finish-2026-09-26/structure/reinforced-restraint-paths.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "97f7152506fcef9b1fe0f85f2de3ab6943d4232d5347f8399237401c602ab7fa",
+      "source_mismatches": []
+    },
+    {
+      "check": "Temporary keeper-body transfer",
+      "report": "output/design-finish-2026-09-26/structure/temporary-fixture-transfer.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "f43947f497c888971d2e965b0553a037656525fefb088f643a14c2a423cfa757",
+      "source_mismatches": []
+    },
+    {
+      "check": "Water servicing, cabinet plates and enlarged hose sweeps",
+      "report": "output/design-finish-2026-09-26/service/verification-build_revi.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "cfe2b9cc529a35b9b2799af357003d52eab54a5afdcab1eb3fc197f677a8163a",
+      "source_mismatches": []
+    },
+    {
+      "check": "Float, normal breakaway and head machining definitions",
+      "report": "output/design-finish-2026-09-26/motion/mechanism-verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "98c296035a30135cd8f9a5bf3f438bec6a4719f6057b14e47462679fa07880fe",
+      "source_mismatches": []
+    },
+    {
+      "check": "Head fastener envelopes and exact individual export inventory",
+      "report": "output/design-finish-2026-09-26/motion/head-package-verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "5cd96a60f991291f33e9c00dcb89549922648a26f64c6b522c943fec5644d671",
+      "source_mismatches": []
+    },
+    {
+      "check": "Split-head transfer through the phased machine",
+      "report": "output/design-finish-2026-09-26/motion/integrated-verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "bb2fe4763f25bebd4b9718abf71aabbbbb598e8411497a84d53f03af6ca48b00",
+      "source_mismatches": []
+    },
+    {
+      "check": "Temporary panel/beam preparation and restoration for head transfer",
+      "report": "output/design-finish-2026-09-26/motion/transfer-staging-verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "5c006573141b16920614781946222447d8d580421172e459d0da85b016d2012c",
+      "source_mismatches": []
+    },
+    {
+      "check": "Router tool transfer and its bed-sequence prerequisites",
+      "report": "output/design-finish-2026-09-26/motion/router-transfer-verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "fc4d51359985f307335fbbca7041fefc5e012dcfc82e42f48422abe2ced1609f",
+      "source_mismatches": []
+    },
+    {
+      "check": "Changed tool obstacles across the full conversion sequence",
+      "report": "output/design-finish-2026-09-26/motion/conversion-prerequisites.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "d2308d5a0cb7f77892ab61223a4793b13f38354490fe5b3f6b26d6d7e041d432",
+      "source_mismatches": []
+    },
+    {
+      "check": "Conversion prerequisite input-report identities",
+      "report": "output/design-finish-2026-09-26/motion/conversion-prerequisites.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "d2308d5a0cb7f77892ab61223a4793b13f38354490fe5b3f6b26d6d7e041d432",
+      "source_mismatches": []
+    },
+    {
+      "check": "Water/tool terminal graph and bounded fault sequences",
+      "report": "output/design-finish-2026-09-26/controls/verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "bf462ab33794b898b0ca37c23569f16929c720a6c6319f250cc889d0ac81465d",
+      "source_mismatches": []
+    },
+    {
+      "check": "Current generated terminal wiring and reviewed control documents",
+      "report": "output/design-finish-2026-09-26/controls/verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "bf462ab33794b898b0ca37c23569f16929c720a6c6319f250cc889d0ac81465d",
+      "source_mismatches": []
+    },
+    {
+      "check": "Normally-off run interface electrical screen",
+      "report": "output/design-finish-2026-09-26/controls/run-interface.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "368bc36db016f956792dac0ada5715190d62c480bec259cbae7d110fcc21fded",
+      "source_mismatches": []
+    },
+    {
+      "check": "Current authored run-interface drawing",
+      "report": "output/design-finish-2026-09-26/controls/run-interface.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "368bc36db016f956792dac0ada5715190d62c480bec259cbae7d110fcc21fded",
+      "source_mismatches": []
+    },
+    {
+      "check": "Isolated head/probe schematic and bounded fault response",
+      "report": "output/design-finish-2026-09-26/controls/head-interface-verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "88fadca5396eaaa7d101d626c1aec7e8fae63034d0031a6ee91fdbf5c22d3cb0",
+      "source_mismatches": []
+    },
+    {
+      "check": "Final source-bound assembly exports",
+      "report": "output/release-review/RevI-CAD/engineering-manifest.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "865f8086f1604645452b3ec7551d2b21667cfb3414a3903e83c636c2188c4f8d",
+      "source_mismatches": []
+    },
+    {
+      "check": "Part inventory, individual solids and drawing package",
+      "report": "output/design-finish-2026-09-26/package-verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "6d8c1409aac8114661022fe59bf649a460946f8a59090d90085194fbacba6fa0",
+      "source_mismatches": []
+    },
+    {
+      "check": "Head detail rendered from current CAD",
+      "report": "output/design-finish-2026-09-26/head-preview-verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "f96ae44c51d05da32204d3da593c8b9bd3a523b609e5053fd1caf06717dd50ba",
+      "source_mismatches": []
+    },
+    {
+      "check": "Concept PDF build inputs",
+      "report": "output/design-finish-2026-09-26/pdf/build-verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "5d6015cb6fdf4422d16c8913c484ada72f9a3481123b21f42603e81ae3f8f21f",
+      "source_mismatches": []
+    },
+    {
+      "check": "Four-page visual review of the current PDF",
+      "report": "output/design-finish-2026-09-26/pdf/visual-review.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "4a3fe1d749144a75c3360c6c3f3ff9ac17cbdd28fd27f3fc89e1dbfe0c9ef973",
+      "source_mismatches": []
+    },
+    {
+      "check": "Exported panel/beam inventory and nominal mass reconciliation",
+      "report": "output/design-finish-2026-09-26/structure/calculations.json",
+      "passed": true,
+      "differences": [],
+      "assemblies": [
+        {
+          "kind": "panel",
+          "index": 0,
+          "exported_nominal_mass_kg": 3.9971468400240022,
+          "difference_kg": 2.500537554794846e-10
+        },
+        {
+          "kind": "panel",
+          "index": 1,
+          "exported_nominal_mass_kg": 3.9971468400240022,
+          "difference_kg": 2.5005242321185506e-10
+        },
+        {
+          "kind": "panel",
+          "index": 2,
+          "exported_nominal_mass_kg": 3.9971468400240022,
+          "difference_kg": 2.500537554794846e-10
+        },
+        {
+          "kind": "panel",
+          "index": 3,
+          "exported_nominal_mass_kg": 3.9971468400240022,
+          "difference_kg": 2.5005242321185506e-10
+        },
+        {
+          "kind": "panel",
+          "index": 4,
+          "exported_nominal_mass_kg": 3.9971468400240022,
+          "difference_kg": 2.500537554794846e-10
+        },
+        {
+          "kind": "panel",
+          "index": 5,
+          "exported_nominal_mass_kg": 3.9971468400240022,
+          "difference_kg": 2.5005242321185506e-10
+        },
+        {
+          "kind": "beam",
+          "index": 0,
+          "exported_nominal_mass_kg": 5.084367987182498,
+          "difference_kg": 1.8110757338263284e-10
+        },
+        {
+          "kind": "beam",
+          "index": 1,
+          "exported_nominal_mass_kg": 5.116940899485497,
+          "difference_kg": 2.057447545666946e-10
+        },
+        {
+          "kind": "beam",
+          "index": 2,
+          "exported_nominal_mass_kg": 5.084367987182498,
+          "difference_kg": 1.8110668520421314e-10
+        },
+        {
+          "kind": "beam",
+          "index": 3,
+          "exported_nominal_mass_kg": 5.084367987182498,
+          "difference_kg": 1.8110757338263284e-10
+        }
+      ],
+      "scope": "Nominal solid volumes and specified densities only; no measured handling-mass or physical strength qualification.",
+      "status": "PASS",
+      "report_sha256": "6a433af691a5eb1e344ec3f54aeebea547628cccbadb4c3e3fbe8db0c9de5807",
+      "export_report": "output/release-review/RevI-CAD/RevI_ROUTER-validation.json",
+      "export_report_sha256": "17a681c406ffc7802a17d4de7133c5fa0dfc8f4e6877ed3cdccdf6847e7d4fea"
+    },
+    {
+      "check": "Current RevI_ROUTER file",
+      "report": "output/release-review/RevI-CAD/step/RevI_ROUTER.step",
+      "status": "PASS",
+      "passed": true,
+      "sha256": "5116857bb26415c5ef736b91fc172f77d0695eaa21ab8c6f1d66b808af31d727"
+    },
+    {
+      "check": "Current RevI_BED_STORED file",
+      "report": "output/release-review/RevI-CAD/step/RevI_BED_STORED.step",
+      "status": "PASS",
+      "passed": true,
+      "sha256": "8de0f8cb928ffe19117c0800f345e8ac73614e60f40f6df249d42c35a164c1c8"
+    },
+    {
+      "check": "Current RevI_PLASMA_HARDWARE file",
+      "report": "output/release-review/RevI-CAD/step/RevI_PLASMA_HARDWARE.step",
+      "status": "PASS",
+      "passed": true,
+      "sha256": "02999d5bd7a51a94611548acd608ea11ed1d067454d5a6575a64625b25f6dfcb"
+    }
+  ],
+  "index_generator_sha256": "578182f3af92eccff40fd76a5e5da8d20d27c97a7a9dbfdb861cacad3968b920",
+  "physical_release": false,
+  "not_closed": [
+    "Actual motion/torch/valve/strainer/enclosure interfaces",
+    "Purchased module and complete tool-to-work rigidity",
+    "Actual extrusion-slot preload capacity",
+    "Complete populated panel and stop/power/brake integration",
+    "Tilted breakaway behavior, force calibration, moving tool leads and physical commissioning"
+  ]
+}
