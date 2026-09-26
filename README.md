@@ -42,6 +42,7 @@ Rev J does not yet contain Rev I's head, plumbing, cabinet, structure or control
 
 **Shared and earlier:**
 
+- [Review of the other session's Rev H, Rev I and variants (26 Sep)](output/review-2026-09-26/README.md): blockers for both lines, including the Rodent's inputs, the missing E-stop circuit, a mode-switch race and plasma torch reach, plus the 4 × 8 for a friend.
 - [Updated concept PDF](output/pdf/plasma-router-stand-concept.pdf); it shows Rev I.
 - [Scrap tube lengths and inspection inputs](output/design-completion-2026-09-26/SCRAP-TUBE-GUIDE.md). That list is for Rev H and Rev I; the Rev J list is in its package.
 - [X/Y lead check and arrival measurements](output/design-completion-2026-09-26/CONTROL-SCALE-CHECK.md).

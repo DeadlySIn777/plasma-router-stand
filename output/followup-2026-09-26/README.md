@@ -4,6 +4,9 @@
 
 ## What changed in this follow-up
 
+- **Review of the other session's work** (owner request, 26 Sep evening): [review](../review-2026-09-26/README.md).
+  - **Its checks reproduce:** Rev I acceptance 30/30 and a fresh rebuild with 0 clashes.
+  - **Blockers:** Kraken-based controls against the Rodent decision, on a Rodent that has only 5 inputs and no THC support on ESP32; no E-stop or power-removal circuit; a mode-switch race that can fire the wrong tool, verified on its own simulator; and a plasma torch that must project about 215–245 mm to reach the slats, which affects Rev J too.
 - **Base branch merged a third time: development variants (`ca9728b`, 22:15 UTC).**
   - **What arrived:** the other session added a small-machine RapidChange ATC dock, a full-sheet 4x8 machine layout and shared removable-table locators, in `variants/`. They were merged unchanged.
   - **Conflicting records:** the variants' [requirements record](../../variants/requirements.json) lists "Keep bed conversion within the machine footprint" and "Preserve the preference for Kraken onboard motor drivers" as confirmed requests. This session recorded the one-piece bed that leaves through the front on a hoist, and the BTT Rodent. These records conflict, and only the owner can settle them.
