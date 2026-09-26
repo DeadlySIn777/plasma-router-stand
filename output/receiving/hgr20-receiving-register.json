@@ -1,7 +1,7 @@
 {
   "purpose": "Receiving record for the two iMetrx HGR20 guide kits. Fill the null fields on delivery, then run plan_rail_cuts.py. Measurements are in mm.",
   "order": {
-    "status": "NOT RECORDED AS ORDERED",
+    "status": "REQUIRED; KEPT BY OWNER DECISION 26 SEP 2026; NOT YET RECORDED AS ORDERED",
     "note": "On 26 Sep 2026 the owner reported ordering the rail kits, then clarified 1000x800x100: that order was the HMS40 and ZBX80 drive modules (see drive-modules-receiving-register.json). The HGR20 guide kits below are still required.",
     "items": [
       {
@@ -18,7 +18,9 @@
       }
     ],
     "price_paid_usd": null,
-    "delivery_dates": null
+    "delivery_dates": null,
+    "owner_decision": "2026-09-26: keep the HGR20 guide rails; owner reports about $150 for all four rails (listing not yet recorded).",
+    "purchase_check": "Two rails >= 1420 mm (Y) and two >= 1200 mm (X), four HGH20CA blocks per pair (square 44 mm block, not flanged HGW20CC)."
   },
   "seller_table_values_to_check": {
     "rail": {

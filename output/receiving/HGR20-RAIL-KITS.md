@@ -1,6 +1,6 @@
 # HGR20 rail kits — receiving, measuring and cutting
 
-**Status: not recorded as ordered, and still required.** The "rail kits" ordered on 26 September 2026 were the HMS40 and ZBX80 drive modules (see [MOTION-MODULES.md](MOTION-MODULES.md)). In this design those modules only push; these HGR20 guides carry the gantry and cutting loads. When ordered, record the listings, price paid and delivery dates in [the register](hgr20-receiving-register.json).
+**Status: required, and kept by owner decision on 26 September 2026.** The owner reports about $150 for all four rails; they are not yet recorded as ordered. The "rail kits" ordered earlier that day were the HMS40 and ZBX80 drive modules (see [MOTION-MODULES.md](MOTION-MODULES.md)), whose strokes of 1000 × 800 × 100 mm are the machine travel. In this design those modules only push; these HGR20 guides carry the gantry and cutting loads. Before buying a combined set, check that it has two rails of at least 1,420 mm for Y (1,500 cut down) and two of at least 1,200 mm for X, with four HGH20CA blocks per pair. HGH20CA is the square 44 mm block this design uses; do not substitute flanged HGW20CC. When ordered, record the listings, price paid and delivery dates in [the register](hgr20-receiving-register.json).
 
 | Kit | Listing | Contents | Use in Rev G |
 |---|---|---|---|
@@ -8,6 +8,18 @@
 | M05 | [B0FFMN9KNC](https://www.amazon.com/dp/B0FFMN9KNC) | Two 1200 mm HGR20 rails, four HGH20CA blocks | X axis: both rails used at **1200 mm**, two blocks per rail |
 
 Together the kits supply exactly what the Rev G model uses (`PURCHASED_HGR20_1420` ×2, `PURCHASED_HGR20_1200` ×2, `PURCHASED_HGH20CA` ×8).
+
+## Why the rails are longer than the stroke
+
+A guide rail has to be the stroke plus the length of the blocks riding on it, or the blocks run off the ends.
+
+| Axis | Stroke | Blocks on each rail | Minimum rail | Rail in the design |
+|---|---:|---|---:|---:|
+| Y | 1,000 mm | two HGH20CA, 180 mm apart: 257.5 mm from the front of one to the back of the other | 1,257.5 mm | 1,420 mm (1,500 cut down; the extra leaves room for the end stops) |
+| X | 800 mm | two HGH20CA spanning 237.5 mm | 1,037.5 mm | 1,200 mm, the full gantry beam |
+| Z | 100 mm | none: the ZBX80 has its own guides | — | — |
+
+The HMS40 modules follow the same rule: the 1,000 mm-stroke module is 1,145 mm long (L = S + 145).
 
 ## Why the rails must be measured before anything is cut or drilled
 
