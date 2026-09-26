@@ -11,7 +11,7 @@ Rev J answers the owner's requirement of 26 September 2026: *one piece, lifted o
 
 The frame, water table, controls packaging and motion are otherwise unchanged from Rev G.
 
-**Name:** this design was first published on this branch as "Rev H". The base branch now has its own Rev H: the six-panel bed with storage restraints, in [RevH-CAD](../RevH-CAD/README.md). This one was therefore renamed Rev J on 26 September 2026. Rev I is skipped because drawing revisions don't use the letter I, which reads as 1.
+**Name:** this design was first published on this branch as "Rev H". The base branch now has its own Rev H: the six-panel bed with storage restraints, in [RevH-CAD](../RevH-CAD/README.md). This one was therefore renamed Rev J on 26 September 2026, skipping the letter I because it reads as 1. Later that day the other session used **Rev I** for the next step of its six-panel line ([RevI-CAD](../RevI-CAD/README.md)): a floating head, plumbing supports, cabinet and control circuits. That work is not in Rev J. Which line continues is the owner's decision.
 
 - [Router assembly STEP](step/RevJ_ROUTER.step) — bed module installed
 - [Plasma layout STEP](step/RevJ_PLASMA_LAYOUT.step) — module out of the machine; spindle, clamp hardware and drawdowns stored (no plasma torch is modeled)
@@ -160,4 +160,4 @@ The sources are in [RevE-ENGINEERING](../RevE-ENGINEERING/):
 - `verify_revj_motion.py`, `revj_handling_check.py`, `verify_revj_water.py`: checks.
 - `render_revj.py`: previews.
 
-Two alternatives are kept: the base branch's Rev H ([RevH-CAD](../RevH-CAD/README.md)) and Rev G ([RevG-CAD](../RevG-CAD/README.md)). Both are six-panel manual beds stored in the machine footprint.
+The six-panel line continues in the other session's Rev I ([RevI-CAD](../RevI-CAD/README.md)), which follows its Rev H ([RevH-CAD](../RevH-CAD/README.md)); Rev G ([RevG-CAD](../RevG-CAD/README.md)) is earlier. All three are manual beds stored in the machine footprint.
