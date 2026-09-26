@@ -21,6 +21,10 @@ A guide rail has to be the stroke plus the length of the blocks riding on it, or
 
 The HMS40 modules follow the same rule: the 1,000 mm-stroke module is 1,145 mm long (L = S + 145).
 
+![Why the rail is longer than the stroke](rail-length-explained.png)
+
+Drawn to scale from the model positions at both ends of travel (`draw_rail_length.py`, `rail-length-positions.json`).
+
 ## Why the rails must be measured before anything is cut or drilled
 
 The seller's table gives HGR20 hole pitch **P = 40 mm** and end distance **E = 20 mm**, whereas the common HGR20 pattern is P = 60 mm. The CAD therefore has no rail-screw holes: the Y datum bars and the X guide face get their holes transfer-drilled from the actual rails. The Y cut position depends on the real pattern. On a 1500 mm rail, `plan_rail_cuts.py` gives:
