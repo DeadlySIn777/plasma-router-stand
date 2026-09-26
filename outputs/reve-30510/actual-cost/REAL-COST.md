@@ -1,6 +1,6 @@
-# CNC / plasma actual-price audit
+# GM1 — Garcia Mechanical Table: actual-price audit
 
-**Recorded priced scope: $5,734.94 goods + $75.30 known/advertised shipping = $5,810.24 USD before tax.**
+**Recorded priced scope: $5,249.85 goods + $86.25 known/advertised shipping = $5,336.10 USD before tax.**
 
 **The complete delivered build price is still unknown. This is not a purchase or manufacturing release.** The remaining required items are not included as zero-dollar purchases. The earlier $7,663.82 estimate is superseded; it contained allowances, omitted stock details and an arbitrary shipping reserve.
 
@@ -10,34 +10,64 @@ The owner performs fabrication, machining, cutting and finishing: outside-shop l
 
 | Priced portion | Goods, before tax |
 |---|---:|
-| Motion | $2,203.13 |
-| Router bed | $469.23 |
+| Motion | $2,205.14 |
+| Router bed | $399.95 |
 | Router head | $309.99 |
-| Controls | $460.67 |
+| Controls | $268.71 |
 | Water controls | $424.74 |
-| Chassis | $1,392.71 |
-| Standard hardware | $216.90 |
-| Controls and water wiring | $257.57 |
+| Chassis | $1,261.46 |
+| Standard hardware | $127.24 |
+| Controls and water wiring | $252.62 |
 
-The current workbook contains **83 priced lines**, **43 remaining scope entries** and a vendor-level shipping register. Every price is linked to a product or supplier. Line quantities are rounded to cents; seller checkout can differ by a cent on fractional-cent fasteners.
+The current register contains **73 priced lines**, **51 remaining scope entries** and a vendor-level shipping register. Every price is linked to a product or supplier. Line quantities are rounded to cents; seller checkout can differ by a cent on fractional-cent fasteners.
 
-Amazon items total **$2,204.99**, with advertised free delivery to ZIP 30510 under the recorded order conditions. This includes two 1,000 mm Y modules, one 800 mm X module, the 100 mm Z, the two HGR20 rail kits, five extrusion packs, spindle kit, power supplies, cabinet, cable chains, CB1 and listed Amazon water components. These are source prices, not proof that all mounting and electrical interfaces are finished.
+Amazon items total **$2,174.01**, with advertised free delivery to ZIP 30510 under the recorded order conditions. This includes two 1,000 mm Y modules, one 800 mm X module, the 100 mm Z, the two HGR20 rail kits, five extrusion packs, spindle kit, power supplies, cabinet, cable chains and listed Amazon water components. These are source prices, not proof that all mounting and electrical interfaces are finished.
 
 The [80/20 beam](https://8020.net/40-8080.html) and [16 matching M8 nuts](https://8020.net/40-3915.html) were configured together in a ZIP-30510 cart: **$193.01 goods + $61.30 UPS Ground + $17.80 estimated tax = $272.11**. The temporary cart was cleared after recording the estimate. This tax amount applies only to that cart, not to all suppliers.
 
-Nutty hardware is combined into one order above its $100 advertised free-shipping threshold. No duplicate delivery charge is added for each fastener row. Other blank freight cells remain unknown.
+Nutty hardware is combined into one order of $76.06, below its $100 free-shipping threshold, so the $10.95 flat rate is included; adding the unpriced Rev J stainless fasteners to this order may remove it. No duplicate delivery charge is added for each fastener row. Other blank freight cells remain unknown.
+
+**Owner order status:** M01 KHMOS HMS40 X module, 800 mm stroke, to be ordered Monday 28 Sep 2026 (owner's other session, recorded on the base branch 26 Sep); this session had recorded it as ordered on 26 Sep, so confirm; M02 KHMOS HMS40 Y module, 1000 mm stroke, ordered and on the way (owner, 26 Sep 2026; also recorded on the base branch by the owner's other session); two, one per Y side, to confirm on receipt; M03 RATTMMOTOR ZBX80 Z module, 100 mm stroke, to be ordered Monday 28 Sep 2026 (owner's other session, recorded on the base branch 26 Sep); this session had recorded it as ordered on 26 Sep, so confirm. Listed prices stay in this register until the price paid is recorded. See the [drive-module receiving check](../../../output/receiving/MOTION-MODULES.md).
 
 ## Corrections to the old estimate
 
-- Recorded the owner's 12 x 12 inch aluminum pieces, provisionally one at 1/2 inch and one at 3/8 inch. The 1/2 inch piece geometrically fits the Z carrier and smaller pieces. Qualifying its alloy and usable finished thickness can avoid MET08 ($58.74), giving $5,751.50 for the current incomplete priced scope. No credit is applied before qualification, and no duplicate offcut savings are counted. See [owned aluminum allocation](OWNED-ALUMINUM-FIT.md).
-- The $930.90 square-tube line is a high retail reference, not a lowest-price buying recommendation. Bobco posts $585.00 for six matching 20-foot A500 Grade B bars, but advertises Los Angeles pickup; Georgia delivery is unquoted. Looper's and YAGI comparisons have further specification/availability limits. Nearby SteelMart Gainesville and Sabel Winder require quotations. See [tube comparisons](TUBE-PRICE-COMPARISON.md).
-- A [Sylvania Marketplace listing](https://www.facebook.com/marketplace/item/1367277908682890/) advertises 24-foot 2 x 2 tubing for $115 each. The alternate cut proof fits all 36 blanks into five bars, giving $575 goods and a $355.90 difference from the retail reference before pickup/tax/qualification. No budget substitution is adopted until actual wall/grade/condition and collection are checked. See [Marketplace findings](MARKETPLACE-TUBING.md).
+- Recorded the owner's 12 x 12 inch aluminum pieces, provisionally one at 1/2 inch and one at 3/8 inch. The 1/2 inch piece geometrically fits the Z carrier and smaller pieces. Qualifying its alloy and usable finished thickness can avoid MET08 ($58.74), giving $5,277.36 for the current incomplete priced scope. No credit is applied before qualification, and no duplicate offcut savings are counted. See [owned aluminum allocation](OWNED-ALUMINUM-FIT.md).
+- The $775.75 square-tube line is a high retail reference, not a lowest-price buying recommendation. Bobco posts $487.50 for 5 matching 20-foot A500 Grade B bars, but advertises Los Angeles pickup; Georgia delivery is unquoted. Looper's and YAGI comparisons have further specification/availability limits. Nearby SteelMart Gainesville and Sabel Winder require quotations. See [tube comparisons](TUBE-PRICE-COMPARISON.md).
+- A [Sylvania Marketplace listing](https://www.facebook.com/marketplace/item/1367277908682890/) advertises 24-foot 2 x 2 tubing for $115 each. Its recorded cut proof (five bars, $575) was made for the Rev E 36-blank schedule and has not been redone for the Rev J 32 blanks. No budget substitution is adopted until the cut proof, actual wall/grade/condition and collection are checked. See [Marketplace findings](MARKETPLACE-TUBING.md).
 - Removed the unsupported $200 decorative-skin allowance: no separate appearance panels existed in the current CAD.
-- Retained six full 20-foot chassis tubes because the cut plan needs them. One bar has no surplus beyond its modeled kerfs and trim; do not assume undersize or damaged stock will fit.
+- Rev J needs 32 square-tube blanks (RevJ-CAD/tube-cut-plan.json). Five full 20-foot bars (MET01) take 30 of them, and one 8 ft length (MET-GAP-23) takes the last two module crossmembers; the plan as written would buy a 6th full bar instead. The smallest remainder on the full bars is 6 mm beyond modeled kerfs and trim; do not assume undersize or damaged stock will fit.
 - Kept two 4 × 8 sheets for the .120-inch water assembly. The stale third nesting DXF is excluded from the current package.
 - Replaced the $150 adapter-stock allowance with explicit raw-stock purchases. The unchanged billet geometry requires $813.33 of sourced aluminum stock before freight. The old allowance understated this cost. An equivalent OnlineMetals 2 x 2 x 12 inch blank replaces the prior BuyMetal source and reduces goods cost by $31.35 without a geometry change.
 - Counted fabricated plugs, supports and clamps as raw stock plus owner work. No shop labor is added a second time.
 - Kept price evidence separate from compatibility. Backorders, timer contact checks, hose restrictions and unresolved interfaces are visible rather than being assumed complete.
+
+## Rev J re-baseline, 26 September 2026
+
+GM1 Rev J (`output/release-review/RevJ-CAD/`) is the owner's one-piece, hoist-lifted, waterproof bed module, first published on this branch as Rev H, combined with the base branch's Rev H water service (reservoir hatches, washout flange, drain reserves) and Z-adapter blank. Its refill spout is moved clear of the module. The base branch's own Rev H keeps the six-panel bed and is not priced here. The bed rows now follow the Rev J cut list. 7 Rev G bed items left the register and stay as dated evidence (`superseded_offers`, revision J): MET-GAP-14 (was unpriced), MET-GAP-15 (was unpriced), MET-GAP-16 (was unpriced), MET-GAP-17 (was unpriced), MET-GAP-19 (was unpriced), HW-N3 $3.88, HW-N5 $6.78. N1 is now 48 stainless square nuts, and B01 stays at five two-packs (nine 1,197 mm profiles plus one spare bar).
+
+New unpriced Rev J scope:
+
+- 3/4 in HDPE sheet (MET-GAP-20)
+- 3 mm stainless for the bolt tray (MET-GAP-21)
+- 3/8 x 4 in bar for the lift lugs (MET-GAP-22)
+- one 8 ft 2 x 2 tube (MET-GAP-23)
+- galvanizing (J-GALV)
+- the stainless module hardware (HW-GAP-H06, H07, H08)
+- from the Rev H water service: 4 mm plate for the washout cover (MET-GAP-24), NPS 1/2 pipe for the refill spout (MET-GAP-25) and the hatch and washout fasteners (in HW-GAP-H03)
+
+The three new EPDM gaskets come out of the centre offcut of the reservoir gasket sheet (MET-GAP-13). The braked Z-motor candidate that the Rev H model reserves (23HS30-5004D-B280) is not priced or bought until the ZBX80 is measured (HW-GAP-R05).
+
+The owner's overhead beam, trolley, hoist, sling, shackles and module stand stay outside the register. Part-by-part changes are in [REVJ-PROCUREMENT-DELTA.md](REVJ-PROCUREMENT-DELTA.md).
+
+`check_revg_stock_fit.py --cad RevJ-CAD` (`revj-stock-fit.json`) packs the Rev J flat parts onto the registered sizes. Every sheet and plate row covers its parts, including the Rev H water-service flats and the 6 mm plate that was short for Rev G. The one exception is the 3/8 in plate, which would need 12 x 36 in with the lugs; the lugs therefore get their own bar. **The lower subtotal is NOT a cheaper build**, because the new Rev J items are unpriced.
+
+## Rev G reconciliation, 26 September 2026 (bed rows since re-baselined to Rev J)
+
+Quantities were reconciled with the Rev G cut list (`output/release-review/RevG-CAD/cutlist.json`) and the owner's controller decision. 8 offers are no longer priced and are kept as dated evidence in `audit-data.json` (`superseded_offers`): E19 $32.99, E07 $129.99, E20 $28.98, MET06 $69.28, HW-N2 $12.36, HW-W1 $39.60, HW-N16 $1.44, CA-10 $4.95. The controller items went because the owner chose BTT Rodent + grblHAL on 26 September 2026 (the owner already owns a Kraken); the Rodent board itself is unpriced (CA-RODENT). At Rev G, MET01 was five 20 ft tubes (30 blanks), MET02 three 8 ft bars (the controls cage raised the 1 x 1 tube list to 7,730 mm), square nuts 96, spoilboard screws 25 and M8x80 drawdowns 10 (Nutty minimums).
+
+`check_revg_stock_fit.py` packs the actual Rev G flat parts onto each registered sheet and plate size (`revg-stock-fit.json`). Every existing row covers its parts except the 6 mm plate, where two tool cradles do not fit; the 3/4 in MDF spoilboards now need only a half sheet. Two thicknesses had no row at all: 2 mm steel rack guides and 3/8 in aluminum panel ties. Those, the extra 6 mm plate, the sleeve round bar and the 30 x 30 x 3 rack-fork tube are listed as remaining scope, as are the Rev G screws, washers and locator pins without an offer. The lower subtotal is therefore NOT a cheaper Rev G build.
+
+**The Excel workbook has not been regenerated.** `build_budget.mjs` needs the private `@oai/artifact-tool` runtime, which is not in this repository. Until it is rebuilt, `budget-data.json`, `audit-data.json` and this page are current; the workbook still shows Rev E quantities.
 
 ## Cost reductions requiring an engineering revision
 

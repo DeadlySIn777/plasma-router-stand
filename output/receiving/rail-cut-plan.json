@@ -1,0 +1,120 @@
+{
+  "register": "hgr20-receiving-register.json",
+  "y_rail_target_length_mm": 1420,
+  "rules": {
+    "e_min_mm": 10.0,
+    "e_max": "one measured pitch",
+    "removed_counterbore_clearance_mm": 1.0,
+    "robust_margin_mm": 2.0,
+    "search_step_mm": 0.5
+  },
+  "rails": [
+    {
+      "id": "Y1",
+      "use": "Y_RAIL_L",
+      "status": "WAITING FOR MEASUREMENT"
+    },
+    {
+      "id": "Y2",
+      "use": "Y_RAIL_R",
+      "status": "WAITING FOR MEASUREMENT"
+    },
+    {
+      "id": "X1",
+      "use": "X_RAIL_1 (upper)",
+      "status": "NO CUT: used at supplied length; measure end distances for transfer drilling"
+    },
+    {
+      "id": "X2",
+      "use": "X_RAIL_2 (lower)",
+      "status": "NO CUT: used at supplied length; measure end distances for transfer drilling"
+    }
+  ],
+  "scenarios_before_measurement": [
+    {
+      "scenario": "Pitch 60, symmetric 30 mm ends (common HGR20 pattern)",
+      "cut_from_end_A_mm": 10.0,
+      "cut_from_end_B_mm": 70.0,
+      "end_distance_A_mm": 20.0,
+      "end_distance_B_mm": 20.0,
+      "kept_holes": 24,
+      "smallest_margin_mm": 10.0,
+      "status": "OK",
+      "valid_cut_from_end_A_ranges_mm": [
+        [
+          0.0,
+          20.0
+        ],
+        [
+          36.0,
+          44.0
+        ],
+        [
+          60.0,
+          80.0
+        ]
+      ]
+    },
+    {
+      "scenario": "Pitch 40, symmetric 30 mm ends (seller table pitch)",
+      "cut_from_end_A_mm": 40.0,
+      "cut_from_end_B_mm": 40.0,
+      "end_distance_A_mm": 30.0,
+      "end_distance_B_mm": 30.0,
+      "kept_holes": 35,
+      "smallest_margin_mm": 4.25,
+      "status": "OK",
+      "valid_cut_from_end_A_ranges_mm": [
+        [
+          0.0,
+          4.0
+        ],
+        [
+          20.0,
+          20.0
+        ],
+        [
+          36.0,
+          44.0
+        ],
+        [
+          60.0,
+          60.0
+        ],
+        [
+          76.0,
+          80.0
+        ]
+      ]
+    },
+    {
+      "scenario": "Pitch 40, 20 mm at end A (seller table E) and 40 mm at end B",
+      "cut_from_end_A_mm": 73.0,
+      "cut_from_end_B_mm": 7.0,
+      "end_distance_A_mm": 27.0,
+      "end_distance_B_mm": 33.0,
+      "kept_holes": 35,
+      "smallest_margin_mm": 7.0,
+      "status": "OK",
+      "valid_cut_from_end_A_ranges_mm": [
+        [
+          10.0,
+          10.0
+        ],
+        [
+          26.0,
+          34.0
+        ],
+        [
+          50.0,
+          50.0
+        ],
+        [
+          66.0,
+          80.0
+        ]
+      ]
+    }
+  ],
+  "status": "WAITING FOR MEASUREMENTS: do not cut the Y rails yet"
+}

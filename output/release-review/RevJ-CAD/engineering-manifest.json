@@ -1,0 +1,615 @@
+{
+  "frame": {
+    "feet_count": 6,
+    "level_adjustment_mm": 8,
+    "pan_bearer_cut_mm": 1016.4,
+    "pan_bearer_M8_count": 24,
+    "additional_tank_support_tube_m": 4.4428,
+    "brace_tube": "25.4\u00d725.4\u00d72.1082",
+    "side_brace_structural_x_mm": [
+      -28.4,
+      1178.4
+    ],
+    "gusset_legs_mm": 160,
+    "sand_ports": 18,
+    "ballast_note": "Stationaryframeonly;actualmassdeterminedbyweighingfill. No sand inbedbeams/cassettes/gantry."
+  },
+  "water": {
+    "reservoir_internal_mm": [
+      900,
+      600,
+      250
+    ],
+    "gross_litres": 135.0,
+    "weir_top_z_mm": 228.048,
+    "reservoir_cover_top_z_mm": 433.096,
+    "overflow_start_approx_z_mm": 420.048,
+    "water_charge_limit_litres": 115,
+    "minimum_return_capacity_litres": 125,
+    "pan_normal_level_z_mm": 820,
+    "pan_minimum_level_z_mm": 810,
+    "pan_high_high_z_mm": 827,
+    "pan_overflow_crest_z_mm": 825,
+    "reservoir_pump_low_trip_z_mm": 233.048,
+    "pipe_dimensional_source": "https://www.wheatland.com/wp-content/uploads/2017/12/Schedule-40-Submittal-Sheet.pdf",
+    "pan_drain_xyz_mm": [
+      900,
+      1270.0,
+      738.3981523961902
+    ],
+    "unmodeled_purchased_connections": [
+      "Selected motorized valve, reducers/unions and refill pump connections require selected manufacturer dimensions.",
+      "External emergency-overflow destination must be defined before commissioning."
+    ]
+  },
+  "water_accessories": {
+    "pump_mount_plate_mm": [
+      250,
+      126,
+      3.048
+    ],
+    "pump_foot_hole_pattern_mm": [
+      58,
+      85
+    ],
+    "purchased_pump_envelope_mm": [
+      210,
+      86,
+      114.5
+    ],
+    "pump_unknowns": [
+      "Exactfootthickness:M4boltlengthselectedafterreceipt",
+      "Portaxis:centeredrigidpipesnotreleased"
+    ],
+    "vent_cap_open_area_mm2": 84.82300164692441,
+    "float_brackets_status": "Verticalfloattrip-planeandthreadengagementdimensionsareunpublished;wet-calibratedadjustablemountsremainunreleased."
+  },
+  "sensor_mounts": {
+    "count": 5,
+    "mount_z_mm": {
+      "PAN_MIN": 860,
+      "PAN_FILL": 870,
+      "PAN_HH": 877,
+      "PAN_EMPTY": 812.0,
+      "TANK_LOW": 283.048
+    },
+    "target_trip_z_mm": {
+      "PAN_MIN": 810,
+      "PAN_FILL": 820,
+      "PAN_HH": 827,
+      "PAN_EMPTY": null,
+      "TANK_LOW": 233.048
+    },
+    "pan_empty_clearance": {
+      "mount_nominal_range_z_mm": [
+        812.0,
+        832.0
+      ],
+      "mount_lowest_with_slot_play_z_mm": 811.7,
+      "guard_underside_at_nominal_min_z_mm": 750.0,
+      "minimum_as_built_gap_mm": 8.0,
+      "pan_floor_check_footprint_xy_mm": [
+        978,
+        1177,
+        1014,
+        1217
+      ],
+      "release": "WET CALIBRATION HOLD: prove actual trip and drained state; unknown supplier trip offset is not inferred from carrier height."
+    },
+    "commissioning": "Wet-set actual reed trips with mount slots; independently prove normal stop, minimum, HH and tank low. PAN_EMPTY mount must remain Z812..832 nominal and its entire guard must retain >=8 mm actual floor clearance. Prove the actual low trip followed by 60 s drain before mode-swap release; do not lower the carrier to chase an assumed trip.",
+    "guard_service": "Release2M6screwsandliftslider/sensor/guardasonepiece. Removebracketassembliesbeforelongsheetoverhangoutsidenominal800mmcuttingwidth."
+  },
+  "bed": {
+    "revision": "H one-piece hoisted module",
+    "architecture_assumption": "One-piece welded module lifted in place and carried out of the front window on the owner overhead beam and trolley hoist; set down outside the machine for plasma work.",
+    "owner_requirements_2026_09_26": [
+      "one piece, lifted out with a winch/hoist",
+      "at most about 12 release screws, M8 to M12",
+      "waterproof for mist coolant on aluminum: no MDF"
+    ],
+    "bare_deck_mm": [
+      900,
+      1197.0,
+      20
+    ],
+    "workplane_z_mm": 940.8,
+    "finished_top_z_mm": 958.8,
+    "hdpe_plates_mm": [
+      [
+        176.0,
+        130.0,
+        574.0,
+        1130.0
+      ],
+      [
+        576.0,
+        130.0,
+        974.0,
+        1130.0
+      ]
+    ],
+    "module_stack": "Ledger Z840 > 6 mm seat pads 846 > rails 2x2 846..896.8 > crossmembers 2x2 870..920.8 > 20100 strips 920.8..940.8 > HDPE 940.8..958.8 finished",
+    "release_fasteners": {
+      "count": 6,
+      "size": "M10x80 ISO 4762 A4-70",
+      "locating_pins": 2
+    },
+    "module_internal_fasteners": {
+      "strip_M5": 36,
+      "hdpe_M5": 12
+    },
+    "lift_lugs": {
+      "count": 4,
+      "holes_xyz_mm": [
+        [
+          150.0,
+          50.0,
+          920.0
+        ],
+        [
+          1000.0,
+          50.0,
+          920.0
+        ],
+        [
+          150.0,
+          1322.8000000000002,
+          920.0
+        ],
+        [
+          1000.0,
+          1322.8000000000002,
+          920.0
+        ]
+      ],
+      "shackle": "3/8 in screw-pin anchor shackle, WLL at least 0.5 t each"
+    },
+    "module_mass_estimate_kg": 63.4,
+    "module_cg_mm": [
+      575.0,
+      669.5,
+      912.2
+    ],
+    "module_mass_basis": "Nominal solids: steel 7850, aluminum 2700 (reconstructed 20100 section), HDPE 950 kg/m3, stainless hardware as steel. Weigh the module before the first lift.",
+    "handling_lift_mm": 70.0,
+    "handling": "Owner overhead beam with trolley hoist over the machine centreline, running at least 1.6 m in front of the machine. 4-leg sling to the four lugs, hook above the module centre of mass.",
+    "sequence": [
+      "Router off and isolated; spindle removed or Z fully raised. Gantry at the front: remove the two rear M10 drawdowns.",
+      "Gantry to the rear stop, head at X575 (centre). Remove the four remaining drawdowns; all six go to the bolt tray.",
+      "Rig the 4-leg sling to the lugs, take the slack, lift 70 mm: pins clear the pads and every module part passes above the pan-float backrails (top Z910).",
+      "Trolley forward about 1.45 m, guiding the module by hand through the front window; two people.",
+      "Set the module down on its stand outside the machine. Clear chips, then continue with the plasma water sequence.",
+      "Reverse to install: lower the last 70 mm onto the pins, fit and torque the six drawdowns, re-probe the HDPE surface."
+    ],
+    "storage": {
+      "module": "Outside the machine footprint on an owner-provided stand or cart; not left suspended over a walkway.",
+      "bolts": "Six M10 drawdowns and washers in the bolt tray on the reservoir lid.",
+      "stored_inside": "Spindle in the existing cradle; tool-clamp hardware in the existing tray."
+    },
+    "plasma_support_clearance": "With the module out, the seat pads (top Z846) stay 4 mm below the slat tops (Z850); nothing projects above them.",
+    "release_holds": [
+      "Owner hoist, beam, trolley and sling ratings; beam height gives the hook at least 1.0 m above the lugs.",
+      "Module weighed; lift proof test; galvanized weldment inspected.",
+      "Seat-pad coplanarity and repeat-seating map; surfacing of the HDPE in place.",
+      "Actual 20100 section, square-nut fit and M5 preload in the strips.",
+      "Owner-provided module stand or cart and the floor space in front of the machine."
+    ]
+  },
+  "storage": {
+    "module": "Outside the machine footprint on an owner-provided stand or cart; not left suspended over a walkway.",
+    "bolts": "Six M10 drawdowns and washers in the bolt tray on the reservoir lid.",
+    "stored_inside": "Spindle in the existing cradle; tool-clamp hardware in the existing tray."
+  },
+  "tool_parking": {
+    "spindle_axis_start_xyz_mm": [
+      760.5,
+      1080,
+      599.7
+    ],
+    "spindle_envelope_mm": [
+      65,
+      259
+    ],
+    "strap_count": 2,
+    "hardware_tray_bounds_mm": [
+      800,
+      725,
+      433.096,
+      1000,
+      825,
+      463.096
+    ],
+    "handling": "Spindle rests in the existing internal cradle; its clamp screws and the lift shackles go in the existing hardware bin, the six drawdowns in the Rev J bolt tray. Exact lead routes remain open."
+  },
+  "controls_packaging": {
+    "enclosure_reserve_xyz_mm": [
+      371.8,
+      251.8,
+      165.0
+    ],
+    "enclosure_dimensions_mm": [
+      406.4,
+      203.2,
+      508.0
+    ],
+    "stringer_drilling": {
+      "diameter_mm": 6.0,
+      "local_xy_mm": [
+        [
+          12.7,
+          12.599999999999994
+        ],
+        [
+          12.7,
+          486.8
+        ]
+      ],
+      "direction": "Local +Z through both tube walls",
+      "shank_nominal_radial_clearance_mm": 0.25
+    },
+    "orientation": "Upright in the front bay under the water table, door forward through the open front window.",
+    "service": "Isolate electrical power before cabinet work. For shield removal take out four M5 retaining fasteners and withdraw the cap forward on its 1% slope; verify the selected enclosure door and hinge envelope before release.",
+    "unreleased_interfaces": [
+      "Vendor back-panel mounting hole pattern (transfer-drill the cage rails)",
+      "Selected enclosure roof, door, hinge and latch envelope; confirm drip-shield and service clearance",
+      "VFD thermal layout and wiring segregation",
+      "Cable glands and chain routes",
+      "Panel layout and legend set"
+    ],
+    "drip_shield": {
+      "roof_flat_mm": [
+        436.4,
+        233.21165970851453,
+        1.5
+      ],
+      "front_lip_flat_mm": [
+        436.4,
+        20,
+        1.5
+      ],
+      "datum_world_mm": [
+        356.8,
+        236.8,
+        675.5
+      ],
+      "slope_rear_high": 0.01,
+      "mount_holes_local_xy_mm": [
+        [
+          8.0,
+          63.2
+        ],
+        [
+          8.0,
+          183.2
+        ],
+        [
+          428.4,
+          63.2
+        ],
+        [
+          428.4,
+          183.2
+        ]
+      ],
+      "attachment": "Four welded cage tabs, four M5x20 socket screws and M5 nyloc nuts; no vendor enclosure penetrations.",
+      "fabrication": "Two flat sheets, continuously seal-welded at front lip. No bends, K factor or developed bend allowance required.",
+      "service": "Remove four M5 retaining bolts and nuts; withdraw roof/lip weldment 230 mm forward parallel to its slope, then lower 100 mm into front bay. Actual selected enclosure projection remains a hold."
+    }
+  },
+  "water_completion": {
+    "revision": "J water/service definition (Rev H hatches, washout and drain reserves; Rev J refill spout)",
+    "routine_washout": "Two independent lift-out hatches with captive upright parking; the full lid stays in place.",
+    "service_hatches": [
+      {
+        "tag": "CLARIFIED",
+        "cover": [
+          330.0,
+          945.0,
+          360.0,
+          215.0
+        ],
+        "opening": [
+          350.0,
+          965.0,
+          320.0,
+          175.0
+        ],
+        "park_y": 935.0
+      },
+      {
+        "tag": "SETTLING",
+        "cover": [
+          440.0,
+          1180.0,
+          310.0,
+          140.0
+        ],
+        "opening": [
+          460.0,
+          1200.0,
+          270.0,
+          100.0
+        ],
+        "park_y": 1168.0
+      }
+    ],
+    "water_charge_limit_litres": 115,
+    "permanently_vented": true,
+    "refill": {
+      "outlet_xyz_mm": [
+        345.0,
+        1215.4,
+        865.0
+      ],
+      "pan_rim_z_mm": 835.0,
+      "nominal_air_gap_mm": 30.0,
+      "minimum_as_built_air_gap_mm": 25,
+      "pump_hose_connection": "1/2 NPT male at (385,1215.4,665), adapter engagement remains receipt-fit.",
+      "connection_exclusion_bounds_mm": [
+        335.0,
+        1165.4,
+        545.0,
+        435.0,
+        1265.4,
+        665.0
+      ],
+      "change_from_rev_h": "Riser moved from (385,1255) to (385,1215.4) and head turned along -X to clear the bed module rear crossmember; riser lengthened to end below pan bearer 3; floor gusset replaces the rear-wall stay."
+    },
+    "gravity_drain": {
+      "status": "ALLOCATION ONLY - SELECTED CONNECTION DIMENSIONS STILL REQUIRED",
+      "axis_xy_mm": [
+        900,
+        1270
+      ],
+      "available_stack_mm": [
+        450,
+        693.398152
+      ],
+      "items": [
+        {
+          "id": "H_DRAIN_REDUCER_RESERVE",
+          "origin_mm": [
+            865,
+            1235,
+            650
+          ],
+          "size_mm": [
+            70,
+            70,
+            43.398152
+          ]
+        },
+        {
+          "id": "H_DRAIN_VALVE_RESERVE",
+          "origin_mm": [
+            837.5,
+            1207.5,
+            525
+          ],
+          "size_mm": [
+            125,
+            125,
+            125
+          ]
+        },
+        {
+          "id": "H_DRAIN_UNION_RESERVE",
+          "origin_mm": [
+            865,
+            1235,
+            470
+          ],
+          "size_mm": [
+            70,
+            70,
+            55
+          ]
+        }
+      ],
+      "holds": [
+        "Supplier valve connection datums and actual actuator orientation",
+        "Reducer/union/thread engagement stack and pipe support",
+        "Basket service with selected union and detached downstream tail",
+        "Suction strainer/fittings, pressure-rated hoses and hose bends are not released"
+      ]
+    },
+    "washout_cap": {
+      "flange_bounds_z_mm": [
+        110,
+        116
+      ],
+      "clear_bore_mm": 48.5,
+      "cover_bounds_z_mm": [
+        104,
+        108
+      ],
+      "fasteners": "4xM6x25 head-down bolts, M6 washers and nyloc nuts",
+      "limitation": "Empty and isolate tank before removal; this is not the full-inventory drain control."
+    },
+    "remaining_holds": [
+      "Complete selected valve/union/strainer/pump port fit and supported hose route",
+      "Whole reservoir lid removal remains major disassembly, not routine service",
+      "Actual cabinet hinge/latch/door, gland entry and VFD heat rejection require selected enclosure drawings",
+      "Wet-test tank cleaning reach, float calibration, overflow flow and anti-siphon air gap"
+    ]
+  },
+  "motion": {
+    "configuration": {
+      "gantry_y": 1275.0,
+      "beam_center_y": 1355.0,
+      "head_x": 575.0,
+      "z_lift": 100.0,
+      "tool": "router"
+    },
+    "travel_mm": {
+      "X": 800,
+      "Y": 1000,
+      "Z": 100
+    },
+    "guide_midpoint_y_limits": [
+      275,
+      1275
+    ],
+    "x_head_limits": [
+      175,
+      975
+    ],
+    "gantry_beam_z": [
+      1155,
+      1235
+    ],
+    "y_guide_center_z": 1033,
+    "y_block_spacing": 180,
+    "x_block_spacing": 160,
+    "Y_rail_count_length": [
+      2,
+      1420
+    ],
+    "X_rail_count_length": [
+      2,
+      1200
+    ],
+    "guide_blocks_count": 8,
+    "tool_axis_y_nominal_limits": [
+      121.4,
+      1121.4
+    ],
+    "readiness": "DETAILED STRUCTURAL MOTION LAYOUT WITH EXPLICIT SUPPLIER/CONNECTION HOLDS",
+    "holds": [
+      "Z slide: exact-ASIN drawing gives body219x80, end blocks12 and carriage90x50;70 mm transverse spacing belongs to the smaller\u00d85 fixing holes, not the larger\u00d87 bores. Output mounting-plane height, along-travel hole pitch/thread/depth and base-slot fastening remain unresolved. No carriage fasteners are modeled; the tool has no released attachment load path and TOOL_ADAPTER_110 individual export is guarded.",
+      "HGR20: seller P40/E20/1500 hole dimensions conflict. Actual factory holes must be verified before rail cutting or custom datum drilling.",
+      "HMS40: base nut cavity and endpoint datum not published. Rail caps require a verified base clamp/nut design; motor current and torque-speed curves missing.",
+      "Z power-loss retention: a 23HS30-5004D-B280 replacement brake motor is a sourced candidate, but no installed restraint is qualified. Shaft/coupling/pilot fit, stopped-load retention, brake sequencing and response under power loss require acceptance. A ballscrew must not be assumed self-locking.",
+      "Head projection uses an explicit80 mm Z stack assumption. Final tool sweep and claimed usable1000 Y must be recalculated when supplier datum is recovered.",
+      "X/Y physical stops and three home switches are modeled. Z home bracket and travel stops depend on the unresolved Z supplier endpoint/output geometry. Cable-chain anchors, way covers and spindle/torch cable bend envelopes still require final integration.",
+      "Candidate 23HS30-5004D-B280 replaces the stock Z motor only after shaft/coupling/pilot fit, brake timing, thermal and stopped-load retention acceptance. No production brake mount released."
+    ],
+    "scope_note": "No unverified purchased bolt hole was invented. Geometry checks cannot close the listed missing interfaces."
+  },
+  "motion_completion": {
+    "adapter": "transfer-drill blank, no unverified output holes",
+    "replacement_brake_motor_candidate": true,
+    "active_motion_holds": [
+      "Z slide: exact-ASIN drawing gives body219x80, end blocks12 and carriage90x50;70 mm transverse spacing belongs to the smaller\u00d85 fixing holes, not the larger\u00d87 bores. Output mounting-plane height, along-travel hole pitch/thread/depth and base-slot fastening remain unresolved. No carriage fasteners are modeled; the tool has no released attachment load path and TOOL_ADAPTER_110 individual export is guarded.",
+      "HGR20: seller P40/E20/1500 hole dimensions conflict. Actual factory holes must be verified before rail cutting or custom datum drilling.",
+      "HMS40: base nut cavity and endpoint datum not published. Rail caps require a verified base clamp/nut design; motor current and torque-speed curves missing.",
+      "Z power-loss retention: a 23HS30-5004D-B280 replacement brake motor is a sourced candidate, but no installed restraint is qualified. Shaft/coupling/pilot fit, stopped-load retention, brake sequencing and response under power loss require acceptance. A ballscrew must not be assumed self-locking.",
+      "Head projection uses an explicit80 mm Z stack assumption. Final tool sweep and claimed usable1000 Y must be recalculated when supplier datum is recovered.",
+      "X/Y physical stops and three home switches are modeled. Z home bracket and travel stops depend on the unresolved Z supplier endpoint/output geometry. Cable-chain anchors, way covers and spindle/torch cable bend envelopes still require final integration.",
+      "Candidate 23HS30-5004D-B280 replaces the stock Z motor only after shaft/coupling/pilot fit, brake timing, thermal and stopped-load retention acceptance. No production brake mount released."
+    ],
+    "torch_interface": "measured clamp generator only; no operating torch assembly",
+    "source_date": "2026-09-26",
+    "brake_static_screen": {
+      "mass_kg": 20,
+      "lead_mm": 5.0,
+      "downward_force_n": 396.133,
+      "design_factor": 3.0,
+      "required_static_torque_nm": 0.9456978760773267,
+      "candidate_static_torque_nm": 2.8,
+      "static_ratio": 2.960776449677733,
+      "passed_static_torque_screen": true,
+      "limits": "Only stopped static torque through an intact coupling/screw. No dynamic engagement, wear, timing, thermal, shaft fit or system safety conclusion.",
+      "load_case_status": "Design screening case only:20 kg moving stack plus200 N downward force; confirm actual loads."
+    }
+  },
+  "machine": "GM1 \u2014 Garcia Mechanical Table",
+  "revision": "J working design: one-piece bed module with the Rev H water service and Z adapter",
+  "revision_note": "First published in this branch as Rev H. Renamed Rev J on 26 September 2026 because the base branch carries a different Rev H (six-panel bed); Rev I is skipped. Rev J adds that Rev H water service and Z-adapter work, moves the refill spout clear of the module and sets the module end crossmembers and deck 15 mm rearward.",
+  "status": "WORKING CAD \u2014 NOT A FABRICATION RELEASE",
+  "architecture_assumption": "One-piece welded module lifted in place and carried out of the front window on the owner overhead beam and trolley hoist; set down outside the machine for plasma work.",
+  "state_checks": {
+    "router": {
+      "part_count": 978,
+      "step_readback": {
+        "passed": true,
+        "solids": 978,
+        "volume_delta_mm3": 0.025305479764938354,
+        "volume_tolerance_mm3": 14.070788493420114,
+        "sha256": "d14480ccfb3f0e8b38a2f90d93a84636aae776f2406d54d507802f36a17356ca",
+        "file": "RevJ_ROUTER.step"
+      },
+      "unresolved_intersections": []
+    },
+    "plasma_layout_module_out": {
+      "part_count": 829,
+      "step_readback": {
+        "passed": true,
+        "solids": 829,
+        "volume_delta_mm3": 0.13150349259376526,
+        "volume_tolerance_mm3": 11.575024606182733,
+        "sha256": "342f80a7b3e664ba6f14444ba293e35b866c263ebe62973f9e848696e8212174",
+        "file": "RevJ_PLASMA_LAYOUT.step"
+      },
+      "unresolved_intersections": []
+    },
+    "bed_module_alone": {
+      "part_count": 149,
+      "step_readback": {
+        "passed": true,
+        "solids": 149,
+        "volume_delta_mm3": 2.3469328880310059e-07,
+        "volume_tolerance_mm3": 2.4957638872374215,
+        "sha256": "28b74f5318c15f82314c47ad2275398e7b105212f50d4b7c1967218de9d12e4d",
+        "file": "RevJ_BED_MODULE.step"
+      },
+      "unresolved_intersections": []
+    }
+  },
+  "holds": [
+    "Candidate 23HS30-5004D-B280 replaces the stock Z motor only after shaft/coupling/pilot fit, brake timing, thermal and stopped-load retention acceptance. No production brake mount released.",
+    "HGR20: seller P40/E20/1500 hole dimensions conflict. Actual factory holes must be verified before rail cutting or custom datum drilling.",
+    "HMS40: base nut cavity and endpoint datum not published. Rail caps require a verified base clamp/nut design; motor current and torque-speed curves missing.",
+    "Head projection uses an explicit80 mm Z stack assumption. Final tool sweep and claimed usable1000 Y must be recalculated when supplier datum is recovered.",
+    "Rev J one-piece module: owner hoist, beam, trolley and sling ratings, and the module stand, are owner scope and not modeled.",
+    "The owned torch barrel/clamping zone, nozzle datum and lead connection are not measured. No compatible torch mount, floating head or breakaway assembly is released.",
+    "This revision is nominal CAD geometry. Frame/tool/work stiffness, joint capacities, purchased interfaces and physical commissioning remain separate release requirements.",
+    "X/Y physical stops and three home switches are modeled. Z home bracket and travel stops depend on the unresolved Z supplier endpoint/output geometry. Cable-chain anchors, way covers and spindle/torch cable bend envelopes still require final integration.",
+    "Z power-loss retention: a 23HS30-5004D-B280 replacement brake motor is a sourced candidate, but no installed restraint is qualified. Shaft/coupling/pilot fit, stopped-load retention, brake sequencing and response under power loss require acceptance. A ballscrew must not be assumed self-locking.",
+    "Z slide: exact-ASIN drawing gives body219x80, end blocks12 and carriage90x50;70 mm transverse spacing belongs to the smaller\u00d85 fixing holes, not the larger\u00d87 bores. Output mounting-plane height, along-travel hole pitch/thread/depth and base-slot fastening remain unresolved. No carriage fasteners are modeled; the tool has no released attachment load path and TOOL_ADAPTER_110 individual export is guarded."
+  ],
+  "plasma_layout_scope": "Bed module outside the machine; spindle, clamp hardware and drawdowns stored inside. The actual plasma torch and head are still missing, so this is a layout state, not an operational plasma assembly.",
+  "source_sha256": {
+    "bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "bed_revj.py": "98931c99c5ee6e04dd86193fb51ae26eca994d50b174ee31fbecec73d4744ee5",
+    "build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "build_revj.py": "bcc085e1dae1a64cf182ba036a6ca3647cd23235dffeb821483c50021b910f93",
+    "cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "render_revj.py": "8c379b534a0c6e625dcdd5ed76a2915cc13ab25bbaefbffffba028a32776b0dd",
+    "revj_handling_check.py": "b7f3b9982483a5f21a2c974a6d01abefef1ae6f8570c977e975ecb52fdaecfd7",
+    "sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "verify_revj_motion.py": "4c8ad5ec131859ad2727934553f3261e751d604b30aaa7eba1da1a4381d2dbad",
+    "verify_revj_water.py": "16ecc9ca2b3cdc15d55ca4293c8c978afe52c50c8dd0149c13af84e5125e1bcd",
+    "verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "water_revj.py": "0a22d980b727d2ad286577db71968edaf8ecd24b19c8120a2159a2f22d537940",
+    "water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+  },
+  "elapsed_seconds": 240.27
+}
