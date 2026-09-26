@@ -42,6 +42,9 @@ def main():
         HERE/'48x96/preview-verification.json',
         HERE/'48x96/package-verification.json',
         HERE/'exchange-verification.json',
+        HERE/'retractable-atc/guide-stroke-check.json',
+        HERE/'retractable-atc/small-study/feasibility.json',
+        HERE/'retractable-atc/large-study/feasibility.json',
     ]
     for path in reports:
         if not path.exists():

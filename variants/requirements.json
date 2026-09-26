@@ -11,28 +11,62 @@
     "Repeatably locate the aluminum/HDPE table to the frame",
     "Keep bed conversion within the machine footprint",
     "Preserve the preference for Kraken onboard motor drivers",
-    "Use existing fabrication capability and budget-conscious construction"
+    "Use existing fabrication capability and budget-conscious construction",
+    "ATC on both machines, retracting on a short linear slide to preserve bed space"
   ],
   "working_assumptions_awaiting_user_confirmation": [
     "4x8 means full 48x96in stock capability, not outside machine dimensions",
-    "Reserve ATC on both variants; the current small machine is explicitly included",
     "Large variant uses aluminum framed carrier panels with replaceable HDPE tops; small baseline retains its existing 20100 aluminum bed",
-    "Exact RapidChange kit, pocket count and options have not been identified"
+    "Exact RapidChange kit, pocket count and options have not been identified",
+    "Treat the proposed 200mm rail as a 200mm useful-stroke target; actual rail length must include bearing blocks and end allowances"
   ],
   "variant_targets": {
     "small_atc": {
-      "nominal_axes_mm": [800, 1000, 100],
-      "existing_bed_mm": [1003, 1211],
+      "nominal_axes_mm": [
+        800,
+        1000,
+        100
+      ],
+      "existing_bed_mm": [
+        1003,
+        1211
+      ],
       "strategy": "Removable frame-supported rear dock; installed ATC reduces unrestricted routing area",
       "purchased_axis_status": "Y reported on order; X/Z not reported delivered"
     },
     "48x96": {
-      "stock_mm": [1219.2, 2438.4],
-      "stock_in": [48, 96],
-      "provisional_frame_plan_mm": [1950, 2950],
-      "provisional_deck_mm": [1320, 2550],
-      "panel_grid": [3, 6],
+      "stock_mm": [
+        1219.2,
+        2438.4
+      ],
+      "stock_in": [
+        48,
+        96
+      ],
+      "provisional_frame_plan_mm": [
+        1950,
+        2950
+      ],
+      "provisional_deck_mm": [
+        1320,
+        2550
+      ],
+      "panel_grid": [
+        3,
+        6
+      ],
       "strategy": "Full sheet with separate dry ATC side bay; redesigned long-axis structure and drives"
+    },
+    "retractable_atc": {
+      "study": "retractable-atc/README.md",
+      "target_useful_stroke_mm": 200,
+      "machines": [
+        "small_atc",
+        "48x96"
+      ],
+      "preserve_bed_during_m6_required": true,
+      "preservation_verified": false,
+      "max_stock_and_clamp_height_mm": null
     }
   },
   "accuracy_definition": {
@@ -55,7 +89,7 @@
   },
   "limits": [
     "Vendor magazine CAD and actual spindle/collet dimensions required before mounting holes or pocket coordinates can be released",
-    "Small-machine full-Z routing area is reduced while the rear dock is fitted",
+    "The earlier fixed small-machine rear dock reduces routing area; the retractable alternative must also clear full-size stock during tool changes",
     "4x8 purchased motion, structural joints, precision and conversion routes require further engineering",
     "Existing spindle/VFD low-speed reverse and controller M6 integration remain unqualified",
     "An aluminum/HDPE panel on pins alone does not establish machine rigidity",

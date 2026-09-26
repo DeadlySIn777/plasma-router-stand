@@ -11,9 +11,13 @@ its existing checks do not automatically qualify these additions.
 | [Full-sheet 4x8](48x96/README.md) | 1219.2 × 2438.4 mm stock; extra travel for deck surfacing and side ATC bay | Provisional 1320 × 2550 mm bed, 3 × 6 aluminum/HDPE carriers, 1950 × 2950 mm chassis plan |
 | [Shared locating interfaces](common/location/README.md) | Metal datum chain, independently checked fits and thermal allowances | Round pin + diamond pin, replaceable metal bushings, hard Z seats and separate clamps |
 
-The large dimensions assume 4x8 means usable sheet size. ATC space is provisioned
-on both variants while the exact kit and which machine receives it first remain
-unconfirmed. The [requirements record](requirements.json) distinguishes requests,
+**Latest design direction:** [retractable ATC on both machines](retractable-atc/README.md),
+with a 200 mm useful-stroke target. This study checks parking, full-size stock
+clearance during tool changes, and the longer guide needed for that travel.
+The earlier fixed-dock model below is retained as a separately checked candidate.
+
+The large dimensions assume 4x8 means usable sheet size. ATC on both machines is
+now requested; the exact kit remains unconfirmed. The [requirements record](requirements.json) distinguishes requests,
 working assumptions and open inputs.
 
 ![Full-sheet machine development layout](48x96/layout-router.png)

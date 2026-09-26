@@ -22,7 +22,7 @@ The manufacturer's [grblHAL macro repository](https://github.com/greilick-indust
 
 ## Practical consequence for this project
 
-The small machine has no spare Y travel behind its full working rectangle. An accessible magazine consumes routing space. See [small-machine candidate](../../small-atc/README.md). The larger machine can reserve a dry side lane; neither variant can release an actual magazine mount until its current drawing is supplied.
+The small machine has no spare Y travel behind its full working rectangle. The earlier fixed magazine candidate consumes routing space; see [small-machine candidate](../../small-atc/README.md). The newer [retractable study](../../retractable-atc/README.md) investigates parking outside the work area, but must also clear full-size stock during deployment and tool changes. The larger machine can reserve a dry side lane; neither variant can release an actual magazine mount until its current drawing is supplied.
 
 An ER11 magazine cannot accept the project's 25.4 mm surfacing cutter under the manufacturer's 15 mm limit. That cutter remains a manually installed tool, with an explicit manual-change workflow and tool-length measurement.
 
