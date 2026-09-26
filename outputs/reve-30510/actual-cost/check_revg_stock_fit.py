@@ -1,17 +1,18 @@
-"""Check that the sheet, plate and bar stock in the cost register covers the Rev G flat parts.
+"""Check that the sheet, plate and bar stock in the cost register covers a revision's flat parts.
 
-Packs the actual Rev G DXF outlines (RevG-CAD/dxf, CUT_OUTER extents) onto each
+Packs the actual DXF outlines (RevG-CAD/dxf by default, CUT_OUTER extents) onto each
 purchased or requested stock size with the project's own MaxRects packer
 (nest_flat_parts.py: 10 mm edge margin, 6 mm part spacing, rotations allowed),
 then compares the pieces needed with the quantity in metal-findings.json.
-Writes revg-stock-fit.json. Rectangular envelopes only: final kerf-compensated
-nesting and grain/flatness choices remain the fabricator's.
+Writes revg-stock-fit.json (or --out). Rectangular envelopes only: final
+kerf-compensated nesting and grain/flatness choices remain the fabricator's.
 
 Run with the CAD Python environment (needs ezdxf):  python check_revg_stock_fit.py
+Rev H:  python check_revg_stock_fit.py --cad RevH-CAD --out revh-stock-fit.json
 """
 from pathlib import Path
 from collections import defaultdict
-import hashlib, json, math, sys
+import argparse, hashlib, json, math, sys
 
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parents[2]
@@ -28,7 +29,7 @@ IN = 25.4
 STOCK = {
     ('carbon_steel', 6):     {'row': 'MET13', 'size_in': (24, 48), 'exclude': ['CAP_SPACER'],
                               'note': 'CAP_SPACER is cut from the MET05 flat bars.'},
-    ('carbon_steel', 8):     {'row': 'MET14', 'size_in': (12, 24)},
+    ('carbon_steel', 8):     {'row': 'MET14', 'size_in': (12, 24), 'also_try_in': [(12, 36), (24, 24)]},
     ('carbon_steel', 12.7):  {'row': 'MET15', 'size_in': (12, 12)},
     ('carbon_steel', 3.048): {'row': 'MET-GAP-1', 'size_in': (48, 96)},
     ('carbon_steel', 3):     {'row': 'MET-GAP-2', 'size_in': (36, 48)},
@@ -39,6 +40,13 @@ STOCK = {
     ('stainless_confirm_grade', 3.048): {'row': 'MET-GAP-7', 'size_in': (12, 12)},
     ('stainless_confirm_grade', 6):     {'row': 'MET-GAP-8', 'size_in': (12, 12)},
     ('MDF_18_mm_finished', 18):         {'row': 'MET-GAP-14', 'size_in': (48, 96), 'also_try_in': [(48, 48)]},
+    # Rev H: HDPE top plates, 3/8 in lift lugs (same raw plate as the 8 mm parts), stainless bolt tray.
+    ('HDPE_sheet_3_4_in_finish_18_0', 18): {'row': None, 'size_in': (48, 48), 'also_try_in': [(24, 48), (48, 96)],
+                              'note': 'Rev H top plates, 3/4 in HDPE finished 18.0 in place.'},
+    ('carbon_steel', 9.525): {'row': 'MET14', 'size_in': (12, 24), 'merge_into': ('carbon_steel', 8),
+                              'note': 'Rev H lift lugs are cut from the same 3/8 in plate as the 8 mm parts; packed together.'},
+    ('stainless_confirm_grade', 3): {'row': None, 'size_in': (12, 12), 'also_try_in': [(12, 24)],
+                              'note': 'Rev H bolt tray; 3 mm or 11 ga (3.048) sheet.'},
     # Not covered by any row before this check; sizes are suggestions to test.
     ('carbon_steel', 2):     {'row': None, 'size_in': (12, 24), 'also_try_in': [(12, 12), (24, 24)]},
     ('aluminum_confirm_alloy', 9.525): {'row': None, 'size_in': (12, 12), 'also_try_in': [(12, 24), (24, 24)],
@@ -58,17 +66,17 @@ def register_quantities():
 NOT_SHEET = ('tube', 'pipe', 'billet', 'bar', 'rod', 'rubber', 'epdm', 'plug', 'sleeve')
 
 
-def flat_items():
+def flat_items(cad):
     """DXF extents where a flat export exists; otherwise model bounds for parts whose
     smallest dimension equals a sheet thickness of their material (small guards,
     cradles, bosses and spacers that the CAD does not export as DXF)."""
-    rows = json.loads((REVG / 'cutlist.json').read_text(encoding='utf-8-sig'))
+    rows = json.loads((cad / 'cutlist.json').read_text(encoding='utf-8-sig'))
     sheet_t = defaultdict(set)
     for group, t in STOCK:
         sheet_t[group].add(t)
     groups = defaultdict(list)
     for row in rows:
-        pn = row['part_number']; src = REVG / 'dxf' / (pn + '.dxf')
+        pn = row['part_number']; src = cad / 'dxf' / (pn + '.dxf')
         if row.get('individual_export_guarded'):
             continue
         group = nf.material_group(row)
@@ -111,14 +119,24 @@ def pieces_needed(items, size_mm):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--cad', default='RevG-CAD', help='CAD package folder under output/release-review')
+    parser.add_argument('--out', default='revg-stock-fit.json')
+    args = parser.parse_args()
+    cad = PROJECT / 'output/release-review' / args.cad
     qty = register_quantities()
-    groups = flat_items()
+    groups = flat_items(cad)
+    for key, spec in STOCK.items():
+        if spec.get('merge_into') and key in groups:
+            groups.setdefault(spec['merge_into'], []).extend(groups.pop(key))
     results = []
     for key, spec in sorted(STOCK.items(), key=lambda kv: str(kv[0])):
+        if spec.get('merge_into'):
+            continue
         items = [p for p in groups.get(key, []) if p['part_number'] not in spec.get('exclude', [])]
         if not items:
             results.append({'material': key[0], 'thickness_mm': key[1], 'row': spec['row'], 'parts': 0,
-                            'result': 'NO REV G PARTS IN THIS GROUP'})
+                            'result': f'NO {args.cad} PARTS IN THIS GROUP'})
             continue
         options = []
         for size_in in [spec['size_in']] + spec.get('also_try_in', []):
@@ -140,13 +158,14 @@ def main():
     # Panel ties as flat bar: 250 mm long, 20 mm finished width from 1 in (25.4) bar, 3 mm kerf, 10 mm trim.
     ties = sum(len([p for p in v if p['part_number'].startswith('G_PANEL_TIE')]) for v in groups.values())
     per_bar = int((72 * IN - 10 + 3) // (250 + 3))
-    results.append({'material': 'aluminum 3/8 x 1 in flat bar, 72 in', 'thickness_mm': 9.525, 'row': None,
-                    'parts': ties, 'ties_per_72in_bar': per_bar, 'bars_needed': math.ceil(ties / per_bar),
-                    'result': 'NEW REQUIREMENT: bar option for the 250 x 20 x 9.525 panel ties (machine 25.4 width to 20)'})
-    report = {'source_cutlist_sha256': hashlib.sha256((REVG / 'cutlist.json').read_bytes()).hexdigest(),
+    if ties:
+        results.append({'material': 'aluminum 3/8 x 1 in flat bar, 72 in', 'thickness_mm': 9.525, 'row': None,
+                        'parts': ties, 'ties_per_72in_bar': per_bar, 'bars_needed': math.ceil(ties / per_bar),
+                        'result': 'NEW REQUIREMENT: bar option for the 250 x 20 x 9.525 panel ties (machine 25.4 width to 20)'})
+    report = {'cad_package': args.cad, 'source_cutlist_sha256': hashlib.sha256((cad / 'cutlist.json').read_bytes()).hexdigest(),
               'packer': 'nest_flat_parts.pack, 10 mm edge, 6 mm spacing, rectangular DXF extents',
               'groups': results}
-    (HERE / 'revg-stock-fit.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+    (HERE / args.out).write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     for r in results:
         print(f"{r['material'][:30]:30} {r['thickness_mm']!s:6} {str(r['row']):10} parts={r['parts']:3} {r['result']}  {r.get('options', '')}")
     return 0

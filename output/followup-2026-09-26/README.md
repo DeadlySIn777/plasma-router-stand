@@ -1,16 +1,20 @@
-# Follow-up on Rev G — 26 September 2026
+# GM1 follow-up after Rev G — 26 September 2026
 
-**Still not released for fabrication or operation.** This page records the work done on top of the Rev G repair (`a61d634`), what it found, and what is still needed to finish the machine. Rev G itself is described in the [Rev G CAD package](../release-review/RevG-CAD/README.md) and the [repair report](../cad-repair-2026-09-25/README.md).
+**Still not released for fabrication or operation.** This page records the work done on top of the Rev G repair (`a61d634`), what it found, and what is still needed to finish the machine. The machine is now named **GM1 — Garcia Mechanical Table** (owner, 26 September 2026). The current design is [Rev H](../release-review/RevH-CAD/README.md). Rev G is described in its [CAD package](../release-review/RevG-CAD/README.md) and the [repair report](../cad-repair-2026-09-25/README.md).
 
 ## What changed in this follow-up
 
+- **Rev H bed, to the owner's requirement.** One waterproof bed module of about 63 kg: a galvanized 2 × 2 steel frame, nine 1,197 mm T-slot profiles from the same five two-packs, and two HDPE plates surfaced in place, with no MDF. Six M10 screws hold it and two pins locate it. For plasma work it lifts 70 mm in place and leaves through the front window on the owner's overhead beam-and-trolley hoist.
+  - **Checks:** static interference (0 unresolved overlaps in the router, bed-out and module-only states), nine motion poses (pass) and the hoist path with the 4-leg sling modeled at hook heights 0.7, 1.0 and 2.0 m (pass, 0 intersections; nearest gap 11.2 mm to the frame legs).
+  - **Removed:** Rev G's racks, trays and slat end reliefs.
+  - Details are in the [Rev H package](../release-review/RevH-CAD/README.md); the shopping-list changes are in [REVH-PROCUREMENT-DELTA.md](../../outputs/reve-30510/actual-cost/REVH-PROCUREMENT-DELTA.md).
 - **Drive modules ordered.** The owner reported ordering the "rail kits" on 26 September 2026 and clarified them as 1000 × 800 × 100: the two HMS40 1000 mm Y drives (M02), the HMS40 800 mm X drive (M01) and the ZBX80 100 mm Z slide (M03). The [drive-module receiving check](../receiving/MOTION-MODULES.md) lists what to measure on arrival, which closes the drive-interface holds. The ZBX80 listing's side view scales to about 60–67 mm from base to carriage top, where the model assumes 80 mm; that one measurement moves the whole tool 13–20 mm in Y.
 - **HGR20 guide rails still to order.** The design's separate HGR20 guides (M04, M05) carry the gantry and cutting loads; the HMS40 modules only push. Their [receiving check](../receiving/HGR20-RAIL-KITS.md) and `plan_rail_cuts.py` are ready. The Y-rail cut cannot be fixed before measuring: plausible hole patterns give 10/70, 40/40 or 73/7 mm off the two ends, and 40/40 would split a counterbore on one of them.
 - **Controller chosen: BTT Rodent with grblHAL** (owner, 26 September 2026). This closes CW-01. The Kraken purchase, CB1 and Pi4B host boards and host USB cable left the priced register; the owner already owns a Kraken, now kept as the fallback. The Rodent board is listed as unpriced scope, and the external THC box is no longer planned.
 - **Cost register reconciled with Rev G and the controller choice.** Priced scope is now **$5,348.40** ($5,262.15 goods + $86.25 known shipping; it was $5,810.24 on Rev E quantities), with **49 unpriced entries**. This is not a cheaper build; new Rev G items remain unpriced. Details are in [REAL-COST.md](../../outputs/reve-30510/actual-cost/REAL-COST.md). The Excel workbook could not be rebuilt here (`build_budget.mjs` needs the private `@oai/artifact-tool` runtime), so it still shows Rev E quantities.
 - **Stock-fit check.** `outputs/reve-30510/actual-cost/check_revg_stock_fit.py` packs every Rev G flat part onto the sheet and plate sizes in the register, including flat parts that have no DXF, using the project's own packer.
 - **Legacy generators.** The Rev B/C and Rev F brief generators no longer write to `output/pdf/plasma-router-stand-concept.pdf`, which now holds the Rev G review copy.
-- **Wording.** The water sequence now names the Rev G bed parts and fasteners, and the cutter is the owner-reported VIV ARC CUT-50 rather than "unknown".
+- **Wording.** The water sequence now names the Rev H drawdowns and hoist, with the Rev G parts as the alternative, and the cutter is the owner-reported VIV ARC CUT-50 rather than "unknown".
 
 An earlier version of pull request #1 carried fixes for the Rev F hoisted bed. Rev G replaced that design, so those changes were dropped rather than merged. Their 397 mm cut instructions and hoist wording would now be wrong.
 
@@ -43,11 +47,20 @@ The controller files did not change in Rev G. These points, found while re-check
 
 ## What is needed to finish
 
-**Owner answers received on 26 September 2026:** controller = BTT Rodent + grblHAL; the order was the 1000 × 800 × 100 drive modules; and a new bed requirement: **one-piece bed lifted out with a winch the owner plans to buy, released by at most about 12 screws of M8–M12, and waterproof for mist coolant when cutting aluminum.** Rev G's six manual panels and MDF spoilboards do not meet that, so the bed needs a new revision. Rev F was one piece but relied on MDF and an unreachable surfacing pass.
+**Owner answers received on 26 September 2026:**
+
+- **Controller:** BTT Rodent + grblHAL.
+- **Order:** the 1000 × 800 × 100 drive modules.
+- **Bed requirement:** one-piece bed lifted out with a winch, released by at most about 12 screws of M8–M12, and waterproof for mist coolant when cutting aluminum.
+- **Hoist:** an overhead beam with a trolley.
+- **Bed top:** HDPE plates.
+- **Name:** GM1 — Garcia Mechanical Table.
+
+Rev H implements the bed answers. Rev G's six manual panels and MDF spoilboards did not meet them; Rev F was one piece but 87 kg and relied on MDF.
 
 **Still needed from the owner:**
 
-1. **Bed module details:** where the lifted module goes (out of the front and set down, or hung), and the hoist to be bought (overhead beam or gantry crane, capacity).
+1. **Hoist and bed stand:** the ceiling or beam height available. With the recommended sling the hook is at about 1.99 m with the module raised, plus the hoist's own headroom. Also the hoist and trolley to be bought, and where the module stand goes; it needs about 1.5 m of floor in front of the machine.
 2. **Cutter photos:** the VIV ARC CUT-50 rating plate, front and rear panels, and torch connector. These identify the version, start method and any CNC/arc-voltage connections.
 3. **Orders:** quantities and price paid for the drive modules, and whether the HGR20 guide kits are already owned or still to order.
 4. **Owned aluminum:** alloy and thickness of the 12 × 12 in pieces.
@@ -56,7 +69,6 @@ The controller files did not change in Rev G. These points, found while re-check
 
 - Transfer-drill the Y datum bars and X guide face from the measured rails; replace the HGR20 hold in `motion_details.py`.
 - Supplier data or measurements for the HMS40 base, ZBX80 output interface and spindle clamp (unsent request: `output/cad-repair-2026-09-25/SUPPLIER-DRAWING-REQUEST.md`), then design Z power-loss retention.
-- Joint tests: slot-lip preload on the panel ties (BED04), seat and beam fastening, and locator repeatability; then a combined stiffness budget (BED09).
+- Bed module: weigh it, proof-lift it once at twice its mass, map the six seat pads and the repeat seating, and test the M5 strip joints. Then build a combined stiffness budget (BED09).
 - Controls: the Rodent port (board map, pin allocation, THCAD counter, RS485 VFD), then one terminal-numbered schematic covering the selector contacts, mode agreement, permissive chain and stop chain (CW-03, CW-09 to CW-12).
-- Bed: a one-piece, waterproof, winch-lifted module to the new requirement, then re-run the static, motion and handling-path checks.
-- Procurement: quotes for the 48 unpriced entries and freight; rebuild the workbook; regenerate the concept PDF after the next CAD change.
+- Procurement: re-baseline the priced register to Rev H (the bed rows are still Rev G; see the delta), then quotes for the unpriced entries and freight; rebuild the workbook; regenerate the concept PDF for Rev H.

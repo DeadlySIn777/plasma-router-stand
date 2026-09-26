@@ -1,0 +1,452 @@
+{
+  "cad_package": "RevH-CAD",
+  "source_cutlist_sha256": "3dab42f5113e4707d63060c176d45a638f848896d1380b3f903fc9f20a38e941",
+  "packer": "nest_flat_parts.pack, 10 mm edge, 6 mm spacing, rectangular DXF extents",
+  "groups": [
+    {
+      "material": "HDPE_sheet_3_4_in_finish_18_0",
+      "thickness_mm": 18,
+      "row": null,
+      "register_quantity": null,
+      "parts": 2,
+      "part_numbers": [
+        "MOD_HDPE_PLATE_1",
+        "MOD_HDPE_PLATE_2"
+      ],
+      "placed_from_model_bounds": [],
+      "blank_area_m2": 0.796,
+      "options": [
+        {
+          "stock_in": [
+            48,
+            48
+          ],
+          "pieces_needed": 1
+        },
+        {
+          "stock_in": [
+            24,
+            48
+          ],
+          "pieces_needed": 2
+        },
+        {
+          "stock_in": [
+            48,
+            96
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "NEW REQUIREMENT: no stock row covers these parts",
+      "note": "Rev H top plates, 3/4 in HDPE finished 18.0 in place."
+    },
+    {
+      "material": "MDF_18_mm_finished",
+      "thickness_mm": 18,
+      "row": "MET-GAP-14",
+      "parts": 0,
+      "result": "NO RevH-CAD PARTS IN THIS GROUP"
+    },
+    {
+      "material": "aluminum_confirm_alloy",
+      "thickness_mm": 9.525,
+      "row": null,
+      "parts": 0,
+      "result": "NO RevH-CAD PARTS IN THIS GROUP"
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 1.5,
+      "row": "MET-GAP-3",
+      "register_quantity": 1,
+      "parts": 2,
+      "part_numbers": [
+        "CAB_DRIP_CAP",
+        "CAB_DRIP_FRONT_LIP"
+      ],
+      "placed_from_model_bounds": [],
+      "blank_area_m2": 0.1105,
+      "options": [
+        {
+          "stock_in": [
+            24,
+            24
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "COVERED"
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 12.7,
+      "row": "MET15",
+      "register_quantity": 1,
+      "parts": 6,
+      "part_numbers": [
+        "FT_PAD"
+      ],
+      "placed_from_model_bounds": [],
+      "blank_area_m2": 0.0384,
+      "options": [
+        {
+          "stock_in": [
+            12,
+            12
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "COVERED"
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 2,
+      "row": null,
+      "parts": 0,
+      "result": "NO RevH-CAD PARTS IN THIS GROUP"
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 3,
+      "row": "MET-GAP-2",
+      "register_quantity": 1,
+      "parts": 10,
+      "part_numbers": [
+        "FB_REAR_GUSSET_HIGH",
+        "FB_REAR_GUSSET_LOW",
+        "FB_TRIANGLE_160_-1",
+        "FB_TRIANGLE_160_1"
+      ],
+      "placed_from_model_bounds": [],
+      "blank_area_m2": 0.256,
+      "options": [
+        {
+          "stock_in": [
+            36,
+            48
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "COVERED"
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 3.048,
+      "row": "MET-GAP-1",
+      "register_quantity": 2,
+      "parts": 55,
+      "part_numbers": [
+        "CAB_CAP_TAB_LEFT",
+        "CAB_CAP_TAB_RIGHT",
+        "HW_BOLT_BIN_END",
+        "HW_BOLT_BIN_FLOOR",
+        "HW_BOLT_BIN_SIDE",
+        "MOD_RAIL_CAP",
+        "PUMP_TRAY",
+        "SAND_ENDCAP_2IN",
+        "TOOL_PARK_BASE",
+        "WP_END_FRONT",
+        "WP_END_REAR",
+        "WP_FLOOR",
+        "WP_SIDE",
+        "WP_SLAT",
+        "WT_FLOOR",
+        "WT_FRONT",
+        "WT_LID",
+        "WT_REAR",
+        "WT_SETTLING_WEIR",
+        "WT_SIDE"
+      ],
+      "placed_from_model_bounds": [],
+      "blank_area_m2": 4.8549,
+      "options": [
+        {
+          "stock_in": [
+            48,
+            96
+          ],
+          "pieces_needed": 2
+        }
+      ],
+      "result": "COVERED"
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 6,
+      "row": "MET13",
+      "register_quantity": 1,
+      "parts": 38,
+      "part_numbers": [
+        "FT_LEG_CLOSURE",
+        "H_PAD_FRONT_ROUND",
+        "H_PAD_FRONT_SLOT",
+        "H_PAD_PLAIN",
+        "MOD_XM_END_PLATE",
+        "TOOL_PARK_CRADLE",
+        "WP_COMB",
+        "WP_CRADLE_WEB_1_1",
+        "WP_CRADLE_WEB_1_2",
+        "WP_CRADLE_WEB_2_1",
+        "WP_CRADLE_WEB_2_2",
+        "WP_CRADLE_WEB_3_1",
+        "WP_CRADLE_WEB_3_2",
+        "WP_HOLD_TAB_1",
+        "WP_HOLD_TAB_2",
+        "WP_HOLD_TAB_3",
+        "WP_HOLD_TAB_4",
+        "WT_RIM_FRONT",
+        "WT_RIM_LEFT",
+        "WT_RIM_REAR",
+        "WT_RIM_RIGHT"
+      ],
+      "placed_from_model_bounds": [
+        "TOOL_PARK_CRADLE"
+      ],
+      "blank_area_m2": 0.3825,
+      "options": [
+        {
+          "stock_in": [
+            24,
+            48
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "COVERED",
+      "note": "CAP_SPACER is cut from the MET05 flat bars."
+    },
+    {
+      "material": "carbon_steel",
+      "thickness_mm": 8,
+      "row": "MET14",
+      "register_quantity": 1,
+      "parts": 18,
+      "part_numbers": [
+        "MOD_LIFT_LUG",
+        "PB_END",
+        "PB_HANGER",
+        "WP_HOLD_SPACER_3",
+        "WP_HOLD_SPACER_4"
+      ],
+      "placed_from_model_bounds": [
+        "WP_HOLD_SPACER_3",
+        "WP_HOLD_SPACER_4"
+      ],
+      "blank_area_m2": 0.1469,
+      "options": [
+        {
+          "stock_in": [
+            12,
+            24
+          ],
+          "pieces_needed": 2
+        },
+        {
+          "stock_in": [
+            12,
+            36
+          ],
+          "pieces_needed": 1
+        },
+        {
+          "stock_in": [
+            24,
+            24
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "SHORT: needs 2, register has 1"
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "thickness_mm": 1,
+      "row": "MET-GAP-4",
+      "register_quantity": 1,
+      "parts": 25,
+      "part_numbers": [
+        "FLOAT_GUARD_FLOOR",
+        "FLOAT_GUARD_FLOOR_PAN_EMPTY",
+        "FLOAT_GUARD_SIDE",
+        "FLOAT_PAN_EMPTY_GUARD_END_1",
+        "FLOAT_PAN_EMPTY_GUARD_END_2",
+        "FLOAT_PAN_EMPTY_GUARD_SIDE_2",
+        "FLOAT_PAN_FILL_GUARD_END_1",
+        "FLOAT_PAN_FILL_GUARD_END_2",
+        "FLOAT_PAN_FILL_GUARD_SIDE_2",
+        "FLOAT_PAN_HH_GUARD_END_1",
+        "FLOAT_PAN_HH_GUARD_END_2",
+        "FLOAT_PAN_HH_GUARD_SIDE_2",
+        "FLOAT_PAN_MIN_GUARD_END_1",
+        "FLOAT_PAN_MIN_GUARD_END_2",
+        "FLOAT_PAN_MIN_GUARD_SIDE_2",
+        "FLOAT_TANK_LOW_GUARD_END_1",
+        "FLOAT_TANK_LOW_GUARD_END_2",
+        "FLOAT_TANK_LOW_GUARD_SIDE_2"
+      ],
+      "placed_from_model_bounds": [
+        "FLOAT_PAN_EMPTY_GUARD_END_1",
+        "FLOAT_PAN_EMPTY_GUARD_END_2",
+        "FLOAT_PAN_EMPTY_GUARD_SIDE_2",
+        "FLOAT_PAN_FILL_GUARD_END_1",
+        "FLOAT_PAN_FILL_GUARD_END_2",
+        "FLOAT_PAN_FILL_GUARD_SIDE_2",
+        "FLOAT_PAN_HH_GUARD_END_1",
+        "FLOAT_PAN_HH_GUARD_END_2",
+        "FLOAT_PAN_HH_GUARD_SIDE_2",
+        "FLOAT_PAN_MIN_GUARD_END_1",
+        "FLOAT_PAN_MIN_GUARD_END_2",
+        "FLOAT_PAN_MIN_GUARD_SIDE_2",
+        "FLOAT_TANK_LOW_GUARD_END_1",
+        "FLOAT_TANK_LOW_GUARD_END_2",
+        "FLOAT_TANK_LOW_GUARD_SIDE_2"
+      ],
+      "blank_area_m2": 0.0523,
+      "options": [
+        {
+          "stock_in": [
+            12,
+            12
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "COVERED"
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "thickness_mm": 1.5,
+      "row": "MET-GAP-5",
+      "register_quantity": 1,
+      "parts": 12,
+      "part_numbers": [
+        "OVERFLOW_CATCH_END",
+        "OVERFLOW_CATCH_FLOOR",
+        "OVERFLOW_CATCH_SIDE",
+        "VENT_PERFORATED_CAP",
+        "WT_BASKET_BASE",
+        "WT_BASKET_END",
+        "WT_BASKET_SIDE",
+        "WT_BASKET_SPLASH_COVER"
+      ],
+      "placed_from_model_bounds": [
+        "VENT_PERFORATED_CAP"
+      ],
+      "blank_area_m2": 0.3522,
+      "options": [
+        {
+          "stock_in": [
+            24,
+            36
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "COVERED"
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "thickness_mm": 2,
+      "row": "MET-GAP-6",
+      "register_quantity": 1,
+      "parts": 1,
+      "part_numbers": [
+        "WT_BASKET_RIM"
+      ],
+      "placed_from_model_bounds": [],
+      "blank_area_m2": 0.0252,
+      "options": [
+        {
+          "stock_in": [
+            12,
+            12
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "COVERED"
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "thickness_mm": 3,
+      "row": null,
+      "register_quantity": null,
+      "parts": 5,
+      "part_numbers": [
+        "H_BOLT_TRAY_END",
+        "H_BOLT_TRAY_FLOOR",
+        "H_BOLT_TRAY_SIDE"
+      ],
+      "placed_from_model_bounds": [],
+      "blank_area_m2": 0.0382,
+      "options": [
+        {
+          "stock_in": [
+            12,
+            12
+          ],
+          "pieces_needed": 1
+        },
+        {
+          "stock_in": [
+            12,
+            24
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "NEW REQUIREMENT: no stock row covers these parts",
+      "note": "Rev H bolt tray; 3 mm or 11 ga (3.048) sheet."
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "thickness_mm": 3.048,
+      "row": "MET-GAP-7",
+      "register_quantity": 1,
+      "parts": 10,
+      "part_numbers": [
+        "FLOAT_LEDGE",
+        "FLOAT_SLIDER"
+      ],
+      "placed_from_model_bounds": [],
+      "blank_area_m2": 0.0134,
+      "options": [
+        {
+          "stock_in": [
+            12,
+            12
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "COVERED"
+    },
+    {
+      "material": "stainless_confirm_grade",
+      "thickness_mm": 6,
+      "row": "MET-GAP-8",
+      "register_quantity": 1,
+      "parts": 5,
+      "part_numbers": [
+        "FLOAT_BACKRAIL_PAN",
+        "FLOAT_BACKRAIL_PAN_EMPTY",
+        "FLOAT_BACKRAIL_TANK"
+      ],
+      "placed_from_model_bounds": [],
+      "blank_area_m2": 0.0367,
+      "options": [
+        {
+          "stock_in": [
+            12,
+            12
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "COVERED"
+    }
+  ]
+}
