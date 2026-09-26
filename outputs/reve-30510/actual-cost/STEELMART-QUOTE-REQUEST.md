@@ -12,28 +12,28 @@ Please quote only the material lines you supply. Show economical stock-size alte
 
 | Qty | Raw material requested | Purpose / note |
 |---:|---|---|
-| 5 | A500 square tube, 2 × 2 × .120 in, full 20 ft bars | Chassis and the four removable bed beams (30 blanks); no blanket 10 ft transport cuts |
+| 5 | A500 square tube, 2 × 2 × .120 in, full 20 ft bars | Chassis, bed-module rails and two crossmembers (30 of 32 blanks); no blanket 10 ft transport cuts |
+| 1 | A500 square tube, 2 × 2 × .120 in, 8 ft (2,438 mm) | The last two bed-module crossmembers, 912.4 mm each |
 | 2 | Square tube, 1 × 1 × .083 in, full 20 ft bars | Frame braces and controls-cage members, 7,730 mm total |
 | 2 | A36 flat bar, 5/16 × 4 × 60 in | Rail datum blanks; quote a thicker option with cleanup allowance separately |
 | 2 | A36 flat bar, 1/4 × 2-1/4 × 60 in | Spacer blanks, finished to 6 mm |
-| 1 | A36 plate, 1/4 × 24 × 48 in | Frame flats, bed seats, racks, clamps and mounting pieces |
-| 1 | A36 plate, 1/4 × 12 × 12 in | Two tool cradles and eight seat bosses (or quote the 1/4 plate as 24 × 60 in instead of both) |
+| 1 | A36 plate, 1/4 × 24 × 48 in | Frame flats, bed seat pads, crossmember end plates, tool cradles and mounting pieces |
 | 1 | A36 plate, 3/8 × 12 × 24 in | Pieces finished to 8 mm |
+| 1 | A36 flat bar, 3/8 × 4 × 12 in | Four bed-module lift lugs, 50 × 75 mm |
 | 1 | A36 plate, 1/2 × 12 × 12 in | Six foot pads |
 | 2 | Carbon-steel sheet, .120 × 48 × 96 in | Water pan, slats and vented reservoir |
 | 1 | Carbon-steel sheet, 3 mm finished thickness, 36 × 48 in | Brackets and covers; state actual stock thickness |
 | 1 | Carbon-steel sheet, 1.5 mm finished thickness, 24 × 24 in | Drip shield |
-| 1 | Carbon-steel sheet, 2 mm finished thickness, 12 × 12 in | Storage-rack guides; state actual stock thickness |
 | 1 | Weldable mild-steel round bar, 1.25 in diameter × 24 in | Owner-machined sand-port bungs and plugs |
-| 1 | Weldable steel round bar, 3/4 in diameter × 36 in | Twelve owner-turned compression sleeves, OD 18 mm |
-| 1 | Steel square tube, 30 × 30 × 3 mm, 400 mm | Two storage-rack forks; metric size, quote the nearest stocked alternative separately |
+| 1 | Weldable steel round bar, 3/4 in diameter × 36 in | Twelve owner-turned sleeves (six in the frame ledgers, six in the bed module), OD 18 × 50.8 mm |
 | 1 | Machinable steel hex bar, 1/2 in AF × 6 in | Three small couplers, finished to 12 mm AF |
 | 1 | A36 steel bar, 1.25 × 2 × 12 in | Stops and cams |
-| 1 each | 304 stainless sheets: 1 mm × 12 × 12 in; 1.5 mm × 24 × 36 in; 2 mm × 12 × 12 in; 3.048 mm × 12 × 12 in; 6 mm × 12 × 12 in | Small guards, catch tray and sensor brackets; state actual thicknesses |
+| 1 each | 304 stainless sheets: 1 mm × 12 × 12 in; 1.5 mm × 24 × 36 in; 2 mm × 12 × 12 in; 3 mm × 12 × 12 in; 3.048 mm × 12 × 12 in; 6 mm × 12 × 12 in | Small guards, catch tray, bolt tray and sensor brackets; state actual thicknesses (11 ga is acceptable for the 3 mm line) |
 | 1 | 304 stainless round bar, 1.75 in diameter × 2 in | Vent sleeve |
-| 1 | 6061 aluminum plate, 3/8 × 12 × 24 in (or four 3/8 × 1 × 72 in flat bars) | Twenty-four bed-panel ties, 250 × 20 × 9.525 mm |
 | 1 each | 6061-T6511: 1/2 × 8 × 72 in; 1/2 × 8 × 12 in; 3.5 × 6 × 12 in; 1.5 × 5 × 12 in; 1.5 × 2 × 12 in; 2 × 2 × 12 in | Current adapter-stock design; quote separately from steel |
 
 Please also identify whether any suitable remnants or drops would reduce the price while providing these blank dimensions. Do not assume thinner stock or shorter bars are acceptable.
+
+Quantities follow the GM1 Rev H design (`output/release-review/RevH-CAD/`). The 3/4 in HDPE sheet for the bed top (48 × 48 in) and galvanizing of the bed module are sourced separately; see [REVH-PROCUREMENT-DELTA.md](REVH-PROCUREMENT-DELTA.md).
 
 Reply contact fields are intentionally unfilled. The website requires first/last name, email, phone and company name. For a personal build, the company field can identify it as a personal fabrication project if the requester confirms that description.

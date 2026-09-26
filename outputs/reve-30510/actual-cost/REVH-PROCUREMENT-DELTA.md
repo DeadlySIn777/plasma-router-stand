@@ -44,11 +44,11 @@ Owner scope, not in the register: overhead beam, trolley and hoist; 4-leg sling;
 
 ## Effect on the priced register
 
-Rev H is the current design, but the priced register ([REAL-COST.md](REAL-COST.md)) has not been re-baselined yet and still carries the Rev G bed rows. The main changes it needs:
+The priced register ([REAL-COST.md](REAL-COST.md)) was re-baselined to Rev H on 26 September 2026. It now shows **$5,334.09** priced ($5,247.84 goods + $86.25 known shipping), with 73 priced lines and 49 unpriced entries; before the re-baseline it showed $5,348.40.
 
 - **B01** stays at five two-packs.
-- **MET01** needs a sixth 2 × 2 length, 8 ft being enough.
-- **MET14** grows to 12 × 36 in, or gets a small flat bar.
-- **N1** drops to 48 nuts; N3 and N5 drop out.
-- **New unpriced rows:** HDPE sheet, stainless tray sheet, stainless module hardware, galvanizing.
-- **Rev G-only unpriced rows** (MDF, ties, 2 mm sheet, 30 × 30 tube, the extra 1/4 in plate) leave the scope.
+- **N1** is 48 stainless square nuts ($3.65).
+- **N3** (MDF screws) and **N5** (M8 × 80 drawdowns) are superseded, as are MET-GAP-14, 15, 16, 17 and 19 (MDF, extra 1/4 in plate, 2 mm sheet, aluminum ties, rack tube).
+- **New unpriced rows:** MET-GAP-20 HDPE, MET-GAP-21 stainless 3 mm, MET-GAP-22 3/8 × 4 in bar, MET-GAP-23 8 ft of 2 × 2 tube, H-GALV galvanizing. HW-GAP-H06/H07/H08 now describe the Rev H stainless module hardware.
+
+The lower total is **not a cheaper build**: the new Rev H items are still unpriced. The Nutty order ($76.06) stays below its $100 free-shipping threshold unless the Rev H stainless fasteners are bought there too.

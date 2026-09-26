@@ -4,14 +4,15 @@
     "currency": "USD",
     "destination": "Alto GA30510",
     "status": "PARTIAL PRICE AUDIT \u2014 COMPLETE BUILD TOTAL UNRESOLVED",
-    "goods_subtotal_usd": 5262.15,
+    "design_revision": "GM1 Rev H working design (bed re-baselined 26 Sep 2026)",
+    "goods_subtotal_usd": 5247.84,
     "known_shipping_subtotal_usd": 86.25,
-    "priced_scope_before_tax_usd": 5348.4,
+    "priced_scope_before_tax_usd": 5334.09,
     "amazon_goods_with_advertised_free_delivery_usd": 2172.0,
     "complete_delivered_total_usd": null,
     "purchase_release": false,
     "owner_fabrication_labor_usd": 0,
-    "priced_rows": 75,
+    "priced_rows": 73,
     "unpriced_scope_rows": 49,
     "unquoted_vendor_shipping_groups": 15,
     "prior_estimate_with_owner_labor_usd": 7663.82,
@@ -117,7 +118,7 @@
       "unit_usd": 79.99,
       "goods_usd": 399.95,
       "url": "https://www.amazon.com/dp/B0BXNWK99C",
-      "notes": "Twenty packs left; advertised free delivery September29. Five packs=ten sticks=thirty397mm strips. Not five sticks. Rev G: the thirty 397 mm strips make the six 500 x 397 panels (BUY_20100_CUT_397 x30).",
+      "notes": "Twenty packs left; advertised free delivery September29. Five packs=ten sticks=thirty397mm strips. Not five sticks. Rev G: the thirty 397 mm strips make the six 500 x 397 panels (BUY_20100_CUT_397 x30). Rev H (current): one saw cut per bar gives the nine 1197 mm deck profiles (BUY_20100_1197 x9); the tenth bar is spare.",
       "vendor": "Amazon",
       "shipping_usd": 0,
       "basis": "Live offer 24 Sep"
@@ -369,7 +370,7 @@
       "unit_usd": 155.15,
       "goods_usd": 775.75,
       "url": "https://www.blueskysupplies.com/products/2inch-x-2-inch-x-120-a500-tube",
-      "notes": "Rev G: all 30 square-tube blanks in output/release-review/RevG-CAD/tube-cut-plan.json on five 20 ft bars (net 29,472 mm), including the four 924 mm bed beams. Bars 1-3 keep only 6 mm beyond 3 mm kerfs and 10 mm trim, so each bar needs a full usable 20 ft. Bar 5 keeps 825.6 mm, which covers the eight G_BEAM_FOOT_18 feet: bed_cassettes.py models each as an 18 mm slice of this tube (3.048 wall) with one face trimmed to 50 mm, 168 mm in all with cuts. No blanket 10 ft transport cuts. (Rev E needed six bars for 36 blanks.) High retail reference, not a lowest-price buying recommendation. Posted goods price; delivery unquoted. Cheaper exact-spec Bobco goods benchmark is $487.50 for five bars, LA pickup advertised, Georgia delivery unquoted. Local SteelMart/Sabel quotes pending; see TUBE-PRICE-COMPARISON.md.",
+      "notes": "Rev H (current): 32 square-tube blanks in output/release-review/RevH-CAD/tube-cut-plan.json, net 32,087 mm. These five 20 ft bars take 30 of them; bars 1-3 keep only 6 mm beyond 3 mm kerfs and 10 mm trim, so each bar needs a full usable 20 ft. The last two 912.4 mm module crossmembers (1,840.8 mm with cuts and trim) go on one extra 8 ft length, MET-GAP-23, instead of a sixth 20 ft bar. Rev G needed exactly five bars for 30 blanks (29,472 mm), including four 924 mm beams and eight 18 mm beam feet; Rev E needed six. No blanket 10 ft transport cuts. High retail reference, not a lowest-price buying recommendation. Posted goods price; delivery unquoted. Cheaper exact-spec Bobco goods benchmark is $487.50 for five bars, LA pickup advertised, Georgia delivery unquoted. Local SteelMart/Sabel quotes pending; see TUBE-PRICE-COMPARISON.md.",
       "vendor": "BlueSky Supplies",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -523,7 +524,7 @@
       "unit_usd": 175.24,
       "goods_usd": 175.24,
       "url": "https://www.onlinemetals.com/en/buy/carbon-steel/0-25-carbon-steel-plate-a36-hot-rolled/pid/9610",
-      "notes": "96 original nominal6mm flats after separating2spacers; add2toolcradles and9motionstopplate blanks. Updated107piece layout passes. Mainparts finish6mm where specified; Ystop bases/posts remain6.35mm, Xswitch arm finishes5mm. No extra sheet for those missing flats. Rev G update (check_revg_stock_fit.py): 89 of the 91 six-mm Rev G flats (CAP_SPACER is on MET05) pack on this one plate; the two TOOL_PARK_CRADLE plates do not and are listed as a separate 1/4 x 12 x 12 in gap. The 107-piece Rev E layout recorded below is superseded. Posted goods price; delivery unquoted",
+      "notes": "96 original nominal6mm flats after separating2spacers; add2toolcradles and9motionstopplate blanks. Updated107piece layout passes. Mainparts finish6mm where specified; Ystop bases/posts remain6.35mm, Xswitch arm finishes5mm. No extra sheet for those missing flats. Rev G update (check_revg_stock_fit.py): 89 of the 91 six-mm Rev G flats (CAP_SPACER is on MET05) pack on this one plate; the two TOOL_PARK_CRADLE plates do not and are listed as a separate 1/4 x 12 x 12 in gap. The 107-piece Rev E layout recorded below is superseded. Rev H (check_revg_stock_fit.py --cad RevH-CAD): all 38 six-mm Rev H flats, including both tool cradles, the six seat pads and the eight crossmember end plates, pack on this one plate, so the extra 1/4 in piece (MET-GAP-15) is not needed. Posted goods price; delivery unquoted",
       "vendor": "OnlineMetals",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -537,7 +538,7 @@
       "unit_usd": 66.0,
       "goods_usd": 66.0,
       "url": "https://www.shapirosupply.com/steel-hot-cold-galvanized/sheet-and-plate/sheet-and-plate/mild-steel-sheets-and-plates/3-8-375",
-      "notes": "Twelve80wide hangers/endplates, finish thickness8mm from9.525; do not substitute5/16in(7.9375mm). Posted goods price; delivery unquoted",
+      "notes": "Twelve80wide hangers/endplates, finish thickness8mm from9.525; do not substitute5/16in(7.9375mm). Rev H adds four 3/8 in lift lugs (50 x 75); with them the 3/8 in parts need a 12 x 36 or 24 x 24 in piece, so the lugs get their own 3/8 x 4 x 12 in bar (MET-GAP-22) and this piece stays as bought. Posted goods price; delivery unquoted",
       "vendor": "Shapiro Supply",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -560,26 +561,12 @@
       "id": "HW-N1",
       "category": "Standard hardware",
       "item": "M5 x 0.8 DIN 562 thin square nut",
-      "quantity": 96,
+      "quantity": 48,
       "unit": "each",
       "unit_usd": 0.076,
-      "goods_usd": 7.3,
+      "goods_usd": 3.65,
       "url": "https://www.nutty.com/m5-x-8-stainless-metric-square-nut-thin/",
-      "notes": "Current design: receive-check 8 x 8 x 2.7 mm maximum. Rev G: 72 panel-tie nuts + 24 spoilboard nuts (was 240/260 for the Rev E keyhole anchors).",
-      "vendor": "Nutty",
-      "shipping_usd": null,
-      "basis": "Posted price"
-    },
-    {
-      "id": "HW-N3",
-      "category": "Standard hardware",
-      "item": "M5 x 20 DIN 7991 class 12.9 MDF screws",
-      "quantity": 25,
-      "unit": "each",
-      "unit_usd": 0.155,
-      "goods_usd": 3.88,
-      "url": "https://www.nutty.com/m5-x-0-80-x-20-ft-flat-head-socket-cap-screws-12-9-din-7991-blk-ox/",
-      "notes": "Rev G: 24 M5x20 DIN7991 spoilboard screws into top-slot nuts; buy 25 to meet the Nutty minimum order. Square nuts are in N1.",
+      "notes": "Current design: receive-check 8 x 8 x 2.7 mm maximum. Rev H: 48 nuts, 36 in the bottom slots holding the nine deck profiles to the crossmembers and 12 in the top slots under the HDPE plates. The model calls A4; confirm this stainless offer grade (A2/18-8 is acceptable for water-based mist coolant). Was 96 for the Rev G panels and spoilboards, 240/260 for the Rev E keyhole anchors.",
       "vendor": "Nutty",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -594,20 +581,6 @@
       "goods_usd": 8.56,
       "url": "https://www.nutty.com/m8-x-1-25-x-16-socket-head-cap-screw-12-9-din-912-blk-ox/",
       "notes": "24 frame/pan plus 16 motion. Standard geometry; retain design torque. Direct product price is higher than stale category $0.194.",
-      "vendor": "Nutty",
-      "shipping_usd": null,
-      "basis": "Posted price"
-    },
-    {
-      "id": "HW-N5",
-      "category": "Standard hardware",
-      "item": "M8 x 80 DIN 912 class 12.9 beam drawdown screws",
-      "quantity": 10,
-      "unit": "each",
-      "unit_usd": 0.678,
-      "goods_usd": 6.78,
-      "url": "https://www.nutty.com/m8-x-1-25-x-80-socket-head-cap-screw-12-9-din-912-blk-ox/",
-      "notes": "Rev G: eight M8x80 beam drawdowns through the beam compression sleeves (STD_M8x80_SOCKET x8); buy 10 to meet the Nutty minimum order. Do not increase design torque.",
       "vendor": "Nutty",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -1116,9 +1089,7 @@
       "vendor": "Nutty",
       "ids": [
         "HW-N1",
-        "HW-N3",
         "HW-N4",
-        "HW-N5",
         "HW-N7",
         "HW-N8",
         "HW-N9",
@@ -1132,7 +1103,7 @@
       ],
       "amount_usd": 10.95,
       "tax_usd": null,
-      "basis": "Published US48 eligible-merchandise policy; one order. Goods $90.37 are below the $100 free-shipping threshold, so the published $10.95 flat rate applies unless unpriced Rev G fasteners are added to this order. Each line rounded to cents; checkout may round fractions of a cent differently. Stock and tax not confirmed."
+      "basis": "Published US48 eligible-merchandise policy; one order. Goods $76.06 are below the $100 free-shipping threshold, so the published $10.95 flat rate applies unless the unpriced Rev H stainless fasteners are added to this order. Each line rounded to cents; checkout may round fractions of a cent differently. Stock and tax not confirmed."
     },
     {
       "id": "SHIP-Amazon",
@@ -1452,50 +1423,42 @@
       "unit_usd": null
     },
     {
-      "id": "MET-GAP-14",
-      "item": "3/4 in MDF sheet",
-      "quantity": "1",
-      "required_work": "48 x 48 in half sheet (a full 48 x 96 also works). Rev G: six spoilboards 393.5 wide x 343.5/397/219.5 long (two of each), 19 mm rough skimmed to 18; all six fit a half sheet (revg-stock-fit.json). The Rev E six 495 x 397 boards and staging bars are superseded.",
-      "url": "",
-      "unit_usd": null
-    },
-    {
-      "id": "MET-GAP-15",
-      "item": "A36 plate 1/4 in, finish 6 mm",
-      "quantity": "1",
-      "required_work": "12 x12 in. Two TOOL_PARK_CRADLE (110 x 166.9) plus eight G_M8_SEAT_BOSS discs (20 dia): with the other Rev G 6 mm flats they do not fit the single MET13 24 x 48 plate. Alternative: buy the 6 mm plate as 24 x 60 or 30 x 48, which holds all 91 pieces.",
-      "url": "",
-      "unit_usd": null
-    },
-    {
-      "id": "MET-GAP-16",
-      "item": "Carbon steel sheet, finish 2.0 mm",
-      "quantity": "1",
-      "required_work": "12 x12 in. 28 Rev G rack guides (G_RACK_PANEL_GUIDE x14, G_RACK_SPOIL_GUIDE x14) fit one sheet (revg-stock-fit.json). No earlier row covered this thickness.",
-      "url": "",
-      "unit_usd": null
-    },
-    {
-      "id": "MET-GAP-17",
-      "item": "Aluminum plate or bar, 3/8 in (9.525) thick, alloy to be confirmed",
-      "quantity": "1",
-      "required_work": "12 x24 in plate, or four 3/8 x 1 x 72 in flat bars. 24 G_PANEL_TIE blanks 250 x 20 x 9.525: all fit one 12 x 24 plate, or seven per 72 in bar with the 1 in width machined to 20. The owner 12 x 12 x 3/8 piece holds about half of them only if its alloy and thickness qualify.",
-      "url": "",
-      "unit_usd": null
-    },
-    {
       "id": "MET-GAP-18",
       "item": "Weldable steel round bar",
       "quantity": "1",
-      "required_work": "3/4 in diameter x36 in. Turn eight G_BEAM_COMPRESSION_SLEEVE OD18/ID9 x 66.8 and four G_FRONT_LEDGER_M8_SLEEVE OD18 x 50.8: 773.6 mm with 3 mm cuts, plus 10 mm trim.",
+      "required_work": "3/4 in diameter x36 in. Rev H: turn six H_LEDGER_M10_SLEEVE OD18 x 50.8 (drill 8.5, tap M10) and six MOD_COMPRESSION_SLEEVE OD18/ID11 x 50.8: 609.6 mm plus twelve 3 mm cuts and 10 mm trim = 655.6 mm. (Rev G: eight beam sleeves and four front-ledger sleeves, 773.6 mm.)",
       "url": "",
       "unit_usd": null
     },
     {
-      "id": "MET-GAP-19",
-      "item": "Steel square tube 30 x 30 x 3 mm",
+      "id": "MET-GAP-20",
+      "item": "HDPE sheet, 3/4 in (19.05), natural",
       "quantity": "1",
-      "required_work": "400 mm or longer. Two G_RACK_PANEL_FORK, 194.2 mm each. Metric size; a US 1-1/4 x 1/8 in substitute changes the fork and needs a CAD check.",
+      "required_work": "48 x 48 in. Rev H: two MOD_HDPE_PLATE 398 x 1000, skimmed to 18 mm in the machine; both fit one 48 x 48 in sheet (revh-stock-fit.json). Waterproof bed top for mist coolant; replaces the Rev G MDF.",
+      "url": "",
+      "unit_usd": null
+    },
+    {
+      "id": "MET-GAP-21",
+      "item": "304 stainless sheet, 3 mm (11 ga 3.048 acceptable)",
+      "quantity": "1",
+      "required_work": "12 x 12 in. Rev H bolt tray for the six removed drawdowns: floor 210 x 120, two sides 120 x 20, two ends 204 x 20; all fit one piece (revh-stock-fit.json).",
+      "url": "",
+      "unit_usd": null
+    },
+    {
+      "id": "MET-GAP-22",
+      "item": "A36 flat bar 3/8 x 4 in",
+      "quantity": "1",
+      "required_work": "12 in. Rev H: four MOD_LIFT_LUG 50 x 75 x 9.525, cut as 50 mm lengths with the 75 mm dimension across the 4 in width (about 210 mm with cuts).",
+      "url": "",
+      "unit_usd": null
+    },
+    {
+      "id": "MET-GAP-23",
+      "item": "2 x 2 x .120 in A500 square tube",
+      "quantity": "1",
+      "required_work": "8 ft (2,438 mm). Rev H: the last two MOD_CROSSMEMBER blanks, 912.4 mm each (1,840.8 mm with cuts and trim), after the five 20 ft bars of MET01 (RevH-CAD/tube-cut-plan.json).",
       "url": "",
       "unit_usd": null
     },
@@ -1509,9 +1472,9 @@
     },
     {
       "id": "HW-GAP-H03",
-      "item": "Rack, cover and cabinet small hardware (Rev G)",
+      "item": "Cover and cabinet small hardware (Rev H)",
       "quantity": "",
-      "required_work": "Rev G quantities from RevG-CAD/cutlist.json: 40 M8 x 16 screws are priced in N4. Still unpriced: 28 M8 flat washers 16 x 8.4 x 1.6, 28 M6 weld nuts, 4 #12-14 x 38 self-drilling cabinet screws. No M8 weld nuts (seat bosses and ledger sleeves are drilled and tapped). Positive restraint for the stored panels, boards and beams is an open design item; no straps or latches are modeled yet.",
+      "required_work": "Rev H quantities from RevH-CAD/cutlist.json: 40 M8 x 16 screws are priced in N4. Still unpriced: 24 M8 flat washers 16 x 8.4 x 1.6, 28 M6 weld nuts and 4 #12-14 x 38 self-drilling cabinet screws. Rev H has no bed storage racks; the removed drawdowns go in the stainless bolt tray (MET-GAP-21).",
       "url": "",
       "unit_usd": null
     },
@@ -1525,25 +1488,25 @@
     },
     {
       "id": "HW-GAP-H06",
-      "item": "Panel tie fasteners: 72 M5x16 button screws and 72 washers (Rev G)",
+      "item": "Deck profile fasteners: 36 M5x8 ISO7380 A4 button screws (Rev H)",
       "quantity": "",
-      "required_work": "Rev G panels: twelve M5 screws per panel through the aluminum ties into bottom-slot nuts, 72 in all. Unpriced: 72 M5x16 ISO7380 button screws and 72 M5 washers 15 OD x 1.5 (fully on the 20 mm tie). The 96 DIN562 nuts are priced in N1. The Rev E N2 screws, N16 nuts and W1 washers are superseded. Tightening is not released: the slot lips carry the preload (Rev G finding BED04).",
+      "required_work": "Rev H: each of the nine 20100 profiles is held by one M5x8 ISO7380 A4 button screw per crossmember, inserted from inside the tube through the \u00d814 bottom access hole into a bottom-slot nut: 36 screws, unpriced. The nuts are in N1. The Rev G panel-tie screws and washers and the Rev E N2, N16 and W1 items are superseded. The slot lips carry the preload; test a sample joint before issuing a torque (BED04).",
       "url": "",
       "unit_usd": null
     },
     {
       "id": "HW-GAP-H07",
-      "item": "Bed beam, seat and clamp hardware (Rev G)",
+      "item": "Bed drawdowns and locating pins (Rev H)",
       "quantity": "",
-      "required_work": "Rev G: eight M8x80 beam drawdowns (N5). Unpriced: four M8x20 front-seat screws (washers from H03), eight hardened 6 x 12 locator pins (G_LOCATOR_6x12; confirm fit and retention), sixteen M6x35 bridge-clamp screws with sixteen 12 mm M6 washers (the cut list has 20 M6x35 in all). Twelve compression sleeves are turned from the round-bar metal gap; seat bosses, M6 bosses and clamp spacers come from the 6 mm and 8 mm plate.",
+      "required_work": "Rev H: six M10x80 ISO4762 A4-70 drawdowns with six M10 A4 washers 20 x 10.5 x 2 (anti-seize, 30 N m nominal) and two hardened stainless dowel pins 10 m6 x 56, all unpriced. The twelve sleeves are turned from MET-GAP-18. The Rev G M8x80 drawdowns (N5), four M8x20 front-seat screws, eight 6 x 12 locator pins and the sixteen M6x35 clamp screws with washers are superseded (four M6x35 remain elsewhere in the machine).",
       "url": "",
       "unit_usd": null
     },
     {
       "id": "HW-GAP-H08",
-      "item": "Spoilboard fastening, MDF sealing and work clamps (Rev G)",
+      "item": "HDPE top fastening and work clamps (Rev H)",
       "quantity": "",
-      "required_work": "Rev G: six separate spoilboards with 24 M5x20 DIN7991 screws (N3) into top-slot nuts (N1). Seal MDF edges after skimming. Ordinary T-slot work clamps are not priced or qualified.",
+      "required_work": "Rev H: two HDPE plates held by 12 M5x12 ISO4762 A4 socket screws with 12 A4 washers 15 x 5.3 x 1.5 into top-slot nuts (N1), unpriced. One fixed hole per plate; the rest are slots or oversize for HDPE growth. The Rev G MDF screws (N3) are superseded. Ordinary T-slot work clamps are not priced or qualified.",
       "url": "",
       "unit_usd": null
     },
@@ -1736,6 +1699,14 @@
       "item": "MET-DATUM",
       "quantity": "",
       "required_work": "Rail datum raw-stock cleanup allowance needs confirmation; the nominal 5/16in offer may need thicker stock to produce a flat finished datum.",
+      "url": "",
+      "unit_usd": null
+    },
+    {
+      "id": "H-GALV",
+      "item": "Hot-dip galvanizing, Rev H bed module",
+      "quantity": "1",
+      "required_work": "About 32 kg of steel: rails, crossmembers, end plates, caps, lugs and sleeves welded as one module. Vent and drain holes as agreed with the galvanizer; a minimum lot charge usually governs. Unquoted.",
       "url": "",
       "unit_usd": null
     }
@@ -1999,7 +1970,7 @@
       "currency": "USD",
       "extended": 575,
       "url": "https://www.facebook.com/marketplace/item/1367277908682890/",
-      "reason": "Seller advertises $115 each and 28 available; pickup in Sylvania GA. The recorded five-bar cut proof was made for the Rev E 36-blank schedule; the Rev G 30-blank schedule has not been re-proved for 24 ft bars, so the quantity shown is that superseded proof. Grade, actual wall (.120 versus nominal1/8), rust/coating, straightness, quantity and collection cost unverified. Conditional option only; no adopted savings."
+      "reason": "Seller advertises $115 each and 28 available; pickup in Sylvania GA. The recorded five-bar cut proof was made for the Rev E 36-blank schedule; the current Rev H 32-blank schedule has not been re-proved for 24 ft bars, so the quantity shown is that superseded proof. Grade, actual wall (.120 versus nominal1/8), rust/coating, straightness, quantity and collection cost unverified. Conditional option only; no adopted savings."
     }
   ],
   "categories": [
@@ -2029,7 +2000,7 @@
     },
     {
       "category": "Standard hardware",
-      "goods_usd": 141.55
+      "goods_usd": 127.24
     },
     {
       "category": "Controls and water wiring",
@@ -2044,7 +2015,8 @@
       "unit_usd": 32.99,
       "goods_usd": 32.99,
       "url": "https://www.amazon.com/dp/B0BLBV9FNY",
-      "reason": "Host board for the Kraken route. The owner chose BTT Rodent + grblHAL on 26 Sep 2026; it runs standalone (WiFi/WebUI/SD), so no host board is needed."
+      "reason": "Host board for the Kraken route. The owner chose BTT Rodent + grblHAL on 26 Sep 2026; it runs standalone (WiFi/WebUI/SD), so no host board is needed.",
+      "revision": "G"
     },
     {
       "id": "E07",
@@ -2053,7 +2025,8 @@
       "unit_usd": 129.99,
       "goods_usd": 129.99,
       "url": "https://biqu.equipment/products/kraken-for-voron-phoenix",
-      "reason": "The owner already owns a Kraken V1.1, and on 26 Sep 2026 chose BTT Rodent + grblHAL instead. No Kraken purchase."
+      "reason": "The owner already owns a Kraken V1.1, and on 26 Sep 2026 chose BTT Rodent + grblHAL instead. No Kraken purchase.",
+      "revision": "G"
     },
     {
       "id": "E20",
@@ -2062,7 +2035,8 @@
       "unit_usd": 28.98,
       "goods_usd": 28.98,
       "url": "https://biqu.equipment/products/pi4b-adapter-v1-0?variant=39919128969314",
-      "reason": "Pi4B carrier for the Kraken host route. Not needed with the standalone Rodent (owner decision 26 Sep 2026)."
+      "reason": "Pi4B carrier for the Kraken host route. Not needed with the standalone Rodent (owner decision 26 Sep 2026).",
+      "revision": "G"
     },
     {
       "id": "MET06",
@@ -2071,7 +2045,58 @@
       "unit_usd": 17.32,
       "goods_usd": 69.28,
       "url": "https://www.onlinemetals.com/en/buy/aluminum/0-25-x-1-aluminum-rectangle-bar-6061-t6511-extruded/pid/1143",
-      "reason": "Rev E cassette-tie bar. Rev G panel ties are 24 pieces 250 x 20 x 9.525 (3/8 in), which 1/4 in bar cannot make; see the 3/8 aluminum stock gap. Kept as dated price evidence only (Rev G reconciliation, 26 Sep 2026)."
+      "reason": "Rev E cassette-tie bar. Rev G panel ties are 24 pieces 250 x 20 x 9.525 (3/8 in), which 1/4 in bar cannot make; see the 3/8 aluminum stock gap. Kept as dated price evidence only (Rev G reconciliation, 26 Sep 2026).",
+      "revision": "G"
+    },
+    {
+      "id": "MET-GAP-14",
+      "item": "3/4 in MDF sheet",
+      "quantity": 1,
+      "unit_usd": null,
+      "goods_usd": null,
+      "url": "",
+      "reason": "Rev H has no MDF: the waterproof bed top is two HDPE plates (MET-GAP-20).",
+      "revision": "H"
+    },
+    {
+      "id": "MET-GAP-15",
+      "item": "A36 plate 1/4 in, finish 6 mm",
+      "quantity": 1,
+      "unit_usd": null,
+      "goods_usd": null,
+      "url": "",
+      "reason": "Rev H: all 6 mm flats, including the two tool cradles, fit the MET13 24 x 48 plate.",
+      "revision": "H"
+    },
+    {
+      "id": "MET-GAP-16",
+      "item": "Carbon steel sheet, finish 2.0 mm",
+      "quantity": 1,
+      "unit_usd": null,
+      "goods_usd": null,
+      "url": "",
+      "reason": "Rev H has no bed storage racks, so no 2 mm rack guides.",
+      "revision": "H"
+    },
+    {
+      "id": "MET-GAP-17",
+      "item": "Aluminum plate or bar, 3/8 in (9.525) thick, alloy to be confirmed",
+      "quantity": 1,
+      "unit_usd": null,
+      "goods_usd": null,
+      "url": "",
+      "reason": "Rev H has no aluminum panel ties: the nine full-length profiles sit directly on the module crossmembers.",
+      "revision": "H"
+    },
+    {
+      "id": "MET-GAP-19",
+      "item": "Steel square tube 30 x 30 x 3 mm",
+      "quantity": 1,
+      "unit_usd": null,
+      "goods_usd": null,
+      "url": "",
+      "reason": "Rev H has no bed storage racks, so no 30 x 30 x 3 rack forks.",
+      "revision": "H"
     },
     {
       "id": "HW-N2",
@@ -2080,7 +2105,28 @@
       "unit_usd": 0.103,
       "goods_usd": 12.36,
       "url": "https://www.nutty.com/m5-x-0-80-x-12-ft-flat-head-socket-cap-screws-12-9-din-7991-blk-ox/",
-      "reason": "Rev E keyhole-anchor tie screw. Rev G ties use 72 M5x16 ISO7380 button screws (unpriced, HW-GAP-H06). Kept as dated price evidence only."
+      "reason": "Rev E keyhole-anchor tie screw. Rev G ties use 72 M5x16 ISO7380 button screws (unpriced, HW-GAP-H06). Kept as dated price evidence only.",
+      "revision": "G"
+    },
+    {
+      "id": "HW-N3",
+      "item": "M5 x 20 DIN 7991 class 12.9 MDF screws",
+      "quantity": 25,
+      "unit_usd": 0.155,
+      "goods_usd": 3.875,
+      "url": "https://www.nutty.com/m5-x-0-80-x-20-ft-flat-head-socket-cap-screws-12-9-din-7991-blk-ox/",
+      "reason": "Rev G MDF spoilboard screw. Rev H has no MDF; the HDPE plates use 12 M5x12 ISO 4762 A4 screws with 15 mm A4 washers (unpriced, HW-GAP-H08). Kept as dated price evidence only.",
+      "revision": "H"
+    },
+    {
+      "id": "HW-N5",
+      "item": "M8 x 80 DIN 912 class 12.9 beam drawdown screws",
+      "quantity": 10,
+      "unit_usd": 0.678,
+      "goods_usd": 6.78,
+      "url": "https://www.nutty.com/m8-x-1-25-x-80-socket-head-cap-screw-12-9-din-912-blk-ox/",
+      "reason": "Rev G beam drawdown. Rev H uses six M10x80 ISO 4762 A4-70 drawdowns (unpriced, HW-GAP-H07). Kept as dated price evidence only.",
+      "revision": "H"
     },
     {
       "id": "HW-W1",
@@ -2089,7 +2135,8 @@
       "unit_usd": 0.66,
       "goods_usd": 39.6,
       "url": "https://www.norelemusa.com/en-us/Product-Overview/Flexible-standard-component-system/07000/Nuts-screws-washers-securing-elements/Washers-DIN-7349-for-bolts-with-heavy-duty-clamping-bodies/p/agid.28087",
-      "reason": "Rev E retaining washer. Rev G models a 1.5 mm thick 15 mm washer under each M5x16 tie screw; this 2 mm DIN 7349 part would shorten screw engagement, so it is not adopted without a stack check. Kept as dated price evidence only."
+      "reason": "Rev E retaining washer. Rev G models a 1.5 mm thick 15 mm washer under each M5x16 tie screw; this 2 mm DIN 7349 part would shorten screw engagement, so it is not adopted without a stack check. Kept as dated price evidence only.",
+      "revision": "G"
     },
     {
       "id": "HW-N16",
@@ -2098,7 +2145,8 @@
       "unit_usd": 0.012,
       "goods_usd": 1.44,
       "url": "https://www.nutty.com/m5-0-80-hex-nut-cl-8-din-934-coarse-plated/",
-      "reason": "Rev E stud nuts. Rev G has no M5 hex nuts in the bed. Kept as dated price evidence only."
+      "reason": "Rev E stud nuts. Rev G has no M5 hex nuts in the bed. Kept as dated price evidence only.",
+      "revision": "G"
     },
     {
       "id": "CA-10",
@@ -2107,7 +2155,8 @@
       "unit_usd": 4.95,
       "goods_usd": 4.95,
       "url": "https://www.adafruit.com/product/4474",
-      "reason": "Host-to-Kraken USB link. The Rodent runs standalone over WiFi; a USB-C cable for flashing is ordinary shop stock (owner decision 26 Sep 2026)."
+      "reason": "Host-to-Kraken USB link. The Rodent runs standalone over WiFi; a USB-C cable for flashing is ordinary shop stock (owner decision 26 Sep 2026).",
+      "revision": "G"
     }
   ],
   "bracket_redesign_not_adopted": {
@@ -3108,10 +3157,10 @@
     ]
   },
   "input_hashes": {
-    "hardware-findings.json": "18bd3bf19ef9243cef21f631d44eaa57f9c8598478198f94363b8873780db1dd",
+    "hardware-findings.json": "99f7db40bab91ded52b789ab1a23d2ab6d2739f1ff3743728a0f4fe3fa5b1f65",
     "marketplace-findings.json": "279e8b66e81b7bf3fbbed26e2d94db3ca69af25a4a1172e45e14a7d4b3196190",
-    "core-findings.json": "451388363c54b5a3ae8c42d485b379ea84c53ca2905c7bc0e51908d34694c59b",
-    "metal-findings.json": "2bb60935c42aa0ca5611f592fdcc7900e4682f0aa0d490c4ef6dcbec29fa98eb",
+    "core-findings.json": "653872e273ca3da3f72cac1e57dab14e85e84b35b479d3fd4563f8f8a8a93418",
+    "metal-findings.json": "22574481348da0b39b7b871204728dce4bf919381788e8bb1fcf62fb8269f299",
     "tube-georgia-findings.json": "a683ea857a020d304c5c02bc2b81acd790c3d7133aa788b2492dff6f7d54ee4e",
     "controls-findings.json": "9831596efc7813f2c6041d3493301dda1e490f08828f8368da313cc4eaf276c3",
     "tube-comparison-findings.json": "8a1d5339fa1865ff922e288bd1d38639cc9cea781901940709a0f21e3e05587d"

@@ -18,7 +18,7 @@
       "goods_usd": 775.75,
       "shipping_usd": null,
       "url": "https://www.blueskysupplies.com/products/2inch-x-2-inch-x-120-a500-tube",
-      "allocation": "Rev G: all 30 square-tube blanks in output/release-review/RevG-CAD/tube-cut-plan.json on five 20 ft bars (net 29,472 mm), including the four 924 mm bed beams. Bars 1-3 keep only 6 mm beyond 3 mm kerfs and 10 mm trim, so each bar needs a full usable 20 ft. Bar 5 keeps 825.6 mm, which covers the eight G_BEAM_FOOT_18 feet: bed_cassettes.py models each as an 18 mm slice of this tube (3.048 wall) with one face trimmed to 50 mm, 168 mm in all with cuts. No blanket 10 ft transport cuts. (Rev E needed six bars for 36 blanks.)",
+      "allocation": "Rev H (current): 32 square-tube blanks in output/release-review/RevH-CAD/tube-cut-plan.json, net 32,087 mm. These five 20 ft bars take 30 of them; bars 1-3 keep only 6 mm beyond 3 mm kerfs and 10 mm trim, so each bar needs a full usable 20 ft. The last two 912.4 mm module crossmembers (1,840.8 mm with cuts and trim) go on one extra 8 ft length, MET-GAP-23, instead of a sixth 20 ft bar. Rev G needed exactly five bars for 30 blanks (29,472 mm), including four 924 mm beams and eight 18 mm beam feet; Rev E needed six. No blanket 10 ft transport cuts.",
       "status": "High retail reference, not a lowest-price buying recommendation. Posted goods price; delivery unquoted. Cheaper exact-spec Bobco goods benchmark is $487.50 for five bars, LA pickup advertised, Georgia delivery unquoted. Local SteelMart/Sabel quotes pending; see TUBE-PRICE-COMPARISON.md."
     },
     {
@@ -163,7 +163,7 @@
       "goods_usd": 175.24,
       "shipping_usd": null,
       "url": "https://www.onlinemetals.com/en/buy/carbon-steel/0-25-carbon-steel-plate-a36-hot-rolled/pid/9610",
-      "allocation": "96 original nominal6mm flats after separating2spacers; add2toolcradles and9motionstopplate blanks. Updated107piece layout passes. Mainparts finish6mm where specified; Ystop bases/posts remain6.35mm, Xswitch arm finishes5mm. No extra sheet for those missing flats. Rev G update (check_revg_stock_fit.py): 89 of the 91 six-mm Rev G flats (CAP_SPACER is on MET05) pack on this one plate; the two TOOL_PARK_CRADLE plates do not and are listed as a separate 1/4 x 12 x 12 in gap. The 107-piece Rev E layout recorded below is superseded.",
+      "allocation": "96 original nominal6mm flats after separating2spacers; add2toolcradles and9motionstopplate blanks. Updated107piece layout passes. Mainparts finish6mm where specified; Ystop bases/posts remain6.35mm, Xswitch arm finishes5mm. No extra sheet for those missing flats. Rev G update (check_revg_stock_fit.py): 89 of the 91 six-mm Rev G flats (CAP_SPACER is on MET05) pack on this one plate; the two TOOL_PARK_CRADLE plates do not and are listed as a separate 1/4 x 12 x 12 in gap. The 107-piece Rev E layout recorded below is superseded. Rev H (check_revg_stock_fit.py --cad RevH-CAD): all 38 six-mm Rev H flats, including both tool cradles, the six seat pads and the eight crossmember end plates, pack on this one plate, so the extra 1/4 in piece (MET-GAP-15) is not needed.",
       "status": "Posted goods price; delivery unquoted"
     },
     {
@@ -175,7 +175,7 @@
       "goods_usd": 66.0,
       "shipping_usd": null,
       "url": "https://www.shapirosupply.com/steel-hot-cold-galvanized/sheet-and-plate/sheet-and-plate/mild-steel-sheets-and-plates/3-8-375",
-      "allocation": "Twelve80wide hangers/endplates, finish thickness8mm from9.525; do not substitute5/16in(7.9375mm).",
+      "allocation": "Twelve80wide hangers/endplates, finish thickness8mm from9.525; do not substitute5/16in(7.9375mm). Rev H adds four 3/8 in lift lugs (50 x 75); with them the 3/8 in parts need a 12 x 36 or 24 x 24 in piece, so the lugs get their own 3/8 x 4 x 12 in bar (MET-GAP-22) and this piece stays as bought.",
       "status": "Posted goods price; delivery unquoted"
     },
     {
@@ -3392,37 +3392,66 @@
       "item": "3/4 in MDF sheet",
       "quantity": 1,
       "size": "48 x 48 in half sheet (a full 48 x 96 also works)",
-      "required_for": "Rev G: six spoilboards 393.5 wide x 343.5/397/219.5 long (two of each), 19 mm rough skimmed to 18; all six fit a half sheet (revg-stock-fit.json). The Rev E six 495 x 397 boards and staging bars are superseded."
+      "required_for": "Rev G: six spoilboards 393.5 wide x 343.5/397/219.5 long (two of each), 19 mm rough skimmed to 18; all six fit a half sheet (revg-stock-fit.json). The Rev E six 495 x 397 boards and staging bars are superseded.",
+      "superseded": "Rev H has no MDF: the waterproof bed top is two HDPE plates (MET-GAP-20)."
     },
     {
       "item": "A36 plate 1/4 in, finish 6 mm",
       "quantity": 1,
       "size": "12 x12 in",
-      "required_for": "Two TOOL_PARK_CRADLE (110 x 166.9) plus eight G_M8_SEAT_BOSS discs (20 dia): with the other Rev G 6 mm flats they do not fit the single MET13 24 x 48 plate. Alternative: buy the 6 mm plate as 24 x 60 or 30 x 48, which holds all 91 pieces."
+      "required_for": "Two TOOL_PARK_CRADLE (110 x 166.9) plus eight G_M8_SEAT_BOSS discs (20 dia): with the other Rev G 6 mm flats they do not fit the single MET13 24 x 48 plate. Alternative: buy the 6 mm plate as 24 x 60 or 30 x 48, which holds all 91 pieces.",
+      "superseded": "Rev H: all 6 mm flats, including the two tool cradles, fit the MET13 24 x 48 plate."
     },
     {
       "item": "Carbon steel sheet, finish 2.0 mm",
       "quantity": 1,
       "size": "12 x12 in",
-      "required_for": "28 Rev G rack guides (G_RACK_PANEL_GUIDE x14, G_RACK_SPOIL_GUIDE x14) fit one sheet (revg-stock-fit.json). No earlier row covered this thickness."
+      "required_for": "28 Rev G rack guides (G_RACK_PANEL_GUIDE x14, G_RACK_SPOIL_GUIDE x14) fit one sheet (revg-stock-fit.json). No earlier row covered this thickness.",
+      "superseded": "Rev H has no bed storage racks, so no 2 mm rack guides."
     },
     {
       "item": "Aluminum plate or bar, 3/8 in (9.525) thick, alloy to be confirmed",
       "quantity": 1,
       "size": "12 x24 in plate, or four 3/8 x 1 x 72 in flat bars",
-      "required_for": "24 G_PANEL_TIE blanks 250 x 20 x 9.525: all fit one 12 x 24 plate, or seven per 72 in bar with the 1 in width machined to 20. The owner 12 x 12 x 3/8 piece holds about half of them only if its alloy and thickness qualify."
+      "required_for": "24 G_PANEL_TIE blanks 250 x 20 x 9.525: all fit one 12 x 24 plate, or seven per 72 in bar with the 1 in width machined to 20. The owner 12 x 12 x 3/8 piece holds about half of them only if its alloy and thickness qualify.",
+      "superseded": "Rev H has no aluminum panel ties: the nine full-length profiles sit directly on the module crossmembers."
     },
     {
       "item": "Weldable steel round bar",
       "quantity": 1,
       "size": "3/4 in diameter x36 in",
-      "required_for": "Turn eight G_BEAM_COMPRESSION_SLEEVE OD18/ID9 x 66.8 and four G_FRONT_LEDGER_M8_SLEEVE OD18 x 50.8: 773.6 mm with 3 mm cuts, plus 10 mm trim."
+      "required_for": "Rev H: turn six H_LEDGER_M10_SLEEVE OD18 x 50.8 (drill 8.5, tap M10) and six MOD_COMPRESSION_SLEEVE OD18/ID11 x 50.8: 609.6 mm plus twelve 3 mm cuts and 10 mm trim = 655.6 mm. (Rev G: eight beam sleeves and four front-ledger sleeves, 773.6 mm.)"
     },
     {
       "item": "Steel square tube 30 x 30 x 3 mm",
       "quantity": 1,
       "size": "400 mm or longer",
-      "required_for": "Two G_RACK_PANEL_FORK, 194.2 mm each. Metric size; a US 1-1/4 x 1/8 in substitute changes the fork and needs a CAD check."
+      "required_for": "Two G_RACK_PANEL_FORK, 194.2 mm each. Metric size; a US 1-1/4 x 1/8 in substitute changes the fork and needs a CAD check.",
+      "superseded": "Rev H has no bed storage racks, so no 30 x 30 x 3 rack forks."
+    },
+    {
+      "item": "HDPE sheet, 3/4 in (19.05), natural",
+      "quantity": 1,
+      "size": "48 x 48 in",
+      "required_for": "Rev H: two MOD_HDPE_PLATE 398 x 1000, skimmed to 18 mm in the machine; both fit one 48 x 48 in sheet (revh-stock-fit.json). Waterproof bed top for mist coolant; replaces the Rev G MDF."
+    },
+    {
+      "item": "304 stainless sheet, 3 mm (11 ga 3.048 acceptable)",
+      "quantity": 1,
+      "size": "12 x 12 in",
+      "required_for": "Rev H bolt tray for the six removed drawdowns: floor 210 x 120, two sides 120 x 20, two ends 204 x 20; all fit one piece (revh-stock-fit.json)."
+    },
+    {
+      "item": "A36 flat bar 3/8 x 4 in",
+      "quantity": 1,
+      "size": "12 in",
+      "required_for": "Rev H: four MOD_LIFT_LUG 50 x 75 x 9.525, cut as 50 mm lengths with the 75 mm dimension across the 4 in width (about 210 mm with cuts)."
+    },
+    {
+      "item": "2 x 2 x .120 in A500 square tube",
+      "quantity": 1,
+      "size": "8 ft (2,438 mm)",
+      "required_for": "Rev H: the last two MOD_CROSSMEMBER blanks, 912.4 mm each (1,840.8 mm with cuts and trim), after the five 20 ft bars of MET01 (RevH-CAD/tube-cut-plan.json)."
     }
   ],
   "unadopted_plate_bracket_option": {
