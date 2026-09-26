@@ -4,21 +4,25 @@
     "currency": "USD",
     "destination": "Alto GA30510",
     "status": "PARTIAL PRICE AUDIT \u2014 COMPLETE BUILD TOTAL UNRESOLVED",
-    "goods_subtotal_usd": 5734.94,
-    "known_shipping_subtotal_usd": 75.3,
-    "priced_scope_before_tax_usd": 5810.24,
+    "goods_subtotal_usd": 5459.06,
+    "known_shipping_subtotal_usd": 86.25,
+    "priced_scope_before_tax_usd": 5545.31,
     "amazon_goods_with_advertised_free_delivery_usd": 2204.99,
     "complete_delivered_total_usd": null,
     "purchase_release": false,
     "owner_fabrication_labor_usd": 0,
-    "priced_rows": 83,
-    "unpriced_scope_rows": 43,
-    "unquoted_vendor_shipping_groups": 17,
+    "priced_rows": 79,
+    "unpriced_scope_rows": 48,
+    "unquoted_vendor_shipping_groups": 16,
     "prior_estimate_with_owner_labor_usd": 7663.82,
     "unsupported_skin_allowance_removed_usd": 200,
     "prior_estimate_is_current": false,
     "reason": "The old estimate underpriced raw billets and omitted exact small-stock purchases; its remaining allowances and shipping reserve cannot be called actual cost.",
     "orders_placed_by_agent": 0,
+    "owner_reported_orders": [
+      "M04",
+      "M05"
+    ],
     "quoted_8020_order_including_estimated_tax_usd": 272.11,
     "exclusions": [
       "Sales taxes and possible tariffs beyond the isolated80/20cart estimate",
@@ -81,10 +85,11 @@
       "unit_usd": 109.99,
       "goods_usd": 109.99,
       "url": "https://www.amazon.com/dp/B0FFMMPC3B",
-      "notes": "In stock; advertised free delivery September29. Actual rail hole pitch/end distance still requires supplier clarification.",
+      "notes": "In stock; advertised free delivery September29. Actual rail hole pitch/end distance still requires supplier clarification. ORDERED by the owner (reported 26 Sep 2026); price paid and delivery not yet recorded. Measure on receipt: output/receiving/HGR20-RAIL-KITS.md.",
       "vendor": "Amazon",
       "shipping_usd": 0,
-      "basis": "Live offer 24 Sep"
+      "basis": "Live offer 24 Sep",
+      "owner_order_status": "ordered 2026-09-26 (owner-reported)"
     },
     {
       "id": "M05",
@@ -95,10 +100,11 @@
       "unit_usd": 79.99,
       "goods_usd": 79.99,
       "url": "https://www.amazon.com/dp/B0FFMN9KNC",
-      "notes": "One kit left; advertised free delivery October1. Both rails and all four blocks are used.",
+      "notes": "One kit left; advertised free delivery October1. Both rails and all four blocks are used. ORDERED by the owner (reported 26 Sep 2026); price paid and delivery not yet recorded. Measure on receipt: output/receiving/HGR20-RAIL-KITS.md.",
       "vendor": "Amazon",
       "shipping_usd": 0,
-      "basis": "Live offer 24 Sep"
+      "basis": "Live offer 24 Sep",
+      "owner_order_status": "ordered 2026-09-26 (owner-reported)"
     },
     {
       "id": "B01",
@@ -109,7 +115,7 @@
       "unit_usd": 79.99,
       "goods_usd": 399.95,
       "url": "https://www.amazon.com/dp/B0BXNWK99C",
-      "notes": "Twenty packs left; advertised free delivery September29. Five packs=ten sticks=thirty397mm strips. Not five sticks.",
+      "notes": "Twenty packs left; advertised free delivery September29. Five packs=ten sticks=thirty397mm strips. Not five sticks. Rev G: the thirty 397 mm strips make the six 500 x 397 panels (BUY_20100_CUT_397 x30).",
       "vendor": "Amazon",
       "shipping_usd": 0,
       "basis": "Live offer 24 Sep"
@@ -398,12 +404,12 @@
       "id": "MET01",
       "category": "Chassis",
       "item": "2 x 2 x .120 inch A500 square tube, full 20 ft",
-      "quantity": 6,
+      "quantity": 5,
       "unit": "stock piece",
       "unit_usd": 155.15,
-      "goods_usd": 930.9,
+      "goods_usd": 775.75,
       "url": "https://www.blueskysupplies.com/products/2inch-x-2-inch-x-120-a500-tube",
-      "notes": "All 36 square-tube blanks in existing six-bar cut plan. Net 35,976.8 mm. No blanket 10 ft transport cuts permitted. High retail reference, not a lowest-price buying recommendation. Posted goods price; delivery unquoted. Cheaper exact-spec Bobco goods benchmark is $585 for six bars, LA pickup advertised, Georgia delivery unquoted. Local SteelMart/Sabel quotes pending; see TUBE-PRICE-COMPARISON.md.",
+      "notes": "Rev G: all 30 square-tube blanks in output/release-review/RevG-CAD/tube-cut-plan.json on five 20 ft bars (net 29,472 mm), including the four 924 mm bed beams. Bars 1-3 keep only 6 mm beyond 3 mm kerfs and 10 mm trim, so each bar needs a full usable 20 ft. Bar 5 keeps 825.6 mm, which would also cover eight 18 mm G_BEAM_FOOT_18 slices if the feet are cut from this tube (construction not stated in the CAD). No blanket 10 ft transport cuts. (Rev E needed six bars for 36 blanks.) High retail reference, not a lowest-price buying recommendation. Posted goods price; delivery unquoted. Cheaper exact-spec Bobco goods benchmark is $487.50 for five bars, LA pickup advertised, Georgia delivery unquoted. Local SteelMart/Sabel quotes pending; see TUBE-PRICE-COMPARISON.md.",
       "vendor": "BlueSky Supplies",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -412,12 +418,12 @@
       "id": "MET02",
       "category": "Chassis",
       "item": "JEGS555-35000 1 x 1 x .083 inch square tube,8 ft",
-      "quantity": 2,
+      "quantity": 3,
       "unit": "stock piece",
       "unit_usd": 23.9,
-      "goods_usd": 47.8,
+      "goods_usd": 71.7,
       "url": "https://www.jegs.com/i/jegs-555-35000-mild-steel-square-tubing-1-in-x-1-in-x-0-083-in-thickness-x-8-ft-length",
-      "notes": "Bar1:1213.178+912.995 mm; bar2:912.995+912.995 mm; remaining short brace from MET03. 3mm cuts and10mm trim each bar fit. Posted goods price; delivery unquoted",
+      "notes": "Rev G 1 x 1 x .083 cut list: 11 pieces, 7,730.4 mm (four side braces, rear brace and six controls-cage members; Rev E had only the five braces, 4,865.2 mm). Bar1: 912.994+912.994+499.2 (CAB_STRINGER); bar2: 912.994+912.994+488.8 (CAB_UPRIGHT); bar3: 1213.177 (FB_REAR)+499.2+488.8. Each fits with 3 mm cuts and 10 mm trim, 94 mm or more left. The two 444.6 CAB_RAIL go on MET03. Two 8 ft bars plus MET03 (6,096 mm) cannot supply 7,730 mm. Posted goods price; delivery unquoted",
       "vendor": "JEGS",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -431,7 +437,7 @@
       "unit_usd": 12.99,
       "goods_usd": 12.99,
       "url": "https://www.jegs.com/i/jegs-555-35008-mild-steel-square-tubing-1-in-x-1-in-x-0-083-in-thickness-x-4-ft-length",
-      "notes": "One912.995 mm brace; five braces total4,865.1534 mm. This replaces one unquoted20 ft bar; buying only two8 ft bars is insufficient once kerfs/trim are included. Posted goods price; delivery unquoted",
+      "notes": "Rev G: the two 444.6 mm CAB_RAIL pieces (895 mm with cuts and trim). The braces and other cabinet members are on the three MET02 bars. Posted goods price; delivery unquoted",
       "vendor": "JEGS",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -461,20 +467,6 @@
       "url": "https://www.zoro.com/online-metal-supply-14-in-x-2-14-in-x-60-in-a36-steel-flat-bar-hot-rolled-a36fbt0250w225l601/i/G123040102/",
       "notes": "Two cap spacers1450x50.8, finish to6.000 mm. Wider57.15 stock leaves edge-finishing margin; do not assume nominal2in hot rolled width cleans up at50.8. Posted goods price; delivery unquoted",
       "vendor": "Zoro",
-      "shipping_usd": null,
-      "basis": "Posted price"
-    },
-    {
-      "id": "MET06",
-      "category": "Router bed",
-      "item": "6061-T6511 flat bar1/4 x1 x72 in; OnlineMetals1143",
-      "quantity": 4,
-      "unit": "stock piece",
-      "unit_usd": 17.32,
-      "goods_usd": 69.28,
-      "url": "https://www.onlinemetals.com/en/buy/aluminum/0-25-x-1-aluminum-rectangle-bar-6061-t6511-extruded/pid/1143",
-      "notes": "Three500 mm cassette ties per bar;12ties total,3mm kerfs+10mmtrim fits. Use stock width/thickness tolerance in fit review. Posted goods price; delivery unquoted",
-      "vendor": "OnlineMetals",
       "shipping_usd": null,
       "basis": "Posted price"
     },
@@ -571,7 +563,7 @@
       "unit_usd": 175.24,
       "goods_usd": 175.24,
       "url": "https://www.onlinemetals.com/en/buy/carbon-steel/0-25-carbon-steel-plate-a36-hot-rolled/pid/9610",
-      "notes": "96 original nominal6mm flats after separating2spacers; add2toolcradles and9motionstopplate blanks. Updated107piece layout passes. Mainparts finish6mm where specified; Ystop bases/posts remain6.35mm, Xswitch arm finishes5mm. No extra sheet for those missing flats. Posted goods price; delivery unquoted",
+      "notes": "96 original nominal6mm flats after separating2spacers; add2toolcradles and9motionstopplate blanks. Updated107piece layout passes. Mainparts finish6mm where specified; Ystop bases/posts remain6.35mm, Xswitch arm finishes5mm. No extra sheet for those missing flats. Rev G update (check_revg_stock_fit.py): 89 of the 91 six-mm Rev G flats (CAP_SPACER is on MET05) pack on this one plate; the two TOOL_PARK_CRADLE plates do not and are listed as a separate 1/4 x 12 x 12 in gap. The 107-piece Rev E layout recorded below is superseded. Posted goods price; delivery unquoted",
       "vendor": "OnlineMetals",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -608,26 +600,12 @@
       "id": "HW-N1",
       "category": "Standard hardware",
       "item": "M5 x 0.8 DIN 562 thin square nut",
-      "quantity": 260,
+      "quantity": 96,
       "unit": "each",
       "unit_usd": 0.076,
-      "goods_usd": 19.76,
+      "goods_usd": 7.3,
       "url": "https://www.nutty.com/m5-x-8-stainless-metric-square-nut-thin/",
-      "notes": "Current design: receive-check 8 x 8 x 2.7 mm maximum.",
-      "vendor": "Nutty",
-      "shipping_usd": null,
-      "basis": "Posted price"
-    },
-    {
-      "id": "HW-N2",
-      "category": "Standard hardware",
-      "item": "M5 x 12 DIN 7991 class 12.9 flat socket screw",
-      "quantity": 120,
-      "unit": "each",
-      "unit_usd": 0.103,
-      "goods_usd": 12.36,
-      "url": "https://www.nutty.com/m5-x-0-80-x-12-ft-flat-head-socket-cap-screws-12-9-din-7991-blk-ox/",
-      "notes": "Current dimensional fit; retain specified assembly torque, do not raise torque to class 12.9 capability.",
+      "notes": "Current design: receive-check 8 x 8 x 2.7 mm maximum. Rev G: 72 panel-tie nuts + 24 spoilboard nuts (was 240/260 for the Rev E keyhole anchors).",
       "vendor": "Nutty",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -636,12 +614,12 @@
       "id": "HW-N3",
       "category": "Standard hardware",
       "item": "M5 x 20 DIN 7991 class 12.9 MDF screws",
-      "quantity": 60,
+      "quantity": 25,
       "unit": "each",
       "unit_usd": 0.155,
-      "goods_usd": 9.3,
+      "goods_usd": 3.88,
       "url": "https://www.nutty.com/m5-x-0-80-x-20-ft-flat-head-socket-cap-screws-12-9-din-7991-blk-ox/",
-      "notes": "Current dimensional fit. Square nuts already in H05.",
+      "notes": "Rev G: 24 M5x20 DIN7991 spoilboard screws into top-slot nuts; buy 25 to meet the Nutty minimum order. Square nuts are in N1.",
       "vendor": "Nutty",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -664,27 +642,13 @@
       "id": "HW-N5",
       "category": "Standard hardware",
       "item": "M8 x 80 DIN 912 class 12.9 beam drawdown screws",
-      "quantity": 16,
+      "quantity": 10,
       "unit": "each",
       "unit_usd": 0.678,
-      "goods_usd": 10.85,
+      "goods_usd": 6.78,
       "url": "https://www.nutty.com/m8-x-1-25-x-80-socket-head-cap-screw-12-9-din-912-blk-ox/",
-      "notes": "Current geometry; standard partial thread runs through tube sleeve and engages nut at end. Do not increase design torque.",
+      "notes": "Rev G: eight M8x80 beam drawdowns through the beam compression sleeves (STD_M8x80_SOCKET x8); buy 10 to meet the Nutty minimum order. Do not increase design torque.",
       "vendor": "Nutty",
-      "shipping_usd": null,
-      "basis": "Posted price"
-    },
-    {
-      "id": "HW-W1",
-      "category": "Standard hardware",
-      "item": "M5 DIN 7349 steel washer 15 OD x 5.3 ID x 2",
-      "quantity": 60,
-      "unit": "each",
-      "unit_usd": 0.66,
-      "goods_usd": 39.6,
-      "url": "https://www.norelemusa.com/en-us/Product-Overview/Flexible-standard-component-system/07000/Nuts-screws-washers-securing-elements/Washers-DIN-7349-for-bolts-with-heavy-duty-clamping-bodies/p/agid.28087",
-      "notes": "Exact selected size/material offer; confirm order-level hardness certification per retaining-joint specification. Generic thin fender washer is not equivalent.",
-      "vendor": "Norelem",
       "shipping_usd": null,
       "basis": "Posted price"
     },
@@ -810,20 +774,6 @@
       "goods_usd": 3.35,
       "url": "https://www.nutty.com/m16-2-00-hex-nut-cl-8-din-934-coarse-plated/",
       "notes": "Current design class 8, 24 AF x 13 mm. Keep original class 8.8 assembly capacity/torque; do not exploit the stronger replacement bolt.",
-      "vendor": "Nutty",
-      "shipping_usd": null,
-      "basis": "Posted price"
-    },
-    {
-      "id": "HW-N16",
-      "category": "Standard hardware",
-      "item": "M5 x 0.8 DIN934 class 8 full nuts",
-      "quantity": 120,
-      "unit": "each",
-      "unit_usd": 0.012,
-      "goods_usd": 1.44,
-      "url": "https://www.nutty.com/m5-0-80-hex-nut-cl-8-din-934-coarse-plated/",
-      "notes": "Exact steel class 8 replacement for prior conditional A2 offer. Two full nuts per stud; not thin DIN439 jam nuts.",
       "vendor": "Nutty",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -1220,7 +1170,6 @@
       "vendor": "Nutty",
       "ids": [
         "HW-N1",
-        "HW-N2",
         "HW-N3",
         "HW-N4",
         "HW-N5",
@@ -1233,12 +1182,11 @@
         "HW-N13",
         "HW-N14",
         "HW-N15",
-        "HW-N16",
         "HW-N17"
       ],
-      "amount_usd": 0,
+      "amount_usd": 10.95,
       "tax_usd": null,
-      "basis": "Published US48 eligible-merchandise policy; one order. Goods are above $100 and qualify for free shipping. Each line rounded to cents; checkout may round fractions of a cent differently. Stock and tax not confirmed."
+      "basis": "Published US48 eligible-merchandise policy; one order. Goods $90.37 are below the $100 free-shipping threshold, so the published $10.95 flat rate applies unless unpriced Rev G fasteners are added to this order. Each line rounded to cents; checkout may round fractions of a cent differently. Stock and tax not confirmed."
     },
     {
       "id": "SHIP-Amazon",
@@ -1415,19 +1363,8 @@
     },
     {
       "id": "SHIP-UNKNOWN-17",
-      "vendor": "Norelem",
-      "ids": [
-        "HW-W1"
-      ],
-      "amount_usd": null,
-      "tax_usd": null,
-      "basis": "Not quoted. Blank does not mean free."
-    },
-    {
-      "id": "SHIP-UNKNOWN-18",
       "vendor": "OnlineMetals",
       "ids": [
-        "MET06",
         "MET07",
         "MET08",
         "MET10",
@@ -1440,7 +1377,7 @@
       "basis": "Not quoted. Blank does not mean free."
     },
     {
-      "id": "SHIP-UNKNOWN-19",
+      "id": "SHIP-UNKNOWN-18",
       "vendor": "Pro Flow Dynamics",
       "ids": [
         "CA-29",
@@ -1454,7 +1391,7 @@
       "basis": "Not quoted. Blank does not mean free."
     },
     {
-      "id": "SHIP-UNKNOWN-20",
+      "id": "SHIP-UNKNOWN-19",
       "vendor": "SP Spareparts",
       "ids": [
         "H10"
@@ -1464,7 +1401,7 @@
       "basis": "Not quoted. Blank does not mean free."
     },
     {
-      "id": "SHIP-UNKNOWN-21",
+      "id": "SHIP-UNKNOWN-20",
       "vendor": "Shapiro Supply",
       "ids": [
         "MET14"
@@ -1474,7 +1411,7 @@
       "basis": "Not quoted. Blank does not mean free."
     },
     {
-      "id": "SHIP-UNKNOWN-22",
+      "id": "SHIP-UNKNOWN-21",
       "vendor": "Zoro",
       "ids": [
         "MET04",
@@ -1498,7 +1435,7 @@
       "id": "MET-GAP-2",
       "item": "A36 carbon steel sheet, finish3.000 mm",
       "quantity": "1",
-      "required_work": "36 x48 in. 28 original flats plus2 Ystop switch backs and1 Xstop switch back. Obtain actual3mm or enough oversize stock to finish3mm; inch1/8 is not dimensionally identical.",
+      "required_work": "36 x48 in. Rev G: 28 three-mm flats (gussets, rack gussets, hardware and seat trays, stop switch backs) pack on one sheet (revg-stock-fit.json). Obtain actual3mm or enough oversize stock to finish3mm; inch1/8 is not dimensionally identical.",
       "url": "",
       "unit_usd": null
     },
@@ -1594,7 +1531,47 @@
       "id": "MET-GAP-14",
       "item": "3/4 in MDF sheet",
       "quantity": "1",
-      "required_work": "48 x96 in. Six495x397mm spoilboards; use remainder forfour500x20mm staging bars surfaced to15mm. Do not purchase asecond MDF sheet.",
+      "required_work": "48 x 48 in half sheet (a full 48 x 96 also works). Rev G: six spoilboards 393.5 wide x 343.5/397/219.5 long (two of each), 19 mm rough skimmed to 18; all six fit a half sheet (revg-stock-fit.json). The Rev E six 495 x 397 boards and staging bars are superseded.",
+      "url": "",
+      "unit_usd": null
+    },
+    {
+      "id": "MET-GAP-15",
+      "item": "A36 plate 1/4 in, finish 6 mm",
+      "quantity": "1",
+      "required_work": "12 x12 in. Two TOOL_PARK_CRADLE (110 x 166.9) plus eight G_M8_SEAT_BOSS discs (20 dia): with the other Rev G 6 mm flats they do not fit the single MET13 24 x 48 plate. Alternative: buy the 6 mm plate as 24 x 60 or 30 x 48, which holds all 91 pieces.",
+      "url": "",
+      "unit_usd": null
+    },
+    {
+      "id": "MET-GAP-16",
+      "item": "Carbon steel sheet, finish 2.0 mm",
+      "quantity": "1",
+      "required_work": "12 x12 in. 28 Rev G rack guides (G_RACK_PANEL_GUIDE x14, G_RACK_SPOIL_GUIDE x14) fit one sheet (revg-stock-fit.json). No earlier row covered this thickness.",
+      "url": "",
+      "unit_usd": null
+    },
+    {
+      "id": "MET-GAP-17",
+      "item": "Aluminum plate or bar, 3/8 in (9.525) thick, alloy to be confirmed",
+      "quantity": "1",
+      "required_work": "12 x24 in plate, or four 3/8 x 1 x 72 in flat bars. 24 G_PANEL_TIE blanks 250 x 20 x 9.525: all fit one 12 x 24 plate, or seven per 72 in bar with the 1 in width machined to 20. The owner 12 x 12 x 3/8 piece holds about half of them only if its alloy and thickness qualify.",
+      "url": "",
+      "unit_usd": null
+    },
+    {
+      "id": "MET-GAP-18",
+      "item": "Weldable steel round bar",
+      "quantity": "1",
+      "required_work": "3/4 in diameter x36 in. Turn eight G_BEAM_COMPRESSION_SLEEVE OD18/ID9 x 66.8 and four G_FRONT_LEDGER_M8_SLEEVE OD18 x 50.8: 773.6 mm with 3 mm cuts, plus 10 mm trim.",
+      "url": "",
+      "unit_usd": null
+    },
+    {
+      "id": "MET-GAP-19",
+      "item": "Steel square tube 30 x 30 x 3 mm",
+      "quantity": "1",
+      "required_work": "400 mm or longer. Two G_RACK_PANEL_FORK, 194.2 mm each. Metric size; a US 1-1/4 x 1/8 in substitute changes the fork and needs a CAD check.",
       "url": "",
       "unit_usd": null
     },
@@ -1608,9 +1585,9 @@
     },
     {
       "id": "HW-GAP-H03",
-      "item": "Cover fasteners, storage liners and retaining hardware",
+      "item": "Rack, cover and cabinet small hardware (Rev G)",
       "quantity": "",
-      "required_work": "24 M8 x 16 screws cost $5.136 from N4; 24 M8 washers, 36 M6 weld nuts, 20 M8 weld nuts, liners and straps remain. Metals for covers/eyes already elsewhere.",
+      "required_work": "Rev G quantities from RevG-CAD/cutlist.json: 40 M8 x 16 screws are priced in N4. Still unpriced: 28 M8 flat washers 16 x 8.4 x 1.6, 28 M6 weld nuts, 4 #12-14 x 38 self-drilling cabinet screws. No M8 weld nuts (seat bosses and ledger sleeves are drilled and tapped). Positive restraint for the stored panels, boards and beams is an open design item; no straps or latches are modeled yet.",
       "url": "",
       "unit_usd": null
     },
@@ -1624,25 +1601,25 @@
     },
     {
       "id": "HW-GAP-H06",
-      "item": "M5 tie screws, 60 anchors, jam nuts and DIN 7349 heavy washers",
+      "item": "Panel tie fasteners: 72 M5x16 button screws and 72 washers (Rev G)",
       "quantity": "",
-      "required_work": "120 M5x12 screws $12.36 + 120 class 8 M5 nuts $1.44 + 60 heavy washers $39.60 = $53.40 goods before Norelem freight. Exact DIN913 M5x25 100-pack $13.82 is excluded because supplier disclaims tensile use. Select a tensile-rated stud or reviewed owner-fabricated grade-rated stud route.",
+      "required_work": "Rev G panels: twelve M5 screws per panel through the aluminum ties into bottom-slot nuts, 72 in all. Unpriced: 72 M5x16 ISO7380 button screws and 72 M5 washers 15 OD x 1.5 (fully on the 20 mm tie). The 96 DIN562 nuts are priced in N1. The Rev E N2 screws, N16 nuts and W1 washers are superseded. Tightening is not released: the slot lips carry the preload (Rev G finding BED04).",
       "url": "",
       "unit_usd": null
     },
     {
       "id": "HW-GAP-H07",
-      "item": "16 M8 beam drawdowns, nuts and compression sleeves",
+      "item": "Bed beam, seat and clamp hardware (Rev G)",
       "quantity": "",
-      "required_work": "16 M8 x 80 screws $10.848. Compression sleeves are owner cut from metal stock, labor $0. Weld nuts count with H03 exactly once.",
+      "required_work": "Rev G: eight M8x80 beam drawdowns (N5). Unpriced: four M8x20 front-seat screws (washers from H03), eight hardened 6 x 12 locator pins (G_LOCATOR_6x12; confirm fit and retention), sixteen M6x35 bridge-clamp screws with sixteen 12 mm M6 washers (the cut list has 20 M6x35 in all). Twelve compression sleeves are turned from the round-bar metal gap; seat bosses, M6 bosses and clamp spacers come from the 6 mm and 8 mm plate.",
       "url": "",
       "unit_usd": null
     },
     {
       "id": "HW-GAP-H08",
-      "item": "MDF retention, handles and ordinary work clamps",
+      "item": "Spoilboard fastening, MDF sealing and work clamps (Rev G)",
       "quantity": "",
-      "required_work": "60 M5 x 20 MDF screws $9.30. H05 already includes matching 60 square nuts. Owner-fabricated handles have $0 labor but retain raw-stock allocation. Work clamps not priced/qualified.",
+      "required_work": "Rev G: six separate spoilboards with 24 M5x20 DIN7991 screws (N3) into top-slot nuts (N1). Seal MDF edges after skimming. Ordinary T-slot work clamps are not priced or qualified.",
       "url": "",
       "unit_usd": null
     },
@@ -2055,32 +2032,32 @@
     {
       "id": "TUBE-ALT-1",
       "item": "Bobco Metals: 2 x 2 x .120 inch ASTM A500 Grade B, 20 ft",
-      "quantity": 6,
+      "quantity": 5,
       "unit_price": 97.5,
       "currency": "USD",
-      "extended": 585.0,
+      "extended": 487.5,
       "url": "https://www.bobcometal.com/hot-rolled-steel-square-tube-2-inch-x-0-12.html",
-      "reason": "Product page advertises in stock for Los Angeles pickup; six-stick inventory not confirmed. Exact-spec goods-price benchmark. FAQ $75 local truck delivery within 30 miles is not Georgia freight. Generic parcel shipping statements not applied to full lengths. Delivery to 30510 is unquoted. Existing $930.90 tube reference is not a lowest-price buying recommendation; no delivered saving adopted."
+      "reason": "Product page advertises in stock for Los Angeles pickup; six-stick inventory not confirmed. Exact-spec goods-price benchmark. FAQ $75 local truck delivery within 30 miles is not Georgia freight. Generic parcel shipping statements not applied to full lengths. Delivery to 30510 is unquoted. Existing $775.75 tube reference is not a lowest-price buying recommendation; no delivered saving adopted."
     },
     {
       "id": "TUBE-ALT-2",
       "item": "Looper's Metal Works: 2 x 2 inch, 11 gauge, 20 ft; A500 and decimal wall not published",
-      "quantity": 6,
+      "quantity": 5,
       "unit_price": 82.4,
       "currency": "USD",
-      "extended": 494.4,
+      "extended": 412.0,
       "url": "https://www.loopersmetalworks.com/metal-products/",
-      "reason": "Call for availability; prices apply to quantity on hand. Fairland OK, northeast Oklahoma/Joplin service area. Confirm A500/.120 and Georgia freight. Not adopted. Delivery to 30510 is unquoted. Existing $930.90 tube reference is not a lowest-price buying recommendation; no delivered saving adopted."
+      "reason": "Call for availability; prices apply to quantity on hand. Fairland OK, northeast Oklahoma/Joplin service area. Confirm A500/.120 and Georgia freight. Not adopted. Delivery to 30510 is unquoted. Existing $775.75 tube reference is not a lowest-price buying recommendation; no delivered saving adopted."
     },
     {
       "id": "TUBE-ALT-3",
       "item": "YAGI Pipe and Steel / McKee's Discount Steel: 2 x 2 inch, 11 gauge, 20 ft; grade and decimal wall not published",
-      "quantity": 6,
+      "quantity": 5,
       "unit_price": 66.28,
       "currency": "USD",
-      "extended": 397.68,
+      "extended": 331.4,
       "url": "https://yagipipeandsteel.com/products/2in-x-11ga-x-20ft-square-tube",
-      "reason": "Sold out / unavailable in retrieved product page. Texas pickup; freight by quote. Price lead only, not an available procurement basis. Delivery to 30510 is unquoted. Existing $930.90 tube reference is not a lowest-price buying recommendation; no delivered saving adopted."
+      "reason": "Sold out / unavailable in retrieved product page. Texas pickup; freight by quote. Price lead only, not an available procurement basis. Delivery to 30510 is unquoted. Existing $775.75 tube reference is not a lowest-price buying recommendation; no delivered saving adopted."
     },
     {
       "id": "FB-SYLVANIA",
@@ -2090,7 +2067,7 @@
       "currency": "USD",
       "extended": 575,
       "url": "https://www.facebook.com/marketplace/item/1367277908682890/",
-      "reason": "Seller advertises $115 each and 28 available; pickup in Sylvania GA. Alternate cut plan fits all 36 blanks in five bars with 3mm kerfs and 10mm total trim/bar, minimum offcut73mm. $355.90 goods difference from retail reference. Grade, actual wall (.120 versus nominal1/8), rust/coating, straightness, quantity and collection cost unverified. Conditional option only; no adopted savings."
+      "reason": "Seller advertises $115 each and 28 available; pickup in Sylvania GA. The recorded five-bar cut proof was made for the Rev E 36-blank schedule; the Rev G 30-blank schedule has not been re-proved for 24 ft bars, so the quantity shown is that superseded proof. Grade, actual wall (.120 versus nominal1/8), rust/coating, straightness, quantity and collection cost unverified. Conditional option only; no adopted savings."
     }
   ],
   "categories": [
@@ -2100,7 +2077,7 @@
     },
     {
       "category": "Router bed",
-      "goods_usd": 469.23
+      "goods_usd": 399.95
     },
     {
       "category": "Router head",
@@ -2116,15 +2093,53 @@
     },
     {
       "category": "Chassis",
-      "goods_usd": 1392.71
+      "goods_usd": 1261.46
     },
     {
       "category": "Standard hardware",
-      "goods_usd": 216.9
+      "goods_usd": 141.55
     },
     {
       "category": "Controls and water wiring",
       "goods_usd": 257.57
+    }
+  ],
+  "superseded_rev_e_offers": [
+    {
+      "id": "MET06",
+      "item": "6061-T6511 flat bar1/4 x1 x72 in; OnlineMetals1143",
+      "quantity": 4,
+      "unit_usd": 17.32,
+      "goods_usd": 69.28,
+      "url": "https://www.onlinemetals.com/en/buy/aluminum/0-25-x-1-aluminum-rectangle-bar-6061-t6511-extruded/pid/1143",
+      "reason": "Rev E cassette-tie bar. Rev G panel ties are 24 pieces 250 x 20 x 9.525 (3/8 in), which 1/4 in bar cannot make; see the 3/8 aluminum stock gap. Kept as dated price evidence only (Rev G reconciliation, 26 Sep 2026)."
+    },
+    {
+      "id": "HW-N2",
+      "item": "M5 x 12 DIN 7991 class 12.9 flat socket screw",
+      "quantity": 120,
+      "unit_usd": 0.103,
+      "goods_usd": 12.36,
+      "url": "https://www.nutty.com/m5-x-0-80-x-12-ft-flat-head-socket-cap-screws-12-9-din-7991-blk-ox/",
+      "reason": "Rev E keyhole-anchor tie screw. Rev G ties use 72 M5x16 ISO7380 button screws (unpriced, HW-GAP-H06). Kept as dated price evidence only."
+    },
+    {
+      "id": "HW-W1",
+      "item": "M5 DIN 7349 steel washer 15 OD x 5.3 ID x 2",
+      "quantity": 60,
+      "unit_usd": 0.66,
+      "goods_usd": 39.6,
+      "url": "https://www.norelemusa.com/en-us/Product-Overview/Flexible-standard-component-system/07000/Nuts-screws-washers-securing-elements/Washers-DIN-7349-for-bolts-with-heavy-duty-clamping-bodies/p/agid.28087",
+      "reason": "Rev E retaining washer. Rev G models a 1.5 mm thick 15 mm washer under each M5x16 tie screw; this 2 mm DIN 7349 part would shorten screw engagement, so it is not adopted without a stack check. Kept as dated price evidence only."
+    },
+    {
+      "id": "HW-N16",
+      "item": "M5 x 0.8 DIN934 class 8 full nuts",
+      "quantity": 120,
+      "unit_usd": 0.012,
+      "goods_usd": 1.44,
+      "url": "https://www.nutty.com/m5-0-80-hex-nut-cl-8-din-934-coarse-plated/",
+      "reason": "Rev E stud nuts. Rev G has no M5 hex nuts in the bed. Kept as dated price evidence only."
     }
   ],
   "bracket_redesign_not_adopted": {
@@ -3125,12 +3140,12 @@
     ]
   },
   "input_hashes": {
-    "controls-findings.json": "1fa775e0028736f0aed1a590b1dc35cead83f359b426fc4ada5baf97e29169ac",
-    "core-findings.json": "a3f29cebc61b51ca73344497b0b406bdca6d3876f8923d2ea4780e7fadd4f7a8",
-    "hardware-findings.json": "5c3fd8346268e5efb5d52c9cc4fae333c7442321124a8cef1bb39e9eba323315",
+    "hardware-findings.json": "18bd3bf19ef9243cef21f631d44eaa57f9c8598478198f94363b8873780db1dd",
     "marketplace-findings.json": "279e8b66e81b7bf3fbbed26e2d94db3ca69af25a4a1172e45e14a7d4b3196190",
-    "metal-findings.json": "41666a86ab3c228fd04df7a1c6a8248dbe9988d644861a32c84a40248c175fb2",
-    "tube-comparison-findings.json": "3dbc14cce5268a2ecbc170446722abe21389860053606c77141caac332a5a3bd",
-    "tube-georgia-findings.json": "a683ea857a020d304c5c02bc2b81acd790c3d7133aa788b2492dff6f7d54ee4e"
+    "core-findings.json": "413b293290bdc712932f78832344289bf3b0418ecd3a11f628aa008ed65296f6",
+    "metal-findings.json": "83a35072110834ac5da0c16f996de13c49cf975f676d29cc31ddfa1d9f3fb06f",
+    "tube-georgia-findings.json": "a683ea857a020d304c5c02bc2b81acd790c3d7133aa788b2492dff6f7d54ee4e",
+    "controls-findings.json": "1fa775e0028736f0aed1a590b1dc35cead83f359b426fc4ada5baf97e29169ac",
+    "tube-comparison-findings.json": "8a1d5339fa1865ff922e288bd1d38639cc9cea781901940709a0f21e3e05587d"
   }
 }

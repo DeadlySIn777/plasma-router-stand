@@ -1,6 +1,6 @@
 # CNC / plasma actual-price audit
 
-**Recorded priced scope: $5,734.94 goods + $75.30 known/advertised shipping = $5,810.24 USD before tax.**
+**Recorded priced scope: $5,459.06 goods + $86.25 known/advertised shipping = $5,545.31 USD before tax.**
 
 **The complete delivered build price is still unknown. This is not a purchase or manufacturing release.** The remaining required items are not included as zero-dollar purchases. The earlier $7,663.82 estimate is superseded; it contained allowances, omitted stock details and an arbitrary shipping reserve.
 
@@ -11,33 +11,43 @@ The owner performs fabrication, machining, cutting and finishing: outside-shop l
 | Priced portion | Goods, before tax |
 |---|---:|
 | Motion | $2,203.13 |
-| Router bed | $469.23 |
+| Router bed | $399.95 |
 | Router head | $309.99 |
 | Controls | $460.67 |
 | Water controls | $424.74 |
-| Chassis | $1,392.71 |
-| Standard hardware | $216.90 |
+| Chassis | $1,261.46 |
+| Standard hardware | $141.55 |
 | Controls and water wiring | $257.57 |
 
-The current workbook contains **83 priced lines**, **43 remaining scope entries** and a vendor-level shipping register. Every price is linked to a product or supplier. Line quantities are rounded to cents; seller checkout can differ by a cent on fractional-cent fasteners.
+The current register contains **79 priced lines**, **48 remaining scope entries** and a vendor-level shipping register. Every price is linked to a product or supplier. Line quantities are rounded to cents; seller checkout can differ by a cent on fractional-cent fasteners.
 
 Amazon items total **$2,204.99**, with advertised free delivery to ZIP 30510 under the recorded order conditions. This includes two 1,000 mm Y modules, one 800 mm X module, the 100 mm Z, the two HGR20 rail kits, five extrusion packs, spindle kit, power supplies, cabinet, cable chains, CB1 and listed Amazon water components. These are source prices, not proof that all mounting and electrical interfaces are finished.
 
 The [80/20 beam](https://8020.net/40-8080.html) and [16 matching M8 nuts](https://8020.net/40-3915.html) were configured together in a ZIP-30510 cart: **$193.01 goods + $61.30 UPS Ground + $17.80 estimated tax = $272.11**. The temporary cart was cleared after recording the estimate. This tax amount applies only to that cart, not to all suppliers.
 
-Nutty hardware is combined into one order above its $100 advertised free-shipping threshold. No duplicate delivery charge is added for each fastener row. Other blank freight cells remain unknown.
+Nutty hardware is combined into one order of $90.37, below its $100 free-shipping threshold, so the $10.95 flat rate is included; adding the unpriced Rev G fasteners to this order may remove it. No duplicate delivery charge is added for each fastener row. Other blank freight cells remain unknown.
+
+**Ordered by the owner:** M04 iMetrx HGR20 kit, two 1500 mm rails and four HGH20CA blocks, ordered 2026-09-26 (owner-reported); M05 iMetrx HGR20 kit, two 1200 mm rails and four HGH20CA blocks, ordered 2026-09-26 (owner-reported). Listed prices stay in this register until the price paid is recorded. See the [rail-kit receiving check](../../../output/receiving/HGR20-RAIL-KITS.md).
 
 ## Corrections to the old estimate
 
-- Recorded the owner's 12 x 12 inch aluminum pieces, provisionally one at 1/2 inch and one at 3/8 inch. The 1/2 inch piece geometrically fits the Z carrier and smaller pieces. Qualifying its alloy and usable finished thickness can avoid MET08 ($58.74), giving $5,751.50 for the current incomplete priced scope. No credit is applied before qualification, and no duplicate offcut savings are counted. See [owned aluminum allocation](OWNED-ALUMINUM-FIT.md).
-- The $930.90 square-tube line is a high retail reference, not a lowest-price buying recommendation. Bobco posts $585.00 for six matching 20-foot A500 Grade B bars, but advertises Los Angeles pickup; Georgia delivery is unquoted. Looper's and YAGI comparisons have further specification/availability limits. Nearby SteelMart Gainesville and Sabel Winder require quotations. See [tube comparisons](TUBE-PRICE-COMPARISON.md).
-- A [Sylvania Marketplace listing](https://www.facebook.com/marketplace/item/1367277908682890/) advertises 24-foot 2 x 2 tubing for $115 each. The alternate cut proof fits all 36 blanks into five bars, giving $575 goods and a $355.90 difference from the retail reference before pickup/tax/qualification. No budget substitution is adopted until actual wall/grade/condition and collection are checked. See [Marketplace findings](MARKETPLACE-TUBING.md).
+- Recorded the owner's 12 x 12 inch aluminum pieces, provisionally one at 1/2 inch and one at 3/8 inch. The 1/2 inch piece geometrically fits the Z carrier and smaller pieces. Qualifying its alloy and usable finished thickness can avoid MET08 ($58.74), giving $5,486.57 for the current incomplete priced scope. No credit is applied before qualification, and no duplicate offcut savings are counted. See [owned aluminum allocation](OWNED-ALUMINUM-FIT.md).
+- The $775.75 square-tube line is a high retail reference, not a lowest-price buying recommendation. Bobco posts $487.50 for 5 matching 20-foot A500 Grade B bars, but advertises Los Angeles pickup; Georgia delivery is unquoted. Looper's and YAGI comparisons have further specification/availability limits. Nearby SteelMart Gainesville and Sabel Winder require quotations. See [tube comparisons](TUBE-PRICE-COMPARISON.md).
+- A [Sylvania Marketplace listing](https://www.facebook.com/marketplace/item/1367277908682890/) advertises 24-foot 2 x 2 tubing for $115 each. Its recorded cut proof (five bars, $575) was made for the Rev E 36-blank schedule and has not been redone for the Rev G 30 blanks. No budget substitution is adopted until the cut proof, actual wall/grade/condition and collection are checked. See [Marketplace findings](MARKETPLACE-TUBING.md).
 - Removed the unsupported $200 decorative-skin allowance: no separate appearance panels existed in the current CAD.
-- Retained six full 20-foot chassis tubes because the cut plan needs them. One bar has no surplus beyond its modeled kerfs and trim; do not assume undersize or damaged stock will fit.
+- Buy 5 full 20-foot chassis tubes for the 30 Rev G blanks in RevG-CAD/tube-cut-plan.json. The smallest bar remainder beyond modeled kerfs and trim is 6 mm; do not assume undersize or damaged stock will fit.
 - Kept two 4 × 8 sheets for the .120-inch water assembly. The stale third nesting DXF is excluded from the current package.
 - Replaced the $150 adapter-stock allowance with explicit raw-stock purchases. The unchanged billet geometry requires $813.33 of sourced aluminum stock before freight. The old allowance understated this cost. An equivalent OnlineMetals 2 x 2 x 12 inch blank replaces the prior BuyMetal source and reduces goods cost by $31.35 without a geometry change.
 - Counted fabricated plugs, supports and clamps as raw stock plus owner work. No shop labor is added a second time.
 - Kept price evidence separate from compatibility. Backorders, timer contact checks, hose restrictions and unresolved interfaces are visible rather than being assumed complete.
+
+## Rev G reconciliation, 26 September 2026
+
+Quantities were reconciled with the Rev G cut list (`output/release-review/RevG-CAD/cutlist.json`). 4 offers that only served the superseded Rev E bed are kept as dated evidence in `audit-data.json` (`superseded_rev_e_offers`) and are no longer priced: MET06 $69.28, HW-N2 $12.36, HW-W1 $39.60, HW-N16 $1.44. MET01 is five 20 ft tubes (30 Rev G blanks), MET02 three 8 ft bars (the controls cage raised the 1 x 1 tube list to 7,730 mm), square nuts 96, spoilboard screws 25 and M8x80 drawdowns 10 (Nutty minimums).
+
+`check_revg_stock_fit.py` packs the actual Rev G flat parts onto each registered sheet and plate size (`revg-stock-fit.json`). Every existing row covers its parts except the 6 mm plate, where two tool cradles do not fit; the 3/4 in MDF spoilboards now need only a half sheet. Two thicknesses had no row at all: 2 mm steel rack guides and 3/8 in aluminum panel ties. Those, the extra 6 mm plate, the sleeve round bar and the 30 x 30 x 3 rack-fork tube are listed as remaining scope, as are the Rev G screws, washers and locator pins without an offer. The lower subtotal is therefore NOT a cheaper Rev G build.
+
+**The Excel workbook has not been regenerated.** `build_budget.mjs` needs the private `@oai/artifact-tool` runtime, which is not in this repository. Until it is rebuilt, `budget-data.json`, `audit-data.json` and this page are current; the workbook still shows Rev E quantities.
 
 ## Cost reductions requiring an engineering revision
 

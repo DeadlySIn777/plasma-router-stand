@@ -20,14 +20,14 @@
       "vendor": "Nutty",
       "sku": "XMSQNT5",
       "item": "M5 x 0.8 DIN 562 thin square nut",
-      "required": 240,
-      "buy_quantity": 260,
+      "required": 96,
+      "buy_quantity": 96,
       "pack_size": 1,
       "minimum_order": null,
       "unit_usd": 0.076,
-      "goods_usd": 19.76,
+      "goods_usd": 7.296,
       "shipping_group": "Nutty",
-      "compatibility": "Current design: receive-check 8 x 8 x 2.7 mm maximum.",
+      "compatibility": "Current design: receive-check 8 x 8 x 2.7 mm maximum. Rev G: 72 panel-tie nuts + 24 spoilboard nuts (was 240/260 for the Rev E keyhole anchors).",
       "url": "https://www.nutty.com/m5-x-8-stainless-metric-square-nut-thin/",
       "accepted_current_design": true
     },
@@ -46,7 +46,8 @@
       "shipping_group": "Nutty",
       "compatibility": "Current dimensional fit; retain specified assembly torque, do not raise torque to class 12.9 capability.",
       "url": "https://www.nutty.com/m5-x-0-80-x-12-ft-flat-head-socket-cap-screws-12-9-din-7991-blk-ox/",
-      "accepted_current_design": true
+      "accepted_current_design": false,
+      "superseded_by_rev_g": "Rev E keyhole-anchor tie screw. Rev G ties use 72 M5x16 ISO7380 button screws (unpriced, HW-GAP-H06). Kept as dated price evidence only."
     },
     {
       "id": "N3",
@@ -54,14 +55,14 @@
       "vendor": "Nutty",
       "sku": "MFSC520",
       "item": "M5 x 20 DIN 7991 class 12.9 MDF screws",
-      "required": 60,
-      "buy_quantity": 60,
+      "required": 24,
+      "buy_quantity": 25,
       "pack_size": 1,
       "minimum_order": 25,
       "unit_usd": 0.155,
-      "goods_usd": 9.3,
+      "goods_usd": 3.875,
       "shipping_group": "Nutty",
-      "compatibility": "Current dimensional fit. Square nuts already in H05.",
+      "compatibility": "Rev G: 24 M5x20 DIN7991 spoilboard screws into top-slot nuts; buy 25 to meet the Nutty minimum order. Square nuts are in N1.",
       "url": "https://www.nutty.com/m5-x-0-80-x-20-ft-flat-head-socket-cap-screws-12-9-din-7991-blk-ox/",
       "accepted_current_design": true
     },
@@ -88,14 +89,14 @@
       "vendor": "Nutty",
       "sku": "MSHC880",
       "item": "M8 x 80 DIN 912 class 12.9 beam drawdown screws",
-      "required": 16,
-      "buy_quantity": 16,
+      "required": 8,
+      "buy_quantity": 10,
       "pack_size": 1,
       "minimum_order": 10,
       "unit_usd": 0.678,
-      "goods_usd": 10.848,
+      "goods_usd": 6.78,
       "shipping_group": "Nutty",
-      "compatibility": "Current geometry; standard partial thread runs through tube sleeve and engages nut at end. Do not increase design torque.",
+      "compatibility": "Rev G: eight M8x80 beam drawdowns through the beam compression sleeves (STD_M8x80_SOCKET x8); buy 10 to meet the Nutty minimum order. Do not increase design torque.",
       "url": "https://www.nutty.com/m8-x-1-25-x-80-socket-head-cap-screw-12-9-din-912-blk-ox/",
       "accepted_current_design": true
     },
@@ -131,7 +132,8 @@
       "shipping_usd": null,
       "compatibility": "Exact selected size/material offer; confirm order-level hardness certification per retaining-joint specification. Generic thin fender washer is not equivalent.",
       "url": "https://www.norelemusa.com/en-us/Product-Overview/Flexible-standard-component-system/07000/Nuts-screws-washers-securing-elements/Washers-DIN-7349-for-bolts-with-heavy-duty-clamping-bodies/p/agid.28087",
-      "accepted_current_design": false
+      "accepted_current_design": false,
+      "superseded_by_rev_g": "Rev E retaining washer. Rev G models a 1.5 mm thick 15 mm washer under each M5x16 tie screw; this 2 mm DIN 7349 part would shorten screw engagement, so it is not adopted without a stack check. Kept as dated price evidence only."
     },
     {
       "id": "T1",
@@ -432,7 +434,8 @@
       "compatibility": "Exact steel class 8 replacement for prior conditional A2 offer. Two full nuts per stud; not thin DIN439 jam nuts.",
       "url": "https://www.nutty.com/m5-0-80-hex-nut-cl-8-din-934-coarse-plated/",
       "shipping_group": "Nutty",
-      "accepted_current_design": true
+      "accepted_current_design": false,
+      "superseded_by_rev_g": "Rev E stud nuts. Rev G has no M5 hex nuts in the bed. Kept as dated price evidence only."
     },
     {
       "id": "N17",
@@ -541,8 +544,9 @@
     {
       "budget_id": "H03",
       "current_usd": 75,
-      "status": "Partial priced",
-      "finding": "24 M8 x 16 screws cost $5.136 from N4; 24 M8 washers, 36 M6 weld nuts, 20 M8 weld nuts, liners and straps remain. Metals for covers/eyes already elsewhere."
+      "status": "Partial priced; Rev G scope",
+      "finding": "Rev G quantities from RevG-CAD/cutlist.json: 40 M8 x 16 screws are priced in N4. Still unpriced: 28 M8 flat washers 16 x 8.4 x 1.6, 28 M6 weld nuts, 4 #12-14 x 38 self-drilling cabinet screws. No M8 weld nuts (seat bosses and ledger sleeves are drilled and tapped). Positive restraint for the stored panels, boards and beams is an open design item; no straps or latches are modeled yet.",
+      "item": "Rack, cover and cabinet small hardware (Rev G)"
     },
     {
       "budget_id": "H04",
@@ -554,25 +558,28 @@
       "budget_id": "H05",
       "current_usd": 30.71,
       "status": "Goods priced; combined free shipment",
-      "finding": "260 square nuts $19.76. Consolidated Nutty basket now qualifies for advertised free ground shipping; remove old separate $10.95 shipping allocation."
+      "finding": "Rev G: 96 square nuts $7.30 (72 panel ties + 24 spoilboards). Whether the Nutty basket reaches the free-shipping threshold is computed by assemble_audit.py."
     },
     {
       "budget_id": "H06",
       "current_usd": 80,
-      "status": "Nuts/screws/washers priced; tensile stud unresolved",
-      "finding": "120 M5x12 screws $12.36 + 120 class 8 M5 nuts $1.44 + 60 heavy washers $39.60 = $53.40 goods before Norelem freight. Exact DIN913 M5x25 100-pack $13.82 is excluded because supplier disclaims tensile use. Select a tensile-rated stud or reviewed owner-fabricated grade-rated stud route."
+      "status": "Rev E hardware superseded; Rev G screws and washers unpriced",
+      "finding": "Rev G panels: twelve M5 screws per panel through the aluminum ties into bottom-slot nuts, 72 in all. Unpriced: 72 M5x16 ISO7380 button screws and 72 M5 washers 15 OD x 1.5 (fully on the 20 mm tie). The 96 DIN562 nuts are priced in N1. The Rev E N2 screws, N16 nuts and W1 washers are superseded. Tightening is not released: the slot lips carry the preload (Rev G finding BED04).",
+      "item": "Panel tie fasteners: 72 M5x16 button screws and 72 washers (Rev G)"
     },
     {
       "budget_id": "H07",
       "current_usd": 45,
-      "status": "Partial priced",
-      "finding": "16 M8 x 80 screws $10.848. Compression sleeves are owner cut from metal stock, labor $0. Weld nuts count with H03 exactly once."
+      "status": "Partly priced (N5); rest unpriced",
+      "finding": "Rev G: eight M8x80 beam drawdowns (N5). Unpriced: four M8x20 front-seat screws (washers from H03), eight hardened 6 x 12 locator pins (G_LOCATOR_6x12; confirm fit and retention), sixteen M6x35 bridge-clamp screws with sixteen 12 mm M6 washers (the cut list has 20 M6x35 in all). Twelve compression sleeves are turned from the round-bar metal gap; seat bosses, M6 bosses and clamp spacers come from the 6 mm and 8 mm plate.",
+      "item": "Bed beam, seat and clamp hardware (Rev G)"
     },
     {
       "budget_id": "H08",
       "current_usd": 70,
-      "status": "Partial priced",
-      "finding": "60 M5 x 20 MDF screws $9.30. H05 already includes matching 60 square nuts. Owner-fabricated handles have $0 labor but retain raw-stock allocation. Work clamps not priced/qualified."
+      "status": "Screws priced (N3); rest unpriced",
+      "finding": "Rev G: six separate spoilboards with 24 M5x20 DIN7991 screws (N3) into top-slot nuts (N1). Seal MDF edges after skimming. Ordinary T-slot work clamps are not priced or qualified.",
+      "item": "Spoilboard fastening, MDF sealing and work clamps (Rev G)"
     },
     {
       "budget_id": "H09",
