@@ -489,7 +489,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461310.1939699072
+2461310.8727314817
   9
 $TDUCREATE
  40
@@ -497,7 +497,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461310.1939699072
+2461310.8727314817
   9
 $TDUUPDATE
  40
@@ -549,7 +549,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-36
+3A
   9
 $SURFTAB1
  70
@@ -929,11 +929,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{ADEA15BF-2043-48E2-B3B4-7E02BF5345C7}
+{007CB3EC-DD4F-4C96-B4CA-4851C9D19162}
   9
 $VERSIONGUID
   2
-{8BB76172-06B4-46DC-A73F-0C4CB61CA681}
+{EEE7EF59-A102-4968-A887-2EC8ADAB86CA}
   9
 $EXTNAMES
 290
@@ -1549,7 +1549,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-5
+6
   0
 LAYER
   5
@@ -1673,6 +1673,30 @@ Continuous
 347
 21
   0
+LAYER
+  5
+35
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+MACHINING_NOTES
+ 70
+0
+ 62
+7
+  6
+Continuous
+370
+-3
+390
+13
+347
+21
+  0
 ENDTAB
   0
 TABLE
@@ -1773,7 +1797,7 @@ ACAD
   0
 APPID
   5
-33
+37
 330
 3
 100
@@ -1787,7 +1811,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-34
+38
 330
 3
 100
@@ -2115,17 +2139,83 @@ AcDbPolyline
  20
 0.0
  10
-120.0
+45.0
  20
 0.0
  10
-120.0
+45.0
  20
-20.0
+60.0
  10
 0.0
  20
+60.0
+  0
+CIRCLE
+  5
+33
+330
+17
+100
+AcDbEntity
+  8
+CUT_HOLES
+100
+AcDbCircle
+ 10
+32.400000000000006
+ 20
 20.0
+ 30
+0.0
+ 40
+5.5
+  0
+CIRCLE
+  5
+34
+330
+17
+100
+AcDbEntity
+  8
+CUT_HOLES
+100
+AcDbCircle
+ 10
+32.400000000000006
+ 20
+47.0
+ 30
+0.0
+ 40
+5.025
+  0
+MTEXT
+  5
+36
+330
+17
+100
+AcDbEntity
+  8
+MACHINING_NOTES
+100
+AcDbMText
+ 10
+65.0
+ 20
+60.0
+ 30
+0.0
+ 40
+3.0
+ 41
+150.0
+ 71
+1
+  1
+Face top after welding; the six pad tops define the bed seating plane.\PØ11 clearance hole concentric with the ledger sleeve below.\PFront pads: ream the pin hole/slot to the measured Ø10 pin plus 0.05 mm.
   0
 ENDSEC
   0
@@ -3117,7 +3207,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-35
+39
   0
 DICTIONARYVAR
   5
@@ -3129,11 +3219,11 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-09-26T04:39:19.353613+00:00
+1.4.4 @ 2026-09-26T20:56:44.363167+00:00
   0
 DICTIONARYVAR
   5
-35
+39
 330
 2D
 100
@@ -3141,7 +3231,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-09-26T04:39:19.354782+00:00
+1.4.4 @ 2026-09-26T20:56:44.365231+00:00
   0
 ENDSEC
   0

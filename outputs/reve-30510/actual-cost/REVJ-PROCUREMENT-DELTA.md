@@ -1,6 +1,8 @@
-# GM1 Rev J — what the one-piece bed changes in the shopping list
+# GM1 Rev J — what the one-piece bed and the Rev H water work change in the shopping list
 
-Computed from the two CAD cut lists (`revj_procurement_delta.py` → `revj-procurement-delta.json`), the two 2 × 2 tube plans and the stock-fit check (`check_revg_stock_fit.py --cad RevJ-CAD`). The design is in [RevJ-CAD](../../../output/release-review/RevJ-CAD/README.md). Only the bed, its receiver and the bed storage change. Frame, water system, motion and controls are the same as Rev G.
+Computed from the two CAD cut lists (`revj_procurement_delta.py` → `revj-procurement-delta.json`), the two 2 × 2 tube plans and the stock-fit check (`check_revg_stock_fit.py --cad RevJ-CAD`). The design is in [RevJ-CAD](../../../output/release-review/RevJ-CAD/README.md). Compared with Rev G, the bed, its receiver and the bed storage change. So does the water service taken from the base branch's Rev H: reservoir hatches, washout closure, drain reserves and a refill spout moved clear of the module. The Z adapter becomes a transfer-drill blank. Frame, water table, motion and controls are otherwise the same as Rev G.
+
+This design was first published on this branch as "Rev H". It was renamed Rev J on 26 September 2026 because the base branch's Rev H is a different design, the six-panel bed; that Rev H is not priced here.
 
 ## No longer needed (Rev G bed)
 
@@ -40,15 +42,32 @@ Computed from the two CAD cut lists (`revj_procurement_delta.py` → `revj-procu
 | Ø10 × 56 hardened stainless dowel pins | 2 | locating pins |
 | Hot-dip galvanizing of the module weldment | about 32 kg of steel | galvanizer's minimum lot charge usually governs |
 
+## New for Rev J from the base branch's Rev H water service and Z adapter
+
+| What | Quantity | Stock or purchase |
+|---|---:|---|
+| Hatch covers, .120 steel, 360 × 215 and 310 × 140 | 2 | MET-GAP-1 .120 sheet (covered: 2 sheets of 48 × 96 with everything else) |
+| Cover parking pockets and pull tabs, 3 mm steel | 16 + 2 | MET-GAP-2 3 mm sheet (covered) |
+| Washout flange Ø90 × 6 and refill gusset 45 × 60 × 6 | 1 + 1 | MET13 1/4 × 24 × 48 in (covered with the other 38 six-mm parts) |
+| Washout cover Ø90 × 4 mm | 1 | **MET-GAP-24**: 4 mm plate, 6 × 6 in (new) |
+| Refill spout, NPS 1/2 schedule 40, three mitered pieces | 1 | **MET-GAP-25**: 18 in threaded-one-end nipple or cut length (new) |
+| Hatch gaskets 360 × 215 and 310 × 140, washout gasket Ø90, 2 mm EPDM | 3 | From the 906 × 606 mm centre offcut of the reservoir gasket sheet, MET-GAP-13 (covered) |
+| M5 weld nuts and M5 × 16 socket screws (hatches) | 12 + 12 | unpriced, in HW-GAP-H03 |
+| M6 × 25 socket screws, M6 washers, M6 nyloc nuts (washout cover) | 4 + 4 + 4 | unpriced, in HW-GAP-H03 |
+| Drain reducer, valve and union reserves; refill hose connection reserve | space only | purchased plumbing still to select; no fittings are invented |
+| Z adapter, 110 × 110 × 12.7 aluminum | 1 | same blank as before, now an undrilled transfer blank (H_TOOL_ADAPTER_TRANSFER_BLANK) |
+| Braked Z-motor candidate 23HS30-5004D-B280 | 0 for now | the model reserves its envelope in place of the stock ZBX80 motor; **not a purchase** until the ZBX80 shaft, pilot and coupling are measured (HW-GAP-R05) |
+
 Owner scope, not in the register: overhead beam, trolley and hoist; 4-leg sling; four 3/8 in screw-pin shackles; module stand or cart.
 
 ## Effect on the priced register
 
-The priced register ([REAL-COST.md](REAL-COST.md)) was re-baselined to Rev J on 26 September 2026. It showed **$5,334.09** priced then; with the owner-reported $82 for the 1,200 mm rail kit it is **$5,336.10** ($5,249.85 goods + $86.25 known shipping), with 73 priced lines and 49 unpriced entries; before the re-baseline it showed $5,348.40.
+The priced register ([REAL-COST.md](REAL-COST.md)) was re-baselined to Rev J on 26 September 2026. It showed **$5,334.09** priced then; with the owner-reported $82 for the 1,200 mm rail kit it is **$5,336.10** ($5,249.85 goods + $86.25 known shipping), with 73 priced lines. Before the re-baseline it showed $5,348.40. The Rev H water-service rows raise the unpriced entries from 49 to 51 and leave the priced total unchanged.
 
 - **B01** stays at five two-packs.
 - **N1** is 48 stainless square nuts ($3.65).
 - **N3** (MDF screws) and **N5** (M8 × 80 drawdowns) are superseded, as are MET-GAP-14, 15, 16, 17 and 19 (MDF, extra 1/4 in plate, 2 mm sheet, aluminum ties, rack tube).
-- **New unpriced rows:** MET-GAP-20 HDPE, MET-GAP-21 stainless 3 mm, MET-GAP-22 3/8 × 4 in bar, MET-GAP-23 8 ft of 2 × 2 tube, J-GALV galvanizing. HW-GAP-H06/H07/H08 now describe the Rev J stainless module hardware.
+- **New unpriced rows:** MET-GAP-20 HDPE, MET-GAP-21 stainless 3 mm, MET-GAP-22 3/8 × 4 in bar, MET-GAP-23 8 ft of 2 × 2 tube, MET-GAP-24 4 mm plate, MET-GAP-25 1/2 in pipe, J-GALV galvanizing. HW-GAP-H06/H07/H08 describe the Rev J stainless module hardware; HW-GAP-H03 now includes the hatch and washout fasteners, and HW-GAP-R05 the braked-motor candidate.
+- **2 × 2 tube:** the owner is looking for it at a scrapyard. The Rev J list of 32 blanks is in the [package README](../../../output/release-review/RevJ-CAD/README.md#2--2-tube-for-the-scrapyard). MET01 and MET-GAP-23 price new stock only.
 
 The lower total is **not a cheaper build**: the new Rev J items are still unpriced. The Nutty order ($76.06) stays below its $100 free-shipping threshold unless the Rev J stainless fasteners are bought there too.

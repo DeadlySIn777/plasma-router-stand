@@ -489,7 +489,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461310.193958333
+2461310.8727546297
   9
 $TDUCREATE
  40
@@ -497,7 +497,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461310.193958333
+2461310.8727546297
   9
 $TDUUPDATE
  40
@@ -549,7 +549,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-3A
+3D
   9
 $SURFTAB1
  70
@@ -929,11 +929,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{9968CDF2-27E7-475E-B864-ECD238F7C1A0}
+{8182AD21-3D65-42D1-B8FF-842E1E7AC4B3}
   9
 $VERSIONGUID
   2
-{06E4DF29-6A4B-4F26-AFB9-D6F503B10819}
+{6C7AA309-9051-4E3C-9BC3-BB032D6D01EE}
   9
 $EXTNAMES
 290
@@ -1549,7 +1549,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-6
+5
   0
 LAYER
   5
@@ -1673,30 +1673,6 @@ Continuous
 347
 21
   0
-LAYER
-  5
-35
-330
-1
-100
-AcDbSymbolTableRecord
-100
-AcDbLayerTableRecord
-  2
-MACHINING_NOTES
- 70
-0
- 62
-7
-  6
-Continuous
-370
--3
-390
-13
-347
-21
-  0
 ENDTAB
   0
 TABLE
@@ -1797,7 +1773,7 @@ ACAD
   0
 APPID
   5
-37
+3A
 330
 3
 100
@@ -1811,7 +1787,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-38
+3B
 330
 3
 100
@@ -2139,17 +2115,17 @@ AcDbPolyline
  20
 0.0
  10
-45.0
+310.0
  20
 0.0
  10
-45.0
+310.0
  20
-60.0
+140.0
  10
 0.0
  20
-60.0
+140.0
   0
 CIRCLE
   5
@@ -2163,15 +2139,15 @@ CUT_HOLES
 100
 AcDbCircle
  10
-12.599999999999909
+10.0
  20
-20.0
+10.0
  30
 0.0
  40
-5.5
+2.75
   0
-LWPOLYLINE
+CIRCLE
   5
 34
 330
@@ -2181,33 +2157,37 @@ AcDbEntity
   8
 CUT_HOLES
 100
-AcDbPolyline
- 90
-4
- 70
-1
+AcDbCircle
  10
-9.62499999999991
+155.0
  20
-41.975
- 10
-15.574999999999909
- 20
-41.975
- 42
-1.0
- 10
-15.574999999999909
- 20
-52.025
- 10
-9.62499999999991
- 20
-52.025
- 42
-1.0
+10.0
+ 30
+0.0
+ 40
+2.75
   0
-MTEXT
+CIRCLE
+  5
+35
+330
+17
+100
+AcDbEntity
+  8
+CUT_HOLES
+100
+AcDbCircle
+ 10
+300.0
+ 20
+10.0
+ 30
+0.0
+ 40
+2.75
+  0
+CIRCLE
   5
 36
 330
@@ -2215,23 +2195,89 @@ MTEXT
 100
 AcDbEntity
   8
-MACHINING_NOTES
+CUT_HOLES
 100
-AcDbMText
+AcDbCircle
  10
-65.0
+10.0
  20
-60.0
+130.0
  30
 0.0
  40
-3.0
- 41
-150.0
- 71
+2.75
+  0
+CIRCLE
+  5
+37
+330
+17
+100
+AcDbEntity
+  8
+CUT_HOLES
+100
+AcDbCircle
+ 10
+155.0
+ 20
+130.0
+ 30
+0.0
+ 40
+2.75
+  0
+CIRCLE
+  5
+38
+330
+17
+100
+AcDbEntity
+  8
+CUT_HOLES
+100
+AcDbCircle
+ 10
+300.0
+ 20
+130.0
+ 30
+0.0
+ 40
+2.75
+  0
+LWPOLYLINE
+  5
+39
+330
+17
+100
+AcDbEntity
+  8
+CUT_INNER
+100
+AcDbPolyline
+ 90
+4
+ 70
 1
-  1
-Face top after welding; the six pad tops define the bed seating plane.\PØ11 clearance hole concentric with the ledger sleeve below.\PFront pads: ream the pin hole/slot to the measured Ø10 pin plus 0.05 mm.
+ 10
+20.0
+ 20
+20.0
+ 10
+290.0
+ 20
+20.0
+ 10
+290.0
+ 20
+120.0
+ 10
+20.0
+ 20
+120.0
   0
 ENDSEC
   0
@@ -3223,7 +3269,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-39
+3C
   0
 DICTIONARYVAR
   5
@@ -3235,11 +3281,11 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-09-26T04:39:18.489389+00:00
+1.4.4 @ 2026-09-26T20:56:46.676972+00:00
   0
 DICTIONARYVAR
   5
-39
+3C
 330
 2D
 100
@@ -3247,7 +3293,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-09-26T04:39:18.490785+00:00
+1.4.4 @ 2026-09-26T20:56:46.678761+00:00
   0
 ENDSEC
   0

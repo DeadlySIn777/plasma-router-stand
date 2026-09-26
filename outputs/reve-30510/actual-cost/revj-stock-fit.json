@@ -1,6 +1,6 @@
 {
   "cad_package": "RevJ-CAD",
-  "source_cutlist_sha256": "3dab42f5113e4707d63060c176d45a638f848896d1380b3f903fc9f20a38e941",
+  "source_cutlist_sha256": "71ff3e120d8edf4674d33dd171e223bfee9307355923a4fce53d4a0a69a672ce",
   "packer": "nest_flat_parts.pack, 10 mm edge, 6 mm spacing, rectangular DXF extents",
   "groups": [
     {
@@ -112,15 +112,19 @@
       "thickness_mm": 3,
       "row": "MET-GAP-2",
       "register_quantity": 1,
-      "parts": 10,
+      "parts": 28,
       "part_numbers": [
         "FB_REAR_GUSSET_HIGH",
         "FB_REAR_GUSSET_LOW",
         "FB_TRIANGLE_160_-1",
-        "FB_TRIANGLE_160_1"
+        "FB_TRIANGLE_160_1",
+        "H_WT_PARK_END",
+        "H_WT_PARK_FACE",
+        "H_WT_PARK_FLOOR",
+        "H_WT_PULL_TAB"
       ],
       "placed_from_model_bounds": [],
-      "blank_area_m2": 0.256,
+      "blank_area_m2": 0.2735,
       "options": [
         {
           "stock_in": [
@@ -137,13 +141,15 @@
       "thickness_mm": 3.048,
       "row": "MET-GAP-1",
       "register_quantity": 2,
-      "parts": 55,
+      "parts": 57,
       "part_numbers": [
         "CAB_CAP_TAB_LEFT",
         "CAB_CAP_TAB_RIGHT",
         "HW_BOLT_BIN_END",
         "HW_BOLT_BIN_FLOOR",
         "HW_BOLT_BIN_SIDE",
+        "H_WT_CLARIFIED_COVER",
+        "H_WT_SETTLING_COVER",
         "MOD_RAIL_CAP",
         "PUMP_TRAY",
         "SAND_ENDCAP_2IN",
@@ -161,7 +167,7 @@
         "WT_SIDE"
       ],
       "placed_from_model_bounds": [],
-      "blank_area_m2": 4.8549,
+      "blank_area_m2": 4.9757,
       "options": [
         {
           "stock_in": [
@@ -175,15 +181,47 @@
     },
     {
       "material": "carbon_steel",
+      "thickness_mm": 4,
+      "row": "MET-GAP-24",
+      "register_quantity": 1,
+      "parts": 1,
+      "part_numbers": [
+        "H_WT_WASHOUT_COVER"
+      ],
+      "placed_from_model_bounds": [],
+      "blank_area_m2": 0.0081,
+      "options": [
+        {
+          "stock_in": [
+            6,
+            6
+          ],
+          "pieces_needed": 1
+        },
+        {
+          "stock_in": [
+            12,
+            12
+          ],
+          "pieces_needed": 1
+        }
+      ],
+      "result": "COVERED",
+      "note": "Rev H washout cover, \u00d890 x 4 mm, carried into Rev J."
+    },
+    {
+      "material": "carbon_steel",
       "thickness_mm": 6,
       "row": "MET13",
       "register_quantity": 1,
-      "parts": 38,
+      "parts": 40,
       "part_numbers": [
         "FT_LEG_CLOSURE",
+        "H_WT_WASHOUT_FLANGE",
         "J_PAD_FRONT_ROUND",
         "J_PAD_FRONT_SLOT",
         "J_PAD_PLAIN",
+        "J_REFILL_GUSSET",
         "MOD_XM_END_PLATE",
         "TOOL_PARK_CRADLE",
         "WP_COMB",
@@ -205,7 +243,7 @@
       "placed_from_model_bounds": [
         "TOOL_PARK_CRADLE"
       ],
-      "blank_area_m2": 0.3825,
+      "blank_area_m2": 0.3933,
       "options": [
         {
           "stock_in": [

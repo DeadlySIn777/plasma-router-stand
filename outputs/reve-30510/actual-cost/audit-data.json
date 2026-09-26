@@ -4,7 +4,7 @@
     "currency": "USD",
     "destination": "Alto GA30510",
     "status": "PARTIAL PRICE AUDIT \u2014 COMPLETE BUILD TOTAL UNRESOLVED",
-    "design_revision": "GM1 Rev J working design (bed re-baselined 26 Sep 2026)",
+    "design_revision": "GM1 Rev J working design: one-piece bed module with the Rev H water service and Z adapter (26 Sep 2026)",
     "goods_subtotal_usd": 5249.85,
     "known_shipping_subtotal_usd": 86.25,
     "priced_scope_before_tax_usd": 5336.1,
@@ -13,7 +13,7 @@
     "purchase_release": false,
     "owner_fabrication_labor_usd": 0,
     "priced_rows": 73,
-    "unpriced_scope_rows": 49,
+    "unpriced_scope_rows": 51,
     "unquoted_vendor_shipping_groups": 15,
     "prior_estimate_with_owner_labor_usd": 7663.82,
     "unsupported_skin_allowance_removed_usd": 200,
@@ -21,9 +21,7 @@
     "reason": "The old estimate underpriced raw billets and omitted exact small-stock purchases; its remaining allowances and shipping reserve cannot be called actual cost.",
     "orders_placed_by_agent": 0,
     "owner_reported_orders": [
-      "M01",
-      "M02",
-      "M03"
+      "M02"
     ],
     "quoted_8020_order_including_estimated_tax_usd": 272.11,
     "exclusions": [
@@ -49,7 +47,7 @@
       "vendor": "Amazon",
       "shipping_usd": 0,
       "basis": "Live offer 24 Sep",
-      "owner_order_status": "ordered 2026-09-26 (owner-confirmed from the shared spec sheets; quantity to confirm)"
+      "owner_order_status": "to be ordered Monday 28 Sep 2026 (owner's other session, recorded on the base branch 26 Sep); this session had recorded it as ordered on 26 Sep, so confirm"
     },
     {
       "id": "M02",
@@ -64,7 +62,7 @@
       "vendor": "Amazon",
       "shipping_usd": 0,
       "basis": "Live offer 24 Sep",
-      "owner_order_status": "ordered 2026-09-26 (owner-confirmed from the shared spec sheets; quantity to confirm)"
+      "owner_order_status": "ordered and on the way (owner, 26 Sep 2026; also recorded on the base branch by the owner's other session); two, one per Y side, to confirm on receipt"
     },
     {
       "id": "M03",
@@ -79,7 +77,7 @@
       "vendor": "Amazon",
       "shipping_usd": 0,
       "basis": "Live offer 24 Sep",
-      "owner_order_status": "ordered 2026-09-26 (owner-confirmed from the shared spec sheets; quantity to confirm)"
+      "owner_order_status": "to be ordered Monday 28 Sep 2026 (owner's other session, recorded on the base branch 26 Sep); this session had recorded it as ordered on 26 Sep, so confirm"
     },
     {
       "id": "M04",
@@ -1418,7 +1416,7 @@
       "id": "MET-GAP-13",
       "item": "EPDM gasket sheet",
       "quantity": "1",
-      "required_work": "2mm thick, at least986.096x686.096mm raw. One-piece966.096x666.096 mm reservoirgasket with10mm cuttingmargin. Any strips/splices are adesignchange.",
+      "required_work": "2mm thick, at least986.096x686.096mm raw. One-piece966.096x666.096 mm reservoirgasket with10mm cuttingmargin. Any strips/splices are adesignchange. Rev J (from the base branch Rev H): the two hatch gaskets (360 x 215 and 310 x 140 frames) and the \u00d890 washout gasket knife-cut from the 906 x 606 mm centre offcut of this gasket, so this one sheet covers all four.",
       "url": "",
       "unit_usd": null
     },
@@ -1463,6 +1461,22 @@
       "unit_usd": null
     },
     {
+      "id": "MET-GAP-24",
+      "item": "A36 steel plate 4 mm (5/32 in)",
+      "quantity": "1",
+      "required_work": "6 x 6 in. Rev J, from the base branch Rev H: H_WT_WASHOUT_COVER, a \u00d890 x 4 mm flat blank with four 6.6 mm holes on a 70 mm pitch circle, closing the emptied-tank washout flange.",
+      "url": "",
+      "unit_usd": null
+    },
+    {
+      "id": "MET-GAP-25",
+      "item": "NPS 1/2 schedule 40 black steel pipe, one end threaded 1/2 NPT",
+      "quantity": "1",
+      "required_work": "18 in (457 mm) nipple or cut length. Rev J refill spout J_REFILL_MITER_SPOUT: three mitered pieces, long-point blanks 230.65 + 61.3 + 30.65 mm (322.6 mm) plus saw cuts and dressing. The riser keeps the threaded end, at Z665 under the pan, for a receipt-fit hose adapter.",
+      "url": "",
+      "unit_usd": null
+    },
+    {
       "id": "HW-GAP-H02",
       "item": "Sand-port plugs and seals",
       "quantity": "",
@@ -1474,7 +1488,7 @@
       "id": "HW-GAP-H03",
       "item": "Cover and cabinet small hardware (Rev J)",
       "quantity": "",
-      "required_work": "Rev J quantities from RevJ-CAD/cutlist.json: 40 M8 x 16 screws are priced in N4. Still unpriced: 24 M8 flat washers 16 x 8.4 x 1.6, 28 M6 weld nuts and 4 #12-14 x 38 self-drilling cabinet screws. Rev J has no bed storage racks; the removed drawdowns go in the stainless bolt tray (MET-GAP-21).",
+      "required_work": "Rev J quantities from RevJ-CAD/cutlist.json: 40 M8 x 16 screws are priced in N4. Still unpriced: 24 M8 flat washers 16 x 8.4 x 1.6, 28 M6 weld nuts and 4 #12-14 x 38 self-drilling cabinet screws. Rev J has no bed storage racks; the removed drawdowns go in the stainless bolt tray (MET-GAP-21). Rev J also carries the base branch Rev H water-service fasteners, unpriced: 12 M5 weld nuts and 12 M5 x 16 socket screws for the two reservoir hatches, and 4 M6 x 25 socket screws with 4 M6 washers and 4 M6 nyloc nuts for the washout cover.",
       "url": "",
       "unit_usd": null
     },
@@ -1546,7 +1560,7 @@
       "id": "HW-GAP-R05",
       "item": "Z anti-drop support/brake provision",
       "quantity": "",
-      "required_work": "Exact Z anti-drop/brake not selected; cannot claim a random $70 brake fits the unknown Z shaft/interface.",
+      "required_work": "Exact Z anti-drop/brake not selected; cannot claim a random $70 brake fits the unknown Z shaft/interface. The base branch Rev H (26 Sep 2026), carried into Rev J, reserves one sourced candidate: a replacement NEMA 23 motor with a 24 V power-off brake, StepperOnline 23HS30-5004D-B280 (2.0 N m, 2.8 N m static brake). Its shaft, pilot and coupling fit to the ZBX80 are unverified, so it is not priced or bought; decide after the ZBX80 is measured.",
       "url": "",
       "unit_usd": null
     },
@@ -3157,10 +3171,10 @@
     ]
   },
   "input_hashes": {
-    "hardware-findings.json": "99f7db40bab91ded52b789ab1a23d2ab6d2739f1ff3743728a0f4fe3fa5b1f65",
+    "hardware-findings.json": "49c2794db50ff6be96d128f5a92d26be50ed4e3bc19373ff496046f29ac720f3",
     "marketplace-findings.json": "279e8b66e81b7bf3fbbed26e2d94db3ca69af25a4a1172e45e14a7d4b3196190",
-    "core-findings.json": "5ddfa7b6245f08026f187f8df23b18d1764f54160eb8702fc94a9be443fbc2a8",
-    "metal-findings.json": "22574481348da0b39b7b871204728dce4bf919381788e8bb1fcf62fb8269f299",
+    "core-findings.json": "23fa2fc7cc6e1b6c1c40d33cd1921123dbdfa8bb24fa17ee953c7919b84670d8",
+    "metal-findings.json": "dbde22071dfc21840e7028015fa41e7f203a6eb7ee1d7980661a5e1c4881cf66",
     "tube-georgia-findings.json": "a683ea857a020d304c5c02bc2b81acd790c3d7133aa788b2492dff6f7d54ee4e",
     "controls-findings.json": "9831596efc7813f2c6041d3493301dda1e490f08828f8368da313cc4eaf276c3",
     "tube-comparison-findings.json": "8a1d5339fa1865ff922e288bd1d38639cc9cea781901940709a0f21e3e05587d"

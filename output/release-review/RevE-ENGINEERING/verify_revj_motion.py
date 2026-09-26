@@ -2,7 +2,8 @@
 
 Checks all eight X/Y/Z travel-box corners and the center. Each includes the
 fixed chassis, actual frame-raised cap blanks, the Rev J one-piece bed module,
-water and packaging geometry.
+water (with the Rev H service hatches and the Rev J refill spout) and packaging
+geometry, and the Rev H Z-adapter blank and braked-motor candidate at every pose.
 This is a sampled static interference check; it does not establish continuous
 motion, independent-Y skew, actual cutter/workpiece/cable clearance, stiffness,
 supplier-interface compatibility or a commissioned operational plasma state.
@@ -54,8 +55,7 @@ def write_report(path,report,start):
 
 def main(output=DEFAULT_OUTPUT):
     from cad_helpers import bbox,validate
-    from build_revj import build_model
-    from motion_details import make_motion
+    from build_revj import add_motion, build_model
 
     output=Path(output)
     output.parent.mkdir(parents=True,exist_ok=True)
@@ -84,7 +84,7 @@ def main(output=DEFAULT_OUTPUT):
         print('Rev J fixed assembly:',len(fixed.parts),'parts',flush=True)
         for gy,hx,z in STATES:
             model=clone_fixed(fixed)
-            make_motion(model,gantry_y=gy,head_x=hx,z_lift=z,tool='router')
+            add_motion(model,gantry_y=gy,head_x=hx,z_lift=z)
             result=validate(model)
             ids=[p.id for p in model.parts]
             assert len(ids)==len(set(ids)), 'Duplicate component IDs'

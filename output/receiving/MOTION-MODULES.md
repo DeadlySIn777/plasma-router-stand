@@ -1,6 +1,6 @@
 # Drive modules — receiving and measuring (HMS40 ×3, ZBX80)
 
-**Status: ordered, confirmed by the owner on 26 September 2026.** The HMS40 spec sheet (KHMOS drawing HMS40-L□□-S□□□-M57-BC) and the ZBX80 listing drawings shared that day are the ordered items; the owner first described the order as "1000x800x100". The order is:
+**Status (26 September 2026): the Y modules are ordered and on the way; the X module and the Z slide are to be ordered on Monday 28 September.** That split comes from the owner's other session, recorded on the base branch the same day. This file first recorded all three as ordered, from the owner's message that the shared spec sheets "are ordered", so please confirm. The HMS40 spec sheet (KHMOS drawing HMS40-L□□-S□□□-M57-BC) and the ZBX80 listing drawings shared that day are the selected items; the owner first described them as "1000x800x100". They are:
 
 | Row | Listing | Use | Quantity in the design |
 |---|---|---|---:|

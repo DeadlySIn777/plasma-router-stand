@@ -21,6 +21,8 @@ Please quote only the material lines you supply. Show economical stock-size alte
 | 1 | A36 plate, 3/8 × 12 × 24 in | Pieces finished to 8 mm |
 | 1 | A36 flat bar, 3/8 × 4 × 12 in | Four bed-module lift lugs, 50 × 75 mm |
 | 1 | A36 plate, 1/2 × 12 × 12 in | Six foot pads |
+| 1 | A36 plate, 4 mm (5/32 in) × 6 × 6 in | Reservoir washout cover, Ø90; state actual thickness |
+| 1 | Schedule 40 black steel pipe, 1/2 in NPS, 18 in, threaded one end | Water-pan refill spout, three mitered pieces |
 | 2 | Carbon-steel sheet, .120 × 48 × 96 in | Water pan, slats and vented reservoir |
 | 1 | Carbon-steel sheet, 3 mm finished thickness, 36 × 48 in | Brackets and covers; state actual stock thickness |
 | 1 | Carbon-steel sheet, 1.5 mm finished thickness, 24 × 24 in | Drip shield |
@@ -32,7 +34,7 @@ Please quote only the material lines you supply. Show economical stock-size alte
 | 1 | 304 stainless round bar, 1.75 in diameter × 2 in | Vent sleeve |
 | 1 each | 6061-T6511: 1/2 × 8 × 72 in; 1/2 × 8 × 12 in; 3.5 × 6 × 12 in; 1.5 × 5 × 12 in; 1.5 × 2 × 12 in; 2 × 2 × 12 in | Current adapter-stock design; quote separately from steel |
 
-Please also identify whether any suitable remnants or drops would reduce the price while providing these blank dimensions. Do not assume thinner stock or shorter bars are acceptable.
+Please also identify whether any suitable remnants or drops would reduce the price while providing these blank dimensions. Do not assume thinner stock or shorter bars are acceptable. Please price the two 2 × 2 tube lines separately; I may source that tube elsewhere.
 
 Quantities follow the GM1 Rev J design (`output/release-review/RevJ-CAD/`). The 3/4 in HDPE sheet for the bed top (48 × 48 in) and galvanizing of the bed module are sourced separately; see [REVJ-PROCUREMENT-DELTA.md](REVJ-PROCUREMENT-DELTA.md).
 

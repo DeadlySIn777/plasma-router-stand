@@ -29,9 +29,11 @@ PAD_Y = ((5.0, 65.0), (640.0, 700.0), (1280.0, 1340.0))
 PAD_X = ((55.0, 100.0), (1050.0, 1095.0))
 PIN_Y = 52.0                    # both pins at the front station; right pad slotted in X
 XM_X = (118.8, 1031.2)          # crossmember between 6 mm end plates
-XM_Y = (85.4, 476.0, 867.0, 1257.4)     # centres; float bands Y575..745 and 1172..1222 avoided
+XM_Y = (100.4, 476.0, 867.0, 1272.4)    # centres; float bands Y575..745 and 1172..1222 avoided;
+                                        # XM_1/XM_4 and the deck sit 15 mm rearward of the first
+                                        # (PR Rev H) layout, to clear the Rev J refill spout (water_revj.py)
 XM_Z = TOP - SIDE               # 870
-STRIP_X0 = 125.0; STRIPS = 9; STRIP_Y = (73.0, 1270.0)
+STRIP_X0 = 125.0; STRIPS = 9; STRIP_Y = (88.0, 1285.0)
 STRIP_SLOT = {0: 30, 1: 70, 2: 30, 3: 70}   # bottom slot used at each crossmember
 PLATE_T = 18.0                  # finished HDPE thickness (19.05 rough, one skim)
 PLATES = ((176.0, 574.0), (576.0, 974.0))
@@ -41,8 +43,8 @@ PLATE_FIX_Y = (170.0, 630.0, 1090.0)
 CB_D = 20.0; CB_FLOOR = TOP + 20 + 6.0         # counterbore floor Z946.8: 6 mm HDPE under washer
 LUG_X = (150.0, 1000.0)
 LUG_T = 9.525                  # 3/8 in plate
-LUG_FRONT_Y = XM_Y[0] - SIDE / 2              # 60, lug rear face on crossmember 1
-LUG_REAR_Y = XM_Y[3] + SIDE / 2               # 1282.8
+LUG_FRONT_Y = XM_Y[0] - SIDE / 2              # 75, lug rear face on crossmember 1
+LUG_REAR_Y = XM_Y[3] + SIDE / 2               # 1297.8
 LUG_HOLE_Z = 920.0; LUG_HOLE_D = 14.0
 LIFT_MM = 70.0                 # every part near the float backrails passes 6 mm above them
 DENSITY = {'steel': 7.85e-6, 'aluminum': 2.7e-6, 'hdpe': 9.5e-7}

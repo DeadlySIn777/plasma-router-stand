@@ -19,7 +19,7 @@ The owner performs fabrication, machining, cutting and finishing: outside-shop l
 | Standard hardware | $127.24 |
 | Controls and water wiring | $252.62 |
 
-The current register contains **73 priced lines**, **49 remaining scope entries** and a vendor-level shipping register. Every price is linked to a product or supplier. Line quantities are rounded to cents; seller checkout can differ by a cent on fractional-cent fasteners.
+The current register contains **73 priced lines**, **51 remaining scope entries** and a vendor-level shipping register. Every price is linked to a product or supplier. Line quantities are rounded to cents; seller checkout can differ by a cent on fractional-cent fasteners.
 
 Amazon items total **$2,174.01**, with advertised free delivery to ZIP 30510 under the recorded order conditions. This includes two 1,000 mm Y modules, one 800 mm X module, the 100 mm Z, the two HGR20 rail kits, five extrusion packs, spindle kit, power supplies, cabinet, cable chains and listed Amazon water components. These are source prices, not proof that all mounting and electrical interfaces are finished.
 
@@ -27,7 +27,7 @@ The [80/20 beam](https://8020.net/40-8080.html) and [16 matching M8 nuts](https:
 
 Nutty hardware is combined into one order of $76.06, below its $100 free-shipping threshold, so the $10.95 flat rate is included; adding the unpriced Rev J stainless fasteners to this order may remove it. No duplicate delivery charge is added for each fastener row. Other blank freight cells remain unknown.
 
-**Ordered by the owner:** M01 KHMOS HMS40 X module, 800 mm stroke, ordered 2026-09-26 (owner-confirmed from the shared spec sheets; quantity to confirm); M02 KHMOS HMS40 Y module, 1000 mm stroke, ordered 2026-09-26 (owner-confirmed from the shared spec sheets; quantity to confirm); M03 RATTMMOTOR ZBX80 Z module, 100 mm stroke, ordered 2026-09-26 (owner-confirmed from the shared spec sheets; quantity to confirm). Listed prices stay in this register until the price paid is recorded. See the [drive-module receiving check](../../../output/receiving/MOTION-MODULES.md).
+**Owner order status:** M01 KHMOS HMS40 X module, 800 mm stroke, to be ordered Monday 28 Sep 2026 (owner's other session, recorded on the base branch 26 Sep); this session had recorded it as ordered on 26 Sep, so confirm; M02 KHMOS HMS40 Y module, 1000 mm stroke, ordered and on the way (owner, 26 Sep 2026; also recorded on the base branch by the owner's other session); two, one per Y side, to confirm on receipt; M03 RATTMMOTOR ZBX80 Z module, 100 mm stroke, to be ordered Monday 28 Sep 2026 (owner's other session, recorded on the base branch 26 Sep); this session had recorded it as ordered on 26 Sep, so confirm. Listed prices stay in this register until the price paid is recorded. See the [drive-module receiving check](../../../output/receiving/MOTION-MODULES.md).
 
 ## Corrections to the old estimate
 
@@ -43,7 +43,7 @@ Nutty hardware is combined into one order of $76.06, below its $100 free-shippin
 
 ## Rev J re-baseline, 26 September 2026
 
-GM1 Rev J replaces the Rev G bed with the owner's one-piece, hoist-lifted, waterproof module (`output/release-review/RevJ-CAD/`). The rest of the machine is unchanged. The bed rows now follow the Rev J cut list. 7 Rev G bed items left the register and stay as dated evidence (`superseded_offers`, revision H): MET-GAP-14 (was unpriced), MET-GAP-15 (was unpriced), MET-GAP-16 (was unpriced), MET-GAP-17 (was unpriced), MET-GAP-19 (was unpriced), HW-N3 $3.88, HW-N5 $6.78. N1 is now 48 stainless square nuts, and B01 stays at five two-packs (nine 1,197 mm profiles plus one spare bar).
+GM1 Rev J (`output/release-review/RevJ-CAD/`) is the owner's one-piece, hoist-lifted, waterproof bed module, first published on this branch as Rev H, combined with the base branch's Rev H water service (reservoir hatches, washout flange, drain reserves) and Z-adapter blank. Its refill spout is moved clear of the module. The base branch's own Rev H keeps the six-panel bed and is not priced here. The bed rows now follow the Rev J cut list. 7 Rev G bed items left the register and stay as dated evidence (`superseded_offers`, revision J): MET-GAP-14 (was unpriced), MET-GAP-15 (was unpriced), MET-GAP-16 (was unpriced), MET-GAP-17 (was unpriced), MET-GAP-19 (was unpriced), HW-N3 $3.88, HW-N5 $6.78. N1 is now 48 stainless square nuts, and B01 stays at five two-packs (nine 1,197 mm profiles plus one spare bar).
 
 New unpriced Rev J scope:
 
@@ -53,10 +53,13 @@ New unpriced Rev J scope:
 - one 8 ft 2 x 2 tube (MET-GAP-23)
 - galvanizing (J-GALV)
 - the stainless module hardware (HW-GAP-H06, H07, H08)
+- from the Rev H water service: 4 mm plate for the washout cover (MET-GAP-24), NPS 1/2 pipe for the refill spout (MET-GAP-25) and the hatch and washout fasteners (in HW-GAP-H03)
+
+The three new EPDM gaskets come out of the centre offcut of the reservoir gasket sheet (MET-GAP-13). The braked Z-motor candidate that the Rev H model reserves (23HS30-5004D-B280) is not priced or bought until the ZBX80 is measured (HW-GAP-R05).
 
 The owner's overhead beam, trolley, hoist, sling, shackles and module stand stay outside the register. Part-by-part changes are in [REVJ-PROCUREMENT-DELTA.md](REVJ-PROCUREMENT-DELTA.md).
 
-`check_revg_stock_fit.py --cad RevJ-CAD` (`revj-stock-fit.json`) packs the Rev J flat parts onto the registered sizes. Every sheet and plate row covers its parts, including the 6 mm plate that was short for Rev G. The one exception is the 3/8 in plate, which would need 12 x 36 in with the lugs; the lugs therefore get their own bar. **The lower subtotal is NOT a cheaper build**, because the new Rev J items are unpriced.
+`check_revg_stock_fit.py --cad RevJ-CAD` (`revj-stock-fit.json`) packs the Rev J flat parts onto the registered sizes. Every sheet and plate row covers its parts, including the Rev H water-service flats and the 6 mm plate that was short for Rev G. The one exception is the 3/8 in plate, which would need 12 x 36 in with the lugs; the lugs therefore get their own bar. **The lower subtotal is NOT a cheaper build**, because the new Rev J items are unpriced.
 
 ## Rev G reconciliation, 26 September 2026 (bed rows since re-baselined to Rev J)
 

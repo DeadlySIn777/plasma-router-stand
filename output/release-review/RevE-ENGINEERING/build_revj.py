@@ -1,7 +1,14 @@
 """GM1 Rev J working CAD: one-piece hoisted router bed module.
 
-Builds the Rev E frame, water system, controls and motion with the Rev J bed
-(`bed_revj.py`) and exports three states to ../RevJ-CAD:
+Rev J is the owner's one-piece bed (`bed_revj.py`, first published in this
+branch as "Rev H") combined with the other session's Rev H water-service and
+Z-adapter work from the base branch:
+  water_revj.py         Rev H hatches, washout and drain reserves (water_completion.py)
+                        with the refill spout moved clear of the module
+  motion_completion.py  Rev H Z-adapter transfer blank and braked-motor candidate
+The Rev H six-panel bed and its storage restraints (bed_completion.py) are not used.
+
+Exports three states to ../RevJ-CAD:
   RevJ_ROUTER         module installed, router head (full cut list and DXF)
   RevJ_PLASMA_LAYOUT  module out of the machine, spindle and bolts stored
   RevJ_BED_MODULE     the lifted module alone (what the hoist carries)
@@ -25,9 +32,23 @@ OUT = SOURCE.parent / 'RevJ-CAD'
 MACHINE = 'GM1 — Garcia Mechanical Table'
 
 
-def build_model(with_motion=True):
+def add_motion(model, gantry_y=1275.0, head_x=575.0, z_lift=100.0):
+    """Router motion at one pose, then the Rev H Z-adapter blank and braked-motor candidate."""
+    from motion_details import make_motion
+    import motion_completion
+    motion = make_motion(model, gantry_y=gantry_y, head_x=head_x, z_lift=z_lift, tool='router')
+    completion = motion_completion.extend_router_model(model)
+    motion['holds'] = completion['active_motion_holds']
+    return motion, completion
+
+
+def build_model(with_motion=True, gantry_y=1275.0, head_x=575.0, z_lift=100.0):
     from bed_revj import make_bed
-    model, details = build_legacy_frame(bed_builder=make_bed, with_motion=with_motion, legacy_tool_parking=False)
+    import water_revj
+    model, details = build_legacy_frame(bed_builder=make_bed, with_motion=False, legacy_tool_parking=False)
+    details['water_completion'] = water_revj.extend_router_model(model)
+    if with_motion:
+        details['motion'], details['motion_completion'] = add_motion(model, gantry_y, head_x, z_lift)
     model.holds.extend([
         'Rev J one-piece module: owner hoist, beam, trolley and sling ratings, and the module stand, are owner scope and not modeled.',
         'The owned torch barrel/clamping zone, nozzle datum and lead connection are not measured. No compatible torch mount, floating head or breakaway assembly is released.',
@@ -37,7 +58,11 @@ def build_model(with_motion=True):
         if part.id == 'HW_BOLT_BIN_FLOOR':
             part.notes = ['Holds the removed spindle-clamp screws and the four lift shackles. The six Rev J drawdowns use their own tray on the reservoir lid.']
     details['machine'] = MACHINE
-    details['revision'] = 'J working design'
+    details['revision'] = 'J working design: one-piece bed module with the Rev H water service and Z adapter'
+    details['revision_note'] = ('First published in this branch as Rev H. Renamed Rev J on 26 September 2026 because the base '
+                                'branch carries a different Rev H (six-panel bed); Rev I is skipped. Rev J adds that Rev H water '
+                                'service and Z-adapter work, moves the refill spout clear of the module and sets the module end '
+                                'crossmembers and deck 15 mm rearward.')
     details['status'] = 'WORKING CAD — NOT A FABRICATION RELEASE'
     details['architecture_assumption'] = details['bed']['architecture_assumption']
     details['tool_parking']['handling'] = (

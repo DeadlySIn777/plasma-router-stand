@@ -251,7 +251,7 @@
       "50.8 x 50.8 x 3.048 mm nominal hollow tube; square-corner idealization",
       "Welded structure: nominal square tube corners; stock corner radii are not precision mating datums.",
       "Sandserviceport:\u00d830weldbung,M20\u00d71.5removableplug. Fillonlyafterallwelding/coating;weightactualdryballast.",
-      "Rev H receiver: three \u00d818 sleeve bores through both walls at X87.4, Y25/670/1310. Weld the sleeves and the three seat pads before ballast filling."
+      "Rev J receiver: three \u00d818 sleeve bores through both walls at X87.4, Y25/670/1310. Weld the sleeves and the three seat pads before ballast filling."
     ],
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
@@ -265,7 +265,7 @@
       "50.8 x 50.8 x 3.048 mm nominal hollow tube; square-corner idealization",
       "Welded structure: nominal square tube corners; stock corner radii are not precision mating datums.",
       "Sandserviceport:\u00d830weldbung,M20\u00d71.5removableplug. Fillonlyafterallwelding/coating;weightactualdryballast.",
-      "Rev H receiver: three \u00d818 sleeve bores through both walls at X1062.6, Y25/670/1310. Weld the sleeves and the three seat pads before ballast filling."
+      "Rev J receiver: three \u00d818 sleeve bores through both walls at X1062.6, Y25/670/1310. Weld the sleeves and the three seat pads before ballast filling."
     ],
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
@@ -901,6 +901,11 @@
           65,
           1165.0582485438229,
           48.5
+        ],
+        [
+          270.0,
+          1110.4555186120692,
+          21.6
         ]
       ],
       "slots": [],
@@ -909,7 +914,8 @@
     "notes": [
       "Install at 1% downward slope toward rear. Continuous watertight seam welds.",
       "Two48.5mmweldneckclearanceholes:drainand1.5instandpipe. No bend allowance required.",
-      "Drain center is0.35mm above absolute rear floor edge; residual film requires cleaning."
+      "Drain center is0.35mm above absolute rear floor edge; residual film requires cleaning.",
+      "Rev J: \u00d821.6 normal hole at world XY(385,1215.4) receives the vertical refill riser; seal weld annulus, leak-test and coat after welding."
     ],
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
@@ -2050,8 +2056,8 @@
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
     "manufacturing_flat": null,
     "notes": [
-      "Flush upper end with inner floor; external lower end1.5NPT male for manual washout valve/cap. Keep accessible from rear.",
-      "https://www.wheatland.com/wp-content/uploads/2017/12/Schedule-40-Submittal-Sheet.pdf"
+      "Flush upper end with tank inner floor; lower end is plain, welded to the fabricated flange. The old1.5 NPT cap callout is superseded.",
+      "Tank must be emptied and isolated before loosening the cleanout cover. This large opening is for washout, not controlled draining of115 L."
     ],
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
@@ -2564,6 +2570,66 @@
           873.048,
           443.048,
           6.6
+        ],
+        [
+          248.048,
+          273.048,
+          5.5
+        ],
+        [
+          418.048,
+          273.048,
+          5.5
+        ],
+        [
+          588.048,
+          273.048,
+          5.5
+        ],
+        [
+          248.048,
+          468.048,
+          5.5
+        ],
+        [
+          418.048,
+          468.048,
+          5.5
+        ],
+        [
+          588.048,
+          468.048,
+          5.5
+        ],
+        [
+          358.048,
+          508.048,
+          5.5
+        ],
+        [
+          503.048,
+          508.048,
+          5.5
+        ],
+        [
+          648.048,
+          508.048,
+          5.5
+        ],
+        [
+          358.048,
+          628.048,
+          5.5
+        ],
+        [
+          503.048,
+          628.048,
+          5.5
+        ],
+        [
+          648.048,
+          628.048,
+          5.5
         ]
       ],
       "slots": [],
@@ -2585,11 +2651,49 @@
             725.048,
             621.048
           ]
+        ],
+        [
+          [
+            258.048,
+            283.048
+          ],
+          [
+            578.048,
+            283.048
+          ],
+          [
+            578.048,
+            458.048
+          ],
+          [
+            258.048,
+            458.048
+          ]
+        ],
+        [
+          [
+            368.048,
+            518.048
+          ],
+          [
+            638.048,
+            518.048
+          ],
+          [
+            638.048,
+            618.048
+          ],
+          [
+            368.048,
+            618.048
+          ]
         ]
       ]
     },
     "notes": [
-      "Catch-basket hatch166x126. Separate55mm overflow entry and33.6mm vent pipe penetration."
+      "Catch-basket hatch166x126. Separate55mm overflow entry and33.6mm vent pipe penetration.",
+      "Rev H: routine washout is through two independent service openings; the equipment lid remains installed.",
+      "The full lid is a major-disassembly item, not a verified routine removal. Drain and isolate before opening either hatch."
     ],
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
@@ -4143,7 +4247,7 @@
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
   {
-    "part_number": "H_PAD_FRONT_ROUND",
+    "part_number": "J_PAD_FRONT_ROUND",
     "quantity": 1,
     "individual_export_guarded": false,
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
@@ -4195,7 +4299,7 @@
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
   {
-    "part_number": "H_LEDGER_M10_SLEEVE",
+    "part_number": "J_LEDGER_M10_SLEEVE",
     "quantity": 6,
     "individual_export_guarded": false,
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
@@ -4207,7 +4311,7 @@
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
   {
-    "part_number": "H_PAD_PLAIN",
+    "part_number": "J_PAD_PLAIN",
     "quantity": 4,
     "individual_export_guarded": false,
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
@@ -4254,7 +4358,7 @@
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
   {
-    "part_number": "H_PAD_FRONT_SLOT",
+    "part_number": "J_PAD_FRONT_SLOT",
     "quantity": 1,
     "individual_export_guarded": false,
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
@@ -4834,7 +4938,7 @@
     "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
   },
   {
-    "part_number": "H_BOLT_TRAY_FLOOR",
+    "part_number": "J_BOLT_TRAY_FLOOR",
     "quantity": 1,
     "individual_export_guarded": false,
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
@@ -4868,7 +4972,7 @@
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
   {
-    "part_number": "H_BOLT_TRAY_SIDE",
+    "part_number": "J_BOLT_TRAY_SIDE",
     "quantity": 2,
     "individual_export_guarded": false,
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
@@ -4900,7 +5004,7 @@
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
   {
-    "part_number": "H_BOLT_TRAY_END",
+    "part_number": "J_BOLT_TRAY_END",
     "quantity": 2,
     "individual_export_guarded": false,
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
@@ -5018,7 +5122,7 @@
       "internal": []
     },
     "notes": [
-      "Holds the removed spindle-clamp screws and the four lift shackles. The six Rev H drawdowns use their own tray on the reservoir lid."
+      "Holds the removed spindle-clamp screws and the four lift shackles. The six Rev J drawdowns use their own tray on the reservoir lid."
     ],
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
@@ -5146,7 +5250,7 @@
   },
   {
     "part_number": "STD_M6_NYLOC",
-    "quantity": 4,
+    "quantity": 8,
     "individual_export_guarded": true,
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
     "manufacturing_flat": null,
@@ -5367,6 +5471,2256 @@
       "\u00d85.5 through-hole takes M5 retaining bolt. Deburr both bearing faces; coat weldment before final assembly. This tab does not bear on the enclosure."
     ],
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "H_WT_CLARIFIED_GASKET",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          360.0,
+          0
+        ],
+        [
+          360.0,
+          215.0
+        ],
+        [
+          0,
+          215.0
+        ]
+      ],
+      "thickness_mm": 2,
+      "holes": [
+        [
+          10.0,
+          10.0,
+          5.5
+        ],
+        [
+          180.0,
+          10.0,
+          5.5
+        ],
+        [
+          350.0,
+          10.0,
+          5.5
+        ],
+        [
+          10.0,
+          205.0,
+          5.5
+        ],
+        [
+          180.0,
+          205.0,
+          5.5
+        ],
+        [
+          350.0,
+          205.0,
+          5.5
+        ]
+      ],
+      "slots": [],
+      "internal": [
+        [
+          [
+            20.0,
+            20.0
+          ],
+          [
+            340.0,
+            20.0
+          ],
+          [
+            340.0,
+            195.0
+          ],
+          [
+            20.0,
+            195.0
+          ]
+        ]
+      ]
+    },
+    "notes": [
+      "Knife cut, not a metal cutting program. Splash seal only; tank remains permanently vented."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "H_WT_CLARIFIED_COVER",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          360.0,
+          0
+        ],
+        [
+          360.0,
+          215.0
+        ],
+        [
+          0,
+          215.0
+        ]
+      ],
+      "thickness_mm": 3.048,
+      "holes": [
+        [
+          10.0,
+          10.0,
+          5.5
+        ],
+        [
+          180.0,
+          10.0,
+          5.5
+        ],
+        [
+          350.0,
+          10.0,
+          5.5
+        ],
+        [
+          10.0,
+          205.0,
+          5.5
+        ],
+        [
+          180.0,
+          205.0,
+          5.5
+        ],
+        [
+          350.0,
+          205.0,
+          5.5
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Six M5x16 screws into underside weld nuts. Remove screws before lifting; retain gasket on the fixed lid.",
+      "Lift 50 mm, move forward to parking Y935.000, rotate +90 degrees about the cover lower/front edge, then lower into both 40 mm deep parking pockets.",
+      "Open position is service only. Confirm the panel is fully seated in both pockets; do not operate machine with a hatch open.",
+      "These are vacuum-wand/long-brush washout openings; tank cleaning efficacy is a physical commissioning check."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "H_WT_PULL_TAB",
+    "quantity": 2,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          20,
+          0
+        ],
+        [
+          20,
+          30
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "thickness_mm": 3,
+      "holes": [
+        [
+          10,
+          20,
+          12
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Weld20 mm lower edge to cover top; deburr12 mm lifting-hook hole. Cover and tab move as one weldment. This is not a rated hoist point."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "STD_M5_WELDNUT",
+    "quantity": 12,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "STD_M5x16_SOCKET",
+    "quantity": 12,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "H_WT_PARK_FLOOR",
+    "quantity": 4,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          40,
+          0
+        ],
+        [
+          40,
+          14
+        ],
+        [
+          0,
+          14
+        ]
+      ],
+      "thickness_mm": 3,
+      "holes": [],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Seal weld perimeter to equipment lid; bottom support for service cover."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "H_WT_PARK_FACE",
+    "quantity": 8,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          40,
+          0
+        ],
+        [
+          40,
+          40
+        ],
+        [
+          0,
+          40
+        ]
+      ],
+      "thickness_mm": 3,
+      "holes": [],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Weld to pocket floor; installed inner gap is 8 mm for the 3.048 mm cover."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "H_WT_PARK_END",
+    "quantity": 4,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          40
+        ],
+        [
+          0,
+          40
+        ]
+      ],
+      "thickness_mm": 3,
+      "holes": [],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Weld bottom edge to lid just beyond the service cover ends; limits sideways movement."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "H_WT_SETTLING_GASKET",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          310.0,
+          0
+        ],
+        [
+          310.0,
+          140.0
+        ],
+        [
+          0,
+          140.0
+        ]
+      ],
+      "thickness_mm": 2,
+      "holes": [
+        [
+          10.0,
+          10.0,
+          5.5
+        ],
+        [
+          155.0,
+          10.0,
+          5.5
+        ],
+        [
+          300.0,
+          10.0,
+          5.5
+        ],
+        [
+          10.0,
+          130.0,
+          5.5
+        ],
+        [
+          155.0,
+          130.0,
+          5.5
+        ],
+        [
+          300.0,
+          130.0,
+          5.5
+        ]
+      ],
+      "slots": [],
+      "internal": [
+        [
+          [
+            20.0,
+            20.0
+          ],
+          [
+            290.0,
+            20.0
+          ],
+          [
+            290.0,
+            120.0
+          ],
+          [
+            20.0,
+            120.0
+          ]
+        ]
+      ]
+    },
+    "notes": [
+      "Knife cut, not a metal cutting program. Splash seal only; tank remains permanently vented."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "H_WT_SETTLING_COVER",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          310.0,
+          0
+        ],
+        [
+          310.0,
+          140.0
+        ],
+        [
+          0,
+          140.0
+        ]
+      ],
+      "thickness_mm": 3.048,
+      "holes": [
+        [
+          10.0,
+          10.0,
+          5.5
+        ],
+        [
+          155.0,
+          10.0,
+          5.5
+        ],
+        [
+          300.0,
+          10.0,
+          5.5
+        ],
+        [
+          10.0,
+          130.0,
+          5.5
+        ],
+        [
+          155.0,
+          130.0,
+          5.5
+        ],
+        [
+          300.0,
+          130.0,
+          5.5
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Six M5x16 screws into underside weld nuts. Remove screws before lifting; retain gasket on the fixed lid.",
+      "Lift 50 mm, move forward to parking Y1168.000, rotate +90 degrees about the cover lower/front edge, then lower into both 40 mm deep parking pockets.",
+      "Open position is service only. Confirm the panel is fully seated in both pockets; do not operate machine with a hatch open.",
+      "These are vacuum-wand/long-brush washout openings; tank cleaning efficacy is a physical commissioning check."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "J_REFILL_MITER_SPOUT",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Fabricated pipe OD21.3 ID15.8 mm. Centerline: (385,1215.4,665) -> (385,1215.4,885) -> (345,1215.4,885) -> (345,1215.4,865).",
+      "Two 90-degree turns use paired 45-degree miters. Centerline segment lengths 220/40/20 mm; long-point miter blank allowances 230.65/61.3/30.65 mm before dressing and thread allowance.",
+      "Rev J position: the Rev H riser at Y1255 stands under the bed module rear crossmember. This riser rises between slats 18 and 19, passes 3.95 mm behind pan bearer 3 and 3.95 mm in front of slat 19, and its head turns along -X. Check both gaps at fit-up.",
+      "Bottom end is 1/2 NPT male at Z665, below pan bearer 3 (Z679), for a receipt-fit reinforced hose adapter. Top discharge remains open: no downstream valve or nozzle.",
+      "Outlet low edge Z865 gives 30 mm nominal air gap above the Z835 pan rim; keep at least 25 mm as built.",
+      "Plasma sheets must stay in front of about Y1200 on the slats; the spout stands 45 mm above the slat tops, as in Rev H."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "J_REFILL_GUSSET",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          45,
+          0
+        ],
+        [
+          0,
+          60
+        ]
+      ],
+      "thickness_mm": 6,
+      "holes": [],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Weld the 45 mm edge to the pan floor and the 60 mm edge to the riser, both sides, after the riser is seal-welded into the floor.",
+      "Replaces the Rev H stay: the riser now stands in the slat bay in front of slat 19, where a stay to the rear wall would pass under the slat."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "J_REFILL_CONNECTION_RESERVE",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Reserve X335..435/Y1165.4..1265.4/Z545..665 for the lower spout connection, below pan bearer 3. Keep conversion handling out of this volume.",
+      "This is a keep-out allocation, not a fitted hose or a manufacturer bend-radius claim. Select actual hose/fittings and revise the allocation if required."
+    ],
+    "release": "HOSE CONNECTION SPACE - ACTUAL ADAPTER / BEND RADIUS UNVERIFIED"
+  },
+  {
+    "part_number": "H_DRAIN_REDUCER_RESERVE",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "1.5 FNPT to1 MNPT reducer and receipt-selected nipple; upper datum meets existing pan neck."
+    ],
+    "release": "PLUMBING RESERVE - PORTS AND FITTING ENGAGEMENT UNVERIFIED; NOT FITTED HARDWARE"
+  },
+  {
+    "part_number": "H_DRAIN_VALVE_RESERVE",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "USS-MSV00009 valve: conservative125 mm reserve; actuator orientation and portface datums remain receipt measured."
+    ],
+    "release": "PLUMBING RESERVE - PORTS AND FITTING ENGAGEMENT UNVERIFIED; NOT FITTED HARDWARE"
+  },
+  {
+    "part_number": "H_DRAIN_UNION_RESERVE",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "1in NPT union/tailpiece reserve; exact union release travel and spanner access not established."
+    ],
+    "release": "PLUMBING RESERVE - PORTS AND FITTING ENGAGEMENT UNVERIFIED; NOT FITTED HARDWARE"
+  },
+  {
+    "part_number": "H_DRAIN_DROP_RESERVE",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Outlet at Z450 is13.404 mm above basket splash cover. Remove downstream tail at union before lifting basket; exact release path remains a selected-union hold.",
+      "This reserve does not assert the selected fittings achieve the stated face datums. No pressure-vessel connection."
+    ],
+    "release": "PLUMBING RESERVE - FINAL TAIL LENGTH / DISCONNECTION UNVERIFIED"
+  },
+  {
+    "part_number": "H_WT_WASHOUT_FLANGE",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          45.0,
+          0.0
+        ],
+        [
+          44.94579552923276,
+          2.2080453447338106
+        ],
+        [
+          44.783312700248864,
+          4.410771314830227
+        ],
+        [
+          44.512942948415144,
+          6.602871350491279
+        ],
+        [
+          44.13533761814537,
+          8.779064490725771
+        ],
+        [
+          43.65140639375448,
+          10.934108095646874
+        ],
+        [
+          43.062315107949395,
+          13.062810476450805
+        ],
+        [
+          42.369482933235936,
+          15.160043402649903
+        ],
+        [
+          41.5745789630079,
+          17.22075445642904
+        ],
+        [
+          40.67951819055495,
+          19.239979204362694
+        ],
+        [
+          39.686456895675974,
+          21.212853157169892
+        ],
+        [
+          38.59778745001225,
+          23.134623488694974
+        ],
+        [
+          37.41613255361454,
+          25.000660485882097
+        ],
+        [
+          36.144338916629025,
+          26.806468702159503
+        ],
+        [
+          34.78547040132317,
+          28.547697787364047
+        ],
+        [
+          33.34280064097316,
+          30.220152968115826
+        ],
+        [
+          31.81980515339464,
+          31.819805153394636
+        ],
+        [
+          30.220152968115826,
+          33.34280064097316
+        ],
+        [
+          28.547697787364047,
+          34.78547040132317
+        ],
+        [
+          26.806468702159506,
+          36.14433891662902
+        ],
+        [
+          25.000660485882104,
+          37.41613255361454
+        ],
+        [
+          23.134623488694974,
+          38.59778745001225
+        ],
+        [
+          21.212853157169903,
+          39.686456895675974
+        ],
+        [
+          19.239979204362697,
+          40.67951819055495
+        ],
+        [
+          17.22075445642904,
+          41.5745789630079
+        ],
+        [
+          15.160043402649903,
+          42.369482933235936
+        ],
+        [
+          13.062810476450805,
+          43.0623151079494
+        ],
+        [
+          10.934108095646879,
+          43.65140639375448
+        ],
+        [
+          8.779064490725775,
+          44.13533761814537
+        ],
+        [
+          6.602871350491279,
+          44.512942948415144
+        ],
+        [
+          4.410771314830234,
+          44.78331270024886
+        ],
+        [
+          2.2080453447338155,
+          44.94579552923276
+        ],
+        [
+          2.7554552980815448e-15,
+          45.0
+        ],
+        [
+          -2.20804534473381,
+          44.94579552923276
+        ],
+        [
+          -4.410771314830229,
+          44.783312700248864
+        ],
+        [
+          -6.602871350491274,
+          44.512942948415144
+        ],
+        [
+          -8.77906449072577,
+          44.13533761814537
+        ],
+        [
+          -10.934108095646874,
+          43.65140639375448
+        ],
+        [
+          -13.062810476450798,
+          43.0623151079494
+        ],
+        [
+          -15.160043402649897,
+          42.369482933235936
+        ],
+        [
+          -17.220754456429038,
+          41.5745789630079
+        ],
+        [
+          -19.239979204362683,
+          40.67951819055496
+        ],
+        [
+          -21.212853157169896,
+          39.686456895675974
+        ],
+        [
+          -23.134623488694974,
+          38.59778745001225
+        ],
+        [
+          -25.000660485882086,
+          37.416132553614545
+        ],
+        [
+          -26.806468702159503,
+          36.144338916629025
+        ],
+        [
+          -28.547697787364044,
+          34.78547040132317
+        ],
+        [
+          -30.22015296811583,
+          33.34280064097315
+        ],
+        [
+          -31.819805153394636,
+          31.81980515339464
+        ],
+        [
+          -33.34280064097315,
+          30.220152968115833
+        ],
+        [
+          -34.78547040132317,
+          28.547697787364047
+        ],
+        [
+          -36.14433891662902,
+          26.806468702159506
+        ],
+        [
+          -37.41613255361454,
+          25.000660485882097
+        ],
+        [
+          -38.59778745001224,
+          23.13462348869498
+        ],
+        [
+          -39.686456895675974,
+          21.212853157169903
+        ],
+        [
+          -40.67951819055495,
+          19.23997920436269
+        ],
+        [
+          -41.5745789630079,
+          17.220754456429045
+        ],
+        [
+          -42.36948293323593,
+          15.160043402649915
+        ],
+        [
+          -43.062315107949395,
+          13.062810476450807
+        ],
+        [
+          -43.65140639375448,
+          10.934108095646883
+        ],
+        [
+          -44.13533761814537,
+          8.779064490725787
+        ],
+        [
+          -44.512942948415144,
+          6.602871350491281
+        ],
+        [
+          -44.78331270024886,
+          4.410771314830237
+        ],
+        [
+          -44.94579552923276,
+          2.2080453447338084
+        ],
+        [
+          -45.0,
+          5.5109105961630896e-15
+        ],
+        [
+          -44.94579552923276,
+          -2.2080453447337978
+        ],
+        [
+          -44.783312700248864,
+          -4.410771314830226
+        ],
+        [
+          -44.512942948415144,
+          -6.602871350491271
+        ],
+        [
+          -44.13533761814537,
+          -8.779064490725776
+        ],
+        [
+          -43.65140639375448,
+          -10.934108095646872
+        ],
+        [
+          -43.0623151079494,
+          -13.062810476450794
+        ],
+        [
+          -42.369482933235936,
+          -15.160043402649904
+        ],
+        [
+          -41.57457896300791,
+          -17.220754456429034
+        ],
+        [
+          -40.67951819055496,
+          -19.23997920436268
+        ],
+        [
+          -39.686456895675974,
+          -21.212853157169892
+        ],
+        [
+          -38.59778745001225,
+          -23.13462348869497
+        ],
+        [
+          -37.416132553614545,
+          -25.000660485882086
+        ],
+        [
+          -36.144338916629025,
+          -26.806468702159496
+        ],
+        [
+          -34.78547040132317,
+          -28.547697787364037
+        ],
+        [
+          -33.34280064097316,
+          -30.22015296811583
+        ],
+        [
+          -31.819805153394647,
+          -31.819805153394636
+        ],
+        [
+          -30.22015296811584,
+          -33.34280064097315
+        ],
+        [
+          -28.54769778736407,
+          -34.78547040132315
+        ],
+        [
+          -26.806468702159492,
+          -36.144338916629025
+        ],
+        [
+          -25.000660485882097,
+          -37.41613255361454
+        ],
+        [
+          -23.13462348869498,
+          -38.59778745001224
+        ],
+        [
+          -21.212853157169903,
+          -39.686456895675974
+        ],
+        [
+          -19.23997920436271,
+          -40.67951819055494
+        ],
+        [
+          -17.220754456429066,
+          -41.574578963007895
+        ],
+        [
+          -15.160043402649897,
+          -42.369482933235936
+        ],
+        [
+          -13.06281047645081,
+          -43.062315107949395
+        ],
+        [
+          -10.934108095646886,
+          -43.65140639375448
+        ],
+        [
+          -8.77906449072579,
+          -44.135337618145364
+        ],
+        [
+          -6.602871350491304,
+          -44.51294294841514
+        ],
+        [
+          -4.41077131483022,
+          -44.783312700248864
+        ],
+        [
+          -2.208045344733811,
+          -44.94579552923276
+        ],
+        [
+          -8.266365894244634e-15,
+          -45.0
+        ],
+        [
+          2.2080453447337947,
+          -44.94579552923276
+        ],
+        [
+          4.410771314830204,
+          -44.783312700248864
+        ],
+        [
+          6.602871350491287,
+          -44.51294294841514
+        ],
+        [
+          8.779064490725773,
+          -44.13533761814537
+        ],
+        [
+          10.934108095646868,
+          -43.65140639375448
+        ],
+        [
+          13.062810476450792,
+          -43.0623151079494
+        ],
+        [
+          15.160043402649883,
+          -42.36948293323594
+        ],
+        [
+          17.22075445642905,
+          -41.5745789630079
+        ],
+        [
+          19.239979204362697,
+          -40.67951819055495
+        ],
+        [
+          21.212853157169892,
+          -39.686456895675974
+        ],
+        [
+          23.13462348869497,
+          -38.59778745001225
+        ],
+        [
+          25.000660485882083,
+          -37.416132553614545
+        ],
+        [
+          26.80646870215948,
+          -36.14433891662904
+        ],
+        [
+          28.54769778736405,
+          -34.78547040132316
+        ],
+        [
+          30.220152968115826,
+          -33.34280064097316
+        ],
+        [
+          31.81980515339463,
+          -31.819805153394647
+        ],
+        [
+          33.34280064097315,
+          -30.22015296811584
+        ],
+        [
+          34.78547040132315,
+          -28.54769778736407
+        ],
+        [
+          36.144338916629025,
+          -26.806468702159496
+        ],
+        [
+          37.41613255361454,
+          -25.000660485882097
+        ],
+        [
+          38.59778745001224,
+          -23.134623488694984
+        ],
+        [
+          39.68645689567597,
+          -21.212853157169906
+        ],
+        [
+          40.67951819055494,
+          -19.239979204362715
+        ],
+        [
+          41.574578963007895,
+          -17.220754456429066
+        ],
+        [
+          42.369482933235936,
+          -15.1600434026499
+        ],
+        [
+          43.062315107949395,
+          -13.062810476450812
+        ],
+        [
+          43.65140639375448,
+          -10.934108095646888
+        ],
+        [
+          44.135337618145364,
+          -8.779064490725792
+        ],
+        [
+          44.51294294841514,
+          -6.6028713504913075
+        ],
+        [
+          44.783312700248864,
+          -4.410771314830223
+        ],
+        [
+          44.94579552923276,
+          -2.208045344733814
+        ]
+      ],
+      "thickness_mm": 6,
+      "holes": [
+        [
+          24.748737341529164,
+          24.74873734152916,
+          6.6
+        ],
+        [
+          -24.74873734152916,
+          24.748737341529164,
+          6.6
+        ],
+        [
+          -24.748737341529168,
+          -24.74873734152916,
+          6.6
+        ],
+        [
+          24.748737341529157,
+          -24.748737341529168,
+          6.6
+        ],
+        [
+          0,
+          0,
+          48.5
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Diameter90 nominal128-sided flange with48.5 bore; lower pipe end seats at flange topZ116. Continuous seal weld around pipe.",
+      "Four6.6 holes on70 pitch circle at45/135/225/315 degrees. Rear shelf crossmember stays untouched."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "H_WT_WASHOUT_GASKET",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          45.0,
+          0.0
+        ],
+        [
+          44.94579552923276,
+          2.2080453447338106
+        ],
+        [
+          44.783312700248864,
+          4.410771314830227
+        ],
+        [
+          44.512942948415144,
+          6.602871350491279
+        ],
+        [
+          44.13533761814537,
+          8.779064490725771
+        ],
+        [
+          43.65140639375448,
+          10.934108095646874
+        ],
+        [
+          43.062315107949395,
+          13.062810476450805
+        ],
+        [
+          42.369482933235936,
+          15.160043402649903
+        ],
+        [
+          41.5745789630079,
+          17.22075445642904
+        ],
+        [
+          40.67951819055495,
+          19.239979204362694
+        ],
+        [
+          39.686456895675974,
+          21.212853157169892
+        ],
+        [
+          38.59778745001225,
+          23.134623488694974
+        ],
+        [
+          37.41613255361454,
+          25.000660485882097
+        ],
+        [
+          36.144338916629025,
+          26.806468702159503
+        ],
+        [
+          34.78547040132317,
+          28.547697787364047
+        ],
+        [
+          33.34280064097316,
+          30.220152968115826
+        ],
+        [
+          31.81980515339464,
+          31.819805153394636
+        ],
+        [
+          30.220152968115826,
+          33.34280064097316
+        ],
+        [
+          28.547697787364047,
+          34.78547040132317
+        ],
+        [
+          26.806468702159506,
+          36.14433891662902
+        ],
+        [
+          25.000660485882104,
+          37.41613255361454
+        ],
+        [
+          23.134623488694974,
+          38.59778745001225
+        ],
+        [
+          21.212853157169903,
+          39.686456895675974
+        ],
+        [
+          19.239979204362697,
+          40.67951819055495
+        ],
+        [
+          17.22075445642904,
+          41.5745789630079
+        ],
+        [
+          15.160043402649903,
+          42.369482933235936
+        ],
+        [
+          13.062810476450805,
+          43.0623151079494
+        ],
+        [
+          10.934108095646879,
+          43.65140639375448
+        ],
+        [
+          8.779064490725775,
+          44.13533761814537
+        ],
+        [
+          6.602871350491279,
+          44.512942948415144
+        ],
+        [
+          4.410771314830234,
+          44.78331270024886
+        ],
+        [
+          2.2080453447338155,
+          44.94579552923276
+        ],
+        [
+          2.7554552980815448e-15,
+          45.0
+        ],
+        [
+          -2.20804534473381,
+          44.94579552923276
+        ],
+        [
+          -4.410771314830229,
+          44.783312700248864
+        ],
+        [
+          -6.602871350491274,
+          44.512942948415144
+        ],
+        [
+          -8.77906449072577,
+          44.13533761814537
+        ],
+        [
+          -10.934108095646874,
+          43.65140639375448
+        ],
+        [
+          -13.062810476450798,
+          43.0623151079494
+        ],
+        [
+          -15.160043402649897,
+          42.369482933235936
+        ],
+        [
+          -17.220754456429038,
+          41.5745789630079
+        ],
+        [
+          -19.239979204362683,
+          40.67951819055496
+        ],
+        [
+          -21.212853157169896,
+          39.686456895675974
+        ],
+        [
+          -23.134623488694974,
+          38.59778745001225
+        ],
+        [
+          -25.000660485882086,
+          37.416132553614545
+        ],
+        [
+          -26.806468702159503,
+          36.144338916629025
+        ],
+        [
+          -28.547697787364044,
+          34.78547040132317
+        ],
+        [
+          -30.22015296811583,
+          33.34280064097315
+        ],
+        [
+          -31.819805153394636,
+          31.81980515339464
+        ],
+        [
+          -33.34280064097315,
+          30.220152968115833
+        ],
+        [
+          -34.78547040132317,
+          28.547697787364047
+        ],
+        [
+          -36.14433891662902,
+          26.806468702159506
+        ],
+        [
+          -37.41613255361454,
+          25.000660485882097
+        ],
+        [
+          -38.59778745001224,
+          23.13462348869498
+        ],
+        [
+          -39.686456895675974,
+          21.212853157169903
+        ],
+        [
+          -40.67951819055495,
+          19.23997920436269
+        ],
+        [
+          -41.5745789630079,
+          17.220754456429045
+        ],
+        [
+          -42.36948293323593,
+          15.160043402649915
+        ],
+        [
+          -43.062315107949395,
+          13.062810476450807
+        ],
+        [
+          -43.65140639375448,
+          10.934108095646883
+        ],
+        [
+          -44.13533761814537,
+          8.779064490725787
+        ],
+        [
+          -44.512942948415144,
+          6.602871350491281
+        ],
+        [
+          -44.78331270024886,
+          4.410771314830237
+        ],
+        [
+          -44.94579552923276,
+          2.2080453447338084
+        ],
+        [
+          -45.0,
+          5.5109105961630896e-15
+        ],
+        [
+          -44.94579552923276,
+          -2.2080453447337978
+        ],
+        [
+          -44.783312700248864,
+          -4.410771314830226
+        ],
+        [
+          -44.512942948415144,
+          -6.602871350491271
+        ],
+        [
+          -44.13533761814537,
+          -8.779064490725776
+        ],
+        [
+          -43.65140639375448,
+          -10.934108095646872
+        ],
+        [
+          -43.0623151079494,
+          -13.062810476450794
+        ],
+        [
+          -42.369482933235936,
+          -15.160043402649904
+        ],
+        [
+          -41.57457896300791,
+          -17.220754456429034
+        ],
+        [
+          -40.67951819055496,
+          -19.23997920436268
+        ],
+        [
+          -39.686456895675974,
+          -21.212853157169892
+        ],
+        [
+          -38.59778745001225,
+          -23.13462348869497
+        ],
+        [
+          -37.416132553614545,
+          -25.000660485882086
+        ],
+        [
+          -36.144338916629025,
+          -26.806468702159496
+        ],
+        [
+          -34.78547040132317,
+          -28.547697787364037
+        ],
+        [
+          -33.34280064097316,
+          -30.22015296811583
+        ],
+        [
+          -31.819805153394647,
+          -31.819805153394636
+        ],
+        [
+          -30.22015296811584,
+          -33.34280064097315
+        ],
+        [
+          -28.54769778736407,
+          -34.78547040132315
+        ],
+        [
+          -26.806468702159492,
+          -36.144338916629025
+        ],
+        [
+          -25.000660485882097,
+          -37.41613255361454
+        ],
+        [
+          -23.13462348869498,
+          -38.59778745001224
+        ],
+        [
+          -21.212853157169903,
+          -39.686456895675974
+        ],
+        [
+          -19.23997920436271,
+          -40.67951819055494
+        ],
+        [
+          -17.220754456429066,
+          -41.574578963007895
+        ],
+        [
+          -15.160043402649897,
+          -42.369482933235936
+        ],
+        [
+          -13.06281047645081,
+          -43.062315107949395
+        ],
+        [
+          -10.934108095646886,
+          -43.65140639375448
+        ],
+        [
+          -8.77906449072579,
+          -44.135337618145364
+        ],
+        [
+          -6.602871350491304,
+          -44.51294294841514
+        ],
+        [
+          -4.41077131483022,
+          -44.783312700248864
+        ],
+        [
+          -2.208045344733811,
+          -44.94579552923276
+        ],
+        [
+          -8.266365894244634e-15,
+          -45.0
+        ],
+        [
+          2.2080453447337947,
+          -44.94579552923276
+        ],
+        [
+          4.410771314830204,
+          -44.783312700248864
+        ],
+        [
+          6.602871350491287,
+          -44.51294294841514
+        ],
+        [
+          8.779064490725773,
+          -44.13533761814537
+        ],
+        [
+          10.934108095646868,
+          -43.65140639375448
+        ],
+        [
+          13.062810476450792,
+          -43.0623151079494
+        ],
+        [
+          15.160043402649883,
+          -42.36948293323594
+        ],
+        [
+          17.22075445642905,
+          -41.5745789630079
+        ],
+        [
+          19.239979204362697,
+          -40.67951819055495
+        ],
+        [
+          21.212853157169892,
+          -39.686456895675974
+        ],
+        [
+          23.13462348869497,
+          -38.59778745001225
+        ],
+        [
+          25.000660485882083,
+          -37.416132553614545
+        ],
+        [
+          26.80646870215948,
+          -36.14433891662904
+        ],
+        [
+          28.54769778736405,
+          -34.78547040132316
+        ],
+        [
+          30.220152968115826,
+          -33.34280064097316
+        ],
+        [
+          31.81980515339463,
+          -31.819805153394647
+        ],
+        [
+          33.34280064097315,
+          -30.22015296811584
+        ],
+        [
+          34.78547040132315,
+          -28.54769778736407
+        ],
+        [
+          36.144338916629025,
+          -26.806468702159496
+        ],
+        [
+          37.41613255361454,
+          -25.000660485882097
+        ],
+        [
+          38.59778745001224,
+          -23.134623488694984
+        ],
+        [
+          39.68645689567597,
+          -21.212853157169906
+        ],
+        [
+          40.67951819055494,
+          -19.239979204362715
+        ],
+        [
+          41.574578963007895,
+          -17.220754456429066
+        ],
+        [
+          42.369482933235936,
+          -15.1600434026499
+        ],
+        [
+          43.062315107949395,
+          -13.062810476450812
+        ],
+        [
+          43.65140639375448,
+          -10.934108095646888
+        ],
+        [
+          44.135337618145364,
+          -8.779064490725792
+        ],
+        [
+          44.51294294841514,
+          -6.6028713504913075
+        ],
+        [
+          44.783312700248864,
+          -4.410771314830223
+        ],
+        [
+          44.94579552923276,
+          -2.208045344733814
+        ]
+      ],
+      "thickness_mm": 2,
+      "holes": [
+        [
+          24.748737341529164,
+          24.74873734152916,
+          6.6
+        ],
+        [
+          -24.74873734152916,
+          24.748737341529164,
+          6.6
+        ],
+        [
+          -24.748737341529168,
+          -24.74873734152916,
+          6.6
+        ],
+        [
+          24.748737341529157,
+          -24.748737341529168,
+          6.6
+        ],
+        [
+          0,
+          0,
+          48.5
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Knife cut. Vented gravity tank only; not a pressure-rated flange."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "H_WT_WASHOUT_COVER",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          45.0,
+          0.0
+        ],
+        [
+          44.94579552923276,
+          2.2080453447338106
+        ],
+        [
+          44.783312700248864,
+          4.410771314830227
+        ],
+        [
+          44.512942948415144,
+          6.602871350491279
+        ],
+        [
+          44.13533761814537,
+          8.779064490725771
+        ],
+        [
+          43.65140639375448,
+          10.934108095646874
+        ],
+        [
+          43.062315107949395,
+          13.062810476450805
+        ],
+        [
+          42.369482933235936,
+          15.160043402649903
+        ],
+        [
+          41.5745789630079,
+          17.22075445642904
+        ],
+        [
+          40.67951819055495,
+          19.239979204362694
+        ],
+        [
+          39.686456895675974,
+          21.212853157169892
+        ],
+        [
+          38.59778745001225,
+          23.134623488694974
+        ],
+        [
+          37.41613255361454,
+          25.000660485882097
+        ],
+        [
+          36.144338916629025,
+          26.806468702159503
+        ],
+        [
+          34.78547040132317,
+          28.547697787364047
+        ],
+        [
+          33.34280064097316,
+          30.220152968115826
+        ],
+        [
+          31.81980515339464,
+          31.819805153394636
+        ],
+        [
+          30.220152968115826,
+          33.34280064097316
+        ],
+        [
+          28.547697787364047,
+          34.78547040132317
+        ],
+        [
+          26.806468702159506,
+          36.14433891662902
+        ],
+        [
+          25.000660485882104,
+          37.41613255361454
+        ],
+        [
+          23.134623488694974,
+          38.59778745001225
+        ],
+        [
+          21.212853157169903,
+          39.686456895675974
+        ],
+        [
+          19.239979204362697,
+          40.67951819055495
+        ],
+        [
+          17.22075445642904,
+          41.5745789630079
+        ],
+        [
+          15.160043402649903,
+          42.369482933235936
+        ],
+        [
+          13.062810476450805,
+          43.0623151079494
+        ],
+        [
+          10.934108095646879,
+          43.65140639375448
+        ],
+        [
+          8.779064490725775,
+          44.13533761814537
+        ],
+        [
+          6.602871350491279,
+          44.512942948415144
+        ],
+        [
+          4.410771314830234,
+          44.78331270024886
+        ],
+        [
+          2.2080453447338155,
+          44.94579552923276
+        ],
+        [
+          2.7554552980815448e-15,
+          45.0
+        ],
+        [
+          -2.20804534473381,
+          44.94579552923276
+        ],
+        [
+          -4.410771314830229,
+          44.783312700248864
+        ],
+        [
+          -6.602871350491274,
+          44.512942948415144
+        ],
+        [
+          -8.77906449072577,
+          44.13533761814537
+        ],
+        [
+          -10.934108095646874,
+          43.65140639375448
+        ],
+        [
+          -13.062810476450798,
+          43.0623151079494
+        ],
+        [
+          -15.160043402649897,
+          42.369482933235936
+        ],
+        [
+          -17.220754456429038,
+          41.5745789630079
+        ],
+        [
+          -19.239979204362683,
+          40.67951819055496
+        ],
+        [
+          -21.212853157169896,
+          39.686456895675974
+        ],
+        [
+          -23.134623488694974,
+          38.59778745001225
+        ],
+        [
+          -25.000660485882086,
+          37.416132553614545
+        ],
+        [
+          -26.806468702159503,
+          36.144338916629025
+        ],
+        [
+          -28.547697787364044,
+          34.78547040132317
+        ],
+        [
+          -30.22015296811583,
+          33.34280064097315
+        ],
+        [
+          -31.819805153394636,
+          31.81980515339464
+        ],
+        [
+          -33.34280064097315,
+          30.220152968115833
+        ],
+        [
+          -34.78547040132317,
+          28.547697787364047
+        ],
+        [
+          -36.14433891662902,
+          26.806468702159506
+        ],
+        [
+          -37.41613255361454,
+          25.000660485882097
+        ],
+        [
+          -38.59778745001224,
+          23.13462348869498
+        ],
+        [
+          -39.686456895675974,
+          21.212853157169903
+        ],
+        [
+          -40.67951819055495,
+          19.23997920436269
+        ],
+        [
+          -41.5745789630079,
+          17.220754456429045
+        ],
+        [
+          -42.36948293323593,
+          15.160043402649915
+        ],
+        [
+          -43.062315107949395,
+          13.062810476450807
+        ],
+        [
+          -43.65140639375448,
+          10.934108095646883
+        ],
+        [
+          -44.13533761814537,
+          8.779064490725787
+        ],
+        [
+          -44.512942948415144,
+          6.602871350491281
+        ],
+        [
+          -44.78331270024886,
+          4.410771314830237
+        ],
+        [
+          -44.94579552923276,
+          2.2080453447338084
+        ],
+        [
+          -45.0,
+          5.5109105961630896e-15
+        ],
+        [
+          -44.94579552923276,
+          -2.2080453447337978
+        ],
+        [
+          -44.783312700248864,
+          -4.410771314830226
+        ],
+        [
+          -44.512942948415144,
+          -6.602871350491271
+        ],
+        [
+          -44.13533761814537,
+          -8.779064490725776
+        ],
+        [
+          -43.65140639375448,
+          -10.934108095646872
+        ],
+        [
+          -43.0623151079494,
+          -13.062810476450794
+        ],
+        [
+          -42.369482933235936,
+          -15.160043402649904
+        ],
+        [
+          -41.57457896300791,
+          -17.220754456429034
+        ],
+        [
+          -40.67951819055496,
+          -19.23997920436268
+        ],
+        [
+          -39.686456895675974,
+          -21.212853157169892
+        ],
+        [
+          -38.59778745001225,
+          -23.13462348869497
+        ],
+        [
+          -37.416132553614545,
+          -25.000660485882086
+        ],
+        [
+          -36.144338916629025,
+          -26.806468702159496
+        ],
+        [
+          -34.78547040132317,
+          -28.547697787364037
+        ],
+        [
+          -33.34280064097316,
+          -30.22015296811583
+        ],
+        [
+          -31.819805153394647,
+          -31.819805153394636
+        ],
+        [
+          -30.22015296811584,
+          -33.34280064097315
+        ],
+        [
+          -28.54769778736407,
+          -34.78547040132315
+        ],
+        [
+          -26.806468702159492,
+          -36.144338916629025
+        ],
+        [
+          -25.000660485882097,
+          -37.41613255361454
+        ],
+        [
+          -23.13462348869498,
+          -38.59778745001224
+        ],
+        [
+          -21.212853157169903,
+          -39.686456895675974
+        ],
+        [
+          -19.23997920436271,
+          -40.67951819055494
+        ],
+        [
+          -17.220754456429066,
+          -41.574578963007895
+        ],
+        [
+          -15.160043402649897,
+          -42.369482933235936
+        ],
+        [
+          -13.06281047645081,
+          -43.062315107949395
+        ],
+        [
+          -10.934108095646886,
+          -43.65140639375448
+        ],
+        [
+          -8.77906449072579,
+          -44.135337618145364
+        ],
+        [
+          -6.602871350491304,
+          -44.51294294841514
+        ],
+        [
+          -4.41077131483022,
+          -44.783312700248864
+        ],
+        [
+          -2.208045344733811,
+          -44.94579552923276
+        ],
+        [
+          -8.266365894244634e-15,
+          -45.0
+        ],
+        [
+          2.2080453447337947,
+          -44.94579552923276
+        ],
+        [
+          4.410771314830204,
+          -44.783312700248864
+        ],
+        [
+          6.602871350491287,
+          -44.51294294841514
+        ],
+        [
+          8.779064490725773,
+          -44.13533761814537
+        ],
+        [
+          10.934108095646868,
+          -43.65140639375448
+        ],
+        [
+          13.062810476450792,
+          -43.0623151079494
+        ],
+        [
+          15.160043402649883,
+          -42.36948293323594
+        ],
+        [
+          17.22075445642905,
+          -41.5745789630079
+        ],
+        [
+          19.239979204362697,
+          -40.67951819055495
+        ],
+        [
+          21.212853157169892,
+          -39.686456895675974
+        ],
+        [
+          23.13462348869497,
+          -38.59778745001225
+        ],
+        [
+          25.000660485882083,
+          -37.416132553614545
+        ],
+        [
+          26.80646870215948,
+          -36.14433891662904
+        ],
+        [
+          28.54769778736405,
+          -34.78547040132316
+        ],
+        [
+          30.220152968115826,
+          -33.34280064097316
+        ],
+        [
+          31.81980515339463,
+          -31.819805153394647
+        ],
+        [
+          33.34280064097315,
+          -30.22015296811584
+        ],
+        [
+          34.78547040132315,
+          -28.54769778736407
+        ],
+        [
+          36.144338916629025,
+          -26.806468702159496
+        ],
+        [
+          37.41613255361454,
+          -25.000660485882097
+        ],
+        [
+          38.59778745001224,
+          -23.134623488694984
+        ],
+        [
+          39.68645689567597,
+          -21.212853157169906
+        ],
+        [
+          40.67951819055494,
+          -19.239979204362715
+        ],
+        [
+          41.574578963007895,
+          -17.220754456429066
+        ],
+        [
+          42.369482933235936,
+          -15.1600434026499
+        ],
+        [
+          43.062315107949395,
+          -13.062810476450812
+        ],
+        [
+          43.65140639375448,
+          -10.934108095646888
+        ],
+        [
+          44.135337618145364,
+          -8.779064490725792
+        ],
+        [
+          44.51294294841514,
+          -6.6028713504913075
+        ],
+        [
+          44.783312700248864,
+          -4.410771314830223
+        ],
+        [
+          44.94579552923276,
+          -2.208045344733814
+        ]
+      ],
+      "thickness_mm": 4,
+      "holes": [
+        [
+          24.748737341529164,
+          24.74873734152916,
+          6.6
+        ],
+        [
+          -24.74873734152916,
+          24.748737341529164,
+          6.6
+        ],
+        [
+          -24.748737341529168,
+          -24.74873734152916,
+          6.6
+        ],
+        [
+          24.748737341529157,
+          -24.748737341529168,
+          6.6
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Flat blank with four clearance holes. Cover removal requires the empty isolated tank and a washout catch beneath."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "STD_M6x25_SOCKET_HEAD_DOWN",
+    "quantity": 4,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "STD_M6_WASHER",
+    "quantity": 4,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
   },
   {
     "part_number": "Y_DATUM_BAR",
@@ -6604,15 +8958,20 @@
     "release": "PURCHASED CLEARANCE ENVELOPE - NOT MATERIAL MASS"
   },
   {
-    "part_number": "ZBX80_MOTOR",
+    "part_number": "CANDIDATE_23HS30-5004D-B280",
     "quantity": 1,
     "individual_export_guarded": true,
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
     "manufacturing_flat": null,
     "notes": [
-      "57\u00d757\u00d756 motor; intervening coupling/bracket clearance reserved. Motor cable outlet HOLD."
+      "Candidate replacement, not an add-on to the original single-ended motor. Source: https://www.omc-stepperonline.com/nema-23-stepper-motor-2-0nm-283-22oz-in-with-24v-4-5w-electromagnetic-brake-23hs30-5004d-b280",
+      "57 x 57 x 116.5 body; shaft diameter8 x21 long, D-flat15. Body extends60.5 above the old56 envelope.",
+      "Two-phase1.8 degree, 5 A/phase, 2.0 N.m holding; brake power-off type, 2.8 N.m static,24 V/4.5 W.",
+      "Motor mount pilot, four mounting holes, shaft alignment/engagement and coupling bore remain unverified against ZBX80. Shaft and cables not silently included in this body solid.",
+      "Brake does not bypass coupling, ballscrew or attachment failure. Static rating is not an emergency-stop energy rating.",
+      "Brake must engage before driver torque is removed; release only after motor torque is established. Brake coil uses a separately rated24 V switched circuit, never a motor phase or logic pin."
     ],
-    "release": "PURCHASED CLEARANCE ENVELOPE - NOT MATERIAL MASS"
+    "release": "REPLACEMENT CANDIDATE - COUPLING/PILOT HOLD - INDIVIDUAL EXPORT GUARDED"
   },
   {
     "part_number": "ZBX80_UPPER_CLEARANCE",
@@ -6621,7 +8980,8 @@
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
     "manufacturing_flat": null,
     "notes": [
-      "330 mm full module envelope fromZ1040 to1370. Connector projection not included."
+      "Original stock module overall envelope is 330 mm from Z1040 to1370. The optional 116.5 mm brake-motor body extends the current reserved overall envelope to390.5 mm, ending atZ1430.5.",
+      "This body reserves the coupling/bracket zone only. Actual motor pilot, shaft, coupling and connector projections are unverified and are not modeled as established hardware."
     ],
     "release": "PURCHASED CLEARANCE ENVELOPE - NOT MATERIAL MASS"
   },
@@ -6632,13 +8992,13 @@
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
     "manufacturing_flat": null,
     "notes": [
-      "Exact-ASIN seller top view: carriage plate90 across x50 along travel; the70 mm transverse dimension connects the smaller\u00d85 holes. Gallery8 identifies four small output fixing holes. The larger\u00d87 bores are not established as usable tool-mount holes.",
-      "Along-travel hole pitch, tapped-vs-through, and the mounting-plane-to-output height are NOT dimensioned in that drawing: the adapter uses vertical slots and the 80 mm output stack stays an assumption until the unit is measured."
+      "Exact-ASIN top view gives a 90 x 50 output carriage. The 70 mm transverse dimension joins the smaller diameter5 fixing holes; it does not qualify the larger assembly bores as tool attachments.",
+      "Output height, along-travel fixing pitch, thread/depth and tool access remain unmeasured. Rev H reserves an 80 mm stack only as a placement assumption and uses an undrilled output-interface blank, without assumed adjustment slots."
     ],
     "release": "PURCHASED CLEARANCE ENVELOPE - NOT MATERIAL MASS"
   },
   {
-    "part_number": "TOOL_ADAPTER_110",
+    "part_number": "H_TOOL_ADAPTER_TRANSFER_BLANK",
     "quantity": 1,
     "individual_export_guarded": true,
     "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
@@ -6684,46 +9044,9 @@
           6.6
         ]
       ],
-      "slots": [
-        [
-          20,
-          45,
-          30,
-          7,
-          90
-        ],
-        [
-          90,
-          45,
-          30,
-          7,
-          90
-        ]
-      ],
+      "slots": [],
       "internal": [],
       "operations": [
-        {
-          "type": "slot",
-          "x": 20,
-          "y": 45,
-          "length": 30,
-          "width": 11,
-          "angle": 90,
-          "depth_mm": 6.6,
-          "face": "front",
-          "layer": "MILL_FRONT_COUNTERSLOT_DEPTH_6_6"
-        },
-        {
-          "type": "slot",
-          "x": 90,
-          "y": 45,
-          "length": 30,
-          "width": 11,
-          "angle": 90,
-          "depth_mm": 6.6,
-          "face": "front",
-          "layer": "MILL_FRONT_COUNTERSLOT_DEPTH_6_6"
-        },
         {
           "type": "circle",
           "x": 10.0,
@@ -6754,25 +9077,19 @@
         }
       ],
       "machining_notes": [
-        "PROVISIONAL: front-face counter-slots11 wide x6.6 deep; dimensions match the STEP but actual carriage fastening is unresolved. Individual fabrication export is guarded."
+        "Blank only: output fixing pattern absent until recorded from actual ZBX80.",
+        "Local Z=0 rear/output face; Z=12.7 front/tool face.",
+        "Known custom clamp pattern 90 x 26; rear counterbores diameter10.5 depth6.",
+        "Do not drill output holes through an assembled guide or ballscrew. Transfer the centers, remove and drill the plate separately."
       ]
     },
     "notes": [
-      "Provisional adapter: two vertical 7 x 30 slots on 70 mm transverse centers. Their approximately24 mm center travel for a6 mm shank does not verify carriage hole spacing, bolt count or a15-45 mm longitudinal pitch.",
-      "Front-face11 x30 counter-slots,6.6 deep, are provisional geometry; the actual carriage screw/head/washer stack remains unselected.",
-      "No carriage fasteners are modeled: the listing identifies four\u00d85 fixing holes but omits their thread and along-travel spacing. The former two M6 x16 candidates have been removed. A true\u00d87 plain bore cannot be tappedM6.",
-      "Interface load path and fastening capacity remain HOLD. Do not manufacture this adapter or select its carriage fasteners from this model.",
-      "Shared spindle/torch clamp pattern: four \u00d86.6 at X\u00b145, Z+12/+38 from the output datum, \u00d810.5 counterbore 6 deep on the carriage-side face.",
-      "Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots.",
-      "\u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush.",
-      "Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots.",
-      "\u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush.",
-      "Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots.",
-      "\u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush.",
-      "Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots.",
-      "\u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush."
+      "Rev H transfer-drill blank: obsolete assumed output slots removed. No output attachment fasteners are invented.",
+      "Record output height and all four fixing-hole coordinates, thread/pitch, usable depth and access before machining this guarded plate.",
+      "Custom tool-side four M6 clearance holes and rear counterbores are defined; Z output attachment is not released.",
+      "The present 80 mm output stack is a placement assumption, not a supplier measurement."
     ],
-    "release": "PROVISIONAL - INDIVIDUAL EXPORT GUARDED UNTIL CARRIAGE DRAWING"
+    "release": "INTERFACE HOLD - INDIVIDUAL EXPORT GUARDED"
   },
   {
     "part_number": "SPINDLE_B0BF5R3LNC",
@@ -6805,8 +9122,7 @@
       "Width110, height40, assembled depth90.5; split gap0.50. Bore\u00d865.00/+0.03 with the split shim installed and both pinch bolts snug.",
       "Rear:four blindM6\u00d71 holes atX\u00b145, \u00d85 pilot17 deep, tap15 deep; mount screwsM6\u00d720 engage13.3 through6.7 mm adapter web.",
       "Pinch screws2\u00d7M6\u00d760 atX\u00b147. Rear split face:\u00d85 pilot17 deep,tapM6\u00d71 depth15. Front half\u00d86.6 through; nominal engagement14.75.",
-      "Deburr bore edges0.3 maximum. Initial pinch torque3 N\u00b7m, verify spindle housing is retained without local deformation. Remove tool before bed swap.",
-      "The plasma torch split clamp (bore\u00d828 for the AG-60 straight body) shares this mount pattern; see TORCH_CLAMP parked parts."
+      "Deburr bore edges0.3 maximum. Initial pinch torque3 N\u00b7m, verify spindle housing is retained without local deformation. Remove tool before bed swap."
     ],
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },
@@ -6820,8 +9136,7 @@
       "Width110, height40, assembled depth90.5; split gap0.50. Bore\u00d865.00/+0.03 with the split shim installed and both pinch bolts snug.",
       "Rear:four blindM6\u00d71 holes atX\u00b145, \u00d85 pilot17 deep, tap15 deep; mount screwsM6\u00d720 engage13.3 through6.7 mm adapter web.",
       "Pinch screws2\u00d7M6\u00d760 atX\u00b147. Rear split face:\u00d85 pilot17 deep,tapM6\u00d71 depth15. Front half\u00d86.6 through; nominal engagement14.75.",
-      "Deburr bore edges0.3 maximum. Initial pinch torque3 N\u00b7m, verify spindle housing is retained without local deformation. Remove tool before bed swap.",
-      "The plasma torch split clamp (bore\u00d828 for the AG-60 straight body) shares this mount pattern; see TORCH_CLAMP parked parts."
+      "Deburr bore edges0.3 maximum. Initial pinch torque3 N\u00b7m, verify spindle housing is retained without local deformation. Remove tool before bed swap."
     ],
     "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
   },

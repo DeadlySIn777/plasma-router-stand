@@ -5,7 +5,9 @@ rigid body: lift 70 mm in place, then travel forward out of the open front
 window. The six BED_M10 drawdowns are removed first. The gantry is at the rear
 stop with the head centred (X575) and Z fully raised; the spindle stays in place
 as a conservative obstacle. Sling legs run from each lug-hole centre to a hook
-point above the module centre of mass; three hook heights are checked.
+point above the module centre of mass; three hook heights are checked. Fixed
+obstacles include the Rev H service hatches, the relocated Rev J refill spout
+and the Rev H braked Z-motor candidate envelope (top Z1430.5).
 Run with the project CadQuery environment.
 """
 from pathlib import Path
@@ -26,7 +28,7 @@ ROOT = Path(__file__).resolve().parent
 OUT_DIR = ROOT.parent / 'RevJ-CAD'
 OUT = OUT_DIR / 'handling-check.json'
 LIFT = 70.0
-FORWARD = 1420.0              # module rear end Y1345 finishes at Y-75, ahead of the feet at Y-14.6
+FORWARD = 1420.0              # module rear end (lugs, Y1347.8) finishes at Y-72.2, ahead of the feet at Y-14.6
 HOOK_RISES = (700.0, 1000.0, 2000.0)   # hook point above the lug-hole plane
 LEG_D = 13.0                  # chain leg plus shackle envelope
 HOOK_BLOCK = (90.0, 180.0)    # hook and bottom block envelope, diameter x height

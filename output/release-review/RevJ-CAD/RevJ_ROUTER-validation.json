@@ -424,7 +424,7 @@
         "50.8 x 50.8 x 3.048 mm nominal hollow tube; square-corner idealization",
         "Welded structure: nominal square tube corners; stock corner radii are not precision mating datums.",
         "Sandserviceport:\u00d830weldbung,M20\u00d71.5removableplug. Fillonlyafterallwelding/coating;weightactualdryballast.",
-        "Rev H receiver: three \u00d818 sleeve bores through both walls at X87.4, Y25/670/1310. Weld the sleeves and the three seat pads before ballast filling."
+        "Rev J receiver: three \u00d818 sleeve bores through both walls at X87.4, Y25/670/1310. Weld the sleeves and the three seat pads before ballast filling."
       ]
     },
     {
@@ -447,7 +447,7 @@
         "50.8 x 50.8 x 3.048 mm nominal hollow tube; square-corner idealization",
         "Welded structure: nominal square tube corners; stock corner radii are not precision mating datums.",
         "Sandserviceport:\u00d830weldbung,M20\u00d71.5removableplug. Fillonlyafterallwelding/coating;weightactualdryballast.",
-        "Rev H receiver: three \u00d818 sleeve bores through both walls at X1062.6, Y25/670/1310. Weld the sleeves and the three seat pads before ballast filling."
+        "Rev J receiver: three \u00d818 sleeve bores through both walls at X1062.6, Y25/670/1310. Weld the sleeves and the three seat pads before ballast filling."
       ]
     },
     {
@@ -3589,7 +3589,7 @@
       "material": "A36 steel 0.120in sheet",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
       "purchased_envelope": false,
-      "volume_mm3": 3353898.17294,
+      "volume_mm3": 3352781.27794,
       "bounds_mm": [
         115.0,
         105.0,
@@ -3601,7 +3601,8 @@
       "notes": [
         "Install at 1% downward slope toward rear. Continuous watertight seam welds.",
         "Two48.5mmweldneckclearanceholes:drainand1.5instandpipe. No bend allowance required.",
-        "Drain center is0.35mm above absolute rear floor edge; residual film requires cleaning."
+        "Drain center is0.35mm above absolute rear floor edge; residual film requires cleaning.",
+        "Rev J: \u00d821.6 normal hole at world XY(385,1215.4) receives the vertical refill riser; seal weld annulus, leak-test and coat after welding."
       ]
     },
     {
@@ -4663,18 +4664,18 @@
       "material": "NPS1.5 schedule40 steel pipe",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
       "purchased_envelope": false,
-      "volume_mm3": 25921.28098,
+      "volume_mm3": 32167.27285,
       "bounds_mm": [
         875.85,
         1235.85,
-        128.048,
+        116.0,
         924.15,
         1284.15,
         178.048
       ],
       "notes": [
-        "Flush upper end with inner floor; external lower end1.5NPT male for manual washout valve/cap. Keep accessible from rear.",
-        "https://www.wheatland.com/wp-content/uploads/2017/12/Schedule-40-Submittal-Sheet.pdf"
+        "Flush upper end with tank inner floor; lower end is plain, welded to the fabricated flange. The old1.5 NPT cap callout is superseded.",
+        "Tank must be emptied and isolated before loosening the cleanout cover. This large opening is for washout, not controlled draining of115 L."
       ]
     },
     {
@@ -4784,7 +4785,7 @@
       "material": "A36 steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
       "purchased_envelope": false,
-      "volume_mm3": 1885227.87395,
+      "volume_mm3": 1631374.89057,
       "bounds_mm": [
         91.952,
         681.952,
@@ -4794,7 +4795,9 @@
         433.096
       ],
       "notes": [
-        "Catch-basket hatch166x126. Separate55mm overflow entry and33.6mm vent pipe penetration."
+        "Catch-basket hatch166x126. Separate55mm overflow entry and33.6mm vent pipe penetration.",
+        "Rev H: routine washout is through two independent service openings; the equipment lid remains installed.",
+        "The full lid is a major-disassembly item, not a verified routine removal. Drain and isolate before opening either hatch."
       ]
     },
     {
@@ -7595,8 +7598,8 @@
       ]
     },
     {
-      "id": "H_PAD_L_1",
-      "part_number": "H_PAD_FRONT_ROUND",
+      "id": "J_PAD_L_1",
+      "part_number": "J_PAD_FRONT_ROUND",
       "group": "bed_fixed",
       "material": "A36 steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -7617,8 +7620,8 @@
       ]
     },
     {
-      "id": "H_LEDGER_SLEEVE_L_1",
-      "part_number": "H_LEDGER_M10_SLEEVE",
+      "id": "J_LEDGER_SLEEVE_L_1",
+      "part_number": "J_LEDGER_M10_SLEEVE",
       "group": "bed_fixed",
       "material": "Machined steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -7638,8 +7641,8 @@
       ]
     },
     {
-      "id": "H_PAD_L_2",
-      "part_number": "H_PAD_PLAIN",
+      "id": "J_PAD_L_2",
+      "part_number": "J_PAD_PLAIN",
       "group": "bed_fixed",
       "material": "A36 steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -7660,8 +7663,8 @@
       ]
     },
     {
-      "id": "H_LEDGER_SLEEVE_L_2",
-      "part_number": "H_LEDGER_M10_SLEEVE",
+      "id": "J_LEDGER_SLEEVE_L_2",
+      "part_number": "J_LEDGER_M10_SLEEVE",
       "group": "bed_fixed",
       "material": "Machined steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -7681,8 +7684,8 @@
       ]
     },
     {
-      "id": "H_PAD_L_3",
-      "part_number": "H_PAD_PLAIN",
+      "id": "J_PAD_L_3",
+      "part_number": "J_PAD_PLAIN",
       "group": "bed_fixed",
       "material": "A36 steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -7703,8 +7706,8 @@
       ]
     },
     {
-      "id": "H_LEDGER_SLEEVE_L_3",
-      "part_number": "H_LEDGER_M10_SLEEVE",
+      "id": "J_LEDGER_SLEEVE_L_3",
+      "part_number": "J_LEDGER_M10_SLEEVE",
       "group": "bed_fixed",
       "material": "Machined steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -7724,8 +7727,8 @@
       ]
     },
     {
-      "id": "H_PAD_R_1",
-      "part_number": "H_PAD_FRONT_SLOT",
+      "id": "J_PAD_R_1",
+      "part_number": "J_PAD_FRONT_SLOT",
       "group": "bed_fixed",
       "material": "A36 steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -7746,8 +7749,8 @@
       ]
     },
     {
-      "id": "H_LEDGER_SLEEVE_R_1",
-      "part_number": "H_LEDGER_M10_SLEEVE",
+      "id": "J_LEDGER_SLEEVE_R_1",
+      "part_number": "J_LEDGER_M10_SLEEVE",
       "group": "bed_fixed",
       "material": "Machined steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -7767,8 +7770,8 @@
       ]
     },
     {
-      "id": "H_PAD_R_2",
-      "part_number": "H_PAD_PLAIN",
+      "id": "J_PAD_R_2",
+      "part_number": "J_PAD_PLAIN",
       "group": "bed_fixed",
       "material": "A36 steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -7789,8 +7792,8 @@
       ]
     },
     {
-      "id": "H_LEDGER_SLEEVE_R_2",
-      "part_number": "H_LEDGER_M10_SLEEVE",
+      "id": "J_LEDGER_SLEEVE_R_2",
+      "part_number": "J_LEDGER_M10_SLEEVE",
       "group": "bed_fixed",
       "material": "Machined steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -7810,8 +7813,8 @@
       ]
     },
     {
-      "id": "H_PAD_R_3",
-      "part_number": "H_PAD_PLAIN",
+      "id": "J_PAD_R_3",
+      "part_number": "J_PAD_PLAIN",
       "group": "bed_fixed",
       "material": "A36 steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -7832,8 +7835,8 @@
       ]
     },
     {
-      "id": "H_LEDGER_SLEEVE_R_3",
-      "part_number": "H_LEDGER_M10_SLEEVE",
+      "id": "J_LEDGER_SLEEVE_R_3",
+      "part_number": "J_LEDGER_M10_SLEEVE",
       "group": "bed_fixed",
       "material": "Machined steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -8148,10 +8151,10 @@
       "volume_mm3": 526317.76531,
       "bounds_mm": [
         118.8,
-        60.0,
+        75.0,
         870.0,
         1031.2,
-        110.8,
+        125.8,
         920.8
       ],
       "notes": [
@@ -8170,10 +8173,10 @@
       "volume_mm3": 22799.04,
       "bounds_mm": [
         112.8,
-        60.0,
+        75.0,
         846.0,
         118.8,
-        110.8,
+        125.8,
         920.8
       ],
       "notes": [
@@ -8190,10 +8193,10 @@
       "volume_mm3": 22799.04,
       "bounds_mm": [
         1031.2,
-        60.0,
+        75.0,
         846.0,
         1037.2,
-        110.8,
+        125.8,
         920.8
       ],
       "notes": [
@@ -8334,10 +8337,10 @@
       "volume_mm3": 526317.76531,
       "bounds_mm": [
         118.8,
-        1232.0,
+        1247.0,
         870.0,
         1031.2,
-        1282.8,
+        1297.8,
         920.8
       ],
       "notes": [
@@ -8356,10 +8359,10 @@
       "volume_mm3": 22799.04,
       "bounds_mm": [
         112.8,
-        1232.0,
+        1247.0,
         846.0,
         118.8,
-        1282.8,
+        1297.8,
         920.8
       ],
       "notes": [
@@ -8376,10 +8379,10 @@
       "volume_mm3": 22799.04,
       "bounds_mm": [
         1031.2,
-        1232.0,
+        1247.0,
         846.0,
         1037.2,
-        1282.8,
+        1297.8,
         920.8
       ],
       "notes": [
@@ -8396,10 +8399,10 @@
       "volume_mm3": 32823.74017,
       "bounds_mm": [
         145.2375,
-        10.0,
+        25.0,
         870.0,
         154.7625,
-        60.0,
+        75.0,
         945.0
       ],
       "notes": [
@@ -8418,10 +8421,10 @@
       "volume_mm3": 32823.74017,
       "bounds_mm": [
         995.2375,
-        10.0,
+        25.0,
         870.0,
         1004.7625,
-        60.0,
+        75.0,
         945.0
       ],
       "notes": [
@@ -8440,10 +8443,10 @@
       "volume_mm3": 32823.74017,
       "bounds_mm": [
         145.2375,
-        1282.8,
+        1297.8,
         870.0,
         154.7625,
-        1332.8,
+        1347.8,
         945.0
       ],
       "notes": [
@@ -8462,10 +8465,10 @@
       "volume_mm3": 32823.74017,
       "bounds_mm": [
         995.2375,
-        1282.8,
+        1297.8,
         870.0,
         1004.7625,
-        1332.8,
+        1347.8,
         945.0
       ],
       "notes": [
@@ -8484,10 +8487,10 @@
       "volume_mm3": 733729.65422,
       "bounds_mm": [
         125.0,
-        73.0,
+        88.0,
         920.8,
         225.0,
-        1270.0,
+        1285.0,
         940.8
       ],
       "notes": [
@@ -8505,10 +8508,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         150.25,
-        87.15,
+        102.15,
         915.002,
         159.75,
-        96.65,
+        111.65,
         925.752
       ],
       "notes": [
@@ -8525,10 +8528,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         151.0,
-        87.9,
+        102.9,
         922.1,
         159.0,
-        95.9,
+        110.9,
         924.8
       ],
       "notes": [
@@ -8625,10 +8628,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         190.25,
-        1246.25,
+        1261.25,
         915.002,
         199.75,
-        1255.75,
+        1270.75,
         925.752
       ],
       "notes": [
@@ -8645,10 +8648,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         191.0,
-        1247.0,
+        1262.0,
         922.1,
         199.0,
-        1255.0,
+        1270.0,
         924.8
       ],
       "notes": [
@@ -8665,10 +8668,10 @@
       "volume_mm3": 733729.65422,
       "bounds_mm": [
         225.0,
-        73.0,
+        88.0,
         920.8,
         325.0,
-        1270.0,
+        1285.0,
         940.8
       ],
       "notes": [
@@ -8686,10 +8689,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         250.25,
-        87.15,
+        102.15,
         915.002,
         259.75,
-        96.65,
+        111.65,
         925.752
       ],
       "notes": [
@@ -8706,10 +8709,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         251.0,
-        87.9,
+        102.9,
         922.1,
         259.0,
-        95.9,
+        110.9,
         924.8
       ],
       "notes": [
@@ -8806,10 +8809,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         290.25,
-        1246.25,
+        1261.25,
         915.002,
         299.75,
-        1255.75,
+        1270.75,
         925.752
       ],
       "notes": [
@@ -8826,10 +8829,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         291.0,
-        1247.0,
+        1262.0,
         922.1,
         299.0,
-        1255.0,
+        1270.0,
         924.8
       ],
       "notes": [
@@ -8846,10 +8849,10 @@
       "volume_mm3": 733729.65422,
       "bounds_mm": [
         325.0,
-        73.0,
+        88.0,
         920.8,
         425.0,
-        1270.0,
+        1285.0,
         940.8
       ],
       "notes": [
@@ -8867,10 +8870,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         350.25,
-        87.15,
+        102.15,
         915.002,
         359.75,
-        96.65,
+        111.65,
         925.752
       ],
       "notes": [
@@ -8887,10 +8890,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         351.0,
-        87.9,
+        102.9,
         922.1,
         359.0,
-        95.9,
+        110.9,
         924.8
       ],
       "notes": [
@@ -8987,10 +8990,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         390.25,
-        1246.25,
+        1261.25,
         915.002,
         399.75,
-        1255.75,
+        1270.75,
         925.752
       ],
       "notes": [
@@ -9007,10 +9010,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         391.0,
-        1247.0,
+        1262.0,
         922.1,
         399.0,
-        1255.0,
+        1270.0,
         924.8
       ],
       "notes": [
@@ -9027,10 +9030,10 @@
       "volume_mm3": 733729.65422,
       "bounds_mm": [
         425.0,
-        73.0,
+        88.0,
         920.8,
         525.0,
-        1270.0,
+        1285.0,
         940.8
       ],
       "notes": [
@@ -9048,10 +9051,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         450.25,
-        87.15,
+        102.15,
         915.002,
         459.75,
-        96.65,
+        111.65,
         925.752
       ],
       "notes": [
@@ -9068,10 +9071,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         451.0,
-        87.9,
+        102.9,
         922.1,
         459.0,
-        95.9,
+        110.9,
         924.8
       ],
       "notes": [
@@ -9168,10 +9171,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         490.25,
-        1246.25,
+        1261.25,
         915.002,
         499.75,
-        1255.75,
+        1270.75,
         925.752
       ],
       "notes": [
@@ -9188,10 +9191,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         491.0,
-        1247.0,
+        1262.0,
         922.1,
         499.0,
-        1255.0,
+        1270.0,
         924.8
       ],
       "notes": [
@@ -9208,10 +9211,10 @@
       "volume_mm3": 733729.65422,
       "bounds_mm": [
         525.0,
-        73.0,
+        88.0,
         920.8,
         625.0,
-        1270.0,
+        1285.0,
         940.8
       ],
       "notes": [
@@ -9229,10 +9232,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         550.25,
-        87.15,
+        102.15,
         915.002,
         559.75,
-        96.65,
+        111.65,
         925.752
       ],
       "notes": [
@@ -9249,10 +9252,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         551.0,
-        87.9,
+        102.9,
         922.1,
         559.0,
-        95.9,
+        110.9,
         924.8
       ],
       "notes": [
@@ -9349,10 +9352,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         590.25,
-        1246.25,
+        1261.25,
         915.002,
         599.75,
-        1255.75,
+        1270.75,
         925.752
       ],
       "notes": [
@@ -9369,10 +9372,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         591.0,
-        1247.0,
+        1262.0,
         922.1,
         599.0,
-        1255.0,
+        1270.0,
         924.8
       ],
       "notes": [
@@ -9389,10 +9392,10 @@
       "volume_mm3": 733729.65422,
       "bounds_mm": [
         625.0,
-        73.0,
+        88.0,
         920.8,
         725.0,
-        1270.0,
+        1285.0,
         940.8
       ],
       "notes": [
@@ -9410,10 +9413,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         650.25,
-        87.15,
+        102.15,
         915.002,
         659.75,
-        96.65,
+        111.65,
         925.752
       ],
       "notes": [
@@ -9430,10 +9433,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         651.0,
-        87.9,
+        102.9,
         922.1,
         659.0,
-        95.9,
+        110.9,
         924.8
       ],
       "notes": [
@@ -9530,10 +9533,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         690.25,
-        1246.25,
+        1261.25,
         915.002,
         699.75,
-        1255.75,
+        1270.75,
         925.752
       ],
       "notes": [
@@ -9550,10 +9553,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         691.0,
-        1247.0,
+        1262.0,
         922.1,
         699.0,
-        1255.0,
+        1270.0,
         924.8
       ],
       "notes": [
@@ -9570,10 +9573,10 @@
       "volume_mm3": 733729.65422,
       "bounds_mm": [
         725.0,
-        73.0,
+        88.0,
         920.8,
         825.0,
-        1270.0,
+        1285.0,
         940.8
       ],
       "notes": [
@@ -9591,10 +9594,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         750.25,
-        87.15,
+        102.15,
         915.002,
         759.75,
-        96.65,
+        111.65,
         925.752
       ],
       "notes": [
@@ -9611,10 +9614,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         751.0,
-        87.9,
+        102.9,
         922.1,
         759.0,
-        95.9,
+        110.9,
         924.8
       ],
       "notes": [
@@ -9711,10 +9714,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         790.25,
-        1246.25,
+        1261.25,
         915.002,
         799.75,
-        1255.75,
+        1270.75,
         925.752
       ],
       "notes": [
@@ -9731,10 +9734,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         791.0,
-        1247.0,
+        1262.0,
         922.1,
         799.0,
-        1255.0,
+        1270.0,
         924.8
       ],
       "notes": [
@@ -9751,10 +9754,10 @@
       "volume_mm3": 733729.65422,
       "bounds_mm": [
         825.0,
-        73.0,
+        88.0,
         920.8,
         925.0,
-        1270.0,
+        1285.0,
         940.8
       ],
       "notes": [
@@ -9772,10 +9775,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         850.25,
-        87.15,
+        102.15,
         915.002,
         859.75,
-        96.65,
+        111.65,
         925.752
       ],
       "notes": [
@@ -9792,10 +9795,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         851.0,
-        87.9,
+        102.9,
         922.1,
         859.0,
-        95.9,
+        110.9,
         924.8
       ],
       "notes": [
@@ -9892,10 +9895,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         890.25,
-        1246.25,
+        1261.25,
         915.002,
         899.75,
-        1255.75,
+        1270.75,
         925.752
       ],
       "notes": [
@@ -9912,10 +9915,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         891.0,
-        1247.0,
+        1262.0,
         922.1,
         899.0,
-        1255.0,
+        1270.0,
         924.8
       ],
       "notes": [
@@ -9932,10 +9935,10 @@
       "volume_mm3": 733729.65422,
       "bounds_mm": [
         925.0,
-        73.0,
+        88.0,
         920.8,
         1025.0,
-        1270.0,
+        1285.0,
         940.8
       ],
       "notes": [
@@ -9953,10 +9956,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         950.25,
-        87.15,
+        102.15,
         915.002,
         959.75,
-        96.65,
+        111.65,
         925.752
       ],
       "notes": [
@@ -9973,10 +9976,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         951.0,
-        87.9,
+        102.9,
         922.1,
         959.0,
-        95.9,
+        110.9,
         924.8
       ],
       "notes": [
@@ -10073,10 +10076,10 @@
       "volume_mm3": 352.00564,
       "bounds_mm": [
         990.25,
-        1246.25,
+        1261.25,
         915.002,
         999.75,
-        1255.75,
+        1270.75,
         925.752
       ],
       "notes": [
@@ -10093,10 +10096,10 @@
       "volume_mm3": 119.78562,
       "bounds_mm": [
         991.0,
-        1247.0,
+        1262.0,
         922.1,
         999.0,
-        1255.0,
+        1270.0,
         924.8
       ],
       "notes": [
@@ -11054,8 +11057,8 @@
       "notes": []
     },
     {
-      "id": "H_BOLT_TRAY_FLOOR",
-      "part_number": "H_BOLT_TRAY_FLOOR",
+      "id": "J_BOLT_TRAY_FLOOR",
+      "part_number": "J_BOLT_TRAY_FLOOR",
       "group": "bed_storage",
       "material": "304 stainless 3 mm sheet",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -11074,8 +11077,8 @@
       ]
     },
     {
-      "id": "H_BOLT_TRAY_SIDE_1",
-      "part_number": "H_BOLT_TRAY_SIDE",
+      "id": "J_BOLT_TRAY_SIDE_1",
+      "part_number": "J_BOLT_TRAY_SIDE",
       "group": "bed_storage",
       "material": "304 stainless 3 mm sheet",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -11092,8 +11095,8 @@
       "notes": []
     },
     {
-      "id": "H_BOLT_TRAY_SIDE_2",
-      "part_number": "H_BOLT_TRAY_SIDE",
+      "id": "J_BOLT_TRAY_SIDE_2",
+      "part_number": "J_BOLT_TRAY_SIDE",
       "group": "bed_storage",
       "material": "304 stainless 3 mm sheet",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -11110,8 +11113,8 @@
       "notes": []
     },
     {
-      "id": "H_BOLT_TRAY_END_1",
-      "part_number": "H_BOLT_TRAY_END",
+      "id": "J_BOLT_TRAY_END_1",
+      "part_number": "J_BOLT_TRAY_END",
       "group": "bed_storage",
       "material": "304 stainless 3 mm sheet",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -11128,8 +11131,8 @@
       "notes": []
     },
     {
-      "id": "H_BOLT_TRAY_END_2",
-      "part_number": "H_BOLT_TRAY_END",
+      "id": "J_BOLT_TRAY_END_2",
+      "part_number": "J_BOLT_TRAY_END",
       "group": "bed_storage",
       "material": "304 stainless 3 mm sheet",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
@@ -11388,7 +11391,7 @@
         436.144
       ],
       "notes": [
-        "Holds the removed spindle-clamp screws and the four lift shackles. The six Rev H drawdowns use their own tray on the reservoir lid."
+        "Holds the removed spindle-clamp screws and the four lift shackles. The six Rev J drawdowns use their own tray on the reservoir lid."
       ]
     },
     {
@@ -12131,6 +12134,1309 @@
       "notes": [
         "Nominal 8AF x 5 envelope; retained below cage tab, outside enclosure side wall."
       ]
+    },
+    {
+      "id": "H_WT_CLARIFIED_GASKET",
+      "part_number": "H_WT_CLARIFIED_GASKET",
+      "group": "water_service",
+      "material": "2mm EPDM gasket; verify coolant compatibility",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 42514.90047,
+      "bounds_mm": [
+        330.0,
+        945.0,
+        433.096,
+        690.0,
+        1160.0,
+        435.096
+      ],
+      "notes": [
+        "Knife cut, not a metal cutting program. Splash seal only; tank remains permanently vented."
+      ]
+    },
+    {
+      "id": "H_WT_CLARIFIED_COVER",
+      "part_number": "H_WT_CLARIFIED_COVER",
+      "group": "water_service",
+      "material": "A36 steel0.120in sheet",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 235480.70831,
+      "bounds_mm": [
+        330.0,
+        945.0,
+        435.096,
+        690.0,
+        1160.0,
+        438.144
+      ],
+      "notes": [
+        "Six M5x16 screws into underside weld nuts. Remove screws before lifting; retain gasket on the fixed lid.",
+        "Lift 50 mm, move forward to parking Y935.000, rotate +90 degrees about the cover lower/front edge, then lower into both 40 mm deep parking pockets.",
+        "Open position is service only. Confirm the panel is fully seated in both pockets; do not operate machine with a hatch open.",
+        "These are vacuum-wand/long-brush washout openings; tank cleaning efficacy is a physical commissioning check."
+      ]
+    },
+    {
+      "id": "H_WT_CLARIFIED_PULL_TAB",
+      "part_number": "H_WT_PULL_TAB",
+      "group": "water_service",
+      "material": "A36 steel3mm",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1460.70799,
+      "bounds_mm": [
+        500.0,
+        992.0,
+        438.144,
+        520.0,
+        995.0,
+        468.144
+      ],
+      "notes": [
+        "Weld20 mm lower edge to cover top; deburr12 mm lifting-hook hole. Cover and tab move as one weldment. This is not a rated hoist point."
+      ]
+    },
+    {
+      "id": "H_WT_CLARIFIED_NUT_1",
+      "part_number": "STD_M5_WELDNUT",
+      "group": "water_service",
+      "material": "M5 weld nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 143.16269,
+      "bounds_mm": [
+        335.381198,
+        951.0,
+        426.048,
+        344.618802,
+        959.0,
+        430.048
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_CLARIFIED_BOLT_1",
+      "part_number": "STD_M5x16_SOCKET",
+      "group": "water_service",
+      "material": "M5x16 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 597.88435,
+      "bounds_mm": [
+        335.75,
+        950.75,
+        422.144,
+        344.25,
+        959.25,
+        443.144
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_CLARIFIED_NUT_2",
+      "part_number": "STD_M5_WELDNUT",
+      "group": "water_service",
+      "material": "M5 weld nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 143.16269,
+      "bounds_mm": [
+        505.381198,
+        951.0,
+        426.048,
+        514.618802,
+        959.0,
+        430.048
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_CLARIFIED_BOLT_2",
+      "part_number": "STD_M5x16_SOCKET",
+      "group": "water_service",
+      "material": "M5x16 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 597.88435,
+      "bounds_mm": [
+        505.75,
+        950.75,
+        422.144,
+        514.25,
+        959.25,
+        443.144
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_CLARIFIED_NUT_3",
+      "part_number": "STD_M5_WELDNUT",
+      "group": "water_service",
+      "material": "M5 weld nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 143.16269,
+      "bounds_mm": [
+        675.381198,
+        951.0,
+        426.048,
+        684.618802,
+        959.0,
+        430.048
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_CLARIFIED_BOLT_3",
+      "part_number": "STD_M5x16_SOCKET",
+      "group": "water_service",
+      "material": "M5x16 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 597.88435,
+      "bounds_mm": [
+        675.75,
+        950.75,
+        422.144,
+        684.25,
+        959.25,
+        443.144
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_CLARIFIED_NUT_4",
+      "part_number": "STD_M5_WELDNUT",
+      "group": "water_service",
+      "material": "M5 weld nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 143.16269,
+      "bounds_mm": [
+        335.381198,
+        1146.0,
+        426.048,
+        344.618802,
+        1154.0,
+        430.048
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_CLARIFIED_BOLT_4",
+      "part_number": "STD_M5x16_SOCKET",
+      "group": "water_service",
+      "material": "M5x16 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 597.88435,
+      "bounds_mm": [
+        335.75,
+        1145.75,
+        422.144,
+        344.25,
+        1154.25,
+        443.144
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_CLARIFIED_NUT_5",
+      "part_number": "STD_M5_WELDNUT",
+      "group": "water_service",
+      "material": "M5 weld nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 143.16269,
+      "bounds_mm": [
+        505.381198,
+        1146.0,
+        426.048,
+        514.618802,
+        1154.0,
+        430.048
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_CLARIFIED_BOLT_5",
+      "part_number": "STD_M5x16_SOCKET",
+      "group": "water_service",
+      "material": "M5x16 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 597.88435,
+      "bounds_mm": [
+        505.75,
+        1145.75,
+        422.144,
+        514.25,
+        1154.25,
+        443.144
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_CLARIFIED_NUT_6",
+      "part_number": "STD_M5_WELDNUT",
+      "group": "water_service",
+      "material": "M5 weld nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 143.16269,
+      "bounds_mm": [
+        675.381198,
+        1146.0,
+        426.048,
+        684.618802,
+        1154.0,
+        430.048
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_CLARIFIED_BOLT_6",
+      "part_number": "STD_M5x16_SOCKET",
+      "group": "water_service",
+      "material": "M5x16 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 597.88435,
+      "bounds_mm": [
+        675.75,
+        1145.75,
+        422.144,
+        684.25,
+        1154.25,
+        443.144
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_FLOOR_1",
+      "part_number": "H_WT_PARK_FLOOR",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1680.0,
+      "bounds_mm": [
+        360.0,
+        928.0,
+        433.096,
+        400.0,
+        942.0,
+        436.096
+      ],
+      "notes": [
+        "Seal weld perimeter to equipment lid; bottom support for service cover."
+      ]
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_FACE_1_1",
+      "part_number": "H_WT_PARK_FACE",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 4800.0,
+      "bounds_mm": [
+        360.0,
+        928.0,
+        436.096,
+        400.0,
+        931.0,
+        476.096
+      ],
+      "notes": [
+        "Weld to pocket floor; installed inner gap is 8 mm for the 3.048 mm cover."
+      ]
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_FACE_1_2",
+      "part_number": "H_WT_PARK_FACE",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 4800.0,
+      "bounds_mm": [
+        360.0,
+        939.0,
+        436.096,
+        400.0,
+        942.0,
+        476.096
+      ],
+      "notes": [
+        "Weld to pocket floor; installed inner gap is 8 mm for the 3.048 mm cover."
+      ]
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_FLOOR_2",
+      "part_number": "H_WT_PARK_FLOOR",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1680.0,
+      "bounds_mm": [
+        620.0,
+        928.0,
+        433.096,
+        660.0,
+        942.0,
+        436.096
+      ],
+      "notes": [
+        "Seal weld perimeter to equipment lid; bottom support for service cover."
+      ]
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_FACE_2_1",
+      "part_number": "H_WT_PARK_FACE",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 4800.0,
+      "bounds_mm": [
+        620.0,
+        928.0,
+        436.096,
+        660.0,
+        931.0,
+        476.096
+      ],
+      "notes": [
+        "Weld to pocket floor; installed inner gap is 8 mm for the 3.048 mm cover."
+      ]
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_FACE_2_2",
+      "part_number": "H_WT_PARK_FACE",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 4800.0,
+      "bounds_mm": [
+        620.0,
+        939.0,
+        436.096,
+        660.0,
+        942.0,
+        476.096
+      ],
+      "notes": [
+        "Weld to pocket floor; installed inner gap is 8 mm for the 3.048 mm cover."
+      ]
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_END_1",
+      "part_number": "H_WT_PARK_END",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 960.0,
+      "bounds_mm": [
+        327.0,
+        931.0,
+        433.096,
+        330.0,
+        939.0,
+        473.096
+      ],
+      "notes": [
+        "Weld bottom edge to lid just beyond the service cover ends; limits sideways movement."
+      ]
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_END_2",
+      "part_number": "H_WT_PARK_END",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 960.0,
+      "bounds_mm": [
+        690.0,
+        931.0,
+        433.096,
+        693.0,
+        939.0,
+        473.096
+      ],
+      "notes": [
+        "Weld bottom edge to lid just beyond the service cover ends; limits sideways movement."
+      ]
+    },
+    {
+      "id": "H_WT_SETTLING_GASKET",
+      "part_number": "H_WT_SETTLING_GASKET",
+      "group": "water_service",
+      "material": "2mm EPDM gasket; verify coolant compatibility",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 32514.90047,
+      "bounds_mm": [
+        440.0,
+        1180.0,
+        433.096,
+        750.0,
+        1320.0,
+        435.096
+      ],
+      "notes": [
+        "Knife cut, not a metal cutting program. Splash seal only; tank remains permanently vented."
+      ]
+    },
+    {
+      "id": "H_WT_SETTLING_COVER",
+      "part_number": "H_WT_SETTLING_COVER",
+      "group": "water_service",
+      "material": "A36 steel0.120in sheet",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 131848.70831,
+      "bounds_mm": [
+        440.0,
+        1180.0,
+        435.096,
+        750.0,
+        1320.0,
+        438.144
+      ],
+      "notes": [
+        "Six M5x16 screws into underside weld nuts. Remove screws before lifting; retain gasket on the fixed lid.",
+        "Lift 50 mm, move forward to parking Y1168.000, rotate +90 degrees about the cover lower/front edge, then lower into both 40 mm deep parking pockets.",
+        "Open position is service only. Confirm the panel is fully seated in both pockets; do not operate machine with a hatch open.",
+        "These are vacuum-wand/long-brush washout openings; tank cleaning efficacy is a physical commissioning check."
+      ]
+    },
+    {
+      "id": "H_WT_SETTLING_PULL_TAB",
+      "part_number": "H_WT_PULL_TAB",
+      "group": "water_service",
+      "material": "A36 steel3mm",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1460.70799,
+      "bounds_mm": [
+        585.0,
+        1227.0,
+        438.144,
+        605.0,
+        1230.0,
+        468.144
+      ],
+      "notes": [
+        "Weld20 mm lower edge to cover top; deburr12 mm lifting-hook hole. Cover and tab move as one weldment. This is not a rated hoist point."
+      ]
+    },
+    {
+      "id": "H_WT_SETTLING_NUT_1",
+      "part_number": "STD_M5_WELDNUT",
+      "group": "water_service",
+      "material": "M5 weld nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 143.16269,
+      "bounds_mm": [
+        445.381198,
+        1186.0,
+        426.048,
+        454.618802,
+        1194.0,
+        430.048
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_SETTLING_BOLT_1",
+      "part_number": "STD_M5x16_SOCKET",
+      "group": "water_service",
+      "material": "M5x16 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 597.88435,
+      "bounds_mm": [
+        445.75,
+        1185.75,
+        422.144,
+        454.25,
+        1194.25,
+        443.144
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_SETTLING_NUT_2",
+      "part_number": "STD_M5_WELDNUT",
+      "group": "water_service",
+      "material": "M5 weld nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 143.16269,
+      "bounds_mm": [
+        590.381198,
+        1186.0,
+        426.048,
+        599.618802,
+        1194.0,
+        430.048
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_SETTLING_BOLT_2",
+      "part_number": "STD_M5x16_SOCKET",
+      "group": "water_service",
+      "material": "M5x16 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 597.88435,
+      "bounds_mm": [
+        590.75,
+        1185.75,
+        422.144,
+        599.25,
+        1194.25,
+        443.144
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_SETTLING_NUT_3",
+      "part_number": "STD_M5_WELDNUT",
+      "group": "water_service",
+      "material": "M5 weld nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 143.16269,
+      "bounds_mm": [
+        735.381198,
+        1186.0,
+        426.048,
+        744.618802,
+        1194.0,
+        430.048
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_SETTLING_BOLT_3",
+      "part_number": "STD_M5x16_SOCKET",
+      "group": "water_service",
+      "material": "M5x16 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 597.88435,
+      "bounds_mm": [
+        735.75,
+        1185.75,
+        422.144,
+        744.25,
+        1194.25,
+        443.144
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_SETTLING_NUT_4",
+      "part_number": "STD_M5_WELDNUT",
+      "group": "water_service",
+      "material": "M5 weld nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 143.16269,
+      "bounds_mm": [
+        445.381198,
+        1306.0,
+        426.048,
+        454.618802,
+        1314.0,
+        430.048
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_SETTLING_BOLT_4",
+      "part_number": "STD_M5x16_SOCKET",
+      "group": "water_service",
+      "material": "M5x16 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 597.88435,
+      "bounds_mm": [
+        445.75,
+        1305.75,
+        422.144,
+        454.25,
+        1314.25,
+        443.144
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_SETTLING_NUT_5",
+      "part_number": "STD_M5_WELDNUT",
+      "group": "water_service",
+      "material": "M5 weld nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 143.16269,
+      "bounds_mm": [
+        590.381198,
+        1306.0,
+        426.048,
+        599.618802,
+        1314.0,
+        430.048
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_SETTLING_BOLT_5",
+      "part_number": "STD_M5x16_SOCKET",
+      "group": "water_service",
+      "material": "M5x16 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 597.88435,
+      "bounds_mm": [
+        590.75,
+        1305.75,
+        422.144,
+        599.25,
+        1314.25,
+        443.144
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_SETTLING_NUT_6",
+      "part_number": "STD_M5_WELDNUT",
+      "group": "water_service",
+      "material": "M5 weld nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 143.16269,
+      "bounds_mm": [
+        735.381198,
+        1306.0,
+        426.048,
+        744.618802,
+        1314.0,
+        430.048
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_SETTLING_BOLT_6",
+      "part_number": "STD_M5x16_SOCKET",
+      "group": "water_service",
+      "material": "M5x16 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 597.88435,
+      "bounds_mm": [
+        735.75,
+        1305.75,
+        422.144,
+        744.25,
+        1314.25,
+        443.144
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_FLOOR_1",
+      "part_number": "H_WT_PARK_FLOOR",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1680.0,
+      "bounds_mm": [
+        470.0,
+        1161.0,
+        433.096,
+        510.0,
+        1175.0,
+        436.096
+      ],
+      "notes": [
+        "Seal weld perimeter to equipment lid; bottom support for service cover."
+      ]
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_FACE_1_1",
+      "part_number": "H_WT_PARK_FACE",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 4800.0,
+      "bounds_mm": [
+        470.0,
+        1161.0,
+        436.096,
+        510.0,
+        1164.0,
+        476.096
+      ],
+      "notes": [
+        "Weld to pocket floor; installed inner gap is 8 mm for the 3.048 mm cover."
+      ]
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_FACE_1_2",
+      "part_number": "H_WT_PARK_FACE",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 4800.0,
+      "bounds_mm": [
+        470.0,
+        1172.0,
+        436.096,
+        510.0,
+        1175.0,
+        476.096
+      ],
+      "notes": [
+        "Weld to pocket floor; installed inner gap is 8 mm for the 3.048 mm cover."
+      ]
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_FLOOR_2",
+      "part_number": "H_WT_PARK_FLOOR",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1680.0,
+      "bounds_mm": [
+        680.0,
+        1161.0,
+        433.096,
+        720.0,
+        1175.0,
+        436.096
+      ],
+      "notes": [
+        "Seal weld perimeter to equipment lid; bottom support for service cover."
+      ]
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_FACE_2_1",
+      "part_number": "H_WT_PARK_FACE",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 4800.0,
+      "bounds_mm": [
+        680.0,
+        1161.0,
+        436.096,
+        720.0,
+        1164.0,
+        476.096
+      ],
+      "notes": [
+        "Weld to pocket floor; installed inner gap is 8 mm for the 3.048 mm cover."
+      ]
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_FACE_2_2",
+      "part_number": "H_WT_PARK_FACE",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 4800.0,
+      "bounds_mm": [
+        680.0,
+        1172.0,
+        436.096,
+        720.0,
+        1175.0,
+        476.096
+      ],
+      "notes": [
+        "Weld to pocket floor; installed inner gap is 8 mm for the 3.048 mm cover."
+      ]
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_END_1",
+      "part_number": "H_WT_PARK_END",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 960.0,
+      "bounds_mm": [
+        437.0,
+        1164.0,
+        433.096,
+        440.0,
+        1172.0,
+        473.096
+      ],
+      "notes": [
+        "Weld bottom edge to lid just beyond the service cover ends; limits sideways movement."
+      ]
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_END_2",
+      "part_number": "H_WT_PARK_END",
+      "group": "water_service",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 960.0,
+      "bounds_mm": [
+        750.0,
+        1164.0,
+        433.096,
+        753.0,
+        1172.0,
+        473.096
+      ],
+      "notes": [
+        "Weld bottom edge to lid just beyond the service cover ends; limits sideways movement."
+      ]
+    },
+    {
+      "id": "J_REFILL_MITER_SPOUT",
+      "part_number": "J_REFILL_MITER_SPOUT",
+      "group": "water_refill",
+      "material": "NPS0.5 schedule40 steel pipe, welded miter assembly",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 44872.93867,
+      "bounds_mm": [
+        334.35,
+        1204.75,
+        665.0,
+        395.65,
+        1226.05,
+        895.65
+      ],
+      "notes": [
+        "Fabricated pipe OD21.3 ID15.8 mm. Centerline: (385,1215.4,665) -> (385,1215.4,885) -> (345,1215.4,885) -> (345,1215.4,865).",
+        "Two 90-degree turns use paired 45-degree miters. Centerline segment lengths 220/40/20 mm; long-point miter blank allowances 230.65/61.3/30.65 mm before dressing and thread allowance.",
+        "Rev J position: the Rev H riser at Y1255 stands under the bed module rear crossmember. This riser rises between slats 18 and 19, passes 3.95 mm behind pan bearer 3 and 3.95 mm in front of slat 19, and its head turns along -X. Check both gaps at fit-up.",
+        "Bottom end is 1/2 NPT male at Z665, below pan bearer 3 (Z679), for a receipt-fit reinforced hose adapter. Top discharge remains open: no downstream valve or nozzle.",
+        "Outlet low edge Z865 gives 30 mm nominal air gap above the Z835 pan rim; keep at least 25 mm as built.",
+        "Plasma sheets must stay in front of about Y1200 on the slats; the spout stands 45 mm above the slat tops, as in Rev H."
+      ]
+    },
+    {
+      "id": "J_REFILL_GUSSET",
+      "part_number": "J_REFILL_GUSSET",
+      "group": "water_refill",
+      "material": "A36 steel6mm",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 8100.0,
+      "bounds_mm": [
+        395.7,
+        1212.4,
+        738.979152,
+        440.7,
+        1218.4,
+        798.979152
+      ],
+      "notes": [
+        "Weld the 45 mm edge to the pan floor and the 60 mm edge to the riser, both sides, after the riser is seal-welded into the floor.",
+        "Replaces the Rev H stay: the riser now stands in the slat bay in front of slat 19, where a stay to the rear wall would pass under the slat."
+      ]
+    },
+    {
+      "id": "J_REFILL_CONNECTION_RESERVE",
+      "part_number": "J_REFILL_CONNECTION_RESERVE",
+      "group": "water_plumbing_reserve",
+      "material": "Purchased hose/adapter space reservation",
+      "status": "HOSE CONNECTION SPACE - ACTUAL ADAPTER / BEND RADIUS UNVERIFIED",
+      "purchased_envelope": true,
+      "volume_mm3": 1200000.0,
+      "bounds_mm": [
+        335.0,
+        1165.4,
+        545.0,
+        435.0,
+        1265.4,
+        665.0
+      ],
+      "notes": [
+        "Reserve X335..435/Y1165.4..1265.4/Z545..665 for the lower spout connection, below pan bearer 3. Keep conversion handling out of this volume.",
+        "This is a keep-out allocation, not a fitted hose or a manufacturer bend-radius claim. Select actual hose/fittings and revise the allocation if required."
+      ]
+    },
+    {
+      "id": "H_DRAIN_REDUCER_RESERVE",
+      "part_number": "H_DRAIN_REDUCER_RESERVE",
+      "group": "water_plumbing_reserve",
+      "material": "Purchased plumbing space reservation",
+      "status": "PLUMBING RESERVE - PORTS AND FITTING ENGAGEMENT UNVERIFIED; NOT FITTED HARDWARE",
+      "purchased_envelope": true,
+      "volume_mm3": 212650.9448,
+      "bounds_mm": [
+        865.0,
+        1235.0,
+        650.0,
+        935.0,
+        1305.0,
+        693.398152
+      ],
+      "notes": [
+        "1.5 FNPT to1 MNPT reducer and receipt-selected nipple; upper datum meets existing pan neck."
+      ]
+    },
+    {
+      "id": "H_DRAIN_VALVE_RESERVE",
+      "part_number": "H_DRAIN_VALVE_RESERVE",
+      "group": "water_plumbing_reserve",
+      "material": "Purchased plumbing space reservation",
+      "status": "PLUMBING RESERVE - PORTS AND FITTING ENGAGEMENT UNVERIFIED; NOT FITTED HARDWARE",
+      "purchased_envelope": true,
+      "volume_mm3": 1953125.0,
+      "bounds_mm": [
+        837.5,
+        1207.5,
+        525.0,
+        962.5,
+        1332.5,
+        650.0
+      ],
+      "notes": [
+        "USS-MSV00009 valve: conservative125 mm reserve; actuator orientation and portface datums remain receipt measured."
+      ]
+    },
+    {
+      "id": "H_DRAIN_UNION_RESERVE",
+      "part_number": "H_DRAIN_UNION_RESERVE",
+      "group": "water_plumbing_reserve",
+      "material": "Purchased plumbing space reservation",
+      "status": "PLUMBING RESERVE - PORTS AND FITTING ENGAGEMENT UNVERIFIED; NOT FITTED HARDWARE",
+      "purchased_envelope": true,
+      "volume_mm3": 269500.0,
+      "bounds_mm": [
+        865.0,
+        1235.0,
+        470.0,
+        935.0,
+        1305.0,
+        525.0
+      ],
+      "notes": [
+        "1in NPT union/tailpiece reserve; exact union release travel and spanner access not established."
+      ]
+    },
+    {
+      "id": "H_DRAIN_DROP_RESERVE",
+      "part_number": "H_DRAIN_DROP_RESERVE",
+      "group": "water_plumbing_reserve",
+      "material": "1in gravity drain tail/hose space reservation",
+      "status": "PLUMBING RESERVE - FINAL TAIL LENGTH / DISCONNECTION UNVERIFIED",
+      "purchased_envelope": true,
+      "volume_mm3": 8024.25596,
+      "bounds_mm": [
+        883.0,
+        1253.0,
+        450.0,
+        917.0,
+        1287.0,
+        470.0
+      ],
+      "notes": [
+        "Outlet at Z450 is13.404 mm above basket splash cover. Remove downstream tail at union before lifting basket; exact release path remains a selected-union hold.",
+        "This reserve does not assert the selected fittings achieve the stated face datums. No pressure-vessel connection."
+      ]
+    },
+    {
+      "id": "H_WT_WASHOUT_FLANGE",
+      "part_number": "H_WT_WASHOUT_FLANGE",
+      "group": "water_service",
+      "material": "A36 steel6mm",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 26249.21992,
+      "bounds_mm": [
+        855.0,
+        1215.0,
+        110.0,
+        945.0,
+        1305.0,
+        116.0
+      ],
+      "notes": [
+        "Diameter90 nominal128-sided flange with48.5 bore; lower pipe end seats at flange topZ116. Continuous seal weld around pipe.",
+        "Four6.6 holes on70 pitch circle at45/135/225/315 degrees. Rear shelf crossmember stays untouched."
+      ]
+    },
+    {
+      "id": "H_WT_WASHOUT_GASKET",
+      "part_number": "H_WT_WASHOUT_GASKET",
+      "group": "water_service",
+      "material": "2mm EPDM gasket; verify coolant compatibility",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 8749.73997,
+      "bounds_mm": [
+        855.0,
+        1215.0,
+        108.0,
+        945.0,
+        1305.0,
+        110.0
+      ],
+      "notes": [
+        "Knife cut. Vented gravity tank only; not a pressure-rated flange."
+      ]
+    },
+    {
+      "id": "H_WT_WASHOUT_COVER",
+      "part_number": "H_WT_WASHOUT_COVER",
+      "group": "water_service",
+      "material": "A36 steel4mm",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 24889.29127,
+      "bounds_mm": [
+        855.0,
+        1215.0,
+        104.0,
+        945.0,
+        1305.0,
+        108.0
+      ],
+      "notes": [
+        "Flat blank with four clearance holes. Cover removal requires the empty isolated tank and a washout catch beneath."
+      ]
+    },
+    {
+      "id": "H_WT_WASHOUT_BOLT_1",
+      "part_number": "STD_M6x25_SOCKET_HEAD_DOWN",
+      "group": "water_service",
+      "material": "M6x25 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 1178.09725,
+      "bounds_mm": [
+        919.748737,
+        1279.748737,
+        98.0,
+        929.748737,
+        1289.748737,
+        129.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_WASHOUT_WASHER_1",
+      "part_number": "STD_M6_WASHER",
+      "group": "water_service",
+      "material": "M6 plain washer",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 129.48388,
+      "bounds_mm": [
+        918.748737,
+        1278.748737,
+        116.0,
+        930.748737,
+        1290.748737,
+        117.6
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_WASHOUT_NUT_1",
+      "part_number": "STD_M6_NYLOC",
+      "group": "water_service",
+      "material": "M6 nyloc nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 349.96924,
+      "bounds_mm": [
+        918.975235,
+        1279.748737,
+        117.6,
+        930.52224,
+        1289.748737,
+        123.6
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_WASHOUT_BOLT_2",
+      "part_number": "STD_M6x25_SOCKET_HEAD_DOWN",
+      "group": "water_service",
+      "material": "M6x25 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 1178.09725,
+      "bounds_mm": [
+        870.251263,
+        1279.748737,
+        98.0,
+        880.251263,
+        1289.748737,
+        129.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_WASHOUT_WASHER_2",
+      "part_number": "STD_M6_WASHER",
+      "group": "water_service",
+      "material": "M6 plain washer",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 129.48388,
+      "bounds_mm": [
+        869.251263,
+        1278.748737,
+        116.0,
+        881.251263,
+        1290.748737,
+        117.6
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_WASHOUT_NUT_2",
+      "part_number": "STD_M6_NYLOC",
+      "group": "water_service",
+      "material": "M6 nyloc nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 349.96924,
+      "bounds_mm": [
+        869.47776,
+        1279.748737,
+        117.6,
+        881.024765,
+        1289.748737,
+        123.6
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_WASHOUT_BOLT_3",
+      "part_number": "STD_M6x25_SOCKET_HEAD_DOWN",
+      "group": "water_service",
+      "material": "M6x25 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 1178.09725,
+      "bounds_mm": [
+        870.251263,
+        1230.251263,
+        98.0,
+        880.251263,
+        1240.251263,
+        129.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_WASHOUT_WASHER_3",
+      "part_number": "STD_M6_WASHER",
+      "group": "water_service",
+      "material": "M6 plain washer",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 129.48388,
+      "bounds_mm": [
+        869.251263,
+        1229.251263,
+        116.0,
+        881.251263,
+        1241.251263,
+        117.6
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_WASHOUT_NUT_3",
+      "part_number": "STD_M6_NYLOC",
+      "group": "water_service",
+      "material": "M6 nyloc nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 349.96924,
+      "bounds_mm": [
+        869.47776,
+        1230.251263,
+        117.6,
+        881.024765,
+        1240.251263,
+        123.6
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_WASHOUT_BOLT_4",
+      "part_number": "STD_M6x25_SOCKET_HEAD_DOWN",
+      "group": "water_service",
+      "material": "M6x25 socket screw",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 1178.09725,
+      "bounds_mm": [
+        919.748737,
+        1230.251263,
+        98.0,
+        929.748737,
+        1240.251263,
+        129.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_WASHOUT_WASHER_4",
+      "part_number": "STD_M6_WASHER",
+      "group": "water_service",
+      "material": "M6 plain washer",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 129.48388,
+      "bounds_mm": [
+        918.748737,
+        1229.251263,
+        116.0,
+        930.748737,
+        1241.251263,
+        117.6
+      ],
+      "notes": []
+    },
+    {
+      "id": "H_WT_WASHOUT_NUT_4",
+      "part_number": "STD_M6_NYLOC",
+      "group": "water_service",
+      "material": "M6 nyloc nut",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 349.96924,
+      "bounds_mm": [
+        918.975235,
+        1230.251263,
+        117.6,
+        930.52224,
+        1240.251263,
+        123.6
+      ],
+      "notes": []
     },
     {
       "id": "Y_DATUM_L",
@@ -16221,22 +17527,27 @@
     },
     {
       "id": "ZBX80_MOTOR",
-      "part_number": "ZBX80_MOTOR",
+      "part_number": "CANDIDATE_23HS30-5004D-B280",
       "group": "motion_purchased",
-      "material": "ZBX80 stepper motor envelope",
-      "status": "PURCHASED CLEARANCE ENVELOPE - NOT MATERIAL MASS",
+      "material": "Purchased replacement brake motor clearance envelope; not mass solid",
+      "status": "REPLACEMENT CANDIDATE - COUPLING/PILOT HOLD - INDIVIDUAL EXPORT GUARDED",
       "purchased_envelope": true,
-      "volume_mm3": 181944.0,
+      "volume_mm3": 378508.5,
       "bounds_mm": [
         546.5,
         1192.6,
         1314.0,
         603.5,
         1249.6,
-        1370.0
+        1430.5
       ],
       "notes": [
-        "57\u00d757\u00d756 motor; intervening coupling/bracket clearance reserved. Motor cable outlet HOLD."
+        "Candidate replacement, not an add-on to the original single-ended motor. Source: https://www.omc-stepperonline.com/nema-23-stepper-motor-2-0nm-283-22oz-in-with-24v-4-5w-electromagnetic-brake-23hs30-5004d-b280",
+        "57 x 57 x 116.5 body; shaft diameter8 x21 long, D-flat15. Body extends60.5 above the old56 envelope.",
+        "Two-phase1.8 degree, 5 A/phase, 2.0 N.m holding; brake power-off type, 2.8 N.m static,24 V/4.5 W.",
+        "Motor mount pilot, four mounting holes, shaft alignment/engagement and coupling bore remain unverified against ZBX80. Shaft and cables not silently included in this body solid.",
+        "Brake does not bypass coupling, ballscrew or attachment failure. Static rating is not an emergency-stop energy rating.",
+        "Brake must engage before driver torque is removed; release only after motor torque is established. Brake coil uses a separately rated24 V switched circuit, never a motor phase or logic pin."
       ]
     },
     {
@@ -16256,7 +17567,8 @@
         1314.0
       ],
       "notes": [
-        "330 mm full module envelope fromZ1040 to1370. Connector projection not included."
+        "Original stock module overall envelope is 330 mm from Z1040 to1370. The optional 116.5 mm brake-motor body extends the current reserved overall envelope to390.5 mm, ending atZ1430.5.",
+        "This body reserves the coupling/bracket zone only. Actual motor pilot, shaft, coupling and connector projections are unverified and are not modeled as established hardware."
       ]
     },
     {
@@ -16276,18 +17588,18 @@
         1230.0
       ],
       "notes": [
-        "Exact-ASIN seller top view: carriage plate90 across x50 along travel; the70 mm transverse dimension connects the smaller\u00d85 holes. Gallery8 identifies four small output fixing holes. The larger\u00d87 bores are not established as usable tool-mount holes.",
-        "Along-travel hole pitch, tapped-vs-through, and the mounting-plane-to-output height are NOT dimensioned in that drawing: the adapter uses vertical slots and the 80 mm output stack stays an assumption until the unit is measured."
+        "Exact-ASIN top view gives a 90 x 50 output carriage. The 70 mm transverse dimension joins the smaller diameter5 fixing holes; it does not qualify the larger assembly bores as tool attachments.",
+        "Output height, along-travel fixing pitch, thread/depth and tool access remain unmeasured. Rev H reserves an 80 mm stack only as a placement assumption and uses an undrilled output-interface blank, without assumed adjustment slots."
       ]
     },
     {
       "id": "TOOL_ADAPTER_110",
-      "part_number": "TOOL_ADAPTER_110",
+      "part_number": "H_TOOL_ADAPTER_TRANSFER_BLANK",
       "group": "removable_tool",
       "material": "6061-T6 aluminum12.7",
-      "status": "PROVISIONAL - INDIVIDUAL EXPORT GUARDED UNTIL CARRIAGE DRAWING",
+      "status": "INTERFACE HOLD - INDIVIDUAL EXPORT GUARDED",
       "purchased_envelope": false,
-      "volume_mm3": 144228.00739,
+      "volume_mm3": 150674.95636,
       "bounds_mm": [
         520.0,
         1166.9,
@@ -16297,19 +17609,10 @@
         1280.0
       ],
       "notes": [
-        "Provisional adapter: two vertical 7 x 30 slots on 70 mm transverse centers. Their approximately24 mm center travel for a6 mm shank does not verify carriage hole spacing, bolt count or a15-45 mm longitudinal pitch.",
-        "Front-face11 x30 counter-slots,6.6 deep, are provisional geometry; the actual carriage screw/head/washer stack remains unselected.",
-        "No carriage fasteners are modeled: the listing identifies four\u00d85 fixing holes but omits their thread and along-travel spacing. The former two M6 x16 candidates have been removed. A true\u00d87 plain bore cannot be tappedM6.",
-        "Interface load path and fastening capacity remain HOLD. Do not manufacture this adapter or select its carriage fasteners from this model.",
-        "Shared spindle/torch clamp pattern: four \u00d86.6 at X\u00b145, Z+12/+38 from the output datum, \u00d810.5 counterbore 6 deep on the carriage-side face.",
-        "Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots.",
-        "\u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush.",
-        "Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots.",
-        "\u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush.",
-        "Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots.",
-        "\u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush.",
-        "Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots.",
-        "\u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush."
+        "Rev H transfer-drill blank: obsolete assumed output slots removed. No output attachment fasteners are invented.",
+        "Record output height and all four fixing-hole coordinates, thread/pitch, usable depth and access before machining this guarded plate.",
+        "Custom tool-side four M6 clearance holes and rear counterbores are defined; Z output attachment is not released.",
+        "The present 80 mm output stack is a placement assumption, not a supplier measurement."
       ]
     },
     {
@@ -16461,8 +17764,7 @@
         "Width110, height40, assembled depth90.5; split gap0.50. Bore\u00d865.00/+0.03 with the split shim installed and both pinch bolts snug.",
         "Rear:four blindM6\u00d71 holes atX\u00b145, \u00d85 pilot17 deep, tap15 deep; mount screwsM6\u00d720 engage13.3 through6.7 mm adapter web.",
         "Pinch screws2\u00d7M6\u00d760 atX\u00b147. Rear split face:\u00d85 pilot17 deep,tapM6\u00d71 depth15. Front half\u00d86.6 through; nominal engagement14.75.",
-        "Deburr bore edges0.3 maximum. Initial pinch torque3 N\u00b7m, verify spindle housing is retained without local deformation. Remove tool before bed swap.",
-        "The plasma torch split clamp (bore\u00d828 for the AG-60 straight body) shares this mount pattern; see TORCH_CLAMP parked parts."
+        "Deburr bore edges0.3 maximum. Initial pinch torque3 N\u00b7m, verify spindle housing is retained without local deformation. Remove tool before bed swap."
       ]
     },
     {
@@ -16485,8 +17787,7 @@
         "Width110, height40, assembled depth90.5; split gap0.50. Bore\u00d865.00/+0.03 with the split shim installed and both pinch bolts snug.",
         "Rear:four blindM6\u00d71 holes atX\u00b145, \u00d85 pilot17 deep, tap15 deep; mount screwsM6\u00d720 engage13.3 through6.7 mm adapter web.",
         "Pinch screws2\u00d7M6\u00d760 atX\u00b147. Rear split face:\u00d85 pilot17 deep,tapM6\u00d71 depth15. Front half\u00d86.6 through; nominal engagement14.75.",
-        "Deburr bore edges0.3 maximum. Initial pinch torque3 N\u00b7m, verify spindle housing is retained without local deformation. Remove tool before bed swap.",
-        "The plasma torch split clamp (bore\u00d828 for the AG-60 straight body) shares this mount pattern; see TORCH_CLAMP parked parts."
+        "Deburr bore edges0.3 maximum. Initial pinch torque3 N\u00b7m, verify spindle housing is retained without local deformation. Remove tool before bed swap."
       ]
     },
     {
@@ -17738,8 +19039,8 @@
       ]
     }
   ],
-  "part_count": 910,
-  "broadphase_pairs": 1212,
+  "part_count": 978,
+  "broadphase_pairs": 1318,
   "unresolved_intersections": [],
   "documented_intersections": [
     {
@@ -18130,11 +19431,11 @@
   "note": "Positive-volume static interference test, not a strength or motion certification.",
   "step_readback": {
     "passed": true,
-    "solids": 910,
-    "volume_delta_mm3": 0.09776559472084045,
-    "volume_tolerance_mm3": 13.648767258167895,
-    "sha256": "a6ad26f6221bcdd2153fe54cc97c080c3ec29022fd46934816a2d97be6f17892",
-    "file": "RevH_ROUTER.step"
+    "solids": 978,
+    "volume_delta_mm3": 0.025305479764938354,
+    "volume_tolerance_mm3": 14.070788493420114,
+    "sha256": "d14480ccfb3f0e8b38a2f90d93a84636aae776f2406d54d507802f36a17356ca",
+    "file": "RevJ_ROUTER.step"
   },
   "individual_step_readback": [
     {
@@ -18350,7 +19651,7 @@
     {
       "part_number": "WP_FLOOR",
       "valid": true,
-      "volume_delta_mm3": 2.100132405757904e-07
+      "volume_delta_mm3": 2.1047890186309814e-07
     },
     {
       "part_number": "WP_SIDE",
@@ -18495,7 +19796,7 @@
     {
       "part_number": "WT_CLEANOUT_NECK",
       "valid": true,
-      "volume_delta_mm3": 5.820766091346741e-10
+      "volume_delta_mm3": 7.130438461899757e-10
     },
     {
       "part_number": "WT_RIM_FRONT",
@@ -18525,7 +19826,7 @@
     {
       "part_number": "WT_LID",
       "valid": true,
-      "volume_delta_mm3": 8.847564458847046e-09
+      "volume_delta_mm3": 6.984919309616089e-09
     },
     {
       "part_number": "WT_VENT_NECK",
@@ -18718,22 +20019,22 @@
       "volume_delta_mm3": 4.274625098332763e-11
     },
     {
-      "part_number": "H_PAD_FRONT_ROUND",
+      "part_number": "J_PAD_FRONT_ROUND",
       "valid": true,
       "volume_delta_mm3": 8.913048077374697e-11
     },
     {
-      "part_number": "H_LEDGER_M10_SLEEVE",
+      "part_number": "J_LEDGER_M10_SLEEVE",
       "valid": true,
       "volume_delta_mm3": 1.9826984498649836e-10
     },
     {
-      "part_number": "H_PAD_PLAIN",
+      "part_number": "J_PAD_PLAIN",
       "valid": true,
       "volume_delta_mm3": 5.638867150992155e-11
     },
     {
-      "part_number": "H_PAD_FRONT_SLOT",
+      "part_number": "J_PAD_FRONT_SLOT",
       "valid": true,
       "volume_delta_mm3": 2.3646862246096134e-11
     },
@@ -18793,17 +20094,17 @@
       "volume_delta_mm3": 4.6566128730773926e-09
     },
     {
-      "part_number": "H_BOLT_TRAY_FLOOR",
+      "part_number": "J_BOLT_TRAY_FLOOR",
       "valid": true,
       "volume_delta_mm3": 0.0
     },
     {
-      "part_number": "H_BOLT_TRAY_SIDE",
+      "part_number": "J_BOLT_TRAY_SIDE",
       "valid": true,
       "volume_delta_mm3": 0.0
     },
     {
-      "part_number": "H_BOLT_TRAY_END",
+      "part_number": "J_BOLT_TRAY_END",
       "valid": true,
       "volume_delta_mm3": 0.0
     },
@@ -18866,6 +20167,71 @@
       "part_number": "CAB_CAP_TAB_RIGHT",
       "valid": true,
       "volume_delta_mm3": 7.958078640513122e-12
+    },
+    {
+      "part_number": "H_WT_CLARIFIED_GASKET",
+      "valid": true,
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "part_number": "H_WT_CLARIFIED_COVER",
+      "valid": true,
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "part_number": "H_WT_PULL_TAB",
+      "valid": true,
+      "volume_delta_mm3": 1.2050804798491299e-11
+    },
+    {
+      "part_number": "H_WT_PARK_FLOOR",
+      "valid": true,
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "part_number": "H_WT_PARK_FACE",
+      "valid": true,
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "part_number": "H_WT_PARK_END",
+      "valid": true,
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "part_number": "H_WT_SETTLING_GASKET",
+      "valid": true,
+      "volume_delta_mm3": 7.275957614183426e-12
+    },
+    {
+      "part_number": "H_WT_SETTLING_COVER",
+      "valid": true,
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "part_number": "J_REFILL_MITER_SPOUT",
+      "valid": true,
+      "volume_delta_mm3": 6.548361852765083e-09
+    },
+    {
+      "part_number": "J_REFILL_GUSSET",
+      "valid": true,
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "part_number": "H_WT_WASHOUT_FLANGE",
+      "valid": true,
+      "volume_delta_mm3": 5.515175871551037e-09
+    },
+    {
+      "part_number": "H_WT_WASHOUT_GASKET",
+      "valid": true,
+      "volume_delta_mm3": 1.8408172763884068e-09
+    },
+    {
+      "part_number": "H_WT_WASHOUT_COVER",
+      "valid": true,
+      "volume_delta_mm3": 3.3542164601385593e-09
     },
     {
       "part_number": "Y_SHOE_L",

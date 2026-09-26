@@ -3386,7 +3386,7 @@
       "item": "EPDM gasket sheet",
       "quantity": 1,
       "size": "2mm thick, at least986.096x686.096mm raw",
-      "required_for": "One-piece966.096x666.096 mm reservoirgasket with10mm cuttingmargin. Any strips/splices are adesignchange."
+      "required_for": "One-piece966.096x666.096 mm reservoirgasket with10mm cuttingmargin. Any strips/splices are adesignchange. Rev J (from the base branch Rev H): the two hatch gaskets (360 x 215 and 310 x 140 frames) and the Ø90 washout gasket knife-cut from the 906 x 606 mm centre offcut of this gasket, so this one sheet covers all four."
     },
     {
       "item": "3/4 in MDF sheet",
@@ -3452,6 +3452,18 @@
       "quantity": 1,
       "size": "8 ft (2,438 mm)",
       "required_for": "Rev J: the last two MOD_CROSSMEMBER blanks, 912.4 mm each (1,840.8 mm with cuts and trim), after the five 20 ft bars of MET01 (RevJ-CAD/tube-cut-plan.json)."
+    },
+    {
+      "item": "A36 steel plate 4 mm (5/32 in)",
+      "quantity": 1,
+      "size": "6 x 6 in",
+      "required_for": "Rev J, from the base branch Rev H: H_WT_WASHOUT_COVER, a Ø90 x 4 mm flat blank with four 6.6 mm holes on a 70 mm pitch circle, closing the emptied-tank washout flange."
+    },
+    {
+      "item": "NPS 1/2 schedule 40 black steel pipe, one end threaded 1/2 NPT",
+      "quantity": 1,
+      "size": "18 in (457 mm) nipple or cut length",
+      "required_for": "Rev J refill spout J_REFILL_MITER_SPOUT: three mitered pieces, long-point blanks 230.65 + 61.3 + 30.65 mm (322.6 mm) plus saw cuts and dressing. The riser keeps the threaded end, at Z665 under the pan, for a receipt-fit hose adapter."
     }
   ],
   "unadopted_plate_bracket_option": {

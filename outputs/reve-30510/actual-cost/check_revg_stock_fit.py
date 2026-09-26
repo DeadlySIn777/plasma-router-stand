@@ -47,6 +47,9 @@ STOCK = {
                               'note': 'Rev J lift lugs are cut from the same 3/8 in plate as the 8 mm parts; packed together.'},
     ('stainless_confirm_grade', 3): {'row': None, 'size_in': (12, 12), 'also_try_in': [(12, 24)],
                               'note': 'Rev J bolt tray; 3 mm or 11 ga (3.048) sheet.'},
+    # Rev J, from the base branch Rev H water service: the washout cover.
+    ('carbon_steel', 4):     {'row': 'MET-GAP-24', 'size_in': (6, 6), 'also_try_in': [(12, 12)],
+                              'note': 'Rev H washout cover, Ø90 x 4 mm, carried into Rev J.'},
     # Not covered by any row before this check; sizes are suggestions to test.
     ('carbon_steel', 2):     {'row': None, 'size_in': (12, 24), 'also_try_in': [(12, 12), (24, 24)]},
     ('aluminum_confirm_alloy', 9.525): {'row': None, 'size_in': (12, 12), 'also_try_in': [(12, 24), (24, 24)],

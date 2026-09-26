@@ -358,7 +358,7 @@
     ],
     "individual_export_guarded": false,
     "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
-    "notes": "50.8 x 50.8 x 3.048 mm nominal hollow tube; square-corner idealization | Welded structure: nominal square tube corners; stock corner radii are not precision mating datums. | Sandserviceport:\u00d830weldbung,M20\u00d71.5removableplug. Fillonlyafterallwelding/coating;weightactualdryballast. | Rev H receiver: three \u00d818 sleeve bores through both walls at X87.4, Y25/670/1310. Weld the sleeves and the three seat pads before ballast filling."
+    "notes": "50.8 x 50.8 x 3.048 mm nominal hollow tube; square-corner idealization | Welded structure: nominal square tube corners; stock corner radii are not precision mating datums. | Sandserviceport:\u00d830weldbung,M20\u00d71.5removableplug. Fillonlyafterallwelding/coating;weightactualdryballast. | Rev J receiver: three \u00d818 sleeve bores through both walls at X87.4, Y25/670/1310. Weld the sleeves and the three seat pads before ballast filling."
   },
   {
     "part_number": "MF_RECEIVER_LEDGER_2",
@@ -377,7 +377,7 @@
     ],
     "individual_export_guarded": false,
     "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
-    "notes": "50.8 x 50.8 x 3.048 mm nominal hollow tube; square-corner idealization | Welded structure: nominal square tube corners; stock corner radii are not precision mating datums. | Sandserviceport:\u00d830weldbung,M20\u00d71.5removableplug. Fillonlyafterallwelding/coating;weightactualdryballast. | Rev H receiver: three \u00d818 sleeve bores through both walls at X1062.6, Y25/670/1310. Weld the sleeves and the three seat pads before ballast filling."
+    "notes": "50.8 x 50.8 x 3.048 mm nominal hollow tube; square-corner idealization | Welded structure: nominal square tube corners; stock corner radii are not precision mating datums. | Sandserviceport:\u00d830weldbung,M20\u00d71.5removableplug. Fillonlyafterallwelding/coating;weightactualdryballast. | Rev J receiver: three \u00d818 sleeve bores through both walls at X1062.6, Y25/670/1310. Weld the sleeves and the three seat pads before ballast filling."
   },
   {
     "part_number": "CAP_SPACER",
@@ -909,7 +909,7 @@
     ],
     "individual_export_guarded": false,
     "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
-    "notes": "Install at 1% downward slope toward rear. Continuous watertight seam welds. | Two48.5mmweldneckclearanceholes:drainand1.5instandpipe. No bend allowance required. | Drain center is0.35mm above absolute rear floor edge; residual film requires cleaning."
+    "notes": "Install at 1% downward slope toward rear. Continuous watertight seam welds. | Two48.5mmweldneckclearanceholes:drainand1.5instandpipe. No bend allowance required. | Drain center is0.35mm above absolute rear floor edge; residual film requires cleaning. | Rev J: \u00d821.6 normal hole at world XY(385,1215.4) receives the vertical refill riser; seal weld annulus, leak-test and coat after welding."
   },
   {
     "part_number": "WP_SIDE",
@@ -1467,7 +1467,7 @@
     "quantity": 1,
     "material": "NPS1.5 schedule40 steel pipe",
     "procured_stock": "NPS1.5 schedule40 steel pipe",
-    "length_mm": 50,
+    "length_mm": 62.048,
     "thickness_mm": null,
     "bounds_local_mm": [
       -24.15,
@@ -1475,11 +1475,11 @@
       0.0,
       24.15,
       24.15,
-      50.0
+      62.048
     ],
     "individual_export_guarded": false,
     "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
-    "notes": "Flush upper end with inner floor; external lower end1.5NPT male for manual washout valve/cap. Keep accessible from rear. | https://www.wheatland.com/wp-content/uploads/2017/12/Schedule-40-Submittal-Sheet.pdf"
+    "notes": "Flush upper end with tank inner floor; lower end is plain, welded to the fabricated flange. The old1.5 NPT cap callout is superseded. | Tank must be emptied and isolated before loosening the cleanout cover. This large opening is for washout, not controlled draining of115 L."
   },
   {
     "part_number": "WT_RIM_FRONT",
@@ -1593,7 +1593,7 @@
     ],
     "individual_export_guarded": false,
     "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
-    "notes": "Catch-basket hatch166x126. Separate55mm overflow entry and33.6mm vent pipe penetration."
+    "notes": "Catch-basket hatch166x126. Separate55mm overflow entry and33.6mm vent pipe penetration. | Rev H: routine washout is through two independent service openings; the equipment lid remains installed. | The full lid is a major-disassembly item, not a verified routine removal. Drain and isolate before opening either hatch."
   },
   {
     "part_number": "STD_M6x20_SOCKET",
@@ -2470,7 +2470,7 @@
     "notes": "Two 12 mm cylindrical access cuts along world X at the M6 clamp axes. Use the individual STEP for these guard cutouts; no through-cut DXF is issued for the intersecting notch."
   },
   {
-    "part_number": "H_PAD_FRONT_ROUND",
+    "part_number": "J_PAD_FRONT_ROUND",
     "quantity": 1,
     "material": "A36 steel",
     "procured_stock": "A36 steel; finish-machine6.000mmfrom1/4in6.35mmstock",
@@ -2489,7 +2489,7 @@
     "notes": "6 mm steel seat pad, fully on the ledger top. Weld all round with 3 mm fillets BEFORE the ledger is sand-filled. | After welding, face all six pad tops coplanar within 0.1 mm (fly-cut or shim-map), then drill the \u00d811 bolt hole through into the ledger sleeve. | Front pads only: left \u00d810.05 locating hole (reamed to the measured pin), right 10.05 x 16 slot along X. The slot axis passes through the left pin."
   },
   {
-    "part_number": "H_LEDGER_M10_SLEEVE",
+    "part_number": "J_LEDGER_M10_SLEEVE",
     "quantity": 6,
     "material": "Machined steel",
     "procured_stock": "Machined steel",
@@ -2508,7 +2508,7 @@
     "notes": "OD18 x 50.8 sleeve through BOTH ledger walls; continuous seal welds top and bottom, finished flush, BEFORE sand fill. The ledger is a ballast compartment: never drill it after filling. | Drill 8.5 and tap M10x1.5 at least 25 deep from the top after welding. STEP bore is the nominal M10 thread envelope."
   },
   {
-    "part_number": "H_PAD_PLAIN",
+    "part_number": "J_PAD_PLAIN",
     "quantity": 4,
     "material": "A36 steel",
     "procured_stock": "A36 steel; finish-machine6.000mmfrom1/4in6.35mmstock",
@@ -2527,7 +2527,7 @@
     "notes": "6 mm steel seat pad, fully on the ledger top. Weld all round with 3 mm fillets BEFORE the ledger is sand-filled. | After welding, face all six pad tops coplanar within 0.1 mm (fly-cut or shim-map), then drill the \u00d811 bolt hole through into the ledger sleeve. | Front pads only: left \u00d810.05 locating hole (reamed to the measured pin), right 10.05 x 16 slot along X. The slot axis passes through the left pin."
   },
   {
-    "part_number": "H_PAD_FRONT_SLOT",
+    "part_number": "J_PAD_FRONT_SLOT",
     "quantity": 1,
     "material": "A36 steel",
     "procured_stock": "A36 steel; finish-machine6.000mmfrom1/4in6.35mmstock",
@@ -2907,7 +2907,7 @@
     "notes": ""
   },
   {
-    "part_number": "H_BOLT_TRAY_FLOOR",
+    "part_number": "J_BOLT_TRAY_FLOOR",
     "quantity": 1,
     "material": "304 stainless 3 mm sheet",
     "procured_stock": "304 stainless 3 mm sheet",
@@ -2926,7 +2926,7 @@
     "notes": "Seal-weld to the removable reservoir lid. Holds the six M10 drawdowns and washers while the module is out."
   },
   {
-    "part_number": "H_BOLT_TRAY_SIDE",
+    "part_number": "J_BOLT_TRAY_SIDE",
     "quantity": 2,
     "material": "304 stainless 3 mm sheet",
     "procured_stock": "304 stainless 3 mm sheet",
@@ -2945,7 +2945,7 @@
     "notes": ""
   },
   {
-    "part_number": "H_BOLT_TRAY_END",
+    "part_number": "J_BOLT_TRAY_END",
     "quantity": 2,
     "material": "304 stainless 3 mm sheet",
     "procured_stock": "304 stainless 3 mm sheet",
@@ -3018,7 +3018,7 @@
     ],
     "individual_export_guarded": false,
     "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
-    "notes": "Holds the removed spindle-clamp screws and the four lift shackles. The six Rev H drawdowns use their own tray on the reservoir lid."
+    "notes": "Holds the removed spindle-clamp screws and the four lift shackles. The six Rev J drawdowns use their own tray on the reservoir lid."
   },
   {
     "part_number": "HW_BOLT_BIN_SIDE",
@@ -3155,7 +3155,7 @@
   },
   {
     "part_number": "STD_M6_NYLOC",
-    "quantity": 4,
+    "quantity": 8,
     "material": "M6 nyloc nut",
     "procured_stock": "M6 nyloc nut",
     "length_mm": null,
@@ -3304,6 +3304,424 @@
     "individual_export_guarded": false,
     "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
     "notes": "Weld outer 30 mm edge to the inner vertical face of its cage stringer. Tab upper face follows the roof 1% slope and touches its underside; tack using the drilled roof as an alignment fixture, then remove roof before final welding. | \u00d85.5 through-hole takes M5 retaining bolt. Deburr both bearing faces; coat weldment before final assembly. This tab does not bear on the enclosure."
+  },
+  {
+    "part_number": "H_WT_CLARIFIED_GASKET",
+    "quantity": 1,
+    "material": "2mm EPDM gasket; verify coolant compatibility",
+    "procured_stock": "2mm EPDM gasket; verify coolant compatibility",
+    "length_mm": null,
+    "thickness_mm": 2,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      360.0,
+      215.0,
+      2.0
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Knife cut, not a metal cutting program. Splash seal only; tank remains permanently vented."
+  },
+  {
+    "part_number": "H_WT_CLARIFIED_COVER",
+    "quantity": 1,
+    "material": "A36 steel0.120in sheet",
+    "procured_stock": "A36 steel0.120in sheet; purchase0.120in sheet,verifyactualgauge",
+    "length_mm": null,
+    "thickness_mm": 3.048,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      360.0,
+      215.0,
+      3.048
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Six M5x16 screws into underside weld nuts. Remove screws before lifting; retain gasket on the fixed lid. | Lift 50 mm, move forward to parking Y935.000, rotate +90 degrees about the cover lower/front edge, then lower into both 40 mm deep parking pockets. | Open position is service only. Confirm the panel is fully seated in both pockets; do not operate machine with a hatch open. | These are vacuum-wand/long-brush washout openings; tank cleaning efficacy is a physical commissioning check."
+  },
+  {
+    "part_number": "H_WT_PULL_TAB",
+    "quantity": 2,
+    "material": "A36 steel3mm",
+    "procured_stock": "A36 steel3mm",
+    "length_mm": null,
+    "thickness_mm": 3,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      20.0,
+      30.0,
+      3.0
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Weld20 mm lower edge to cover top; deburr12 mm lifting-hook hole. Cover and tab move as one weldment. This is not a rated hoist point."
+  },
+  {
+    "part_number": "STD_M5_WELDNUT",
+    "quantity": 12,
+    "material": "M5 weld nut",
+    "procured_stock": "M5 weld nut",
+    "length_mm": null,
+    "thickness_mm": null,
+    "bounds_local_mm": [
+      -4.6188,
+      -4.0,
+      0.0,
+      4.6188,
+      4.0,
+      4.0
+    ],
+    "individual_export_guarded": true,
+    "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+    "notes": ""
+  },
+  {
+    "part_number": "STD_M5x16_SOCKET",
+    "quantity": 12,
+    "material": "M5x16 socket screw",
+    "procured_stock": "M5x16 socket screw",
+    "length_mm": null,
+    "thickness_mm": null,
+    "bounds_local_mm": [
+      -4.25,
+      -4.25,
+      0.0,
+      4.25,
+      4.25,
+      21.0
+    ],
+    "individual_export_guarded": true,
+    "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+    "notes": ""
+  },
+  {
+    "part_number": "H_WT_PARK_FLOOR",
+    "quantity": 4,
+    "material": "A36 steel",
+    "procured_stock": "A36 steel",
+    "length_mm": null,
+    "thickness_mm": 3,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      40.0,
+      14.0,
+      3.0
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Seal weld perimeter to equipment lid; bottom support for service cover."
+  },
+  {
+    "part_number": "H_WT_PARK_FACE",
+    "quantity": 8,
+    "material": "A36 steel",
+    "procured_stock": "A36 steel",
+    "length_mm": null,
+    "thickness_mm": 3,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      40.0,
+      40.0,
+      3.0
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Weld to pocket floor; installed inner gap is 8 mm for the 3.048 mm cover."
+  },
+  {
+    "part_number": "H_WT_PARK_END",
+    "quantity": 4,
+    "material": "A36 steel",
+    "procured_stock": "A36 steel",
+    "length_mm": null,
+    "thickness_mm": 3,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      8.0,
+      40.0,
+      3.0
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Weld bottom edge to lid just beyond the service cover ends; limits sideways movement."
+  },
+  {
+    "part_number": "H_WT_SETTLING_GASKET",
+    "quantity": 1,
+    "material": "2mm EPDM gasket; verify coolant compatibility",
+    "procured_stock": "2mm EPDM gasket; verify coolant compatibility",
+    "length_mm": null,
+    "thickness_mm": 2,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      310.0,
+      140.0,
+      2.0
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Knife cut, not a metal cutting program. Splash seal only; tank remains permanently vented."
+  },
+  {
+    "part_number": "H_WT_SETTLING_COVER",
+    "quantity": 1,
+    "material": "A36 steel0.120in sheet",
+    "procured_stock": "A36 steel0.120in sheet; purchase0.120in sheet,verifyactualgauge",
+    "length_mm": null,
+    "thickness_mm": 3.048,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      310.0,
+      140.0,
+      3.048
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Six M5x16 screws into underside weld nuts. Remove screws before lifting; retain gasket on the fixed lid. | Lift 50 mm, move forward to parking Y1168.000, rotate +90 degrees about the cover lower/front edge, then lower into both 40 mm deep parking pockets. | Open position is service only. Confirm the panel is fully seated in both pockets; do not operate machine with a hatch open. | These are vacuum-wand/long-brush washout openings; tank cleaning efficacy is a physical commissioning check."
+  },
+  {
+    "part_number": "J_REFILL_MITER_SPOUT",
+    "quantity": 1,
+    "material": "NPS0.5 schedule40 steel pipe, welded miter assembly",
+    "procured_stock": "NPS0.5 schedule40 steel pipe, welded miter assembly",
+    "length_mm": null,
+    "thickness_mm": null,
+    "bounds_local_mm": [
+      334.35,
+      1204.75,
+      665.0,
+      395.65,
+      1226.05,
+      895.65
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Fabricated pipe OD21.3 ID15.8 mm. Centerline: (385,1215.4,665) -> (385,1215.4,885) -> (345,1215.4,885) -> (345,1215.4,865). | Two 90-degree turns use paired 45-degree miters. Centerline segment lengths 220/40/20 mm; long-point miter blank allowances 230.65/61.3/30.65 mm before dressing and thread allowance. | Rev J position: the Rev H riser at Y1255 stands under the bed module rear crossmember. This riser rises between slats 18 and 19, passes 3.95 mm behind pan bearer 3 and 3.95 mm in front of slat 19, and its head turns along -X. Check both gaps at fit-up. | Bottom end is 1/2 NPT male at Z665, below pan bearer 3 (Z679), for a receipt-fit reinforced hose adapter. Top discharge remains open: no downstream valve or nozzle. | Outlet low edge Z865 gives 30 mm nominal air gap above the Z835 pan rim; keep at least 25 mm as built. | Plasma sheets must stay in front of about Y1200 on the slats; the spout stands 45 mm above the slat tops, as in Rev H."
+  },
+  {
+    "part_number": "J_REFILL_GUSSET",
+    "quantity": 1,
+    "material": "A36 steel6mm",
+    "procured_stock": "A36 steel6mm; finish-machine6.000mmfrom1/4in6.35mmstock",
+    "length_mm": null,
+    "thickness_mm": 6,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      45.0,
+      60.0,
+      6.0
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Weld the 45 mm edge to the pan floor and the 60 mm edge to the riser, both sides, after the riser is seal-welded into the floor. | Replaces the Rev H stay: the riser now stands in the slat bay in front of slat 19, where a stay to the rear wall would pass under the slat."
+  },
+  {
+    "part_number": "J_REFILL_CONNECTION_RESERVE",
+    "quantity": 1,
+    "material": "Purchased hose/adapter space reservation",
+    "procured_stock": "Purchased hose/adapter space reservation",
+    "length_mm": null,
+    "thickness_mm": null,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      100.0,
+      100.0,
+      120.0
+    ],
+    "individual_export_guarded": true,
+    "status": "HOSE CONNECTION SPACE - ACTUAL ADAPTER / BEND RADIUS UNVERIFIED",
+    "notes": "Reserve X335..435/Y1165.4..1265.4/Z545..665 for the lower spout connection, below pan bearer 3. Keep conversion handling out of this volume. | This is a keep-out allocation, not a fitted hose or a manufacturer bend-radius claim. Select actual hose/fittings and revise the allocation if required."
+  },
+  {
+    "part_number": "H_DRAIN_REDUCER_RESERVE",
+    "quantity": 1,
+    "material": "Purchased plumbing space reservation",
+    "procured_stock": "Purchased plumbing space reservation",
+    "length_mm": null,
+    "thickness_mm": null,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      70.0,
+      70.0,
+      43.3982
+    ],
+    "individual_export_guarded": true,
+    "status": "PLUMBING RESERVE - PORTS AND FITTING ENGAGEMENT UNVERIFIED; NOT FITTED HARDWARE",
+    "notes": "1.5 FNPT to1 MNPT reducer and receipt-selected nipple; upper datum meets existing pan neck."
+  },
+  {
+    "part_number": "H_DRAIN_VALVE_RESERVE",
+    "quantity": 1,
+    "material": "Purchased plumbing space reservation",
+    "procured_stock": "Purchased plumbing space reservation",
+    "length_mm": null,
+    "thickness_mm": null,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      125.0,
+      125.0,
+      125.0
+    ],
+    "individual_export_guarded": true,
+    "status": "PLUMBING RESERVE - PORTS AND FITTING ENGAGEMENT UNVERIFIED; NOT FITTED HARDWARE",
+    "notes": "USS-MSV00009 valve: conservative125 mm reserve; actuator orientation and portface datums remain receipt measured."
+  },
+  {
+    "part_number": "H_DRAIN_UNION_RESERVE",
+    "quantity": 1,
+    "material": "Purchased plumbing space reservation",
+    "procured_stock": "Purchased plumbing space reservation",
+    "length_mm": null,
+    "thickness_mm": null,
+    "bounds_local_mm": [
+      0.0,
+      0.0,
+      0.0,
+      70.0,
+      70.0,
+      55.0
+    ],
+    "individual_export_guarded": true,
+    "status": "PLUMBING RESERVE - PORTS AND FITTING ENGAGEMENT UNVERIFIED; NOT FITTED HARDWARE",
+    "notes": "1in NPT union/tailpiece reserve; exact union release travel and spanner access not established."
+  },
+  {
+    "part_number": "H_DRAIN_DROP_RESERVE",
+    "quantity": 1,
+    "material": "1in gravity drain tail/hose space reservation",
+    "procured_stock": "1in gravity drain tail/hose space reservation",
+    "length_mm": null,
+    "thickness_mm": null,
+    "bounds_local_mm": [
+      -17.0,
+      -17.0,
+      0.0,
+      17.0,
+      17.0,
+      20.0
+    ],
+    "individual_export_guarded": true,
+    "status": "PLUMBING RESERVE - FINAL TAIL LENGTH / DISCONNECTION UNVERIFIED",
+    "notes": "Outlet at Z450 is13.404 mm above basket splash cover. Remove downstream tail at union before lifting basket; exact release path remains a selected-union hold. | This reserve does not assert the selected fittings achieve the stated face datums. No pressure-vessel connection."
+  },
+  {
+    "part_number": "H_WT_WASHOUT_FLANGE",
+    "quantity": 1,
+    "material": "A36 steel6mm",
+    "procured_stock": "A36 steel6mm; finish-machine6.000mmfrom1/4in6.35mmstock",
+    "length_mm": null,
+    "thickness_mm": 6,
+    "bounds_local_mm": [
+      -45.0,
+      -45.0,
+      0.0,
+      45.0,
+      45.0,
+      6.0
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Diameter90 nominal128-sided flange with48.5 bore; lower pipe end seats at flange topZ116. Continuous seal weld around pipe. | Four6.6 holes on70 pitch circle at45/135/225/315 degrees. Rear shelf crossmember stays untouched."
+  },
+  {
+    "part_number": "H_WT_WASHOUT_GASKET",
+    "quantity": 1,
+    "material": "2mm EPDM gasket; verify coolant compatibility",
+    "procured_stock": "2mm EPDM gasket; verify coolant compatibility",
+    "length_mm": null,
+    "thickness_mm": 2,
+    "bounds_local_mm": [
+      -45.0,
+      -45.0,
+      0.0,
+      45.0,
+      45.0,
+      2.0
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Knife cut. Vented gravity tank only; not a pressure-rated flange."
+  },
+  {
+    "part_number": "H_WT_WASHOUT_COVER",
+    "quantity": 1,
+    "material": "A36 steel4mm",
+    "procured_stock": "A36 steel4mm",
+    "length_mm": null,
+    "thickness_mm": 4,
+    "bounds_local_mm": [
+      -45.0,
+      -45.0,
+      0.0,
+      45.0,
+      45.0,
+      4.0
+    ],
+    "individual_export_guarded": false,
+    "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+    "notes": "Flat blank with four clearance holes. Cover removal requires the empty isolated tank and a washout catch beneath."
+  },
+  {
+    "part_number": "STD_M6x25_SOCKET_HEAD_DOWN",
+    "quantity": 4,
+    "material": "M6x25 socket screw",
+    "procured_stock": "M6x25 socket screw",
+    "length_mm": null,
+    "thickness_mm": null,
+    "bounds_local_mm": [
+      -5.0,
+      -5.0,
+      0.0,
+      5.0,
+      5.0,
+      31.0
+    ],
+    "individual_export_guarded": true,
+    "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+    "notes": ""
+  },
+  {
+    "part_number": "STD_M6_WASHER",
+    "quantity": 4,
+    "material": "M6 plain washer",
+    "procured_stock": "M6 plain washer",
+    "length_mm": null,
+    "thickness_mm": null,
+    "bounds_local_mm": [
+      -6.0,
+      -6.0,
+      0.0,
+      6.0,
+      6.0,
+      1.6
+    ],
+    "individual_export_guarded": true,
+    "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+    "notes": ""
   },
   {
     "part_number": "Y_DATUM_BAR",
@@ -4085,10 +4503,10 @@
     "notes": ""
   },
   {
-    "part_number": "ZBX80_MOTOR",
+    "part_number": "CANDIDATE_23HS30-5004D-B280",
     "quantity": 1,
-    "material": "ZBX80 stepper motor envelope",
-    "procured_stock": "ZBX80 stepper motor envelope",
+    "material": "Purchased replacement brake motor clearance envelope; not mass solid",
+    "procured_stock": "Purchased replacement brake motor clearance envelope; not mass solid",
     "length_mm": null,
     "thickness_mm": null,
     "bounds_local_mm": [
@@ -4097,11 +4515,11 @@
       0.0,
       57.0,
       57.0,
-      56.0
+      116.5
     ],
     "individual_export_guarded": true,
-    "status": "PURCHASED CLEARANCE ENVELOPE - NOT MATERIAL MASS",
-    "notes": "57\u00d757\u00d756 motor; intervening coupling/bracket clearance reserved. Motor cable outlet HOLD."
+    "status": "REPLACEMENT CANDIDATE - COUPLING/PILOT HOLD - INDIVIDUAL EXPORT GUARDED",
+    "notes": "Candidate replacement, not an add-on to the original single-ended motor. Source: https://www.omc-stepperonline.com/nema-23-stepper-motor-2-0nm-283-22oz-in-with-24v-4-5w-electromagnetic-brake-23hs30-5004d-b280 | 57 x 57 x 116.5 body; shaft diameter8 x21 long, D-flat15. Body extends60.5 above the old56 envelope. | Two-phase1.8 degree, 5 A/phase, 2.0 N.m holding; brake power-off type, 2.8 N.m static,24 V/4.5 W. | Motor mount pilot, four mounting holes, shaft alignment/engagement and coupling bore remain unverified against ZBX80. Shaft and cables not silently included in this body solid. | Brake does not bypass coupling, ballscrew or attachment failure. Static rating is not an emergency-stop energy rating. | Brake must engage before driver torque is removed; release only after motor torque is established. Brake coil uses a separately rated24 V switched circuit, never a motor phase or logic pin."
   },
   {
     "part_number": "ZBX80_UPPER_CLEARANCE",
@@ -4120,7 +4538,7 @@
     ],
     "individual_export_guarded": true,
     "status": "PURCHASED CLEARANCE ENVELOPE - NOT MATERIAL MASS",
-    "notes": "330 mm full module envelope fromZ1040 to1370. Connector projection not included."
+    "notes": "Original stock module overall envelope is 330 mm from Z1040 to1370. The optional 116.5 mm brake-motor body extends the current reserved overall envelope to390.5 mm, ending atZ1430.5. | This body reserves the coupling/bracket zone only. Actual motor pilot, shaft, coupling and connector projections are unverified and are not modeled as established hardware."
   },
   {
     "part_number": "ZBX80_OUTPUT_INTERFACE_HOLD",
@@ -4139,10 +4557,10 @@
     ],
     "individual_export_guarded": true,
     "status": "PURCHASED CLEARANCE ENVELOPE - NOT MATERIAL MASS",
-    "notes": "Exact-ASIN seller top view: carriage plate90 across x50 along travel; the70 mm transverse dimension connects the smaller\u00d85 holes. Gallery8 identifies four small output fixing holes. The larger\u00d87 bores are not established as usable tool-mount holes. | Along-travel hole pitch, tapped-vs-through, and the mounting-plane-to-output height are NOT dimensioned in that drawing: the adapter uses vertical slots and the 80 mm output stack stays an assumption until the unit is measured."
+    "notes": "Exact-ASIN top view gives a 90 x 50 output carriage. The 70 mm transverse dimension joins the smaller diameter5 fixing holes; it does not qualify the larger assembly bores as tool attachments. | Output height, along-travel fixing pitch, thread/depth and tool access remain unmeasured. Rev H reserves an 80 mm stack only as a placement assumption and uses an undrilled output-interface blank, without assumed adjustment slots."
   },
   {
-    "part_number": "TOOL_ADAPTER_110",
+    "part_number": "H_TOOL_ADAPTER_TRANSFER_BLANK",
     "quantity": 1,
     "material": "6061-T6 aluminum12.7",
     "procured_stock": "6061-T6 aluminum12.7",
@@ -4157,8 +4575,8 @@
       12.7
     ],
     "individual_export_guarded": true,
-    "status": "PROVISIONAL - INDIVIDUAL EXPORT GUARDED UNTIL CARRIAGE DRAWING",
-    "notes": "Provisional adapter: two vertical 7 x 30 slots on 70 mm transverse centers. Their approximately24 mm center travel for a6 mm shank does not verify carriage hole spacing, bolt count or a15-45 mm longitudinal pitch. | Front-face11 x30 counter-slots,6.6 deep, are provisional geometry; the actual carriage screw/head/washer stack remains unselected. | No carriage fasteners are modeled: the listing identifies four\u00d85 fixing holes but omits their thread and along-travel spacing. The former two M6 x16 candidates have been removed. A true\u00d87 plain bore cannot be tappedM6. | Interface load path and fastening capacity remain HOLD. Do not manufacture this adapter or select its carriage fasteners from this model. | Shared spindle/torch clamp pattern: four \u00d86.6 at X\u00b145, Z+12/+38 from the output datum, \u00d810.5 counterbore 6 deep on the carriage-side face. | Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots. | \u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush. | Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots. | \u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush. | Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots. | \u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush. | Four\u00d86.6 through holes for the shared spindle/torch clamp, atX\u00b145/Z+12,+38 relative to output datum, outboard of the carriage slots. | \u00d810.5 counterbore6 deep from rear/output mating face, keeping heads flush."
+    "status": "INTERFACE HOLD - INDIVIDUAL EXPORT GUARDED",
+    "notes": "Rev H transfer-drill blank: obsolete assumed output slots removed. No output attachment fasteners are invented. | Record output height and all four fixing-hole coordinates, thread/pitch, usable depth and access before machining this guarded plate. | Custom tool-side four M6 clearance holes and rear counterbores are defined; Z output attachment is not released. | The present 80 mm output stack is a placement assumption, not a supplier measurement."
   },
   {
     "part_number": "SPINDLE_B0BF5R3LNC",
@@ -4215,7 +4633,7 @@
     ],
     "individual_export_guarded": false,
     "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
-    "notes": "Width110, height40, assembled depth90.5; split gap0.50. Bore\u00d865.00/+0.03 with the split shim installed and both pinch bolts snug. | Rear:four blindM6\u00d71 holes atX\u00b145, \u00d85 pilot17 deep, tap15 deep; mount screwsM6\u00d720 engage13.3 through6.7 mm adapter web. | Pinch screws2\u00d7M6\u00d760 atX\u00b147. Rear split face:\u00d85 pilot17 deep,tapM6\u00d71 depth15. Front half\u00d86.6 through; nominal engagement14.75. | Deburr bore edges0.3 maximum. Initial pinch torque3 N\u00b7m, verify spindle housing is retained without local deformation. Remove tool before bed swap. | The plasma torch split clamp (bore\u00d828 for the AG-60 straight body) shares this mount pattern; see TORCH_CLAMP parked parts."
+    "notes": "Width110, height40, assembled depth90.5; split gap0.50. Bore\u00d865.00/+0.03 with the split shim installed and both pinch bolts snug. | Rear:four blindM6\u00d71 holes atX\u00b145, \u00d85 pilot17 deep, tap15 deep; mount screwsM6\u00d720 engage13.3 through6.7 mm adapter web. | Pinch screws2\u00d7M6\u00d760 atX\u00b147. Rear split face:\u00d85 pilot17 deep,tapM6\u00d71 depth15. Front half\u00d86.6 through; nominal engagement14.75. | Deburr bore edges0.3 maximum. Initial pinch torque3 N\u00b7m, verify spindle housing is retained without local deformation. Remove tool before bed swap."
   },
   {
     "part_number": "SPINDLE_SPLIT_CLAMP_FRONT",
@@ -4234,7 +4652,7 @@
     ],
     "individual_export_guarded": false,
     "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
-    "notes": "Width110, height40, assembled depth90.5; split gap0.50. Bore\u00d865.00/+0.03 with the split shim installed and both pinch bolts snug. | Rear:four blindM6\u00d71 holes atX\u00b145, \u00d85 pilot17 deep, tap15 deep; mount screwsM6\u00d720 engage13.3 through6.7 mm adapter web. | Pinch screws2\u00d7M6\u00d760 atX\u00b147. Rear split face:\u00d85 pilot17 deep,tapM6\u00d71 depth15. Front half\u00d86.6 through; nominal engagement14.75. | Deburr bore edges0.3 maximum. Initial pinch torque3 N\u00b7m, verify spindle housing is retained without local deformation. Remove tool before bed swap. | The plasma torch split clamp (bore\u00d828 for the AG-60 straight body) shares this mount pattern; see TORCH_CLAMP parked parts."
+    "notes": "Width110, height40, assembled depth90.5; split gap0.50. Bore\u00d865.00/+0.03 with the split shim installed and both pinch bolts snug. | Rear:four blindM6\u00d71 holes atX\u00b145, \u00d85 pilot17 deep, tap15 deep; mount screwsM6\u00d720 engage13.3 through6.7 mm adapter web. | Pinch screws2\u00d7M6\u00d760 atX\u00b147. Rear split face:\u00d85 pilot17 deep,tapM6\u00d71 depth15. Front half\u00d86.6 through; nominal engagement14.75. | Deburr bore edges0.3 maximum. Initial pinch torque3 N\u00b7m, verify spindle housing is retained without local deformation. Remove tool before bed swap."
   },
   {
     "part_number": "STD_M3x14_SOCKET",
