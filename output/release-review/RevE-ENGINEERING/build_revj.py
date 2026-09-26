@@ -1,10 +1,10 @@
-"""GM1 Rev H working CAD: one-piece hoisted router bed module.
+"""GM1 Rev J working CAD: one-piece hoisted router bed module.
 
-Builds the Rev E frame, water system, controls and motion with the Rev H bed
-(`bed_revh.py`) and exports three states to ../RevH-CAD:
-  RevH_ROUTER         module installed, router head (full cut list and DXF)
-  RevH_PLASMA_LAYOUT  module out of the machine, spindle and bolts stored
-  RevH_BED_MODULE     the lifted module alone (what the hoist carries)
+Builds the Rev E frame, water system, controls and motion with the Rev J bed
+(`bed_revj.py`) and exports three states to ../RevJ-CAD:
+  RevJ_ROUTER         module installed, router head (full cut list and DXF)
+  RevJ_PLASMA_LAYOUT  module out of the machine, spindle and bolts stored
+  RevJ_BED_MODULE     the lifted module alone (what the hoist carries)
 Unknown purchased interfaces stay guarded; no manufacturing readiness is implied.
 """
 from pathlib import Path
@@ -21,34 +21,34 @@ from build_reve_engineering import build_model as build_legacy_frame
 from build_revg import clone_model, store_router_tool
 
 SOURCE = Path(__file__).resolve().parent
-OUT = SOURCE.parent / 'RevH-CAD'
+OUT = SOURCE.parent / 'RevJ-CAD'
 MACHINE = 'GM1 — Garcia Mechanical Table'
 
 
 def build_model(with_motion=True):
-    from bed_revh import make_bed
+    from bed_revj import make_bed
     model, details = build_legacy_frame(bed_builder=make_bed, with_motion=with_motion, legacy_tool_parking=False)
     model.holds.extend([
-        'Rev H one-piece module: owner hoist, beam, trolley and sling ratings, and the module stand, are owner scope and not modeled.',
+        'Rev J one-piece module: owner hoist, beam, trolley and sling ratings, and the module stand, are owner scope and not modeled.',
         'The owned torch barrel/clamping zone, nozzle datum and lead connection are not measured. No compatible torch mount, floating head or breakaway assembly is released.',
         'This revision is nominal CAD geometry. Frame/tool/work stiffness, joint capacities, purchased interfaces and physical commissioning remain separate release requirements.',
     ])
     for part in model.parts:
         if part.id == 'HW_BOLT_BIN_FLOOR':
-            part.notes = ['Holds the removed spindle-clamp screws and the four lift shackles. The six Rev H drawdowns use their own tray on the reservoir lid.']
+            part.notes = ['Holds the removed spindle-clamp screws and the four lift shackles. The six Rev J drawdowns use their own tray on the reservoir lid.']
     details['machine'] = MACHINE
-    details['revision'] = 'H working design'
+    details['revision'] = 'J working design'
     details['status'] = 'WORKING CAD — NOT A FABRICATION RELEASE'
     details['architecture_assumption'] = details['bed']['architecture_assumption']
     details['tool_parking']['handling'] = (
         'Spindle rests in the existing internal cradle; its clamp screws and the lift shackles go in the existing '
-        'hardware bin, the six drawdowns in the Rev H bolt tray. Exact lead routes remain open.')
+        'hardware bin, the six drawdowns in the Rev J bolt tray. Exact lead routes remain open.')
     return model, details
 
 
 def plasma_layout(source):
     """Module out of the machine, drawdowns in their tray, router tool stored."""
-    from bed_revh import bolt_tray_positions
+    from bed_revj import bolt_tray_positions
     model = clone_model(source)
     model.parts = [p for p in model.parts if not p.id.startswith('MOD_')]
     labels = [f'{side}_{station}' for side in 'LR' for station in (1, 2, 3)]
@@ -59,7 +59,7 @@ def plasma_layout(source):
         washer.shape = place(washer.local, (x0 + 78, y, z), u=(0, 1, 0), v=(0, 0, 1))
         for part in (bolt, washer):
             part.group = 'stored_hardware'
-            part.notes = list(part.notes) + ['Stored in the Rev H bolt tray while the module is out of the machine.']
+            part.notes = list(part.notes) + ['Stored in the Rev J bolt tray while the module is out of the machine.']
     return store_router_tool(model)
 
 
@@ -97,17 +97,17 @@ def main():
     start = time.monotonic()
     OUT.mkdir(parents=True, exist_ok=True)
     model, details = build_model()
-    print('Rev H router:', len(model.parts), 'components', flush=True)
-    router = export(model, OUT, 'RevH_ROUTER', individual=True)
-    write_mesh(model, 'RevH_ROUTER')
+    print('Rev J router:', len(model.parts), 'components', flush=True)
+    router = export(model, OUT, 'RevJ_ROUTER', individual=True)
+    write_mesh(model, 'RevJ_ROUTER')
     plasma = plasma_layout(model)
-    print('Rev H plasma layout:', len(plasma.parts), 'components', flush=True)
-    parked = export(plasma, OUT, 'RevH_PLASMA_LAYOUT', individual=False)
-    write_mesh(plasma, 'RevH_PLASMA_LAYOUT')
+    print('Rev J plasma layout:', len(plasma.parts), 'components', flush=True)
+    parked = export(plasma, OUT, 'RevJ_PLASMA_LAYOUT', individual=False)
+    write_mesh(plasma, 'RevJ_PLASMA_LAYOUT')
     module = module_only(model)
-    print('Rev H bed module:', len(module.parts), 'components', flush=True)
-    alone = export(module, OUT, 'RevH_BED_MODULE', individual=False)
-    write_mesh(module, 'RevH_BED_MODULE')
+    print('Rev J bed module:', len(module.parts), 'components', flush=True)
+    alone = export(module, OUT, 'RevJ_BED_MODULE', individual=False)
+    write_mesh(module, 'RevJ_BED_MODULE')
     details['state_checks'] = {
         key: {'part_count': result['part_count'], 'step_readback': result['step_readback'],
               'unresolved_intersections': result['unresolved_intersections']}

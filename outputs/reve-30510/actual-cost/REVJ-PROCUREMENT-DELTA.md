@@ -1,6 +1,6 @@
-# GM1 Rev H — what the one-piece bed changes in the shopping list
+# GM1 Rev J — what the one-piece bed changes in the shopping list
 
-Computed from the two CAD cut lists (`revh_procurement_delta.py` → `revh-procurement-delta.json`), the two 2 × 2 tube plans and the stock-fit check (`check_revg_stock_fit.py --cad RevH-CAD`). The design is in [RevH-CAD](../../../output/release-review/RevH-CAD/README.md). Only the bed, its receiver and the bed storage change. Frame, water system, motion and controls are the same as Rev G.
+Computed from the two CAD cut lists (`revj_procurement_delta.py` → `revj-procurement-delta.json`), the two 2 × 2 tube plans and the stock-fit check (`check_revg_stock_fit.py --cad RevJ-CAD`). The design is in [RevJ-CAD](../../../output/release-review/RevJ-CAD/README.md). Only the bed, its receiver and the bed storage change. Frame, water system, motion and controls are the same as Rev G.
 
 ## No longer needed (Rev G bed)
 
@@ -11,7 +11,7 @@ Computed from the two CAD cut lists (`revh_procurement_delta.py` → `revh-procu
 | Aluminum panel ties, 3/8 in plate or bar | 24 | MET-GAP-17 |
 | 2 mm steel rack guides | 28 | MET-GAP-16 |
 | 30 × 30 × 3 mm rack-fork tube | 2 | MET-GAP-19 |
-| Extra 1/4 × 12 × 12 in plate for the tool cradles | 1 | MET-GAP-15: Rev H's 6 mm parts (38) fit one 24 × 48 in plate (MET13) |
+| Extra 1/4 × 12 × 12 in plate for the tool cradles | 1 | MET-GAP-15: Rev J's 6 mm parts (38) fit one 24 × 48 in plate (MET13) |
 | Beams, beam feet, seats, front seats, clamp bridges, bosses, racks, hardware trays | 135 flat pieces, 6 tubes, 60 machined | shop-made from registered stock |
 | M5 × 20 DIN 7991 spoilboard screws | 24 | N3 |
 | M8 × 80 beam drawdowns | 8 | N5 |
@@ -20,7 +20,7 @@ Computed from the two CAD cut lists (`revh_procurement_delta.py` → `revh-procu
 | M6 × 35 clamp screws | 16 of 20 | unpriced |
 | 6 × 12 locator pins | 8 | unpriced |
 
-## New for Rev H
+## New for Rev J
 
 | What | Quantity | Stock or purchase |
 |---|---:|---|
@@ -44,11 +44,11 @@ Owner scope, not in the register: overhead beam, trolley and hoist; 4-leg sling;
 
 ## Effect on the priced register
 
-The priced register ([REAL-COST.md](REAL-COST.md)) was re-baselined to Rev H on 26 September 2026. It showed **$5,334.09** priced then; with the owner-reported $82 for the 1,200 mm rail kit it is **$5,336.10** ($5,249.85 goods + $86.25 known shipping), with 73 priced lines and 49 unpriced entries; before the re-baseline it showed $5,348.40.
+The priced register ([REAL-COST.md](REAL-COST.md)) was re-baselined to Rev J on 26 September 2026. It showed **$5,334.09** priced then; with the owner-reported $82 for the 1,200 mm rail kit it is **$5,336.10** ($5,249.85 goods + $86.25 known shipping), with 73 priced lines and 49 unpriced entries; before the re-baseline it showed $5,348.40.
 
 - **B01** stays at five two-packs.
 - **N1** is 48 stainless square nuts ($3.65).
 - **N3** (MDF screws) and **N5** (M8 × 80 drawdowns) are superseded, as are MET-GAP-14, 15, 16, 17 and 19 (MDF, extra 1/4 in plate, 2 mm sheet, aluminum ties, rack tube).
-- **New unpriced rows:** MET-GAP-20 HDPE, MET-GAP-21 stainless 3 mm, MET-GAP-22 3/8 × 4 in bar, MET-GAP-23 8 ft of 2 × 2 tube, H-GALV galvanizing. HW-GAP-H06/H07/H08 now describe the Rev H stainless module hardware.
+- **New unpriced rows:** MET-GAP-20 HDPE, MET-GAP-21 stainless 3 mm, MET-GAP-22 3/8 × 4 in bar, MET-GAP-23 8 ft of 2 × 2 tube, J-GALV galvanizing. HW-GAP-H06/H07/H08 now describe the Rev J stainless module hardware.
 
-The lower total is **not a cheaper build**: the new Rev H items are still unpriced. The Nutty order ($76.06) stays below its $100 free-shipping threshold unless the Rev H stainless fasteners are bought there too.
+The lower total is **not a cheaper build**: the new Rev J items are still unpriced. The Nutty order ($76.06) stays below its $100 free-shipping threshold unless the Rev J stainless fasteners are bought there too.

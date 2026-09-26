@@ -8,7 +8,7 @@ Writes revg-stock-fit.json (or --out). Rectangular envelopes only: final
 kerf-compensated nesting and grain/flatness choices remain the fabricator's.
 
 Run with the CAD Python environment (needs ezdxf):  python check_revg_stock_fit.py
-Rev H:  python check_revg_stock_fit.py --cad RevH-CAD --out revh-stock-fit.json
+Rev J:  python check_revg_stock_fit.py --cad RevJ-CAD --out revj-stock-fit.json
 """
 from pathlib import Path
 from collections import defaultdict
@@ -40,13 +40,13 @@ STOCK = {
     ('stainless_confirm_grade', 3.048): {'row': 'MET-GAP-7', 'size_in': (12, 12)},
     ('stainless_confirm_grade', 6):     {'row': 'MET-GAP-8', 'size_in': (12, 12)},
     ('MDF_18_mm_finished', 18):         {'row': 'MET-GAP-14', 'size_in': (48, 96), 'also_try_in': [(48, 48)]},
-    # Rev H: HDPE top plates, 3/8 in lift lugs (same raw plate as the 8 mm parts), stainless bolt tray.
+    # Rev J: HDPE top plates, 3/8 in lift lugs (same raw plate as the 8 mm parts), stainless bolt tray.
     ('HDPE_sheet_3_4_in_finish_18_0', 18): {'row': None, 'size_in': (48, 48), 'also_try_in': [(24, 48), (48, 96)],
-                              'note': 'Rev H top plates, 3/4 in HDPE finished 18.0 in place.'},
+                              'note': 'Rev J top plates, 3/4 in HDPE finished 18.0 in place.'},
     ('carbon_steel', 9.525): {'row': 'MET14', 'size_in': (12, 24), 'merge_into': ('carbon_steel', 8),
-                              'note': 'Rev H lift lugs are cut from the same 3/8 in plate as the 8 mm parts; packed together.'},
+                              'note': 'Rev J lift lugs are cut from the same 3/8 in plate as the 8 mm parts; packed together.'},
     ('stainless_confirm_grade', 3): {'row': None, 'size_in': (12, 12), 'also_try_in': [(12, 24)],
-                              'note': 'Rev H bolt tray; 3 mm or 11 ga (3.048) sheet.'},
+                              'note': 'Rev J bolt tray; 3 mm or 11 ga (3.048) sheet.'},
     # Not covered by any row before this check; sizes are suggestions to test.
     ('carbon_steel', 2):     {'row': None, 'size_in': (12, 24), 'also_try_in': [(12, 12), (24, 24)]},
     ('aluminum_confirm_alloy', 9.525): {'row': None, 'size_in': (12, 12), 'also_try_in': [(12, 24), (24, 24)],

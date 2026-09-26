@@ -1,7 +1,7 @@
-"""Check nine nominal full-machine GM1 Rev H router poses from fresh source CAD.
+"""Check nine nominal full-machine GM1 Rev J router poses from fresh source CAD.
 
 Checks all eight X/Y/Z travel-box corners and the center. Each includes the
-fixed chassis, actual frame-raised cap blanks, the Rev H one-piece bed module,
+fixed chassis, actual frame-raised cap blanks, the Rev J one-piece bed module,
 water and packaging geometry.
 This is a sampled static interference check; it does not establish continuous
 motion, independent-Y skew, actual cutter/workpiece/cable clearance, stiffness,
@@ -19,7 +19,7 @@ import time
 import traceback
 
 SOURCE=Path(__file__).resolve().parent
-DEFAULT_OUTPUT=SOURCE.parent/'RevH-CAD'/'motion'/'revh-full-machine-poses.json'
+DEFAULT_OUTPUT=SOURCE.parent/'RevJ-CAD'/'motion'/'revj-full-machine-poses.json'
 STATES=list(itertools.product((275,1275),(175,975),(0,100)))+[(775,575,50)]
 
 
@@ -54,13 +54,13 @@ def write_report(path,report,start):
 
 def main(output=DEFAULT_OUTPUT):
     from cad_helpers import bbox,validate
-    from build_revh import build_model
+    from build_revj import build_model
     from motion_details import make_motion
 
     output=Path(output)
     output.parent.mkdir(parents=True,exist_ok=True)
     start=time.monotonic()
-    report={'scope':__doc__,'revision':'GM1 Rev H working design','status':'RUNNING',
+    report={'scope':__doc__,'revision':'GM1 Rev J working design','status':'RUNNING',
             'expected_pose_count':len(STATES),'states':[],
             'acceptance':{'all_world_and_local_shapes_valid_single_solids':True,
                           'local_world_volume_tolerance_mm3':'max(0.05, world_volume * 1e-7)',
@@ -81,7 +81,7 @@ def main(output=DEFAULT_OUTPUT):
         assert len(report['cap_blanks_before_motion_drilling'])==2
         report['build_status']=details.get('status')
         report['architecture_assumption']=details.get('architecture_assumption')
-        print('Rev H fixed assembly:',len(fixed.parts),'parts',flush=True)
+        print('Rev J fixed assembly:',len(fixed.parts),'parts',flush=True)
         for gy,hx,z in STATES:
             model=clone_fixed(fixed)
             make_motion(model,gantry_y=gy,head_x=hx,z_lift=z,tool='router')
@@ -119,7 +119,7 @@ def main(output=DEFAULT_OUTPUT):
             else:
                 assert ids==report['component_ids'], 'Pose component inventory changed'
             write_report(output,report,start)
-            print('Rev H pose',gy,hx,z,'parts',result['part_count'],
+            print('Rev J pose',gy,hx,z,'parts',result['part_count'],
                   'clashes',len(record['unresolved_intersections']),
                   'local-invalid',len(invalid_local),'volume-mismatches',len(mismatches),flush=True)
             if record['unresolved_intersections']:
@@ -136,7 +136,7 @@ def main(output=DEFAULT_OUTPUT):
         report['current_source_run_valid']=sources_unchanged
         report['status']='PASS' if passed else ('STALE' if geometry_passed else 'FAIL')
         write_report(output,report,start)
-        print('Rev H full-machine motion:',report['status'],len(report['states']),
+        print('Rev J full-machine motion:',report['status'],len(report['states']),
               'poses;',report['elapsed_seconds'],'seconds',flush=True)
         return 0 if passed else 2
     except Exception as error:

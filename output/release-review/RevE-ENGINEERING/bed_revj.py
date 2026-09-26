@@ -1,4 +1,4 @@
-"""Rev H one-piece router bed module for GM1: welded steel, aluminum T-slot, HDPE top.
+"""Rev J one-piece router bed module for GM1: welded steel, aluminum T-slot, HDPE top.
 
 Owner requirements of 26 September 2026: one piece, lifted out with an
 overhead beam and trolley hoist, released by no more than about twelve M8-M12
@@ -80,8 +80,8 @@ def make_bed(m):
                     holes.append((bx - px0, PIN_Y - py0, 10.05))
                 else:
                     slots.append((bx - px0, PIN_Y - py0, 16.0, 10.05, 0))
-            pn = 'H_PAD_' + ('FRONT_ROUND' if si == 0 and side == 0 else 'FRONT_SLOT' if si == 0 else 'PLAIN')
-            p = m.add_plate('H_PAD_' + label, px1 - px0, py1 - py0, PAD_T, holes=holes, slots=slots,
+            pn = 'J_PAD_' + ('FRONT_ROUND' if si == 0 and side == 0 else 'FRONT_SLOT' if si == 0 else 'PLAIN')
+            p = m.add_plate('J_PAD_' + label, px1 - px0, py1 - py0, PAD_T, holes=holes, slots=slots,
                             origin=(px0, py0, PAD_Z), pn=pn, group='bed_fixed',
                             notes=['6 mm steel seat pad, fully on the ledger top. Weld all round with 3 mm fillets BEFORE the ledger is sand-filled.',
                                    'After welding, face all six pad tops coplanar within 0.1 mm (fly-cut or shim-map), then drill the Ø11 bolt hole through into the ledger sleeve.',
@@ -89,7 +89,7 @@ def make_bed(m):
             p.flat['machining_notes'] = ['Face top after welding; the six pad tops define the bed seating plane.',
                                          'Ø11 clearance hole concentric with the ledger sleeve below.',
                                          'Front pads: ream the pin hole/slot to the measured Ø10 pin plus 0.05 mm.']
-            m.add(f'H_LEDGER_SLEEVE_{label}', pipe(SIDE, 18, 10), origin=(bx, sy, 789.2), pn='H_LEDGER_M10_SLEEVE',
+            m.add(f'J_LEDGER_SLEEVE_{label}', pipe(SIDE, 18, 10), origin=(bx, sy, 789.2), pn='J_LEDGER_M10_SLEEVE',
                   group='bed_fixed', material='Machined steel',
                   notes=['OD18 x 50.8 sleeve through BOTH ledger walls; continuous seal welds top and bottom, finished flush, BEFORE sand fill. The ledger is a ballast compartment: never drill it after filling.',
                          'Drill 8.5 and tap M10x1.5 at least 25 deep from the top after welding. STEP bore is the nominal M10 thread envelope.'])
@@ -98,7 +98,7 @@ def make_bed(m):
         ledger = m.find('MF_RECEIVER_LEDGER_' + str(side + 1))
         ledger.shape = ledger.shape.cut(cq.Compound.makeCompound(ledger_cuts[side])).clean()
         bb = bbox(ledger.shape); ledger.local = ledger.shape.translate(tuple(-v for v in bb[:3]))
-        ledger.notes.append(f'Rev H receiver: three Ø18 sleeve bores through both walls at X{BOLT_X[side]}, Y{"/".join(str(int(y)) for y in STATIONS)}. '
+        ledger.notes.append(f'Rev J receiver: three Ø18 sleeve bores through both walls at X{BOLT_X[side]}, Y{"/".join(str(int(y)) for y in STATIONS)}. '
                             'Weld the sleeves and the three seat pads before ballast filling.')
 
     # --- Module weldment: two capped side rails, four crossmembers with end plates, four lugs.
@@ -277,15 +277,15 @@ def strip_screw_y(ci):
 def make_bolt_tray(m):
     """Small tray on the reservoir lid for the six drawdowns (Rev G front-seat tray location)."""
     lid_top = 433.096
-    m.add_plate('H_BOLT_TRAY_FLOOR', 210, 120, 3, origin=(300, 800, lid_top), group='bed_storage', pn='H_BOLT_TRAY_FLOOR',
+    m.add_plate('J_BOLT_TRAY_FLOOR', 210, 120, 3, origin=(300, 800, lid_top), group='bed_storage', pn='J_BOLT_TRAY_FLOOR',
                 material='304 stainless 3 mm sheet',
                 notes=['Seal-weld to the removable reservoir lid. Holds the six M10 drawdowns and washers while the module is out.'])
     for side, x in enumerate((300, 507)):
-        m.add_plate(f'H_BOLT_TRAY_SIDE_{side + 1}', 120, 20, 3, origin=(x, 800, lid_top + 3), u=(0, 1, 0), v=(0, 0, 1),
-                    pn='H_BOLT_TRAY_SIDE', group='bed_storage', material='304 stainless 3 mm sheet')
+        m.add_plate(f'J_BOLT_TRAY_SIDE_{side + 1}', 120, 20, 3, origin=(x, 800, lid_top + 3), u=(0, 1, 0), v=(0, 0, 1),
+                    pn='J_BOLT_TRAY_SIDE', group='bed_storage', material='304 stainless 3 mm sheet')
     for side, y in enumerate((803, 920)):
-        m.add_plate(f'H_BOLT_TRAY_END_{side + 1}', 204, 20, 3, origin=(303, y, lid_top + 3), u=(1, 0, 0), v=(0, 0, 1),
-                    pn='H_BOLT_TRAY_END', group='bed_storage', material='304 stainless 3 mm sheet')
+        m.add_plate(f'J_BOLT_TRAY_END_{side + 1}', 204, 20, 3, origin=(303, y, lid_top + 3), u=(1, 0, 0), v=(0, 0, 1),
+                    pn='J_BOLT_TRAY_END', group='bed_storage', material='304 stainless 3 mm sheet')
 
 
 def bolt_tray_positions():

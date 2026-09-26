@@ -27,7 +27,7 @@
       "unit_usd": 0.076,
       "goods_usd": 3.648,
       "shipping_group": "Nutty",
-      "compatibility": "Current design: receive-check 8 x 8 x 2.7 mm maximum. Rev H: 48 nuts, 36 in the bottom slots holding the nine deck profiles to the crossmembers and 12 in the top slots under the HDPE plates. The model calls A4; confirm this stainless offer grade (A2/18-8 is acceptable for water-based mist coolant). Was 96 for the Rev G panels and spoilboards, 240/260 for the Rev E keyhole anchors.",
+      "compatibility": "Current design: receive-check 8 x 8 x 2.7 mm maximum. Rev J: 48 nuts, 36 in the bottom slots holding the nine deck profiles to the crossmembers and 12 in the top slots under the HDPE plates. The model calls A4; confirm this stainless offer grade (A2/18-8 is acceptable for water-based mist coolant). Was 96 for the Rev G panels and spoilboards, 240/260 for the Rev E keyhole anchors.",
       "url": "https://www.nutty.com/m5-x-8-stainless-metric-square-nut-thin/",
       "accepted_current_design": true
     },
@@ -65,7 +65,7 @@
       "compatibility": "Rev G: 24 M5x20 DIN7991 spoilboard screws into top-slot nuts; buy 25 to meet the Nutty minimum order. Square nuts are in N1.",
       "url": "https://www.nutty.com/m5-x-0-80-x-20-ft-flat-head-socket-cap-screws-12-9-din-7991-blk-ox/",
       "accepted_current_design": true,
-      "superseded_by_rev_h": "Rev G MDF spoilboard screw. Rev H has no MDF; the HDPE plates use 12 M5x12 ISO 4762 A4 screws with 15 mm A4 washers (unpriced, HW-GAP-H08). Kept as dated price evidence only."
+      "superseded_by_rev_j": "Rev G MDF spoilboard screw. Rev J has no MDF; the HDPE plates use 12 M5x12 ISO 4762 A4 screws with 15 mm A4 washers (unpriced, HW-GAP-H08). Kept as dated price evidence only."
     },
     {
       "id": "N4",
@@ -100,7 +100,7 @@
       "compatibility": "Rev G: eight M8x80 beam drawdowns through the beam compression sleeves (STD_M8x80_SOCKET x8); buy 10 to meet the Nutty minimum order. Do not increase design torque.",
       "url": "https://www.nutty.com/m8-x-1-25-x-80-socket-head-cap-screw-12-9-din-912-blk-ox/",
       "accepted_current_design": true,
-      "superseded_by_rev_h": "Rev G beam drawdown. Rev H uses six M10x80 ISO 4762 A4-70 drawdowns (unpriced, HW-GAP-H07). Kept as dated price evidence only."
+      "superseded_by_rev_j": "Rev G beam drawdown. Rev J uses six M10x80 ISO 4762 A4-70 drawdowns (unpriced, HW-GAP-H07). Kept as dated price evidence only."
     },
     {
       "id": "N6",
@@ -546,9 +546,9 @@
     {
       "budget_id": "H03",
       "current_usd": 75,
-      "status": "Partial priced; Rev H scope",
-      "finding": "Rev H quantities from RevH-CAD/cutlist.json: 40 M8 x 16 screws are priced in N4. Still unpriced: 24 M8 flat washers 16 x 8.4 x 1.6, 28 M6 weld nuts and 4 #12-14 x 38 self-drilling cabinet screws. Rev H has no bed storage racks; the removed drawdowns go in the stainless bolt tray (MET-GAP-21).",
-      "item": "Cover and cabinet small hardware (Rev H)"
+      "status": "Partial priced; Rev J scope",
+      "finding": "Rev J quantities from RevJ-CAD/cutlist.json: 40 M8 x 16 screws are priced in N4. Still unpriced: 24 M8 flat washers 16 x 8.4 x 1.6, 28 M6 weld nuts and 4 #12-14 x 38 self-drilling cabinet screws. Rev J has no bed storage racks; the removed drawdowns go in the stainless bolt tray (MET-GAP-21).",
+      "item": "Cover and cabinet small hardware (Rev J)"
     },
     {
       "budget_id": "H04",
@@ -560,28 +560,28 @@
       "budget_id": "H05",
       "current_usd": 30.71,
       "status": "Goods priced; combined free shipment",
-      "finding": "Rev H: 48 stainless DIN562 M5 square nuts $3.65 (36 deck-profile nuts, 12 HDPE nuts). Whether the Nutty basket reaches the free-shipping threshold is computed by assemble_audit.py."
+      "finding": "Rev J: 48 stainless DIN562 M5 square nuts $3.65 (36 deck-profile nuts, 12 HDPE nuts). Whether the Nutty basket reaches the free-shipping threshold is computed by assemble_audit.py."
     },
     {
       "budget_id": "H06",
       "current_usd": 80,
-      "status": "Rev E and Rev G hardware superseded; Rev H screws unpriced",
-      "finding": "Rev H: each of the nine 20100 profiles is held by one M5x8 ISO7380 A4 button screw per crossmember, inserted from inside the tube through the Ø14 bottom access hole into a bottom-slot nut: 36 screws, unpriced. The nuts are in N1. The Rev G panel-tie screws and washers and the Rev E N2, N16 and W1 items are superseded. The slot lips carry the preload; test a sample joint before issuing a torque (BED04).",
-      "item": "Deck profile fasteners: 36 M5x8 ISO7380 A4 button screws (Rev H)"
+      "status": "Rev E and Rev G hardware superseded; Rev J screws unpriced",
+      "finding": "Rev J: each of the nine 20100 profiles is held by one M5x8 ISO7380 A4 button screw per crossmember, inserted from inside the tube through the Ø14 bottom access hole into a bottom-slot nut: 36 screws, unpriced. The nuts are in N1. The Rev G panel-tie screws and washers and the Rev E N2, N16 and W1 items are superseded. The slot lips carry the preload; test a sample joint before issuing a torque (BED04).",
+      "item": "Deck profile fasteners: 36 M5x8 ISO7380 A4 button screws (Rev J)"
     },
     {
       "budget_id": "H07",
       "current_usd": 45,
       "status": "Unpriced; Rev G items superseded",
-      "finding": "Rev H: six M10x80 ISO4762 A4-70 drawdowns with six M10 A4 washers 20 x 10.5 x 2 (anti-seize, 30 N m nominal) and two hardened stainless dowel pins 10 m6 x 56, all unpriced. The twelve sleeves are turned from MET-GAP-18. The Rev G M8x80 drawdowns (N5), four M8x20 front-seat screws, eight 6 x 12 locator pins and the sixteen M6x35 clamp screws with washers are superseded (four M6x35 remain elsewhere in the machine).",
-      "item": "Bed drawdowns and locating pins (Rev H)"
+      "finding": "Rev J: six M10x80 ISO4762 A4-70 drawdowns with six M10 A4 washers 20 x 10.5 x 2 (anti-seize, 30 N m nominal) and two hardened stainless dowel pins 10 m6 x 56, all unpriced. The twelve sleeves are turned from MET-GAP-18. The Rev G M8x80 drawdowns (N5), four M8x20 front-seat screws, eight 6 x 12 locator pins and the sixteen M6x35 clamp screws with washers are superseded (four M6x35 remain elsewhere in the machine).",
+      "item": "Bed drawdowns and locating pins (Rev J)"
     },
     {
       "budget_id": "H08",
       "current_usd": 70,
       "status": "Unpriced; Rev G MDF screws superseded",
-      "finding": "Rev H: two HDPE plates held by 12 M5x12 ISO4762 A4 socket screws with 12 A4 washers 15 x 5.3 x 1.5 into top-slot nuts (N1), unpriced. One fixed hole per plate; the rest are slots or oversize for HDPE growth. The Rev G MDF screws (N3) are superseded. Ordinary T-slot work clamps are not priced or qualified.",
-      "item": "HDPE top fastening and work clamps (Rev H)"
+      "finding": "Rev J: two HDPE plates held by 12 M5x12 ISO4762 A4 socket screws with 12 A4 washers 15 x 5.3 x 1.5 into top-slot nuts (N1), unpriced. One fixed hole per plate; the rest are slots or oversize for HDPE growth. The Rev G MDF screws (N3) are superseded. Ordinary T-slot work clamps are not priced or qualified.",
+      "item": "HDPE top fastening and work clamps (Rev J)"
     },
     {
       "budget_id": "H09",

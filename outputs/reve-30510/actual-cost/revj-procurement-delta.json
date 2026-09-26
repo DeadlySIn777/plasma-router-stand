@@ -1,8 +1,8 @@
 {
-  "scope": "What GM1 Rev H changes in the shopping list, computed from the two cut lists.\n\nCompares output/release-review/RevG-CAD/cutlist.json with RevH-CAD/cutlist.json\npart number by part number, then the two tube plans and the two stock-fit\nreports (check_revg_stock_fit.py with --cad). Writes revh-procurement-delta.json.\nStdlib only.",
+  "scope": "What GM1 Rev J changes in the shopping list, computed from the two cut lists.\n\nCompares output/release-review/RevG-CAD/cutlist.json with RevJ-CAD/cutlist.json\npart number by part number, then the two tube plans and the two stock-fit\nreports (check_revg_stock_fit.py with --cad). Writes revj-procurement-delta.json.\nStdlib only.",
   "source_sha256": {
     "RevG-CAD/cutlist.json": "1e4b8c8afcdf141dbe3e4418da5675354b442c57f56e9fa5a181776742d13f28",
-    "RevH-CAD/cutlist.json": "3dab42f5113e4707d63060c176d45a638f848896d1380b3f903fc9f20a38e941"
+    "RevJ-CAD/cutlist.json": "3dab42f5113e4707d63060c176d45a638f848896d1380b3f903fc9f20a38e941"
   },
   "summary_by_kind": {
     "purchased": {
@@ -749,7 +749,7 @@
       ]
     },
     {
-      "part_number": "H_BOLT_TRAY_END",
+      "part_number": "J_BOLT_TRAY_END",
       "quantity": 2,
       "material": "304 stainless 3 mm sheet",
       "kind": "flat",
@@ -762,7 +762,7 @@
       ]
     },
     {
-      "part_number": "H_BOLT_TRAY_FLOOR",
+      "part_number": "J_BOLT_TRAY_FLOOR",
       "quantity": 1,
       "material": "304 stainless 3 mm sheet",
       "kind": "flat",
@@ -775,7 +775,7 @@
       ]
     },
     {
-      "part_number": "H_BOLT_TRAY_SIDE",
+      "part_number": "J_BOLT_TRAY_SIDE",
       "quantity": 2,
       "material": "304 stainless 3 mm sheet",
       "kind": "flat",
@@ -788,7 +788,7 @@
       ]
     },
     {
-      "part_number": "H_LEDGER_M10_SLEEVE",
+      "part_number": "J_LEDGER_M10_SLEEVE",
       "quantity": 6,
       "material": "Machined steel",
       "kind": "machined or other",
@@ -801,7 +801,7 @@
       ]
     },
     {
-      "part_number": "H_PAD_FRONT_ROUND",
+      "part_number": "J_PAD_FRONT_ROUND",
       "quantity": 1,
       "material": "A36 steel",
       "kind": "flat",
@@ -814,7 +814,7 @@
       ]
     },
     {
-      "part_number": "H_PAD_FRONT_SLOT",
+      "part_number": "J_PAD_FRONT_SLOT",
       "quantity": 1,
       "material": "A36 steel",
       "kind": "flat",
@@ -827,7 +827,7 @@
       ]
     },
     {
-      "part_number": "H_PAD_PLAIN",
+      "part_number": "J_PAD_PLAIN",
       "quantity": 4,
       "material": "A36 steel",
       "kind": "flat",
@@ -1078,13 +1078,13 @@
     {
       "part_number": "STD_M6x35_SOCKET",
       "rev_g_quantity": 20,
-      "rev_h_quantity": 4,
+      "rev_j_quantity": 4,
       "material": "M6x35class8.8"
     },
     {
       "part_number": "STD_M8_WASHER",
       "rev_g_quantity": 28,
-      "rev_h_quantity": 24,
+      "rev_j_quantity": 24,
       "material": "M8flatwasher16\u00d78.4\u00d71.6"
     }
   ],
@@ -1101,7 +1101,7 @@
         825.6
       ]
     },
-    "rev_h": {
+    "rev_j": {
       "bars_20ft": 6,
       "pieces": 32,
       "net_length_mm": 32087.408,
@@ -1415,7 +1415,7 @@
         "options": null
       }
     ],
-    "rev_h": [
+    "rev_j": [
       {
         "material": "HDPE_sheet_3_4_in_finish_18_0",
         "thickness_mm": 18,
@@ -1451,7 +1451,7 @@
         "thickness_mm": 18,
         "row": "MET-GAP-14",
         "parts": 0,
-        "result": "NO RevH-CAD PARTS IN THIS GROUP",
+        "result": "NO RevJ-CAD PARTS IN THIS GROUP",
         "options": null
       },
       {
@@ -1459,7 +1459,7 @@
         "thickness_mm": 9.525,
         "row": null,
         "parts": 0,
-        "result": "NO RevH-CAD PARTS IN THIS GROUP",
+        "result": "NO RevJ-CAD PARTS IN THIS GROUP",
         "options": null
       },
       {
@@ -1499,7 +1499,7 @@
         "thickness_mm": 2,
         "row": null,
         "parts": 0,
-        "result": "NO RevH-CAD PARTS IN THIS GROUP",
+        "result": "NO RevJ-CAD PARTS IN THIS GROUP",
         "options": null
       },
       {

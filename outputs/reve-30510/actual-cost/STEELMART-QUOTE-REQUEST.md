@@ -34,6 +34,6 @@ Please quote only the material lines you supply. Show economical stock-size alte
 
 Please also identify whether any suitable remnants or drops would reduce the price while providing these blank dimensions. Do not assume thinner stock or shorter bars are acceptable.
 
-Quantities follow the GM1 Rev H design (`output/release-review/RevH-CAD/`). The 3/4 in HDPE sheet for the bed top (48 × 48 in) and galvanizing of the bed module are sourced separately; see [REVH-PROCUREMENT-DELTA.md](REVH-PROCUREMENT-DELTA.md).
+Quantities follow the GM1 Rev J design (`output/release-review/RevJ-CAD/`). The 3/4 in HDPE sheet for the bed top (48 × 48 in) and galvanizing of the bed module are sourced separately; see [REVJ-PROCUREMENT-DELTA.md](REVJ-PROCUREMENT-DELTA.md).
 
 Reply contact fields are intentionally unfilled. The website requires first/last name, email, phone and company name. For a personal build, the company field can identify it as a personal fabrication project if the requester confirms that description.

@@ -1,4 +1,4 @@
-"""Actual-solid sampled check of the Rev H bed-module hoist path, rigging included.
+"""Actual-solid sampled check of the Rev J bed-module hoist path, rigging included.
 
 The one-piece module (every MOD_* part) and a modeled 4-leg sling move as ONE
 rigid body: lift 70 mm in place, then travel forward out of the open front
@@ -23,7 +23,7 @@ import cadquery as cq
 from cad_helpers import bbox, cyl, intersection_volume
 
 ROOT = Path(__file__).resolve().parent
-OUT_DIR = ROOT.parent / 'RevH-CAD'
+OUT_DIR = ROOT.parent / 'RevJ-CAD'
 OUT = OUT_DIR / 'handling-check.json'
 LIFT = 70.0
 FORWARD = 1420.0              # module rear end Y1345 finishes at Y-75, ahead of the feet at Y-14.6
@@ -165,7 +165,7 @@ class Checker:
 
 def main():
     start = time.monotonic()
-    from build_revh import build_model
+    from build_revj import build_model
     before = {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in ROOT.glob('*.py')}
     model, details = build_model(with_motion=True)
     motion = details['motion']['configuration']

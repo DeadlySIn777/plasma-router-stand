@@ -1,4 +1,4 @@
-"""Draw why the Y guide rail is longer than the 1,000 mm stroke, from GM1 Rev H model positions.
+"""Draw why the Y guide rail is longer than the 1,000 mm stroke, from GM1 Rev J model positions.
 
 Positions come from motion_details.make_motion at gantry_y = 275 (front stop) and
 1275 (back stop); see rail-length-positions.json. Horizontal is to scale; the

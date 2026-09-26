@@ -1,22 +1,22 @@
-# GM1 Rev H — one-piece hoisted router bed
+# GM1 Rev J — one-piece hoisted router bed
 
 **GM1 — Garcia Mechanical Table.** Working design for review, **not released for purchasing, fabrication, CAM or operation.** Amber parts in the previews are purchased-part envelopes whose interfaces are not all verified.
 
-Rev H answers the owner's requirement of 26 September 2026: *one piece, lifted out with a winch, at most about 12 screws of M8–M12, waterproof for mist coolant when cutting aluminum.* It replaces the Rev G six-panel manual bed. The rest of the machine (frame, water table, controls packaging, motion) is unchanged from Rev G.
+Rev J answers the owner's requirement of 26 September 2026: *one piece, lifted out with a winch, at most about 12 screws of M8–M12, waterproof for mist coolant when cutting aluminum.* It replaces the Rev G six-panel manual bed. The rest of the machine (frame, water table, controls packaging, motion) is unchanged from Rev G.
 
-- [Router assembly STEP](step/RevH_ROUTER.step) — bed module installed
-- [Plasma layout STEP](step/RevH_PLASMA_LAYOUT.step) — module out of the machine; spindle, clamp hardware and drawdowns stored (no plasma torch is modeled)
-- [Bed module STEP](step/RevH_BED_MODULE.step) — the part the hoist carries
-- Previews: [router](previews/RevH_ROUTER.png), [front](previews/RevH_ROUTER_front.png), [plasma layout](previews/RevH_PLASMA_LAYOUT.png), [module](previews/RevH_BED_MODULE.png), [module underside](previews/RevH_BED_MODULE_underside.png)
+- [Router assembly STEP](step/RevJ_ROUTER.step) — bed module installed
+- [Plasma layout STEP](step/RevJ_PLASMA_LAYOUT.step) — module out of the machine; spindle, clamp hardware and drawdowns stored (no plasma torch is modeled)
+- [Bed module STEP](step/RevJ_BED_MODULE.step) — the part the hoist carries
+- Previews: [router](previews/RevJ_ROUTER.png), [front](previews/RevJ_ROUTER_front.png), [plasma layout](previews/RevJ_PLASMA_LAYOUT.png), [module](previews/RevJ_BED_MODULE.png), [module underside](previews/RevJ_BED_MODULE_underside.png)
 - [Component schedule](cutlist.csv), [operations](part-operations.json), [individual STEP parts](parts/), [flat DXFs](dxf/), [tube cutting plan](TUBE-CUT-PLAN.md), [sheet nesting](nesting/sheet-nesting.json)
-- Checks: [hoist path with rigging](handling-check.json), [nine motion poses](motion/revh-full-machine-poses.json), validations for the [router](RevH_ROUTER-validation.json), [plasma layout](RevH_PLASMA_LAYOUT-validation.json) and [module](RevH_BED_MODULE-validation.json), [manifest and source hashes](engineering-manifest.json)
-- [What Rev H changes in the shopping list](../../../outputs/reve-30510/actual-cost/REVH-PROCUREMENT-DELTA.md)
+- Checks: [hoist path with rigging](handling-check.json), [nine motion poses](motion/revj-full-machine-poses.json), validations for the [router](RevJ_ROUTER-validation.json), [plasma layout](RevJ_PLASMA_LAYOUT-validation.json) and [module](RevJ_BED_MODULE-validation.json), [manifest and source hashes](engineering-manifest.json)
+- [What Rev J changes in the shopping list](../../../outputs/reve-30510/actual-cost/REVJ-PROCUREMENT-DELTA.md)
 
-![Rev H router](previews/RevH_ROUTER.png)
+![Rev J router](previews/RevJ_ROUTER.png)
 
-## How Rev H meets the requirement
+## How Rev J meets the requirement
 
-| Owner requirement | Rev H |
+| Owner requirement | Rev J |
 |---|---|
 | One piece, lifted out with a winch | One welded, galvanized module, **about 63 kg** (model estimate; weigh it). Four lift lugs take a 4-leg sling to an overhead beam-and-trolley hoist. |
 | At most about 12 screws, M8–M12 | **Six M10 × 80** stainless socket screws hold it down; two Ø10 pins locate it. Nothing else is removed for a bed change. |
@@ -67,7 +67,7 @@ The hoist parks in front of the machine during cutting; the gantry and Z motor (
 |---|---|
 | Static interference, router state | 910 solids, 0 unresolved overlaps; STEP reimport matches |
 | Static interference, plasma layout and module alone | 761 and 149 solids, 0 unresolved overlaps |
-| Nine router poses (X/Y/Z travel corners and centre) | **Pass**: 910 solids in each pose, 0 unresolved overlaps ([motion check](motion/revh-full-machine-poses.json)) |
+| Nine router poses (X/Y/Z travel corners and centre) | **Pass**: 910 solids in each pose, 0 unresolved overlaps ([motion check](motion/revj-full-machine-poses.json)) |
 | Hoist path, module and 4-leg sling as one rigid body, gantry at the rear stop, spindle left in place as an obstacle | **Pass** at hook heights 0.7, 1.0 and 2.0 m above the lug holes: 74 sampled poses each (lift every 5 mm, travel every 25 mm), 0 intersections |
 
 Nearest modeled gaps with the module raised 70 mm: frame legs 11.2 mm each side; float backrails 13.7–14.5 mm (6 mm above their tops); Y-block bolts 18.8 mm; Y guide shoes 23.2 mm; Z slide body 29.2 mm. The steepest sling (2.0 m) passes 22.3 mm from the X rail. These are nominal CAD gaps. Weld distortion, sling stretch, swing and debris all use them up.
@@ -81,4 +81,4 @@ Not checked or not released: rigging hardware, beam and hoist ratings; chain sag
 - **Added:** the module, six seat pads, six ledger sleeves, the bolt tray, and the module hardware listed in the cut list.
 - **Extrusion:** nine 1,197 mm pieces from the same five two-packs (ten bars, one spare) instead of thirty 397 mm pieces.
 
-Sources are in [RevE-ENGINEERING](../RevE-ENGINEERING/): `bed_revh.py` (module and receiver), `build_revh.py` (exports), `verify_revh_motion.py`, `revh_handling_check.py`, `render_revh.py`. Rev G ([RevG-CAD](../RevG-CAD/README.md)) stays as the in-footprint manual alternative.
+Sources are in [RevE-ENGINEERING](../RevE-ENGINEERING/): `bed_revj.py` (module and receiver), `build_revj.py` (exports), `verify_revj_motion.py`, `revj_handling_check.py`, `render_revj.py`. Rev G ([RevG-CAD](../RevG-CAD/README.md)) stays as the in-footprint manual alternative.

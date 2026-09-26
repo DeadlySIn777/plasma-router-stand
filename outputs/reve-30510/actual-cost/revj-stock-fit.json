@@ -1,5 +1,5 @@
 {
-  "cad_package": "RevH-CAD",
+  "cad_package": "RevJ-CAD",
   "source_cutlist_sha256": "3dab42f5113e4707d63060c176d45a638f848896d1380b3f903fc9f20a38e941",
   "packer": "nest_flat_parts.pack, 10 mm edge, 6 mm spacing, rectangular DXF extents",
   "groups": [
@@ -39,21 +39,21 @@
         }
       ],
       "result": "NEW REQUIREMENT: no stock row covers these parts",
-      "note": "Rev H top plates, 3/4 in HDPE finished 18.0 in place."
+      "note": "Rev J top plates, 3/4 in HDPE finished 18.0 in place."
     },
     {
       "material": "MDF_18_mm_finished",
       "thickness_mm": 18,
       "row": "MET-GAP-14",
       "parts": 0,
-      "result": "NO RevH-CAD PARTS IN THIS GROUP"
+      "result": "NO RevJ-CAD PARTS IN THIS GROUP"
     },
     {
       "material": "aluminum_confirm_alloy",
       "thickness_mm": 9.525,
       "row": null,
       "parts": 0,
-      "result": "NO RevH-CAD PARTS IN THIS GROUP"
+      "result": "NO RevJ-CAD PARTS IN THIS GROUP"
     },
     {
       "material": "carbon_steel",
@@ -105,7 +105,7 @@
       "thickness_mm": 2,
       "row": null,
       "parts": 0,
-      "result": "NO RevH-CAD PARTS IN THIS GROUP"
+      "result": "NO RevJ-CAD PARTS IN THIS GROUP"
     },
     {
       "material": "carbon_steel",
@@ -181,9 +181,9 @@
       "parts": 38,
       "part_numbers": [
         "FT_LEG_CLOSURE",
-        "H_PAD_FRONT_ROUND",
-        "H_PAD_FRONT_SLOT",
-        "H_PAD_PLAIN",
+        "J_PAD_FRONT_ROUND",
+        "J_PAD_FRONT_SLOT",
+        "J_PAD_PLAIN",
         "MOD_XM_END_PLATE",
         "TOOL_PARK_CRADLE",
         "WP_COMB",
@@ -376,9 +376,9 @@
       "register_quantity": null,
       "parts": 5,
       "part_numbers": [
-        "H_BOLT_TRAY_END",
-        "H_BOLT_TRAY_FLOOR",
-        "H_BOLT_TRAY_SIDE"
+        "J_BOLT_TRAY_END",
+        "J_BOLT_TRAY_FLOOR",
+        "J_BOLT_TRAY_SIDE"
       ],
       "placed_from_model_bounds": [],
       "blank_area_m2": 0.0382,
@@ -399,7 +399,7 @@
         }
       ],
       "result": "NEW REQUIREMENT: no stock row covers these parts",
-      "note": "Rev H bolt tray; 3 mm or 11 ga (3.048) sheet."
+      "note": "Rev J bolt tray; 3 mm or 11 ga (3.048) sheet."
     },
     {
       "material": "stainless_confirm_grade",

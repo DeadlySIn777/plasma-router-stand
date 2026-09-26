@@ -1,4 +1,4 @@
-"""Render GM1 Rev H CAD tessellations (actual exported geometry, no illustration parts)."""
+"""Render GM1 Rev J CAD tessellations (actual exported geometry, no illustration parts)."""
 from pathlib import Path
 import sys
 import json
@@ -8,7 +8,7 @@ from PIL import Image, ImageDraw, ImageFont
 SOURCE = Path(__file__).resolve().parent
 sys.path.insert(0, str(SOURCE.parents[2]))
 from render_cad import _triangle, _unit
-ROOT = SOURCE.parent / 'RevH-CAD'
+ROOT = SOURCE.parent / 'RevJ-CAD'
 
 
 def font(bold, size):
@@ -48,16 +48,16 @@ def render(name, view=(-1.25, -1.8, 1.25), size=(1600, 1400), suffix=''):
         else: edge[:, :-1] |= selected
     pixels[edge] = (pixels[edge].astype(float) * .72).astype(np.uint8)
     picture = Image.fromarray(pixels); draw = ImageDraw.Draw(picture)
-    titles = {'RevH_ROUTER': 'GM1 Rev H | Router: one-piece bed module installed',
-              'RevH_PLASMA_LAYOUT': 'GM1 Rev H | Plasma layout: bed module lifted out',
-              'RevH_BED_MODULE': 'GM1 Rev H | Bed module: galvanized frame, T-slot, HDPE top'}
+    titles = {'RevJ_ROUTER': 'GM1 Rev J | Router: one-piece bed module installed',
+              'RevJ_PLASMA_LAYOUT': 'GM1 Rev J | Plasma layout: bed module lifted out',
+              'RevJ_BED_MODULE': 'GM1 Rev J | Bed module: galvanized frame, T-slot, HDPE top'}
     draw.text((42, 25), titles.get(name, name), font=font(True, 30), fill=(28, 43, 50))
     draw.text((42, 69), 'Actual CAD geometry. Amber parts are purchased envelopes.', font=font(False, 19), fill=(85, 101, 112))
     draw.text((42, h - 77), 'WORKING DESIGN: owner hoist and supplier interfaces still open. Not a fabrication release.',
               font=font(False, 19), fill=(112, 66, 18))
-    notes = {'RevH_ROUTER': 'Nominal motion: X 800 / Y 1000 / Z 100 mm. Six M10 drawdowns hold the module.',
-             'RevH_PLASMA_LAYOUT': 'No verified plasma head is modeled. Module sits outside on the owner stand.',
-             'RevH_BED_MODULE': 'About 63 kg. Four lift lugs; 4-leg sling to an overhead trolley hoist.'}
+    notes = {'RevJ_ROUTER': 'Nominal motion: X 800 / Y 1000 / Z 100 mm. Six M10 drawdowns hold the module.',
+             'RevJ_PLASMA_LAYOUT': 'No verified plasma head is modeled. Module sits outside on the owner stand.',
+             'RevJ_BED_MODULE': 'About 63 kg. Four lift lugs; 4-leg sling to an overhead trolley hoist.'}
     draw.text((42, h - 46), notes.get(name, ''), font=font(False, 19), fill=(85, 101, 112))
     dest = ROOT / 'previews' / (name + suffix + '.png'); picture.save(dest)
     return {'file': dest.name, 'bounds_min': vertices.min(0).tolist(), 'bounds_max': vertices.max(0).tolist()}
@@ -65,10 +65,10 @@ def render(name, view=(-1.25, -1.8, 1.25), size=(1600, 1400), suffix=''):
 
 def main():
     results = []
-    for name in ('RevH_ROUTER', 'RevH_PLASMA_LAYOUT', 'RevH_BED_MODULE'):
+    for name in ('RevJ_ROUTER', 'RevJ_PLASMA_LAYOUT', 'RevJ_BED_MODULE'):
         print('Render', name, flush=True); results.append(render(name))
-    results.append(render('RevH_ROUTER', view=(0, -1, .18), size=(1400, 1400), suffix='_front'))
-    results.append(render('RevH_BED_MODULE', view=(.9, -1.4, -.8), size=(1400, 1200), suffix='_underside'))
+    results.append(render('RevJ_ROUTER', view=(0, -1, .18), size=(1400, 1400), suffix='_front'))
+    results.append(render('RevJ_BED_MODULE', view=(.9, -1.4, -.8), size=(1400, 1200), suffix='_underside'))
     (ROOT / 'previews' / 'preview-metadata.json').write_text(json.dumps(results, indent=2) + '\n')
     print('Rendered', len(results), 'CAD views', flush=True)
 
