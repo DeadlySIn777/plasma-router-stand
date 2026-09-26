@@ -409,7 +409,7 @@
       "unit_usd": 155.15,
       "goods_usd": 775.75,
       "url": "https://www.blueskysupplies.com/products/2inch-x-2-inch-x-120-a500-tube",
-      "notes": "Rev G: all 30 square-tube blanks in output/release-review/RevG-CAD/tube-cut-plan.json on five 20 ft bars (net 29,472 mm), including the four 924 mm bed beams. Bars 1-3 keep only 6 mm beyond 3 mm kerfs and 10 mm trim, so each bar needs a full usable 20 ft. Bar 5 keeps 825.6 mm, which would also cover eight 18 mm G_BEAM_FOOT_18 slices if the feet are cut from this tube (construction not stated in the CAD). No blanket 10 ft transport cuts. (Rev E needed six bars for 36 blanks.) High retail reference, not a lowest-price buying recommendation. Posted goods price; delivery unquoted. Cheaper exact-spec Bobco goods benchmark is $487.50 for five bars, LA pickup advertised, Georgia delivery unquoted. Local SteelMart/Sabel quotes pending; see TUBE-PRICE-COMPARISON.md.",
+      "notes": "Rev G: all 30 square-tube blanks in output/release-review/RevG-CAD/tube-cut-plan.json on five 20 ft bars (net 29,472 mm), including the four 924 mm bed beams. Bars 1-3 keep only 6 mm beyond 3 mm kerfs and 10 mm trim, so each bar needs a full usable 20 ft. Bar 5 keeps 825.6 mm, which covers the eight G_BEAM_FOOT_18 feet: bed_cassettes.py models each as an 18 mm slice of this tube (3.048 wall) with one face trimmed to 50 mm, 168 mm in all with cuts. No blanket 10 ft transport cuts. (Rev E needed six bars for 36 blanks.) High retail reference, not a lowest-price buying recommendation. Posted goods price; delivery unquoted. Cheaper exact-spec Bobco goods benchmark is $487.50 for five bars, LA pickup advertised, Georgia delivery unquoted. Local SteelMart/Sabel quotes pending; see TUBE-PRICE-COMPARISON.md.",
       "vendor": "BlueSky Supplies",
       "shipping_usd": null,
       "basis": "Posted price"
@@ -3143,7 +3143,7 @@
     "hardware-findings.json": "18bd3bf19ef9243cef21f631d44eaa57f9c8598478198f94363b8873780db1dd",
     "marketplace-findings.json": "279e8b66e81b7bf3fbbed26e2d94db3ca69af25a4a1172e45e14a7d4b3196190",
     "core-findings.json": "413b293290bdc712932f78832344289bf3b0418ecd3a11f628aa008ed65296f6",
-    "metal-findings.json": "83a35072110834ac5da0c16f996de13c49cf975f676d29cc31ddfa1d9f3fb06f",
+    "metal-findings.json": "2bb60935c42aa0ca5611f592fdcc7900e4682f0aa0d490c4ef6dcbec29fa98eb",
     "tube-georgia-findings.json": "a683ea857a020d304c5c02bc2b81acd790c3d7133aa788b2492dff6f7d54ee4e",
     "controls-findings.json": "1fa775e0028736f0aed1a590b1dc35cead83f359b426fc4ada5baf97e29169ac",
     "tube-comparison-findings.json": "8a1d5339fa1865ff922e288bd1d38639cc9cea781901940709a0f21e3e05587d"
