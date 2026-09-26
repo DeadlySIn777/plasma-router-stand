@@ -28,7 +28,7 @@ for r in core['rows']:
     if r.get('superseded'):
         superseded.append(dict(id=r['id'],item=r['item'],quantity=r['quantity'],unit_usd=r['unit_usd'],goods_usd=money(Decimal(str(r['quantity']))*Decimal(str(r['unit_usd']))),url=r['url'],reason=r['superseded'],revision='G'));continue
     oldr=byold.get(r['id'],{})
-    add(r['id'],oldr.get('category','Controls'),oldr.get('item',r['item']),r['quantity'],oldr.get('unit','each'),r['unit_usd'],r['url'],r['notes'],r['vendor'],r['shipping_usd'],'Live offer 24 Sep')
+    add(r['id'],oldr.get('category','Controls'),oldr.get('item',r['item']),r['quantity'],oldr.get('unit','each'),r['unit_usd'],r['url'],r['notes'],r['vendor'],r['shipping_usd'],r.get('basis','Live offer 24 Sep'))
     if r.get('owner_order_status'): rows[-1]['owner_order_status']=r['owner_order_status']
 coreids={r['id'] for r in rows}
 # Earlier same-day researched exact offers retained; related-SKU benchmarks excluded.

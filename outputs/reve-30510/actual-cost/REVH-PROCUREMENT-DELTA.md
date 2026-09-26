@@ -44,7 +44,7 @@ Owner scope, not in the register: overhead beam, trolley and hoist; 4-leg sling;
 
 ## Effect on the priced register
 
-The priced register ([REAL-COST.md](REAL-COST.md)) was re-baselined to Rev H on 26 September 2026. It now shows **$5,334.09** priced ($5,247.84 goods + $86.25 known shipping), with 73 priced lines and 49 unpriced entries; before the re-baseline it showed $5,348.40.
+The priced register ([REAL-COST.md](REAL-COST.md)) was re-baselined to Rev H on 26 September 2026. It showed **$5,334.09** priced then; with the owner-reported $82 for the 1,200 mm rail kit it is **$5,336.10** ($5,249.85 goods + $86.25 known shipping), with 73 priced lines and 49 unpriced entries; before the re-baseline it showed $5,348.40.
 
 - **B01** stays at five two-packs.
 - **N1** is 48 stainless square nuts ($3.65).

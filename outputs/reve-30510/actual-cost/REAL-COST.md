@@ -1,6 +1,6 @@
 # GM1 — Garcia Mechanical Table: actual-price audit
 
-**Recorded priced scope: $5,247.84 goods + $86.25 known/advertised shipping = $5,334.09 USD before tax.**
+**Recorded priced scope: $5,249.85 goods + $86.25 known/advertised shipping = $5,336.10 USD before tax.**
 
 **The complete delivered build price is still unknown. This is not a purchase or manufacturing release.** The remaining required items are not included as zero-dollar purchases. The earlier $7,663.82 estimate is superseded; it contained allowances, omitted stock details and an arbitrary shipping reserve.
 
@@ -10,7 +10,7 @@ The owner performs fabrication, machining, cutting and finishing: outside-shop l
 
 | Priced portion | Goods, before tax |
 |---|---:|
-| Motion | $2,203.13 |
+| Motion | $2,205.14 |
 | Router bed | $399.95 |
 | Router head | $309.99 |
 | Controls | $268.71 |
@@ -21,7 +21,7 @@ The owner performs fabrication, machining, cutting and finishing: outside-shop l
 
 The current register contains **73 priced lines**, **49 remaining scope entries** and a vendor-level shipping register. Every price is linked to a product or supplier. Line quantities are rounded to cents; seller checkout can differ by a cent on fractional-cent fasteners.
 
-Amazon items total **$2,172.00**, with advertised free delivery to ZIP 30510 under the recorded order conditions. This includes two 1,000 mm Y modules, one 800 mm X module, the 100 mm Z, the two HGR20 rail kits, five extrusion packs, spindle kit, power supplies, cabinet, cable chains and listed Amazon water components. These are source prices, not proof that all mounting and electrical interfaces are finished.
+Amazon items total **$2,174.01**, with advertised free delivery to ZIP 30510 under the recorded order conditions. This includes two 1,000 mm Y modules, one 800 mm X module, the 100 mm Z, the two HGR20 rail kits, five extrusion packs, spindle kit, power supplies, cabinet, cable chains and listed Amazon water components. These are source prices, not proof that all mounting and electrical interfaces are finished.
 
 The [80/20 beam](https://8020.net/40-8080.html) and [16 matching M8 nuts](https://8020.net/40-3915.html) were configured together in a ZIP-30510 cart: **$193.01 goods + $61.30 UPS Ground + $17.80 estimated tax = $272.11**. The temporary cart was cleared after recording the estimate. This tax amount applies only to that cart, not to all suppliers.
 
@@ -31,7 +31,7 @@ Nutty hardware is combined into one order of $76.06, below its $100 free-shippin
 
 ## Corrections to the old estimate
 
-- Recorded the owner's 12 x 12 inch aluminum pieces, provisionally one at 1/2 inch and one at 3/8 inch. The 1/2 inch piece geometrically fits the Z carrier and smaller pieces. Qualifying its alloy and usable finished thickness can avoid MET08 ($58.74), giving $5,275.35 for the current incomplete priced scope. No credit is applied before qualification, and no duplicate offcut savings are counted. See [owned aluminum allocation](OWNED-ALUMINUM-FIT.md).
+- Recorded the owner's 12 x 12 inch aluminum pieces, provisionally one at 1/2 inch and one at 3/8 inch. The 1/2 inch piece geometrically fits the Z carrier and smaller pieces. Qualifying its alloy and usable finished thickness can avoid MET08 ($58.74), giving $5,277.36 for the current incomplete priced scope. No credit is applied before qualification, and no duplicate offcut savings are counted. See [owned aluminum allocation](OWNED-ALUMINUM-FIT.md).
 - The $775.75 square-tube line is a high retail reference, not a lowest-price buying recommendation. Bobco posts $487.50 for 5 matching 20-foot A500 Grade B bars, but advertises Los Angeles pickup; Georgia delivery is unquoted. Looper's and YAGI comparisons have further specification/availability limits. Nearby SteelMart Gainesville and Sabel Winder require quotations. See [tube comparisons](TUBE-PRICE-COMPARISON.md).
 - A [Sylvania Marketplace listing](https://www.facebook.com/marketplace/item/1367277908682890/) advertises 24-foot 2 x 2 tubing for $115 each. Its recorded cut proof (five bars, $575) was made for the Rev E 36-blank schedule and has not been redone for the Rev H 32 blanks. No budget substitution is adopted until the cut proof, actual wall/grade/condition and collection are checked. See [Marketplace findings](MARKETPLACE-TUBING.md).
 - Removed the unsupported $200 decorative-skin allowance: no separate appearance panels existed in the current CAD.
