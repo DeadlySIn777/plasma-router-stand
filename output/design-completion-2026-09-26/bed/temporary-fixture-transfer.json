@@ -1,0 +1,589 @@
+{
+  "scope": "Full Rev H bare temporary C-frame transfer; hardware and hand paths excluded.",
+  "source_sha256": {
+    "output\\release-review\\RevE-ENGINEERING\\bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "output\\release-review\\RevE-ENGINEERING\\bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "output\\release-review\\RevE-ENGINEERING\\bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "output\\release-review\\RevE-ENGINEERING\\build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "output\\release-review\\RevE-ENGINEERING\\build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "output\\release-review\\RevE-ENGINEERING\\build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "output\\release-review\\RevE-ENGINEERING\\cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "output\\release-review\\RevE-ENGINEERING\\check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "output\\release-review\\RevE-ENGINEERING\\controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "output\\release-review\\RevE-ENGINEERING\\export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "output\\release-review\\RevE-ENGINEERING\\frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "output\\release-review\\RevE-ENGINEERING\\geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "output\\release-review\\RevE-ENGINEERING\\motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output\\release-review\\RevE-ENGINEERING\\motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output\\release-review\\RevE-ENGINEERING\\nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "output\\release-review\\RevE-ENGINEERING\\package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "output\\release-review\\RevE-ENGINEERING\\plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "output\\release-review\\RevE-ENGINEERING\\reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "output\\release-review\\RevE-ENGINEERING\\render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "output\\release-review\\RevE-ENGINEERING\\render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "output\\release-review\\RevE-ENGINEERING\\render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "output\\release-review\\RevE-ENGINEERING\\sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "output\\release-review\\RevE-ENGINEERING\\strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "output\\release-review\\RevE-ENGINEERING\\swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "output\\release-review\\RevE-ENGINEERING\\sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "output\\release-review\\RevE-ENGINEERING\\tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "output\\release-review\\RevE-ENGINEERING\\update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "output\\release-review\\RevE-ENGINEERING\\verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "output\\release-review\\RevE-ENGINEERING\\verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "output\\release-review\\RevE-ENGINEERING\\verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "output\\release-review\\RevE-ENGINEERING\\water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "output\\release-review\\RevE-ENGINEERING\\water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "output\\release-review\\RevE-ENGINEERING\\water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811",
+    "output\\design-completion-2026-09-26\\bed\\check_temp_fixture_transfer.py": "62c245b98da3ef0097ce52f56311d7974f89718a0547dae6b4eb2a07d3e8c03f",
+    "output\\design-completion-2026-09-26\\bed\\check_restraint_paths.py": "14ae7e53685225df902191fd72625c03a1e3b3a8ab3a9b8b3f615ffba32a96bb",
+    "output\\cad-repair-2026-09-25\\check_spoil_transfer.py": "1397e268b4136f0436db0f07bd23256c35d980cb38eca42c2c6a40c56e4af9fe"
+  },
+  "model_parts": 1448,
+  "paths": [
+    {
+      "name": "H_TEMP_BOX_1",
+      "segments": [
+        {
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              183.904
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              145.0,
+              900.0,
+              436.096,
+              243.0,
+              1016.0,
+              632.7
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              55,
+              0,
+              0
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              145.0,
+              900.0,
+              620.0,
+              298.0,
+              1016.0,
+              632.7
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              0,
+              -832,
+              0
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              200.0,
+              68.0,
+              620.0,
+              298.0,
+              1016.0,
+              632.7
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "R",
+            [
+              200,
+              68,
+              620
+            ],
+            [
+              201,
+              68,
+              620
+            ],
+            90
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 15,
+            "max_subdivision_depth": 4,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              200.0,
+              55.299999999999955,
+              620.0,
+              298.0,
+              184.0,
+              736.6931446144117
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              380
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              200.0,
+              55.3,
+              619.9999999999999,
+              298.0,
+              68.00000000000001,
+              1116.0
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "R",
+            [
+              200,
+              68,
+              1000
+            ],
+            [
+              200,
+              68,
+              1001
+            ],
+            90
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              200.0,
+              55.3,
+              999.9999999999999,
+              298.81948188489963,
+              166.0,
+              1116.0
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              150,
+              0,
+              0
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              200.0,
+              68.0,
+              999.9999999999999,
+              362.7,
+              166.0,
+              1116.0
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              0,
+              480,
+              0
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              350.0,
+              68.0,
+              999.9999999999999,
+              362.7,
+              646.0,
+              1116.0
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              -137
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              350.0,
+              548.0,
+              862.9999999999999,
+              362.7,
+              646.0,
+              1116.0
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              0,
+              -120,
+              0
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 162,
+            "max_subdivision_depth": 6,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              350.0,
+              428.0,
+              862.9999999999999,
+              362.7,
+              646.0,
+              978.9999999999999
+            ],
+            "within_frame_footprint": true
+          }
+        }
+      ],
+      "final_bounds_delta_mm": 1.1368683772161603e-13,
+      "pass": true
+    },
+    {
+      "name": "H_TEMP_BOX_2",
+      "segments": [
+        {
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              183.904
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              145.0,
+              1030.0,
+              436.096,
+              243.0,
+              1146.0,
+              632.7
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              55,
+              0,
+              0
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              145.0,
+              1030.0,
+              620.0,
+              298.0,
+              1146.0,
+              632.7
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              0,
+              -962,
+              0
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              200.0,
+              68.0,
+              620.0,
+              298.0,
+              1146.0,
+              632.7
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "R",
+            [
+              200,
+              68,
+              620
+            ],
+            [
+              201,
+              68,
+              620
+            ],
+            90
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 15,
+            "max_subdivision_depth": 4,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              200.0,
+              55.299999999999955,
+              620.0,
+              298.0,
+              184.0,
+              736.6931446144117
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              380
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              200.0,
+              55.299999999999955,
+              619.9999999999999,
+              298.0,
+              68.00000000000001,
+              1116.0
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "R",
+            [
+              200,
+              68,
+              1000
+            ],
+            [
+              200,
+              68,
+              1001
+            ],
+            90
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              200.0,
+              55.299999999999955,
+              999.9999999999999,
+              298.81948188489963,
+              166.0,
+              1116.0
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              580,
+              0,
+              0
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              200.0,
+              68.0,
+              999.9999999999999,
+              792.7,
+              166.0,
+              1116.0
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              0,
+              480,
+              0
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              780.0,
+              68.0,
+              999.9999999999999,
+              792.7,
+              646.0,
+              1116.0
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              -137
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 0,
+            "max_subdivision_depth": 0,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              780.0,
+              548.0,
+              862.9999999999999,
+              792.7,
+              646.0,
+              1116.0
+            ],
+            "within_frame_footprint": true
+          }
+        },
+        {
+          "operation": [
+            "T",
+            [
+              0,
+              -120,
+              0
+            ]
+          ],
+          "result": {
+            "status": "CLEAR",
+            "distance_queries": 162,
+            "max_subdivision_depth": 6,
+            "failures": [],
+            "swept_bounding_box_mm": [
+              780.0,
+              428.0,
+              862.9999999999999,
+              792.7,
+              646.0,
+              979.0
+            ],
+            "within_frame_footprint": true
+          }
+        }
+      ],
+      "final_bounds_delta_mm": 1.1368683772161603e-13,
+      "pass": true
+    }
+  ],
+  "preconditions": [
+    "All boards/panels stored and their rack retainers fitted. Beam1 rests on beam2. Both front seats remain installed.",
+    "Remove each front gate, both gate screws, locator bolt/washer/spacer and storage nut before moving the bare C frame. These small parts and hand paths are excluded.",
+    "Move C frame1 then2 by this route; other C body remains a collision obstacle. After both bodies are in place, install gates and locator hardware by the separately documented sequence."
+  ],
+  "sources_unchanged": true,
+  "pass": true
+}

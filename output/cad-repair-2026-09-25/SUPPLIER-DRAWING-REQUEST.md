@@ -32,7 +32,7 @@ Please provide the bottom nut/slot mating drawing, nut retention and assembly
 access, usable bolt engagement, reference dimensions from the base ends to the
 carriage at each stroke limit, motor current and torque-speed data for the
 supplied motor, and the conditions attached to the published load/moment ratings.
-The machine's independent guides carry the router loads; these belt modules
+The machine's independent guides carry the router loads; these ball-screw modules
 provide the drive force through floating links.
 
 ## Actual torch and plasma source

@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "scope": "Recorded nominal CAD geometry and named continuous paths, with source-matching independent STEP readback. This is not a fabrication, operational-plasma, structural, controls or physical-safety release.",
+  "checks": [
+    {
+      "check": "Integrated solids, shared parts and nine poses",
+      "report": "output/design-completion-2026-09-26/verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "a76656c2f6f6ce300985dc56f76a172be21c08f917ab498aa07cddcafc8d2ed3",
+      "source_mismatches": []
+    },
+    {
+      "check": "Independent final STEP readback",
+      "report": "output/design-completion-2026-09-26/step-verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "718c0dcaad00cbb81529aaae57f7b67892dfb17066b1eea2e62fedfae84a19f6",
+      "source_mismatches": []
+    },
+    {
+      "check": "Six spoilboard continuous routes",
+      "report": "output/design-completion-2026-09-26/routes/spoil-transfer-check.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "af419a1f8e431af528009a67e64a34c5dffad5e727b4e1c22b373a1419ec576f",
+      "source_mismatches": []
+    },
+    {
+      "check": "Six panel continuous routes",
+      "report": "output/design-completion-2026-09-26/routes/panel-path-check.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "d578a97231803798c2184cab020e71e48a4347aadda98ac7cfc562306de757e2",
+      "source_mismatches": []
+    },
+    {
+      "check": "Four beam continuous routes",
+      "report": "output/design-completion-2026-09-26/routes/beam-path-check.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "abe186c680f2e48ac1964fc169a41b5541ed7d2eabd40b3fb1f8bf14634f35d1",
+      "source_mismatches": []
+    },
+    {
+      "check": "Added restraint and temporary capture paths",
+      "report": "output/design-completion-2026-09-26/bed/restraint-paths.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "b8ccba1787b3cb295c158ecd6f8b3e60453ba09e5ffa4c412fa214dcf864e34f",
+      "source_mismatches": []
+    },
+    {
+      "check": "Two temporary C-body tray-to-beam routes",
+      "report": "output/design-completion-2026-09-26/bed/temporary-fixture-transfer.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "3c32085a3caf154d68331448c2c5a434bd6cf6a69f8273bf02ba3a9eee9798d9",
+      "source_mismatches": []
+    },
+    {
+      "check": "Integrated hatch and washout service paths",
+      "report": "output/design-completion-2026-09-26/water/integrated-verification.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "fe763c5755206636de8d8fab81eb0a90d014808ae8406632787fc5e7c94429c7",
+      "source_mismatches": []
+    },
+    {
+      "check": "Final assembly exports",
+      "report": "output/release-review/RevH-CAD/engineering-manifest.json",
+      "status": "PASS",
+      "passed": true,
+      "report_sha256": "4c1b500f42c88d05d6baa18b0f621c0ebe0e5836c84c4adbae14ca33f0c739d6",
+      "source_mismatches": []
+    },
+    {
+      "check": "Current RevH_ROUTER STEP bytes",
+      "report": "output/release-review/RevH-CAD/step/RevH_ROUTER.step",
+      "status": "PASS",
+      "passed": true,
+      "current_sha256": "375b22e5d55d668005e5d2b17200879de30352f31293a2e10ec60c286d79a82d",
+      "verified_sha256": "375b22e5d55d668005e5d2b17200879de30352f31293a2e10ec60c286d79a82d"
+    },
+    {
+      "check": "Current RevH_BED_STORED STEP bytes",
+      "report": "output/release-review/RevH-CAD/step/RevH_BED_STORED.step",
+      "status": "PASS",
+      "passed": true,
+      "current_sha256": "feb594d56b65850d37b3f15b4cb42291b91a6451bdf335db44e4f585129599ef",
+      "verified_sha256": "feb594d56b65850d37b3f15b4cb42291b91a6451bdf335db44e4f585129599ef"
+    }
+  ],
+  "current_extension_sha256": {
+    "build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878"
+  },
+  "index_generator_sha256": "c78f9d85a4c2bd76f23f9f024e1a4c9eff6f608892944570b73cbb5c5f428526",
+  "diagnostic_history": "diagnostic-before-final-freeze contains superseded diagnostic reports. A historical STEP_EXPORT_STALE/PENDING status in verification.json is superseded only for export readback by the current passing step-verification.json; its geometry/source findings are not rewritten.",
+  "supplemental_index_generator_sha256": "544418d4eeebcbb5b95102bfdf023e0f6324cdbd1e5acd16fd6df86d44a26e41"
+}
