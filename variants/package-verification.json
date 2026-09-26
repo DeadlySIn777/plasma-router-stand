@@ -1,0 +1,1644 @@
+{
+  "status": "PASS",
+  "scope": "Current source bindings, protected Rev I baseline, local document links and public file hashes",
+  "baseline_commit": "4a67463082116249690cc5c4d886d38d5104b3b4",
+  "physical_release": false,
+  "atc_operational": false,
+  "full_sheet_fabrication_release": false,
+  "checks": [
+    {
+      "name": "Rev_I_baseline_unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "legacy_source_inventory_unchanged",
+      "passed": true,
+      "detail": {
+        "added": [],
+        "missing": []
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\controls\\pin-reservation-check.json",
+        "source": "RevE-ENGINEERING/controls/source-overlay/boards/my_machine_map.h"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\controls\\pin-reservation-check.json",
+        "source": "RevE-ENGINEERING/controls/source-overlay/Src/kraken_board.c"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\controls\\pin-reservation-check.json",
+        "source": "RevE-ENGINEERING/controls/kraken-official.cfg"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\controls\\pin-reservation-check.json",
+        "source": "RevE-ENGINEERING/controls/source-overlay/kraken.ini"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\controls\\pin-reservation-check.json",
+        "source": "variants/common/controls/pin-reservations.json"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\controls\\pin-reservation-check.json",
+        "source": "variants/common/controls/verify_reservations.py"
+      }
+    },
+    {
+      "name": "report_has_source_binding",
+      "passed": true,
+      "detail": "variants\\common\\controls\\pin-reservation-check.json"
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\location\\output\\verification.json",
+        "source": "variants\\common\\location\\locator_dock.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\location\\output\\verification.json",
+        "source": "variants\\common\\location\\verify_location.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\location\\output\\verification.json",
+        "source": "output\\release-review\\RevE-ENGINEERING\\cad_helpers.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\location\\output\\verification.json",
+        "source": "variants\\common\\location\\source-data.json"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\location\\output\\verification.json",
+        "source": "variants\\common\\location\\locator_dock.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\location\\output\\verification.json",
+        "source": "variants\\common\\location\\verify_location.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\location\\output\\verification.json",
+        "source": "output\\release-review\\RevE-ENGINEERING\\cad_helpers.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\common\\location\\output\\verification.json",
+        "source": "variants\\common\\location\\source-data.json"
+      }
+    },
+    {
+      "name": "report_has_source_binding",
+      "passed": true,
+      "detail": "variants\\common\\location\\output\\verification.json"
+    },
+    {
+      "name": "sources_stable_during_check",
+      "passed": true,
+      "detail": "variants\\small-atc\\output\\fit-report.json"
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/bed_cassettes.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/bed_completion.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/bed_details.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/build_reve_engineering.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/build_revg.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/build_revh.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/build_revi.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/cad_helpers.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/check_motion_states.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/controls_packaging.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/export_states.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/frame_details.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/geometry_base.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/motion_completion.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/motion_details.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/motion_finish.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/nest_flat_parts.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/package_review.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/plan_tube_cuts.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/reconcile_water_revision.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/render_reve.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/render_revg.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/render_revh.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/render_revi.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/sensor_mounts.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/service_finish.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/strength-screen.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/structure_finish.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/swap-path-checks.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/sweep_checks.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/tool_parking.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/update_timer_selection.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/verify_revg_motion.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/verify_revg_panel_path.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/verify_water_design.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/water_accessories.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/water_completion.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/water_system.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "variants/small-atc/build_small_atc.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\fit-report.json",
+        "source": "variants/common/location/locator_dock.py"
+      }
+    },
+    {
+      "name": "report_has_source_binding",
+      "passed": true,
+      "detail": "variants\\small-atc\\output\\fit-report.json"
+    },
+    {
+      "name": "sources_stable_during_check",
+      "passed": true,
+      "detail": "variants\\small-atc\\output\\carrier-route-report.json"
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/bed_cassettes.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/bed_completion.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/bed_details.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/build_reve_engineering.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/build_revg.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/build_revh.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/build_revi.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/cad_helpers.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/check_motion_states.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/controls_packaging.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/export_states.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/frame_details.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/geometry_base.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/motion_completion.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/motion_details.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/motion_finish.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/nest_flat_parts.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/package_review.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/plan_tube_cuts.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/reconcile_water_revision.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/render_reve.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/render_revg.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/render_revh.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/render_revi.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/sensor_mounts.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/service_finish.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/strength-screen.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/structure_finish.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/swap-path-checks.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/sweep_checks.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/tool_parking.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/update_timer_selection.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/verify_revg_motion.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/verify_revg_panel_path.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/verify_water_design.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/water_accessories.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/water_completion.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output/release-review/RevE-ENGINEERING/water_system.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "variants/small-atc/build_small_atc.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "variants/common/location/locator_dock.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "output\\cad-repair-2026-09-25\\check_spoil_transfer.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\carrier-route-report.json",
+        "source": "variants\\small-atc\\check_carrier_routes.py"
+      }
+    },
+    {
+      "name": "report_has_source_binding",
+      "passed": true,
+      "detail": "variants\\small-atc\\output\\carrier-route-report.json"
+    },
+    {
+      "name": "reported_bounded_check_passed",
+      "passed": true,
+      "detail": "variants\\small-atc\\output\\preview-verification.json"
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\preview-verification.json",
+        "source": "variants/small-atc/verify_previews.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\preview-verification.json",
+        "source": "variants/small-atc/build_small_atc.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\preview-verification.json",
+        "source": "variants/small-atc/render_small_atc.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\preview-verification.json",
+        "source": "render_cad.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\small-atc\\output\\preview-verification.json",
+        "source": "variants/common/location/locator_dock.py"
+      }
+    },
+    {
+      "name": "report_has_source_binding",
+      "passed": true,
+      "detail": "variants\\small-atc\\output\\preview-verification.json"
+    },
+    {
+      "name": "preview_image_hash",
+      "passed": true,
+      "detail": "variants/small-atc/output/SMALL_ATC_CONTEXT.png"
+    },
+    {
+      "name": "preview_image_hash",
+      "passed": true,
+      "detail": "variants/small-atc/output/SMALL_ATC_DOCK.png"
+    },
+    {
+      "name": "preview_fit_report_hash",
+      "passed": true,
+      "detail": "variants\\small-atc\\output\\preview-verification.json"
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\layout-verification.json",
+        "source": "layout.py"
+      }
+    },
+    {
+      "name": "report_has_source_binding",
+      "passed": true,
+      "detail": "variants\\48x96\\layout-verification.json"
+    },
+    {
+      "name": "layout_step_hash",
+      "passed": true,
+      "detail": "router"
+    },
+    {
+      "name": "layout_step_hash",
+      "passed": true,
+      "detail": "plasma_layout"
+    },
+    {
+      "name": "reported_bounded_check_passed",
+      "passed": true,
+      "detail": "variants\\48x96\\static-verification.json"
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\static-verification.json",
+        "source": "layout.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\static-verification.json",
+        "source": "check_static.py"
+      }
+    },
+    {
+      "name": "report_has_source_binding",
+      "passed": true,
+      "detail": "variants\\48x96\\static-verification.json"
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\preview-verification.json",
+        "source": "layout.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\preview-verification.json",
+        "source": "render.py"
+      }
+    },
+    {
+      "name": "report_has_source_binding",
+      "passed": true,
+      "detail": "variants\\48x96\\preview-verification.json"
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\preview-verification.json",
+        "artifact": "layout-router.png"
+      }
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\preview-verification.json",
+        "artifact": "layout-plasma.png"
+      }
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\preview-verification.json",
+        "artifact": "layout-plan.svg"
+      }
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\preview-verification.json",
+        "artifact": "layout-plan.png"
+      }
+    },
+    {
+      "name": "reported_bounded_check_passed",
+      "passed": true,
+      "detail": "variants\\48x96\\package-verification.json"
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "source": "variants/48x96/layout.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "source": "variants/48x96/check_static.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "source": "variants/48x96/render.py"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "source": "variants/48x96/check_package.py"
+      }
+    },
+    {
+      "name": "report_has_source_binding",
+      "passed": true,
+      "detail": "variants\\48x96\\package-verification.json"
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "artifact": "variants/48x96/README.md"
+      }
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "artifact": "variants/48x96/router.step"
+      }
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "artifact": "variants/48x96/plasma_layout.step"
+      }
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "artifact": "variants/48x96/layout-verification.json"
+      }
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "artifact": "variants/48x96/static-verification.json"
+      }
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "artifact": "variants/48x96/preview-verification.json"
+      }
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "artifact": "variants/48x96/layout-router.png"
+      }
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "artifact": "variants/48x96/layout-plasma.png"
+      }
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "artifact": "variants/48x96/layout-plan.png"
+      }
+    },
+    {
+      "name": "rendered_artifact_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\48x96\\package-verification.json",
+        "artifact": "variants/48x96/layout-plan.svg"
+      }
+    },
+    {
+      "name": "source_hash",
+      "passed": true,
+      "detail": {
+        "report": "variants\\exchange-verification.json",
+        "source": "variants/verify_exchange.py"
+      }
+    },
+    {
+      "name": "report_has_source_binding",
+      "passed": true,
+      "detail": "variants\\exchange-verification.json"
+    },
+    {
+      "name": "exchange_record_passed",
+      "passed": true,
+      "detail": "common/location/output/step/common-locator-dock.step"
+    },
+    {
+      "name": "exchange_file_hash",
+      "passed": true,
+      "detail": "common/location/output/step/common-locator-dock.step"
+    },
+    {
+      "name": "exchange_report_hash",
+      "passed": true,
+      "detail": "common/location/output/verification.json"
+    },
+    {
+      "name": "exchange_record_passed",
+      "passed": true,
+      "detail": "common/location/output/protected/step/common-locator-protected.step"
+    },
+    {
+      "name": "exchange_file_hash",
+      "passed": true,
+      "detail": "common/location/output/protected/step/common-locator-protected.step"
+    },
+    {
+      "name": "exchange_report_hash",
+      "passed": true,
+      "detail": "common/location/output/verification.json"
+    },
+    {
+      "name": "exchange_record_passed",
+      "passed": true,
+      "detail": "small-atc/output/step/SMALL_ATC_DOCK_CANDIDATE.step"
+    },
+    {
+      "name": "exchange_file_hash",
+      "passed": true,
+      "detail": "small-atc/output/step/SMALL_ATC_DOCK_CANDIDATE.step"
+    },
+    {
+      "name": "exchange_report_hash",
+      "passed": true,
+      "detail": "small-atc/output/fit-report.json"
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\README.md",
+        "target": "../output/release-review/RevI-CAD/README.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\README.md",
+        "target": "small-atc/README.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\README.md",
+        "target": "48x96/README.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\README.md",
+        "target": "common/location/README.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\README.md",
+        "target": "requirements.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\README.md",
+        "target": "48x96/layout-router.png"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\README.md",
+        "target": "small-atc/output/SMALL_ATC_CONTEXT.png"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\README.md",
+        "target": "common/controls/ATC-INTEGRATION.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\README.md",
+        "target": "common/controls/pin-reservation-check.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\README.md",
+        "target": "common/atc/README.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\README.md",
+        "target": "../output/pdf/plasma-router-stand-concept.pdf"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\README.md",
+        "target": "package-verification.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\48x96\\README.md",
+        "target": "router.step"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\48x96\\README.md",
+        "target": "plasma_layout.step"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\48x96\\README.md",
+        "target": "layout-plan.svg"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\48x96\\README.md",
+        "target": "layout-router.png"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\48x96\\README.md",
+        "target": "layout-plasma.png"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\48x96\\README.md",
+        "target": "../common/location/README.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\48x96\\README.md",
+        "target": "../common/atc/README.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\48x96\\README.md",
+        "target": "../common/controls/ATC-INTEGRATION.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\48x96\\README.md",
+        "target": "layout-verification.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\48x96\\README.md",
+        "target": "static-verification.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\48x96\\README.md",
+        "target": "preview-verification.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\48x96\\README.md",
+        "target": "package-verification.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\small-atc\\README.md",
+        "target": "output/SMALL_ATC_CONTEXT.png"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\small-atc\\README.md",
+        "target": "output/step/SMALL_ATC_DOCK_CANDIDATE.step"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\small-atc\\README.md",
+        "target": "build_small_atc.py"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\small-atc\\README.md",
+        "target": "output/fit-report.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\small-atc\\README.md",
+        "target": "output/carrier-route-report.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\small-atc\\README.md",
+        "target": "output/preview-verification.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\small-atc\\README.md",
+        "target": "output/part-operations.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\small-atc\\README.md",
+        "target": "../common/atc/README.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\small-atc\\README.md",
+        "target": "../common/controls/ATC-INTEGRATION.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\small-atc\\README.md",
+        "target": "../common/location/README.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\atc\\README.md",
+        "target": "../controls/ATC-INTEGRATION.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\atc\\README.md",
+        "target": "../../small-atc/README.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\controls\\ATC-INTEGRATION.md",
+        "target": "pin-reservation-check.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\controls\\ATC-INTEGRATION.md",
+        "target": "pin-reservations.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\controls\\ATC-INTEGRATION.md",
+        "target": "verify_reservations.py"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\controls\\ATC-INTEGRATION.md",
+        "target": "../../../output/design-finish-2026-09-26/controls/RUN-INTERFACE.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\controls\\ATC-INTEGRATION.md",
+        "target": "../../../output/design-finish-2026-09-26/controls/SPEED-INTERFACE.md"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\location\\README.md",
+        "target": "output/locator-dock-preview.svg"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\location\\README.md",
+        "target": "output/step/common-locator-dock.step"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\location\\README.md",
+        "target": "output/protected/step/common-locator-protected.step"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\location\\README.md",
+        "target": "output/interface.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\location\\README.md",
+        "target": "output/part-operations.json"
+      }
+    },
+    {
+      "name": "local_document_link",
+      "passed": true,
+      "detail": {
+        "document": "variants\\common\\location\\README.md",
+        "target": "output/verification.json"
+      }
+    }
+  ],
+  "public_files_sha256": {
+    "variants/48x96/README.md": "c1d6bbd62d173853e3fd5ed34c8a8a0a45610048fd2f16846dc7bb835510421f",
+    "variants/48x96/check_package.py": "f143421941ee0e0bd6524b053abeb6496d4d43ef5315dff32ec39dcd63119508",
+    "variants/48x96/check_static.py": "f0f6cb34641386ae16bac5716909273d5793e1108b40c16aa48eed0114068acf",
+    "variants/48x96/layout-plan.png": "33ffe91f1d13d72ee897f31df561d95d3ce7d4e73a88e1fbcc699e6df8bf9cff",
+    "variants/48x96/layout-plan.svg": "95d037f0fbdb017e970dbe2a6be2856ac0e06e403218b5d62c0f5ab05287aba3",
+    "variants/48x96/layout-plasma.png": "d15a602275047dec8c4376d099b75e77e4a5f490502fdab32a3e615de5b75d8a",
+    "variants/48x96/layout-router.png": "a9e05939e9908d58fee6e50d83031cbf4ba32d420d1d659c8c0c71badd20f449",
+    "variants/48x96/layout-verification.json": "9700a76a961cb99eec5b6b26edd87160a4fea3905166e65bf227dadb0e7106be",
+    "variants/48x96/layout.py": "3f6902e36323b0eecc4f3576fd9848f60146d448d197cfdf6062f27e468b09b4",
+    "variants/48x96/package-verification.json": "c495fb524dc3ffc1484b366cd5d699a98a494c5a2122d7449a4e195685391dc0",
+    "variants/48x96/plasma_layout.step": "7858114f5827d8f3c7d1a24be41dc21841e16048477071d6657475312a65c028",
+    "variants/48x96/preview-verification.json": "fed2118575e37cc1e7a53b5c1b2a827d2b5d43c88b6cf82d303c62580b5a6752",
+    "variants/48x96/render.py": "401753bddfbe7bad69c793d3abd8d9790651c823db62081775cd215cf98247ad",
+    "variants/48x96/router.step": "ffe3d9a3ac9a4f7a86ee9339d606588f831223677044cb32894e42b9863c8074",
+    "variants/48x96/static-verification.json": "81c920f0fcdb02bf8732c01f58ab00fa8c5f2486b4e5993cfbb80a136908772b",
+    "variants/README.md": "59174cb459f310271c4fdc68653446199fc64b0b594c404196a11355bca6b29c",
+    "variants/common/atc/README.md": "d779e633c85c9c993a9391e48e6d37ab602066ce491aa7c4f64b5fdc3d148047",
+    "variants/common/atc/sources/.gitignore": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d",
+    "variants/common/controls/ATC-INTEGRATION.md": "960a7a280fe3df2274906611252ce20c4fa479dfb88b47d76c23c042ac5bd17f",
+    "variants/common/controls/pin-reservation-check.json": "f804083c88e9d03bdf2680f373f224a80181ca6496e69852cda208c3c4d911fa",
+    "variants/common/controls/pin-reservations.json": "872cac652853e9cb023febcdecdad3f1987fe6bce2a1cee985cf5d80cfaae26b",
+    "variants/common/controls/verify_reservations.py": "99dcd6f2b976970f52bf17862cecce27f1f97e7e05e1c3710918e070f5ac2fc2",
+    "variants/common/location/.gitignore": "11d58bed797bd86c34ac0a9800580ea5e89d96a3ac959e059ebf8c3c67460e2f",
+    "variants/common/location/README.md": "8e239bbc35467354178782744d16933bd5bedd3358db6c2c22ed2c069019e891",
+    "variants/common/location/locator_dock.py": "56ee3088e2255c52f6098a3f148077d155177ca4eb425d4b0dcc07c44c81645c",
+    "variants/common/location/output/common-locator-dock-validation.json": "94f1bd29bd1b357f0dce29de677a41929455e89ae6c63b54e191bd4c36974c18",
+    "variants/common/location/output/cutlist.csv": "2153d8fd9a9596a269b9375982fc703c213606d26eeb6b49ec91c8aa34a003a1",
+    "variants/common/location/output/cutlist.json": "940df9d58d1f425ec8933221ab177c4aab96a2ed3914c23e7ff001e4ade35909",
+    "variants/common/location/output/dxf/LOC_CARRIER_LAND_40_40_12.dxf": "355fb4079ac16b9ab1b2c0b103ba7c33c9d1cc3541f4d43841ca3c165411700a",
+    "variants/common/location/output/dxf/LOC_FITTED_SHIM_NOMINAL_050.dxf": "a198784a933ee96230101e2bd991627fbcd7a19014afd30f9ad4ea8055724efa",
+    "variants/common/location/output/dxf/LOC_PIN_BLOCK_60_40_12_CB_M6.dxf": "febaf7ae04abe4b1cfb5f5d93e70c05743a3e8073881d87dc125e9bdf3e18d16",
+    "variants/common/location/output/dxf/LOC_RECEIVER_60_40_12_TAP_M5.dxf": "e477d9bfd92b80387e6035045e4e67d1388c607c1d15415442eb579cd202c115",
+    "variants/common/location/output/dxf/LOC_Z_PRIMARY.dxf": "9adca32b13bce2aa2cfce0e2bf23ce770c2b4ee881a3c2b8b809fe97e68b1156",
+    "variants/common/location/output/dxf/LOC_Z_SUPPLEMENTARY.dxf": "5e8d171682c27deb6b395f0164151f0403a070ccfac4f2e3847fd6f47a65fd04",
+    "variants/common/location/output/interface.json": "1a56ca392f2a065e3e4bfac02c63881c3ab7e0eaad5fddbdf788f3c2cd224898",
+    "variants/common/location/output/locator-dock-preview.svg": "b6fd87c6fd31c97f73a5950b8557fbd47b6de2a44079aa18a2fa16c3ffd23043",
+    "variants/common/location/output/part-operations.json": "521985f3114c206c312e3aef771640021cc025b997a66baa9f46a63208358b54",
+    "variants/common/location/output/parts/ISO4762_M6x25.step": "c7f3c34cf78df757df4f0ed993ff91eade4c121f05a517df75d6518784366c78",
+    "variants/common/location/output/parts/LOC_CARRIER_LAND_40_40_12.step": "2ee4ee164e57be5ec47ec88f3a95b2f9a37d49c652eef09695e61170bdbb6b57",
+    "variants/common/location/output/parts/LOC_FITTED_SHIM_NOMINAL_050.step": "e3e02ab7e13aefccbccf35e1f46d0411f59c5ecca96d04ceb05d7eafcf6b563a",
+    "variants/common/location/output/parts/LOC_PIN_BLOCK_60_40_12_CB_M6.step": "70d59d1cb26be558d0d59000353c08398699d7c6ed41f3e2be7dbb80c677e3ca",
+    "variants/common/location/output/parts/LOC_RECEIVER_60_40_12_TAP_M5.step": "8acb3b8c107cb233539208359e1089ff232cec4de06a1646b5162f4077128fac",
+    "variants/common/location/output/parts/LOC_Z_PRIMARY.step": "afc99c81a5be379f680b7506567f493d6624dcc2a7bf277c0a4a01ab89ad22af",
+    "variants/common/location/output/parts/LOC_Z_SUPPLEMENTARY.step": "07089739ad74ee77e1bc9e01cc1ab897096df7059e4f55a47e42c10875aa8038",
+    "variants/common/location/output/parts/WASHER_M6_OD18_T1.6.step": "7becc47d573a24da176857f1c8aeeb91e285e9044eb736b3be247e288a86aeb9",
+    "variants/common/location/output/protected/common-locator-protected-validation.json": "b9104dc78fb333cce04602bd8904d1a2d5060d125067f8b062fdbf04a34a4b19",
+    "variants/common/location/output/protected/cutlist.csv": "b3dc2efe65f01502dfa4fb79f77695748a41ab03297b70a4fb980726ea4315c5",
+    "variants/common/location/output/protected/cutlist.json": "359991bf89d81e89a0b6f82e6f0d1e1ae8591cfb1cb21379018e2c926469d6ad",
+    "variants/common/location/output/protected/dxf/LOC_FITTED_SHIM_NOMINAL_050.dxf": "dd7e61ff7bbc46160ccc40f7d93df07d85f7ceb333b564114aab002dd62ad900",
+    "variants/common/location/output/protected/dxf/LOC_PIN_BLOCK_60_40_12_CB_M6.dxf": "8424728cf733694d69b441285d0447f55fc7df4d471dece158b0be7cfab8f04d",
+    "variants/common/location/output/protected/dxf/LOC_Z_PRIMARY.dxf": "85a1087f1603cfb577e6abd6992abe6ef2e335787629e8d7aae9da537f75f508",
+    "variants/common/location/output/protected/dxf/LOC_Z_SUPPLEMENTARY.dxf": "d42e51c4a8a3a9ac0787cf84bdfcc3dc3b6d1fbd81f722800547b065eaed4836",
+    "variants/common/location/output/protected/part-operations.json": "e2224f9f696a2b933df743e9c0b5997a13ec69ae8649ee2b229d76bee4a96a89",
+    "variants/common/location/output/protected/parts/LOC_CHIP_CAP_OD22_ID12_L23.step": "f06e790f352ce91b65a58a55b07fb3f7d2fbc8704a72df462ba95ff1f006f1a5",
+    "variants/common/location/output/protected/parts/LOC_FITTED_SHIM_NOMINAL_050.step": "e8421a90f031ea79d364857e67b62bddf3c283e38ff1f1f19a68ae8d4449cff5",
+    "variants/common/location/output/protected/parts/LOC_PIN_BLOCK_60_40_12_CB_M6.step": "57c73230d0a85ea70d7049159fae7223ac8715449675ca572cfa8b84ae477616",
+    "variants/common/location/output/protected/parts/LOC_Z_PRIMARY.step": "29f076f8f287eb28d7b7d9a81362c32859b12b1ff455ba4ca3600e908a1f162b",
+    "variants/common/location/output/protected/parts/LOC_Z_SUPPLEMENTARY.step": "3a7d5c6e8c65f9e9dec1f314b3233997bfe0910c9d263111cea7d1bf7bba00ed",
+    "variants/common/location/output/protected/step/common-locator-protected.step": "e71c2a81f28a59cb285935d78371285fd7b100c0f23db53244897f403bc73b67",
+    "variants/common/location/output/step/common-locator-dock.step": "229742cb27e24dc28c24c7fc39f994087c69c78f6edefd42e405dae72c14836f",
+    "variants/common/location/output/verification.json": "e59290c0b6957be8ebadff6057cb24454b44652190574341b29b3015832a522a",
+    "variants/common/location/render_preview.py": "72fdbe1f2f96bf193e4cba9a8cd775ac8a0700cd7cc7bf0083db6de8b1c32842",
+    "variants/common/location/source-data.json": "1705dd98b50d4b1236d009b68e8dad3361f14819e3c7810077dd98343d89c42a",
+    "variants/common/location/verify_location.py": "e570d4d1144b18ae21d195b31b4da47672f797686e8017d28f14731aaa6907a1",
+    "variants/exchange-verification.json": "e59ec5977eba864369c5724125ec3cc43b3e739dcf3692d4aa05dc1a23a19dee",
+    "variants/requirements.json": "cc0d60d05b500e7463bda5eae88c0891f9f1a116927500a0bb7ab031c12445ba",
+    "variants/small-atc/README.md": "e46a947063ddefd8ee89960ebb108adb2faa32646ead6a22e603e5ececda3a93",
+    "variants/small-atc/build_small_atc.py": "3df8bf27627d4833fd8098d632b178d75442c5c8bac3c275cbdcfd2c3253b665",
+    "variants/small-atc/check_carrier_routes.py": "96b45e8575a0d280e206a56decf9e904ca9d06e4cbdda7ca766f71c960a6d1db",
+    "variants/small-atc/output/SMALL_ATC_CONTEXT.png": "d3c1ead41b61297358fb0e4140e59ca048a6d28acdb686f537c714cddf6373e4",
+    "variants/small-atc/output/SMALL_ATC_DOCK.png": "d7e519045f4894edc9d5fa4dd03cd9bc5f6f50141581e3c6a9e83cb8185ba919",
+    "variants/small-atc/output/SMALL_ATC_DOCK_CANDIDATE-validation.json": "0405673fdde00b33976d7de3cf6e02ccd0502d1475561ac76f910f99a43679a8",
+    "variants/small-atc/output/carrier-route-report.json": "907c0ce9fb31936a38984dc0dbbe349952e004a66c2d3ce5996e26393d00646d",
+    "variants/small-atc/output/cutlist.csv": "fa63831c4207a0f9160912f7454de6de043e0ec0a115893240891881ed7a9247",
+    "variants/small-atc/output/cutlist.json": "cd3fa5764f378907bcf98bb9013e5a8e5f9c5ef84bbbf9f75afa63e716673674",
+    "variants/small-atc/output/diagnostic-history/.gitignore": "aae815b9313ef60fb99d51bec324f3de1cea5256d6bbf58a660578b3e2d5815c",
+    "variants/small-atc/output/diagnostic-history/README.md": "7f8dc55e7ff8bf5e142955f742161fe38a7790386f5006372060297d1dc44509",
+    "variants/small-atc/output/dxf/SATC_PIN_BLOCK_CB11_60_40_12.dxf": "2140f02725dd8cdc56a5f068e90bf5d0ed03ec74bb0d611495cd1a930dafe165",
+    "variants/small-atc/output/dxf/SATC_RECEIVER_M5_TAPPED_L.dxf": "799c67b5bc45b0051751b9b8c2fd8d8f55b7efd4b2a815d7a737f469cee63df4",
+    "variants/small-atc/output/dxf/SATC_RECEIVER_M5_TAPPED_R.dxf": "2741d3551c8b2fd59cfa486cc0cf220c50099f42590e69ab2be269b90bc18f08",
+    "variants/small-atc/output/export-inventory.json": "cfc943488adc5b6baaa802eb5a2bae3a009a9217c0571d6eece0217bf07b77c6",
+    "variants/small-atc/output/fit-report.json": "3f7b75b67f4b16eaf0b37307d1776080b499c19c29324f37607e0308d75e4355",
+    "variants/small-atc/output/interface.json": "042648b623370dca51784a4d8ed6342c506d415623c6f953b34dcfc94d2b2a56",
+    "variants/small-atc/output/part-operations.json": "d15e9a544b317d50c8cb93335a8b75aa95ca4c59bcb998fc970b89ecc443f27f",
+    "variants/small-atc/output/parts/SATC_CARRIER_WELDMENT.step": "57304851f3b15b23a7b497af5e301f6300d26b59a19eb1b854c4448373abd2b3",
+    "variants/small-atc/output/parts/SATC_FRAME_SEAT_L.step": "72fdf9b7c6b13e48eae50e95edb8652ce4d3a594f65a437f876525bbe02f3f00",
+    "variants/small-atc/output/parts/SATC_FRAME_SEAT_R.step": "cd470ca7800fac3077d648df68400d012cb6beaa3f0967e2cb0c9a9f2d91c104",
+    "variants/small-atc/output/parts/SATC_PIN_BLOCK_CB11_60_40_12.step": "dc1c4983041f5a45f3318abf560cbe67df784cc190cf039f98ed00b5dfd7a5b5",
+    "variants/small-atc/output/parts/SATC_RECEIVER_M5_TAPPED_L.step": "e36cf55678c6b8721496bb5bff1829e7af972e46430e26d4bd1bf89bccd9c77b",
+    "variants/small-atc/output/parts/SATC_RECEIVER_M5_TAPPED_R.step": "5ae8d4838fc6cf225e972e9f1a1a4d4510376f40245a251de79aad5ff24f60bd",
+    "variants/small-atc/output/parts/SATC_Z_PAD_20_14_26.step": "049d152f5e9a715d0609ed8b2fb7b74e4ae6b513dd8d88bfeaa3d7cb0069a3cd",
+    "variants/small-atc/output/preview-verification.json": "30edfd9676a58782297162b303371a8c563b4b4ef80b4b296e0990cc17eba5b2",
+    "variants/small-atc/output/step/SMALL_ATC_DOCK_CANDIDATE.step": "daaf2d5effa63f352f64425c7d65985d46f46b1d5a4b2190d496d5e1acd44793",
+    "variants/small-atc/render_small_atc.py": "aec27f1f65e86be7631e68190b54fc78bebdda1a2ea95f6d9f8248184139c5e2",
+    "variants/small-atc/verify_previews.py": "23af84d270f7438fe7526c9980f4e4c68d2701d1081d9cbc4bc32df866f3f8dd",
+    "variants/verify_exchange.py": "5b4a6dd24b5832d977b773f11287be7504206e2cf1d3d526b7cdcc997addafe4",
+    "variants/verify_package.py": "6b9f6fabdec4ad93c256d069840e05fcb5a495a2da37955402b9a6943ae53f39",
+    "README.md": "facbb000bd07c5b5f75f3003e35ee8e2463eec133aaf7bdd00a0fe97722f48a9"
+  }
+}

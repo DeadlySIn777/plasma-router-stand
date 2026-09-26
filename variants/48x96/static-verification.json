@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "source_sha256": {
+    "layout.py": "3f6902e36323b0eecc4f3576fd9848f60146d448d197cfdf6062f27e468b09b4",
+    "check_static.py": "f0f6cb34641386ae16bac5716909273d5793e1108b40c16aa48eed0114068acf"
+  },
+  "sources_unchanged": true,
+  "states": {
+    "router": {
+      "fabricated_parts": 338,
+      "excluded_allocation_parts": 9,
+      "broadphase_candidates": 0,
+      "unexpected_intersections": [],
+      "passed": true
+    },
+    "plasma_layout": {
+      "fabricated_parts": 338,
+      "excluded_allocation_parts": 9,
+      "broadphase_candidates": 0,
+      "unexpected_intersections": [],
+      "passed": true
+    }
+  },
+  "elapsed_seconds": 4.5,
+  "scope": "Exact positive-volume tests afterAABB broadphase. Zero-volume bearing/weld contacts need no blanket allowance. Unselected axis/ATC allocations are excluded and remain unresolved interfaces. No path/strength/handling claim."
+}

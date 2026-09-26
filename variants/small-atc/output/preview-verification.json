@@ -1,0 +1,38 @@
+{
+  "scope": "Readable rendered CAD previews and exact input/output association only; not machine fit, load or motion approval.",
+  "visual_review": "Both current PNGs reviewed by root: readable, clean, no clipping; magenta cage explicitly labeled unverified allocation.",
+  "source_sha256": {
+    "variants/small-atc/verify_previews.py": "23af84d270f7438fe7526c9980f4e4c68d2701d1081d9cbc4bc32df866f3f8dd",
+    "variants/small-atc/build_small_atc.py": "3df8bf27627d4833fd8098d632b178d75442c5c8bac3c275cbdcfd2c3253b665",
+    "variants/small-atc/render_small_atc.py": "aec27f1f65e86be7631e68190b54fc78bebdda1a2ea95f6d9f8248184139c5e2",
+    "render_cad.py": "eea541872710bf508b2e7667715cd613f9b58dcdf6585a03aa8cf9c5b73e10fb",
+    "variants/common/location/locator_dock.py": "56ee3088e2255c52f6098a3f148077d155177ca4eb425d4b0dcc07c44c81645c"
+  },
+  "fit_report_sha256": "3f7b75b67f4b16eaf0b37307d1776080b499c19c29324f37607e0308d75e4355",
+  "images": [
+    {
+      "file": "variants/small-atc/output/SMALL_ATC_CONTEXT.png",
+      "sha256": "d3c1ead41b61297358fb0e4140e59ca048a6d28acdb686f537c714cddf6373e4",
+      "size_px": [
+        1600,
+        1400
+      ],
+      "expected_size_matches": true,
+      "mesh_file": "variants/small-atc/output/SMALL_ATC_CONTEXT.npz",
+      "mesh_sha256": "f4b1b4657a5bda56c804ab538368bb224fcb5f966f5d9b37af7fac77e3b024b4"
+    },
+    {
+      "file": "variants/small-atc/output/SMALL_ATC_DOCK.png",
+      "sha256": "d7e519045f4894edc9d5fa4dd03cd9bc5f6f50141581e3c6a9e83cb8185ba919",
+      "size_px": [
+        1600,
+        950
+      ],
+      "expected_size_matches": true,
+      "mesh_file": "variants/small-atc/output/SMALL_ATC_DOCK.npz",
+      "mesh_sha256": "3a05c48d5ee99b29af77c6e3fbf4c6c8c39b95ec44612a7dc6f344366d57bec3"
+    }
+  ],
+  "build_source_matches_fit": true,
+  "passed": true
+}

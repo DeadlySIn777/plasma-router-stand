@@ -1,0 +1,217 @@
+{
+  "status": "PASS",
+  "scope": "Static connector, GPIO and external-interrupt line reservation only",
+  "firmware_compiled": false,
+  "hardware_tested": false,
+  "physical_release": false,
+  "sources": {
+    "RevE-ENGINEERING/controls/source-overlay/boards/my_machine_map.h": "3878c82b9ea583e9d7c4d846e07e0b58a29d677dd68b2d9294bd5149e00b7797",
+    "RevE-ENGINEERING/controls/source-overlay/Src/kraken_board.c": "c1fa773aa982dee95cb274f996a9c8d31c078ab03ffb80ca0c1bdc81f90bcdac",
+    "RevE-ENGINEERING/controls/kraken-official.cfg": "43e8fb4c1b571cd91b43cdd5ba05171ea60e43cc0982e11edb8afdb0f7b961ab",
+    "RevE-ENGINEERING/controls/source-overlay/kraken.ini": "29452a2fd126f850c7b2af3fca1f0c210b412936bdceadc7e3440bf924143242",
+    "variants/common/controls/pin-reservations.json": "872cac652853e9cb023febcdecdad3f1987fe6bce2a1cee985cf5d80cfaae26b",
+    "variants/common/controls/verify_reservations.py": "99dcd6f2b976970f52bf17862cecce27f1f97e7e05e1c3710918e070f5ac2fc2"
+  },
+  "baseline_assigned_gpio": [
+    "PA10",
+    "PA15",
+    "PA9",
+    "PB5",
+    "PB7",
+    "PB8",
+    "PB9",
+    "PC13",
+    "PC14",
+    "PC15",
+    "PC6",
+    "PC7",
+    "PC8",
+    "PD12",
+    "PD13",
+    "PD14",
+    "PD2",
+    "PD3",
+    "PD4",
+    "PD5",
+    "PD6",
+    "PE0",
+    "PE1",
+    "PE11",
+    "PE2",
+    "PE3",
+    "PE4",
+    "PE5",
+    "PE6",
+    "PE9",
+    "PF0",
+    "PF1",
+    "PF2",
+    "PG12",
+    "PG13",
+    "PG14",
+    "PG2",
+    "PG3",
+    "PG4",
+    "PG5",
+    "PG6"
+  ],
+  "checks": [
+    {
+      "check": "spindle_direction:unused_gpio",
+      "pass": true,
+      "detail": {
+        "gpio": "PD15",
+        "baseline_users": []
+      }
+    },
+    {
+      "check": "spindle_direction:connector",
+      "pass": true,
+      "detail": {
+        "connector": "EXP1_5",
+        "official_gpio": "PD15"
+      }
+    },
+    {
+      "check": "fixed_router_toolsetter:unused_gpio",
+      "pass": true,
+      "detail": {
+        "gpio": "PG8",
+        "baseline_users": []
+      }
+    },
+    {
+      "check": "fixed_router_toolsetter:connector",
+      "pass": true,
+      "detail": {
+        "connector": "EXP2_3",
+        "official_gpio": "PG8"
+      }
+    },
+    {
+      "check": "fixed_router_toolsetter:unique_exti",
+      "pass": true,
+      "detail": {
+        "exti_line": 8,
+        "already_used": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "check": "atc_ir_status:unused_gpio",
+      "pass": true,
+      "detail": {
+        "gpio": "PG7",
+        "baseline_users": []
+      }
+    },
+    {
+      "check": "atc_ir_status:connector",
+      "pass": true,
+      "detail": {
+        "connector": "EXP2_5",
+        "official_gpio": "PG7"
+      }
+    },
+    {
+      "check": "atc_ir_status:unique_exti",
+      "pass": true,
+      "detail": {
+        "exti_line": 7,
+        "already_used": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "check": "cover_command:unused_gpio",
+      "pass": true,
+      "detail": {
+        "gpio": "PE12",
+        "baseline_users": []
+      }
+    },
+    {
+      "check": "cover_command:connector",
+      "pass": true,
+      "detail": {
+        "connector": "EXP2_2",
+        "official_gpio": "PE12"
+      }
+    },
+    {
+      "check": "atc_dock_present:unused_gpio",
+      "pass": true,
+      "detail": {
+        "gpio": "PF10",
+        "baseline_users": []
+      }
+    },
+    {
+      "check": "atc_dock_present:connector",
+      "pass": true,
+      "detail": "Official S7 filament/stop input; actual board DIAG jumper still needs verification"
+    },
+    {
+      "check": "atc_dock_present:unique_exti",
+      "pass": true,
+      "detail": {
+        "exti_line": 10,
+        "already_used": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "check": "baseline_reverse_gap_recorded",
+      "pass": true,
+      "detail": "Baseline router/hybrid configuration has no direction channel; the reservations do not implement it"
+    }
+  ],
+  "unresolved": [
+    "Exact RapidChange SKU, connector revision, cover protocol and number of IO signals",
+    "VFD accepts forward/reverse and low-speed commands with controlled stop before reversal",
+    "Separate router toolsetter selection during M6; plasma probe stays electrically distinct",
+    "Controller filesystem/SD support and manufacturer macro integration",
+    "Hardware inhibit logic for dock removed, mode selection and stopped spindle",
+    "Complete isolated IO board, actual harness terminals and power budget",
+    "4x8 motor torque/speed selection remains separate; onboard-driver intent is not proof of capacity"
+  ]
+}

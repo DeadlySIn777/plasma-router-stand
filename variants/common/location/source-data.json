@@ -1,0 +1,53 @@
+{
+  "checked_date": "2026-09-26",
+  "status": "Primary-source dimensional facts for candidate selection; price/shipping not quoted; delivered parts still require inspection.",
+  "pin": {
+    "source": "https://live-catalog.jwwinco.com/pdf/winco/US/6321.pdf?dispositiontype=attachment",
+    "round_order": "DIN 6321-10-18-B",
+    "diamond_order": "DIN 6321-10-18-C",
+    "head_diameter_fit": "10g6",
+    "head_height_mm": 18,
+    "head_height_tolerance_mm": 0.1,
+    "shank_diameter_fit": "6n6",
+    "shank_length_mm": 9,
+    "lead_height_mm": 6,
+    "lead_angle_degrees": 15,
+    "diamond_contact_land_approx_mm": 2.5,
+    "full_diamond_relief_dimensions_verified": false,
+    "material": "Hardened steel, blackened; bearing/shank surfaces ground"
+  },
+  "bushing": {
+    "source": "https://live-catalog.jwwinco.com/pdf/winco/us/172n.pdf?dispositiontype=attachment",
+    "order": "DIN179-B10-12-A-NI",
+    "inside_diameter_fit": "10F7",
+    "outside_diameter_fit": "15n6",
+    "length_mm": 12,
+    "replacement_method": "Press out/replace in separate steel cartridge and requalify. Not a quick-change slip bushing."
+  },
+  "fits": {
+    "source": "https://live-catalog.jwwinco.com/pdf/winco/US/286_2.pdf?dispositiontype=attachment",
+    "pin10g6_actual_mm": [9.986, 9.995],
+    "bush10F7_actual_mm": [10.013, 10.028],
+    "nominal_diametral_clearance_mm": [0.018, 0.042],
+    "note": "Bushing installed ID may change after pressing; fit bound applies only after installed gauging."
+  },
+  "locating_principle": {
+    "source": "https://www.carrlane.com/product/locating-pins/locating-pins/round-diamond-pins/round-pins",
+    "interpretation": "One round primary fixes two lateral directions; diamond secondary fixes rotation while relieving pin-pitch variation. Independent three Z contacts complete six rigid-body constraints."
+  },
+  "aluminum": {
+    "source": "https://www.hydro.com/globalassets/01-products--services/extruded-profiles/americas/ena-resources/alloy-data-sheets/hydro_2019_data_sheet_6061.pdf",
+    "chosen_grade": "New documented6061-T6 or equivalent engineering-approved stock; not assumed owned scrap",
+    "thermal_expansion_per_degF": 0.0000131,
+    "modulus_assumed_MPa": 69000,
+    "density_assumed_kg_per_m3": 2700,
+    "note": "Nominal elastic-property assumptions; weld heat-affected-zone strength not qualified here."
+  },
+  "hdpe": {
+    "source": "https://www.ensingerplastics.com/en-us/shapes/polyethylene-tecafine-hdpe-natural",
+    "thermal_expansion_per_degF": 0.000065,
+    "density_kg_per_m3": 950,
+    "tensile_modulus_psi": 140000,
+    "interpretation": "Wear surface only. Separate thermal freedom and compression stops; no high-precision pin bore or structural clamp datum in HDPE."
+  }
+}

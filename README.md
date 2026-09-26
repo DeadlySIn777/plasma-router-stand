@@ -7,6 +7,11 @@ stronger storage restraints, supported plumbing and defined water/tool control
 circuits. It is still an engineering design with open measured interfaces and
 integration work, **not a fabrication-ready or operational machine**.
 
+**New development variants:** [small-machine RapidChange ATC, a full-sheet 4x8
+machine, and repeatable removable table interfaces](variants/README.md). These
+have their own CAD and checks. Their supplier interfaces and physical
+qualification remain open; they do not replace or inherit the Rev I release status.
+
 ## Open the current design
 
 - [Current CAD package and limitations](output/release-review/RevI-CAD/README.md)

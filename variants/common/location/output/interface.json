@@ -1,0 +1,273 @@
+{
+  "centers_mm": [
+    [
+      80,
+      60
+    ],
+    [
+      358.6666666667,
+      363.3333333333
+    ]
+  ],
+  "pitch_mm": 411.9055986779259,
+  "diamond_relief_angle_deg": 47.426891028637556,
+  "carrier_underside_mm": 14.0,
+  "interfaces": [
+    {
+      "center_mm": [
+        80,
+        60
+      ],
+      "pin_type": "round",
+      "pin_block_bounds_relative_mm": [
+        -30,
+        -20,
+        0,
+        30,
+        20,
+        12
+      ],
+      "receiver_bounds_relative_mm": [
+        -30,
+        -20,
+        14,
+        30,
+        20,
+        26
+      ],
+      "base_mount_xy_relative_mm": [
+        [
+          -22,
+          -12
+        ],
+        [
+          22,
+          -12
+        ],
+        [
+          -22,
+          12
+        ],
+        [
+          22,
+          12
+        ]
+      ],
+      "receiver_mount_xy_relative_mm": [
+        [
+          -22,
+          -12
+        ],
+        [
+          22,
+          -12
+        ],
+        [
+          -22,
+          12
+        ],
+        [
+          22,
+          12
+        ]
+      ],
+      "receiver_mount_thread": "M5x0.8 THRU; max installedscrewpenetration10.5mm",
+      "match_dowel_xy_relative_mm": [
+        [
+          -17,
+          0
+        ],
+        [
+          17,
+          0
+        ]
+      ],
+      "keepout_top_mm": 30.1
+    },
+    {
+      "center_mm": [
+        358.6666666667,
+        363.3333333333
+      ],
+      "pin_type": "diamond",
+      "pin_block_bounds_relative_mm": [
+        -30,
+        -20,
+        0,
+        30,
+        20,
+        12
+      ],
+      "receiver_bounds_relative_mm": [
+        -30,
+        -20,
+        14,
+        30,
+        20,
+        26
+      ],
+      "base_mount_xy_relative_mm": [
+        [
+          -22,
+          -12
+        ],
+        [
+          22,
+          -12
+        ],
+        [
+          -22,
+          12
+        ],
+        [
+          22,
+          12
+        ]
+      ],
+      "receiver_mount_xy_relative_mm": [
+        [
+          -22,
+          -12
+        ],
+        [
+          22,
+          -12
+        ],
+        [
+          -22,
+          12
+        ],
+        [
+          22,
+          12
+        ]
+      ],
+      "receiver_mount_thread": "M5x0.8 THRU; max installedscrewpenetration10.5mm",
+      "match_dowel_xy_relative_mm": [
+        [
+          -17,
+          0
+        ],
+        [
+          17,
+          0
+        ]
+      ],
+      "keepout_top_mm": 30.1
+    }
+  ],
+  "status": "Unintegrated reusable interface; two locators do not support the table.",
+  "panel_size_mm": [
+    438.6666666667,
+    423.3333333333
+  ],
+  "supports": [
+    {
+      "center_mm": [
+        25,
+        25
+      ],
+      "fixed_footprint_mm": [
+        40,
+        40
+      ],
+      "land_z_mm": 14.0,
+      "primary": true,
+      "grid_mounts_relative_mm": [
+        [
+          -12,
+          0
+        ],
+        [
+          12,
+          0
+        ]
+      ],
+      "grid_mount_size": "M8",
+      "drawbolt": "M6x25",
+      "minimum_grid_bearing_area_requirement_mm2": 1600
+    },
+    {
+      "center_mm": [
+        413.6666666667,
+        25
+      ],
+      "fixed_footprint_mm": [
+        40,
+        40
+      ],
+      "land_z_mm": 14.0,
+      "primary": true,
+      "grid_mounts_relative_mm": [
+        [
+          -12,
+          0
+        ],
+        [
+          12,
+          0
+        ]
+      ],
+      "grid_mount_size": "M8",
+      "drawbolt": "M6x25",
+      "minimum_grid_bearing_area_requirement_mm2": 1600
+    },
+    {
+      "center_mm": [
+        25,
+        398.3333333333
+      ],
+      "fixed_footprint_mm": [
+        40,
+        40
+      ],
+      "land_z_mm": 14.0,
+      "primary": true,
+      "grid_mounts_relative_mm": [
+        [
+          -12,
+          0
+        ],
+        [
+          12,
+          0
+        ]
+      ],
+      "grid_mount_size": "M8",
+      "drawbolt": "M6x25",
+      "minimum_grid_bearing_area_requirement_mm2": 1600
+    },
+    {
+      "center_mm": [
+        413.6666666667,
+        398.3333333333
+      ],
+      "fixed_footprint_mm": [
+        40,
+        40
+      ],
+      "land_z_mm": 14.0,
+      "primary": false,
+      "grid_mounts_relative_mm": [
+        [
+          -12,
+          0
+        ],
+        [
+          12,
+          0
+        ]
+      ],
+      "grid_mount_size": "M8",
+      "drawbolt": "M6x25",
+      "minimum_grid_bearing_area_requirement_mm2": 1600
+    }
+  ],
+  "grid_required": true,
+  "carrier_required": true,
+  "machine_integrated": false,
+  "fit_inspection_required": true,
+  "mechanical_return_target_mm": 0.15,
+  "target_definition": "Maximum XY point displacement between setups at panel corners, 20 clean unloaded re-seats at stable temperature; target, not demonstrated performance.",
+  "diagram_only_carrier": "Carrier/grid intentionally absent; all attachment and support requirements are explicit interfaces, not invisible load paths."
+}
