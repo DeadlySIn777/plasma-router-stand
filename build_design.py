@@ -10,7 +10,10 @@ from reportlab.lib.styles import ParagraphStyle
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'output' / 'pdf'
 OUT.mkdir(parents=True, exist_ok=True)
-PDF = OUT / 'plasma-router-stand-concept.pdf'
+# Historical Rev B/C generator (build_bed_system.py reuses this prefix). The
+# current brief at plasma-router-stand-concept.pdf is the Rev G review copy
+# (build_concept_revg.py); never overwrite it from here.
+PDF = OUT / 'plasma-router-stand-concept-legacy.pdf'
 W,H = landscape(A3)
 C = canvas.Canvas(str(PDF), pagesize=(W,H))
 C.setTitle('KHMOS / RATTMMOTOR CNC stand | Sand-filled 2-inch chassis | Concept B')

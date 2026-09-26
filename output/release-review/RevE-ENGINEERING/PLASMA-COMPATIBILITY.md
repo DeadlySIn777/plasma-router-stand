@@ -10,7 +10,7 @@ An [AG-60/SG-55 manufacturer description](https://cnaweld.en.made-in-china.com/p
 
 Pilot arc describes the initial arc before it transfers to the workpiece; it does not specify whether that arc is initiated by HF or blowback. [Langmuir's compatibility guidance](https://www.langmuirsystems.com/pages/plasma-cutters) explains the distinction and excludes HF-start equipment from its own CrossFire controls because of interference and electronics damage. That exclusion is specific to its equipment; HF plasma is not universally incompatible with CNC. [Hypertherm's HPR260 documentation](https://xnet.hypertherm.com/Xnet/library/library.jsp?file=HYP118188) describes an industrial system with both pilot-arc and HF starting components.
 
-The present Kraken installation has **not** been designed and qualified as an HF-compatible control system. A different torch body does not establish that the cutter's HF source has disappeared. Generic ferrites, a metal box or an isolated trigger alone are not proof of compatibility.
+The present Kraken firmware package has **not** been designed and qualified as an HF-compatible control system. A different torch body does not establish that the cutter's HF source has disappeared. Generic ferrites, a metal box or an isolated trigger alone are not proof of compatibility.
 
 ## What closes this interface
 
