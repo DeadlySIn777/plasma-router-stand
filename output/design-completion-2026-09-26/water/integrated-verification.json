@@ -1,0 +1,706 @@
+{
+  "source_sha256": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+  "all_sources_sha256": {
+    "bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+  },
+  "integrated": true,
+  "definition": {
+    "revision": "H water/service definition",
+    "routine_washout": "Two independent lift-out hatches with captive upright in-footprint parking; original full lid remains in place.",
+    "service_hatches": [
+      {
+        "tag": "CLARIFIED",
+        "cover": [
+          330.0,
+          945.0,
+          360.0,
+          215.0
+        ],
+        "opening": [
+          350.0,
+          965.0,
+          320.0,
+          175.0
+        ],
+        "park_y": 935.0
+      },
+      {
+        "tag": "SETTLING",
+        "cover": [
+          440.0,
+          1180.0,
+          310.0,
+          140.0
+        ],
+        "opening": [
+          460.0,
+          1200.0,
+          270.0,
+          100.0
+        ],
+        "park_y": 1168.0
+      }
+    ],
+    "water_charge_limit_litres": 115,
+    "permanently_vented": true,
+    "refill": {
+      "outlet_xyz_mm": [
+        385,
+        1215,
+        865
+      ],
+      "pan_rim_z_mm": 835,
+      "nominal_air_gap_mm": 30,
+      "minimum_as_built_air_gap_mm": 25,
+      "pump_hose_connection": "1/2 NPT male at (385,1255,695), adapter engagement remains receipt-fit.",
+      "connection_exclusion_bounds_mm": [
+        335,
+        1205,
+        575,
+        435,
+        1305,
+        695
+      ],
+      "connection_exclusion_scope": "Reserved for selected adapter and first reinforced hose bend; keep conversion handling out. Not a fitted hose or manufacturer bend-radius claim."
+    },
+    "gravity_drain": {
+      "status": "ALLOCATION ONLY - SELECTED CONNECTION DIMENSIONS STILL REQUIRED",
+      "axis_xy_mm": [
+        900,
+        1270
+      ],
+      "available_stack_mm": [
+        450,
+        693.398152
+      ],
+      "items": [
+        {
+          "id": "H_DRAIN_REDUCER_RESERVE",
+          "origin_mm": [
+            865,
+            1235,
+            650
+          ],
+          "size_mm": [
+            70,
+            70,
+            43.398152
+          ]
+        },
+        {
+          "id": "H_DRAIN_VALVE_RESERVE",
+          "origin_mm": [
+            837.5,
+            1207.5,
+            525
+          ],
+          "size_mm": [
+            125,
+            125,
+            125
+          ]
+        },
+        {
+          "id": "H_DRAIN_UNION_RESERVE",
+          "origin_mm": [
+            865,
+            1235,
+            470
+          ],
+          "size_mm": [
+            70,
+            70,
+            55
+          ]
+        }
+      ],
+      "holds": [
+        "Supplier valve connection datums and actual actuator orientation",
+        "Reducer/union/thread engagement stack and pipe support",
+        "Basket service with selected union and detached downstream tail",
+        "Suction strainer/fittings, pressure-rated hoses and hose bends are not released"
+      ]
+    },
+    "washout_cap": {
+      "flange_bounds_z_mm": [
+        110,
+        116
+      ],
+      "clear_bore_mm": 48.5,
+      "cover_bounds_z_mm": [
+        104,
+        108
+      ],
+      "fasteners": "4xM6x25 head-down bolts, M6 washers and nyloc nuts",
+      "limitation": "Empty and isolate tank before removal; this is not the full-inventory drain control."
+    },
+    "remaining_holds": [
+      "Complete selected valve/union/strainer/pump port fit and supported hose route",
+      "Whole reservoir lid removal remains major disassembly, not routine service",
+      "Actual cabinet hinge/latch/door, gland entry and VFD heat rejection require selected enclosure drawings",
+      "Wet-test tank cleaning reach, float calibration, overflow flow and anti-siphon air gap"
+    ]
+  },
+  "state_checks": {
+    "router_closed": {
+      "count": 1448,
+      "clashes": [],
+      "all_solids_valid": true
+    },
+    "bed_stored_closed": {
+      "count": 1448,
+      "clashes": [],
+      "all_solids_valid": true
+    },
+    "service_open": {
+      "count": 1436,
+      "clashes": [],
+      "all_solids_valid": true
+    }
+  },
+  "paths": [
+    {
+      "hatch": "CLARIFIED",
+      "segments": [
+        {
+          "name": "lift50",
+          "method": "Full translation enclosed by endpoint-AABB union",
+          "status": "CLEAR",
+          "moving_part_count": 2,
+          "fixed_part_count": 1434,
+          "clearance_mm": 0,
+          "boolean_volume_tolerance_mm3": 1e-06,
+          "bound_tests": 1,
+          "candidates": [],
+          "caller_exclusions": [],
+          "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+          "delta_xyz_mm": [
+            0.0,
+            0.0,
+            50.0
+          ],
+          "swept_enclosing_bounds_mm": [
+            330.0,
+            945.0,
+            435.096,
+            690.0,
+            1160.0,
+            518.144
+          ],
+          "all_pairs_included": true,
+          "within_chassis_plan_0_1150_0_1450": true
+        },
+        {
+          "name": "move_to_pocket_plane",
+          "method": "Full translation enclosed by endpoint-AABB union",
+          "status": "CLEAR",
+          "moving_part_count": 2,
+          "fixed_part_count": 1434,
+          "clearance_mm": 0,
+          "boolean_volume_tolerance_mm3": 1e-06,
+          "bound_tests": 0,
+          "candidates": [],
+          "caller_exclusions": [],
+          "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+          "delta_xyz_mm": [
+            0.0,
+            -10.0,
+            0.0
+          ],
+          "swept_enclosing_bounds_mm": [
+            330.0,
+            935.0,
+            485.096,
+            690.0,
+            1160.0,
+            518.144
+          ],
+          "all_pairs_included": true,
+          "within_chassis_plan_0_1150_0_1450": true
+        },
+        {
+          "name": "rotate_upright",
+          "method": "Mid-angle AABB plus rigorous radial displacement bound",
+          "status": "CLEAR",
+          "moving_part_count": 2,
+          "fixed_part_count": 1434,
+          "clearance_mm": 0,
+          "boolean_volume_tolerance_mm3": 1e-06,
+          "bound_tests": 0,
+          "candidates": [],
+          "caller_exclusions": [],
+          "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+          "axis": "X",
+          "axis_origin_mm": [
+            330.0,
+            935.0,
+            485.096
+          ],
+          "start_deg": 0,
+          "end_deg": 90,
+          "angular_cells": 90,
+          "actual_step_deg": 1.0,
+          "part_radius_bounds_mm": {
+            "H_WT_CLARIFIED_COVER": 215.02160427268697,
+            "H_WT_CLARIFIED_PULL_TAB": 59.93471701776859
+          },
+          "swept_enclosing_bounds_mm": [
+            330.0,
+            901.8403764608933,
+            483.2195825212604,
+            690.0,
+            1151.868230937536,
+            701.9908294177352
+          ],
+          "all_pairs_included": true,
+          "within_chassis_plan_0_1150_0_1450": true
+        },
+        {
+          "name": "lower_into40mm_pockets",
+          "method": "Full translation enclosed by endpoint-AABB union",
+          "status": "CLEAR",
+          "moving_part_count": 2,
+          "fixed_part_count": 1434,
+          "clearance_mm": 0,
+          "boolean_volume_tolerance_mm3": 1e-06,
+          "bound_tests": 4,
+          "candidates": [],
+          "caller_exclusions": [],
+          "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+          "delta_xyz_mm": [
+            0.0,
+            0.0,
+            -49.0
+          ],
+          "swept_enclosing_bounds_mm": [
+            330.0,
+            901.9520000000001,
+            436.096,
+            690.0,
+            935.0000000000001,
+            700.096
+          ],
+          "all_pairs_included": true,
+          "within_chassis_plan_0_1150_0_1450": true
+        }
+      ]
+    },
+    {
+      "hatch": "SETTLING",
+      "segments": [
+        {
+          "name": "lift50",
+          "method": "Full translation enclosed by endpoint-AABB union",
+          "status": "CLEAR",
+          "moving_part_count": 2,
+          "fixed_part_count": 1434,
+          "clearance_mm": 0,
+          "boolean_volume_tolerance_mm3": 1e-06,
+          "bound_tests": 1,
+          "candidates": [],
+          "caller_exclusions": [],
+          "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+          "delta_xyz_mm": [
+            0.0,
+            0.0,
+            50.0
+          ],
+          "swept_enclosing_bounds_mm": [
+            440.0,
+            1180.0,
+            435.096,
+            750.0,
+            1320.0,
+            518.144
+          ],
+          "all_pairs_included": true,
+          "within_chassis_plan_0_1150_0_1450": true
+        },
+        {
+          "name": "move_to_pocket_plane",
+          "method": "Full translation enclosed by endpoint-AABB union",
+          "status": "CLEAR",
+          "moving_part_count": 2,
+          "fixed_part_count": 1434,
+          "clearance_mm": 0,
+          "boolean_volume_tolerance_mm3": 1e-06,
+          "bound_tests": 0,
+          "candidates": [],
+          "caller_exclusions": [],
+          "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+          "delta_xyz_mm": [
+            0.0,
+            -12.0,
+            0.0
+          ],
+          "swept_enclosing_bounds_mm": [
+            440.0,
+            1168.0,
+            485.096,
+            750.0,
+            1320.0,
+            518.144
+          ],
+          "all_pairs_included": true,
+          "within_chassis_plan_0_1150_0_1450": true
+        },
+        {
+          "name": "rotate_upright",
+          "method": "Mid-angle AABB plus rigorous radial displacement bound",
+          "status": "CLEAR",
+          "moving_part_count": 2,
+          "fixed_part_count": 1434,
+          "clearance_mm": 0,
+          "boolean_volume_tolerance_mm3": 1e-06,
+          "bound_tests": 0,
+          "candidates": [],
+          "caller_exclusions": [],
+          "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+          "axis": "X",
+          "axis_origin_mm": [
+            440.0,
+            1168.0,
+            485.096
+          ],
+          "start_deg": 0,
+          "end_deg": 90,
+          "angular_cells": 90,
+          "actual_step_deg": 1.0,
+          "part_radius_bounds_mm": {
+            "H_WT_SETTLING_COVER": 140.03317572632565,
+            "H_WT_SETTLING_PULL_TAB": 59.93471701776859
+          },
+          "swept_enclosing_bounds_mm": [
+            440.0,
+            1134.8403764608931,
+            483.8739800107756,
+            750.0,
+            1309.216689218208,
+            626.3498328242443
+          ],
+          "all_pairs_included": true,
+          "within_chassis_plan_0_1150_0_1450": true
+        },
+        {
+          "name": "lower_into40mm_pockets",
+          "method": "Full translation enclosed by endpoint-AABB union",
+          "status": "CLEAR",
+          "moving_part_count": 2,
+          "fixed_part_count": 1434,
+          "clearance_mm": 0,
+          "boolean_volume_tolerance_mm3": 1e-06,
+          "bound_tests": 4,
+          "candidates": [],
+          "caller_exclusions": [],
+          "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+          "delta_xyz_mm": [
+            0.0,
+            0.0,
+            -49.0
+          ],
+          "swept_enclosing_bounds_mm": [
+            440.0,
+            1134.9520000000002,
+            436.096,
+            750.0,
+            1168.0000000000002,
+            625.096
+          ],
+          "all_pairs_included": true,
+          "within_chassis_plan_0_1150_0_1450": true
+        }
+      ]
+    },
+    {
+      "hatch": "EMPTY_TANK_WASHOUT_COVER",
+      "segments": [
+        {
+          "name": "lower20_after_removing_four_fasteners",
+          "method": "Full translation enclosed by endpoint-AABB union",
+          "status": "CLEAR",
+          "moving_part_count": 1,
+          "fixed_part_count": 1423,
+          "clearance_mm": 0,
+          "boolean_volume_tolerance_mm3": 1e-06,
+          "bound_tests": 1,
+          "candidates": [],
+          "caller_exclusions": [],
+          "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+          "delta_xyz_mm": [
+            0.0,
+            0.0,
+            -20.0
+          ],
+          "swept_enclosing_bounds_mm": [
+            855.0,
+            1215.0,
+            84.0,
+            945.0,
+            1305.0,
+            108.0
+          ],
+          "all_pairs_included": true,
+          "within_chassis_plan_0_1150_0_1450": true
+        },
+        {
+          "name": "withdraw_forward80_handheld",
+          "method": "Full translation enclosed by endpoint-AABB union",
+          "status": "CLEAR",
+          "moving_part_count": 1,
+          "fixed_part_count": 1423,
+          "clearance_mm": 0,
+          "boolean_volume_tolerance_mm3": 1e-06,
+          "bound_tests": 0,
+          "candidates": [],
+          "caller_exclusions": [],
+          "scope": "Conservative nominal rigid geometry. CLEAR excludes positive-volume interference above the Boolean tolerance; surface contact, unmodeled parts and manufacturing uncertainty are outside this result.",
+          "delta_xyz_mm": [
+            0.0,
+            -80.0,
+            0.0
+          ],
+          "swept_enclosing_bounds_mm": [
+            855.0,
+            1135.0,
+            84.0,
+            945.0,
+            1305.0,
+            88.0
+          ],
+          "all_pairs_included": true,
+          "within_chassis_plan_0_1150_0_1450": true
+        }
+      ]
+    }
+  ],
+  "new_ids": [
+    "H_WT_CLARIFIED_GASKET",
+    "H_WT_CLARIFIED_COVER",
+    "H_WT_CLARIFIED_PULL_TAB",
+    "H_WT_CLARIFIED_NUT_1",
+    "H_WT_CLARIFIED_BOLT_1",
+    "H_WT_CLARIFIED_NUT_2",
+    "H_WT_CLARIFIED_BOLT_2",
+    "H_WT_CLARIFIED_NUT_3",
+    "H_WT_CLARIFIED_BOLT_3",
+    "H_WT_CLARIFIED_NUT_4",
+    "H_WT_CLARIFIED_BOLT_4",
+    "H_WT_CLARIFIED_NUT_5",
+    "H_WT_CLARIFIED_BOLT_5",
+    "H_WT_CLARIFIED_NUT_6",
+    "H_WT_CLARIFIED_BOLT_6",
+    "H_WT_CLARIFIED_PARK_FLOOR_1",
+    "H_WT_CLARIFIED_PARK_FACE_1_1",
+    "H_WT_CLARIFIED_PARK_FACE_1_2",
+    "H_WT_CLARIFIED_PARK_FLOOR_2",
+    "H_WT_CLARIFIED_PARK_FACE_2_1",
+    "H_WT_CLARIFIED_PARK_FACE_2_2",
+    "H_WT_CLARIFIED_PARK_END_1",
+    "H_WT_CLARIFIED_PARK_END_2",
+    "H_WT_SETTLING_GASKET",
+    "H_WT_SETTLING_COVER",
+    "H_WT_SETTLING_PULL_TAB",
+    "H_WT_SETTLING_NUT_1",
+    "H_WT_SETTLING_BOLT_1",
+    "H_WT_SETTLING_NUT_2",
+    "H_WT_SETTLING_BOLT_2",
+    "H_WT_SETTLING_NUT_3",
+    "H_WT_SETTLING_BOLT_3",
+    "H_WT_SETTLING_NUT_4",
+    "H_WT_SETTLING_BOLT_4",
+    "H_WT_SETTLING_NUT_5",
+    "H_WT_SETTLING_BOLT_5",
+    "H_WT_SETTLING_NUT_6",
+    "H_WT_SETTLING_BOLT_6",
+    "H_WT_SETTLING_PARK_FLOOR_1",
+    "H_WT_SETTLING_PARK_FACE_1_1",
+    "H_WT_SETTLING_PARK_FACE_1_2",
+    "H_WT_SETTLING_PARK_FLOOR_2",
+    "H_WT_SETTLING_PARK_FACE_2_1",
+    "H_WT_SETTLING_PARK_FACE_2_2",
+    "H_WT_SETTLING_PARK_END_1",
+    "H_WT_SETTLING_PARK_END_2",
+    "H_REFILL_MITER_SPOUT",
+    "H_REFILL_STAY",
+    "H_REFILL_CONNECTION_RESERVE",
+    "H_DRAIN_REDUCER_RESERVE",
+    "H_DRAIN_VALVE_RESERVE",
+    "H_DRAIN_UNION_RESERVE",
+    "H_DRAIN_DROP_RESERVE",
+    "H_WT_WASHOUT_FLANGE",
+    "H_WT_WASHOUT_GASKET",
+    "H_WT_WASHOUT_COVER",
+    "H_WT_WASHOUT_BOLT_1",
+    "H_WT_WASHOUT_WASHER_1",
+    "H_WT_WASHOUT_NUT_1",
+    "H_WT_WASHOUT_BOLT_2",
+    "H_WT_WASHOUT_WASHER_2",
+    "H_WT_WASHOUT_NUT_2",
+    "H_WT_WASHOUT_BOLT_3",
+    "H_WT_WASHOUT_WASHER_3",
+    "H_WT_WASHOUT_NUT_3",
+    "H_WT_WASHOUT_BOLT_4",
+    "H_WT_WASHOUT_WASHER_4",
+    "H_WT_WASHOUT_NUT_4"
+  ],
+  "changed_existing_ids": [
+    "WT_LID",
+    "WP_FLOOR",
+    "WT_CLEANOUT_NECK"
+  ],
+  "flat_local_consistency": [
+    {
+      "id": "WP_FLOOR",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "WT_LID",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_CLARIFIED_GASKET",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_CLARIFIED_COVER",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_CLARIFIED_PULL_TAB",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_FLOOR_1",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_FACE_1_1",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_FACE_1_2",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_FLOOR_2",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_FACE_2_1",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_FACE_2_2",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_END_1",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_CLARIFIED_PARK_END_2",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_SETTLING_GASKET",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_SETTLING_COVER",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_SETTLING_PULL_TAB",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_FLOOR_1",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_FACE_1_1",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_FACE_1_2",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_FLOOR_2",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_FACE_2_1",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_FACE_2_2",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_END_1",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_SETTLING_PARK_END_2",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_REFILL_STAY",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_WASHOUT_FLANGE",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_WASHOUT_GASKET",
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "id": "H_WT_WASHOUT_COVER",
+      "volume_delta_mm3": 0.0
+    }
+  ],
+  "scope_limits": [
+    "Twelve hatch fasteners are removed before the hatch proof; screw handling and loose storage are not proven.",
+    "Nominal rigid path bound, no human hand/brush envelope, manufacturing tolerances, gasket adhesion or wet cleaning test.",
+    "Purchased valve/union blocks remain placement reserves and cannot close FW01 by themselves.",
+    "No actual cabinet door/thermal/wiring design is introduced."
+  ],
+  "elapsed_seconds": 85.8289999999979,
+  "sources_changed_during_run": {},
+  "passed": true
+}
