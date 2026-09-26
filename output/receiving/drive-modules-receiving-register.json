@@ -1,0 +1,126 @@
+{
+  "purpose": "Receiving record for the HMS40 drive modules and the ZBX80 Z slide. Fill null fields on delivery (mm unless stated).",
+  "order": {
+    "reported_by_owner": "2026-09-26",
+    "owner_message": "rail kits: 1000x800x100",
+    "assumed_items": [
+      {
+        "id": "M02",
+        "asin": "B0C7GN24S1",
+        "listing": "KHMOS HMS40 1000 mm stroke, 10 mm lead, NEMA23",
+        "quantity_in_design": 2
+      },
+      {
+        "id": "M01",
+        "asin": "B0C7GQTRRX",
+        "listing": "KHMOS HMS40 800 mm stroke, 10 mm lead",
+        "quantity_in_design": 1
+      },
+      {
+        "id": "M03",
+        "asin": "B09MVYGLNQ",
+        "listing": "RATTMMOTOR ZBX80 100 mm, SFU1605, NEMA23",
+        "quantity_in_design": 1
+      }
+    ],
+    "quantities_ordered": null,
+    "price_paid_usd": null,
+    "delivery_dates": null
+  },
+  "hms40": [
+    {
+      "id": "Y1",
+      "row": "M02",
+      "stroke_mm": 1000,
+      "measured": {
+        "length_overall_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "carriage_top_above_base_mm": null,
+        "carriage_hole_pattern_mm": null,
+        "carriage_thread_and_depth": null,
+        "carriage_travel_from_motor_end_block_mm": null,
+        "carriage_travel_from_far_end_block_mm": null,
+        "bottom_slot_count": null,
+        "bottom_slot_spacing_mm": null,
+        "bottom_slot_opening_mm": null,
+        "bottom_slot_cavity_depth_mm": null,
+        "slide_nut_thread_and_size": null,
+        "motor_model": null,
+        "motor_rated_current_A": null,
+        "motor_step_angle_deg": null,
+        "lead_and_connector": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "Y2",
+      "row": "M02",
+      "stroke_mm": 1000,
+      "measured": {
+        "length_overall_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "carriage_top_above_base_mm": null,
+        "carriage_hole_pattern_mm": null,
+        "carriage_thread_and_depth": null,
+        "carriage_travel_from_motor_end_block_mm": null,
+        "carriage_travel_from_far_end_block_mm": null,
+        "bottom_slot_count": null,
+        "bottom_slot_spacing_mm": null,
+        "bottom_slot_opening_mm": null,
+        "bottom_slot_cavity_depth_mm": null,
+        "slide_nut_thread_and_size": null,
+        "motor_model": null,
+        "motor_rated_current_A": null,
+        "motor_step_angle_deg": null,
+        "lead_and_connector": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "X",
+      "row": "M01",
+      "stroke_mm": 800,
+      "measured": {
+        "length_overall_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "carriage_top_above_base_mm": null,
+        "carriage_hole_pattern_mm": null,
+        "carriage_thread_and_depth": null,
+        "carriage_travel_from_motor_end_block_mm": null,
+        "carriage_travel_from_far_end_block_mm": null,
+        "bottom_slot_count": null,
+        "bottom_slot_spacing_mm": null,
+        "bottom_slot_opening_mm": null,
+        "bottom_slot_cavity_depth_mm": null,
+        "slide_nut_thread_and_size": null,
+        "motor_model": null,
+        "motor_rated_current_A": null,
+        "motor_step_angle_deg": null,
+        "lead_and_connector": null,
+        "notes": null
+      }
+    }
+  ],
+  "zbx80": {
+    "row": "M03",
+    "model_assumption_base_to_output_mm": 80,
+    "measured": {
+      "base_bottom_to_carriage_top_mm": null,
+      "body_length_mm": null,
+      "width_mm": null,
+      "carriage_holes": null,
+      "carriage_holes_tapped_or_clearance": null,
+      "carriage_thread_and_depth": null,
+      "base_slot_positions_mm": null,
+      "slide_nut_thread": null,
+      "carriage_travel_ends_mm": null,
+      "motor_model": null,
+      "motor_rated_current_A": null,
+      "backdrives_unpowered_vertical": null,
+      "notes": null
+    }
+  }
+}

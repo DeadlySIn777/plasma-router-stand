@@ -4,8 +4,10 @@
 
 ## What changed in this follow-up
 
-- **Rail kits ordered.** The owner reported ordering the rail kits on 26 September 2026, recorded as M04 (two 1500 mm HGR20 rails, four HGH20CA blocks) and M05 (two 1200 mm rails, four blocks). Those supply exactly the Rev G guides. The [receiving check](../receiving/HGR20-RAIL-KITS.md) says what to measure on arrival, and `plan_rail_cuts.py` turns the measured holes into the Y-rail cut positions (1500 → 1420 mm). The cut cannot be fixed in advance: plausible hole patterns give 10/70, 40/40 or 73/7 mm off the two ends, and 40/40 would split a counterbore on one of them.
-- **Cost register reconciled with Rev G.** Priced scope is now **$5,545.31** ($5,459.06 goods + $86.25 known shipping; it was $5,810.24 on Rev E quantities), with **48 unpriced entries**. This is not a cheaper build; new Rev G items remain unpriced. Details are in [REAL-COST.md](../../outputs/reve-30510/actual-cost/REAL-COST.md). The Excel workbook could not be rebuilt here (`build_budget.mjs` needs the private `@oai/artifact-tool` runtime), so it still shows Rev E quantities.
+- **Drive modules ordered.** The owner reported ordering the "rail kits" on 26 September 2026 and clarified them as 1000 × 800 × 100: the two HMS40 1000 mm Y drives (M02), the HMS40 800 mm X drive (M01) and the ZBX80 100 mm Z slide (M03). The [drive-module receiving check](../receiving/MOTION-MODULES.md) lists what to measure on arrival, which closes the drive-interface holds. The ZBX80 listing's side view scales to about 60–67 mm from base to carriage top, where the model assumes 80 mm; that one measurement moves the whole tool 13–20 mm in Y.
+- **HGR20 guide rails still to order.** The design's separate HGR20 guides (M04, M05) carry the gantry and cutting loads; the HMS40 modules only push. Their [receiving check](../receiving/HGR20-RAIL-KITS.md) and `plan_rail_cuts.py` are ready. The Y-rail cut cannot be fixed before measuring: plausible hole patterns give 10/70, 40/40 or 73/7 mm off the two ends, and 40/40 would split a counterbore on one of them.
+- **Controller chosen: BTT Rodent with grblHAL** (owner, 26 September 2026). This closes CW-01. The Kraken purchase, CB1 and Pi4B host boards and host USB cable left the priced register; the owner already owns a Kraken, now kept as the fallback. The Rodent board is listed as unpriced scope, and the external THC box is no longer planned.
+- **Cost register reconciled with Rev G and the controller choice.** Priced scope is now **$5,348.40** ($5,262.15 goods + $86.25 known shipping; it was $5,810.24 on Rev E quantities), with **49 unpriced entries**. This is not a cheaper build; new Rev G items remain unpriced. Details are in [REAL-COST.md](../../outputs/reve-30510/actual-cost/REAL-COST.md). The Excel workbook could not be rebuilt here (`build_budget.mjs` needs the private `@oai/artifact-tool` runtime), so it still shows Rev E quantities.
 - **Stock-fit check.** `outputs/reve-30510/actual-cost/check_revg_stock_fit.py` packs every Rev G flat part onto the sheet and plate sizes in the register, including flat parts that have no DXF, using the project's own packer.
 - **Legacy generators.** The Rev B/C and Rev F brief generators no longer write to `output/pdf/plasma-router-stand-concept.pdf`, which now holds the Rev G review copy.
 - **Wording.** The water sequence now names the Rev G bed parts and fasteners, and the cutter is the owner-reported VIV ARC CUT-50 rather than "unknown".
@@ -31,7 +33,7 @@ The controller files did not change in Rev G. These points, found while re-check
 
 | ID | Finding |
 |---|---|
-| CW-01 | Two controller baselines: the compiled Kraken V1.1 image and every wiring document, versus a later record in `PLASMA-COMPATIBILITY.md` choosing BTT Rodent/grblHAL, which has no firmware, pin map or THCAD shim yet. |
+| CW-01 | **Resolved 26 Sep 2026: Rodent.** Every wiring document and the compiled image still describe the Kraken, so the Rodent board map, pin allocation, THCAD counter support and RS485 VFD link are now the controls work. |
 | CW-02 | No cutter-facing start or arc-sensing interface is defined for the VIV ARC CUT-50. |
 | CW-09 | All four normally-open contacts on the mode selector are used by the water circuit; none is allocated to route the tool-run request (PG2) only to the selected tool. |
 | CW-10 | No input tells the controller which physical mode is selected, so a firmware/selector mismatch is caught only by procedure. |
@@ -41,18 +43,20 @@ The controller files did not change in Rev G. These points, found while re-check
 
 ## What is needed to finish
 
-**From the owner** (nothing below can be closed without these):
+**Owner answers received on 26 September 2026:** controller = BTT Rodent + grblHAL; the order was the 1000 × 800 × 100 drive modules; and a new bed requirement: **one-piece bed lifted out with a winch the owner plans to buy, released by at most about 12 screws of M8–M12, and waterproof for mist coolant when cutting aluminum.** Rev G's six manual panels and MDF spoilboards do not meet that, so the bed needs a new revision. Rev F was one piece but relied on MDF and an unreachable surfacing pass.
 
-1. **Controller:** Kraken (compiled and wired on paper, but needs an external THC box) or Rodent (preferred in the later record, but no firmware or pin map exists yet).
+**Still needed from the owner:**
+
+1. **Bed module details:** where the lifted module goes (out of the front and set down, or hung), and the hoist to be bought (overhead beam or gantry crane, capacity).
 2. **Cutter photos:** the VIV ARC CUT-50 rating plate, front and rear panels, and torch connector. These identify the version, start method and any CNC/arc-voltage connections.
-3. **Bed handling:** confirm manual handling for the Rev G panels and beams, or ask for an assisted option. The repair report left this question open.
-4. **Rail order details:** price paid and delivery dates. When the rails arrive, record their measurements in `output/receiving/hgr20-receiving-register.json`.
-5. **Owned aluminum:** alloy and thickness of the 12 × 12 in pieces, to see whether they cover some of the 24 panel ties.
+3. **Orders:** quantities and price paid for the drive modules, and whether the HGR20 guide kits are already owned or still to order.
+4. **Owned aluminum:** alloy and thickness of the 12 × 12 in pieces.
 
 **Engineering work that can proceed once those arrive:**
 
 - Transfer-drill the Y datum bars and X guide face from the measured rails; replace the HGR20 hold in `motion_details.py`.
 - Supplier data or measurements for the HMS40 base, ZBX80 output interface and spindle clamp (unsent request: `output/cad-repair-2026-09-25/SUPPLIER-DRAWING-REQUEST.md`), then design Z power-loss retention.
 - Joint tests: slot-lip preload on the panel ties (BED04), seat and beam fastening, and locator repeatability; then a combined stiffness budget (BED09).
-- Controls: after the controller choice, one terminal-numbered schematic covering the selector contacts, mode agreement, PG6 chain and stop chain (CW-03, CW-09 to CW-12).
+- Controls: the Rodent port (board map, pin allocation, THCAD counter, RS485 VFD), then one terminal-numbered schematic covering the selector contacts, mode agreement, permissive chain and stop chain (CW-03, CW-09 to CW-12).
+- Bed: a one-piece, waterproof, winch-lifted module to the new requirement, then re-run the static, motion and handling-path checks.
 - Procurement: quotes for the 48 unpriced entries and freight; rebuild the workbook; regenerate the concept PDF after the next CAD change.

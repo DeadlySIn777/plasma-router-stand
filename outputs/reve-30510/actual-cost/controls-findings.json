@@ -242,7 +242,8 @@
         "No Ethernet cable is required for the Kraken USB motion link. An optional host-network cable is separate."
       ],
       "status": "partial",
-      "extended": 4.95
+      "extended": 4.95,
+      "superseded": "Host-to-Kraken USB link. The Rodent runs standalone over WiFi; a USB-C cable for flashing is ordinary shop stock (owner decision 26 Sep 2026)."
     },
     {
       "id": "CA-11",
@@ -422,7 +423,7 @@
       "replaces_old_ids": [
         "E21"
       ],
-      "item": "Host microSD, Kraken firmware microSD and CB1 heatsink/fan",
+      "item": "Controller microSD card for the BTT Rodent (grblHAL job files and settings backup)",
       "qty": 1,
       "unitprice": null,
       "currency": "USD",
@@ -433,13 +434,34 @@
         "status": "Unquoted to Alto GA 30510; do not assume free."
       },
       "basis": "Unpriced exact-stock selection",
-      "fitproof": "Two cards are distinct when CB1 remains installed: boot media and removable controller update media.",
+      "fitproof": "Rodent decision (26 Sep 2026): no CB1 host, so the host boot card and CB1 heatsink/fan are no longer needed. One microSD for grblHAL job storage remains. Earlier Kraken/CB1 two-card scope is superseded.",
       "openitems": [
         "No zero-cost ownership assumption. Candidate Adafruit2820 was rejected because no longer stocked.",
         "Use CB1-specific cooling; confirm any host power supply omitted from E19/E20."
       ],
       "status": "partial",
       "extended": null
+    },
+    {
+      "id": "CA-RODENT",
+      "item": "BIGTREETECH Rodent controller board (grblHAL ESP32 board map btt_rodent_map.h)",
+      "qty": 1,
+      "unitprice": null,
+      "currency": "USD",
+      "source": "https://github.com/grblHAL/ESP32/blob/master/main/boards/btt_rodent_map.h",
+      "shipping": {
+        "vendor_group": "unknown",
+        "amount": null,
+        "status": "Unquoted to Alto GA 30510; do not assume free."
+      },
+      "basis": "Owner decision 26 Sep 2026; no offer researched yet",
+      "fitproof": "Selected controller (owner decision 26 Sep 2026): one standalone ESP32 board with WiFi/WebUI/SD running grblHAL, onboard stepper drivers and native RS485 for a Modbus VFD. The grblHAL board map is maintainer-authored and marked untested.",
+      "openitems": [
+        "Price and stock not researched.",
+        "Confirm the board revision, onboard driver current against the HMS40/ZBX80 NEMA23 motors, and the free inputs/outputs against the isolation list (CA-13).",
+        "The THCAD-300 frequency-counter support (thcad2 port to ESP32 PCNT) is firmware development, not a purchase."
+      ],
+      "status": "partial"
     },
     {
       "id": "CA-19",

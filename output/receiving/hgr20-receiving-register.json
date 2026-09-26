@@ -1,23 +1,22 @@
 {
   "purpose": "Receiving record for the two iMetrx HGR20 guide kits. Fill the null fields on delivery, then run plan_rail_cuts.py. Measurements are in mm.",
   "order": {
-    "reported_by_owner": "2026-09-26",
-    "owner_message": "I ORDERED THE RAIL KITS",
-    "assumed_items": [
+    "status": "NOT RECORDED AS ORDERED",
+    "note": "On 26 Sep 2026 the owner reported ordering the rail kits, then clarified 1000x800x100: that order was the HMS40 and ZBX80 drive modules (see drive-modules-receiving-register.json). The HGR20 guide kits below are still required.",
+    "items": [
       {
         "id": "M04",
         "asin": "B0FFMMPC3B",
         "listing": "iMetrx HGR20 kit, two 1500 mm rails and four HGH20CA blocks",
-        "use": "Y axis: both rails cut to 1420 mm; all four blocks"
+        "use": "Y axis: both rails cut to 1420 mm"
       },
       {
         "id": "M05",
         "asin": "B0FFMN9KNC",
         "listing": "iMetrx HGR20 kit, two 1200 mm rails and four HGH20CA blocks",
-        "use": "X axis: both rails used at 1200 mm; all four blocks"
+        "use": "X axis: both rails used at 1200 mm"
       }
     ],
-    "assumption_note": "Mapped to M04 and M05, the only rail kits in the parts list. Confirm the listings, quantities, price paid and delivery dates.",
     "price_paid_usd": null,
     "delivery_dates": null
   },

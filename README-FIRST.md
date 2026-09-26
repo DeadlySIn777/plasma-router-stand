@@ -11,7 +11,7 @@ Rev G uses six manual panels and four beams stored inside the stand. Five two-pa
 - [Current cut list](output/release-review/RevG-CAD/cutlist.csv)
 - [Historical full CAD audit](output/cad-reaudit-2026-09-25/README.md)
 - [Unsent supplier dimension request](output/cad-repair-2026-09-25/SUPPLIER-DRAWING-REQUEST.md)
-- [Rail kits: ordered 26 Sep; receiving check and Y-rail cut planner](output/receiving/HGR20-RAIL-KITS.md)
+- [Drive modules ordered 26 Sep: receiving check](output/receiving/MOTION-MODULES.md); [HGR20 guide rails (still to order): receiving check and Y-rail cut planner](output/receiving/HGR20-RAIL-KITS.md)
 - [26 Sep follow-up: Rev G procurement, open controls findings and what is left to finish](output/followup-2026-09-26/README.md)
 
 The source directory remains named RevE-ENGINEERING, but current generated files are in RevG-CAD. Fusion has not been verified to load this revision.

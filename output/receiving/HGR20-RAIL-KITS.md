@@ -1,6 +1,6 @@
 # HGR20 rail kits — receiving, measuring and cutting
 
-**Status: ordered by the owner (reported 26 September 2026); not yet received.** The order is taken to be the two kits in the parts list. Please confirm the listings, the price paid and the delivery dates in [the register](hgr20-receiving-register.json).
+**Status: not recorded as ordered, and still required.** The "rail kits" ordered on 26 September 2026 were the HMS40 and ZBX80 drive modules (see [MOTION-MODULES.md](MOTION-MODULES.md)). In this design those modules only push; these HGR20 guides carry the gantry and cutting loads. When ordered, record the listings, price paid and delivery dates in [the register](hgr20-receiving-register.json).
 
 | Kit | Listing | Contents | Use in Rev G |
 |---|---|---|---|

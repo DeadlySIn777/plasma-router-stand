@@ -12,7 +12,7 @@ Public working design for **800 mm X / 1000 mm Y / 100 mm Z nominal travel**.
 - [Updated concept PDF](output/pdf/plasma-router-stand-concept.pdf)
 - [Repair evidence and finding-by-finding status](output/cad-repair-2026-09-25/README.md)
 - [Current component schedule](output/release-review/RevG-CAD/cutlist.csv)
-- [Rail kits: ordered 26 Sep; receiving check and Y-rail cut planner](output/receiving/HGR20-RAIL-KITS.md)
+- [Drive modules ordered 26 Sep: receiving check](output/receiving/MOTION-MODULES.md); [HGR20 guide rails (still to order): receiving check and Y-rail cut planner](output/receiving/HGR20-RAIL-KITS.md)
 - [26 Sep follow-up: Rev G procurement, open controls findings and what is left to finish](output/followup-2026-09-26/README.md)
 
 ![Current router CAD](output/release-review/RevG-CAD/previews/RevG_ROUTER.png)
@@ -29,8 +29,8 @@ Nominal CAD and path checks do not establish whole-machine stiffness, joint capa
 
 The active generator is [build_revg.py](output/release-review/RevE-ENGINEERING/build_revg.py). Shared Python sources remain in the legacy-named directory for reproducibility; **current exports are only in RevG-CAD**. The [29-finding audit](output/cad-reaudit-2026-09-25/README.md) and old Rev E/F exports are historical evidence. They have not been relabeled as the new design.
 
-The [actual-price audit](outputs/reve-30510/actual-cost/REAL-COST.md) was reconciled with the Rev G cut list on 26 September 2026. It is a partial register with 48 required entries still unpriced, not a complete build total. The [earlier price workbook](outputs/reve-30510/CNC-plasma-RevE-budget.xlsx) has not been rebuilt and still shows Rev E quantities. Apart from the owner's HGR20 rail-kit order (26 September), no purchase, vendor message, hardware flashing or manufacturing release is recorded.
+The [actual-price audit](outputs/reve-30510/actual-cost/REAL-COST.md) was reconciled with the Rev G cut list on 26 September 2026. It is a partial register with 49 required entries still unpriced, not a complete build total. The [earlier price workbook](outputs/reve-30510/CNC-plasma-RevE-budget.xlsx) has not been rebuilt and still shows Rev E quantities. Apart from the owner's drive-module order (HMS40 × 3 and ZBX80, 26 September), no purchase, vendor message, hardware flashing or manufacturing release is recorded. The owner chose the BTT Rodent controller on 26 September; the Kraken firmware in `RevE-ENGINEERING/controls/` is now a reference and fallback.
 
-CadQuery/OpenCascade generate the model; ReportLab generates the concept brief. Runtime paths are local Windows paths. A clean-machine rebuild and Fusion import have not been certified. [Controller work](RevE-ENGINEERING/controls/) is a separate prototype and was not redesigned or deployed with this mechanical repair.
+CadQuery/OpenCascade generate the model; ReportLab generates the concept brief. Runtime paths are local Windows paths. A clean-machine rebuild and Fusion import have not been certified. [Controller work](RevE-ENGINEERING/controls/) is the Kraken prototype; the owner has since chosen the BTT Rodent, whose port is not written yet.
 
 The [original snapshot manifest](REPOSITORY-SNAPSHOT.json) describes the initial import only. Third-party sources retain their existing license notices; this repository grants no new rights over supplier material.

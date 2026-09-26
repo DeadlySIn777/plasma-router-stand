@@ -24,6 +24,8 @@ def add(id,group,item,qty,unit,price,url,notes='',vendor='',shipping=None,basis=
 def gap(id,item,details,quantity='',url=''):
     gaps.append(dict(id=id,item=item,quantity=str(quantity),required_work=details,url=url,unit_usd=None))
 for r in core['rows']:
+    if r.get('superseded'):
+        superseded.append(dict(id=r['id'],item=r['item'],quantity=r['quantity'],unit_usd=r['unit_usd'],goods_usd=money(Decimal(str(r['quantity']))*Decimal(str(r['unit_usd']))),url=r['url'],reason=r['superseded']));continue
     oldr=byold.get(r['id'],{})
     add(r['id'],oldr.get('category','Controls'),oldr.get('item',r['item']),r['quantity'],oldr.get('unit','each'),r['unit_usd'],r['url'],r['notes'],r['vendor'],r['shipping_usd'],'Live offer 24 Sep')
     if r.get('owner_order_status'): rows[-1]['owner_order_status']=r['owner_order_status']
@@ -58,6 +60,8 @@ for r in hardware['audits']:
     gap('HW-GAP-'+r['budget_id'],r.get('item') or byold[r['budget_id']]['item'],r['finding'])
 options.append(dict(id='OWN-AL-12',item='Owner aluminum: one 12 x 12 x 1/2 in plate and one 12 x 12 x 3/8 in plate (quantity assumed)',quantity=2,unit_price=0,currency='USD',extended=0,url='User-reported stock, 24 September 2026',reason='Acquisition cost $0 for existing pieces. Alloy and usable finished thickness unverified. The 1/2 in plate can replace MET08 Z-carrier stock, conditionally avoiding $58.74; MET08 remains in current subtotal until qualified. Other small parts fit but already use paid-stock offcuts, so no extra saving. The 3/8 in plate is unallocated; no redesign saving assumed. See OWNED-ALUMINUM-FIT.md.'))
 for r in controls['rows']:
+    if r.get('superseded'):
+        superseded.append(dict(id=r['id'],item=r['item'],quantity=r['qty'],unit_usd=r['unitprice'],goods_usd=r.get('extended'),url=r.get('source',''),reason=r['superseded']));continue
     if r.get('status')=='candidate_not_adopted' or r.get('currency','USD')!='USD':
         options.append(dict(id=r['id'],item=r['item'],quantity=r['qty'],unit_price=r['unitprice'],currency=r.get('currency','USD'),extended=r.get('extended'),url=r.get('source',''),reason=r['fitproof']+' '+' '.join(r.get('openitems',[]))))
     elif r.get('unitprice') is not None and r['unitprice']>0:
@@ -66,9 +70,9 @@ for r in controls['rows']:
         gap(r['id'],r['item'],r['fitproof']+' '+' '.join(r.get('openitems',[])),r['qty'],r.get('source',''))
 # Scope not fully represented in subordinate price audits.
 for id,details in [
- ('E08','Selected THC offer is conditional and EUR-denominated; actual cutter starting circuit, isolated sensing, currency conversion and delivery are unresolved.'),
+ ('E08','Arc-voltage sensing for the Rodent route (owner decision 26 Sep 2026): no external THC box. The owned Mesa THCAD-300 feeds grblHAL internal THC, which needs the ten-resistor -10 conversion, an external high-voltage divider for an HF-start cutter, and the unfinished THCAD counter firmware. Parts unpriced; cutter start method and sensing connections unverified.'),
  ('E11','Exact bed/guard/head confirming mechanisms and switch actuation remain to be selected; price cannot be completed from a generic switch allowance.'),
- ('E22','Isolated VFD control candidate requires a complete fail-off interface and 3.3V/5V compatibility check; candidate prices are separate.'),
+ ('E22','Spindle VFD control for the Rodent route: RS485 Modbus link from the Rodent to the spindle-kit VFD. Confirm the VFD RS485 terminals and protocol, cable and termination, and define fail-off behavior on link loss.'),
  ('MET-DATUM','Rail datum raw-stock cleanup allowance needs confirmation; the nominal 5/16in offer may need thicker stock to produce a flat finished datum.')]:
     gap(id,byold.get(id,{}).get('item',id),details)
 for s in core['shipping_groups']:
@@ -78,6 +82,7 @@ nuttyship=0 if nuttygoods>=100 else 10.95
 nuttybasis=('Goods are above $100 and qualify for free shipping.' if nuttyship==0 else f'Goods ${nuttygoods:,.2f} are below the $100 free-shipping threshold, so the published $10.95 flat rate applies unless unpriced Rev G fasteners are added to this order.')
 shipments.append(dict(id='SHIP-NUTTY',vendor='Nutty',ids=[r['id'] for r in rows if r['vendor']=='Nutty'],amount_usd=nuttyship,tax_usd=None,basis='Published US48 eligible-merchandise policy; one order. '+nuttybasis+' Each line rounded to cents; checkout may round fractions of a cent differently. Stock and tax not confirmed.'))
 for vendor in ['Amazon','BIQU','AutomationDirect']:
+    if not any(r['vendor']==vendor for r in rows): continue
     shipments.append(dict(id='SHIP-'+vendor,vendor=vendor,ids=[r['id'] for r in rows if r['vendor']==vendor],amount_usd=0,tax_usd=None,basis=('Amazon product pages advertise free delivery to30510; eligible items grouped over35USD.' if vendor=='Amazon' else 'Store advertises free shipping above threshold; combined listed order exceeds threshold. Not a ZIP-specific checkout quote.')))
 pricedvendors={r['vendor'] for r in rows}
 met01=next(r for r in rows if r['id']=='MET01')
@@ -109,7 +114,7 @@ summary=dict(date='2026-09-24',currency='USD',destination='Alto GA30510',status=
 categories=[]
 for c in dict.fromkeys(r['category'] for r in rows): categories.append(dict(category=c,goods_usd=money(sum(r['goods_usd'] for r in rows if r['category']==c))))
 data=dict(summary=summary,rows=rows,shipping=shipments,unpriced=gaps,alternatives=options,categories=categories,
-    superseded_rev_e_offers=superseded,
+    superseded_offers=superseded,
     bracket_redesign_not_adopted=metal['unadopted_plate_bracket_option'],previous_estimate=old,
     input_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in HERE.glob('*-findings.json')})
 (HERE/'audit-data.json').write_text(json.dumps(data,indent=2),encoding='utf8')
@@ -123,10 +128,10 @@ lines=['# CNC / plasma actual-price audit','',
     '| Priced portion | Goods, before tax |','|---|---:|']
 for c in categories: lines.append(f"| {c['category']} | ${c['goods_usd']:,.2f} |")
 lines += ['',f"The current register contains **{len(rows)} priced lines**, **{len(gaps)} remaining scope entries** and a vendor-level shipping register. Every price is linked to a product or supplier. Line quantities are rounded to cents; seller checkout can differ by a cent on fractional-cent fasteners.", '',
-    f"Amazon items total **${amazon:,.2f}**, with advertised free delivery to ZIP 30510 under the recorded order conditions. This includes two 1,000 mm Y modules, one 800 mm X module, the 100 mm Z, the two HGR20 rail kits, five extrusion packs, spindle kit, power supplies, cabinet, cable chains, CB1 and listed Amazon water components. These are source prices, not proof that all mounting and electrical interfaces are finished.", '',
+    f"Amazon items total **${amazon:,.2f}**, with advertised free delivery to ZIP 30510 under the recorded order conditions. This includes two 1,000 mm Y modules, one 800 mm X module, the 100 mm Z, the two HGR20 rail kits, five extrusion packs, spindle kit, power supplies, cabinet, cable chains and listed Amazon water components. These are source prices, not proof that all mounting and electrical interfaces are finished.", '',
     'The [80/20 beam](https://8020.net/40-8080.html) and [16 matching M8 nuts](https://8020.net/40-3915.html) were configured together in a ZIP-30510 cart: **$193.01 goods + $61.30 UPS Ground + $17.80 estimated tax = $272.11**. The temporary cart was cleared after recording the estimate. This tax amount applies only to that cart, not to all suppliers.', '',
     ('Nutty hardware is combined into one order above its $100 advertised free-shipping threshold.' if nuttyship==0 else f'Nutty hardware is combined into one order of ${nuttygoods:,.2f}, below its $100 free-shipping threshold, so the $10.95 flat rate is included; adding the unpriced Rev G fasteners to this order may remove it.')+' No duplicate delivery charge is added for each fastener row. Other blank freight cells remain unknown.', '',
-    *(['**Ordered by the owner:** '+'; '.join(f"{r['id']} {r['item']}, {r['owner_order_status']}" for r in rows if r.get('owner_order_status'))+'. Listed prices stay in this register until the price paid is recorded. See the [rail-kit receiving check](../../../output/receiving/HGR20-RAIL-KITS.md).', ''] if any(r.get('owner_order_status') for r in rows) else []),
+    *(['**Ordered by the owner:** '+'; '.join(f"{r['id']} {r['item']}, {r['owner_order_status']}" for r in rows if r.get('owner_order_status'))+'. Listed prices stay in this register until the price paid is recorded. See the [drive-module receiving check](../../../output/receiving/MOTION-MODULES.md).', ''] if any(r.get('owner_order_status') for r in rows) else []),
     '## Corrections to the old estimate','',
     f'- Recorded the owner\'s 12 x 12 inch aluminum pieces, provisionally one at 1/2 inch and one at 3/8 inch. The 1/2 inch piece geometrically fits the Z carrier and smaller pieces. Qualifying its alloy and usable finished thickness can avoid MET08 ($58.74), giving ${summary["priced_scope_before_tax_usd"]-58.74:,.2f} for the current incomplete priced scope. No credit is applied before qualification, and no duplicate offcut savings are counted. See [owned aluminum allocation](OWNED-ALUMINUM-FIT.md).',
     f'- The ${met01["goods_usd"]:,.2f} square-tube line is a high retail reference, not a lowest-price buying recommendation. Bobco posts ${97.5*met01["quantity"]:,.2f} for {met01["quantity"]} matching 20-foot A500 Grade B bars, but advertises Los Angeles pickup; Georgia delivery is unquoted. Looper\'s and YAGI comparisons have further specification/availability limits. Nearby SteelMart Gainesville and Sabel Winder require quotations. See [tube comparisons](TUBE-PRICE-COMPARISON.md).',
@@ -138,7 +143,7 @@ lines += ['',f"The current register contains **{len(rows)} priced lines**, **{le
     '- Counted fabricated plugs, supports and clamps as raw stock plus owner work. No shop labor is added a second time.',
     '- Kept price evidence separate from compatibility. Backorders, timer contact checks, hose restrictions and unresolved interfaces are visible rather than being assumed complete.', '',
     '## Rev G reconciliation, 26 September 2026','',
-    f"Quantities were reconciled with the Rev G cut list (`output/release-review/RevG-CAD/cutlist.json`). {len(superseded)} offers that only served the superseded Rev E bed are kept as dated evidence in `audit-data.json` (`superseded_rev_e_offers`) and are no longer priced: "+', '.join(f"{r['id']} ${r['goods_usd']:,.2f}" for r in superseded)+'. MET01 is five 20 ft tubes (30 Rev G blanks), MET02 three 8 ft bars (the controls cage raised the 1 x 1 tube list to 7,730 mm), square nuts 96, spoilboard screws 25 and M8x80 drawdowns 10 (Nutty minimums).', '',
+    f"Quantities were reconciled with the Rev G cut list (`output/release-review/RevG-CAD/cutlist.json`) and the owner's controller decision. {len(superseded)} offers are no longer priced and are kept as dated evidence in `audit-data.json` (`superseded_offers`): "+', '.join(f"{r['id']} ${r['goods_usd']:,.2f}" for r in superseded)+'. The controller items went because the owner chose BTT Rodent + grblHAL on 26 September 2026 (the owner already owns a Kraken); the Rodent board itself is unpriced (CA-RODENT). MET01 is five 20 ft tubes (30 Rev G blanks), MET02 three 8 ft bars (the controls cage raised the 1 x 1 tube list to 7,730 mm), square nuts 96, spoilboard screws 25 and M8x80 drawdowns 10 (Nutty minimums).', '',
     '`check_revg_stock_fit.py` packs the actual Rev G flat parts onto each registered sheet and plate size (`revg-stock-fit.json`). Every existing row covers its parts except the 6 mm plate, where two tool cradles do not fit; the 3/4 in MDF spoilboards now need only a half sheet. Two thicknesses had no row at all: 2 mm steel rack guides and 3/8 in aluminum panel ties. Those, the extra 6 mm plate, the sleeve round bar and the 30 x 30 x 3 rack-fork tube are listed as remaining scope, as are the Rev G screws, washers and locator pins without an offer. The lower subtotal is therefore NOT a cheaper Rev G build.', '',
     '**The Excel workbook has not been regenerated.** `build_budget.mjs` needs the private `@oai/artifact-tool` runtime, which is not in this repository. Until it is rebuilt, `budget-data.json`, `audit-data.json` and this page are current; the workbook still shows Rev E quantities.', '',
     '## Cost reductions requiring an engineering revision','',

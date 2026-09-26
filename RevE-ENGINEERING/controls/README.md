@@ -1,5 +1,7 @@
 # Kraken V1.1 hybrid motion controller — engineering implementation
 
+> **Not the build baseline (26 September 2026).** The owner chose the BTT Rodent with grblHAL (see `output/release-review/RevE-ENGINEERING/PLASMA-COMPATIBILITY.md`). This Kraken port, its pin map and commissioning notes are kept as a reference and fallback. The Rodent port has not been written yet.
+
 This folder contains an actual compiled grblHAL STM32H7 board port for the Kraken V1.1, with X/Y1/Y2/Z on its four S1–S4 integrated TMC2160 channels. It has independent dual-Y homing and the upstream plasma plugin's live Z step injection. No external stepper drivers are used. The binary passed the static and compiled-image checks recorded in `verification.json`; it has **not** been booted or electrically tested on a Kraken. This is a prototype commissioning build, not a claim of completed machine acceptance.
 
 ## Delivered files
