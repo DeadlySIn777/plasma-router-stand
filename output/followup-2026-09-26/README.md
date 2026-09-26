@@ -4,6 +4,10 @@
 
 ## What changed in this follow-up
 
+- **Base branch merged a third time: development variants (`ca9728b`, 22:15 UTC).**
+  - **What arrived:** the other session added a small-machine RapidChange ATC dock, a full-sheet 4x8 machine layout and shared removable-table locators, in `variants/`. They were merged unchanged.
+  - **Conflicting records:** the variants' [requirements record](../../variants/requirements.json) lists "Keep bed conversion within the machine footprint" and "Preserve the preference for Kraken onboard motor drivers" as confirmed requests. This session recorded the one-piece bed that leaves through the front on a hoist, and the BTT Rodent. These records conflict, and only the owner can settle them.
+  - **If the other session's records stand:** Rev J's hoisted bed is not what the owner wants. This branch would then keep only its receiving checks, rail-length explanation and cost-register work.
 - **Base branch merged again: the other session's Rev I (`4a67463`, 21:15 UTC).**
   - **What Rev I is:** the next step of the six-panel line. It adds a guided floating/breakaway plasma head (insert unbored until the torch is measured), 14 mm storage rods, bed-joint calculations, drain, strainer and hose supports, a corrected cabinet, and Kraken V1.1 terminal circuits with isolated head inputs.
   - **How it merged:** only `README.md` conflicted. It now presents Rev J and Rev I side by side, without choosing between them.
@@ -72,7 +76,7 @@ Rev J implements the bed answers. Rev G's six manual panels and MDF spoilboards 
 
 **Still needed from the owner:**
 
-1. **Which line:** this branch's Rev J one-piece module, which follows the requirement above, or the other session's six-panel Rev I (which also has the new head, plumbing and control circuits)? Both are in the repository, and neither is marked the single current design. If you choose Rev J, the next step is to fold Rev I's head, plumbing, cabinet, structure and control work into it. If you choose Rev I, this branch's bed module is dropped, and the Rodent choice and cost register would need carrying over. **Controller:** you chose the Rodent here, but Rev I's circuits use the Kraken, so please confirm. Please give design work to one session at a time; two sessions working in parallel is how the designs split.
+1. **Which line:** this branch's Rev J one-piece module, which follows the requirement above, or the other session's six-panel Rev I (which also has the new head, plumbing and control circuits)? Both are in the repository, and neither is marked the single current design. If you choose Rev J, the next step is to fold Rev I's head, plumbing, cabinet, structure and control work into it. If you choose Rev I, this branch's bed module is dropped, and the Rodent choice and cost register would need carrying over. **Controller:** you chose the Rodent here, but Rev I's circuits and the variants' requirements record use the Kraken, so please confirm. **Bed conversion:** the variants' record says it stays within the machine footprint, while Rev J lifts the bed out on a hoist; please say which you want. Please give design work to one session at a time; two sessions working in parallel is how the designs split.
 2. **Hoist and bed stand:** the ceiling or beam height available. With the recommended sling the hook is at about 1.99 m with the module raised, plus the hoist's own headroom. Also the hoist and trolley to be bought, and where the module stand goes; it needs about 1.5 m of floor in front of the machine.
 3. **Cutter photos:** the VIV ARC CUT-50 rating plate, front and rear panels, and torch connector. These identify the version, start method and any CNC/arc-voltage connections.
 4. **Orders:** confirm the X and Z drive modules on Monday, the quantities and price paid, and when the HGR20 guide kits are ordered.
