@@ -14,6 +14,10 @@ Plasma and router CNC table. Public working design for **800 mm X / 1000 mm Y / 
 
 Rev J does not yet contain Rev I's head, plumbing, cabinet, structure or control-circuit work. Rev I has no one-piece bed and follows the Kraken. **Which line continues is the owner's decision**; the [26 September follow-up](output/followup-2026-09-26/README.md) lists what each would need.
 
+**Newer development variants (other session, 22:15 UTC):** [small-machine RapidChange ATC, a full-sheet 4x8 machine, and repeatable removable table interfaces](variants/README.md). These have their own CAD and checks. Their supplier interfaces and physical qualification remain open, and they do not replace or inherit the Rev I release status.
+
+**Conflicting owner records.** The variants' [requirements record](variants/requirements.json) lists these among its confirmed requests: "Keep bed conversion within the machine footprint" and "Preserve the preference for Kraken onboard motor drivers". This session recorded something different on the same day: the owner's one-piece bed, lifted out of the front of the machine on a hoist, and the BTT Rodent controller. Only the owner can settle which records stand.
+
 ## Open the designs
 
 **Rev J, one-piece bed** (`build_revj.py`):
@@ -34,6 +38,7 @@ Rev J does not yet contain Rev I's head, plumbing, cabinet, structure or control
 - [Every original audit finding](output/design-finish-2026-09-26/FINDING-DISPOSITION.md)
 - [Remaining engineering and measured inputs](output/design-finish-2026-09-26/OPEN-ITEMS.md)
 - [Mechanical component schedule](output/release-review/RevI-CAD/cutlist.csv); [selected controls schedule](output/design-finish-2026-09-26/controls/selected-components.json)
+- [Development variants: small-machine ATC dock, full-sheet 4x8 machine, shared removable-table locators](variants/README.md)
 
 **Shared and earlier:**
 

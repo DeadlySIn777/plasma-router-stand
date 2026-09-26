@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "scope": "Source-bound development package and independent STEP round trip only; not fabrication, handling, supplier-interface or structural release.",
+  "checks": {
+    "exact_layout_states": true,
+    "exact_static_states": true,
+    "reports_sources_unchanged": true,
+    "layout_source_binding": true,
+    "static_source_binding": true,
+    "preview_source_binding": true,
+    "preview_exact_artifacts": true,
+    "preview_artifact_binding": true,
+    "static_report_passed": true,
+    "source_files_unchanged": true,
+    "artifact_files_unchanged": true
+  },
+  "states": {
+    "router": {
+      "part_count": 347,
+      "step_solids": 347,
+      "valid": true,
+      "bbox_max_delta_mm": 0.0,
+      "volume_delta_mm3": 2.849102020263672e-05,
+      "part_count_matches": true,
+      "volume_matches": true,
+      "bbox_matches": true,
+      "step_binding_matches": true,
+      "reported_geometry_passes": true,
+      "reported_static_passes": true,
+      "physical_holds_preserved": true,
+      "passed": true
+    },
+    "plasma_layout": {
+      "part_count": 347,
+      "step_solids": 347,
+      "valid": true,
+      "bbox_max_delta_mm": 0.0,
+      "volume_delta_mm3": 4.506111145019531e-05,
+      "part_count_matches": true,
+      "volume_matches": true,
+      "bbox_matches": true,
+      "step_binding_matches": true,
+      "reported_geometry_passes": true,
+      "reported_static_passes": true,
+      "physical_holds_preserved": true,
+      "passed": true
+    }
+  },
+  "sources_unchanged": true,
+  "source_sha256": {
+    "variants/48x96/layout.py": "3f6902e36323b0eecc4f3576fd9848f60146d448d197cfdf6062f27e468b09b4",
+    "variants/48x96/check_static.py": "f0f6cb34641386ae16bac5716909273d5793e1108b40c16aa48eed0114068acf",
+    "variants/48x96/render.py": "401753bddfbe7bad69c793d3abd8d9790651c823db62081775cd215cf98247ad",
+    "variants/48x96/check_package.py": "f143421941ee0e0bd6524b053abeb6496d4d43ef5315dff32ec39dcd63119508"
+  },
+  "artifact_sha256": {
+    "variants/48x96/README.md": "c1d6bbd62d173853e3fd5ed34c8a8a0a45610048fd2f16846dc7bb835510421f",
+    "variants/48x96/router.step": "ffe3d9a3ac9a4f7a86ee9339d606588f831223677044cb32894e42b9863c8074",
+    "variants/48x96/plasma_layout.step": "7858114f5827d8f3c7d1a24be41dc21841e16048477071d6657475312a65c028",
+    "variants/48x96/layout-verification.json": "9700a76a961cb99eec5b6b26edd87160a4fea3905166e65bf227dadb0e7106be",
+    "variants/48x96/static-verification.json": "81c920f0fcdb02bf8732c01f58ab00fa8c5f2486b4e5993cfbb80a136908772b",
+    "variants/48x96/preview-verification.json": "fed2118575e37cc1e7a53b5c1b2a827d2b5d43c88b6cf82d303c62580b5a6752",
+    "variants/48x96/layout-router.png": "a9e05939e9908d58fee6e50d83031cbf4ba32d420d1d659c8c0c71badd20f449",
+    "variants/48x96/layout-plasma.png": "d15a602275047dec8c4376d099b75e77e4a5f490502fdab32a3e615de5b75d8a",
+    "variants/48x96/layout-plan.png": "33ffe91f1d13d72ee897f31df561d95d3ce7d4e73a88e1fbcc699e6df8bf9cff",
+    "variants/48x96/layout-plan.svg": "95d037f0fbdb017e970dbe2a6be2856ac0e06e403218b5d62c0f5ab05287aba3"
+  },
+  "fabrication_ready": false,
+  "conversion_paths_verified": false,
+  "whole_machine_strength_qualified": false,
+  "supplier_interfaces_verified": false
+}

@@ -1,0 +1,1073 @@
+{
+  "source_sha256_before": {
+    "variants\\common\\location\\locator_dock.py": "56ee3088e2255c52f6098a3f148077d155177ca4eb425d4b0dcc07c44c81645c",
+    "variants\\common\\location\\verify_location.py": "e570d4d1144b18ae21d195b31b4da47672f797686e8017d28f14731aaa6907a1",
+    "output\\release-review\\RevE-ENGINEERING\\cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "variants\\common\\location\\source-data.json": "1705dd98b50d4b1236d009b68e8dad3361f14819e3c7810077dd98343d89c42a"
+  },
+  "source_sha256_after": {
+    "variants\\common\\location\\locator_dock.py": "56ee3088e2255c52f6098a3f148077d155177ca4eb425d4b0dcc07c44c81645c",
+    "variants\\common\\location\\verify_location.py": "e570d4d1144b18ae21d195b31b4da47672f797686e8017d28f14731aaa6907a1",
+    "output\\release-review\\RevE-ENGINEERING\\cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "variants\\common\\location\\source-data.json": "1705dd98b50d4b1236d009b68e8dad3361f14819e3c7810077dd98343d89c42a"
+  },
+  "installed_static": {
+    "parts": [
+      {
+        "id": "COMMON_LOC_1_PIN_BLOCK",
+        "part_number": "LOC_PIN_BLOCK_60_40_12_CB_M6",
+        "group": "locator_fixed",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 25057.23218,
+        "bounds_mm": [
+          50.0,
+          40.0,
+          0.0,
+          110.0,
+          80.0,
+          12.0
+        ],
+        "notes": [
+          "Support entire block on rigid grid; four M6 mounting screws. Two \u00d84 in-situ dowels transfer lateral load to grid.",
+          "Four \u00d811 counterbores6deep accept flush M6 socket heads. Grid thickness/thread attachment must be specified by integrator.",
+          "Pair-bore the central shank seat for 0.010\u20130.015 mm measured diametral interference; CAD \u00d86 is nominal only.",
+          "Press pin shoulder against top face. Do not weld or coat fitted bores. Recheck clocking and fit after pressing."
+        ]
+      },
+      {
+        "id": "COMMON_LOC_1_PIN",
+        "part_number": "DIN6321-10-18-B",
+        "group": "locator_fixed",
+        "material": "Hardened ground steel",
+        "status": "SUPPLIER INTERFACE ENVELOPE; VERIFY CURRENT DRAWING AND DELIVERED PART",
+        "purchased_envelope": true,
+        "volume_mm3": 1530.36321,
+        "bounds_mm": [
+          75.00475,
+          55.00475,
+          3.0,
+          84.99525,
+          64.99525,
+          30.0
+        ],
+        "notes": [
+          "JW Winco DIN 6321-10-18-B / -C",
+          "Published diameter/taper/shank envelope; root relief and centre holes omitted.",
+          "Round pin fixes two lateral axes."
+        ]
+      },
+      {
+        "id": "COMMON_LOC_1_RECEIVER",
+        "part_number": "LOC_RECEIVER_60_40_12_TAP_M5",
+        "group": "locator_carrier",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 25712.81973,
+        "bounds_mm": [
+          50.0,
+          40.0,
+          14.0,
+          110.0,
+          80.0,
+          26.0
+        ],
+        "notes": [
+          "Four top-entry M5 screws plus two in-situ \u00d84 dowels attach to a metal carrier lug; clearance bolts alone are not a datum.",
+          "M5x0.8 tapped THRU; minor\u00d84.2 envelope, helicalthreads omitted. Limit installedscrewpenetration to10.5mm so ends remain inside12mm receiver, above fixedblock. M5x16 through6.35mm wing penetrates9.65mm beforewasher allowance.",
+          "Press-in bushing is replaceable using an arbor press; receiver remains a separately removable service cartridge.",
+          "Match bore to delivered bushing for .010\u2013.020 mm diametral interference. Measure installed bore and verify 10F7 remains valid.",
+          "Replacement/disturbance of cartridge or pin requires requalification and new WCS check. No tight bush directly in HDPE."
+        ]
+      },
+      {
+        "id": "COMMON_LOC_1_BUSH",
+        "part_number": "DIN179-B10-12-A-NI",
+        "group": "locator_carrier",
+        "material": "Hardened stainless drill bushing",
+        "status": "SUPPLIER INTERFACE ENVELOPE; VERIFY INSTALLED FIT",
+        "purchased_envelope": true,
+        "volume_mm3": 1174.22913,
+        "bounds_mm": [
+          72.5,
+          52.5,
+          14.0,
+          87.5,
+          67.5,
+          26.0
+        ],
+        "notes": [
+          "JW Winco DIN 179-B10-12-A-NI",
+          "OD15 n6; ID10 F7; length12. Nominal edge breaks omitted. Installed bore must be gauged after press fit."
+        ]
+      },
+      {
+        "id": "COMMON_LOC_2_PIN_BLOCK",
+        "part_number": "LOC_PIN_BLOCK_60_40_12_CB_M6",
+        "group": "locator_fixed",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 25057.23218,
+        "bounds_mm": [
+          328.666667,
+          343.333333,
+          0.0,
+          388.666667,
+          383.333333,
+          12.0
+        ],
+        "notes": [
+          "Support entire block on rigid grid; four M6 mounting screws. Two \u00d84 in-situ dowels transfer lateral load to grid.",
+          "Four \u00d811 counterbores6deep accept flush M6 socket heads. Grid thickness/thread attachment must be specified by integrator.",
+          "Pair-bore the central shank seat for 0.010\u20130.015 mm measured diametral interference; CAD \u00d86 is nominal only.",
+          "Press pin shoulder against top face. Do not weld or coat fitted bores. Recheck clocking and fit after pressing."
+        ]
+      },
+      {
+        "id": "COMMON_LOC_2_PIN",
+        "part_number": "DIN6321-10-18-C",
+        "group": "locator_fixed",
+        "material": "Hardened ground steel",
+        "status": "SUPPLIER INTERFACE ENVELOPE; VERIFY CURRENT DRAWING AND DELIVERED PART",
+        "purchased_envelope": true,
+        "volume_mm3": 674.85294,
+        "bounds_mm": [
+          354.259464,
+          359.140895,
+          3.0,
+          363.073869,
+          367.525771,
+          30.0
+        ],
+        "notes": [
+          "JW Winco DIN 6321-10-18-B / -C",
+          "Published diameter/taper/shank envelope; root relief and centre holes omitted.",
+          "Diamond non-contact relief is schematic. Require measured >=0.20 mm free travel along pin-pair line at full insertion; do not fabricate from this purchased envelope."
+        ]
+      },
+      {
+        "id": "COMMON_LOC_2_RECEIVER",
+        "part_number": "LOC_RECEIVER_60_40_12_TAP_M5",
+        "group": "locator_carrier",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 25712.81973,
+        "bounds_mm": [
+          328.666667,
+          343.333333,
+          14.0,
+          388.666667,
+          383.333333,
+          26.0
+        ],
+        "notes": [
+          "Four top-entry M5 screws plus two in-situ \u00d84 dowels attach to a metal carrier lug; clearance bolts alone are not a datum.",
+          "M5x0.8 tapped THRU; minor\u00d84.2 envelope, helicalthreads omitted. Limit installedscrewpenetration to10.5mm so ends remain inside12mm receiver, above fixedblock. M5x16 through6.35mm wing penetrates9.65mm beforewasher allowance.",
+          "Press-in bushing is replaceable using an arbor press; receiver remains a separately removable service cartridge.",
+          "Match bore to delivered bushing for .010\u2013.020 mm diametral interference. Measure installed bore and verify 10F7 remains valid.",
+          "Replacement/disturbance of cartridge or pin requires requalification and new WCS check. No tight bush directly in HDPE."
+        ]
+      },
+      {
+        "id": "COMMON_LOC_2_BUSH",
+        "part_number": "DIN179-B10-12-A-NI",
+        "group": "locator_carrier",
+        "material": "Hardened stainless drill bushing",
+        "status": "SUPPLIER INTERFACE ENVELOPE; VERIFY INSTALLED FIT",
+        "purchased_envelope": true,
+        "volume_mm3": 1174.22913,
+        "bounds_mm": [
+          351.166667,
+          355.833333,
+          14.0,
+          366.166667,
+          370.833333,
+          26.0
+        ],
+        "notes": [
+          "JW Winco DIN 179-B10-12-A-NI",
+          "OD15 n6; ID10 F7; length12. Nominal edge breaks omitted. Installed bore must be gauged after press fit."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_1_FIXED",
+        "part_number": "LOC_Z_PRIMARY",
+        "group": "locator_fixed",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 18981.16179,
+        "bounds_mm": [
+          5.0,
+          5.0,
+          0.0,
+          45.0,
+          45.0,
+          14.0
+        ],
+        "notes": [
+          "M6 central tapped hole, \u00d85 minor envelope; thread engagement11.4mm.",
+          "Three primary hard seats establish Z/pitch/roll. Machine installed bearing faces coplanar within0.02mm.",
+          "Two M8 counterbored grid mounts; chassis mating attachment must be integrated."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_1_LAND",
+        "part_number": "LOC_CARRIER_LAND_40_40_12",
+        "group": "locator_carrier",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 18112.59299,
+        "bounds_mm": [
+          5.0,
+          5.0,
+          14.0,
+          45.0,
+          45.0,
+          26.0
+        ],
+        "notes": [
+          "Attach to metal frame with direct bearing beneath frame rail; keep weld distortion out of machined bottom face.",
+          "12x9 clearance slot is NOT a locator. Thermal travel minimum1.5mm transverse to slot at M6 shank.",
+          "Clamps load only metal. Set600\u2013900N verified preload per station; do not infer torque from dry generic charts."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_1_WASHER",
+        "part_number": "WASHER_M6_OD18_T1.6",
+        "group": "locator_clamp",
+        "material": "Steel",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 352.4113,
+        "bounds_mm": [
+          16.0,
+          16.0,
+          26.0,
+          34.0,
+          34.0,
+          27.6
+        ],
+        "notes": []
+      },
+      {
+        "id": "COMMON_SUP_1_DRAWBOLT",
+        "part_number": "ISO4762_M6x25",
+        "group": "locator_clamp",
+        "material": "Steel class8.8 minimum",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 1178.09725,
+        "bounds_mm": [
+          20.0,
+          20.0,
+          2.6,
+          30.0,
+          30.0,
+          33.6
+        ],
+        "notes": [
+          "Nominal thread/head envelope; shank25 below head.600\u2013900N verified clamp preload. Tool access must be reserved above this bolt."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_2_FIXED",
+        "part_number": "LOC_Z_PRIMARY",
+        "group": "locator_fixed",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 18981.16179,
+        "bounds_mm": [
+          393.666667,
+          5.0,
+          0.0,
+          433.666667,
+          45.0,
+          14.0
+        ],
+        "notes": [
+          "M6 central tapped hole, \u00d85 minor envelope; thread engagement11.4mm.",
+          "Three primary hard seats establish Z/pitch/roll. Machine installed bearing faces coplanar within0.02mm.",
+          "Two M8 counterbored grid mounts; chassis mating attachment must be integrated."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_2_LAND",
+        "part_number": "LOC_CARRIER_LAND_40_40_12",
+        "group": "locator_carrier",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 18112.59299,
+        "bounds_mm": [
+          393.666667,
+          5.0,
+          14.0,
+          433.666667,
+          45.0,
+          26.0
+        ],
+        "notes": [
+          "Attach to metal frame with direct bearing beneath frame rail; keep weld distortion out of machined bottom face.",
+          "12x9 clearance slot is NOT a locator. Thermal travel minimum1.5mm transverse to slot at M6 shank.",
+          "Clamps load only metal. Set600\u2013900N verified preload per station; do not infer torque from dry generic charts."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_2_WASHER",
+        "part_number": "WASHER_M6_OD18_T1.6",
+        "group": "locator_clamp",
+        "material": "Steel",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 352.4113,
+        "bounds_mm": [
+          404.666667,
+          16.0,
+          26.0,
+          422.666667,
+          34.0,
+          27.6
+        ],
+        "notes": []
+      },
+      {
+        "id": "COMMON_SUP_2_DRAWBOLT",
+        "part_number": "ISO4762_M6x25",
+        "group": "locator_clamp",
+        "material": "Steel class8.8 minimum",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 1178.09725,
+        "bounds_mm": [
+          408.666667,
+          20.0,
+          2.6,
+          418.666667,
+          30.0,
+          33.6
+        ],
+        "notes": [
+          "Nominal thread/head envelope; shank25 below head.600\u2013900N verified clamp preload. Tool access must be reserved above this bolt."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_3_FIXED",
+        "part_number": "LOC_Z_PRIMARY",
+        "group": "locator_fixed",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 18981.16179,
+        "bounds_mm": [
+          5.0,
+          378.333333,
+          0.0,
+          45.0,
+          418.333333,
+          14.0
+        ],
+        "notes": [
+          "M6 central tapped hole, \u00d85 minor envelope; thread engagement11.4mm.",
+          "Three primary hard seats establish Z/pitch/roll. Machine installed bearing faces coplanar within0.02mm.",
+          "Two M8 counterbored grid mounts; chassis mating attachment must be integrated."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_3_LAND",
+        "part_number": "LOC_CARRIER_LAND_40_40_12",
+        "group": "locator_carrier",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 18112.59299,
+        "bounds_mm": [
+          5.0,
+          378.333333,
+          14.0,
+          45.0,
+          418.333333,
+          26.0
+        ],
+        "notes": [
+          "Attach to metal frame with direct bearing beneath frame rail; keep weld distortion out of machined bottom face.",
+          "12x9 clearance slot is NOT a locator. Thermal travel minimum1.5mm transverse to slot at M6 shank.",
+          "Clamps load only metal. Set600\u2013900N verified preload per station; do not infer torque from dry generic charts."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_3_WASHER",
+        "part_number": "WASHER_M6_OD18_T1.6",
+        "group": "locator_clamp",
+        "material": "Steel",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 352.4113,
+        "bounds_mm": [
+          16.0,
+          389.333333,
+          26.0,
+          34.0,
+          407.333333,
+          27.6
+        ],
+        "notes": []
+      },
+      {
+        "id": "COMMON_SUP_3_DRAWBOLT",
+        "part_number": "ISO4762_M6x25",
+        "group": "locator_clamp",
+        "material": "Steel class8.8 minimum",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 1178.09725,
+        "bounds_mm": [
+          20.0,
+          393.333333,
+          2.6,
+          30.0,
+          403.333333,
+          33.6
+        ],
+        "notes": [
+          "Nominal thread/head envelope; shank25 below head.600\u2013900N verified clamp preload. Tool access must be reserved above this bolt."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_4_FIXED",
+        "part_number": "LOC_Z_SUPPLEMENTARY",
+        "group": "locator_fixed",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 18247.72429,
+        "bounds_mm": [
+          393.666667,
+          378.333333,
+          0.0,
+          433.666667,
+          418.333333,
+          13.5
+        ],
+        "notes": [
+          "M6 central tapped hole model uses \u00d85 minor bore; engagement11.4 mm. Threads omitted.",
+          "Two M8 counterbored grid mounting holes; rigid attachment beneath this block must be designed in integrating chassis.",
+          "Machine three primary top bearing lands coplanar within0.02mm after fixture installation; strip paint from contact.",
+          "Fourth station is a fitted .50mm nominal shim stack: fit with three primary seats loaded, then lock. Do not jack carrier off its datums."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_4_SHIM",
+        "part_number": "LOC_FITTED_SHIM_NOMINAL_050",
+        "group": "locator_fixed",
+        "material": "Precision steel shim",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 604.04316,
+        "bounds_mm": [
+          393.666667,
+          378.333333,
+          13.5,
+          433.666667,
+          418.333333,
+          14.0
+        ],
+        "notes": [
+          "Shown .50mm is nominal; actual stack is fitted after three-seat setup."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_4_LAND",
+        "part_number": "LOC_CARRIER_LAND_40_40_12",
+        "group": "locator_carrier",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 18112.59299,
+        "bounds_mm": [
+          393.666667,
+          378.333333,
+          14.0,
+          433.666667,
+          418.333333,
+          26.0
+        ],
+        "notes": [
+          "Attach to metal frame with direct bearing beneath frame rail; keep weld distortion out of machined bottom face.",
+          "12x9 clearance slot is NOT a locator. Thermal travel minimum1.5mm transverse to slot at M6 shank.",
+          "Clamps load only metal. Set600\u2013900N verified preload per station; do not infer torque from dry generic charts."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_4_WASHER",
+        "part_number": "WASHER_M6_OD18_T1.6",
+        "group": "locator_clamp",
+        "material": "Steel",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 352.4113,
+        "bounds_mm": [
+          404.666667,
+          389.333333,
+          26.0,
+          422.666667,
+          407.333333,
+          27.6
+        ],
+        "notes": []
+      },
+      {
+        "id": "COMMON_SUP_4_DRAWBOLT",
+        "part_number": "ISO4762_M6x25",
+        "group": "locator_clamp",
+        "material": "Steel class8.8 minimum",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 1178.09725,
+        "bounds_mm": [
+          408.666667,
+          393.333333,
+          2.6,
+          418.666667,
+          403.333333,
+          33.6
+        ],
+        "notes": [
+          "Nominal thread/head envelope; shank25 below head.600\u2013900N verified clamp preload. Tool access must be reserved above this bolt."
+        ]
+      }
+    ],
+    "part_count": 25,
+    "broadphase_pairs": 21,
+    "unresolved_intersections": [],
+    "documented_intersections": [
+      {
+        "a": "COMMON_SUP_1_FIXED",
+        "b": "COMMON_SUP_1_DRAWBOLT",
+        "intersection_mm3": 98.48893,
+        "reason": "Nominal M6 thread engagement, \u00d85 minor versus \u00d86 external-thread envelope; threads intentionally not helical."
+      },
+      {
+        "a": "COMMON_SUP_2_FIXED",
+        "b": "COMMON_SUP_2_DRAWBOLT",
+        "intersection_mm3": 98.48893,
+        "reason": "Nominal M6 thread engagement, \u00d85 minor versus \u00d86 external-thread envelope; threads intentionally not helical."
+      },
+      {
+        "a": "COMMON_SUP_3_FIXED",
+        "b": "COMMON_SUP_3_DRAWBOLT",
+        "intersection_mm3": 98.48893,
+        "reason": "Nominal M6 thread engagement, \u00d85 minor versus \u00d86 external-thread envelope; threads intentionally not helical."
+      },
+      {
+        "a": "COMMON_SUP_4_FIXED",
+        "b": "COMMON_SUP_4_DRAWBOLT",
+        "intersection_mm3": 94.16924,
+        "reason": "Nominal M6 thread engagement, \u00d85 minor versus \u00d86 external-thread envelope; threads intentionally not helical."
+      }
+    ],
+    "note": "Positive-volume static interference test, not a strength or motion certification."
+  },
+  "protected_static": {
+    "parts": [
+      {
+        "id": "COMMON_LOC_1_PIN_BLOCK",
+        "part_number": "LOC_PIN_BLOCK_60_40_12_CB_M6",
+        "group": "locator_fixed",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 25057.23218,
+        "bounds_mm": [
+          50.0,
+          40.0,
+          0.0,
+          110.0,
+          80.0,
+          12.0
+        ],
+        "notes": [
+          "Support entire block on rigid grid; four M6 mounting screws. Two \u00d84 in-situ dowels transfer lateral load to grid.",
+          "Four \u00d811 counterbores6deep accept flush M6 socket heads. Grid thickness/thread attachment must be specified by integrator.",
+          "Pair-bore the central shank seat for 0.010\u20130.015 mm measured diametral interference; CAD \u00d86 is nominal only.",
+          "Press pin shoulder against top face. Do not weld or coat fitted bores. Recheck clocking and fit after pressing."
+        ]
+      },
+      {
+        "id": "COMMON_LOC_1_PIN",
+        "part_number": "DIN6321-10-18-B",
+        "group": "locator_fixed",
+        "material": "Hardened ground steel",
+        "status": "SUPPLIER INTERFACE ENVELOPE; VERIFY CURRENT DRAWING AND DELIVERED PART",
+        "purchased_envelope": true,
+        "volume_mm3": 1530.36321,
+        "bounds_mm": [
+          75.00475,
+          55.00475,
+          3.0,
+          84.99525,
+          64.99525,
+          30.0
+        ],
+        "notes": [
+          "JW Winco DIN 6321-10-18-B / -C",
+          "Published diameter/taper/shank envelope; root relief and centre holes omitted.",
+          "Round pin fixes two lateral axes."
+        ]
+      },
+      {
+        "id": "COMMON_LOC_2_PIN_BLOCK",
+        "part_number": "LOC_PIN_BLOCK_60_40_12_CB_M6",
+        "group": "locator_fixed",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 25057.23218,
+        "bounds_mm": [
+          328.666667,
+          343.333333,
+          0.0,
+          388.666667,
+          383.333333,
+          12.0
+        ],
+        "notes": [
+          "Support entire block on rigid grid; four M6 mounting screws. Two \u00d84 in-situ dowels transfer lateral load to grid.",
+          "Four \u00d811 counterbores6deep accept flush M6 socket heads. Grid thickness/thread attachment must be specified by integrator.",
+          "Pair-bore the central shank seat for 0.010\u20130.015 mm measured diametral interference; CAD \u00d86 is nominal only.",
+          "Press pin shoulder against top face. Do not weld or coat fitted bores. Recheck clocking and fit after pressing."
+        ]
+      },
+      {
+        "id": "COMMON_LOC_2_PIN",
+        "part_number": "DIN6321-10-18-C",
+        "group": "locator_fixed",
+        "material": "Hardened ground steel",
+        "status": "SUPPLIER INTERFACE ENVELOPE; VERIFY CURRENT DRAWING AND DELIVERED PART",
+        "purchased_envelope": true,
+        "volume_mm3": 674.85294,
+        "bounds_mm": [
+          354.259464,
+          359.140895,
+          3.0,
+          363.073869,
+          367.525771,
+          30.0
+        ],
+        "notes": [
+          "JW Winco DIN 6321-10-18-B / -C",
+          "Published diameter/taper/shank envelope; root relief and centre holes omitted.",
+          "Diamond non-contact relief is schematic. Require measured >=0.20 mm free travel along pin-pair line at full insertion; do not fabricate from this purchased envelope."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_1_FIXED",
+        "part_number": "LOC_Z_PRIMARY",
+        "group": "locator_fixed",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 18981.16179,
+        "bounds_mm": [
+          5.0,
+          5.0,
+          0.0,
+          45.0,
+          45.0,
+          14.0
+        ],
+        "notes": [
+          "M6 central tapped hole, \u00d85 minor envelope; thread engagement11.4mm.",
+          "Three primary hard seats establish Z/pitch/roll. Machine installed bearing faces coplanar within0.02mm.",
+          "Two M8 counterbored grid mounts; chassis mating attachment must be integrated."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_2_FIXED",
+        "part_number": "LOC_Z_PRIMARY",
+        "group": "locator_fixed",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 18981.16179,
+        "bounds_mm": [
+          393.666667,
+          5.0,
+          0.0,
+          433.666667,
+          45.0,
+          14.0
+        ],
+        "notes": [
+          "M6 central tapped hole, \u00d85 minor envelope; thread engagement11.4mm.",
+          "Three primary hard seats establish Z/pitch/roll. Machine installed bearing faces coplanar within0.02mm.",
+          "Two M8 counterbored grid mounts; chassis mating attachment must be integrated."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_3_FIXED",
+        "part_number": "LOC_Z_PRIMARY",
+        "group": "locator_fixed",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 18981.16179,
+        "bounds_mm": [
+          5.0,
+          378.333333,
+          0.0,
+          45.0,
+          418.333333,
+          14.0
+        ],
+        "notes": [
+          "M6 central tapped hole, \u00d85 minor envelope; thread engagement11.4mm.",
+          "Three primary hard seats establish Z/pitch/roll. Machine installed bearing faces coplanar within0.02mm.",
+          "Two M8 counterbored grid mounts; chassis mating attachment must be integrated."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_4_FIXED",
+        "part_number": "LOC_Z_SUPPLEMENTARY",
+        "group": "locator_fixed",
+        "material": "Machined steel, certified yield >=250 MPa",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 18247.72429,
+        "bounds_mm": [
+          393.666667,
+          378.333333,
+          0.0,
+          433.666667,
+          418.333333,
+          13.5
+        ],
+        "notes": [
+          "M6 central tapped hole model uses \u00d85 minor bore; engagement11.4 mm. Threads omitted.",
+          "Two M8 counterbored grid mounting holes; rigid attachment beneath this block must be designed in integrating chassis.",
+          "Machine three primary top bearing lands coplanar within0.02mm after fixture installation; strip paint from contact.",
+          "Fourth station is a fitted .50mm nominal shim stack: fit with three primary seats loaded, then lock. Do not jack carrier off its datums."
+        ]
+      },
+      {
+        "id": "COMMON_SUP_4_SHIM",
+        "part_number": "LOC_FITTED_SHIM_NOMINAL_050",
+        "group": "locator_fixed",
+        "material": "Precision steel shim",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 604.04316,
+        "bounds_mm": [
+          393.666667,
+          378.333333,
+          13.5,
+          433.666667,
+          418.333333,
+          14.0
+        ],
+        "notes": [
+          "Shown .50mm is nominal; actual stack is fitted after three-seat setup."
+        ]
+      },
+      {
+        "id": "COMMON_PIN_CAP_1",
+        "part_number": "LOC_CHIP_CAP_OD22_ID12_L23",
+        "group": "locator_protection",
+        "material": "Steel cap",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 6254.91097,
+        "bounds_mm": [
+          69.0,
+          49.0,
+          12.0,
+          91.0,
+          71.0,
+          35.0
+        ],
+        "notes": [
+          "Gravity slip cap on pin pedestal; 1mm closed end. Fit only after carrier removal; lift off before docking.",
+          "Caps are swarf shields, not watertight seals or load-bearing stops. Clean/dry pins and bushes before docking."
+        ]
+      },
+      {
+        "id": "COMMON_PIN_CAP_2",
+        "part_number": "LOC_CHIP_CAP_OD22_ID12_L23",
+        "group": "locator_protection",
+        "material": "Steel cap",
+        "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+        "purchased_envelope": false,
+        "volume_mm3": 6254.91097,
+        "bounds_mm": [
+          347.666667,
+          352.333333,
+          12.0,
+          369.666667,
+          374.333333,
+          35.0
+        ],
+        "notes": [
+          "Gravity slip cap on pin pedestal; 1mm closed end. Fit only after carrier removal; lift off before docking.",
+          "Caps are swarf shields, not watertight seals or load-bearing stops. Clean/dry pins and bushes before docking."
+        ]
+      }
+    ],
+    "part_count": 11,
+    "broadphase_pairs": 4,
+    "unresolved_intersections": [],
+    "documented_intersections": [],
+    "note": "Positive-volume static interference test, not a strength or motion certification."
+  },
+  "kinematic_constraints": {
+    "rows_6dof": [
+      [
+        0,
+        0,
+        1,
+        0.056990881458962236,
+        -0.056990881458962236,
+        0.0
+      ],
+      [
+        0,
+        0,
+        1,
+        0.056990881458962236,
+        -0.9430091185410377,
+        0.0
+      ],
+      [
+        0,
+        0,
+        1,
+        0.9080547112460556,
+        -0.056990881458962236,
+        0.0
+      ],
+      [
+        1,
+        0,
+        0,
+        0.0,
+        0.03191489361701885,
+        -0.13677811550150937
+      ],
+      [
+        0,
+        1,
+        0,
+        -0.03191489361701885,
+        0.0,
+        0.18237082066867916
+      ],
+      [
+        -0.736414688964886,
+        0.6765304175547099,
+        0,
+        -0.02159139630493591,
+        -0.023502596456324364,
+        1.1630993467024857
+      ]
+    ],
+    "rank": 6,
+    "passed": true,
+    "note": "Only three primary seats included; fourth support fitted after datum setting, not a seventh independent constraint."
+  },
+  "local_extraction": {
+    "passed": true,
+    "motions": [
+      {
+        "part": "COMMON_LOC_1_RECEIVER",
+        "translation_mm": [
+          0,
+          0,
+          35
+        ],
+        "sweep_method": "Exact constant-section prismatic sweep",
+        "clashes": [],
+        "passed": true
+      },
+      {
+        "part": "COMMON_LOC_1_BUSH",
+        "translation_mm": [
+          0,
+          0,
+          35
+        ],
+        "sweep_method": "Exact constant-section prismatic sweep",
+        "clashes": [],
+        "passed": true
+      },
+      {
+        "part": "COMMON_LOC_2_RECEIVER",
+        "translation_mm": [
+          0,
+          0,
+          35
+        ],
+        "sweep_method": "Exact constant-section prismatic sweep",
+        "clashes": [],
+        "passed": true
+      },
+      {
+        "part": "COMMON_LOC_2_BUSH",
+        "translation_mm": [
+          0,
+          0,
+          35
+        ],
+        "sweep_method": "Exact constant-section prismatic sweep",
+        "clashes": [],
+        "passed": true
+      },
+      {
+        "part": "COMMON_SUP_1_LAND",
+        "translation_mm": [
+          0,
+          0,
+          35
+        ],
+        "sweep_method": "Exact constant-section prismatic sweep",
+        "clashes": [],
+        "passed": true
+      },
+      {
+        "part": "COMMON_SUP_2_LAND",
+        "translation_mm": [
+          0,
+          0,
+          35
+        ],
+        "sweep_method": "Exact constant-section prismatic sweep",
+        "clashes": [],
+        "passed": true
+      },
+      {
+        "part": "COMMON_SUP_3_LAND",
+        "translation_mm": [
+          0,
+          0,
+          35
+        ],
+        "sweep_method": "Exact constant-section prismatic sweep",
+        "clashes": [],
+        "passed": true
+      },
+      {
+        "part": "COMMON_SUP_4_LAND",
+        "translation_mm": [
+          0,
+          0,
+          35
+        ],
+        "sweep_method": "Exact constant-section prismatic sweep",
+        "clashes": [],
+        "passed": true
+      }
+    ],
+    "scope": "Only receiver/land/bush removal from fixed localdock after bolts+washers removed; integration mustproveactualcarrier/grid/machine/handmotion.",
+    "screw_removal_paths_included": false
+  },
+  "calculations": {
+    "supplier_fit": {
+      "pin_10g6_mm": [
+        9.986,
+        9.995
+      ],
+      "installed_bush_10F7_mm": [
+        10.013,
+        10.028
+      ],
+      "diametral_clearance_mm": [
+        0.018000000000000682,
+        0.041999999999999815
+      ],
+      "clearance_only_extreme_to_extreme_corner_return_bound_mm": 0.1461148942691377,
+      "target_mm": 0.15,
+      "target_demonstrated": false,
+      "catalog_worst_fit_establishes_combined_target": false,
+      "candidate_measured_maximum_paired_clearance_mm": 0.025,
+      "selected_fit_clearance_only_bound_mm": 0.08697315135067758,
+      "selected_fit_remaining_combined_error_allowance_mm": 0.06302684864932241,
+      "selected_fit_accepted": false,
+      "note": "Bound excludes swarf, wear, face error, joint slip, manufacturing error and temperature; target requires20 actual clean re-seats."
+    },
+    "thermal": {
+      "temperature_change_K": 20,
+      "alpha_al_perK": 2.358e-05,
+      "alpha_hdpe_perK": 0.000117,
+      "alpha_steel_assumption_perK": 1.2e-05,
+      "panel_pin_pitch_mm": 411.9055986779259,
+      "metal_pin_pitch_differential_mm": 0.09539733665380766,
+      "required_measured_diamond_relief_each_direction_mm": 0.2,
+      "diamond_relief_supplier_certified": false,
+      "hdpe_vs_carrier_max_radial_shift_mm": 0.5695093111879391,
+      "hdpe_slot_spec": "M5 screws with OD8 metal compression limiters in12x9 radial slots; OD18 counterbore also radially elongated. Limiters stop .10mm above measured local plastic thickness; steel cap washer bears on limiter, not a crushing clamp on HDPE.",
+      "slot_available_radial_travel_mm": 2,
+      "slot_margin_mm": 1.430490688812061,
+      "four_by_eight_HDPE_steel_differential_over2438p4_mm": 5.120640000000001
+    },
+    "local_load_screen": {
+      "service_horizontal_N": 100,
+      "service_downward_point_N": 100,
+      "service_uplift_N": 100,
+      "load_height_above_metal_land_mm": 100,
+      "tube_section_mm": [
+        25.4,
+        38.1,
+        3.175
+      ],
+      "tube_second_moment_mm4": 66255.58825468751,
+      "tube_simple_support_span_mm": 373.3333333333,
+      "tube_deflection_mm": 0.023712506420856427,
+      "backing_plate_mm": 6.35,
+      "maximum_backing_clear_span_mm": 150,
+      "backing_effective_strip_mm": 50,
+      "backing_deflection_mm": 0.09551542553958096,
+      "backing_bending_stress_MPa": 11.16002232004464,
+      "local_member_deflection_sum_mm": 0.11922793196043739,
+      "actual_carrier_joints_and_grid_included": false,
+      "full_machine_stiffness_qualified": false,
+      "pin_design_screen_load_N": 300,
+      "pin_shank_bending_stress_MPa": 127.32395447351628,
+      "pin_shank_mean_shear_MPa": 10.61032953945969,
+      "nominal_head_bearing_MPa": 3.0,
+      "pin_strength_rating_verified": false,
+      "clamp_preload_per_station_N": [
+        600,
+        900
+      ],
+      "clamp_reaction_path": "M6 screw -> steel washer -> steel carrier landing -> hard seat -> rigid grid; HDPE absent from preload loop.",
+      "minimum_four_clamp_preload_N": 2400,
+      "first_order_max_uplift_at_one_support_N": 126.78571428571668,
+      "lateral_transfer": "Pins -> steelcartridge -> two\u00d84matchdowels -> metalcarrier/grid; do not credit friction. Full chassis/support joints still require design."
+    },
+    "small_existing_machine": {
+      "front_removable_seat_precision_return": false,
+      "six_20100_panel_precision_return": false,
+      "evidence": "bed_cassettes.py front seat two\u00d88.5M8clearanceholes; perbeam\u00d86round/relievedlocators return only to seats; panels have frictionclamps and noXYlocators.",
+      "required_interfaces": [
+        "positively locate each removable front seat to frame",
+        "locate each individual metalpanel/cassette to supported beams",
+        "preserve existingbeamremoval, storage, torchtravel and spoilboardreach"
+      ],
+      "candidate_integrated": false
+    },
+    "sensors": {
+      "dock_present_sensor_proves_pin_seating": false,
+      "dock_present_sensor_proves_clamp_preload": false
+    }
+  },
+  "component_geometry_checks_passed": true,
+  "machine_integrated": false,
+  "full_machine_release": false,
+  "repeatability_qualified": false,
+  "source_current": true,
+  "local_verification_passed": true
+}

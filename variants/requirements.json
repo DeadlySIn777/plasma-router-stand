@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "created": "2026-09-26",
+  "baseline_revision": "Rev I",
+  "baseline_commit": "4a67463082116249690cc5c4d886d38d5104b3b4",
+  "release": "DEVELOPMENT VARIANTS; supplier and physical interfaces remain open",
+  "confirmed_requests": [
+    "Retain existing small machine and add a secondary 4x8 machine",
+    "Add RapidChange-style ATC with an approximately USD 700 kit target",
+    "Keep the router bed and ATC mounting removable",
+    "Repeatably locate the aluminum/HDPE table to the frame",
+    "Keep bed conversion within the machine footprint",
+    "Preserve the preference for Kraken onboard motor drivers",
+    "Use existing fabrication capability and budget-conscious construction"
+  ],
+  "working_assumptions_awaiting_user_confirmation": [
+    "4x8 means full 48x96in stock capability, not outside machine dimensions",
+    "Reserve ATC on both variants; the current small machine is explicitly included",
+    "Large variant uses aluminum framed carrier panels with replaceable HDPE tops; small baseline retains its existing 20100 aluminum bed",
+    "Exact RapidChange kit, pocket count and options have not been identified"
+  ],
+  "variant_targets": {
+    "small_atc": {
+      "nominal_axes_mm": [800, 1000, 100],
+      "existing_bed_mm": [1003, 1211],
+      "strategy": "Removable frame-supported rear dock; installed ATC reduces unrestricted routing area",
+      "purchased_axis_status": "Y reported on order; X/Z not reported delivered"
+    },
+    "48x96": {
+      "stock_mm": [1219.2, 2438.4],
+      "stock_in": [48, 96],
+      "provisional_frame_plan_mm": [1950, 2950],
+      "provisional_deck_mm": [1320, 2550],
+      "panel_grid": [3, 6],
+      "strategy": "Full sheet with separate dry ATC side bay; redesigned long-axis structure and drives"
+    }
+  },
+  "accuracy_definition": {
+    "locators": "One round and one relieved/diamond pin in metal bushings per located assembly",
+    "z_reference": "Three primary hard seats; supplementary supports fitted without lifting the datum plane",
+    "hold_down": "Separate positive clamps through metal, not HDPE",
+    "thermal_design": "HDPE allowed to expand relative to aluminum carrier",
+    "repeatability": "A measured acceptance target, not an accuracy guarantee from CAD",
+    "after_reinstallation": "Clean datum surfaces, seat, clamp, verify reference and re-probe as required"
+  },
+  "procurement": {
+    "currency": "USD",
+    "atc_kit_budget_target": 700,
+    "target_is_quote": false,
+    "shipping_included": false,
+    "tax_included": false,
+    "exact_kit_selected": false,
+    "orders_authorized_or_placed": false,
+    "note": "Official RapidChange pages show different option pricing. Final kit, freight, tax, tooling and integration cost require a matching cart quote. No complete installed cost is asserted."
+  },
+  "limits": [
+    "Vendor magazine CAD and actual spindle/collet dimensions required before mounting holes or pocket coordinates can be released",
+    "Small-machine full-Z routing area is reduced while the rear dock is fitted",
+    "4x8 purchased motion, structural joints, precision and conversion routes require further engineering",
+    "Existing spindle/VFD low-speed reverse and controller M6 integration remain unqualified",
+    "An aluminum/HDPE panel on pins alone does not establish machine rigidity",
+    "Sand adds mass but is not credited as elastic stiffness",
+    "Existing Rev I CAD and qualification records are retained separately"
+  ]
+}

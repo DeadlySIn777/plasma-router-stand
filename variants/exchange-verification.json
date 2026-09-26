@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "scope": "Independent STEP body count, validity, volume and outer bounds against the recorded candidate model",
+  "sources": {
+    "variants/verify_exchange.py": "5b4a6dd24b5832d977b773f11287be7504206e2cf1d3d526b7cdcc997addafe4"
+  },
+  "physical_release": false,
+  "checks": [
+    {
+      "file": "common/location/output/step/common-locator-dock.step",
+      "report": "common/location/output/verification.json",
+      "passed": true,
+      "step_sha256": "229742cb27e24dc28c24c7fc39f994087c69c78f6edefd42e405dae72c14836f",
+      "report_sha256": "e59290c0b6957be8ebadff6057cb24454b44652190574341b29b3015832a522a",
+      "solid_count": 25,
+      "recorded_body_count": 25,
+      "volume_difference_mm3": 5.755119491368532e-05,
+      "volume_tolerance_mm3": 0.026046143721,
+      "maximum_bounds_error_mm": 3.3330002224829514e-07
+    },
+    {
+      "file": "common/location/output/protected/step/common-locator-protected.step",
+      "report": "common/location/output/verification.json",
+      "passed": true,
+      "step_sha256": "e71c2a81f28a59cb285935d78371285fd7b100c0f23db53244897f403bc73b67",
+      "report_sha256": "e59290c0b6957be8ebadff6057cb24454b44652190574341b29b3015832a522a",
+      "solid_count": 11,
+      "recorded_body_count": 11,
+      "volume_difference_mm3": 4.8322544898837805e-06,
+      "volume_tolerance_mm3": 0.02,
+      "maximum_bounds_error_mm": 3.3330002224829514e-07
+    },
+    {
+      "file": "small-atc/output/step/SMALL_ATC_DOCK_CANDIDATE.step",
+      "report": "small-atc/output/fit-report.json",
+      "passed": true,
+      "step_sha256": "daaf2d5effa63f352f64425c7d65985d46f46b1d5a4b2190d496d5e1acd44793",
+      "report_sha256": "3f7b75b67f4b16eaf0b37307d1776080b499c19c29324f37607e0308d75e4355",
+      "solid_count": 63,
+      "recorded_body_count": 63,
+      "volume_difference_mm3": 1.6984064131975174e-05,
+      "volume_tolerance_mm3": 0.14925511293399998,
+      "maximum_bounds_error_mm": 0.0
+    }
+  ]
+}

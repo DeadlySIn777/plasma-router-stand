@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "status": "DESIGN RESERVATIONS ONLY; no ATC firmware or wiring released",
+  "board": "BIGTREETECH Kraken V1.1, existing X/Y/Y2/Z on S1-S4",
+  "scope": "New removable ATC variants; preserve Rev I control files",
+  "reservations": [
+    {"function": "spindle_direction", "gpio": "PD15", "connector": "EXP1_5", "kind": "output", "condition": "Isolated direction interface and actual VFD truth table required; cannot connect directly to VFD"},
+    {"function": "fixed_router_toolsetter", "gpio": "PG8", "connector": "EXP2_3", "kind": "input", "condition": "Separate isolated toolsetter input; preserve PE11 plasma float"},
+    {"function": "atc_ir_status", "gpio": "PG7", "connector": "EXP2_5", "kind": "input", "condition": "Actual kit sensor voltage, polarity and electrical interface required"},
+    {"function": "cover_command", "gpio": "PE12", "connector": "EXP2_2", "kind": "output", "condition": "Generic logic reservation only, not a servo PWM allocation; verify kit controller protocol. Cannot share with EXP2 LCD/SD SPI"},
+    {"function": "atc_dock_present", "gpio": "PF10", "connector": "S7_STOP", "kind": "input", "condition": "Unused S7 stop input; verify connector and DIAG jumper isolation from disabled S7 driver. Dock-present indication does not prove pin seating or clamp preload"}
+  ],
+  "unresolved": [
+    "Exact RapidChange SKU, connector revision, cover protocol and number of IO signals",
+    "VFD accepts forward/reverse and low-speed commands with controlled stop before reversal",
+    "Separate router toolsetter selection during M6; plasma probe stays electrically distinct",
+    "Controller filesystem/SD support and manufacturer macro integration",
+    "Hardware inhibit logic for dock removed, mode selection and stopped spindle",
+    "Complete isolated IO board, actual harness terminals and power budget",
+    "4x8 motor torque/speed selection remains separate; onboard-driver intent is not proof of capacity"
+  ]
+}

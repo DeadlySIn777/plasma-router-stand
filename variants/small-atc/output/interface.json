@@ -1,0 +1,252 @@
+{
+  "centers_mm": [
+    [
+      90,
+      1155.4
+    ],
+    [
+      1060,
+      1155.4
+    ]
+  ],
+  "pitch_mm": 970.0,
+  "diamond_relief_angle_deg": 0.0,
+  "interfaces": [
+    {
+      "center_mm": [
+        90,
+        1155.4
+      ],
+      "pin_type": "round",
+      "pin_block_bounds_relative_mm": [
+        -30,
+        -20,
+        0,
+        30,
+        20,
+        12
+      ],
+      "receiver_bounds_relative_mm": [
+        -30,
+        -20,
+        14,
+        30,
+        20,
+        26
+      ],
+      "base_mount_xy_relative_mm": [
+        [
+          -22,
+          -12
+        ],
+        [
+          22,
+          -12
+        ],
+        [
+          -22,
+          12
+        ],
+        [
+          22,
+          12
+        ]
+      ],
+      "receiver_mount_xy_relative_mm": [
+        [
+          -17,
+          -12
+        ],
+        [
+          -17,
+          12
+        ],
+        [
+          22,
+          -12
+        ],
+        [
+          22,
+          12
+        ]
+      ],
+      "receiver_mount_thread": "M5x0.8 THRU; max installedscrewpenetration10.5mm",
+      "match_dowel_xy_relative_mm": [
+        [
+          -17,
+          0
+        ],
+        [
+          17,
+          0
+        ]
+      ],
+      "pin_tip_keepout_top_mm": 994.1,
+      "relative_z_datum_mm": 964
+    },
+    {
+      "center_mm": [
+        1060,
+        1155.4
+      ],
+      "pin_type": "diamond",
+      "pin_block_bounds_relative_mm": [
+        -30,
+        -20,
+        0,
+        30,
+        20,
+        12
+      ],
+      "receiver_bounds_relative_mm": [
+        -30,
+        -20,
+        14,
+        30,
+        20,
+        26
+      ],
+      "base_mount_xy_relative_mm": [
+        [
+          -22,
+          -12
+        ],
+        [
+          22,
+          -12
+        ],
+        [
+          -22,
+          12
+        ],
+        [
+          22,
+          12
+        ]
+      ],
+      "receiver_mount_xy_relative_mm": [
+        [
+          -22,
+          -12
+        ],
+        [
+          -22,
+          12
+        ],
+        [
+          17,
+          -12
+        ],
+        [
+          17,
+          12
+        ]
+      ],
+      "receiver_mount_thread": "M5x0.8 THRU; max installedscrewpenetration10.5mm",
+      "match_dowel_xy_relative_mm": [
+        [
+          -17,
+          0
+        ],
+        [
+          17,
+          0
+        ]
+      ],
+      "pin_tip_keepout_top_mm": 994.1,
+      "relative_z_datum_mm": 964
+    }
+  ],
+  "status": "INTEGRATED ALLOCATION CANDIDATE; NOT PURCHASE OR FABRICATION RELEASE",
+  "receiver_underside_mm": 978,
+  "fixed_pin_block_base_z_mm": 964,
+  "carrier_weldment_max_z_mm": 1003.8,
+  "support": "Four independent metal pads; three primary/fourth fitted; pins do not carry vertical weight.",
+  "support_bearing_checks": [
+    {
+      "center_mm": [
+        75,
+        1127
+      ],
+      "actual_contact_area_mm2": 245.7880560021837,
+      "expected_pad_minus_clearance_bore_mm2": 245.78805600240716
+    },
+    {
+      "center_mm": [
+        1075,
+        1127
+      ],
+      "actual_contact_area_mm2": 245.78805600218377,
+      "expected_pad_minus_clearance_bore_mm2": 245.78805600240716
+    },
+    {
+      "center_mm": [
+        75,
+        1183
+      ],
+      "actual_contact_area_mm2": 245.7880560021837,
+      "expected_pad_minus_clearance_bore_mm2": 245.78805600240716
+    },
+    {
+      "center_mm": [
+        1075,
+        1183
+      ],
+      "actual_contact_area_mm2": 245.78805600218377,
+      "expected_pad_minus_clearance_bore_mm2": 245.78805600240716
+    }
+  ],
+  "outer_M5_head_to_wing_edge_mm": 5.25,
+  "outer_M6_washer_to_wing_edge_mm": 6.0,
+  "receiver_mount_note": "Outer M5 columns shifted inward5mm versus common blocks; use distinct left/right ATC receiver parts and their DXFs.",
+  "proposed_routing_tool_axis_mm": {
+    "x": [
+      175,
+      975
+    ],
+    "y": [
+      121.4,
+      910
+    ],
+    "z_lift": [
+      0,
+      100
+    ]
+  },
+  "nominal_axis_rectangle_mm": [
+    800,
+    788.6
+  ],
+  "protected_atc_approach_region_y_mm": [
+    910,
+    1121.4
+  ],
+  "rear_strip_original_proposal_y_mm": [
+    940,
+    1121.4
+  ],
+  "why_more_reserved": "CarrierfrontY950 minus32.5 spindlebodyradius minus7.5 clearance givesY910; frontstrip940 alone is insufficient at lowZ.",
+  "magazine_allocation_mm": [
+    520,
+    120,
+    120
+  ],
+  "allocation_status": "Product webpage additional-information dimensions may be shipping metadata; NOT verified magazine envelope.",
+  "allocation_origin_mm": [
+    315,
+    980,
+    966.15
+  ],
+  "finished_MDF_top_mm": 958.8,
+  "magazine_shelf_top_mm": 966.15,
+  "nominal_spindle_lower_envelope_at_retract_mm": 1060,
+  "apparent_retract_to_carrier_clearance_mm": 93.85,
+  "clearance_caveat": "1060 is an inherited simplified spindle envelope datum, not measured collet or installed-tool tip. 93.85mm does not prove manufacturer90mm requirement or docking engagement.",
+  "carrier_steel_mass_kg": 9.702,
+  "holds": [
+    "Exact RapidChange variant, mounting drawing, height datums, pocket pitch, cover envelope and delivered price unconfirmed.",
+    "No automatic or in-footprint dock storage/transfer path released. Bridge is manually removable; plasma use requires verified removal/storage.",
+    "Actual spindle nut19.5mm maximumOD/17AF, reversal, controlled lowRPM and toolsetter/macros remain to be verified.",
+    "New frame welds, pads, carrier bending and repeated location require qualification; nominal solids do not establish load capacity."
+  ]
+}
