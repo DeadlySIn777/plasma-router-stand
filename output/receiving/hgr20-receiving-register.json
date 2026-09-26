@@ -1,0 +1,302 @@
+{
+  "purpose": "Receiving record for the two iMetrx HGR20 guide kits. Fill the null fields on delivery, then run plan_rail_cuts.py. Measurements are in mm.",
+  "order": {
+    "reported_by_owner": "2026-09-26",
+    "owner_message": "I ORDERED THE RAIL KITS",
+    "assumed_items": [
+      {
+        "id": "M04",
+        "asin": "B0FFMMPC3B",
+        "listing": "iMetrx HGR20 kit, two 1500 mm rails and four HGH20CA blocks",
+        "use": "Y axis: both rails cut to 1420 mm; all four blocks"
+      },
+      {
+        "id": "M05",
+        "asin": "B0FFMN9KNC",
+        "listing": "iMetrx HGR20 kit, two 1200 mm rails and four HGH20CA blocks",
+        "use": "X axis: both rails used at 1200 mm; all four blocks"
+      }
+    ],
+    "assumption_note": "Mapped to M04 and M05, the only rail kits in the parts list. Confirm the listings, quantities, price paid and delivery dates.",
+    "price_paid_usd": null,
+    "delivery_dates": null
+  },
+  "seller_table_values_to_check": {
+    "rail": {
+      "width": 20,
+      "height": 17.5,
+      "counterbore_D": 9.5,
+      "counterbore_depth_h": 8.5,
+      "through_hole_d": 6,
+      "pitch_P": 40,
+      "end_E": 20,
+      "note": "The seller table gives P = 40 for HGR20 where the common HGR20 pattern is P = 60. Measure; do not assume either."
+    },
+    "block_HGH20CA": {
+      "width_W": 44,
+      "length_L": 77.5,
+      "assembly_height_H": 30,
+      "hole_spacing_across_B": 32,
+      "hole_spacing_along_C": 36,
+      "thread": "M5, 6 deep",
+      "rail_screw": "M5 x 16 socket head"
+    }
+  },
+  "y_rail_target_length_mm": 1420,
+  "rails": [
+    {
+      "id": "Y1",
+      "kit": "M04",
+      "nominal_length_mm": 1500,
+      "target_length_mm": 1420,
+      "use": "Y_RAIL_L",
+      "measured": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "hole_count": null,
+        "first_hole_from_end_A_mm": null,
+        "last_hole_from_end_B_mm": null,
+        "pitch_mm": null,
+        "hole_centres_from_end_A_mm": null,
+        "counterbore_diameter_mm": null,
+        "counterbore_depth_mm": null,
+        "through_hole_diameter_mm": null,
+        "bow_on_flat_surface_mm": null,
+        "side_bow_mm": null,
+        "reference_edge_or_arrow_marked": null,
+        "end_A_identified_by": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "Y2",
+      "kit": "M04",
+      "nominal_length_mm": 1500,
+      "target_length_mm": 1420,
+      "use": "Y_RAIL_R",
+      "measured": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "hole_count": null,
+        "first_hole_from_end_A_mm": null,
+        "last_hole_from_end_B_mm": null,
+        "pitch_mm": null,
+        "hole_centres_from_end_A_mm": null,
+        "counterbore_diameter_mm": null,
+        "counterbore_depth_mm": null,
+        "through_hole_diameter_mm": null,
+        "bow_on_flat_surface_mm": null,
+        "side_bow_mm": null,
+        "reference_edge_or_arrow_marked": null,
+        "end_A_identified_by": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "X1",
+      "kit": "M05",
+      "nominal_length_mm": 1200,
+      "target_length_mm": 1200,
+      "use": "X_RAIL_1 (upper)",
+      "measured": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "hole_count": null,
+        "first_hole_from_end_A_mm": null,
+        "last_hole_from_end_B_mm": null,
+        "pitch_mm": null,
+        "hole_centres_from_end_A_mm": null,
+        "counterbore_diameter_mm": null,
+        "counterbore_depth_mm": null,
+        "through_hole_diameter_mm": null,
+        "bow_on_flat_surface_mm": null,
+        "side_bow_mm": null,
+        "reference_edge_or_arrow_marked": null,
+        "end_A_identified_by": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "X2",
+      "kit": "M05",
+      "nominal_length_mm": 1200,
+      "target_length_mm": 1200,
+      "use": "X_RAIL_2 (lower)",
+      "measured": {
+        "length_mm": null,
+        "width_mm": null,
+        "height_mm": null,
+        "hole_count": null,
+        "first_hole_from_end_A_mm": null,
+        "last_hole_from_end_B_mm": null,
+        "pitch_mm": null,
+        "hole_centres_from_end_A_mm": null,
+        "counterbore_diameter_mm": null,
+        "counterbore_depth_mm": null,
+        "through_hole_diameter_mm": null,
+        "bow_on_flat_surface_mm": null,
+        "side_bow_mm": null,
+        "reference_edge_or_arrow_marked": null,
+        "end_A_identified_by": null,
+        "notes": null
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "id": "B1",
+      "kit": "M04",
+      "use": "Y axis",
+      "measured": {
+        "width_mm": null,
+        "length_mm": null,
+        "height_rail_base_to_block_top_mm": null,
+        "hole_spacing_across_mm": null,
+        "hole_spacing_along_mm": null,
+        "thread": null,
+        "usable_thread_depth_mm": null,
+        "play_felt_by_hand": null,
+        "runs_smoothly_full_length": null,
+        "seals_and_grease_nipple_present": null,
+        "on_rail_or_on_plastic_transfer_rail": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "B2",
+      "kit": "M04",
+      "use": "Y axis",
+      "measured": {
+        "width_mm": null,
+        "length_mm": null,
+        "height_rail_base_to_block_top_mm": null,
+        "hole_spacing_across_mm": null,
+        "hole_spacing_along_mm": null,
+        "thread": null,
+        "usable_thread_depth_mm": null,
+        "play_felt_by_hand": null,
+        "runs_smoothly_full_length": null,
+        "seals_and_grease_nipple_present": null,
+        "on_rail_or_on_plastic_transfer_rail": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "B3",
+      "kit": "M04",
+      "use": "Y axis",
+      "measured": {
+        "width_mm": null,
+        "length_mm": null,
+        "height_rail_base_to_block_top_mm": null,
+        "hole_spacing_across_mm": null,
+        "hole_spacing_along_mm": null,
+        "thread": null,
+        "usable_thread_depth_mm": null,
+        "play_felt_by_hand": null,
+        "runs_smoothly_full_length": null,
+        "seals_and_grease_nipple_present": null,
+        "on_rail_or_on_plastic_transfer_rail": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "B4",
+      "kit": "M04",
+      "use": "Y axis",
+      "measured": {
+        "width_mm": null,
+        "length_mm": null,
+        "height_rail_base_to_block_top_mm": null,
+        "hole_spacing_across_mm": null,
+        "hole_spacing_along_mm": null,
+        "thread": null,
+        "usable_thread_depth_mm": null,
+        "play_felt_by_hand": null,
+        "runs_smoothly_full_length": null,
+        "seals_and_grease_nipple_present": null,
+        "on_rail_or_on_plastic_transfer_rail": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "B5",
+      "kit": "M05",
+      "use": "X axis",
+      "measured": {
+        "width_mm": null,
+        "length_mm": null,
+        "height_rail_base_to_block_top_mm": null,
+        "hole_spacing_across_mm": null,
+        "hole_spacing_along_mm": null,
+        "thread": null,
+        "usable_thread_depth_mm": null,
+        "play_felt_by_hand": null,
+        "runs_smoothly_full_length": null,
+        "seals_and_grease_nipple_present": null,
+        "on_rail_or_on_plastic_transfer_rail": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "B6",
+      "kit": "M05",
+      "use": "X axis",
+      "measured": {
+        "width_mm": null,
+        "length_mm": null,
+        "height_rail_base_to_block_top_mm": null,
+        "hole_spacing_across_mm": null,
+        "hole_spacing_along_mm": null,
+        "thread": null,
+        "usable_thread_depth_mm": null,
+        "play_felt_by_hand": null,
+        "runs_smoothly_full_length": null,
+        "seals_and_grease_nipple_present": null,
+        "on_rail_or_on_plastic_transfer_rail": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "B7",
+      "kit": "M05",
+      "use": "X axis",
+      "measured": {
+        "width_mm": null,
+        "length_mm": null,
+        "height_rail_base_to_block_top_mm": null,
+        "hole_spacing_across_mm": null,
+        "hole_spacing_along_mm": null,
+        "thread": null,
+        "usable_thread_depth_mm": null,
+        "play_felt_by_hand": null,
+        "runs_smoothly_full_length": null,
+        "seals_and_grease_nipple_present": null,
+        "on_rail_or_on_plastic_transfer_rail": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "B8",
+      "kit": "M05",
+      "use": "X axis",
+      "measured": {
+        "width_mm": null,
+        "length_mm": null,
+        "height_rail_base_to_block_top_mm": null,
+        "hole_spacing_across_mm": null,
+        "hole_spacing_along_mm": null,
+        "thread": null,
+        "usable_thread_depth_mm": null,
+        "play_felt_by_hand": null,
+        "runs_smoothly_full_length": null,
+        "seals_and_grease_nipple_present": null,
+        "on_rail_or_on_plastic_transfer_rail": null,
+        "notes": null
+      }
+    }
+  ]
+}
