@@ -1,0 +1,186 @@
+{
+  "scope": "Selected controls schedule only, not a complete machine BOM or delivered-price quotation. Head interface quantities are now defined in HEAD-INTERFACE.md. Its four Omron switches are shared references to the mechanical head BOM and must not be purchased twice. Other wiring, fuse, connector, enclosure and stop-assembly quantities require the final panel drawings.",
+  "parts": [
+    {
+      "part": "BIGTREETECH Kraken V1.1",
+      "quantity": 1,
+      "role": "X/Y1/Y2/Z onboard drivers; actual board V1.1 required",
+      "status": "current baseline"
+    },
+    {
+      "part": "Finder 40.52.9.024.0000",
+      "quantity": 8,
+      "role": "Six water relays + K_REQUEST + K_RUN_ARM",
+      "status": "selected"
+    },
+    {
+      "part": "Finder 40.52.9.024.5000",
+      "quantity": 2,
+      "role": "Gold-contact K_VFD_RUN / K_TORCH_RUN",
+      "status": "Selected subject to actual tool contact requirements"
+    },
+    {
+      "part": "Finder 95.05",
+      "quantity": 10,
+      "role": "40.52 relay sockets",
+      "status": "selected"
+    },
+    {
+      "part": "Finder 55.34.9.024.0000",
+      "quantity": 2,
+      "role": "four-pole router/plasma mode relays",
+      "status": "selected"
+    },
+    {
+      "part": "Finder 94.04",
+      "quantity": 2,
+      "role": "55.34 sockets",
+      "status": "selected"
+    },
+    {
+      "part": "Finder 80.01.0.240.0000",
+      "quantity": 2,
+      "role": "Close/drain delay; AI function",
+      "status": "Replaces AH3"
+    },
+    {
+      "part": "Carlo Gavazzi RM1D060D20",
+      "quantity": 2,
+      "role": "Series pump command/limit SSRs",
+      "status": "Retained Rev H selection"
+    },
+    {
+      "part": "Schneider XB5AD33",
+      "quantity": 1,
+      "role": "ROUTER/OFF/PLASMA selection",
+      "status": "selected"
+    },
+    {
+      "part": "Schneider XB5AD25",
+      "quantity": 2,
+      "role": "SETUP/RUN and AUTO/DRAIN",
+      "status": "selected"
+    },
+    {
+      "part": "Schneider XB5AG03",
+      "quantity": 1,
+      "role": "Bed confirmation; 3 positions, 2 NO",
+      "status": "Selected; not physical bed proof"
+    },
+    {
+      "part": "Schneider XB5AA35",
+      "quantity": 1,
+      "role": "Momentary FILL, 1 NO + 1 NC",
+      "status": "Selected; guard and control station remain unfinished"
+    },
+    {
+      "part": "TI SN74LVC1G17DBVR",
+      "quantity": 2,
+      "role": "Run and PWM GPIO current buffers",
+      "status": "Schematic only; board layout required"
+    },
+    {
+      "part": "Panasonic AQY212GS",
+      "quantity": 3,
+      "role": "One run-request channel plus isolated float and series-head-presence channels",
+      "status": "Defined schematics; actual PCB, timing and EMI unqualified"
+    },
+    {
+      "part": "LITEON LTV-817",
+      "quantity": 1,
+      "role": "Defined combined permission input",
+      "status": "Count only for IF_READY; additional inputs need a complete panel drawing"
+    },
+    {
+      "part": "CNC4PC C41S Rev1.1",
+      "quantity": 1,
+      "role": "Isolated 0-10 V speed conversion; 200 Hz PWM",
+      "status": "Selected; current/calibration/fit verification required"
+    },
+    {
+      "part": "680 ohm, 3 W, 5% flameproof resistor",
+      "quantity": 2,
+      "role": "Timer output minimum load",
+      "status": "Selected; covered heat-resistant mounts required"
+    },
+    {
+      "part": "MeanWell LRS-350-24",
+      "quantity": 1,
+      "role": "24 V power supply",
+      "status": "Retained; whole-panel power/thermal behavior unqualified"
+    },
+    {
+      "part": "Omron D2HW-C202MR",
+      "quantity": 1,
+      "role": "NC floating-head switch; SAME switch as mechanical head BOM",
+      "status": "Defined by HEAD-INTERFACE.md; schematic inventory, not an installed panel"
+    },
+    {
+      "part": "Omron D2HW-C203MR",
+      "quantity": 3,
+      "role": "Three NO seated-head switches; SAME switches as mechanical head BOM",
+      "status": "Defined by HEAD-INTERFACE.md; schematic inventory, not an installed panel"
+    },
+    {
+      "part": "Vishay MRS25000C3321FCT00",
+      "quantity": 2,
+      "role": "3.32kohm1%0.6W head field-loop current limits",
+      "status": "Defined by HEAD-INTERFACE.md; schematic inventory, not an installed panel"
+    },
+    {
+      "part": "Vishay MRS25000C2202FCT00",
+      "quantity": 2,
+      "role": "22kohm1%0.6W head LED shunts; additional to run channel shunt",
+      "status": "Defined by HEAD-INTERFACE.md; schematic inventory, not an installed panel"
+    },
+    {
+      "part": "Vishay MRS25000C4701FCT00",
+      "quantity": 1,
+      "role": "4.7kohm1%0.6W PE11 local pull-up",
+      "status": "Defined by HEAD-INTERFACE.md; schematic inventory, not an installed panel"
+    },
+    {
+      "part": "Vishay MRS25000C3300FCT00",
+      "quantity": 1,
+      "role": "330ohm1%0.6W PE11 series resistor",
+      "status": "Defined by HEAD-INTERFACE.md; schematic inventory, not an installed panel"
+    },
+    {
+      "part": "Vishay MRS25000C1003FCT00",
+      "quantity": 1,
+      "role": "100kohm1%0.6W HEAD_SAFE bleed",
+      "status": "Defined by HEAD-INTERFACE.md; schematic inventory, not an installed panel"
+    },
+    {
+      "part": "Vishay 1N4148",
+      "quantity": 2,
+      "role": "Head LED anti-parallel protection only; does not include other circuit diodes",
+      "status": "Defined by HEAD-INTERFACE.md; schematic inventory, not an installed panel"
+    },
+    {
+      "part": "4.7nF5% C0G/NP0 capacitor, >=50V",
+      "quantity": 1,
+      "role": "PE11 local filter; package selected during PCB layout",
+      "status": "Defined by HEAD-INTERFACE.md; schematic inventory, not an installed panel"
+    },
+    {
+      "part": "Phoenix Contact PT 2,5 / 3209510",
+      "quantity": 8,
+      "role": "XHEAD field switch terminals only",
+      "status": "Defined by HEAD-INTERFACE.md; schematic inventory, not an installed panel"
+    },
+    {
+      "part": "Phoenix Contact D-ST 2,5 / 3030417",
+      "quantity": 1,
+      "role": "XHEAD end cover",
+      "status": "Defined by HEAD-INTERFACE.md; schematic inventory, not an installed panel"
+    },
+    {
+      "part": "Phoenix Contact CLIPFIX 35-5 / 3022276",
+      "quantity": 2,
+      "role": "XHEAD strip end brackets",
+      "status": "Defined by HEAD-INTERFACE.md; schematic inventory, not an installed panel"
+    }
+  ],
+  "commercial_status": "No order, shipping quote, tax calculation or purchase performed."
+}

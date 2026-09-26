@@ -1,0 +1,2809 @@
+{
+  "revision": "Rev I integrated completion",
+  "scope": "Independent combined Rev I geometry and current-export verification.\n\nThis is static rigid-solid verification, not fabrication release, continuous\ntool motion, actual workpiece/cable clearance, rigidity or brake qualification.\nThe same build_revi API used by the exporter generates each complete pose.\n",
+  "status": "RUNNING",
+  "states": {
+    "RevI_ROUTER": {
+      "label": "RevI_ROUTER",
+      "part_count": 1669,
+      "all_world_shapes_valid_single_solids": true,
+      "total_solid_volume_mm3": 108889047.52015191,
+      "unresolved_intersections": [
+        {
+          "a": "I_HEAD_CAP_1_103_17",
+          "b": "I_PARK_BOLT_2",
+          "intersection_mm3": 0.71691
+        }
+      ],
+      "documented_intersections": [
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_L_A_ROD_END",
+          "b": "Y_LINK_L_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_L_B_ROD_END",
+          "b": "Y_LINK_L_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_R_A_ROD_END",
+          "b": "Y_LINK_R_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_R_B_ROD_END",
+          "b": "Y_LINK_R_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_1",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_2",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_3",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_4",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_5",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_5",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_6",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_6",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_7",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_7",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_8",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_8",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "X_LINK_A_ROD_END",
+          "b": "X_LINK_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "X_LINK_B_ROD_END",
+          "b": "X_LINK_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_BOTTOM",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_TOP",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_1_45",
+          "intersection_mm3": 20.06692,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_1_65",
+          "intersection_mm3": 20.06692,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_2_45",
+          "intersection_mm3": 20.06692,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_2_65",
+          "intersection_mm3": 20.06692,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_STOP_49",
+          "intersection_mm3": 18.16057,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_STOP_61",
+          "intersection_mm3": 18.16057,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_FLOAT_SWITCH_FOOT_0",
+          "intersection_mm3": 11.28519,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_FLOAT_SWITCH_FOOT_1",
+          "intersection_mm3": 11.28519,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_LEAD_84",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_LEAD_100",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_TETHER_FIXED",
+          "intersection_mm3": 16.05354,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_25",
+          "b": "I_HEAD_ROD_TOP_25",
+          "intersection_mm3": 40.13385,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_25",
+          "b": "I_HEAD_ROD_BOTTOM_25",
+          "intersection_mm3": 40.13385,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_85",
+          "b": "I_HEAD_ROD_TOP_85",
+          "intersection_mm3": 40.13385,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_85",
+          "b": "I_HEAD_ROD_BOTTOM_85",
+          "intersection_mm3": 40.13385,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_7_17",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_7_29",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_103_17",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_103_29",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_7_17",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_7_29",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_103_17",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_103_29",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_SEAT_CONE",
+          "intersection_mm3": 24.08031,
+          "reason": "Integral M4 seat thread in matching tapped float body."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_SEAT_V",
+          "intersection_mm3": 24.08031,
+          "reason": "Integral M4 seat thread in matching tapped float body."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_SEAT_FLAT",
+          "intersection_mm3": 24.08031,
+          "reason": "Integral M4 seat thread in matching tapped float body."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_MAGNET_SCREW_1",
+          "intersection_mm3": 24.88298,
+          "reason": "M4 screw engages6.2mm in tapped carriage."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_MAGNET_SCREW_2",
+          "intersection_mm3": 24.88298,
+          "reason": "M4 screw engages6.2mm in tapped carriage."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_MAGNET_SCREW_3",
+          "intersection_mm3": 24.88298,
+          "reason": "M4 screw engages6.2mm in tapped carriage."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAM_91",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAM_96.8",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_LEFT_FOOT_0",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_LEFT_FOOT_1",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_RIGHT_FOOT_0",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_RIGHT_FOOT_1",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_TOP_FOOT_0",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_TOP_FOOT_1",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BUTTON_CONE",
+          "b": "I_HEAD_BUTTON_SCREW_CONE",
+          "intersection_mm3": 7.88343,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BUTTON_V",
+          "b": "I_HEAD_BUTTON_SCREW_V",
+          "intersection_mm3": 7.88343,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BUTTON_FLAT",
+          "b": "I_HEAD_BUTTON_SCREW_FLAT",
+          "intersection_mm3": 7.88343,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_RELEASE_PLATE",
+          "b": "I_HEAD_SPLASH_5",
+          "intersection_mm3": 9.7193,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_RELEASE_PLATE",
+          "b": "I_HEAD_SPLASH_105",
+          "intersection_mm3": 9.7193,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_RELEASE_PLATE",
+          "b": "I_HEAD_TETHER_RELEASE",
+          "intersection_mm3": 16.05354,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_25_35",
+          "intersection_mm3": 46.75593,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_25_55",
+          "intersection_mm3": 46.75593,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_85_35",
+          "intersection_mm3": 46.75593,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_85_55",
+          "intersection_mm3": 46.75593,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_PINCH_15",
+          "intersection_mm3": 38.12715,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_PINCH_95",
+          "intersection_mm3": 38.12715,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_SWITCH_BRACKET",
+          "b": "I_HEAD_FLOAT_SWITCH_M3",
+          "intersection_mm3": 10.15127,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PRESENCE_LEFT_BRACKET",
+          "b": "I_HEAD_PRESENCE_LEFT_M3",
+          "intersection_mm3": 10.15127,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PRESENCE_RIGHT_BRACKET",
+          "b": "I_HEAD_PRESENCE_RIGHT_M3",
+          "intersection_mm3": 10.15127,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PRESENCE_TOP_BRACKET",
+          "b": "I_HEAD_PRESENCE_TOP_M3",
+          "intersection_mm3": 10.15127,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PARK_FOOT_1",
+          "b": "I_PARK_BOLT_1",
+          "intersection_mm3": 50.32439,
+          "reason": "M6 parking screw engages5.825mm in tapped steel foot."
+        },
+        {
+          "a": "I_HEAD_PARK_FOOT_2",
+          "b": "I_PARK_BOLT_2",
+          "intersection_mm3": 50.32439,
+          "reason": "M6 parking screw engages5.825mm in tapped steel foot."
+        }
+      ],
+      "local_integrity": {
+        "invalid_local": [],
+        "local_world_volume_or_area_mismatches": [],
+        "duplicate_component_ids": [],
+        "passed": true
+      },
+      "shared_part_numbers": {
+        "compared_duplicate_instances": 1238,
+        "fabrication_geometry_mismatches": [],
+        "guarded_or_purchased_geometry_mismatches": [
+          {
+            "part_number": "STD_M5_NYLOC",
+            "reference_id": "CAB_CAP_NUT_1_1",
+            "compared_id": "I_CAB_GLAND_MAINS_NUT_1",
+            "local_volume_delta_mm3": 35.79067175726789,
+            "max_local_bound_delta_mm": 1.0,
+            "symmetric_difference_mm3": null,
+            "tolerance_mm3": 0.05,
+            "manufacturing_flat_geometry_mismatch": false,
+            "individual_export_guarded": true
+          },
+          {
+            "part_number": "STD_M5_NYLOC",
+            "reference_id": "CAB_CAP_NUT_1_1",
+            "compared_id": "I_CAB_GLAND_MAINS_NUT_2",
+            "local_volume_delta_mm3": 35.79067175726789,
+            "max_local_bound_delta_mm": 1.0,
+            "symmetric_difference_mm3": null,
+            "tolerance_mm3": 0.05,
+            "manufacturing_flat_geometry_mismatch": false,
+            "individual_export_guarded": true
+          },
+          {
+            "part_number": "STD_M5_NYLOC",
+            "reference_id": "CAB_CAP_NUT_1_1",
+            "compared_id": "I_CAB_GLAND_MAINS_NUT_3",
+            "local_volume_delta_mm3": 35.79067175726789,
+            "max_local_bound_delta_mm": 1.0,
+            "symmetric_difference_mm3": null,
+            "tolerance_mm3": 0.05,
+            "manufacturing_flat_geometry_mismatch": false,
+            "individual_export_guarded": true
+          },
+          {
+            "part_number": "STD_M5_NYLOC",
+            "reference_id": "CAB_CAP_NUT_1_1",
+            "compared_id": "I_CAB_GLAND_MAINS_NUT_4",
+            "local_volume_delta_mm3": 35.79067175726789,
+            "max_local_bound_delta_mm": 1.0,
+            "symmetric_difference_mm3": null,
+            "tolerance_mm3": 0.05,
+            "manufacturing_flat_geometry_mismatch": false,
+            "individual_export_guarded": true
+          },
+          {
+            "part_number": "STD_M5_NYLOC",
+            "reference_id": "CAB_CAP_NUT_1_1",
+            "compared_id": "I_CAB_GLAND_SIGNAL_NUT_1",
+            "local_volume_delta_mm3": 35.79067175726789,
+            "max_local_bound_delta_mm": 1.0,
+            "symmetric_difference_mm3": null,
+            "tolerance_mm3": 0.05,
+            "manufacturing_flat_geometry_mismatch": false,
+            "individual_export_guarded": true
+          },
+          {
+            "part_number": "STD_M5_NYLOC",
+            "reference_id": "CAB_CAP_NUT_1_1",
+            "compared_id": "I_CAB_GLAND_SIGNAL_NUT_2",
+            "local_volume_delta_mm3": 35.79067175726789,
+            "max_local_bound_delta_mm": 1.0,
+            "symmetric_difference_mm3": null,
+            "tolerance_mm3": 0.05,
+            "manufacturing_flat_geometry_mismatch": false,
+            "individual_export_guarded": true
+          },
+          {
+            "part_number": "STD_M5_NYLOC",
+            "reference_id": "CAB_CAP_NUT_1_1",
+            "compared_id": "I_CAB_GLAND_SIGNAL_NUT_3",
+            "local_volume_delta_mm3": 35.79067175726789,
+            "max_local_bound_delta_mm": 1.0,
+            "symmetric_difference_mm3": null,
+            "tolerance_mm3": 0.05,
+            "manufacturing_flat_geometry_mismatch": false,
+            "individual_export_guarded": true
+          },
+          {
+            "part_number": "STD_M5_NYLOC",
+            "reference_id": "CAB_CAP_NUT_1_1",
+            "compared_id": "I_CAB_GLAND_SIGNAL_NUT_4",
+            "local_volume_delta_mm3": 35.79067175726789,
+            "max_local_bound_delta_mm": 1.0,
+            "symmetric_difference_mm3": null,
+            "tolerance_mm3": 0.05,
+            "manufacturing_flat_geometry_mismatch": false,
+            "individual_export_guarded": true
+          }
+        ],
+        "proven_coordinate_only_differences": [
+          {
+            "part_number": "STD_M6x40_SOCKET",
+            "reference_id": "WP_HOLD_BOLT_1",
+            "compared_id": "H_TEMP_LOCATOR_BOLT_1",
+            "local_x_direction": [
+              0,
+              0,
+              1
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              -32.4,
+              -6.35,
+              -59.6
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "STD_M6x40_SOCKET",
+            "reference_id": "WP_HOLD_BOLT_1",
+            "compared_id": "H_TEMP_LOCATOR_BOLT_2",
+            "local_x_direction": [
+              0,
+              0,
+              1
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              -32.4,
+              -6.35,
+              -59.6
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "STD_M6_WASHER_12",
+            "reference_id": "G_PANEL_CLAMP_WASHER_1_1",
+            "compared_id": "H_TEMP_LOCATOR_WASHER_1",
+            "local_x_direction": [
+              0,
+              0,
+              1
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              -32.4,
+              -6.35,
+              -98.0
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "STD_M6_WASHER_12",
+            "reference_id": "G_PANEL_CLAMP_WASHER_1_1",
+            "compared_id": "H_TEMP_LOCATOR_WASHER_2",
+            "local_x_direction": [
+              0,
+              0,
+              1
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              -32.4,
+              -6.35,
+              -98.0
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "STD_M5x16_BUTTON",
+            "reference_id": "G_PANEL_1_TIE_1_1_F1_SCREW",
+            "compared_id": "H_TEMP_GATE_SCREW_1_1",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              0,
+              1
+            ],
+            "translation_mm": [
+              -5.0,
+              6.35,
+              0.0
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "STD_M5x16_BUTTON",
+            "reference_id": "G_PANEL_1_TIE_1_1_F1_SCREW",
+            "compared_id": "H_TEMP_GATE_SCREW_1_2",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              0,
+              -1
+            ],
+            "translation_mm": [
+              -5.0,
+              -6.35,
+              116.0
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "STD_M5x16_BUTTON",
+            "reference_id": "G_PANEL_1_TIE_1_1_F1_SCREW",
+            "compared_id": "H_TEMP_GATE_SCREW_2_1",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              0,
+              1
+            ],
+            "translation_mm": [
+              -5.0,
+              6.35,
+              0.0
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "STD_M5x16_BUTTON",
+            "reference_id": "G_PANEL_1_TIE_1_1_F1_SCREW",
+            "compared_id": "H_TEMP_GATE_SCREW_2_2",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              0,
+              -1
+            ],
+            "translation_mm": [
+              -5.0,
+              -6.35,
+              116.0
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "SKF_SA6C",
+            "reference_id": "Y_LINK_L_A_ROD_END",
+            "compared_id": "X_LINK_A_ROD_END",
+            "local_x_direction": [
+              0,
+              1,
+              0
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              0.0,
+              22.0
+            ],
+            "symmetric_difference_mm3": 9.094947017729282e-12
+          },
+          {
+            "part_number": "INCLUDED_SKF_ROD_END_SHANK",
+            "reference_id": "Y_LINK_L_A_ROD_SHANK",
+            "compared_id": "X_LINK_A_ROD_SHANK",
+            "local_x_direction": [
+              0,
+              1,
+              0
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              0.0,
+              6.0
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "INCLUDED_SKF_ROD_END_SHANK",
+            "reference_id": "Y_LINK_L_A_ROD_SHANK",
+            "compared_id": "X_LINK_B_ROD_SHANK",
+            "local_x_direction": [
+              0,
+              1,
+              0
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              0.0,
+              6.0
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "SKF_SAL6C",
+            "reference_id": "Y_LINK_L_B_ROD_END",
+            "compared_id": "X_LINK_B_ROD_END",
+            "local_x_direction": [
+              0,
+              1,
+              0
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              0.0,
+              22.0
+            ],
+            "symmetric_difference_mm3": 1.1823431123048067e-11
+          },
+          {
+            "part_number": "LINK_COUPLER_M6_RHLH_28",
+            "reference_id": "Y_LINK_L_COUPLER",
+            "compared_id": "X_LINK_COUPLER",
+            "local_x_direction": [
+              0,
+              1,
+              0
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              0.0,
+              13.85640646055117
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "M6_RH_JAM_NUT",
+            "reference_id": "Y_LINK_L_JAM_RH",
+            "compared_id": "X_LINK_JAM_RH",
+            "local_x_direction": [
+              0,
+              1,
+              0
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              0.0,
+              11.547005383792566
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "M6_LH_JAM_NUT",
+            "reference_id": "Y_LINK_L_JAM_LH",
+            "compared_id": "X_LINK_JAM_LH",
+            "local_x_direction": [
+              0,
+              1,
+              0
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              0.0,
+              11.547005383792566
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "INCLUDED_D2VW_ROLLER",
+            "reference_id": "Y_LIMIT_L_FRONT_ROLLER",
+            "compared_id": "X_HOME_ROLLER",
+            "local_x_direction": [
+              0,
+              1,
+              0
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              -1.687538997430238e-14,
+              -2.842170943040401e-14,
+              4.8000000000002725
+            ],
+            "symmetric_difference_mm3": 4.831690603168681e-13
+          },
+          {
+            "part_number": "STD_M6_HEX_NUT",
+            "reference_id": "H_STACK_LOCK_NUT_1_1",
+            "compared_id": "H_TEMP_STORAGE_NUT_1",
+            "local_x_direction": [
+              0,
+              0,
+              1
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              -32.4,
+              -6.35,
+              -70.9
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "STD_M6_HEX_NUT",
+            "reference_id": "H_STACK_LOCK_NUT_1_1",
+            "compared_id": "H_TEMP_STORAGE_NUT_2",
+            "local_x_direction": [
+              0,
+              0,
+              1
+            ],
+            "local_y_direction": [
+              1,
+              0,
+              0
+            ],
+            "translation_mm": [
+              -32.4,
+              -6.35,
+              -70.9
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "I_STD_M4x16_y_SOCKET",
+            "reference_id": "I_HEAD_ROD_TOP_25",
+            "compared_id": "I_HEAD_ROD_BOTTOM_25",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              -1,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              16.0,
+              8.881784197001252e-16
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "I_STD_M4x16_y_SOCKET",
+            "reference_id": "I_HEAD_ROD_TOP_25",
+            "compared_id": "I_HEAD_ROD_BOTTOM_85",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              -1,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              16.0,
+              8.881784197001252e-16
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "I_STD_M3x8_y_SOCKET",
+            "reference_id": "I_HEAD_CAP_1_7_17",
+            "compared_id": "I_HEAD_CAP_2_7_17",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              -1,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              14.0,
+              4.440892098500626e-16
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "I_STD_M3x8_y_SOCKET",
+            "reference_id": "I_HEAD_CAP_1_7_17",
+            "compared_id": "I_HEAD_CAP_2_7_29",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              -1,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              14.0,
+              4.440892098500626e-16
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "I_STD_M3x8_y_SOCKET",
+            "reference_id": "I_HEAD_CAP_1_7_17",
+            "compared_id": "I_HEAD_CAP_2_103_17",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              -1,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              14.0,
+              4.440892098500626e-16
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "I_STD_M3x8_y_SOCKET",
+            "reference_id": "I_HEAD_CAP_1_7_17",
+            "compared_id": "I_HEAD_CAP_2_103_29",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              -1,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              14.0,
+              4.440892098500626e-16
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "I_STD_M3x10_y_SOCKET",
+            "reference_id": "I_HEAD_FLOAT_SWITCH_M3",
+            "compared_id": "I_HEAD_PRESENCE_LEFT_M3",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              -1,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              10.0,
+              8.881784197001252e-16
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "I_STD_M3x10_y_SOCKET",
+            "reference_id": "I_HEAD_FLOAT_SWITCH_M3",
+            "compared_id": "I_HEAD_PRESENCE_RIGHT_M3",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              -1,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              10.0,
+              8.881784197001252e-16
+            ],
+            "symmetric_difference_mm3": 0
+          },
+          {
+            "part_number": "I_STD_M3x10_y_SOCKET",
+            "reference_id": "I_HEAD_FLOAT_SWITCH_M3",
+            "compared_id": "I_HEAD_PRESENCE_TOP_M3",
+            "local_x_direction": [
+              1,
+              0,
+              0
+            ],
+            "local_y_direction": [
+              0,
+              -1,
+              0
+            ],
+            "translation_mm": [
+              0.0,
+              10.0,
+              8.881784197001252e-16
+            ],
+            "symmetric_difference_mm3": 0
+          }
+        ],
+        "passed": true,
+        "scope": "Boolean local-geometry congruence and manufacturing drawing equality. Rigid axis rotations/translations are explicitly proven; reflections are not allowed. Does not establish machining allowances or purchased part identity."
+      },
+      "passed": false
+    },
+    "RevI_BED_STORED": {
+      "label": "RevI_BED_STORED",
+      "part_count": 1669,
+      "all_world_shapes_valid_single_solids": true,
+      "total_solid_volume_mm3": 108889047.52015191,
+      "unresolved_intersections": [
+        {
+          "a": "I_HEAD_CAP_1_103_17",
+          "b": "I_PARK_BOLT_2",
+          "intersection_mm3": 0.71691
+        }
+      ],
+      "documented_intersections": [
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_L_A_ROD_END",
+          "b": "Y_LINK_L_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_L_B_ROD_END",
+          "b": "Y_LINK_L_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_R_A_ROD_END",
+          "b": "Y_LINK_R_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_R_B_ROD_END",
+          "b": "Y_LINK_R_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_1",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_2",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_3",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_4",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_5",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_5",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_6",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_6",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_7",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_7",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_8",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_8",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "X_LINK_A_ROD_END",
+          "b": "X_LINK_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "X_LINK_B_ROD_END",
+          "b": "X_LINK_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_BOTTOM",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_TOP",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_1_45",
+          "intersection_mm3": 20.06692,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_1_65",
+          "intersection_mm3": 20.06692,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_2_45",
+          "intersection_mm3": 20.06692,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_2_65",
+          "intersection_mm3": 20.06692,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_STOP_49",
+          "intersection_mm3": 18.16057,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_STOP_61",
+          "intersection_mm3": 18.16057,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_FLOAT_SWITCH_FOOT_0",
+          "intersection_mm3": 11.28519,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_FLOAT_SWITCH_FOOT_1",
+          "intersection_mm3": 11.28519,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_LEAD_84",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_LEAD_100",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_TETHER_FIXED",
+          "intersection_mm3": 16.05354,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_25",
+          "b": "I_HEAD_ROD_TOP_25",
+          "intersection_mm3": 40.13385,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_25",
+          "b": "I_HEAD_ROD_BOTTOM_25",
+          "intersection_mm3": 40.13385,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_85",
+          "b": "I_HEAD_ROD_TOP_85",
+          "intersection_mm3": 40.13385,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_85",
+          "b": "I_HEAD_ROD_BOTTOM_85",
+          "intersection_mm3": 40.13385,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_7_17",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_7_29",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_103_17",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_103_29",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_7_17",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_7_29",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_103_17",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_103_29",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_SEAT_CONE",
+          "intersection_mm3": 24.08031,
+          "reason": "Integral M4 seat thread in matching tapped float body."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_SEAT_V",
+          "intersection_mm3": 24.08031,
+          "reason": "Integral M4 seat thread in matching tapped float body."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_SEAT_FLAT",
+          "intersection_mm3": 24.08031,
+          "reason": "Integral M4 seat thread in matching tapped float body."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_MAGNET_SCREW_1",
+          "intersection_mm3": 24.88298,
+          "reason": "M4 screw engages6.2mm in tapped carriage."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_MAGNET_SCREW_2",
+          "intersection_mm3": 24.88298,
+          "reason": "M4 screw engages6.2mm in tapped carriage."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_MAGNET_SCREW_3",
+          "intersection_mm3": 24.88298,
+          "reason": "M4 screw engages6.2mm in tapped carriage."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAM_91",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAM_96.8",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_LEFT_FOOT_0",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_LEFT_FOOT_1",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_RIGHT_FOOT_0",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_RIGHT_FOOT_1",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_TOP_FOOT_0",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_TOP_FOOT_1",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BUTTON_CONE",
+          "b": "I_HEAD_BUTTON_SCREW_CONE",
+          "intersection_mm3": 7.88343,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BUTTON_V",
+          "b": "I_HEAD_BUTTON_SCREW_V",
+          "intersection_mm3": 7.88343,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BUTTON_FLAT",
+          "b": "I_HEAD_BUTTON_SCREW_FLAT",
+          "intersection_mm3": 7.88343,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_RELEASE_PLATE",
+          "b": "I_HEAD_SPLASH_5",
+          "intersection_mm3": 9.7193,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_RELEASE_PLATE",
+          "b": "I_HEAD_SPLASH_105",
+          "intersection_mm3": 9.7193,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_RELEASE_PLATE",
+          "b": "I_HEAD_TETHER_RELEASE",
+          "intersection_mm3": 16.05354,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_25_35",
+          "intersection_mm3": 46.75593,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_25_55",
+          "intersection_mm3": 46.75593,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_85_35",
+          "intersection_mm3": 46.75593,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_85_55",
+          "intersection_mm3": 46.75593,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_PINCH_15",
+          "intersection_mm3": 38.12715,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_PINCH_95",
+          "intersection_mm3": 38.12715,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_SWITCH_BRACKET",
+          "b": "I_HEAD_FLOAT_SWITCH_M3",
+          "intersection_mm3": 10.15127,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PRESENCE_LEFT_BRACKET",
+          "b": "I_HEAD_PRESENCE_LEFT_M3",
+          "intersection_mm3": 10.15127,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PRESENCE_RIGHT_BRACKET",
+          "b": "I_HEAD_PRESENCE_RIGHT_M3",
+          "intersection_mm3": 10.15127,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PRESENCE_TOP_BRACKET",
+          "b": "I_HEAD_PRESENCE_TOP_M3",
+          "intersection_mm3": 10.15127,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PARK_FOOT_1",
+          "b": "I_PARK_BOLT_1",
+          "intersection_mm3": 50.32439,
+          "reason": "M6 parking screw engages5.825mm in tapped steel foot."
+        },
+        {
+          "a": "I_HEAD_PARK_FOOT_2",
+          "b": "I_PARK_BOLT_2",
+          "intersection_mm3": 50.32439,
+          "reason": "M6 parking screw engages5.825mm in tapped steel foot."
+        }
+      ],
+      "local_integrity": {
+        "invalid_local": [],
+        "local_world_volume_or_area_mismatches": [],
+        "duplicate_component_ids": [],
+        "passed": true
+      },
+      "passed": false
+    },
+    "RevI_PLASMA_HARDWARE": {
+      "label": "RevI_PLASMA_HARDWARE",
+      "part_count": 1669,
+      "all_world_shapes_valid_single_solids": true,
+      "total_solid_volume_mm3": 108889047.52015191,
+      "unresolved_intersections": [],
+      "documented_intersections": [
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_1_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_1",
+          "b": "CAB_TEK_2_1",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_1_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "PAN_BEARER_2",
+          "b": "CAB_TEK_2_2",
+          "intersection_mm3": 72.41528,
+          "reason": "Self-drilling screw thread pierces the bearer bottom wall."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_L_A_ROD_END",
+          "b": "Y_LINK_L_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_L_B_ROD_END",
+          "b": "Y_LINK_L_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "Y_LINK_R_A_ROD_END",
+          "b": "Y_LINK_R_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "Y_LINK_R_B_ROD_END",
+          "b": "Y_LINK_R_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_L_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_L_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_1",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_2",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_3",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_UNDERSIDE_BOLT_R_4",
+          "intersection_mm3": 567.99995,
+          "reason": "Fastener enters omitted purchased T-slot cavity; M8\u00d716 projects11.3 mm past beam face."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "GANTRY_TNUT_R_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_1",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_1",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_2",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_2",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_3",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_3",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_4",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_4",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_5",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_5",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_6",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_6",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_7",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_7",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_BOLT_8",
+          "intersection_mm3": 567.99995,
+          "reason": "M8 thread enters omitted T-slot and nut of the purchased beam envelope."
+        },
+        {
+          "a": "GANTRY_8080",
+          "b": "X_FACE_TNUT_8",
+          "intersection_mm3": 1481.69365,
+          "reason": "Selected T-nut sits inside the omitted purchased T-slot cavity."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "intersection_mm3": 31.41593,
+          "reason": "Published M4 carriage thread lies inside the conservative purchased module body envelope."
+        },
+        {
+          "a": "X_LINK_A_ROD_END",
+          "b": "X_LINK_A_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "X_LINK_B_ROD_END",
+          "b": "X_LINK_B_ROD_SHANK",
+          "intersection_mm3": 25.35505,
+          "reason": "Overlapping conservative head/shank envelopes describe one purchased SKF rod end, not two fabricated bodies."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_BOTTOM",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "ZBX80_BASE",
+          "b": "ZBX80_END_TOP",
+          "intersection_mm3": 19200.0,
+          "reason": "Purchased module endplate and extrusion represented with overlapping external envelopes, not separate material solids."
+        },
+        {
+          "a": "I_TOOL_MOUNT_1",
+          "b": "I_HEAD_BACKPLATE",
+          "intersection_mm3": 80.34623,
+          "reason": "M6x16 mount screw engages9.3mm in tapped custom head plate."
+        },
+        {
+          "a": "I_TOOL_MOUNT_2",
+          "b": "I_HEAD_BACKPLATE",
+          "intersection_mm3": 80.34623,
+          "reason": "M6x16 mount screw engages9.3mm in tapped custom head plate."
+        },
+        {
+          "a": "I_TOOL_MOUNT_3",
+          "b": "I_HEAD_BACKPLATE",
+          "intersection_mm3": 78.43726,
+          "reason": "M6x16 mount screw engages9.3mm in tapped custom head plate."
+        },
+        {
+          "a": "I_TOOL_MOUNT_4",
+          "b": "I_HEAD_BACKPLATE",
+          "intersection_mm3": 80.34623,
+          "reason": "M6x16 mount screw engages9.3mm in tapped custom head plate."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_1_45",
+          "intersection_mm3": 20.06692,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_1_65",
+          "intersection_mm3": 20.06692,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_2_45",
+          "intersection_mm3": 20.06692,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_2_65",
+          "intersection_mm3": 20.06692,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_STOP_49",
+          "intersection_mm3": 18.16057,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_STOP_61",
+          "intersection_mm3": 18.16057,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_FLOAT_SWITCH_FOOT_0",
+          "intersection_mm3": 11.28519,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_FLOAT_SWITCH_FOOT_1",
+          "intersection_mm3": 11.28519,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_LEAD_84",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_LEAD_100",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_TETHER_FIXED",
+          "intersection_mm3": 16.05354,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_25",
+          "b": "I_HEAD_ROD_TOP_25",
+          "intersection_mm3": 40.13385,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_25",
+          "b": "I_HEAD_ROD_BOTTOM_25",
+          "intersection_mm3": 40.13385,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_85",
+          "b": "I_HEAD_ROD_TOP_85",
+          "intersection_mm3": 40.13385,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_85",
+          "b": "I_HEAD_ROD_BOTTOM_85",
+          "intersection_mm3": 40.13385,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_7_17",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_7_29",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_103_17",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_103_29",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_7_17",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_7_29",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_103_17",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_103_29",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_SEAT_CONE",
+          "intersection_mm3": 24.08031,
+          "reason": "Integral M4 seat thread in matching tapped float body."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_SEAT_V",
+          "intersection_mm3": 24.08031,
+          "reason": "Integral M4 seat thread in matching tapped float body."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_SEAT_FLAT",
+          "intersection_mm3": 24.08031,
+          "reason": "Integral M4 seat thread in matching tapped float body."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_MAGNET_SCREW_1",
+          "intersection_mm3": 24.88298,
+          "reason": "M4 screw engages6.2mm in tapped carriage."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_MAGNET_SCREW_2",
+          "intersection_mm3": 24.88298,
+          "reason": "M4 screw engages6.2mm in tapped carriage."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_MAGNET_SCREW_3",
+          "intersection_mm3": 24.88298,
+          "reason": "M4 screw engages6.2mm in tapped carriage."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAM_91",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAM_96.8",
+          "intersection_mm3": 12.95907,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_LEFT_FOOT_0",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_LEFT_FOOT_1",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_RIGHT_FOOT_0",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_RIGHT_FOOT_1",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_TOP_FOOT_0",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_TOP_FOOT_1",
+          "intersection_mm3": 8.63938,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BUTTON_CONE",
+          "b": "I_HEAD_BUTTON_SCREW_CONE",
+          "intersection_mm3": 7.88343,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BUTTON_V",
+          "b": "I_HEAD_BUTTON_SCREW_V",
+          "intersection_mm3": 7.88343,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BUTTON_FLAT",
+          "b": "I_HEAD_BUTTON_SCREW_FLAT",
+          "intersection_mm3": 7.88343,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_RELEASE_PLATE",
+          "b": "I_HEAD_SPLASH_5",
+          "intersection_mm3": 9.7193,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_RELEASE_PLATE",
+          "b": "I_HEAD_SPLASH_105",
+          "intersection_mm3": 9.7193,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_RELEASE_PLATE",
+          "b": "I_HEAD_TETHER_RELEASE",
+          "intersection_mm3": 16.05354,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_25_35",
+          "intersection_mm3": 46.75593,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_25_55",
+          "intersection_mm3": 46.75593,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_85_35",
+          "intersection_mm3": 46.75593,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_85_55",
+          "intersection_mm3": 46.75593,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_PINCH_15",
+          "intersection_mm3": 38.12715,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_PINCH_95",
+          "intersection_mm3": 38.12715,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_SWITCH_BRACKET",
+          "b": "I_HEAD_FLOAT_SWITCH_M3",
+          "intersection_mm3": 10.15127,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PRESENCE_LEFT_BRACKET",
+          "b": "I_HEAD_PRESENCE_LEFT_M3",
+          "intersection_mm3": 10.15127,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PRESENCE_RIGHT_BRACKET",
+          "b": "I_HEAD_PRESENCE_RIGHT_M3",
+          "intersection_mm3": 10.15127,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PRESENCE_TOP_BRACKET",
+          "b": "I_HEAD_PRESENCE_TOP_M3",
+          "intersection_mm3": 10.15127,
+          "reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        }
+      ],
+      "local_integrity": {
+        "invalid_local": [],
+        "local_world_volume_or_area_mismatches": [],
+        "duplicate_component_ids": [],
+        "passed": true
+      },
+      "passed": true
+    }
+  },
+  "poses": [],
+  "plasma_hardware_poses": [],
+  "source_initial_sha256": {
+    "output/release-review/RevE-ENGINEERING/bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "output/release-review/RevE-ENGINEERING/bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "output/release-review/RevE-ENGINEERING/bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "output/release-review/RevE-ENGINEERING/build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "output/release-review/RevE-ENGINEERING/build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "output/release-review/RevE-ENGINEERING/build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "output/release-review/RevE-ENGINEERING/build_revi.py": "2756268a5dca6ce3588d4b2ac0ebde43c87390bed8d6caa21e706fc7f83af462",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "output/release-review/RevE-ENGINEERING/check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "output/release-review/RevE-ENGINEERING/controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "output/release-review/RevE-ENGINEERING/export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "output/release-review/RevE-ENGINEERING/frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "output/release-review/RevE-ENGINEERING/geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "9f3fe8214a58285249a1ac7313e5f39b7658349eb3a4f6a259faeb162e953def",
+    "output/release-review/RevE-ENGINEERING/nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "output/release-review/RevE-ENGINEERING/package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "output/release-review/RevE-ENGINEERING/plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "output/release-review/RevE-ENGINEERING/reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "output/release-review/RevE-ENGINEERING/render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "output/release-review/RevE-ENGINEERING/render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "output/release-review/RevE-ENGINEERING/render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "output/release-review/RevE-ENGINEERING/render_revi.py": "991d641ba4baa19a0f5147b4d29aa9d300c163973c15cadbd62d6cbe2b5ebab5",
+    "output/release-review/RevE-ENGINEERING/sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "output/release-review/RevE-ENGINEERING/service_finish.py": "9738b260ce8f61c7ca45b46c212b1559057bdb1b1505885bcc0616045bc228e5",
+    "output/release-review/RevE-ENGINEERING/strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "output/release-review/RevE-ENGINEERING/structure_finish.py": "b0e6e7f5fc7bd5d3b9e901bc13f7186f78395c78584ab3238ba249613bea9778",
+    "output/release-review/RevE-ENGINEERING/swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "output/release-review/RevE-ENGINEERING/sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "output/release-review/RevE-ENGINEERING/tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "output/release-review/RevE-ENGINEERING/update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "output/release-review/RevE-ENGINEERING/verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "output/release-review/RevE-ENGINEERING/verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "output/release-review/RevE-ENGINEERING/verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "output/release-review/RevE-ENGINEERING/water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "output/release-review/RevE-ENGINEERING/water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "output/release-review/RevE-ENGINEERING/water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811",
+    "output/design-finish-2026-09-26/verify_revi.py": "ff8a5427ad64ca7dca2d0756036e738b05df734f11e7ae132dc55d6869bb556f"
+  },
+  "elapsed_seconds": 108.53,
+  "architecture_assumption": "Current design uses manual small panels, beams and separate spoilboards stored inside the chassis. This is an engineering choice under the footprint constraint, not a claim of automatic bed handling or an owner-selected effort preference.",
+  "holds": [
+    "Actual torch barrel, straight grip, nozzle stand-off, lead OD/bend radius and thermal limits require owner measurements.",
+    "Candidate 23HS30-5004D-B280 replaces the stock Z motor only after shaft/coupling/pilot fit, brake timing, thermal and stopped-load retention acceptance. No production brake mount released.",
+    "HGR20: seller P40/E20/1500 hole dimensions conflict. Actual factory holes must be verified before rail cutting or custom datum drilling.",
+    "HMS40: base nut cavity and endpoint datum not published. Rail caps require a verified base clamp/nut design; motor current and torque-speed curves missing.",
+    "Head is not an operating plasma tool until clamp bore, seated-force/release-force, return, detection, stopping and tether tests pass.",
+    "Head projection uses an explicit80 mm Z stack assumption. Final tool sweep and claimed usable1000 Y must be recalculated when supplier datum is recovered.",
+    "Purchased Z output fixing, brake motor pilot/coupling and loss-of-power timing remain the separately recorded Rev H interface holds.",
+    "Rev H fabricated restraints, nut strips and their welds/threads require measured fit and physical load/retention qualification; nominal CAD does not establish a storage or handling rating.",
+    "Rev I supplies nominal fabricated floating and breakaway mechanisms. Actual torch/clamp dimensions, installed retention/release forces, tether, lead routing and electrical commissioning remain unqualified.",
+    "This revision corrects nominal CAD geometry. Full frame/tool/work stiffness, joint capacities, purchased interfaces and physical commissioning remain separate release requirements.",
+    "X/Y physical stops and three home switches are modeled. Z home bracket and travel stops depend on the unresolved Z supplier endpoint/output geometry. Cable-chain anchors, way covers and spindle/torch cable bend envelopes still require final integration.",
+    "Z power-loss retention: a 23HS30-5004D-B280 replacement brake motor is a sourced candidate, but no installed restraint is qualified. Shaft/coupling/pilot fit, stopped-load retention, brake sequencing and response under power loss require acceptance. A ballscrew must not be assumed self-locking.",
+    "Z slide: exact-ASIN drawing gives body219x80, end blocks12 and carriage90x50;70 mm transverse spacing belongs to the smaller\u00d85 fixing holes, not the larger\u00d87 bores. Output mounting-plane height, along-travel hole pitch/thread/depth and base-slot fastening remain unresolved. No carriage fasteners are modeled; the tool has no released attachment load path and TOOL_ADAPTER_110 individual export is guarded."
+  ],
+  "stored_inventory_integrity": {
+    "missing_in_stored": [],
+    "added_in_stored": [],
+    "changed_local_parts": [],
+    "passed": true,
+    "scope": "Both states should contain the same physical inventory and local fabrication definitions. World pose can differ."
+  }
+}

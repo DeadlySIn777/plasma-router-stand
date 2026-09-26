@@ -2,38 +2,94 @@
 
 Public working design for **800 mm X / 1000 mm Y / 100 mm Z nominal travel**.
 
-**Current revision: Rev H integrated working CAD. It is not a finished, fabrication-ready or operational plasma machine.** Six removable panels, four beams and separate spoilboards store inside the frame. Rev H adds captive bed hardware, storage restraints and reservoir service details. Manual handling remains the working assumption; it is not recorded as an owner-approved preference.
+**Current revision: Rev I.** It adds a floating/breakaway head mechanism,
+stronger storage restraints, supported plumbing and defined water/tool control
+circuits. It is still an engineering design with open measured interfaces and
+integration work, **not a fabrication-ready or operational machine**.
 
 ## Open the current design
 
-- [Current CAD package and limitations](output/release-review/RevH-CAD/README.md)
-- [Router assembly STEP](output/release-review/RevH-CAD/step/RevH_ROUTER.step)
-- [Bed stored assembly STEP](output/release-review/RevH-CAD/step/RevH_BED_STORED.step) — storage layout, with no invented plasma head
+- [Current CAD package and limitations](output/release-review/RevI-CAD/README.md)
+- [Router assembly STEP](output/release-review/RevI-CAD/step/RevI_ROUTER.step)
+- [Bed stored assembly STEP](output/release-review/RevI-CAD/step/RevI_BED_STORED.step)
+- [Plasma head hardware STEP](output/release-review/RevI-CAD/step/RevI_PLASMA_HARDWARE.step) — measured torch not yet installed
 - [Updated concept PDF](output/pdf/plasma-router-stand-concept.pdf)
-- [Current changes, evidence and remaining work](output/design-completion-2026-09-26/README.md)
-- [Verification index](output/design-completion-2026-09-26/ACCEPTANCE.md)
-- [Current component schedule](output/release-review/RevH-CAD/cutlist.csv)
+- [Changes, evidence and reproduction](output/design-finish-2026-09-26/README.md)
+- [Current verification index](output/design-finish-2026-09-26/ACCEPTANCE.md)
+- [Every original audit finding](output/design-finish-2026-09-26/FINDING-DISPOSITION.md)
+- [Remaining engineering and measured inputs](output/design-finish-2026-09-26/OPEN-ITEMS.md)
+- [Mechanical component schedule](output/release-review/RevI-CAD/cutlist.csv)
+- [Selected controls schedule](output/design-finish-2026-09-26/controls/selected-components.json)
 - [Scrap tube lengths and inspection inputs](output/design-completion-2026-09-26/SCRAP-TUBE-GUIDE.md)
 - [X/Y lead check and arrival measurements](output/design-completion-2026-09-26/CONTROL-SCALE-CHECK.md)
 
-![Current router CAD](output/release-review/RevH-CAD/previews/RevH_ROUTER.png)
+![Current router CAD](output/release-review/RevI-CAD/previews/RevI_ROUTER.png)
 
-## What changed
+## Design and changes
 
-Ten selected 1220 mm extrusion bars yield thirty 397 mm strips, assembled into six 500 x 397 mm panels. Twelve retained nut strips eliminate retrieval of 24 loose spoilboard nuts. Defined panel retainers, a folding spoilboard guard, sleeved beam-stack locks and two temporary boxed keepers add restraint geometry. The top bars and rods move separately along the checked routes. The original 52 release fasteners remain, with additional restraint operations; this is not a quick or automatic changer.
+Ten 1220 mm extrusion bars yield thirty 397 mm strips in six 500 × 397 mm
+panels. The bare bed is 1003 × 1211 mm. Panels, four support beams and separate
+spoilboards store inside the chassis. Conversion is manual and retains 52
+primary release fasteners plus restraint/tool operations. It is not an
+automatic or quick bed changer.
 
-Two gasketed reservoir hatches have internal cover-parking pockets, and the washout now has a bolted flange and closure. A fabricated refill pipe and stay define its path and air gap. The Z adapter is a transfer-drill blank with known tool-side holes; unpublished carriage holes are omitted. An optional braked-motor candidate has a sourced envelope and static rating, with fit and stopping behavior still unqualified.
+The head now has twin guides, 6 mm captured float, cone/V/flat magnetic release,
+sealed detection switches, machined clamp features and internal parking. Its
+replaceable insert remains unbored until the actual torch is measured. The
+plasma hardware view is therefore a mechanism assembly, not an invented
+ready-to-cut VIV ARC CUT-50 setup.
 
-The selected X and Y catalog variants both specify **10 mm lead**, meaning travel per screw revolution, not screw diameter. Verify the delivered modules before final calibration. The 2 x 2 tube schedule remains 30 blanks totaling 29,472 mm (96.69 ft) net; actual scrap lengths and remaining wall still need recording.
+Storage rods increase from 10 to 14 mm with 40 mm sockets and thicker seats.
+Actual-section calculations replace the earlier incomplete stiffness claim.
+The proposed light-routing target is 0.20 mm tool-to-work displacement at
+100 N; known bed members alone account for about 0.135 mm. Actual motion,
+mount, joint and tool compliance remain unqualified. Sand receives no
+elastic-stiffness credit.
 
-Nominal CAD and path checks do not establish whole-machine stiffness, joint capacity, actual interface compatibility, operator access, physical retention or machining accuracy. See the current evidence for exact scope and limits. The **VIV ARC CUT-50** identification still needs exact version/interface information; an AG-60 listing does not identify the owner's actual torch geometry or starting circuitry.
+The water system gains a supported drain/flange, removable tail and parking
+cup, strainer carrier, corrected pump orientation and supported pressure and
+suction hose routes. The reservoir stays vented. A compressor or venturi is
+not connected to the fabricated tank.
 
-## Sources, history and cost
+[Current controls](output/design-finish-2026-09-26/controls/README.md) retain
+Kraken V1.1 with onboard drivers. Actual terminal circuits, timer contacts,
+isolated run request, restart prevention and a selected C41S speed converter
+are defined. Separate [isolated head inputs](output/design-finish-2026-09-26/controls/HEAD-INTERFACE.md)
+connect the float and breakaway switches. Router Z zero remains manual; the
+parked plasma float is not a spindle touchplate. The populated panel, complete stop/power/brake system, actual
+VFD/cutter interface and physical commissioning remain unfinished.
 
-The active generator is [build_revh.py](output/release-review/RevE-ENGINEERING/build_revh.py). Shared Python sources remain in the legacy-named directory for reproducibility; **current exports are only in RevH-CAD**. The [29-finding audit](output/cad-reaudit-2026-09-25/README.md), [Rev G repair evidence](output/cad-repair-2026-09-25/README.md) and older exports are historical evidence. They have not been relabeled as the new design. The Rev H manifest explicitly separates historical baseline metadata from current completion details.
+The selected X/Y catalog variants specify **10 mm lead**, meaning movement
+per screw revolution, not screw diameter. The selected SFU1605 Z has 5 mm
+lead. Verify delivered modules before final calibration and adapter drilling.
 
-[Earlier price workbook](outputs/reve-30510/CNC-plasma-RevE-budget.xlsx) and [actual-price audit](outputs/reve-30510/actual-cost/REAL-COST.md) are historical procurement research. Quantities changed; neither is a current complete build total. No purchase, vendor message, hardware flashing or manufacturing release occurred.
+The 2 × 2 tube list remains 30 blanks totaling 29,472 mm / 96.69 ft net, using
+3.048 mm modeled wall. Actual scrap lengths, remaining wall and condition
+must be recorded before nesting. The mechanical cut list is not a complete
+electrical BOM or a current delivered purchase total.
 
-CadQuery/OpenCascade generate the model; ReportLab generates the concept brief. Runtime paths are local Windows paths. A clean-machine rebuild and Fusion import have not been certified. [Controller work](RevE-ENGINEERING/controls/) is a separate prototype and was not redesigned or deployed with this mechanical repair.
+## Evidence, history and cost
 
-The [original snapshot manifest](REPOSITORY-SNAPSHOT.json) describes the initial import only. Third-party sources retain their existing license notices; this repository grants no new rights over supplier material.
+The [verification index](output/design-finish-2026-09-26/ACCEPTANCE.md) binds
+current assembly, pose, route, service, mechanism, circuit and export reports
+to their source files. These checks have explicit limits: nominal clear
+geometry does not establish physical rigidity, force thresholds, operator
+access, live electrical behavior or machining accuracy.
+
+The active generator is [build_revi.py](output/release-review/RevE-ENGINEERING/build_revi.py).
+Shared Python sources retain their legacy directory name; **current exports
+are in RevI-CAD**. Rev H, Rev G, older exports and the
+[29-finding audit](output/cad-reaudit-2026-09-25/README.md) are preserved as
+historical evidence. They are not relabeled as current results.
+
+[Earlier prices](outputs/reve-30510/CNC-plasma-RevE-budget.xlsx) and the
+[actual-price audit](outputs/reve-30510/actual-cost/REAL-COST.md) are historical
+procurement research. Quantities changed; neither is a complete Rev I build
+total. No purchase, vendor message, firmware flash or machine operation is
+implied by this public design record.
+
+CadQuery/OpenCascade generate exchange geometry; ReportLab generates the
+concept brief. This is not a native Fusion feature-history or machine-specific
+CAM release. The [original snapshot manifest](REPOSITORY-SNAPSHOT.json)
+describes the initial import only. Supplier material retains its existing
+license notices; this repository grants no new rights over it.

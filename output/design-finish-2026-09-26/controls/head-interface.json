@@ -1,0 +1,611 @@
+{
+  "revision": "Rev I head-input interface, 2026-09-26",
+  "status": "SCHEMATIC_DEFINED_HARDWARE_UNQUALIFIED",
+  "scope": "Two isolated low-voltage head channels. No arc connection, safety-rated stop, PCB layout, harness movement or energized-machine verification.",
+  "supply": {
+    "field_v": [
+      21.6,
+      26.4
+    ],
+    "logic_v": [
+      3,
+      3.6
+    ],
+    "field_node": "C",
+    "field_return": "XW:2",
+    "logic_return": "LOGIC_0",
+    "field_loop_drop_allowance_v": 1,
+    "resistor_effective_tolerance": 0.02,
+    "component_initial_tolerance": 0.01,
+    "screen_ambient_c": [
+      0,
+      50
+    ]
+  },
+  "components": {
+    "U_HEAD": {
+      "mpn": "Panasonic AQY212GS",
+      "quantity": 1,
+      "role": "Presence output XH:5/6",
+      "pins": {
+        "1": "LED anode",
+        "2": "LED cathode",
+        "3": "NO output",
+        "4": "NO output"
+      }
+    },
+    "U_PROBE": {
+      "mpn": "Panasonic AQY212GS",
+      "quantity": 1,
+      "role": "Float NC to isolated PE11 healthy-low",
+      "pins": {
+        "1": "LED anode",
+        "2": "LED cathode",
+        "3": "NO output",
+        "4": "NO output"
+      }
+    },
+    "S_FLOAT": {
+      "mpn": "Omron D2HW-C202MR",
+      "quantity": 1,
+      "form": "NC",
+      "com": "black",
+      "contact": "red",
+      "closed_condition": "float at normal lower stop"
+    },
+    "S_HEAD_L": {
+      "mpn": "Omron D2HW-C203MR",
+      "quantity": 1,
+      "form": "NO",
+      "com": "black",
+      "contact": "blue",
+      "closed_condition": "left release-plate cam seated"
+    },
+    "S_HEAD_R": {
+      "mpn": "Omron D2HW-C203MR",
+      "quantity": 1,
+      "form": "NO",
+      "com": "black",
+      "contact": "blue",
+      "closed_condition": "right release-plate cam seated"
+    },
+    "S_HEAD_T": {
+      "mpn": "Omron D2HW-C203MR",
+      "quantity": 1,
+      "form": "NO",
+      "com": "black",
+      "contact": "blue",
+      "closed_condition": "top release-plate cam seated"
+    },
+    "R_HEAD": {
+      "mpn": "Vishay MRS25000C3321FCT00",
+      "quantity": 1,
+      "ohms": 3320,
+      "watts": 0.6,
+      "role": "Current limit before outgoing presence wire"
+    },
+    "R_PROBE": {
+      "mpn": "Vishay MRS25000C3321FCT00",
+      "quantity": 1,
+      "ohms": 3320,
+      "watts": 0.6,
+      "role": "Current limit before outgoing probe wire"
+    },
+    "R_HEAD_SHUNT": {
+      "mpn": "Vishay MRS25000C2202FCT00",
+      "quantity": 1,
+      "ohms": 22000,
+      "watts": 0.6
+    },
+    "R_PROBE_SHUNT": {
+      "mpn": "Vishay MRS25000C2202FCT00",
+      "quantity": 1,
+      "ohms": 22000,
+      "watts": 0.6
+    },
+    "R_PULLUP": {
+      "mpn": "Vishay MRS25000C4701FCT00",
+      "quantity": 1,
+      "ohms": 4700,
+      "watts": 0.6,
+      "placement": "At controller header, PE11 to controller 3V3"
+    },
+    "R_SERIES": {
+      "mpn": "Vishay MRS25000C3300FCT00",
+      "quantity": 1,
+      "ohms": 330,
+      "watts": 0.6,
+      "placement": "At controller header, PE11 to U_PROBE pin4"
+    },
+    "R_BLEED": {
+      "mpn": "Vishay MRS25000C1003FCT00",
+      "quantity": 1,
+      "ohms": 100000,
+      "watts": 0.6,
+      "placement": "HEAD_SAFE to XW:2"
+    },
+    "C_PROBE": {
+      "spec": "4.7 nF +/-5%, C0G/NP0, >=50 V, leaded or suitable PCB package",
+      "quantity": 1,
+      "farads": 4.7e-9,
+      "tolerance": 0.05,
+      "placement": "At controller header, PE11 to LOGIC_0"
+    },
+    "D_HEAD": {
+      "mpn": "Vishay 1N4148",
+      "quantity": 1,
+      "role": "Anti-parallel LED protection; anode U_HEAD2, cathode U_HEAD1"
+    },
+    "D_PROBE": {
+      "mpn": "Vishay 1N4148",
+      "quantity": 1,
+      "role": "Anti-parallel LED protection; anode U_PROBE2, cathode U_PROBE1"
+    },
+    "XHEAD": {
+      "mpn": "Phoenix Contact PT 2,5 / 3209510",
+      "quantity": 8,
+      "role": "Eight field switch terminals; separate individual positions, no common bridge"
+    },
+    "XHEAD_END": {
+      "mpn": "Phoenix Contact D-ST 2,5 / 3030417",
+      "quantity": 1,
+      "role": "Exposed end cover"
+    },
+    "XHEAD_STOP": {
+      "mpn": "Phoenix Contact CLIPFIX 35-5 / 3022276",
+      "quantity": 2,
+      "role": "Both ends of dedicated terminal strip"
+    }
+  },
+  "terminals": [
+    [
+      "XHEAD:1",
+      "S_FLOAT:black",
+      "Current-limited outgoing probe pair"
+    ],
+    [
+      "XHEAD:2",
+      "S_FLOAT:red",
+      "NC return to U_PROBE:1"
+    ],
+    [
+      "XHEAD:3",
+      "S_HEAD_L:black",
+      "Current-limited outgoing presence pair"
+    ],
+    [
+      "XHEAD:4",
+      "S_HEAD_L:blue",
+      "Return left, panel wire to XHEAD:5"
+    ],
+    [
+      "XHEAD:5",
+      "S_HEAD_R:black",
+      "Outgoing right"
+    ],
+    [
+      "XHEAD:6",
+      "S_HEAD_R:blue",
+      "Return right, panel wire to XHEAD:7"
+    ],
+    [
+      "XHEAD:7",
+      "S_HEAD_T:black",
+      "Outgoing top"
+    ],
+    [
+      "XHEAD:8",
+      "S_HEAD_T:blue",
+      "Return top to U_HEAD:1"
+    ],
+    [
+      "XH:5",
+      "U_HEAD:4",
+      "Existing DOOR_SAFE boundary"
+    ],
+    [
+      "XH:6",
+      "U_HEAD:3",
+      "Existing HEAD_SAFE boundary"
+    ],
+    [
+      "J_PROBE:1",
+      "PE11 / Kraken EXP2 pin4",
+      "Receiver signal, local pull-up/filter"
+    ],
+    [
+      "J_PROBE:2",
+      "LOGIC_0 / Kraken SWD J22 pin3",
+      "Controller ground only"
+    ],
+    [
+      "J_PROBE:3",
+      "3V3 / Kraken SWD J22 pin1",
+      "Controller-derived 3.3 V only; never EXP +5 V"
+    ]
+  ],
+  "connections": [
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "R_PROBE:1",
+      "id": "W_P1"
+    },
+    {
+      "kind": "resistor",
+      "a": "R_PROBE:1",
+      "b": "R_PROBE:2",
+      "id": "R_PROBE"
+    },
+    {
+      "kind": "wire",
+      "a": "R_PROBE:2",
+      "b": "XHEAD:1",
+      "id": "W_P2"
+    },
+    {
+      "kind": "wire",
+      "a": "XHEAD:1",
+      "b": "S_FLOAT:black",
+      "id": "W_P3"
+    },
+    {
+      "kind": "contact",
+      "a": "S_FLOAT:black",
+      "b": "S_FLOAT:red",
+      "id": "S_FLOAT",
+      "closed_key": "float_healthy"
+    },
+    {
+      "kind": "wire",
+      "a": "S_FLOAT:red",
+      "b": "XHEAD:2",
+      "id": "W_P4"
+    },
+    {
+      "kind": "wire",
+      "a": "XHEAD:2",
+      "b": "U_PROBE:1",
+      "id": "W_P5"
+    },
+    {
+      "kind": "wire",
+      "a": "U_PROBE:2",
+      "b": "XW:2",
+      "id": "W_P6"
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "R_HEAD:1",
+      "id": "W_H1"
+    },
+    {
+      "kind": "resistor",
+      "a": "R_HEAD:1",
+      "b": "R_HEAD:2",
+      "id": "R_HEAD"
+    },
+    {
+      "kind": "wire",
+      "a": "R_HEAD:2",
+      "b": "XHEAD:3",
+      "id": "W_H2"
+    },
+    {
+      "kind": "wire",
+      "a": "XHEAD:3",
+      "b": "S_HEAD_L:black",
+      "id": "W_H3"
+    },
+    {
+      "kind": "contact",
+      "a": "S_HEAD_L:black",
+      "b": "S_HEAD_L:blue",
+      "id": "S_HEAD_L",
+      "closed_key": "left"
+    },
+    {
+      "kind": "wire",
+      "a": "S_HEAD_L:blue",
+      "b": "XHEAD:4",
+      "id": "W_H4"
+    },
+    {
+      "kind": "wire",
+      "a": "XHEAD:5",
+      "b": "S_HEAD_R:black",
+      "id": "W_H5"
+    },
+    {
+      "kind": "contact",
+      "a": "S_HEAD_R:black",
+      "b": "S_HEAD_R:blue",
+      "id": "S_HEAD_R",
+      "closed_key": "right"
+    },
+    {
+      "kind": "wire",
+      "a": "S_HEAD_R:blue",
+      "b": "XHEAD:6",
+      "id": "W_H6"
+    },
+    {
+      "kind": "wire",
+      "a": "XHEAD:7",
+      "b": "S_HEAD_T:black",
+      "id": "W_H7"
+    },
+    {
+      "kind": "contact",
+      "a": "S_HEAD_T:black",
+      "b": "S_HEAD_T:blue",
+      "id": "S_HEAD_T",
+      "closed_key": "top"
+    },
+    {
+      "kind": "wire",
+      "a": "S_HEAD_T:blue",
+      "b": "XHEAD:8",
+      "id": "W_H8"
+    },
+    {
+      "kind": "wire",
+      "a": "XHEAD:4",
+      "b": "XHEAD:5",
+      "id": "W_H45"
+    },
+    {
+      "kind": "wire",
+      "a": "XHEAD:6",
+      "b": "XHEAD:7",
+      "id": "W_H67"
+    },
+    {
+      "kind": "wire",
+      "a": "XHEAD:8",
+      "b": "U_HEAD:1",
+      "id": "W_H8U"
+    },
+    {
+      "kind": "wire",
+      "a": "U_HEAD:2",
+      "b": "XW:2",
+      "id": "W_H0"
+    },
+    {
+      "kind": "led",
+      "a": "U_HEAD:1",
+      "b": "U_HEAD:2",
+      "id": "LED_HEAD"
+    },
+    {
+      "kind": "resistor",
+      "a": "U_HEAD:1",
+      "b": "U_HEAD:2",
+      "id": "R_HEAD_SHUNT"
+    },
+    {
+      "kind": "diode",
+      "a": "U_HEAD:2",
+      "b": "U_HEAD:1",
+      "id": "D_HEAD"
+    },
+    {
+      "kind": "photomos",
+      "a": "U_HEAD:4",
+      "b": "U_HEAD:3",
+      "id": "U_HEAD",
+      "controlled_by": "LED_HEAD",
+      "optical_only": true
+    },
+    {
+      "kind": "led",
+      "a": "U_PROBE:1",
+      "b": "U_PROBE:2",
+      "id": "LED_PROBE"
+    },
+    {
+      "kind": "resistor",
+      "a": "U_PROBE:1",
+      "b": "U_PROBE:2",
+      "id": "R_PROBE_SHUNT"
+    },
+    {
+      "kind": "diode",
+      "a": "U_PROBE:2",
+      "b": "U_PROBE:1",
+      "id": "D_PROBE"
+    },
+    {
+      "kind": "photomos",
+      "a": "U_PROBE:4",
+      "b": "U_PROBE:3",
+      "id": "U_PROBE",
+      "controlled_by": "LED_PROBE",
+      "optical_only": true
+    },
+    {
+      "kind": "wire",
+      "a": "XH:5",
+      "b": "U_HEAD:4",
+      "id": "W_O1"
+    },
+    {
+      "kind": "wire",
+      "a": "U_HEAD:3",
+      "b": "XH:6",
+      "id": "W_O2"
+    },
+    {
+      "kind": "wire",
+      "a": "XH:6",
+      "b": "HEAD_SAFE",
+      "id": "W_O3"
+    },
+    {
+      "kind": "resistor",
+      "a": "HEAD_SAFE",
+      "b": "XW:2",
+      "id": "R_BLEED"
+    },
+    {
+      "kind": "wire",
+      "a": "U_PROBE:3",
+      "b": "LOGIC_0",
+      "id": "W_L0"
+    },
+    {
+      "kind": "wire",
+      "a": "U_PROBE:4",
+      "b": "R_SERIES:1",
+      "id": "W_L1"
+    },
+    {
+      "kind": "resistor",
+      "a": "R_SERIES:1",
+      "b": "R_SERIES:2",
+      "id": "R_SERIES"
+    },
+    {
+      "kind": "wire",
+      "a": "R_SERIES:2",
+      "b": "PE11",
+      "id": "W_L2"
+    },
+    {
+      "kind": "resistor",
+      "a": "3V3",
+      "b": "PE11",
+      "id": "R_PULLUP"
+    },
+    {
+      "kind": "capacitor",
+      "a": "PE11",
+      "b": "LOGIC_0",
+      "id": "C_PROBE"
+    },
+    {
+      "kind": "wire",
+      "a": "PE11",
+      "b": "J_PROBE:1",
+      "id": "W_L3"
+    },
+    {
+      "kind": "wire",
+      "a": "LOGIC_0",
+      "b": "J_PROBE:2",
+      "id": "W_L4"
+    },
+    {
+      "kind": "wire",
+      "a": "3V3",
+      "b": "J_PROBE:3",
+      "id": "W_L5"
+    }
+  ],
+  "model": {
+    "presence_contacts": [
+      "S_HEAD_L",
+      "S_HEAD_R",
+      "S_HEAD_T"
+    ],
+    "probe_contact": "S_FLOAT",
+    "presence_output": [
+      "U_HEAD:4",
+      "U_HEAD:3"
+    ],
+    "presence_boundary": [
+      "XH:5",
+      "XH:6"
+    ],
+    "presence_model_input": "breakaway_seated",
+    "probe_output": [
+      "U_PROBE:4",
+      "U_PROBE:3"
+    ],
+    "probe_healthy_logic": 0,
+    "probe_open_logic": 1,
+    "photomos": {
+      "recommended_if_a": [
+        0.005,
+        0.03
+      ],
+      "operate_if_max_a": 0.003,
+      "release_if_min_a": 0.0003,
+      "vf_max_v": 1.5,
+      "ron_max_ohm": 0.7,
+      "off_leak_max_a": 0.000001,
+      "load_recommended_max_v": 48,
+      "load_absolute_max_v": 60,
+      "load_catalogue_a": 1,
+      "output_power_max_w": 0.4,
+      "input_power_max_w": 0.075,
+      "on_s": 0.005,
+      "off_s": 0.0005,
+      "test_condition": "25 C; IF 5 mA, IL 100 mA, VL 10 V for timing. Values are not a qualified delay at the actual small probe load/24 V field load."
+    },
+    "switch": {
+      "minimum_circuit_v": 5,
+      "minimum_a": 0.001,
+      "resistive_24v_a": 1,
+      "initial_contact_resistance_ohm": 0.15
+    },
+    "head_load": {
+      "if_ready_r_ohm": 1000,
+      "if_ready_r_tolerance": 0.05,
+      "if_ready_vf_min_v": 1,
+      "run_arm_coil_cap_a": 0.04,
+      "each_tool_coil_cap_a": 0.04,
+      "normal_tool_coils": 1,
+      "abnormal_both_tool_coils": 2,
+      "output_design_cap_a": 0.15,
+      "other_loads_allowed": false
+    },
+    "logic": {
+      "vil_vdd_fraction": 0.3,
+      "vih_vdd_fraction": 0.7,
+      "pad_leak_allowance_a": 0.000001,
+      "internal_pullup_min_ohm": 30000,
+      "internal_pulldown_allowed": false,
+      "probe_speed_mm_s": 1,
+      "probe_invert_setting": 0,
+      "setting_scope": "Current vendored grblHAL raw GPIO XOR invert; $6 bit0=0. Other probe bits, if any, preserved. Confirm on board before movement."
+    },
+    "delay_test": {
+      "relay_pickup_s": [
+        0.005,
+        0.01,
+        0.02
+      ],
+      "relay_dropout_s": [
+        0.005,
+        0.02,
+        0.05
+      ],
+      "fault_hold_s": 0.3,
+      "integration_step_s": 0.0005
+    }
+  },
+  "sources": {
+    "photomos_catalog": "https://industry.panasonic.com/ac/cdn/e/control/relay/photomos/catalog/semi_eng_gu1a_aqy21_gs.pdf",
+    "photomos_product": "https://industry.panasonic.com/ap/en/products/control/relay/photomos/number/aqy212gs",
+    "switch": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-d2hw.pdf",
+    "resistors": "https://www.vishay.com/docs/28724/mrs16m25.pdf",
+    "diodes": "https://www.vishay.com/docs/81857/1n4148.pdf",
+    "terminal": "https://www.phoenixcontact.com/en-gb/products/feed-through-terminal-block-pt-25-3209510",
+    "terminal_accessories": "https://www.phoenixcontact.com/en-gb/products/feed-through-terminal-block-pt-25-3209510?type=pdf",
+    "mcu": "https://www.st.com/resource/en/datasheet/stm32h723zg.pdf",
+    "board": "https://github.com/bigtreetech/BIGTREETECH-Kraken",
+    "coil": "https://cdn.findernet.com/app/uploads/S40EN.pdf"
+  },
+  "limits": [
+    "Presence is an ordinary machine permissive; shorted PhotoMOS output or welded/bridged presence contact can mask a release.",
+    "NC float loop detects opens, not a shorted cable/contact or shorted receiver; it is not safety-rated overtravel detection.",
+    "Parked head must remain assembled and wired for router mode; its float is not a router touchplate. Router Z zero is manual in this design.",
+    "PCB, creepage/clearance, enclosure, physical harness/strain relief, supply transients, actual temperature/delay and EMI are not qualified.",
+    "Field C is already fused by F_CONTROL; this head interface does not qualify that fuse or provide semiconductor short-circuit protection.",
+    "Each relay coil must remain <=40 mA over actual voltage and coil temperature. Total HEAD_SAFE load <=150 mA. Retain coil-local flyback protection.",
+    "No actual plasma torch, raw arc or cutter trigger is connected to this circuit."
+  ]
+}

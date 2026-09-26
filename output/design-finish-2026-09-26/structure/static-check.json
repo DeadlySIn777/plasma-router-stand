@@ -1,0 +1,76 @@
+{
+  "details": {
+    "revision": "I",
+    "rod_mm": [
+      14,
+      398.5
+    ],
+    "rod_material_min_yield_MPa": 300,
+    "socket_mm": {
+      "OD": 18.2,
+      "bore": 14.2,
+      "height": 49,
+      "engagement": 40
+    },
+    "design_case": "100 N horizontal at one panel rod top; storage restraint only",
+    "nominal_panel_clearance_mm": 0.9,
+    "assembly_changes": [
+      "Two rods",
+      "Two lowerM6x16 screws",
+      "Two receiver sockets and underside welds",
+      "Two enlarged saddle cuts",
+      "Two revised receiver seat holes"
+    ],
+    "source_scope": "Calculations and physical acceptance in output/design-finish-2026-09-26/structure. No complete tool-to-work rigidity rating."
+  },
+  "router": {
+    "parts": 1452,
+    "clashes": [
+      {
+        "a": "G_RACK_PANEL_WEB_1",
+        "b": "I_PANEL_ROD_SOCKET_1",
+        "intersection_mm3": 50.09435
+      },
+      {
+        "a": "G_RACK_PANEL_WEB_1",
+        "b": "I_PANEL_ROD_SOCKET_WELD_1",
+        "intersection_mm3": 72.989
+      },
+      {
+        "a": "G_RACK_PANEL_WEB_2",
+        "b": "I_PANEL_ROD_SOCKET_2",
+        "intersection_mm3": 50.09435
+      },
+      {
+        "a": "G_RACK_PANEL_WEB_2",
+        "b": "I_PANEL_ROD_SOCKET_WELD_2",
+        "intersection_mm3": 72.989
+      }
+    ]
+  },
+  "stored": {
+    "parts": 1452,
+    "clashes": [
+      {
+        "a": "G_RACK_PANEL_WEB_1",
+        "b": "I_PANEL_ROD_SOCKET_1",
+        "intersection_mm3": 50.09435
+      },
+      {
+        "a": "G_RACK_PANEL_WEB_1",
+        "b": "I_PANEL_ROD_SOCKET_WELD_1",
+        "intersection_mm3": 72.989
+      },
+      {
+        "a": "G_RACK_PANEL_WEB_2",
+        "b": "I_PANEL_ROD_SOCKET_2",
+        "intersection_mm3": 50.09435
+      },
+      {
+        "a": "G_RACK_PANEL_WEB_2",
+        "b": "I_PANEL_ROD_SOCKET_WELD_2",
+        "intersection_mm3": 72.989
+      }
+    ]
+  }
+}

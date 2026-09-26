@@ -1,0 +1,368 @@
+{
+  "scope": "Ordered geometry of beams 1,2,3,4 after all panels/boards/clamps and router tool are already stored. Small-part transfers, fingers, operator reach and temporary-park lateral restraint are excluded.",
+  "source_sha256": {
+    "output/cad-repair-2026-09-25/check_spoil_transfer.py": "1397e268b4136f0436db0f07bd23256c35d980cb38eca42c2c6a40c56e4af9fe",
+    "output/cad-repair-2026-09-25/verify_revg_beam_path.py": "cf9cffeb4ebeddc6048fc977c888b13f0f90ee0779b7006549f745fd5f56e6c3",
+    "output/design-finish-2026-09-26/verify_revi_routes.py": "be4fc38927a00f7e0194f1270380b0927d483dfcd0e1fa1f6cddab6ac87ae50d",
+    "output/release-review/RevE-ENGINEERING/bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "output/release-review/RevE-ENGINEERING/bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "output/release-review/RevE-ENGINEERING/bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "output/release-review/RevE-ENGINEERING/build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "output/release-review/RevE-ENGINEERING/build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "output/release-review/RevE-ENGINEERING/build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "output/release-review/RevE-ENGINEERING/build_revi.py": "2756268a5dca6ce3588d4b2ac0ebde43c87390bed8d6caa21e706fc7f83af462",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "output/release-review/RevE-ENGINEERING/check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "output/release-review/RevE-ENGINEERING/controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "output/release-review/RevE-ENGINEERING/export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "output/release-review/RevE-ENGINEERING/frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "output/release-review/RevE-ENGINEERING/geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "output/release-review/RevE-ENGINEERING/package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "output/release-review/RevE-ENGINEERING/plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "output/release-review/RevE-ENGINEERING/reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "output/release-review/RevE-ENGINEERING/render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "output/release-review/RevE-ENGINEERING/render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "output/release-review/RevE-ENGINEERING/render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "output/release-review/RevE-ENGINEERING/render_revi.py": "991d641ba4baa19a0f5147b4d29aa9d300c163973c15cadbd62d6cbe2b5ebab5",
+    "output/release-review/RevE-ENGINEERING/sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "output/release-review/RevE-ENGINEERING/service_finish.py": "9738b260ce8f61c7ca45b46c212b1559057bdb1b1505885bcc0616045bc228e5",
+    "output/release-review/RevE-ENGINEERING/strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "output/release-review/RevE-ENGINEERING/structure_finish.py": "b0e6e7f5fc7bd5d3b9e901bc13f7186f78395c78584ab3238ba249613bea9778",
+    "output/release-review/RevE-ENGINEERING/swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "output/release-review/RevE-ENGINEERING/sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "output/release-review/RevE-ENGINEERING/tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "output/release-review/RevE-ENGINEERING/update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "output/release-review/RevE-ENGINEERING/verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "output/release-review/RevE-ENGINEERING/verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "output/release-review/RevE-ENGINEERING/verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "output/release-review/RevE-ENGINEERING/water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "output/release-review/RevE-ENGINEERING/water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "output/release-review/RevE-ENGINEERING/water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+  },
+  "sources_unchanged_during_check": true,
+  "method": "Exact B-rep midpoint minimum distance plus a conservative maximum point displacement; adaptive continuous subdivision, including already stored beams as obstacles.",
+  "model_parts": 1669,
+  "temporary_park": {
+    "bounds_mm": [
+      113.0,
+      439.09999999999997,
+      920.8,
+      1037.0,
+      517.9,
+      977.6
+    ],
+    "nominal_uniform_steel_center_of_volume_mm": [
+      575.0000000000002,
+      468.0799157886645,
+      947.2277215236165
+    ],
+    "support_contact_nominal_xy_mm": [
+      113,
+      453.1,
+      1037,
+      489.9
+    ],
+    "status": "Nominal static resting contact only; no lateral restraint or human-access qualification."
+  },
+  "records": [
+    {
+      "beam": 1,
+      "moving_components": 17,
+      "phases": {
+        "lift_clear_of_seats": {
+          "status": "CLEAR",
+          "distance_queries": 834,
+          "max_subdivision_depth": 12,
+          "failures": []
+        },
+        "move_lifted_beam_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "rotate_on_side_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "raise_for_temporary_park_approach": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "move_above_second_beam": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_onto_second_beam": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lift_from_temporary_park": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "return_on_side_to_front_portal": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_in_open_front_portal": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "move_into_rear_lower_rack": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_onto_rear_shelf": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      },
+      "stored_bounds_mm": [
+        113.0,
+        89.99999999999993,
+        585.0,
+        1037.0,
+        168.80000000000007,
+        641.8000000000002
+      ],
+      "final_geometry_bounds_delta_mm": 1.1368683772161603e-13
+    },
+    {
+      "beam": 2,
+      "moving_components": 19,
+      "phases": {
+        "lift_clear_of_seats": {
+          "status": "CLEAR",
+          "distance_queries": 834,
+          "max_subdivision_depth": 12,
+          "failures": []
+        },
+        "move_lifted_beam_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "rotate_on_side_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_onto_front_shelf": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      },
+      "stored_bounds_mm": [
+        113.0,
+        -9.947598300641403e-14,
+        584.9999999999999,
+        1037.0,
+        78.80000000000001,
+        641.8
+      ],
+      "final_geometry_bounds_delta_mm": 1.1368683772161603e-13
+    },
+    {
+      "beam": 3,
+      "moving_components": 17,
+      "phases": {
+        "lift_clear_of_seats": {
+          "status": "CLEAR",
+          "distance_queries": 838,
+          "max_subdivision_depth": 12,
+          "failures": []
+        },
+        "move_lifted_beam_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "rotate_on_side_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_above_front_lower_beam": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "move_above_rear_lower_beam": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_onto_rear_stacking_pads": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      },
+      "stored_bounds_mm": [
+        113.0,
+        89.99999999999996,
+        641.8,
+        1037.0,
+        168.79999999999984,
+        698.6
+      ],
+      "final_geometry_bounds_delta_mm": 1.1368683772161603e-13
+    },
+    {
+      "beam": 4,
+      "moving_components": 17,
+      "phases": {
+        "lift_clear_of_seats": {
+          "status": "CLEAR",
+          "distance_queries": 834,
+          "max_subdivision_depth": 12,
+          "failures": []
+        },
+        "move_lifted_beam_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "rotate_on_side_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_onto_front_stacking_pads": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      },
+      "stored_bounds_mm": [
+        113.0,
+        -2.283728761653947e-13,
+        641.8,
+        1037.0,
+        78.79999999999995,
+        698.6000000000001
+      ],
+      "final_geometry_bounds_delta_mm": 0.0
+    }
+  ],
+  "analytic_xy_envelope_mm": [
+    113,
+    0,
+    1037,
+    1330.4
+  ],
+  "footprint": "All prescribed geometry stays inside nominal frame X0..1150,Y0..1450; X never changes, quarter-turn Y bounds remain0..135.6, other XY moves are linear between contained endpoints.",
+  "sampled_bounds_mm": [
+    113.0,
+    -2.283728761653947e-13,
+    584.9999999999999,
+    1037.0,
+    1330.4,
+    1017.883679528896
+  ],
+  "pass": true,
+  "revision": "Rev I full integrated machine, original prescribed large-part route",
+  "builder": "build_revi.build_model",
+  "revi_obstacle_state": {
+    "part_count": 1669,
+    "restraint_preparation": "prepare_beam_handling_model",
+    "holds": [
+      "Actual torch barrel, straight grip, nozzle stand-off, lead OD/bend radius and thermal limits require owner measurements.",
+      "Candidate 23HS30-5004D-B280 replaces the stock Z motor only after shaft/coupling/pilot fit, brake timing, thermal and stopped-load retention acceptance. No production brake mount released.",
+      "HGR20: seller P40/E20/1500 hole dimensions conflict. Actual factory holes must be verified before rail cutting or custom datum drilling.",
+      "HMS40: base nut cavity and endpoint datum not published. Rail caps require a verified base clamp/nut design; motor current and torque-speed curves missing.",
+      "Head is not an operating plasma tool until clamp bore, seated-force/release-force, return, detection, stopping and tether tests pass.",
+      "Head projection uses an explicit80 mm Z stack assumption. Final tool sweep and claimed usable1000 Y must be recalculated when supplier datum is recovered.",
+      "Purchased Z output fixing, brake motor pilot/coupling and loss-of-power timing remain the separately recorded Rev H interface holds.",
+      "Rev H fabricated restraints, nut strips and their welds/threads require measured fit and physical load/retention qualification; nominal CAD does not establish a storage or handling rating.",
+      "Rev I supplies nominal fabricated floating and breakaway mechanisms. Actual torch/clamp dimensions, installed retention/release forces, tether, lead routing and electrical commissioning remain unqualified.",
+      "This revision corrects nominal CAD geometry. Full frame/tool/work stiffness, joint capacities, purchased interfaces and physical commissioning remain separate release requirements.",
+      "X/Y physical stops and three home switches are modeled. Z home bracket and travel stops depend on the unresolved Z supplier endpoint/output geometry. Cable-chain anchors, way covers and spindle/torch cable bend envelopes still require final integration.",
+      "Z power-loss retention: a 23HS30-5004D-B280 replacement brake motor is a sourced candidate, but no installed restraint is qualified. Shaft/coupling/pilot fit, stopped-load retention, brake sequencing and response under power loss require acceptance. A ballscrew must not be assumed self-locking.",
+      "Z slide: exact-ASIN drawing gives body219x80, end blocks12 and carriage90x50;70 mm transverse spacing belongs to the smaller\u00d85 fixing holes, not the larger\u00d87 bores. Output mounting-plane height, along-travel hole pitch/thread/depth and base-slot fastening remain unresolved. No carriage fasteners are modeled; the tool has no released attachment load path and TOOL_ADAPTER_110 individual export is guarded."
+    ]
+  },
+  "original_solver_source": "output/cad-repair-2026-09-25/verify_revg_beam_path.py",
+  "complete_source_sha256": {
+    "output/cad-repair-2026-09-25/check_spoil_transfer.py": "1397e268b4136f0436db0f07bd23256c35d980cb38eca42c2c6a40c56e4af9fe",
+    "output/cad-repair-2026-09-25/verify_revg_beam_path.py": "cf9cffeb4ebeddc6048fc977c888b13f0f90ee0779b7006549f745fd5f56e6c3",
+    "output/design-finish-2026-09-26/verify_revi_routes.py": "be4fc38927a00f7e0194f1270380b0927d483dfcd0e1fa1f6cddab6ac87ae50d",
+    "output/release-review/RevE-ENGINEERING/bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "output/release-review/RevE-ENGINEERING/bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "output/release-review/RevE-ENGINEERING/bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "output/release-review/RevE-ENGINEERING/build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "output/release-review/RevE-ENGINEERING/build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "output/release-review/RevE-ENGINEERING/build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "output/release-review/RevE-ENGINEERING/build_revi.py": "2756268a5dca6ce3588d4b2ac0ebde43c87390bed8d6caa21e706fc7f83af462",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "output/release-review/RevE-ENGINEERING/check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "output/release-review/RevE-ENGINEERING/controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "output/release-review/RevE-ENGINEERING/export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "output/release-review/RevE-ENGINEERING/frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "output/release-review/RevE-ENGINEERING/geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "output/release-review/RevE-ENGINEERING/package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "output/release-review/RevE-ENGINEERING/plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "output/release-review/RevE-ENGINEERING/reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "output/release-review/RevE-ENGINEERING/render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "output/release-review/RevE-ENGINEERING/render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "output/release-review/RevE-ENGINEERING/render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "output/release-review/RevE-ENGINEERING/render_revi.py": "991d641ba4baa19a0f5147b4d29aa9d300c163973c15cadbd62d6cbe2b5ebab5",
+    "output/release-review/RevE-ENGINEERING/sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "output/release-review/RevE-ENGINEERING/service_finish.py": "9738b260ce8f61c7ca45b46c212b1559057bdb1b1505885bcc0616045bc228e5",
+    "output/release-review/RevE-ENGINEERING/strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "output/release-review/RevE-ENGINEERING/structure_finish.py": "b0e6e7f5fc7bd5d3b9e901bc13f7186f78395c78584ab3238ba249613bea9778",
+    "output/release-review/RevE-ENGINEERING/swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "output/release-review/RevE-ENGINEERING/sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "output/release-review/RevE-ENGINEERING/tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "output/release-review/RevE-ENGINEERING/update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "output/release-review/RevE-ENGINEERING/verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "output/release-review/RevE-ENGINEERING/verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "output/release-review/RevE-ENGINEERING/verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "output/release-review/RevE-ENGINEERING/water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "output/release-review/RevE-ENGINEERING/water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "output/release-review/RevE-ENGINEERING/water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+  },
+  "complete_sources_changed_during_run": {},
+  "runner_sha256": "be4fc38927a00f7e0194f1270380b0927d483dfcd0e1fa1f6cddab6ac87ae50d",
+  "integrated_elapsed_seconds": 79.91,
+  "integrated_passed": true
+}

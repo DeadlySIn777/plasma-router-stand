@@ -1,0 +1,4009 @@
+{
+  "status": "CONDITIONAL NOMINAL MEMBER AND JOINT DESIGN; NOT FULL TOOL-TO-WORK RIGIDITY QUALIFICATION",
+  "source_sha256": {
+    "bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "build_revi.py": "2756268a5dca6ce3588d4b2ac0ebde43c87390bed8d6caa21e706fc7f83af462",
+    "cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "render_revi.py": "991d641ba4baa19a0f5147b4d29aa9d300c163973c15cadbd62d6cbe2b5ebab5",
+    "sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "service_finish.py": "9738b260ce8f61c7ca45b46c212b1559057bdb1b1505885bcc0616045bc228e5",
+    "strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "structure_finish.py": "b0e6e7f5fc7bd5d3b9e901bc13f7186f78395c78584ab3238ba249613bea9778",
+    "swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811",
+    "calculate_structure.py": "70c508ba81fe5367352492599fe1e15f83b0b491e0cc33c2e046b4aaa92eb4bf"
+  },
+  "builder": "build_revi.build_model",
+  "geometry": {
+    "parts": 1669,
+    "20100_area_mm2": 612.9738130458967,
+    "20100_Ivertical_mm4": 27207.732888568193,
+    "panel_mass_estimates_kg": [
+      3.997146840274056,
+      3.9971468402740546,
+      3.997146840274056,
+      3.9971468402740546,
+      3.997146840274056,
+      3.9971468402740546
+    ],
+    "beam_mass_estimates_kg": [
+      5.08436798700139,
+      5.1169408992797525,
+      5.084367987001391,
+      5.08436798700139
+    ],
+    "panel_mass_inventory": [
+      {
+        "kind": "panel",
+        "index": 0,
+        "part_count": 51,
+        "parts": [
+          {
+            "id": "G_PANEL_1_STRIP_1",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.6037792201,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038943
+          },
+          {
+            "id": "G_PANEL_1_STRIP_2",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377922046,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038952
+          },
+          {
+            "id": "G_PANEL_1_STRIP_3",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377922014,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038944
+          },
+          {
+            "id": "G_PANEL_1_STRIP_4",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377922017,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038944
+          },
+          {
+            "id": "G_PANEL_1_STRIP_5",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377921976,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038933
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_1",
+            "part_number": "G_PANEL_TIE_1",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_1_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371833,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491888
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_1_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.9791285318873,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753152
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_1_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067293,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697824
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_1_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371834,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491889
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_1_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.9791285318874,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753158
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_1_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067289,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697821
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_1_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718404,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491894
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_1_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_1_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067283,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697816
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_2",
+            "part_number": "G_PANEL_TIE_2",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_2_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718404,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491894
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_2_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_2_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067283,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697816
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_2_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718404,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491894
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_2_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188748,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753167
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_2_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067283,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697816
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_2_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718324,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491888
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_2_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.001821036158975315
+          },
+          {
+            "id": "G_PANEL_1_TIE_1_2_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067293,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697824
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_1",
+            "part_number": "G_PANEL_TIE_1",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_1_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718404,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491894
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_1_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188737,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753156
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_1_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067282,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697815
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_1_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718415,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491895
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_1_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_1_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067279,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697813
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_1_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718467,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0039963193854919
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_1_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.9791285318875,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.001821036158975317
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_1_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067273,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697809
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_2",
+            "part_number": "G_PANEL_TIE_2",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_2_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718467,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0039963193854919
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_2_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.9791285318875,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.001821036158975317
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_2_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067273,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697809
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_2_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718467,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0039963193854919
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_2_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188754,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753171
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_2_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067273,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697809
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_2_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371839,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0039963193854918935
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_2_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188734,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753154
+          },
+          {
+            "id": "G_PANEL_1_TIE_2_2_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697814
+          },
+          {
+            "id": "H_NUT_STRIP_1_1",
+            "part_number": "H_NUT_STRIP_ROW_1",
+            "material": "Low carbon steel",
+            "volume_mm3": 8301.400897200276,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.06516599704302216
+          },
+          {
+            "id": "H_NUT_STRIP_SET_1_1_1",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.34291735288516,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201485
+          },
+          {
+            "id": "H_NUT_STRIP_SET_1_1_2",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.342917352885124,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201482
+          },
+          {
+            "id": "H_NUT_STRIP_1_2",
+            "part_number": "H_NUT_STRIP_ROW_1",
+            "material": "Low carbon steel",
+            "volume_mm3": 8301.400897200276,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.06516599704302216
+          },
+          {
+            "id": "H_NUT_STRIP_SET_1_2_1",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.34291735288529,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00027744190122014947
+          },
+          {
+            "id": "H_NUT_STRIP_SET_1_2_2",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.342917352885244,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00027744190122014914
+          }
+        ],
+        "nominal_mass_kg": 3.997146840274056
+      },
+      {
+        "kind": "panel",
+        "index": 1,
+        "part_count": 51,
+        "parts": [
+          {
+            "id": "G_PANEL_2_STRIP_1",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.6037792197,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038932
+          },
+          {
+            "id": "G_PANEL_2_STRIP_2",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.6037792199,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038938
+          },
+          {
+            "id": "G_PANEL_2_STRIP_3",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377921996,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038939
+          },
+          {
+            "id": "G_PANEL_2_STRIP_4",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377921993,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038939
+          },
+          {
+            "id": "G_PANEL_2_STRIP_5",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.6037792207,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038959
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_1",
+            "part_number": "G_PANEL_TIE_1",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_1_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718324,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491888
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_1_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.001821036158975315
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_1_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067293,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697824
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_1_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718324,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491888
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_1_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.001821036158975315
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_1_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067293,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697824
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_1_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718324,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491888
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_1_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.001821036158975315
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_1_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067293,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697824
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_2",
+            "part_number": "G_PANEL_TIE_2",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_2_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718324,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491888
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_2_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.001821036158975315
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_2_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067293,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697824
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_2_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718324,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491888
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_2_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.001821036158975315
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_2_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067293,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697824
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_2_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371805,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491867
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_2_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.9791285318874,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753158
+          },
+          {
+            "id": "G_PANEL_2_TIE_1_2_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067333,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697856
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_1",
+            "part_number": "G_PANEL_TIE_1",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_1_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371839,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0039963193854918935
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_1_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188734,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753154
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_1_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697814
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_1_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371839,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0039963193854918935
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_1_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188734,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753154
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_1_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697814
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_1_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371839,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0039963193854918935
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_1_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188734,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753154
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_1_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697814
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_2",
+            "part_number": "G_PANEL_TIE_2",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_2_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371839,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0039963193854918935
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_2_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188734,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753154
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_2_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697814
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_2_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371839,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0039963193854918935
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_2_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188734,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753154
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_2_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697814
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_2_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371812,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491872
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_2_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188743,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753163
+          },
+          {
+            "id": "G_PANEL_2_TIE_2_2_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067323,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697848
+          },
+          {
+            "id": "H_NUT_STRIP_2_1",
+            "part_number": "H_NUT_STRIP_ROW_1",
+            "material": "Low carbon steel",
+            "volume_mm3": 8301.400897200276,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.06516599704302216
+          },
+          {
+            "id": "H_NUT_STRIP_SET_2_1_1",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.34291735288524,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201491
+          },
+          {
+            "id": "H_NUT_STRIP_SET_2_1_2",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.3429173528852,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201488
+          },
+          {
+            "id": "H_NUT_STRIP_2_2",
+            "part_number": "H_NUT_STRIP_ROW_1",
+            "material": "Low carbon steel",
+            "volume_mm3": 8301.400897200276,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.06516599704302216
+          },
+          {
+            "id": "H_NUT_STRIP_SET_2_2_1",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.34291735288524,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201491
+          },
+          {
+            "id": "H_NUT_STRIP_SET_2_2_2",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.3429173528852,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201488
+          }
+        ],
+        "nominal_mass_kg": 3.9971468402740546
+      },
+      {
+        "kind": "panel",
+        "index": 2,
+        "part_count": 51,
+        "parts": [
+          {
+            "id": "G_PANEL_3_STRIP_1",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.6037792201,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038943
+          },
+          {
+            "id": "G_PANEL_3_STRIP_2",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377922046,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038952
+          },
+          {
+            "id": "G_PANEL_3_STRIP_3",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377922014,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038944
+          },
+          {
+            "id": "G_PANEL_3_STRIP_4",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377922017,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038944
+          },
+          {
+            "id": "G_PANEL_3_STRIP_5",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377921976,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038933
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_1",
+            "part_number": "G_PANEL_TIE_1",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_1_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718245,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491882
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_1_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188726,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753147
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_1_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706731,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697837
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_1_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718245,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491882
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_1_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188734,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753154
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_1_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067307,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697835
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_1_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371831,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491887
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_1_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_1_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067302,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697831
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_2",
+            "part_number": "G_PANEL_TIE_2",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_2_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371831,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491887
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_2_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_2_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067302,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697831
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_2_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371831,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491887
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_2_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_2_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067302,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697831
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_2_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_2_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_3_TIE_1_2_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_1",
+            "part_number": "G_PANEL_TIE_1",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_1_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718245,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491882
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_1_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188726,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753147
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_1_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706731,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697837
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_1_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718245,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491882
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_1_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188734,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753154
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_1_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067307,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697835
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_1_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371831,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491887
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_1_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_1_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067302,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697831
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_2",
+            "part_number": "G_PANEL_TIE_2",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_2_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371831,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491887
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_2_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_2_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067302,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697831
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_2_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371831,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491887
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_2_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_2_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067302,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697831
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_2_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_2_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_3_TIE_2_2_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "H_NUT_STRIP_3_1",
+            "part_number": "H_NUT_STRIP_ROW_2",
+            "material": "Low carbon steel",
+            "volume_mm3": 8301.400897200276,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.06516599704302216
+          },
+          {
+            "id": "H_NUT_STRIP_SET_3_1_1",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.342917352885124,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201482
+          },
+          {
+            "id": "H_NUT_STRIP_SET_3_1_2",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.34291735288517,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201486
+          },
+          {
+            "id": "H_NUT_STRIP_3_2",
+            "part_number": "H_NUT_STRIP_ROW_2",
+            "material": "Low carbon steel",
+            "volume_mm3": 8301.400897200276,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.06516599704302216
+          },
+          {
+            "id": "H_NUT_STRIP_SET_3_2_1",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.342917352885244,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00027744190122014914
+          },
+          {
+            "id": "H_NUT_STRIP_SET_3_2_2",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.3429173528853,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201496
+          }
+        ],
+        "nominal_mass_kg": 3.997146840274056
+      },
+      {
+        "kind": "panel",
+        "index": 3,
+        "part_count": 51,
+        "parts": [
+          {
+            "id": "G_PANEL_4_STRIP_1",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.6037792197,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038932
+          },
+          {
+            "id": "G_PANEL_4_STRIP_2",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.6037792199,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038938
+          },
+          {
+            "id": "G_PANEL_4_STRIP_3",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377921996,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038939
+          },
+          {
+            "id": "G_PANEL_4_STRIP_4",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377921993,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038939
+          },
+          {
+            "id": "G_PANEL_4_STRIP_5",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.6037792207,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038959
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_1",
+            "part_number": "G_PANEL_TIE_1",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_1_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_1_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_1_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_1_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_1_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_1_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_1_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_1_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_1_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_2",
+            "part_number": "G_PANEL_TIE_2",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_2_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_2_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_2_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_2_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_2_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_2_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_2_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371796,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00399631938549186
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_2_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.9791285318873,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753152
+          },
+          {
+            "id": "G_PANEL_4_TIE_1_2_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706735,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697869
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_1",
+            "part_number": "G_PANEL_TIE_1",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_1_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_1_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_1_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_1_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_1_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_1_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_1_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_1_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_1_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_2",
+            "part_number": "G_PANEL_TIE_2",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_2_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_2_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_2_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_2_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_2_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_2_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_2_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371796,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00399631938549186
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_2_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.9791285318873,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753152
+          },
+          {
+            "id": "G_PANEL_4_TIE_2_2_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706735,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697869
+          },
+          {
+            "id": "H_NUT_STRIP_4_1",
+            "part_number": "H_NUT_STRIP_ROW_2",
+            "material": "Low carbon steel",
+            "volume_mm3": 8301.400897200276,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.06516599704302216
+          },
+          {
+            "id": "H_NUT_STRIP_SET_4_1_1",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.3429173528852,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201488
+          },
+          {
+            "id": "H_NUT_STRIP_SET_4_1_2",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.34291735288526,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00027744190122014925
+          },
+          {
+            "id": "H_NUT_STRIP_4_2",
+            "part_number": "H_NUT_STRIP_ROW_2",
+            "material": "Low carbon steel",
+            "volume_mm3": 8301.400897200276,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.06516599704302216
+          },
+          {
+            "id": "H_NUT_STRIP_SET_4_2_1",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.3429173528852,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201488
+          },
+          {
+            "id": "H_NUT_STRIP_SET_4_2_2",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.34291735288526,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00027744190122014925
+          }
+        ],
+        "nominal_mass_kg": 3.9971468402740546
+      },
+      {
+        "kind": "panel",
+        "index": 4,
+        "part_count": 51,
+        "parts": [
+          {
+            "id": "G_PANEL_5_STRIP_1",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.6037792201,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038943
+          },
+          {
+            "id": "G_PANEL_5_STRIP_2",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377922046,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038952
+          },
+          {
+            "id": "G_PANEL_5_STRIP_3",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377922014,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038944
+          },
+          {
+            "id": "G_PANEL_5_STRIP_4",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377922017,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038944
+          },
+          {
+            "id": "G_PANEL_5_STRIP_5",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377921976,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038933
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_1",
+            "part_number": "G_PANEL_TIE_1",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_1_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718245,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491882
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_1_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188726,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753147
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_1_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706731,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697837
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_1_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718245,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491882
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_1_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188734,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753154
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_1_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067307,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697835
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_1_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371831,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491887
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_1_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_1_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067302,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697831
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_2",
+            "part_number": "G_PANEL_TIE_2",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_2_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371831,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491887
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_2_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_2_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067302,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697831
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_2_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371831,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491887
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_2_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_2_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067302,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697831
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_2_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_2_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_5_TIE_1_2_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_1",
+            "part_number": "G_PANEL_TIE_1",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_1_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371838,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491893
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_1_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.001821036158975315
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_1_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706728,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697814
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_1_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371838,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491893
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_1_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188734,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753154
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_1_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067276,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697811
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_1_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371844,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491897
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_1_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_1_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706727,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697807
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_2",
+            "part_number": "G_PANEL_TIE_2",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_2_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371844,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491897
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_2_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188745,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753165
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_2_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706727,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697807
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_2_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371844,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491897
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_2_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.9791285318875,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.001821036158975317
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_2_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706727,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697807
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_2_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371837,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491892
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_2_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188726,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753147
+          },
+          {
+            "id": "G_PANEL_5_TIE_2_2_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067279,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697813
+          },
+          {
+            "id": "H_NUT_STRIP_5_1",
+            "part_number": "H_NUT_STRIP_ROW_3",
+            "material": "Low carbon steel",
+            "volume_mm3": 8301.400897200274,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.06516599704302214
+          },
+          {
+            "id": "H_NUT_STRIP_SET_5_1_1",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.34291735288517,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201486
+          },
+          {
+            "id": "H_NUT_STRIP_SET_5_1_2",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.3429173528847,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00027744190122014486
+          },
+          {
+            "id": "H_NUT_STRIP_5_2",
+            "part_number": "H_NUT_STRIP_ROW_3",
+            "material": "Low carbon steel",
+            "volume_mm3": 8301.400897200274,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.06516599704302214
+          },
+          {
+            "id": "H_NUT_STRIP_SET_5_2_1",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.3429173528853,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0002774419012201496
+          },
+          {
+            "id": "H_NUT_STRIP_SET_5_2_2",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.342917352884825,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00027744190122014584
+          }
+        ],
+        "nominal_mass_kg": 3.997146840274056
+      },
+      {
+        "kind": "panel",
+        "index": 5,
+        "part_count": 51,
+        "parts": [
+          {
+            "id": "G_PANEL_6_STRIP_1",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.6037792197,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038932
+          },
+          {
+            "id": "G_PANEL_6_STRIP_2",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.6037792199,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038938
+          },
+          {
+            "id": "G_PANEL_6_STRIP_3",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377921996,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038939
+          },
+          {
+            "id": "G_PANEL_6_STRIP_4",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.60377921993,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038939
+          },
+          {
+            "id": "G_PANEL_6_STRIP_5",
+            "part_number": "BUY_20100_CUT_397",
+            "material": "Purchased6063T5profile",
+            "volume_mm3": 243350.6037792207,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.6570466302038959
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_1",
+            "part_number": "G_PANEL_TIE_1",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_1_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_1_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_1_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_1_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_1_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_1_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_1_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_1_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_1_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_2",
+            "part_number": "G_PANEL_TIE_2",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_2_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_2_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_2_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_2_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718234,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491881
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_2_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_2_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067309,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697836
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_2_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371796,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00399631938549186
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_2_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.9791285318873,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753152
+          },
+          {
+            "id": "G_PANEL_6_TIE_1_2_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.7856239706735,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697869
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_1",
+            "part_number": "G_PANEL_TIE_1",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_1_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371837,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491892
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_1_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188726,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753147
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_1_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067279,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697813
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_1_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371837,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491892
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_1_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188726,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753147
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_1_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067279,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697813
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_1_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371837,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491892
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_1_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_1_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067279,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697813
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_2",
+            "part_number": "G_PANEL_TIE_2",
+            "material": "Aluminum alloy unverified",
+            "volume_mm3": 46238.87548629774,
+            "density_kg_per_mm3": 2.7e-06,
+            "mass_kg": 0.12484496381300389
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_2_F1_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371837,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491892
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_2_F1_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_2_F1_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067279,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697813
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_2_F2_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.0852720371837,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.003996319385491892
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_2_F2_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188723,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753145
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_2_F2_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067279,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697813
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_2_F3_SCREW",
+            "part_number": "STD_M5x16_BUTTON",
+            "material": "Steel M5x16",
+            "volume_mm3": 509.08527203718097,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00399631938549187
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_2_F3_WASHER",
+            "part_number": "STD_M5_WASHER_15",
+            "material": "Steel washer",
+            "volume_mm3": 231.97912853188734,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0018210361589753154
+          },
+          {
+            "id": "G_PANEL_6_TIE_2_2_F3_NUT",
+            "part_number": "STD_DIN562_M5",
+            "material": "Steel square nut",
+            "volume_mm3": 119.78562397067319,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0009403171481697845
+          },
+          {
+            "id": "H_NUT_STRIP_6_1",
+            "part_number": "H_NUT_STRIP_ROW_3",
+            "material": "Low carbon steel",
+            "volume_mm3": 8301.400897200274,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.06516599704302214
+          },
+          {
+            "id": "H_NUT_STRIP_SET_6_1_1",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.34291735288526,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00027744190122014925
+          },
+          {
+            "id": "H_NUT_STRIP_SET_6_1_2",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.342917352884776,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00027744190122014546
+          },
+          {
+            "id": "H_NUT_STRIP_6_2",
+            "part_number": "H_NUT_STRIP_ROW_3",
+            "material": "Low carbon steel",
+            "volume_mm3": 8301.400897200274,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.06516599704302214
+          },
+          {
+            "id": "H_NUT_STRIP_SET_6_2_1",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.34291735288526,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00027744190122014925
+          },
+          {
+            "id": "H_NUT_STRIP_SET_6_2_2",
+            "part_number": "STD_M3x5_FLAT_POINT_SET",
+            "material": "Steel M3 flat point set screw",
+            "volume_mm3": 35.342917352884776,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.00027744190122014546
+          }
+        ],
+        "nominal_mass_kg": 3.9971468402740546
+      }
+    ],
+    "beam_mass_inventory": [
+      {
+        "kind": "beam",
+        "index": 0,
+        "part_count": 17,
+        "parts": [
+          {
+            "id": "G_BEAM_1",
+            "part_number": "G_BED_BEAM_924",
+            "material": "A5002x2x.120tube",
+            "volume_mm3": 533540.9985882553,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 4.188296838917803
+          },
+          {
+            "id": "G_BEAM_STACK_PAD_1_1",
+            "part_number": "H_BEAM_STACK_PAD_1",
+            "material": "A36 steel",
+            "volume_mm3": 14768.761101961527,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.11593477465039798
+          },
+          {
+            "id": "G_BEAM_STACK_PAD_1_2",
+            "part_number": "H_BEAM_STACK_PAD_2",
+            "material": "A36 steel",
+            "volume_mm3": 14768.761101961523,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.11593477465039795
+          },
+          {
+            "id": "G_BEAM_FOOT_BASE_1_1",
+            "part_number": "G_BEAM_FOOT_BASE",
+            "material": "A36 steel",
+            "volume_mm3": 13543.539967061513,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10631678874143287
+          },
+          {
+            "id": "G_BEAM_FOOT_1_1",
+            "part_number": "G_BEAM_FOOT_18",
+            "material": "A36 steel",
+            "volume_mm3": 10391.680512000004,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.08157469201920003
+          },
+          {
+            "id": "G_BEAM_SLEEVE_1_1",
+            "part_number": "G_BEAM_COMPRESSION_SLEEVE",
+            "material": "Machined steel",
+            "volume_mm3": 12748.897147532742,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10007884260813202
+          },
+          {
+            "id": "G_BEAM_LOCATOR_1_1",
+            "part_number": "G_LOCATOR_6x12",
+            "material": "Hardened steel pin",
+            "volume_mm3": 339.29200658769776,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0026634422517134273
+          },
+          {
+            "id": "G_BEAM_FOOT_BASE_1_2",
+            "part_number": "G_BEAM_FOOT_BASE",
+            "material": "A36 steel",
+            "volume_mm3": 13543.53996706151,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10631678874143284
+          },
+          {
+            "id": "G_BEAM_FOOT_1_2",
+            "part_number": "G_BEAM_FOOT_18",
+            "material": "A36 steel",
+            "volume_mm3": 10391.680512000004,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.08157469201920003
+          },
+          {
+            "id": "G_BEAM_SLEEVE_1_2",
+            "part_number": "G_BEAM_COMPRESSION_SLEEVE",
+            "material": "Machined steel",
+            "volume_mm3": 12748.897147532753,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.1000788426081321
+          },
+          {
+            "id": "G_BEAM_LOCATOR_1_2",
+            "part_number": "G_LOCATOR_6x12",
+            "material": "Hardened steel pin",
+            "volume_mm3": 339.2920065876988,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.002663442251713435
+          },
+          {
+            "id": "G_CLAMP_BOSS_1_1",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.3007675795093,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499147
+          },
+          {
+            "id": "G_CLAMP_BOSS_1_2",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.30076757951,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499152
+          },
+          {
+            "id": "G_CLAMP_BOSS_1_3",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.30076757951,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499152
+          },
+          {
+            "id": "G_CLAMP_BOSS_1_4",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.300767579511,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.01085106102549916
+          },
+          {
+            "id": "H_BEAM_STACK_SLEEVE_1_1",
+            "part_number": "H_STACK_COMPRESSION_SLEEVE_56_8",
+            "material": "Steel tube OD10 ID6.6",
+            "volume_mm3": 2517.8231490342378,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.019764911719918767
+          },
+          {
+            "id": "H_BEAM_STACK_SLEEVE_1_2",
+            "part_number": "H_STACK_COMPRESSION_SLEEVE_56_8",
+            "material": "Steel tube OD10 ID6.6",
+            "volume_mm3": 2517.823149034247,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.019764911719918836
+          }
+        ],
+        "nominal_mass_kg": 5.08436798700139
+      },
+      {
+        "kind": "beam",
+        "index": 1,
+        "part_count": 19,
+        "parts": [
+          {
+            "id": "G_BEAM_2",
+            "part_number": "H_BED_BEAM_924_TEMP_LOCATORS",
+            "material": "A5002x2x.120tube",
+            "volume_mm3": 532583.4411474412,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 4.180780013007412
+          },
+          {
+            "id": "G_BEAM_STACK_PAD_2_1",
+            "part_number": "H_BEAM_STACK_PAD_1",
+            "material": "A36 steel",
+            "volume_mm3": 14768.761101961527,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.11593477465039798
+          },
+          {
+            "id": "G_BEAM_STACK_PAD_2_2",
+            "part_number": "H_BEAM_STACK_PAD_2",
+            "material": "A36 steel",
+            "volume_mm3": 14768.761101961525,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.11593477465039796
+          },
+          {
+            "id": "G_BEAM_FOOT_BASE_2_1",
+            "part_number": "G_BEAM_FOOT_BASE",
+            "material": "A36 steel",
+            "volume_mm3": 13543.539967061515,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10631678874143288
+          },
+          {
+            "id": "G_BEAM_FOOT_2_1",
+            "part_number": "G_BEAM_FOOT_18",
+            "material": "A36 steel",
+            "volume_mm3": 10391.680512000008,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.08157469201920006
+          },
+          {
+            "id": "G_BEAM_SLEEVE_2_1",
+            "part_number": "G_BEAM_COMPRESSION_SLEEVE",
+            "material": "Machined steel",
+            "volume_mm3": 12748.897147532743,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10007884260813203
+          },
+          {
+            "id": "G_BEAM_LOCATOR_2_1",
+            "part_number": "G_LOCATOR_6x12",
+            "material": "Hardened steel pin",
+            "volume_mm3": 339.292006587698,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.002663442251713429
+          },
+          {
+            "id": "G_BEAM_FOOT_BASE_2_2",
+            "part_number": "G_BEAM_FOOT_BASE",
+            "material": "A36 steel",
+            "volume_mm3": 13543.539967061512,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10631678874143285
+          },
+          {
+            "id": "G_BEAM_FOOT_2_2",
+            "part_number": "G_BEAM_FOOT_18",
+            "material": "A36 steel",
+            "volume_mm3": 10391.680512000008,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.08157469201920006
+          },
+          {
+            "id": "G_BEAM_SLEEVE_2_2",
+            "part_number": "G_BEAM_COMPRESSION_SLEEVE",
+            "material": "Machined steel",
+            "volume_mm3": 12748.89714753275,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10007884260813209
+          },
+          {
+            "id": "G_BEAM_LOCATOR_2_2",
+            "part_number": "G_LOCATOR_6x12",
+            "material": "Hardened steel pin",
+            "volume_mm3": 339.29200658769895,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0026634422517134364
+          },
+          {
+            "id": "G_CLAMP_BOSS_2_1",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.3007675795077,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499134
+          },
+          {
+            "id": "G_CLAMP_BOSS_2_2",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.3007675795088,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499143
+          },
+          {
+            "id": "G_CLAMP_BOSS_2_3",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.3007675795088,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499143
+          },
+          {
+            "id": "G_CLAMP_BOSS_2_4",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.30076757951,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499152
+          },
+          {
+            "id": "H_BEAM_STACK_SLEEVE_2_1",
+            "part_number": "H_STACK_COMPRESSION_SLEEVE_56_8",
+            "material": "Steel tube OD10 ID6.6",
+            "volume_mm3": 2517.8231490342387,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.019764911719918773
+          },
+          {
+            "id": "H_BEAM_STACK_SLEEVE_2_2",
+            "part_number": "H_STACK_COMPRESSION_SLEEVE_56_8",
+            "material": "Steel tube OD10 ID6.6",
+            "volume_mm3": 2517.823149034247,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.019764911719918836
+          },
+          {
+            "id": "H_TEMP_BEAM2_SLEEVE_1",
+            "part_number": "H_TEMP_LOCATOR_SLEEVE_50_8",
+            "material": "Machined steel",
+            "volume_mm3": 2553.4865088377946,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.020044869094376687
+          },
+          {
+            "id": "H_TEMP_BEAM2_SLEEVE_2",
+            "part_number": "H_TEMP_LOCATOR_SLEEVE_50_8",
+            "material": "Machined steel",
+            "volume_mm3": 2553.486508837793,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.020044869094376673
+          }
+        ],
+        "nominal_mass_kg": 5.1169408992797525
+      },
+      {
+        "kind": "beam",
+        "index": 2,
+        "part_count": 17,
+        "parts": [
+          {
+            "id": "G_BEAM_3",
+            "part_number": "G_BED_BEAM_924",
+            "material": "A5002x2x.120tube",
+            "volume_mm3": 533540.9985882554,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 4.188296838917804
+          },
+          {
+            "id": "G_BEAM_STACK_PAD_3_1",
+            "part_number": "H_BEAM_STACK_PAD_1",
+            "material": "A36 steel",
+            "volume_mm3": 14768.761101961525,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.11593477465039796
+          },
+          {
+            "id": "G_BEAM_STACK_PAD_3_2",
+            "part_number": "H_BEAM_STACK_PAD_2",
+            "material": "A36 steel",
+            "volume_mm3": 14768.761101961525,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.11593477465039796
+          },
+          {
+            "id": "G_BEAM_FOOT_BASE_3_1",
+            "part_number": "G_BEAM_FOOT_BASE",
+            "material": "A36 steel",
+            "volume_mm3": 13543.539967061506,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10631678874143281
+          },
+          {
+            "id": "G_BEAM_FOOT_3_1",
+            "part_number": "G_BEAM_FOOT_18",
+            "material": "A36 steel",
+            "volume_mm3": 10391.680512,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0815746920192
+          },
+          {
+            "id": "G_BEAM_SLEEVE_3_1",
+            "part_number": "G_BEAM_COMPRESSION_SLEEVE",
+            "material": "Machined steel",
+            "volume_mm3": 12748.897147532749,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10007884260813207
+          },
+          {
+            "id": "G_BEAM_LOCATOR_3_1",
+            "part_number": "G_LOCATOR_6x12",
+            "material": "Hardened steel pin",
+            "volume_mm3": 339.2920065876975,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.002663442251713425
+          },
+          {
+            "id": "G_BEAM_FOOT_BASE_3_2",
+            "part_number": "G_BEAM_FOOT_BASE",
+            "material": "A36 steel",
+            "volume_mm3": 13543.539967061504,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.1063167887414328
+          },
+          {
+            "id": "G_BEAM_FOOT_3_2",
+            "part_number": "G_BEAM_FOOT_18",
+            "material": "A36 steel",
+            "volume_mm3": 10391.680512,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0815746920192
+          },
+          {
+            "id": "G_BEAM_SLEEVE_3_2",
+            "part_number": "G_BEAM_COMPRESSION_SLEEVE",
+            "material": "Machined steel",
+            "volume_mm3": 12748.897147532762,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10007884260813217
+          },
+          {
+            "id": "G_BEAM_LOCATOR_3_2",
+            "part_number": "G_LOCATOR_6x12",
+            "material": "Hardened steel pin",
+            "volume_mm3": 339.2920065876984,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.002663442251713432
+          },
+          {
+            "id": "G_CLAMP_BOSS_3_1",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.3007675795081,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499138
+          },
+          {
+            "id": "G_CLAMP_BOSS_3_2",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.3007675795093,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499147
+          },
+          {
+            "id": "G_CLAMP_BOSS_3_3",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.3007675795093,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499147
+          },
+          {
+            "id": "G_CLAMP_BOSS_3_4",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.3007675795104,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499155
+          },
+          {
+            "id": "H_BEAM_STACK_SLEEVE_3_1",
+            "part_number": "H_STACK_COMPRESSION_SLEEVE_56_8",
+            "material": "Steel tube OD10 ID6.6",
+            "volume_mm3": 2517.8231490342378,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.019764911719918767
+          },
+          {
+            "id": "H_BEAM_STACK_SLEEVE_3_2",
+            "part_number": "H_STACK_COMPRESSION_SLEEVE_56_8",
+            "material": "Steel tube OD10 ID6.6",
+            "volume_mm3": 2517.823149034247,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.019764911719918836
+          }
+        ],
+        "nominal_mass_kg": 5.084367987001391
+      },
+      {
+        "kind": "beam",
+        "index": 3,
+        "part_count": 17,
+        "parts": [
+          {
+            "id": "G_BEAM_4",
+            "part_number": "G_BED_BEAM_924",
+            "material": "A5002x2x.120tube",
+            "volume_mm3": 533540.9985882553,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 4.188296838917803
+          },
+          {
+            "id": "G_BEAM_STACK_PAD_4_1",
+            "part_number": "H_BEAM_STACK_PAD_1",
+            "material": "A36 steel",
+            "volume_mm3": 14768.761101961527,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.11593477465039798
+          },
+          {
+            "id": "G_BEAM_STACK_PAD_4_2",
+            "part_number": "H_BEAM_STACK_PAD_2",
+            "material": "A36 steel",
+            "volume_mm3": 14768.761101961523,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.11593477465039795
+          },
+          {
+            "id": "G_BEAM_FOOT_BASE_4_1",
+            "part_number": "G_BEAM_FOOT_BASE",
+            "material": "A36 steel",
+            "volume_mm3": 13543.539967061506,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10631678874143281
+          },
+          {
+            "id": "G_BEAM_FOOT_4_1",
+            "part_number": "G_BEAM_FOOT_18",
+            "material": "A36 steel",
+            "volume_mm3": 10391.680512000008,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.08157469201920006
+          },
+          {
+            "id": "G_BEAM_SLEEVE_4_1",
+            "part_number": "G_BEAM_COMPRESSION_SLEEVE",
+            "material": "Machined steel",
+            "volume_mm3": 12748.897147532733,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10007884260813195
+          },
+          {
+            "id": "G_BEAM_LOCATOR_4_1",
+            "part_number": "G_LOCATOR_6x12",
+            "material": "Hardened steel pin",
+            "volume_mm3": 339.2920065876979,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0026634422517134286
+          },
+          {
+            "id": "G_BEAM_FOOT_BASE_4_2",
+            "part_number": "G_BEAM_FOOT_BASE",
+            "material": "A36 steel",
+            "volume_mm3": 13543.539967061504,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.1063167887414328
+          },
+          {
+            "id": "G_BEAM_FOOT_4_2",
+            "part_number": "G_BEAM_FOOT_18",
+            "material": "A36 steel",
+            "volume_mm3": 10391.680512000008,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.08157469201920006
+          },
+          {
+            "id": "G_BEAM_SLEEVE_4_2",
+            "part_number": "G_BEAM_COMPRESSION_SLEEVE",
+            "material": "Machined steel",
+            "volume_mm3": 12748.897147532747,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.10007884260813206
+          },
+          {
+            "id": "G_BEAM_LOCATOR_4_2",
+            "part_number": "G_LOCATOR_6x12",
+            "material": "Hardened steel pin",
+            "volume_mm3": 339.29200658769895,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.0026634422517134364
+          },
+          {
+            "id": "G_CLAMP_BOSS_4_1",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.3007675795127,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499174
+          },
+          {
+            "id": "G_CLAMP_BOSS_4_2",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.3007675795134,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.01085106102549918
+          },
+          {
+            "id": "G_CLAMP_BOSS_4_3",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.3007675795134,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.01085106102549918
+          },
+          {
+            "id": "G_CLAMP_BOSS_4_4",
+            "part_number": "G_M6_BEAM_BOSS",
+            "material": "A36 steel",
+            "volume_mm3": 1382.3007675795145,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.010851061025499188
+          },
+          {
+            "id": "H_BEAM_STACK_SLEEVE_4_1",
+            "part_number": "H_STACK_COMPRESSION_SLEEVE_56_8",
+            "material": "Steel tube OD10 ID6.6",
+            "volume_mm3": 2517.8231490342378,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.019764911719918767
+          },
+          {
+            "id": "H_BEAM_STACK_SLEEVE_4_2",
+            "part_number": "H_STACK_COMPRESSION_SLEEVE_56_8",
+            "material": "Steel tube OD10 ID6.6",
+            "volume_mm3": 2517.823149034246,
+            "density_kg_per_mm3": 7.85e-06,
+            "mass_kg": 0.01976491171991883
+          }
+        ],
+        "nominal_mass_kg": 5.08436798700139
+      }
+    ],
+    "handling_mass_basis": "Exact current bed_cassettes placement membership; explicit material density per component, no ID-prefix density. Nominal solids omit unmodeled weld beads and actual stock variation.",
+    "main_frame_only_mass_kg": 83.20858307881944,
+    "main_frame_only_CG_mm": [
+      574.9999999999995,
+      724.920434836044,
+      557.660467179971
+    ]
+  },
+  "design_basis": {
+    "routing": "Light wood/plastics routing; not metal milling or crash loads",
+    "tool_force_N": 100,
+    "proposed_static_tool_work_target_mm": 0.2,
+    "service_stock_kg": 25,
+    "local_downward_accidental_load_N": 500,
+    "gross_mass_upper_kg": 650,
+    "storage_single_rod_horizontal_N": 100,
+    "retention_acceleration_g": 0.5,
+    "E_steel_MPa": 200000.0,
+    "E_aluminum_MPa": 69000.0,
+    "steel_yield_screen_MPa": 245,
+    "rod_required_yield_MPa": 300,
+    "6063T5_lip_yield_screen_MPa": 110,
+    "conditions": [
+      "All six feet adjusted in contact and jammed. Sound welds; square frame and matched seat shims.",
+      "The0.20 mm target is a proposed acceptance criterion, not demonstrated cutting accuracy.",
+      "Unknown scrap has no assigned certified yield or wall. Sensitivities below are conditional; measure clean remaining wall.",
+      "Static member calculations exclude dynamics, joint microslip, bearing preload, local tube-wall distortion and actual purchased head/module compliance."
+    ]
+  },
+  "vertical_member_chain": [
+    {
+      "wall_basis": "nominal CAD wall",
+      "nominal_wall_mm": 3.048,
+      "section": {
+        "b": 50.8,
+        "t": 3.048,
+        "A": 558.2677883880482,
+        "I": 207432.5470204775,
+        "J_thinwall": 331886.5559045283,
+        "corner_model": "outer2t/inner1t; no credit for sand"
+      },
+      "one_strip": {
+        "F_N": 100,
+        "L_mm": 397,
+        "delta_mm": 0.06943666230352497,
+        "stress_MPa": 3.647859981810599
+      },
+      "one_bed_beam": {
+        "F_N": 100,
+        "L_mm": 874,
+        "delta_mm": 0.0335263415339548,
+        "stress_MPa": 2.675520346116234
+      },
+      "one_ledger": {
+        "F_N": 100,
+        "L_mm": 699.6,
+        "delta_mm": 0.017194963940002583,
+        "stress_MPa": 2.141640771330569
+      },
+      "one_overhanging_seat": {
+        "F_N": 100,
+        "L_mm": 36.4,
+        "delta_mm": 0.008790562846310877,
+        "stress_MPa": 11.94225721784777
+      },
+      "ledger_eccentric_torsion_mm": 0.0026164982683113008,
+      "identified_member_sum_mm": 0.13156502889210453,
+      "remaining_budget_mm": 0.06843497110789548,
+      "interpretation": "Deliberately assigns the entire100 N to each member, full397 mm strip span,874 mm beam support-center span and699.6 mm leg-center span. No MDF composite/load-sharing credit. This is a component sum, not a global finite-element solution or a bound on omitted interfaces."
+    },
+    {
+      "wall_basis": "A500 design wall",
+      "nominal_wall_mm": 3.048,
+      "section": {
+        "b": 50.8,
+        "t": 2.8346400000000003,
+        "A": 523.165729536822,
+        "I": 196487.86800273834,
+        "J_thinwall": 312810.2939418369,
+        "corner_model": "outer2t/inner1t; no credit for sand"
+      },
+      "one_strip": {
+        "F_N": 100,
+        "L_mm": 397,
+        "delta_mm": 0.06943666230352497,
+        "stress_MPa": 3.647859981810599
+      },
+      "one_bed_beam": {
+        "F_N": 100,
+        "L_mm": 874,
+        "delta_mm": 0.03539381075970424,
+        "stress_MPa": 2.8245509793625803
+      },
+      "one_ledger": {
+        "F_N": 100,
+        "L_mm": 699.6,
+        "delta_mm": 0.01815275010236404,
+        "stress_MPa": 2.260933484167118
+      },
+      "one_overhanging_seat": {
+        "F_N": 100,
+        "L_mm": 36.4,
+        "delta_mm": 0.008790562846310877,
+        "stress_MPa": 11.94225721784777
+      },
+      "ledger_eccentric_torsion_mm": 0.00277606145199769,
+      "identified_member_sum_mm": 0.1345498474639018,
+      "remaining_budget_mm": 0.0654501525360982,
+      "interpretation": "Deliberately assigns the entire100 N to each member, full397 mm strip span,874 mm beam support-center span and699.6 mm leg-center span. No MDF composite/load-sharing credit. This is a component sum, not a global finite-element solution or a bound on omitted interfaces."
+    },
+    {
+      "wall_basis": "measured2.0 remaining wall sensitivity",
+      "nominal_wall_mm": 2,
+      "section": {
+        "b": 50.8,
+        "t": 2,
+        "A": 380.0991118430773,
+        "I": 148765.86348553718,
+        "J_thinwall": 232428.54399999997,
+        "corner_model": "outer2t/inner1t; no credit for sand"
+      },
+      "one_strip": {
+        "F_N": 100,
+        "L_mm": 397,
+        "delta_mm": 0.06943666230352497,
+        "stress_MPa": 3.647859981810599
+      },
+      "one_bed_beam": {
+        "F_N": 100,
+        "L_mm": 874,
+        "delta_mm": 0.04674764931769962,
+        "stress_MPa": 3.730627356281607
+      },
+      "one_ledger": {
+        "F_N": 100,
+        "L_mm": 699.6,
+        "delta_mm": 0.023975897981103438,
+        "stress_MPa": 2.9862092659663757
+      },
+      "one_overhanging_seat": {
+        "F_N": 100,
+        "L_mm": 36.4,
+        "delta_mm": 0.008790562846310877,
+        "stress_MPa": 11.94225721784777
+      },
+      "ledger_eccentric_torsion_mm": 0.003736118567261688,
+      "identified_member_sum_mm": 0.1526868910159006,
+      "remaining_budget_mm": 0.047313108984099406,
+      "interpretation": "Deliberately assigns the entire100 N to each member, full397 mm strip span,874 mm beam support-center span and699.6 mm leg-center span. No MDF composite/load-sharing credit. This is a component sum, not a global finite-element solution or a bound on omitted interfaces."
+    },
+    {
+      "wall_basis": "measured1.5 remaining wall sensitivity",
+      "nominal_wall_mm": 1.5,
+      "section": {
+        "b": 50.8,
+        "t": 1.5,
+        "A": 290.0057504117314,
+        "I": 116279.55049962336,
+        "J_thinwall": 179734.73549999995,
+        "corner_model": "outer2t/inner1t; no credit for sand"
+      },
+      "one_strip": {
+        "F_N": 100,
+        "L_mm": 397,
+        "delta_mm": 0.06943666230352497,
+        "stress_MPa": 3.647859981810599
+      },
+      "one_bed_beam": {
+        "F_N": 100,
+        "L_mm": 874,
+        "delta_mm": 0.059808060719061626,
+        "stress_MPa": 4.77289426743869
+      },
+      "one_ledger": {
+        "F_N": 100,
+        "L_mm": 699.6,
+        "delta_mm": 0.03067431161089287,
+        "stress_MPa": 3.8204998049200314
+      },
+      "one_overhanging_seat": {
+        "F_N": 100,
+        "L_mm": 36.4,
+        "delta_mm": 0.008790562846310877,
+        "stress_MPa": 11.94225721784777
+      },
+      "ledger_eccentric_torsion_mm": 0.004831456737531963,
+      "identified_member_sum_mm": 0.1735410542173223,
+      "remaining_budget_mm": 0.026458945782677712,
+      "interpretation": "Deliberately assigns the entire100 N to each member, full397 mm strip span,874 mm beam support-center span and699.6 mm leg-center span. No MDF composite/load-sharing credit. This is a component sum, not a global finite-element solution or a bound on omitted interfaces."
+    }
+  ],
+  "chassis": {
+    "braces": [
+      {
+        "name": "side",
+        "horizontal_mm": 598.8,
+        "vertical_mm": 689.2,
+        "length_mm": 912.9940196956385,
+        "axial_demand_N": 152.47061117161633,
+        "ideal_k_N_per_mm": 16388.889334773976,
+        "Euler_pinned_N": 36582.1709084152,
+        "Euler_over_demand": 239.9293255750081,
+        "yield_stress_MPa": 0.8766503267174414,
+        "ideal100N_sway_mm": 0.006101694749248188,
+        "ten_percent_joint_efficiency_sensitivity_mm": 0.061016947492481884,
+        "weld_two50mm_edges_shear_MPa": 0.7187533539407153
+      },
+      {
+        "name": "rear",
+        "horizontal_mm": 998.4,
+        "vertical_mm": 689.2,
+        "length_mm": 1213.1773159765228,
+        "axial_demand_N": 121.51215103931519,
+        "ideal_k_N_per_mm": 19418.96319885248,
+        "Euler_pinned_N": 20718.42690541647,
+        "Euler_over_demand": 170.50498018682126,
+        "yield_stress_MPa": 0.6986504880527756,
+        "ideal100N_sway_mm": 0.00514960551580371,
+        "ten_percent_joint_efficiency_sensitivity_mm": 0.0514960551580371,
+        "weld_two50mm_edges_shear_MPa": 0.5728137733097585
+      }
+    ],
+    "brace_network": "Side pair in series on each side, two sides in parallel gives one-member k for equal bays; rear brace alone gives X shear stiffness. Welded frame, gusset/leg bending, brace end eccentricity and floor-slip are not replaced by this ideal axial calculation.",
+    "vertical_member_500N": {
+      "F_N": 500,
+      "L_mm": 874,
+      "delta_mm": 0.1769690537985212,
+      "stress_MPa": 14.122754896812902
+    },
+    "leg_max_gravity_stress_MPa": 4.0613787308809535,
+    "leg_Euler_pinned_949_2_N": 430477.0692521186
+  },
+  "locators": {
+    "single_pin_proof_force_N": 500,
+    "pin_shear_MPa": 17.683882565766147,
+    "pin_bending_MPa": 94.3140403507528,
+    "seat_bearing_MPa": 20.833333333333332,
+    "conditional_yield_reserve": 2.59770442543706,
+    "nominal_full_diametral_clearance_mm": 0.03,
+    "scope": "One round left locator carries X/Y; relieved right locator carries Y. Capacity is checked without friction. Actual hardened pin retention,6.03 bore fit and full4 mm engagement must match."
+  },
+  "preloads": {
+    "beam_M8_N": [
+      2000,
+      4000
+    ],
+    "front_seat_M8_N": [
+      2000,
+      4000
+    ],
+    "panel_clamp_M6_N": [
+      800,
+      1000
+    ],
+    "spoil_M5": "UNRELEASED pending actual extrusion coupon. Qualification starting range50..75 N; combined preload plus local uplift must remain<=175 N under this lip screen.",
+    "M8_at4000_tensile_MPa": 109.2896174863388,
+    "M8_class88_proof_load_N": 21228.0,
+    "M8_sleeve_compression_MPa": 20.958675633500622,
+    "M6_panel_at1000_tensile_MPa": 49.75124378109452,
+    "panel_end_bridge_stress_at1000_MPa": 95.83333333333333,
+    "panel_end_contact_pressure_at1000_MPa": 14.285714285714286,
+    "panel_friction_min_N": 240.0,
+    "front_seat_friction_min_N": 600.0,
+    "minimum_assumed_mu": 0.15,
+    "front_seat_bolt_prying_at500N_reaction_N_each": 669.1176470588235,
+    "torque_rule": "No universal torque substituted. Calibrate actual finish/lubrication/joint using force measurement or tension verification; T=KFd is sensitivity only."
+  },
+  "slot_lip_screen": {
+    "lip_t_mm": 1.3,
+    "lip_load_centroid_arm_mm": 1.95,
+    "steel_strip_EI_Nmm2": 2624400.0000000005,
+    "foundation_k_N_per_mm2": 10222.222222222223,
+    "beta_per_mm": 0.17665007427383914,
+    "effective_peak_load_length_mm": 11.32181805312826,
+    "stress_per_bolt_N_MPa": 0.30574051316626,
+    "75N_preload_lip_stress_MPa": 22.9305384874695,
+    "175N_combined_lip_stress_MPa": 53.50458980409551,
+    "yield110_twofold_reserve_force_N": 179.89110906637129,
+    "result": "UNQUALIFIED: a normal torque-table preload is not justified. Lip/root section and contact foundation are approximated; the reconstructed slot is not supplier-certified. Test the actual extrusion and nut strip before releasing a preload.",
+    "coupon_requirement": "Apply350 N upward at each actual M5 station with the same strip/retainers/profile, hold60 seconds, repeat10 times. Require no lip cracking, thread damage or slip, and residual movement<=0.02 mm. This is a proposed acceptance test, not a predicted pass or completed test."
+  },
+  "panel_retainer": {
+    "old10mm": {
+      "F_N": 100,
+      "L_mm": 398.5,
+      "delta_mm": 21.486408490780914,
+      "stress_MPa": 405.90876686156986
+    },
+    "new14mm": {
+      "F_N": 100,
+      "L_mm": 358.5,
+      "delta_mm": 4.072247714256868,
+      "stress_MPa": 133.07766087100754
+    },
+    "new_yield_reserve": 2.254322761885563,
+    "socket_bearing_force_couple_N": 896.25,
+    "socket_conservative10mm_end_bearing_MPa": 6.401785714285714,
+    "socket_weld": {
+      "force_N": 100,
+      "moment_Nmm": 39850.0,
+      "radius_mm": 9.1,
+      "leg_mm": 3,
+      "effective_area_mm2": 121.29070421172338,
+      "stress_sum_MPa": 73.03314640484676,
+      "E70_ASD_screen_MPa": 144.78990315299998,
+      "allowable_over_demand": 1.9825231457286792
+    },
+    "seat8mm_net_section_bending_MPa": 69.70032649253731,
+    "seat_assumed_two_sided_restraint": "Moment splits between fore/aft seat strips around the socket; clear28 mm web relief and net width26.8 mm. Verify welded continuity.",
+    "seat_yield_reserve": 3.515048097030531,
+    "web_relief_remaining_height_mm": 10.4,
+    "web_shear_from_moment_MPa": 22.807921245421245,
+    "socket_design_fit_mm": [
+      0.15,
+      0.3
+    ],
+    "max_fit_rotation_displacement_mm": 2.6887499999999998,
+    "saddle_rod_departure_lift_mm": 8.5,
+    "lower_screw_thread_engagement_mm": 9,
+    "load_scope": "100 N at a single rod top. No lifting/standing, no collision-energy rating. Elastic rod travel and sliding-fit play are storage containment, not a precision datum.",
+    "socket_bending_MPa": 106.97083778272545,
+    "socket_yield_reserve": 2.3370855569794564
+  },
+  "feet_and_stability": {
+    "one_third_650kg_N": 2124.7741666666666,
+    "M16_stress_on157mm2_MPa": 13.533593418259024,
+    "M16_31_3mm_stem_100N_lateral": {
+      "F_N": 100,
+      "L_mm": 31.3,
+      "delta_mm": 0.0030922000187490434,
+      "stress_MPa": 12.826590489024449
+    },
+    "foot_pad_gross_pressure_MPa": 0.33199596354166666,
+    "pad_strip_model": "Two opposite halves each take half of foot load over26 mm beyond a28 mm head bearing footprint,80 mm effective width. Assumes full-area support; hard-point floors invalidate this screen.",
+    "pad_bending_MPa": 12.844285526071054,
+    "closure_weld_direct_shear_MPa": 4.929272381036732,
+    "stationary_main_frame_only_mass_kg": 83.20858307881944,
+    "frame_only_X_tipping_force_at1255_N": 357.34836590195,
+    "500N_external_pull_tip_margin": 0.7146967318039,
+    "sliding_coefficient_required_for500N_on_frame_only": 0.6127470119350552,
+    "scope": "Global stability under a500 N external pull is separate from internally balanced cutting force. Full machine mass/CG and floor friction must be measured. Existing optional anchors require site-specific selection; no anchor capacity assumed.",
+    "known_fabricated_steel": {
+      "part_ids": [
+        "MF_LEG_1_1",
+        "MF_LEG_1_2",
+        "MF_LEG_1_3",
+        "MF_TOP_Y_1",
+        "MF_LOWER_SIDE_1_1",
+        "MF_LOWER_SIDE_1_2",
+        "MF_LEG_2_1",
+        "MF_LEG_2_2",
+        "MF_LEG_2_3",
+        "MF_TOP_Y_2",
+        "MF_LOWER_SIDE_2_1",
+        "MF_LOWER_SIDE_2_2",
+        "MF_END_FRONT_LOW",
+        "MF_END_REAR_LOW",
+        "MF_END_FRONT_UPPER",
+        "MF_END_REAR_UPPER",
+        "MF_RECEIVER_LEDGER_1",
+        "MF_RECEIVER_LEDGER_2",
+        "FT_1_1_PAD",
+        "FT_1_1_LEG_CLOSURE",
+        "FT_1_2_PAD",
+        "FT_1_2_LEG_CLOSURE",
+        "FT_1_3_PAD",
+        "FT_1_3_LEG_CLOSURE",
+        "FT_2_1_PAD",
+        "FT_2_1_LEG_CLOSURE",
+        "FT_2_2_PAD",
+        "FT_2_2_LEG_CLOSURE",
+        "FT_2_3_PAD",
+        "FT_2_3_LEG_CLOSURE",
+        "FB_SIDE_L_1",
+        "FB_GUSSET_L_1_LOW",
+        "FB_GUSSET_L_1_HIGH",
+        "FB_SIDE_L_2",
+        "FB_GUSSET_L_2_LOW",
+        "FB_GUSSET_L_2_HIGH",
+        "FB_SIDE_R_1",
+        "FB_GUSSET_R_1_LOW",
+        "FB_GUSSET_R_1_HIGH",
+        "FB_SIDE_R_2",
+        "FB_GUSSET_R_2_LOW",
+        "FB_GUSSET_R_2_HIGH",
+        "FB_REAR",
+        "FB_REAR_GUSSET_LOW",
+        "FB_REAR_GUSSET_HIGH",
+        "PAN_BEARER_1",
+        "PB_HANGER_1_1",
+        "PB_END_1_1",
+        "PB_HANGER_1_2",
+        "PB_END_1_2",
+        "PAN_BEARER_2",
+        "PB_HANGER_2_1",
+        "PB_END_2_1",
+        "PB_HANGER_2_2",
+        "PB_END_2_2",
+        "PAN_BEARER_3",
+        "PB_HANGER_3_1",
+        "PB_END_3_1",
+        "PB_HANGER_3_2",
+        "PB_END_3_2",
+        "TS_OUTER_TIE_1",
+        "TS_OUTER_TIE_2",
+        "TS_CROSS_1",
+        "TS_CROSS_2",
+        "TS_CROSS_3",
+        "WP_FLOOR",
+        "WP_SIDE_1",
+        "WP_SIDE_2",
+        "WP_END_FRONT",
+        "WP_END_REAR",
+        "WP_DRAIN_NECK",
+        "WP_OVERFLOW_STANDPIPE",
+        "WP_CRADLE_WEB_1_1",
+        "WP_CRADLE_WEB_1_2",
+        "WP_CRADLE_WEB_2_1",
+        "WP_CRADLE_WEB_2_2",
+        "WP_CRADLE_WEB_3_1",
+        "WP_CRADLE_WEB_3_2",
+        "WP_HOLD_TAB_1",
+        "WP_HOLD_SPACER_1",
+        "WP_HOLD_TAB_2",
+        "WP_HOLD_SPACER_2",
+        "WP_HOLD_TAB_3",
+        "WP_HOLD_SPACER_3",
+        "WP_HOLD_TAB_4",
+        "WP_HOLD_SPACER_4",
+        "WP_COMB_1",
+        "WP_COMB_2",
+        "WP_SLAT_01",
+        "WP_SLAT_02",
+        "WP_SLAT_03",
+        "WP_SLAT_04",
+        "WP_SLAT_05",
+        "WP_SLAT_06",
+        "WP_SLAT_07",
+        "WP_SLAT_08",
+        "WP_SLAT_09",
+        "WP_SLAT_10",
+        "WP_SLAT_11",
+        "WP_SLAT_12",
+        "WP_SLAT_13",
+        "WP_SLAT_14",
+        "WP_SLAT_15",
+        "WP_SLAT_16",
+        "WP_SLAT_17",
+        "WP_SLAT_18",
+        "WP_SLAT_19",
+        "WT_FLOOR",
+        "WT_SIDE_LEFT",
+        "WT_SIDE_RIGHT",
+        "WT_FRONT",
+        "WT_REAR",
+        "WT_SETTLING_WEIR",
+        "WT_PICKUP_PIPE",
+        "WT_EMERGENCY_OVERFLOW",
+        "WT_CLEANOUT_NECK",
+        "WT_RIM_FRONT",
+        "WT_RIM_REAR",
+        "WT_RIM_LEFT",
+        "WT_RIM_RIGHT",
+        "WT_LID",
+        "WT_VENT_NECK",
+        "G_SEAT_1_1",
+        "G_FRONT_LEDGER_SLEEVE_1_1",
+        "G_FRONT_LEDGER_SLEEVE_1_2",
+        "G_SEAT_BOSS_1_1",
+        "G_SEAT_1_2",
+        "G_FRONT_LEDGER_SLEEVE_2_1",
+        "G_FRONT_LEDGER_SLEEVE_2_2",
+        "G_SEAT_BOSS_1_2",
+        "G_BEAM_1",
+        "G_BEAM_STACK_PAD_1_1",
+        "G_BEAM_STACK_PAD_1_2",
+        "G_BEAM_FOOT_BASE_1_1",
+        "G_BEAM_FOOT_1_1",
+        "G_BEAM_SLEEVE_1_1",
+        "G_BEAM_FOOT_BASE_1_2",
+        "G_BEAM_FOOT_1_2",
+        "G_BEAM_SLEEVE_1_2",
+        "G_CLAMP_BOSS_1_1",
+        "G_CLAMP_BOSS_1_2",
+        "G_CLAMP_BOSS_1_3",
+        "G_CLAMP_BOSS_1_4",
+        "G_SEAT_2_1",
+        "G_SEAT_BOSS_2_1",
+        "G_SEAT_2_2",
+        "G_SEAT_BOSS_2_2",
+        "G_BEAM_2",
+        "G_BEAM_STACK_PAD_2_1",
+        "G_BEAM_STACK_PAD_2_2",
+        "G_BEAM_FOOT_BASE_2_1",
+        "G_BEAM_FOOT_2_1",
+        "G_BEAM_SLEEVE_2_1",
+        "G_BEAM_FOOT_BASE_2_2",
+        "G_BEAM_FOOT_2_2",
+        "G_BEAM_SLEEVE_2_2",
+        "G_CLAMP_BOSS_2_1",
+        "G_CLAMP_BOSS_2_2",
+        "G_CLAMP_BOSS_2_3",
+        "G_CLAMP_BOSS_2_4",
+        "G_SEAT_3_1",
+        "G_SEAT_BOSS_3_1",
+        "G_SEAT_3_2",
+        "G_SEAT_BOSS_3_2",
+        "G_BEAM_3",
+        "G_BEAM_STACK_PAD_3_1",
+        "G_BEAM_STACK_PAD_3_2",
+        "G_BEAM_FOOT_BASE_3_1",
+        "G_BEAM_FOOT_3_1",
+        "G_BEAM_SLEEVE_3_1",
+        "G_BEAM_FOOT_BASE_3_2",
+        "G_BEAM_FOOT_3_2",
+        "G_BEAM_SLEEVE_3_2",
+        "G_CLAMP_BOSS_3_1",
+        "G_CLAMP_BOSS_3_2",
+        "G_CLAMP_BOSS_3_3",
+        "G_CLAMP_BOSS_3_4",
+        "G_SEAT_4_1",
+        "G_SEAT_BOSS_4_1",
+        "G_SEAT_4_2",
+        "G_SEAT_BOSS_4_2",
+        "G_BEAM_4",
+        "G_BEAM_STACK_PAD_4_1",
+        "G_BEAM_STACK_PAD_4_2",
+        "G_BEAM_FOOT_BASE_4_1",
+        "G_BEAM_FOOT_4_1",
+        "G_BEAM_SLEEVE_4_1",
+        "G_BEAM_FOOT_BASE_4_2",
+        "G_BEAM_FOOT_4_2",
+        "G_BEAM_SLEEVE_4_2",
+        "G_CLAMP_BOSS_4_1",
+        "G_CLAMP_BOSS_4_2",
+        "G_CLAMP_BOSS_4_3",
+        "G_CLAMP_BOSS_4_4",
+        "G_RACK_PANEL_FORK_1",
+        "G_RACK_PANEL_WEB_1",
+        "G_RACK_PANEL_SEAT_1",
+        "G_RACK_PANEL_GUIDE_1_1",
+        "G_RACK_PANEL_GUIDE_1_2",
+        "G_RACK_PANEL_GUIDE_1_3",
+        "G_RACK_PANEL_GUIDE_1_4",
+        "G_RACK_PANEL_GUIDE_1_5",
+        "G_RACK_PANEL_GUIDE_1_6",
+        "G_RACK_PANEL_GUIDE_1_7",
+        "G_RACK_PANEL_FORK_2",
+        "G_RACK_PANEL_WEB_2",
+        "G_RACK_PANEL_SEAT_2",
+        "G_RACK_PANEL_GUIDE_2_1",
+        "G_RACK_PANEL_GUIDE_2_2",
+        "G_RACK_PANEL_GUIDE_2_3",
+        "G_RACK_PANEL_GUIDE_2_4",
+        "G_RACK_PANEL_GUIDE_2_5",
+        "G_RACK_PANEL_GUIDE_2_6",
+        "G_RACK_PANEL_GUIDE_2_7",
+        "G_RACK_BEAM_SHELF_1_1",
+        "G_RACK_BEAM_GUSSET_1_1_1",
+        "G_RACK_BEAM_GUSSET_1_1_2",
+        "G_RACK_BEAM_SHELF_2_1",
+        "G_RACK_BEAM_GUSSET_2_1_1",
+        "G_RACK_BEAM_GUSSET_2_1_2",
+        "G_RACK_SPOIL_ARM_1",
+        "G_RACK_SPOIL_DROP_1",
+        "G_RACK_SPOIL_FOOT_1",
+        "G_RACK_SPOIL_GUIDE_1_1",
+        "G_RACK_SPOIL_GUIDE_1_2",
+        "G_RACK_SPOIL_GUIDE_1_3",
+        "G_RACK_SPOIL_GUIDE_1_4",
+        "G_RACK_SPOIL_GUIDE_1_5",
+        "G_RACK_SPOIL_GUIDE_1_6",
+        "G_RACK_SPOIL_GUIDE_1_7",
+        "G_RACK_SPOIL_ARM_2",
+        "G_RACK_SPOIL_DROP_2",
+        "G_RACK_SPOIL_FOOT_2",
+        "G_RACK_SPOIL_GUIDE_2_1",
+        "G_RACK_SPOIL_GUIDE_2_2",
+        "G_RACK_SPOIL_GUIDE_2_3",
+        "G_RACK_SPOIL_GUIDE_2_4",
+        "G_RACK_SPOIL_GUIDE_2_5",
+        "G_RACK_SPOIL_GUIDE_2_6",
+        "G_RACK_SPOIL_GUIDE_2_7",
+        "G_RACK_SPOIL_RUNNER_1",
+        "G_RACK_SPOIL_RUNNER_2",
+        "G_RACK_SPOIL_RUNNER_3",
+        "G_RACK_SPOIL_RUNNER_4",
+        "G_RACK_SPOIL_RUNNER_5",
+        "G_RACK_SPOIL_RUNNER_6",
+        "G_HW_MOUNT_WEB",
+        "G_HW_MOUNT_SHELF",
+        "G_HW_TRAY_FLOOR",
+        "G_HW_TRAY_SIDE_1",
+        "G_HW_TRAY_SIDE_2",
+        "G_HW_TRAY_END_1",
+        "G_HW_TRAY_END_2",
+        "G_HW_DRAWBOLT_GUIDE",
+        "G_HW_DRAWBOLT_GUIDE_RISER_1",
+        "G_HW_DRAWBOLT_GUIDE_RISER_2",
+        "G_FRONT_SEAT_TRAY_FLOOR",
+        "G_FRONT_SEAT_TRAY_SIDE_1",
+        "G_FRONT_SEAT_TRAY_SIDE_2",
+        "G_FRONT_SEAT_TRAY_END_1",
+        "G_FRONT_SEAT_TRAY_END_2",
+        "H_BEAM_STACK_SLEEVE_1_1",
+        "H_BEAM_STACK_SLEEVE_1_2",
+        "H_BEAM_STACK_SLEEVE_2_1",
+        "H_BEAM_STACK_SLEEVE_2_2",
+        "H_BEAM_STACK_SLEEVE_3_1",
+        "H_BEAM_STACK_SLEEVE_3_2",
+        "H_BEAM_STACK_SLEEVE_4_1",
+        "H_BEAM_STACK_SLEEVE_4_2",
+        "H_TEMP_BOX_1",
+        "H_TEMP_GATE_1",
+        "H_TEMP_LOCATOR_SPACER_1",
+        "H_TEMP_BEAM2_SLEEVE_1",
+        "H_TEMP_BOX_2",
+        "H_TEMP_GATE_2",
+        "H_TEMP_LOCATOR_SPACER_2",
+        "H_TEMP_BEAM2_SLEEVE_2",
+        "H_TEMP_TRAY_FLOOR",
+        "H_TEMP_TRAY_SIDE_1",
+        "H_TEMP_TRAY_SIDE_2",
+        "H_TEMP_TRAY_END_1",
+        "H_TEMP_TRAY_END_2",
+        "H_PANEL_HOOP_TOP_1",
+        "H_PANEL_HOOP_SKIRT_1_1",
+        "H_PANEL_HOOP_SKIRT_1_2",
+        "H_PANEL_HOOP_ROD_1",
+        "H_PANEL_HOOP_STAGE_SADDLE_1",
+        "H_PANEL_HOOP_POCKET_END_1_1",
+        "H_PANEL_HOOP_POCKET_END_1_2",
+        "H_PANEL_HOOP_POCKET_SIDE_1_1",
+        "H_PANEL_HOOP_POCKET_SIDE_1_2",
+        "H_PANEL_HOOP_TOP_2",
+        "H_PANEL_HOOP_SKIRT_2_1",
+        "H_PANEL_HOOP_SKIRT_2_2",
+        "H_PANEL_HOOP_ROD_2",
+        "H_PANEL_HOOP_STAGE_SADDLE_2",
+        "H_PANEL_HOOP_POCKET_END_2_1",
+        "H_PANEL_HOOP_POCKET_END_2_2",
+        "H_PANEL_HOOP_POCKET_SIDE_2_1",
+        "H_PANEL_HOOP_POCKET_SIDE_2_2",
+        "H_SPOIL_GUARD_ARM",
+        "H_SPOIL_GUARD_POST",
+        "H_SPOIL_GUARD_FRONT_EAR",
+        "H_SPOIL_GUARD_INDEX_EAR",
+        "H_SPOIL_GUARD_TOP",
+        "H_SPOIL_GUARD_FRONT",
+        "H_SPOIL_GUARD_REAR",
+        "H_SPOIL_GUARD_RIGHT",
+        "H_SPOIL_GUARD_HINGE_CARRIER",
+        "I_PANEL_ROD_SOCKET_1",
+        "I_PANEL_ROD_SOCKET_2"
+      ],
+      "CAD_mass_kg": 305.8095298611976,
+      "CG_mm": [
+        561.5453983106155,
+        775.1241001807832,
+        560.7801939777829
+      ],
+      "mass_after15percent_deduction_kg": 259.9381003820179,
+      "tipping_force_X_N": 1089.0039960796519,
+      "tipping_force_Y_N": 1319.1978379170782,
+      "minimum_Coulomb_mu_for500N": 0.19614596926716454,
+      "scope": "Conditional on nominal specified plate/tube.15 percent mass deduction screens square corners and stock tolerance; this is not valid for arbitrary thin scrap. All purchased parts, water and sand excluded. CG of omitted parts must remain within supports for their omission to be conservative."
+    }
+  },
+  "retaining_hardware": {
+    "stored_beam_total_kg": 20.370044860283926,
+    "beam_stack_point5g_force_N": 99.88095021455167,
+    "fourM6_single_shear_MPa": 1.2423003758028814,
+    "fourM6_twofold_yield_capacity_N": 14854.067725710693,
+    "shelf8M6_sleeves": "Sleeves transfer clamp preload through tube walls; thread/nut engagement and welds remain actual-build checks.",
+    "temporary_box_gate100N_each_M5_shear_MPa": 3.5211267605633805,
+    "temporary_box_scope": "Geometric containment; beam1 already rests on beam2. No lifting rating; only remove seats after both gates and locators are fitted."
+  },
+  "weld_demands": {
+    "front_seat_boss500N": {
+      "force_N": 500,
+      "moment_Nmm": 18200.0,
+      "radius_mm": 10,
+      "leg_mm": 3,
+      "effective_area_mm2": 133.28648814475096,
+      "stress_sum_MPa": 31.06091290742016,
+      "E70_ASD_screen_MPa": 144.78990315299998,
+      "allowable_over_demand": 4.661482538667144
+    },
+    "panel_fork_root": {
+      "force_N": 217.5958601835207,
+      "moment_Nmm": 48669.68951376405,
+      "perimeter_mm": [
+        30,
+        30
+      ],
+      "leg_mm": 3,
+      "stress_sum_MPa": 19.97405698686958,
+      "E70_ASD_screen_MPa": 144.78990315299998,
+      "allowable_over_demand": 7.248898070541255
+    },
+    "beam_stack_shelf": {
+      "force_N": 99.88095021455167,
+      "moment_Nmm": 7491.071266091376,
+      "radius_mm": 25.4,
+      "leg_mm": 3,
+      "effective_area_mm2": 338.54767988766747,
+      "stress_sum_MPa": 2.037317407201568,
+      "E70_ASD_screen_MPa": 144.78990315299998,
+      "allowable_over_demand": 71.06889807213766
+    },
+    "scope": "Actual circular socket/boss and square30 mm fork groups. The shelf circular-equivalent value is demand scale only, not weld-group certification; use actual accessible weld lengths and local base-metal checks."
+  },
+  "actual_cut_section_sensitivity": {
+    "G_BEAM_1": {
+      "samples": [
+        {
+          "station_mm": 123.5,
+          "area_mm2": 503.2969346935666,
+          "I_vertical_mm4": 210854.06481570815
+        },
+        {
+          "station_mm": 138,
+          "area_mm2": 472.4784967447917,
+          "I_vertical_mm4": 159530.35296707944
+        },
+        {
+          "station_mm": 400,
+          "area_mm2": 582.1923840000003,
+          "I_vertical_mm4": 222159.16130893936
+        },
+        {
+          "station_mm": 523.5,
+          "area_mm2": 563.9255727701475,
+          "I_vertical_mm4": 211394.47141577018
+        },
+        {
+          "station_mm": 575,
+          "area_mm2": 582.1923840000003,
+          "I_vertical_mm4": 222159.161309297
+        },
+        {
+          "station_mm": 626.5,
+          "area_mm2": 563.9255727701475,
+          "I_vertical_mm4": 211394.47141577018
+        },
+        {
+          "station_mm": 950,
+          "area_mm2": 582.1923840000003,
+          "I_vertical_mm4": 222159.16131001225
+        },
+        {
+          "station_mm": 1012,
+          "area_mm2": 472.4784967447917,
+          "I_vertical_mm4": 159530.35296678141
+        },
+        {
+          "station_mm": 1026.5,
+          "area_mm2": 503.2969346935666,
+          "I_vertical_mm4": 210854.06481463526
+        }
+      ],
+      "minimum_sampled_I_mm4": 159530.35296678141
+    },
+    "MF_RECEIVER_LEDGER_1": {
+      "samples": [
+        {
+          "station_mm": 25.4,
+          "area_mm2": 582.1923840000001,
+          "I_vertical_mm4": 222159.16130876055
+        },
+        {
+          "station_mm": 45,
+          "area_mm2": 472.4784967447911,
+          "I_vertical_mm4": 159530.35296684102
+        },
+        {
+          "station_mm": 65,
+          "area_mm2": 582.1923840000001,
+          "I_vertical_mm4": 222159.16130870095
+        },
+        {
+          "station_mm": 85,
+          "area_mm2": 472.4784967447911,
+          "I_vertical_mm4": 159530.35296684102
+        },
+        {
+          "station_mm": 350,
+          "area_mm2": 582.1923840000001,
+          "I_vertical_mm4": 222159.16130876055
+        },
+        {
+          "station_mm": 478.5,
+          "area_mm2": 582.1923840000001,
+          "I_vertical_mm4": 222159.16130899897
+        },
+        {
+          "station_mm": 699.6,
+          "area_mm2": 582.1923840000003,
+          "I_vertical_mm4": 222159.16130834332
+        },
+        {
+          "station_mm": 885.5,
+          "area_mm2": 582.1923840000001,
+          "I_vertical_mm4": 222159.16130989304
+        },
+        {
+          "station_mm": 1100,
+          "area_mm2": 582.1923840000001,
+          "I_vertical_mm4": 222159.16130786648
+        },
+        {
+          "station_mm": 1299,
+          "area_mm2": 582.1923840000001,
+          "I_vertical_mm4": 222159.1613095354
+        },
+        {
+          "station_mm": 1370,
+          "area_mm2": 490.75661750973984,
+          "I_vertical_mm4": 160252.62637744422
+        }
+      ],
+      "minimum_sampled_I_mm4": 159530.35296684102
+    },
+    "scope": "0.5 mm slices through actual cut parent tube solids at enumerated critical drill/service-port stations. Minimum sampled section is not a continuous-section optimization. Welded sleeve/boss reinforcement is deliberately excluded.",
+    "minimum_sampled_I_assigned_over_entire_span_member_sum_mm": 0.14679512004582307
+  },
+  "whole_chain_budget": {
+    "target_mm": 0.2,
+    "identified_bed_member_mm": 0.1345498474639018,
+    "unallocated_mm": 0.0654501525360982,
+    "unknown_series_compliances": [
+      "Actual HGR20 guide/block preload and bolted rail seats",
+      "Actual8080 gantry bending/torsion and end brackets",
+      "ZBX80 screw/bearings/carriage, measured mounting and adapter",
+      "Spindle clamp, spindle bearings, collet/tool and projection",
+      "MDF contact, actual20100 profile tolerances and clamp microslip",
+      "Welded frame joints, alignment and feet/floor contact"
+    ],
+    "conclusion": "The known-member screen alone does not establish whole-tool stiffness. A measured series-compliance sum must fit the remaining budget; missing stiffness terms have no invented zero or finite bound."
+  },
+  "arithmetic_checks_pass": true,
+  "static_states": {
+    "router": {
+      "parts": 1669,
+      "unresolved_intersections": []
+    },
+    "stored": {
+      "parts": 1669,
+      "unresolved_intersections": []
+    }
+  },
+  "sources_unchanged": true,
+  "nominal_geometry_pass": true,
+  "full_machine_rigidity_qualified": false
+}

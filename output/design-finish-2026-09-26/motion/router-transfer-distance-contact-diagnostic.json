@@ -1,0 +1,3634 @@
+{
+  "source_sha256": {
+    "output/release-review/RevE-ENGINEERING/bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "output/release-review/RevE-ENGINEERING/bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "output/release-review/RevE-ENGINEERING/bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "output/release-review/RevE-ENGINEERING/build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "output/release-review/RevE-ENGINEERING/build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "output/release-review/RevE-ENGINEERING/build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "output/release-review/RevE-ENGINEERING/build_revi.py": "2756268a5dca6ce3588d4b2ac0ebde43c87390bed8d6caa21e706fc7f83af462",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "output/release-review/RevE-ENGINEERING/check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "output/release-review/RevE-ENGINEERING/controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "output/release-review/RevE-ENGINEERING/export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "output/release-review/RevE-ENGINEERING/frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "output/release-review/RevE-ENGINEERING/geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "output/release-review/RevE-ENGINEERING/package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "output/release-review/RevE-ENGINEERING/plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "output/release-review/RevE-ENGINEERING/reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "output/release-review/RevE-ENGINEERING/render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "output/release-review/RevE-ENGINEERING/render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "output/release-review/RevE-ENGINEERING/render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "output/release-review/RevE-ENGINEERING/render_revi.py": "991d641ba4baa19a0f5147b4d29aa9d300c163973c15cadbd62d6cbe2b5ebab5",
+    "output/release-review/RevE-ENGINEERING/sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "output/release-review/RevE-ENGINEERING/service_finish.py": "9738b260ce8f61c7ca45b46c212b1559057bdb1b1505885bcc0616045bc228e5",
+    "output/release-review/RevE-ENGINEERING/strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "output/release-review/RevE-ENGINEERING/structure_finish.py": "b0e6e7f5fc7bd5d3b9e901bc13f7186f78395c78584ab3238ba249613bea9778",
+    "output/release-review/RevE-ENGINEERING/swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "output/release-review/RevE-ENGINEERING/sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "output/release-review/RevE-ENGINEERING/tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "output/release-review/RevE-ENGINEERING/update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "output/release-review/RevE-ENGINEERING/verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "output/release-review/RevE-ENGINEERING/verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "output/release-review/RevE-ENGINEERING/verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "output/release-review/RevE-ENGINEERING/water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "output/release-review/RevE-ENGINEERING/water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "output/release-review/RevE-ENGINEERING/water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811",
+    "output/design-finish-2026-09-26/motion/check_router_transfer.py": "df0edb061e649175e3638813a8c58ec258ce523d2c014ef2d95dc6289e78f449",
+    "output/design-finish-2026-09-26/motion/check_transfer_staging.py": "5eb15e7d426e8bfb13d90d6fb5340f424f58237d813e1f9e6735b379ddd491a3",
+    "output/cad-repair-2026-09-25/check_spoil_transfer.py": "1397e268b4136f0436db0f07bd23256c35d980cb38eca42c2c6a40c56e4af9fe",
+    "output/design-finish-2026-09-26/structure/check_reinforced_paths.py": "0be42f7f957efa89edd80bba5a9a6f5a798ece6be5869e8ec66a19bbdcb23e8a"
+  },
+  "builder": "build_revi",
+  "status": "RUNNING",
+  "states": {
+    "prepared_router_mounted": {
+      "parts": 1669,
+      "clashes": []
+    },
+    "front_cap_on_panel1_spindle_supported_by_operator": {
+      "parts": 1669,
+      "clashes": []
+    },
+    "bare_spindle_on_cradles": {
+      "parts": 1669,
+      "clashes": []
+    },
+    "router_tool_all_parked": {
+      "parts": 1669,
+      "clashes": []
+    }
+  },
+  "paths": [
+    {
+      "name": "front_cap_to_panel1",
+      "ids": [
+        "TOOL_SPLIT_CLAMP_FRONT"
+      ],
+      "segments": [
+        {
+          "name": "detach_forward",
+          "operation": [
+            "T",
+            [
+              0,
+              -80,
+              0
+            ]
+          ],
+          "status": "FAILED_OR_UNRESOLVED",
+          "distance_queries": 502,
+          "max_subdivision_depth": 16,
+          "failures": [
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0,
+                1.52587890625e-05
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                1.52587890625e-05,
+                3.0517578125e-05
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                3.0517578125e-05,
+                4.57763671875e-05
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                4.57763671875e-05,
+                6.103515625e-05
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                6.103515625e-05,
+                7.62939453125e-05
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                7.62939453125e-05,
+                9.1552734375e-05
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                9.1552734375e-05,
+                0.0001068115234375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0001068115234375,
+                0.0001220703125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0001220703125,
+                0.0001373291015625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0001373291015625,
+                0.000152587890625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000152587890625,
+                0.0001678466796875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0001678466796875,
+                0.00018310546875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.00018310546875,
+                0.0001983642578125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0001983642578125,
+                0.000213623046875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000213623046875,
+                0.0002288818359375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0002288818359375,
+                0.000244140625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000244140625,
+                0.0002593994140625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0002593994140625,
+                0.000274658203125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000274658203125,
+                0.0002899169921875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0002899169921875,
+                0.00030517578125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.00030517578125,
+                0.0003204345703125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0003204345703125,
+                0.000335693359375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000335693359375,
+                0.0003509521484375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0003509521484375,
+                0.0003662109375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0003662109375,
+                0.0003814697265625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0003814697265625,
+                0.000396728515625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000396728515625,
+                0.0004119873046875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0004119873046875,
+                0.00042724609375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.00042724609375,
+                0.0004425048828125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0004425048828125,
+                0.000457763671875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000457763671875,
+                0.0004730224609375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0004730224609375,
+                0.00048828125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.00048828125,
+                0.0005035400390625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0005035400390625,
+                0.000518798828125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000518798828125,
+                0.0005340576171875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0005340576171875,
+                0.00054931640625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.00054931640625,
+                0.0005645751953125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0005645751953125,
+                0.000579833984375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000579833984375,
+                0.0005950927734375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0005950927734375,
+                0.0006103515625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0006103515625,
+                0.0006256103515625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0006256103515625,
+                0.000640869140625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000640869140625,
+                0.0006561279296875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0006561279296875,
+                0.00067138671875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.00067138671875,
+                0.0006866455078125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0006866455078125,
+                0.000701904296875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000701904296875,
+                0.0007171630859375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0007171630859375,
+                0.000732421875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000732421875,
+                0.0007476806640625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0007476806640625,
+                0.000762939453125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000762939453125,
+                0.0007781982421875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0007781982421875,
+                0.00079345703125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.00079345703125,
+                0.0008087158203125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0008087158203125,
+                0.000823974609375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.000823974609375,
+                0.0008392333984375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0008392333984375,
+                0.0008544921875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.0008544921875,
+                0.0008697509765625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            }
+          ],
+          "swept_bounds_mm": [
+            520.0,
+            996.3999999999999,
+            1185.0,
+            630.0,
+            1121.1499999999999,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "left_over_panel1",
+          "operation": [
+            "T",
+            [
+              -170,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            350.0,
+            996.3999999999999,
+            1185.0,
+            630.0,
+            1041.1499999999999,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "position_over_panel1",
+          "operation": [
+            "T",
+            [
+              0,
+              -26.4,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            350.0,
+            969.9999999999998,
+            1185.0,
+            460.0,
+            1041.1499999999999,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "set_flat_on_panel1",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              -244.2
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            350.0,
+            969.9999999999998,
+            940.8,
+            460.0,
+            1014.7499999999998,
+            1225.0
+          ],
+          "in_footprint": true
+        }
+      ]
+    },
+    {
+      "name": "bare_spindle_to_cradle",
+      "ids": [
+        "TOOL_SPINDLE_65x259"
+      ],
+      "segments": [
+        {
+          "name": "withdraw_from_rear_clamp",
+          "operation": [
+            "T",
+            [
+              0,
+              -80,
+              0
+            ]
+          ],
+          "status": "FAILED_OR_UNRESOLVED",
+          "distance_queries": 502,
+          "max_subdivision_depth": 16,
+          "failures": [
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0,
+                1.52587890625e-05
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                1.52587890625e-05,
+                3.0517578125e-05
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                3.0517578125e-05,
+                4.57763671875e-05
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                4.57763671875e-05,
+                6.103515625e-05
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                6.103515625e-05,
+                7.62939453125e-05
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                7.62939453125e-05,
+                9.1552734375e-05
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                9.1552734375e-05,
+                0.0001068115234375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0001068115234375,
+                0.0001220703125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0001220703125,
+                0.0001373291015625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0001373291015625,
+                0.000152587890625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000152587890625,
+                0.0001678466796875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0001678466796875,
+                0.00018310546875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.00018310546875,
+                0.0001983642578125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0001983642578125,
+                0.000213623046875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000213623046875,
+                0.0002288818359375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0002288818359375,
+                0.000244140625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000244140625,
+                0.0002593994140625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0002593994140625,
+                0.000274658203125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000274658203125,
+                0.0002899169921875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0002899169921875,
+                0.00030517578125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.00030517578125,
+                0.0003204345703125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0003204345703125,
+                0.000335693359375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000335693359375,
+                0.0003509521484375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0003509521484375,
+                0.0003662109375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0003662109375,
+                0.0003814697265625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0003814697265625,
+                0.000396728515625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000396728515625,
+                0.0004119873046875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0004119873046875,
+                0.00042724609375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.00042724609375,
+                0.0004425048828125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0004425048828125,
+                0.000457763671875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000457763671875,
+                0.0004730224609375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0004730224609375,
+                0.00048828125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.00048828125,
+                0.0005035400390625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0005035400390625,
+                0.000518798828125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000518798828125,
+                0.0005340576171875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0005340576171875,
+                0.00054931640625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.00054931640625,
+                0.0005645751953125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0005645751953125,
+                0.000579833984375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000579833984375,
+                0.0005950927734375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0005950927734375,
+                0.0006103515625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0006103515625,
+                0.0006256103515625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0006256103515625,
+                0.000640869140625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000640869140625,
+                0.0006561279296875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0006561279296875,
+                0.00067138671875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.00067138671875,
+                0.0006866455078125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0006866455078125,
+                0.000701904296875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000701904296875,
+                0.0007171630859375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0007171630859375,
+                0.000732421875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000732421875,
+                0.0007476806640625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0007476806640625,
+                0.000762939453125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000762939453125,
+                0.0007781982421875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0007781982421875,
+                0.00079345703125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.00079345703125,
+                0.0008087158203125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0008087158203125,
+                0.000823974609375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.000823974609375,
+                0.0008392333984375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0008392333984375,
+                0.0008544921875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.0008544921875,
+                0.0008697509765625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            }
+          ],
+          "swept_bounds_mm": [
+            542.5,
+            1008.8999999999999,
+            1060.0,
+            607.5,
+            1153.8999999999999,
+            1319.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "right_to_clear_restored_rack_rod",
+          "operation": [
+            "T",
+            [
+              325,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            542.5,
+            1008.8999999999999,
+            1060.0,
+            932.5,
+            1073.8999999999999,
+            1319.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "forward_to_open_portal",
+          "operation": [
+            "T",
+            [
+              0,
+              -971.4000000000001,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            867.5,
+            37.499999999999545,
+            1060.0,
+            932.5,
+            1073.8999999999999,
+            1319.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "lower_vertical_in_open_portal",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              -710
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            867.5,
+            37.499999999999545,
+            350.0,
+            932.5,
+            102.49999999999955,
+            1319.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "rearward_vertical_past_cabinet",
+          "operation": [
+            "T",
+            [
+              0,
+              530,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            867.5,
+            37.499999999999545,
+            350.0,
+            932.5,
+            632.4999999999995,
+            609.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "left_to_rotation_axis_behind_cabinet",
+          "operation": [
+            "T",
+            [
+              -35,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            832.5,
+            567.4999999999995,
+            350.0,
+            932.5,
+            632.4999999999995,
+            609.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "turn_horizontal_behind_cabinet",
+          "operation": [
+            "R",
+            [
+              865,
+              600,
+              350
+            ],
+            [
+              865,
+              601,
+              350
+            ],
+            90
+          ],
+          "status": "CLEAR",
+          "distance_queries": 21,
+          "max_subdivision_depth": 1,
+          "failures": [],
+          "swept_bounds_mm": [
+            832.5,
+            567.4999999999995,
+            317.5,
+            1126.0311284119193,
+            632.4999999999995,
+            611.0311284119194
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "raise_to_low_route",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              270
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            864.9999999999999,
+            567.4999999999995,
+            317.5,
+            1124.0,
+            632.4999999999995,
+            652.5
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "left_behind_cabinet",
+          "operation": [
+            "T",
+            [
+              -365,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            499.9999999999999,
+            567.4999999999995,
+            587.5,
+            1124.0,
+            632.4999999999995,
+            652.5
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "rearward_left_of_cradles",
+          "operation": [
+            "T",
+            [
+              0,
+              480,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 9,
+          "max_subdivision_depth": 1,
+          "failures": [],
+          "swept_bounds_mm": [
+            499.9999999999999,
+            567.4999999999995,
+            587.5,
+            759.0,
+            1112.4999999999995,
+            652.5
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "axial_insertion_through_cradles",
+          "operation": [
+            "T",
+            [
+              260.5,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 207,
+          "max_subdivision_depth": 5,
+          "failures": [],
+          "swept_bounds_mm": [
+            499.9999999999999,
+            1047.4999999999995,
+            587.5,
+            1019.5,
+            1112.4999999999995,
+            652.5
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "lower_into_cradle",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              -20.3
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 98,
+          "max_subdivision_depth": 6,
+          "failures": [],
+          "swept_bounds_mm": [
+            760.4999999999999,
+            1047.4999999999995,
+            567.2,
+            1019.5,
+            1112.4999999999995,
+            652.5
+          ],
+          "in_footprint": true
+        }
+      ]
+    },
+    {
+      "name": "rear_clamp_to_lid",
+      "ids": [
+        "TOOL_SPLIT_CLAMP_REAR"
+      ],
+      "segments": [
+        {
+          "name": "detach_forward",
+          "operation": [
+            "T",
+            [
+              0,
+              -80,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            520.0,
+            1041.6499999999999,
+            1185.0,
+            630.0,
+            1166.8999999999999,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "right_to_portal",
+          "operation": [
+            "T",
+            [
+              325,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            520.0,
+            1041.6499999999999,
+            1185.0,
+            955.0,
+            1086.8999999999999,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "front_to_portal",
+          "operation": [
+            "T",
+            [
+              0,
+              -991.6500000000001,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            845.0,
+            49.99999999999954,
+            1185.0,
+            955.0,
+            1086.8999999999999,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "lower_in_portal",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              -585
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            845.0,
+            49.99999999999954,
+            600.0,
+            955.0,
+            95.24999999999955,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "rearward_past_cabinet",
+          "operation": [
+            "T",
+            [
+              0,
+              550,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            845.0,
+            49.99999999999954,
+            600.0,
+            955.0,
+            645.2499999999995,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "left_to_bypass_lane",
+          "operation": [
+            "T",
+            [
+              -415,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            430.0,
+            599.9999999999995,
+            600.0,
+            955.0,
+            645.2499999999995,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "rearward_past_staged_guard_foot",
+          "operation": [
+            "T",
+            [
+              0,
+              580,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 16,
+          "max_subdivision_depth": 5,
+          "failures": [],
+          "swept_bounds_mm": [
+            430.0,
+            599.9999999999995,
+            600.0,
+            540.0,
+            1225.2499999999995,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "left_to_park",
+          "operation": [
+            "T",
+            [
+              -130,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 8,
+          "max_subdivision_depth": 2,
+          "failures": [],
+          "swept_bounds_mm": [
+            300.0,
+            1179.9999999999995,
+            600.0,
+            540.0,
+            1225.2499999999995,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "lower_to_lid",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              -166.904
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 2,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            300.0,
+            1179.9999999999995,
+            433.096,
+            410.0,
+            1225.2499999999995,
+            640.0
+          ],
+          "in_footprint": true
+        }
+      ]
+    },
+    {
+      "name": "front_cap_from_panel1_to_lid",
+      "ids": [
+        "TOOL_SPLIT_CLAMP_FRONT"
+      ],
+      "segments": [
+        {
+          "name": "lift_from_table",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              40
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            350.0,
+            969.9999999999998,
+            940.8,
+            460.0,
+            1014.7499999999998,
+            1020.8
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "right_to_portal",
+          "operation": [
+            "T",
+            [
+              495,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            350.0,
+            969.9999999999998,
+            980.8,
+            955.0,
+            1014.7499999999998,
+            1020.8
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "front_to_portal",
+          "operation": [
+            "T",
+            [
+              0,
+              -920,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            845.0,
+            49.999999999999545,
+            980.8,
+            955.0,
+            1014.7499999999998,
+            1020.8
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "lower_in_portal",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              -380.8
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            845.0,
+            49.999999999999545,
+            600.0,
+            955.0,
+            94.74999999999977,
+            1020.8
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "rearward_past_cabinet",
+          "operation": [
+            "T",
+            [
+              0,
+              550,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            845.0,
+            49.999999999999545,
+            600.0,
+            955.0,
+            644.7499999999998,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "left_to_bypass_lane",
+          "operation": [
+            "T",
+            [
+              -415,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            430.0,
+            599.9999999999995,
+            600.0,
+            955.0,
+            644.7499999999998,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "rearward_past_staged_guard_foot",
+          "operation": [
+            "T",
+            [
+              0,
+              630,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 16,
+          "max_subdivision_depth": 5,
+          "failures": [],
+          "swept_bounds_mm": [
+            430.0,
+            599.9999999999995,
+            600.0,
+            540.0,
+            1274.7499999999998,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "left_to_park",
+          "operation": [
+            "T",
+            [
+              -130,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 1,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            300.0,
+            1229.9999999999995,
+            600.0,
+            540.0,
+            1274.7499999999998,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "lower_to_lid",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              -166.904
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 1,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            300.0,
+            1229.9999999999995,
+            433.096,
+            410.0,
+            1274.7499999999998,
+            640.0
+          ],
+          "in_footprint": true
+        }
+      ]
+    },
+    {
+      "name": "restore_front_cap_from_panel1_to_lid",
+      "ids": [
+        "TOOL_SPLIT_CLAMP_FRONT"
+      ],
+      "segments": [
+        {
+          "name": "reverse_lower_to_lid",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              166.904
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 1,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            300.0,
+            1229.9999999999995,
+            433.096,
+            410.0,
+            1274.7499999999998,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_left_to_park",
+          "operation": [
+            "T",
+            [
+              130,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 1,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            300.0,
+            1229.9999999999995,
+            600.0,
+            540.0,
+            1274.7499999999998,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_rearward_past_staged_guard_foot",
+          "operation": [
+            "T",
+            [
+              0,
+              -630,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 16,
+          "max_subdivision_depth": 5,
+          "failures": [],
+          "swept_bounds_mm": [
+            430.0,
+            599.9999999999995,
+            600.0,
+            540.0,
+            1274.7499999999998,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_left_to_bypass_lane",
+          "operation": [
+            "T",
+            [
+              415,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            430.0,
+            599.9999999999995,
+            600.0,
+            955.0,
+            644.7499999999998,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_rearward_past_cabinet",
+          "operation": [
+            "T",
+            [
+              0,
+              -550,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            845.0,
+            49.999999999999545,
+            600.0,
+            955.0,
+            644.7499999999998,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_lower_in_portal",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              380.8
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            845.0,
+            49.999999999999545,
+            600.0,
+            955.0,
+            94.74999999999977,
+            1020.8
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_front_to_portal",
+          "operation": [
+            "T",
+            [
+              0,
+              920,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            845.0,
+            49.999999999999545,
+            980.8,
+            955.0,
+            1014.7499999999998,
+            1020.8
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_right_to_portal",
+          "operation": [
+            "T",
+            [
+              -495,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            350.0,
+            969.9999999999995,
+            980.8,
+            955.0,
+            1014.7499999999998,
+            1020.8
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_lift_from_table",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              -40
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            350.0,
+            969.9999999999995,
+            940.8,
+            460.0,
+            1014.7499999999998,
+            1020.8
+          ],
+          "in_footprint": true
+        }
+      ]
+    },
+    {
+      "name": "restore_rear_clamp_to_lid",
+      "ids": [
+        "TOOL_SPLIT_CLAMP_REAR"
+      ],
+      "segments": [
+        {
+          "name": "reverse_lower_to_lid",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              166.904
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 2,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            300.0,
+            1179.9999999999995,
+            433.096,
+            410.0,
+            1225.2499999999995,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_left_to_park",
+          "operation": [
+            "T",
+            [
+              130,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 8,
+          "max_subdivision_depth": 2,
+          "failures": [],
+          "swept_bounds_mm": [
+            300.0,
+            1179.9999999999995,
+            600.0,
+            540.0,
+            1225.2499999999995,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_rearward_past_staged_guard_foot",
+          "operation": [
+            "T",
+            [
+              0,
+              -580,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 16,
+          "max_subdivision_depth": 5,
+          "failures": [],
+          "swept_bounds_mm": [
+            430.0,
+            599.9999999999995,
+            600.0,
+            540.0,
+            1225.2499999999995,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_left_to_bypass_lane",
+          "operation": [
+            "T",
+            [
+              415,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            430.0,
+            599.9999999999995,
+            600.0,
+            955.0,
+            645.2499999999995,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_rearward_past_cabinet",
+          "operation": [
+            "T",
+            [
+              0,
+              -550,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            845.0,
+            49.99999999999954,
+            600.0,
+            955.0,
+            645.2499999999995,
+            640.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_lower_in_portal",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              585
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            845.0,
+            49.99999999999954,
+            600.0,
+            955.0,
+            95.24999999999955,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_front_to_portal",
+          "operation": [
+            "T",
+            [
+              0,
+              991.6500000000001,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            845.0,
+            49.99999999999954,
+            1185.0,
+            955.0,
+            1086.8999999999996,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_right_to_portal",
+          "operation": [
+            "T",
+            [
+              -325,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            520.0,
+            1041.6499999999996,
+            1185.0,
+            955.0,
+            1086.8999999999996,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_detach_forward",
+          "operation": [
+            "T",
+            [
+              0,
+              80,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            520.0,
+            1041.6499999999996,
+            1185.0,
+            630.0,
+            1166.8999999999996,
+            1225.0
+          ],
+          "in_footprint": true
+        }
+      ]
+    },
+    {
+      "name": "restore_bare_spindle_to_cradle",
+      "ids": [
+        "TOOL_SPINDLE_65x259"
+      ],
+      "segments": [
+        {
+          "name": "reverse_lower_into_cradle",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              20.3
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 98,
+          "max_subdivision_depth": 6,
+          "failures": [],
+          "swept_bounds_mm": [
+            760.4999999999999,
+            1047.4999999999995,
+            567.2,
+            1019.5,
+            1112.4999999999995,
+            652.5
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_axial_insertion_through_cradles",
+          "operation": [
+            "T",
+            [
+              -260.5,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 207,
+          "max_subdivision_depth": 5,
+          "failures": [],
+          "swept_bounds_mm": [
+            499.9999999999999,
+            1047.4999999999995,
+            587.5,
+            1019.5,
+            1112.4999999999995,
+            652.5
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_rearward_left_of_cradles",
+          "operation": [
+            "T",
+            [
+              0,
+              -480,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 9,
+          "max_subdivision_depth": 1,
+          "failures": [],
+          "swept_bounds_mm": [
+            499.9999999999999,
+            567.4999999999995,
+            587.5,
+            759.0,
+            1112.4999999999995,
+            652.5
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_left_behind_cabinet",
+          "operation": [
+            "T",
+            [
+              365,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            499.9999999999999,
+            567.4999999999995,
+            587.5,
+            1124.0,
+            632.4999999999995,
+            652.5
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_raise_to_low_route",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              -270
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            864.9999999999999,
+            567.4999999999995,
+            317.5,
+            1124.0,
+            632.4999999999995,
+            652.5
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_turn_horizontal_behind_cabinet",
+          "operation": [
+            "R",
+            [
+              865,
+              600,
+              350
+            ],
+            [
+              865,
+              601,
+              350
+            ],
+            -90
+          ],
+          "status": "CLEAR",
+          "distance_queries": 21,
+          "max_subdivision_depth": 1,
+          "failures": [],
+          "swept_bounds_mm": [
+            832.5,
+            567.4999999999995,
+            317.5,
+            1126.0311284119193,
+            632.4999999999995,
+            611.0311284119196
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_left_to_rotation_axis_behind_cabinet",
+          "operation": [
+            "T",
+            [
+              35,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            832.5,
+            567.4999999999995,
+            350.0,
+            932.5000000000001,
+            632.4999999999995,
+            609.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_rearward_vertical_past_cabinet",
+          "operation": [
+            "T",
+            [
+              0,
+              -530,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            867.5,
+            37.499999999999545,
+            350.0,
+            932.5000000000001,
+            632.4999999999995,
+            609.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_lower_vertical_in_open_portal",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              710
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            867.5,
+            37.499999999999545,
+            350.0,
+            932.5000000000001,
+            102.49999999999955,
+            1319.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_forward_to_open_portal",
+          "operation": [
+            "T",
+            [
+              0,
+              971.4000000000001,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            867.5,
+            37.499999999999545,
+            1060.0,
+            932.5000000000001,
+            1073.8999999999996,
+            1319.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_right_to_clear_restored_rack_rod",
+          "operation": [
+            "T",
+            [
+              -325,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            542.5,
+            1008.8999999999996,
+            1060.0,
+            932.5000000000001,
+            1073.8999999999996,
+            1319.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_withdraw_from_rear_clamp",
+          "operation": [
+            "T",
+            [
+              0,
+              80,
+              0
+            ]
+          ],
+          "status": "FAILED_OR_UNRESOLVED",
+          "distance_queries": 502,
+          "max_subdivision_depth": 16,
+          "failures": [
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9991302490234375,
+                0.9991455078125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9991455078125,
+                0.9991607666015625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9991607666015625,
+                0.999176025390625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999176025390625,
+                0.9991912841796875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9991912841796875,
+                0.99920654296875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.99920654296875,
+                0.9992218017578125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9992218017578125,
+                0.999237060546875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999237060546875,
+                0.9992523193359375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9992523193359375,
+                0.999267578125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999267578125,
+                0.9992828369140625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9992828369140625,
+                0.999298095703125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999298095703125,
+                0.9993133544921875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9993133544921875,
+                0.99932861328125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.99932861328125,
+                0.9993438720703125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9993438720703125,
+                0.999359130859375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999359130859375,
+                0.9993743896484375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9993743896484375,
+                0.9993896484375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9993896484375,
+                0.9994049072265625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9994049072265625,
+                0.999420166015625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999420166015625,
+                0.9994354248046875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9994354248046875,
+                0.99945068359375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.99945068359375,
+                0.9994659423828125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9994659423828125,
+                0.999481201171875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999481201171875,
+                0.9994964599609375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9994964599609375,
+                0.99951171875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.99951171875,
+                0.9995269775390625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9995269775390625,
+                0.999542236328125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999542236328125,
+                0.9995574951171875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9995574951171875,
+                0.99957275390625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.99957275390625,
+                0.9995880126953125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9995880126953125,
+                0.999603271484375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999603271484375,
+                0.9996185302734375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9996185302734375,
+                0.9996337890625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9996337890625,
+                0.9996490478515625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9996490478515625,
+                0.999664306640625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999664306640625,
+                0.9996795654296875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9996795654296875,
+                0.99969482421875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.99969482421875,
+                0.9997100830078125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9997100830078125,
+                0.999725341796875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999725341796875,
+                0.9997406005859375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9997406005859375,
+                0.999755859375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999755859375,
+                0.9997711181640625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9997711181640625,
+                0.999786376953125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999786376953125,
+                0.9998016357421875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9998016357421875,
+                0.99981689453125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.99981689453125,
+                0.9998321533203125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9998321533203125,
+                0.999847412109375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999847412109375,
+                0.9998626708984375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9998626708984375,
+                0.9998779296875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9998779296875,
+                0.9998931884765625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9998931884765625,
+                0.999908447265625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999908447265625,
+                0.9999237060546875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9999237060546875,
+                0.99993896484375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.99993896484375,
+                0.9999542236328125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9999542236328125,
+                0.999969482421875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.999969482421875,
+                0.9999847412109375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPLIT_CLAMP_REAR",
+              "interval": [
+                0.9999847412109375,
+                1
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            }
+          ],
+          "swept_bounds_mm": [
+            542.5,
+            1008.8999999999996,
+            1060.0,
+            607.5000000000001,
+            1153.8999999999996,
+            1319.0
+          ],
+          "in_footprint": true
+        }
+      ]
+    },
+    {
+      "name": "restore_front_cap_to_panel1",
+      "ids": [
+        "TOOL_SPLIT_CLAMP_FRONT"
+      ],
+      "segments": [
+        {
+          "name": "reverse_set_flat_on_panel1",
+          "operation": [
+            "T",
+            [
+              0,
+              0,
+              244.2
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            350.0,
+            969.9999999999995,
+            940.8,
+            460.0,
+            1014.7499999999998,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_position_over_panel1",
+          "operation": [
+            "T",
+            [
+              0,
+              26.4,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            350.0,
+            969.9999999999995,
+            1185.0,
+            460.0,
+            1041.1499999999999,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_left_over_panel1",
+          "operation": [
+            "T",
+            [
+              170,
+              0,
+              0
+            ]
+          ],
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            350.0,
+            996.3999999999996,
+            1185.0,
+            630.0,
+            1041.1499999999999,
+            1225.0
+          ],
+          "in_footprint": true
+        },
+        {
+          "name": "reverse_detach_forward",
+          "operation": [
+            "T",
+            [
+              0,
+              80,
+              0
+            ]
+          ],
+          "status": "FAILED_OR_UNRESOLVED",
+          "distance_queries": 502,
+          "max_subdivision_depth": 16,
+          "failures": [
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9991302490234375,
+                0.9991455078125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9991455078125,
+                0.9991607666015625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9991607666015625,
+                0.999176025390625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999176025390625,
+                0.9991912841796875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9991912841796875,
+                0.99920654296875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.99920654296875,
+                0.9992218017578125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9992218017578125,
+                0.999237060546875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999237060546875,
+                0.9992523193359375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9992523193359375,
+                0.999267578125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999267578125,
+                0.9992828369140625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9992828369140625,
+                0.999298095703125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999298095703125,
+                0.9993133544921875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9993133544921875,
+                0.99932861328125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.99932861328125,
+                0.9993438720703125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9993438720703125,
+                0.999359130859375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999359130859375,
+                0.9993743896484375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9993743896484375,
+                0.9993896484375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9993896484375,
+                0.9994049072265625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9994049072265625,
+                0.999420166015625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999420166015625,
+                0.9994354248046875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9994354248046875,
+                0.99945068359375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.99945068359375,
+                0.9994659423828125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9994659423828125,
+                0.999481201171875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999481201171875,
+                0.9994964599609375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9994964599609375,
+                0.99951171875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.99951171875,
+                0.9995269775390625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9995269775390625,
+                0.999542236328125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999542236328125,
+                0.9995574951171875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9995574951171875,
+                0.99957275390625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.99957275390625,
+                0.9995880126953125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9995880126953125,
+                0.999603271484375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999603271484375,
+                0.9996185302734375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9996185302734375,
+                0.9996337890625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9996337890625,
+                0.9996490478515625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9996490478515625,
+                0.999664306640625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999664306640625,
+                0.9996795654296875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9996795654296875,
+                0.99969482421875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.99969482421875,
+                0.9997100830078125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9997100830078125,
+                0.999725341796875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999725341796875,
+                0.9997406005859375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9997406005859375,
+                0.999755859375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999755859375,
+                0.9997711181640625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9997711181640625,
+                0.999786376953125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999786376953125,
+                0.9998016357421875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9998016357421875,
+                0.99981689453125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.99981689453125,
+                0.9998321533203125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9998321533203125,
+                0.999847412109375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999847412109375,
+                0.9998626708984375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9998626708984375,
+                0.9998779296875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9998779296875,
+                0.9998931884765625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9998931884765625,
+                0.999908447265625
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999908447265625,
+                0.9999237060546875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9999237060546875,
+                0.99993896484375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.99993896484375,
+                0.9999542236328125
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9999542236328125,
+                0.999969482421875
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.999969482421875,
+                0.9999847412109375
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            },
+            {
+              "obstacle": "TOOL_SPINDLE_65x259",
+              "interval": [
+                0.9999847412109375,
+                1
+              ],
+              "status": "UNRESOLVED_DISTANCE_BOUND"
+            }
+          ],
+          "swept_bounds_mm": [
+            520.0,
+            996.3999999999996,
+            1185.0,
+            630.0,
+            1121.1499999999999,
+            1225.0
+          ],
+          "in_footprint": true
+        }
+      ]
+    }
+  ],
+  "scope": "Ordered disconnected router-tool transfer on frozen Rev I CAD.\n\nThe retained panel1 and captured beam1 preparation is proved separately by\ncheck_transfer_staging.py. Nominal rigid geometry does not prove hand access,\noperator ability, cable handling, clamp preload or actual purchased details.\n",
+  "preconditions": [
+    "Machine electrically isolated; cutter and spindle cable disconnected. Gantry parked rear/high at X575/Y1275/Z100. No actual torch installed.",
+    "Complete the separately proved rear-panel1 table and beam1-on-beam2 preparation. Fit both temporary keepers before removing front seats; beam1 remains captured above beam2 throughout this procedure.",
+    "Keep other five panels and all six boards in their defined internal storage, rack rods restored and top bars staged. Do not lower beam1 into the front rack yet: the spindle needs the full 105mm front portal.",
+    "Support the 2.7kg spindle continuously before releasing its two pinch screws and front cap. The rear half stays bolted to the adapter until the spindle rests in its cradles. A helper may handle the cap; no unmodeled fixture is assumed.",
+    "Front cap rests flat on clean/dry panel1 at X350..460/Y970..1014.75/Z940.8. Remove it to its permanent lid location before any head parts use the table.",
+    "Small fastener paths, fingers and grip envelopes are not proved. Pinch screws go to their existing tray locations before cap removal; four rear-clamp mount screws go there only after the spindle is supported in the cradles.",
+    "For restoration first recreate the same panel1/beam1 preparation with the plasma head returned to its parking cradle. Reverse the four transfer routes in order; secure rear-clamp mount screws before returning the spindle and fit pinch screws last."
+  ],
+  "limits": [
+    "Rigid nominal envelope only; no hands, tolerance/deformation, lead or collet extensions included.",
+    "Real spindle connector and clamp dimensions must match or remain within the represented envelope.",
+    "Temporary table support and ordinary hand support are not load-rated lifting fixtures.",
+    "Straps, final clamp torque, purchased attachment interfaces and physical commissioning remain separate acceptance work."
+  ],
+  "permanent_parking_matches": [
+    {
+      "part": "TOOL_SPINDLE_65x259",
+      "symmetric_difference_mm3": 0.0
+    },
+    {
+      "part": "TOOL_SPLIT_CLAMP_FRONT",
+      "symmetric_difference_mm3": 0.0
+    },
+    {
+      "part": "TOOL_SPLIT_CLAMP_REAR",
+      "symmetric_difference_mm3": 0.0
+    }
+  ]
+}

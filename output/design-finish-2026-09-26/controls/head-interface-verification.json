@@ -1,0 +1,2610 @@
+{
+  "status": "PASS_WITH_EXPLICIT_LIMITS",
+  "scope": "Verify the defined head schematic against the existing Rev I relay graph.\n\nThis is a bounded schematic/delay model, not an assembled-board or EMC test.\n",
+  "passed_checks": 418,
+  "checks": [
+    {
+      "check": "Unique head connection identities",
+      "passed": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": false,
+      "top": false,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": false,
+      "top": false,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": false,
+      "top": false,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": false,
+      "top": false,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": false,
+      "top": true,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": false,
+      "top": true,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": false,
+      "top": true,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": false,
+      "top": true,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": true,
+      "top": false,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": true,
+      "top": false,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": true,
+      "top": false,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": true,
+      "top": false,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": true,
+      "top": true,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": true,
+      "top": true,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": true,
+      "top": true,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": false,
+      "right": true,
+      "top": true,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": false,
+      "top": false,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": false,
+      "top": false,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": false,
+      "top": false,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": false,
+      "top": false,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": false,
+      "top": true,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": false,
+      "top": true,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": false,
+      "top": true,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": false,
+      "top": true,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": true,
+      "top": false,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": true,
+      "top": false,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": true,
+      "top": false,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": true,
+      "top": false,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": true,
+      "top": true,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": true,
+      "top": true,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": false,
+      "field_power": true
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": true,
+      "top": true,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": false
+    },
+    {
+      "check": "Three contacts are series, separate from float",
+      "passed": true,
+      "left": true,
+      "right": true,
+      "top": true,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "NC float responds independently",
+      "passed": true,
+      "float_healthy": true,
+      "field_power": true
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "HEAD",
+      "opened": "W_H1"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "HEAD",
+      "opened": "W_H2"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "HEAD",
+      "opened": "W_H3"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "HEAD",
+      "opened": "W_H4"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "HEAD",
+      "opened": "W_H5"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "HEAD",
+      "opened": "W_H6"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "HEAD",
+      "opened": "W_H7"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "HEAD",
+      "opened": "W_H8"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "HEAD",
+      "opened": "W_H45"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "HEAD",
+      "opened": "W_H67"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "HEAD",
+      "opened": "W_H8U"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "HEAD",
+      "opened": "W_H0"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "PROBE",
+      "opened": "W_P1"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "PROBE",
+      "opened": "W_P2"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "PROBE",
+      "opened": "W_P3"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "PROBE",
+      "opened": "W_P4"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "PROBE",
+      "opened": "W_P5"
+    },
+    {
+      "check": "Each open field conductor de-energizes its receiver",
+      "passed": true,
+      "channel": "PROBE",
+      "opened": "W_P6"
+    },
+    {
+      "check": "Field has no conductive path into controller domain",
+      "passed": true
+    },
+    {
+      "check": "Receiver output spans actual XH5/6 boundary",
+      "passed": true
+    },
+    {
+      "check": "Existing graph boundary has correct control and polarity",
+      "passed": true
+    },
+    {
+      "check": "Bound terminal netlist exactly matches the actual circuit definition",
+      "passed": true
+    },
+    {
+      "check": "HEAD_SAFE coil inventory covers both tool outputs and run arm only",
+      "passed": true,
+      "loads": [
+        "K_RUN_ARM",
+        "K_TORCH_RUN",
+        "K_VFD_RUN"
+      ]
+    },
+    {
+      "check": "HEAD_SAFE also supplies IF_READY",
+      "passed": true
+    },
+    {
+      "check": "Both channels use the same defined current-limit and shunt values",
+      "passed": true
+    },
+    {
+      "check": "Minimum LED current exceeds recommended5mA",
+      "passed": true,
+      "minimum_A": 0.005570634606526072
+    },
+    {
+      "check": "Maximum LED current below recommended30mA",
+      "passed": true,
+      "maximum_A": 0.008114089009097615
+    },
+    {
+      "check": "Field resistor below half selected0.6W rating including output short",
+      "passed": true,
+      "maximum_W": 0.21421194984017702
+    },
+    {
+      "check": "LED dissipation stays below75mW",
+      "passed": true
+    },
+    {
+      "check": "Switch wetting minimum circuit voltage/current satisfied",
+      "passed": true
+    },
+    {
+      "check": "Switch resistive current below24V1A reference rating",
+      "passed": true
+    },
+    {
+      "check": "Field normal voltage below48V recommended PhotoMOS maximum",
+      "passed": true
+    },
+    {
+      "check": "Normal complete HEAD_SAFE current below150mA",
+      "passed": true,
+      "maximum_A": 0.1070062298603652
+    },
+    {
+      "check": "Both tool coils still below output allocation, without qualifying that fault",
+      "passed": true,
+      "maximum_A": 0.1470062298603652
+    },
+    {
+      "check": "PhotoMOS output dissipation below400mW catalogue limit",
+      "passed": true,
+      "maximum_W": 0.01575
+    },
+    {
+      "check": "Bleeder defines off output below0.2V with all loads disconnected",
+      "passed": true,
+      "maximum_V": 0.102
+    },
+    {
+      "check": "Bleeder power below half selected rating",
+      "passed": true
+    },
+    {
+      "check": "Healthy PE11 below conservative CMOS low threshold",
+      "passed": true,
+      "maximum_V": 0.2807553415582475
+    },
+    {
+      "check": "Open PE11 above conservative CMOS high threshold",
+      "passed": true,
+      "minimum_V": 2.990412
+    },
+    {
+      "check": "Probe catalogue-delay plus specified RC screen below1ms",
+      "passed": true,
+      "reference_response_s": 0.0005526243325429042
+    },
+    {
+      "check": "NC probe polarity is healthyLOW/openHIGH",
+      "passed": true
+    },
+    {
+      "check": "Current board map still assigns PE11 to probe",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "left",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "right",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "top",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "left",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "right",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "top",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "left",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "right",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "top",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "left",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "right",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "top",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "left",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "right",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "top",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "left",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "right",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "top",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "left",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "right",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "top",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "left",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "right",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "top",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "left",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "right",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "top",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "router",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Held request on power-up remains inhibited with real head receiver",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Deliberate selected request starts after receiver settles",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "left"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "right"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "top"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_supply"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "300ms physical head fault drops both tools and PG6 permission",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Recovered head cannot restart a held tool request",
+      "passed": true,
+      "mode": "plasma",
+      "fault": "field_cable"
+    },
+    {
+      "check": "Release and fresh request restores only selected tool",
+      "passed": true
+    },
+    {
+      "check": "Counterexample: shorted presence output masks release",
+      "passed": true
+    },
+    {
+      "check": "Counterexample: shorted probe output masks NC cable open",
+      "passed": true
+    },
+    {
+      "check": "Whole controls schedule counts run plus two head isolators once",
+      "passed": true
+    },
+    {
+      "check": "Whole controls schedule counts existing mechanical switches once",
+      "passed": true
+    },
+    {
+      "check": "All bound sources and artifacts remained unchanged during verification",
+      "passed": true
+    }
+  ],
+  "verifier_file": "output/design-finish-2026-09-26/controls/verify_head_interface.py",
+  "verifier_sha256_before": "e946b603c09bd2827b61aa7fd85a4aa9cf9ea6669dc55555e68811b6225102fc",
+  "verifier_sha256_after": "e946b603c09bd2827b61aa7fd85a4aa9cf9ea6669dc55555e68811b6225102fc",
+  "verifier_changed": false,
+  "source_sha256": {
+    "output/design-finish-2026-09-26/controls/head-interface.json": "0e2030c10ef980cf7316634915b8622cabcc11fc3b17d4d22f9e507519c727f6",
+    "output/design-finish-2026-09-26/controls/verify_head_interface.py": "e946b603c09bd2827b61aa7fd85a4aa9cf9ea6669dc55555e68811b6225102fc",
+    "output/design-finish-2026-09-26/controls/circuit.py": "a9370143297125a4f7a0da8843ba2ca8d9570003969337a2448bd8a327a4152b",
+    "output/design-finish-2026-09-26/controls/terminal-netlist.json": "47e6c469c9c7780e9eb8482af59c0a9fee998aa08da9ff8a3b3f6f3e918bfb4b",
+    "output/design-finish-2026-09-26/controls/selected-components.json": "c9e9873eb5ca426d0715a21d9f7f473082ed19de82992606f71f596b3f5f8392",
+    "output/design-finish-2026-09-26/controls/HEAD-INTERFACE.md": "b4ee4c529e70959f0a6f7eb23cd4c226e531ccb27cf4ea9a0c195bf0b2bda104",
+    "output/design-finish-2026-09-26/controls/RUN-INTERFACE.md": "b0884dea3dde9de450f07358d0da581b4deba2672751ec605866eade6c9038f8",
+    "output/design-finish-2026-09-26/controls/README.md": "584072edb100def7b2244ade355816b111baf12dd98da2002e0efd3e16756544",
+    "RevE-ENGINEERING/controls/source-overlay/boards/my_machine_map.h": "3878c82b9ea583e9d7c4d846e07e0b58a29d677dd68b2d9294bd5149e00b7797",
+    "RevE-ENGINEERING/controls/grblhal-h7/Src/driver.c": "9c18607bab035283ba0e77353fd64b794f7fa451ff0f6055749d93e517f9ced0",
+    "RevE-ENGINEERING/controls/grblhal-h7/grbl/probe.c": "ed41c6e98cacc44a4a0202438edbddc6ce5b8b22a24970629cd0c0d01593931f",
+    "RevE-ENGINEERING/controls/Kraken-V1.0-SCH.pdf": "6ccf5fc6c5277eaa35bf9f65deeb8448167d47d85ecdcdc7d1aed66736d2a338",
+    "output/design-finish-2026-09-26/controls/sources/Panasonic-AQY212GS.pdf": "86aa163c782fb0b03303bb7f64bb3e0348fa3d0aacdc40cc6ae86600ad8585c4",
+    "output/design-finish-2026-09-26/motion/sources/omron-d2hw.pdf": "81180225ade62479858be755689a5cb8df4639bb6de02f1b2fe1b94adfff6501"
+  },
+  "calculations": {
+    "led_current_a": [
+      0.005570634606526072,
+      0.008114089009097615
+    ],
+    "field_resistor_max_w": 0.21421194984017702,
+    "head_normal_max_a": 0.1070062298603652,
+    "head_both_tool_max_a": 0.1470062298603652,
+    "head_output_max_drop_v": 0.105,
+    "head_output_max_w": 0.01575,
+    "head_off_max_v": 0.102,
+    "probe_healthy_max_v": 0.2807553415582475,
+    "probe_open_min_v": 2.990412,
+    "probe_rc_threshold_s": 5.262433254290413e-05,
+    "probe_reference_response_s": 0.0005526243325429042,
+    "probe_reference_travel_mm": 0.0005526243325429042
+  },
+  "dynamic_cases": 18,
+  "delay_test": {
+    "relay_pickup_s": [
+      0.005,
+      0.01,
+      0.02
+    ],
+    "relay_dropout_s": [
+      0.005,
+      0.02,
+      0.05
+    ],
+    "fault_hold_s": 0.3,
+    "integration_step_s": 0.0005
+  },
+  "timing_reference_conditions": "25 C; IF 5 mA, IL 100 mA, VL 10 V for timing. Values are not a qualified delay at the actual small probe load/24 V field load.",
+  "limits": [
+    "Presence is an ordinary machine permissive; shorted PhotoMOS output or welded/bridged presence contact can mask a release.",
+    "NC float loop detects opens, not a shorted cable/contact or shorted receiver; it is not safety-rated overtravel detection.",
+    "Parked head must remain assembled and wired for router mode; its float is not a router touchplate. Router Z zero is manual in this design.",
+    "PCB, creepage/clearance, enclosure, physical harness/strain relief, supply transients, actual temperature/delay and EMI are not qualified.",
+    "Field C is already fused by F_CONTROL; this head interface does not qualify that fuse or provide semiconductor short-circuit protection.",
+    "Each relay coil must remain <=40 mA over actual voltage and coil temperature. Total HEAD_SAFE load <=150 mA. Retain coil-local flyback protection.",
+    "No actual plasma torch, raw arc or cutter trigger is connected to this circuit."
+  ]
+}

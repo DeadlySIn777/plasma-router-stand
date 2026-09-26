@@ -1,0 +1,476 @@
+{
+  "builder": "build_revi",
+  "source_sha256": {
+    "output/release-review/RevE-ENGINEERING/bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "output/release-review/RevE-ENGINEERING/bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "output/release-review/RevE-ENGINEERING/bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "output/release-review/RevE-ENGINEERING/build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "output/release-review/RevE-ENGINEERING/build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "output/release-review/RevE-ENGINEERING/build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "output/release-review/RevE-ENGINEERING/build_revi.py": "2756268a5dca6ce3588d4b2ac0ebde43c87390bed8d6caa21e706fc7f83af462",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "output/release-review/RevE-ENGINEERING/check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "output/release-review/RevE-ENGINEERING/controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "output/release-review/RevE-ENGINEERING/export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "output/release-review/RevE-ENGINEERING/frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "output/release-review/RevE-ENGINEERING/geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3d13998e3fb1d3df9a9e0edb64876d7f53bef236c8116cee5fffa56e240cbbee",
+    "output/release-review/RevE-ENGINEERING/nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "output/release-review/RevE-ENGINEERING/package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "output/release-review/RevE-ENGINEERING/plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "output/release-review/RevE-ENGINEERING/reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "output/release-review/RevE-ENGINEERING/render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "output/release-review/RevE-ENGINEERING/render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "output/release-review/RevE-ENGINEERING/render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "output/release-review/RevE-ENGINEERING/render_revi.py": "991d641ba4baa19a0f5147b4d29aa9d300c163973c15cadbd62d6cbe2b5ebab5",
+    "output/release-review/RevE-ENGINEERING/sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "output/release-review/RevE-ENGINEERING/service_finish.py": "9738b260ce8f61c7ca45b46c212b1559057bdb1b1505885bcc0616045bc228e5",
+    "output/release-review/RevE-ENGINEERING/strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "output/release-review/RevE-ENGINEERING/structure_finish.py": "b0e6e7f5fc7bd5d3b9e901bc13f7186f78395c78584ab3238ba249613bea9778",
+    "output/release-review/RevE-ENGINEERING/swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "output/release-review/RevE-ENGINEERING/sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "output/release-review/RevE-ENGINEERING/tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "output/release-review/RevE-ENGINEERING/update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "output/release-review/RevE-ENGINEERING/verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "output/release-review/RevE-ENGINEERING/verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "output/release-review/RevE-ENGINEERING/verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "output/release-review/RevE-ENGINEERING/water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "output/release-review/RevE-ENGINEERING/water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "output/release-review/RevE-ENGINEERING/water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811",
+    "output/design-finish-2026-09-26/motion/check_transfer_staging.py": "0e992581c48bd5b2d95c9b19da8c0f6e4c90678ba7460fd46e2d0e4bdd740152",
+    "output/cad-repair-2026-09-25/check_spoil_transfer.py": "1397e268b4136f0436db0f07bd23256c35d980cb38eca42c2c6a40c56e4af9fe",
+    "output/design-finish-2026-09-26/structure/check_reinforced_paths.py": "0be42f7f957efa89edd80bba5a9a6f5a798ece6be5869e8ec66a19bbdcb23e8a"
+  },
+  "states": {
+    "boards_panels_stored_beams_installed": {
+      "part_count": 1669,
+      "clashes": []
+    },
+    "board5_on_slats_beams_installed": {
+      "part_count": 1669,
+      "clashes": []
+    },
+    "board5_on_slats_beam1_locked_front_lower": {
+      "part_count": 1669,
+      "clashes": []
+    }
+  },
+  "paths": [
+    {
+      "name": "board5_retrieve_and_stage",
+      "segments": [
+        {
+          "name": "lift_board5_from_runner",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            135.0,
+            250.0,
+            175.0,
+            153.0,
+            469.5,
+            628.5
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "withdraw_board5_from_rack",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            135.0,
+            0.0,
+            235.0,
+            153.0,
+            469.5,
+            628.5
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "reverse_board5_lower_yaw",
+          "status": "FAILED_OR_UNRESOLVED",
+          "distance_queries": 317,
+          "max_subdivision_depth": 7,
+          "failures": [
+            {
+              "obstacle": "H_PANEL_HOOP_TOP_1",
+              "t": 0.5,
+              "intersection_mm3": 25.89307351301335
+            },
+            {
+              "obstacle": "G_PANEL_1_STRIP_1",
+              "t": 0.75,
+              "intersection_mm3": 31387.77590617014
+            },
+            {
+              "obstacle": "H_PANEL_HOOP_SKIRT_1_1",
+              "t": 0.75,
+              "intersection_mm3": 14.411866631575066
+            }
+          ],
+          "swept_bounds_mm": [
+            135,
+            0,
+            235,
+            355.2368043720213,
+            220.23680437202134,
+            628.5
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "raise_board5_in_front",
+          "status": "FAILED_OR_UNRESOLVED",
+          "distance_queries": 8,
+          "max_subdivision_depth": 2,
+          "failures": [
+            {
+              "obstacle": "G_PANEL_1_STRIP_1",
+              "t": 0.25,
+              "intersection_mm3": 15147.315785577546
+            },
+            {
+              "obstacle": "H_PANEL_HOOP_TOP_1",
+              "t": 0.25,
+              "intersection_mm3": 1620.0
+            },
+            {
+              "obstacle": "H_PANEL_HOOP_SKIRT_1_1",
+              "t": 0.125,
+              "intersection_mm3": 1761.8652000305328
+            },
+            {
+              "obstacle": "H_PANEL_HOOP_SKIRT_1_1",
+              "t": 0.375,
+              "intersection_mm3": 1756.1582409800978
+            }
+          ],
+          "swept_bounds_mm": [
+            135.0,
+            -3.680389326632394e-14,
+            234.99999999999977,
+            354.50000000000006,
+            18.000000000000043,
+            1374.2999999999997
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "move_board5_above_front",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            135.0,
+            -3.680389326632394e-14,
+            980.7999999999997,
+            354.50000000000006,
+            411.50000000000006,
+            1374.2999999999997
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "lay_board5_horizontal",
+          "status": "CLEAR",
+          "distance_queries": 37,
+          "max_subdivision_depth": 1,
+          "failures": [],
+          "swept_bounds_mm": [
+            135.0,
+            2.2737367544323206e-13,
+            980.7999999999997,
+            354.50000000000006,
+            411.50000000000006,
+            1374.7114748265144
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "restore_board5_yaw",
+          "status": "CLEAR",
+          "distance_queries": 65,
+          "max_subdivision_depth": 1,
+          "failures": [],
+          "swept_bounds_mm": [
+            134.99999999999972,
+            2.2737367544323206e-13,
+            980.8,
+            585.5801815437512,
+            613.0,
+            998.8
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "move_board5_over_slats",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            134.99999999999972,
+            130.0,
+            980.8,
+            573.4999999999998,
+            613.0000000000001,
+            998.8
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "lower_board5_onto_slats",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            179.99999999999972,
+            130.0,
+            850.0,
+            573.4999999999998,
+            349.5000000000001,
+            998.8
+          ],
+          "inside_frame_footprint": true
+        }
+      ],
+      "passed": false
+    },
+    {
+      "name": "beam1_rest_on_beam2",
+      "segments": [
+        {
+          "name": "lift_clear_of_seats",
+          "status": "CLEAR",
+          "distance_queries": 834,
+          "max_subdivision_depth": 12,
+          "failures": [],
+          "swept_bounds_mm": [
+            113.0,
+            39.6,
+            842.0,
+            1037.0,
+            96.4,
+            1000.8
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "move_lifted_beam_to_front",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            113.0,
+            39.6,
+            922.0,
+            1037.0,
+            135.60000000000002,
+            1000.8
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "rotate_on_side_above_front",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            113.0,
+            4.263256414560601e-14,
+            922.0,
+            1037.0,
+            135.60000000000002,
+            1019.1374284197394
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "raise_for_temporary_park_approach",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            922.0,
+            1037.0,
+            78.79999999999995,
+            997.6
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "move_above_second_beam",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            940.8,
+            1037.0,
+            517.9,
+            997.6
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "lower_onto_second_beam",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            113.0,
+            439.09999999999997,
+            920.8,
+            1037.0,
+            517.9,
+            997.6
+          ],
+          "inside_frame_footprint": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "beam1_to_front_lower_slot",
+      "segments": [
+        {
+          "name": "lift_from_temporary_park",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            113.0,
+            439.09999999999997,
+            920.8,
+            1037.0,
+            517.9,
+            997.6
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "return_on_side_to_front_portal",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            940.8,
+            1037.0,
+            517.9,
+            997.6
+          ],
+          "inside_frame_footprint": true
+        },
+        {
+          "name": "lower_onto_front_shelf",
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": [],
+          "swept_bounds_mm": [
+            113.0,
+            -7.915890165577366e-14,
+            585.0,
+            1037.0,
+            78.79999999999995,
+            997.6
+          ],
+          "inside_frame_footprint": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "scope": "Prove the temporary board/beam preparation for split-head transfer.\n\nAll paths use the complete selected Rev I model. Small fasteners, human grips,\ncleanliness, restraint strength and head-component paths are separate checks.\n",
+  "preconditions": [
+    "Machine isolated; no stock or actual torch; gantry parked rear/high; spindle disconnected and parked.",
+    "All panels and six bare boards first follow their normal proven routes into storage. Their release screws are already in trays. Four beams and front seats remain installed.",
+    "Panel hoops are restored. Open the spoilboard guard using its separately checked hinge route before retrieving board5.",
+    "Retrieve board5 BEFORE temporarily storing beam1, because that stored beam occupies the normal board transfer lane.",
+    "Clean and dry the drained pan slats and board. This temporary staging surface has no machining or standing rating.",
+    "After beam1 rests on beam2, fit both temporary keeper fixtures before removing the front seats. Remove keepers before lifting beam1. Their separate routes are checked in structural evidence.",
+    "After beam1 reaches the front/lower slot, fit both front-row stack locks using the stated single-beam heights. Small fastener motions and hand access are excluded.",
+    "After head transfer, remove those locks, restore beam1 and front seats by the reverse route, then return board5 by the reverse route and close the board guard. Only then use the normal four-beam storage sequence."
+  ],
+  "temporary_board": {
+    "id": "G_SPOIL_5",
+    "bounds_mm": [
+      180.0,
+      130.0,
+      850.0,
+      573.5,
+      349.5,
+      868.0
+    ],
+    "support_slat_ids": [
+      "WP_SLAT_01",
+      "WP_SLAT_02",
+      "WP_SLAT_03",
+      "WP_SLAT_04"
+    ],
+    "support_y_mm": [
+      [
+        150,
+        153.048
+      ],
+      [
+        210,
+        213.048
+      ],
+      [
+        270,
+        273.048
+      ],
+      [
+        330,
+        333.048
+      ]
+    ],
+    "slat_top_z_mm": 850,
+    "front_overhang_mm": 20,
+    "rear_overhang_mm": 16.452,
+    "support_scope": "Nominal geometric bearing; clean/dry actual slat condition and head restraint remain physical checks."
+  },
+  "temporary_beam_lock": {
+    "centers_xy_mm": [
+      [
+        123,
+        25.4
+      ],
+      [
+        1027,
+        25.4
+      ]
+    ],
+    "bolt_tip_z_mm": 513.4,
+    "top_washer_z_mm": 641.8,
+    "lower_washer_z_mm": 577.4,
+    "nut_z_mm": 572.4,
+    "hardware": "Existing front-row M6x130 FULL THREAD screws, two washers and nut per side. Rear-row locks remain parked."
+  },
+  "board_final_symmetric_difference_mm3": 0.0,
+  "beam_final_symmetric_difference_mm3": 0.0,
+  "sources_unchanged": true,
+  "passed": false
+}

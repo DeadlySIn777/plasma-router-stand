@@ -1,0 +1,139 @@
+WORKSHOP / CNC + PLASMA
+REV I / 26 SEP 2026
+Refining the machine you will build.
+Actual Rev I CAD. The Y modules are ordered; the X and Z purchase is planned for Monday. The chassis remains based on 2-inch square tube.
+WORKING DESIGN / DIMENSIONS IN mm / NOT A FABRICATION OR OPERATION RELEASE
+1 / 4
+ROUTER BED INSTALLED
+Rendered from exported geometry. Amber parts represent purchased-component envelopes; several mating dimensions still
+require measurement.
+800 X / 1000 Y / 100 Z
+Nominal travel. Both selected HMS40 X/Y listings specify 10
+mm lead: 10 mm movement per screw revolution. This is not
+screw diameter.
+2 x 2-inch steel chassis
+Current model wall: 0.120 inch (3.048 mm). Scrap lengths,
+wall and condition are still unknown. Sand can add
+stationary mass; it does not supply structural stiffness.
+What this revision changes
+Stronger storage retainers, a guided float/breakaway head,
+supported plumbing, service access and actual control
+circuits replace several unresolved details.
+Design review, not finished machinery.
+The head mechanism is modeled. Actual torch and module
+interfaces, whole-machine rigidity and electrical
+qualification remain open.
+
+WORKSHOP / CNC + PLASMA
+REV I / 26 SEP 2026
+Conversion stays inside the frame.
+Manual panel-and-beam conversion preserves the floor footprint. It retains 52 primary release fasteners plus restraint and tool-exchange steps.
+WORKING DESIGN / DIMENSIONS IN mm / NOT A FABRICATION OR OPERATION RELEASE
+2 / 4
+STORED BED / ISOMETRIC
+FLOAT / BREAKAWAY DETAIL / UNBORED INSERT
+Scope: the stored view contains the bed and removed router tools. The head hardware view has no invented torch. Clear the front storage racks before servicing the controls cabinet.
+01 / Captive hardware
+Twelve nut strips retain the spoilboard hardware. Thin slot
+lips cannot accept ordinary torque-table preload: the
+actual extrusion needs the specified coupon test before
+release.
+02 / Defined storage
+The two storage rods grow from 10 to 14 mm with 40 mm
+receiver engagement, thicker seats and a revised clearance
+path. The 100 N single-rod bump screen now has a 2.25
+yield reserve.
+03 / Supported tool exchange
+One rear panel stays clamped as a work surface. Park the
+router through the open front bay, then split and transfer
+the head. Restore the front beam before storing the last
+panel. Follow the detailed sequence.
+
+WORKSHOP / CNC + PLASMA
+REV I / 26 SEP 2026
+Dimensions, materials and interfaces.
+The steel stock lengths remain unchanged. Service openings and fabricated hardware are modeled; unknown supplier interfaces remain explicitly guarded.
+WORKING DESIGN / DIMENSIONS IN mm / NOT A FABRICATION OR OPERATION RELEASE
+3 / 4
+BED, STOCK AND WATER
+Bare bed
+1003 x 1211 overall; larger than nominal cutting travel
+Six removable panels
+500 x 397 each; separate reachable spoilboards
+Extrusion stock
+10 bars at 1220 = five two-packs; 3 x 397 per bar
+2 x 2 tube blanks
+30 blanks / 29,472 mm / 96.69 ft net
+Tube lengths and quantities
+4 x 1450; 7 x 1048.4; 3 x 1016.4; 6 x 949.2; 4 x 924; 6 x
+648.8
+Nominal wall
+3.048 mm; do not silently substitute thinner scrap
+Water storage
+Vented reservoir; gravity drain and electric refill
+Refill discharge
+Air gap above the pan; verify at least 25 mm as built
+Net tube length excludes saw loss and other profiles, plate and sheet. Five full 20-ft lengths
+have a documented nest; random scrap must be nested from its actual usable lengths. No new
+material price is asserted.
+Supported drain and basket service
+A reducer, valve allocation and removable flanged tail replace generic blocks. The tail
+parks internally, allowing the basket to lift. Exact threaded make-up remains a receipt
+fit.
+Pressure and suction paths
+Supported Parker hose routes use 80 mm bends and a separate strainer carrier.
+Enlarged hose sweeps check 2 mm radial allowance. Pump orientation and tray bores
+now match the routing.
+Rigidity has a stated target
+Known bed members account for about 0.135 mm at 100 N against a proposed 0.20
+mm tool-to-work target. Actual motion, joint and tool compliance cannot be assigned
+zero.
+One control baseline
+Kraken V1.1 retains onboard drivers. Terminal wiring, timers, run isolation and restart
+prevention are defined. The C41S speed converter uses a 200 Hz commissioning
+setting.
+
+WORKSHOP / CNC + PLASMA
+REV I / 26 SEP 2026
+Evidence and the remaining work.
+The checks cover explicit geometry, routes and circuit behavior. Physical supplier fit, cutting rigidity and control commissioning remain separate release conditions.
+WORKING DESIGN / DIMENSIONS IN mm / NOT A FABRICATION OR OPERATION RELEASE
+4 / 4
+CHECKED ARTIFACTS
+Router state
+1669 components; 0 unresolved nominal overlaps
+Stored state
+1669 components; 0 unresolved nominal overlaps
+Head hardware state
+1669 components; 0 unresolved nominal overlaps
+STEP readback
+All three assemblies reimported; matching solid
+counts and volumes
+Source identity
+Build manifest records exact source hashes and no
+changes during generation
+Check scope
+18 router/head poses, named handling/service
+paths and 450 bounded circuit checks; see the
+linked evidence
+Limits
+Member/joint screens are conditional; full rigidity,
+physical interfaces and electrical operation are not
+qualified
+Current package: output/release-review/RevI-CAD
+Completion evidence: output/design-finish-2026-09-26
+Rebuild: build_revi.py in the legacy-named source directory.
+Public project: github.com/DeadlySIn777/plasma-router-stand
+Y arrival and X/Z order
+Measure base slots/nuts, carriage hole pattern, height and stroke datums. The Z listing alone
+does not resolve its output mounting or prove the optional brake motor will fit.
+Actual plasma assembly
+The mechanism now has defined guides, stops, locators, magnets and switch cams. VIV ARC
+CUT-50 version, torch bore, start interface, lead routing and force/stop tests remain required.
+Rigid structure with the actual stock
+Confirm remaining scrap wall and usable lengths. Qualify the complete frame, bed, gantry,
+mounts, joints and feet against explicit loads and a tool-to-work deflection target.
+Operation and procurement
+Complete physical panel layout, stop/power/brake integration, measured hose ends and live
+interlock tests. Revised quantities supersede historical budgets; no current delivered total is
+asserted.

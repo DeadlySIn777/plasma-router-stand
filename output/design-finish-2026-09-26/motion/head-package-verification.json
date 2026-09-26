@@ -1,0 +1,1072 @@
+{
+  "motion_source_sha256": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+  "mechanism_source_matches": true,
+  "verifier_file": "output/design-finish-2026-09-26/motion/verify_head_package.py",
+  "verifier_sha256_before": "b282cb1ca7876513e968b394c6d463e0c2f0c9d85abefca8eb5fe7b3fdf17dfc",
+  "socket_head_basis": "Unknurled ISO4762 selected envelope M3 5.5x3, M4 7x4, M5 8.5x5; M6 modeled10.2x6 conservatively covers supplier10x6. Larger knurled heads are outside selection.",
+  "countersunk_basis": "ISO10642 M4x16, head8.96x2.48,90degree cone.16mm is total overall length, not under-head length.",
+  "recesses": "Button M3 counterbores6.0x3; stop M4 counterbores7.5x4; clamp M4 counterbores8x4. Magnet supplier countersink9.46x2.48 exceeds selected head by0.50mm diameter.",
+  "cam_screw_correction": "Second cam screw movedV96.8 to96.5, giving0.25mm nominal radial clearance from its5.5mm head to bridge startV99.5.",
+  "sources": {
+    "M3": "https://www.accu.co.uk/api/product-datasheet?id=642039",
+    "M4": "https://www.accu.co.uk/api/product-datasheet?id=151797",
+    "M5": "https://www.accu.co.uk/metric-cap-head-screws/250442-SSCF-M5-18-A2-R360",
+    "M6": "https://www.accu.co.uk/metric-cap-head-screws/250454-SSCF-M6-16-A2-R360",
+    "M4_CSK": "https://www.accu.co.uk/countersunk-socket-head-screws/251236-SSK-M4-16-A2-R360"
+  },
+  "fastener_checks": [
+    {
+      "id": "I_HEAD_BAR_1_45",
+      "part_number": "I_STD_M4x30_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        34.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        34.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_BAR_1_65",
+      "part_number": "I_STD_M4x30_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        34.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        34.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_BAR_2_45",
+      "part_number": "I_STD_M4x30_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        34.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        34.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_BAR_2_65",
+      "part_number": "I_STD_M4x30_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        34.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        34.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_ROD_TOP_25",
+      "part_number": "I_STD_M4x16_y_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        20.0,
+        7.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        20.0,
+        7.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_ROD_BOTTOM_25",
+      "part_number": "I_STD_M4x16_y_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        20.0,
+        7.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        20.0,
+        7.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_ROD_TOP_85",
+      "part_number": "I_STD_M4x16_y_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        20.0,
+        7.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        20.0,
+        7.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_ROD_BOTTOM_85",
+      "part_number": "I_STD_M4x16_y_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        20.0,
+        7.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        20.0,
+        7.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CAP_1_7_17",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CAP_1_7_29",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CAP_1_103_17",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CAP_1_103_29",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CAP_2_7_17",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CAP_2_7_29",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CAP_2_103_17",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CAP_2_103_29",
+      "part_number": "I_STD_M3x8_y_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        11.0,
+        5.5
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_STOP_49",
+      "part_number": "I_STD_M4x16_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        20.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        20.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_STOP_61",
+      "part_number": "I_STD_M4x16_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        20.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        20.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_BUTTON_SCREW_CONE",
+      "part_number": "I_STD_M3x7_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        10.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        10.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_BUTTON_SCREW_V",
+      "part_number": "I_STD_M3x7_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        10.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        10.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_BUTTON_SCREW_FLAT",
+      "part_number": "I_STD_M3x7_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        10.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        10.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_MAGNET_SCREW_1",
+      "part_number": "I_STD_M4x16_CSK",
+      "expected_local_extent_mm": [
+        8.96,
+        8.96,
+        16.0
+      ],
+      "actual_local_extent_mm": [
+        8.96,
+        8.96,
+        16.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_MAGNET_SCREW_2",
+      "part_number": "I_STD_M4x16_CSK",
+      "expected_local_extent_mm": [
+        8.96,
+        8.96,
+        16.0
+      ],
+      "actual_local_extent_mm": [
+        8.96,
+        8.96,
+        16.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_MAGNET_SCREW_3",
+      "part_number": "I_STD_M4x16_CSK",
+      "expected_local_extent_mm": [
+        8.96,
+        8.96,
+        16.0
+      ],
+      "actual_local_extent_mm": [
+        8.96,
+        8.96,
+        16.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CLAMP_MOUNT_25_35",
+      "part_number": "I_STD_M4x14_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        18.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        18.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CLAMP_MOUNT_25_55",
+      "part_number": "I_STD_M4x14_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        18.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        18.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CLAMP_MOUNT_85_35",
+      "part_number": "I_STD_M4x14_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        18.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        18.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CLAMP_MOUNT_85_55",
+      "part_number": "I_STD_M4x14_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        18.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        18.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CLAMP_PINCH_15",
+      "part_number": "I_STD_M4x40_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        44.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        44.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CLAMP_PINCH_95",
+      "part_number": "I_STD_M4x40_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        44.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        44.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_SPLASH_5",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_SPLASH_105",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CAM_91",
+      "part_number": "I_STD_M3x10_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        13.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        13.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_CAM_96.5",
+      "part_number": "I_STD_M3x10_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        13.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        13.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_M3",
+      "part_number": "I_STD_M3x10_y_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        13.0,
+        5.5
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        13.0,
+        5.5
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_FOOT_0",
+      "part_number": "I_STD_M3x8_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        11.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        11.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_FOOT_1",
+      "part_number": "I_STD_M3x8_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        11.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        11.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_M3",
+      "part_number": "I_STD_M3x10_y_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        13.0,
+        5.5
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        13.0,
+        5.5
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_FOOT_0",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_FOOT_1",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_M3",
+      "part_number": "I_STD_M3x10_y_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        13.0,
+        5.5
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        13.0,
+        5.5
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_FOOT_0",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_FOOT_1",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_M3",
+      "part_number": "I_STD_M3x10_y_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        13.0,
+        5.5
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        13.0,
+        5.5
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_FOOT_0",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_FOOT_1",
+      "part_number": "I_STD_M3x6_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        9.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_LEAD_84",
+      "part_number": "I_STD_M3x10_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        13.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        13.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_LEAD_100",
+      "part_number": "I_STD_M3x10_z_SOCKET",
+      "expected_local_extent_mm": [
+        5.5,
+        5.5,
+        13.0
+      ],
+      "actual_local_extent_mm": [
+        5.5,
+        5.5,
+        13.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_TETHER_FIXED",
+      "part_number": "I_STD_M4x16_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        20.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        20.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_HEAD_TETHER_RELEASE",
+      "part_number": "I_STD_M4x16_z_SOCKET",
+      "expected_local_extent_mm": [
+        7.0,
+        7.0,
+        20.0
+      ],
+      "actual_local_extent_mm": [
+        7.0,
+        7.0,
+        20.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_PARK_BOLT_1",
+      "part_number": "I_STD_M5x18_SOCKET",
+      "expected_local_extent_mm": [
+        8.5,
+        8.5,
+        23.0
+      ],
+      "actual_local_extent_mm": [
+        8.5,
+        8.5,
+        23.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_PARK_BOLT_2",
+      "part_number": "I_STD_M5x18_SOCKET",
+      "expected_local_extent_mm": [
+        8.5,
+        8.5,
+        23.0
+      ],
+      "actual_local_extent_mm": [
+        8.5,
+        8.5,
+        23.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_TOOL_MOUNT_1",
+      "part_number": "I_STD_M6x16_SOCKET",
+      "expected_local_extent_mm": [
+        10.2,
+        10.2,
+        22.0
+      ],
+      "actual_local_extent_mm": [
+        10.2,
+        10.2,
+        22.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_TOOL_MOUNT_2",
+      "part_number": "I_STD_M6x16_SOCKET",
+      "expected_local_extent_mm": [
+        10.2,
+        10.2,
+        22.0
+      ],
+      "actual_local_extent_mm": [
+        10.2,
+        10.2,
+        22.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_TOOL_MOUNT_3",
+      "part_number": "I_STD_M6x16_SOCKET",
+      "expected_local_extent_mm": [
+        10.2,
+        10.2,
+        22.0
+      ],
+      "actual_local_extent_mm": [
+        10.2,
+        10.2,
+        22.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "I_TOOL_MOUNT_4",
+      "part_number": "I_STD_M6x16_SOCKET",
+      "expected_local_extent_mm": [
+        10.2,
+        10.2,
+        22.0
+      ],
+      "actual_local_extent_mm": [
+        10.2,
+        10.2,
+        22.0
+      ],
+      "passed": true
+    }
+  ],
+  "expected_individual_steps": 30,
+  "expected_dxfs": 7,
+  "missing_step": [],
+  "obsolete_step": [],
+  "missing_dxf": [],
+  "obsolete_dxf": [],
+  "assembly_step_readback": {
+    "passed": true,
+    "solids": 103,
+    "volume_delta_mm3": 0.0034220635425299406,
+    "volume_tolerance_mm3": 0.2,
+    "sha256": "57b873310f3a7a2e66199ae947461e0fac522f3a54f4116bf6ee88094d0b6fc5",
+    "file": "RevI_FLOAT_BREAKAWAY_HEAD_BLANK.step"
+  },
+  "individual_readbacks": [
+    {
+      "part_number": "I_HEAD_BACKPLATE",
+      "valid": true,
+      "volume_delta_mm3": 0.0
+    },
+    {
+      "part_number": "I_HEAD_CROSSBAR_1",
+      "valid": true,
+      "volume_delta_mm3": 2.1827872842550278e-11
+    },
+    {
+      "part_number": "I_HEAD_CROSSBAR_2",
+      "valid": true,
+      "volume_delta_mm3": 3.2741809263825417e-11
+    },
+    {
+      "part_number": "I_HEAD_ROD_8x118_M4_ENDS",
+      "valid": true,
+      "volume_delta_mm3": 1.064108801074326e-10
+    },
+    {
+      "part_number": "I_HEAD_FLOAT_CARRIAGE",
+      "valid": true,
+      "volume_delta_mm3": 0.0031619580986443907
+    },
+    {
+      "part_number": "I_HEAD_BUSH_SPACER_23p85",
+      "valid": true,
+      "volume_delta_mm3": 5.775291356258094e-11
+    },
+    {
+      "part_number": "I_HEAD_BEARING_CAP_1",
+      "valid": true,
+      "volume_delta_mm3": 7.275957614183426e-12
+    },
+    {
+      "part_number": "I_HEAD_BEARING_CAP_2",
+      "valid": true,
+      "volume_delta_mm3": 7.275957614183426e-12
+    },
+    {
+      "part_number": "I_HEAD_FLOAT_STOP",
+      "valid": true,
+      "volume_delta_mm3": 4.320099833421409e-12
+    },
+    {
+      "part_number": "I_HEAD_SEAT_CONE",
+      "valid": true,
+      "volume_delta_mm3": 8.526512829121202e-13
+    },
+    {
+      "part_number": "I_HEAD_BALL_BUTTON_R3",
+      "valid": true,
+      "volume_delta_mm3": 1.8474111129762605e-12
+    },
+    {
+      "part_number": "I_HEAD_SEAT_V",
+      "valid": true,
+      "volume_delta_mm3": 2.9558577807620168e-12
+    },
+    {
+      "part_number": "I_HEAD_SEAT_FLAT",
+      "valid": true,
+      "volume_delta_mm3": 2.148681232938543e-11
+    },
+    {
+      "part_number": "I_HEAD_RELEASE_PLATE",
+      "valid": true,
+      "volume_delta_mm3": 9.458744898438454e-11
+    },
+    {
+      "part_number": "I_HEAD_MAGNET_SPACER_3p8",
+      "valid": true,
+      "volume_delta_mm3": 2.637534635141492e-11
+    },
+    {
+      "part_number": "I_HEAD_CLAMP_REAR",
+      "valid": true,
+      "volume_delta_mm3": 8.87666828930378e-10
+    },
+    {
+      "part_number": "I_HEAD_CLAMP_FRONT",
+      "valid": true,
+      "volume_delta_mm3": 9.89530235528946e-10
+    },
+    {
+      "part_number": "I_HEAD_SPLASH_SCREEN",
+      "valid": true,
+      "volume_delta_mm3": 1.0368239600211382e-10
+    },
+    {
+      "part_number": "I_HEAD_SPLASH_TAB_5",
+      "valid": true,
+      "volume_delta_mm3": 4.831690603168681e-13
+    },
+    {
+      "part_number": "I_HEAD_SPLASH_TAB_105",
+      "valid": true,
+      "volume_delta_mm3": 4.831690603168681e-13
+    },
+    {
+      "part_number": "I_HEAD_FLOAT_CAM",
+      "valid": true,
+      "volume_delta_mm3": 2.955857780762017e-11
+    },
+    {
+      "part_number": "I_HEAD_FLOAT_SWITCH_BRACKET",
+      "valid": true,
+      "volume_delta_mm3": 4.774847184307873e-12
+    },
+    {
+      "part_number": "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_0",
+      "valid": true,
+      "volume_delta_mm3": 3.517186542012496e-13
+    },
+    {
+      "part_number": "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_1",
+      "valid": true,
+      "volume_delta_mm3": 3.517186542012496e-13
+    },
+    {
+      "part_number": "I_HEAD_PRESENCE_LEFT_BRACKET",
+      "valid": true,
+      "volume_delta_mm3": 4.774847184307873e-12
+    },
+    {
+      "part_number": "I_HEAD_PRESENCE_RIGHT_BRACKET",
+      "valid": true,
+      "volume_delta_mm3": 7.73070496506989e-12
+    },
+    {
+      "part_number": "I_HEAD_PRESENCE_TOP_BRACKET",
+      "valid": true,
+      "volume_delta_mm3": 4.092726157978177e-11
+    },
+    {
+      "part_number": "I_HEAD_LEAD_SADDLE",
+      "valid": true,
+      "volume_delta_mm3": 3.183231456205249e-12
+    },
+    {
+      "part_number": "I_HEAD_TETHER_EYE_FIXED",
+      "valid": true,
+      "volume_delta_mm3": 6.366462912410498e-12
+    },
+    {
+      "part_number": "I_HEAD_TETHER_EYE_RELEASE",
+      "valid": true,
+      "volume_delta_mm3": 5.4569682106375694e-12
+    }
+  ],
+  "file_sha256": {
+    "cutlist.csv": "ed09915fbda0b9932ff91fb0b48f164dd7902bed2fccbb7089e525b2fa943053",
+    "cutlist.json": "019ed820a8d7c5627f730f8271a265f5a811739ba73550fe7826d8e68e9fc425",
+    "part-operations.json": "5ae3e5f2b7532795d293e8830d12a1fa36377e1c18b2450c6e3ff4512239be2f",
+    "RevI_FLOAT_BREAKAWAY_HEAD_BLANK-validation.json": "9a990a2ea18da2d386b246f19ea686ed808640ed7e7ab9ac63077be16cc7ebfa",
+    "dxf/I_HEAD_BACKPLATE.dxf": "8fd97bf9ae13cbee7938af47209cceb73d1b5249ec6b2f03750ca9967035e4c3",
+    "dxf/I_HEAD_BEARING_CAP_1.dxf": "68d4916681bc7b079a01524a1c21f800391875f12490db25ef7f7918820bbe0f",
+    "dxf/I_HEAD_BEARING_CAP_2.dxf": "c0edb5ac97a883aa5705adf21ad4bdb8b084ed53d21909340534aa7227d8146f",
+    "dxf/I_HEAD_RELEASE_PLATE.dxf": "e75968d1e110e1824268b6ec071ff4dcb5e77c39707ea6c0782544034a9d64c3",
+    "dxf/I_HEAD_SPLASH_SCREEN.dxf": "b8d10d4a43c684c3ef5f6c51419511f0957860732cca500d68c03439d6505a41",
+    "dxf/I_HEAD_SPLASH_TAB_105.dxf": "65b34809c4b8ccfd7462756d63f5225e9722692c2e6e2e7ca78695ff491a2197",
+    "dxf/I_HEAD_SPLASH_TAB_5.dxf": "9b802f74b2d1f0ea9b1957805157ed95e14207f5e23a2f4b6555662ec31664db",
+    "parts/I_HEAD_BACKPLATE.step": "4aa1dcc084ef0ffa51c7f576a97c0d28260c5eaec08aff6b07606e7a8614ab22",
+    "parts/I_HEAD_BALL_BUTTON_R3.step": "e1bd2092944e3fbedb27273476c52e1dbbeebd91300a7b6438c3de3ca283932c",
+    "parts/I_HEAD_BEARING_CAP_1.step": "351291a569b0405456310b658e9011d45bd03153cc6f173fce35b0d5b7fe8f12",
+    "parts/I_HEAD_BEARING_CAP_2.step": "40dbff87bed82352e5c3e1511e46accecc420758b4a7ebfc4bb1b46bad00c88f",
+    "parts/I_HEAD_BUSH_SPACER_23p85.step": "d70591defe3abc778f38b7beadf1713a3ba0af1b5045b5d29f6bdadcfef1e017",
+    "parts/I_HEAD_CLAMP_FRONT.step": "0ab8b29c7a795130d39666ce0ef1b83d51d91a12bc97d47396d20fbf91b7cedf",
+    "parts/I_HEAD_CLAMP_REAR.step": "02e06b5f3094cf405bf6489bec08b3d4ae6104f5a2f776cb75289d7fa0f09908",
+    "parts/I_HEAD_CROSSBAR_1.step": "0d75d52252a4d819dbb0ee58d7a41d6d8f8e6dc715ec7ed4e88b2675e5bb38d0",
+    "parts/I_HEAD_CROSSBAR_2.step": "71460fc5aa3f72b5d12da2922fea9a8d5f219f7462dd08183268a9136c895e26",
+    "parts/I_HEAD_FLOAT_CAM.step": "be56d4ac1209320fc998f2b5aeeba223692d353b7c422d6797effb22a1cb0064",
+    "parts/I_HEAD_FLOAT_CARRIAGE.step": "b62e41533cd2b69cd98e314fa9bc660a65b0c98b1a130051ef2e14cf927b18d3",
+    "parts/I_HEAD_FLOAT_STOP.step": "3fdc84646f63b4bd6de7bb6f07b9224b6284ebf367dc0f4e4c10ab8863b6d5e4",
+    "parts/I_HEAD_FLOAT_SWITCH_BRACKET.step": "0420d22cd701b8041e99f7392e67d0d21f7852e63efca175eec6e36e8a82e3d4",
+    "parts/I_HEAD_FLOAT_SWITCH_FOOT_SPACER_0.step": "c2d01fce26797d05f58d248dee32e6d0631d046af0d6aeb15a097f9b2a1a0baf",
+    "parts/I_HEAD_FLOAT_SWITCH_FOOT_SPACER_1.step": "fa42d4de37aefeaa9d3bbe63c66111d000b6d5a99d84940f80ba9adf13119411",
+    "parts/I_HEAD_LEAD_SADDLE.step": "794af97e1c1a23e8c2d6a9207c93e88db4eef7144744107cdf7553583a9d98ee",
+    "parts/I_HEAD_MAGNET_SPACER_3p8.step": "005aacdd5545dc496ebe2e8692a18c71587fee7279180a6dbeef9e100682de2c",
+    "parts/I_HEAD_PRESENCE_LEFT_BRACKET.step": "ccd2088ac52f2630de0e924bdd83ba76245a188d28827e713724444fa70240dd",
+    "parts/I_HEAD_PRESENCE_RIGHT_BRACKET.step": "ea55c5f0df690541fbe5aa94e764cb0882dd41174f2d26a3b5a2c6d7c112745c",
+    "parts/I_HEAD_PRESENCE_TOP_BRACKET.step": "10d4750b9cf06e1b21ba415dedb1114d5bb90a334df4bf254f55945c99062478",
+    "parts/I_HEAD_RELEASE_PLATE.step": "98949f99e8ef4e5db3c4cdee5ee160dc58c0608da7493dcec776171aa9302fd4",
+    "parts/I_HEAD_ROD_8x118_M4_ENDS.step": "59529c9c7289b1ec176ee06546025d2f29ca35fdb1b4fde5fa102eb8ee5dfdb8",
+    "parts/I_HEAD_SEAT_CONE.step": "5f9c19e713eaedde480ffda5b736d633788338d3fec2a66c7319610d78ccc33d",
+    "parts/I_HEAD_SEAT_FLAT.step": "8fea430dbf66315e90847647fad55bf62efbc34f4bc23b252b139f498153e059",
+    "parts/I_HEAD_SEAT_V.step": "029b3326f695ce946f9246c8ffa22b3cd3c96205c2d7c7f5a1166184b67941d9",
+    "parts/I_HEAD_SPLASH_SCREEN.step": "95bf4fddc913a10adce95b5238f08dd52949158e16694846abee87fcb4a60f60",
+    "parts/I_HEAD_SPLASH_TAB_105.step": "79ac0e943b1fbdf4829fba9edf2e5159cd6fd8a7f7513b5a2aa757ad6082db8f",
+    "parts/I_HEAD_SPLASH_TAB_5.step": "c33005ab3854b8726ca8843825c04227cd5750549b18f35e68aecc6066ad9869",
+    "parts/I_HEAD_TETHER_EYE_FIXED.step": "862252b472dc72d1ac037c81046fc7d8ee336467d4cb805bf6f54c183f5e7abf",
+    "parts/I_HEAD_TETHER_EYE_RELEASE.step": "2d654e228940fd0556da68869136108996a91c640c5c30026f7b4ad32db490bd",
+    "step/RevI_FLOAT_BREAKAWAY_HEAD_BLANK.step": "57b873310f3a7a2e66199ae947461e0fac522f3a54f4116bf6ee88094d0b6fc5"
+  },
+  "verifier_sha256_after": "b282cb1ca7876513e968b394c6d463e0c2f0c9d85abefca8eb5fe7b3fdf17dfc",
+  "source_unchanged": true,
+  "passed": true
+}

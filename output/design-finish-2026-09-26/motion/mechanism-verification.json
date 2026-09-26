@@ -1,0 +1,215 @@
+{
+  "source_sha256": {
+    "cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/cad-repair-2026-09-25/check_spoil_transfer.py": "1397e268b4136f0436db0f07bd23256c35d980cb38eca42c2c6a40c56e4af9fe"
+  },
+  "source_unchanged": true,
+  "scope": "Nominal rigid geometry only. Actual owner torch, lead, thermal behavior, switch response and force calibration are excluded.",
+  "static_mechanism_states": [
+    {
+      "float_mm": 0,
+      "separation_mm": 0,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 0,
+      "separation_mm": 8,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 0.4,
+      "separation_mm": 0,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 0.4,
+      "separation_mm": 8,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 1,
+      "separation_mm": 0,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 1,
+      "separation_mm": 8,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 1.4,
+      "separation_mm": 0,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 1.4,
+      "separation_mm": 8,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 1.5,
+      "separation_mm": 0,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 1.5,
+      "separation_mm": 8,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 3,
+      "separation_mm": 0,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 3,
+      "separation_mm": 8,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 6,
+      "separation_mm": 0,
+      "part_count": 103,
+      "clashes": []
+    },
+    {
+      "float_mm": 6,
+      "separation_mm": 8,
+      "part_count": 103,
+      "clashes": []
+    }
+  ],
+  "float_continuous": {
+    "status": "CLEAR",
+    "distance_queries": 38,
+    "max_subdivision_depth": 4,
+    "failures": []
+  },
+  "guide_exact_sweep_checks": [
+    {
+      "rod_x_mm": 25,
+      "full_swept_obstacle_intersection_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "rod_x_mm": 85,
+      "full_swept_obstacle_intersection_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "normal_breakaway_continuous": {
+    "status": "CLEAR",
+    "distance_queries": 29,
+    "max_subdivision_depth": 0,
+    "failures": []
+  },
+  "seat_monotonic_release_checks": [
+    {
+      "seat": "I_HEAD_SEAT_FLAT",
+      "initial_intersection_mm3": 0.0,
+      "passed": true,
+      "continuous_argument": "Cone and V voids open monotonically in+Z, and flat is a half-space stop. Initial detached assembly has no point below the seat base where its threaded shank could enter. Outward+Z translation cannot enter any of these three seat solids. Tilt is not included."
+    },
+    {
+      "seat": "I_HEAD_SEAT_V",
+      "initial_intersection_mm3": 0.0,
+      "passed": true,
+      "continuous_argument": "Cone and V voids open monotonically in+Z, and flat is a half-space stop. Initial detached assembly has no point below the seat base where its threaded shank could enter. Outward+Z translation cannot enter any of these three seat solids. Tilt is not included."
+    },
+    {
+      "seat": "I_HEAD_SEAT_CONE",
+      "initial_intersection_mm3": 0.0,
+      "passed": true,
+      "continuous_argument": "Cone and V voids open monotonically in+Z, and flat is a half-space stop. Initial detached assembly has no point below the seat base where its threaded shank could enter. Outward+Z translation cannot enter any of these three seat solids. Tilt is not included."
+    }
+  ],
+  "cam_exact_sweep_check": {
+    "cam_cover_residual_mm3": 0.0,
+    "conservative_swept_box_intersection_mm3": 0.0,
+    "passed": true
+  },
+  "switch_analytic_clearance": {
+    "float_cam_contact": "At the lowest edge of the conservative2.2mm pin, cam normal=7.6-min(float,1.5). Pin normal=min(7.2,cam). Gap>=0 through0..6; pin remains>=6.1 versusTTPmax5.1.",
+    "presence_contact": "Release plane normal=5.8+separation relative switch datum. Pin=min(7.2,plane), gap>=0 for0..8. Three plungers excluded from rigid sweep only because their prescribed normal length changes.",
+    "scope": "No electrical latency, hysteresis timing, tilted release or safety integrity qualification."
+  },
+  "flat_solid_checks": [
+    {
+      "part": "I_HEAD_BACKPLATE",
+      "difference_mm3": 0.0,
+      "boolean_difference_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "part": "I_HEAD_BEARING_CAP_1",
+      "difference_mm3": 0.0,
+      "boolean_difference_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "part": "I_HEAD_BEARING_CAP_2",
+      "difference_mm3": 0.0,
+      "boolean_difference_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "part": "I_HEAD_RELEASE_PLATE",
+      "difference_mm3": 0.0,
+      "boolean_difference_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "part": "I_HEAD_SPLASH_SCREEN",
+      "difference_mm3": 0.0,
+      "boolean_difference_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "part": "I_HEAD_SPLASH_TAB_5",
+      "difference_mm3": 0.0,
+      "boolean_difference_mm3": 0.0,
+      "passed": true
+    },
+    {
+      "part": "I_HEAD_SPLASH_TAB_105",
+      "difference_mm3": 0.0,
+      "boolean_difference_mm3": 0.0,
+      "passed": true
+    }
+  ],
+  "synthetic_boundary_checks": [
+    {
+      "synthetic_diameter_mm": 20,
+      "insert_bore_mm": 20.1,
+      "clashes": []
+    },
+    {
+      "synthetic_diameter_mm": 40,
+      "insert_bore_mm": 40.1,
+      "clashes": []
+    }
+  ],
+  "invalid_inputs_rejected": 5,
+  "passed": true,
+  "verifier_file": "output/design-finish-2026-09-26/motion/verify_motion_finish.py",
+  "verifier_sha256_before": "a17f3bd93b6ee3436b63befc9f645d44e5b86f3e25960e3a993cb38be5875d37",
+  "continuous_solver_file": "output/cad-repair-2026-09-25/check_spoil_transfer.py",
+  "continuous_solver_sha256_before": "1397e268b4136f0436db0f07bd23256c35d980cb38eca42c2c6a40c56e4af9fe",
+  "verifier_sha256_after": "a17f3bd93b6ee3436b63befc9f645d44e5b86f3e25960e3a993cb38be5875d37",
+  "verifier_changed_during_run": false,
+  "continuous_solver_sha256_after": "1397e268b4136f0436db0f07bd23256c35d980cb38eca42c2c6a40c56e4af9fe",
+  "continuous_solver_changed_during_run": false
+}
