@@ -27,7 +27,7 @@ The [80/20 beam](https://8020.net/40-8080.html) and [16 matching M8 nuts](https:
 
 Nutty hardware is combined into one order of $76.06, below its $100 free-shipping threshold, so the $10.95 flat rate is included; adding the unpriced Rev H stainless fasteners to this order may remove it. No duplicate delivery charge is added for each fastener row. Other blank freight cells remain unknown.
 
-**Ordered by the owner:** M01 KHMOS HMS40 X module, 800 mm stroke, ordered 2026-09-26 (owner-reported; quantity to confirm); M02 KHMOS HMS40 Y module, 1000 mm stroke, ordered 2026-09-26 (owner-reported; quantity to confirm); M03 RATTMMOTOR ZBX80 Z module, 100 mm stroke, ordered 2026-09-26 (owner-reported; quantity to confirm). Listed prices stay in this register until the price paid is recorded. See the [drive-module receiving check](../../../output/receiving/MOTION-MODULES.md).
+**Ordered by the owner:** M01 KHMOS HMS40 X module, 800 mm stroke, ordered 2026-09-26 (owner-confirmed from the shared spec sheets; quantity to confirm); M02 KHMOS HMS40 Y module, 1000 mm stroke, ordered 2026-09-26 (owner-confirmed from the shared spec sheets; quantity to confirm); M03 RATTMMOTOR ZBX80 Z module, 100 mm stroke, ordered 2026-09-26 (owner-confirmed from the shared spec sheets; quantity to confirm). Listed prices stay in this register until the price paid is recorded. See the [drive-module receiving check](../../../output/receiving/MOTION-MODULES.md).
 
 ## Corrections to the old estimate
 

@@ -1,6 +1,6 @@
 # Drive modules — receiving and measuring (HMS40 ×3, ZBX80)
 
-**Status: ordered by the owner (reported 26 September 2026 as "1000x800x100").** The order is taken to be:
+**Status: ordered, confirmed by the owner on 26 September 2026.** The HMS40 spec sheet (KHMOS drawing HMS40-L□□-S□□□-M57-BC) and the ZBX80 listing drawings shared that day are the ordered items; the owner first described the order as "1000x800x100". The order is:
 
 | Row | Listing | Use | Quantity in the design |
 |---|---|---|---:|
@@ -27,7 +27,10 @@ Please confirm the quantities (the machine needs **two** 1000 mm modules), the p
 | Base fixing | two bottom slots with M4 slide nuts, 28 mm apart; M3 slide nuts in the side slots | **hold**: slot cavity and nut not modeled |
 | End of travel | drawing marks motion limits of 50 mm at the motor end and 10 mm at the far end; the reference faces are not fully clear | **hold**: endpoint datum |
 | Mass | 4.6 kg (1000), 3.9 kg (800) | not used |
-| Motor | NEMA23 (57 mm) stepper; current and torque curve not published | **hold** |
+| Motor | Standard NEMA23 5756 stepper (57 mm frame, 56 mm long); current and torque curve not published | **hold** |
+| Coupling | Φ8 × Φ10 (8 mm motor shaft to 10 mm screw end) | not modeled |
+| Sensors | FC-SPX307 NPN, mounted outside the module (the sheet does not say whether they are included) | model uses roller switches; **check** what arrived |
+| Repeatability | ±0.02 mm per 300 mm (listing); ±0.03 in the drawing table | not used |
 
 **ZBX80** (listing images `B09MVYGLNQ-gallery-*.jpg`):
 
@@ -37,7 +40,7 @@ Please confirm the quantities (the machine needs **two** 1000 mm modules), the p
 | Carriage | 90 across × 50 along; Ø5 holes 70 apart across, plus Ø7 bores | **hold**: thread and along-travel pitch |
 | Heights | end block 67 high at the free end, 78 at the motor end; base 20 high | not all used |
 | Base face to carriage top | not dimensioned; about **60–67 mm** when the side view is scaled | **80 mm assumed** |
-| Base fixing | M5 slide nuts in the base slots | **hold** |
+| Base fixing | M5 slide nuts in the base slots; bottom view dimensions 80 overall, 66, 54, 26 and 14 across the slots | **hold**: slot positions to confirm |
 | Screw | SFU1605, 5 mm lead | — |
 
 If the ZBX80 output face really is 60–67 mm above its base instead of 80, the whole tool sits 13–20 mm further back than modeled. The tool-axis Y range would move 13–20 mm rearward, from Y121.4–1121.4 to about Y134–141 at the front limit and Y1134–1141 at the rear. The front spoilboard edge (Y130) would then be a few millimetres in front of the tool axis, still reachable with a cutter of normal radius, but the tool sweep and clearances must be re-run.
@@ -48,7 +51,7 @@ If the ZBX80 output face really is 60–67 mm above its base instead of 80, the 
 1. Overall length, width, height; carriage top height above the base bottom; carriage top hole pattern and thread depth.
 2. Power off, move the carriage by hand to each end. Measure the carriage position from each end-block face: this is the endpoint datum.
 3. Bottom slots: number, spacing, opening width, cavity depth, the nuts supplied (thread and size) and how far they slide.
-4. Motor label (model, rated current, step angle), lead exit and connector; coupling; any sensor supplied.
+4. Motor label (model, rated current, step angle), lead exit and connector; coupling; any sensor supplied. If FC-SPX307 NPN sensors came with the modules, note their thread, cable and supply voltage: they could replace the modeled roller switches, subject to the Rodent input check.
 
 **ZBX80:**
 1. **Base bottom face to carriage top face**: the key number for the head position.

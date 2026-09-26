@@ -25,7 +25,8 @@
     ],
     "quantities_ordered": null,
     "price_paid_usd": null,
-    "delivery_dates": null
+    "delivery_dates": null,
+    "confirmed_by_owner": "2026-09-26: the shared HMS40 spec sheet (KHMOS HMS40-L□□-S□□□-M57-BC, 10 mm lead, NEMA23 5756) and the ZBX80 listing drawings (B09MVYGLNQ) are the ordered items. Quantities, price paid and delivery dates still to record."
   },
   "hms40": [
     {
@@ -121,6 +122,57 @@
       "motor_rated_current_A": null,
       "backdrives_unpowered_vertical": null,
       "notes": null
+    }
+  },
+  "supplier_data": {
+    "hms40": {
+      "source": "KHMOS drawing HMS40-L□□-S□□□-M57-BC dated 2026-02-10 and the listing spec table shared by the owner",
+      "lead_mm": 10,
+      "max_speed_mm_s": 350,
+      "rated_thrust_N": 251,
+      "payload_horizontal_kg": 20,
+      "payload_vertical_kg": 10,
+      "repeatability": "±0.02/300 (listing), ±0.03 (drawing table)",
+      "screw_diameter_mm": 16,
+      "internal_guide": "12 x 8",
+      "coupling": "Φ8 x Φ10",
+      "sensor": "FC-SPX307 (NPN), mounted outside; inclusion not stated",
+      "motor": "NEMA23 5756 stepper (57 frame, 56 long)",
+      "length_L": "S+145 stepper, S+150 servo flange",
+      "body": "S+125",
+      "motion_limits_mm": {
+        "motor_end": 50,
+        "far_end": 10
+      },
+      "carriage_top_above_base_mm": 65.5,
+      "carriage_holes": "4-M4 x 10 deep on 30 x 30; 4-M3 x 6 deep both sides",
+      "side_slots": "M3 slide nuts",
+      "bottom_slots": "M4 slide nuts, 28 apart",
+      "net_weight_kg": {
+        "800": 3.9,
+        "1000": 4.6
+      }
+    },
+    "zbx80": {
+      "source": "RATTMMOTOR listing drawings B09MVYGLNQ shared by the owner",
+      "body_mm": "219 x 80, 12 mm end blocks",
+      "overall_with_motor_mm": 330,
+      "end_block_heights_mm": {
+        "free_end": 67,
+        "motor_end": 78
+      },
+      "base_height_mm": 20,
+      "carriage_mm": "90 across x 50 along; Ø5 holes 70 apart, Ø7 holes",
+      "between_end_blocks_mm": 195,
+      "base_fixing": "M5 movable nuts in the base slots",
+      "bottom_view_mm": [
+        80,
+        66,
+        54,
+        26,
+        14
+      ],
+      "base_to_carriage_top": "not dimensioned; about 60-67 by scaling the side view (model assumes 80)"
     }
   }
 }
