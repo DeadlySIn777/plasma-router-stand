@@ -106,6 +106,11 @@ For CW-01, the board map and pin allocation are drafted and the RS485 link is dr
 - **Torch:** not yet known ("idk yet"). The owner will measure it. Rev K is drawn for the PT31-style torch in the photo, and the bracket slots cover a clamp 90–140 mm above the tip.
 - **CUT-50 start:** the torch trigger, and it starts in mid-air, so it is an HF start. The K_TS relay's contact goes across the trigger terminals, in its shielded box at the cutter ([GM1 controls](../controls-2026-09-27/README.md)).
 - **Rodent and VFD:** not ordered yet. The design assumes a Rodent V1.1 and the VFD that comes with the spindle kit. Nothing is waiting on them.
+- **Tool changer: yes, a RapidChange ATC on this machine.**
+  - **Order the Z slide with a 200 mm stroke**, not 100 mm: the same ZBX80 type, if its listing offers that length.
+  - RapidChange asks for about 90 mm between the magazine and the spindle nut with Z fully up. The magazine rides on a tray above clamped stock, so the other session's ATC design is drawn for a 200 mm Z. With 50 mm of stock and clamps under the tray, that gives about 20 mm of spare.
+  - The magazine itself is small: RapidChange gives 60 mm for its width. The design allows 520 × 60 × 80 mm (about 20 × 2.4 × 3 in); that envelope is not from supplier drawings.
+  - Fitting it to Rev K is the next design step.
 - **Shop:** a container with an 8 ft ceiling. Rev K's plan is a rolling A-frame gantry with a low-headroom hoist and the 0.7 m sling that passed the hoist-path check ([hoist in the container](../release-review/RevK-CAD/README.md#hoist-in-the-container)).
 
 **Owner answers received on 26 September 2026:**

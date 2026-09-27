@@ -6,7 +6,7 @@
 |---|---|---|---:|
 | M02 | [KHMOS HMS40, 1000 mm stroke, 10 mm lead, NEMA23](https://www.amazon.com/dp/B0C7GN24S1) | Y drives (one per side) | 2 |
 | M01 | [KHMOS HMS40, 800 mm stroke, 10 mm lead](https://www.amazon.com/dp/B0C7GQTRRX) | X drive | 1 |
-| M03 | [RATTMMOTOR ZBX80, 100 mm, SFU1605, NEMA23](https://www.amazon.com/dp/B09MVYGLNQ) | Z slide | 1 |
+| M03 | [RATTMMOTOR ZBX80, 100 mm, SFU1605, NEMA23](https://www.amazon.com/dp/B09MVYGLNQ) | Z slide | 1. **Change to a 200 mm stroke** (owner wants the RapidChange ATC, 27 Sep) |
 
 Please confirm the quantities (the machine needs **two** 1000 mm modules), the price paid and the delivery dates in [the register](drive-modules-receiving-register.json).
 
