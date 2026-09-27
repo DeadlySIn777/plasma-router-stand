@@ -1,5 +1,5 @@
 {
-  "scope": "Exercise the GM1 panel model: Rev I behaviors, the stop, the mode race and welded contacts.\n\nWrites gm1-circuit-verification.json next to this file, plus the regenerated\nnetlist (gm1-terminal-netlist.json, GM1-TERMINALS.md). Every check is a\nsimulation of the connection graph in gm1_circuit.py with finite relay delays;\nnone is a measurement of a built panel.",
+  "scope": "Exercise the GM1 panel model: Rev I behaviors, the stop, the mode race, welded contacts,\nand (M12/M13) spindle reverse and the tool-changer drive.\n\nWrites gm1-circuit-verification.json next to this file, plus the regenerated\nnetlist (gm1-terminal-netlist.json, GM1-TERMINALS.md). Every check is a\nsimulation of the connection graph in gm1_circuit.py with finite relay delays;\nnone is a measurement of a built panel.",
   "changes": [
     {
       "id": "M1",
@@ -55,6 +55,16 @@
       "id": "M11",
       "topic": "Float stop",
       "change": "The torch-head float switch is added in series with the three head-presence switches in the U_HEAD loop (XH:5-6). A float trip while the torch is requested therefore drops the permission (torch off) and opens the Rodent door input (feed hold). During probing the request is low, so the door input stays closed and the chain re-arms when the float returns. The same loop drives the Rodent probe input through a second optocoupler."
+    },
+    {
+      "id": "M12",
+      "topic": "Spindle reverse",
+      "change": "The RapidChange tool changer unloads a tool with the spindle in reverse (M4), so the VFD also needs its REV terminal. A force-guided direction relay K_DIR (G7SA-2A2B) sits at the end of the three-contact run chain: its NC 31-32 passes the run command to FWD and its NO 13-14 to REV, so the VFD never sees both, even with a welded contact. Its coil is on the Rodent V-MOS HE1 output (GPIO2, the grblHAL spindle direction), fed like the mist from the 48-to-24 V DC-DC after K1 and K2. K_DIR only chooses the direction: K_VFD_RUN, K_RUN_ARM and K_REQ_B still start and stop the spindle. Its spare NO 23-24 reports the direction to the MCP23017 (XM:8)."
+    },
+    {
+      "id": "M13",
+      "topic": "Tool changer drive",
+      "change": "The Rev L dock's 24 V gearmotor is fed from the Z-brake supply, which is live only while K1 and K2 are closed, so every E-stop stops it. The feed then passes fuse F_DOCK and K_VFD_RUN NC 41-42: the dock cannot move while the spindle run relay is picked up, or if that relay is welded, and a spindle start stops a moving dock. K_DOCK_RUN switches the motor on and K_DOCK_DIR chooses the direction, so the two directions can never be driven at once. Each direction runs through its own end microswitch (LS_OUT at the deployed stop, LS_IN at the parked stop), which opens at the end of travel even if a relay welds. The Rodent drives both coils from MCP23017 outputs through a ULN2803A and reads the two dock sensors on MCP23017 inputs."
     }
   ],
   "rev_i_behaviors": {
@@ -122,9 +132,9 @@
     }
   },
   "welded_contacts": {
-    "weld_cases": 104,
-    "short_cases": 74,
-    "setup_short_cases": 80,
+    "weld_cases": 112,
+    "short_cases": 82,
+    "setup_short_cases": 88,
     "rows": [
       {
         "relay": "K_READY",
@@ -1373,6 +1383,102 @@
         "no_start_in_setup": true,
         "arms_again": true,
         "tool_after_fresh_request": true
+      },
+      {
+        "relay": "K_DIR",
+        "pole": "K_DIR:13-14",
+        "stuck": false,
+        "mode": "router",
+        "stops_on_controller_command": true,
+        "stops_on_permission_loss": true,
+        "no_restart_with_request_held": true,
+        "no_start_in_setup": true,
+        "arms_again": true,
+        "tool_after_fresh_request": true
+      },
+      {
+        "relay": "K_DIR",
+        "pole": "K_DIR:13-14",
+        "stuck": false,
+        "mode": "plasma",
+        "stops_on_controller_command": true,
+        "stops_on_permission_loss": true,
+        "no_restart_with_request_held": true,
+        "no_start_in_setup": true,
+        "arms_again": true,
+        "tool_after_fresh_request": true
+      },
+      {
+        "relay": "K_DIR",
+        "pole": "K_DIR:13-14",
+        "stuck": true,
+        "mode": "router",
+        "stops_on_controller_command": true,
+        "stops_on_permission_loss": true,
+        "no_restart_with_request_held": true,
+        "no_start_in_setup": true,
+        "arms_again": true,
+        "tool_after_fresh_request": true
+      },
+      {
+        "relay": "K_DIR",
+        "pole": "K_DIR:13-14",
+        "stuck": true,
+        "mode": "plasma",
+        "stops_on_controller_command": true,
+        "stops_on_permission_loss": true,
+        "no_restart_with_request_held": true,
+        "no_start_in_setup": true,
+        "arms_again": true,
+        "tool_after_fresh_request": true
+      },
+      {
+        "relay": "K_DIR",
+        "pole": "K_DIR:23-24",
+        "stuck": false,
+        "mode": "router",
+        "stops_on_controller_command": true,
+        "stops_on_permission_loss": true,
+        "no_restart_with_request_held": true,
+        "no_start_in_setup": true,
+        "arms_again": true,
+        "tool_after_fresh_request": false
+      },
+      {
+        "relay": "K_DIR",
+        "pole": "K_DIR:23-24",
+        "stuck": false,
+        "mode": "plasma",
+        "stops_on_controller_command": true,
+        "stops_on_permission_loss": true,
+        "no_restart_with_request_held": true,
+        "no_start_in_setup": true,
+        "arms_again": true,
+        "tool_after_fresh_request": true
+      },
+      {
+        "relay": "K_DIR",
+        "pole": "K_DIR:23-24",
+        "stuck": true,
+        "mode": "router",
+        "stops_on_controller_command": true,
+        "stops_on_permission_loss": true,
+        "no_restart_with_request_held": true,
+        "no_start_in_setup": true,
+        "arms_again": true,
+        "tool_after_fresh_request": true
+      },
+      {
+        "relay": "K_DIR",
+        "pole": "K_DIR:23-24",
+        "stuck": true,
+        "mode": "plasma",
+        "stops_on_controller_command": true,
+        "stops_on_permission_loss": true,
+        "no_restart_with_request_held": true,
+        "no_start_in_setup": true,
+        "arms_again": true,
+        "tool_after_fresh_request": true
       }
     ],
     "welds_that_block_the_next_arming": [
@@ -1403,6 +1509,8 @@
       "KM_R KM_R:11-14",
       "KM_R KM_R:21-24",
       "KM_R KM_R:31-34",
+      "K_DIR K_DIR:13-14",
+      "K_DIR K_DIR:23-24",
       "K_RDY_P K_RDY_P:11-14",
       "K_RDY_P K_RDY_P:21-24",
       "K_RDY_R K_RDY_R:11-14",
@@ -1431,6 +1539,232 @@
       13,
       18
     ]
+  },
+  "spindle_reverse": {
+    "cases": 24,
+    "rows": [
+      {
+        "mode": "router",
+        "reverse": false,
+        "request": false,
+        "weld": null,
+        "stuck": null,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "router",
+        "reverse": false,
+        "request": false,
+        "weld": "K_DIR:13-14",
+        "stuck": true,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "router",
+        "reverse": false,
+        "request": false,
+        "weld": "K_DIR:13-14",
+        "stuck": false,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "router",
+        "reverse": false,
+        "request": true,
+        "weld": null,
+        "stuck": null,
+        "fwd": true,
+        "rev": false
+      },
+      {
+        "mode": "router",
+        "reverse": false,
+        "request": true,
+        "weld": "K_DIR:13-14",
+        "stuck": true,
+        "fwd": false,
+        "rev": true
+      },
+      {
+        "mode": "router",
+        "reverse": false,
+        "request": true,
+        "weld": "K_DIR:13-14",
+        "stuck": false,
+        "fwd": false,
+        "rev": true
+      },
+      {
+        "mode": "router",
+        "reverse": true,
+        "request": false,
+        "weld": null,
+        "stuck": null,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "router",
+        "reverse": true,
+        "request": false,
+        "weld": "K_DIR:13-14",
+        "stuck": true,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "router",
+        "reverse": true,
+        "request": false,
+        "weld": "K_DIR:13-14",
+        "stuck": false,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "router",
+        "reverse": true,
+        "request": true,
+        "weld": null,
+        "stuck": null,
+        "fwd": false,
+        "rev": true
+      },
+      {
+        "mode": "router",
+        "reverse": true,
+        "request": true,
+        "weld": "K_DIR:13-14",
+        "stuck": true,
+        "fwd": false,
+        "rev": true
+      },
+      {
+        "mode": "router",
+        "reverse": true,
+        "request": true,
+        "weld": "K_DIR:13-14",
+        "stuck": false,
+        "fwd": false,
+        "rev": true
+      },
+      {
+        "mode": "plasma",
+        "reverse": false,
+        "request": false,
+        "weld": null,
+        "stuck": null,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "plasma",
+        "reverse": false,
+        "request": false,
+        "weld": "K_DIR:13-14",
+        "stuck": true,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "plasma",
+        "reverse": false,
+        "request": false,
+        "weld": "K_DIR:13-14",
+        "stuck": false,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "plasma",
+        "reverse": false,
+        "request": true,
+        "weld": null,
+        "stuck": null,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "plasma",
+        "reverse": false,
+        "request": true,
+        "weld": "K_DIR:13-14",
+        "stuck": true,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "plasma",
+        "reverse": false,
+        "request": true,
+        "weld": "K_DIR:13-14",
+        "stuck": false,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "plasma",
+        "reverse": true,
+        "request": false,
+        "weld": null,
+        "stuck": null,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "plasma",
+        "reverse": true,
+        "request": false,
+        "weld": "K_DIR:13-14",
+        "stuck": true,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "plasma",
+        "reverse": true,
+        "request": false,
+        "weld": "K_DIR:13-14",
+        "stuck": false,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "plasma",
+        "reverse": true,
+        "request": true,
+        "weld": null,
+        "stuck": null,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "plasma",
+        "reverse": true,
+        "request": true,
+        "weld": "K_DIR:13-14",
+        "stuck": true,
+        "fwd": false,
+        "rev": false
+      },
+      {
+        "mode": "plasma",
+        "reverse": true,
+        "request": true,
+        "weld": "K_DIR:13-14",
+        "stuck": false,
+        "fwd": false,
+        "rev": false
+      }
+    ],
+    "welded_k_dir_runs_reverse_on_m3": true,
+    "note": "A welded K_DIR runs the spindle in reverse on M3; the tool-change macro reads XM:8 before every start."
+  },
+  "tool_changer_drive": {
+    "note": "The motor is modeled as one load per direction. Pole 2 of each relay (the motor 0 V and the second polarity pole) and the end-switch back-off diodes are wiring details in the README, not simulated."
   },
   "simulation_assumptions": {
     "relay_pickup_s": [
@@ -1475,9 +1809,10 @@
     "No performance level or category is claimed. The run request still has one output stage (the Rodent pin and its PhotoMOS); if that stage shorts, the tool keeps running after the Rodent drops the request, and only the E-stop stops it.",
     "Water-contact glitches shorter than a relay dropout can still resume a held fill, as in Rev I.",
     "The float stop (M11) is modeled as the existing head-loop input; the float switch itself, its cam and the probe optocoupler are not simulated.",
-    "Mains wiring, contactor and brake sizing, VFD and cutter interfaces, and EMC are specified in the README, not simulated."
+    "Mains wiring, contactor and brake sizing, VFD and cutter interfaces, and EMC are specified in the README, not simulated.",
+    "M12/M13: the VFD's behavior with FWD and REV, its direction-change ramp, the dock motor current and the dock sensors are not simulated. The dock is modeled only through its relays and end switches."
   ],
-  "passed_checks": 1173,
+  "passed_checks": 1386,
   "checks": [
     {
       "check": "Every contact tag is unique",
@@ -1541,7 +1876,8 @@
         ],
         "K_VFD_RUN": [
           "13-14",
-          "31-32"
+          "31-32",
+          "41-42"
         ],
         "K_TORCH_RUN": [
           "13-14",
@@ -1555,6 +1891,11 @@
           "11-14",
           "21-24"
         ],
+        "K_DIR": [
+          "13-14",
+          "23-24",
+          "31-32"
+        ],
         "K_DRAINED": [
           "11-12",
           "11-14",
@@ -1565,6 +1906,13 @@
         ],
         "T_FILL": [
           "15-16"
+        ],
+        "K_DOCK_RUN": [
+          "11-14"
+        ],
+        "K_DOCK_DIR": [
+          "11-12",
+          "11-14"
         ]
       }
     },
@@ -8517,6 +8865,342 @@
       "tool_after_fresh_request": true
     },
     {
+      "check": "Single weld never starts a tool in SETUP",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:13-14",
+      "stuck": false,
+      "mode": "router",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never restarts a tool without a fresh request",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:13-14",
+      "stuck": false,
+      "mode": "router",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld: the Rodent can still stop the tool",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:13-14",
+      "stuck": false,
+      "mode": "router",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never starts a tool in SETUP",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:13-14",
+      "stuck": false,
+      "mode": "plasma",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never restarts a tool without a fresh request",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:13-14",
+      "stuck": false,
+      "mode": "plasma",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld: the Rodent can still stop the tool",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:13-14",
+      "stuck": false,
+      "mode": "plasma",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never starts a tool in SETUP",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:13-14",
+      "stuck": true,
+      "mode": "router",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never restarts a tool without a fresh request",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:13-14",
+      "stuck": true,
+      "mode": "router",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld: the Rodent can still stop the tool",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:13-14",
+      "stuck": true,
+      "mode": "router",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never starts a tool in SETUP",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:13-14",
+      "stuck": true,
+      "mode": "plasma",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never restarts a tool without a fresh request",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:13-14",
+      "stuck": true,
+      "mode": "plasma",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld: the Rodent can still stop the tool",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:13-14",
+      "stuck": true,
+      "mode": "plasma",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never starts a tool in SETUP",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:23-24",
+      "stuck": false,
+      "mode": "router",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": false
+    },
+    {
+      "check": "Single weld never restarts a tool without a fresh request",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:23-24",
+      "stuck": false,
+      "mode": "router",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": false
+    },
+    {
+      "check": "Single weld: the Rodent can still stop the tool",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:23-24",
+      "stuck": false,
+      "mode": "router",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": false
+    },
+    {
+      "check": "Single weld never starts a tool in SETUP",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:23-24",
+      "stuck": false,
+      "mode": "plasma",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never restarts a tool without a fresh request",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:23-24",
+      "stuck": false,
+      "mode": "plasma",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld: the Rodent can still stop the tool",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:23-24",
+      "stuck": false,
+      "mode": "plasma",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never starts a tool in SETUP",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:23-24",
+      "stuck": true,
+      "mode": "router",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never restarts a tool without a fresh request",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:23-24",
+      "stuck": true,
+      "mode": "router",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld: the Rodent can still stop the tool",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:23-24",
+      "stuck": true,
+      "mode": "router",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never starts a tool in SETUP",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:23-24",
+      "stuck": true,
+      "mode": "plasma",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld never restarts a tool without a fresh request",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:23-24",
+      "stuck": true,
+      "mode": "plasma",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
+      "check": "Single weld: the Rodent can still stop the tool",
+      "passed": true,
+      "relay": "K_DIR",
+      "pole": "K_DIR:23-24",
+      "stuck": true,
+      "mode": "plasma",
+      "stops_on_controller_command": true,
+      "stops_on_permission_loss": true,
+      "no_restart_with_request_held": true,
+      "no_start_in_setup": true,
+      "arms_again": true,
+      "tool_after_fresh_request": true
+    },
+    {
       "check": "A single shorted start-chain contact never starts a tool without a request",
       "passed": true,
       "mode": "router",
@@ -8670,6 +9354,18 @@
       "check": "A single shorted start-chain contact never starts a tool without a request",
       "passed": true,
       "mode": "router",
+      "shorted": "K_DIR:31-32"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool without a request",
+      "passed": true,
+      "mode": "router",
+      "shorted": "K_DIR:13-14"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool without a request",
+      "passed": true,
+      "mode": "router",
       "shorted": "K_RUN_ARM:33-34"
     },
     {
@@ -8736,7 +9432,19 @@
       "check": "A single shorted start-chain contact never starts a tool without a request",
       "passed": true,
       "mode": "router",
+      "shorted": "K_DIR:23-24"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool without a request",
+      "passed": true,
+      "mode": "router",
       "shorted": "K_READY:41-42"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool without a request",
+      "passed": true,
+      "mode": "router",
+      "shorted": "K_VFD_RUN:41-42"
     },
     {
       "check": "A single shorted start-chain contact never starts a tool without a request",
@@ -8892,6 +9600,18 @@
       "check": "A single shorted start-chain contact never starts a tool without a request",
       "passed": true,
       "mode": "plasma",
+      "shorted": "K_DIR:31-32"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool without a request",
+      "passed": true,
+      "mode": "plasma",
+      "shorted": "K_DIR:13-14"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool without a request",
+      "passed": true,
+      "mode": "plasma",
       "shorted": "K_RUN_ARM:33-34"
     },
     {
@@ -8958,7 +9678,19 @@
       "check": "A single shorted start-chain contact never starts a tool without a request",
       "passed": true,
       "mode": "plasma",
+      "shorted": "K_DIR:23-24"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool without a request",
+      "passed": true,
+      "mode": "plasma",
       "shorted": "K_READY:41-42"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool without a request",
+      "passed": true,
+      "mode": "plasma",
+      "shorted": "K_VFD_RUN:41-42"
     },
     {
       "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
@@ -9132,6 +9864,18 @@
       "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
       "passed": true,
       "mode": "router",
+      "shorted": "K_DIR:31-32"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
+      "passed": true,
+      "mode": "router",
+      "shorted": "K_DIR:13-14"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
+      "passed": true,
+      "mode": "router",
       "shorted": "K_RUN_ARM:33-34"
     },
     {
@@ -9198,7 +9942,19 @@
       "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
       "passed": true,
       "mode": "router",
+      "shorted": "K_DIR:23-24"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
+      "passed": true,
+      "mode": "router",
       "shorted": "K_READY:41-42"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
+      "passed": true,
+      "mode": "router",
+      "shorted": "K_VFD_RUN:41-42"
     },
     {
       "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
@@ -9372,6 +10128,18 @@
       "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
       "passed": true,
       "mode": "plasma",
+      "shorted": "K_DIR:31-32"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
+      "passed": true,
+      "mode": "plasma",
+      "shorted": "K_DIR:13-14"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
+      "passed": true,
+      "mode": "plasma",
       "shorted": "K_RUN_ARM:33-34"
     },
     {
@@ -9438,7 +10206,19 @@
       "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
       "passed": true,
       "mode": "plasma",
+      "shorted": "K_DIR:23-24"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
+      "passed": true,
+      "mode": "plasma",
       "shorted": "K_READY:41-42"
+    },
+    {
+      "check": "A single shorted start-chain contact never starts a tool in SETUP, even with a request",
+      "passed": true,
+      "mode": "plasma",
+      "shorted": "K_VFD_RUN:41-42"
     },
     {
       "check": "A shorted run-request output stage cannot run a tool in SETUP",
@@ -10427,17 +11207,1300 @@
       "passed": true,
       "pickup": 0.02,
       "dropout": 0.05
+    },
+    {
+      "check": "M3: the run command reaches FWD only",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "M4: the run command reaches REV only",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "M4: the direction status input reports REV",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "M4: dropping the request stops the spindle",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Back to M3: FWD only again",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "M3: the run command reaches FWD only",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "M4: the run command reaches REV only",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "M4: the direction status input reports REV",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "M4: dropping the request stops the spindle",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Back to M3: FWD only again",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "M3: the run command reaches FWD only",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "M4: the run command reaches REV only",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "M4: the direction status input reports REV",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "M4: dropping the request stops the spindle",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Back to M3: FWD only again",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "M3: the run command reaches FWD only",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "M4: the run command reaches REV only",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "M4: the direction status input reports REV",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "M4: dropping the request stops the spindle",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Back to M3: FWD only again",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "M3: the run command reaches FWD only",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "M4: the run command reaches REV only",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "M4: the direction status input reports REV",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "M4: dropping the request stops the spindle",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Back to M3: FWD only again",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "M3: the run command reaches FWD only",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "M4: the run command reaches REV only",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "M4: the direction status input reports REV",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "M4: dropping the request stops the spindle",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Back to M3: FWD only again",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "M3: the run command reaches FWD only",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "M4: the run command reaches REV only",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "M4: the direction status input reports REV",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "M4: dropping the request stops the spindle",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Back to M3: FWD only again",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "M3: the run command reaches FWD only",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "M4: the run command reaches REV only",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "M4: the direction status input reports REV",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "M4: dropping the request stops the spindle",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Back to M3: FWD only again",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "M3: the run command reaches FWD only",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "M4: the run command reaches REV only",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "M4: the direction status input reports REV",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "M4: dropping the request stops the spindle",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Back to M3: FWD only again",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "router",
+      "reverse": false,
+      "request": false,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "router",
+      "reverse": false,
+      "request": false,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "router",
+      "reverse": false,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "router",
+      "reverse": false,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "router",
+      "reverse": false,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "router",
+      "reverse": false,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "router",
+      "reverse": false,
+      "request": true,
+      "weld": null,
+      "stuck": null,
+      "fwd": true,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "router",
+      "reverse": false,
+      "request": true,
+      "weld": null,
+      "stuck": null,
+      "fwd": true,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "router",
+      "reverse": false,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": true
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "router",
+      "reverse": false,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": true
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "router",
+      "reverse": false,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": true
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "router",
+      "reverse": false,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": true
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "router",
+      "reverse": true,
+      "request": false,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "router",
+      "reverse": true,
+      "request": false,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "router",
+      "reverse": true,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "router",
+      "reverse": true,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "router",
+      "reverse": true,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "router",
+      "reverse": true,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "router",
+      "reverse": true,
+      "request": true,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": true
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "router",
+      "reverse": true,
+      "request": true,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": true
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "router",
+      "reverse": true,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": true
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "router",
+      "reverse": true,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": true
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "router",
+      "reverse": true,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": true
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "router",
+      "reverse": true,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": true
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": false,
+      "request": false,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": false,
+      "request": false,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": false,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": false,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": false,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": false,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": false,
+      "request": true,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": false,
+      "request": true,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": false,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": false,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": false,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": false,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": true,
+      "request": false,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": true,
+      "request": false,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": true,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": true,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": true,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": true,
+      "request": false,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": true,
+      "request": true,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": true,
+      "request": true,
+      "weld": null,
+      "stuck": null,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": true,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": true,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": true,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "FWD and REV are never both closed",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": true,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "Plasma mode never runs the spindle in either direction",
+      "passed": true,
+      "mode": "plasma",
+      "reverse": true,
+      "request": true,
+      "weld": "K_DIR:13-14",
+      "stuck": false,
+      "fwd": false,
+      "rev": false
+    },
+    {
+      "check": "SETUP: a reverse request cannot run the spindle",
+      "passed": true
+    },
+    {
+      "check": "A welded K_DIR shows on the direction status input",
+      "passed": true
+    },
+    {
+      "check": "Command out: the dock moves out, not in",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "The deployed end switch stops it with the command held",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Command in: the dock moves in, not out",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "The parked end switch stops it",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "A spindle start stops a moving dock",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "The dock cannot move while the spindle runs",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005,
+      "reverse": false
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005,
+      "reverse": true
+    },
+    {
+      "check": "Command out: the dock moves out, not in",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "The deployed end switch stops it with the command held",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Command in: the dock moves in, not out",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "The parked end switch stops it",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "A spindle start stops a moving dock",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "The dock cannot move while the spindle runs",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02,
+      "reverse": false
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02,
+      "reverse": true
+    },
+    {
+      "check": "Command out: the dock moves out, not in",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "The deployed end switch stops it with the command held",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Command in: the dock moves in, not out",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "The parked end switch stops it",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "A spindle start stops a moving dock",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "The dock cannot move while the spindle runs",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05,
+      "reverse": false
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05,
+      "reverse": true
+    },
+    {
+      "check": "Command out: the dock moves out, not in",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "The deployed end switch stops it with the command held",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Command in: the dock moves in, not out",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "The parked end switch stops it",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "A spindle start stops a moving dock",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "The dock cannot move while the spindle runs",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005,
+      "reverse": false
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005,
+      "reverse": true
+    },
+    {
+      "check": "Command out: the dock moves out, not in",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "The deployed end switch stops it with the command held",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Command in: the dock moves in, not out",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "The parked end switch stops it",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "A spindle start stops a moving dock",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "The dock cannot move while the spindle runs",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02,
+      "reverse": false
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02,
+      "reverse": true
+    },
+    {
+      "check": "Command out: the dock moves out, not in",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "The deployed end switch stops it with the command held",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Command in: the dock moves in, not out",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "The parked end switch stops it",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "A spindle start stops a moving dock",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "The dock cannot move while the spindle runs",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05,
+      "reverse": false
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05,
+      "reverse": true
+    },
+    {
+      "check": "Command out: the dock moves out, not in",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "The deployed end switch stops it with the command held",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Command in: the dock moves in, not out",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "The parked end switch stops it",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "A spindle start stops a moving dock",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "The dock cannot move while the spindle runs",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005,
+      "reverse": false
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005,
+      "reverse": true
+    },
+    {
+      "check": "Command out: the dock moves out, not in",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "The deployed end switch stops it with the command held",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Command in: the dock moves in, not out",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "The parked end switch stops it",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "A spindle start stops a moving dock",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "The dock cannot move while the spindle runs",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02,
+      "reverse": false
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02,
+      "reverse": true
+    },
+    {
+      "check": "Command out: the dock moves out, not in",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "The deployed end switch stops it with the command held",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Command in: the dock moves in, not out",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "The parked end switch stops it",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "A spindle start stops a moving dock",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "The dock cannot move while the spindle runs",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05,
+      "reverse": false
+    },
+    {
+      "check": "The dock cannot move while the spindle runs, either direction",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05,
+      "reverse": true
+    },
+    {
+      "check": "A welded K_VFD_RUN keeps the dock from moving",
+      "passed": true,
+      "stuck": false
+    },
+    {
+      "check": "A welded K_VFD_RUN keeps the dock from moving",
+      "passed": true,
+      "stuck": true
+    },
+    {
+      "check": "An E-stop stops a moving dock",
+      "passed": true
+    },
+    {
+      "check": "SETUP (bed change): the dock can move with the spindle off",
+      "passed": true
+    },
+    {
+      "check": "A welded K_DOCK_RUN still stops at the end switch",
+      "passed": true,
+      "runs_until_end": true
+    },
+    {
+      "check": "Direction changes never drive both directions",
+      "passed": true
     }
   ],
   "result": "PASS",
   "source_sha256": {
-    "output/controls-2026-09-27/verify_gm1_circuit.py": "c9a3d2fc4d78bd296ffd0f4fd16cc3d5e0898b719cc36f3fefdf435254e4768d",
-    "output/controls-2026-09-27/gm1_circuit.py": "f66fb745b5ad4dc2f5946689eafb2fee924ed87147b1f8597667ace3a9f22f20",
+    "output/controls-2026-09-27/verify_gm1_circuit.py": "3b131dee9439835bf6380ead80579ef5f04f15d4643844d5f637d1224539bd8b",
+    "output/controls-2026-09-27/gm1_circuit.py": "f7fb10fde3b3e52ac3a97125d47d81c95be17a79d97ae16bea7d013f5ac2e7ee",
     "output/design-finish-2026-09-26/controls/circuit.py": "a9370143297125a4f7a0da8843ba2ca8d9570003969337a2448bd8a327a4152b"
   },
   "artifact_sha256": {
-    "gm1-terminal-netlist.json": "6b0ad0a05753b43be65859afb0144e68638e8f9d7989374b201d5c4744882221",
-    "GM1-TERMINALS.md": "aec0b348484bc179e795e5c6c8c909c5489675688c7d1b47fb78849ec294851a"
+    "gm1-terminal-netlist.json": "619a234ad1fa1cd2b63768d03a3a25985276cb44ac78ade9686f5fc4f1acb3c7",
+    "GM1-TERMINALS.md": "d1eec8632693e612653986857791ab0ce48c6fb0e046858fb495c1276bc514d4"
   },
-  "elapsed_s": 872.9
+  "elapsed_s": 1470.9
 }

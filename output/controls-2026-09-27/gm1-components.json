@@ -1,5 +1,5 @@
 {
-  "scope": "GM1 controls parts delta against Rev I's selected controls schedule (output/design-finish-2026-09-26/controls/selected-components.json). Unpriced; no order, quote or stock check. Check terminal marks, coil currents and minimum loads against each maker's datasheet at purchase. Updated later on 27 Sep 2026 for M9-M11, the cutter-side start relay and the Rev K cabinet parts.",
+  "scope": "GM1 controls parts delta against Rev I's selected controls schedule (output/design-finish-2026-09-26/controls/selected-components.json). Unpriced; no order, quote or stock check. Check terminal marks, coil currents and minimum loads against each maker's datasheet at purchase. Updated later on 27 Sep 2026 for M9-M11, the cutter-side start relay and the Rev K cabinet parts, and again for M12-M13 (Rev L tool changer).",
   "added": [
     {
       "qty": 1,
@@ -38,9 +38,9 @@
       "status": "to size with the contactor coils and brake"
     },
     {
-      "qty": 4,
+      "qty": 5,
       "part": "Omron G7SA-2A2B 24 VDC force-guided relay",
-      "tag": "K_REQ_A, K_REQ_B, K_VFD_RUN, K_TORCH_RUN",
+      "tag": "K_REQ_A, K_REQ_B, K_VFD_RUN, K_TORCH_RUN, K_DIR",
       "status": "candidate"
     },
     {
@@ -56,7 +56,7 @@
       "status": "candidate"
     },
     {
-      "qty": 6,
+      "qty": 7,
       "part": "Omron P7SA-10F socket",
       "tag": "G7SA 4-pole",
       "status": "candidate"
@@ -105,7 +105,7 @@
     },
     {
       "qty": 1,
-      "part": "Interface board: MCP23017, 2 x SN74LVC1G17, 3.3 V LDO, 4 x 470 ohm, 4.7 kohm, 10 kohm, Rev I run-interface parts",
+      "part": "Interface board: MCP23017, 2 x SN74LVC1G17, 3.3 V LDO, 5 x 470 ohm, 4.7 kohm, 10 kohm, Rev I run-interface parts; for M13 a ULN2803A and 2 x PC817 with resistors (dock sensor inputs)",
       "tag": "IFB",
       "status": "schematic level; no PCB"
     },
@@ -156,6 +156,24 @@
       "part": "16 mm2 braided bond strap, gland plates to the cabinet PE stud, with serrated washers",
       "tag": "cabinet bonding (Rev K)",
       "status": "to select"
+    },
+    {
+      "qty": 2,
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket",
+      "tag": "K_DOCK_RUN, K_DOCK_DIR",
+      "status": "as Rev I's water relays; M13 tool-changer drive (run, and a polarity reverser)"
+    },
+    {
+      "qty": 1,
+      "part": "2 A time-delay fuse and holder",
+      "tag": "F_DOCK",
+      "status": "to select; M13 dock motor feed"
+    },
+    {
+      "qty": 2,
+      "part": "Roller-lever microswitch, NC, IP67, with a 1N4007 across each",
+      "tag": "LS_OUT, LS_IN",
+      "status": "to select; M13 dock end of travel, fitted at the Rev L stop blocks"
     }
   ],
   "already_required": [

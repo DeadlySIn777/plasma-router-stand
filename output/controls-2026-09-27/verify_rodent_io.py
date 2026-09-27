@@ -102,12 +102,18 @@ ALLOCATION = [
     dict(signal='Router mist solenoid', connector='V-MOS HE0', gpio=4, direction='out', rt=False, map_define='AUXOUTPUT3_PIN',
          wiring='24 V solenoid on the V-MOS output. Feed V-MOS input from a controller-side 48-to-24 V DC-DC after the E-stop '
                 'contactors, never from the field 24 V, so mist also stops at every E-stop.', healthy='M7 on, M9 off'),
-    dict(signal='Spare (flood)', connector='V-MOS HE1', gpio=2, direction='out', rt=False, map_define='AUXOUTPUT2_PIN',
-         wiring='Unused.', healthy='-'),
+    dict(signal='Spindle direction (K_DIR coil)', connector='V-MOS HE1', gpio=2, direction='out', rt=False, map_define='AUXOUTPUT2_PIN',
+         wiring='24 V coil of the force-guided K_DIR (G7SA-2A2B) on the V-MOS output, fed like the mist from the 48-to-24 V DC-DC after '
+                'the E-stop contactors. grblHAL SPINDLE_DIRECTION_PIN: M4 energizes K_DIR, which turns the VFD run command from FWD to '
+                'REV (controls M12). The RapidChange tool changer unloads tools in reverse.',
+         healthy='M3: off (FWD). M4: on (REV). Set before the run request; K_DIR 23-24 reports it on MCP23017 GPA7.'),
     dict(signal='Status expander MCP23017', connector='OLED header', gpio=(27, 26), direction='i2c', rt=False, map_define=('I2C_SDA', 'I2C_SCL'),
          wiring='MCP23017 on +5 V (the board pull-ups are to +5 V). GPA0-3 read dry contacts K_READY 13-14, K_PERMIT 33-34, '
-                'K_RDY_R 21-24 and K_RDY_P 21-24, each with a 470 Ohm pull-up to 5 V (about 10 mA wetting current).',
-         healthy='polled status for the operator display only; no real-time use'),
+                'K_RDY_R 21-24 and K_RDY_P 21-24, and GPA7 K_DIR 23-24, each with a 470 Ohm pull-up to 5 V (about 10 mA wetting '
+                'current). Tool changer (Rev L, controls M13): GPA4 dock deployed and GPA5 dock parked (M8 PNP sensors through '
+                'optocouplers), GPA6 reserved for the RapidChange IR check; GPB0 dock run and GPB1 dock direction (ULN2803A to '
+                'K_DOCK_RUN and K_DOCK_DIR), GPB2 reserved for the magazine cover.',
+         healthy='polled: operator status, and the tool-change macro (M64/M65 outputs, M66 waits on inputs); no real-time use'),
 ]
 
 NOT_USED = [
@@ -151,6 +157,9 @@ def main():
     check('No map pin is also listed as unused', not {g for g, _ in NOT_USED} & set(pins))
     strapping_used = {g: STRAPPING[g] for g in pins if g in STRAPPING}
     check('Strapping pins used only where their reset level is safe', set(strapping_used) <= {2, 15}, used=strapping_used)
+    check('Spindle direction output exists for M4 (RapidChange unload) on V-MOS HE1',
+          '#define SPINDLE_DIRECTION_PIN   AUXOUTPUT2_PIN' in map_text and defines.get('AUXOUTPUT2_PIN') == 2)
+    check('No flood coolant is mapped onto the direction output', 'COOLANT_FLOOD_PIN' not in map_text)
     doc = {
         'title': 'GM1 BTT Rodent I/O allocation',
         'status': 'Allocation from BTT and grblHAL primary sources. Not wired, compiled or flashed. Confirm the board version: '
@@ -180,7 +189,11 @@ def main():
             'Add the plasma plugin to the ESP32 CMakeLists.txt and set PLASMA_ENABLE.',
             'New ESP32 THCAD driver: MCPWM capture (or PCNT with a gate timer) on GPIO14. Convert period to voltage with $361/$362 '
             'and present it as an analog aux port for $366, following the unfinished thcad2.c pattern for RP2040/STM32F4.',
-            'MCP23017_ENABLE 1 (8 in, 8 out) for status inputs.',
+            'MCP23017_ENABLE 1 (8 in, 8 out) for the status inputs and the tool-changer I/O; expose its pins as aux ports for '
+            'M62-M66 so the RapidChange macros can run the dock and wait on its sensors.',
+            'Spindle direction on GPIO2 (V-MOS HE1): build with SPINDLE_DIR in DRIVER_SPINDLE_ENABLE.',
+            'RapidChange grblHAL macros: set the pocket coordinates, and approach the pockets from the rear stop with the head at '
+            'X975 while the dock moves (Rev L), never from the front with the dock out.',
             'Settings: $5, $6 and $14 input polarity per the table; homing required after power-up; $33 = 5000; driver current '
             'from the actual sense resistor.',
             'Bench tests before any cutter connection: signal generator on CN53, arc-OK and door inputs toggled by hand, probe '

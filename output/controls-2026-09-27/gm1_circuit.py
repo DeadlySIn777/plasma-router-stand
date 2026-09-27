@@ -7,6 +7,9 @@ bed confirmation, mode relays) stays Rev I's, with one added check contact in
 the fill arm. The stop, the tool-permission chain, the tool outputs and the
 controller interface are replaced. Each change is listed in CHANGES.
 
+M12 and M13 (later on 27 September, for the Rev L tool changer) add spindle
+reverse and the tool-changer drive.
+
 This is a wiring-graph and relay-timing model, like Rev I's. It is not a
 certified safety function, a PL/category claim or a tested panel.
 """
@@ -64,6 +67,19 @@ CHANGES = [
      'loop (XH:5-6). A float trip while the torch is requested therefore drops the permission (torch off) and opens the '
      'Rodent door input (feed hold). During probing the request is low, so the door input stays closed and the chain re-arms '
      'when the float returns. The same loop drives the Rodent probe input through a second optocoupler.'),
+    ('M12', 'Spindle reverse', 'The RapidChange tool changer unloads a tool with the spindle in reverse (M4), so the VFD also '
+     'needs its REV terminal. A force-guided direction relay K_DIR (G7SA-2A2B) sits at the end of the three-contact run chain: '
+     'its NC 31-32 passes the run command to FWD and its NO 13-14 to REV, so the VFD never sees both, even with a welded '
+     'contact. Its coil is on the Rodent V-MOS HE1 output (GPIO2, the grblHAL spindle direction), fed like the mist from the '
+     '48-to-24 V DC-DC after K1 and K2. K_DIR only chooses the direction: K_VFD_RUN, K_RUN_ARM and K_REQ_B still start and '
+     'stop the spindle. Its spare NO 23-24 reports the direction to the MCP23017 (XM:8).'),
+    ('M13', 'Tool changer drive', 'The Rev L dock\'s 24 V gearmotor is fed from the Z-brake supply, which is live only while K1 '
+     'and K2 are closed, so every E-stop stops it. The feed then passes fuse F_DOCK and K_VFD_RUN NC 41-42: the dock cannot '
+     'move while the spindle run relay is picked up, or if that relay is welded, and a spindle start stops a moving dock. '
+     'K_DOCK_RUN switches the motor on and K_DOCK_DIR chooses the direction, so the two directions can never be driven at '
+     'once. Each direction runs through its own end microswitch (LS_OUT at the deployed stop, LS_IN at the parked stop), '
+     'which opens at the end of travel even if a relay welds. The Rodent drives both coils from MCP23017 outputs through a '
+     'ULN2803A and reads the two dock sensors on MCP23017 inputs.'),
 ]
 
 # Relay families and poles. G7SA terminal marks follow EN 50005 (13-14 NO,
@@ -97,10 +113,15 @@ DEVICES = {
     'T_FILL': dict(part='Finder 80.01.0.240.0000, function AI (on-delay), 25 min until the fill is timed', kind='timer',
                    no=['15-18'], nc=['15-16']),
     'Z_BRAKE': dict(part='Z motor power-off holding brake, 24 V coil (energized = released)', kind='brake', no=[], nc=[]),
+    'K_DIR': dict(part='Omron G7SA-2A2B 24 VDC + P7SA-10F socket', kind='force-guided', **G7SA_2A2B),
+    'K_DOCK_RUN': dict(part='Finder 40.52.9.024.0000 + 95.05 socket: pole 1 switches the dock motor +24 V, pole 2 its 0 V',
+                       kind='relay', no=['11-14', '21-24'], nc=['11-12', '21-22']),
+    'K_DOCK_DIR': dict(part='Finder 40.52.9.024.0000 + 95.05 socket: both poles reverse the dock motor polarity',
+                       kind='relay', no=['11-14', '21-24'], nc=['11-12', '21-22']),
 }
 GUIDED = {k for k, d in DEVICES.items() if d['kind'] in ('force-guided', 'contactor')}
 TOOL_CHAIN = ['K_READY', 'K_PERMIT', 'K_RUN_ARM', 'K_REQ_A', 'K_REQ_B', 'K_VFD_RUN', 'K_TORCH_RUN',
-              'K_RDY_R', 'K_RDY_P', 'KM_R', 'KM_P']
+              'K_RDY_R', 'K_RDY_P', 'KM_R', 'KM_P', 'K_DIR']
 
 # Rev I edges that the new start chain replaces.
 DROP_PREFIXES = ('K_READY:', 'K_REQUEST:', 'K_RUN_ARM:', 'K_VFD_RUN:', 'K_TORCH_RUN:', 'IF_RUN:', 'IF_READY:')
@@ -232,7 +253,13 @@ def definition():
     wire('K_RDY_P:14', 'TORCH_RUN_COIL')
     coil('K_TORCH_RUN', 'TORCH_RUN_COIL')
     # M6: dry tool outputs, three relays in series each.
-    contact('K_VFD_RUN:13-14', 'XVFD:FWD', 'XVFD:F1', 'K_VFD_RUN')
+    contact('K_VFD_RUN:13-14', 'XVFD:DIR', 'XVFD:F1', 'K_VFD_RUN')
+    # M12: direction changeover at the end of the run chain; one relay, so FWD and REV never both close.
+    contact('K_DIR:31-32', 'XVFD:DIR', 'XVFD:FWD', 'K_DIR', True)
+    contact('K_DIR:13-14', 'XVFD:DIR', 'XVFD:REV', 'K_DIR')
+    branch('BRK_PWR', 'VMOS_HE1:D-S', 'spindle_reverse', 'DIR_COIL', form='MOSFET output (low side in the real wiring)',
+           device='BTT Rodent V-MOS HE1, GPIO2 = grblHAL spindle direction, fed from the 48-to-24 V DC-DC after K1/K2')
+    coil('K_DIR', 'DIR_COIL')
     contact('K_RUN_ARM:33-34', 'XVFD:F1', 'XVFD:F2', 'K_RUN_ARM')
     contact('K_REQ_B:13-14', 'XVFD:F2', 'XVFD:COM', 'K_REQ_B')
     contact('K_TORCH_RUN:13-14', 'XPLASMA:START1', 'XPLASMA:S1', 'K_TORCH_RUN')
@@ -245,6 +272,7 @@ def definition():
     contact('K_PERMIT:33-34', 'XM:2', 'XM:COM', 'K_PERMIT')
     contact('K_RDY_R:21-24', 'XM:3', 'XM:COM', 'K_RDY_R')
     contact('K_RDY_P:21-24', 'XM:4', 'XM:COM', 'K_RDY_P')
+    contact('K_DIR:23-24', 'XM:8', 'XM:COM', 'K_DIR')
     # M8: K_READY NC in the fill-arm pickup.
     branch('FILL:22', 'K_READY:41-42', 'K_READY', 'ARM_COIL', True)
 
@@ -266,6 +294,25 @@ def definition():
     # M10: fill watchdog in the K_FILL self-hold.
     coil('T_FILL', 'FILL_COIL')
     branch('K_FILL:14', 'T_FILL:15-16', 'T_FILL', 'FILL_COIL', True)
+    # M13: tool-changer drive. Motor feed after K1/K2 and the spindle-run interlock; run and
+    # direction relays; one end switch per direction. The motor is modeled as one load per direction.
+    contact('F_DOCK', 'BRK_PWR', 'DOCK_1', 'f_dock', form='Fuse continuity', device='Dock motor fuse, 2 A time-delay')
+    branch('DOCK_1', 'K_VFD_RUN:41-42', 'K_VFD_RUN', 'DOCK_24V', True)
+    branch('C', 'IF_DOCK_RUN:1-2', 'dock_run_cmd', 'DOCK_RUN_COIL', form='Open-collector sink',
+           device='Interface board ULN2803A channel, driven by MCP23017 GPB0')
+    coil('K_DOCK_RUN', 'DOCK_RUN_COIL')
+    branch('C', 'IF_DOCK_DIR:1-2', 'dock_in_dir', 'DOCK_DIR_COIL', form='Open-collector sink',
+           device='Interface board ULN2803A channel, driven by MCP23017 GPB1 (on = toward parked)')
+    coil('K_DOCK_DIR', 'DOCK_DIR_COIL')
+    branch('DOCK_24V', 'K_DOCK_RUN:11-14', 'K_DOCK_RUN', 'K_DOCK_DIR:11')
+    contact('K_DOCK_DIR:11-12', 'K_DOCK_DIR:11', 'K_DOCK_DIR:12', 'K_DOCK_DIR', True)
+    contact('K_DOCK_DIR:11-14', 'K_DOCK_DIR:11', 'K_DOCK_DIR:14', 'K_DOCK_DIR')
+    branch('K_DOCK_DIR:12', 'LS_OUT:11-12', 'dock_at_deployed', 'M_DOCK_OUT_IN', True, form='NC',
+           device='End microswitch at the deployed stop; opens when the drive tab reaches it (with a diode for backing off)')
+    coil('M_DOCK_OUT', 'M_DOCK_OUT_IN')
+    branch('K_DOCK_DIR:14', 'LS_IN:11-12', 'dock_at_parked', 'M_DOCK_IN_IN', True, form='NC',
+           device='End microswitch at the parked stop; opens when the drive tab reaches it (with a diode for backing off)')
+    coil('M_DOCK_IN', 'M_DOCK_IN_IN')
     return wires, contacts, diodes, loads, power, dropped
 
 
@@ -275,6 +322,8 @@ ALL_EDGES = WIRES + DIODES + CONTACTS
 TIMERS = ('T_CLOSE', 'T_DRAIN', 'T_BRAKE', 'T_FILL')
 DEFAULT = {k: v for k, v in rev_i.DEFAULT.items() if k not in ('stop_ok', 'hardware_stop_ok')}
 DEFAULT.update(f_safety=True, estop_ch1=True, estop_ch2=True, reset_pressed=False, supply_48v=True, mains=True)
+DEFAULT.update(spindle_reverse=False, f_dock=True, dock_run_cmd=False, dock_in_dir=False,
+               dock_at_deployed=False, dock_at_parked=True)
 
 
 class Simulator:
@@ -471,14 +520,17 @@ class Simulator:
         reached = self.live(g)
         paths = self.power_paths(values)
         fwd = 'XVFD:COM' in self.reach(g, 'XVFD:FWD')
+        rev = 'XVFD:COM' in self.reach(g, 'XVFD:REV')
         start = 'XPLASMA:START2' in self.reach(g, 'XPLASMA:START1')
         limit = 'P_LIMIT:A1' in reached or 'P_LIMIT' in self.ssr_failed_short
         cmd = 'P_CMD:A1' in reached or 'P_CMD' in self.ssr_failed_short
         return {'pump': self.inputs['power'] and self.inputs['pump_fuse'] and limit and cmd,
                 'drain': 'XW:7' in reached, 'fill': self.states['K_FILL'], 'fill_armed': self.states['K_ARM'],
                 'ready': self.states['K_READY'], 'permit': self.states['K_PERMIT'], 'armed': self.states['K_RUN_ARM'],
-                'fwd_closed': fwd, 'start_closed': start, **paths,
-                'router_run': fwd and paths['vfd_mains'], 'torch_run': start and paths['plasma_mains'],
+                'fwd_closed': fwd, 'rev_closed': rev, 'start_closed': start, **paths,
+                'router_run': (fwd or rev) and paths['vfd_mains'], 'torch_run': start and paths['plasma_mains'],
+                'dock_out': 'M_DOCK_OUT:A1' in reached, 'dock_in': 'M_DOCK_IN:A1' in reached,
+                'direction_status_rev': 'XM:COM' in self.reach(g, 'XM:8'),
                 'z_brake_released': self.states['Z_BRAKE'], 'sr_out': self.sr_out,
                 'router_drained': self.states['K_DRAINED'], 'fill_timed_out': self.states['T_FILL'],
                 'door_ok': 'XR:E1_GND' in self.reach(g, 'XR:E1_SIG'),

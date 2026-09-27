@@ -1,0 +1,1566 @@
+{
+  "parts": [
+    {
+      "id": "MOD_ATC_FOOT_L_1",
+      "part_number": "MOD_ATC_FOOT_60x40",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 14938.26966,
+      "bounds_mm": [
+        265.0,
+        1170.0,
+        940.794784,
+        325.0,
+        1210.0,
+        947.155216
+      ],
+      "notes": [
+        "1/4 in steel, welded under the beam tube. Two M5 x 12 button screws into M5 T-nuts in the strip top slots at X275 and X315. The T-nuts are not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_FOOT_SCREW_L_1_1",
+      "part_number": "STD_M5x12_ISO7380",
+      "group": "atc_hardware",
+      "material": "M5 x 12 button head, A2 stainless",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 430.54546,
+      "bounds_mm": [
+        270.25,
+        1185.243244,
+        935.145258,
+        279.759009,
+        1194.756756,
+        949.909009
+      ],
+      "notes": [
+        "Shank ends inside the 20100 top slot; the T-nut is not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_FOOT_SCREW_L_1_2",
+      "part_number": "STD_M5x12_ISO7380",
+      "group": "atc_hardware",
+      "material": "M5 x 12 button head, A2 stainless",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 430.54546,
+      "bounds_mm": [
+        310.25,
+        1185.243244,
+        935.145258,
+        319.759009,
+        1194.756756,
+        949.909009
+      ],
+      "notes": [
+        "Shank ends inside the 20100 top slot; the T-nut is not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_FOOT_L_2",
+      "part_number": "MOD_ATC_FOOT_60x40",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 14938.26966,
+      "bounds_mm": [
+        265.0,
+        1240.0,
+        940.794784,
+        325.0,
+        1280.0,
+        947.155216
+      ],
+      "notes": [
+        "1/4 in steel, welded under the beam tube. Two M5 x 12 button screws into M5 T-nuts in the strip top slots at X275 and X315. The T-nuts are not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_FOOT_SCREW_L_2_1",
+      "part_number": "STD_M5x12_ISO7380",
+      "group": "atc_hardware",
+      "material": "M5 x 12 button head, A2 stainless",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 430.54546,
+      "bounds_mm": [
+        270.25,
+        1255.243244,
+        935.145258,
+        279.759009,
+        1264.756756,
+        949.909009
+      ],
+      "notes": [
+        "Shank ends inside the 20100 top slot; the T-nut is not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_FOOT_SCREW_L_2_2",
+      "part_number": "STD_M5x12_ISO7380",
+      "group": "atc_hardware",
+      "material": "M5 x 12 button head, A2 stainless",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 430.54546,
+      "bounds_mm": [
+        310.25,
+        1255.243244,
+        935.145258,
+        319.759009,
+        1264.756756,
+        949.909009
+      ],
+      "notes": [
+        "Shank ends inside the 20100 top slot; the T-nut is not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_BEAM_L",
+      "part_number": "MOD_ATC_BEAM_1x2_285",
+      "group": "atc",
+      "material": "1 x 2 x .083 in steel rectangular tube",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 86493.09504,
+      "bounds_mm": [
+        282.3,
+        1160.0,
+        947.15,
+        307.7,
+        1445.0,
+        997.95
+      ],
+      "notes": [
+        "Welded to its two feet and to the seat bar; stands 6.35 mm off the strip between the feet.",
+        "Cantilevers 165 mm behind the rear foot, past the module rear edge (Y1347.8) to Y1445."
+      ]
+    },
+    {
+      "id": "MOD_ATC_SEAT_L",
+      "part_number": "MOD_ATC_RAIL_SEAT_285",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 65024.28508,
+      "bounds_mm": [
+        282.3,
+        1160.0,
+        997.947629,
+        307.7,
+        1445.0,
+        1007.002371
+      ],
+      "notes": [
+        "Steel bar 25.4 x 9.05 (from 3/8 in), welded on the tube, then machined flat at Z1007 with the module level. M3 tapped at the rail pitch (tap drill 2.5 shown), 6 deep."
+      ]
+    },
+    {
+      "id": "MOD_ATC_RAIL_L",
+      "part_number": "HIWIN_MGNR12_281",
+      "group": "atc_guides",
+      "material": "HIWIN MGNR12 rail, cut to 281 mm",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 25206.00706,
+      "bounds_mm": [
+        289.0,
+        1162.0,
+        1006.996681,
+        301.0,
+        1443.0,
+        1015.00569
+      ],
+      "notes": [
+        "Cut 281 mm with the first hole 10 mm from the front end (11 holes at 25 mm). M3 x 8 screws into the seat."
+      ]
+    },
+    {
+      "id": "MOD_ATC_FOOT_R_1",
+      "part_number": "MOD_ATC_FOOT_60x40",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 14938.26966,
+      "bounds_mm": [
+        825.0,
+        1170.0,
+        940.794784,
+        885.0,
+        1210.0,
+        947.155216
+      ],
+      "notes": [
+        "1/4 in steel, welded under the beam tube. Two M5 x 12 button screws into M5 T-nuts in the strip top slots at X835 and X875. The T-nuts are not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_FOOT_SCREW_R_1_1",
+      "part_number": "STD_M5x12_ISO7380",
+      "group": "atc_hardware",
+      "material": "M5 x 12 button head, A2 stainless",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 430.54546,
+      "bounds_mm": [
+        830.25,
+        1185.243244,
+        935.145258,
+        839.759009,
+        1194.756756,
+        949.909009
+      ],
+      "notes": [
+        "Shank ends inside the 20100 top slot; the T-nut is not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_FOOT_SCREW_R_1_2",
+      "part_number": "STD_M5x12_ISO7380",
+      "group": "atc_hardware",
+      "material": "M5 x 12 button head, A2 stainless",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 430.54546,
+      "bounds_mm": [
+        870.25,
+        1185.243244,
+        935.145258,
+        879.759009,
+        1194.756756,
+        949.909009
+      ],
+      "notes": [
+        "Shank ends inside the 20100 top slot; the T-nut is not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_FOOT_R_2",
+      "part_number": "MOD_ATC_FOOT_60x40",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 14938.26966,
+      "bounds_mm": [
+        825.0,
+        1240.0,
+        940.794784,
+        885.0,
+        1280.0,
+        947.155216
+      ],
+      "notes": [
+        "1/4 in steel, welded under the beam tube. Two M5 x 12 button screws into M5 T-nuts in the strip top slots at X835 and X875. The T-nuts are not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_FOOT_SCREW_R_2_1",
+      "part_number": "STD_M5x12_ISO7380",
+      "group": "atc_hardware",
+      "material": "M5 x 12 button head, A2 stainless",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 430.54546,
+      "bounds_mm": [
+        830.25,
+        1255.243244,
+        935.145258,
+        839.759009,
+        1264.756756,
+        949.909009
+      ],
+      "notes": [
+        "Shank ends inside the 20100 top slot; the T-nut is not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_FOOT_SCREW_R_2_2",
+      "part_number": "STD_M5x12_ISO7380",
+      "group": "atc_hardware",
+      "material": "M5 x 12 button head, A2 stainless",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 430.54546,
+      "bounds_mm": [
+        870.25,
+        1255.243244,
+        935.145258,
+        879.759009,
+        1264.756756,
+        949.909009
+      ],
+      "notes": [
+        "Shank ends inside the 20100 top slot; the T-nut is not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_BEAM_R",
+      "part_number": "MOD_ATC_BEAM_1x2_285",
+      "group": "atc",
+      "material": "1 x 2 x .083 in steel rectangular tube",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 86493.09504,
+      "bounds_mm": [
+        842.3,
+        1160.0,
+        947.15,
+        867.7,
+        1445.0,
+        997.95
+      ],
+      "notes": [
+        "Welded to its two feet and to the seat bar; stands 6.35 mm off the strip between the feet.",
+        "Cantilevers 165 mm behind the rear foot, past the module rear edge (Y1347.8) to Y1445."
+      ]
+    },
+    {
+      "id": "MOD_ATC_SEAT_R",
+      "part_number": "MOD_ATC_RAIL_SEAT_285",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 65024.28508,
+      "bounds_mm": [
+        842.3,
+        1160.0,
+        997.947629,
+        867.7,
+        1445.0,
+        1007.002371
+      ],
+      "notes": [
+        "Steel bar 25.4 x 9.05 (from 3/8 in), welded on the tube, then machined flat at Z1007 with the module level. M3 tapped at the rail pitch (tap drill 2.5 shown), 6 deep."
+      ]
+    },
+    {
+      "id": "MOD_ATC_RAIL_R",
+      "part_number": "HIWIN_MGNR12_281",
+      "group": "atc_guides",
+      "material": "HIWIN MGNR12 rail, cut to 281 mm",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 25206.00706,
+      "bounds_mm": [
+        849.0,
+        1162.0,
+        1006.996681,
+        861.0,
+        1443.0,
+        1015.00569
+      ],
+      "notes": [
+        "Cut 281 mm with the first hole 10 mm from the front end (11 holes at 25 mm). M3 x 8 screws into the seat."
+      ]
+    },
+    {
+      "id": "MOD_ATC_FRONT_STOP",
+      "part_number": "MOD_ATC_FRONT_STOP",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 3247.2,
+      "bounds_mm": [
+        867.7,
+        1173.0,
+        962.0,
+        880.0,
+        1185.0,
+        984.0
+      ],
+      "notes": [
+        "Welded to the right beam outer face. Its rear face (Y1185) is the deployed datum: fit it after welding, then probe the pocket reference."
+      ]
+    },
+    {
+      "id": "MOD_ATC_REAR_STOP",
+      "part_number": "MOD_ATC_REAR_STOP",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 3247.2,
+      "bounds_mm": [
+        867.7,
+        1421.0,
+        962.0,
+        880.0,
+        1433.0,
+        984.0
+      ],
+      "notes": [
+        "Welded to the right beam outer face. Soft end stop for the parked position; the drive tab stops 0-2 mm short."
+      ]
+    },
+    {
+      "id": "MOD_ATC_PULLEY_BRACKET_F",
+      "part_number": "MOD_ATC_PULLEY_BRACKET",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 2772.0,
+      "bounds_mm": [
+        867.7,
+        1161.0,
+        985.0,
+        874.0,
+        1183.0,
+        1005.0
+      ],
+      "notes": [
+        "Carries the pulley shaft (8 mm, flanged bearing), welded to the right beam outer face. Shaft not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_PULLEY_BRACKET_R",
+      "part_number": "MOD_ATC_PULLEY_BRACKET",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 2520.0,
+      "bounds_mm": [
+        867.7,
+        1425.0,
+        985.0,
+        874.0,
+        1445.0,
+        1005.0
+      ],
+      "notes": [
+        "Carries the pulley shaft (8 mm, flanged bearing), welded to the right beam outer face. Shaft not modeled."
+      ]
+    },
+    {
+      "id": "MOD_ATC_PULLEY_F",
+      "part_number": "GT2_20T_8MM_BORE",
+      "group": "atc_drive",
+      "material": "GT2 20-tooth pulley, 6 mm belt, 8 mm bore (flanged envelope)",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 3216.99088,
+      "bounds_mm": [
+        874.984827,
+        1164.0,
+        986.988621,
+        891.015173,
+        1180.015173,
+        1003.011379
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_PULLEY_R",
+      "part_number": "GT2_20T_8MM_BORE",
+      "group": "atc_drive",
+      "material": "GT2 20-tooth pulley, 6 mm belt, 8 mm bore (flanged envelope)",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 3216.99088,
+      "bounds_mm": [
+        874.984827,
+        1428.0,
+        986.988621,
+        891.015173,
+        1444.015173,
+        1003.011379
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BELT_UPPER",
+      "part_number": "GT2_6MM_BELT",
+      "group": "atc_drive",
+      "material": "GT2 6 mm belt, closed loop by the clamp",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 2217.6,
+      "bounds_mm": [
+        877.5,
+        1172.0,
+        1000.6,
+        883.5,
+        1436.0,
+        1002.0
+      ],
+      "notes": [
+        "Straight runs between the pulley centres; the wraps are inside the pulley envelopes."
+      ]
+    },
+    {
+      "id": "MOD_ATC_BELT_LOWER",
+      "part_number": "GT2_6MM_BELT",
+      "group": "atc_drive",
+      "material": "GT2 6 mm belt, closed loop by the clamp",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 2217.6,
+      "bounds_mm": [
+        877.5,
+        1172.0,
+        988.0,
+        883.5,
+        1436.0,
+        989.4
+      ],
+      "notes": [
+        "Straight runs between the pulley centres; the wraps are inside the pulley envelopes."
+      ]
+    },
+    {
+      "id": "MOD_ATC_GEARMOTOR",
+      "part_number": "24V_WORM_GEARMOTOR_30RPM",
+      "group": "atc_drive",
+      "material": "24 V DC worm gearmotor, about 30 rpm, 8 mm output shaft (envelope)",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 73500.0,
+      "bounds_mm": [
+        891.0,
+        1415.0,
+        975.0,
+        940.0,
+        1445.0,
+        1025.0
+      ],
+      "notes": [
+        "Self-locking worm holds the carrier against the stops. 30 rpm on a 20T GT2 pulley is about 20 mm/s (200 mm in 10 s).",
+        "Envelope 49 x 30 x 50; select the actual unit and fit its face to the motor plate."
+      ]
+    },
+    {
+      "id": "MOD_ATC_MOTOR_PLATE",
+      "part_number": "MOD_ATC_MOTOR_PLATE",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 30423.78,
+      "bounds_mm": [
+        842.3,
+        1445.0,
+        947.15,
+        940.0,
+        1449.0,
+        1025.0
+      ],
+      "notes": [
+        "3/16 in steel, welded to the right beam end; the gearmotor and connector bracket bolt to it."
+      ]
+    },
+    {
+      "id": "MOD_ATC_CONNECTOR",
+      "part_number": "M12_8PIN_PANEL_RECEPTACLE",
+      "group": "atc_electrical",
+      "material": "M12 8-pin panel receptacle with its mating plug (envelope)",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 17600.0,
+      "bounds_mm": [
+        895.0,
+        1420.0,
+        948.0,
+        935.0,
+        1440.0,
+        970.0
+      ],
+      "notes": [
+        "One plug for the gearmotor and both sensors; unplug it before the bed lift. The magazine cover/IR lead is a second plug, not yet defined."
+      ]
+    },
+    {
+      "id": "MOD_ATC_CONNECTOR_BRACKET",
+      "part_number": "MOD_ATC_CONNECTOR_BRACKET",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 4400.0,
+      "bounds_mm": [
+        895.0,
+        1440.0,
+        948.0,
+        935.0,
+        1445.0,
+        970.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_SENSOR_BASE_DEPLOYED",
+      "part_number": "MOD_ATC_SENSOR_BASE",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 3876.0,
+      "bounds_mm": [
+        867.7,
+        1193.0,
+        950.0,
+        900.0,
+        1213.0,
+        956.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_SENSOR_UPRIGHT_DEPLOYED",
+      "part_number": "MOD_ATC_SENSOR_UPRIGHT",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 2803.13896,
+      "bounds_mm": [
+        893.992224,
+        1193.0,
+        956.0,
+        900.007776,
+        1213.0,
+        982.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_SENSOR_DEPLOYED",
+      "part_number": "M8_INDUCTIVE_PNP_NO_2MM",
+      "group": "atc_electrical",
+      "material": "M8 inductive sensor, PNP NO, 2 mm range, 10-30 V (envelope)",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 2261.94671,
+      "bounds_mm": [
+        877.992413,
+        1199.0,
+        965.99431,
+        923.007587,
+        1207.007587,
+        974.00569
+      ],
+      "notes": [
+        "Face 1.65 mm from the drive tab when the carrier is deployed."
+      ]
+    },
+    {
+      "id": "MOD_ATC_SENSOR_BASE_PARKED",
+      "part_number": "MOD_ATC_SENSOR_BASE",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 3876.0,
+      "bounds_mm": [
+        867.7,
+        1393.0,
+        950.0,
+        900.0,
+        1413.0,
+        956.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_SENSOR_UPRIGHT_PARKED",
+      "part_number": "MOD_ATC_SENSOR_UPRIGHT",
+      "group": "atc",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 2803.13896,
+      "bounds_mm": [
+        893.992224,
+        1393.0,
+        956.0,
+        900.007776,
+        1413.0,
+        982.0
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_SENSOR_PARKED",
+      "part_number": "M8_INDUCTIVE_PNP_NO_2MM",
+      "group": "atc_electrical",
+      "material": "M8 inductive sensor, PNP NO, 2 mm range, 10-30 V (envelope)",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 2261.94671,
+      "bounds_mm": [
+        877.992413,
+        1399.0,
+        965.99431,
+        923.007587,
+        1407.007587,
+        974.00569
+      ],
+      "notes": [
+        "Face 1.65 mm from the drive tab when the carrier is parked."
+      ]
+    },
+    {
+      "id": "MOD_ATC_CARRIER",
+      "part_number": "MOD_ATC_CARRIER",
+      "group": "atc_moving",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 192451.35514,
+      "bounds_mm": [
+        280.0,
+        1065.0,
+        1019.994784,
+        870.0,
+        1232.0,
+        1026.355216
+      ],
+      "notes": [
+        "1/4 in steel, one piece: tray under the magazine and two arms back to the guide blocks. The middle is open behind the tray so the Z body lower end block (Z1040) passes over it.",
+        "Window X335-815 x Y1080-1120 (deployed) for cutters hanging below the pockets."
+      ]
+    },
+    {
+      "id": "MOD_ATC_UPSTAND_FRONT",
+      "part_number": "MOD_ATC_UPSTAND_FRONT",
+      "group": "atc_moving",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 53573.045,
+      "bounds_mm": [
+        336.0,
+        1065.0,
+        1026.35,
+        814.0,
+        1071.35,
+        1044.0
+      ],
+      "notes": [
+        "1/4 in steel strip on edge, welded to the tray; stiffens it as a channel."
+      ]
+    },
+    {
+      "id": "MOD_ATC_UPSTAND_REAR",
+      "part_number": "MOD_ATC_UPSTAND_REAR",
+      "group": "atc_moving",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 59401.075,
+      "bounds_mm": [
+        310.0,
+        1133.65,
+        1026.35,
+        840.0,
+        1140.0,
+        1044.0
+      ],
+      "notes": [
+        "1/4 in steel strip on edge, welded to the tray; stiffens it as a channel."
+      ]
+    },
+    {
+      "id": "MOD_ATC_SADDLE_L",
+      "part_number": "MOD_ATC_SADDLE_BLANK_40x65",
+      "group": "atc_moving",
+      "material": "Aluminum plate 1/4 in; alloy to verify",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 16011.27217,
+      "bounds_mm": [
+        295.0,
+        1065.0,
+        1043.995258,
+        335.0,
+        1130.0,
+        1050.354742
+      ],
+      "notes": [
+        "BLANK magazine interface: only the four riser holes (tap M5; drawn at 5.0). Drill the magazine holes from the supplier drawing or the delivered part."
+      ]
+    },
+    {
+      "id": "MOD_ATC_SADDLE_R",
+      "part_number": "MOD_ATC_SADDLE_BLANK_40x65",
+      "group": "atc_moving",
+      "material": "Aluminum plate 1/4 in; alloy to verify",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 16011.27217,
+      "bounds_mm": [
+        815.0,
+        1065.0,
+        1043.995258,
+        855.0,
+        1130.0,
+        1050.354742
+      ],
+      "notes": [
+        "BLANK magazine interface: only the four riser holes (tap M5; drawn at 5.0). Drill the magazine holes from the supplier drawing or the delivered part."
+      ]
+    },
+    {
+      "id": "MOD_ATC_RISER_1",
+      "part_number": "MOD_ATC_RISER_12x17p65",
+      "group": "atc_moving",
+      "material": "Steel spacer 12 OD x 5.5 ID x 17.65",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1576.83408,
+      "bounds_mm": [
+        308.0,
+        1068.991466,
+        1026.33862,
+        320.01138,
+        1081.008534,
+        1044.01138
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_RISER_SCREW_1",
+      "part_number": "STD_M5x30_ISO4762",
+      "group": "atc_hardware",
+      "material": "M5 x 30 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 872.77371,
+      "bounds_mm": [
+        309.75,
+        1070.743955,
+        1014.991939,
+        318.258061,
+        1079.256045,
+        1050.004742
+      ],
+      "notes": [
+        "From below: head under the tray (Z1015), threads into the saddle."
+      ]
+    },
+    {
+      "id": "MOD_ATC_RISER_2",
+      "part_number": "MOD_ATC_RISER_12x17p65",
+      "group": "atc_moving",
+      "material": "Steel spacer 12 OD x 5.5 ID x 17.65",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1576.83408,
+      "bounds_mm": [
+        308.0,
+        1113.991466,
+        1026.33862,
+        320.01138,
+        1126.008534,
+        1044.01138
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_RISER_SCREW_2",
+      "part_number": "STD_M5x30_ISO4762",
+      "group": "atc_hardware",
+      "material": "M5 x 30 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 872.77371,
+      "bounds_mm": [
+        309.75,
+        1115.743955,
+        1014.991939,
+        318.258061,
+        1124.256045,
+        1050.004742
+      ],
+      "notes": [
+        "From below: head under the tray (Z1015), threads into the saddle."
+      ]
+    },
+    {
+      "id": "MOD_ATC_RISER_3",
+      "part_number": "MOD_ATC_RISER_12x17p65",
+      "group": "atc_moving",
+      "material": "Steel spacer 12 OD x 5.5 ID x 17.65",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1576.83408,
+      "bounds_mm": [
+        322.0,
+        1068.991466,
+        1026.33862,
+        334.01138,
+        1081.008534,
+        1044.01138
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_RISER_SCREW_3",
+      "part_number": "STD_M5x30_ISO4762",
+      "group": "atc_hardware",
+      "material": "M5 x 30 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 872.77371,
+      "bounds_mm": [
+        323.75,
+        1070.743955,
+        1014.991939,
+        332.258061,
+        1079.256045,
+        1050.004742
+      ],
+      "notes": [
+        "From below: head under the tray (Z1015), threads into the saddle."
+      ]
+    },
+    {
+      "id": "MOD_ATC_RISER_4",
+      "part_number": "MOD_ATC_RISER_12x17p65",
+      "group": "atc_moving",
+      "material": "Steel spacer 12 OD x 5.5 ID x 17.65",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1576.83408,
+      "bounds_mm": [
+        322.0,
+        1113.991466,
+        1026.33862,
+        334.01138,
+        1126.008534,
+        1044.01138
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_RISER_SCREW_4",
+      "part_number": "STD_M5x30_ISO4762",
+      "group": "atc_hardware",
+      "material": "M5 x 30 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 872.77371,
+      "bounds_mm": [
+        323.75,
+        1115.743955,
+        1014.991939,
+        332.258061,
+        1124.256045,
+        1050.004742
+      ],
+      "notes": [
+        "From below: head under the tray (Z1015), threads into the saddle."
+      ]
+    },
+    {
+      "id": "MOD_ATC_RISER_5",
+      "part_number": "MOD_ATC_RISER_12x17p65",
+      "group": "atc_moving",
+      "material": "Steel spacer 12 OD x 5.5 ID x 17.65",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1576.83408,
+      "bounds_mm": [
+        816.0,
+        1068.991466,
+        1026.33862,
+        828.01138,
+        1081.008534,
+        1044.01138
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_RISER_SCREW_5",
+      "part_number": "STD_M5x30_ISO4762",
+      "group": "atc_hardware",
+      "material": "M5 x 30 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 872.77371,
+      "bounds_mm": [
+        817.75,
+        1070.743955,
+        1014.991939,
+        826.258061,
+        1079.256045,
+        1050.004742
+      ],
+      "notes": [
+        "From below: head under the tray (Z1015), threads into the saddle."
+      ]
+    },
+    {
+      "id": "MOD_ATC_RISER_6",
+      "part_number": "MOD_ATC_RISER_12x17p65",
+      "group": "atc_moving",
+      "material": "Steel spacer 12 OD x 5.5 ID x 17.65",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1576.83408,
+      "bounds_mm": [
+        816.0,
+        1113.991466,
+        1026.33862,
+        828.01138,
+        1126.008534,
+        1044.01138
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_RISER_SCREW_6",
+      "part_number": "STD_M5x30_ISO4762",
+      "group": "atc_hardware",
+      "material": "M5 x 30 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 872.77371,
+      "bounds_mm": [
+        817.75,
+        1115.743955,
+        1014.991939,
+        826.258061,
+        1124.256045,
+        1050.004742
+      ],
+      "notes": [
+        "From below: head under the tray (Z1015), threads into the saddle."
+      ]
+    },
+    {
+      "id": "MOD_ATC_RISER_7",
+      "part_number": "MOD_ATC_RISER_12x17p65",
+      "group": "atc_moving",
+      "material": "Steel spacer 12 OD x 5.5 ID x 17.65",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1576.83408,
+      "bounds_mm": [
+        830.0,
+        1068.991466,
+        1026.33862,
+        842.01138,
+        1081.008534,
+        1044.01138
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_RISER_SCREW_7",
+      "part_number": "STD_M5x30_ISO4762",
+      "group": "atc_hardware",
+      "material": "M5 x 30 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 872.77371,
+      "bounds_mm": [
+        831.75,
+        1070.743955,
+        1014.991939,
+        840.258061,
+        1079.256045,
+        1050.004742
+      ],
+      "notes": [
+        "From below: head under the tray (Z1015), threads into the saddle."
+      ]
+    },
+    {
+      "id": "MOD_ATC_RISER_8",
+      "part_number": "MOD_ATC_RISER_12x17p65",
+      "group": "atc_moving",
+      "material": "Steel spacer 12 OD x 5.5 ID x 17.65",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1576.83408,
+      "bounds_mm": [
+        830.0,
+        1113.991466,
+        1026.33862,
+        842.01138,
+        1126.008534,
+        1044.01138
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_RISER_SCREW_8",
+      "part_number": "STD_M5x30_ISO4762",
+      "group": "atc_hardware",
+      "material": "M5 x 30 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 872.77371,
+      "bounds_mm": [
+        831.75,
+        1115.743955,
+        1014.991939,
+        840.258061,
+        1124.256045,
+        1050.004742
+      ],
+      "notes": [
+        "From below: head under the tray (Z1015), threads into the saddle."
+      ]
+    },
+    {
+      "id": "MOD_ATC_BLOCK_L",
+      "part_number": "HIWIN_MGN12H",
+      "group": "atc_guides",
+      "material": "HIWIN MGN12H block",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 9313.85583,
+      "bounds_mm": [
+        281.5,
+        1177.1,
+        1010.0,
+        308.5,
+        1222.9,
+        1020.002845
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_WASHER_L_1",
+      "part_number": "WASHER_M3_7x0p5",
+      "group": "atc_hardware",
+      "material": "steel washer",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 15.22102,
+      "bounds_mm": [
+        281.5,
+        1186.495022,
+        1026.343362,
+        288.506638,
+        1193.504978,
+        1026.856638
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_SCREW_L_1",
+      "part_number": "STD_M3x10_ISO4762",
+      "group": "atc_hardware",
+      "material": "M3 x 10 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        282.25,
+        1187.246088,
+        1016.847155,
+        287.755216,
+        1192.753912,
+        1029.855216
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_WASHER_L_2",
+      "part_number": "WASHER_M3_7x0p5",
+      "group": "atc_hardware",
+      "material": "steel washer",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 15.22102,
+      "bounds_mm": [
+        281.5,
+        1206.495022,
+        1026.343362,
+        288.506638,
+        1213.504978,
+        1026.856638
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_SCREW_L_2",
+      "part_number": "STD_M3x10_ISO4762",
+      "group": "atc_hardware",
+      "material": "M3 x 10 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        282.25,
+        1207.246088,
+        1016.847155,
+        287.755216,
+        1212.753912,
+        1029.855216
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_WASHER_L_3",
+      "part_number": "WASHER_M3_7x0p5",
+      "group": "atc_hardware",
+      "material": "steel washer",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 15.22102,
+      "bounds_mm": [
+        301.5,
+        1186.495022,
+        1026.343362,
+        308.506638,
+        1193.504978,
+        1026.856638
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_SCREW_L_3",
+      "part_number": "STD_M3x10_ISO4762",
+      "group": "atc_hardware",
+      "material": "M3 x 10 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        302.25,
+        1187.246088,
+        1016.847155,
+        307.755216,
+        1192.753912,
+        1029.855216
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_WASHER_L_4",
+      "part_number": "WASHER_M3_7x0p5",
+      "group": "atc_hardware",
+      "material": "steel washer",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 15.22102,
+      "bounds_mm": [
+        301.5,
+        1206.495022,
+        1026.343362,
+        308.506638,
+        1213.504978,
+        1026.856638
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_SCREW_L_4",
+      "part_number": "STD_M3x10_ISO4762",
+      "group": "atc_hardware",
+      "material": "M3 x 10 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        302.25,
+        1207.246088,
+        1016.847155,
+        307.755216,
+        1212.753912,
+        1029.855216
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_R",
+      "part_number": "HIWIN_MGN12H",
+      "group": "atc_guides",
+      "material": "HIWIN MGN12H block",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 9313.85583,
+      "bounds_mm": [
+        841.5,
+        1177.1,
+        1010.0,
+        868.5,
+        1222.9,
+        1020.002845
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_WASHER_R_1",
+      "part_number": "WASHER_M3_7x0p5",
+      "group": "atc_hardware",
+      "material": "steel washer",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 15.22102,
+      "bounds_mm": [
+        841.5,
+        1186.495022,
+        1026.343362,
+        848.506638,
+        1193.504978,
+        1026.856638
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_SCREW_R_1",
+      "part_number": "STD_M3x10_ISO4762",
+      "group": "atc_hardware",
+      "material": "M3 x 10 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        842.25,
+        1187.246088,
+        1016.847155,
+        847.755216,
+        1192.753912,
+        1029.855216
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_WASHER_R_2",
+      "part_number": "WASHER_M3_7x0p5",
+      "group": "atc_hardware",
+      "material": "steel washer",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 15.22102,
+      "bounds_mm": [
+        841.5,
+        1206.495022,
+        1026.343362,
+        848.506638,
+        1213.504978,
+        1026.856638
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_SCREW_R_2",
+      "part_number": "STD_M3x10_ISO4762",
+      "group": "atc_hardware",
+      "material": "M3 x 10 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        842.25,
+        1207.246088,
+        1016.847155,
+        847.755216,
+        1212.753912,
+        1029.855216
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_WASHER_R_3",
+      "part_number": "WASHER_M3_7x0p5",
+      "group": "atc_hardware",
+      "material": "steel washer",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 15.22102,
+      "bounds_mm": [
+        861.5,
+        1186.495022,
+        1026.343362,
+        868.506638,
+        1193.504978,
+        1026.856638
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_SCREW_R_3",
+      "part_number": "STD_M3x10_ISO4762",
+      "group": "atc_hardware",
+      "material": "M3 x 10 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        862.25,
+        1187.246088,
+        1016.847155,
+        867.755216,
+        1192.753912,
+        1029.855216
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_WASHER_R_4",
+      "part_number": "WASHER_M3_7x0p5",
+      "group": "atc_hardware",
+      "material": "steel washer",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 15.22102,
+      "bounds_mm": [
+        861.5,
+        1206.495022,
+        1026.343362,
+        868.506638,
+        1213.504978,
+        1026.856638
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_BLOCK_SCREW_R_4",
+      "part_number": "STD_M3x10_ISO4762",
+      "group": "atc_hardware",
+      "material": "M3 x 10 socket head, class 8.8",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 141.96072,
+      "bounds_mm": [
+        862.25,
+        1207.246088,
+        1016.847155,
+        867.755216,
+        1212.753912,
+        1029.855216
+      ],
+      "notes": []
+    },
+    {
+      "id": "MOD_ATC_DRIVE_TAB",
+      "part_number": "MOD_ATC_DRIVE_TAB",
+      "group": "atc_moving",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 14024.61,
+      "bounds_mm": [
+        870.0,
+        1185.0,
+        965.0,
+        876.35,
+        1221.0,
+        1026.35
+      ],
+      "notes": [
+        "1/4 in steel, welded to the right arm outer edge. Its front face stops on the front stop (deployed datum); the sensors read its outer face."
+      ]
+    },
+    {
+      "id": "MOD_ATC_BELT_CLAMP",
+      "part_number": "MOD_ATC_BELT_CLAMP",
+      "group": "atc_moving",
+      "material": "A36 steel",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 1235.2,
+      "bounds_mm": [
+        876.35,
+        1195.0,
+        998.0,
+        886.0,
+        1211.0,
+        1006.0
+      ],
+      "notes": [
+        "Clamps both belt ends. Bolt it to the tab through a slot with a stiff spring so the belt runs about 2 mm on after the tab reaches the front stop: the self-locking worm then holds that preload."
+      ]
+    },
+    {
+      "id": "MOD_ATC_MAGAZINE_ALLOCATION",
+      "part_number": "RAPIDCHANGE_ER11_MAGAZINE_ALLOCATION",
+      "group": "atc_allocation",
+      "material": "RapidChange ER11 linear magazine: allocation only",
+      "status": "SUPPLIER ALLOCATION - NOT A PURCHASED-PART DRAWING",
+      "purchased_envelope": true,
+      "volume_mm3": 2496000.0,
+      "bounds_mm": [
+        315.0,
+        1070.0,
+        1050.35,
+        835.0,
+        1130.0,
+        1130.35
+      ],
+      "notes": [
+        "520 x 60 x 80 mm allocation (the other session's), pocket line Y1100 deployed. Not a supplier drawing: length, pocket pitch, mounting holes, nut datum and cover sweep come from the delivered kit."
+      ]
+    },
+    {
+      "id": "MOD_ATC_STORED_TOOLS_ALLOCATION",
+      "part_number": "STORED_CUTTER_ALLOCATION",
+      "group": "atc_allocation",
+      "material": "Stored ER11 cutters: allocation only",
+      "status": "SUPPLIER ALLOCATION - NOT A PURCHASED-PART DRAWING",
+      "purchased_envelope": true,
+      "volume_mm3": 263160.0,
+      "bounds_mm": [
+        335.0,
+        1092.5,
+        1013.8,
+        815.0,
+        1107.5,
+        1050.35
+      ],
+      "notes": [
+        "Cutters up to 15 mm OD hanging at most 36.55 mm below the magazine base (Z1013.8)."
+      ]
+    }
+  ],
+  "part_count": 79,
+  "broadphase_pairs": 105,
+  "unresolved_intersections": [],
+  "documented_intersections": [
+    {
+      "a": "MOD_ATC_PULLEY_F",
+      "b": "MOD_ATC_BELT_UPPER",
+      "intersection_mm3": 41.03921,
+      "reason": "Belt run ends at the pulley centre; the belt wraps the pulley."
+    },
+    {
+      "a": "MOD_ATC_PULLEY_F",
+      "b": "MOD_ATC_BELT_LOWER",
+      "intersection_mm3": 41.03921,
+      "reason": "Belt run ends at the pulley centre; the belt wraps the pulley."
+    },
+    {
+      "a": "MOD_ATC_PULLEY_R",
+      "b": "MOD_ATC_BELT_UPPER",
+      "intersection_mm3": 41.03921,
+      "reason": "Belt run ends at the pulley centre; the belt wraps the pulley."
+    },
+    {
+      "a": "MOD_ATC_PULLEY_R",
+      "b": "MOD_ATC_BELT_LOWER",
+      "intersection_mm3": 41.03921,
+      "reason": "Belt run ends at the pulley centre; the belt wraps the pulley."
+    },
+    {
+      "a": "MOD_ATC_BELT_UPPER",
+      "b": "MOD_ATC_BELT_CLAMP",
+      "intersection_mm3": 134.4,
+      "reason": "The belt ends are clamped in the carrier clamp (closed loop)."
+    }
+  ],
+  "note": "Positive-volume static interference test, not a strength or motion certification.",
+  "step_readback": {
+    "passed": true,
+    "solids": 79,
+    "volume_delta_mm3": 4.6566128730773926e-09,
+    "volume_tolerance_mm3": 0.37344556070484675,
+    "sha256": "486ef9564e132aaf34069da2b291d52599e8f7de94f46c17254022ea3f64228f",
+    "file": "RevL_DOCK.step"
+  }
+}

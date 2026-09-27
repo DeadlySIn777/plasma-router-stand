@@ -2,6 +2,8 @@
 
 **GM1 — Garcia Mechanical Table.** Working design for review, **not released for purchasing, fabrication, CAM or operation.** Amber parts in the previews are purchased-part envelopes whose interfaces are not all verified.
 
+> **Continued as [Rev L](../RevL-CAD/README.md) (27 September 2026).** Rev L keeps Rev K unchanged and adds a 300 mm Z and the owner's RapidChange tool changer, mounted on the bed module. With Rev L, the bed-change steps below gain two (deploy the tool changer, unplug it), the hook moves over Y745 and the roll is 1.52 m.
+
 Rev K is where the one-piece bed line stands after the owner's "finish it" (27 September 2026). It is [Rev J](../RevJ-CAD/README.md) with three additions:
 
 - The other session's **Rev I head, plumbing and cabinet**, adopted and adapted to the one-piece bed.

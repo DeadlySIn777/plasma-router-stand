@@ -1,0 +1,627 @@
+[
+  {
+    "part_number": "MOD_ATC_FOOT_60x40",
+    "quantity": 4,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          60,
+          0
+        ],
+        [
+          60,
+          40.0
+        ],
+        [
+          0,
+          40.0
+        ]
+      ],
+      "thickness_mm": 6.35,
+      "holes": [
+        [
+          10,
+          20,
+          5.5
+        ],
+        [
+          50,
+          20,
+          5.5
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "1/4 in steel, welded under the beam tube. Two M5 x 12 button screws into M5 T-nuts in the strip top slots at X275 and X315. The T-nuts are not modeled."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "STD_M5x12_ISO7380",
+    "quantity": 8,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Shank ends inside the 20100 top slot; the T-nut is not modeled."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "MOD_ATC_BEAM_1x2_285",
+    "quantity": 2,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Welded to its two feet and to the seat bar; stands 6.35 mm off the strip between the feet.",
+      "Cantilevers 165 mm behind the rear foot, past the module rear edge (Y1347.8) to Y1445."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "MOD_ATC_RAIL_SEAT_285",
+    "quantity": 2,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          25.4,
+          0
+        ],
+        [
+          25.4,
+          285.0
+        ],
+        [
+          0,
+          285.0
+        ]
+      ],
+      "thickness_mm": 9.050000000000068,
+      "holes": [
+        [
+          12.7,
+          12.0,
+          2.5
+        ],
+        [
+          12.7,
+          37.0,
+          2.5
+        ],
+        [
+          12.7,
+          62.0,
+          2.5
+        ],
+        [
+          12.7,
+          87.0,
+          2.5
+        ],
+        [
+          12.7,
+          112.0,
+          2.5
+        ],
+        [
+          12.7,
+          137.0,
+          2.5
+        ],
+        [
+          12.7,
+          162.0,
+          2.5
+        ],
+        [
+          12.7,
+          187.0,
+          2.5
+        ],
+        [
+          12.7,
+          212.0,
+          2.5
+        ],
+        [
+          12.7,
+          237.0,
+          2.5
+        ],
+        [
+          12.7,
+          262.0,
+          2.5
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "Steel bar 25.4 x 9.05 (from 3/8 in), welded on the tube, then machined flat at Z1007 with the module level. M3 tapped at the rail pitch (tap drill 2.5 shown), 6 deep."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "HIWIN_MGNR12_281",
+    "quantity": 2,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Cut 281 mm with the first hole 10 mm from the front end (11 holes at 25 mm). M3 x 8 screws into the seat."
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "MOD_ATC_FRONT_STOP",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Welded to the right beam outer face. Its rear face (Y1185) is the deployed datum: fit it after welding, then probe the pocket reference."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "MOD_ATC_REAR_STOP",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Welded to the right beam outer face. Soft end stop for the parked position; the drive tab stops 0-2 mm short."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "MOD_ATC_PULLEY_BRACKET",
+    "quantity": 2,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Carries the pulley shaft (8 mm, flanged bearing), welded to the right beam outer face. Shaft not modeled."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "GT2_20T_8MM_BORE",
+    "quantity": 2,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "GT2_6MM_BELT",
+    "quantity": 2,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Straight runs between the pulley centres; the wraps are inside the pulley envelopes."
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "24V_WORM_GEARMOTOR_30RPM",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Self-locking worm holds the carrier against the stops. 30 rpm on a 20T GT2 pulley is about 20 mm/s (200 mm in 10 s).",
+      "Envelope 49 x 30 x 50; select the actual unit and fit its face to the motor plate."
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "MOD_ATC_MOTOR_PLATE",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "3/16 in steel, welded to the right beam end; the gearmotor and connector bracket bolt to it."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "M12_8PIN_PANEL_RECEPTACLE",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "One plug for the gearmotor and both sensors; unplug it before the bed lift. The magazine cover/IR lead is a second plug, not yet defined."
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "MOD_ATC_CONNECTOR_BRACKET",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "MOD_ATC_SENSOR_BASE",
+    "quantity": 2,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "MOD_ATC_SENSOR_UPRIGHT",
+    "quantity": 2,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "M8_INDUCTIVE_PNP_NO_2MM",
+    "quantity": 2,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Face 1.65 mm from the drive tab when the carrier is deployed."
+    ],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "MOD_ATC_CARRIER",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          590.0,
+          0
+        ],
+        [
+          590.0,
+          167.0
+        ],
+        [
+          560.0,
+          167.0
+        ],
+        [
+          560.0,
+          75.0
+        ],
+        [
+          30.0,
+          75.0
+        ],
+        [
+          30.0,
+          167.0
+        ],
+        [
+          0,
+          167.0
+        ]
+      ],
+      "thickness_mm": 6.35,
+      "holes": [
+        [
+          5.0,
+          125.0,
+          3.4
+        ],
+        [
+          5.0,
+          145.0,
+          3.4
+        ],
+        [
+          25.0,
+          125.0,
+          3.4
+        ],
+        [
+          25.0,
+          145.0,
+          3.4
+        ],
+        [
+          565.0,
+          125.0,
+          3.4
+        ],
+        [
+          565.0,
+          145.0,
+          3.4
+        ],
+        [
+          585.0,
+          125.0,
+          3.4
+        ],
+        [
+          585.0,
+          145.0,
+          3.4
+        ],
+        [
+          34.0,
+          10.0,
+          5.5
+        ],
+        [
+          34.0,
+          55.0,
+          5.5
+        ],
+        [
+          48.0,
+          10.0,
+          5.5
+        ],
+        [
+          48.0,
+          55.0,
+          5.5
+        ],
+        [
+          542.0,
+          10.0,
+          5.5
+        ],
+        [
+          542.0,
+          55.0,
+          5.5
+        ],
+        [
+          556.0,
+          10.0,
+          5.5
+        ],
+        [
+          556.0,
+          55.0,
+          5.5
+        ]
+      ],
+      "slots": [],
+      "internal": [
+        [
+          [
+            55.0,
+            15.0
+          ],
+          [
+            535.0,
+            15.0
+          ],
+          [
+            535.0,
+            55.0
+          ],
+          [
+            55.0,
+            55.0
+          ]
+        ]
+      ]
+    },
+    "notes": [
+      "1/4 in steel, one piece: tray under the magazine and two arms back to the guide blocks. The middle is open behind the tray so the Z body lower end block (Z1040) passes over it.",
+      "Window X335-815 x Y1080-1120 (deployed) for cutters hanging below the pockets."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "MOD_ATC_UPSTAND_FRONT",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "1/4 in steel strip on edge, welded to the tray; stiffens it as a channel."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "MOD_ATC_UPSTAND_REAR",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "1/4 in steel strip on edge, welded to the tray; stiffens it as a channel."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "MOD_ATC_SADDLE_BLANK_40x65",
+    "quantity": 2,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          40,
+          0
+        ],
+        [
+          40,
+          65
+        ],
+        [
+          0,
+          65
+        ]
+      ],
+      "thickness_mm": 6.35,
+      "holes": [
+        [
+          19.0,
+          10,
+          5.0
+        ],
+        [
+          19.0,
+          55,
+          5.0
+        ],
+        [
+          33.0,
+          10,
+          5.0
+        ],
+        [
+          33.0,
+          55,
+          5.0
+        ]
+      ],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "BLANK magazine interface: only the four riser holes (tap M5; drawn at 5.0). Drill the magazine holes from the supplier drawing or the delivered part."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "MOD_ATC_RISER_12x17p65",
+    "quantity": 8,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "STD_M5x30_ISO4762",
+    "quantity": 8,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "From below: head under the tray (Z1015), threads into the saddle."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "HIWIN_MGN12H",
+    "quantity": 2,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "PURCHASED ENVELOPE - VERIFY INTERFACE"
+  },
+  {
+    "part_number": "WASHER_M3_7x0p5",
+    "quantity": 8,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "STD_M3x10_ISO4762",
+    "quantity": 8,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "MOD_ATC_DRIVE_TAB",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "1/4 in steel, welded to the right arm outer edge. Its front face stops on the front stop (deployed datum); the sensors read its outer face."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "MOD_ATC_BELT_CLAMP",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Clamps both belt ends. Bolt it to the tab through a slot with a stiff spring so the belt runs about 2 mm on after the tab reaches the front stop: the self-locking worm then holds that preload."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "RAPIDCHANGE_ER11_MAGAZINE_ALLOCATION",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "520 x 60 x 80 mm allocation (the other session's), pocket line Y1100 deployed. Not a supplier drawing: length, pocket pitch, mounting holes, nut datum and cover sweep come from the delivered kit."
+    ],
+    "release": "SUPPLIER ALLOCATION - NOT A PURCHASED-PART DRAWING"
+  },
+  {
+    "part_number": "STORED_CUTTER_ALLOCATION",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Cutters up to 15 mm OD hanging at most 36.55 mm below the magazine base (Z1013.8)."
+    ],
+    "release": "SUPPLIER ALLOCATION - NOT A PURCHASED-PART DRAWING"
+  },
+  {
+    "part_number": "RATTMOTOR_ZBX80_300",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "ZBX80 with a 300 mm stroke (Rev L). Body 419 x 80 assumed from the 100 mm drawing (stroke + 119); measure on receipt. The lower end and the carriage's lowest position are unchanged.",
+      "Exact base-slot fastening interface remains HOLD; base fastening is measure-on-receipt."
+    ],
+    "release": "PURCHASED CLEARANCE ENVELOPE - NOT MATERIAL MASS"
+  }
+]

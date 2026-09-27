@@ -1,13 +1,15 @@
-# GM1 — Garcia Mechanical Table: two working designs, owner's choice pending
+# GM1 — Garcia Mechanical Table: two working designs, one-piece line chosen
 
 Two sessions developed the design in parallel on 26 September 2026:
 
-- **The one-piece hoisted bed** is what the owner asked for in this session. On 27 September, after the owner said "finish it", that line was completed as **Rev K**.
+- **The one-piece hoisted bed** is what the owner asked for in this session. On 27 September, after the owner said "finish it", that line was completed as **Rev K**, and then given the owner's RapidChange tool changer and a 300 mm Z as **Rev L**.
 - **Rev I** is the other session's six-panel line ([Rev I package](output/release-review/RevI-CAD/README.md), [changes](output/design-finish-2026-09-26/README.md)).
 
 **The owner chose the one-piece line on 27 September.** Rev I stays in the repository as the alternative, and the [README](README.md) compares them.
 
-**Start with the [Rev K CAD package](output/release-review/RevK-CAD/README.md).** It is Rev J's bed with the other session's Rev I head, plumbing and cabinet folded in, plus the review's fixes:
+**Start with the [Rev L CAD package](output/release-review/RevL-CAD/README.md).** It is Rev K with a 300 mm Z and a tool changer that rides on the bed module and lifts out with it. [REVL-PROCUREMENT-DELTA.md](outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md) lists what it adds.
+
+**Then the [Rev K CAD package](output/release-review/RevK-CAD/README.md).** It is Rev J's bed with the other session's Rev I head, plumbing and cabinet folded in, plus the review's fixes:
 
 - plasma reach, with a drop bracket for the owner's PT31-style torch;
 - water and coolant;
@@ -40,4 +42,4 @@ Rev J is the owner's 26 September requirement: one waterproof bed module of abou
   - the BTT Rodent pin plan;
   - the router drain latch, the fill watchdog and the float stop.
 
-The shared source directory remains named RevE-ENGINEERING; Rev K's own sources are in RevK-ENGINEERING, and its generated files are in RevK-CAD. The concept PDF shows Rev I, not Rev K. Fusion has not been verified to load this revision.
+The shared source directory remains named RevE-ENGINEERING; Rev K's own sources are in RevK-ENGINEERING, and its generated files are in RevK-CAD; Rev L's are in RevL-ENGINEERING and RevL-CAD. The concept PDF shows Rev I, not Rev K. Fusion has not been verified to load this revision.

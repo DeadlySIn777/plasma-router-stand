@@ -1,4 +1,5 @@
-"""Exercise the GM1 panel model: Rev I behaviors, the stop, the mode race and welded contacts.
+"""Exercise the GM1 panel model: Rev I behaviors, the stop, the mode race, welded contacts,
+and (M12/M13) spindle reverse and the tool-changer drive.
 
 Writes gm1-circuit-verification.json next to this file, plus the regenerated
 netlist (gm1-terminal-netlist.json, GM1-TERMINALS.md). Every check is a
@@ -607,6 +608,112 @@ def float_stop():
         check('The torch then starts on the next request', s.outputs()['torch_run'], pickup=pick, dropout=drop)
 
 
+def spindle_reverse():
+    """M12: the direction relay chooses FWD or REV; the run chain still starts and stops the spindle."""
+    rows = []
+    for pick, drop in itertools.product(PICKUPS, DROPOUTS):
+        s = running('router', pick, drop)
+        o = s.outputs()
+        check('M3: the run command reaches FWD only', o['fwd_closed'] and not o['rev_closed'] and o['router_run'],
+              pickup=pick, dropout=drop)
+        s.run(.1, spindle_reverse=True)
+        o = s.outputs()
+        check('M4: the run command reaches REV only', o['rev_closed'] and not o['fwd_closed'] and o['router_run'],
+              pickup=pick, dropout=drop)
+        check('M4: the direction status input reports REV', o['direction_status_rev'], pickup=pick, dropout=drop)
+        s.run(.3, run_request=False)
+        check('M4: dropping the request stops the spindle', not s.outputs()['router_run'], pickup=pick, dropout=drop)
+        s.run(.1, spindle_reverse=False)
+        s.run(.3, run_request=True)
+        o = s.outputs()
+        check('Back to M3: FWD only again', o['fwd_closed'] and not o['rev_closed'], pickup=pick, dropout=drop)
+    # FWD and REV never both closed: every direction, request and K_DIR weld, in both modes.
+    for mode, reverse, request, weld in itertools.product(('router', 'plasma'), (False, True), (False, True),
+                                                          (None, ('K_DIR:13-14', True), ('K_DIR:13-14', False))):
+        s = running(mode)
+        if weld:
+            s.weld(*weld)
+        s.run(.2, spindle_reverse=reverse, run_request=request)
+        o = s.outputs()
+        rows.append({'mode': mode, 'reverse': reverse, 'request': request, 'weld': weld and weld[0], 'stuck': weld and weld[1],
+                     'fwd': o['fwd_closed'], 'rev': o['rev_closed']})
+        check('FWD and REV are never both closed', not (o['fwd_closed'] and o['rev_closed']), **rows[-1])
+        check('Plasma mode never runs the spindle in either direction', mode == 'router' or not o['router_run'], **rows[-1])
+    s = started()
+    s.run(5., **ROUTER)
+    s.run(75.4)
+    s.run(.3, spindle_reverse=True, run_request=True)
+    check('SETUP: a reverse request cannot run the spindle', not s.outputs()['router_run'])
+    s = running('router')
+    s.weld('K_DIR:13-14', True)
+    s.run(.2, spindle_reverse=False)
+    welded_runs_reverse = s.outputs()['rev_closed']
+    check('A welded K_DIR shows on the direction status input', s.outputs()['direction_status_rev'])
+    return {'cases': len(rows), 'rows': rows, 'welded_k_dir_runs_reverse_on_m3': welded_runs_reverse,
+            'note': 'A welded K_DIR runs the spindle in reverse on M3; the tool-change macro reads XM:8 before every start.'}
+
+
+def tool_changer_drive():
+    """M13: the dock motor runs only with the stop healthy, the spindle run relay released and a command."""
+    DOCK_OUT = dict(dock_run_cmd=True, dock_in_dir=False, dock_at_parked=False)
+    for pick, drop in itertools.product(PICKUPS, DROPOUTS):
+        s = ready('router', pick, drop)
+        s.run(.1, **DOCK_OUT)
+        o = s.outputs()
+        check('Command out: the dock moves out, not in', o['dock_out'] and not o['dock_in'], pickup=pick, dropout=drop)
+        s.run(.02, dock_at_deployed=True)
+        check('The deployed end switch stops it with the command held', not s.outputs()['dock_out'], pickup=pick, dropout=drop)
+        s.run(.1, dock_in_dir=True)
+        s.run(.02, dock_at_deployed=False)
+        o = s.outputs()
+        check('Command in: the dock moves in, not out', o['dock_in'] and not o['dock_out'], pickup=pick, dropout=drop)
+        s.run(.02, dock_at_parked=True)
+        check('The parked end switch stops it', not s.outputs()['dock_in'], pickup=pick, dropout=drop)
+        s = ready('router', pick, drop)
+        s.run(.1, **DOCK_OUT)
+        s.run(.3, run_request=True)
+        o = s.outputs()
+        check('A spindle start stops a moving dock', o['router_run'] and not o['dock_out'] and not o['dock_in'],
+              pickup=pick, dropout=drop)
+        s = running('router', pick, drop)
+        s.run(.1, **DOCK_OUT)
+        check('The dock cannot move while the spindle runs', not s.outputs()['dock_out'], pickup=pick, dropout=drop)
+        for reverse in (False, True):
+            s = running('router', pick, drop)
+            s.run(.1, spindle_reverse=reverse)
+            s.run(.1, **DOCK_OUT)
+            check('The dock cannot move while the spindle runs, either direction', not s.outputs()['dock_out'],
+                  pickup=pick, dropout=drop, reverse=reverse)
+    for stuck in (False, True):
+        s = running('router')
+        s.weld('K_VFD_RUN:13-14', stuck)
+        s.run(.3, run_request=False)
+        s.run(.1, **DOCK_OUT)
+        check('A welded K_VFD_RUN keeps the dock from moving', not s.outputs()['dock_out'], stuck=stuck)
+    s = ready('router')
+    s.run(.1, **DOCK_OUT)
+    s.run(.3, estop_ch1=False, estop_ch2=False)
+    check('An E-stop stops a moving dock', not s.outputs()['dock_out'] and not s.outputs()['dock_in'])
+    s = started()
+    s.run(5., **ROUTER)
+    s.run(.1, **DOCK_OUT)
+    check('SETUP (bed change): the dock can move with the spindle off', s.outputs()['dock_out'])
+    s = ready('router')
+    s.weld('K_DOCK_RUN:11-14', True)
+    s.run(.1, dock_run_cmd=False, dock_in_dir=False, dock_at_parked=False)
+    runs_on = s.outputs()['dock_out']
+    s.run(.02, dock_at_deployed=True)
+    check('A welded K_DOCK_RUN still stops at the end switch', not s.outputs()['dock_out'], runs_until_end=runs_on)
+    s = ready('router')
+    s.run(.1, dock_run_cmd=True, dock_in_dir=True, dock_at_parked=False, dock_at_deployed=False)
+    s.run(.1, dock_in_dir=False)
+    s.run(.1, dock_in_dir=True)
+    o = s.outputs()
+    check('Direction changes never drive both directions', not (o['dock_out'] and o['dock_in']))
+    return {'note': 'The motor is modeled as one load per direction. Pole 2 of each relay (the motor 0 V and the second '
+                    'polarity pole) and the end-switch back-off diodes are wiring details in the README, not simulated.'}
+
+
 def main():
     start = time.monotonic()
     gm1.write_netlist(OUT)
@@ -627,6 +734,9 @@ def main():
     report['fill_watchdog'] = fill_watchdog()
     float_stop()
     print('watchdog and float', len(CHECKS), flush=True)
+    report['spindle_reverse'] = spindle_reverse()
+    report['tool_changer_drive'] = tool_changer_drive()
+    print('reverse and dock', len(CHECKS), flush=True)
     report['simulation_assumptions'] = {
         'relay_pickup_s': list(PICKUPS), 'relay_dropout_s': list(DROPOUTS), 'contactor_pickup_dropout_s': [list(c) for c in CONTACTOR_TIMING],
         'safety_relay_on_s': .050, 'safety_relay_off_s': .020, 'reset_min_press_s': .030, 'timer_recovery_s': .100,
@@ -642,7 +752,9 @@ def main():
         'if that stage shorts, the tool keeps running after the Rodent drops the request, and only the E-stop stops it.',
         'Water-contact glitches shorter than a relay dropout can still resume a held fill, as in Rev I.',
         'The float stop (M11) is modeled as the existing head-loop input; the float switch itself, its cam and the probe optocoupler are not simulated.',
-        'Mains wiring, contactor and brake sizing, VFD and cutter interfaces, and EMC are specified in the README, not simulated.']
+        'Mains wiring, contactor and brake sizing, VFD and cutter interfaces, and EMC are specified in the README, not simulated.',
+        'M12/M13: the VFD\'s behavior with FWD and REV, its direction-change ramp, the dock motor current and the dock sensors are '
+        'not simulated. The dock is modeled only through its relays and end switches.']
     report['passed_checks'] = len(CHECKS)
     report['checks'] = CHECKS
     report['result'] = 'PASS' if all(c['passed'] for c in CHECKS) else 'FAIL'

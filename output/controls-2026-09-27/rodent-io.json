@@ -194,14 +194,14 @@
       "healthy": "M7 on, M9 off"
     },
     {
-      "signal": "Spare (flood)",
+      "signal": "Spindle direction (K_DIR coil)",
       "connector": "V-MOS HE1",
       "gpio": 2,
       "direction": "out",
       "rt": false,
       "map_define": "AUXOUTPUT2_PIN",
-      "wiring": "Unused.",
-      "healthy": "-"
+      "wiring": "24 V coil of the force-guided K_DIR (G7SA-2A2B) on the V-MOS output, fed like the mist from the 48-to-24 V DC-DC after the E-stop contactors. grblHAL SPINDLE_DIRECTION_PIN: M4 energizes K_DIR, which turns the VFD run command from FWD to REV (controls M12). The RapidChange tool changer unloads tools in reverse.",
+      "healthy": "M3: off (FWD). M4: on (REV). Set before the run request; K_DIR 23-24 reports it on MCP23017 GPA7."
     },
     {
       "signal": "Status expander MCP23017",
@@ -216,8 +216,8 @@
         "I2C_SDA",
         "I2C_SCL"
       ],
-      "wiring": "MCP23017 on +5 V (the board pull-ups are to +5 V). GPA0-3 read dry contacts K_READY 13-14, K_PERMIT 33-34, K_RDY_R 21-24 and K_RDY_P 21-24, each with a 470 Ohm pull-up to 5 V (about 10 mA wetting current).",
-      "healthy": "polled status for the operator display only; no real-time use"
+      "wiring": "MCP23017 on +5 V (the board pull-ups are to +5 V). GPA0-3 read dry contacts K_READY 13-14, K_PERMIT 33-34, K_RDY_R 21-24 and K_RDY_P 21-24, and GPA7 K_DIR 23-24, each with a 470 Ohm pull-up to 5 V (about 10 mA wetting current). Tool changer (Rev L, controls M13): GPA4 dock deployed and GPA5 dock parked (M8 PNP sensors through optocouplers), GPA6 reserved for the RapidChange IR check; GPB0 dock run and GPB1 dock direction (ULN2803A to K_DOCK_RUN and K_DOCK_DIR), GPB2 reserved for the magazine cover.",
+      "healthy": "polled: operator status, and the tool-change macro (M64/M65 outputs, M66 waits on inputs); no real-time use"
     }
   ],
   "unused": [
@@ -246,7 +246,9 @@
     "Board map: gm1_rodent_map.h (draft, not compiled).",
     "Add the plasma plugin to the ESP32 CMakeLists.txt and set PLASMA_ENABLE.",
     "New ESP32 THCAD driver: MCPWM capture (or PCNT with a gate timer) on GPIO14. Convert period to voltage with $361/$362 and present it as an analog aux port for $366, following the unfinished thcad2.c pattern for RP2040/STM32F4.",
-    "MCP23017_ENABLE 1 (8 in, 8 out) for status inputs.",
+    "MCP23017_ENABLE 1 (8 in, 8 out) for the status inputs and the tool-changer I/O; expose its pins as aux ports for M62-M66 so the RapidChange macros can run the dock and wait on its sensors.",
+    "Spindle direction on GPIO2 (V-MOS HE1): build with SPINDLE_DIR in DRIVER_SPINDLE_ENABLE.",
+    "RapidChange grblHAL macros: set the pocket coordinates, and approach the pockets from the rear stop with the head at X975 while the dock moves (Rev L), never from the front with the dock out.",
     "Settings: $5, $6 and $14 input polarity per the table; homing required after power-up; $33 = 5000; driver current from the actual sense resistor.",
     "Bench tests before any cutter connection: signal generator on CN53, arc-OK and door inputs toggled by hand, probe trip and open-wire, and the E-stop restart."
   ],
@@ -342,7 +344,7 @@
       "map": 2
     },
     {
-      "check": "Output not on an input-only pin: Spare (flood)",
+      "check": "Output not on an input-only pin: Spindle direction (K_DIR coil)",
       "passed": true
     },
     {
@@ -406,11 +408,19 @@
         "15": "boot log / SDIO timing; either level boots normally",
         "2": "must be low/floating to enter download mode"
       }
+    },
+    {
+      "check": "Spindle direction output exists for M4 (RapidChange unload) on V-MOS HE1",
+      "passed": true
+    },
+    {
+      "check": "No flood coolant is mapped onto the direction output",
+      "passed": true
     }
   ],
   "result": "PASS",
   "source_sha256": {
-    "verify_rodent_io.py": "cce99fbcc9c7c07d047ebaad591c5589fe2fa73c324400b49b76779a2d392edb",
-    "gm1_rodent_map.h": "934e2e9aa1ee17de4ba500fb2372615cea22a4d57ba81db6bad13fadf2510bc4"
+    "verify_rodent_io.py": "73e5fc6d9c78281390e5b10e84c2ef95297965379506061a7c8684a96d2ab424",
+    "gm1_rodent_map.h": "062ae38cc67e22b5a58d63ca3da6fb3640f305af0b79879c1fa5c44747219310"
   }
 }

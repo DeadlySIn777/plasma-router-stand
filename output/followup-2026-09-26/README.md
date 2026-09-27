@@ -1,9 +1,17 @@
 # GM1 follow-up after Rev G — 26 September 2026
 
-**Still not released for fabrication or operation.** This page records the work done on top of the Rev G repair (`a61d634`), what it found, and what is still needed to finish the machine. The machine is now named **GM1 — Garcia Mechanical Table** (owner, 26 September 2026). The current design on this branch is [Rev K](../release-review/RevK-CAD/README.md) (27 September). It is [Rev J](../release-review/RevJ-CAD/README.md)'s one-piece bed, completed with the other session's Rev I head, plumbing and cabinet and with the review's fixes. Rev J was first published on this branch as "Rev H" and renamed on the evening of 26 September (see below). Rev G is described in its [CAD package](../release-review/RevG-CAD/README.md) and the [repair report](../cad-repair-2026-09-25/README.md).
+**Still not released for fabrication or operation.** This page records the work done on top of the Rev G repair (`a61d634`), what it found, and what is still needed to finish the machine. The machine is now named **GM1 — Garcia Mechanical Table** (owner, 26 September 2026). The current design on this branch is [Rev L](../release-review/RevL-CAD/README.md) (27 September): [Rev K](../release-review/RevK-CAD/README.md) with a 300 mm Z and the owner's RapidChange tool changer on the bed module. Rev K is [Rev J](../release-review/RevJ-CAD/README.md)'s one-piece bed, completed with the other session's Rev I head, plumbing and cabinet and with the review's fixes. Rev J was first published on this branch as "Rev H" and renamed on the evening of 26 September (see below). Rev G is described in its [CAD package](../release-review/RevG-CAD/README.md) and the [repair report](../cad-repair-2026-09-25/README.md).
 
 ## What changed in this follow-up
 
+- **Rev L, the owner's tool changer (27 September):** [package](../release-review/RevL-CAD/README.md).
+  - **300 mm Z** (ordered Monday). The lowest spindle reach is unchanged; the nut rises to Z1260, 210 mm above the magazine, where RapidChange asks for 90 mm.
+  - **The dock rides on the bed module**, so it lifts out with the bed for plasma and nothing extra comes off the machine. Two MGN12 rails on the T-slot strips, a U-shaped carrier, 200 mm of travel, a worm gearmotor and belt, a fitted front stop and two sensors. The magazine is the other session's 520 × 60 × 80 mm allocation at Z1050.35.
+  - **Tool-change rule:** the Z slide's lower end is below the magazine top, so the spindle reaches the pockets from the rear stop with the head at X975 while the dock moves; never over the magazine from the front.
+  - **Bed changes:** deploy the dock and unplug it before the lift; the hook goes over Y745 (the module is now about 74 kg) and the roll is 1.52 m.
+  - **Controls M12–M13:** spindle reverse through a force-guided direction relay, and the dock drive, interlocked with the spindle-run relay and the E-stop. 1,386 simulated checks pass (1,173 before); the Rodent pin plan passes 25 checks.
+  - **Checks:** router and plasma poses at Z 0 and 300, the dock's travel, tool-change poses, the forbidden front approach (clashes, as expected), a 50 mm stock allowance under the deployed dock, and the hoist path with the dock on the module at three hook heights. All pass.
+  - **Shopping list:** [REVL-PROCUREMENT-DELTA.md](../../outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md), unpriced.
 - **Rev K, after the owner's "finish it" (27 September):** [package](../release-review/RevK-CAD/README.md). The one-piece line is chosen as the one to complete, because it is the bed the owner asked for in this session; the owner can still pick Rev I instead.
   - **Folded in from Rev I:** its floating/breakaway plasma head, drain valve and tail, strainer carrier, hoses and cabinet.
   - **Plasma reach fixed:** a 135 mm drop bracket sized for the owner's torch. The owner sent a photo of a PT31-style straight machine torch, 270 mm long with a 28 mm barrel. The tip reaches Z845 at the bottom of Z, 5 mm below the slats. Near the pan level sensors, plasma paths stay at X955 or less.
@@ -108,11 +116,11 @@ For CW-01, the board map and pin allocation are drafted and the RS485 link is dr
 - **Rodent and VFD:** not ordered yet. The design assumes a Rodent V1.1 and the VFD that comes with the spindle kit. Nothing is waiting on them.
 - **Tool changer: yes, a RapidChange ATC on this machine.**
   - **Order the Z slide with a 300 mm stroke**, not 100 or 200 mm: the same ZBX80 type (SFU1605, NEMA23). Its listing offers strokes from 100 to 600 mm.
-  - RapidChange asks for at least 90 mm between the magazine and the spindle nut with Z fully up. The magazine rides on a tray above clamped stock. The other session's tray, drawn for the six-panel bed, needs a 200 mm Z and leaves about 20 mm to spare.
-  - On the one-piece bed, the tray's guides must clear the bed's 70 mm lift and its rear lifting lugs. That raises them, and the magazine, by up to about 45 mm. A 200 mm Z would then have nothing to spare, or fall up to about 25 mm short. A 300 mm Z leaves about 70 mm or more, which also covers longer tools and taller clamps.
+  - RapidChange asks for at least 90 mm between the magazine and the spindle nut with Z fully up. The magazine rides on a tray above clamped stock, at Z1050.35. A 200 mm Z gives 110 mm there, 20 mm to spare; **300 mm gives 210 mm**, room for longer tools, taller clamps and whatever the delivered magazine really measures.
+  - Rev L mounts the tool changer on the bed module, which keeps that magazine height. An earlier version of this note (`3a674bf`) expected the magazine up to 45 mm higher, to clear the bed lift; the bed-mounted layout avoids that. 300 mm stays the recommendation, for the margin.
   - The longer slide keeps the spindle's lowest reach; the Z body only grows upward. The top of the braked Z motor goes from Z1430.5 to about Z1630, 1.63 m above the floor. Nothing on the machine is above it, and the 8 ft ceiling and the A-frame hoist are clear of it.
   - The magazine itself is small: RapidChange gives 60 mm for its width. The design allows 520 × 60 × 80 mm (about 20 × 2.4 × 3 in); that envelope is not from supplier drawings.
-  - Fitting it to Rev K is the next design step.
+  - Fitted in [Rev L](../release-review/RevL-CAD/README.md), with spindle reverse and the dock drive in the controls (M12, M13).
 - **Shop:** a container with an 8 ft ceiling. Rev K's plan is a rolling A-frame gantry with a low-headroom hoist and the 0.7 m sling that passed the hoist-path check ([hoist in the container](../release-review/RevK-CAD/README.md#hoist-in-the-container)).
 
 **Owner answers received on 26 September 2026:**
@@ -129,13 +137,12 @@ Rev J implements the bed answers. Rev G's six manual panels and MDF spoilboards 
 
 **Still needed from the owner:**
 
-1. **Which line: answered on 27 September, the one-piece line** (Rev K). Please give design work to one session at a time. If you choose Rev I, this branch's bed module is dropped, and the Rodent choice and cost register would need carrying over. **Controller: settled, the Rodent** (owner, 26 Sep, reconfirmed after Rev I). **Bed conversion:** the variants' record says it stays within the machine footprint, while Rev J lifts the bed out on a hoist. Please say which you want. Please give design work to one session at a time; two sessions working in parallel is how the designs split.
+1. **Which line: answered on 27 September, the one-piece line** (Rev K, now Rev L with the tool changer). Please give design work to one session at a time. If you choose Rev I, this branch's bed module is dropped, and the Rodent choice and cost register would need carrying over. **Controller: settled, the Rodent** (owner, 26 Sep, reconfirmed after Rev I). **Bed conversion:** the variants' record says it stays within the machine footprint, while Rev J lifts the bed out on a hoist. Please say which you want. Please give design work to one session at a time; two sessions working in parallel is how the designs split.
 2. **Hoist and bed stand:** a container with an 8 ft ceiling (27 Sep). Please confirm it is a standard 20 or 40 ft container, about 2.39 m inside. Rev K plans a rolling A-frame gantry. Still to choose: the A-frame and hoist, and where the module stand goes; the stand needs about 1.5 m of floor in front of the machine.
 3. **Cutter:** it starts from the trigger, in mid-air (an HF start; 27 Sep). Nothing more is needed now. Note the work-lead size at commissioning. The owner will measure the torch before the clamp insert is bored.
 4. **Orders:** confirm the X and Z drive modules on Monday, the quantities and price paid, and when the HGR20 guide kits are ordered.
    - **Z: order the 300 mm stroke.** The ATC was decided on 27 September (above). Rev K's Z mount, drop bracket and pose checks are redone for it as part of fitting the ATC.
-   - That ATC also drives its slide from the Kraken's spare motor drivers, which the Rodent does not have. On the Rodent it would need its own drive, such as a 24 V linear actuator with two end switches.
-   - It was drawn on the six-panel bed, so it would also need fitting to the one-piece bed.
+   - The other session's ATC drives its slide from the Kraken's spare motor drivers, which the Rodent does not have, and was drawn on the six-panel bed. Rev L instead gives the dock a 24 V gearmotor on two relays, driven through the Rodent's I/O expander, and mounts it on the one-piece bed.
 5. **Owned aluminum:** alloy and thickness of the 12 × 12 in pieces.
 6. **Scrap tube:** for each piece of 2 × 2 tube, its usable length, measured wall and price, checked against the Rev J list.
 

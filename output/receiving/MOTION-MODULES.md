@@ -6,7 +6,7 @@
 |---|---|---|---:|
 | M02 | [KHMOS HMS40, 1000 mm stroke, 10 mm lead, NEMA23](https://www.amazon.com/dp/B0C7GN24S1) | Y drives (one per side) | 2 |
 | M01 | [KHMOS HMS40, 800 mm stroke, 10 mm lead](https://www.amazon.com/dp/B0C7GQTRRX) | X drive | 1 |
-| M03 | [RATTMMOTOR ZBX80, 100 mm, SFU1605, NEMA23](https://www.amazon.com/dp/B09MVYGLNQ) | Z slide | 1. **Change to a 300 mm stroke** (owner wants the RapidChange ATC, 27 Sep; 300 rather than 200 so the one-piece bed can still lift out under the tool changer) |
+| M03 | [RATTMMOTOR ZBX80, 100 mm, SFU1605, NEMA23](https://www.amazon.com/dp/B09MVYGLNQ) | Z slide | 1. **Change to a 300 mm stroke** (owner wants the RapidChange ATC, 27 Sep; 300 rather than the 200 mm minimum, for margin: see [Rev L](../release-review/RevL-CAD/README.md#the-300-mm-z)) |
 
 Please confirm the quantities (the machine needs **two** 1000 mm modules), the price paid and the delivery dates in [the register](drive-modules-receiving-register.json).
 

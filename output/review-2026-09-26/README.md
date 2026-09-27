@@ -29,7 +29,7 @@ Four independent reviews covered controls, mechanical design and the plasma head
 
 On the Rodent's inputs, BTT's own schematic shows six isolated inputs, not five: E1-MAX, on GPIO39 or 37, is unused by grblHAL's map. Once RS485 is dropped, two spindle-header pins are also free. Together these cover all real-time signals.
 
-**Status, later on 27 September.** After the owner said "finish it", the one-piece bed line moved to [Rev K](../release-review/RevK-CAD/README.md), and the GM1 controls gained M9–M11. Between them they give design fixes for:
+**Status, later on 27 September.** After the owner said "finish it", the one-piece bed line moved to [Rev K](../release-review/RevK-CAD/README.md), and the GM1 controls gained M9–M11. [Rev L](../release-review/RevL-CAD/README.md) then added the owner's tool changer and a 300 mm Z, with controls M12–M13; it changes none of the fixes below. Between them they give design fixes for:
 
 - **Blocker 4 (plasma reach).** A 135 mm drop bracket, sized for the owner's torch: a PT31-style straight machine torch, 270 × 28 mm (photo of 27 Sep; seller's figures). The torch tip reaches Z845 at the bottom of Z.
 - **The cabinet.** A shorter drip lip, so the door opens; 30 entries on bonded gland plates; a filter fan; the VFD outside; the torch-start relay at the cutter.

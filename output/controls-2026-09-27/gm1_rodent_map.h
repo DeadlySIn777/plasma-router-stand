@@ -14,10 +14,12 @@
     by the GM1 panel's dry "request not armed" contacts.
   - The E-stop has no input: the safety relay removes the Rodent's 48 V, so
     the board restarts after every stop and must be homed again.
-  - Spindle direction output removed (GPIO15 is an input here).
+  - Spindle direction moves to V-MOS HE1 (GPIO2), since GPIO15 is an input here. It drives
+    the K_DIR relay, which turns the VFD run command from FWD to REV for M4 (the
+    RapidChange tool changer unloads in reverse; controls M12). No flood output.
 
   Add to my_machine.h with this map: SAFETY_DOOR_ENABLE 1, PROBE_ENABLE 1,
-  MCP23017_ENABLE 1 (status inputs), PLASMA_ENABLE 1 (the plasma plugin must be
+  MCP23017_ENABLE 1 (status inputs and the tool-changer I/O), PLASMA_ENABLE 1 (the plasma plugin must be
   added to the ESP32 CMakeLists.txt; it is not in the ESP32 build today) and
   MODBUS_ENABLE 0. THCAD_ENABLE is new: the ESP32 THCAD capture driver that
   reads THCAD_PIN does not exist yet.
@@ -79,7 +81,7 @@
 
 #define AUXOUTPUT0_PIN          GPIO_NUM_25     // Sp-Enable: run request -> isolated U_RUN -> K_REQ_A/K_REQ_B
 #define AUXOUTPUT1_PIN          GPIO_NUM_13     // SP-PWM 0-10 V (onboard filter and LM358)
-#define AUXOUTPUT2_PIN          GPIO_NUM_2      // V-MOS HE1 (unused, flood)
+#define AUXOUTPUT2_PIN          GPIO_NUM_2      // V-MOS HE1: K_DIR coil, spindle direction (M4 = REV)
 #define AUXOUTPUT3_PIN          GPIO_NUM_4      // V-MOS HE0: router mist solenoid
 
 #if DRIVER_SPINDLE_ENABLE & SPINDLE_PWM
@@ -89,12 +91,11 @@
 #define SPINDLE_ENABLE_PIN      AUXOUTPUT0_PIN
 #endif
 #if DRIVER_SPINDLE_ENABLE & SPINDLE_DIR
-#undef DRIVER_SPINDLE_ENABLE
-#define DRIVER_SPINDLE_ENABLE (SPINDLE_PWM|SPINDLE_ENA)   // no direction output on GM1
+#define SPINDLE_DIRECTION_PIN   AUXOUTPUT2_PIN  // K_DIR: M4 runs the VFD in REV (RapidChange unload)
 #endif
 
 #if COOLANT_ENABLE & COOLANT_FLOOD
-#define COOLANT_FLOOD_PIN       AUXOUTPUT2_PIN
+#error "GM1: V-MOS HE1 is the spindle direction output; there is no flood coolant output."
 #endif
 #if COOLANT_ENABLE & COOLANT_MIST
 #define COOLANT_MIST_PIN        AUXOUTPUT3_PIN

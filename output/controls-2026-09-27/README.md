@@ -18,6 +18,11 @@ This package fixes all five. It applies to both bed lines: Rev J (one-piece hois
 
 M9 and M10 close the review's water findings on the controls side. M11 closes its "a float trip triggers nothing" finding.
 
+**Later again, for Rev L** ([RevL-CAD](../release-review/RevL-CAD/README.md)), the owner's RapidChange tool changer needed two more:
+
+- M12: spindle reverse, because RapidChange unloads a tool with the spindle in reverse (M4).
+- M13: the drive for the tool changer's retracting magazine.
+
 **What it builds on.** It starts from the other session's Rev I relay circuit (`output/design-finish-2026-09-26/controls/circuit.py`). That file is imported read-only and left unchanged, and its hash is recorded.
 
 **What is kept.** Rev I's water logic is kept, with three changes:
@@ -53,6 +58,8 @@ The owner's controller decision is built in: BTT Rodent with grblHAL.
 | M9 | **Router drain closes.** Latch relay K_DRAINED picks up when the 75 s drain dwell ends. Its NC contact drops the drain request, so the valve closes, and its NO contacts hold router-ready in place of the timer. It holds only while router mode is selected (fed through KM_R) and the pan stays empty (K_EMPTY_B, a second relay on the empty-float line). | Major: router mode leaves the drain open |
 | M10 | **Fill watchdog.** On-delay timer T_FILL runs while the fill is commanded; its NC contact is in the K_FILL self-hold. A fill that has not reached the fill-stop float in time stops and needs a new FILL press. Set it to 25 min, then to 1.5 × the timed fill. | Major: no fill time limit |
 | M11 | **Float stop.** The torch float switch is wired in series with the three head-presence switches in the U_HEAD loop. A float trip during a cut drops the permission (torch off) and opens the door input (feed hold). During probing the request is low, so nothing holds and the chain re-arms when the float returns. | Major: a float trip triggers nothing |
+| M12 | **Spindle reverse.** A force-guided direction relay K_DIR sits at the end of the three-contact run chain. Its NC contact passes the run command to the VFD's FWD terminal and its NO contact to REV, so the VFD never sees both. The Rodent's spindle direction (V-MOS HE1, GPIO2) drives it. It only chooses the direction; the run chain still starts and stops the spindle. | Owner's tool changer (Rev L) |
+| M13 | **Tool-changer drive.** The dock's 24 V gearmotor is fed through the E-stop contactors and K_VFD_RUN's NC contact, so it cannot move while the spindle is commanded, stops if the spindle starts, and stops at every E-stop. A run relay and a direction relay drive it, so the two directions can never be driven at once. An end microswitch for each direction stops it at the end of travel, even if a relay welds. | Owner's tool changer (Rev L) |
 
 ## How a stop works
 
@@ -105,7 +112,7 @@ ARM_SRC --K_REQ_A NC, K_REQ_B NC, K_VFD_RUN NC, K_TORCH_RUN NC--> K_RUN_ARM (hol
 Rodent GPIO25 -> U_RUN PhotoMOS -> K_REQ_A + K_REQ_B coils
 ARM_SRC --K_RUN_ARM--> --K_REQ_A--> REQUEST
 REQUEST --KM_R--> --K_RDY_R--> K_VFD_RUN      REQUEST --KM_P--> --K_RDY_P--> K_TORCH_RUN
-VFD FWD/COM   = K_VFD_RUN   + K_RUN_ARM + K_REQ_B in series
+VFD FWD or REV = K_VFD_RUN + K_RUN_ARM + K_REQ_B in series, then K_DIR: NC to FWD, NO to REV (M12)
 Cutter START  = K_TORCH_RUN + K_RUN_ARM + K_REQ_B in series
 Rodent E1-MAX = K_REQ_A NC  || K_RUN_ARM NO   (open = requested but not armed)
 ```
@@ -147,6 +154,28 @@ RE --K_DRAINED 21-24--> RR                                     (router ready wit
 - Use a relay with reinforced coil-to-contact isolation and a flyback diode.
 - Bond the box to the cutter chassis. Run the cable to the cabinet shielded, through an EMC gland.
 
+## Spindle reverse and the tool-changer drive (M12–M13)
+
+RapidChange unloads a tool by spinning the spindle in reverse at about 1600 rpm and loads it forward at about 1500 rpm. Its grblHAL macros use M4 and M3, so the VFD needs its REV input, and the Rodent needs a spindle direction output.
+
+```text
+XVFD:COM --K_REQ_B 13-14--K_RUN_ARM 33-34--K_VFD_RUN 13-14--> K_DIR common
+K_DIR 31-32 (NC) --> VFD FWD          K_DIR 13-14 (NO) --> VFD REV
+Rodent GPIO2 (V-MOS HE1, spindle direction) --> K_DIR coil      K_DIR 23-24 --> MCP23017 GPA7 (direction status)
+
+K1/K2 aux (Z-brake supply) --F_DOCK 2 A--K_VFD_RUN 41-42 (NC)--> DOCK_24V
+DOCK_24V --K_DOCK_RUN--> K_DOCK_DIR: NC --LS_OUT (NC)--> motor out (deploy)
+                                     NO --LS_IN (NC)---> motor in (park)
+MCP23017 GPB0 --ULN2803A--> K_DOCK_RUN coil    GPB1 --ULN2803A--> K_DOCK_DIR coil (on = toward parked)
+Dock sensors (M8 PNP) --optocouplers--> MCP23017 GPA4 (deployed), GPA5 (parked)
+```
+
+- **K_DIR** is an Omron G7SA-2A2B, force-guided like the start chain. A welded contact cannot close both FWD and REV. A welded K_DIR would run the spindle in reverse on M3, so its spare NO contact reports the direction to the MCP23017. The tool-change macro reads it before each start.
+- **K_DOCK_RUN and K_DOCK_DIR** are Finder 40.52 relays. K_DOCK_RUN switches the motor's +24 V (pole 1) and 0 V (pole 2). K_DOCK_DIR's two poles reverse the motor. Change direction only with K_DOCK_RUN off.
+- **End microswitches.** LS_OUT opens when the drive tab reaches the deployed stop, LS_IN at the parked stop. Each has a 1N4007 across it, so the motor can always back away from the end. Set LS_OUT to open about 2 mm after the tab touches the front stop, so the belt-clamp spring is preloaded; the worm then holds it.
+- **The dock may move in SETUP** (it has to, for a bed change) and in RUN, but only with the spindle stopped. Keep hands clear: it moves at about 20 mm/s.
+- **The macros** must approach the pockets from the rear stop with the head at X975 whenever the dock moves or is out (Rev L README). They read the dock sensors with M66 and drive the dock with M64/M65.
+
 ## Rodent wiring
 
 The pin plan and the board facts behind it are in [rodent-io.json](rodent-io.json). The facts come from:
@@ -170,13 +199,16 @@ Dropping RS485 frees GPIO14 and GPIO15. That covers the eight real-time inputs G
 | Run request | Sp-Enable header | 25 | Rev I's run interface: pull-down, buffer and AQY212GS. It drives both request relays. |
 | Spindle speed | SP-PWM terminal | 13 | Onboard 0–10 V through an isolated signal conditioner to the VFD. Set `$33 = 5000`. |
 | Router mist | V-MOS HE0 | 4 | 24 V solenoid. Feed V-MOS from a DC-DC after K1/K2, never from the field 24 V. |
-| Status (polled) | OLED header, I2C | 27, 26 | MCP23017 on 5 V reads K_READY, K_PERMIT, router-ready and plasma-ready. Display only. |
+| Spindle direction | V-MOS HE1 | 2 | K_DIR coil (M12). M4 energizes it: the VFD runs REV. Same V-MOS supply as the mist. |
+| Status and tool changer (polled) | OLED header, I2C | 27, 26 | MCP23017 on 5 V. Inputs: K_READY, K_PERMIT, router-ready, plasma-ready, dock deployed, dock parked, RapidChange IR (reserved), K_DIR. Outputs: dock run, dock direction, magazine cover (reserved). |
 
 **Firmware work this needs:**
 
 - Add the plasma plugin to the ESP32 build; it is not there today.
 - Write the ESP32 THCAD capture driver. The THCAD code in grblHAL exists only for other chips, marked tentative and unfinished.
-- Enable the MCP23017.
+- Enable the MCP23017, and expose its pins as aux ports for M62–M66 so the tool-change macros can use them.
+- Build with the spindle direction output (GPIO2).
+- Set up the RapidChange grblHAL macros: pocket coordinates, and the rear-stop approach from the Rev L README.
 - Set the input polarities.
 
 The owner ruled out an external THC box on 25 September, so this firmware route is the plan.
@@ -191,7 +223,7 @@ All parts are unpriced; the cost register gets them when it is re-baselined to t
 | 2 | Schneider TeSys LC1D18BD, 24 V DC coil | K1, K2 | Candidate; confirm DC rating as above |
 | 1 | E-stop pushbutton, Ø40, latching, turn to release, two NC blocks | E-stop | Select; add stations in series per channel |
 | 1 | Blue momentary pushbutton, 1 NO | RESET | Select |
-| 4 | Omron G7SA-2A2B 24 VDC + P7SA-10F | K_REQ_A, K_REQ_B, K_VFD_RUN, K_TORCH_RUN | Candidate |
+| 5 | Omron G7SA-2A2B 24 VDC + P7SA-10F | K_REQ_A, K_REQ_B, K_VFD_RUN, K_TORCH_RUN, K_DIR (M12) | Candidate |
 | 2 | Omron G7SA-3A1B 24 VDC + P7SA-10F | K_READY, K_PERMIT | Candidate |
 | 1 | Omron G7SA-5A1B 24 VDC + P7SA-14F | K_RUN_ARM | Candidate |
 | 2 | Finder 40.52.9.024.5000 + 95.05 | K_RDY_R, K_RDY_P (gold contacts for the low-level status loops) | Candidate |
@@ -205,7 +237,10 @@ All parts are unpriced; the cost register gets them when it is re-baselined to t
 | 1 | Isolated 0–10 V to 0–10 V signal conditioner | Spindle speed | To select |
 | 1 | Isolated DC current switch for the work lead | Arc OK | To select |
 | 1 | 48 V to 24 V DC-DC | V-MOS supply (mist) | To select |
-| 1 | Interface board: MCP23017, 2 × SN74LVC1G17, AQY212GS (U_RUN), 3.3 V LDO, resistors | Rodent side | Schematic level; no PCB yet |
+| 2 | Finder 40.52.9.024.0000 + 95.05 | K_DOCK_RUN, K_DOCK_DIR (M13) | As Rev I's water relays |
+| 1 | 2 A time-delay fuse and holder | F_DOCK (M13) | Select |
+| 2 | Roller-lever microswitch, NC, IP67, with a 1N4007 across each | LS_OUT, LS_IN, dock end of travel (M13) | Select to fit the Rev L stop blocks |
+| 1 | Interface board: MCP23017, 2 × SN74LVC1G17, AQY212GS (U_RUN), 3.3 V LDO, ULN2803A, 2 × PC817 (dock sensor inputs), resistors | Rodent side | Schematic level; no PCB yet |
 
 **Retired from Rev I's list:**
 
@@ -218,7 +253,7 @@ The five remaining Finder water relays, the mode relays, the timers, the pump SS
 
 ## What the simulation shows
 
-All 1173 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.json)). Unless stated otherwise, each ran with every combination of relay pickup (5, 10 and 20 ms) and dropout (5, 20 and 50 ms), in the way Rev I tested its own circuit.
+All 1386 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.json)); 1173 before M12–M13. Unless stated otherwise, each ran with every combination of relay pickup (5, 10 and 20 ms) and dropout (5, 20 and 50 ms), in the way Rev I tested its own circuit.
 
 - **Rev I's own behaviors are kept.** These checks were repeated on the new graph:
   - fill arm, self-hold, stops and release-to-rearm;
@@ -243,14 +278,14 @@ All 1173 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.j
   - router → plasma, bed key and water also switched: 0 of 54
   - plasma → router, bed key and water unchanged: 17 of 54, up to 90 ms
   - plasma → router, bed key and water also switched: 0 of 54
-- **Welded contacts.** Every NO contact of every start-chain relay was welded in turn, 104 cases in all. Each case was run with the relay's other contacts free or stuck, and in both modes.
+- **Welded contacts.** Every NO contact of every start-chain relay, and of the direction relay K_DIR, was welded in turn, 112 cases in all. Each case was run with the relay's other contacts free or stuck, and in both modes.
   - None starts a tool in SETUP.
   - None restarts a tool without a fresh request.
   - In every case the Rodent can still stop the tool by dropping its request.
   - **Welds that block the next start, so the fault shows:** K_PERMIT:13-14, K_PERMIT:23-24, K_PERMIT:33-34, K_REQ_A:13-14, K_REQ_B:13-14, K_REQ_B:23-24, K_RUN_ARM:13-14, K_RUN_ARM:23-24, K_RUN_ARM:33-34, K_RUN_ARM:43-44, K_RUN_ARM:53-54, K_TORCH_RUN:13-14, K_VFD_RUN:13-14.
-  - **Welds another channel covers instead:** K_RDY_P:11-14, K_RDY_P:21-24, K_RDY_R:11-14, K_RDY_R:21-24, K_READY:13-14, K_READY:23-24, K_READY:33-34. A welded K_READY is revealed instead by the fill check: FILL will not start.
+  - **Welds another channel covers instead:** K_RDY_P:11-14, K_RDY_P:21-24, K_RDY_R:11-14, K_RDY_R:21-24, K_READY:13-14, K_READY:23-24, K_READY:33-34. A welded K_READY is revealed instead by the fill check: FILL will not start. A welded K_DIR (13-14 or 23-24) still lets the chain arm and stop normally; it shows on the direction status input, and with 13-14 welded the spindle runs in reverse.
   - **Mode-relay welds (non-force-guided):** KM_P:11-14, KM_P:21-24, KM_P:31-34, KM_R:11-14, KM_R:21-24, KM_R:31-34. Whether the machine arms again depends on how the relay sticks. In either case, the per-mode ready relay keeps the other tool off.
-- **Shorted contacts.** Any single start-chain contact shorted while armed and idle (74 cases) never starts a tool without a request. Any single start-chain or SETUP contact shorted in SETUP, with the Rodent requesting a tool (80 cases), never starts a tool.
+- **Shorted contacts.** Any single start-chain or K_DIR contact shorted while armed and idle (82 cases) never starts a tool without a request. Any single start-chain, K_DIR or SETUP contact shorted in SETUP, with the Rodent requesting a tool (88 cases), never starts a tool.
 - **The review's Rev I weld cases, re-run on the Rev I circuit for comparison:**
   - K_REQUEST:21-24 welded, request dropped: torch still on: **yes**
   - K_RUN_ARM:21-24 welded, door cycled with request held: torch restarts: **yes**
@@ -278,6 +313,25 @@ All 1173 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.j
   - A float trip during a cut stops the torch and opens the door input, so grblHAL holds feed.
   - During probing the door input stays closed, and the chain re-arms within 150 ms.
   - The torch then starts on the next request.
+- **Spindle reverse (M12).** In all nine timing combinations:
+  - M3 closes FWD only; M4 closes REV only, and the direction status input shows it.
+  - Dropping the request stops the spindle in either direction.
+
+  Also:
+  - FWD and REV were never both closed in 24 combinations of mode, direction, request and a welded K_DIR.
+  - Plasma mode never ran the spindle.
+  - A reverse request in SETUP runs nothing.
+- **Tool-changer drive (M13).** In all nine timing combinations:
+  - The dock moves out or in as commanded, and each end switch stops it with the command held.
+  - A spindle start stops a moving dock.
+  - The dock cannot move while the spindle runs, forward or reverse.
+
+  Also:
+  - A welded K_VFD_RUN keeps it from moving.
+  - An E-stop stops it.
+  - It can move in SETUP for a bed change.
+  - A welded K_DOCK_RUN still stops at the end switch.
+  - Direction changes never drive both directions.
 
 ## Limits
 
@@ -290,6 +344,7 @@ All 1173 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.j
   - EMC.
 - **Water-contact glitches** shorter than a relay's dropout can still resume a held fill, as in Rev I.
 - **The float stop (M11)** is simulated as the existing head-loop input. The float switch, its cam and the probe optocoupler are not simulated.
+- **Spindle reverse and the dock (M12–M13).** The VFD's behavior with FWD and REV and its direction-change ramp are not simulated. The dock motor is modeled as one load per direction; its current, the second relay poles, the back-off diodes and the sensors are wiring details, not simulated.
 - **The plasma reach and the cabinet findings** are mechanical. They are dealt with in [Rev K](../release-review/RevK-CAD/README.md):
   - the drop bracket and torch;
   - the drip lip, glands, fan and VFD placement.
@@ -301,7 +356,7 @@ The Rodent and the VFD are not ordered yet (owner, 27 Sep). These are the choice
 1. **Rodent: buy the V1.1**, the current version.
    - The board map already uses its GPIO39 for the door input.
    - If a V1.0 arrives instead, change that one line to GPIO37.
-2. **VFD: use the one in the spindle kit.** These kits have a run terminal (FWD to COM or DCM) and a 0–10 V speed input, and that is all this design uses. The cabinet's VFD mount allows up to 180 × 160 × 250 mm.
+2. **VFD: use the one in the spindle kit.** These kits have run terminals (FWD and REV to COM or DCM) and a 0–10 V speed input, and that is all this design uses. The tool changer needs the REV terminal (M12); check the delivered unit has one. The cabinet's VFD mount allows up to 180 × 160 × 250 mm.
 3. **CUT-50:**
    - **It starts in mid-air** (owner, 27 Sep). That is a high-frequency (HF), non-contact start.
    - **Start circuit:** it starts from the torch trigger. K_TS's NO contact goes across the trigger terminals, in its shielded box at the cutter. Choose K_TS with reinforced coil-to-contact isolation.
