@@ -1,0 +1,544 @@
+{
+  "schema": 1,
+  "passed": true,
+  "complete_machine_set": true,
+  "scope": "Actual STEP tessellation and preview provenance; not interference, strength, handling, control or fabrication qualification.",
+  "machine_release": false,
+  "geometry_frozen_manifest": true,
+  "source_sha256_before": {
+    "render_cad.py": "eea541872710bf508b2e7667715cd613f9b58dcdf6585a03aa8cf9c5b73e10fb",
+    "variants/retractable-atc/large-mechanism/deployed-machine.step": "cb7d066d73068bc55aa6af53e8162fd15ced25b28e3da3f8471d3b17963608ae",
+    "variants/retractable-atc/large-mechanism/deployed-mechanism.step": "37c614a73969cd362246bb77c5d1be442e57c6231460991112eefabe657144a1",
+    "variants/retractable-atc/large-mechanism/parked-machine.step": "e29247bee120b39d62931ffe40374bf4e859012b170c49aea5a60ec9ca4232a0",
+    "variants/retractable-atc/large-mechanism/parked-mechanism.step": "b184f8c0c46216727492f6a110d1445a298e62a66875986debf112b77a644842",
+    "variants/retractable-atc/previews/render-inputs.json": "d21f608ef45ace0f7efa7d5d1798c70509e80fc4d89d4fb6d143447e4121d1ca",
+    "variants/retractable-atc/render_mechanisms.py": "bc8b937cdc5a5c0da266006cc7bb6b476519e31adcbec73e7946d50707014812",
+    "variants/retractable-atc/small-mechanism/output/step/SMALL_CONTEXT_DEPLOYED.step": "7a7f464cc075eaecdee4c4ac35a407483d155f328280915ccf0c26f7012ba4c0",
+    "variants/retractable-atc/small-mechanism/output/step/SMALL_CONTEXT_PARKED.step": "5ef6ac9895309aafbf5e637d8b0249ad7d56de38febe8ce9e90adccaa947a6bd",
+    "variants/retractable-atc/small-mechanism/output/step/SMALL_DEPLOYED.step": "869f9402151f150e6bac10e97335e0fa1992efbafacccaccf8cac14087f5c956",
+    "variants/retractable-atc/small-mechanism/output/step/SMALL_PARKED.step": "e43ee34f5d1c097030558f9bd202a03350d60e1590279d43d756c326b0e107d0"
+  },
+  "source_sha256": {
+    "render_cad.py": "eea541872710bf508b2e7667715cd613f9b58dcdf6585a03aa8cf9c5b73e10fb",
+    "variants/retractable-atc/large-mechanism/deployed-machine.step": "cb7d066d73068bc55aa6af53e8162fd15ced25b28e3da3f8471d3b17963608ae",
+    "variants/retractable-atc/large-mechanism/deployed-mechanism.step": "37c614a73969cd362246bb77c5d1be442e57c6231460991112eefabe657144a1",
+    "variants/retractable-atc/large-mechanism/parked-machine.step": "e29247bee120b39d62931ffe40374bf4e859012b170c49aea5a60ec9ca4232a0",
+    "variants/retractable-atc/large-mechanism/parked-mechanism.step": "b184f8c0c46216727492f6a110d1445a298e62a66875986debf112b77a644842",
+    "variants/retractable-atc/previews/render-inputs.json": "d21f608ef45ace0f7efa7d5d1798c70509e80fc4d89d4fb6d143447e4121d1ca",
+    "variants/retractable-atc/render_mechanisms.py": "bc8b937cdc5a5c0da266006cc7bb6b476519e31adcbec73e7946d50707014812",
+    "variants/retractable-atc/small-mechanism/output/step/SMALL_CONTEXT_DEPLOYED.step": "7a7f464cc075eaecdee4c4ac35a407483d155f328280915ccf0c26f7012ba4c0",
+    "variants/retractable-atc/small-mechanism/output/step/SMALL_CONTEXT_PARKED.step": "5ef6ac9895309aafbf5e637d8b0249ad7d56de38febe8ce9e90adccaa947a6bd",
+    "variants/retractable-atc/small-mechanism/output/step/SMALL_DEPLOYED.step": "869f9402151f150e6bac10e97335e0fa1992efbafacccaccf8cac14087f5c956",
+    "variants/retractable-atc/small-mechanism/output/step/SMALL_PARKED.step": "e43ee34f5d1c097030558f9bd202a03350d60e1590279d43d756c326b0e107d0"
+  },
+  "sources_unchanged": true,
+  "step_readback": {
+    "variants/retractable-atc/small-mechanism/output/step/SMALL_DEPLOYED.step": {
+      "solid_count": 270,
+      "all_solids_valid": true,
+      "volume_mm3": 1921031.1173176924,
+      "bounds_mm": [
+        6.349999999999994,
+        992.0,
+        936.8032,
+        1143.65,
+        1450.0,
+        1056.35
+      ],
+      "flat_import_crosscheck": true,
+      "allocation_names": []
+    },
+    "variants/retractable-atc/small-mechanism/output/step/SMALL_CONTEXT_DEPLOYED.step": {
+      "solid_count": 1940,
+      "all_solids_valid": true,
+      "volume_mm3": 113465919.82500845,
+      "bounds_mm": [
+        -28.4,
+        -14.6,
+        0.0,
+        1178.4,
+        1464.6,
+        1530.5
+      ],
+      "flat_import_crosscheck": true,
+      "allocation_names": [
+        "ZBX80_BASE",
+        "ZBX80_END_TOP",
+        "ZBX80_MOTOR",
+        "ZBX80_COUPLER_GUARD",
+        "ZBX80_OUTPUT_HOLD",
+        "TOOL_ADAPTER_110",
+        "TOOL_SPINDLE_65x259",
+        "TOOL_CLAMP_MOUNT_-45_12",
+        "TOOL_CLAMP_MOUNT_-45_38",
+        "TOOL_CLAMP_MOUNT_45_12",
+        "TOOL_CLAMP_MOUNT_45_38",
+        "TOOL_CLAMP_PINCH_1",
+        "TOOL_CLAMP_PINCH_2",
+        "TOOL_SPLIT_CLAMP_REAR",
+        "TOOL_SPLIT_CLAMP_FRONT",
+        "I_CABINET_DOOR_ALLOCATION",
+        "UNVERIFIED_MAGAZINE_ACCEPTANCE"
+      ],
+      "mechanism_name_bounds_volume_matches": 270
+    },
+    "variants/retractable-atc/small-mechanism/output/step/SMALL_PARKED.step": {
+      "solid_count": 270,
+      "all_solids_valid": true,
+      "volume_mm3": 1921031.1173176924,
+      "bounds_mm": [
+        6.349999999999994,
+        992.0,
+        936.8032,
+        1143.65,
+        1450.0,
+        1056.35
+      ],
+      "flat_import_crosscheck": true,
+      "allocation_names": []
+    },
+    "variants/retractable-atc/small-mechanism/output/step/SMALL_CONTEXT_PARKED.step": {
+      "solid_count": 1940,
+      "all_solids_valid": true,
+      "volume_mm3": 113465919.82500845,
+      "bounds_mm": [
+        -28.4,
+        -14.6,
+        0.0,
+        1178.4,
+        1464.6,
+        1530.5
+      ],
+      "flat_import_crosscheck": true,
+      "allocation_names": [
+        "ZBX80_BASE",
+        "ZBX80_END_TOP",
+        "ZBX80_MOTOR",
+        "ZBX80_COUPLER_GUARD",
+        "ZBX80_OUTPUT_HOLD",
+        "TOOL_ADAPTER_110",
+        "TOOL_SPINDLE_65x259",
+        "TOOL_CLAMP_MOUNT_-45_12",
+        "TOOL_CLAMP_MOUNT_-45_38",
+        "TOOL_CLAMP_MOUNT_45_12",
+        "TOOL_CLAMP_MOUNT_45_38",
+        "TOOL_CLAMP_PINCH_1",
+        "TOOL_CLAMP_PINCH_2",
+        "TOOL_SPLIT_CLAMP_REAR",
+        "TOOL_SPLIT_CLAMP_FRONT",
+        "I_CABINET_DOOR_ALLOCATION",
+        "UNVERIFIED_MAGAZINE_ACCEPTANCE"
+      ],
+      "mechanism_name_bounds_volume_matches": 270
+    },
+    "variants/retractable-atc/large-mechanism/deployed-mechanism.step": {
+      "solid_count": 451,
+      "all_solids_valid": true,
+      "volume_mm3": 6569701.222888113,
+      "bounds_mm": [
+        1452.0,
+        235.0,
+        525.0,
+        1926.9,
+        1095.0,
+        1142.0
+      ],
+      "flat_import_crosscheck": true,
+      "allocation_names": []
+    },
+    "variants/retractable-atc/large-mechanism/deployed-machine.step": {
+      "solid_count": 797,
+      "all_solids_valid": true,
+      "volume_mm3": 175712447.3163195,
+      "bounds_mm": [
+        24.0,
+        25.0,
+        7.3,
+        1926.9,
+        2930.0,
+        1400.8
+      ],
+      "flat_import_crosscheck": true,
+      "allocation_names": [
+        "BASE_Y_RAIL_L",
+        "BASE_Y_CARRIAGE_L",
+        "BASE_RACK_L",
+        "BASE_Y_RAIL_R",
+        "BASE_Y_CARRIAGE_R",
+        "BASE_RACK_R",
+        "BASE_X_AXIS",
+        "BASE_Z_TOOL_PACKAGE"
+      ],
+      "mechanism_name_bounds_volume_matches": 451
+    },
+    "variants/retractable-atc/large-mechanism/parked-mechanism.step": {
+      "solid_count": 451,
+      "all_solids_valid": true,
+      "volume_mm3": 6569701.222888113,
+      "bounds_mm": [
+        1452.0,
+        235.0,
+        525.0,
+        1926.9,
+        1095.0,
+        1142.0
+      ],
+      "flat_import_crosscheck": true,
+      "allocation_names": []
+    },
+    "variants/retractable-atc/large-mechanism/parked-machine.step": {
+      "solid_count": 797,
+      "all_solids_valid": true,
+      "volume_mm3": 175712447.3163195,
+      "bounds_mm": [
+        24.0,
+        25.0,
+        7.3,
+        1926.9,
+        2930.0,
+        1400.8
+      ],
+      "flat_import_crosscheck": true,
+      "allocation_names": [
+        "BASE_Y_RAIL_L",
+        "BASE_Y_CARRIAGE_L",
+        "BASE_RACK_L",
+        "BASE_Y_RAIL_R",
+        "BASE_Y_CARRIAGE_R",
+        "BASE_RACK_R",
+        "BASE_X_AXIS",
+        "BASE_Z_TOOL_PACKAGE"
+      ],
+      "mechanism_name_bounds_volume_matches": 451
+    }
+  },
+  "images": [
+    {
+      "image": "variants/retractable-atc/previews/small-deployed-full.png",
+      "width": 1800,
+      "height": 1320,
+      "body_count": 1940,
+      "triangles": 1579578,
+      "occupied_pixels": 634079,
+      "visible_mechanism_pixels": 5543,
+      "camera_toward_viewer": [
+        1.4,
+        1.7,
+        1.25
+      ],
+      "full_machine_context": true,
+      "orthographic_scale_pixels_per_mm": 0.5443650270118763,
+      "allocation_names": [
+        "ZBX80_BASE",
+        "ZBX80_END_TOP",
+        "ZBX80_MOTOR",
+        "ZBX80_COUPLER_GUARD",
+        "ZBX80_OUTPUT_HOLD",
+        "TOOL_ADAPTER_110",
+        "TOOL_SPINDLE_65x259",
+        "TOOL_CLAMP_MOUNT_-45_12",
+        "TOOL_CLAMP_MOUNT_-45_38",
+        "TOOL_CLAMP_MOUNT_45_12",
+        "TOOL_CLAMP_MOUNT_45_38",
+        "TOOL_CLAMP_PINCH_1",
+        "TOOL_CLAMP_PINCH_2",
+        "TOOL_SPLIT_CLAMP_REAR",
+        "TOOL_SPLIT_CLAMP_FRONT",
+        "I_CABINET_DOOR_ALLOCATION",
+        "UNVERIFIED_MAGAZINE_ACCEPTANCE"
+      ],
+      "sha256": "81d6b59de2fd43c8c7f8b64582c698d8f7f8bd3f3c85fba8949a6b86aeac2092",
+      "input_signature": {
+        "renderer": "bc8b937cdc5a5c0da266006cc7bb6b476519e31adcbec73e7946d50707014812",
+        "depth_rasterizer": "eea541872710bf508b2e7667715cd613f9b58dcdf6585a03aa8cf9c5b73e10fb",
+        "mechanism_step": "869f9402151f150e6bac10e97335e0fa1992efbafacccaccf8cac14087f5c956",
+        "context_step": "7a7f464cc075eaecdee4c4ac35a407483d155f328280915ccf0c26f7012ba4c0",
+        "title": "800 \u00d7 1000 mm HYBRID  |  DEPLOYED  |  MACHINE",
+        "subtitle": "Actual STEP bodies \u2022 Purple: proposed Z200 / unverified magazine \u2022 Small automatic cover remains unresolved",
+        "camera": [
+          1.4,
+          1.7,
+          1.25
+        ],
+        "full_context": true
+      }
+    },
+    {
+      "image": "variants/retractable-atc/previews/small-deployed-mechanism.png",
+      "width": 1800,
+      "height": 1320,
+      "body_count": 270,
+      "triangles": 228976,
+      "occupied_pixels": 263153,
+      "visible_mechanism_pixels": 263153,
+      "camera_toward_viewer": [
+        1.4,
+        1.7,
+        1.25
+      ],
+      "full_machine_context": false,
+      "orthographic_scale_pixels_per_mm": 1.5578458294561441,
+      "allocation_names": [],
+      "sha256": "e32de7224ed8083444065c70e9bb7109c5cda857e7663b282db925f15b45f5a6",
+      "input_signature": {
+        "renderer": "bc8b937cdc5a5c0da266006cc7bb6b476519e31adcbec73e7946d50707014812",
+        "depth_rasterizer": "eea541872710bf508b2e7667715cd613f9b58dcdf6585a03aa8cf9c5b73e10fb",
+        "mechanism_step": "869f9402151f150e6bac10e97335e0fa1992efbafacccaccf8cac14087f5c956",
+        "context_step": null,
+        "title": "800 \u00d7 1000 mm HYBRID  |  DEPLOYED  |  MECHANISM",
+        "subtitle": "Actual STEP bodies \u2022 Purple: proposed Z200 / unverified magazine \u2022 Small automatic cover remains unresolved",
+        "camera": [
+          1.4,
+          1.7,
+          1.25
+        ],
+        "full_context": false
+      }
+    },
+    {
+      "image": "variants/retractable-atc/previews/small-parked-full.png",
+      "width": 1800,
+      "height": 1320,
+      "body_count": 1940,
+      "triangles": 1579578,
+      "occupied_pixels": 634149,
+      "visible_mechanism_pixels": 18054,
+      "camera_toward_viewer": [
+        1.4,
+        1.7,
+        1.25
+      ],
+      "full_machine_context": true,
+      "orthographic_scale_pixels_per_mm": 0.5443650270118763,
+      "allocation_names": [
+        "ZBX80_BASE",
+        "ZBX80_END_TOP",
+        "ZBX80_MOTOR",
+        "ZBX80_COUPLER_GUARD",
+        "ZBX80_OUTPUT_HOLD",
+        "TOOL_ADAPTER_110",
+        "TOOL_SPINDLE_65x259",
+        "TOOL_CLAMP_MOUNT_-45_12",
+        "TOOL_CLAMP_MOUNT_-45_38",
+        "TOOL_CLAMP_MOUNT_45_12",
+        "TOOL_CLAMP_MOUNT_45_38",
+        "TOOL_CLAMP_PINCH_1",
+        "TOOL_CLAMP_PINCH_2",
+        "TOOL_SPLIT_CLAMP_REAR",
+        "TOOL_SPLIT_CLAMP_FRONT",
+        "I_CABINET_DOOR_ALLOCATION",
+        "UNVERIFIED_MAGAZINE_ACCEPTANCE"
+      ],
+      "sha256": "b3fcb4d81eecbf493fa4a3f74d05f358fa4739028d5b0068e80737987edc64bf",
+      "input_signature": {
+        "renderer": "bc8b937cdc5a5c0da266006cc7bb6b476519e31adcbec73e7946d50707014812",
+        "depth_rasterizer": "eea541872710bf508b2e7667715cd613f9b58dcdf6585a03aa8cf9c5b73e10fb",
+        "mechanism_step": "e43ee34f5d1c097030558f9bd202a03350d60e1590279d43d756c326b0e107d0",
+        "context_step": "5ef6ac9895309aafbf5e637d8b0249ad7d56de38febe8ce9e90adccaa947a6bd",
+        "title": "800 \u00d7 1000 mm HYBRID  |  PARKED  |  MACHINE",
+        "subtitle": "Actual STEP bodies \u2022 Purple: proposed Z200 / unverified magazine \u2022 Small automatic cover remains unresolved",
+        "camera": [
+          1.4,
+          1.7,
+          1.25
+        ],
+        "full_context": true
+      }
+    },
+    {
+      "image": "variants/retractable-atc/previews/small-parked-mechanism.png",
+      "width": 1800,
+      "height": 1320,
+      "body_count": 270,
+      "triangles": 228976,
+      "occupied_pixels": 265486,
+      "visible_mechanism_pixels": 265486,
+      "camera_toward_viewer": [
+        1.4,
+        1.7,
+        1.25
+      ],
+      "full_machine_context": false,
+      "orthographic_scale_pixels_per_mm": 1.5578458294561441,
+      "allocation_names": [],
+      "sha256": "f0b62eec6f74e711c20fde12d158dabee942093b1a95842c58ca86ec28ac1aed",
+      "input_signature": {
+        "renderer": "bc8b937cdc5a5c0da266006cc7bb6b476519e31adcbec73e7946d50707014812",
+        "depth_rasterizer": "eea541872710bf508b2e7667715cd613f9b58dcdf6585a03aa8cf9c5b73e10fb",
+        "mechanism_step": "e43ee34f5d1c097030558f9bd202a03350d60e1590279d43d756c326b0e107d0",
+        "context_step": null,
+        "title": "800 \u00d7 1000 mm HYBRID  |  PARKED  |  MECHANISM",
+        "subtitle": "Actual STEP bodies \u2022 Purple: proposed Z200 / unverified magazine \u2022 Small automatic cover remains unresolved",
+        "camera": [
+          1.4,
+          1.7,
+          1.25
+        ],
+        "full_context": false
+      }
+    },
+    {
+      "image": "variants/retractable-atc/previews/large-deployed-full.png",
+      "width": 1800,
+      "height": 1320,
+      "body_count": 797,
+      "triangles": 397364,
+      "occupied_pixels": 602603,
+      "visible_mechanism_pixels": 35453,
+      "camera_toward_viewer": [
+        1.4,
+        -1.5,
+        1.2
+      ],
+      "full_machine_context": true,
+      "orthographic_scale_pixels_per_mm": 0.393808814417078,
+      "allocation_names": [
+        "BASE_Y_RAIL_L",
+        "BASE_Y_CARRIAGE_L",
+        "BASE_RACK_L",
+        "BASE_Y_RAIL_R",
+        "BASE_Y_CARRIAGE_R",
+        "BASE_RACK_R",
+        "BASE_X_AXIS",
+        "BASE_Z_TOOL_PACKAGE"
+      ],
+      "sha256": "c65d4dfd1684a521159ebbbf1312100fe6b3c6ea21c1a962cadd1d00495e9d17",
+      "input_signature": {
+        "renderer": "bc8b937cdc5a5c0da266006cc7bb6b476519e31adcbec73e7946d50707014812",
+        "depth_rasterizer": "eea541872710bf508b2e7667715cd613f9b58dcdf6585a03aa8cf9c5b73e10fb",
+        "mechanism_step": "37c614a73969cd362246bb77c5d1be442e57c6231460991112eefabe657144a1",
+        "context_step": "cb7d066d73068bc55aa6af53e8162fd15ced25b28e3da3f8471d3b17963608ae",
+        "title": "48 \u00d7 96 in HYBRID  |  DEPLOYED  |  MACHINE",
+        "subtitle": "Actual STEP bodies \u2022 200 mm carrier / 164 mm shutter \u2022 Magazine mounting interface remains unverified",
+        "camera": [
+          1.4,
+          -1.5,
+          1.2
+        ],
+        "full_context": true
+      }
+    },
+    {
+      "image": "variants/retractable-atc/previews/large-deployed-mechanism.png",
+      "width": 1800,
+      "height": 1320,
+      "body_count": 451,
+      "triangles": 382392,
+      "occupied_pixels": 571896,
+      "visible_mechanism_pixels": 571896,
+      "camera_toward_viewer": [
+        -1.6,
+        -1.4,
+        1.1
+      ],
+      "full_machine_context": false,
+      "orthographic_scale_pixels_per_mm": 1.4198309774766713,
+      "allocation_names": [],
+      "sha256": "62c7f89b785e530d3409fb70d575b9ad6ddc5a1bc180dc0a65d2da7e06fbdb91",
+      "input_signature": {
+        "renderer": "bc8b937cdc5a5c0da266006cc7bb6b476519e31adcbec73e7946d50707014812",
+        "depth_rasterizer": "eea541872710bf508b2e7667715cd613f9b58dcdf6585a03aa8cf9c5b73e10fb",
+        "mechanism_step": "37c614a73969cd362246bb77c5d1be442e57c6231460991112eefabe657144a1",
+        "context_step": null,
+        "title": "48 \u00d7 96 in HYBRID  |  DEPLOYED  |  MECHANISM",
+        "subtitle": "Actual STEP bodies \u2022 200 mm carrier / 164 mm shutter \u2022 Magazine mounting interface remains unverified",
+        "camera": [
+          -1.6,
+          -1.4,
+          1.1
+        ],
+        "full_context": false
+      }
+    },
+    {
+      "image": "variants/retractable-atc/previews/large-parked-full.png",
+      "width": 1800,
+      "height": 1320,
+      "body_count": 797,
+      "triangles": 397364,
+      "occupied_pixels": 602603,
+      "visible_mechanism_pixels": 27944,
+      "camera_toward_viewer": [
+        1.4,
+        -1.5,
+        1.2
+      ],
+      "full_machine_context": true,
+      "orthographic_scale_pixels_per_mm": 0.393808814417078,
+      "allocation_names": [
+        "BASE_Y_RAIL_L",
+        "BASE_Y_CARRIAGE_L",
+        "BASE_RACK_L",
+        "BASE_Y_RAIL_R",
+        "BASE_Y_CARRIAGE_R",
+        "BASE_RACK_R",
+        "BASE_X_AXIS",
+        "BASE_Z_TOOL_PACKAGE"
+      ],
+      "sha256": "b7fac6d457d843efdc871fcabc43e77246efa9bd5cddc417d48695414566e8ce",
+      "input_signature": {
+        "renderer": "bc8b937cdc5a5c0da266006cc7bb6b476519e31adcbec73e7946d50707014812",
+        "depth_rasterizer": "eea541872710bf508b2e7667715cd613f9b58dcdf6585a03aa8cf9c5b73e10fb",
+        "mechanism_step": "b184f8c0c46216727492f6a110d1445a298e62a66875986debf112b77a644842",
+        "context_step": "e29247bee120b39d62931ffe40374bf4e859012b170c49aea5a60ec9ca4232a0",
+        "title": "48 \u00d7 96 in HYBRID  |  PARKED  |  MACHINE",
+        "subtitle": "Actual STEP bodies \u2022 200 mm carrier / 164 mm shutter \u2022 Magazine mounting interface remains unverified",
+        "camera": [
+          1.4,
+          -1.5,
+          1.2
+        ],
+        "full_context": true
+      }
+    },
+    {
+      "image": "variants/retractable-atc/previews/large-parked-mechanism.png",
+      "width": 1800,
+      "height": 1320,
+      "body_count": 451,
+      "triangles": 382392,
+      "occupied_pixels": 512176,
+      "visible_mechanism_pixels": 512176,
+      "camera_toward_viewer": [
+        -1.6,
+        -1.4,
+        1.1
+      ],
+      "full_machine_context": false,
+      "orthographic_scale_pixels_per_mm": 1.4198309774766713,
+      "allocation_names": [],
+      "sha256": "03361b9f24e105289e871c9a494a961924bb529249e1dc68afaa8bd600915bd3",
+      "input_signature": {
+        "renderer": "bc8b937cdc5a5c0da266006cc7bb6b476519e31adcbec73e7946d50707014812",
+        "depth_rasterizer": "eea541872710bf508b2e7667715cd613f9b58dcdf6585a03aa8cf9c5b73e10fb",
+        "mechanism_step": "b184f8c0c46216727492f6a110d1445a298e62a66875986debf112b77a644842",
+        "context_step": null,
+        "title": "48 \u00d7 96 in HYBRID  |  PARKED  |  MECHANISM",
+        "subtitle": "Actual STEP bodies \u2022 200 mm carrier / 164 mm shutter \u2022 Magazine mounting interface remains unverified",
+        "camera": [
+          -1.6,
+          -1.4,
+          1.1
+        ],
+        "full_context": false
+      }
+    }
+  ],
+  "image_sha256": {
+    "variants/retractable-atc/previews/small-deployed-full.png": "81d6b59de2fd43c8c7f8b64582c698d8f7f8bd3f3c85fba8949a6b86aeac2092",
+    "variants/retractable-atc/previews/small-deployed-mechanism.png": "e32de7224ed8083444065c70e9bb7109c5cda857e7663b282db925f15b45f5a6",
+    "variants/retractable-atc/previews/small-parked-full.png": "b3fcb4d81eecbf493fa4a3f74d05f358fa4739028d5b0068e80737987edc64bf",
+    "variants/retractable-atc/previews/small-parked-mechanism.png": "f0b62eec6f74e711c20fde12d158dabee942093b1a95842c58ca86ec28ac1aed",
+    "variants/retractable-atc/previews/large-deployed-full.png": "c65d4dfd1684a521159ebbbf1312100fe6b3c6ea21c1a962cadd1d00495e9d17",
+    "variants/retractable-atc/previews/large-deployed-mechanism.png": "62c7f89b785e530d3409fb70d575b9ad6ddc5a1bc180dc0a65d2da7e06fbdb91",
+    "variants/retractable-atc/previews/large-parked-full.png": "b7fac6d457d843efdc871fcabc43e77246efa9bd5cddc417d48695414566e8ce",
+    "variants/retractable-atc/previews/large-parked-mechanism.png": "03361b9f24e105289e871c9a494a961924bb529249e1dc68afaa8bd600915bd3"
+  },
+  "render_seconds": 288.2,
+  "limitations": [
+    "Tessellation is a display approximation of exported BREP.",
+    "Opaque hidden bodies are not visible from every camera.",
+    "Mechanism-only images deliberately hide all machine context.",
+    "Purchased envelopes and allocations do not establish delivered supplier fit."
+  ]
+}

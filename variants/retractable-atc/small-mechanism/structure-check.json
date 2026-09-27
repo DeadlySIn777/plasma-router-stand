@@ -1,0 +1,91 @@
+{
+  "scope": "Elastic screening of nominal sound A36 welded carrier under stated assumed loads; weld fatigue, scrap defects, guide ratings, actuator speed force and actual magazine loads are not qualified.",
+  "assumptions": {
+    "carrier_vertical_load_N": 150,
+    "collet_reaction_torque_Nm": 19,
+    "torque_source": "RapidChange manufacturer FAQ advertises approximately14ftlb; selected kit and actual reaction still require confirmation",
+    "steel_E_MPa": 200000,
+    "steel_G_MPa": 77000,
+    "assumed_minimum_yield_MPa": 250,
+    "allowable_stress_screen_MPa": 83.33333333333333,
+    "lock_shear_design_load_N": 300,
+    "aluminum_density_kg_m3": 2700,
+    "steel_density_kg_m3": 7850
+  },
+  "fabricated_mass_kg": 12.31770512452436,
+  "moving_fabricated_mass_kg": 5.258420932933774,
+  "excluded_mass": "Purchased rails, blocks, motor, springs, fasteners and actual magazine/tools; not total machine or complete carriage mass.",
+  "crossbeam": {
+    "I_mm4": 138066.34853072918,
+    "bending_stress_MPa": 5.953713622092694,
+    "midspan_deflection_mm": 0.07273853905203992,
+    "torsion_shear_MPa": 1.1158627491608193,
+    "vertical_load_eccentricity_mm": 50,
+    "eccentric_vertical_load_torque_Nm": 7.5,
+    "conservative_twist_degrees_over_863mm": 0.047287149456248796,
+    "at_50mm_offset_displacement_mm": 0.041265822594709387
+  },
+  "vertical_spindle_nut_torque_about_Z": {
+    "torque_Nm": 19,
+    "weak_axis_I_mm4": 43763.91616822917,
+    "max_bending_stress_MPa": 2.7568373802796704,
+    "max_transverse_deflection_mm": 0.01296390666063703,
+    "center_rotation_degrees": 0.00894457293942647,
+    "at50mm_offset_mm": 0.007805612398888962
+  },
+  "railbar_notch_pessimistic_screen": {
+    "section_mm": [
+      33,
+      6.8
+    ],
+    "cantilever_mm": 120,
+    "load_N": 75,
+    "stress_MPa": 35.388486945580375,
+    "deflection_mm": 0.2498010843217438,
+    "actual_reduction_length_mm": 5,
+    "piecewise_I_deflection_mm": 0.04336970215953592
+  },
+  "pin": {
+    "diameter_mm": 6,
+    "engagement_mm": 4,
+    "single_shear_stress_MPa": 10.61032953945969,
+    "receiver_bearing_MPa": 12.5
+  },
+  "M6_bracket_fasteners": {
+    "one_pair_per_support": true,
+    "assumed_load_per_support_N": 25,
+    "eccentricity_mm": 95.6,
+    "couple_distance_mm": 16.5,
+    "separate_local_moment_assumption_Nmm": 5000,
+    "tension_per_bolt_N": 315.530303030303,
+    "M6_tensile_area_mm2": 20.1,
+    "nominal_tension_stress_MPa": 15.698025026383233
+  },
+  "actuator": {
+    "holding_torque_Nm": 0.44,
+    "assumed_screw_efficiency": 0.3,
+    "ideal_static_thrust_from_holding_N": 103.67255756846316,
+    "running_thrust_qualified": false
+  },
+  "repeatability": {
+    "nominal_pin_diametral_clearance_mm": [
+      0.05,
+      0.078
+    ],
+    "qualification_target_mm": 0.05,
+    "rule": "Approach the same positive stop flank under limited motor preload, engage pin only when aligned; verify every pocket after installation. Pin clearance alone is not pocket calibration."
+  },
+  "deformation_budget": {
+    "scalar_sum_named_effects_mm": 0.17814358286581122,
+    "target_for_review_mm": 0.2,
+    "not_machine_acceptance": "Conservative component screens; does not include rail preload, weld/joint compliance, actual magazine mount, Z module, spindle tram or repeatability. Bench-calibrate pockets and actual load loop."
+  },
+  "passed": true,
+  "stiffness_qualified": false,
+  "source_sha256": {
+    "variants/retractable-atc/small-mechanism/structure_check.py": "28cf895a712cd499a106e3977774b5e745f6b8cba5892445523d2d8a7173bd50",
+    "variants/retractable-atc/small-mechanism/build.py": "de5d6250966b0029a0727d0865f8ee25c8905d6e992d3c2d16d20163e92f645d",
+    "variants/retractable-atc/small-mechanism/lock.py": "cad631053a95310738aa5f9b43250ac8305e6a70a97a707e7855a01658a09027",
+    "variants/retractable-atc/small-mechanism/sensors.py": "cbff229958003d2d6d54016a615564ec9069b65356f5c4342c35a61a3ae25f85"
+  }
+}

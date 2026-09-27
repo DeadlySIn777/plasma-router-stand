@@ -7,14 +7,15 @@ its existing checks do not automatically qualify these additions.
 
 | Design | Working area / stock | Bed and ATC arrangement |
 |---|---|---|
-| [Small machine with ATC](small-atc/README.md) | Existing nominal 800 X × 1000 Y × 100 Z; proposed routing rectangle with dock installed is 800 × 788.6 mm, pending full tool sweep | Existing 20100 bed retained; removable rear dock supported from frame |
-| [Full-sheet 4x8](48x96/README.md) | 1219.2 × 2438.4 mm stock; extra travel for deck surfacing and side ATC bay | Provisional 1320 × 2550 mm bed, 3 × 6 aluminum/HDPE carriers, 1950 × 2950 mm chassis plan |
+| [Small retractable ATC](retractable-atc/small-mechanism/README.md) | Targets existing 800 X × 1000 Y; proposed 200 Z configuration, separately from baseline 100 Z | Raised open carrier, guided rearward parking, automatic spring-pin release; exact loaded magazine remains to fit |
+| [Full-sheet retractable ATC](retractable-atc/large-mechanism/README.md) | 1219.2 × 2438.4 mm stock; additional deck-surfacing travel | Separate dry side bay, 200 mm slide and guided outer shutter; based on the [4x8 development frame](48x96/README.md) |
 | [Shared locating interfaces](common/location/README.md) | Metal datum chain, independently checked fits and thermal allowances | Round pin + diamond pin, replaceable metal bushings, hard Z seats and separate clamps |
 
-**Latest design direction:** [retractable ATC on both machines](retractable-atc/README.md),
-with a 200 mm useful-stroke target. This study checks parking, full-size stock
-clearance during tool changes, and the longer guide needed for that travel.
-The earlier fixed-dock model below is retained as a separately checked candidate.
+**Latest package:** [retractable ATC on both machines](retractable-atc/README.md),
+with a 200 mm useful-stroke target, detailed mechanism candidates and an offline
+interlock model. The earlier [fixed small dock](small-atc/README.md) and first
+packaging studies remain historical candidates. They are not the newest ATC
+assembly and do not share the revised clearance result.
 
 The large dimensions assume 4x8 means usable sheet size. ATC on both machines is
 now requested; the exact kit remains unconfirmed. The [requirements record](requirements.json) distinguishes requests,
@@ -22,7 +23,8 @@ working assumptions and open inputs.
 
 ![Full-sheet machine development layout](48x96/layout-router.png)
 
-![Small-machine removable ATC dock candidate](small-atc/output/SMALL_ATC_CONTEXT.png)
+The image above shows the underlying 4x8 frame layout. Current ATC mechanism
+views and exchange files are linked from the latest package.
 
 ## Repeatable removal
 
@@ -44,17 +46,18 @@ contain the completed pin, clamp and thermal-clearance details.
 
 ## ATC is more than a magazine
 
-The [control integration](common/controls/ATC-INTEGRATION.md) adds a pin allocation
-for spindle direction, a fixed router toolsetter, IR status, cover control and
-dock presence. A [static source check](common/controls/pin-reservation-check.json)
-checks connector identities and GPIO/interrupt conflicts. It does not implement
-M6 or prove the actual spindle/VFD can reverse at the required low speeds.
+The [retractable mechanism controls](retractable-atc/controls/README.md) extend
+the earlier [ATC interface reservations](common/controls/ATC-INTEGRATION.md)
+with motor allocations, isolated position inputs, lock outputs and an executable
+offline interlock model. This is not flashed machine firmware or calibrated M6.
+The actual spindle/VFD must still support the required low-speed reverse cycle.
 
 Manufacturer mounting geometry and the exact RapidChange kit are still required
 to release the drilled adapter and pocket coordinates. Colored ATC allocations
 in CAD represent reserved space, not a supplier-certified magazine solid.
-The installed small-machine dock consumes part of its work area; the large
-machine reserves a side bay beyond the sheet. Removal must preserve or re-establish
+The earlier fixed small dock consumes part of its work area. Its retractable
+successor adds vertical clearance and explicit stored-tool limits to address
+that loss; the large machine reserves a side bay beyond the sheet. Removal must preserve or re-establish
 the pocket reference before automatic changes resume.
 
 The approximately **USD 700** kit figure is a user budget target. Official shop

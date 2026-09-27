@@ -1,104 +1,59 @@
-# Retractable ATC on both machines
+# Retractable ATC — small and full-sheet machines
 
-Requested on 26 September 2026: move each ATC magazine on a short linear slide
-so it does not permanently consume the routing area. The working target is
-**200 mm useful stroke**. A rail advertised as 200 mm long is a different size.
-This is a packaging study, not a selected actuator or released installation.
+The latest revision develops the requested **200 mm magazine travel on both machines** into separate mechanical assemblies, sourced drive interfaces, automatic locking arrangements and an executable control sequence. Use the two mechanism pages below for current CAD. The earlier `small-study` and `large-study` folders preserve the first packaging studies; they are not the current assemblies.
 
-## What the slide must accomplish
+**Status: engineering development, not a fabrication/CAM release or an operating ATC.** Exact magazine geometry, the small machine's proposed longer Z, actual spindle/VFD behavior and physical qualification still determine whether the installation can work as modeled. The preserved Rev I machine has not silently acquired those capabilities.
 
-During routing, the magazine parks clear of the tool, moving head, gantry,
-stock and clamps. For M6, the machine moves to a verified clearance pose, the
-magazine deploys, seats against its reference stop and locks. The spindle can
-then visit its calibrated pockets. Before ordinary machining resumes, the
-magazine returns to its parked position and its cover closes.
-
-The guide supports and guides the carriage; it needs a separate actuator.
-A screw drive or a suitably guided pneumatic arrangement are candidates.
-The existing compressor does not identify a cylinder, valve, pressure setting
-or holding mechanism. No actuator or solenoid is selected here.
-
-The motion guide must resist the actual magazine mass, cantilever and
-tool-change reaction. Final position needs a positive reference and holding
-arrangement; simply driving into a microswitch does not qualify pocket
-alignment. A removable magazine can retain separate metal locating features
-on top of the sliding carriage. Existing vertical locating pins cannot simply
-stay engaged during a horizontal slide.
-
-## Machine-specific result
-
-| Machine | Proposed arrangement | Present conclusion |
+| Machine | Current arrangement | Design constraint |
 |---|---|---|
-| [Small machine](small-study/README.md) | Compact rear magazine moving 200 mm in Y | A parked corridor is possible for an assumed 60 mm body depth. The current low shelf collides with full-area stock during deployment. Extra Z clearance and a redesigned tray/support are required to preserve the usable area through M6. |
-| [Full-sheet 4x8](large-study/README.md) | Magazine moving 200 mm across the existing dry side bay | A narrower assembly can fit the side corridor without occupying the 48x96 sheet. The previous 200 mm-wide allocation is too wide for a full 200 mm slide. Full-deck surfacing requires the rack parked. |
+| [Small machine: CAD, drawings and checks](small-mechanism/README.md) | Rear tray moves 200 mm in Y on two 350 mm rails; raised, open carrier gives stored cutters space below the magazine | Targets the nominal 800 × 1000 mm work rectangle with a working 50 mm combined stock/clamp height. Requires the proposed longer Z configuration; the original Z remains 100 mm. |
+| [Full-sheet 4x8: CAD, drawings and checks](large-mechanism/README.md) | Magazine moves 200 mm across a separate side bay; removable adapter strips sit above a guided carrier | Keeps the nominal 1219.2 × 2438.4 mm sheet area separate from the magazine. Deck surfacing and head access still depend on the defined parked pose. |
 
-The old small-machine bridge cannot simply be translated 200 mm rearward: its
-shelf still interferes with the low spindle. Moving only the magazine also
-leaves that fixed shelf in the work area. The small study therefore proposes
-a new compact moving tray, with its support and height still to redesign.
+The magazine is located and held by the mechanism at each endpoint. Its drive screw is not the precision stop or the only means of restraint. Spring-engaged guided pins have separate release actuators and feedback from the pins themselves. The fabricated carrier and its replaceable magazine mounting plates are distinct parts; vendor mounting holes and pocket coordinates remain undrilled and uncalibrated until the exact kit is identified.
 
-![Large-machine change and parked allocation](large-study/plan.png)
+## Current CAD views
 
-The compact dimensions are conditional envelopes. The supplier confirms a
-current nominal magazine width of 60 mm, but exact endcaps, cover motion,
-tool projections and mounting geometry still require the selected kit's CAD.
-The manufacturer also specifies 90 mm Z clearance for a non-inset installation.
-The inherited small-model spindle datum is an approximation, so its clearance
-arithmetic is a screening result rather than a measured spindle qualification.
-[RapidChange FAQ](https://rapidchangeatc.com/faq/).
+These previews are rendered from the delivered STEP assemblies. Purple geometry identifies an unverified supplier allocation or proposed motion package; it is not a purchased-part drawing.
 
-## Rail length versus travel
+![Small machine with the retractable carrier deployed](previews/small-deployed-full.png)
 
-For a fixed rail, useful travel is limited by rail length minus the occupied
-bearing-block span and the allowances at both ends. As an illustrative
-manufacturer dimension, the HIWIN MGN12H block has nominal length 45.4 mm.
-[HIWIN MGN12HZ1CM dimensions](https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/MGN12HZ1CM/p/MGN12HZ1CM).
+![Full-sheet machine with the retractable carrier deployed](previews/large-deployed-full.png)
 
-The catalog gives a maximum block envelope of 45.8 mm including screws and
-end-seal lips. With two blocks on each rail, 80 mm between their centers and
-a 10 mm allowance at each end, the minimum length for 200 mm travel is:
+The mechanism pages also show the parked states and closer views. [Preview verification](preview-verification.json) binds the images to their STEP files.
 
-`200 + 80 + 45.8 + 10 + 10 = 345.8 mm`
+## Guides, drives and covers
 
-Using only nominal block length would give 345.4 mm. The example uses the
-maximum envelope. [HIWIN catalog, PDF page 91 / printed page 88](https://www.hiwin.com/wp-content/uploads/HIWIN-Linear-Guideway-Catalog.pdf#page=91).
+The proposed guides use the sourced **HIWIN MGN12H/MGNR12** mounting geometry: two 350 mm rails and four blocks per slide. A 200 mm rail is too short for 200 mm motion with two separated blocks. The bounding calculation is `200 + 80 + 45.8 + 10 + 10 = 345.8 mm`; [the checked arithmetic](guide-stroke-check.json) uses the maximum published block length. These catalog dimensions do not give an inexpensive clone HIWIN load ratings.
 
-A **350 mm rail** is therefore an illustrative packaging size for that block
-arrangement. It is not a capacity-qualified purchase recommendation. A 200 mm
-rail gives only 54.2 mm travel with those two blocks, or 134.2 mm with one block
-and the same end allowances. Actual seals, fittings, tolerances, stops and the
-chosen actuator can increase the required length. See the executable
-[arithmetic check](check_guide_stroke.py) and [results](guide-stroke-check.json).
+The drive candidate is a **STEPPERONLINE 17E19S1684MB4-300RS**, with an integrated 300 mm TR8×8 screw. Its 8 mm lead is for the new magazine/shutter drives, not a change to the original X/Y axis lead. [Sourced dimensions](hardware/source-data.json) distinguish the current model, published alias and unverified delivered details. Holding torque alone does not establish running thrust or a brake function.
 
-## Required control sequence
+The locking arrangement uses separate [Delta release solenoids](hardware/LOCK-ACTUATOR.md) and [noncontact pin sensors](hardware/PIN-SENSORS.md). The guided pin and housing carry the lock reaction. A light return spring, actual friction, hot-coil pull and release timing require measured qualification. Sensor electronics cannot prove that a blocked optical slot contains the intended pin flag.
 
-This is an interface definition; no working M6 or slide-control firmware is
-issued with the study.
+The large machine has a separate powered outer shutter and dust enclosure. The small machine currently has the carrier and locks only: its constrained rear corridor does not establish room for that same shutter. Its cover arrangement remains a specific unfinished interface, and its automatic profile must remain disabled. Neither arrangement is qualified as a plasma spark or fire barrier. **The new control candidate denies plasma permission**, including when the magazine is parked. Plasma conversion requires a qualified protected arrangement or a separately verified removal/configuration workflow.
 
-1. Permit ordinary routing only with verified PARKED and cover-closed states.
-2. For a requested tool change, establish the actual spindle stop/clearance
-   conditions and a collision-free machine pose before moving the rack.
-3. Deploy; verify the deployed and locked states, with a timeout for each move.
-4. Run the calibrated RapidChange operation only while the dock stays locked.
-5. Retract the spindle, return the rack, and verify PARKED/CLOSED before resuming.
-6. A position contradiction, timeout, lost clamp state or interrupted threading
-   requires controlled recovery and reference verification. A restart must not
-   automatically resume an uncertain tool-change cycle.
+## Control sequence and onboard drivers
 
-The current controller reservation provides only a dock-present signal. It does
-not yet provide the additional parked/deployed/locked/cover signals and actuator
-outputs needed here. Those require a checked I/O expansion or revised allocation.
-The existing emergency-stop and hardware tool-power permissions remain separate.
+The [controls package](controls/README.md) defines Kraken S5 for the magazine slide and S6 for the large machine's outer shutter, with isolated field inputs and separate lock outputs. The small machine has no assigned outer-shutter travel or completed automatic profile. The design retains the user's preference for onboard stepper drivers. S5/S6 use the documented 75 mΩ current-sense value; their settings cannot be copied blindly from Kraken V1.1 S1–S4.
 
-A dust cover is not established plasma protection. The magazine needs a verified
-dry, spark-protected parked enclosure or removal for plasma operation. The
-studies do not qualify enclosure sealing, grounding, fire resistance or an
-energized machine.
+The [terminal/circuit definition](controls/WIRING.md) and [I/O allocation](controls/io_plan.json) specify the added interfaces. The existing hardware stop and tool-power permission remain independent. The new relay contact belongs in series with the existing run-arm path, without a bypass. VFD and kit feedback channels remain open interfaces until their actual electrical signals and meanings are known.
 
-## Release boundary
+The offline sequence stops the spindle, confirms a current clearance pose, opens and captures the shutter, releases both magazine pins, deploys, confirms the matching endpoint and lock, and only then permits the calibrated tool operation. It requires another verified clearance pose before retracting and reclosing, then confirms the shutter's closed retaining pin before restoring router permission. Invalid feedback, missing endpoints, stale data and interrupted cycles inhibit permission and require deliberate recovery.
 
-The slide concept has been added as a separate study so the earlier dock and
-4x8 model evidence remain readable. It does not silently replace those models
-or establish full-bed automatic operation. Exact kit dimensions, actual tool
-and stock/clamp envelopes, selected guides/actuator, complete attachments,
-deflection and repeatability, and the controls remain to finish.
+This package contains **no flashed firmware, functioning M6 integration or calibrated pocket coordinates**. Its default configuration does not energize hardware. Simulation and source checks demonstrate the specified behavior only; they do not qualify a populated control cabinet or an energized machine.
+
+## Evidence and fabrication boundary
+
+The small machine's bed-removal sequence was revised around the installed rear guides. Its checks cover 42 panel, 60 spoilboard and 31 beam movements within the modeled frame footprint. Conversion remains manual, with defined tool/fastener/restraint preconditions; these checks do not include the operator's hands or flexible leads.
+
+- [Small mechanism verification](small-mechanism/verification.json) and [large mechanism verification](large-mechanism/verification.json) bind their specific modeled checks to the sources and exported artifacts.
+- [Control verification](controls/verification.json) records the offline sequence and fault checks.
+- [Independent export verification](export-verification.json) reopens STEP/DXF files without importing the geometry generators. It checks valid positive-volume solids, millimetre drawing units, file structure and circular feature correspondence between each drawing and its part. It does not establish assembly clearance, complete machining setups or rigidity.
+- [Publication verification](../package-verification.json) checks source/artifact hashes, local document links and the unchanged Rev I baseline.
+
+Remaining release inputs are concrete: the selected RapidChange kit's dimensions and mounting pattern; loaded tool/nut geometry; the proposed small Z module's drawing and retained-load behavior; actual spindle low-speed forward/reverse performance; measured alignment, loaded deflection and pin repeatability; and tested electrical/firmware integration. The mechanism pages identify any additional CAD findings and incomplete fabrication details. The 4x8's purchased main motion, structural joints and complete bed conversion also remain separate development work.
+
+The working 50 mm stock/clamp height is an assumption, not a confirmed user limit. Clearance must be checked against the actual tallest clamp and longest stored cutter. A blank supplier interface in a STEP file is not permission to guess the drilling pattern.
+
+The approximately **$700 ATC kit target** excludes unquoted installation hardware, freight, taxes and tooling. Component source records distinguish observed goods prices from missing delivered quotes. No complete build total is asserted by this revision.
+
+Primary references: [RapidChange requirements](https://rapidchangeatc.com/faq/), [HIWIN guide catalog](https://www.hiwin.com/wp-content/uploads/HIWIN-Linear-Guideway-Catalog.pdf#page=91), [BTT Kraken documentation](https://global.bttwiki.com/Kraken.html). The [requirements record](../requirements.json) separates confirmed requests from assumptions and unresolved interfaces.

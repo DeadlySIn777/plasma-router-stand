@@ -18,7 +18,9 @@
     "4x8 means full 48x96in stock capability, not outside machine dimensions",
     "Large variant uses aluminum framed carrier panels with replaceable HDPE tops; small baseline retains its existing 20100 aluminum bed",
     "Exact RapidChange kit, pocket count and options have not been identified",
-    "Treat the proposed 200mm rail as a 200mm useful-stroke target; actual rail length must include bearing blocks and end allowances"
+    "Treat the proposed 200mm rail as a 200mm useful-stroke target; actual rail length must include bearing blocks and end allowances",
+    "Use 50mm combined stock and clamp height above the small bed as a working clearance target, not a user-confirmed maximum",
+    "The proposed small-machine retractable ATC revision uses a separately qualified longer Z axis; the original 100mm Z specification is preserved in Rev I"
   ],
   "variant_targets": {
     "small_atc": {
@@ -31,7 +33,7 @@
         1003,
         1211
       ],
-      "strategy": "Removable frame-supported rear dock; installed ATC reduces unrestricted routing area",
+      "strategy": "Raised retractable rear tray targets preservation of the nominal 800 x 1000 working rectangle in the proposed longer-Z variant; earlier fixed dock is a historical candidate",
       "purchased_axis_status": "Y reported on order; X/Z not reported delivered"
     },
     "48x96": {
@@ -58,7 +60,7 @@
       "strategy": "Full sheet with separate dry ATC side bay; redesigned long-axis structure and drives"
     },
     "retractable_atc": {
-      "study": "retractable-atc/README.md",
+      "design": "retractable-atc/README.md",
       "target_useful_stroke_mm": 200,
       "machines": [
         "small_atc",
@@ -66,7 +68,15 @@
       ],
       "preserve_bed_during_m6_required": true,
       "preservation_verified": false,
-      "max_stock_and_clamp_height_mm": null
+      "max_stock_and_clamp_height_mm": null,
+      "working_stock_and_clamp_height_mm": 50,
+      "working_height_confirmed_by_user": false,
+      "proposed_small_Z_travel_mm": 200,
+      "proposed_Z_supplier_interface_qualified": false,
+      "automatic_lock_and_release_required": true,
+      "onboard_slide_and_shutter_drivers": "Kraken S5 slide; S6 large outer shutter. Small closure interface and automatic profile remain unavailable. All require firmware integration and current verification.",
+      "small_outer_shutter_selected": false,
+      "physical_commissioning_complete": false
     }
   },
   "accuracy_definition": {

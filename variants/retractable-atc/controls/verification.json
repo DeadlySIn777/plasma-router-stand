@@ -1,0 +1,1418 @@
+{
+  "schema": 1,
+  "passed": true,
+  "scope": "Offline interlock behavior, pin allocation, interface arithmetic; not hardware or machine release",
+  "test_count": 269,
+  "exhaustive_feedback_cases": 1024,
+  "checks": [
+    {
+      "name": "small profile unavailable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown profile unavailable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "obsolete 170 mm shutter cannot load",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "large shutter geometry and pulse budget match plan",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "normal tool spindle permission",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full cycle returns parked and locked",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "closed capture inhibits run and stops motion while spring engages",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "closed catch stuck retracted faults on bounded timeout",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "closed endpoint loss during capture prevents run",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "closed contradictory catch feedback prevents run",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost parked closed capture removes run permission",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "boot acknowledgement cannot bypass missing closed capture",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "parked plasma mode cannot enable common tool permission",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "normal trace visits every nonfault state",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BOOT_UNKNOWN: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BOOT_UNKNOWN: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BOOT_UNKNOWN: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BOOT_UNKNOWN: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BOOT_UNKNOWN: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "BOOT_UNKNOWN: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PARKED_LOCKED: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PARKED_LOCKED: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PARKED_LOCKED: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PARKED_LOCKED: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PARKED_LOCKED: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PARKED_LOCKED: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_STOP: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_STOP: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_STOP: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_STOP: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_STOP: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_STOP: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RELEASE_SHUTTER_CATCH_TO_OPEN: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RELEASE_SHUTTER_CATCH_TO_OPEN: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RELEASE_SHUTTER_CATCH_TO_OPEN: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RELEASE_SHUTTER_CATCH_TO_OPEN: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RELEASE_SHUTTER_CATCH_TO_OPEN: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RELEASE_SHUTTER_CATCH_TO_OPEN: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "OPEN_SHUTTER: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "OPEN_SHUTTER: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "OPEN_SHUTTER: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "OPEN_SHUTTER: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "OPEN_SHUTTER: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "OPEN_SHUTTER: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CAPTURE_SHUTTER_OPEN: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CAPTURE_SHUTTER_OPEN: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CAPTURE_SHUTTER_OPEN: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CAPTURE_SHUTTER_OPEN: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CAPTURE_SHUTTER_OPEN: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CAPTURE_SHUTTER_OPEN: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UNLOCK_PARK: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UNLOCK_PARK: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UNLOCK_PARK: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UNLOCK_PARK: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UNLOCK_PARK: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UNLOCK_PARK: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DEPLOY: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DEPLOY: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DEPLOY: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DEPLOY: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DEPLOY: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "DEPLOY: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LOCK_DEPLOYED: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LOCK_DEPLOYED: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LOCK_DEPLOYED: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LOCK_DEPLOYED: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LOCK_DEPLOYED: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LOCK_DEPLOYED: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ATC_READY: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ATC_READY: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ATC_READY: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ATC_READY: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ATC_READY: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ATC_READY: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "TOOL_CYCLE: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "TOOL_CYCLE: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "TOOL_CYCLE: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "TOOL_CYCLE: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "TOOL_CYCLE: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "TOOL_CYCLE: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_STOP_AFTER_TOOL: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_STOP_AFTER_TOOL: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_STOP_AFTER_TOOL: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_STOP_AFTER_TOOL: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_STOP_AFTER_TOOL: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_STOP_AFTER_TOOL: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_AXIS_CLEAR: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_AXIS_CLEAR: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_AXIS_CLEAR: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_AXIS_CLEAR: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_AXIS_CLEAR: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "WAIT_AXIS_CLEAR: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UNLOCK_DEPLOYED: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UNLOCK_DEPLOYED: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UNLOCK_DEPLOYED: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UNLOCK_DEPLOYED: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UNLOCK_DEPLOYED: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UNLOCK_DEPLOYED: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RETRACT: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RETRACT: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RETRACT: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RETRACT: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RETRACT: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RETRACT: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LOCK_PARKED: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LOCK_PARKED: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LOCK_PARKED: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LOCK_PARKED: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LOCK_PARKED: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "LOCK_PARKED: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RELEASE_SHUTTER_CATCH_TO_CLOSE: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RELEASE_SHUTTER_CATCH_TO_CLOSE: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RELEASE_SHUTTER_CATCH_TO_CLOSE: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RELEASE_SHUTTER_CATCH_TO_CLOSE: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RELEASE_SHUTTER_CATCH_TO_CLOSE: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "RELEASE_SHUTTER_CATCH_TO_CLOSE: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLOSE_SHUTTER: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLOSE_SHUTTER: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLOSE_SHUTTER: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLOSE_SHUTTER: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLOSE_SHUTTER: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLOSE_SHUTTER: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CAPTURE_SHUTTER_CLOSED: hardware_permission loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CAPTURE_SHUTTER_CLOSED: control_power loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CAPTURE_SHUTTER_CLOSED: bus_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CAPTURE_SHUTTER_CLOSED: config_readback_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CAPTURE_SHUTTER_CLOSED: driver_ok loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CAPTURE_SHUTTER_CLOSED: dock_present loss latches and removes commands",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contradictory slide inhibits spindle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contradictory park pin inhibits spindle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contradictory deploy pin inhibits spindle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contradictory shutter inhibits spindle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contradictory catch inhibits spindle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contradictory spindle inhibits spindle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "contradictory kit cover inhibits spindle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "early false-high deployed rejects short travel",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "early false-high parked rejects short travel",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pose epoch invalidates OPEN_SHUTTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "axis motion invalidates OPEN_SHUTTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pose epoch invalidates DEPLOY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "axis motion invalidates DEPLOY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pose epoch invalidates RETRACT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "axis motion invalidates RETRACT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pose epoch invalidates CLOSE_SHUTTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "axis motion invalidates CLOSE_SHUTTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost park inhibits before transition WAIT_STOP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost park inhibits before transition RELEASE_SHUTTER_CATCH_TO_OPEN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost park inhibits before transition OPEN_SHUTTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost park inhibits before transition CAPTURE_SHUTTER_OPEN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost park inhibits before transition UNLOCK_PARK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost park lock inhibits before transition WAIT_STOP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost park lock inhibits before transition RELEASE_SHUTTER_CATCH_TO_OPEN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost park lock inhibits before transition OPEN_SHUTTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost park lock inhibits before transition CAPTURE_SHUTTER_OPEN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost park lock inhibits before transition RELEASE_SHUTTER_CATCH_TO_CLOSE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost park lock inhibits before transition CLOSE_SHUTTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost capture inhibits before transition UNLOCK_PARK",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost capture inhibits before transition DEPLOY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost capture inhibits before transition LOCK_DEPLOYED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost capture inhibits before transition ATC_READY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost capture inhibits before transition TOOL_CYCLE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost capture inhibits before transition WAIT_STOP_AFTER_TOOL",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost capture inhibits before transition WAIT_AXIS_CLEAR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost capture inhibits before transition UNLOCK_DEPLOYED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost capture inhibits before transition RETRACT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost capture inhibits before transition LOCK_PARKED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stale stop during threading inhibits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stale input during threading inhibits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "replayed input during threading inhibits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wrong session during threading inhibits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost toolpath during threading inhibits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lost IR during threading inhibits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing endpoint stops at pulse budget DEPLOY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing endpoint stops at pulse budget RETRACT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing endpoint stops at pulse budget OPEN_SHUTTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing endpoint stops at pulse budget CLOSE_SHUTTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite slide_mm nan",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite slide_mm inf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite slide_mm -inf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite shutter_position_mm nan",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite shutter_position_mm inf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite shutter_position_mm -inf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite sampled_ms nan",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite sampled_ms inf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite sampled_ms -inf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite spindle_feedback_ms nan",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite spindle_feedback_ms inf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite spindle_feedback_ms -inf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite axis_clear_ms nan",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite axis_clear_ms inf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject nonfinite axis_clear_ms -inf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject out-of-range counter {'slide_mm': 200.01}",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject out-of-range counter {'slide_mm': -0.01}",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject out-of-range counter {'shutter_position_mm': 164.01}",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reject out-of-range counter {'shutter_position_mm': -0.01}",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "finite slide target exported DEPLOY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "finite slide target exported RETRACT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "finite shutter target exported OPEN_SHUTTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "finite shutter target exported CLOSE_SHUTTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full missing-limit sequence stops on count before timeout DEPLOY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full missing-limit sequence stops on count before timeout OPEN_SHUTTER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stuck-high stopped signal does not complete tool cycle",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "held request plus acknowledge cannot restart",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reset cannot resume from deployed rack",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "delivered unqualified default cannot energize",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wrong end pin cannot establish engagement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1024 critical-feedback combinations obey tool run permission",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "jam/stuck-low arrival times out",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "new functions use unique GPIO",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no baseline mapped GPIO is overwritten",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all common ATC reservations preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no new EXTI source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "raw output headers match BTT map",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "P10 mapping official I2C2 PB10/PB11",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PS_ON mapping is official PD10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "J14signal is pin2 throughR44;pin1 is ground",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S5 step official",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S5 direction official",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S5 enable official",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S5 75mohm mixed sense explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S5 pulses and conservative ceiling",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S5 chip-select matches official driver",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S6 step official",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S6 direction official",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S6 enable official",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S6 75mohm mixed sense explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S6 pulses and conservative ceiling",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "S6 chip-select matches official driver",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "14 isolated channels never use output-only bit7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all channel package pins unique",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "open all input wires means no confirmations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode parked",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode deployed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode park_pin_extended",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode park_pin_retracted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode deploy_pin_extended",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode deploy_pin_retracted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode shutter_open",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode shutter_closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode shutter_catch_extended",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode shutter_catch_retracted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode spindle_stopped",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode spindle_running",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode kit_cover_open",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "terminal decode kit_cover_closed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "correct register initialization accepted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "configuration upset detected at 0x14",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "configuration upset detected at 0x15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "configuration upset detected at 0xa",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "configuration upset detected at 0x0",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "configuration upset detected at 0x1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "configuration upset detected at 0x2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "configuration upset detected at 0x3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "configuration upset detected at 0x4",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "configuration upset detected at 0x5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "configuration upset detected at 0xc",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "configuration upset detected at 0xd",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "input LED reaches recommended5mA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PNP input LED reaches5mA with1Vresidual and1Vwire",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "PNP LEDload remains below16mA residual-reference point",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "six separate PNP sensor channels and returns",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "six sensor quiescent loads explicitly budgeted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "input LED under30mA",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "input resistor under half0.6W",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "MCP low below0.2VDD at minimum3V",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "MCP high above0.8VDD for same minimum3V",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "25C and0C solenoid screens under0.5A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "every solenoid individually fused",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "bound sources unchanged during verification",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "calculations": {
+    "field_LED_min_mA": 5.571337366969092,
+    "field_LED_max_mA": 8.114089009097615,
+    "PNP_LED_min_mA_with1V_wire_and1V_residual": 5.276038524540555,
+    "input_resistor_max_W": 0.21421194984017702,
+    "logic_low_max_V": 0.2411068778824945,
+    "logic_high_min_V": 2.990506,
+    "solenoid_25C_high_supply_current_A": 0.3819444444444444,
+    "solenoid_0C_screen_A": 0.423559128854388,
+    "three_solenoid_design_cap_A": 1.5,
+    "relay_coil_cap_A": 0.12,
+    "fourteen_input_channel_cap_A": 0.1135972461273666,
+    "six_sensor_quiescent_cap_A": 0.09,
+    "aux_field_design_cap_A": 1.8235972461273668
+  },
+  "source_sha256": {
+    "output/design-finish-2026-09-26/controls/HEAD-INTERFACE.md": "b4ee4c529e70959f0a6f7eb23cd4c226e531ccb27cf4ea9a0c195bf0b2bda104",
+    "output/design-finish-2026-09-26/controls/RUN-INTERFACE.md": "b0884dea3dde9de450f07358d0da581b4deba2672751ec605866eade6c9038f8",
+    "RevE-ENGINEERING/controls/kraken-official.cfg": "43e8fb4c1b571cd91b43cdd5ba05171ea60e43cc0982e11edb8afdb0f7b961ab",
+    "RevE-ENGINEERING/controls/Kraken-schematic.txt": "dbcade566b5aa89d6bb19890dba7e494bd97cc78964e06c434e9169c7106234d",
+    "RevE-ENGINEERING/controls/source-overlay/boards/my_machine_map.h": "3878c82b9ea583e9d7c4d846e07e0b58a29d677dd68b2d9294bd5149e00b7797",
+    "RevE-ENGINEERING/controls/source-overlay/Src/kraken_board.c": "c1fa773aa982dee95cb274f996a9c8d31c078ab03ffb80ca0c1bdc81f90bcdac",
+    "variants/common/controls/pin-reservations.json": "872cac652853e9cb023febcdecdad3f1987fe6bce2a1cee985cf5d80cfaae26b",
+    "variants/retractable-atc/controls/input_adapter.py": "fc7699e5ce6e514cbc523aa6a8b38231cfe3e8abefa6ba754f186c07fe01af34",
+    "variants/retractable-atc/controls/interlock.py": "b639192f026806cc3add7e255409fc6ca658ea8d6871c469f560978cec0b486e",
+    "variants/retractable-atc/controls/io_plan.json": "99fa9854d595c06d3f7cdf67f59e9c4c6bd0d46464d0399da67f4f74209c64cb",
+    "variants/retractable-atc/controls/README.md": "c323ccd617938550d1ddb66e0c51a4c36f73528d5f0195d9921e803b1a3581a6",
+    "variants/retractable-atc/controls/sources.json": "cb812accc2fd2684f7a22bf201fcc354774911e31abd650cc522b7b595cd9f89",
+    "variants/retractable-atc/controls/verify_controls.py": "1ce4077eeb78acf73bc74ce7e721b4ac5a7ef32bff7132a12eb2ba0d34d2af14",
+    "variants/retractable-atc/controls/wiring-overview.svg": "bde5821a617c45e5df023df2acec03a10a3b4a281d4ee2a059e6db2013bb127b",
+    "variants/retractable-atc/controls/WIRING.md": "a69e2e435259abc340c92cb1dfe72a0a99535bfc43b93a1cb73e4db37d4431c2",
+    "variants/retractable-atc/hardware/lock-actuator.json": "864dab3726f6541325aeba7c0a83b60561809d6900240aa7279d016a5cd3e199",
+    "variants/retractable-atc/hardware/pin-sensor.json": "54d2c48056513dd4832e87b0b878cd91078a0c1ba7f611dff0064323dbb36fef"
+  },
+  "source_sha256_before": {
+    "output/design-finish-2026-09-26/controls/HEAD-INTERFACE.md": "b4ee4c529e70959f0a6f7eb23cd4c226e531ccb27cf4ea9a0c195bf0b2bda104",
+    "output/design-finish-2026-09-26/controls/RUN-INTERFACE.md": "b0884dea3dde9de450f07358d0da581b4deba2672751ec605866eade6c9038f8",
+    "RevE-ENGINEERING/controls/kraken-official.cfg": "43e8fb4c1b571cd91b43cdd5ba05171ea60e43cc0982e11edb8afdb0f7b961ab",
+    "RevE-ENGINEERING/controls/Kraken-schematic.txt": "dbcade566b5aa89d6bb19890dba7e494bd97cc78964e06c434e9169c7106234d",
+    "RevE-ENGINEERING/controls/source-overlay/boards/my_machine_map.h": "3878c82b9ea583e9d7c4d846e07e0b58a29d677dd68b2d9294bd5149e00b7797",
+    "RevE-ENGINEERING/controls/source-overlay/Src/kraken_board.c": "c1fa773aa982dee95cb274f996a9c8d31c078ab03ffb80ca0c1bdc81f90bcdac",
+    "variants/common/controls/pin-reservations.json": "872cac652853e9cb023febcdecdad3f1987fe6bce2a1cee985cf5d80cfaae26b",
+    "variants/retractable-atc/controls/input_adapter.py": "fc7699e5ce6e514cbc523aa6a8b38231cfe3e8abefa6ba754f186c07fe01af34",
+    "variants/retractable-atc/controls/interlock.py": "b639192f026806cc3add7e255409fc6ca658ea8d6871c469f560978cec0b486e",
+    "variants/retractable-atc/controls/io_plan.json": "99fa9854d595c06d3f7cdf67f59e9c4c6bd0d46464d0399da67f4f74209c64cb",
+    "variants/retractable-atc/controls/README.md": "c323ccd617938550d1ddb66e0c51a4c36f73528d5f0195d9921e803b1a3581a6",
+    "variants/retractable-atc/controls/sources.json": "cb812accc2fd2684f7a22bf201fcc354774911e31abd650cc522b7b595cd9f89",
+    "variants/retractable-atc/controls/verify_controls.py": "1ce4077eeb78acf73bc74ce7e721b4ac5a7ef32bff7132a12eb2ba0d34d2af14",
+    "variants/retractable-atc/controls/wiring-overview.svg": "bde5821a617c45e5df023df2acec03a10a3b4a281d4ee2a059e6db2013bb127b",
+    "variants/retractable-atc/controls/WIRING.md": "a69e2e435259abc340c92cb1dfe72a0a99535bfc43b93a1cb73e4db37d4431c2",
+    "variants/retractable-atc/hardware/lock-actuator.json": "864dab3726f6541325aeba7c0a83b60561809d6900240aa7279d016a5cd3e199",
+    "variants/retractable-atc/hardware/pin-sensor.json": "54d2c48056513dd4832e87b0b878cd91078a0c1ba7f611dff0064323dbb36fef"
+  },
+  "firmware_compiled": false,
+  "hardware_tested": false,
+  "machine_release": false,
+  "excluded": [
+    "actual M6 macros and trajectories",
+    "GPIO scheduler and motor pulse timing",
+    "HF/EMC and stop distances",
+    "common-cause or coherently falsified sensor signals",
+    "physical pin seating/cam adjustment",
+    "unidentified VFD/kit contacts and cover protocol"
+  ]
+}

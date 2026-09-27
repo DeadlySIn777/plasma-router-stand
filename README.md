@@ -2,21 +2,25 @@
 
 Public working design for **800 mm X / 1000 mm Y / 100 mm Z nominal travel**.
 
-**Current revision: Rev I.** It adds a floating/breakaway head mechanism,
+**Preserved baseline: Rev I.** It adds a floating/breakaway head mechanism,
 stronger storage restraints, supported plumbing and defined water/tool control
 circuits. It is still an engineering design with open measured interfaces and
 integration work, **not a fabrication-ready or operational machine**.
 
-**New development variants:** [small-machine RapidChange ATC, a full-sheet 4x8
-machine, and repeatable removable table interfaces](variants/README.md). These
-have their own CAD and checks. Their supplier interfaces and physical
-qualification remain open; they do not replace or inherit the Rev I release status.
+**Latest design work:** [retractable ATC mechanisms for both machines](variants/retractable-atc/README.md),
+with 200 mm slide travel, automatic pin release and onboard Kraken drive
+allocations. The small-machine proposal includes a longer Z configuration;
+the 4x8 uses a separate side bay. These have their own CAD, controls model and
+checks. Exact magazine interfaces and machine qualification remain open.
+Use the [variant index](variants/README.md) to distinguish these proposals from
+the preserved Rev I baseline and earlier fixed-dock studies.
 
 ## Open the current design
 
-- [Current CAD package and limitations](output/release-review/RevI-CAD/README.md)
-- [Router assembly STEP](output/release-review/RevI-CAD/step/RevI_ROUTER.step)
-- [Bed stored assembly STEP](output/release-review/RevI-CAD/step/RevI_BED_STORED.step)
+- [Latest small and 4x8 retractable ATC work](variants/retractable-atc/README.md)
+- [Baseline Rev I CAD package and limitations](output/release-review/RevI-CAD/README.md)
+- [Baseline router assembly STEP](output/release-review/RevI-CAD/step/RevI_ROUTER.step)
+- [Baseline bed stored assembly STEP](output/release-review/RevI-CAD/step/RevI_BED_STORED.step)
 - [Plasma head hardware STEP](output/release-review/RevI-CAD/step/RevI_PLASMA_HARDWARE.step) — measured torch not yet installed
 - [Updated concept PDF](output/pdf/plasma-router-stand-concept.pdf)
 - [Changes, evidence and reproduction](output/design-finish-2026-09-26/README.md)
@@ -28,7 +32,9 @@ qualification remain open; they do not replace or inherit the Rev I release stat
 - [Scrap tube lengths and inspection inputs](output/design-completion-2026-09-26/SCRAP-TUBE-GUIDE.md)
 - [X/Y lead check and arrival measurements](output/design-completion-2026-09-26/CONTROL-SCALE-CHECK.md)
 
-![Current router CAD](output/release-review/RevI-CAD/previews/RevI_ROUTER.png)
+![Preserved Rev I router baseline](output/release-review/RevI-CAD/previews/RevI_ROUTER.png)
+
+The view above is the Rev I baseline. The [latest retractable ATC package](variants/retractable-atc/README.md) contains the new small and full-sheet machine views and STEP files.
 
 ## Design and changes
 
