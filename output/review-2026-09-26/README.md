@@ -52,7 +52,7 @@ Still open:
 - the variants findings;
 - the other minor findings.
 
-Rev I, the six-panel line, has none of these fixes.
+Rev I, the six-panel line, has none of these fixes. **The owner chose the one-piece line on 27 September**, so Rev K is the current design.
 
 ## Bottom line
 

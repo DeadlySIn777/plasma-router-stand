@@ -142,7 +142,7 @@ RE --K_DRAINED 21-24--> RR                                     (router ready wit
 
 **Cutter start at the cutter.** The review found HF-exposed torch-start leads entering the cabinet. The XPLASMA output stays a dry contact chain in the cabinet. At the cutter, it switches the coil of an interposing relay, K_TS, in a small shielded die-cast box bolted to the cutter:
 
-- K_TS's contact closes the cutter's torch trigger, so the trigger leads stay at the cutter.
+- K_TS's contact closes the cutter's torch trigger: the owner confirmed on 27 September that the CUT-50 starts from its trigger. The trigger leads stay at the cutter.
 - The box has its own 24 V supply, fed from the cutter's mains after K1/K2, so K_TS cannot pull in after an E-stop.
 - Use a relay with reinforced coil-to-contact isolation and a flyback diode.
 - Bond the box to the cutter chassis. Run the cable to the cabinet shielded, through an EMC gland.
@@ -298,7 +298,12 @@ All 1173 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.j
 
 1. **Rodent version.** V1.1 puts E1-MAX on GPIO39; V1.0 uses GPIO37.
 2. **VFD model.** Needed: its FWD/COM input type, its analog input range and impedance, and whether it has STO (safe torque off).
-3. **CUT-50 details.** The start circuit and the work-lead size, to choose the arc-OK current switch and K_TS. The owner's photo of 27 September settles the torch: a PT31-style straight machine torch, 270 mm × 28 mm (Rev K).
+3. **CUT-50 details.**
+   - **Start: the torch trigger** (owner, 27 Sep). K_TS's NO contact goes across the cutter's torch-trigger terminals, in place of the hand switch.
+   - **Still needed:**
+     - the work-lead size, for the arc-OK current switch;
+     - whether the cutter starts with HF, which sets K_TS's isolation;
+     - the trigger circuit's voltage and current, which K_TS's contact must handle.
 
 ## Reproduce
 

@@ -5,7 +5,7 @@ Two sessions developed the design in parallel on 26 September 2026:
 - **The one-piece hoisted bed** is what the owner asked for in this session. On 27 September, after the owner said "finish it", that line was completed as **Rev K**.
 - **Rev I** is the other session's six-panel line ([Rev I package](output/release-review/RevI-CAD/README.md), [changes](output/design-finish-2026-09-26/README.md)).
 
-The [README](README.md) compares them, and choosing one is the owner's decision.
+**The owner chose the one-piece line on 27 September.** Rev I stays in the repository as the alternative, and the [README](README.md) compares them.
 
 **Start with the [Rev K CAD package](output/release-review/RevK-CAD/README.md).** It is Rev J's bed with the other session's Rev I head, plumbing and cabinet folded in, plus the review's fixes:
 

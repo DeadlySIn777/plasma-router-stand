@@ -8,7 +8,7 @@ Rev K is where the one-piece bed line stands after the owner's "finish it" (27 S
 - The **owner's torch**, from the photo sent on 27 September: a straight PT31-style machine torch, 270 mm long with a 28 mm barrel (seller's figures).
 - Fixes for the **findings of the [26 September review](../../review-2026-09-26/README.md)** that were still open: plasma reach, the cabinet, water and coolant, and the float trip. The controls side is in the [GM1 controls](../../controls-2026-09-27/README.md) (M9–M11).
 
-The bed module, frame, water table and motion are Rev J's, unchanged. Which bed line continues is still the owner's decision: this one-piece line, or the other session's six-panel [Rev I](../RevI-CAD/README.md).
+The bed module, frame, water table and motion are Rev J's, unchanged. **The owner chose this one-piece line on 27 September** ("the one piece"). The other session's six-panel [Rev I](../RevI-CAD/README.md) stays in the repository as the alternative.
 
 - [Router assembly STEP](step/RevK_ROUTER.step): bed module installed, plasma head and bracket parked on the reservoir lid
 - [Plasma assembly STEP](step/RevK_PLASMA.step): module out, router tool stored, head, drop bracket and torch on the Z adapter
@@ -105,6 +105,34 @@ Aluminium fines left in the water make hydrogen. Empty the screen after long pla
 - **Heat.** The Rodent, supplies, relays and contactors inside make about 60 W; the sealed box sheds only about 33 W at a 10 K rise. An IP54 filter fan low on the left wall blows in, and an exhaust filter leaves high on the right. They need about 20 m³/h for a 10 K rise; specify 40 m³/h or more free-blowing. The box becomes IP54. Keep components 45 mm clear of the fan.
 - **VFD outside.** The VFD loses 45–110 W on its own. It sits on a 3 mm plate welded to the cage's right upright and stringer, under its own drip roof, with 100 mm of air above and below. The envelope allows 180 × 160 × 250 mm; confirm the owner's unit. Read its keypad from the right side of the machine.
 
+## Hoist in the container
+
+The owner said on 27 September that the machine goes in a container with an **8 ft ceiling**. Inside a standard container that is about 2.39 m. The container's roof and walls can't carry a hoist beam, and the recommended 1.0 m sling height needs about 2.3 m to the beam plus the beam itself: no margin. What fits:
+
+- **A rolling A-frame gantry** over the front of the machine, with its legs outside the machine's sides.
+  - Clear span between its legs at least 1.3 m (the machine is 1.15 m wide).
+  - Rated 250 kg or more (the module is about 63 kg).
+  - Beam underside set to about 2.0–2.1 m.
+  - Lock the casters while lifting.
+- **A low-headroom hoist:** a chain hoist or mini electric hoist on a trolley, hook no more than 0.35 m below the beam at full lift.
+- **The short sling** from the hoist check: the hook 0.7 m above the lug holes, legs about 1.03–1.05 m long at 42–43° from horizontal.
+  - Use rigging rated at that angle: each leg then carries about 23 kg.
+  - That hook height passed the hoist-path check: 74 sampled poses, 0 contacts.
+  - The raised hook sits at about 1.69 m, so the beam underside needs about 2.0 m with the hoist.
+  - That clears the Z motor top (1.43 m) by about 0.57 m.
+
+**To lift:**
+
+1. Park the gantry at the rear stop.
+2. Roll the A-frame so its hook is over the module's centre of mass (machine Y670).
+3. Lift 70 mm.
+4. Roll the whole A-frame forward about 1.42 m, guiding the module out through the front window.
+5. Lower the module onto its stand.
+
+Put the machine with its front along the container's length. It needs about 1.5 m of floor in front, and a 20 ft container leaves room for the stand and walking space.
+
+**Fumes.** Plasma in a closed container needs an exhaust fan pulling from next to the table, and a fresh-air inlet at the far end. The water table cuts the smoke but does not remove it. Router mist coolant also needs the air moved.
+
 ## Changing beds
 
 As [Rev J](../RevJ-CAD/README.md#changing-beds), with the head and water steps added.
@@ -112,7 +140,7 @@ As [Rev J](../RevJ-CAD/README.md#changing-beds), with the head and water steps a
 **Router to plasma:**
 
 1. SETUP, bed key UNCONFIRMED. Take the spindle out and store it in its cradle.
-2. Remove the six M10 drawdowns, lift the module 70 mm and run it out on the hoist (Rev J steps 2–6). The head goes on after the module is out: the hoist path was checked with the router head, not the plasma torch.
+2. Remove the six M10 drawdowns, lift the module 70 mm and roll it out on the A-frame (Rev J steps 2–6; [hoist in the container](#hoist-in-the-container)). The head goes on after the module is out: the hoist path was checked with the router head, not the plasma torch.
 3. Take the head and bracket off the lid pads, bolt the bracket to the Z adapter at its witness line and fit the torch down to its collar.
 4. Vacuum the pan and empty the drain screen.
 5. MODE PLASMA, bed key PLASMA CHECKED, FILL.
@@ -144,7 +172,7 @@ These are nominal CAD checks. They do not cover rigidity, the torch's true nose 
 
 ## Still open
 
-- **Torch:** measure the barrel before boring the insert. The PT31 torch's nose diameters, lead and connector fit to the CUT-50 are not verified.
+- **Torch:** the owner does not yet know which torch they will use (27 Sep) and will measure it. Measure the barrel before boring the insert; if the barrel is not 28 mm, the insert bore and the collar change, and the bracket slots cover a clamp 90–140 mm above the tip. The PT31 torch's nose diameters, lead and connector fit to the CUT-50 are not verified.
 - **Head:**
   - release force and float trip;
   - the tether;
@@ -154,7 +182,11 @@ These are nominal CAD checks. They do not cover rigidity, the torch's true nose 
 - **Plumbing:** the pump's port positions, strainer ports and all hose-end fittings are receipt-fit. The review's note that Rev I clamps the strainer through its bowl threads is not addressed: support it by its body when fitting.
 - **Cabinet:** the fan, glands and VFD are chosen by function. Measure the temperature rise at full load. The enclosure's hinge, latch and cut-outs need the received box.
 - **Controls:** the GM1 circuit is simulated only; see its README for what the owner still needs to send.
-- **Rev J's own open items:** the hoist and beam, the module stand, galvanizing distortion and pad coplanarity.
+- **Rev J's own open items:**
+  - selecting the A-frame and hoist for the container (see above);
+  - the module stand;
+  - galvanizing distortion;
+  - pad coplanarity.
 - **Not part of this line:** the ATC variants still assume the Kraken's spare drivers.
 
 ## Sources
