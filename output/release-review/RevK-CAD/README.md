@@ -174,7 +174,7 @@ These are nominal CAD checks. They do not cover rigidity, the torch's true nose 
 
 ## Still open
 
-- **Torch:** the owner does not yet know which torch they will use (27 Sep) and will measure it. Measure the barrel before boring the insert; if the barrel is not 28 mm, the insert bore and the collar change, and the bracket slots cover a clamp 90–140 mm above the tip. The PT31 torch's nose diameters, lead and connector fit to the CUT-50 are not verified.
+- **Torch:** the owner has it in hand (27 Sep; earlier that day it was not yet known). Measure the barrel before boring the insert ([Rev L build order](../RevL-CAD/BUILD-ORDER.md)); if the barrel is not 28 mm, the insert bore and the collar change, and the bracket slots cover a clamp 90–140 mm above the tip. The PT31 torch's nose diameters, lead and connector fit to the CUT-50 are not verified.
 - **Head:**
   - release force and float trip;
   - the tether;

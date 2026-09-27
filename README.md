@@ -27,6 +27,7 @@ The owner chose the one-piece line on 27 September. The machine goes in a contai
 **Rev L, one-piece bed with the tool changer** (`build_revl.py`):
 
 - [CAD package: the 300 mm Z, the tool changer on the bed module, tool changes and bed changes with it, what was checked](output/release-review/RevL-CAD/README.md)
+- **[What to build while the parts arrive](output/release-review/RevL-CAD/BUILD-ORDER.md)** (27 Sep): the owner has the plasma cutter and torch, and all the drive modules are ordered. The HGR20 rails and the bed extrusion are still to come; the page lists what can be built first
 - [Router assembly STEP](output/release-review/RevL-CAD/step/RevL_ROUTER.step); [bed module with the tool changer](output/release-review/RevL-CAD/step/RevL_BED_MODULE.step); [tool changer alone](output/release-review/RevL-CAD/step/RevL_DOCK.step); [new parts](output/release-review/RevL-CAD/step/RevL_NEW_PARTS.step)
 - [New-parts schedule](output/release-review/RevL-CAD/cutlist.csv); [what Rev L adds to the shopping list](outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md)
 
@@ -36,8 +37,8 @@ The owner chose the one-piece line on 27 September. The machine goes in a contai
 - [Router assembly STEP](output/release-review/RevK-CAD/step/RevK_ROUTER.step); [plasma assembly with the head and torch on the Z](output/release-review/RevK-CAD/step/RevK_PLASMA.step); [bed module alone](output/release-review/RevK-CAD/step/RevK_BED_MODULE.step)
 - [Component schedule](output/release-review/RevK-CAD/cutlist.csv); [what Rev K adds to the shopping list](outputs/reve-30510/actual-cost/REVK-PROCUREMENT-DELTA.md)
 - The bed module itself, the hoist and the 2 × 2 tube list are unchanged from [Rev J](output/release-review/RevJ-CAD/README.md) ([what Rev J changed in the shopping list](outputs/reve-30510/actual-cost/REVJ-PROCUREMENT-DELTA.md))
-- [Drive modules, receiving check](output/receiving/MOTION-MODULES.md): Y modules ordered; X and Z to be ordered Monday 28 Sep (please confirm). **Z: order the 300 mm stroke** for the tool changer
-- [HGR20 guide rails (still to order): receiving check and Y-rail cut planner](output/receiving/HGR20-RAIL-KITS.md)
+- [Drive modules, receiving check](output/receiving/MOTION-MODULES.md): all ordered (27 Sep), the Z with the 300 mm stroke for the tool changer
+- [HGR20 guide rails (still to come): receiving check and Y-rail cut planner](output/receiving/HGR20-RAIL-KITS.md)
 - [26 Sep follow-up: owner decisions, procurement, open controls findings and what is left to finish](output/followup-2026-09-26/README.md)
 
 **Rev I, six-panel bed** (`build_revi.py`):
@@ -69,7 +70,7 @@ The owner chose the one-piece line on 27 September. The machine goes in a contai
 
 ## Rev L: the tool changer
 
-**Rev L (27 September).** The owner wants the RapidChange tool changer on this machine and orders the Z slide on Monday 28 September.
+**Rev L (27 September).** The owner wants the RapidChange tool changer on this machine and ordered the Z slide with a 300 mm stroke on 27 September.
 
 - **300 mm Z.** The same ZBX80 with a longer body. The spindle's lowest reach is unchanged; the nut now rises to Z1260, 210 mm above the magazine, where RapidChange asks for at least 90 mm.
 - **The dock rides on the bed module.** Two MGN12 rails on the module's T-slot strips carry a U-shaped carrier with the magazine, and a worm gearmotor retracts it 200 mm behind the Z body when not in use. It lifts out with the bed for plasma, so nothing extra comes off the machine and the plasma never sees it.
@@ -128,6 +129,6 @@ Shared Python sources keep their legacy directory name; the exports are in RevK-
 
 The [actual-price audit](outputs/reve-30510/actual-cost/REAL-COST.md) follows Rev J: **$5,336.10** priced, with 51 required entries still unpriced ([Rev J procurement delta](outputs/reve-30510/actual-cost/REVJ-PROCUREMENT-DELTA.md)). Rev K's additions and the GM1 controls parts are listed, all unpriced, in the [Rev K procurement delta](outputs/reve-30510/actual-cost/REVK-PROCUREMENT-DELTA.md), and Rev L's in the [Rev L procurement delta](outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md). The audit does not price Rev I's additions. It is a partial register, not a complete build total. The [earlier price workbook](outputs/reve-30510/CNC-plasma-RevE-budget.xlsx) has not been rebuilt and still shows Rev E quantities.
 
-Apart from the owner's drive-module order, no purchase, vendor message, firmware flash or machine operation is recorded. The two Y HMS40 modules were ordered on 26 September; X and Z are to follow on 28 September. The owner chose the BTT Rodent controller on 26 September and reconfirmed it that evening ("we're going to use the Rodent, not the Kraken"). The Kraken firmware in `RevE-ENGINEERING/controls/` and Rev I's Kraken circuits are the prototype and reference for the Rodent port.
+Apart from the owner's drive-module order, no purchase, vendor message, firmware flash or machine operation is recorded. The two Y HMS40 modules were ordered on 26 September, and the X module and the 300 mm Z slide on 27 September. The owner has the plasma cutter and the torch; the HGR20 rails and the bed extrusion are still to come ([build order](output/release-review/RevL-CAD/BUILD-ORDER.md)). The owner chose the BTT Rodent controller on 26 September and reconfirmed it that evening ("we're going to use the Rodent, not the Kraken"). The Kraken firmware in `RevE-ENGINEERING/controls/` and Rev I's Kraken circuits are the prototype and reference for the Rodent port.
 
 CadQuery/OpenCascade generate exchange geometry; ReportLab generates the concept brief. This is not a native Fusion feature-history or machine-specific CAM release. Runtime paths are local Windows paths, and a clean-machine rebuild has not been certified. The [original snapshot manifest](REPOSITORY-SNAPSHOT.json) describes the initial import only. Supplier material retains its existing license notices; this repository grants no new rights over it.

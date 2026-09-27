@@ -4,7 +4,7 @@
 
 Rev L is [Rev K](../RevK-CAD/README.md) with two changes the owner asked for on 27 September 2026:
 
-- **A 300 mm Z slide** instead of 100 mm. The ZBX80 order goes in on Monday 28 September.
+- **A 300 mm Z slide** instead of 100 mm. Ordered on 27 September.
 - **A RapidChange-type automatic tool changer** ("yes i do"; "the rapidautochanger or something like that"). Its magazine retracts on a short slide, so the 800 × 1000 mm work area stays free.
 
 Everything else is Rev K's, unchanged: the frame, the one-piece bed module and its hoist, the water table, the plasma head and torch, the cabinet. The GM1 controls gain spindle reverse and the tool-changer drive (M12 and M13 in the [controls README](../../controls-2026-09-27/README.md)).
@@ -16,6 +16,7 @@ Everything else is Rev K's, unchanged: the frame, the one-piece bed module and i
 - Previews: [router](previews/RevL_ROUTER.png), [router from the right](previews/RevL_ROUTER_side.png), [tool change](previews/RevL_TOOL_CHANGE.png), [dock close-up](previews/RevL_DOCK_DETAIL.png), [bed module](previews/RevL_BED_MODULE.png)
 - Checks: [poses, dock travel, tool change and hoist path](revl-checks.json), [manifest and source hashes](engineering-manifest.json), and the validations of each STEP
 - [What Rev L adds to the shopping list](../../../outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md)
+- **[What to build while the parts arrive](BUILD-ORDER.md)**: the owner has the plasma cutter and torch, and all the drive modules are ordered (27 Sep). The HGR20 rails and the bed extrusion are still to come.
 
 ![Rev L dock close-up, deployed](previews/RevL_DOCK_DETAIL.png)
 

@@ -1,16 +1,16 @@
 # Drive modules — receiving and measuring (HMS40 ×3, ZBX80)
 
-**Status (26 September 2026): the Y modules are ordered and on the way; the X module and the Z slide are to be ordered on Monday 28 September.** That split comes from the owner's other session, recorded on the base branch the same day. This file first recorded all three as ordered, from the owner's message that the shared spec sheets "are ordered", so please confirm. The HMS40 spec sheet (KHMOS drawing HMS40-L□□-S□□□-M57-BC) and the ZBX80 listing drawings shared that day are the selected items; the owner first described them as "1000x800x100". They are:
+**Status (27 September 2026): all the drive modules are ordered, the Z slide with a 300 mm stroke** (owner, 27 Sep). The Y modules were ordered on 26 September; the X module and the Z slide followed. The HMS40 spec sheet (KHMOS drawing HMS40-L□□-S□□□-M57-BC) and the ZBX80 listing drawings shared on 26 September are the selected items; the owner first described them as "1000x800x100". They are:
 
 | Row | Listing | Use | Quantity in the design |
 |---|---|---|---:|
 | M02 | [KHMOS HMS40, 1000 mm stroke, 10 mm lead, NEMA23](https://www.amazon.com/dp/B0C7GN24S1) | Y drives (one per side) | 2 |
 | M01 | [KHMOS HMS40, 800 mm stroke, 10 mm lead](https://www.amazon.com/dp/B0C7GQTRRX) | X drive | 1 |
-| M03 | [RATTMMOTOR ZBX80, 100 mm, SFU1605, NEMA23](https://www.amazon.com/dp/B09MVYGLNQ) | Z slide | 1. **Change to a 300 mm stroke** (owner wants the RapidChange ATC, 27 Sep; 300 rather than the 200 mm minimum, for margin: see [Rev L](../release-review/RevL-CAD/README.md#the-300-mm-z)) |
+| M03 | [RATTMMOTOR ZBX80, SFU1605, NEMA23 (listed in 100–600 mm strokes)](https://www.amazon.com/dp/B09MVYGLNQ) | Z slide | 1, **ordered with a 300 mm stroke** (27 Sep) for the RapidChange tool changer; 300 rather than the 200 mm minimum, for margin: see [Rev L](../release-review/RevL-CAD/README.md#the-300-mm-z) |
 
-Please confirm the quantities (the machine needs **two** 1000 mm modules), the price paid and the delivery dates in [the register](drive-modules-receiving-register.json).
+On delivery, record the quantities (the machine needs **two** 1000 mm modules), the price paid and the delivery dates in [the register](drive-modules-receiving-register.json).
 
-**The HGR20 guide-rail kits are still needed.** In this design the HMS40 modules only push; the separate HGR20 rails ([M04, M05](HGR20-RAIL-KITS.md)) carry the gantry and the cutting loads. The HMS40's own internal 12 × 8 guide is rated 20 kg horizontal with 12–15 N·m moments, while a 100 N side load on a 250 mm tool lever is already 25 N·m. Those kits are not recorded as ordered.
+**The HGR20 guide-rail kits are still to come** (the owner is waiting on them, 27 Sep). In this design the HMS40 modules only push; the separate HGR20 rails ([M04, M05](HGR20-RAIL-KITS.md)) carry the gantry and the cutting loads. The HMS40's own internal 12 × 8 guide is rated 20 kg horizontal with 12–15 N·m moments, while a 100 N side load on a 250 mm tool lever is already 25 N·m. The gantry cannot be assembled or moved until they arrive; [the build order](../release-review/RevL-CAD/BUILD-ORDER.md) lists what can be built before then.
 
 ## What the drawings already give, and what the model uses
 

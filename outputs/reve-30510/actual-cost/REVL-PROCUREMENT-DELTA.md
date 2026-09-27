@@ -8,7 +8,7 @@ Rev L is Rev K with a 300 mm Z slide and a RapidChange-type tool changer ("the d
 
 | Was | Now |
 |---|---|
-| RATTMMOTOR ZBX80, 100 mm stroke (M03) | **The same ZBX80 with a 300 mm stroke** (the listing offers 100–600 mm). Order Monday 28 September |
+| RATTMMOTOR ZBX80, 100 mm stroke (M03) | **The same ZBX80 with a 300 mm stroke** (the listing offers 100–600 mm). Ordered (owner, 27 September) |
 
 ## The tool changer kit
 
@@ -62,5 +62,7 @@ Rev L is Rev K with a 300 mm Z slide and a RapidChange-type tool changer ("the d
 About 6 kg of steel and aluminum in all; the dock with its bought parts is about 10.6 kg, with 3.3 kg allowed for the magazine and cutters.
 
 ## How to use this
+
+The [build order](../../../output/release-review/RevL-CAD/BUILD-ORDER.md) says which of these parts gate which build steps.
 
 Add these rows to the register as unpriced scope when quotes are gathered. The RapidChange kit is the largest item, and its exact configuration decides the magazine interface, so choose it before drilling the saddles.
