@@ -126,6 +126,10 @@ Rev J implements the bed answers. Rev G's six manual panels and MDF spoilboards 
 2. **Hoist and bed stand:** a container with an 8 ft ceiling (27 Sep). Please confirm it is a standard 20 or 40 ft container, about 2.39 m inside. Rev K plans a rolling A-frame gantry. Still to choose: the A-frame and hoist, and where the module stand goes; the stand needs about 1.5 m of floor in front of the machine.
 3. **Cutter:** it starts from the trigger, in mid-air (an HF start; 27 Sep). Nothing more is needed now. Note the work-lead size at commissioning. The owner will measure the torch before the clamp insert is bored.
 4. **Orders:** confirm the X and Z drive modules on Monday, the quantities and price paid, and when the HGR20 guide kits are ordered.
+   - **Before ordering the Z: decide on the ATC.** The other session's retractable ATC (`dfdf5da`, already merged) is drawn for a **200 mm Z**. With the planned 100 mm ZBX80, a fixed dock has only 3.85 mm of margin, and the retractable tray is blocked by any clamped stock.
+   - If you want the ATC on this machine, order the longer Z. Rev K's Z mount, drop bracket and pose checks would then be redone for it.
+   - That ATC also drives its slide from the Kraken's spare motor drivers, which the Rodent does not have. On the Rodent it would need its own drive, such as a 24 V linear actuator with two end switches.
+   - It was drawn on the six-panel bed, so it would also need fitting to the one-piece bed.
 5. **Owned aluminum:** alloy and thickness of the 12 × 12 in pieces.
 6. **Scrap tube:** for each piece of 2 × 2 tube, its usable length, measured wall and price, checked against the Rev J list.
 
