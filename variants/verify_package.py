@@ -42,6 +42,17 @@ def main():
         HERE/'48x96/preview-verification.json',
         HERE/'48x96/package-verification.json',
         HERE/'exchange-verification.json',
+        HERE/'retractable-atc/guide-stroke-check.json',
+        HERE/'retractable-atc/small-study/feasibility.json',
+        HERE/'retractable-atc/large-study/feasibility.json',
+        HERE/'retractable-atc/small-mechanism/verification.json',
+        HERE/'retractable-atc/small-mechanism/structure-check.json',
+        HERE/'retractable-atc/small-mechanism/panel-transfer-check.json',
+        HERE/'retractable-atc/large-mechanism/verification.json',
+        HERE/'retractable-atc/large-mechanism/service-verification.json',
+        HERE/'retractable-atc/controls/verification.json',
+        HERE/'retractable-atc/export-verification.json',
+        HERE/'retractable-atc/preview-verification.json',
     ]
     for path in reports:
         if not path.exists():
@@ -50,6 +61,11 @@ def main():
         data = json.loads(path.read_text(encoding='utf8'))
         if isinstance(data.get('passed'), bool):
             check('reported_bounded_check_passed', data['passed'], str(path.relative_to(ROOT)))
+        if path == HERE/'retractable-atc/preview-verification.json':
+            check('both_retractable_machine_previews_complete',
+                  data.get('complete_machine_set') is True and len(data.get('images', [])) == 8,
+                  {'complete_machine_set': data.get('complete_machine_set'),
+                   'image_count': len(data.get('images', []))})
         if 'sources_changed_during_check' in data:
             check('sources_stable_during_check', not data['sources_changed_during_check'], str(path.relative_to(ROOT)))
         found = 0
@@ -77,7 +93,11 @@ def main():
             check('rendered_artifact_hash', artifact.is_file() and sha(artifact) == digest,
                   {'report': str(path.relative_to(ROOT)), 'artifact': rel})
         for item in data.get('images', []):
-            check('preview_image_hash', sha(ROOT/item['file']) == item['sha256'], item['file'])
+            relative = item.get('file', item.get('image'))
+            image_path = ROOT/relative if isinstance(relative, str) else None
+            check('preview_image_hash',
+                  image_path is not None and image_path.is_file() and sha(image_path) == item.get('sha256'),
+                  relative or 'Missing image path')
         if 'fit_report_sha256' in data:
             check('preview_fit_report_hash', sha(path.parent/'fit-report.json') == data['fit_report_sha256'], str(path.relative_to(ROOT)))
         if path.name == 'exchange-verification.json':

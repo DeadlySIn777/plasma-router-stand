@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820">
+<style>text{font-family:Arial,sans-serif;fill:#183147;font-size:17px}.t{font-size:26px;font-weight:bold}.h{font-size:20px;font-weight:bold}.s{font-size:14px}.box{fill:#eef5fa;stroke:#245775;stroke-width:2}.field{fill:#fff4e4;stroke:#a26926;stroke-width:2}.line{fill:none;stroke:#245775;stroke-width:3}.iso{stroke:#b16229;stroke-width:3;stroke-dasharray:8 7}</style>
+<rect width="1200" height="820" fill="#fff"/>
+<text x="35" y="43" class="t">Retractable ATC • low-voltage control candidate</text>
+<text x="35" y="71">Large: 200 mm slide + 164 mm captured shutter • router operation only</text>
+<line x1="615" y1="98" x2="615" y2="698" class="iso"/>
+<text x="350" y="114" class="s">LOGIC 3.3 V / LOGIC0</text><text x="670" y="114" class="s">FIELD 24 V / FIELD0 — separate return</text>
+<rect x="35" y="145" width="260" height="265" rx="8" class="box"/>
+<text x="55" y="175" class="h">Kraken V1.1</text>
+<text x="55" y="207">S1–S4: X / Y / Y2 / Z</text>
+<text x="55" y="239">S5: dock slide</text><text x="55" y="266">S6: outer shutter</text>
+<text x="55" y="303">PB10 / PB11: I2C2</text>
+<text x="55" y="335">PE13: rack release</text>
+<text x="55" y="362">PE14: shutter release</text>
+<text x="55" y="389">PD10: run gate</text>
+<rect x="355" y="145" width="215" height="145" rx="8" class="box"/>
+<text x="374" y="176" class="h">MCP23017 • 0x20</text>
+<text x="374" y="206">14 polled inputs</text><text x="374" y="232">No new EXTI inputs</text>
+<text x="374" y="260" class="s">GPA7 / GPB7 unused outputs</text>
+<path d="M295 303H325V218H355" class="line"/>
+<rect x="670" y="145" width="490" height="145" rx="8" class="field"/>
+<text x="690" y="176" class="h">14 isolated input channels</text>
+<text x="690" y="207">8 dry contacts + 6 powered PNP pin sensors</text>
+<text x="690" y="234">PNP white → 3.32k → AQY LED → FIELD0</text>
+<text x="690" y="261" class="s">Logic side: 4.7k pull-up, 330Ω series, 4.7nF filter</text>
+<path d="M570 218H670" class="line"/><text x="580" y="205" class="s">ISO</text>
+<rect x="355" y="335" width="215" height="148" rx="8" class="box"/>
+<text x="375" y="367" class="h">3 command stages</text>
+<text x="375" y="397">3.3 V buffer</text><text x="375" y="425">154Ω → AQY LED</text>
+<text x="375" y="454" class="s">Default LOW = no release</text>
+<path d="M295 362H355M570 409H670" class="line"/>
+<rect x="670" y="335" width="490" height="148" rx="8" class="field"/>
+<text x="690" y="367" class="h">AUX24_SAFE → AQY → Finder relay coils</text>
+<text x="690" y="397">Rack relay → 2 individually fused release coils</text>
+<text x="690" y="425">Shutter relay → 1 fused upper-catch release coil</text>
+<text x="690" y="454" class="s">Local flyback per coil • no solenoid load on HEAD_SAFE</text>
+<rect x="35" y="525" width="1125" height="125" rx="8" class="field"/>
+<text x="55" y="556" class="h">Preserved independent hardware tool permission</text>
+<text x="55" y="589">Stop / door / head / ready → XW34 → K_ATC_GATE NO11–14 → PERMIT → K_RUN_ARM → selected tool</text>
+<text x="55" y="620" class="s">Remove former XW34–PERMIT bypass. K_REQUEST stays independent: held HIGH cannot re-arm after permission loss.</text>
+<text x="35" y="698" class="h">Every restart begins UNKNOWN; no automatic retract with a partly threaded tool.</text>
+<text x="35" y="730">FAULT: no motor pulses, release coils OFF, run gate OFF, kit-cover action HOLD.</text>
+<text x="35" y="758" class="s">Existing firmware still disables S5/S6. Exact kit/VFD interfaces, PCB, harness and physical qualification remain open.</text>
+<text x="35" y="786" class="s">Use WIRING.md for terminal/pin details. This diagram is neither a safety-rated stop circuit nor a complete machine release.</text>
+</svg>

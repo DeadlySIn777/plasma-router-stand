@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "status": "CONDITIONAL ALLOCATION FEASIBILITY ONLY",
+  "checks": {
+    "change_static_machine_clear": true,
+    "change_internal_clear": true,
+    "change_STEP_readback": true,
+    "parked_static_machine_clear": true,
+    "parked_internal_clear": true,
+    "parked_STEP_readback": true,
+    "continuous_sweeps_clear_machine": true,
+    "magazine_sweep_clear_when_shutter_open": true,
+    "shutter_sweep_clear_when_magazine_parked": true,
+    "parked_full_deck_surfacing_clear": true,
+    "deployed_surfacing_interlock_required": true,
+    "closed_shutter_slide_interlock_required": true,
+    "stock_rectangle_preserved": true,
+    "inside_existing_frame": true,
+    "change_line_within_X_travel": true,
+    "pocket_Y_allocation_within_Y_travel": true,
+    "sources_unchanged": true
+  },
+  "details": {
+    "change": {
+      "machine_intersections": [],
+      "internal_intersections": []
+    },
+    "parked": {
+      "machine_intersections": [],
+      "internal_intersections": []
+    },
+    "machine_sweep_intersections": [],
+    "magazine_sweep_internal_intersections": [],
+    "shutter_sweep_internal_intersections": [],
+    "parked_full_deck_surfacing_intersections": [],
+    "deployed_full_deck_surfacing_overlap_mm3": 249600.00000000215,
+    "slide_through_closed_shutter_overlap_mm3": 168000.0
+  },
+  "source_sha256": {
+    "variants/48x96/layout.py": "3f6902e36323b0eecc4f3576fd9848f60146d448d197cfdf6062f27e468b09b4",
+    "variants/retractable-atc/large-study/study.py": "e9c7f4cf2f005693ef97da9139779098a02597231950025e993f56843bceea8f",
+    "variants/retractable-atc/large-study/README.md": "98b7925accfdf0f84399ab7d9215d63b65200a5cf2c74ed7990082cb0bf80957"
+  },
+  "sources_unchanged": true,
+  "artifact_sha256": {
+    "change-allocation.step": "967eac6cdc1a3b35584d027cb490c891a51d6630b55a6a81ff1cd2d43630067e",
+    "parked-allocation.step": "8a22965f54079bc1a8b7a33d907c9a745b947e03f4a63001be46d670acc14d16",
+    "plan.svg": "fa9357643adc7ec4faeb10cb19d9e98254371599dbde8c79f78e732743453714",
+    "plan.png": "bf7a99d66b45cfd6a4f807fcaffe6753fd6846ea74bbc119e91cb4c29b6e291c"
+  },
+  "nominal_X_stroke_mm": 200.0,
+  "moving_envelope_mm": [
+    160.0,
+    600.0,
+    140.0
+  ],
+  "change_bounds_mm": [
+    1465.0,
+    400.0,
+    800.0,
+    1625.0,
+    1000.0,
+    940.0
+  ],
+  "park_bounds_mm": [
+    1665.0,
+    400.0,
+    800.0,
+    1825.0,
+    1000.0,
+    940.0
+  ],
+  "guide_arithmetic": {
+    "nominal_block_length_mm": 45.4,
+    "maximum_block_length_mm": 45.8,
+    "catalog_pdf_page": 91,
+    "catalog_printed_page": 88,
+    "catalog_revision": "G99TE24-2410",
+    "blocks_per_rail": 2,
+    "block_center_spacing_mm": 80.0,
+    "end_margin_mm": 10.0,
+    "minimum_rail_for_200mm_stroke_mm": 345.8,
+    "candidate_rail_length_mm": 350.0,
+    "two_block_group_center_end_margins_mm": [
+      12.1,
+      12.1
+    ],
+    "travel_with_200mm_rail_two_blocks_mm": 54.2,
+    "travel_with_200mm_rail_single_block_mm": 134.2,
+    "scope": "Length arithmetic only; no rail load/moment rating, selection, holes or motor specification."
+  },
+  "gantry_parts_conservatively_swept_through_full_Y": [
+    "GANTRY_LOW_FRONT",
+    "GANTRY_LOW_REAR",
+    "GANTRY_HIGH_FRONT",
+    "GANTRY_HIGH_REAR",
+    "GANTRY_POST_0_0",
+    "GANTRY_POST_0_1",
+    "GANTRY_POST_1_0",
+    "GANTRY_POST_1_1",
+    "GANTRY_POST_2_0",
+    "GANTRY_POST_2_1",
+    "GANTRY_POST_3_0",
+    "GANTRY_POST_3_1",
+    "GANTRY_TOWER_L",
+    "GANTRY_TOWER_R",
+    "Y_CARRIAGE_L",
+    "Y_CARRIAGE_R",
+    "X_AXIS",
+    "Z_TOOL_PACKAGE"
+  ],
+  "clearances_mm": {
+    "park_magazine_to_hood_right_wall": 3.0,
+    "hood_to_Y_carriage_allocation": 7.5,
+    "open_shutter_to_lower_gantry_chord": 20.0,
+    "stage_top_to_surfacing_Z_floor": 100.0
+  },
+  "scope": "Checks the stated box allocations and simple hood sheets against frozen development CAD. Gantry Y uses conservative AABB sweeps; Z/tool is parked at X780 for slide/shutter operations. This does not prove tool engagement, pocket pitch, mounting, support, seals, rigidity or real supplier interfaces.",
+  "supplier_interfaces_verified": false,
+  "tool_change_cycle_verified": false,
+  "actuator_or_guides_selected": false,
+  "fabrication_ready": false,
+  "sources": {
+    "HIWIN_nominal_length": "https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/MGN12HZ1CM/p/MGN12HZ1CM",
+    "HIWIN_maximum_length": "https://www.hiwin.com/wp-content/uploads/HIWIN-Linear-Guideway-Catalog.pdf#page=91",
+    "RapidChange_width_and_clearance": "https://rapidchangeatc.com/faq/"
+  }
+}

@@ -11,28 +11,72 @@
     "Repeatably locate the aluminum/HDPE table to the frame",
     "Keep bed conversion within the machine footprint",
     "Preserve the preference for Kraken onboard motor drivers",
-    "Use existing fabrication capability and budget-conscious construction"
+    "Use existing fabrication capability and budget-conscious construction",
+    "ATC on both machines, retracting on a short linear slide to preserve bed space"
   ],
   "working_assumptions_awaiting_user_confirmation": [
     "4x8 means full 48x96in stock capability, not outside machine dimensions",
-    "Reserve ATC on both variants; the current small machine is explicitly included",
     "Large variant uses aluminum framed carrier panels with replaceable HDPE tops; small baseline retains its existing 20100 aluminum bed",
-    "Exact RapidChange kit, pocket count and options have not been identified"
+    "Exact RapidChange kit, pocket count and options have not been identified",
+    "Treat the proposed 200mm rail as a 200mm useful-stroke target; actual rail length must include bearing blocks and end allowances",
+    "Use 50mm combined stock and clamp height above the small bed as a working clearance target, not a user-confirmed maximum",
+    "The proposed small-machine retractable ATC revision uses a separately qualified longer Z axis; the original 100mm Z specification is preserved in Rev I"
   ],
   "variant_targets": {
     "small_atc": {
-      "nominal_axes_mm": [800, 1000, 100],
-      "existing_bed_mm": [1003, 1211],
-      "strategy": "Removable frame-supported rear dock; installed ATC reduces unrestricted routing area",
+      "nominal_axes_mm": [
+        800,
+        1000,
+        100
+      ],
+      "existing_bed_mm": [
+        1003,
+        1211
+      ],
+      "strategy": "Raised retractable rear tray targets preservation of the nominal 800 x 1000 working rectangle in the proposed longer-Z variant; earlier fixed dock is a historical candidate",
       "purchased_axis_status": "Y reported on order; X/Z not reported delivered"
     },
     "48x96": {
-      "stock_mm": [1219.2, 2438.4],
-      "stock_in": [48, 96],
-      "provisional_frame_plan_mm": [1950, 2950],
-      "provisional_deck_mm": [1320, 2550],
-      "panel_grid": [3, 6],
+      "stock_mm": [
+        1219.2,
+        2438.4
+      ],
+      "stock_in": [
+        48,
+        96
+      ],
+      "provisional_frame_plan_mm": [
+        1950,
+        2950
+      ],
+      "provisional_deck_mm": [
+        1320,
+        2550
+      ],
+      "panel_grid": [
+        3,
+        6
+      ],
       "strategy": "Full sheet with separate dry ATC side bay; redesigned long-axis structure and drives"
+    },
+    "retractable_atc": {
+      "design": "retractable-atc/README.md",
+      "target_useful_stroke_mm": 200,
+      "machines": [
+        "small_atc",
+        "48x96"
+      ],
+      "preserve_bed_during_m6_required": true,
+      "preservation_verified": false,
+      "max_stock_and_clamp_height_mm": null,
+      "working_stock_and_clamp_height_mm": 50,
+      "working_height_confirmed_by_user": false,
+      "proposed_small_Z_travel_mm": 200,
+      "proposed_Z_supplier_interface_qualified": false,
+      "automatic_lock_and_release_required": true,
+      "onboard_slide_and_shutter_drivers": "Kraken S5 slide; S6 large outer shutter. Small closure interface and automatic profile remain unavailable. All require firmware integration and current verification.",
+      "small_outer_shutter_selected": false,
+      "physical_commissioning_complete": false
     }
   },
   "accuracy_definition": {
@@ -55,7 +99,7 @@
   },
   "limits": [
     "Vendor magazine CAD and actual spindle/collet dimensions required before mounting holes or pocket coordinates can be released",
-    "Small-machine full-Z routing area is reduced while the rear dock is fitted",
+    "The earlier fixed small-machine rear dock reduces routing area; the retractable alternative must also clear full-size stock during tool changes",
     "4x8 purchased motion, structural joints, precision and conversion routes require further engineering",
     "Existing spindle/VFD low-speed reverse and controller M6 integration remain unqualified",
     "An aluminum/HDPE panel on pins alone does not establish machine rigidity",

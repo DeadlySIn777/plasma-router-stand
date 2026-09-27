@@ -1,0 +1,381 @@
+{
+  "schema": 1,
+  "status": "ENGINEERING_CANDIDATE_NOT_FLASHED_NOT_WIRING_RELEASE",
+  "board": "Kraken V1.1 only",
+  "logic_voltage_v": 3.3,
+  "field_supply_range_v": [
+    21.6,
+    26.4
+  ],
+  "poll_ms": 10,
+  "snapshot_timeout_ms": 50,
+  "gpio": [
+    {
+      "function": "io_scl",
+      "gpio": "PB10",
+      "connector": "P10:3",
+      "kind": "i2c",
+      "exti": false
+    },
+    {
+      "function": "io_sda",
+      "gpio": "PB11",
+      "connector": "P10:4",
+      "kind": "i2c",
+      "exti": false
+    },
+    {
+      "function": "rack_pin_release",
+      "gpio": "PE13",
+      "connector": "EXP2_1",
+      "kind": "output",
+      "exti": false
+    },
+    {
+      "function": "shutter_pin_release",
+      "gpio": "PE14",
+      "connector": "EXP2_6",
+      "kind": "output",
+      "exti": false
+    },
+    {
+      "function": "atc_run_gate",
+      "gpio": "PD10",
+      "connector": "J14:2 PS_ON",
+      "kind": "output",
+      "exti": false
+    }
+  ],
+  "onboard_motors": [
+    {
+      "function": "dock_slide",
+      "socket": "S5",
+      "step": "PG9",
+      "direction": "PG10",
+      "enable": "PG13",
+      "cs": "PD2",
+      "sense_milliohm": 75,
+      "microsteps": 16,
+      "lead_mm": 8,
+      "steps_per_mm": 400,
+      "stroke_mm": 200,
+      "speed_mm_s": 10,
+      "initial_current_mA_rms": 500,
+      "candidate_ceiling_mA_rms": 1180
+    },
+    {
+      "function": "outer_shutter",
+      "socket": "S6",
+      "step": "PG11",
+      "direction": "PD7",
+      "enable": "PG12",
+      "cs": "PA15",
+      "sense_milliohm": 75,
+      "microsteps": 16,
+      "lead_mm": 8,
+      "steps_per_mm": 400,
+      "stroke_mm": 164,
+      "speed_mm_s": 10,
+      "initial_current_mA_rms": 500,
+      "candidate_ceiling_mA_rms": 1180
+    }
+  ],
+  "mcp23017": {
+    "part": "MCP23017-E/SP",
+    "address_7bit": "0x20",
+    "vdd_pin": 9,
+    "vss_pin": 10,
+    "scl_pin": 12,
+    "sda_pin": 13,
+    "reset_pin": 18,
+    "address_ground_pins": [
+      15,
+      16,
+      17
+    ],
+    "unused_nc_pins": [
+      11,
+      14,
+      19,
+      20
+    ],
+    "output_only_unused_pins": [
+      8,
+      28
+    ],
+    "iodira": "0x7f",
+    "iodirb": "0x7f",
+    "gpinten": "0x00",
+    "ipol": "0x00",
+    "gppu": "0x00",
+    "iocon": "0x00",
+    "gpio_read_start": "0x12",
+    "bus_hz": 100000,
+    "note": "Set OLAT7 low before configuring GPA7/GPB7 as outputs. Both are output-only in current RevD; do not attach sensors. Other unused inputs get47k pulldowns. No interrupt output connection."
+  },
+  "isolated_inputs": [
+    {
+      "signal": "parked",
+      "mcp": "GPA0",
+      "pin": 21,
+      "terminal_pair": [
+        1,
+        2
+      ]
+    },
+    {
+      "signal": "deployed",
+      "mcp": "GPA1",
+      "pin": 22,
+      "terminal_pair": [
+        3,
+        4
+      ]
+    },
+    {
+      "signal": "park_pin_extended",
+      "mcp": "GPA2",
+      "pin": 23,
+      "terminal_pair": [
+        5,
+        6
+      ],
+      "sensor": "Panasonic PM-U25-P",
+      "field_kind": "PNP_DARK_ON",
+      "blue_return_terminal": 41,
+      "wiring": "Odd XA terminal = fused C24V to brown; even = white return through3.32kohm toAQY LED1. Blue to added FIELD0 terminal. Black insulated."
+    },
+    {
+      "signal": "park_pin_retracted",
+      "mcp": "GPA3",
+      "pin": 24,
+      "terminal_pair": [
+        7,
+        8
+      ],
+      "sensor": "Panasonic PM-U25-P",
+      "field_kind": "PNP_DARK_ON",
+      "blue_return_terminal": 42,
+      "wiring": "Odd XA terminal = fused C24V to brown; even = white return through3.32kohm toAQY LED1. Blue to added FIELD0 terminal. Black insulated."
+    },
+    {
+      "signal": "deploy_pin_extended",
+      "mcp": "GPA4",
+      "pin": 25,
+      "terminal_pair": [
+        9,
+        10
+      ],
+      "sensor": "Panasonic PM-U25-P",
+      "field_kind": "PNP_DARK_ON",
+      "blue_return_terminal": 43,
+      "wiring": "Odd XA terminal = fused C24V to brown; even = white return through3.32kohm toAQY LED1. Blue to added FIELD0 terminal. Black insulated."
+    },
+    {
+      "signal": "deploy_pin_retracted",
+      "mcp": "GPA5",
+      "pin": 26,
+      "terminal_pair": [
+        11,
+        12
+      ],
+      "sensor": "Panasonic PM-U25-P",
+      "field_kind": "PNP_DARK_ON",
+      "blue_return_terminal": 44,
+      "wiring": "Odd XA terminal = fused C24V to brown; even = white return through3.32kohm toAQY LED1. Blue to added FIELD0 terminal. Black insulated."
+    },
+    {
+      "signal": "shutter_open",
+      "mcp": "GPA6",
+      "pin": 27,
+      "terminal_pair": [
+        13,
+        14
+      ]
+    },
+    {
+      "signal": "shutter_closed",
+      "mcp": "GPB0",
+      "pin": 1,
+      "terminal_pair": [
+        15,
+        16
+      ]
+    },
+    {
+      "signal": "shutter_catch_extended",
+      "mcp": "GPB1",
+      "pin": 2,
+      "terminal_pair": [
+        17,
+        18
+      ],
+      "sensor": "Panasonic PM-U25-P",
+      "field_kind": "PNP_DARK_ON",
+      "blue_return_terminal": 45,
+      "wiring": "Odd XA terminal = fused C24V to brown; even = white return through3.32kohm toAQY LED1. Blue to added FIELD0 terminal. Black insulated."
+    },
+    {
+      "signal": "shutter_catch_retracted",
+      "mcp": "GPB2",
+      "pin": 3,
+      "terminal_pair": [
+        19,
+        20
+      ],
+      "sensor": "Panasonic PM-U25-P",
+      "field_kind": "PNP_DARK_ON",
+      "blue_return_terminal": 46,
+      "wiring": "Odd XA terminal = fused C24V to brown; even = white return through3.32kohm toAQY LED1. Blue to added FIELD0 terminal. Black insulated."
+    },
+    {
+      "signal": "spindle_stopped",
+      "mcp": "GPB3",
+      "pin": 4,
+      "terminal_pair": [
+        21,
+        22
+      ],
+      "hold": "Actual isolated dry-contact VFD status unselected; no jumper substitute."
+    },
+    {
+      "signal": "spindle_running",
+      "mcp": "GPB4",
+      "pin": 5,
+      "terminal_pair": [
+        23,
+        24
+      ],
+      "hold": "Actual isolated dry-contact VFD status unselected; no jumper substitute."
+    },
+    {
+      "signal": "kit_cover_open",
+      "mcp": "GPB5",
+      "pin": 6,
+      "terminal_pair": [
+        25,
+        26
+      ],
+      "hold": "Actual magazine cover feedback unselected; no jumper substitute."
+    },
+    {
+      "signal": "kit_cover_closed",
+      "mcp": "GPB6",
+      "pin": 7,
+      "terminal_pair": [
+        27,
+        28
+      ],
+      "hold": "Actual magazine cover feedback unselected; no jumper substitute."
+    }
+  ],
+  "input_channel": {
+    "isolator": "AQY212GS",
+    "field_series_ohm": 3320,
+    "field_resistor_w": 0.6,
+    "field_resistor_tolerance_effective": 0.02,
+    "led_shunt_ohm": 22000,
+    "reverse_diode": "1N4148 cathode toLED1",
+    "logic_pullup_ohm": 4700,
+    "logic_series_ohm": 330,
+    "logic_filter_nf": 4.7,
+    "active_low": true,
+    "open_wire_meaning": "unconfirmed / false",
+    "switch_candidate": "Omron D2HW-C203MR only for four slide/shutter end limits; six pin endpoints use independent PM-U25-P sensors.",
+    "pnp_residual_v_max": 1.0,
+    "field_drop_allowance_v": 1.0
+  },
+  "relay_outputs": [
+    {
+      "gpio": "PE13",
+      "relay": "K_RACK_RELEASE",
+      "coil": "Finder40.52.9.024.0000",
+      "socket": "95.05",
+      "load": "Two Delta DSOL1151-24C rack pins, each through its own1A branch fuse and own1N5408 diode; relay contact rating screen at1A combined cap",
+      "contact": "11-14 NO",
+      "branch_fuse_a": 1,
+      "diode": "1N5408, cathode at positive coil terminal"
+    },
+    {
+      "gpio": "PE14",
+      "relay": "K_SHUTTER_RELEASE",
+      "coil": "Finder40.52.9.024.0000",
+      "socket": "95.05",
+      "load": "Delta DSOL1151-24C shutter catch release",
+      "contact": "11-14 NO",
+      "branch_fuse_a": 1,
+      "diode": "1N5408, cathode at positive coil terminal"
+    },
+    {
+      "gpio": "PD10",
+      "relay": "K_ATC_GATE",
+      "coil": "Finder40.52.9.024.5000 gold",
+      "socket": "95.05",
+      "load": "dry NO series in existing common tool-permission path",
+      "contact": "11-14 NO",
+      "branch_fuse_a": 0.25,
+      "diode": "1N4007 cathodeA1"
+    }
+  ],
+  "output_channel": {
+    "buffer": "SN74LVC1G17DBVR",
+    "input_series_ohm": 1000,
+    "input_pulldown_ohm": 10000,
+    "led_series_ohm": 154,
+    "led_series_w": 0.25,
+    "led_shunt_ohm": 22000,
+    "isolator": "AQY212GS",
+    "max_driven_relay_coil_ma": 40,
+    "field_coil_supply": "dedicated fused C24V via hardware auxiliary actuator permission; never HEAD_SAFE",
+    "field_return": "FIELD0 electrically separate from LOGIC0"
+  },
+  "release_solenoids": {
+    "candidate": "Delta DSOL1151-24C",
+    "rated_v": 24,
+    "rated_w": 7.5,
+    "resistance_ohm_at25c": 76.8,
+    "resistance_tolerance": 0.1,
+    "catalog_current_a": 0.4,
+    "branch_design_cap_a": 0.5,
+    "duty_percent": 100,
+    "stroke_used_mm": 6,
+    "quantity": 3,
+    "combined_design_cap_a": 1.5
+  },
+  "limits": [
+    "No finished PCB/harness or certified E-stop design",
+    "Current baseline firmware disables S5/S6 and cannot run this candidate",
+    "PE12 remains reserved for actual RapidChange magazine internal cover; outer shutter is separate S6",
+    "Two equivalent machines each need their own controller/expander/sensors, not one shared bus across machines",
+    "No sensor may be tied true to bypass unselected interfaces"
+  ],
+  "pin_sensors": {
+    "part": "PM-U25-P",
+    "quantity": 6,
+    "quiescent_current_a_max_each": 0.015,
+    "output_load_a_max": 0.05,
+    "residual_v_at16ma": 1.0,
+    "supply_v": [
+      4.5,
+      26.4
+    ],
+    "endpoint_output": "white Dark-ON",
+    "black_output": "unused, individually insulated",
+    "off_leakage_bound": "not established in retrieved catalog; require actual off LEDcurrent measurement before commissioning",
+    "procurement": "candidate; observed stock/backorder is not a delivered quotation"
+  },
+  "terminal_count": 46,
+  "machine_profiles": {
+    "large": {
+      "available_in_offline_model": true,
+      "hardware_qualified": false,
+      "slide_mm": 200,
+      "outer_shutter_mm": 164,
+      "outer_shutter_pulses": 65600
+    },
+    "small": {
+      "available_in_offline_model": false,
+      "reason": "No selected independent outer shutter; exact magazine cover/closure solution unintegrated. Do not emulate feedback or reuse large profile."
+    }
+  }
+}

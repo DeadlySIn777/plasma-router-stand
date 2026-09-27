@@ -1,0 +1,45 @@
+{
+  "geometry_frozen": true,
+  "machines": [
+    {
+      "id": "small",
+      "title": "800 \u00d7 1000 mm HYBRID",
+      "context_contains_mechanism": true,
+      "deployed_context_step": "variants/retractable-atc/small-mechanism/output/step/SMALL_CONTEXT_DEPLOYED.step",
+      "parked_context_step": "variants/retractable-atc/small-mechanism/output/step/SMALL_CONTEXT_PARKED.step",
+      "deployed_step": "variants/retractable-atc/small-mechanism/output/step/SMALL_DEPLOYED.step",
+      "parked_step": "variants/retractable-atc/small-mechanism/output/step/SMALL_PARKED.step",
+      "full_camera": [
+        1.4,
+        1.7,
+        1.25
+      ],
+      "mechanism_camera": [
+        1.4,
+        1.7,
+        1.25
+      ],
+      "subtitle": "Actual STEP bodies \u2022 Purple: proposed Z200 / unverified magazine \u2022 Small automatic cover remains unresolved"
+    },
+    {
+      "id": "large",
+      "title": "48 \u00d7 96 in HYBRID",
+      "context_contains_mechanism": true,
+      "deployed_context_step": "variants/retractable-atc/large-mechanism/deployed-machine.step",
+      "parked_context_step": "variants/retractable-atc/large-mechanism/parked-machine.step",
+      "deployed_step": "variants/retractable-atc/large-mechanism/deployed-mechanism.step",
+      "parked_step": "variants/retractable-atc/large-mechanism/parked-mechanism.step",
+      "full_camera": [
+        1.4,
+        -1.5,
+        1.2
+      ],
+      "mechanism_camera": [
+        -1.6,
+        -1.4,
+        1.1
+      ],
+      "subtitle": "Actual STEP bodies \u2022 200 mm carrier / 164 mm shutter \u2022 Magazine mounting interface remains unverified"
+    }
+  ]
+}

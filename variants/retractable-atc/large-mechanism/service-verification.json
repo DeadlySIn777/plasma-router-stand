@@ -1,0 +1,234 @@
+{
+  "builder": "large-mechanism",
+  "passed": true,
+  "coil_count": 3,
+  "machine_footprint_mm": [
+    1950,
+    2950
+  ],
+  "conditional_parked_magazine_envelope_mm": [
+    160,
+    600,
+    120
+  ],
+  "paths": [
+    {
+      "part": "DOCK0_END_CAP_BOLT_0",
+      "operation": "Unscrew M3x10 and withdraw axially. Threads represented at nominal major diameter.",
+      "translation_mm": [
+        14,
+        0,
+        0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "DOCK0_END_CAP_BOLT_1",
+      "operation": "Unscrew M3x10 and withdraw axially. Threads represented at nominal major diameter.",
+      "translation_mm": [
+        14,
+        0,
+        0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "DOCK0_BODY_END_REAR",
+      "operation": "Withdraw removable rear cap; support it by hand.",
+      "translation_mm": [
+        50,
+        0,
+        0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "DOCK0_SOLENOID",
+      "operation": "Disconnect field leads and withdraw coil body axially; side keeper and guided plunger remain installed.",
+      "translation_mm": [
+        70.0,
+        0,
+        0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "DOCK0_SOLENOID",
+      "operation": "Lower detached coil 20 mm into the accessible under-module space.",
+      "translation_mm": [
+        0,
+        0,
+        -20
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "DOCK1_END_CAP_BOLT_0",
+      "operation": "Unscrew M3x10 and withdraw axially. Threads represented at nominal major diameter.",
+      "translation_mm": [
+        -14,
+        0,
+        0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "DOCK1_END_CAP_BOLT_1",
+      "operation": "Unscrew M3x10 and withdraw axially. Threads represented at nominal major diameter.",
+      "translation_mm": [
+        -14,
+        0,
+        0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "DOCK1_BODY_END_REAR",
+      "operation": "Withdraw removable rear cap; support it by hand.",
+      "translation_mm": [
+        -50,
+        0,
+        0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "DOCK1_SOLENOID",
+      "operation": "Disconnect field leads and withdraw coil body axially; side keeper and guided plunger remain installed.",
+      "translation_mm": [
+        -70.0,
+        0,
+        0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "DOCK1_SOLENOID",
+      "operation": "Lower detached coil 20 mm into the accessible under-module space.",
+      "translation_mm": [
+        0,
+        0,
+        -20
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "CATCH_SERVICE_CAP",
+      "operation": "Remove four M4x6 cover screws; manually lift the welded cover and downstand together.",
+      "translation_mm": [
+        0,
+        0,
+        60
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "CATCH_CAP_DOWNSTAND",
+      "operation": "Remove four M4x6 cover screws; manually lift the welded cover and downstand together.",
+      "translation_mm": [
+        0,
+        0,
+        60
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "CATCH_END_CAP_BOLT_0",
+      "operation": "Unscrew M3x10 and withdraw axially. Threads represented at nominal major diameter.",
+      "translation_mm": [
+        14,
+        0,
+        0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "CATCH_END_CAP_BOLT_1",
+      "operation": "Unscrew M3x10 and withdraw axially. Threads represented at nominal major diameter.",
+      "translation_mm": [
+        14,
+        0,
+        0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "CATCH_BODY_END_REAR",
+      "operation": "Withdraw removable rear cap; support it by hand.",
+      "translation_mm": [
+        50,
+        0,
+        0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "CATCH_BODY_END_REAR",
+      "operation": "Lift detached cap through open service cover.",
+      "translation_mm": [
+        0,
+        0,
+        60
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "CATCH_SOLENOID",
+      "operation": "Disconnect field leads and withdraw coil body axially; side keeper and guided plunger remain installed.",
+      "translation_mm": [
+        55.0,
+        0,
+        0
+      ],
+      "collisions": [],
+      "passed": true
+    },
+    {
+      "part": "CATCH_SOLENOID",
+      "operation": "Lift fully detached coil through open service cover.",
+      "translation_mm": [
+        0,
+        0,
+        60
+      ],
+      "collisions": [],
+      "passed": true
+    }
+  ],
+  "method": "Continuous conservative enclosing solids, refined only by the constant coaxial purchased-housing bore; exact positive-volume intersections against all other installed mechanism and baseline context parts. Each coil is serviced independently.",
+  "limits": "External nominal body routes only. Isolate actuator power; mechanically support the shutter and secure the slide. Disconnect leads and allow coil cooling. Actual terminals, cable boots, proprietary internal plunger retention, hand/tool space, tolerances and hot surfaces require delivered-part inspection. Swaged linkage pins are not removed for the shown body service. Detached caps/coils are manually supported; no nonexistent fixture is assumed. Reverse paths restore the shown components.",
+  "source_sha256": {
+    "variants/retractable-atc/large-mechanism/mechanism.py": "1c7960a392760e89b2a7dfe9d3d78e899099786335d623d18c957572df598435",
+    "variants/retractable-atc/large-mechanism/hood.py": "397a9d132b0c3dd6365dc2e4ddd67c0a15c47576a4d9b4431dcdde5f44304cb7",
+    "variants/retractable-atc/large-mechanism/locks.py": "5da03499b8a5b3c9b45c9fa74cdd73872ff1215c7ef38eb57d7bbcdc4d480ea3",
+    "variants/retractable-atc/large-mechanism/catch.py": "7cf07cbeda2a56f206ed5b784a770bdab94a04daa32fd754c7ac9e702ec1fc67",
+    "variants/retractable-atc/large-mechanism/retention.py": "caa4effe50a2de5b1d9c83c14f6697c74218058cfd95a5ab8eefd326fc59adf2",
+    "variants/retractable-atc/large-mechanism/verify.py": "4d39d84c671cf2066b05d9e85210ae7e654224b1299e432969a1000bdb941dd2",
+    "variants/retractable-atc/large-mechanism/service_check.py": "cad4129c9bc76837bec9e4eab98d5d6845d1c76de94695b29ec931cf3286823d",
+    "variants/retractable-atc/large-mechanism/README.md": "ca31cdf30d0ee989e755d311d8613b7d1b472dbeeaf66ef65b1a310d1bdcd6b0",
+    "variants/48x96/layout.py": "3f6902e36323b0eecc4f3576fd9848f60146d448d197cfdf6062f27e468b09b4",
+    "variants/retractable-atc/hardware/hardware.py": "b4c134ef05aebafded4362991f04a6118ad36be874887fafb81ee8d105757df0",
+    "variants/retractable-atc/hardware/lock-actuator.json": "864dab3726f6541325aeba7c0a83b60561809d6900240aa7279d016a5cd3e199",
+    "variants/retractable-atc/hardware/pin-sensor.json": "54d2c48056513dd4832e87b0b878cd91078a0c1ba7f611dff0064323dbb36fef",
+    "variants/retractable-atc/hardware/source-data.json": "c84351cf6aba8b2e1e8d2b57c40ee52c7a3a7de8c58f21be1ab71af1952378ba",
+    "variants/retractable-atc/hardware/LOCK-ACTUATOR.md": "7544151488242c1f2a7288add62367b67a6ae915bba5a91d2d7f4851326acc70",
+    "variants/retractable-atc/hardware/PIN-SENSORS.md": "9752c4ce5457ad82ef66dede90cdb69a9132e878e6d6790ce6fda0a26d16c5d7"
+  },
+  "sources_unchanged": true
+}

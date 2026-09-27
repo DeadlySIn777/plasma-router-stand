@@ -14,7 +14,7 @@ Plasma and router CNC table. Public working design for **800 mm X / 1000 mm Y / 
 
 Rev J does not yet contain Rev I's head, plumbing, cabinet, structure or control-circuit work. Rev I has no one-piece bed and follows the Kraken. **Which line continues is the owner's decision**; the [26 September follow-up](output/followup-2026-09-26/README.md) lists what each would need.
 
-**Newer development variants (other session, 22:15 UTC):** [small-machine RapidChange ATC, a full-sheet 4x8 machine, and repeatable removable table interfaces](variants/README.md). These have their own CAD and checks. Their supplier interfaces and physical qualification remain open, and they do not replace or inherit the Rev I release status.
+**Development variants (other session):** [small-machine RapidChange ATC, a full-sheet 4x8 machine, and repeatable removable table interfaces](variants/README.md) (22:15 UTC), then [retractable ATC mechanisms for both machines](variants/retractable-atc/README.md) (00:54 UTC, 27 Sep). The retractable ATC has a 200 mm slide, automatic pin release, a longer Z for the small machine and a side bay for the 4x8. These have their own CAD, controls model and checks. Their magazine and supplier interfaces and physical qualification remain open, and they do not replace or inherit the Rev I release status. **Controller conflict:** the retractable ATC drives its slide and shutter from the Kraken's spare onboard drivers (S5, S6). The Rodent's four onboard drivers are all used by X, Y, Y2 and Z, and grblHAL's Rodent map supports no fifth motor, so these mechanisms would need a different drive arrangement on the Rodent.
 
 **Controller settled: the BTT Rodent.** The owner confirmed it again on 26 September, after the other session had recorded "Preserve the preference for Kraken onboard motor drivers" in the variants' [requirements record](variants/requirements.json). Rev I's Kraken terminal circuits and isolated head inputs, and the variants' ATC pin reservation, therefore need porting to the Rodent. **Still open:** that same record lists "Keep bed conversion within the machine footprint", while this session recorded the owner's one-piece bed lifted out of the front of the machine on a hoist. Only the owner can settle the bed.
 
@@ -39,6 +39,7 @@ Rev J does not yet contain Rev I's head, plumbing, cabinet, structure or control
 - [Remaining engineering and measured inputs](output/design-finish-2026-09-26/OPEN-ITEMS.md)
 - [Mechanical component schedule](output/release-review/RevI-CAD/cutlist.csv); [selected controls schedule](output/design-finish-2026-09-26/controls/selected-components.json)
 - [Development variants: small-machine ATC dock, full-sheet 4x8 machine, shared removable-table locators](variants/README.md)
+- [Retractable ATC mechanisms for both machines (27 Sep, the other session's latest work)](variants/retractable-atc/README.md), with its own machine views, STEP files and controls model
 
 **Shared and earlier:**
 

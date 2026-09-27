@@ -1,0 +1,68 @@
+{
+  "scope": "Guide/block packaging arithmetic using the catalog maximum block length. Stops, fittings, actuator and installation tolerances can increase length.",
+  "manufacturer_block_length_mm": 45.4,
+  "manufacturer_maximum_block_length_mm": 45.8,
+  "manufacturer_source": "https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/MGN12HZ1CM/p/MGN12HZ1CM",
+  "maximum_envelope_source": "https://www.hiwin.com/wp-content/uploads/HIWIN-Linear-Guideway-Catalog.pdf#page=91",
+  "maximum_envelope_reference": "Printed page88, section2-4-19, revisionG99TE24-2410; note3 includes screws and end-seal lips.",
+  "source_checked": "2026-09-26",
+  "design_assumptions": {
+    "two_block_center_pitch_mm": 80.0,
+    "end_allowance_each_mm": 10.0,
+    "target_useful_stroke_mm": 200.0
+  },
+  "two_block_minimum_nominal_rail_length_mm": 345.4,
+  "two_block_minimum_rail_using_maximum_block_length_mm": 345.8,
+  "illustrative_rail_length_mm": 350,
+  "examples": [
+    {
+      "blocks_per_rail": 1,
+      "rail_length_mm": 200.0,
+      "occupied_block_span_mm": 45.8,
+      "available_travel_mm": 134.2,
+      "accommodates_200mm_travel": false
+    },
+    {
+      "blocks_per_rail": 1,
+      "rail_length_mm": 300.0,
+      "occupied_block_span_mm": 45.8,
+      "available_travel_mm": 234.2,
+      "accommodates_200mm_travel": true
+    },
+    {
+      "blocks_per_rail": 1,
+      "rail_length_mm": 350.0,
+      "occupied_block_span_mm": 45.8,
+      "available_travel_mm": 284.2,
+      "accommodates_200mm_travel": true
+    },
+    {
+      "blocks_per_rail": 2,
+      "rail_length_mm": 200.0,
+      "occupied_block_span_mm": 125.8,
+      "available_travel_mm": 54.2,
+      "accommodates_200mm_travel": false
+    },
+    {
+      "blocks_per_rail": 2,
+      "rail_length_mm": 300.0,
+      "occupied_block_span_mm": 125.8,
+      "available_travel_mm": 154.2,
+      "accommodates_200mm_travel": false
+    },
+    {
+      "blocks_per_rail": 2,
+      "rail_length_mm": 350.0,
+      "occupied_block_span_mm": 125.8,
+      "available_travel_mm": 204.2,
+      "accommodates_200mm_travel": true
+    }
+  ],
+  "guide_selected_for_purchase": false,
+  "load_capacity_qualified": false,
+  "mechanical_design_released": false,
+  "source_sha256": {
+    "variants/retractable-atc/check_guide_stroke.py": "3c039f38e4fc9fa32587a7f270c9273b6295e7c293a6cc6bdbeee74886934296"
+  },
+  "passed": true
+}

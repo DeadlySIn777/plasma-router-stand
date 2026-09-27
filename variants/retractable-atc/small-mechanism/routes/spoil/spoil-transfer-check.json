@@ -1,0 +1,500 @@
+{
+  "scope": "All prescribed bare-board motions from installed state through internal storage, after all spoilboard screws are already removed. Human handling, finger clearance and hardware-transfer paths excluded.",
+  "hardware_sequence": "All24 spoilboard screws are pre-stored; the24 top-slot nuts remain installed during every board movement. Nuts are removed/stored only after all boards and before the panels; that small-part transfer is not proven here.",
+  "source_sha256": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+  "source_unchanged_during_check": true,
+  "method": "Exact B-rep midpoint minimum distance with conservative per-point displacement bound; adaptive subdivision. Coordinates use exact prescribed linear and sinusoidal transforms. Existing parked boards remain fixed obstacles.",
+  "analytic_xy_swept_bounds_mm": [
+    135,
+    0,
+    970,
+    1110
+  ],
+  "footprint_check": "The entire prescribed XY path lies inside the nominal frame rectangle X0..1150/Y0..1450. Linear segments stay between their endpoints. Horizontal quarter-turn maximum X is 135+hypot(393.5,397)<695 and Y is 0..790.5; standing turn stays X135..532 and Y0..411.5; lower yaw stays X135..135+hypot(397,18)<533 and Y0..hypot(397,18)<398.",
+  "maximum_prescribed_height_mm": 1374.7114748265149,
+  "model_parts": 1940,
+  "order": [
+    4,
+    3,
+    2,
+    1,
+    6,
+    5
+  ],
+  "records": [
+    {
+      "board": 4,
+      "slot": 6,
+      "handling_width_mm": 397.0,
+      "standing_height_mm": 393.5,
+      "final_bounds_delta_mm": 2.2737367544323206e-13,
+      "phases": {
+        "lift_from_panel": {
+          "status": "CLEAR",
+          "distance_queries": 20,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_horizontal_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "turn_horizontal_board": {
+          "status": "CLEAR",
+          "distance_queries": 385,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "stand_board_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 166,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_standing_board_to_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "vertical_front_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "yaw_below_pan": {
+          "status": "CLEAR",
+          "distance_queries": 176,
+          "max_subdivision_depth": 3,
+          "failures": []
+        },
+        "move_to_slot_x": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "slide_rear": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_to_runner": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "board": 3,
+      "slot": 5,
+      "handling_width_mm": 397.0,
+      "standing_height_mm": 393.5,
+      "final_bounds_delta_mm": 2.2737367544323206e-13,
+      "phases": {
+        "lift_from_panel": {
+          "status": "CLEAR",
+          "distance_queries": 20,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_horizontal_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "turn_horizontal_board": {
+          "status": "CLEAR",
+          "distance_queries": 382,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "stand_board_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 165,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_standing_board_to_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "vertical_front_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "yaw_below_pan": {
+          "status": "CLEAR",
+          "distance_queries": 190,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_to_slot_x": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "slide_rear": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_to_runner": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "board": 2,
+      "slot": 4,
+      "handling_width_mm": 343.5,
+      "standing_height_mm": 393.5,
+      "final_bounds_delta_mm": 2.2737367544323206e-13,
+      "phases": {
+        "lift_from_panel": {
+          "status": "CLEAR",
+          "distance_queries": 10,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_horizontal_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "turn_horizontal_board": {
+          "status": "CLEAR",
+          "distance_queries": 320,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "stand_board_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 144,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_standing_board_to_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "vertical_front_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "yaw_below_pan": {
+          "status": "CLEAR",
+          "distance_queries": 149,
+          "max_subdivision_depth": 3,
+          "failures": []
+        },
+        "move_to_slot_x": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "slide_rear": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_to_runner": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "board": 1,
+      "slot": 3,
+      "handling_width_mm": 343.5,
+      "standing_height_mm": 393.5,
+      "final_bounds_delta_mm": 2.2737367544323206e-13,
+      "phases": {
+        "lift_from_panel": {
+          "status": "CLEAR",
+          "distance_queries": 10,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_horizontal_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "turn_horizontal_board": {
+          "status": "CLEAR",
+          "distance_queries": 317,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "stand_board_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 141,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_standing_board_to_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "vertical_front_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "yaw_below_pan": {
+          "status": "CLEAR",
+          "distance_queries": 165,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_to_slot_x": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "slide_rear": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_to_runner": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "board": 6,
+      "slot": 2,
+      "handling_width_mm": 219.5,
+      "standing_height_mm": 393.5,
+      "final_bounds_delta_mm": 2.2737367544323206e-13,
+      "phases": {
+        "lift_from_panel": {
+          "status": "CLEAR",
+          "distance_queries": 10,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_horizontal_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 7,
+          "max_subdivision_depth": 1,
+          "failures": []
+        },
+        "turn_horizontal_board": {
+          "status": "CLEAR",
+          "distance_queries": 201,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "stand_board_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 117,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_standing_board_to_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "vertical_front_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "yaw_below_pan": {
+          "status": "CLEAR",
+          "distance_queries": 62,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_to_slot_x": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "slide_rear": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_to_runner": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      }
+    },
+    {
+      "board": 5,
+      "slot": 1,
+      "handling_width_mm": 219.5,
+      "standing_height_mm": 393.5,
+      "final_bounds_delta_mm": 2.2737367544323206e-13,
+      "phases": {
+        "lift_from_panel": {
+          "status": "CLEAR",
+          "distance_queries": 10,
+          "max_subdivision_depth": 4,
+          "failures": []
+        },
+        "move_horizontal_to_front": {
+          "status": "CLEAR",
+          "distance_queries": 7,
+          "max_subdivision_depth": 1,
+          "failures": []
+        },
+        "turn_horizontal_board": {
+          "status": "CLEAR",
+          "distance_queries": 201,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "stand_board_above_front": {
+          "status": "CLEAR",
+          "distance_queries": 117,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_standing_board_to_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "vertical_front_drop": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "yaw_below_pan": {
+          "status": "CLEAR",
+          "distance_queries": 63,
+          "max_subdivision_depth": 2,
+          "failures": []
+        },
+        "move_to_slot_x": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "slide_rear": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        },
+        "lower_to_runner": {
+          "status": "CLEAR",
+          "distance_queries": 0,
+          "max_subdivision_depth": 0,
+          "failures": []
+        }
+      }
+    }
+  ],
+  "pass": true,
+  "new_variant_source_sha256": {
+    "variants/retractable-atc/small-mechanism/verify_other_routes.py": "455a9dd3321e9fecbfe599a086b0c1a831699938487e9a97b06d31145bc19098",
+    "variants/retractable-atc/small-mechanism/build.py": "de5d6250966b0029a0727d0865f8ee25c8905d6e992d3c2d16d20163e92f645d",
+    "variants/retractable-atc/small-mechanism/lock.py": "cad631053a95310738aa5f9b43250ac8305e6a70a97a707e7855a01658a09027",
+    "variants/retractable-atc/small-mechanism/sensors.py": "cbff229958003d2d6d54016a615564ec9069b65356f5c4342c35a61a3ae25f85",
+    "variants/retractable-atc/small-mechanism/verify.py": "bf27b45dbaaed647acbfee573f307e0fc59680db9c4dd0f58c2db75cbfb276d5",
+    "variants/retractable-atc/small-mechanism/verify_panels.py": "c68e6c13c34476ebe3b6370f7a512d3f7f6672253028a8c47189e6c7fe1c98ed",
+    "output/cad-repair-2026-09-25/check_spoil_transfer.py": "1397e268b4136f0436db0f07bd23256c35d980cb38eca42c2c6a40c56e4af9fe",
+    "output/release-review/RevE-ENGINEERING/bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "output/release-review/RevE-ENGINEERING/bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "output/release-review/RevE-ENGINEERING/bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "output/release-review/RevE-ENGINEERING/build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "output/release-review/RevE-ENGINEERING/build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "output/release-review/RevE-ENGINEERING/build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "output/release-review/RevE-ENGINEERING/build_revi.py": "2756268a5dca6ce3588d4b2ac0ebde43c87390bed8d6caa21e706fc7f83af462",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "output/release-review/RevE-ENGINEERING/check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "output/release-review/RevE-ENGINEERING/controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "output/release-review/RevE-ENGINEERING/export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "output/release-review/RevE-ENGINEERING/frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "output/release-review/RevE-ENGINEERING/geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "output/release-review/RevE-ENGINEERING/package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "output/release-review/RevE-ENGINEERING/plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "output/release-review/RevE-ENGINEERING/reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "output/release-review/RevE-ENGINEERING/render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "output/release-review/RevE-ENGINEERING/render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "output/release-review/RevE-ENGINEERING/render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "output/release-review/RevE-ENGINEERING/render_revi.py": "991d641ba4baa19a0f5147b4d29aa9d300c163973c15cadbd62d6cbe2b5ebab5",
+    "output/release-review/RevE-ENGINEERING/sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "output/release-review/RevE-ENGINEERING/service_finish.py": "9738b260ce8f61c7ca45b46c212b1559057bdb1b1505885bcc0616045bc228e5",
+    "output/release-review/RevE-ENGINEERING/strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "output/release-review/RevE-ENGINEERING/structure_finish.py": "b0e6e7f5fc7bd5d3b9e901bc13f7186f78395c78584ab3238ba249613bea9778",
+    "output/release-review/RevE-ENGINEERING/swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "output/release-review/RevE-ENGINEERING/sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "output/release-review/RevE-ENGINEERING/tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "output/release-review/RevE-ENGINEERING/update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "output/release-review/RevE-ENGINEERING/verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "output/release-review/RevE-ENGINEERING/verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "output/release-review/RevE-ENGINEERING/verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "output/release-review/RevE-ENGINEERING/water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "output/release-review/RevE-ENGINEERING/water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "output/release-review/RevE-ENGINEERING/water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
+  },
+  "new_variant_sources_changed": {},
+  "integration_scope": "Parked270-part retractable mechanism plus unverified magazine allocation; one lower rear-left bed clamp screw. Beam route includes actual newly permuted stored panel solids.",
+  "new_panel_to_slot_one_based": {
+    "1": 6,
+    "2": 5,
+    "3": 4,
+    "4": 3,
+    "6": 2,
+    "5": 1
+  },
+  "passed": true,
+  "elapsed_seconds": 102.72261428833008
+}

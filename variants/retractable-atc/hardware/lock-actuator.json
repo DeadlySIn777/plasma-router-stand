@@ -1,0 +1,67 @@
+{
+  "schema": 1,
+  "checked_date": "2026-09-26",
+  "manufacturer": "Delta Electronics",
+  "part_number": "DSOL-1151-24C",
+  "role": "Withdraw a separate unloaded, spring-engaged guided locking pin",
+  "selection_status": "Drawing-based integration candidate; thermal pull and delivered dimensions unqualified",
+  "source": {
+    "manufacturer_page": "https://www.deltaww.com/en-US/products/solenoids",
+    "manufacturer_drawing": "https://filecenter.deltaww.com/Products/download/04/0409/DSOL-1151.pdf",
+    "retrieval": "Original Delta sheet mirrored by Datasheet Archive; manufacturer link currently redirects to an unavailable page",
+    "archive_listing": "https://www.datasheetarchive.com/?q=dsol-1151",
+    "drawing_sha256": "f61e3528b25fc26b9ea8209cfea291e4c4d37f310b3557386f45d728c2eb4263"
+  },
+  "electrical": {
+    "voltage_VDC": 24,
+    "duty_percent": 100,
+    "power_W": 7.5,
+    "DCR_ohms_at_25C": 76.8,
+    "DCR_tolerance_percent": 10,
+    "table_current_A": 0.4,
+    "calculated_nominal_current_A": 0.3125,
+    "minimum_design_allocation_A": 0.4,
+    "allocation_is_guaranteed_maximum": false,
+    "note": "Published current, resistance and power are not mutually exact; cold temperature and supply tolerance must be included in final branch sizing."
+  },
+  "geometry_mm": {
+    "body_length": 49.9872,
+    "body_width": 28.956,
+    "body_height": 24.9936,
+    "plunger_diameter": 10.9982,
+    "clevis_slot_width": 4.826,
+    "clevis_pin_hole_min": 3.2512,
+    "clevis_pin_hole_max": 3.302,
+    "energized_plunger_tip_projection": 17.526,
+    "pin_hole_offset_from_tip": 3.9624,
+    "same_height_mount_face_hole_x_from_front": [7.112, 22.987],
+    "same_height_mount_face_hole_height": 12.4968,
+    "terminal_height_max": 12.7,
+    "terminal_boot_and_bend_envelope_included": false,
+    "mount_thread": "8-32 UNC-2B",
+    "mount_thread_depth": null,
+    "drawing_state": "energized",
+    "supplier_units": "inch",
+    "default_tolerances": "X.X +/-0.02in; X.XX +/-0.01in; angles +/-1deg; not a fit tolerance for fabricated locking pin"
+  },
+  "mechanism_targets": {
+    "pin_nominal_engagement_mm": 4,
+    "pin_withdrawal_mm": 6,
+    "unlocked_nominal_clearance_mm": 2,
+    "maximum_solenoid_air_gap_mm": 6,
+    "external_spring_force_max_N": 1,
+    "typical_graph_pull_near_6mm_N_approx": 5,
+    "graph_value_is_guaranteed_minimum": false,
+    "working_pull_margin_qualified": false,
+    "structural_load_through_solenoid_allowed": false
+  },
+  "procurement": {
+    "currency": "USD",
+    "unit_goods_price_observed": 23.72,
+    "supplier": "https://www.digikey.com/en/products/detail/delta-electronics/DSOL-1151-24C/18661275",
+    "shipping": null,
+    "tax": null,
+    "tariff": null,
+    "ordered": false
+  }
+}

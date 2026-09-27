@@ -1,0 +1,66 @@
+{
+  "checked_date": "2026-09-26",
+  "policy": "Facts and primary URLs only; no republished vendor PDFs",
+  "sources": [
+    {
+      "id": "BTT",
+      "url": "https://global.bttwiki.com/Kraken.html",
+      "facts": "Kraken V1.1 S1-S4 50mohm; S5-S8 75mohm. 3.3V logic. Actual header orientation still requires board verification."
+    },
+    {
+      "id": "BTT_REPO",
+      "url": "https://github.com/bigtreetech/BIGTREETECH-Kraken",
+      "facts": "Official common configuration and schematic pin mapping. Existing local official map and old V1.0 schematic are read-only references."
+    },
+    {
+      "id": "MCP",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP23017-Data-Sheet-DS20001952.pdf",
+      "facts": "RevD2022: GPA7/GPB7 output-only; 3.3V operation; GPIO thresholds0.2/0.8VDD; SPDIP pinout; bank0 register addresses;100kHz operation;1us minimum reset pulse."
+    },
+    {
+      "id": "AQY",
+      "url": "https://industry.panasonic.com/ac/cdn/e/control/relay/photomos/catalog/semi_eng_gu1a_aqy21_gs.pdf",
+      "facts": "AQY212GS normally-open isolated semiconductor relay;5-30mA recommended LED current; maximum LED Vf1.5V and outputRon0.7ohm;1uA off leakage;published timings at catalog conditions are not machine limits."
+    },
+    {
+      "id": "TI",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf",
+      "facts": "SN74LVC1G17 DBV pin1NC2input3GND4output5VCC;3.3V buffered output stage with24mA drive guarantee at specified conditions."
+    },
+    {
+      "id": "OMRON",
+      "url": "https://omronfs.omron.com/en_US/ecb/products/pdf/en-d2hw.pdf",
+      "facts": "D2HW-C203MR leaded NO candidate blackCOM blueNO;minimum applicable load reference5V1mA. Actual cam and bracket must be designed."
+    },
+    {
+      "id": "FINDER",
+      "url": "https://cdn.findernet.com/app/uploads/S40EN.pdf",
+      "facts": "40.52 DC24V relays and95.05 sockets;two changeover poles11/12/14 and21/22/24. Gold variant selected for added low-level permission contact."
+    },
+    {
+      "id": "DIODE",
+      "url": "https://www.vishay.com/docs/88516/1n5400.pdf",
+      "facts": "1N5408 power rectifier selected as local freewheel diode;3A current class, subject to published thermal conditions. Actual solenoid decay and switch life require bench tests."
+    },
+    {
+      "id": "MOTOR",
+      "url": "https://www.omc-stepperonline.com/download/17E19S1684MB-300RS.pdf",
+      "facts": "Linked family drawing:8mmlead,200steps/rev,1.68A/phase,0.44Nm holding. Holding torque is not a dynamic thrust rating; actual delivered MB4 winding colors require verification."
+    },
+    {
+      "id": "DELTA",
+      "url": "https://filecenter.deltaww.com/Products/download/04/0409/DSOL-1151.pdf",
+      "facts": "Original manufacturer sheet currently unavailable from this endpoint; repository hardware/lock-actuator.json binds retrieved original drawing and archive provenance.24V7.5W100%duty,76.8ohms+-10%25C,also0.4A table value; no guaranteed hot pull force established."
+    },
+    {
+      "id": "RAPID",
+      "url": "https://github.com/greilick-industries/rcatc-scripts-grblhal",
+      "facts": "Manufacturer integration macros require compatible grblHAL and tool change setup. No macro from this repository is installed or executed by this controls package."
+    },
+    {
+      "id": "PM25",
+      "url": "https://industry.panasonic.com/ac/e_download/fasys/sensor/micro/catalog/pm-254565_e_cata.pdf?f_cd=402226&via=ok",
+      "facts": "PM-U25-P PNP: brown supply,blue0V,whiteDark-ON,blackLight-ONunused.5-24V+-10%,15mAmaximumconsumption,50mAmaxoutput,1Vresidualat16mA. Independent sensors required at both endpoints; blocked slot can falsely indicate endpoint."
+    }
+  ]
+}

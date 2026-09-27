@@ -1,0 +1,126 @@
+{
+  "scope": "Continuous conservative swept-box check of proposed extended fixedZ components versus parked mechanism/allocation, plus thirteen exact intermediate pin mechanism configurations. Pin configuration samples are not a continuous collision proof.",
+  "fixed_Z200_swept_bounds": {
+    "ZBX80_BASE": [
+      135.0,
+      239.5999999999999,
+      1040.0,
+      1015.0,
+      1259.6,
+      1359.0
+    ],
+    "ZBX80_END_TOP": [
+      135.0,
+      181.5999999999999,
+      1347.0,
+      1015.0,
+      1259.6,
+      1359.0
+    ],
+    "ZBX80_MOTOR": [
+      146.5,
+      192.5999999999999,
+      1414.0,
+      1003.5,
+      1249.6,
+      1530.5
+    ],
+    "ZBX80_COUPLER_GUARD": [
+      135.0,
+      181.5999999999999,
+      1359.0,
+      1015.0,
+      1259.6,
+      1414.0
+    ]
+  },
+  "fixed_Z200_hits": [],
+  "pin_states": [
+    {
+      "withdrawal_from_released_mm": 0.0,
+      "bellcrank_degrees": 0.0,
+      "clashes": []
+    },
+    {
+      "withdrawal_from_released_mm": 0.5,
+      "bellcrank_degrees": 1.4320961841646465,
+      "clashes": []
+    },
+    {
+      "withdrawal_from_released_mm": 1.0,
+      "bellcrank_degrees": 2.8624052261117474,
+      "clashes": []
+    },
+    {
+      "withdrawal_from_released_mm": 1.5,
+      "bellcrank_degrees": 4.289153328819018,
+      "clashes": []
+    },
+    {
+      "withdrawal_from_released_mm": 2.0,
+      "bellcrank_degrees": 5.710593137499642,
+      "clashes": []
+    },
+    {
+      "withdrawal_from_released_mm": 2.5,
+      "bellcrank_degrees": 7.125016348901798,
+      "clashes": []
+    },
+    {
+      "withdrawal_from_released_mm": 3.0,
+      "bellcrank_degrees": 8.530765609948133,
+      "clashes": []
+    },
+    {
+      "withdrawal_from_released_mm": 3.5,
+      "bellcrank_degrees": 9.926245506651705,
+      "clashes": []
+    },
+    {
+      "withdrawal_from_released_mm": 4.0,
+      "bellcrank_degrees": 11.309932474020213,
+      "clashes": []
+    },
+    {
+      "withdrawal_from_released_mm": 4.5,
+      "bellcrank_degrees": 12.68038349181982,
+      "clashes": []
+    },
+    {
+      "withdrawal_from_released_mm": 5.0,
+      "bellcrank_degrees": 14.036243467926479,
+      "clashes": []
+    },
+    {
+      "withdrawal_from_released_mm": 5.5,
+      "bellcrank_degrees": 15.376251248826188,
+      "clashes": []
+    },
+    {
+      "withdrawal_from_released_mm": 6.0,
+      "bellcrank_degrees": 16.69924423399362,
+      "clashes": []
+    }
+  ],
+  "endpoint_geometry_mismatch": [],
+  "pin_kinematics": {
+    "equal_arm_mm": 20,
+    "stroke_mm": 6,
+    "maximum_radial_slide_mm": 0.8806130178211014,
+    "slot_available_center_travel_mm": 3.1,
+    "minimum_pin_guided_length_mm": 11,
+    "spring_free_length_mm": 14,
+    "spring_min_compressed_length_mm": 2.7,
+    "spring_rate_target_N_mm": 0.0602,
+    "max_nominal_force_N": 0.68026,
+    "spring_catalog_and_hot_force_qualified": false
+  },
+  "source_sha256": {
+    "variants/retractable-atc/small-mechanism/verify_supplement.py": "ff5f8301c6e6b831a8b409dc3e58e98ade6a25d4b5a5fb46babdfb5dbfaf8c3c",
+    "variants/retractable-atc/small-mechanism/build.py": "de5d6250966b0029a0727d0865f8ee25c8905d6e992d3c2d16d20163e92f645d",
+    "variants/retractable-atc/small-mechanism/lock.py": "cad631053a95310738aa5f9b43250ac8305e6a70a97a707e7855a01658a09027",
+    "variants/retractable-atc/small-mechanism/sensors.py": "cbff229958003d2d6d54016a615564ec9069b65356f5c4342c35a61a3ae25f85",
+    "output/release-review/RevI-CAD/RevI_ROUTER-validation.json": "17a681c406ffc7802a17d4de7133c5fa0dfc8f4e6877ed3cdccdf6847e7d4fea"
+  },
+  "passed": true
+}

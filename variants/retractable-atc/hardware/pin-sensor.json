@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "checked_date": "2026-09-26",
+  "manufacturer": "Panasonic Industry",
+  "part_number": "PM-U25-P",
+  "status": "Drawing-based candidate; not commissioned; listed on backorder",
+  "quantity_per_pin": 2,
+  "quantity_by_variant": {"small_carrier_locks_only": 4, "large_with_shutter_catch": 6},
+  "source": {
+    "product": "https://industry.panasonic.com/global/en/products/fasys/sensor/micro/number/pm-u25-p",
+    "catalog": "https://industry.panasonic.com/ac/e_download/fasys/sensor/micro/catalog/pm-254565_e_cata.pdf?f_cd=402226&via=ok",
+    "pages": [4, 5, 10, 13],
+    "drawing_visually_inspected": true
+  },
+  "geometry_mm": {
+    "width": 13.4,
+    "height": 16,
+    "depth": 6,
+    "slot_width": 6,
+    "slot_depth_from_top": 5.5,
+    "mount_hole_diameter": 3.2,
+    "mount_hole_pitch": 8,
+    "mount_row_above_bottom": 2.5,
+    "beam_below_top": 2,
+    "cable_diameter": 2.5,
+    "minimum_opaque_target": [0.8, 1.2]
+  },
+  "electrical": {
+    "nominal_supply_VDC": [5, 24],
+    "supply_tolerance_percent": 10,
+    "maximum_consumption_A": 0.015,
+    "maximum_output_source_A": 0.05,
+    "maximum_output_drop_V_at_0p016A": 1,
+    "maximum_output_drop_V_at_0p05A": 2,
+    "output_type": "PNP open collector",
+    "wires": {"brown": "+V", "blue": "0V", "white": "Dark-ON endpoint output", "black": "Light-ON; insulate unused"},
+    "direct_connection_to_Kraken_allowed": false
+  },
+  "qualification": {
+    "sense_actual_pin": true,
+    "separate_sensor_for_each_endpoint": true,
+    "slot_fouling_checked": false,
+    "pin_endpoint_windows_measured": false,
+    "power_loss_and_wire_fault_tests_complete": false,
+    "machine_safety_qualification": false
+  },
+  "procurement": {
+    "supplier": "https://www.digikey.com/en/products/detail/panasonic-industry/PM-U25-P/5962566",
+    "unit_goods_price_USD_observed": 13,
+    "four_sensor_goods_subtotal_USD": 52,
+    "six_sensor_goods_subtotal_USD": 78,
+    "availability_observed": "Backorder",
+    "shipping_USD": null,
+    "tax_USD": null,
+    "tariff_USD": null,
+    "ordered": false
+  }
+}

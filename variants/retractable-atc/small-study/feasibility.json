@@ -1,0 +1,1466 @@
+{
+  "status": "BOUNDED FEASIBILITY STUDY; NO FULL-BED OR FABRICATION RELEASE",
+  "date": "2026-09-26",
+  "verifier_file": "variants/retractable-atc/small-study/study.py",
+  "verifier_sha256_before": "6424bde8755767b43dfc8e344ecc08ca6aba00eb5d06e4a1f8c3aa65cccdb724",
+  "verifier_sha256_after": "6424bde8755767b43dfc8e344ecc08ca6aba00eb5d06e4a1f8c3aa65cccdb724",
+  "source_sha256": {
+    "variants/retractable-atc/small-study/study.py": "6424bde8755767b43dfc8e344ecc08ca6aba00eb5d06e4a1f8c3aa65cccdb724",
+    "variants/retractable-atc/small-study/README.md": "d378ba13dc98dab548d3010f17aa8134a44a658e2355fb84bd50237820a22630",
+    "output/release-review/RevI-CAD/RevI_ROUTER-validation.json": "17a681c406ffc7802a17d4de7133c5fa0dfc8f4e6877ed3cdccdf6847e7d4fea",
+    "variants/small-atc/output/parts/SATC_CARRIER_WELDMENT.step": "57304851f3b15b23a7b497af5e301f6300d26b59a19eb1b854c4448373abd2b3",
+    "variants/small-atc/build_small_atc.py": "3df8bf27627d4833fd8098d632b178d75442c5c8bac3c275cbdcfd2c3253b665",
+    "variants/small-atc/output/fit-report.json": "3f7b75b67f4b16eaf0b37307d1776080b499c19c29324f37607e0308d75e4355",
+    "variants/small-atc/output/interface.json": "042648b623370dca51784a4d8ed6342c506d415623c6f953b34dcfc94d2b2a56",
+    "variants/retractable-atc/check_guide_stroke.py": "3c039f38e4fc9fa32587a7f270c9273b6295e7c293a6cc6bdbeee74886934296",
+    "variants/retractable-atc/guide-stroke-check.json": "8f8ecd5306138a6583229d5a7c84ea20b5e9150acb2574e205b916b85412de4b",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d"
+  },
+  "source_hashes_unchanged": true,
+  "actual_magazine_verified": false,
+  "guide_mount_design_complete": false,
+  "full_bed_through_M6_qualified": false,
+  "machine_nominal_tool_travel_mm": {
+    "x": [
+      175,
+      975
+    ],
+    "y": [
+      121.4,
+      1121.4
+    ],
+    "z_lift": [
+      0,
+      100
+    ]
+  },
+  "allocation_input_status": {
+    "body_width_60mm": "manufacturer nominal body width; endcaps/cover excluded",
+    "body_length_520mm": "UNVERIFIED study variable",
+    "heights_mm": [
+      40,
+      60,
+      90,
+      120
+    ],
+    "tool_pocket_y1100": "assumed only; exact pocket drawing absent"
+  },
+  "compact_parked_scenarios": [
+    {
+      "assumed_body_height_mm": 40,
+      "parked_bounds": {
+        "body": [
+          315,
+          1270,
+          966.15,
+          835,
+          1330,
+          1006.15
+        ],
+        "tray": [
+          295,
+          1260,
+          959.8,
+          855,
+          1340,
+          966.15
+        ]
+      },
+      "inside_xy_footprint": true,
+      "named_full_xyz_swept_aabb_hits": []
+    },
+    {
+      "assumed_body_height_mm": 60,
+      "parked_bounds": {
+        "body": [
+          315,
+          1270,
+          966.15,
+          835,
+          1330,
+          1026.15
+        ],
+        "tray": [
+          295,
+          1260,
+          959.8,
+          855,
+          1340,
+          966.15
+        ]
+      },
+      "inside_xy_footprint": true,
+      "named_full_xyz_swept_aabb_hits": []
+    },
+    {
+      "assumed_body_height_mm": 90,
+      "parked_bounds": {
+        "body": [
+          315,
+          1270,
+          966.15,
+          835,
+          1330,
+          1056.15
+        ],
+        "tray": [
+          295,
+          1260,
+          959.8,
+          855,
+          1340,
+          966.15
+        ]
+      },
+      "inside_xy_footprint": true,
+      "named_full_xyz_swept_aabb_hits": []
+    },
+    {
+      "assumed_body_height_mm": 120,
+      "parked_bounds": {
+        "body": [
+          315,
+          1270,
+          966.15,
+          835,
+          1330,
+          1086.15
+        ],
+        "tray": [
+          295,
+          1260,
+          959.8,
+          855,
+          1340,
+          966.15
+        ]
+      },
+      "inside_xy_footprint": true,
+      "named_full_xyz_swept_aabb_hits": []
+    }
+  ],
+  "old_bridge_comparison": {
+    "original_carrier_bounds_mm": [
+      63.0,
+      950.0,
+      953.0,
+      1087.0,
+      1190.0,
+      1003.8
+    ],
+    "carrier_200stroke_low_spindle_exact_intersection_mm3": 499.90971273176274,
+    "carrier_200stroke_high_spindle_exact_intersection_mm3": 0.0,
+    "old_120mm_cage_200stroke_exact_nominal_box_intersections_mm3": {
+      "ZBX80_BASE": 73840.00000000015,
+      "ZBX80_END_BOTTOM": 64320.0
+    },
+    "shelf_minimum_stroke_for_spindle_plus_5mm_mm": 208.9000000000001,
+    "tall_cage_minimum_stroke_for_low_z_module_plus_5mm_mm": 284.5999999999999,
+    "whole_carrier_max_stroke_inside_outline_with_5mm_mm": 255,
+    "magazine_only_leaves_fixed_shelf_over_work": true
+  },
+  "stock_and_fixture_cases": [
+    {
+      "stock_thickness_mm": 12,
+      "fixture_extra_above_stock_mm": 0,
+      "stock_plus_fixture_bounds": [
+        175,
+        121.4,
+        958.8,
+        975,
+        1121.4,
+        970.8
+      ],
+      "deployed_tray_overlap_mm3": 218338.4000000011,
+      "continuous_tray_translation_sweep_overlap_mm3": 218338.4000000011,
+      "parked_tray_overlap_mm3": 0.0,
+      "minimum_tray_top_for_5mm_gap_mm": 982.15,
+      "extra_apparent_retract_clearance_mm": 12.150000000000091,
+      "extra_apparent_retract_with_added_13mm_guide_mm": 25.15000000000009
+    },
+    {
+      "stock_thickness_mm": 12,
+      "fixture_extra_above_stock_mm": 15,
+      "stock_plus_fixture_bounds": [
+        175,
+        121.4,
+        958.8,
+        975,
+        1121.4,
+        985.8
+      ],
+      "deployed_tray_overlap_mm3": 218338.4000000011,
+      "continuous_tray_translation_sweep_overlap_mm3": 218338.4000000011,
+      "parked_tray_overlap_mm3": 0.0,
+      "minimum_tray_top_for_5mm_gap_mm": 997.15,
+      "extra_apparent_retract_clearance_mm": 27.15000000000009,
+      "extra_apparent_retract_with_added_13mm_guide_mm": 40.15000000000009
+    },
+    {
+      "stock_thickness_mm": 25,
+      "fixture_extra_above_stock_mm": 0,
+      "stock_plus_fixture_bounds": [
+        175,
+        121.4,
+        958.8,
+        975,
+        1121.4,
+        983.8
+      ],
+      "deployed_tray_overlap_mm3": 218338.4000000011,
+      "continuous_tray_translation_sweep_overlap_mm3": 218338.4000000011,
+      "parked_tray_overlap_mm3": 0.0,
+      "minimum_tray_top_for_5mm_gap_mm": 995.15,
+      "extra_apparent_retract_clearance_mm": 25.15000000000009,
+      "extra_apparent_retract_with_added_13mm_guide_mm": 38.15000000000009
+    },
+    {
+      "stock_thickness_mm": 25,
+      "fixture_extra_above_stock_mm": 15,
+      "stock_plus_fixture_bounds": [
+        175,
+        121.4,
+        958.8,
+        975,
+        1121.4,
+        998.8
+      ],
+      "deployed_tray_overlap_mm3": 218338.4000000011,
+      "continuous_tray_translation_sweep_overlap_mm3": 218338.4000000011,
+      "parked_tray_overlap_mm3": 0.0,
+      "minimum_tray_top_for_5mm_gap_mm": 1010.15,
+      "extra_apparent_retract_clearance_mm": 40.15000000000009,
+      "extra_apparent_retract_with_added_13mm_guide_mm": 53.15000000000009
+    },
+    {
+      "stock_thickness_mm": 50,
+      "fixture_extra_above_stock_mm": 0,
+      "stock_plus_fixture_bounds": [
+        175,
+        121.4,
+        958.8,
+        975,
+        1121.4,
+        1008.8
+      ],
+      "deployed_tray_overlap_mm3": 218338.4000000011,
+      "continuous_tray_translation_sweep_overlap_mm3": 218338.4000000011,
+      "parked_tray_overlap_mm3": 0.0,
+      "minimum_tray_top_for_5mm_gap_mm": 1020.15,
+      "extra_apparent_retract_clearance_mm": 50.15000000000009,
+      "extra_apparent_retract_with_added_13mm_guide_mm": 63.15000000000009
+    },
+    {
+      "stock_thickness_mm": 50,
+      "fixture_extra_above_stock_mm": 15,
+      "stock_plus_fixture_bounds": [
+        175,
+        121.4,
+        958.8,
+        975,
+        1121.4,
+        1023.8
+      ],
+      "deployed_tray_overlap_mm3": 218338.4000000011,
+      "continuous_tray_translation_sweep_overlap_mm3": 218338.4000000011,
+      "parked_tray_overlap_mm3": 0.0,
+      "minimum_tray_top_for_5mm_gap_mm": 1035.1499999999999,
+      "extra_apparent_retract_clearance_mm": 65.14999999999986,
+      "extra_apparent_retract_with_added_13mm_guide_mm": 78.14999999999986
+    },
+    {
+      "stock_thickness_mm": 75,
+      "fixture_extra_above_stock_mm": 0,
+      "stock_plus_fixture_bounds": [
+        175,
+        121.4,
+        958.8,
+        975,
+        1121.4,
+        1033.8
+      ],
+      "deployed_tray_overlap_mm3": 218338.4000000011,
+      "continuous_tray_translation_sweep_overlap_mm3": 218338.4000000011,
+      "parked_tray_overlap_mm3": 0.0,
+      "minimum_tray_top_for_5mm_gap_mm": 1045.1499999999999,
+      "extra_apparent_retract_clearance_mm": 75.14999999999986,
+      "extra_apparent_retract_with_added_13mm_guide_mm": 88.14999999999986
+    },
+    {
+      "stock_thickness_mm": 75,
+      "fixture_extra_above_stock_mm": 15,
+      "stock_plus_fixture_bounds": [
+        175,
+        121.4,
+        958.8,
+        975,
+        1121.4,
+        1048.8
+      ],
+      "deployed_tray_overlap_mm3": 218338.4000000011,
+      "continuous_tray_translation_sweep_overlap_mm3": 218338.4000000011,
+      "parked_tray_overlap_mm3": 0.0,
+      "minimum_tray_top_for_5mm_gap_mm": 1060.1499999999999,
+      "extra_apparent_retract_clearance_mm": 90.14999999999986,
+      "extra_apparent_retract_with_added_13mm_guide_mm": 103.14999999999986
+    }
+  ],
+  "combined_stock_plus_clamp_height_cases": [
+    {
+      "combined_height_above_MDF_mm": 25,
+      "extra_apparent_retract_clearance_mm": 25.15,
+      "extra_apparent_retract_with_added_13mm_guide_mm": 38.15
+    },
+    {
+      "combined_height_above_MDF_mm": 50,
+      "extra_apparent_retract_clearance_mm": 50.15,
+      "extra_apparent_retract_with_added_13mm_guide_mm": 63.15
+    },
+    {
+      "combined_height_above_MDF_mm": 75,
+      "extra_apparent_retract_clearance_mm": 75.15,
+      "extra_apparent_retract_with_added_13mm_guide_mm": 88.15
+    }
+  ],
+  "guide_length_examples": [
+    {
+      "blocks": 1,
+      "block_nominal_length_mm": 45.4,
+      "block_catalog_max_length_mm": 45.8,
+      "center_pitch_if_two_mm": null,
+      "end_allowance_each_mm": 10,
+      "travel_on_200mm_rail_mm": 134.2,
+      "minimum_rail_for_200mm_stroke_mm": 265.8
+    },
+    {
+      "blocks": 2,
+      "block_nominal_length_mm": 45.4,
+      "block_catalog_max_length_mm": 45.8,
+      "center_pitch_if_two_mm": 80,
+      "end_allowance_each_mm": 10,
+      "travel_on_200mm_rail_mm": 54.19999999999999,
+      "minimum_rail_for_200mm_stroke_mm": 345.8
+    }
+  ],
+  "named_full_xyz_swept_aabbs": {
+    "GANTRY_8080": [
+      -25.0,
+      315.0,
+      1155.0,
+      1175.0,
+      1395.0,
+      1235.0
+    ],
+    "GANTRY_END_BRACKET_L": [
+      -25.0,
+      315.0,
+      1072.3,
+      125.0,
+      1395.0,
+      1155.0
+    ],
+    "GANTRY_END_BRACKET_R": [
+      1025.0,
+      315.0,
+      1072.3,
+      1175.0,
+      1395.0,
+      1155.0
+    ],
+    "GANTRY_TNUT_L_1": [
+      -11.0,
+      328.1500000000001,
+      1159.32,
+      11.0,
+      1341.85,
+      1165.22
+    ],
+    "GANTRY_TNUT_L_2": [
+      -11.0,
+      368.1500000000001,
+      1159.32,
+      11.0,
+      1381.85,
+      1165.22
+    ],
+    "GANTRY_TNUT_L_3": [
+      64.0,
+      328.1500000000001,
+      1159.32,
+      86.0,
+      1341.85,
+      1165.22
+    ],
+    "GANTRY_TNUT_L_4": [
+      64.0,
+      368.1500000000001,
+      1159.32,
+      86.0,
+      1381.85,
+      1165.22
+    ],
+    "GANTRY_TNUT_R_1": [
+      1064.0,
+      328.1500000000001,
+      1159.32,
+      1086.0,
+      1341.85,
+      1165.22
+    ],
+    "GANTRY_TNUT_R_2": [
+      1064.0,
+      368.1500000000001,
+      1159.32,
+      1086.0,
+      1381.85,
+      1165.22
+    ],
+    "GANTRY_TNUT_R_3": [
+      1139.0,
+      328.1500000000001,
+      1159.32,
+      1161.0,
+      1341.85,
+      1165.22
+    ],
+    "GANTRY_TNUT_R_4": [
+      1139.0,
+      368.1500000000001,
+      1159.32,
+      1161.0,
+      1381.85,
+      1165.22
+    ],
+    "GANTRY_UNDERSIDE_BOLT_L_1": [
+      -6.5,
+      328.5,
+      1142.3,
+      6.5,
+      1341.5,
+      1166.3
+    ],
+    "GANTRY_UNDERSIDE_BOLT_L_2": [
+      -6.5,
+      368.5,
+      1142.3,
+      6.5,
+      1381.5,
+      1166.3
+    ],
+    "GANTRY_UNDERSIDE_BOLT_L_3": [
+      68.5,
+      328.5,
+      1142.3,
+      81.5,
+      1341.5,
+      1166.3
+    ],
+    "GANTRY_UNDERSIDE_BOLT_L_4": [
+      68.5,
+      368.5,
+      1142.3,
+      81.5,
+      1381.5,
+      1166.3
+    ],
+    "GANTRY_UNDERSIDE_BOLT_R_1": [
+      1068.5,
+      328.5,
+      1142.3,
+      1081.5,
+      1341.5,
+      1166.3
+    ],
+    "GANTRY_UNDERSIDE_BOLT_R_2": [
+      1068.5,
+      368.5,
+      1142.3,
+      1081.5,
+      1381.5,
+      1166.3
+    ],
+    "GANTRY_UNDERSIDE_BOLT_R_3": [
+      1143.5,
+      328.5,
+      1142.3,
+      1156.5,
+      1341.5,
+      1166.3
+    ],
+    "GANTRY_UNDERSIDE_BOLT_R_4": [
+      1143.5,
+      368.5,
+      1142.3,
+      1156.5,
+      1381.5,
+      1166.3
+    ],
+    "GANTRY_WEB_BOLT_L_1": [
+      82.8,
+      325.0,
+      1113.3,
+      110.8,
+      1335.0,
+      1123.3
+    ],
+    "GANTRY_WEB_BOLT_L_2": [
+      82.8,
+      325.0,
+      1083.3,
+      110.8,
+      1335.0,
+      1093.3
+    ],
+    "GANTRY_WEB_BOLT_L_3": [
+      82.8,
+      375.0,
+      1113.3,
+      110.8,
+      1385.0,
+      1123.3
+    ],
+    "GANTRY_WEB_BOLT_L_4": [
+      82.8,
+      375.0,
+      1083.3,
+      110.8,
+      1385.0,
+      1093.3
+    ],
+    "GANTRY_WEB_BOLT_R_1": [
+      1039.2,
+      325.0,
+      1113.3,
+      1067.2,
+      1335.0,
+      1123.3
+    ],
+    "GANTRY_WEB_BOLT_R_2": [
+      1039.2,
+      325.0,
+      1083.3,
+      1067.2,
+      1335.0,
+      1093.3
+    ],
+    "GANTRY_WEB_BOLT_R_3": [
+      1039.2,
+      375.0,
+      1113.3,
+      1067.2,
+      1385.0,
+      1123.3
+    ],
+    "GANTRY_WEB_BOLT_R_4": [
+      1039.2,
+      375.0,
+      1083.3,
+      1067.2,
+      1385.0,
+      1093.3
+    ],
+    "TOOL_ADAPTER_110": [
+      120.0,
+      166.9000000000001,
+      1070.0,
+      1030.0,
+      1179.6,
+      1280.0
+    ],
+    "TOOL_CLAMP_MOUNT_-45_12": [
+      125.0,
+      153.5999999999999,
+      1087.0,
+      935.0,
+      1179.6,
+      1197.0
+    ],
+    "TOOL_CLAMP_MOUNT_-45_38": [
+      125.0,
+      153.5999999999999,
+      1113.0,
+      935.0,
+      1179.6,
+      1223.0
+    ],
+    "TOOL_CLAMP_MOUNT_45_12": [
+      215.0,
+      153.5999999999999,
+      1087.0,
+      1025.0,
+      1179.6,
+      1197.0
+    ],
+    "TOOL_CLAMP_MOUNT_45_38": [
+      215.0,
+      153.5999999999999,
+      1113.0,
+      1025.0,
+      1179.6,
+      1223.0
+    ],
+    "TOOL_CLAMP_PINCH_1": [
+      123.0,
+      70.40000000000009,
+      1100.0,
+      933.0,
+      1136.4,
+      1210.0
+    ],
+    "TOOL_CLAMP_PINCH_2": [
+      217.0,
+      70.40000000000009,
+      1100.0,
+      1027.0,
+      1136.4,
+      1210.0
+    ],
+    "TOOL_SPINDLE_65x259": [
+      142.5,
+      88.90000000000009,
+      960.0,
+      1007.5,
+      1153.9,
+      1319.0
+    ],
+    "TOOL_SPLIT_CLAMP_FRONT": [
+      120.0,
+      76.40000000000009,
+      1085.0,
+      1030.0,
+      1121.15,
+      1225.0
+    ],
+    "TOOL_SPLIT_CLAMP_REAR": [
+      120.0,
+      121.65000000000009,
+      1085.0,
+      1030.0,
+      1166.9,
+      1225.0
+    ],
+    "X_BLOCK_1_1": [
+      56.25,
+      272.29999999999995,
+      1143.0,
+      933.75,
+      1302.3,
+      1187.0
+    ],
+    "X_BLOCK_1_2": [
+      216.25,
+      272.29999999999995,
+      1143.0,
+      1093.75,
+      1302.3,
+      1187.0
+    ],
+    "X_BLOCK_2_1": [
+      56.25,
+      272.29999999999995,
+      1203.0,
+      933.75,
+      1302.3,
+      1247.0
+    ],
+    "X_BLOCK_2_2": [
+      216.25,
+      272.29999999999995,
+      1203.0,
+      1093.75,
+      1302.3,
+      1247.0
+    ],
+    "X_BLOCK_BOLT_1_1_1": [
+      72.75,
+      254.5999999999999,
+      1144.75,
+      881.25,
+      1277.6,
+      1153.25
+    ],
+    "X_BLOCK_BOLT_1_1_2": [
+      72.75,
+      254.5999999999999,
+      1176.75,
+      881.25,
+      1277.6,
+      1185.25
+    ],
+    "X_BLOCK_BOLT_1_1_3": [
+      108.75,
+      254.5999999999999,
+      1144.75,
+      917.25,
+      1277.6,
+      1153.25
+    ],
+    "X_BLOCK_BOLT_1_1_4": [
+      108.75,
+      254.5999999999999,
+      1176.75,
+      917.25,
+      1277.6,
+      1185.25
+    ],
+    "X_BLOCK_BOLT_1_2_1": [
+      232.75,
+      254.5999999999999,
+      1144.75,
+      1041.25,
+      1277.6,
+      1153.25
+    ],
+    "X_BLOCK_BOLT_1_2_2": [
+      232.75,
+      254.5999999999999,
+      1176.75,
+      1041.25,
+      1277.6,
+      1185.25
+    ],
+    "X_BLOCK_BOLT_1_2_3": [
+      268.75,
+      254.5999999999999,
+      1144.75,
+      1077.25,
+      1277.6,
+      1153.25
+    ],
+    "X_BLOCK_BOLT_1_2_4": [
+      268.75,
+      254.5999999999999,
+      1176.75,
+      1077.25,
+      1277.6,
+      1185.25
+    ],
+    "X_BLOCK_BOLT_2_1_1": [
+      72.75,
+      254.5999999999999,
+      1204.75,
+      881.25,
+      1277.6,
+      1213.25
+    ],
+    "X_BLOCK_BOLT_2_1_2": [
+      72.75,
+      254.5999999999999,
+      1236.75,
+      881.25,
+      1277.6,
+      1245.25
+    ],
+    "X_BLOCK_BOLT_2_1_3": [
+      108.75,
+      254.5999999999999,
+      1204.75,
+      917.25,
+      1277.6,
+      1213.25
+    ],
+    "X_BLOCK_BOLT_2_1_4": [
+      108.75,
+      254.5999999999999,
+      1236.75,
+      917.25,
+      1277.6,
+      1245.25
+    ],
+    "X_BLOCK_BOLT_2_2_1": [
+      232.75,
+      254.5999999999999,
+      1204.75,
+      1041.25,
+      1277.6,
+      1213.25
+    ],
+    "X_BLOCK_BOLT_2_2_2": [
+      232.75,
+      254.5999999999999,
+      1236.75,
+      1041.25,
+      1277.6,
+      1245.25
+    ],
+    "X_BLOCK_BOLT_2_2_3": [
+      268.75,
+      254.5999999999999,
+      1204.75,
+      1077.25,
+      1277.6,
+      1213.25
+    ],
+    "X_BLOCK_BOLT_2_2_4": [
+      268.75,
+      254.5999999999999,
+      1236.75,
+      1077.25,
+      1277.6,
+      1245.25
+    ],
+    "X_BUFFER_LEFT_BOLT_1": [
+      22.0,
+      262.79999999999995,
+      1248.5,
+      38.0,
+      1269.8,
+      1255.5
+    ],
+    "X_BUFFER_LEFT_BOLT_2": [
+      22.0,
+      262.79999999999995,
+      1256.5,
+      38.0,
+      1269.8,
+      1263.5
+    ],
+    "X_BUFFER_RIGHT_BOLT_1": [
+      1112.0,
+      262.79999999999995,
+      1248.5,
+      1128.0,
+      1269.8,
+      1255.5
+    ],
+    "X_BUFFER_RIGHT_BOLT_2": [
+      1112.0,
+      262.79999999999995,
+      1256.5,
+      1128.0,
+      1269.8,
+      1263.5
+    ],
+    "X_FACE_BOLT_1": [
+      43.5,
+      302.29999999999995,
+      1168.5,
+      56.5,
+      1326.3,
+      1181.5
+    ],
+    "X_FACE_BOLT_2": [
+      43.5,
+      302.29999999999995,
+      1208.5,
+      56.5,
+      1326.3,
+      1221.5
+    ],
+    "X_FACE_BOLT_3": [
+      343.5,
+      302.29999999999995,
+      1168.5,
+      356.5,
+      1326.3,
+      1181.5
+    ],
+    "X_FACE_BOLT_4": [
+      343.5,
+      302.29999999999995,
+      1208.5,
+      356.5,
+      1326.3,
+      1221.5
+    ],
+    "X_FACE_BOLT_5": [
+      643.5,
+      302.29999999999995,
+      1168.5,
+      656.5,
+      1326.3,
+      1181.5
+    ],
+    "X_FACE_BOLT_6": [
+      643.5,
+      302.29999999999995,
+      1208.5,
+      656.5,
+      1326.3,
+      1221.5
+    ],
+    "X_FACE_BOLT_7": [
+      1093.5,
+      302.29999999999995,
+      1168.5,
+      1106.5,
+      1326.3,
+      1181.5
+    ],
+    "X_FACE_BOLT_8": [
+      1093.5,
+      302.29999999999995,
+      1208.5,
+      1106.5,
+      1326.3,
+      1221.5
+    ],
+    "X_FACE_TNUT_1": [
+      39.0,
+      319.31999999999994,
+      1168.15,
+      61.0,
+      1325.22,
+      1181.85
+    ],
+    "X_FACE_TNUT_2": [
+      39.0,
+      319.31999999999994,
+      1208.15,
+      61.0,
+      1325.22,
+      1221.85
+    ],
+    "X_FACE_TNUT_3": [
+      339.0,
+      319.31999999999994,
+      1168.15,
+      361.0,
+      1325.22,
+      1181.85
+    ],
+    "X_FACE_TNUT_4": [
+      339.0,
+      319.31999999999994,
+      1208.15,
+      361.0,
+      1325.22,
+      1221.85
+    ],
+    "X_FACE_TNUT_5": [
+      639.0,
+      319.31999999999994,
+      1168.15,
+      661.0,
+      1325.22,
+      1181.85
+    ],
+    "X_FACE_TNUT_6": [
+      639.0,
+      319.31999999999994,
+      1208.15,
+      661.0,
+      1325.22,
+      1221.85
+    ],
+    "X_FACE_TNUT_7": [
+      1089.0,
+      319.31999999999994,
+      1168.15,
+      1111.0,
+      1325.22,
+      1181.85
+    ],
+    "X_FACE_TNUT_8": [
+      1089.0,
+      319.31999999999994,
+      1208.15,
+      1111.0,
+      1325.22,
+      1221.85
+    ],
+    "X_GUIDE_FACE": [
+      -25.0,
+      302.29999999999995,
+      1143.0,
+      1175.0,
+      1315.0,
+      1255.0
+    ],
+    "X_HOME_BODY": [
+      19.0,
+      239.5999999999999,
+      1270.0,
+      52.0,
+      1249.9,
+      1285.9
+    ],
+    "X_HOME_CAM": [
+      445.0,
+      239.5999999999999,
+      1270.7,
+      475.0,
+      1259.6,
+      1299.0
+    ],
+    "X_HOME_CAM_BOLT_1": [
+      449.2,
+      256.5999999999999,
+      1276.9,
+      456.8,
+      1266.8,
+      1284.5
+    ],
+    "X_HOME_CAM_BOLT_2": [
+      464.2,
+      256.5999999999999,
+      1276.9,
+      471.8,
+      1266.8,
+      1284.5
+    ],
+    "X_HOME_ROLLER": [
+      50.6,
+      242.3499999999999,
+      1289.9,
+      55.4,
+      1247.15,
+      1294.7
+    ],
+    "X_HOME_SCREW_1": [
+      19.05,
+      236.5999999999999,
+      1270.05,
+      24.55,
+      1253.6,
+      1275.55
+    ],
+    "X_HOME_SCREW_2": [
+      41.25,
+      236.5999999999999,
+      1280.35,
+      46.75,
+      1253.6,
+      1285.85
+    ],
+    "X_LINK_A_CLEVIS": [
+      475.0,
+      331.0,
+      1319.55,
+      515.0,
+      1379.0,
+      1351.55
+    ],
+    "X_LINK_A_LOCKNUT": [
+      491.0,
+      339.5,
+      1333.931198,
+      499.0,
+      1344.5,
+      1343.168802
+    ],
+    "X_LINK_A_MOUNT_1": [
+      491.5,
+      332.5,
+      1313.55,
+      498.5,
+      1339.5,
+      1329.55
+    ],
+    "X_LINK_A_MOUNT_2": [
+      491.5,
+      370.5,
+      1313.55,
+      498.5,
+      1377.5,
+      1329.55
+    ],
+    "X_LINK_A_NUT_WASHER": [
+      490.0,
+      344.5,
+      1333.55,
+      500.0,
+      1345.5,
+      1343.55
+    ],
+    "X_LINK_A_PIN": [
+      490.0,
+      335.5,
+      1333.55,
+      500.0,
+      1370.5,
+      1343.55
+    ],
+    "X_LINK_A_RACE_SPACER_1": [
+      490.0,
+      351.5,
+      1333.55,
+      500.0,
+      1352.0,
+      1343.55
+    ],
+    "X_LINK_A_RACE_SPACER_2": [
+      490.0,
+      358.0,
+      1333.55,
+      500.0,
+      1358.5,
+      1343.55
+    ],
+    "X_LINK_A_ROD_END": [
+      484.0,
+      352.0,
+      1327.55,
+      506.0,
+      1358.0,
+      1349.55
+    ],
+    "X_LINK_A_ROD_SHANK": [
+      505.0,
+      352.0,
+      1335.55,
+      531.0,
+      1358.0,
+      1341.55
+    ],
+    "X_LINK_A_TOP_WASHER": [
+      489.0,
+      364.5,
+      1332.55,
+      501.0,
+      1365.5,
+      1344.55
+    ],
+    "X_LINK_BRIDGE_BOLT_138_-12": [
+      630.0,
+      253.5999999999999,
+      1296.2,
+      640.0,
+      1279.6,
+      1306.2
+    ],
+    "X_LINK_BRIDGE_BOLT_138_-28": [
+      630.0,
+      253.5999999999999,
+      1280.2,
+      640.0,
+      1279.6,
+      1290.2
+    ],
+    "X_LINK_BRIDGE_BOLT_18_-12": [
+      510.0,
+      253.5999999999999,
+      1296.2,
+      520.0,
+      1279.6,
+      1306.2
+    ],
+    "X_LINK_BRIDGE_BOLT_18_-28": [
+      510.0,
+      253.5999999999999,
+      1280.2,
+      520.0,
+      1279.6,
+      1290.2
+    ],
+    "X_LINK_B_CLEVIS": [
+      555.0,
+      331.0,
+      1319.55,
+      595.0,
+      1379.0,
+      1351.55
+    ],
+    "X_LINK_B_LOCKNUT": [
+      571.0,
+      339.5,
+      1333.931198,
+      579.0,
+      1344.5,
+      1343.168802
+    ],
+    "X_LINK_B_MOUNT_1": [
+      571.5,
+      332.5,
+      1313.55,
+      578.5,
+      1339.5,
+      1329.55
+    ],
+    "X_LINK_B_MOUNT_2": [
+      571.5,
+      370.5,
+      1313.55,
+      578.5,
+      1377.5,
+      1329.55
+    ],
+    "X_LINK_B_NUT_WASHER": [
+      570.0,
+      344.5,
+      1333.55,
+      580.0,
+      1345.5,
+      1343.55
+    ],
+    "X_LINK_B_PIN": [
+      570.0,
+      335.5,
+      1333.55,
+      580.0,
+      1370.5,
+      1343.55
+    ],
+    "X_LINK_B_RACE_SPACER_1": [
+      570.0,
+      351.5,
+      1333.55,
+      580.0,
+      1352.0,
+      1343.55
+    ],
+    "X_LINK_B_RACE_SPACER_2": [
+      570.0,
+      358.0,
+      1333.55,
+      580.0,
+      1358.5,
+      1343.55
+    ],
+    "X_LINK_B_ROD_END": [
+      564.0,
+      352.0,
+      1327.55,
+      586.0,
+      1358.0,
+      1349.55
+    ],
+    "X_LINK_B_ROD_SHANK": [
+      539.0,
+      352.0,
+      1335.55,
+      565.0,
+      1358.0,
+      1341.55
+    ],
+    "X_LINK_B_TOP_WASHER": [
+      569.0,
+      364.5,
+      1332.55,
+      581.0,
+      1365.5,
+      1344.55
+    ],
+    "X_LINK_COUPLER": [
+      521.0,
+      349.0,
+      1331.621797,
+      549.0,
+      1361.0,
+      1345.478203
+    ],
+    "X_LINK_JAM_LH": [
+      549.0,
+      350.0,
+      1332.776497,
+      554.0,
+      1360.0,
+      1344.323503
+    ],
+    "X_LINK_JAM_RH": [
+      516.0,
+      350.0,
+      1332.776497,
+      521.0,
+      1360.0,
+      1344.323503
+    ],
+    "X_LINK_SUPPORT": [
+      497.0,
+      259.5999999999999,
+      1283.2,
+      653.0,
+      1380.4,
+      1319.55
+    ],
+    "X_RAIL_1": [
+      -25.0,
+      284.79999999999995,
+      1155.0,
+      1175.0,
+      1302.3,
+      1175.0
+    ],
+    "X_RAIL_2": [
+      -25.0,
+      284.79999999999995,
+      1215.0,
+      1175.0,
+      1302.3,
+      1235.0
+    ],
+    "X_STOP_LEFT_BODY": [
+      10.0,
+      249.9000000000001,
+      1239.0,
+      57.0,
+      1302.3,
+      1288.0
+    ],
+    "X_STOP_LEFT_BOLT_1": [
+      10.0,
+      251.29999999999995,
+      1240.0,
+      20.0,
+      1312.3,
+      1250.0
+    ],
+    "X_STOP_LEFT_BOLT_2": [
+      20.0,
+      251.29999999999995,
+      1240.0,
+      30.0,
+      1312.3,
+      1250.0
+    ],
+    "X_STOP_LEFT_BUFFER": [
+      30.0,
+      259.29999999999995,
+      1245.0,
+      38.0,
+      1273.3,
+      1265.0
+    ],
+    "X_STOP_RIGHT_BODY": [
+      1120.0,
+      257.29999999999995,
+      1239.0,
+      1140.0,
+      1302.3,
+      1265.0
+    ],
+    "X_STOP_RIGHT_BOLT_1": [
+      1130.0,
+      251.29999999999995,
+      1240.0,
+      1140.0,
+      1312.3,
+      1250.0
+    ],
+    "X_STOP_RIGHT_BOLT_2": [
+      1120.0,
+      251.29999999999995,
+      1240.0,
+      1130.0,
+      1312.3,
+      1250.0
+    ],
+    "X_STOP_RIGHT_BUFFER": [
+      1112.0,
+      259.29999999999995,
+      1245.0,
+      1120.0,
+      1273.3,
+      1265.0
+    ],
+    "ZBX80_BASE": [
+      135.0,
+      239.5999999999999,
+      1040.0,
+      1015.0,
+      1259.6,
+      1259.0
+    ],
+    "ZBX80_COUPLER_GUARD": [
+      135.0,
+      181.5999999999999,
+      1259.0,
+      1015.0,
+      1259.6,
+      1314.0
+    ],
+    "ZBX80_END_BOTTOM": [
+      135.0,
+      192.5999999999999,
+      1040.0,
+      1015.0,
+      1259.6,
+      1052.0
+    ],
+    "ZBX80_END_TOP": [
+      135.0,
+      181.5999999999999,
+      1247.0,
+      1015.0,
+      1259.6,
+      1259.0
+    ],
+    "ZBX80_MOTOR": [
+      146.5,
+      192.5999999999999,
+      1314.0,
+      1003.5,
+      1249.6,
+      1430.5
+    ],
+    "ZBX80_OUTPUT_HOLD": [
+      130.0,
+      179.5999999999999,
+      1080.0,
+      1020.0,
+      1214.6,
+      1230.0
+    ],
+    "Z_CARRIER": [
+      45.0,
+      259.5999999999999,
+      1143.0,
+      1105.0,
+      1272.3,
+      1313.2
+    ]
+  },
+  "forward_gantry_transfer_sweep_hits": [],
+  "STEP_readbacks": [
+    {
+      "file": "deployed-allocation.step",
+      "solids": 3,
+      "valid": true,
+      "bounds_mm": [
+        175.0,
+        121.4,
+        958.8,
+        975.0,
+        1140.0,
+        1086.15
+      ],
+      "scope": "Envelope bodies only; deployed stock intersection is intentional."
+    },
+    {
+      "file": "parked-allocation.step",
+      "solids": 3,
+      "valid": true,
+      "bounds_mm": [
+        175.0,
+        121.4,
+        958.8,
+        975.0,
+        1340.0,
+        1086.15
+      ],
+      "scope": "Envelope bodies only; deployed stock intersection is intentional."
+    }
+  ],
+  "artifact_sha256": {
+    "deployed-allocation.step": "5477f2e744ddee80e657717c5228e948c1046f62e5acfabe544f307213ecc7e7",
+    "parked-allocation.step": "0b70d4a0333532b3125cfaead776ff0157a062bad3e23b928fb2327f8c165bde"
+  },
+  "bounded_consistency_checks": {
+    "all_compact_scenarios_inside_footprint": true,
+    "selected_parked_full_travel_screens_clear": true,
+    "selected_forward_gantry_tray_sweep_clear": true,
+    "old_carrier_low_spindle_collision_demonstrated": true,
+    "all_loaded_tray_sweeps_blocked": true,
+    "all_loaded_parked_trays_clear_of_stock": true,
+    "two_step_readbacks_valid": true
+  },
+  "bounded_consistency_pass": true,
+  "unmodeled": [
+    "Actual purchased magazine/pockets/cover/cable and below-magazine cutters",
+    "Fixed guide supports and load path, actuator, positive stops/clamp, sensing",
+    "Full machine collision proof, deflection, dynamic loads and physical repeatability",
+    "Actual stock/clamp arrangement and measured nut/tool Z engagement trajectory"
+  ],
+  "sources": [
+    {
+      "url": "https://rapidchangeatc.com/faq/",
+      "used": "60 mm body;90 mm non-inset allowance; actualCAD not retrieved",
+      "accessed": "2026-09-26"
+    },
+    {
+      "url": "https://www.hiwin.de/en/Products/Linear-guideways/Blocks/Miniature-guides/MGN-HIRES-series/MGN12HZ1CM/p/MGN12HZ1CM",
+      "used": "45.4 length,27 width,13 height nominal",
+      "accessed": "2026-09-26"
+    }
+  ]
+}
