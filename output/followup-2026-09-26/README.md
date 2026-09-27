@@ -107,8 +107,10 @@ For CW-01, the board map and pin allocation are drafted and the RS485 link is dr
 - **CUT-50 start:** the torch trigger, and it starts in mid-air, so it is an HF start. The K_TS relay's contact goes across the trigger terminals, in its shielded box at the cutter ([GM1 controls](../controls-2026-09-27/README.md)).
 - **Rodent and VFD:** not ordered yet. The design assumes a Rodent V1.1 and the VFD that comes with the spindle kit. Nothing is waiting on them.
 - **Tool changer: yes, a RapidChange ATC on this machine.**
-  - **Order the Z slide with a 200 mm stroke**, not 100 mm: the same ZBX80 type, if its listing offers that length.
-  - RapidChange asks for about 90 mm between the magazine and the spindle nut with Z fully up. The magazine rides on a tray above clamped stock, so the other session's ATC design is drawn for a 200 mm Z. With 50 mm of stock and clamps under the tray, that gives about 20 mm of spare.
+  - **Order the Z slide with a 300 mm stroke**, not 100 or 200 mm: the same ZBX80 type (SFU1605, NEMA23). Its listing offers strokes from 100 to 600 mm.
+  - RapidChange asks for at least 90 mm between the magazine and the spindle nut with Z fully up. The magazine rides on a tray above clamped stock. The other session's tray, drawn for the six-panel bed, needs a 200 mm Z and leaves about 20 mm to spare.
+  - On the one-piece bed, the tray's guides must clear the bed's 70 mm lift and its rear lifting lugs. That raises them, and the magazine, by up to about 45 mm. A 200 mm Z would then have nothing to spare, or fall up to about 25 mm short. A 300 mm Z leaves about 70 mm or more, which also covers longer tools and taller clamps.
+  - The longer slide keeps the spindle's lowest reach; the Z body only grows upward. The top of the braked Z motor goes from Z1430.5 to about Z1630, 1.63 m above the floor. Nothing on the machine is above it, and the 8 ft ceiling and the A-frame hoist are clear of it.
   - The magazine itself is small: RapidChange gives 60 mm for its width. The design allows 520 × 60 × 80 mm (about 20 × 2.4 × 3 in); that envelope is not from supplier drawings.
   - Fitting it to Rev K is the next design step.
 - **Shop:** a container with an 8 ft ceiling. Rev K's plan is a rolling A-frame gantry with a low-headroom hoist and the 0.7 m sling that passed the hoist-path check ([hoist in the container](../release-review/RevK-CAD/README.md#hoist-in-the-container)).
@@ -131,8 +133,7 @@ Rev J implements the bed answers. Rev G's six manual panels and MDF spoilboards 
 2. **Hoist and bed stand:** a container with an 8 ft ceiling (27 Sep). Please confirm it is a standard 20 or 40 ft container, about 2.39 m inside. Rev K plans a rolling A-frame gantry. Still to choose: the A-frame and hoist, and where the module stand goes; the stand needs about 1.5 m of floor in front of the machine.
 3. **Cutter:** it starts from the trigger, in mid-air (an HF start; 27 Sep). Nothing more is needed now. Note the work-lead size at commissioning. The owner will measure the torch before the clamp insert is bored.
 4. **Orders:** confirm the X and Z drive modules on Monday, the quantities and price paid, and when the HGR20 guide kits are ordered.
-   - **Before ordering the Z: decide on the ATC.** The other session's retractable ATC (`dfdf5da`, already merged) is drawn for a **200 mm Z**. With the planned 100 mm ZBX80, a fixed dock has only 3.85 mm of margin, and the retractable tray is blocked by any clamped stock.
-   - If you want the ATC on this machine, order the longer Z. Rev K's Z mount, drop bracket and pose checks would then be redone for it.
+   - **Z: order the 300 mm stroke.** The ATC was decided on 27 September (above). Rev K's Z mount, drop bracket and pose checks are redone for it as part of fitting the ATC.
    - That ATC also drives its slide from the Kraken's spare motor drivers, which the Rodent does not have. On the Rodent it would need its own drive, such as a 24 V linear actuator with two end switches.
    - It was drawn on the six-panel bed, so it would also need fitting to the one-piece bed.
 5. **Owned aluminum:** alloy and thickness of the 12 × 12 in pieces.

@@ -6,7 +6,7 @@
 |---|---|---|---:|
 | M02 | [KHMOS HMS40, 1000 mm stroke, 10 mm lead, NEMA23](https://www.amazon.com/dp/B0C7GN24S1) | Y drives (one per side) | 2 |
 | M01 | [KHMOS HMS40, 800 mm stroke, 10 mm lead](https://www.amazon.com/dp/B0C7GQTRRX) | X drive | 1 |
-| M03 | [RATTMMOTOR ZBX80, 100 mm, SFU1605, NEMA23](https://www.amazon.com/dp/B09MVYGLNQ) | Z slide | 1. **Change to a 200 mm stroke** (owner wants the RapidChange ATC, 27 Sep) |
+| M03 | [RATTMMOTOR ZBX80, 100 mm, SFU1605, NEMA23](https://www.amazon.com/dp/B09MVYGLNQ) | Z slide | 1. **Change to a 300 mm stroke** (owner wants the RapidChange ATC, 27 Sep; 300 rather than 200 so the one-piece bed can still lift out under the tool changer) |
 
 Please confirm the quantities (the machine needs **two** 1000 mm modules), the price paid and the delivery dates in [the register](drive-modules-receiving-register.json).
 
@@ -42,6 +42,8 @@ Please confirm the quantities (the machine needs **two** 1000 mm modules), the p
 | Base face to carriage top | not dimensioned; about **60–67 mm** when the side view is scaled | **80 mm assumed** |
 | Base fixing | M5 slide nuts in the base slots; bottom view dimensions 80 overall, 66, 54, 26 and 14 across the slots | **hold**: slot positions to confirm |
 | Screw | SFU1605, 5 mm lead | — |
+
+**300 mm stroke:** if the body scales like the 100 mm drawing (stroke + 119), it is about 419 mm long and about 530 mm with the motor. Measure it on receipt. The model keeps the carriage's lowest position, so the extra length goes upward.
 
 If the ZBX80 output face really is 60–67 mm above its base instead of 80, the whole tool sits 13–20 mm further back than modeled. The tool-axis Y range would move 13–20 mm rearward, from Y121.4–1121.4 to about Y134–141 at the front limit and Y1134–1141 at the rear. The front spoilboard edge (Y130) would then be a few millimetres in front of the tool axis, still reachable with a cutter of normal radius, but the tool sweep and clearances must be re-run.
 

@@ -32,7 +32,7 @@ Rev J is the owner's 26 September requirement: one waterproof bed module of abou
 - [Current cut list](output/release-review/RevK-CAD/cutlist.csv)
 - [Historical full CAD audit](output/cad-reaudit-2026-09-25/README.md)
 - [Unsent supplier dimension request](output/cad-repair-2026-09-25/SUPPLIER-DRAWING-REQUEST.md)
-- [Drive modules, receiving check](output/receiving/MOTION-MODULES.md): Y modules ordered; X and Z to be ordered Monday 28 Sep (please confirm); [HGR20 guide rails (still to order): receiving check and Y-rail cut planner](output/receiving/HGR20-RAIL-KITS.md)
+- [Drive modules, receiving check](output/receiving/MOTION-MODULES.md): Y modules ordered; X and Z to be ordered Monday 28 Sep (please confirm). **Z: order the 300 mm stroke** for the tool changer; [HGR20 guide rails (still to order): receiving check and Y-rail cut planner](output/receiving/HGR20-RAIL-KITS.md)
 - [26 Sep follow-up: owner decisions, procurement, open controls findings and what is left to finish](output/followup-2026-09-26/README.md)
 - [GM1 controls (27 Sep), for either bed line](output/controls-2026-09-27/README.md). Simulated, not built. They cover:
   - the E-stop and power removal;

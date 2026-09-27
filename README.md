@@ -29,7 +29,7 @@ The owner chose the one-piece line on 27 September. The machine goes in a contai
 - [Router assembly STEP](output/release-review/RevK-CAD/step/RevK_ROUTER.step); [plasma assembly with the head and torch on the Z](output/release-review/RevK-CAD/step/RevK_PLASMA.step); [bed module alone](output/release-review/RevK-CAD/step/RevK_BED_MODULE.step)
 - [Component schedule](output/release-review/RevK-CAD/cutlist.csv); [what Rev K adds to the shopping list](outputs/reve-30510/actual-cost/REVK-PROCUREMENT-DELTA.md)
 - The bed module itself, the hoist and the 2 × 2 tube list are unchanged from [Rev J](output/release-review/RevJ-CAD/README.md) ([what Rev J changed in the shopping list](outputs/reve-30510/actual-cost/REVJ-PROCUREMENT-DELTA.md))
-- [Drive modules, receiving check](output/receiving/MOTION-MODULES.md): Y modules ordered; X and Z to be ordered Monday 28 Sep (please confirm)
+- [Drive modules, receiving check](output/receiving/MOTION-MODULES.md): Y modules ordered; X and Z to be ordered Monday 28 Sep (please confirm). **Z: order the 300 mm stroke** for the tool changer
 - [HGR20 guide rails (still to order): receiving check and Y-rail cut planner](output/receiving/HGR20-RAIL-KITS.md)
 - [26 Sep follow-up: owner decisions, procurement, open controls findings and what is left to finish](output/followup-2026-09-26/README.md)
 
