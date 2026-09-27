@@ -3,16 +3,21 @@
 Router: the eight X/Y/Z travel corners (Z 0 and 300) and the centre, dock parked.
 Plasma: the same nine poses with the module (and dock) out and Rev K's head and torch on the
 Z adapter, plus Rev K's three plasma-only poses (the top-of-Z one now at Z 300).
-Dock travel: the carrier at 0..200 mm in 20 mm steps with the gantry at the rear stop, the head
-at X975 and Z fully up (the pose the dock moves in).
+Dock travel: the carrier at 0..200 mm in 20 mm steps with the gantry at the rear stop and Z fully up,
+with the head at X175, X575 and X975: the Z body now clears the magazine and its lid, so the dock may
+move with the head anywhere (Z up).
 Tool change: dock deployed, spindle axis on the pocket line (Y1100) at X345, X575 and X805:
-  - Z fully up (300) and 5 mm above the magazine allocation (176): must clear;
-  - nut at the magazine support plane (Z 90): the spindle may only meet the magazine allocation,
-    the saddles and the stored-cutter allocation (the supplier's pocket interface); nothing else.
-Forbidden approach: with the dock deployed, the Z body's lower end block cannot pass over the
-magazine. A pose with the spindle in front of the magazine must clash; the tool-change sequence
-therefore reaches the pockets from the rear stop.
-Stock allowance: 50 mm over the HDPE must be clear of the deployed dock.
+  - Z fully up (300) and 5.65 mm above the lid allocation (about 178): must clear;
+  - nut at the magazine support plane (Z 90): the spindle may only meet the magazine and lid
+    allocations, the saddles and the stored-cutter allocation (the supplier's pocket interface).
+Over the magazine: with the dock deployed and Z up, the gantry drives forward over the magazine
+(gantry Y1275 down to 1150 at head X575, and Y1150 at X345 and X805): all clear. In Rev L before the
+raise this pose clashed and the changer depended on the head being parked at X975 first.
+Z rule: the only remaining collision is the spindle itself, low over the magazine. The dock may move,
+and the gantry may cross the deployed magazine, only with the spindle nose (plus a 40 mm tool) above
+the lid: z_lift at least Z_DOCK_MIN. The M14 interlock enforces this with the Z top switch.
+Stock allowance: 40 mm over the HDPE must be clear of the deployed dock (50 before the magazine was lowered 10 mm
+to fit its lid under the gantry).
 Hoist: Rev J's sampled module-and-sling path with the dock deployed on the module (heavier, centre
 of mass further back), head X575, Z fully up, at three hook heights, run 100 mm further forward.
 Frame fill: every pose above carries the moved fill ports (ballast_revl.py). One port per frame tube,
@@ -43,14 +48,19 @@ PLASMA_EXTRA = [(571.5 + TORCH_Y_OFFSET, 575.0, 0.0, 'torch over slat 8, bottom 
                 (660.0 + TORCH_Y_OFFSET, 955.0, 0.0, 'level-sensor band at the plasma limit X955, bottom of Z'),
                 (660.0 + TORCH_Y_OFFSET, 975.0, Z_TOP, 'level-sensor band at full X, top of Z')]
 POCKET_X = (345.0, 575.0, 805.0)
-APPROACH_Z = 176.0            # spindle bottom 5.65 mm above the 80 mm magazine allocation
-ENGAGE_Z = 90.0               # nut at the magazine support plane (Z1050)
+APPROACH_Z = None             # set in main: spindle bottom 5.65 mm above the lid allocation
+ENGAGE_Z = None               # set in main: nut at the magazine support plane
 FORWARD_L = 1520.0            # the dock's rear (Y1449) must also leave the frame
-ENGAGE_OK = ('MOD_ATC_MAGAZINE_ALLOCATION', 'MOD_ATC_SADDLE_', 'MOD_ATC_STORED_TOOLS_ALLOCATION')
+ENGAGE_OK = ('MOD_ATC_MAGAZINE_ALLOCATION', 'MOD_ATC_MAGAZINE_COVER_ALLOCATION', 'MOD_ATC_SADDLE_',
+             'MOD_ATC_STORED_TOOLS_ALLOCATION')
+TRAVEL_HEAD_X = (175.0, 575.0, 975.0)
+TOOL_BELOW_NUT = 40.0         # a cutter in the spindle while the dock moves
+CLEAR = 15.0
+Z_DOCK_MIN = None             # set from the model: the lowest z_lift at which the dock may move
 
 
 def main():
-    from cad_helpers import box, intersection_volume, validate
+    from cad_helpers import bbox, box, intersection_volume, validate
     import build_revj as rev_j
     import build_revk
     import build_revl
@@ -61,6 +71,9 @@ def main():
     import z300
     import revj_handling_check as hoist
 
+    global APPROACH_Z, ENGAGE_Z
+    ENGAGE_Z = atc_revl.MAG - 960.0
+    APPROACH_Z = atc_revl.COVER_TOP + 5.65 - 960.0
     start = time.monotonic()
     before = build_revl.source_hashes()
     report = {'scope': __doc__.strip(), 'revision': 'GM1 Rev L working design', 'status': 'RUNNING'}
@@ -106,12 +119,13 @@ def main():
         print('plasma', round(gy, 1), hx, z, label[0], 'tip', head['tip_z_mm'], 'clashes', len(left), flush=True)
 
     travel_rows = []
-    for travel in [20.0 * i for i in range(11)]:
-        m, atc = pose(travel, 1275.0, build_revl.DOCK_X, Z_TOP)
-        row, _ = row_of(m, travel_mm=travel, gantry_y=1275.0, head_x=build_revl.DOCK_X, z_lift=Z_TOP)
-        row['passed'] = not row['unresolved'] and not row['invalid_local']
-        travel_rows.append(row)
-        print('dock travel', travel, 'clashes', len(row['unresolved']), flush=True)
+    for hx in TRAVEL_HEAD_X:
+        for travel in [20.0 * i for i in range(11)]:
+            m, atc = pose(travel, 1275.0, hx, Z_TOP)
+            row, _ = row_of(m, travel_mm=travel, gantry_y=1275.0, head_x=hx, z_lift=Z_TOP)
+            row['passed'] = not row['unresolved'] and not row['invalid_local']
+            travel_rows.append(row)
+            print('dock travel', travel, 'head', hx, 'clashes', len(row['unresolved']), flush=True)
 
     change_rows = []
     for hx, z in itertools.product(POCKET_X, (Z_TOP, APPROACH_Z, ENGAGE_Z)):
@@ -120,7 +134,7 @@ def main():
         expected, other = [], []
         for c in row['unresolved']:
             pair = (c['a'], c['b'])
-            if z == ENGAGE_Z and 'TOOL_SPINDLE_65x259' in pair and any(i.startswith(ENGAGE_OK) for i in pair):
+            if z == ENGAGE_Z and ('TOOL_SPINDLE_65x259' in pair or 'TOOL_SPLIT_CLAMP_FRONT' in pair) and any(i.startswith(ENGAGE_OK) for i in pair):
                 expected.append(c)
             else:
                 other.append(c)
@@ -129,15 +143,22 @@ def main():
         change_rows.append(row)
         print('tool change', hx, z, 'interface', len(expected), 'clashes', len(other), flush=True)
 
-    m, _ = pose(0.0, 1150.0, 575.0, Z_TOP)
-    forbidden, _ = row_of(m, gantry_y=1150.0, head_x=575.0, z_lift=Z_TOP, dock='deployed')
-    zbody = [c for c in forbidden['unresolved'] if any(i.startswith('ZBX80_') for i in (c['a'], c['b']))]
-    forbidden['z_body_clashes_with_dock'] = zbody
-    forbidden['meaning'] = 'Expected: the Z body cannot pass over the deployed magazine; approach the pockets from the rear stop.'
-    print('forbidden approach: z-body clashes', len(zbody), flush=True)
+    over_rows = []
+    for gy, hx in [(1150.0, 575.0), (1200.0, 575.0), (1230.0, 575.0), (1150.0, 345.0), (1150.0, 805.0)]:
+        m, _ = pose(0.0, gy, hx, Z_TOP)
+        row, _ = row_of(m, gantry_y=gy, head_x=hx, z_lift=Z_TOP, dock='deployed')
+        row['passed'] = not row['unresolved'] and not row['invalid_local']
+        over_rows.append(row)
+        print('over the deployed magazine', gy, hx, 'clashes', len(row['unresolved']), flush=True)
+    body_bottom = min(bbox(p.shape)[2] for p in m.parts if p.id.startswith('ZBX80_'))
+    lid_top = atc_revl.COVER_TOP
+    z_dock_min = lid_top + TOOL_BELOW_NUT + CLEAR - 960.0
+    global Z_DOCK_MIN
+    Z_DOCK_MIN = z_dock_min
+    print('Z body bottom', body_bottom, 'lid top', lid_top, 'dock moves at z >=', z_dock_min, flush=True)
 
     m, atc_dep = pose(0.0, 1275.0, 575.0, Z_TOP)
-    stock = box(800, 1000, 50).translate((175, 130, 958.8))
+    stock = box(800, 1000, 40).translate((175, 130, 958.8))
     stock_hits = []
     for p in m.parts:
         if p.id.startswith(atc_revl.PREFIX):
@@ -157,11 +178,13 @@ def main():
         'every plasma pose clear, module and dock out': all(r['passed'] for r in plasma_rows),
         'torch reaches below the slat top within the float travel': bool(reach_rows) and all(
             0 < c['tip_below_slat_top_mm'] <= verify_revk.FLOAT_TRAVEL - .5 for c in reach_rows),
-        'dock travel clear at the rear stop with the head at X975': all(r['passed'] for r in travel_rows),
+        'dock travel clear at the rear stop with the head at X175, X575 and X975': all(r['passed'] for r in travel_rows),
         'tool-change poses clear; only the pocket interface is touched': all(r['passed'] for r in change_rows),
-        'the Z body cannot pass over the deployed magazine (forbidden approach clashes)': bool(zbody),
-        'deployed dock clear of a 50 mm stock and clamp allowance': not stock_hits,
-        'RapidChange 90 mm: spindle nut at full Z at least 90 mm above the magazine plane': nut_top - atc_revl.MAG >= 90,
+        'the Z body clears the magazine and its lid by at least 15 mm': body_bottom - lid_top >= CLEAR,
+        'gantry over the deployed magazine with Z up: clear': all(r['passed'] for r in over_rows),
+        'the dock can move with Z at least 65 mm below the top (a 40 mm tool clears the lid by 15 mm)': z_dock_min <= Z_TOP - 65,
+        'deployed dock clear of a 40 mm stock and clamp allowance': not stock_hits,
+        'RapidChange 90 mm: spindle nut at full Z at least 90 mm above the magazine lid': nut_top - lid_top >= 90,
         'hoist path clear at every hook height with the dock deployed': all(c['result'].startswith('PASS') for c in hoist_cases),
         'frame fill: one port per frame tube': sorted(p['tube'] for p in fill['ports']) == sorted(
             p.id for p in base.parts if p.group == 'main_frame') and len(fill['ports']) == 18,
@@ -172,8 +195,11 @@ def main():
     after = build_revl.source_hashes()
     report.update(status='PASS' if all(checks.values()) and before == after else 'FAIL', checks=checks,
                   router_poses=router_rows, plasma_poses=plasma_rows, dock_travel=travel_rows,
-                  tool_change_poses=change_rows, forbidden_approach=forbidden, stock_allowance_hits=stock_hits,
+                  tool_change_poses=change_rows, over_deployed_magazine=over_rows, stock_allowance_hits=stock_hits,
+                  z_body_bottom_mm=body_bottom, lid_top_mm=lid_top, z_body_clearance_over_lid_mm=round(body_bottom - lid_top, 2),
+                  dock_moves_at_z_lift_at_least_mm=round(z_dock_min, 2),
                   nut_above_magazine_plane_at_full_z_mm=round(nut_top - atc_revl.MAG, 2),
+                  nut_above_lid_at_full_z_mm=round(nut_top - lid_top, 2),
                   bed_with_dock={k: details['bed'][k] for k in ('module_mass_estimate_kg', 'module_cg_mm', 'module_without_dock')},
                   hoist_forward_mm=FORWARD_L, hoist_cases=hoist_cases, frame_fill=fill,
                   sources_unchanged_during_run=before == after, source_sha256=before,

@@ -119,7 +119,7 @@
       "direction": "in",
       "rt": true,
       "map_define": "Z_LIMIT_PIN",
-      "wiring": "As X.",
+      "wiring": "As X. M14: the Z top switch has a second, NO, contact (or a second switch beside it) wired into the dock motor feed in the cabinet (LS_ZTOP 13-14); it is not a Rodent input.",
       "healthy": "As X"
     },
     {
@@ -420,7 +420,7 @@
   ],
   "result": "PASS",
   "source_sha256": {
-    "verify_rodent_io.py": "73e5fc6d9c78281390e5b10e84c2ef95297965379506061a7c8684a96d2ab424",
+    "verify_rodent_io.py": "32efc0fa59def2992cd7e15687e4b610520012b8ace6aac4cbd693438fb8e004",
     "gm1_rodent_map.h": "062ae38cc67e22b5a58d63ca3da6fb3640f305af0b79879c1fa5c44747219310"
   }
 }

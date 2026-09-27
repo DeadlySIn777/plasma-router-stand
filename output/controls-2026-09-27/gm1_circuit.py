@@ -8,7 +8,8 @@ the fill arm. The stop, the tool-permission chain, the tool outputs and the
 controller interface are replaced. Each change is listed in CHANGES.
 
 M12 and M13 (later on 27 September, for the Rev L tool changer) add spindle
-reverse and the tool-changer drive.
+reverse and the tool-changer drive. M14 (the same evening) feeds the dock
+motor through the Z top switch, so the dock can only move with Z up.
 
 This is a wiring-graph and relay-timing model, like Rev I's. It is not a
 certified safety function, a PL/category claim or a tested panel.
@@ -80,6 +81,11 @@ CHANGES = [
      'once. Each direction runs through its own end microswitch (LS_OUT at the deployed stop, LS_IN at the parked stop), '
      'which opens at the end of travel even if a relay welds. The Rodent drives both coils from MCP23017 outputs through a '
      'ULN2803A and reads the two dock sensors on MCP23017 inputs.'),
+    ('M14', 'Dock enable from the Z top switch', 'With the Z body raised over the changer (Rev L), the only crash left is the '
+     'spindle low over the magazine while the dock moves or the gantry crosses it. The dock motor feed passes a second, NO, '
+     'contact of the Z top switch (LS_ZTOP 13-14) ahead of K_DOCK_RUN, so the dock cannot move unless the Z carriage is at '
+     'its top, whatever the firmware commands and even if K_DOCK_RUN is welded. The Rodent still reads the switch\'s first '
+     'contact as the Z limit; the second contact is only in the dock feed.'),
 ]
 
 # Relay families and poles. G7SA terminal marks follow EN 50005 (13-14 NO,
@@ -297,7 +303,10 @@ def definition():
     # M13: tool-changer drive. Motor feed after K1/K2 and the spindle-run interlock; run and
     # direction relays; one end switch per direction. The motor is modeled as one load per direction.
     contact('F_DOCK', 'BRK_PWR', 'DOCK_1', 'f_dock', form='Fuse continuity', device='Dock motor fuse, 2 A time-delay')
-    branch('DOCK_1', 'K_VFD_RUN:41-42', 'K_VFD_RUN', 'DOCK_24V', True)
+    branch('DOCK_1', 'K_VFD_RUN:41-42', 'K_VFD_RUN', 'DOCK_ZTOP', True)
+    # M14: the Z top switch's second contact, closed only with the Z carriage at its top.
+    branch('DOCK_ZTOP', 'LS_ZTOP:13-14', 'z_at_top', 'DOCK_24V', form='NO',
+           device='Z top limit switch, second contact (NO): closed only with the Z carriage at its top. The first contact is the Rodent Z limit')
     branch('C', 'IF_DOCK_RUN:1-2', 'dock_run_cmd', 'DOCK_RUN_COIL', form='Open-collector sink',
            device='Interface board ULN2803A channel, driven by MCP23017 GPB0')
     coil('K_DOCK_RUN', 'DOCK_RUN_COIL')
@@ -323,7 +332,7 @@ TIMERS = ('T_CLOSE', 'T_DRAIN', 'T_BRAKE', 'T_FILL')
 DEFAULT = {k: v for k, v in rev_i.DEFAULT.items() if k not in ('stop_ok', 'hardware_stop_ok')}
 DEFAULT.update(f_safety=True, estop_ch1=True, estop_ch2=True, reset_pressed=False, supply_48v=True, mains=True)
 DEFAULT.update(spindle_reverse=False, f_dock=True, dock_run_cmd=False, dock_in_dir=False,
-               dock_at_deployed=False, dock_at_parked=True)
+               dock_at_deployed=False, dock_at_parked=True, z_at_top=True)
 
 
 class Simulator:

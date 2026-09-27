@@ -1,7 +1,8 @@
 """GM1 Rev L working CAD: Rev K with the 300 mm Z slide and a RapidChange dock on the bed module.
 
 Rev L is Rev K (`../RevK-ENGINEERING/build_revk.py`, used unchanged) plus:
-  z300.py       the ZBX80 with a 300 mm stroke (lower datum kept, body grows upward)
+  z300.py       the ZBX80 with a 300 mm stroke, raised 125 mm on its carrier with a taller tool adapter,
+                so the Z body clears the tool changer (the spindle's reach is unchanged)
   atc_revl.py   a retracting magazine carrier that rides on the one-piece bed module
   ballast_revl.py  the frame's fill ports moved to each tube's high end (epoxy or dry sand)
 The sources live in this folder, so the Rev K and shared RevE-ENGINEERING inventories are unchanged.
@@ -70,8 +71,8 @@ def build_model(with_motion=True, gantry_y=1275.0, head_x=575.0, z_lift=z300.STR
     build_revk.purchased_material(model)
     details['bed_rev_j'] = details['bed']
     details['bed'] = module_with_dock(details['bed'], details['atc'])
-    model.holds.append('Z slide: the 300 mm ZBX80 is drawn from the 100 mm listing drawing (body = stroke + 119). '
-                       'Measure the delivered body, carriage and end blocks before the adapter and stops are made.')
+    model.holds.append('Z slide: the 300 mm ZBX80 is drawn from its listing drawing (body 419). Measure the delivered body, '
+                       'carriage, end blocks and base slots before the drop adapter and the carrier bolting are made.')
     details['machine'] = MACHINE
     details['revision'] = 'L working design: Rev K with a 300 mm Z and a RapidChange dock on the bed module'
     details['status'] = 'WORKING CAD - NOT A FABRICATION RELEASE'
@@ -110,7 +111,7 @@ def main():
     print('Rev L router:', len(model.parts), 'components', flush=True)
     router = export(model, OUT, 'RevL_ROUTER', individual=False)
     rev_j.write_mesh(model, 'RevL_ROUTER')
-    new = sub_model(model, lambda i: i.startswith(atc_revl.PREFIX) or i == 'ZBX80_BASE' or is_fill_part(model.find(i)))
+    new = sub_model(model, lambda i: i.startswith(atc_revl.PREFIX) or i in ('ZBX80_BASE', 'TOOL_ADAPTER_110') or is_fill_part(model.find(i)))
     parts = export(new, OUT, 'RevL_NEW_PARTS', individual=True)
     change, change_details = build_model(gantry_y=POCKET_GANTRY_Y, head_x=575.0, atc_travel=0.0)
     rev_j.write_mesh(change, 'RevL_TOOL_CHANGE')

@@ -46,14 +46,18 @@ BEAM_Y = (1160.0, 1445.0)
 RAIL_Y = (1162.0, 1443.0)
 WT, T = 1020.0, 6.35                                    # carrier plate
 TOP = WT + T
-SADDLE_Z = 1044.0
-MAG = 1050.35                                           # magazine support plane
+SADDLE_Z = 1034.0                                       # 10 mm lower than first drawn: the lid must fit under the gantry
+MAG = SADDLE_Z + T                                      # magazine support plane, 1040.35
 TRAVEL = 200.0                                          # 0 = deployed, 200 = parked
 BLOCK_Y = 1200.0                                        # block centre, deployed
 CARRIER = (280.0, 870.0, 1065.0, 1232.0)                # x0, x1, y0, y1 deployed
 TRAY_Y1 = 1140.0
 WINDOW = (335.0, 815.0, 1080.0, 1120.0)
 MAGAZINE = (315.0, 1070.0, 520.0, 60.0, 80.0)           # x0, y0, length, width, height (allocation)
+COVER_H = 12.0                                          # the magazine's dust cover, closed, on top (allocation)
+COVER_TOP = MAG + MAGAZINE[4] + COVER_H                 # 1132.35; the gantry's X blocks and carrier are at 1143
+RISER_H = SADDLE_Z - TOP                                # 7.65
+RISER_SCREW_L = 20                                      # 6.35 tray + 7.65 riser + 6 into the saddle
 POCKET_Y = 1100.0
 TOOL_HANG = 36.55                                       # stored cutter below the magazine base
 SADDLES = (295.0, 815.0)
@@ -68,7 +72,8 @@ TUBE_OUTER_X = RAIL_X[1] + TUBE_W / 2                   # 867.7, right beam oute
 DENSITY = {'steel': 7.85e-6, 'aluminum': 2.7e-6}        # kg/mm3
 BOUGHT_KG = {'HIWIN_MGN12H': .10, 'HIWIN_MGNR12_281': .18, '24V_WORM_GEARMOTOR_30RPM': .35, 'GT2_20T_8MM_BORE': .02,
              'GT2_6MM_BELT': .01, 'M8_INDUCTIVE_PNP_NO_2MM': .05, 'M12_8PIN_PANEL_RECEPTACLE': .10,
-             'RAPIDCHANGE_ER11_MAGAZINE_ALLOCATION': 3.0, 'STORED_CUTTER_ALLOCATION': .30}   # by part number
+             'RAPIDCHANGE_ER11_MAGAZINE_ALLOCATION': 3.0, 'STORED_CUTTER_ALLOCATION': .30,
+             'RAPIDCHANGE_COVER_ALLOCATION': .40}   # by part number
 Y_TO_X = dict(u=(0, 1, 0), v=(-1, 0, 0))                # local X along world +Y, local Y along world -X
 
 
@@ -194,7 +199,7 @@ def _carrier(m, travel):
     p = m.add_plate(PREFIX + 'CARRIER', w, d, T, internal=[window], holes=holes, outline=outline, origin=(x0, y0 + dy, WT),
                     pn='MOD_ATC_CARRIER', group='atc_moving', color=BLUE,
                     notes=['1/4 in steel, one piece: tray under the magazine and two arms back to the guide blocks. The middle is open '
-                           'behind the tray so the Z body lower end block (Z1040) passes over it.',
+                           'behind the tray, so the Z body clears it even where the Rev K body height (Z1040) applied.',
                            'Window X335-815 x Y1080-1120 (deployed) for cutters hanging below the pockets.'])
     ids.append(p.id)
     for name, (ux0, ux1), (uy0, uy1) in (('UPSTAND_FRONT', (336.0, 814.0), (1065.0, 1071.35)),
@@ -212,10 +217,11 @@ def _carrier(m, travel):
         ids.append(s.id)
     for k, (rx, ry) in enumerate(risers, 1):
         r = _add(m, f'RISER_{k}', cyl(12, SADDLE_Z - TOP).cut(cyl(5.5, SADDLE_Z - TOP)), (rx, ry + dy, TOP),
-                 pn='MOD_ATC_RISER_12x17p65', group='atc_moving', color=GOLD, material='Steel spacer 12 OD x 5.5 ID x 17.65')
-        s = _add(m, f'RISER_SCREW_{k}', socket_screw(5, 30, 8.5, 5, head_below=True), (rx, ry + dy, WT),
-                 pn='STD_M5x30_ISO4762', group='atc_hardware', material='M5 x 30 socket head, class 8.8', color=HARDWARE,
-                 notes=['From below: head under the tray (Z1015), threads into the saddle.'])
+                 pn=f'MOD_ATC_RISER_12x{RISER_H:g}'.replace('.', 'p'), group='atc_moving', color=GOLD,
+                 material=f'Steel spacer 12 OD x 5.5 ID x {RISER_H:g}')
+        s = _add(m, f'RISER_SCREW_{k}', socket_screw(5, RISER_SCREW_L, 8.5, 5, head_below=True), (rx, ry + dy, WT),
+                 pn=f'STD_M5x{RISER_SCREW_L}_ISO4762', group='atc_hardware', material=f'M5 x {RISER_SCREW_L} socket head, class 8.8', color=HARDWARE,
+                 notes=['From below: head under the tray (Z1015), threads 6 mm into the saddle.'])
         m.permit(s.id, f'{PREFIX}SADDLE_{"L" if rx < 575 else "R"}', 'Nominal M5 screw in the tapped saddle hole (drawn at the major diameter).')
         ids += [r.id, s.id]
     for side, cx in zip('LR', RAIL_X):
@@ -244,12 +250,20 @@ def _carrier(m, travel):
                group='atc_allocation', purchased=True, color=MAGENTA, release='SUPPLIER ALLOCATION - NOT A PURCHASED-PART DRAWING',
                material='RapidChange ER11 linear magazine: allocation only',
                notes=['520 x 60 x 80 mm allocation (the other session\'s), pocket line Y1100 deployed. Not a supplier drawing: '
-                      'length, pocket pitch, mounting holes, nut datum and cover sweep come from the delivered kit.'])
+                      'length, pocket pitch, mounting holes, nut datum and cover sweep come from the delivered kit.',
+                      'Height budget: the stored cutters clear a 40 mm stock allowance below, and the closed lid allocation clears '
+                      'the gantry\'s X blocks and Z carrier (Z1143) above by 10.65 mm when the dock is parked under them.'])
     tools = _add(m, 'STORED_TOOLS_ALLOCATION', box(wx1 - wx0, 15, TOOL_HANG), (wx0, POCKET_Y - 7.5 + dy, MAG - TOOL_HANG),
                  pn='STORED_CUTTER_ALLOCATION', group='atc_allocation', purchased=True, color=MAGENTA,
                  release='SUPPLIER ALLOCATION - NOT A PURCHASED-PART DRAWING', material='Stored ER11 cutters: allocation only',
-                 notes=['Cutters up to 15 mm OD hanging at most 36.55 mm below the magazine base (Z1013.8).'])
-    ids += [mag.id, tools.id]
+                 notes=[f'Cutters up to 15 mm OD hanging at most {TOOL_HANG:g} mm below the magazine base (Z{MAG - TOOL_HANG:g}).'])
+    cover = _add(m, 'MAGAZINE_COVER_ALLOCATION', box(ml, mw, COVER_H), (mx0, my0 + dy, MAG + mh), pn='RAPIDCHANGE_COVER_ALLOCATION',
+                 group='atc_allocation', purchased=True, color=MAGENTA, release='SUPPLIER ALLOCATION - NOT A PURCHASED-PART DRAWING',
+                 material='RapidChange magazine dust cover, closed: allocation only',
+                 notes=[f'{COVER_H:g} mm on top of the magazine allocation (top Z{COVER_TOP:g}). The cover slides open along the '
+                        'magazine during a change; its open sweep is not drawn and must fit the 520 mm length or the space beyond '
+                        'the right saddle. The spindle only enters this space with the cover open.'])
+    ids += [mag.id, tools.id, cover.id]
     return ids
 
 
@@ -279,7 +293,7 @@ def extend_router_model(m, travel=TRAVEL):
     return {'status': 'MODULE-MOUNTED RETRACTING DOCK: WORKING CAD, NOT A FABRICATION RELEASE',
             'travel_mm': travel, 'travel_state': 'deployed' if travel == 0 else 'parked' if travel == TRAVEL else 'between',
             'stroke_mm': TRAVEL, 'rail_x_mm': list(RAIL_X), 'rail_plane_z_mm': RB, 'carrier_z_mm': [WT, TOP],
-            'magazine_support_plane_z_mm': MAG, 'magazine_allocation_mm': list(MAGAZINE[2:]),
+            'magazine_support_plane_z_mm': MAG, 'magazine_allocation_mm': list(MAGAZINE[2:]), 'cover_top_z_mm': COVER_TOP,
             'magazine_y_deployed_mm': [MAGAZINE[1], MAGAZINE[1] + MAGAZINE[3]], 'pocket_line_y_deployed_mm': POCKET_Y,
             'stored_cutter_bottom_z_mm': MAG - TOOL_HANG, 'tool_window_mm': list(WINDOW),
             'deployed_datum': 'Drive tab front face on the front stop at Y1185',

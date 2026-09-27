@@ -4,6 +4,12 @@
 
 ## What changed in this follow-up
 
+- **The Z body raised over the tool changer (Rev L, 27 September, evening).** Looking at the Rev L picture, the owner said "when it retracts, or it moves forward it will hit the autochanger", and "it has the lid on the autochanger too". They were right: the Z body's lower end sat 90 mm below the magazine top, so the changer could only move with the head parked at X975 first, and a wrong move would have driven the Z body into the magazine. Now:
+  - the ZBX80 sits 110 mm higher on the Z carrier, on a 220 mm tall drop adapter whose lower 110 mm is the Rev K adapter, so the spindle, the plasma head and the tool axis are unchanged;
+  - the Z body's lower end (Z1150) is level with the gantry's X blocks and carrier (Z1143), and a 12 mm lid allocation sits on the magazine; the magazine is lowered 10 mm so the closed lid passes 10.65 mm under the gantry when parked (the stock allowance under the deployed dock becomes 40 mm);
+  - the checks now run the dock with the head at X175, X575 and X975, and drive the gantry over the deployed magazine: all clear;
+  - the one rule left is "Z up before the dock moves", and controls **M14** enforces it in hardware through a second contact of the Z top switch.
+  - **On the 300 mm stroke:** with the body raised, a 200 mm Z would put the spindle nose only 15 mm above the lid at full up, where RapidChange asks for 90; the 300 gives 128.
 - **Frame fill holes moved (Rev L, 27 September).** The owner asked "are all my holes aligned so the sand fills the rails?" and is thinking of epoxy sand.
   - Each of the 18 frame tubes is its own sealed compartment with one fill hole; nothing connects them. Rev K's holes were placed for access. Even a runny mix would fill the top rails and front cross tubes only about a quarter full, and the legs about three-quarters.
   - Rev L moves each hole to its tube's high end (`ballast_revl.py`). By the model's estimate, epoxy sand fills every tube over 93 % in two pours with the frame tilted 15°. Dry sand fills over 91 % with each tube stood near vertical.
@@ -17,11 +23,11 @@
 
   The receiving records and the cost register's order status are updated.
 - **Rev L, the owner's tool changer (27 September):** [package](../release-review/RevL-CAD/README.md).
-  - **300 mm Z** (ordered, 27 September). The lowest spindle reach is unchanged; the nut rises to Z1260, 210 mm above the magazine, where RapidChange asks for 90 mm.
+  - **300 mm Z** (ordered, 27 September). The lowest spindle reach is unchanged; the nut rises to Z1260, 128 mm above the magazine's lid, where RapidChange asks for 90 mm. Later that day the body was raised 110 mm over the changer (above).
   - **The dock rides on the bed module**, so it lifts out with the bed for plasma and nothing extra comes off the machine. Two MGN12 rails on the T-slot strips, a U-shaped carrier, 200 mm of travel, a worm gearmotor and belt, a fitted front stop and two sensors. The magazine is the other session's 520 × 60 × 80 mm allocation at Z1050.35.
-  - **Tool-change rule:** the Z slide's lower end is below the magazine top, so the spindle reaches the pockets from the rear stop with the head at X975 while the dock moves; never over the magazine from the front.
+  - **Tool-change rule:** first drawn with the Z slide's lower end below the magazine top, so the head had to park at X975 while the dock moved. Superseded the same evening by the raise (above): now only "Z up before the dock moves".
   - **Bed changes:** deploy the dock and unplug it before the lift; the hook goes over Y745 (the module is now about 74 kg) and the roll is 1.52 m.
-  - **Controls M12–M13:** spindle reverse through a force-guided direction relay, and the dock drive, interlocked with the spindle-run relay and the E-stop. 1,386 simulated checks pass (1,173 before); the Rodent pin plan passes 25 checks.
+  - **Controls M12–M13:** spindle reverse through a force-guided direction relay, and the dock drive, interlocked with the spindle-run relay and the E-stop. 1,424 simulated checks pass with M14's Z-top dock enable (1,386 before it, 1,173 before M12); the Rodent pin plan passes 25 checks.
   - **Checks:** router and plasma poses at Z 0 and 300, the dock's travel, tool-change poses, the forbidden front approach (clashes, as expected), a 50 mm stock allowance under the deployed dock, and the hoist path with the dock on the module at three hook heights. All pass.
   - **Shopping list:** [REVL-PROCUREMENT-DELTA.md](../../outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md), unpriced.
 - **Rev K, after the owner's "finish it" (27 September):** [package](../release-review/RevK-CAD/README.md). The one-piece line is chosen as the one to complete, because it is the bed the owner asked for in this session; the owner can still pick Rev I instead.

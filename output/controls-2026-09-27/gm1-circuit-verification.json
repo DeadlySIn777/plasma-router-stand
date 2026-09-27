@@ -65,6 +65,11 @@
       "id": "M13",
       "topic": "Tool changer drive",
       "change": "The Rev L dock's 24 V gearmotor is fed from the Z-brake supply, which is live only while K1 and K2 are closed, so every E-stop stops it. The feed then passes fuse F_DOCK and K_VFD_RUN NC 41-42: the dock cannot move while the spindle run relay is picked up, or if that relay is welded, and a spindle start stops a moving dock. K_DOCK_RUN switches the motor on and K_DOCK_DIR chooses the direction, so the two directions can never be driven at once. Each direction runs through its own end microswitch (LS_OUT at the deployed stop, LS_IN at the parked stop), which opens at the end of travel even if a relay welds. The Rodent drives both coils from MCP23017 outputs through a ULN2803A and reads the two dock sensors on MCP23017 inputs."
+    },
+    {
+      "id": "M14",
+      "topic": "Dock enable from the Z top switch",
+      "change": "With the Z body raised over the changer (Rev L), the only crash left is the spindle low over the magazine while the dock moves or the gantry crosses it. The dock motor feed passes a second, NO, contact of the Z top switch (LS_ZTOP 13-14) ahead of K_DOCK_RUN, so the dock cannot move unless the Z carriage is at its top, whatever the firmware commands and even if K_DOCK_RUN is welded. The Rodent still reads the switch's first contact as the Z limit; the second contact is only in the dock feed."
     }
   ],
   "rev_i_behaviors": {
@@ -1812,7 +1817,7 @@
     "Mains wiring, contactor and brake sizing, VFD and cutter interfaces, and EMC are specified in the README, not simulated.",
     "M12/M13: the VFD's behavior with FWD and REV, its direction-change ramp, the dock motor current and the dock sensors are not simulated. The dock is modeled only through its relays and end switches."
   ],
-  "passed_checks": 1386,
+  "passed_checks": 1424,
   "checks": [
     {
       "check": "Every contact tag is unique",
@@ -12479,6 +12484,232 @@
       "passed": true
     },
     {
+      "check": "With Z below its top the dock does not move, whatever is commanded",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Nor in the other direction",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "At the top it moves",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Z leaving the top stops a moving dock at once",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "With Z below its top the dock does not move, whatever is commanded",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Nor in the other direction",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "At the top it moves",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Z leaving the top stops a moving dock at once",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "With Z below its top the dock does not move, whatever is commanded",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Nor in the other direction",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "At the top it moves",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Z leaving the top stops a moving dock at once",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "With Z below its top the dock does not move, whatever is commanded",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Nor in the other direction",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "At the top it moves",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Z leaving the top stops a moving dock at once",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "With Z below its top the dock does not move, whatever is commanded",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Nor in the other direction",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "At the top it moves",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Z leaving the top stops a moving dock at once",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "With Z below its top the dock does not move, whatever is commanded",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Nor in the other direction",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "At the top it moves",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Z leaving the top stops a moving dock at once",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "With Z below its top the dock does not move, whatever is commanded",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Nor in the other direction",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "At the top it moves",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Z leaving the top stops a moving dock at once",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "With Z below its top the dock does not move, whatever is commanded",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Nor in the other direction",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "At the top it moves",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Z leaving the top stops a moving dock at once",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "With Z below its top the dock does not move, whatever is commanded",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Nor in the other direction",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "At the top it moves",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Z leaving the top stops a moving dock at once",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "A welded K_DOCK_RUN still cannot move the dock with Z below its top",
+      "passed": true,
+      "stuck": false
+    },
+    {
+      "check": "A welded K_DOCK_RUN still cannot move the dock with Z below its top",
+      "passed": true,
+      "stuck": true
+    },
+    {
       "check": "SETUP (bed change): the dock can move with the spindle off",
       "passed": true
     },
@@ -12494,13 +12725,13 @@
   ],
   "result": "PASS",
   "source_sha256": {
-    "output/controls-2026-09-27/verify_gm1_circuit.py": "3b131dee9439835bf6380ead80579ef5f04f15d4643844d5f637d1224539bd8b",
-    "output/controls-2026-09-27/gm1_circuit.py": "f7fb10fde3b3e52ac3a97125d47d81c95be17a79d97ae16bea7d013f5ac2e7ee",
+    "output/controls-2026-09-27/verify_gm1_circuit.py": "071a87c5105a94a564aa1fb7932c0c2521943d1a3eb053006b25f92ef79860a8",
+    "output/controls-2026-09-27/gm1_circuit.py": "8c603a675bdac4223162ea71cdc6749d592e03a13911703facd4642b22eeb8ab",
     "output/design-finish-2026-09-26/controls/circuit.py": "a9370143297125a4f7a0da8843ba2ca8d9570003969337a2448bd8a327a4152b"
   },
   "artifact_sha256": {
-    "gm1-terminal-netlist.json": "619a234ad1fa1cd2b63768d03a3a25985276cb44ac78ade9686f5fc4f1acb3c7",
-    "GM1-TERMINALS.md": "d1eec8632693e612653986857791ab0ce48c6fb0e046858fb495c1276bc514d4"
+    "gm1-terminal-netlist.json": "d801bd9114d308c9ce955c45bec173b706f951218fdf204171130df2ae84100b",
+    "GM1-TERMINALS.md": "f47742a411945767cb2ad65bff3af0d63c9c0f3bba283c60e76dde3e637d9bd8"
   },
-  "elapsed_s": 1470.9
+  "elapsed_s": 1643.6
 }

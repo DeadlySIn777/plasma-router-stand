@@ -694,6 +694,26 @@ def tool_changer_drive():
     s.run(.1, **DOCK_OUT)
     s.run(.3, estop_ch1=False, estop_ch2=False)
     check('An E-stop stops a moving dock', not s.outputs()['dock_out'] and not s.outputs()['dock_in'])
+    # M14: the Z top switch in the dock feed.
+    for pick, drop in itertools.product(PICKUPS, DROPOUTS):
+        s = ready('router', pick, drop)
+        s.run(.1, z_at_top=False, **DOCK_OUT)
+        o = s.outputs()
+        check('With Z below its top the dock does not move, whatever is commanded', not o['dock_out'] and not o['dock_in'],
+              pickup=pick, dropout=drop)
+        s.run(.1, dock_in_dir=True)
+        check('Nor in the other direction', not s.outputs()['dock_in'], pickup=pick, dropout=drop)
+        s = ready('router', pick, drop)
+        s.run(.1, **DOCK_OUT)
+        check('At the top it moves', s.outputs()['dock_out'], pickup=pick, dropout=drop)
+        s.run(.05, z_at_top=False)
+        check('Z leaving the top stops a moving dock at once', not s.outputs()['dock_out'], pickup=pick, dropout=drop)
+    for stuck in (False, True):
+        s = ready('router')
+        s.run(.1, z_at_top=False, **DOCK_OUT)
+        s.weld('K_DOCK_RUN:11-14', stuck)
+        s.run(.1)
+        check('A welded K_DOCK_RUN still cannot move the dock with Z below its top', not s.outputs()['dock_out'], stuck=stuck)
     s = started()
     s.run(5., **ROUTER)
     s.run(.1, **DOCK_OUT)

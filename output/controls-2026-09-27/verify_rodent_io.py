@@ -71,7 +71,8 @@ ALLOCATION = [
     dict(signal='Y2 home / limit (ganged Y, auto-squaring)', connector='E0-MAX', gpio=32, direction='in', rt=True, map_define='M3_LIMIT_PIN',
          wiring='As X.', healthy='As X'),
     dict(signal='Z home / limit', connector='Z-MAX', gpio=33, direction='in', rt=True, map_define='Z_LIMIT_PIN',
-         wiring='As X.', healthy='As X'),
+         wiring='As X. M14: the Z top switch has a second, NO, contact (or a second switch beside it) wired into the dock motor '
+                'feed in the cabinet (LS_ZTOP 13-14); it is not a Rodent input.', healthy='As X'),
     dict(signal='Plasma float (probe)', connector='Probe', gpio=36, direction='in', rt=True, map_define='AUXINPUT0_PIN',
          wiring='Rev I U_PROBE PhotoMOS output (pins 3/4) between probe pin 3 (VProbe, jumper 12 V) and pin 1 (signal). J44 not fitted. '
                 'Router Z zero stays manual, as in Rev I, so no router probe shares this input.',

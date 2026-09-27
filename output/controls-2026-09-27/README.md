@@ -22,6 +22,7 @@ M9 and M10 close the review's water findings on the controls side. M11 closes it
 
 - M12: spindle reverse, because RapidChange unloads a tool with the spindle in reverse (M4).
 - M13: the drive for the tool changer's retracting magazine.
+- M14: the dock motor is fed through the Z top switch, so the dock can only move with Z up.
 
 **What it builds on.** It starts from the other session's Rev I relay circuit (`output/design-finish-2026-09-26/controls/circuit.py`). That file is imported read-only and left unchanged, and its hash is recorded.
 
@@ -60,6 +61,7 @@ The owner's controller decision is built in: BTT Rodent with grblHAL.
 | M11 | **Float stop.** The torch float switch is wired in series with the three head-presence switches in the U_HEAD loop. A float trip during a cut drops the permission (torch off) and opens the door input (feed hold). During probing the request is low, so nothing holds and the chain re-arms when the float returns. | Major: a float trip triggers nothing |
 | M12 | **Spindle reverse.** A force-guided direction relay K_DIR sits at the end of the three-contact run chain. Its NC contact passes the run command to the VFD's FWD terminal and its NO contact to REV, so the VFD never sees both. The Rodent's spindle direction (V-MOS HE1, GPIO2) drives it. It only chooses the direction; the run chain still starts and stops the spindle. | Owner's tool changer (Rev L) |
 | M13 | **Tool-changer drive.** The dock's 24 V gearmotor is fed through the E-stop contactors and K_VFD_RUN's NC contact, so it cannot move while the spindle is commanded, stops if the spindle starts, and stops at every E-stop. A run relay and a direction relay drive it, so the two directions can never be driven at once. An end microswitch for each direction stops it at the end of travel, even if a relay welds. | Owner's tool changer (Rev L) |
+| M14 | **Dock enable from the Z top switch.** With the Z body raised over the changer, the only crash left is the spindle low over the magazine while the dock moves. The dock feed passes a second, NO, contact of the Z top switch (LS_ZTOP 13-14) ahead of K_DOCK_RUN, so the dock cannot move unless the Z carriage is at its top, whatever the firmware commands and even with K_DOCK_RUN welded. The switch's first contact stays the Rodent's Z limit. | Owner's catch on the Rev L picture (27 Sep): "when it retracts, or it moves forward it will hit the autochanger" |
 
 ## How a stop works
 
@@ -154,7 +156,7 @@ RE --K_DRAINED 21-24--> RR                                     (router ready wit
 - Use a relay with reinforced coil-to-contact isolation and a flyback diode.
 - Bond the box to the cutter chassis. Run the cable to the cabinet shielded, through an EMC gland.
 
-## Spindle reverse and the tool-changer drive (M12–M13)
+## Spindle reverse and the tool-changer drive (M12–M14)
 
 RapidChange unloads a tool by spinning the spindle in reverse at about 1600 rpm and loads it forward at about 1500 rpm. Its grblHAL macros use M4 and M3, so the VFD needs its REV input, and the Rodent needs a spindle direction output.
 
@@ -163,7 +165,7 @@ XVFD:COM --K_REQ_B 13-14--K_RUN_ARM 33-34--K_VFD_RUN 13-14--> K_DIR common
 K_DIR 31-32 (NC) --> VFD FWD          K_DIR 13-14 (NO) --> VFD REV
 Rodent GPIO2 (V-MOS HE1, spindle direction) --> K_DIR coil      K_DIR 23-24 --> MCP23017 GPA7 (direction status)
 
-K1/K2 aux (Z-brake supply) --F_DOCK 2 A--K_VFD_RUN 41-42 (NC)--> DOCK_24V
+K1/K2 aux (Z-brake supply) --F_DOCK 2 A--K_VFD_RUN 41-42 (NC)--LS_ZTOP 13-14 (NO, Z at top)--> DOCK_24V
 DOCK_24V --K_DOCK_RUN--> K_DOCK_DIR: NC --LS_OUT (NC)--> motor out (deploy)
                                      NO --LS_IN (NC)---> motor in (park)
 MCP23017 GPB0 --ULN2803A--> K_DOCK_RUN coil    GPB1 --ULN2803A--> K_DOCK_DIR coil (on = toward parked)
@@ -172,6 +174,7 @@ Dock sensors (M8 PNP) --optocouplers--> MCP23017 GPA4 (deployed), GPA5 (parked)
 
 - **K_DIR** is an Omron G7SA-2A2B, force-guided like the start chain. A welded contact cannot close both FWD and REV. A welded K_DIR would run the spindle in reverse on M3, so its spare NO contact reports the direction to the MCP23017. The tool-change macro reads it before each start.
 - **K_DOCK_RUN and K_DOCK_DIR** are Finder 40.52 relays. K_DOCK_RUN switches the motor's +24 V (pole 1) and 0 V (pole 2). K_DOCK_DIR's two poles reverse the motor. Change direction only with K_DOCK_RUN off.
+- **LS_ZTOP (M14).** The Z top limit switch gets a second, NO, contact (a two-circuit switch, or a second switch beside it) that closes only with the Z carriage at its top. It sits in the dock feed, in the cabinet, and is not a Rodent input. The tool-change macro raises Z fully before it commands the dock; if it does not, the dock simply does not move. Fit it so it closes within the last 2 mm of Z travel, above the point where a 40 mm cutter clears the magazine lid by 15 mm (Rev L: z_lift 227 of 300).
 - **End microswitches.** LS_OUT opens when the drive tab reaches the deployed stop, LS_IN at the parked stop. Each has a 1N4007 across it, so the motor can always back away from the end. Set LS_OUT to open about 2 mm after the tab touches the front stop, so the belt-clamp spring is preloaded; the worm then holds it.
 - **The dock may move in SETUP** (it has to, for a bed change) and in RUN, but only with the spindle stopped. Keep hands clear: it moves at about 20 mm/s.
 - **The macros** must approach the pockets from the rear stop with the head at X975 whenever the dock moves or is out (Rev L README). They read the dock sensors with M66 and drive the dock with M64/M65.
@@ -240,6 +243,7 @@ All parts are unpriced; the cost register gets them when it is re-baselined to t
 | 2 | Finder 40.52.9.024.0000 + 95.05 | K_DOCK_RUN, K_DOCK_DIR (M13) | As Rev I's water relays |
 | 1 | 2 A time-delay fuse and holder | F_DOCK (M13) | Select |
 | 2 | Roller-lever microswitch, NC, IP67, with a 1N4007 across each | LS_OUT, LS_IN, dock end of travel (M13) | Select to fit the Rev L stop blocks |
+| 1 | Z top limit switch with two circuits (or a second switch beside the Z limit), NO contact for the dock feed | LS_ZTOP (M14) | Select with the Z limit switch |
 | 1 | Interface board: MCP23017, 2 × SN74LVC1G17, AQY212GS (U_RUN), 3.3 V LDO, ULN2803A, 2 × PC817 (dock sensor inputs), resistors | Rodent side | Schematic level; no PCB yet |
 
 **Retired from Rev I's list:**
@@ -253,7 +257,7 @@ The five remaining Finder water relays, the mode relays, the timers, the pump SS
 
 ## What the simulation shows
 
-All 1386 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.json)); 1173 before M12–M13. Unless stated otherwise, each ran with every combination of relay pickup (5, 10 and 20 ms) and dropout (5, 20 and 50 ms), in the way Rev I tested its own circuit.
+All 1424 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.json)); 1386 before M14, 1173 before M12–M13. Unless stated otherwise, each ran with every combination of relay pickup (5, 10 and 20 ms) and dropout (5, 20 and 50 ms), in the way Rev I tested its own circuit.
 
 - **Rev I's own behaviors are kept.** These checks were repeated on the new graph:
   - fill arm, self-hold, stops and release-to-rearm;
@@ -330,6 +334,7 @@ All 1386 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.j
   - A welded K_VFD_RUN keeps it from moving.
   - An E-stop stops it.
   - It can move in SETUP for a bed change.
+- **Dock enable from the Z top switch (M14).** In all nine timing combinations: with Z below its top the dock does not move in either direction, whatever is commanded; at the top it moves; Z leaving the top stops a moving dock at once. A welded K_DOCK_RUN still cannot move the dock with Z below its top.
   - A welded K_DOCK_RUN still stops at the end switch.
   - Direction changes never drive both directions.
 

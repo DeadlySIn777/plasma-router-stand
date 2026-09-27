@@ -48,7 +48,8 @@ The design took the seller's figures (270 mm long, 28 mm barrel) and a photo. Wi
 - **Plasma head** (Rev I's floating head) and the **135 mm drop bracket** (1/2 in 6061). Bore the insert after the torch is measured (above). Set the switch trips at commissioning.
 - **Gantry aluminum parts:** Y shoes, gantry end brackets, X guide face, Z carrier, link supports, clevis billets, HMS40 drive shoes. Two sets of holes wait:
   - the X guide face's rail holes, transfer-drilled from the X rails;
-  - the Z carrier's holes for the Z slide, measured from the slide.
+  - the Z carrier's holes for the Z slide, measured from the slide. The slide bolts to the carrier's upper 163 mm: its body sits 110 mm higher than in Rev K, so it clears the tool changer.
+- **The Z drop adapter** (110 × 220 × 1/2 in 6061, `TOOL_ADAPTER_110x220_DROP`): cut the plate and the four clamp holes in its lower 110 mm. Its two carriage slots at the top wait for the slide.
 
   Mill the X guide face's two rail seats coplanar within 0.03 mm. The Y shoes and the Z carrier take the HGH20CA blocks on the standard 32 × 36 mm M5 pattern; check it against the delivered blocks. The X guide face bolts to the 80/20 40-8080 beam with M8 T-nuts, so the beam is needed too.
 - **Tool park, bolt tray and the head's parking pads** on the reservoir lid.
@@ -60,7 +61,7 @@ The design took the seller's figures (270 mm long, 28 mm barrel) and a photo. Wi
   - **the height from its base to its carriage top.** The model assumes 80 mm; the listing drawing does not dimension it but scales to about 62 mm. If it is not 80, the tool axis moves (further back if it is lower) and the pose checks are re-run.
   - **the 300 mm body length.** 419 mm on the listing drawing for the 300 mm stroke, as modeled.
 - Do the Z back-drive test: stand it vertical, unpowered, with a weight on the carriage.
-- Then drill the Z carrier and the Z tool adapter blank from the measured slide, and the HMS40 base fixings from the measured slot nuts.
+- Then drill the Z carrier and the Z drop adapter's carriage slots from the measured slide, and the HMS40 base fixings from the measured slot nuts. Bolt the slide 110 mm higher on the carrier than Rev K drew it (body bottom at Z1150, level with the X blocks).
 - The braked Z motor is bought only after the ZBX80 is measured.
 
 ## 3. When the HGR20 rails arrive
@@ -93,7 +94,8 @@ This gates the router bed and the tool changer only.
    - fit the MGN12 rails (cut to 281 mm, first hole 10 mm from the front end), carrier and drive;
    - fit the front stop after welding, then probe the pocket reference.
 
-   The magazine saddles are drilled from the RapidChange kit once it is chosen and delivered.
+   The magazine saddles are drilled from the RapidChange kit once it is chosen and delivered. Check the kit's magazine and lid against the height budget: the cutters must stay 40 mm above the HDPE, and the closed lid under Z1143 (the gantry's underside) when parked. The model allows 80 mm for the magazine and 12 mm for the lid above the Z1040.35 support plane.
+   - **Wire the Z top switch's second contact** into the dock feed (controls M14) before the first tool change. Without it, the only guard against the spindle being low while the dock moves is the macro.
 
 ## 5. Plasma can come before the router bed
 

@@ -72,10 +72,10 @@ The owner chose the one-piece line on 27 September. The machine goes in a contai
 
 **Rev L (27 September).** The owner wants the RapidChange tool changer on this machine and ordered the Z slide with a 300 mm stroke on 27 September.
 
-- **300 mm Z.** The same ZBX80 with a longer body. The spindle's lowest reach is unchanged; the nut now rises to Z1260, 210 mm above the magazine, where RapidChange asks for at least 90 mm.
+- **300 mm Z, raised over the changer.** The same ZBX80 with a longer body, mounted 110 mm higher on a taller tool adapter. The spindle's lowest reach is unchanged; the nut now rises to Z1260, 128 mm above the magazine's lid, where RapidChange asks for at least 90 mm. The Z body's lower end clears the magazine and lid, so the changer can move with the head anywhere and the gantry can cross it, with Z up.
 - **The dock rides on the bed module.** Two MGN12 rails on the module's T-slot strips carry a U-shaped carrier with the magazine, and a worm gearmotor retracts it 200 mm behind the Z body when not in use. It lifts out with the bed for plasma, so nothing extra comes off the machine and the plasma never sees it.
-- **One rule for tool changes:** the Z slide's lower end is below the magazine top, so the spindle reaches the pockets from the rear stop, never over the magazine from the front.
-- **Controls M12–M13:** spindle reverse (RapidChange unloads in reverse) and the dock drive with its interlocks.
+- **One rule for tool changes:** the dock moves, and the gantry crosses the deployed magazine, only with Z at its top. Controls M14 wires the dock motor through a second contact of the Z top switch, so a wrong command cannot move it with the spindle low.
+- **Controls M12–M14:** spindle reverse (RapidChange unloads in reverse), the dock drive with its interlocks, and the Z-top enable for the dock.
 - **Frame fill holes.** Each frame tube's fill hole moves to the tube's high end, so the frame can be filled full with epoxy sand or dry sand ([build order: filling the frame](output/release-review/RevL-CAD/BUILD-ORDER.md#6-filling-the-frame)).
 
 Details are in the [Rev L package](output/release-review/RevL-CAD/README.md).

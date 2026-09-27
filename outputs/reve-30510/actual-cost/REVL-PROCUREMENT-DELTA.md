@@ -14,7 +14,7 @@ Rev L is Rev K with a 300 mm Z slide and a RapidChange-type tool changer ("the d
 
 - **RapidChange ER11 linear magazine**, the owner's choice ("the rapidautochanger or something like that"). The pocket count and options (IR check, dust cover) are the owner's call.
 - The other session's research ([RapidChange selection](../../../variants/common/atc/README.md)) found goods prices of $400–$900 on the maker's configurator, from 4 pockets Basic to 8 pockets Premium, and says the two selectors disagree. It is not a quote: freight, tax, collets, nuts and a tool setter are extra.
-- The dock is drawn for a magazine up to 520 × 60 × 80 mm, with cutters up to 15 mm in diameter hanging at most 36.55 mm below it. Check the chosen kit against that before ordering.
+- The dock is drawn for a magazine up to 520 × 60 × 80 mm with a 12 mm lid on top, and cutters up to 15 mm in diameter hanging at most 36.55 mm below it. Check the chosen kit against that before ordering: the lid must pass under the gantry (Z1143) when the dock is parked.
 - ER11 collets and nuts for each tool. The spindle kit's ER11 nut must match the kit's nut: measure it.
 
 ## New purchased parts
@@ -34,7 +34,7 @@ Rev L is Rev K with a 300 mm Z slide and a RapidChange-type tool changer ("the d
 **Fasteners**
 
 - 8 × M5 T-nut for 20-series slots, and 8 × M5 × 12 button head (feet to strips).
-- 8 × M5 × 30 socket head (saddles through the risers).
+- 8 × M5 × 20 socket head (saddles through the risers; the risers are 7.65 mm since the magazine was lowered 10 mm).
 - 8 × M3 × 10 socket head and M3 washers (blocks).
 - 22 × M3 × 8 socket head (rails).
 
@@ -44,6 +44,7 @@ Rev L is Rev K with a 300 mm Z slide and a RapidChange-type tool changer ("the d
 - 2 × Finder 40.52.9.024.0000 relay and 95.05 socket (K_DOCK_RUN, K_DOCK_DIR).
 - 1 × 2 A time-delay fuse and holder (F_DOCK).
 - 2 × roller-lever microswitch, NC, IP67, and 2 × 1N4007 (dock end of travel).
+- 1 × Z top limit switch with two circuits, or a second switch beside it (M14: its NO contact feeds the dock motor only with Z at its top).
 - Interface board additions: ULN2803A, 2 × PC817 with resistors, one more 470 Ω pull-up.
 
 ## New fabricated parts and their stock
@@ -57,7 +58,8 @@ Rev L is Rev K with a 300 mm Z slide and a RapidChange-type tool changer ("the d
 | Front and rear stops, pulley brackets, sensor bases and uprights, connector bracket | 9 | 1/4–1/2 in steel offcuts | Small blocks, welded to the right beam |
 | Motor plate, 98 × 78 | 1 | 3/16 in steel | Welded to the right beam end |
 | Magazine saddle blanks, 40 × 65 | 2 | 1/4 in aluminum | Drill the magazine holes from the delivered kit |
-| Risers, 12 OD × 5.5 ID × 17.65 | 8 | 12 mm steel bar or tube | Turned |
+| Risers, 12 OD × 5.5 ID × 7.65 | 8 | 12 mm steel bar or tube | Turned |
+| Z drop adapter, 110 × 220 × 1/2 in (replaces the 110 × 110 adapter) | 1 | 1/2 in 6061 plate | Its lower 110 mm is the Rev K adapter; the carriage slots wait for the delivered slide. Raises the Z body 110 mm over the tool changer |
 
 About 6 kg of steel and aluminum in all; the dock with its bought parts is about 10.6 kg, with 3.3 kg allowed for the magazine and cutters.
 
