@@ -294,16 +294,21 @@ All 1173 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.j
   - the drop bracket and torch;
   - the drip lip, glands, fan and VFD placement.
 
-## Needed from the owner
+## Buying notes (nothing is waiting on the owner)
 
-1. **Rodent version.** V1.1 puts E1-MAX on GPIO39; V1.0 uses GPIO37.
-2. **VFD model.** Needed: its FWD/COM input type, its analog input range and impedance, and whether it has STO (safe torque off).
-3. **CUT-50 details.**
-   - **Start: the torch trigger** (owner, 27 Sep). K_TS's NO contact goes across the cutter's torch-trigger terminals, in place of the hand switch.
-   - **Still needed:**
-     - the work-lead size, for the arc-OK current switch;
-     - whether the cutter starts with HF, which sets K_TS's isolation;
-     - the trigger circuit's voltage and current, which K_TS's contact must handle.
+The Rodent and the VFD are not ordered yet (owner, 27 Sep). These are the choices the design assumes.
+
+1. **Rodent: buy the V1.1**, the current version.
+   - The board map already uses its GPIO39 for the door input.
+   - If a V1.0 arrives instead, change that one line to GPIO37.
+2. **VFD: use the one in the spindle kit.** These kits have a run terminal (FWD to COM or DCM) and a 0–10 V speed input, and that is all this design uses. The cabinet's VFD mount allows up to 180 × 160 × 250 mm.
+3. **CUT-50:**
+   - **It starts in mid-air** (owner, 27 Sep). That is a high-frequency (HF), non-contact start.
+   - **Start circuit:** it starts from the torch trigger. K_TS's NO contact goes across the trigger terminals, in its shielded box at the cutter. Choose K_TS with reinforced coil-to-contact isolation.
+   - **Routing:** run the torch lead and work lead away from the motor, limit and probe cables.
+   - **At commissioning:**
+     - note the work-lead size, which sizes the arc-OK current sensor;
+     - check that the trigger circuit's voltage and current suit K_TS's contact.
 
 ## Reproduce
 

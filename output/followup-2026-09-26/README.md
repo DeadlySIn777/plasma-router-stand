@@ -104,7 +104,8 @@ For CW-01, the board map and pin allocation are drafted and the RS485 link is dr
 
 - **Bed line: the one-piece bed** ("the one piece"). Rev K is the current design, and Rev I stays as the alternative.
 - **Torch:** not yet known ("idk yet"). The owner will measure it. Rev K is drawn for the PT31-style torch in the photo, and the bracket slots cover a clamp 90–140 mm above the tip.
-- **CUT-50 start:** the torch trigger. The K_TS relay's contact goes across the cutter's torch-trigger terminals ([GM1 controls](../controls-2026-09-27/README.md)).
+- **CUT-50 start:** the torch trigger, and it starts in mid-air, so it is an HF start. The K_TS relay's contact goes across the trigger terminals, in its shielded box at the cutter ([GM1 controls](../controls-2026-09-27/README.md)).
+- **Rodent and VFD:** not ordered yet. The design assumes a Rodent V1.1 and the VFD that comes with the spindle kit. Nothing is waiting on them.
 - **Shop:** a container with an 8 ft ceiling. Rev K's plan is a rolling A-frame gantry with a low-headroom hoist and the 0.7 m sling that passed the hoist-path check ([hoist in the container](../release-review/RevK-CAD/README.md#hoist-in-the-container)).
 
 **Owner answers received on 26 September 2026:**
@@ -123,9 +124,7 @@ Rev J implements the bed answers. Rev G's six manual panels and MDF spoilboards 
 
 1. **Which line: answered on 27 September, the one-piece line** (Rev K). Please give design work to one session at a time. If you choose Rev I, this branch's bed module is dropped, and the Rodent choice and cost register would need carrying over. **Controller: settled, the Rodent** (owner, 26 Sep, reconfirmed after Rev I). **Bed conversion:** the variants' record says it stays within the machine footprint, while Rev J lifts the bed out on a hoist. Please say which you want. Please give design work to one session at a time; two sessions working in parallel is how the designs split.
 2. **Hoist and bed stand:** a container with an 8 ft ceiling (27 Sep). Please confirm it is a standard 20 or 40 ft container, about 2.39 m inside. Rev K plans a rolling A-frame gantry. Still to choose: the A-frame and hoist, and where the module stand goes; the stand needs about 1.5 m of floor in front of the machine.
-3. **Cutter:** the start method is the torch trigger (27 Sep).
-   - Still needed: the work-lead size, and whether it starts with HF. A photo of the rating plate and the torch connector would answer both.
-   - The torch in the photo is a PT31-style straight machine torch, 270 × 28 mm. The owner will measure the actual torch before the clamp insert is bored.
+3. **Cutter:** it starts from the trigger, in mid-air (an HF start; 27 Sep). Nothing more is needed now. Note the work-lead size at commissioning. The owner will measure the torch before the clamp insert is bored.
 4. **Orders:** confirm the X and Z drive modules on Monday, the quantities and price paid, and when the HGR20 guide kits are ordered.
 5. **Owned aluminum:** alloy and thickness of the 12 × 12 in pieces.
 6. **Scrap tube:** for each piece of 2 × 2 tube, its usable length, measured wall and price, checked against the Rev J list.
