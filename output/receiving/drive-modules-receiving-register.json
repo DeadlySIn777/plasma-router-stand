@@ -116,7 +116,7 @@
     "row": "M03",
     "stroke_ordered_mm": 300,
     "model_body_length_mm": 419,
-    "model_body_length_basis": "Scaled from the 100 mm drawing (stroke + 119); measure on receipt (measured.body_length_mm).",
+    "model_body_length_basis": "Listing drawing for the 300 mm stroke (owner-sent, 27 Sep 2026): body 419 mm, as modeled; measure on receipt (measured.body_length_mm).",
     "model_assumption_base_to_output_mm": 80,
     "measured": {
       "base_bottom_to_carriage_top_mm": null,
@@ -132,6 +132,30 @@
       "motor_rated_current_A": null,
       "backdrives_unpowered_vertical": null,
       "notes": null
+    },
+    "listing_drawing_300mm": {
+      "source": [
+        "output/release-review/sources/B09MVYGLNQ-300mm-top-view.jpg",
+        "output/release-review/sources/B09MVYGLNQ-300mm-side-view.jpg"
+      ],
+      "sent_by_owner": "2026-09-27",
+      "travel_mm": 300,
+      "body_length_mm": 419,
+      "between_end_blocks_mm": 395,
+      "end_block_mm": 12,
+      "overall_with_motor_mm": 530,
+      "width_mm": 80,
+      "motor_flange_mm": 57,
+      "carriage_mm": "90 across x 50 along",
+      "carriage_holes": "Ø5 on 70 across, plus Ø7 bores",
+      "end_block_heights_mm": {
+        "free_end": 67,
+        "motor_end": 78
+      },
+      "base_height_mm": 20,
+      "carriage_body_height_mm": 35,
+      "base_to_carriage_top": "not dimensioned; about 62 mm when the side view is scaled (60-67). The model assumes 80: measure on receipt.",
+      "note": "Same side and bottom views as the 100 mm drawing, with 395 in place of 195 between the end blocks."
     }
   },
   "supplier_data": {

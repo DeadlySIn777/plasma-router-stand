@@ -32,18 +32,18 @@ On delivery, record the quantities (the machine needs **two** 1000 mm modules), 
 | Sensors | FC-SPX307 NPN, mounted outside the module (the sheet does not say whether they are included) | model uses roller switches; **check** what arrived |
 | Repeatability | ±0.02 mm per 300 mm (listing); ±0.03 in the drawing table | not used |
 
-**ZBX80** (listing images `B09MVYGLNQ-gallery-*.jpg`):
+**ZBX80** (listing images `B09MVYGLNQ-gallery-*.jpg`; for the 300 mm stroke that is ordered, the owner sent its [top](../release-review/sources/B09MVYGLNQ-300mm-top-view.jpg) and [side](../release-review/sources/B09MVYGLNQ-300mm-side-view.jpg) views on 27 September):
 
 | Item | Listing value | Model |
 |---|---|---|
-| Body | 219 × 80, 12 mm end blocks, 330 overall with the motor | same |
+| Body | 100 mm stroke: 219 × 80, 12 mm end blocks, 330 overall with the motor. **300 mm stroke (ordered): 419 × 80, 395 between the 12 mm end blocks, 530 overall with the motor, 300 travel** | Rev L: 419, the same |
 | Carriage | 90 across × 50 along; Ø5 holes 70 apart across, plus Ø7 bores | **hold**: thread and along-travel pitch |
 | Heights | end block 67 high at the free end, 78 at the motor end; base 20 high | not all used |
-| Base face to carriage top | not dimensioned; about **60–67 mm** when the side view is scaled | **80 mm assumed** |
+| Base face to carriage top | Not dimensioned. The side view scales to about **62 mm** (60–67). Its 35 mm figure is the carriage's own height, not this one. The 300 mm side view is the same drawing | **80 mm assumed** |
 | Base fixing | M5 slide nuts in the base slots; bottom view dimensions 80 overall, 66, 54, 26 and 14 across the slots | **hold**: slot positions to confirm |
 | Screw | SFU1605, 5 mm lead | — |
 
-**300 mm stroke:** if the body scales like the 100 mm drawing (stroke + 119), it is about 419 mm long and about 530 mm with the motor. Measure it on receipt. The model keeps the carriage's lowest position, so the extra length goes upward.
+**300 mm stroke:** the listing drawing for the ordered stroke confirms the length the model scaled from the 100 mm drawing (stroke + 119): body 419 mm, 530 mm with the motor, 300 mm of travel between the 12 mm end blocks. The carriage, the heights and the base slots are the same as the 100 mm drawing's. Measure it on receipt anyway. The model keeps the carriage's lowest position, so the extra length goes upward.
 
 If the ZBX80 output face really is 60–67 mm above its base instead of 80, the whole tool sits 13–20 mm further back than modeled. The tool-axis Y range would move 13–20 mm rearward, from Y121.4–1121.4 to about Y134–141 at the front limit and Y1134–1141 at the rear. The front spoilboard edge (Y130) would then be a few millimetres in front of the tool axis, still reachable with a cutter of normal radius, but the tool sweep and clearances must be re-run.
 

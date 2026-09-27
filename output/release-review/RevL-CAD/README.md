@@ -27,7 +27,7 @@ The ZBX80 is the same type with a longer body. The model keeps the lower end whe
 
 - The spindle nut still reaches Z960 at the bottom, 1.2 mm above the HDPE, so nothing changes for cutting.
 - At the top the nut is at **Z1260** instead of 1060.
-- The body grows 200 mm upward, to Z1040–1459. Its length is scaled from the 100 mm drawing (stroke + 119 mm); measure the delivered unit.
+- The body grows 200 mm upward, to Z1040–1459. Its 419 mm length, scaled from the 100 mm drawing (stroke + 119 mm), matches the listing drawing for the 300 mm stroke that the owner sent: 419 mm body, 530 mm with the motor. Measure the delivered unit.
 - The braked motor's top moves from Z1430.5 to **Z1630.5**, 1.63 m above the floor. Nothing on the machine is above it, and it is well under the 8 ft ceiling and the A-frame beam.
 - The plasma torch tip now reaches Z845–1145.
 
@@ -150,7 +150,7 @@ These are nominal CAD checks. They do not cover stiffness at the pocket, the del
 - **Drive parts.** The gearmotor, pulleys, belt clamp spring and sensors are chosen by function. Fit the gearmotor's face to the motor plate once it is in hand.
 - **Tool length.** A tool setter is not drawn. It could sit on the dock's right saddle.
 - **Chips and coolant.** The rails, belt and gearmotor sit at the back of the bed. Cover the rails (a sheet-metal cover or bellows) and use a sealed gearmotor or shield it; neither is drawn. The sensors and the plug are IP67 parts.
-- **The Z slide.** The 300 mm body length is scaled, not measured. Measure its carriage and end blocks on receipt, as MOTION-MODULES.md lists.
+- **The Z slide.** The 300 mm listing drawing confirms the 419 mm body. The height from its base to the carriage top is still not dimensioned: the model assumes 80 mm, and the drawing scales to about 62 mm. If it is about 62, the spindle and torch sit about 18 mm further back and the checks are re-run. Measure it, the carriage and the end blocks on receipt, as MOTION-MODULES.md lists.
 - **Rigging.** The chain sling needs shortening clutches for the rear legs. At the 0.7 m hook height the front legs sit at about 41°; use rigging rated for that angle. Don't use a 2.0 m hook rise: a rear leg then passes 2.8 mm from the X rail.
 - **Frame fill.** The fill percentages are geometric. A real pour leaves voids unless each tube is vibrated, so weigh the frame before and after.
 - **Rev K's open items** still apply.

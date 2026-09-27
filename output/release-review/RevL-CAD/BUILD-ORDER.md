@@ -57,8 +57,8 @@ The design took the seller's figures (270 mm long, 28 mm barrel) and a photo. Wi
 ## 2. When the drive modules arrive
 
 - Measure each one as [MOTION-MODULES.md](../../receiving/MOTION-MODULES.md) lists, and write the values in its register. On the ZBX80, two numbers matter most:
-  - **the height from its base to its carriage top.** The model assumes 80 mm. If it is not 80, the tool axis moves (further back if it is lower) and the pose checks are re-run.
-  - **the 300 mm body length.** The model assumes 419 mm, scaled from the 100 mm drawing.
+  - **the height from its base to its carriage top.** The model assumes 80 mm; the listing drawing does not dimension it but scales to about 62 mm. If it is not 80, the tool axis moves (further back if it is lower) and the pose checks are re-run.
+  - **the 300 mm body length.** 419 mm on the listing drawing for the 300 mm stroke, as modeled.
 - Do the Z back-drive test: stand it vertical, unpowered, with a weight on the carriage.
 - Then drill the Z carrier and the Z tool adapter blank from the measured slide, and the HMS40 base fixings from the measured slot nuts.
 - The braked Z motor is bought only after the ZBX80 is measured.
