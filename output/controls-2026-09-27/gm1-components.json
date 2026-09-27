@@ -1,5 +1,5 @@
 {
-  "scope": "GM1 controls parts delta against Rev I's selected controls schedule (output/design-finish-2026-09-26/controls/selected-components.json). Unpriced; no order, quote or stock check. Check terminal marks, coil currents and minimum loads against each maker's datasheet at purchase.",
+  "scope": "GM1 controls parts delta against Rev I's selected controls schedule (output/design-finish-2026-09-26/controls/selected-components.json). Unpriced; no order, quote or stock check. Check terminal marks, coil currents and minimum loads against each maker's datasheet at purchase. Updated later on 27 Sep 2026 for M9-M11, the cutter-side start relay and the Rev K cabinet parts.",
   "added": [
     {
       "qty": 1,
@@ -108,6 +108,54 @@
       "part": "Interface board: MCP23017, 2 x SN74LVC1G17, 3.3 V LDO, 4 x 470 ohm, 4.7 kohm, 10 kohm, Rev I run-interface parts",
       "tag": "IFB",
       "status": "schematic level; no PCB"
+    },
+    {
+      "qty": 2,
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket",
+      "tag": "K_DRAINED, K_EMPTY_B",
+      "status": "as Rev I's water relays; M9 router drain latch"
+    },
+    {
+      "qty": 1,
+      "part": "Finder 80.01.0.240.0000, function AI, set 25 min, then 1.5 x the timed fill",
+      "tag": "T_FILL",
+      "status": "as Rev I's timers; M10 fill watchdog"
+    },
+    {
+      "qty": 1,
+      "part": "24 V DC interposing relay with reinforced coil-to-contact isolation, socket, flyback diode",
+      "tag": "K_TS",
+      "status": "to select; mounted at the cutter so the HF-exposed trigger leads never enter the cabinet"
+    },
+    {
+      "qty": 1,
+      "part": "Die-cast aluminium box about 120 x 80 x 55 mm with EMC gland, and a 24 V 10-15 W supply fed from the cutter mains after K1/K2",
+      "tag": "K_TS box",
+      "status": "to select; bond the box to the cutter chassis"
+    },
+    {
+      "qty": 1,
+      "part": "IP54 filter fan, 120 mm class, 24 V DC, 40 m3/h or more free-blowing, and a matching outlet filter",
+      "tag": "cabinet cooling (Rev K)",
+      "status": "to select; sized for about 60 W inside at 10 K rise"
+    },
+    {
+      "qty": 8,
+      "part": "EMC cable glands, nickel-plated brass, 360-degree shield contact: 4 x M20 (motors), 4 x M16 (VFD control, THCAD, head, torch start)",
+      "tag": "cabinet glands (Rev K)",
+      "status": "to select for the actual cable ODs"
+    },
+    {
+      "qty": 18,
+      "part": "Nylon cable glands (4 x M25, 2 x M20, 12 x M16) and rated blanking plugs for the spare entries",
+      "tag": "cabinet glands (Rev K)",
+      "status": "to select; 30 entries in total on two plates"
+    },
+    {
+      "qty": 1,
+      "part": "16 mm2 braided bond strap, gland plates to the cabinet PE stud, with serrated washers",
+      "tag": "cabinet bonding (Rev K)",
+      "status": "to select"
     }
   ],
   "already_required": [

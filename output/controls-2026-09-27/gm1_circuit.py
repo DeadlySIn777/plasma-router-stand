@@ -51,6 +51,19 @@ CHANGES = [
      'a safety door: feed hold and spindle off.'),
     ('M8', 'Fill check', 'K_READY NC in the fill-arm pickup. FILL cannot arm in SETUP if K_READY is welded, so that '
      'fault shows up as "fill will not start".'),
+    ('M9', 'Router drain', 'Rev I left the pan drain open for as long as router mode was selected, so chips, aluminium fines '
+     'and mist coolant ran to the plasma reservoir. A latch relay K_DRAINED now picks up when the 75 s drain dwell ends '
+     '(T_DRAIN output through diode D_SET). Its NC contact opens the drain request (the valve closes) and its NO contacts '
+     'hold router ready in place of the timer. The latch holds only while router mode is selected (fed from KM_R) and the pan '
+     'stays empty (K_EMPTY_B, a second relay on the empty-float coil line). Liquid reaching the empty float, or leaving router '
+     'mode, drops the latch; the drain then reopens and a new dwell starts. An E-stop does not drop it.'),
+    ('M10', 'Fill watchdog', 'On-delay timer T_FILL runs whenever the fill is commanded; its NC contact is in the K_FILL '
+     'self-hold. A fill that has not reached the fill-stop float within the set time (commission it to 1.5 x the measured '
+     'fill, 25 min until then) stops and needs a new FILL press. Holding FILL keeps the pump running only while it is held.'),
+    ('M11', 'Float stop', 'The torch-head float switch is added in series with the three head-presence switches in the U_HEAD '
+     'loop (XH:5-6). A float trip while the torch is requested therefore drops the permission (torch off) and opens the '
+     'Rodent door input (feed hold). During probing the request is low, so the door input stays closed and the chain re-arms '
+     'when the float returns. The same loop drives the Rodent probe input through a second optocoupler.'),
 ]
 
 # Relay families and poles. G7SA terminal marks follow EN 50005 (13-14 NO,
@@ -77,6 +90,12 @@ DEVICES = {
     'K_RDY_P': dict(part='Finder 40.52.9.024.0000 + 95.05 socket (as Rev I)', kind='relay', no=['11-14', '21-24'], nc=['11-12', '21-22']),
     'T_BRAKE': dict(part='Finder 80.01.0.240.0000, function AI (on-delay), set 3 s (as Rev I timers)', kind='timer',
                     no=['15-18'], nc=['15-16']),
+    'K_DRAINED': dict(part='Finder 40.52.9.024.0000 + 95.05 socket (as Rev I water relays)', kind='relay',
+                      no=['11-14', '21-24'], nc=['11-12', '21-22']),
+    'K_EMPTY_B': dict(part='Finder 40.52.9.024.0000 + 95.05 socket, coil in parallel with K_EMPTY', kind='relay',
+                      no=['11-14', '21-24'], nc=['11-12', '21-22']),
+    'T_FILL': dict(part='Finder 80.01.0.240.0000, function AI (on-delay), 25 min until the fill is timed', kind='timer',
+                   no=['15-18'], nc=['15-16']),
     'Z_BRAKE': dict(part='Z motor power-off holding brake, 24 V coil (energized = released)', kind='brake', no=[], nc=[]),
 }
 GUIDED = {k for k, d in DEVICES.items() if d['kind'] in ('force-guided', 'contactor')}
@@ -89,7 +108,10 @@ DROP_NODES = {'XW:21', 'XW:22', 'XH:1', 'XH:2', 'XW:31', 'XW:32', 'XW:33', 'XW:3
               'RUN_ARM_COIL', 'ARMED_PERMIT', 'REQUEST', 'VFD_RUN_COIL', 'TORCH_RUN_COIL', 'READY_COIL',
               'XVFD:RUN', 'XVFD:COM', 'XPLASMA:START1', 'XPLASMA:START2'}
 DROP_CONTACTS = {'XW:21-22', 'XH:1-2'}
-DROP_WIRES = {frozenset(('FILL:22', 'ARM_COIL'))}
+DROP_WIRES = {frozenset(('FILL:22', 'ARM_COIL')),
+              frozenset(('T_DRAIN:18', 'RR')),        # M9: timer output now through diodes D_TD and D_SET
+              frozenset(('K_FILL:14', 'FILL_COIL'))}  # M10: fill self-hold now through T_FILL NC
+DROP_DIODES = {'D_R'}                                 # M9: drain request now through K_DRAINED NC and D_R2
 
 
 def _dropped(edge):
@@ -102,9 +124,9 @@ def _dropped(edge):
 def definition():
     wires = [e for e in rev_i.WIRES if not _dropped(e)]
     contacts = [e for e in rev_i.CONTACTS if not _dropped(e)]
-    diodes = list(rev_i.DIODES)
+    diodes = [d for d in rev_i.DIODES if d.tag not in DROP_DIODES]
     loads = {k: v for k, v in rev_i.LOADS.items() if k not in ('K_READY', 'K_REQUEST', 'K_RUN_ARM', 'K_VFD_RUN', 'K_TORCH_RUN')}
-    dropped = [e for e in rev_i.WIRES + rev_i.CONTACTS if _dropped(e)]
+    dropped = [e for e in rev_i.WIRES + rev_i.CONTACTS if _dropped(e)] + [d for d in rev_i.DIODES if d.tag in DROP_DIODES]
     power = []
     n = [0]
 
@@ -225,13 +247,32 @@ def definition():
     contact('K_RDY_P:21-24', 'XM:4', 'XM:COM', 'K_RDY_P')
     # M8: K_READY NC in the fill-arm pickup.
     branch('FILL:22', 'K_READY:41-42', 'K_READY', 'ARM_COIL', True)
+
+    def diode(tag, a, b):
+        diodes.append(Edge(a, b, tag, directed=True, physical_form='1N4007 in the terminal row'))
+
+    # M9: router drain latch. K_DRAINED's first changeover shares common 11:
+    # NC 11-12 passes the drain request, NO 11-14 is the self-hold.
+    wire('DR_REQ', 'K_DRAINED:11')
+    contact('K_DRAINED:11-12', 'K_DRAINED:11', 'K_DRAINED:12', 'K_DRAINED', True)
+    diode('D_R2', 'K_DRAINED:12', 'DRAIN_COIL')
+    contact('K_DRAINED:11-14', 'K_DRAINED:11', 'K_DRAINED:14', 'K_DRAINED')
+    branch('K_DRAINED:14', 'K_EMPTY_B:11-14', 'K_EMPTY_B', 'DRN_COIL')
+    coil('K_EMPTY_B', 'EMPTY_COIL')
+    coil('K_DRAINED', 'DRN_COIL')
+    diode('D_TD', 'T_DRAIN:18', 'RR')
+    diode('D_SET', 'T_DRAIN:18', 'DRN_COIL')
+    branch('RE', 'K_DRAINED:21-24', 'K_DRAINED', 'RR')
+    # M10: fill watchdog in the K_FILL self-hold.
+    coil('T_FILL', 'FILL_COIL')
+    branch('K_FILL:14', 'T_FILL:15-16', 'T_FILL', 'FILL_COIL', True)
     return wires, contacts, diodes, loads, power, dropped
 
 
 WIRES, CONTACTS, DIODES, LOADS, POWER, DROPPED = definition()
 CONTACT_IDS = {id(e) for e in CONTACTS + POWER}
 ALL_EDGES = WIRES + DIODES + CONTACTS
-TIMERS = ('T_CLOSE', 'T_DRAIN', 'T_BRAKE')
+TIMERS = ('T_CLOSE', 'T_DRAIN', 'T_BRAKE', 'T_FILL')
 DEFAULT = {k: v for k, v in rev_i.DEFAULT.items() if k not in ('stop_ok', 'hardware_stop_ok')}
 DEFAULT.update(f_safety=True, estop_ch1=True, estop_ch2=True, reset_pressed=False, supply_48v=True, mains=True)
 
@@ -249,14 +290,14 @@ class Simulator:
     """
 
     def __init__(self, pickup=.010, dropout=.020, contactor_pickup=.060, contactor_dropout=.020,
-                 sr_on=.050, sr_off=.020, t_close=12., t_drain=75., t_brake=3., timer_recovery=.100,
+                 sr_on=.050, sr_off=.020, t_close=12., t_drain=75., t_brake=3., t_fill=1500., timer_recovery=.100,
                  controller_boot=2., reset_mode='monitored', holds_request=False):
         self.inputs = DEFAULT.copy()
         self.states = {k: False for k in LOADS}
         self.elapsed = {k: 0. for k in LOADS}
         self.pickup, self.dropout = pickup, dropout
         self.contactor = (contactor_pickup, contactor_dropout)
-        self.timers = {'T_CLOSE': t_close, 'T_DRAIN': t_drain, 'T_BRAKE': t_brake}
+        self.timers = {'T_CLOSE': t_close, 'T_DRAIN': t_drain, 'T_BRAKE': t_brake, 'T_FILL': t_fill}
         self.timer_recovery = timer_recovery
         self.timer_off = {k: 0. for k in self.timers}
         self.sr_on, self.sr_off = sr_on, sr_off
@@ -439,6 +480,7 @@ class Simulator:
                 'fwd_closed': fwd, 'start_closed': start, **paths,
                 'router_run': fwd and paths['vfd_mains'], 'torch_run': start and paths['plasma_mains'],
                 'z_brake_released': self.states['Z_BRAKE'], 'sr_out': self.sr_out,
+                'router_drained': self.states['K_DRAINED'], 'fill_timed_out': self.states['T_FILL'],
                 'door_ok': 'XR:E1_GND' in self.reach(g, 'XR:E1_SIG'),
                 'controller_ready': paths['motor_power'] and self.controller_up >= self.controller_boot,
                 'status': {name: 'XM:COM' in self.reach(g, f'XM:{i}')
@@ -474,7 +516,8 @@ def write_netlist(out_dir=HERE):
             rows.append(row)
     doc = {'scope': __doc__, 'changes': [dict(id=i, topic=t, change=c) for i, t, c in CHANGES],
            'base': 'output/design-finish-2026-09-26/controls/circuit.py (Rev I), imported read-only',
-           'removed_rev_i_edges': [{'kind': 'contact' if e.control else 'wire', 'tag': e.tag, 'a': e.a, 'b': e.b} for e in DROPPED],
+           'removed_rev_i_edges': [{'kind': 'contact' if e.control else ('diode' if e.directed else 'wire'), 'tag': e.tag, 'a': e.a, 'b': e.b}
+                                   for e in DROPPED],
            'devices': DEVICES, 'pole_usage': pole_usage(), 'connections': rows, 'loads': LOADS,
            'contact_semantics': 'closed_when_control_false is the model inversion only; physical_form is the purchased contact form. '
                                 'A contact whose control is an operator input (setup, router, estop_ch1 ...) is a switch block, not a relay.'}

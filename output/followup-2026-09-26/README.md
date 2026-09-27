@@ -1,9 +1,23 @@
 # GM1 follow-up after Rev G — 26 September 2026
 
-**Still not released for fabrication or operation.** This page records the work done on top of the Rev G repair (`a61d634`), what it found, and what is still needed to finish the machine. The machine is now named **GM1 — Garcia Mechanical Table** (owner, 26 September 2026). The current design is [Rev J](../release-review/RevJ-CAD/README.md), first published on this branch as "Rev H" and renamed on the evening of 26 September (see the first item below). Rev G is described in its [CAD package](../release-review/RevG-CAD/README.md) and the [repair report](../cad-repair-2026-09-25/README.md).
+**Still not released for fabrication or operation.** This page records the work done on top of the Rev G repair (`a61d634`), what it found, and what is still needed to finish the machine. The machine is now named **GM1 — Garcia Mechanical Table** (owner, 26 September 2026). The current design on this branch is [Rev K](../release-review/RevK-CAD/README.md) (27 September). It is [Rev J](../release-review/RevJ-CAD/README.md)'s one-piece bed, completed with the other session's Rev I head, plumbing and cabinet and with the review's fixes. Rev J was first published on this branch as "Rev H" and renamed on the evening of 26 September (see below). Rev G is described in its [CAD package](../release-review/RevG-CAD/README.md) and the [repair report](../cad-repair-2026-09-25/README.md).
 
 ## What changed in this follow-up
 
+- **Rev K, after the owner's "finish it" (27 September):** [package](../release-review/RevK-CAD/README.md). The one-piece line is chosen as the one to complete, because it is the bed the owner asked for in this session; the owner can still pick Rev I instead.
+  - **Folded in from Rev I:** its floating/breakaway plasma head, drain valve and tail, strainer carrier, hoses and cabinet.
+  - **Plasma reach fixed:** a 135 mm drop bracket sized for the owner's torch. The owner sent a photo of a PT31-style straight machine torch, 270 mm long with a 28 mm barrel. The tip reaches Z845 at the bottom of Z, 5 mm below the slats. Near the pan level sensors, plasma paths stay at X955 or less.
+  - **Water fixed:**
+    - a drain screen;
+    - a manual reservoir drain;
+    - NBR seals;
+    - a suction line without a high point;
+    - a 32 mm refill air gap.
+  - **Controls (M9–M11):** the router-mode drain closes after its dwell, a fill watchdog, and a float trip that stops a cut. 1,173 simulated checks pass.
+  - **Cabinet fixed:** a shorter drip lip so the door opens, 30 bonded gland entries, a filter fan, the VFD outside, and the torch-start relay moved to the cutter.
+  - **Checks:** all pass. Static: 1,220, 1,074 and 149 solids, 0 unresolved. 9 router poses and 12 plasma poses; the torch tip reaches 5 mm below a slat top, within the float travel. The hoist path at three hook heights, and the water and cabinet checks.
+  - **Shopping list:** [REVK-PROCUREMENT-DELTA.md](../../outputs/reve-30510/actual-cost/REVK-PROCUREMENT-DELTA.md). All Rev K additions are unpriced.
+  - **Owner question, 27 September:** can it cut steel with a 6 mm end mill at 12k rpm and 0.005 in passes? Answered in the session: yes, as light-duty work. The cut needs about 40 W and 10–20 N. Use a 3–4 flute coated carbide at about 0.02 mm per tooth, short stick-out and chip clearing. The frame's side stiffness is not yet calculated.
 - **GM1 controls for either bed line (27 September, while the owner's answers were pending):** [package](../controls-2026-09-27/README.md). It builds on Rev I's relay circuit, imported unchanged, and keeps its water logic.
   - **E-stop:** a dual-channel safety relay drives two contactors. They remove the Rodent's 48 V, VFD mains and plasma mains, and the Z brake engages.
   - **Mode race fixed:** per-mode ready relays sit in each tool coil.
@@ -100,9 +114,9 @@ Rev J implements the bed answers. Rev G's six manual panels and MDF spoilboards 
 
 **Still needed from the owner:**
 
-1. **Which line:** this branch's Rev J one-piece module, which follows the requirement above, or the other session's six-panel Rev I (which also has the new head, plumbing and control circuits)? Both are in the repository, and neither is marked the single current design. If you choose Rev J, the next step is to fold Rev I's head, plumbing, cabinet, structure and control work into it. If you choose Rev I, this branch's bed module is dropped, and the Rodent choice and cost register would need carrying over. **Controller: settled, the Rodent** (owner, 26 Sep, reconfirmed after Rev I). **Bed conversion:** the variants' record says it stays within the machine footprint, while Rev J lifts the bed out on a hoist. Please say which you want. Please give design work to one session at a time; two sessions working in parallel is how the designs split.
+1. **Which line:** this branch's one-piece module, which follows the requirement above, or the other session's six-panel Rev I? Both are in the repository. The one-piece line is now complete as Rev K: Rev I's head, plumbing and cabinet are folded in, together with the review's fixes. If you choose Rev I, this branch's bed module is dropped, and the Rodent choice and cost register would need carrying over. **Controller: settled, the Rodent** (owner, 26 Sep, reconfirmed after Rev I). **Bed conversion:** the variants' record says it stays within the machine footprint, while Rev J lifts the bed out on a hoist. Please say which you want. Please give design work to one session at a time; two sessions working in parallel is how the designs split.
 2. **Hoist and bed stand:** the ceiling or beam height available. With the recommended sling the hook is at about 1.99 m with the module raised, plus the hoist's own headroom. Also the hoist and trolley to be bought, and where the module stand goes; it needs about 1.5 m of floor in front of the machine.
-3. **Cutter photos:** the VIV ARC CUT-50 rating plate, front and rear panels, and torch connector. These identify the version, start method and any CNC/arc-voltage connections.
+3. **Cutter photos:** the VIV ARC CUT-50 rating plate, front and rear panels, and torch connector. These identify the version, start method and any CNC/arc-voltage connections. **Torch received (27 Sep):** a photo of a PT31-style straight machine torch, 270 × 28 mm. Please say whether you already have it, and measure the barrel before the clamp insert is bored.
 4. **Orders:** confirm the X and Z drive modules on Monday, the quantities and price paid, and when the HGR20 guide kits are ordered.
 5. **Owned aluminum:** alloy and thickness of the 12 × 12 in pieces.
 6. **Scrap tube:** for each piece of 2 × 2 tube, its usable length, measured wall and price, checked against the Rev J list.

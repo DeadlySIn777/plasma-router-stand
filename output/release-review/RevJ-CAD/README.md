@@ -2,6 +2,14 @@
 
 **GM1 — Garcia Mechanical Table.** Working design for review, **not released for purchasing, fabrication, CAM or operation.** Amber parts in the previews are purchased-part envelopes whose interfaces are not all verified.
 
+> **Continued as [Rev K](../RevK-CAD/README.md) (27 September 2026).** Rev K keeps this bed module, hoist path and tube list unchanged. It adds three things:
+>
+> - the other session's Rev I head, plumbing and cabinet;
+> - a plasma drop bracket for the owner's torch;
+> - the review's water, cabinet and float fixes.
+>
+> This page stays the reference for the module itself.
+
 Rev J answers the owner's requirement of 26 September 2026: *one piece, lifted out with a winch, at most about 12 screws of M8–M12, waterproof for mist coolant when cutting aluminum.* It replaces the Rev G six-panel manual bed with a one-piece module. It also carries the base branch's Rev H water-service and Z-adapter work:
 
 - two gasketed reservoir hatches with upright cover parking;

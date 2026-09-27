@@ -40,6 +40,21 @@
       "id": "M8",
       "topic": "Fill check",
       "change": "K_READY NC in the fill-arm pickup. FILL cannot arm in SETUP if K_READY is welded, so that fault shows up as \"fill will not start\"."
+    },
+    {
+      "id": "M9",
+      "topic": "Router drain",
+      "change": "Rev I left the pan drain open for as long as router mode was selected, so chips, aluminium fines and mist coolant ran to the plasma reservoir. A latch relay K_DRAINED now picks up when the 75 s drain dwell ends (T_DRAIN output through diode D_SET). Its NC contact opens the drain request (the valve closes) and its NO contacts hold router ready in place of the timer. The latch holds only while router mode is selected (fed from KM_R) and the pan stays empty (K_EMPTY_B, a second relay on the empty-float coil line). Liquid reaching the empty float, or leaving router mode, drops the latch; the drain then reopens and a new dwell starts. An E-stop does not drop it."
+    },
+    {
+      "id": "M10",
+      "topic": "Fill watchdog",
+      "change": "On-delay timer T_FILL runs whenever the fill is commanded; its NC contact is in the K_FILL self-hold. A fill that has not reached the fill-stop float within the set time (commission it to 1.5 x the measured fill, 25 min until then) stops and needs a new FILL press. Holding FILL keeps the pump running only while it is held."
+    },
+    {
+      "id": "M11",
+      "topic": "Float stop",
+      "change": "The torch-head float switch is added in series with the three head-presence switches in the U_HEAD loop (XH:5-6). A float trip while the torch is requested therefore drops the permission (torch off) and opens the Rodent door input (feed hold). During probing the request is low, so the door input stays closed and the chain re-arms when the float returns. The same loop drives the Rodent probe input through a second optocoupler."
     }
   ],
   "rev_i_behaviors": {
@@ -1403,6 +1418,20 @@
     "K_RUN_ARM:21-24 welded, door cycled with request held: torch restarts": true,
     "KM_R:31-34 welded in plasma mode: spindle starts with the torch": true
   },
+  "router_drain": {
+    "delay_combinations": 9,
+    "drain_dwell_s": 75,
+    "behaviour": "Drain open on entering router mode until the pan has been empty for 75 s, then closed for as long as router mode stays selected and the pan stays empty. An E-stop keeps it closed; DRAIN override opens it while held."
+  },
+  "fill_watchdog": {
+    "simulated_setting_s": 20.0,
+    "panel_setting": "25 min until the first fill is timed; then 1.5 x the measured fill time",
+    "pump_open_flow_l_min": 7,
+    "expected_fill_80_l_min": [
+      13,
+      18
+    ]
+  },
   "simulation_assumptions": {
     "relay_pickup_s": [
       0.005,
@@ -1445,9 +1474,10 @@
     "The safety relay is modeled by its function (two channels, discrepancy lock, reset through the feedback loop). Its terminal numbers, cross-short detection, reset type and response times come from the purchased unit's manual.",
     "No performance level or category is claimed. The run request still has one output stage (the Rodent pin and its PhotoMOS); if that stage shorts, the tool keeps running after the Rodent drops the request, and only the E-stop stops it.",
     "Water-contact glitches shorter than a relay dropout can still resume a held fill, as in Rev I.",
+    "The float stop (M11) is modeled as the existing head-loop input; the float switch itself, its cam and the probe optocoupler are not simulated.",
     "Mains wiring, contactor and brake sizing, VFD and cutter interfaces, and EMC are specified in the README, not simulated."
   ],
-  "passed_checks": 984,
+  "passed_checks": 1173,
   "checks": [
     {
       "check": "Every contact tag is unique",
@@ -1524,6 +1554,17 @@
         "K_RDY_P": [
           "11-14",
           "21-24"
+        ],
+        "K_DRAINED": [
+          "11-12",
+          "11-14",
+          "21-24"
+        ],
+        "K_EMPTY_B": [
+          "11-14"
+        ],
+        "T_FILL": [
+          "15-16"
         ]
       }
     },
@@ -1560,6 +1601,15 @@
         "K_VFD_RUN:11-14",
         "XH:1-2",
         "XW:21-22"
+      ]
+    },
+    {
+      "check": "Water logic changes reroute only the drain request, the drain-timer output and the fill self-hold",
+      "passed": true,
+      "rerouted": [
+        "D_R DR_REQ-DRAIN_COIL",
+        "K_FILL:14-FILL_COIL",
+        "T_DRAIN:18-RR"
       ]
     },
     {
@@ -9409,17 +9459,985 @@
     {
       "check": "Armed and requested: door input closed, spindle runs",
       "passed": true
+    },
+    {
+      "check": "Router mode opens the pan drain",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "The drain stays open through the 75 s dwell",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "After the dwell the drain closes and the router is ready",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "The drain stays closed and ready holds while router mode stays selected",
+      "passed": true
+    },
+    {
+      "check": "The spindle runs with the drain closed",
+      "passed": true
+    },
+    {
+      "check": "Liquid at the empty float drops router ready and reopens the drain",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "The reopened drain waits for a new dwell",
+      "passed": true
+    },
+    {
+      "check": "After the new dwell the drain closes again with router ready",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Router mode opens the pan drain",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "The drain stays open through the 75 s dwell",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "After the dwell the drain closes and the router is ready",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "The drain stays closed and ready holds while router mode stays selected",
+      "passed": true
+    },
+    {
+      "check": "The spindle runs with the drain closed",
+      "passed": true
+    },
+    {
+      "check": "Liquid at the empty float drops router ready and reopens the drain",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "The reopened drain waits for a new dwell",
+      "passed": true
+    },
+    {
+      "check": "After the new dwell the drain closes again with router ready",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Router mode opens the pan drain",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "The drain stays open through the 75 s dwell",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "After the dwell the drain closes and the router is ready",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "The drain stays closed and ready holds while router mode stays selected",
+      "passed": true
+    },
+    {
+      "check": "The spindle runs with the drain closed",
+      "passed": true
+    },
+    {
+      "check": "Liquid at the empty float drops router ready and reopens the drain",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "The reopened drain waits for a new dwell",
+      "passed": true
+    },
+    {
+      "check": "After the new dwell the drain closes again with router ready",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Router mode opens the pan drain",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "The drain stays open through the 75 s dwell",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "After the dwell the drain closes and the router is ready",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "The drain stays closed and ready holds while router mode stays selected",
+      "passed": true
+    },
+    {
+      "check": "The spindle runs with the drain closed",
+      "passed": true
+    },
+    {
+      "check": "Liquid at the empty float drops router ready and reopens the drain",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "The reopened drain waits for a new dwell",
+      "passed": true
+    },
+    {
+      "check": "After the new dwell the drain closes again with router ready",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Router mode opens the pan drain",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "The drain stays open through the 75 s dwell",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "After the dwell the drain closes and the router is ready",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "The drain stays closed and ready holds while router mode stays selected",
+      "passed": true
+    },
+    {
+      "check": "The spindle runs with the drain closed",
+      "passed": true
+    },
+    {
+      "check": "Liquid at the empty float drops router ready and reopens the drain",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "The reopened drain waits for a new dwell",
+      "passed": true
+    },
+    {
+      "check": "After the new dwell the drain closes again with router ready",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Router mode opens the pan drain",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "The drain stays open through the 75 s dwell",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "After the dwell the drain closes and the router is ready",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "The drain stays closed and ready holds while router mode stays selected",
+      "passed": true
+    },
+    {
+      "check": "The spindle runs with the drain closed",
+      "passed": true
+    },
+    {
+      "check": "Liquid at the empty float drops router ready and reopens the drain",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "The reopened drain waits for a new dwell",
+      "passed": true
+    },
+    {
+      "check": "After the new dwell the drain closes again with router ready",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Router mode opens the pan drain",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "The drain stays open through the 75 s dwell",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "After the dwell the drain closes and the router is ready",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "The drain stays closed and ready holds while router mode stays selected",
+      "passed": true
+    },
+    {
+      "check": "The spindle runs with the drain closed",
+      "passed": true
+    },
+    {
+      "check": "Liquid at the empty float drops router ready and reopens the drain",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "The reopened drain waits for a new dwell",
+      "passed": true
+    },
+    {
+      "check": "After the new dwell the drain closes again with router ready",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Router mode opens the pan drain",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "The drain stays open through the 75 s dwell",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "After the dwell the drain closes and the router is ready",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "The drain stays closed and ready holds while router mode stays selected",
+      "passed": true
+    },
+    {
+      "check": "The spindle runs with the drain closed",
+      "passed": true
+    },
+    {
+      "check": "Liquid at the empty float drops router ready and reopens the drain",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "The reopened drain waits for a new dwell",
+      "passed": true
+    },
+    {
+      "check": "After the new dwell the drain closes again with router ready",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Router mode opens the pan drain",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "The drain stays open through the 75 s dwell",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "After the dwell the drain closes and the router is ready",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "The drain stays closed and ready holds while router mode stays selected",
+      "passed": true
+    },
+    {
+      "check": "The spindle runs with the drain closed",
+      "passed": true
+    },
+    {
+      "check": "Liquid at the empty float drops router ready and reopens the drain",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "The reopened drain waits for a new dwell",
+      "passed": true
+    },
+    {
+      "check": "After the new dwell the drain closes again with router ready",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "An E-stop in router mode leaves the drain closed",
+      "passed": true
+    },
+    {
+      "check": "After the reset the router is ready again without a new dwell",
+      "passed": true
+    },
+    {
+      "check": "DRAIN override opens the drain and holds ready off",
+      "passed": true
+    },
+    {
+      "check": "Releasing the override closes the drain and restores ready",
+      "passed": true
+    },
+    {
+      "check": "Unlocking the bed drops ready and keeps the drain closed",
+      "passed": true
+    },
+    {
+      "check": "Relocking restores ready",
+      "passed": true
+    },
+    {
+      "check": "Leaving router mode drops the latch; plasma mode keeps the drain closed",
+      "passed": true
+    },
+    {
+      "check": "Plasma mode then readies as before",
+      "passed": true
+    },
+    {
+      "check": "Returning to router mode with water in the pan opens the drain again",
+      "passed": true
+    },
+    {
+      "check": "... and the dwell restarts once the pan is empty",
+      "passed": true
+    },
+    {
+      "check": "... then the drain closes with router ready",
+      "passed": true
+    },
+    {
+      "check": "Welded K_DRAINED 21-24: the spindle cannot run in plasma mode",
+      "passed": true
+    },
+    {
+      "check": "Welded K_DRAINED 21-24: the torch still waits for the plasma water sequence",
+      "passed": true
+    },
+    {
+      "check": "Stuck K_DRAINED: the drain cannot open, and the router never becomes ready with water in the pan (fault shows)",
+      "passed": true
+    },
+    {
+      "check": "An unattended fill runs until the watchdog time",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "The fill watchdog stops a fill that never reaches the fill-stop float",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "... and the pump stays off",
+      "passed": true
+    },
+    {
+      "check": "A new FILL press starts a new fill period",
+      "passed": true
+    },
+    {
+      "check": "The new period runs self-held",
+      "passed": true
+    },
+    {
+      "check": "The fill-stop float still ends a normal fill",
+      "passed": true
+    },
+    {
+      "check": "An unattended fill runs until the watchdog time",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "The fill watchdog stops a fill that never reaches the fill-stop float",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "... and the pump stays off",
+      "passed": true
+    },
+    {
+      "check": "A new FILL press starts a new fill period",
+      "passed": true
+    },
+    {
+      "check": "The new period runs self-held",
+      "passed": true
+    },
+    {
+      "check": "The fill-stop float still ends a normal fill",
+      "passed": true
+    },
+    {
+      "check": "An unattended fill runs until the watchdog time",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "The fill watchdog stops a fill that never reaches the fill-stop float",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "... and the pump stays off",
+      "passed": true
+    },
+    {
+      "check": "A new FILL press starts a new fill period",
+      "passed": true
+    },
+    {
+      "check": "The new period runs self-held",
+      "passed": true
+    },
+    {
+      "check": "The fill-stop float still ends a normal fill",
+      "passed": true
+    },
+    {
+      "check": "An unattended fill runs until the watchdog time",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "The fill watchdog stops a fill that never reaches the fill-stop float",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "... and the pump stays off",
+      "passed": true
+    },
+    {
+      "check": "A new FILL press starts a new fill period",
+      "passed": true
+    },
+    {
+      "check": "The new period runs self-held",
+      "passed": true
+    },
+    {
+      "check": "The fill-stop float still ends a normal fill",
+      "passed": true
+    },
+    {
+      "check": "An unattended fill runs until the watchdog time",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "The fill watchdog stops a fill that never reaches the fill-stop float",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "... and the pump stays off",
+      "passed": true
+    },
+    {
+      "check": "A new FILL press starts a new fill period",
+      "passed": true
+    },
+    {
+      "check": "The new period runs self-held",
+      "passed": true
+    },
+    {
+      "check": "The fill-stop float still ends a normal fill",
+      "passed": true
+    },
+    {
+      "check": "An unattended fill runs until the watchdog time",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "The fill watchdog stops a fill that never reaches the fill-stop float",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "... and the pump stays off",
+      "passed": true
+    },
+    {
+      "check": "A new FILL press starts a new fill period",
+      "passed": true
+    },
+    {
+      "check": "The new period runs self-held",
+      "passed": true
+    },
+    {
+      "check": "The fill-stop float still ends a normal fill",
+      "passed": true
+    },
+    {
+      "check": "An unattended fill runs until the watchdog time",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "The fill watchdog stops a fill that never reaches the fill-stop float",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "... and the pump stays off",
+      "passed": true
+    },
+    {
+      "check": "A new FILL press starts a new fill period",
+      "passed": true
+    },
+    {
+      "check": "The new period runs self-held",
+      "passed": true
+    },
+    {
+      "check": "The fill-stop float still ends a normal fill",
+      "passed": true
+    },
+    {
+      "check": "An unattended fill runs until the watchdog time",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "The fill watchdog stops a fill that never reaches the fill-stop float",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "... and the pump stays off",
+      "passed": true
+    },
+    {
+      "check": "A new FILL press starts a new fill period",
+      "passed": true
+    },
+    {
+      "check": "The new period runs self-held",
+      "passed": true
+    },
+    {
+      "check": "The fill-stop float still ends a normal fill",
+      "passed": true
+    },
+    {
+      "check": "An unattended fill runs until the watchdog time",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "The fill watchdog stops a fill that never reaches the fill-stop float",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "... and the pump stays off",
+      "passed": true
+    },
+    {
+      "check": "A new FILL press starts a new fill period",
+      "passed": true
+    },
+    {
+      "check": "The new period runs self-held",
+      "passed": true
+    },
+    {
+      "check": "The fill-stop float still ends a normal fill",
+      "passed": true
+    },
+    {
+      "check": "Holding FILL keeps the pump running past the watchdog (attended)",
+      "passed": true
+    },
+    {
+      "check": "Releasing FILL after the watchdog time stops the pump",
+      "passed": true
+    },
+    {
+      "check": "With the 25 min setting a normal fill is not cut short at 10 min",
+      "passed": true
+    },
+    {
+      "check": "A float trip while cutting stops the torch",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "A float trip while cutting opens the Rodent door input (feed hold)",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "A float trip while probing (no request) keeps the door input closed",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "The chain re-arms within 150 ms of the float returning",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "The torch then starts on the next request",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "A float trip while cutting stops the torch",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "A float trip while cutting opens the Rodent door input (feed hold)",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "A float trip while probing (no request) keeps the door input closed",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "The chain re-arms within 150 ms of the float returning",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "The torch then starts on the next request",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "A float trip while cutting stops the torch",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "A float trip while cutting opens the Rodent door input (feed hold)",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "A float trip while probing (no request) keeps the door input closed",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "The chain re-arms within 150 ms of the float returning",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "The torch then starts on the next request",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "A float trip while cutting stops the torch",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "A float trip while cutting opens the Rodent door input (feed hold)",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "A float trip while probing (no request) keeps the door input closed",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "The chain re-arms within 150 ms of the float returning",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "The torch then starts on the next request",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "A float trip while cutting stops the torch",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "A float trip while cutting opens the Rodent door input (feed hold)",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "A float trip while probing (no request) keeps the door input closed",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "The chain re-arms within 150 ms of the float returning",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "The torch then starts on the next request",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "A float trip while cutting stops the torch",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "A float trip while cutting opens the Rodent door input (feed hold)",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "A float trip while probing (no request) keeps the door input closed",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "The chain re-arms within 150 ms of the float returning",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "The torch then starts on the next request",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "A float trip while cutting stops the torch",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "A float trip while cutting opens the Rodent door input (feed hold)",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "A float trip while probing (no request) keeps the door input closed",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "The chain re-arms within 150 ms of the float returning",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "The torch then starts on the next request",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "A float trip while cutting stops the torch",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "A float trip while cutting opens the Rodent door input (feed hold)",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "A float trip while probing (no request) keeps the door input closed",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "The chain re-arms within 150 ms of the float returning",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "The torch then starts on the next request",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "A float trip while cutting stops the torch",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "A float trip while cutting opens the Rodent door input (feed hold)",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "A float trip while probing (no request) keeps the door input closed",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "The chain re-arms within 150 ms of the float returning",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "The torch then starts on the next request",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
     }
   ],
   "result": "PASS",
   "source_sha256": {
-    "output/controls-2026-09-27/verify_gm1_circuit.py": "9e5c1b1e5359b5c3e456a76dcb18f60cd8bf08c4ea783f81fa35932772a2405b",
-    "output/controls-2026-09-27/gm1_circuit.py": "2500af76a81232ba7367ac1aafa21982af7de5e27046f28feecbc1558a1a08ed",
+    "output/controls-2026-09-27/verify_gm1_circuit.py": "c9a3d2fc4d78bd296ffd0f4fd16cc3d5e0898b719cc36f3fefdf435254e4768d",
+    "output/controls-2026-09-27/gm1_circuit.py": "f66fb745b5ad4dc2f5946689eafb2fee924ed87147b1f8597667ace3a9f22f20",
     "output/design-finish-2026-09-26/controls/circuit.py": "a9370143297125a4f7a0da8843ba2ca8d9570003969337a2448bd8a327a4152b"
   },
   "artifact_sha256": {
-    "gm1-terminal-netlist.json": "4d4392b215fccdc9646279126ecff709f65e27d13ba1e53559a8f5f8e5d52a29",
-    "GM1-TERMINALS.md": "4a5af34ee755860a79159390a1d1ad0d1b3bb5e30eda6d69ca931fdeb99cafd7"
+    "gm1-terminal-netlist.json": "6b0ad0a05753b43be65859afb0144e68638e8f9d7989374b201d5c4744882221",
+    "GM1-TERMINALS.md": "aec0b348484bc179e795e5c6c8c909c5489675688c7d1b47fb78849ec294851a"
   },
-  "elapsed_s": 578.8
+  "elapsed_s": 872.9
 }

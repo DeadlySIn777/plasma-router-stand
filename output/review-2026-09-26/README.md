@@ -29,11 +29,30 @@ Four independent reviews covered controls, mechanical design and the plasma head
 
 On the Rodent's inputs, BTT's own schematic shows six isolated inputs, not five: E1-MAX, on GPIO39 or 37, is unused by grblHAL's map. Once RS485 is dropped, two spindle-header pins are also free. Together these cover all real-time signals.
 
+**Status, later on 27 September.** After the owner said "finish it", the one-piece bed line moved to [Rev K](../release-review/RevK-CAD/README.md), and the GM1 controls gained M9–M11. Between them they give design fixes for:
+
+- **Blocker 4 (plasma reach).** A 135 mm drop bracket, sized for the owner's torch: a PT31-style straight machine torch, 270 × 28 mm (photo of 27 Sep; seller's figures). The torch tip reaches Z845 at the bottom of Z.
+- **The cabinet.** A shorter drip lip, so the door opens; 30 entries on bonded gland plates; a filter fan; the VFD outside; the torch-start relay at the cutter.
+- **Water and coolant:**
+  - the router drain closes after its dwell;
+  - a drain screen;
+  - a fill watchdog;
+  - NBR seals;
+  - a manual drain;
+  - a suction line without a high point;
+  - a 32 mm refill air gap.
+- **The float trip.** It now stops a cut.
+- **The level-sensor guards.** They are handled by an operating rule, checked in CAD: with the torch low, plasma paths stay at X955 or less in the sensor band, since no sheet can lie over the sensors anyway. At the top of Z the torch clears them.
+
 Still open:
 
-- blocker 4 (plasma reach);
-- the cabinet, water, plasma-head and variants findings;
-- the minor findings.
+- the float switch's margin and side load: set at commissioning; a lever-actuated switch if it sticks;
+- the magnet preload offset;
+- sludge carry-over to the pickup, and the strainer clamped through its bowl;
+- the variants findings;
+- the other minor findings.
+
+Rev I, the six-panel line, has none of these fixes.
 
 ## Bottom line
 

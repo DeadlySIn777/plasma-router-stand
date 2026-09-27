@@ -2,17 +2,18 @@
 
 Plasma and router CNC table. Public working design for **800 mm X / 1000 mm Y / 100 mm Z nominal travel**.
 
-**Two working designs, owner's choice pending (26 September 2026).** Neither is a finished, fabrication-ready or operational machine. Two sessions developed the design in parallel on the same day, and they differ mainly in the router bed:
+**Two working designs, owner's choice pending (updated 27 September 2026).** Neither is a finished, fabrication-ready or operational machine. Two sessions developed the design in parallel, and they differ mainly in the router bed:
 
-| | **Rev J** (one-piece bed line) | **Rev I** (six-panel line) |
+| | **Rev K** (one-piece bed line) | **Rev I** (six-panel line) |
 |---|---|---|
 | Router bed | One waterproof module of about 63 kg (galvanized steel, aluminum T-slot, HDPE top, no MDF), held by six M10 screws and lifted out through the front on an overhead beam-and-trolley hoist. This is the requirement the owner gave in this session | Six 500 × 397 mm panels, four beams and separate spoilboards stored inside the frame; 52 primary release fasteners plus restraint and tool steps |
-| Water service | Rev H reservoir hatches, washout closure and drain reserves; the refill spout is moved clear of the module | Rev H service, plus a supported drain and flange, removable tail and parking cup, strainer carrier, corrected pump orientation and supported hoses |
-| Plasma head | Rev H Z-adapter transfer blank and braked-motor candidate; no head mechanism | Floating/breakaway head mechanism; its insert stays unbored until the torch is measured |
-| Controls | **BTT Rodent with grblHAL**, the owner's choice, reconfirmed on 26 Sep. [GM1 controls](output/controls-2026-09-27/README.md) (27 Sep): E-stop, mode-race and welded-relay fixes and the Rodent pin plan, simulated and not built | Kraken V1.1 terminal circuits and isolated head inputs; the GM1 controls replace its stop and start chain on the Rodent |
-| Checks | Static, nine motion poses, hoist path and water service: all pass | See its verification index |
+| Water service | Rev H hatches and washout, and Rev I's supported drain, strainer carrier and hoses. Rev K adds a drain screen, a manual reservoir drain, NBR seals, a suction line without a high point and a 32 mm refill air gap | Rev H service, plus a supported drain and flange, removable tail and parking cup, strainer carrier, corrected pump orientation and supported hoses |
+| Plasma head | Rev I's floating/breakaway head on a 135 mm drop bracket, with the owner's PT31-style torch (270 × 28 mm). The tip reaches the slats | Floating/breakaway head mechanism; its insert stays unbored until the torch is measured. Its torch cannot reach the slats (review blocker 4) |
+| Cabinet | Rev I's box with a shorter drip lip so the door opens, 30 bonded gland entries, a filter fan and the VFD outside | 500 × 400 × 200 box; the review found the door blocked by the drip lip, too few entries and too much heat |
+| Controls | **BTT Rodent with grblHAL**, the owner's choice, reconfirmed on 26 Sep. [GM1 controls](output/controls-2026-09-27/README.md) (27 Sep): E-stop, mode-race and welded-relay fixes and the Rodent pin plan, plus a router drain that closes, a fill watchdog and a float stop. Simulated, not built | Kraken V1.1 terminal circuits and isolated head inputs; the GM1 controls replace its stop and start chain on the Rodent |
+| Checks | Static (0 unresolved in all three states), 9 router poses, 12 plasma poses, the hoist path at three hook heights, and the water and cabinet checks: all pass | See its verification index |
 
-Rev J does not yet contain Rev I's head, plumbing, cabinet, structure or control-circuit work. Rev I has no one-piece bed and follows the Kraken. **Which line continues is the owner's decision**; the [26 September follow-up](output/followup-2026-09-26/README.md) lists what each would need.
+Rev K is the one-piece line completed after the owner's "finish it". It takes Rev J's bed and folds in Rev I's head, plumbing and cabinet, and it fixes the review's plasma-reach, cabinet, water and float findings. Rev I has none of these fixes and follows the Kraken. **Which line continues is the owner's decision**; the [26 September follow-up](output/followup-2026-09-26/README.md) lists what each would need.
 
 **Development variants (other session):** [small-machine RapidChange ATC, a full-sheet 4x8 machine, and repeatable removable table interfaces](variants/README.md) (22:15 UTC), then [retractable ATC mechanisms for both machines](variants/retractable-atc/README.md) (00:54 UTC, 27 Sep). The retractable ATC has a 200 mm slide, automatic pin release, a longer Z for the small machine and a side bay for the 4x8. These have their own CAD, controls model and checks. Their magazine and supplier interfaces and physical qualification remain open, and they do not replace or inherit the Rev I release status. **Controller conflict:** the retractable ATC drives its slide and shutter from the Kraken's spare onboard drivers (S5, S6). The Rodent's four onboard drivers are all used by X, Y, Y2 and Z, and grblHAL's Rodent map supports no fifth motor, so these mechanisms would need a different drive arrangement on the Rodent.
 
@@ -20,11 +21,12 @@ Rev J does not yet contain Rev I's head, plumbing, cabinet, structure or control
 
 ## Open the designs
 
-**Rev J, one-piece bed** (`build_revj.py`):
+**Rev K, one-piece bed, completed** (`build_revk.py`):
 
-- [CAD package: the bed module, changing beds, what was checked](output/release-review/RevJ-CAD/README.md)
-- [Router assembly STEP](output/release-review/RevJ-CAD/step/RevJ_ROUTER.step); [plasma layout with the module out](output/release-review/RevJ-CAD/step/RevJ_PLASMA_LAYOUT.step) (no invented plasma head); [bed module alone](output/release-review/RevJ-CAD/step/RevJ_BED_MODULE.step)
-- [Component schedule](output/release-review/RevJ-CAD/cutlist.csv); [what Rev J changes in the shopping list](outputs/reve-30510/actual-cost/REVJ-PROCUREMENT-DELTA.md)
+- [CAD package: plasma head and torch, water, cabinet, changing beds, what was checked](output/release-review/RevK-CAD/README.md)
+- [Router assembly STEP](output/release-review/RevK-CAD/step/RevK_ROUTER.step); [plasma assembly with the head and torch on the Z](output/release-review/RevK-CAD/step/RevK_PLASMA.step); [bed module alone](output/release-review/RevK-CAD/step/RevK_BED_MODULE.step)
+- [Component schedule](output/release-review/RevK-CAD/cutlist.csv); [what Rev K adds to the shopping list](outputs/reve-30510/actual-cost/REVK-PROCUREMENT-DELTA.md)
+- The bed module itself, the hoist and the 2 × 2 tube list are unchanged from [Rev J](output/release-review/RevJ-CAD/README.md) ([what Rev J changed in the shopping list](outputs/reve-30510/actual-cost/REVJ-PROCUREMENT-DELTA.md))
 - [Drive modules, receiving check](output/receiving/MOTION-MODULES.md): Y modules ordered; X and Z to be ordered Monday 28 Sep (please confirm)
 - [HGR20 guide rails (still to order): receiving check and Y-rail cut planner](output/receiving/HGR20-RAIL-KITS.md)
 - [26 Sep follow-up: owner decisions, procurement, open controls findings and what is left to finish](output/followup-2026-09-26/README.md)
@@ -50,17 +52,25 @@ Rev J does not yet contain Rev I's head, plumbing, cabinet, structure or control
 - [X/Y lead check and arrival measurements](output/design-completion-2026-09-26/CONTROL-SCALE-CHECK.md).
 - Rev H ([package](output/release-review/RevH-CAD/README.md), [completion report](output/design-completion-2026-09-26/README.md)) and Rev G ([package](output/release-review/RevG-CAD/README.md), [repair evidence](output/cad-repair-2026-09-25/README.md)) are earlier revisions.
 
-![GM1 Rev J router CAD](output/release-review/RevJ-CAD/previews/RevJ_ROUTER.png)
+![GM1 Rev K plasma CAD](output/release-review/RevK-CAD/previews/RevK_PLASMA.png)
 
 ![Rev I router CAD](output/release-review/RevI-CAD/previews/RevI_ROUTER.png)
 
-## Rev J: one-piece bed
+## Rev K: one-piece bed line
+
+**Rev K (27 September).** It adds three things to Rev J, below:
+
+- **Plasma head and torch.** Rev I's floating/breakaway head sits on a 135 mm drop bracket and carries the owner's torch: a PT31-style straight machine torch, 270 × 28 mm (seller's figures from the owner's photo). The tip reaches Z845 at the bottom of Z, 5 mm below the slats. The cutting area on the slats is 800 × 924 mm. Near the pan level sensors, plasma paths stay at X955 or less.
+- **Plumbing and cabinet from Rev I.** Rev K also adds a drain screen, a manual reservoir drain, NBR seals, a suction line without a high point and a 32 mm refill air gap.
+- **Cabinet fixes.** A shorter drip lip, so the door opens; 30 bonded gland entries; a filter fan; the VFD outside; the torch-start relay moved to the cutter.
+
+The GM1 controls add the matching logic (M9–M11). Details are in the [Rev K package](output/release-review/RevK-CAD/README.md).
 
 **The bed.** Nine cut-only 1197 mm 20100 profiles sit on a welded 2 × 2 steel frame, topped by two HDPE plates that the machine surfaces in place. Six seat pads and sealed M10 sleeves in the ledgers take the six drawdowns, and two pins locate the module. For plasma, it lifts 70 mm in place, so every part passes above the pan floats. It then travels 1.42 m forward out of the front window on the hoist. That path was checked with the sling modeled, at three hook heights, with the gantry parked at the rear. Rev G's storage racks and slat end reliefs are gone.
 
 **From Rev H:** two gasketed reservoir hatches with upright cover parking, a bolted washout flange and cover, and drain space reserves. It also takes a welded NPS 1/2 refill spout with a 30 mm air gap, a Z-adapter transfer blank and a braked Z-motor candidate envelope. Rev J moves the refill riser from Y1255 to Y1215.4, because the module's rear crossmember stands over the original spot. It also sets the module's end crossmembers and deck 15 mm rearward for clearance. Static, nine-pose motion, hoist-path and water-service checks all pass on the combined model.
 
-This design was first published on this branch as "Rev H" and renamed Rev J, so it does not share a name with the other session's Rev H. Rev I is the other session's next revision.
+Rev J was first published on this branch as "Rev H" and renamed Rev J, so it does not share a name with the other session's Rev H. Rev I is the other session's next revision.
 
 ## Rev I: six-panel bed line
 
@@ -78,17 +88,23 @@ The water system gains a supported drain and flange, a removable tail and parkin
 
 The selected X/Y catalog variants specify **10 mm lead**, meaning movement per screw revolution, not screw diameter. The selected SFU1605 Z has 5 mm lead. Verify the delivered modules before final calibration and adapter drilling.
 
-The 2 × 2 tube list is 30 blanks (29,472 mm / 96.69 ft net) for Rev I and 32 blanks (32,087 mm) for Rev J, using the 3.048 mm modeled wall. Actual scrap lengths, remaining wall and condition must be recorded before nesting. Neither mechanical cut list is a complete electrical BOM or a current delivered purchase total.
+The 2 × 2 tube list is 30 blanks (29,472 mm / 96.69 ft net) for Rev I and 32 blanks (32,087 mm) for Rev J and Rev K, using the 3.048 mm modeled wall. Actual scrap lengths, remaining wall and condition must be recorded before nesting. Neither mechanical cut list is a complete electrical BOM or a current delivered purchase total.
 
-Nominal CAD and path checks do not establish whole-machine stiffness, joint capacity, actual interface compatibility, operator access, physical retention or machining accuracy. See each line's evidence for its exact scope and limits. The **VIV ARC CUT-50** still needs exact version and interface information; an AG-60 listing does not identify the owner's actual torch geometry or starting circuitry.
+Nominal CAD and path checks do not establish whole-machine stiffness, joint capacity, actual interface compatibility, operator access, physical retention or machining accuracy. See each line's evidence for its exact scope and limits. The **VIV ARC CUT-50** still needs exact version and interface information. The owner's photo of 27 September gives the torch: a PT31-style straight machine torch, 270 × 28 mm (seller's figures; measure before boring the clamp).
 
 ## Evidence, history and cost
 
-Rev J's check records sit in its [package](output/release-review/RevJ-CAD/README.md#what-was-checked), and each matches its sources by hash. Rev I's [verification index](output/design-finish-2026-09-26/ACCEPTANCE.md) binds its assembly, pose, route, service, mechanism, circuit and export reports to their source files. These checks have explicit limits: nominal clear geometry does not establish physical rigidity, force thresholds, operator access, live electrical behavior or machining accuracy.
+Rev K's and Rev J's check records sit in their packages ([Rev K](output/release-review/RevK-CAD/README.md#what-was-checked), [Rev J](output/release-review/RevJ-CAD/README.md#what-was-checked)), and each matches its sources by hash. Rev I's [verification index](output/design-finish-2026-09-26/ACCEPTANCE.md) binds its assembly, pose, route, service, mechanism, circuit and export reports to their source files. These checks have explicit limits: nominal clear geometry does not establish physical rigidity, force thresholds, operator access, live electrical behavior or machining accuracy.
 
-The generators are [build_revj.py](output/release-review/RevE-ENGINEERING/build_revj.py) (bed in [bed_revj.py](output/release-review/RevE-ENGINEERING/bed_revj.py), water service in [water_revj.py](output/release-review/RevE-ENGINEERING/water_revj.py)) and [build_revi.py](output/release-review/RevE-ENGINEERING/build_revi.py). Shared Python sources keep their legacy directory name; the exports are in RevJ-CAD and RevI-CAD. Rev H, Rev G, older exports and the [29-finding audit](output/cad-reaudit-2026-09-25/README.md) are preserved as historical evidence and are not relabeled as current results.
+The generators are:
 
-The [actual-price audit](outputs/reve-30510/actual-cost/REAL-COST.md) follows Rev J: **$5,336.10** priced, with 51 required entries still unpriced ([Rev J procurement delta](outputs/reve-30510/actual-cost/REVJ-PROCUREMENT-DELTA.md)). It does not price Rev I's additions. It is a partial register, not a complete build total. The [earlier price workbook](outputs/reve-30510/CNC-plasma-RevE-budget.xlsx) has not been rebuilt and still shows Rev E quantities.
+- [build_revk.py](output/release-review/RevK-ENGINEERING/build_revk.py): its own folder; it builds on Rev J.
+- [build_revj.py](output/release-review/RevE-ENGINEERING/build_revj.py): bed in [bed_revj.py](output/release-review/RevE-ENGINEERING/bed_revj.py), water service in [water_revj.py](output/release-review/RevE-ENGINEERING/water_revj.py).
+- [build_revi.py](output/release-review/RevE-ENGINEERING/build_revi.py).
+
+Shared Python sources keep their legacy directory name; the exports are in RevK-CAD, RevJ-CAD and RevI-CAD. Rev H, Rev G, older exports and the [29-finding audit](output/cad-reaudit-2026-09-25/README.md) are preserved as historical evidence and are not relabeled as current results.
+
+The [actual-price audit](outputs/reve-30510/actual-cost/REAL-COST.md) follows Rev J: **$5,336.10** priced, with 51 required entries still unpriced ([Rev J procurement delta](outputs/reve-30510/actual-cost/REVJ-PROCUREMENT-DELTA.md)). Rev K's additions and the GM1 controls parts are listed, all unpriced, in the [Rev K procurement delta](outputs/reve-30510/actual-cost/REVK-PROCUREMENT-DELTA.md). The audit does not price Rev I's additions. It is a partial register, not a complete build total. The [earlier price workbook](outputs/reve-30510/CNC-plasma-RevE-budget.xlsx) has not been rebuilt and still shows Rev E quantities.
 
 Apart from the owner's drive-module order, no purchase, vendor message, firmware flash or machine operation is recorded. The two Y HMS40 modules were ordered on 26 September; X and Z are to follow on 28 September. The owner chose the BTT Rodent controller on 26 September and reconfirmed it that evening ("we're going to use the Rodent, not the Kraken"). The Kraken firmware in `RevE-ENGINEERING/controls/` and Rev I's Kraken circuits are the prototype and reference for the Rodent port.
 

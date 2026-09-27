@@ -10,14 +10,22 @@ It also found two major problems: a single welded relay contact can start a tool
 
 This package fixes all five. It applies to both bed lines: Rev J (one-piece hoisted bed) and Rev I (six panels in the footprint).
 
+**Later on 27 September** three more changes were added for Rev K ([RevK-CAD](../release-review/RevK-CAD/README.md)):
+
+- M9: the router-mode drain closes after its dwell.
+- M10: a fill watchdog.
+- M11: the torch float switch stops a cut.
+
+M9 and M10 close the review's water findings on the controls side. M11 closes its "a float trip triggers nothing" finding.
+
 **What it builds on.** It starts from the other session's Rev I relay circuit (`output/design-finish-2026-09-26/controls/circuit.py`). That file is imported read-only and left unchanged, and its hash is recorded.
 
-**What is kept.** Rev I's water logic is kept as is:
+**What is kept.** Rev I's water logic is kept, with three changes:
 
-- fill, drain and timers;
-- bed confirmation;
-- mode relays;
-- head interface.
+- Fill, drain and timers are kept, except that the router drain now closes after its dwell (M9) and the fill has a watchdog (M10).
+- Bed confirmation is kept.
+- The mode relays are kept.
+- The head interface is kept, with the float switch added to its loop (M11).
 
 **What is replaced:**
 
@@ -42,6 +50,9 @@ The owner's controller decision is built in: BTT Rodent with grblHAL.
 | M6 | **Tool outputs and no RS485.** Each tool output is three contacts in series, from three different relays. The VFD takes run only through its FWD terminal and speed only through isolated 0–10 V. With no RS485, no serial command can start the spindle. | Major: Modbus bypass |
 | M7 | **Door input to the Rodent.** A dry contact pair opens only when the Rodent requests a tool that is not armed. grblHAL treats that as a safety door: feed hold, spindle off. So when the hardware stops a tool mid-cut, the axes stop too. | Blocker 1 (part): permission input |
 | M8 | **Fill check.** K_READY's NC contact is added to the fill-arm pickup. If K_READY welds, FILL will not start in SETUP, which reveals the fault. | Major: welded relays |
+| M9 | **Router drain closes.** Latch relay K_DRAINED picks up when the 75 s drain dwell ends. Its NC contact drops the drain request, so the valve closes, and its NO contacts hold router-ready in place of the timer. It holds only while router mode is selected (fed through KM_R) and the pan stays empty (K_EMPTY_B, a second relay on the empty-float line). | Major: router mode leaves the drain open |
+| M10 | **Fill watchdog.** On-delay timer T_FILL runs while the fill is commanded; its NC contact is in the K_FILL self-hold. A fill that has not reached the fill-stop float in time stops and needs a new FILL press. Set it to 25 min, then to 1.5 × the timed fill. | Major: no fill time limit |
+| M11 | **Float stop.** The torch float switch is wired in series with the three head-presence switches in the U_HEAD loop. A float trip during a cut drops the permission (torch off) and opens the door input (feed hold). During probing the request is low, so nothing holds and the chain re-arms when the float returns. | Major: a float trip triggers nothing |
 
 ## How a stop works
 
@@ -103,6 +114,39 @@ Rev I's release-to-rearm rule is unchanged: a held request never re-arms after a
 
 In RUN, the Rodent's single output stage remains a single point of failure: the GPIO and the U_RUN PhotoMOS. If it shorts, the tool keeps running after the Rodent drops its request, exactly as if the Rodent commanded it. The E-stop still stops it.
 
+## Router drain, fill watchdog and float stop (M9–M11)
+
+**Router drain (M9).**
+
+- Entering router mode opens the pan drain, as in Rev I. The plasma water runs back to the reservoir through the new drain screen (Rev K).
+- Once the pan has been empty for 75 s the drain closes and the router is ready.
+- From then on, coolant and chips stay in the pan. Vacuum them out before switching to plasma: that step is on the Rev K pre-plasma checklist.
+- If liquid reaches the empty float, router-ready drops and the drain opens again, followed by a new 75 s dwell.
+- Leaving router mode clears the latch.
+- An E-stop does not clear it, so the router is ready again right after the reset.
+- The DRAIN override selector opens the drain while it is on, as before.
+
+```text
+KM_R 11-14 -> DR_REQ --K_DRAINED 11-12 (NC)--> D_R2 --> drain valve relay K_DRAIN
+T_DRAIN 15-18 --> D_TD --> RR (router ready)      T_DRAIN 15-18 --> D_SET --> K_DRAINED coil
+DR_REQ --K_DRAINED 11-14 --K_EMPTY_B 11-14--> K_DRAINED coil   (self-hold: router mode and pan empty)
+RE --K_DRAINED 21-24--> RR                                     (router ready without the timer)
+```
+
+**Fill watchdog (M10).** T_FILL is a Finder 80.01 on-delay timer, like Rev I's. It is powered with the fill command, and its NC contact is in the K_FILL self-hold. Set it to 25 min at first: the pump's 7 L/min open flow needs about 13–18 min for 80 L. Then time a real fill and set T_FILL to 1.5 times that. A fill stopped by the watchdog needs a new FILL press. Holding FILL keeps the pump running only while it is held.
+
+**Float stop (M11).** Wire the float switch (NC, opens on touch-off) in series with the three head-presence contacts. That loop drives both U_HEAD (the XH:5-6 head-safe input) and U_PROBE (the Rodent probe input).
+
+- **During probing:** the Rodent sees the trip on its probe pin. The request is low, so the door input stays closed. The chain re-arms within about 50 ms of the float returning, well before M3 at pierce height.
+- **During a cut:** a trip is a collision. The torch stops and grblHAL holds feed.
+
+**Cutter start at the cutter.** The review found HF-exposed torch-start leads entering the cabinet. The XPLASMA output stays a dry contact chain in the cabinet. At the cutter, it switches the coil of an interposing relay, K_TS, in a small shielded die-cast box bolted to the cutter:
+
+- K_TS's contact closes the cutter's torch trigger, so the trigger leads stay at the cutter.
+- The box has its own 24 V supply, fed from the cutter's mains after K1/K2, so K_TS cannot pull in after an E-stop.
+- Use a relay with reinforced coil-to-contact isolation and a flyback diode.
+- Bond the box to the cutter chassis. Run the cable to the cabinet shielded, through an EMC gland.
+
 ## Rodent wiring
 
 The pin plan and the board facts behind it are in [rodent-io.json](rodent-io.json). The facts come from:
@@ -152,6 +196,10 @@ All parts are unpriced; the cost register gets them when it is re-baselined to t
 | 1 | Omron G7SA-5A1B 24 VDC + P7SA-14F | K_RUN_ARM | Candidate |
 | 2 | Finder 40.52.9.024.5000 + 95.05 | K_RDY_R, K_RDY_P (gold contacts for the low-level status loops) | Candidate |
 | 1 | Finder 80.01.0.240.0000, set 3 s | T_BRAKE | As Rev I's timers |
+| 2 | Finder 40.52.9.024.0000 + 95.05 | K_DRAINED, K_EMPTY_B (M9) | As Rev I's water relays |
+| 1 | Finder 80.01.0.240.0000, set 25 min, then 1.5 × the timed fill | T_FILL (M10) | As Rev I's timers |
+| 1 | 24 V DC relay with reinforced coil-contact isolation, socket and flyback diode | K_TS, cutter start at the cutter | To select |
+| 1 | Die-cast aluminium box about 120 × 80 × 55, EMC gland, 24 V 10–15 W supply | K_TS box at the cutter | To select |
 | 1 | Schneider ZBE101 contact block | Second SETUP/RUN channel | Candidate |
 | 1 | NEMA23 stepper with 24 V power-off brake | Z motor | Already required; see the drive-module receiving check |
 | 1 | Isolated 0–10 V to 0–10 V signal conditioner | Spindle speed | To select |
@@ -170,7 +218,7 @@ The five remaining Finder water relays, the mode relays, the timers, the pump SS
 
 ## What the simulation shows
 
-All 984 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.json)). Unless stated otherwise, each ran with every combination of relay pickup (5, 10 and 20 ms) and dropout (5, 20 and 50 ms), in the way Rev I tested its own circuit.
+All 1173 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.json)). Unless stated otherwise, each ran with every combination of relay pickup (5, 10 and 20 ms) and dropout (5, 20 and 50 ms), in the way Rev I tested its own circuit.
 
 - **Rev I's own behaviors are kept.** These checks were repeated on the new graph:
   - fill arm, self-hold, stops and release-to-rearm;
@@ -210,6 +258,26 @@ All 984 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.js
   - None of these happens in the new circuit.
 - **The known single point:** a shorted run-request output stage keeps the tool running after the Rodent drops its request. The model confirms this. The E-stop stops it, and it cannot run a tool in SETUP.
 - **Rodent door input.** It is closed in SETUP and when armed. It opens when the Rodent requests a tool before the machine is ready, or after a permission loss. It closes again once the request drops.
+- **Router drain (M9).** Checked in all nine relay-timing combinations:
+  - The drain opens on entering router mode.
+  - It stays open through the 75 s dwell, then closes with the router ready.
+  - Liquid at the empty float reopens it, and a new dwell follows.
+  - An E-stop leaves it closed, and the router is ready right after the reset.
+  - The DRAIN override selector opens it while it is on.
+  - Unlocking the bed drops ready without opening it.
+  - Leaving router mode clears the latch. Returning with water in the pan opens the drain again.
+  - A welded K_DRAINED contact never lets the spindle run in plasma mode, or the torch start before its water sequence.
+  - A stuck latch keeps the drain closed, and the router never becomes ready with water in the pan, so the fault shows.
+- **Fill watchdog (M10).** Simulated with the watchdog at 20 s:
+  - An unattended fill stops at the watchdog time and stays off.
+  - A new FILL press starts a new period.
+  - The fill-stop float still ends a normal fill.
+  - Holding FILL keeps the pump running past the watchdog; releasing it stops the pump.
+  - With the 25 min panel setting, a normal fill is not cut short at 10 min.
+- **Float stop (M11).** Checked in all nine timing combinations:
+  - A float trip during a cut stops the torch and opens the door input, so grblHAL holds feed.
+  - During probing the door input stays closed, and the chain re-arms within 150 ms.
+  - The torch then starts on the next request.
 
 ## Limits
 
@@ -221,15 +289,16 @@ All 984 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.js
   - the interface board layout;
   - EMC.
 - **Water-contact glitches** shorter than a relay's dropout can still resume a held fill, as in Rev I.
-- **Two findings are not dealt with here:**
-  - the plasma torch cannot reach the work (blocker 4);
-  - the cabinet findings: heat, drip lip, gland count and EMC.
+- **The float stop (M11)** is simulated as the existing head-loop input. The float switch, its cam and the probe optocoupler are not simulated.
+- **The plasma reach and the cabinet findings** are mechanical. They are dealt with in [Rev K](../release-review/RevK-CAD/README.md):
+  - the drop bracket and torch;
+  - the drip lip, glands, fan and VFD placement.
 
 ## Needed from the owner
 
 1. **Rodent version.** V1.1 puts E1-MAX on GPIO39; V1.0 uses GPIO37.
 2. **VFD model.** Needed: its FWD/COM input type, its analog input range and impedance, and whether it has STO (safe torque off).
-3. **CUT-50 details.** The start circuit and the work-lead size, to choose the arc-OK current switch.
+3. **CUT-50 details.** The start circuit and the work-lead size, to choose the arc-OK current switch and K_TS. The owner's photo of 27 September settles the torch: a PT31-style straight machine torch, 270 mm × 28 mm (Rev K).
 
 ## Reproduce
 

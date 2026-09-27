@@ -40,6 +40,21 @@
       "id": "M8",
       "topic": "Fill check",
       "change": "K_READY NC in the fill-arm pickup. FILL cannot arm in SETUP if K_READY is welded, so that fault shows up as \"fill will not start\"."
+    },
+    {
+      "id": "M9",
+      "topic": "Router drain",
+      "change": "Rev I left the pan drain open for as long as router mode was selected, so chips, aluminium fines and mist coolant ran to the plasma reservoir. A latch relay K_DRAINED now picks up when the 75 s drain dwell ends (T_DRAIN output through diode D_SET). Its NC contact opens the drain request (the valve closes) and its NO contacts hold router ready in place of the timer. The latch holds only while router mode is selected (fed from KM_R) and the pan stays empty (K_EMPTY_B, a second relay on the empty-float coil line). Liquid reaching the empty float, or leaving router mode, drops the latch; the drain then reopens and a new dwell starts. An E-stop does not drop it."
+    },
+    {
+      "id": "M10",
+      "topic": "Fill watchdog",
+      "change": "On-delay timer T_FILL runs whenever the fill is commanded; its NC contact is in the K_FILL self-hold. A fill that has not reached the fill-stop float within the set time (commission it to 1.5 x the measured fill, 25 min until then) stops and needs a new FILL press. Holding FILL keeps the pump running only while it is held."
+    },
+    {
+      "id": "M11",
+      "topic": "Float stop",
+      "change": "The torch-head float switch is added in series with the three head-presence switches in the U_HEAD loop (XH:5-6). A float trip while the torch is requested therefore drops the permission (torch off) and opens the Rodent door input (feed hold). During probing the request is low, so the door input stays closed and the chain re-arms when the float returns. The same loop drives the Rodent probe input through a second optocoupler."
     }
   ],
   "base": "output/design-finish-2026-09-26/controls/circuit.py (Rev I), imported read-only",
@@ -61,6 +76,18 @@
       "tag": "W067",
       "a": "FILL:22",
       "b": "ARM_COIL"
+    },
+    {
+      "kind": "wire",
+      "tag": "W077",
+      "a": "K_FILL:14",
+      "b": "FILL_COIL"
+    },
+    {
+      "kind": "wire",
+      "tag": "W095",
+      "a": "T_DRAIN:18",
+      "b": "RR"
     },
     {
       "kind": "wire",
@@ -343,6 +370,12 @@
       "tag": "K_TORCH_RUN:11-14",
       "a": "XPLASMA:START1",
       "b": "XPLASMA:START2"
+    },
+    {
+      "kind": "diode",
+      "tag": "D_R",
+      "a": "DR_REQ",
+      "b": "DRAIN_COIL"
     }
   ],
   "devices": {
@@ -504,6 +537,40 @@
         "15-16"
       ]
     },
+    "K_DRAINED": {
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I water relays)",
+      "kind": "relay",
+      "no": [
+        "11-14",
+        "21-24"
+      ],
+      "nc": [
+        "11-12",
+        "21-22"
+      ]
+    },
+    "K_EMPTY_B": {
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket, coil in parallel with K_EMPTY",
+      "kind": "relay",
+      "no": [
+        "11-14",
+        "21-24"
+      ],
+      "nc": [
+        "11-12",
+        "21-22"
+      ]
+    },
+    "T_FILL": {
+      "part": "Finder 80.01.0.240.0000, function AI (on-delay), 25 min until the fill is timed",
+      "kind": "timer",
+      "no": [
+        "15-18"
+      ],
+      "nc": [
+        "15-16"
+      ]
+    },
     "Z_BRAKE": {
       "part": "Z motor power-off holding brake, 24 V coil (energized = released)",
       "kind": "brake",
@@ -579,6 +646,17 @@
     "K_RDY_P": [
       "11-14",
       "21-24"
+    ],
+    "K_DRAINED": [
+      "11-12",
+      "11-14",
+      "21-24"
+    ],
+    "K_EMPTY_B": [
+      "11-14"
+    ],
+    "T_FILL": [
+      "15-16"
     ]
   },
   "connections": [
@@ -1460,18 +1538,6 @@
     },
     {
       "kind": "wire",
-      "a": "K_FILL:14",
-      "b": "FILL_COIL",
-      "tag": "W077",
-      "control": "",
-      "closed_when_control_false": false,
-      "directed": false,
-      "physical_form": "",
-      "device": "",
-      "closed_condition": ""
-    },
-    {
-      "kind": "wire",
       "a": "FILL_COIL",
       "b": "K_FILL:A1",
       "tag": "W078",
@@ -1667,18 +1733,6 @@
       "a": "RE",
       "b": "T_DRAIN:15",
       "tag": "W094",
-      "control": "",
-      "closed_when_control_false": false,
-      "directed": false,
-      "physical_form": "",
-      "device": "",
-      "closed_condition": ""
-    },
-    {
-      "kind": "wire",
-      "a": "T_DRAIN:18",
-      "b": "RR",
-      "tag": "W095",
       "control": "",
       "closed_when_control_false": false,
       "directed": false,
@@ -2899,6 +2953,162 @@
       "closed_condition": ""
     },
     {
+      "kind": "wire",
+      "a": "DR_REQ",
+      "b": "K_DRAINED:11",
+      "tag": "G089",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DRAINED:14",
+      "b": "K_EMPTY_B:11",
+      "tag": "G090",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_EMPTY_B:14",
+      "b": "DRN_COIL",
+      "tag": "G091",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "EMPTY_COIL",
+      "b": "K_EMPTY_B:A1",
+      "tag": "G092",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_EMPTY_B:A2",
+      "b": "XW:2",
+      "tag": "G093",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DRN_COIL",
+      "b": "K_DRAINED:A1",
+      "tag": "G094",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DRAINED:A2",
+      "b": "XW:2",
+      "tag": "G095",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "RE",
+      "b": "K_DRAINED:21",
+      "tag": "G096",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DRAINED:24",
+      "b": "RR",
+      "tag": "G097",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "FILL_COIL",
+      "b": "T_FILL:A1",
+      "tag": "G098",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "T_FILL:A2",
+      "b": "XW:2",
+      "tag": "G099",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_FILL:14",
+      "b": "T_FILL:15",
+      "tag": "G100",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "T_FILL:16",
+      "b": "FILL_COIL",
+      "tag": "G101",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
       "kind": "contact",
       "a": "F_CONTROL:1",
       "b": "F_CONTROL:2",
@@ -3859,16 +4069,64 @@
       "closed_condition": "K_READY = false"
     },
     {
-      "kind": "diode",
-      "a": "DR_REQ",
-      "b": "DRAIN_COIL",
-      "tag": "D_R",
-      "control": "",
+      "kind": "contact",
+      "a": "K_DRAINED:11",
+      "b": "K_DRAINED:12",
+      "tag": "K_DRAINED:11-12",
+      "control": "K_DRAINED",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I water relays)",
+      "closed_condition": "K_DRAINED = false"
+    },
+    {
+      "kind": "contact",
+      "a": "K_DRAINED:11",
+      "b": "K_DRAINED:14",
+      "tag": "K_DRAINED:11-14",
+      "control": "K_DRAINED",
       "closed_when_control_false": false,
-      "directed": true,
-      "physical_form": "",
-      "device": "",
-      "closed_condition": ""
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I water relays)",
+      "closed_condition": "K_DRAINED = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_EMPTY_B:11",
+      "b": "K_EMPTY_B:14",
+      "tag": "K_EMPTY_B:11-14",
+      "control": "K_EMPTY_B",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket, coil in parallel with K_EMPTY",
+      "closed_condition": "K_EMPTY_B = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_DRAINED:21",
+      "b": "K_DRAINED:24",
+      "tag": "K_DRAINED:21-24",
+      "control": "K_DRAINED",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I water relays)",
+      "closed_condition": "K_DRAINED = true"
+    },
+    {
+      "kind": "contact",
+      "a": "T_FILL:15",
+      "b": "T_FILL:16",
+      "tag": "T_FILL:15-16",
+      "control": "T_FILL",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Finder 80.01.0.240.0000, function AI (on-delay), 25 min until the fill is timed",
+      "closed_condition": "T_FILL = false"
     },
     {
       "kind": "diode",
@@ -3903,6 +4161,42 @@
       "closed_when_control_false": false,
       "directed": true,
       "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "diode",
+      "a": "K_DRAINED:12",
+      "b": "DRAIN_COIL",
+      "tag": "D_R2",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": true,
+      "physical_form": "1N4007 in the terminal row",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "diode",
+      "a": "T_DRAIN:18",
+      "b": "RR",
+      "tag": "D_TD",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": true,
+      "physical_form": "1N4007 in the terminal row",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "diode",
+      "a": "T_DRAIN:18",
+      "b": "DRN_COIL",
+      "tag": "D_SET",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": true,
+      "physical_form": "1N4007 in the terminal row",
       "device": "",
       "closed_condition": ""
     },
@@ -4001,7 +4295,10 @@
     "K_RDY_R": "K_RDY_R:A1",
     "K_RDY_P": "K_RDY_P:A1",
     "K_VFD_RUN": "K_VFD_RUN:A1",
-    "K_TORCH_RUN": "K_TORCH_RUN:A1"
+    "K_TORCH_RUN": "K_TORCH_RUN:A1",
+    "K_EMPTY_B": "K_EMPTY_B:A1",
+    "K_DRAINED": "K_DRAINED:A1",
+    "T_FILL": "T_FILL:A1"
   },
   "contact_semantics": "closed_when_control_false is the model inversion only; physical_form is the purchased contact form. A contact whose control is an operator input (setup, router, estop_ch1 ...) is a switch block, not a relay."
 }

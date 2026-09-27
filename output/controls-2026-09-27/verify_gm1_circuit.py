@@ -82,6 +82,10 @@ def structure():
     check('Only the Rev I stop and start-chain contacts are removed', set(removed) == {
         'XW:21-22', 'XH:1-2', 'K_READY:11-14', 'K_READY:21-24', 'IF_RUN:13-14', 'K_REQUEST:11-12', 'K_REQUEST:21-24',
         'K_RUN_ARM:11-14', 'K_RUN_ARM:21-24', 'K_VFD_RUN:11-14', 'K_TORCH_RUN:11-14'}, removed=removed)
+    rerouted = sorted(f'{e.tag} {e.a}-{e.b}' if e.directed else f'{e.a}-{e.b}' for e in gm1.DROPPED
+                      if not e.control and (e.directed or {e.a, e.b} in ({'T_DRAIN:18', 'RR'}, {'K_FILL:14', 'FILL_COIL'})))
+    check('Water logic changes reroute only the drain request, the drain-timer output and the fill self-hold',
+          rerouted == ['D_R DR_REQ-DRAIN_COIL', 'K_FILL:14-FILL_COIL', 'T_DRAIN:18-RR'], rerouted=rerouted)
 
 
 def rev_i_behaviors():
@@ -467,6 +471,142 @@ def door_input():
     check('Armed and requested: door input closed, spindle runs', s.outputs()['door_ok'] and s.outputs()['router_run'])
 
 
+def router_drain():
+    """M9: the drain closes after the router dwell and reopens only when needed."""
+    rows = {}
+    for pick, drop in itertools.product(PICKUPS, DROPOUTS):
+        s = started(pick, drop)
+        s.run(1., setup=False, **ROUTER)
+        check('Router mode opens the pan drain', s.outputs()['drain'], pickup=pick, dropout=drop)
+        s.run(73.9)
+        o = s.outputs()
+        check('The drain stays open through the 75 s dwell', o['drain'] and not o['ready'], pickup=pick, dropout=drop)
+        s.run(.5)
+        o = s.outputs()
+        check('After the dwell the drain closes and the router is ready', not o['drain'] and o['ready'] and o['router_drained'],
+              pickup=pick, dropout=drop)
+        s.run(60.)
+        o = s.outputs()
+        check('The drain stays closed and ready holds while router mode stays selected', not o['drain'] and o['ready'])
+        s.run(.3, run_request=True)
+        check('The spindle runs with the drain closed', s.outputs()['router_run'] and not s.outputs()['drain'])
+        s.run(.3, run_request=False)
+        s.run(.3, empty=False)
+        o = s.outputs()
+        check('Liquid at the empty float drops router ready and reopens the drain', o['drain'] and not o['ready'] and not o['router_drained'],
+              pickup=pick, dropout=drop)
+        s.run(.3, empty=True)
+        check('The reopened drain waits for a new dwell', s.outputs()['drain'] and not s.outputs()['ready'])
+        s.run(75.2)
+        o = s.outputs()
+        check('After the new dwell the drain closes again with router ready', not o['drain'] and o['ready'], pickup=pick, dropout=drop)
+        rows[f'{pick}/{drop}'] = True
+    s = started()
+    s.run(76., setup=False, **ROUTER)
+    s.run(.3, estop_ch1=False, estop_ch2=False)
+    o = s.outputs()
+    check('An E-stop in router mode leaves the drain closed', not o['drain'] and not o['ready'] and o['router_drained'])
+    s.run(.3, estop_ch1=True, estop_ch2=True)
+    s.reset()
+    s.run(.5)
+    o = s.outputs()
+    check('After the reset the router is ready again without a new dwell', o['ready'] and not o['drain'])
+    s.run(.3, drain_override=True)
+    o = s.outputs()
+    check('DRAIN override opens the drain and holds ready off', o['drain'] and not o['ready'])
+    s.run(.3, drain_override=False)
+    o = s.outputs()
+    check('Releasing the override closes the drain and restores ready', not o['drain'] and o['ready'])
+    s.run(.3, bed_locked=False)
+    check('Unlocking the bed drops ready and keeps the drain closed', not s.outputs()['ready'] and not s.outputs()['drain'])
+    s.run(.3, bed_locked=True)
+    check('Relocking restores ready', s.outputs()['ready'])
+    s.run(.5, router=False, plasma=True, bed_locked=False, bed_clear=True)
+    o = s.outputs()
+    check('Leaving router mode drops the latch; plasma mode keeps the drain closed', not o['router_drained'] and not o['drain'])
+    s.run(12.4, minimum=True, empty=False)
+    check('Plasma mode then readies as before', s.outputs()['ready'])
+    s.run(.5, plasma=False, router=True, bed_locked=True, bed_clear=False, minimum=False)
+    check('Returning to router mode with water in the pan opens the drain again', s.outputs()['drain'] and not s.outputs()['ready'])
+    s.run(20., empty=True)
+    check('... and the dwell restarts once the pan is empty', s.outputs()['drain'] and not s.outputs()['ready'])
+    s.run(55.5)
+    check('... then the drain closes with router ready', not s.outputs()['drain'] and s.outputs()['ready'])
+    # A welded latch contact: the other faults stay visible or harmless.
+    s = ready('router')
+    s.weld('K_DRAINED:21-24', False)
+    s.run(.3, router=False)
+    s.run(.3, plasma=True, run_request=True, **{k: v for k, v in PLASMA.items() if k != 'plasma'})
+    o = s.outputs()
+    check('Welded K_DRAINED 21-24: the spindle cannot run in plasma mode', not o['router_run'])
+    held = False
+    for _ in range(int(11.5 / .005)):
+        held |= s.tick(.005)['torch_run']
+    check('Welded K_DRAINED 21-24: the torch still waits for the plasma water sequence', not held)
+    s = started()
+    s.weld('K_DRAINED:11-14', True)
+    s.run(80., setup=False, **dict(ROUTER, empty=False))
+    o = s.outputs()
+    check('Stuck K_DRAINED: the drain cannot open, and the router never becomes ready with water in the pan (fault shows)',
+          not o['drain'] and not o['ready'])
+    return {'delay_combinations': len(rows), 'drain_dwell_s': 75,
+            'behaviour': 'Drain open on entering router mode until the pan has been empty for 75 s, then closed for as long as router '
+                         'mode stays selected and the pan stays empty. An E-stop keeps it closed; DRAIN override opens it while held.'}
+
+
+def fill_watchdog():
+    """M10: an unattended fill stops at T_FILL. Simulated with T_FILL = 20 s; the panel setting is 1.5 x the timed fill."""
+    t_fill = 20.
+    for pick, drop in itertools.product(PICKUPS, DROPOUTS):
+        s = filling(pick, drop, t_fill=t_fill)
+        s.run(.15, fill_pressed=True)
+        s.run(.15, fill_pressed=False)
+        s.run(t_fill - .6)
+        check('An unattended fill runs until the watchdog time', s.outputs()['pump'], pickup=pick, dropout=drop)
+        s.run(.6)
+        o = s.outputs()
+        check('The fill watchdog stops a fill that never reaches the fill-stop float', not o['pump'] and not o['fill'],
+              pickup=pick, dropout=drop)
+        s.run(2.)
+        check('... and the pump stays off', not s.outputs()['pump'])
+        s.run(.15, fill_pressed=True)
+        check('A new FILL press starts a new fill period', s.outputs()['pump'])
+        s.run(.15, fill_pressed=False)
+        s.run(5.)
+        check('The new period runs self-held', s.outputs()['pump'])
+        s.run(.15, fill_stop_healthy=False)
+        check('The fill-stop float still ends a normal fill', not s.outputs()['pump'])
+    s = filling(t_fill=t_fill)
+    s.run(t_fill + 5., fill_pressed=True)
+    check('Holding FILL keeps the pump running past the watchdog (attended)', s.outputs()['pump'])
+    s.run(.3, fill_pressed=False)
+    check('Releasing FILL after the watchdog time stops the pump', not s.outputs()['pump'])
+    s = filling()
+    s.run(.15, fill_pressed=True)
+    s.run(.15, fill_pressed=False)
+    s.run(600.)
+    check('With the 25 min setting a normal fill is not cut short at 10 min', s.outputs()['pump'])
+    return {'simulated_setting_s': t_fill, 'panel_setting': '25 min until the first fill is timed; then 1.5 x the measured fill time',
+            'pump_open_flow_l_min': 7, 'expected_fill_80_l_min': [13, 18]}
+
+
+def float_stop():
+    """M11: the float switch in the head loop (modeled as the breakaway_seated input)."""
+    for pick, drop in itertools.product(PICKUPS, DROPOUTS):
+        s = running('plasma', pick, drop)
+        s.run(.1, breakaway_seated=False)
+        o = s.outputs()
+        check('A float trip while cutting stops the torch', not o['torch_run'], pickup=pick, dropout=drop)
+        check('A float trip while cutting opens the Rodent door input (feed hold)', not o['door_ok'], pickup=pick, dropout=drop)
+        s = ready('plasma', pick, drop)
+        s.run(.2, breakaway_seated=False)
+        check('A float trip while probing (no request) keeps the door input closed', s.outputs()['door_ok'], pickup=pick, dropout=drop)
+        s.run(.15, breakaway_seated=True)
+        check('The chain re-arms within 150 ms of the float returning', s.outputs()['armed'], pickup=pick, dropout=drop)
+        s.run(.3, run_request=True)
+        check('The torch then starts on the next request', s.outputs()['torch_run'], pickup=pick, dropout=drop)
+
+
 def main():
     start = time.monotonic()
     gm1.write_netlist(OUT)
@@ -482,6 +622,11 @@ def main():
     report['rev_i_welded_contact_cases'] = rev_i_weld_cases()
     print('welds', report['welded_contacts']['weld_cases'], report['rev_i_welded_contact_cases'], flush=True)
     door_input()
+    report['router_drain'] = router_drain()
+    print('router drain', len(CHECKS), flush=True)
+    report['fill_watchdog'] = fill_watchdog()
+    float_stop()
+    print('watchdog and float', len(CHECKS), flush=True)
     report['simulation_assumptions'] = {
         'relay_pickup_s': list(PICKUPS), 'relay_dropout_s': list(DROPOUTS), 'contactor_pickup_dropout_s': [list(c) for c in CONTACTOR_TIMING],
         'safety_relay_on_s': .050, 'safety_relay_off_s': .020, 'reset_min_press_s': .030, 'timer_recovery_s': .100,
@@ -496,6 +641,7 @@ def main():
         'No performance level or category is claimed. The run request still has one output stage (the Rodent pin and its PhotoMOS); '
         'if that stage shorts, the tool keeps running after the Rodent drops the request, and only the E-stop stops it.',
         'Water-contact glitches shorter than a relay dropout can still resume a held fill, as in Rev I.',
+        'The float stop (M11) is modeled as the existing head-loop input; the float switch itself, its cam and the probe optocoupler are not simulated.',
         'Mains wiring, contactor and brake sizing, VFD and cutter interfaces, and EMC are specified in the README, not simulated.']
     report['passed_checks'] = len(CHECKS)
     report['checks'] = CHECKS
