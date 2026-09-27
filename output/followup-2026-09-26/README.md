@@ -4,6 +4,12 @@
 
 ## What changed in this follow-up
 
+- **Frame fill holes moved (Rev L, 27 September).** The owner asked "are all my holes aligned so the sand fills the rails?" and is thinking of epoxy sand.
+  - Each of the 18 frame tubes is its own sealed compartment with one fill hole; nothing connects them. Rev K's holes were placed for access. Even a runny mix would fill the top rails and front cross tubes only about a quarter full, and the legs about three-quarters.
+  - Rev L moves each hole to its tube's high end (`ballast_revl.py`). By the model's estimate, epoxy sand fills every tube over 93 % in two pours with the frame tilted 15°. Dry sand fills over 91 % with each tube stood near vertical.
+  - The holes are Ø30, drilled with a step bit.
+  - The rebuilt Rev L package and all its checks pass with the new holes. The procedure is in the [build order](../release-review/RevL-CAD/BUILD-ORDER.md#6-filling-the-frame).
+  - **Enclosure:** the owner looked at a plastic box of about 460 × 320 × 160 mm. It is too small for the panel and the gland plates, and it does not shield. The design needs a steel box of at least 500 × 400 × 200 mm, like the VEVOR 20 × 16 × 8 in in the register.
 - **Parts on the way (owner, 27 September).** The plasma cutter and the torch are in hand. All the drive modules are ordered, the Z slide with a 300 mm stroke. The only parts still to wait for are the extra rails (the HGR20 guide kits) and the bed extrusion. [BUILD-ORDER.md](../release-review/RevL-CAD/BUILD-ORDER.md) sorts the build by what each step waits for:
   - the frame, water pan, cabinet frame, plasma head and gantry parts can start now;
   - the rails gate the gantry and every powered move;

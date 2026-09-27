@@ -61,6 +61,14 @@ Rev L is Rev K with a 300 mm Z slide and a RapidChange-type tool changer ("the d
 
 About 6 kg of steel and aluminum in all; the dock with its bought parts is about 10.6 kg, with 3.3 kg allowed for the magazine and cutters.
 
+## Frame fill
+
+Rev L moves the frame's 18 fill holes to each tube's high end so every tube can be filled full ([build order, section 6](../../../output/release-review/RevL-CAD/BUILD-ORDER.md#6-filling-the-frame)). The weld bungs and M20 plugs stay 18 of each. The frame tubes and the two ported top-rail end caps (SAND_ENDCAP_2IN_PORTED) appear in the Rev L new-parts cut list only because their holes moved; their stock is unchanged.
+
+Fill material is not priced:
+- **Epoxy sand** (the owner is considering it): about 12–15 L of slow, low-viscosity epoxy and fine dry sand, about 36 L of fill in all. If the threaded plugs are left out, 18 push-in hole plugs for 30 mm (1-3/16 in) holes.
+- **Dry sand:** about 36 L.
+
 ## How to use this
 
 The [build order](../../../output/release-review/RevL-CAD/BUILD-ORDER.md) says which of these parts gate which build steps.

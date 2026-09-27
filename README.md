@@ -76,6 +76,7 @@ The owner chose the one-piece line on 27 September. The machine goes in a contai
 - **The dock rides on the bed module.** Two MGN12 rails on the module's T-slot strips carry a U-shaped carrier with the magazine, and a worm gearmotor retracts it 200 mm behind the Z body when not in use. It lifts out with the bed for plasma, so nothing extra comes off the machine and the plasma never sees it.
 - **One rule for tool changes:** the Z slide's lower end is below the magazine top, so the spindle reaches the pockets from the rear stop, never over the magazine from the front.
 - **Controls M12–M13:** spindle reverse (RapidChange unloads in reverse) and the dock drive with its interlocks.
+- **Frame fill holes.** Each frame tube's fill hole moves to the tube's high end, so the frame can be filled full with epoxy sand or dry sand ([build order: filling the frame](output/release-review/RevL-CAD/BUILD-ORDER.md#6-filling-the-frame)).
 
 Details are in the [Rev L package](output/release-review/RevL-CAD/README.md).
 

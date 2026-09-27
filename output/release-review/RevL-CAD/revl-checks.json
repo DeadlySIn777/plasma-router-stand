@@ -1,5 +1,5 @@
 {
-  "scope": "Check GM1 Rev L from fresh source CAD: the 300 mm Z, the dock on the bed module, and the bed lift.\n\nRouter: the eight X/Y/Z travel corners (Z 0 and 300) and the centre, dock parked.\nPlasma: the same nine poses with the module (and dock) out and Rev K's head and torch on the\nZ adapter, plus Rev K's three plasma-only poses (the top-of-Z one now at Z 300).\nDock travel: the carrier at 0..200 mm in 20 mm steps with the gantry at the rear stop, the head\nat X975 and Z fully up (the pose the dock moves in).\nTool change: dock deployed, spindle axis on the pocket line (Y1100) at X345, X575 and X805:\n  - Z fully up (300) and 5 mm above the magazine allocation (176): must clear;\n  - nut at the magazine support plane (Z 90): the spindle may only meet the magazine allocation,\n    the saddles and the stored-cutter allocation (the supplier's pocket interface); nothing else.\nForbidden approach: with the dock deployed, the Z body's lower end block cannot pass over the\nmagazine. A pose with the spindle in front of the magazine must clash; the tool-change sequence\ntherefore reaches the pockets from the rear stop.\nStock allowance: 50 mm over the HDPE must be clear of the deployed dock.\nHoist: Rev J's sampled module-and-sling path with the dock deployed on the module (heavier, centre\nof mass further back), head X575, Z fully up, at three hook heights, run 100 mm further forward.\nThis is a sampled static interference check, not a motion, stiffness or cut test.",
+  "scope": "Check GM1 Rev L from fresh source CAD: the 300 mm Z, the dock on the bed module, and the bed lift.\n\nRouter: the eight X/Y/Z travel corners (Z 0 and 300) and the centre, dock parked.\nPlasma: the same nine poses with the module (and dock) out and Rev K's head and torch on the\nZ adapter, plus Rev K's three plasma-only poses (the top-of-Z one now at Z 300).\nDock travel: the carrier at 0..200 mm in 20 mm steps with the gantry at the rear stop, the head\nat X975 and Z fully up (the pose the dock moves in).\nTool change: dock deployed, spindle axis on the pocket line (Y1100) at X345, X575 and X805:\n  - Z fully up (300) and 5 mm above the magazine allocation (176): must clear;\n  - nut at the magazine support plane (Z 90): the spindle may only meet the magazine allocation,\n    the saddles and the stored-cutter allocation (the supplier's pocket interface); nothing else.\nForbidden approach: with the dock deployed, the Z body's lower end block cannot pass over the\nmagazine. A pose with the spindle in front of the magazine must clash; the tool-change sequence\ntherefore reaches the pockets from the rear stop.\nStock allowance: 50 mm over the HDPE must be clear of the deployed dock.\nHoist: Rev J's sampled module-and-sling path with the dock deployed on the module (heavier, centre\nof mass further back), head X575, Z fully up, at three hook heights, run 100 mm further forward.\nFrame fill: every pose above carries the moved fill ports (ballast_revl.py). One port per frame tube,\nnone facing down in its fill attitude, and each tube at least 90 % full in that attitude by the sampled\nestimate, for epoxy sand (frame tilted 15 degrees) and for dry sand (tube near vertical).\nThis is a sampled static interference check, not a motion, stiffness or cut test.",
   "revision": "GM1 Rev L working design",
   "status": "PASS",
   "rev_k_fixed_part_count": 929,
@@ -12,7 +12,10 @@
     "the Z body cannot pass over the deployed magazine (forbidden approach clashes)": true,
     "deployed dock clear of a 50 mm stock and clamp allowance": true,
     "RapidChange 90 mm: spindle nut at full Z at least 90 mm above the magazine plane": true,
-    "hoist path clear at every hook height with the dock deployed": true
+    "hoist path clear at every hook height with the dock deployed": true,
+    "frame fill: one port per frame tube": true,
+    "frame fill: no port faces down in its fill attitude": true,
+    "frame fill: every tube at least 90 % full, epoxy (15 degree tilt) and dry sand (near vertical)": true
   },
   "router_poses": [
     {
@@ -786,6 +789,18 @@
               "gap_mm": 18.8
             },
             {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "SAND_BUNG_2",
+              "gap_mm": 21.6
+            },
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "SAND_PLUG_2",
+              "gap_mm": 22.6
+            },
+            {
               "moving": "MOD_LUG_R_2",
               "kind": "module",
               "obstacle": "FB_REAR",
@@ -802,18 +817,6 @@
               "kind": "module",
               "obstacle": "Y_SHOE_R",
               "gap_mm": 23.15
-            },
-            {
-              "moving": "MOD_STRIP_5",
-              "kind": "module",
-              "obstacle": "ZBX80_BASE",
-              "gap_mm": 29.2
-            },
-            {
-              "moving": "MOD_STRIP_5",
-              "kind": "module",
-              "obstacle": "ZBX80_END_BOTTOM",
-              "gap_mm": 29.2
             }
           ]
         }
@@ -936,6 +939,18 @@
               "gap_mm": 18.8
             },
             {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "SAND_BUNG_2",
+              "gap_mm": 21.6
+            },
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "SAND_PLUG_2",
+              "gap_mm": 22.6
+            },
+            {
               "moving": "MOD_LUG_R_2",
               "kind": "module",
               "obstacle": "FB_REAR",
@@ -952,18 +967,6 @@
               "kind": "module",
               "obstacle": "Y_SHOE_R",
               "gap_mm": 23.15
-            },
-            {
-              "moving": "MOD_STRIP_5",
-              "kind": "module",
-              "obstacle": "ZBX80_BASE",
-              "gap_mm": 29.2
-            },
-            {
-              "moving": "MOD_STRIP_5",
-              "kind": "module",
-              "obstacle": "ZBX80_END_BOTTOM",
-              "gap_mm": 29.2
             }
           ]
         }
@@ -1111,22 +1114,22 @@
               "gap_mm": 18.8
             },
             {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "SAND_BUNG_2",
+              "gap_mm": 21.6
+            },
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "SAND_PLUG_2",
+              "gap_mm": 22.6
+            },
+            {
               "moving": "MOD_LUG_R_2",
               "kind": "module",
               "obstacle": "FB_REAR",
               "gap_mm": 23.0
-            },
-            {
-              "moving": "MOD_XM_END_4_L",
-              "kind": "module",
-              "obstacle": "Y_SHOE_L",
-              "gap_mm": 23.15
-            },
-            {
-              "moving": "MOD_XM_END_4_R",
-              "kind": "module",
-              "obstacle": "Y_SHOE_R",
-              "gap_mm": 23.15
             }
           ]
         }
@@ -1142,12 +1145,747 @@
       "result": "PASS SAMPLED PATH"
     }
   ],
+  "frame_fill": {
+    "ports": [
+      {
+        "tube": "MF_LEG_1_1",
+        "carrier": "MF_LEG_1_1",
+        "where": "outer face, 35 mm below the top",
+        "outer_face_point_mm": [
+          0.0,
+          25.4,
+          965.0
+        ],
+        "outward_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "group": "leg",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "upright"
+      },
+      {
+        "tube": "MF_LEG_1_2",
+        "carrier": "MF_LEG_1_2",
+        "where": "rear face, 35 mm below the top",
+        "outer_face_point_mm": [
+          25.4,
+          750.4,
+          965.0
+        ],
+        "outward_normal": [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        "group": "leg",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "upright"
+      },
+      {
+        "tube": "MF_LEG_1_3",
+        "carrier": "MF_LEG_1_3",
+        "where": "rear face, 35 mm below the top",
+        "outer_face_point_mm": [
+          25.4,
+          1450.0,
+          965.0
+        ],
+        "outward_normal": [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        "group": "leg",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "upright"
+      },
+      {
+        "tube": "MF_LEG_2_1",
+        "carrier": "MF_LEG_2_1",
+        "where": "outer face, 35 mm below the top",
+        "outer_face_point_mm": [
+          1150.0,
+          25.4,
+          965.0
+        ],
+        "outward_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "group": "leg",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "upright"
+      },
+      {
+        "tube": "MF_LEG_2_2",
+        "carrier": "MF_LEG_2_2",
+        "where": "rear face, 35 mm below the top",
+        "outer_face_point_mm": [
+          1124.6,
+          750.4,
+          965.0
+        ],
+        "outward_normal": [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        "group": "leg",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "upright"
+      },
+      {
+        "tube": "MF_LEG_2_3",
+        "carrier": "MF_LEG_2_3",
+        "where": "rear face, 35 mm below the top",
+        "outer_face_point_mm": [
+          1124.6,
+          1450.0,
+          965.0
+        ],
+        "outward_normal": [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        "group": "leg",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "upright"
+      },
+      {
+        "tube": "MF_TOP_Y_1",
+        "carrier": "SAND_ENDCAP_TOP_L_REAR",
+        "where": "rear end cap",
+        "outer_face_point_mm": [
+          25.4,
+          1453.048,
+          1024.6
+        ],
+        "outward_normal": [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        "group": "y_tube",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "on_front_end"
+      },
+      {
+        "tube": "MF_TOP_Y_2",
+        "carrier": "SAND_ENDCAP_TOP_R_REAR",
+        "where": "rear end cap",
+        "outer_face_point_mm": [
+          1124.6,
+          1453.048,
+          1024.6
+        ],
+        "outward_normal": [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        "group": "y_tube",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "on_front_end"
+      },
+      {
+        "tube": "MF_LOWER_SIDE_1_1",
+        "carrier": "MF_LOWER_SIDE_1_1",
+        "where": "top face, 40 mm from the rear end",
+        "outer_face_point_mm": [
+          25.4,
+          659.6,
+          280.8
+        ],
+        "outward_normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "group": "y_tube",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "on_front_end"
+      },
+      {
+        "tube": "MF_LOWER_SIDE_1_2",
+        "carrier": "MF_LOWER_SIDE_1_2",
+        "where": "top face, 40 mm from the rear end",
+        "outer_face_point_mm": [
+          25.4,
+          1359.2,
+          280.8
+        ],
+        "outward_normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "group": "y_tube",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "on_front_end"
+      },
+      {
+        "tube": "MF_LOWER_SIDE_2_1",
+        "carrier": "MF_LOWER_SIDE_2_1",
+        "where": "top face, 40 mm from the rear end",
+        "outer_face_point_mm": [
+          1124.6,
+          659.6,
+          280.8
+        ],
+        "outward_normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "group": "y_tube",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "on_front_end"
+      },
+      {
+        "tube": "MF_LOWER_SIDE_2_2",
+        "carrier": "MF_LOWER_SIDE_2_2",
+        "where": "top face, 40 mm from the rear end",
+        "outer_face_point_mm": [
+          1124.6,
+          1359.2,
+          280.8
+        ],
+        "outward_normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "group": "y_tube",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "on_front_end"
+      },
+      {
+        "tube": "MF_RECEIVER_LEDGER_1",
+        "carrier": "MF_RECEIVER_LEDGER_1",
+        "where": "top face at Y1370, unchanged",
+        "outer_face_point_mm": [
+          76.2,
+          1370.0,
+          840.0
+        ],
+        "outward_normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "group": "y_tube",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "on_front_end"
+      },
+      {
+        "tube": "MF_RECEIVER_LEDGER_2",
+        "carrier": "MF_RECEIVER_LEDGER_2",
+        "where": "top face at Y1370, unchanged",
+        "outer_face_point_mm": [
+          1073.8,
+          1370.0,
+          840.0
+        ],
+        "outward_normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "group": "y_tube",
+        "epoxy_stage": "rear_up",
+        "dry_attitude": "on_front_end"
+      },
+      {
+        "tube": "MF_END_FRONT_LOW",
+        "carrier": "MF_END_FRONT_LOW",
+        "where": "front face, right end",
+        "outer_face_point_mm": [
+          1069.2,
+          0.0,
+          75.4
+        ],
+        "outward_normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "group": "x_tube",
+        "epoxy_stage": "right_up",
+        "dry_attitude": "on_left_side"
+      },
+      {
+        "tube": "MF_END_FRONT_UPPER",
+        "carrier": "MF_END_FRONT_UPPER",
+        "where": "top face, right end",
+        "outer_face_point_mm": [
+          1069.2,
+          25.4,
+          151.6
+        ],
+        "outward_normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "group": "x_tube",
+        "epoxy_stage": "right_up",
+        "dry_attitude": "on_left_side"
+      },
+      {
+        "tube": "MF_END_REAR_LOW",
+        "carrier": "MF_END_REAR_LOW",
+        "where": "top face, right end",
+        "outer_face_point_mm": [
+          1069.2,
+          1424.6,
+          280.8
+        ],
+        "outward_normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "group": "x_tube",
+        "epoxy_stage": "right_up",
+        "dry_attitude": "on_left_side"
+      },
+      {
+        "tube": "MF_END_REAR_UPPER",
+        "carrier": "MF_END_REAR_UPPER",
+        "where": "top face, inboard of the right ledger",
+        "outer_face_point_mm": [
+          1020.0,
+          1424.6,
+          730.0
+        ],
+        "outward_normal": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "group": "x_tube",
+        "epoxy_stage": "right_up",
+        "dry_attitude": "on_left_side"
+      }
+    ],
+    "restored_old_holes": [
+      {
+        "tube": "MF_LEG_1_1",
+        "old_port_mm": [
+          0.0,
+          25.4,
+          800.0
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_LEG_1_2",
+        "old_port_mm": [
+          0.0,
+          725.0,
+          800.0
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_LEG_1_3",
+        "old_port_mm": [
+          0.0,
+          1424.6,
+          800.0
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_LEG_2_1",
+        "old_port_mm": [
+          1150.0,
+          25.4,
+          800.0
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_LEG_2_2",
+        "old_port_mm": [
+          1150.0,
+          725.0,
+          800.0
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_LEG_2_3",
+        "old_port_mm": [
+          1150.0,
+          1424.6,
+          800.0
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_TOP_Y_1",
+        "old_port_mm": [
+          0.0,
+          1250.0,
+          1024.6
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_LOWER_SIDE_1_1",
+        "old_port_mm": [
+          25.4,
+          375.2,
+          280.8
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_LOWER_SIDE_1_2",
+        "old_port_mm": [
+          25.4,
+          1074.8,
+          280.8
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_TOP_Y_2",
+        "old_port_mm": [
+          1150.0,
+          1250.0,
+          1024.6
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_LOWER_SIDE_2_1",
+        "old_port_mm": [
+          1124.6,
+          375.2,
+          280.8
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_LOWER_SIDE_2_2",
+        "old_port_mm": [
+          1124.6,
+          1074.8,
+          280.8
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_END_FRONT_LOW",
+        "old_port_mm": [
+          575.0,
+          0.0,
+          75.4
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_END_REAR_LOW",
+        "old_port_mm": [
+          575.0,
+          1424.6,
+          280.8
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_END_FRONT_UPPER",
+        "old_port_mm": [
+          575.0,
+          0.0,
+          126.2
+        ],
+        "wall_restored_mm3": 2154.5
+      },
+      {
+        "tube": "MF_END_REAR_UPPER",
+        "old_port_mm": [
+          575.0,
+          1424.6,
+          730.0
+        ],
+        "wall_restored_mm3": 2154.5
+      }
+    ],
+    "unchanged_ports": [
+      "MF_RECEIVER_LEDGER_1",
+      "MF_RECEIVER_LEDGER_2"
+    ],
+    "tilt_deg": 15.0,
+    "bore_radius_mm": 9.25,
+    "estimates": [
+      {
+        "tube": "MF_LEG_1_1",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.954
+        },
+        "dry_sand": {
+          "attitude": "upright",
+          "port_faces_down": false,
+          "filled_fraction": 0.956
+        },
+        "old_port_frame_level_liquid": 0.781
+      },
+      {
+        "tube": "MF_LEG_1_2",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.961
+        },
+        "dry_sand": {
+          "attitude": "upright",
+          "port_faces_down": false,
+          "filled_fraction": 0.956
+        },
+        "old_port_frame_level_liquid": 0.781
+      },
+      {
+        "tube": "MF_LEG_1_3",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.961
+        },
+        "dry_sand": {
+          "attitude": "upright",
+          "port_faces_down": false,
+          "filled_fraction": 0.956
+        },
+        "old_port_frame_level_liquid": 0.781
+      },
+      {
+        "tube": "MF_LEG_2_1",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.954
+        },
+        "dry_sand": {
+          "attitude": "upright",
+          "port_faces_down": false,
+          "filled_fraction": 0.956
+        },
+        "old_port_frame_level_liquid": 0.781
+      },
+      {
+        "tube": "MF_LEG_2_2",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.961
+        },
+        "dry_sand": {
+          "attitude": "upright",
+          "port_faces_down": false,
+          "filled_fraction": 0.956
+        },
+        "old_port_frame_level_liquid": 0.781
+      },
+      {
+        "tube": "MF_LEG_2_3",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.961
+        },
+        "dry_sand": {
+          "attitude": "upright",
+          "port_faces_down": false,
+          "filled_fraction": 0.956
+        },
+        "old_port_frame_level_liquid": 0.781
+      },
+      {
+        "tube": "MF_TOP_Y_1",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.971
+        },
+        "dry_sand": {
+          "attitude": "on_front_end",
+          "port_faces_down": false,
+          "filled_fraction": 1.0
+        },
+        "old_port_frame_level_liquid": 0.25
+      },
+      {
+        "tube": "MF_TOP_Y_2",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.971
+        },
+        "dry_sand": {
+          "attitude": "on_front_end",
+          "port_faces_down": false,
+          "filled_fraction": 1.0
+        },
+        "old_port_frame_level_liquid": 0.25
+      },
+      {
+        "tube": "MF_LOWER_SIDE_1_1",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.989
+        },
+        "dry_sand": {
+          "attitude": "on_front_end",
+          "port_faces_down": false,
+          "filled_fraction": 0.925
+        },
+        "old_port_frame_level_liquid": 1.0
+      },
+      {
+        "tube": "MF_LOWER_SIDE_1_2",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.989
+        },
+        "dry_sand": {
+          "attitude": "on_front_end",
+          "port_faces_down": false,
+          "filled_fraction": 0.925
+        },
+        "old_port_frame_level_liquid": 1.0
+      },
+      {
+        "tube": "MF_LOWER_SIDE_2_1",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.989
+        },
+        "dry_sand": {
+          "attitude": "on_front_end",
+          "port_faces_down": false,
+          "filled_fraction": 0.925
+        },
+        "old_port_frame_level_liquid": 1.0
+      },
+      {
+        "tube": "MF_LOWER_SIDE_2_2",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.989
+        },
+        "dry_sand": {
+          "attitude": "on_front_end",
+          "port_faces_down": false,
+          "filled_fraction": 0.925
+        },
+        "old_port_frame_level_liquid": 1.0
+      },
+      {
+        "tube": "MF_RECEIVER_LEDGER_1",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.984
+        },
+        "dry_sand": {
+          "attitude": "on_front_end",
+          "port_faces_down": false,
+          "filled_fraction": 0.938
+        },
+        "old_port_frame_level_liquid": 1.0
+      },
+      {
+        "tube": "MF_RECEIVER_LEDGER_2",
+        "epoxy": {
+          "attitude": "rear_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.984
+        },
+        "dry_sand": {
+          "attitude": "on_front_end",
+          "port_faces_down": false,
+          "filled_fraction": 0.938
+        },
+        "old_port_frame_level_liquid": 1.0
+      },
+      {
+        "tube": "MF_END_FRONT_LOW",
+        "epoxy": {
+          "attitude": "right_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.937
+        },
+        "dry_sand": {
+          "attitude": "on_left_side",
+          "port_faces_down": false,
+          "filled_fraction": 0.963
+        },
+        "old_port_frame_level_liquid": 0.25
+      },
+      {
+        "tube": "MF_END_FRONT_UPPER",
+        "epoxy": {
+          "attitude": "right_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.996
+        },
+        "dry_sand": {
+          "attitude": "on_left_side",
+          "port_faces_down": false,
+          "filled_fraction": 0.963
+        },
+        "old_port_frame_level_liquid": 0.25
+      },
+      {
+        "tube": "MF_END_REAR_LOW",
+        "epoxy": {
+          "attitude": "right_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.996
+        },
+        "dry_sand": {
+          "attitude": "on_left_side",
+          "port_faces_down": false,
+          "filled_fraction": 0.963
+        },
+        "old_port_frame_level_liquid": 1.0
+      },
+      {
+        "tube": "MF_END_REAR_UPPER",
+        "epoxy": {
+          "attitude": "right_up",
+          "port_faces_down": false,
+          "filled_fraction": 0.977
+        },
+        "dry_sand": {
+          "attitude": "on_left_side",
+          "port_faces_down": false,
+          "filled_fraction": 0.919
+        },
+        "old_port_frame_level_liquid": 1.0
+      }
+    ]
+  },
   "sources_unchanged_during_run": true,
   "source_sha256": {
     "RevL-ENGINEERING/atc_revl.py": "aeb3beee9ab679bdb76774a2e1a3c2b6496aee24e0053273120915067cd87f29",
-    "RevL-ENGINEERING/build_revl.py": "e14744c3cbe117783d7c690f49e8e48f7cee60414dfb5b7d5c88e16413b53e18",
+    "RevL-ENGINEERING/ballast_revl.py": "4be3635e9b7ab6db627be95fc39a0fe95981b02aec1689bd2841fc120adb3f63",
+    "RevL-ENGINEERING/build_revl.py": "2362e05147009d904d6d373d946f9965d7fbd7219a913c8389b225fbe2f632ff",
     "RevL-ENGINEERING/render_revl.py": "63c8ead80056d464b625534db96083a9403894c70041038d6162dc375b3513d0",
-    "RevL-ENGINEERING/verify_revl.py": "9e5510d3a8f005ffbbd26ff2e217919a4c1aa4b89af5780b8750008250cf05a9",
+    "RevL-ENGINEERING/verify_revl.py": "5f7dd3feaf221f62ac0b7ab8a605645a80c2487f067ce29d21eb8132b5f5f0a3",
     "RevL-ENGINEERING/z300.py": "df9a5b00e92720ba3e4302aa4552e3029e817dc289deb1994053ea4655af0e00",
     "RevK-ENGINEERING/build_revk.py": "19f60c8ca4838097d1f63b994f3239648e61466adbd678d114f86124b5618be8",
     "RevK-ENGINEERING/plasma_drop.py": "84141e2a156240a894fdb905547c2d50d82dc4efffb5c1af438eb631c6fbb053",
@@ -1202,5 +1940,5 @@
     "RevE-ENGINEERING/water_revj.py": "0a22d980b727d2ad286577db71968edaf8ecd24b19c8120a2159a2f22d537940",
     "RevE-ENGINEERING/water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
   },
-  "elapsed_seconds": 1953.5
+  "elapsed_seconds": 2090.3
 }

@@ -12,7 +12,7 @@ This page sorts the [Rev L](README.md) work by what each step waits for, so the 
 
 | Work | Waits for |
 |---|---|
-| The torch and cutter checks, the frame, the water pan and reservoir, the cabinet frame, the plasma head and bracket, the gantry's aluminum parts, and welding the bed module | Nothing: start now |
+| The torch and cutter checks, the frame and its fill holes, the water pan and reservoir, the cabinet frame, the plasma head and bracket, the gantry's aluminum parts, and welding the bed module | Nothing: start now |
 | The Z carrier's and Z adapter's holes to the slide; the HMS40 base fixings | The drive modules (ordered) |
 | The rail holes in the Y datum bars and the X guide face, so the whole gantry | **The HGR20 rails. No motion without them** |
 | The router bed (strips and HDPE top) and the tool changer | **The bed extrusion. Plasma does not need it**: it runs with the module out |
@@ -39,7 +39,8 @@ The design took the seller's figures (270 mm long, 28 mm barrel) and a photo. Wi
 - **Frame.** The 2 × 2 tube list is Rev J's: 32 blanks, from the scrapyard or new ([tube cutting plan](../RevJ-CAD/TUBE-CUT-PLAN.md)). Cut, fixture and weld it, with the feet.
   - Weld the six M10 sleeves through both walls of the ledgers, sealed. Tap them M10 at least 25 mm deep after welding.
   - Weld the six seat pads, face them coplanar within 0.1 mm (fly-cut or shim-map), then drill them through into the sleeves.
-  - **Sand-fill the frame last**, after all welding, coating and drilling.
+  - Drill the 18 fill holes (Ø30, one per tube) where the Rev L drawings put them: at each tube's high end ([section 6](#6-filling-the-frame)).
+  - **Fill the frame last**, after all welding, coating and drilling ([section 6](#6-filling-the-frame)).
 - **Y datum bars.** Weld them to the upper chassis, then finish-machine the rail seats: flat within 0.05 mm per metre and parallel within 0.05 mm over the travel. Leave the rail holes: they are transfer-drilled from the rails.
 - **Bed module weldment:** side rails, crossmembers, end plates, compression sleeves, caps and the four lift lugs. Weld it now. **Hold the strip-screw holes and the galvanizing until the first 20100 bar is in hand.** The holes are nine Ø5.5 in each crossmember top, with Ø14 access holes below. Check the bar's bottom slot on that hole line and a square nut's fit, then drill, then galvanize.
 - **Water pan and reservoir**, pan bearers and cradles, float guards, overflow catch, hatches, drain parts, refill spout and gusset. Grind the cradle webs to the measured floor slope. Drill the holes for bought parts (pump feet, float nuts) from the parts themselves.
@@ -68,7 +69,7 @@ This gates the gantry and every powered move.
 
 1. Receive and measure them as [HGR20-RAIL-KITS.md](../../receiving/HGR20-RAIL-KITS.md) lists. Run `plan_rail_cuts.py`, then cut the Y rails to 1,420 mm.
 2. Transfer-drill the rail holes in the Y datum bars (tapped M5) and the X guide face from the actual rails.
-3. Sand-fill the frame once all drilling is done.
+3. Fill the frame once all drilling is done ([section 6](#6-filling-the-frame)).
 4. Assemble the gantry:
    - rails and blocks;
    - Y shoes and end brackets;
@@ -106,6 +107,44 @@ Plasma runs with the bed module out: the torch cuts on the slats over the water 
 
 It does not need the bed extrusion. The router needs the module, and the tool changer needs the module and the RapidChange kit.
 
+## 6. Filling the frame
+
+Each of the 18 frame tubes is its own sealed compartment with one fill hole. Nothing connects the tubes, so each is filled on its own. Rev K's holes were placed for access. Even a runny mix would only fill the top rails and the front cross tubes about a quarter full and the legs about three-quarters. **Rev L moves each hole to its tube's high end** ([ballast_revl.py](../RevL-ENGINEERING/ballast_revl.py)):
+
+| Tubes | Hole |
+|---|---|
+| 6 legs | 35 mm below the top (Z965). Outer face on the two front legs, rear face on the other four |
+| 2 top rails | In the rear end cap. That cap gets its own part number, SAND_ENDCAP_2IN_PORTED |
+| 4 lower side tubes | On top, 40 mm from the rear end |
+| 2 bed ledgers | On top at Y1370, as before |
+| 4 cross tubes | At the right-hand end: on top of three, on the front face of the front lower tube, which is covered on top |
+
+**Drilling:** every hole is round, Ø30 through the 3 mm wall.
+- Use a step bit that reaches 30 mm: a 4–32 mm bit, or a 1/4–1-3/8 in bit stopped at its 1-3/16 in (30.2 mm) step.
+- Centre-punch the spot, run the bit slow with cutting oil, and it goes through in one pass.
+- If your bit tops out at 1-1/8 in (28.6 mm), finish with a 30 mm hole saw.
+
+**Epoxy sand** (the owner is considering it):
+- **Before you fill:**
+  - Do all welding, drilling (including the Y rail holes) and painting first.
+  - Never weld on the frame afterwards: the heat burns the epoxy and gives off toxic fumes. The fill is permanent.
+- **Mix:** a pourable mix of dry, fine sand and a slow, low-viscosity epoxy. The tubes hold about 36 L. Expect roughly 12–15 L of epoxy and about 70 kg of fill.
+- **Pouring:** pour in lifts, and vibrate each tube as it fills (a sander held against it works).
+- **Stage 1:** raise the rear of the frame about 15° (rear feet about 375 mm up). Pour the 6 legs, the 2 top rails, the 4 lower side tubes and the 2 ledgers. Every hole is then at its tube's high end.
+- **Stage 2:** once stage 1 has cured, raise the right side about 15° (about 300 mm). Pour the 4 cross tubes.
+- **Result:** the model's estimate for these two stages is over 93 % of every tube. The small pocket above each hole's lower edge stays empty.
+- **Plugs:** the threaded plugs are not needed. Pour through the plain 30 mm hole, which is easier than the plug fitting's 18.5 mm bore, and push a plastic hole plug in once it cures.
+
+**Dry sand:**
+- It does not run along a tube at 15°, so stand each tube near vertical:
+  - the legs with the frame upright;
+  - the front-to-back tubes with the frame on its front end;
+  - the cross tubes with the frame on its left side.
+- Vibrate the tube and top it up, then fit the M20 plug. The estimate is over 91 % of every tube.
+- Dry sand can be emptied again through the plugs.
+
+Either way, weigh the frame before and after. The design counts the fill as mass and damping, not strength.
+
 ## Not recorded as bought yet
 
 These are in the [cost register](../../../outputs/reve-30510/actual-cost/REAL-COST.md), the [Rev K delta](../../../outputs/reve-30510/actual-cost/REVK-PROCUREMENT-DELTA.md), the [Rev L delta](../../../outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md) and the [controls README](../../controls-2026-09-27/README.md). Skip anything already bought.
@@ -113,7 +152,7 @@ These are in the [cost register](../../../outputs/reve-30510/actual-cost/REAL-CO
 - **Controls:**
   - the BTT Rodent V1.1;
   - the GM1 relay, safety and power parts;
-  - the cabinet enclosure.
+  - the cabinet enclosure: a **steel** box at least 500 × 400 × 200 mm, like the VEVOR 20 × 16 × 8 in in the register (E05). The panel layout needs about 330 × 430 mm, and the floor takes two 175 × 150 mm gland plates. A plastic box does not shield the Rodent from the plasma's high-frequency start.
 
   Nothing moves under power without them.
 - **Spindle kit** with its VFD (1.5 kW, 110 V, ER11, Ø65 body). Machine the spindle clamp's bore against the actual spindle.
@@ -122,3 +161,4 @@ These are in the [cost register](../../../outputs/reve-30510/actual-cost/REAL-CO
 - **Materials and hardware:** HDPE sheet, fasteners, and the extra plate and stainless the deltas list.
 - **Tool changer:** the RapidChange kit and the dock's bought parts.
 - **The braked Z motor**, after the ZBX80 is measured.
+- **Frame fill:** epoxy and fine dry sand, or dry sand alone ([section 6](#6-filling-the-frame)). If you pour epoxy without the threaded plugs, add 18 push-in hole plugs for 30 mm (1-3/16 in) holes.

@@ -2,17 +2,18 @@
 
 **GM1 — Garcia Mechanical Table.** Working design for review, **not released for purchasing, fabrication, CAM or operation.** In the previews, amber parts are purchased-part envelopes and magenta parts are allocations for the tool changer's magazine and stored cutters, not supplier drawings.
 
-Rev L is [Rev K](../RevK-CAD/README.md) with two changes the owner asked for on 27 September 2026:
+Rev L is [Rev K](../RevK-CAD/README.md) with these changes, all from 27 September 2026:
 
 - **A 300 mm Z slide** instead of 100 mm. Ordered on 27 September.
 - **A RapidChange-type automatic tool changer** ("yes i do"; "the rapidautochanger or something like that"). Its magazine retracts on a short slide, so the 800 × 1000 mm work area stays free.
+- **Frame fill holes at each tube's high end.** The owner asked "are all my holes aligned so the sand fills the rails?" and is thinking of epoxy sand. See [Frame fill](#frame-fill).
 
-Everything else is Rev K's, unchanged: the frame, the one-piece bed module and its hoist, the water table, the plasma head and torch, the cabinet. The GM1 controls gain spindle reverse and the tool-changer drive (M12 and M13 in the [controls README](../../controls-2026-09-27/README.md)).
+Everything else is Rev K's, unchanged: the frame apart from its fill holes, the one-piece bed module and its hoist, the water table, the plasma head and torch, the cabinet. The GM1 controls gain spindle reverse and the tool-changer drive (M12 and M13 in the [controls README](../../controls-2026-09-27/README.md)).
 
 - [Router assembly STEP](step/RevL_ROUTER.step): dock parked, gantry at the rear stop, Z fully up
 - [Bed module STEP](step/RevL_BED_MODULE.step): the module with the dock deployed, as the hoist lifts it
 - [Dock STEP](step/RevL_DOCK.step): the tool changer alone, deployed
-- [New parts](step/RevL_NEW_PARTS.step): the dock's parts and the 300 mm Z body, with the [component schedule](cutlist.csv), [operations](part-operations.json), [individual STEP parts](parts/) and [flat DXFs](dxf/)
+- [New parts](step/RevL_NEW_PARTS.step): the dock's parts, the 300 mm Z body and the frame parts whose fill holes moved, with the [component schedule](cutlist.csv), [operations](part-operations.json), [individual STEP parts](parts/) and [flat DXFs](dxf/)
 - Previews: [router](previews/RevL_ROUTER.png), [router from the right](previews/RevL_ROUTER_side.png), [tool change](previews/RevL_TOOL_CHANGE.png), [dock close-up](previews/RevL_DOCK_DETAIL.png), [bed module](previews/RevL_BED_MODULE.png)
 - Checks: [poses, dock travel, tool change and hoist path](revl-checks.json), [manifest and source hashes](engineering-manifest.json), and the validations of each STEP
 - [What Rev L adds to the shopping list](../../../outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md)
@@ -91,6 +92,27 @@ The bottom of the Z slide's body (its end block, Z1040–1052) is lower than the
 
 **Plasma to router:** lower the module in and refit the six screws, as in Rev K. Then plug in the dock, park it (head at X975, gantry at the rear stop) and **probe the pocket reference** before the first tool change. RapidChange needs the pockets within 0.2 mm, and the module's locating pins are not proven to that.
 
+## Frame fill
+
+The frame's 18 tubes are separate sealed compartments, each with one fill hole. Nothing connects them.
+
+Rev K's holes were placed for access. With a runny mix and the frame level, they fill the legs about 78 % and the top rails and front cross tubes about 25 %.
+
+`ballast_revl.py` moves each hole to its tube's high end. The Ø30 weld bung and M20 plug are unchanged:
+
+| Tubes | Hole | Epoxy sand | Dry sand |
+|---|---|---|---|
+| 6 legs | 35 mm below the top (Z965). Outer face on the front legs; rear face on the others, whose outer faces carry the brace gussets | 95–96 % | 96 % |
+| 2 top rails | In the rear end cap (new part SAND_ENDCAP_2IN_PORTED) | 97 % | 100 % |
+| 4 lower side tubes | On top, 40 mm from the rear end | 99 % | 93 % |
+| 2 bed ledgers | On top at Y1370, unchanged | 98 % | 94 % |
+| 4 cross tubes | At the right-hand end: on top of three, on the front face of the front lower tube | 94–100 % | 92–96 % |
+
+- **Epoxy sand:** two pours. First with the rear raised 15° (the legs and the front-to-back tubes), then with the right side raised 15° (the cross tubes).
+- **Dry sand:** stand each tube near vertical.
+
+The percentages are the model's estimate: the part of each cavity below a level surface through the lowest point of its hole. The procedure is in the [build order](BUILD-ORDER.md#6-filling-the-frame). The old holes are closed in the model, nothing else in the frame changes, and every pose check below includes the new holes.
+
 ## Controls
 
 These are M12 and M13 in the [GM1 controls](../../controls-2026-09-27/README.md), with their simulation checks.
@@ -115,7 +137,8 @@ These are M12 and M13 in the [GM1 controls](../../controls-2026-09-27/README.md)
 | Deployed dock against 50 mm of stock and clamps over the HDPE | **Pass**: clear |
 | RapidChange 90 mm rule | 209.65 mm from the magazine plane to the nut at full Z |
 | Hoist path with the dock deployed on the module: hook 0.7, 1.0 and 2.0 m above the lugs, over Y745, rolled 1.52 m | **Pass**, 78 sampled poses each, and no sling leg touches the dock. At 0.7 and 1.0 m the nearest gaps are Rev J's: frame legs 11.2 mm, float backrails 14.5 mm. At 2.0 m a rear leg passes **2.8 mm** from the rear-parked X rail (8.6 mm in Rev K), because the hook moved back over the new centre of mass: don't use the 2.0 m sling. The container plan uses 0.7 m |
-| Static interference of the exported states: router with the dock parked (1,299 solids), bed module with the dock deployed (228), dock (79), new parts (80) | 0 unresolved overlaps; STEP reimport matches |
+| Frame fill: one hole per frame tube; none faces down in its fill attitude; every tube at least 90 % full (epoxy with the 15° tilts, dry sand near vertical) | **Pass**. The lowest estimates are 93.7 % (epoxy, front lower cross tube) and 91.9 % (dry sand, rear upper cross tube). Every pose above includes the moved holes |
+| Static interference of the exported states: router with the dock parked (1,299 solids), bed module with the dock deployed (228), dock (79), new and changed parts (136) | 0 unresolved overlaps; STEP reimport matches |
 
 These are nominal CAD checks. They do not cover stiffness at the pocket, the delivered magazine, cable routing, or the sling's real shackles.
 
@@ -129,6 +152,7 @@ These are nominal CAD checks. They do not cover stiffness at the pocket, the del
 - **Chips and coolant.** The rails, belt and gearmotor sit at the back of the bed. Cover the rails (a sheet-metal cover or bellows) and use a sealed gearmotor or shield it; neither is drawn. The sensors and the plug are IP67 parts.
 - **The Z slide.** The 300 mm body length is scaled, not measured. Measure its carriage and end blocks on receipt, as MOTION-MODULES.md lists.
 - **Rigging.** The chain sling needs shortening clutches for the rear legs. At the 0.7 m hook height the front legs sit at about 41°; use rigging rated for that angle. Don't use a 2.0 m hook rise: a rear leg then passes 2.8 mm from the X rail.
+- **Frame fill.** The fill percentages are geometric. A real pour leaves voids unless each tube is vibrated, so weigh the frame before and after.
 - **Rev K's open items** still apply.
 
 ## Sources
@@ -138,5 +162,6 @@ In [RevL-ENGINEERING](../RevL-ENGINEERING/), kept apart so the Rev K and shared 
 - `build_revl.py`: builds the states and exports them; Rev K's `build_revk.py` is used unchanged.
 - `z300.py`: the 300 mm Z slide on Rev J's motion model.
 - `atc_revl.py`: the dock.
+- `ballast_revl.py`: the frame's fill holes, and their fill estimates.
 - `verify_revl.py`: the checks above.
 - `render_revl.py`: the previews.

@@ -3,12 +3,14 @@
 Rev L is Rev K (`../RevK-ENGINEERING/build_revk.py`, used unchanged) plus:
   z300.py       the ZBX80 with a 300 mm stroke (lower datum kept, body grows upward)
   atc_revl.py   a retracting magazine carrier that rides on the one-piece bed module
+  ballast_revl.py  the frame's fill ports moved to each tube's high end (epoxy or dry sand)
 The sources live in this folder, so the Rev K and shared RevE-ENGINEERING inventories are unchanged.
 Exports to ../RevL-CAD:
   RevL_ROUTER       dock parked, gantry at the rear stop, head X575, Z fully up (assembly STEP)
   RevL_BED_MODULE   the module with the dock deployed, as lifted for a bed change
   RevL_DOCK         the dock alone, deployed (assembly STEP)
-  RevL_NEW_PARTS    the dock's parts and the 300 mm Z body: cut list, part STEP files and DXF
+  RevL_NEW_PARTS    the dock's parts, the 300 mm Z body and the frame tubes, caps and fill ports whose
+                    ports moved: cut list, part STEP files and DXF
   previews          router (dock parked), tool change (dock deployed), bed module, dock close-up
 The plasma state is Rev K's with the longer Z; verify_revl.py checks it and it is not re-exported.
 Unknown purchased interfaces stay guarded; no manufacturing release is implied.
@@ -32,6 +34,7 @@ from cad_helpers import Model, bbox, export  # noqa: E402
 import build_revj as rev_j  # noqa: E402
 import build_revk  # noqa: E402
 import atc_revl  # noqa: E402
+import ballast_revl  # noqa: E402
 import z300  # noqa: E402
 
 OUT = HERE.parent / 'RevL-CAD'
@@ -60,6 +63,7 @@ def module_with_dock(bed, atc):
 
 def build_model(with_motion=True, gantry_y=1275.0, head_x=575.0, z_lift=z300.STROKE, atc_travel=atc_revl.TRAVEL):
     model, details = build_revk.build_model(with_motion=False)
+    details['frame_fill'] = ballast_revl.apply(model)
     details['atc'] = atc_revl.extend_router_model(model, travel=atc_travel)
     if with_motion:
         details['motion'], details['motion_completion'] = z300.add_motion(model, gantry_y, head_x, z_lift)
@@ -86,6 +90,12 @@ def sub_model(source, keep):
     return m
 
 
+def is_fill_part(part):
+    """The frame tubes, ported end caps, bungs and plugs that Rev L's fill-port change touches."""
+    return part.group == 'main_frame' or part.id.startswith(('SAND_BUNG_', 'SAND_PLUG_')) or \
+        part.part_number == ballast_revl.CAP_PN
+
+
 def near_dock(part):
     b = bbox(part.shape)
     return b[4] > 1000 and b[1] < 1460 and b[5] > 900 and b[2] < 1320 and b[3] > 200 and b[0] < 960
@@ -100,7 +110,7 @@ def main():
     print('Rev L router:', len(model.parts), 'components', flush=True)
     router = export(model, OUT, 'RevL_ROUTER', individual=False)
     rev_j.write_mesh(model, 'RevL_ROUTER')
-    new = sub_model(model, lambda i: i.startswith(atc_revl.PREFIX) or i == 'ZBX80_BASE')
+    new = sub_model(model, lambda i: i.startswith(atc_revl.PREFIX) or i == 'ZBX80_BASE' or is_fill_part(model.find(i)))
     parts = export(new, OUT, 'RevL_NEW_PARTS', individual=True)
     change, change_details = build_model(gantry_y=POCKET_GANTRY_Y, head_x=575.0, atc_travel=0.0)
     rev_j.write_mesh(change, 'RevL_TOOL_CHANGE')

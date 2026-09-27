@@ -15,6 +15,9 @@ therefore reaches the pockets from the rear stop.
 Stock allowance: 50 mm over the HDPE must be clear of the deployed dock.
 Hoist: Rev J's sampled module-and-sling path with the dock deployed on the module (heavier, centre
 of mass further back), head X575, Z fully up, at three hook heights, run 100 mm further forward.
+Frame fill: every pose above carries the moved fill ports (ballast_revl.py). One port per frame tube,
+none facing down in its fill attitude, and each tube at least 90 % full in that attitude by the sampled
+estimate, for epoxy sand (frame tilted 15 degrees) and for dry sand (tube near vertical).
 This is a sampled static interference check, not a motion, stiffness or cut test.
 """
 from pathlib import Path
@@ -52,6 +55,7 @@ def main():
     import build_revk
     import build_revl
     import atc_revl
+    import ballast_revl
     import plasma_drop
     import verify_revk
     import z300
@@ -61,6 +65,7 @@ def main():
     before = build_revl.source_hashes()
     report = {'scope': __doc__.strip(), 'revision': 'GM1 Rev L working design', 'status': 'RUNNING'}
     base, base_details = build_revk.build_model(with_motion=False)
+    fill = ballast_revl.apply(base)
     report['rev_k_fixed_part_count'] = len(base.parts)
 
     def pose(travel, gy, hx, z):
@@ -157,14 +162,20 @@ def main():
         'the Z body cannot pass over the deployed magazine (forbidden approach clashes)': bool(zbody),
         'deployed dock clear of a 50 mm stock and clamp allowance': not stock_hits,
         'RapidChange 90 mm: spindle nut at full Z at least 90 mm above the magazine plane': nut_top - atc_revl.MAG >= 90,
-        'hoist path clear at every hook height with the dock deployed': all(c['result'].startswith('PASS') for c in hoist_cases)}
+        'hoist path clear at every hook height with the dock deployed': all(c['result'].startswith('PASS') for c in hoist_cases),
+        'frame fill: one port per frame tube': sorted(p['tube'] for p in fill['ports']) == sorted(
+            p.id for p in base.parts if p.group == 'main_frame') and len(fill['ports']) == 18,
+        'frame fill: no port faces down in its fill attitude': not any(
+            e[k]['port_faces_down'] for e in fill['estimates'] for k in ('epoxy', 'dry_sand')),
+        'frame fill: every tube at least 90 % full, epoxy (15 degree tilt) and dry sand (near vertical)': all(
+            e[k]['filled_fraction'] >= 0.90 for e in fill['estimates'] for k in ('epoxy', 'dry_sand'))}
     after = build_revl.source_hashes()
     report.update(status='PASS' if all(checks.values()) and before == after else 'FAIL', checks=checks,
                   router_poses=router_rows, plasma_poses=plasma_rows, dock_travel=travel_rows,
                   tool_change_poses=change_rows, forbidden_approach=forbidden, stock_allowance_hits=stock_hits,
                   nut_above_magazine_plane_at_full_z_mm=round(nut_top - atc_revl.MAG, 2),
                   bed_with_dock={k: details['bed'][k] for k in ('module_mass_estimate_kg', 'module_cg_mm', 'module_without_dock')},
-                  hoist_forward_mm=FORWARD_L, hoist_cases=hoist_cases,
+                  hoist_forward_mm=FORWARD_L, hoist_cases=hoist_cases, frame_fill=fill,
                   sources_unchanged_during_run=before == after, source_sha256=before,
                   elapsed_seconds=round(time.monotonic() - start, 1))
     OUT.parent.mkdir(parents=True, exist_ok=True)
