@@ -15,5 +15,6 @@ Rev J is the owner's 26 September requirement: one waterproof bed module of abou
 - [Unsent supplier dimension request](output/cad-repair-2026-09-25/SUPPLIER-DRAWING-REQUEST.md)
 - [Drive modules, receiving check](output/receiving/MOTION-MODULES.md): Y modules ordered; X and Z to be ordered Monday 28 Sep (please confirm); [HGR20 guide rails (still to order): receiving check and Y-rail cut planner](output/receiving/HGR20-RAIL-KITS.md)
 - [26 Sep follow-up: owner decisions, procurement, open controls findings and what is left to finish](output/followup-2026-09-26/README.md)
+- [GM1 controls (27 Sep), for either bed line](output/controls-2026-09-27/README.md): E-stop and power removal, the mode-race and welded-relay fixes, and the BTT Rodent pin plan. Simulated, not built.
 
 The source directory remains named RevE-ENGINEERING, but current generated files are in RevJ-CAD. The concept PDF shows Rev I, not Rev J. Fusion has not been verified to load this revision.

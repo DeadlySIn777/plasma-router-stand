@@ -4,9 +4,20 @@
 
 ## What changed in this follow-up
 
+- **GM1 controls for either bed line (27 September, while the owner's answers were pending):** [package](../controls-2026-09-27/README.md). It builds on Rev I's relay circuit, imported unchanged, and keeps its water logic.
+  - **E-stop:** a dual-channel safety relay drives two contactors. They remove the Rodent's 48 V, VFD mains and plasma mains, and the Z brake engages.
+  - **Mode race fixed:** per-mode ready relays sit in each tool coil.
+  - **Welded relays:** the start chain is force-guided with monitored pickups, plus a second request relay and a second SETUP contact.
+  - **No RS485:** the VFD runs only through its FWD terminal.
+  - **Rodent pin plan:** the board has six isolated inputs plus two 3.3 V header pins once RS485 is dropped, enough for the eight real-time signals, so no I/O board is needed for them. A draft grblHAL board map is included.
+  - **Status:** simulated, not built, wired or flashed. Blocker 4 (plasma reach) and the cabinet and water findings stay open.
+- **Base branch merged a fourth time: retractable ATC (`dfdf5da`, 00:54 UTC on 27 September).**
+  - **What arrived:** the other session added [retractable ATC mechanisms](../../variants/retractable-atc/README.md) for both machine variants: a 200 mm slide, automatic pin release, a longer Z for the small machine and a side bay for the 4x8. It comes with CAD and a controls model.
+  - **How it merged:** only `README.md` conflicted; it now lists the new work. The files were merged unchanged and not reviewed in depth.
+  - **Controller conflict:** the slide and shutter run on the Kraken's spare drivers S5 and S6. The Rodent's four drivers are all used by X, Y, Y2 and Z, and grblHAL's Rodent map has no fifth motor. On the owner's Rodent these mechanisms would therefore need a different drive arrangement.
 - **Review of the other session's work** (owner request, 26 Sep evening): [review](../review-2026-09-26/README.md).
   - **Its checks reproduce:** Rev I acceptance 30/30 and a fresh rebuild with 0 clashes.
-  - **Blockers:** Kraken-based controls against the Rodent decision, on a Rodent that has only 5 inputs and no THC support on ESP32; no E-stop or power-removal circuit; a mode-switch race that can fire the wrong tool, verified on its own simulator; and a plasma torch that must project about 215–245 mm to reach the slats, which affects Rev J too.
+  - **Blockers:** Kraken-based controls against the Rodent decision, on a Rodent that has only 5 inputs (corrected on 27 September: 6, since grblHAL's map leaves E1-MAX unused) and no THC support on ESP32; no E-stop or power-removal circuit; a mode-switch race that can fire the wrong tool, verified on its own simulator; and a plasma torch that must project about 215–245 mm to reach the slats, which affects Rev J too.
 - **Base branch merged a third time: development variants (`ca9728b`, 22:15 UTC).**
   - **What arrived:** the other session added a small-machine RapidChange ATC dock, a full-sheet 4x8 machine layout and shared removable-table locators, in `variants/`. They were merged unchanged.
   - **Conflicting records:** the variants' [requirements record](../../variants/requirements.json) lists "Keep bed conversion within the machine footprint" and "Preserve the preference for Kraken onboard motor drivers" as confirmed requests. This session recorded the one-piece bed that leaves through the front on a hoist, and the BTT Rodent. These records conflict, and only the owner can settle them.
@@ -64,6 +75,15 @@ The controller files did not change in Rev G. These points, found while re-check
 | CW-12 | The E-stop, STOP_OK and PG4 contact budget is unreconciled, and the RESET button has no firmware input because that pin is the E-stop. |
 | CW-13 | Part numbers disagree between documents: flyback diode MBR20100CTG versus STPS20100CT, and 1 A fuse 0287001.L versus 0287001.U. |
 
+**Status, 27 September.** The [GM1 controls](../controls-2026-09-27/README.md) address these in design, simulated only:
+
+- **CW-09:** each tool coil path runs through its own mode's relay pole and its own mode's ready relay.
+- **CW-10, in part:** polled MCP23017 status shows which mode's water sequence is ready.
+- **CW-11:** a drawn, terminal-numbered permission chain, with its polarity defined at the Rodent's E1-MAX door input.
+- **CW-12:** the safety relay's contacts are allocated. The Rodent needs no E-stop input because the stop removes its power, and RESET belongs to the safety relay.
+
+For CW-01, the board map and pin allocation are drafted and the RS485 link is dropped. What remains is the ESP32 THCAD driver and adding the plasma plugin to the ESP32 build. CW-02 and CW-13 stay open.
+
 ## What is needed to finish
 
 **Owner answers received on 26 September 2026:**
@@ -92,5 +112,10 @@ Rev J implements the bed answers. Rev G's six manual panels and MDF spoilboards 
 - Transfer-drill the Y datum bars and X guide face from the measured rails; replace the HGR20 hold in `motion_details.py`.
 - Supplier data or measurements for the HMS40 base, ZBX80 output interface and spindle clamp (unsent request: `output/cad-repair-2026-09-25/SUPPLIER-DRAWING-REQUEST.md`), then design Z power-loss retention.
 - Bed module: weigh it, proof-lift it once at twice its mass, map the six seat pads and the repeat seating, and test the M5 strip joints. Then build a combined stiffness budget (BED09).
-- Controls: the Rodent port (board map, pin allocation, THCAD counter, RS485 VFD), then one terminal-numbered schematic covering the selector contacts, mode agreement, permissive chain and stop chain (CW-03, CW-09 to CW-12).
+- Controls: the [GM1 controls](../controls-2026-09-27/README.md) now cover the Rodent board map and pin allocation (RS485 dropped), and a terminal-numbered stop, permission and mode chain (CW-09 to CW-12). Still to do:
+  - the ESP32 THCAD driver;
+  - the plasma plugin in the ESP32 build;
+  - the cutter interface (CW-02);
+  - the interface board layout;
+  - the bench tests.
 - Procurement: quotes for the 51 unpriced entries and freight (the SteelMart request is ready but unsent); rebuild the workbook; regenerate the concept PDF for Rev J (it now shows the six-panel Rev H).

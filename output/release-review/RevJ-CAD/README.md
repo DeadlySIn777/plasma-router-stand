@@ -13,6 +13,11 @@ The frame, water table, controls packaging and motion are otherwise unchanged fr
 
 **Name:** this design was first published on this branch as "Rev H". The base branch now has its own Rev H: the six-panel bed with storage restraints, in [RevH-CAD](../RevH-CAD/README.md). This one was therefore renamed Rev J on 26 September 2026, skipping the letter I because it reads as 1. Later that day the other session used **Rev I** for the next step of its six-panel line ([RevI-CAD](../RevI-CAD/README.md)): a floating head, plumbing supports, cabinet and control circuits. That work is not in Rev J. Which line continues is the owner's decision.
 
+**Controls (27 September):** the [GM1 controls](../../controls-2026-09-27/README.md) apply to Rev J as well as Rev I. They take Rev I's water and mode relays, and add a safety-relay E-stop, the mode-race and welded-relay fixes and the BTT Rodent pin plan. They are simulated, not built. For Rev J, the bed-confirmation key's two checked positions mean:
+
+- **ROUTER CHECKED:** the module is down on its pins with all six M10 drawdowns tight.
+- **PLASMA CHECKED:** the module is out and the slats are clear.
+
 - [Router assembly STEP](step/RevJ_ROUTER.step) — bed module installed
 - [Plasma layout STEP](step/RevJ_PLASMA_LAYOUT.step) — module out of the machine; spindle, clamp hardware and drawdowns stored (no plasma torch is modeled)
 - [Bed module STEP](step/RevJ_BED_MODULE.step) — the part the hoist carries
@@ -73,12 +78,12 @@ The Z-adapter transfer blank and the braked-motor candidate come from the base b
 
 Router to plasma:
 
-1. Router off and isolated. Remove the spindle or raise Z fully.
+1. Router off and isolated: selector on SETUP and the bed key on UNCONFIRMED ([GM1 controls](../../controls-2026-09-27/README.md)). Remove the spindle or raise Z fully.
 2. Gantry at the front: remove the two **rear** M10 screws. They sit under the Y guide shoes when the gantry is at the back.
 3. Gantry to the rear stop, head at X575. Remove the other four screws. All six and their washers go in the bolt tray on the reservoir lid.
 4. Shackle the 4-leg sling to the four lugs, take up the slack and **lift 70 mm**. The pins leave the pads, and every part of the module passes at least 6 mm above the pan-float backrails.
 5. Run the trolley forward about 1.42 m, guiding the module through the front window by hand. It has 11.2 mm to the frame legs on each side. Two people.
-6. Lower the module onto its stand in front of the machine. Don't leave it hanging over a walkway. Clear chips, then follow the plasma water sequence ([WATER-CONTROL.md](../RevE-ENGINEERING/WATER-CONTROL.md)).
+6. Lower the module onto its stand in front of the machine. Don't leave it hanging over a walkway. Clear chips, then follow the plasma water sequence ([WATER-CONTROL.md](../RevE-ENGINEERING/WATER-CONTROL.md)). With the GM1 controls, the relays run that sequence once MODE is on PLASMA and the bed key on PLASMA CHECKED.
 
 Plasma to router is the reverse. Lower the module straight down over the last 70 mm: the refill spout stands 21 mm in front of the rear crossmember, and the float backrails 14.5 mm inside the right rail. The pins then seat the module; refit the six screws (anti-seize, 30 N·m nominal) and re-probe the HDPE. With the module out, the seat pads (top Z846) stay 4 mm below the slat tops (Z850), and the slats are back to full height without the Rev G end reliefs. Wide plasma sheets therefore rest on the slats.
 

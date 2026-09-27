@@ -1,0 +1,513 @@
+"""Exercise the GM1 panel model: Rev I behaviors, the stop, the mode race and welded contacts.
+
+Writes gm1-circuit-verification.json next to this file, plus the regenerated
+netlist (gm1-terminal-netlist.json, GM1-TERMINALS.md). Every check is a
+simulation of the connection graph in gm1_circuit.py with finite relay delays;
+none is a measurement of a built panel.
+"""
+from copy import deepcopy
+from pathlib import Path
+import hashlib
+import itertools
+import json
+import sys
+import time
+
+import gm1_circuit as gm1
+from gm1_circuit import Simulator
+
+OUT = Path(__file__).resolve().parent
+ROOT = OUT.parents[1]
+REV_I_SOURCE = gm1.REV_I_DIR / 'circuit.py'
+PICKUPS, DROPOUTS = (.005, .010, .020), (.005, .020, .050)
+CONTACTOR_TIMING = ((.030, .010), (.060, .020), (.100, .040))
+PLASMA = dict(plasma=True, bed_clear=True, bed_locked=False, minimum=True, empty=False)
+ROUTER = dict(router=True, bed_locked=True, bed_clear=False, empty=True, minimum=False)
+TOOL = {'router': 'router_run', 'plasma': 'torch_run'}
+CHECKS = []
+
+
+def check(name, passed, **evidence):
+    CHECKS.append({'check': name, 'passed': bool(passed), **evidence})
+    if not passed:
+        raise AssertionError((name, evidence))
+
+
+def started(pick=.010, drop=.020, **kw):
+    """Powered panel after the operator's first reset, controller booted, SETUP."""
+    s = Simulator(pick, drop, **kw)
+    s.run(.2)
+    s.reset()
+    s.run(3.2)
+    return s
+
+
+def ready(mode, pick=.010, drop=.020, **kw):
+    s = started(pick, drop, **kw)
+    s.run(75.4 if mode == 'router' else 12.4, setup=False, **(ROUTER if mode == 'router' else PLASMA))
+    return s
+
+
+def running(mode, pick=.010, drop=.020, **kw):
+    s = ready(mode, pick, drop, **kw)
+    s.run(.3, run_request=True)
+    return s
+
+
+def filling(pick=.010, drop=.020, **kw):
+    s = started(pick, drop, **kw)
+    s.run(12.25, **PLASMA)
+    return s
+
+
+def structure():
+    tags = [e.tag for e in gm1.CONTACTS + gm1.POWER]
+    check('Every contact tag is unique', len(set(tags)) == len(tags))
+    usage = gm1.pole_usage()
+    over = {k: sorted(set(v) - set(gm1.DEVICES[k].get('no', [])) - set(gm1.DEVICES[k].get('nc', [])))
+            for k, v in usage.items()}
+    check('Every new device uses only its purchased poles', not any(over.values()), usage=usage)
+    rev_i_relays = {k for k in gm1.LOADS if k.startswith('K') and k not in gm1.DEVICES}
+    check('Rev I relays keep within their poles', all(
+        len({e.tag.split(':')[1].split('-')[0] for e in gm1.CONTACTS if e.tag.startswith(k + ':')}) <= (4 if k.startswith('KM_') else 2)
+        for k in rev_i_relays), relays=sorted(rev_i_relays))
+    # Galvanic separation: with every contact forced closed, no dry pair or
+    # safety-relay input loop joins the 24 V control network.
+    s = Simulator()
+    s.failed_closed = {e.tag for e in gm1.CONTACTS}
+    live = s.live(s.graph(s.values()))
+    dry = sorted(n for n in live if n.startswith(('XVFD:', 'XPLASMA:', 'XR:', 'XM:', 'SR:S', 'RST_')))
+    check('Dry outputs and safety-relay input loops never join the 24 V network', not dry, joined=dry)
+    removed = sorted({e.tag for e in gm1.DROPPED if e.control})
+    check('Only the Rev I stop and start-chain contacts are removed', set(removed) == {
+        'XW:21-22', 'XH:1-2', 'K_READY:11-14', 'K_READY:21-24', 'IF_RUN:13-14', 'K_REQUEST:11-12', 'K_REQUEST:21-24',
+        'K_RUN_ARM:11-14', 'K_RUN_ARM:21-24', 'K_VFD_RUN:11-14', 'K_TORCH_RUN:11-14'}, removed=removed)
+
+
+def rev_i_behaviors():
+    """Rev I's own checks, repeated on the GM1 graph (stop_ok and hardware_stop_ok are now the E-stop)."""
+    combos = 0
+    for pick, drop in itertools.product(PICKUPS, DROPOUTS):
+        s = filling(pick, drop)
+        check('No fill without deliberate press', not s.outputs()['pump'], pickup=pick, dropout=drop)
+        s.run(.15, fill_pressed=True)
+        check('Deliberate fill starts', s.outputs()['pump'], pickup=pick, dropout=drop)
+        s.run(.15, fill_pressed=False)
+        check('Fill self-holds after release', s.outputs()['pump'])
+        s.run(.15, fill_stop_healthy=False)
+        check('Normal fill stop removes pump', not s.outputs()['pump'])
+        s.run(.15, fill_pressed=True, fill_stop_healthy=True)
+        check('Held fill does not restart after fill-stop', not s.outputs()['pump'])
+        s.run(.15, fill_pressed=False)
+        s.run(.15, fill_pressed=True)
+        check('Release then press rearms after fill-stop', s.outputs()['pump'])
+        for field in ('high_high_healthy', 'reservoir_healthy', 'bed_clear'):
+            s = filling(pick, drop)
+            s.run(.15, fill_pressed=True)
+            s.run(.15, **{field: False})
+            check('Fault stops pump: ' + field, not s.outputs()['pump'])
+            s.run(.15, **{field: True})
+            check('Held button does not recover: ' + field, not s.outputs()['pump'])
+        s = filling(pick, drop)
+        s.run(.15, fill_pressed=True)
+        s.run(.15, estop_ch1=False, estop_ch2=False)
+        check('E-stop stops pump', not s.outputs()['pump'])
+        s.run(.15, estop_ch1=True, estop_ch2=True)
+        s.reset()
+        s.run(12.25)
+        check('Held FILL does not recover after E-stop reset', not s.outputs()['pump'])
+        for state in ({'drain_override': True}, {'setup': False}, {'plasma': False}):
+            s = filling(pick, drop)
+            s.run(.15, fill_pressed=True)
+            s.run(.15, **state)
+            check('Mode/setup/override stops pump', not s.outputs()['pump'], change=state)
+        s = started(pick, drop)
+        s.run(12.25, fill_pressed=True, **PLASMA)
+        check('Held FILL on power-up never starts pump', not s.outputs()['pump'])
+        combos += 1
+    for short in ('P_CMD', 'P_LIMIT'):
+        for field in ('high_high_healthy', 'reservoir_healthy'):
+            s = filling()
+            s.run(.15, fill_pressed=True)
+            s.ssr_failed_short.add(short)
+            s.run(.15, **{field: False})
+            check('Single SSR short interrupted by healthy-chain loss', not s.outputs()['pump'], short=short, field=field)
+    s = filling()
+    s.run(.15, fill_pressed=True)
+    s.run(.15, power=False)
+    check('Power loss removes fill and arm', not any(s.outputs()[k] for k in ('pump', 'fill', 'fill_armed')))
+    s.run(.2, power=True)
+    s.reset()
+    s.run(12.25)
+    check('Held FILL after power restoration stays off', not s.outputs()['pump'])
+    for mode, pick, drop in itertools.product(('router', 'plasma'), PICKUPS, DROPOUTS):
+        other = 'plasma' if mode == 'router' else 'router'
+        s = started(pick, drop, holds_request=True)
+        s.run(75.4 if mode == 'router' else 12.4, setup=False, run_request=True, **(ROUTER if mode == 'router' else PLASMA))
+        check('Held request cannot start tool after cold power-up', not s.outputs()['router_run'] and not s.outputs()['torch_run'],
+              mode=mode, pickup=pick, dropout=drop)
+        s.run(.3, run_request=False)
+        s.run(.3, run_request=True)
+        out = s.outputs()
+        check('Only selected tool can run: ' + mode, out[TOOL[mode]] and not out[TOOL[other]])
+        for field in ('door_closed', 'breakaway_seated'):
+            s.run(.3, **{field: False})
+            check('Hardware chain stops tools: ' + field, not s.outputs()['router_run'] and not s.outputs()['torch_run'])
+            check('Permission loss while requested opens the Rodent door input: ' + field, not s.outputs()['door_ok'])
+            s.run(.3, **{field: True})
+            check('Held run cannot resume after permission recovery: ' + field,
+                  not s.outputs()['router_run'] and not s.outputs()['torch_run'])
+            s.run(.3, run_request=False)
+            check('Door input closes again once the request drops: ' + field, s.outputs()['door_ok'])
+            s.run(.3, run_request=True)
+            check('Fresh run request after recovery starts selected tool', s.outputs()[TOOL[mode]])
+        s.run(.3, power=False)
+        s.run(.2, power=True)
+        s.reset()
+        s.run(75.4 if mode == 'router' else 12.4)
+        check('Held run after power restoration stays off', not s.outputs()['router_run'] and not s.outputs()['torch_run'])
+    s = started()
+    s.run(74.9, setup=False, **ROUTER)
+    check('Drain timer cannot ready early', not s.outputs()['ready'])
+    s.run(.35)
+    check('Drain dwell eventually permits ready', s.outputs()['ready'])
+    s.run(.15, empty=False)
+    check('Lost empty contact inhibits router ready', not s.outputs()['ready'])
+    s = started()
+    s.run(.25, drain_override=True)
+    check('Drain override does not backfeed mode relays', not s.states['KM_R'] and not s.states['KM_P'] and s.outputs()['drain'])
+    # Rev I's short-interruption counterexample, now split in two.
+    s = filling(drop=.050)
+    s.run(.15, fill_pressed=True)
+    s.run(.005, estop_ch1=False, estop_ch2=False)
+    s.run(.05, estop_ch1=True, estop_ch2=True)
+    estop_5ms_filtered = s.outputs()['pump'] and s.outputs()['sr_out']
+    s = filling(drop=.050)
+    s.run(.15, fill_pressed=True)
+    s.run(.030, estop_ch1=False, estop_ch2=False)
+    s.run(.3, estop_ch1=True, estop_ch2=True)
+    estop_glitch_restarts = s.outputs()['pump'] or s.outputs()['sr_out']
+    check('An E-stop opening that trips the safety relay latches off until reset', not estop_glitch_restarts)
+    s = filling(drop=.050)
+    s.run(.15, fill_pressed=True)
+    s.run(.005, reservoir_healthy=False)
+    s.run(.05, reservoir_healthy=True)
+    water_glitch_restarts = s.outputs()['pump']
+    check('Model still exposes the short-interruption limit on water contacts', water_glitch_restarts)
+    return {'fill_delay_combinations': combos, 'estop_30ms_opening_restarts_pump': estop_glitch_restarts,
+            'estop_5ms_opening_filtered_by_safety_relay': estop_5ms_filtered,
+            'water_contact_5ms_glitch_restarts_pump': water_glitch_restarts}
+
+
+def stop_function():
+    worst = {'power_removed_s': 0., 'tool_output_open_s': 0.}
+    for (pick, drop), (kp, kd) in itertools.product(((.005, .005), (.010, .020), (.020, .050)), CONTACTOR_TIMING):
+        for mode in ('router', 'plasma', 'setup', 'fill'):
+            if mode in TOOL:
+                s = running(mode, pick, drop, contactor_pickup=kp, contactor_dropout=kd)
+                assert s.outputs()[TOOL[mode]]
+            elif mode == 'fill':
+                s = filling(pick, drop, contactor_pickup=kp, contactor_dropout=kd)
+                s.run(.15, fill_pressed=True)
+            else:
+                s = started(pick, drop, contactor_pickup=kp, contactor_dropout=kd)
+            s.inputs.update(estop_ch1=False, estop_ch2=False)
+            t0, power_off, tool_off = s.time, None, None
+            for _ in range(250):
+                o = s.tick(.001)
+                if power_off is None and not (o['motor_power'] or o['vfd_mains'] or o['plasma_mains']):
+                    power_off = s.time - t0
+                if tool_off is None and not (o['fwd_closed'] or o['start_closed']):
+                    tool_off = s.time - t0
+            o = s.outputs()
+            check('E-stop removes 48 V, VFD mains and plasma mains', power_off is not None and not o['z_brake_released'] and not o['pump'],
+                  mode=mode, pickup=pick, dropout=drop, contactor=(kp, kd), seconds=power_off)
+            worst['power_removed_s'] = max(worst['power_removed_s'], power_off)
+            if tool_off is not None:
+                worst['tool_output_open_s'] = max(worst['tool_output_open_s'], tool_off)
+            s.run(1., estop_ch1=True, estop_ch2=True)
+            check('Released E-stop alone does not restore power', not s.outputs()['motor_power'] and not s.outputs()['sr_out'])
+    s = started()
+    s.run(.2, estop_ch1=False, estop_ch2=False)
+    s.run(.2, reset_pressed=True)
+    s.run(.3, estop_ch1=True, estop_ch2=True)
+    check('Reset held through E-stop release does not restart (monitored reset)', not s.outputs()['sr_out'])
+    s.run(.2, reset_pressed=False)
+    check('Releasing that reset restarts, as a deliberate action', s.outputs()['sr_out'])
+    for mode_name in ('monitored', 'level'):
+        s = started(reset_mode=mode_name)
+        s.run(.2, estop_ch1=False, estop_ch2=False)
+        s.run(.2, reset_pressed=True)
+        s.run(1., estop_ch1=True, estop_ch2=True)
+        if mode_name == 'monitored':
+            check('Stuck reset button never resets a monitored-reset unit', not s.outputs()['sr_out'])
+        else:
+            level_autorestart = s.outputs()['sr_out']
+    s = started()
+    s.run(.2, estop_ch1=False)
+    check('One channel opening stops the machine', not s.outputs()['motor_power'])
+    s.run(.2, estop_ch1=True)
+    s.reset()
+    check('Reset refused after a single-channel opening', not s.outputs()['sr_out'])
+    s.run(.2, estop_ch1=False, estop_ch2=False)
+    s.run(.2, estop_ch1=True, estop_ch2=True)
+    s.reset()
+    check('Opening both channels clears the lock', s.outputs()['sr_out'])
+    welded_contactors = {}
+    for k in ('K1', 'K2'):
+        for stuck in (False, True):
+            s = started()
+            s.weld(f'{k}:1-2', stuck)
+            s.run(.3, estop_ch1=False, estop_ch2=False)
+            o = s.outputs()
+            check('One welded contactor still leaves every power path open', not (o['motor_power'] or o['vfd_mains'] or o['plasma_mains']),
+                  contactor=k, stuck=stuck)
+            check('A welded contactor keeps the Z brake engaged', not o['z_brake_released'], contactor=k, stuck=stuck)
+            s.run(.3, estop_ch1=True, estop_ch2=True)
+            s.reset()
+            welded_contactors[f'{k} stuck={stuck}'] = s.outputs()['sr_out']
+            check('Reset refused while a contactor is welded (feedback loop open)', not s.outputs()['sr_out'], contactor=k, stuck=stuck)
+    s = started()
+    s.run(.2, estop_ch1=False, estop_ch2=False)
+    s.run(.2, estop_ch1=True, estop_ch2=True)
+    s.run(.1, reset_pressed=True)
+    s.inputs['reset_pressed'] = False
+    t_power = released_at = None
+    for _ in range(900):
+        o = s.tick(.005)
+        if t_power is None and o['motor_power']:
+            t_power = s.time
+        if released_at is None and o['z_brake_released']:
+            released_at = s.time - t_power
+    check('Z brake releases only after the 3 s delay from power return', released_at is not None and released_at >= 2.995, seconds=released_at)
+    s = running('plasma', holds_request=True)
+    s.run(.3, estop_ch1=False, estop_ch2=False)
+    s.run(.3, estop_ch1=True, estop_ch2=True)
+    s.reset()
+    s.run(12.4)
+    check('Request held through a stop and reset cannot restart the torch', not s.outputs()['torch_run'])
+    s = running('router')
+    s.run(.3, estop_ch1=False, estop_ch2=False)
+    s.run(.3, estop_ch1=True, estop_ch2=True)
+    s.reset()
+    s.run(75.4)
+    o = s.outputs()
+    check('After a stop the Rodent reboots with its request low', not o['router_run'] and not s.inputs['run_request'])
+    return {'worst_modeled_power_removal_s': round(worst['power_removed_s'], 3),
+            'worst_modeled_tool_output_open_s': round(worst['tool_output_open_s'], 3),
+            'z_brake_release_after_power_s': round(released_at, 3),
+            'level_reset_with_stuck_button_restarts': level_autorestart,
+            'reset_with_welded_contactor': welded_contactors}
+
+
+def race(sim_factory):
+    """Change mode with the start signal held. Returns wrong-tool hits per direction/variant."""
+    variants = ('bed key and water unchanged', 'bed key and water also switched')
+    result = {}
+    for src, dst in (('router', 'plasma'), ('plasma', 'router')):
+        tally = {v: [0, 0, 0] for v in variants}
+        for pick, drop in itertools.product(PICKUPS, DROPOUTS):
+            base = sim_factory(src, pick, drop)
+            for variant, off_ms in itertools.product(variants, (0, 10, 30, 60, 150, 300)):
+                s = deepcopy(base)
+                key = TOOL[dst]
+                wrong = 0
+                s.inputs[src] = False
+                if variant.endswith('switched'):
+                    s.inputs.update({k: v for k, v in (PLASMA if dst == 'plasma' else ROUTER).items() if k != dst})
+                for _ in range(off_ms):
+                    wrong += bool(s.tick(.001)[key])
+                s.inputs[dst] = True
+                for _ in range(600):
+                    wrong += bool(s.tick(.001)[key])
+                t = tally[variant]
+                t[1] += 1
+                if wrong:
+                    t[0] += 1
+                    t[2] = max(t[2], wrong)
+        for variant, (hits, total, worst) in tally.items():
+            result[f'{src} -> {dst}, {variant}'] = {'cases_with_wrong_tool': hits, 'cases': total, 'longest_ms': worst}
+    return result
+
+
+def gm1_running(mode, pick, drop):
+    return running(mode, pick, drop)
+
+
+def rev_i_running(mode, pick, drop):
+    s = gm1.rev_i.Simulator(pick, drop)
+    s.run(75.4 if mode == 'router' else 12.4, setup=False, run_request=False, **(ROUTER if mode == 'router' else PLASMA))
+    s.run(.3, run_request=True)
+    assert s.outputs()[TOOL[mode]]
+    return s
+
+
+def mode_race():
+    gm1_result = race(gm1_running)
+    rev_i_result = race(rev_i_running)
+    for name, r in gm1_result.items():
+        check('Changing mode with the start held never fires the other tool: ' + name, r['cases_with_wrong_tool'] == 0, **r)
+    check('The same test finds the race in the Rev I circuit', any(r['cases_with_wrong_tool'] for r in rev_i_result.values()))
+    s = running('router')
+    s.run(.3, router=False)
+    s.run(13., plasma=True, **{k: v for k, v in PLASMA.items() if k != 'plasma'})
+    check('After a mode change the new tool still needs a fresh request', not s.outputs()['torch_run'])
+    s.run(.3, run_request=False)
+    s.run(.3, run_request=True)
+    check('A fresh request then starts the new tool', s.outputs()['torch_run'])
+    return {'gm1': gm1_result, 'rev_i_same_test': rev_i_result}
+
+
+def weld_faults():
+    """Weld each NO contact of each start-chain relay, one at a time, in both modes."""
+    bases = {mode: running(mode) for mode in ('router', 'plasma')}
+    rows = []
+    for relay in gm1.TOOL_CHAIN:
+        poles = sorted({e.tag for e in gm1.CONTACTS if e.tag.startswith(relay + ':') and not e.closed_when_control_false})
+        for pole, stuck, mode in itertools.product(poles, (False, True), ('router', 'plasma')):
+            key = TOOL[mode]
+            row = {'relay': relay, 'pole': pole, 'stuck': stuck, 'mode': mode}
+            s = deepcopy(bases[mode])
+            s.weld(pole, stuck)
+            s.run(.3, run_request=False)
+            row['stops_on_controller_command'] = not s.outputs()[key]
+            s = deepcopy(bases[mode])
+            s.weld(pole, stuck)
+            s.run(.3, breakaway_seated=False)
+            row['stops_on_permission_loss'] = not s.outputs()[key]
+            s.run(.6, breakaway_seated=True)
+            row['no_restart_with_request_held'] = not s.outputs()['router_run'] and not s.outputs()['torch_run']
+            s.run(.3, run_request=False)
+            s.run(.6, setup=True)
+            s.run(.6, run_request=True)
+            row['no_start_in_setup'] = not s.outputs()['router_run'] and not s.outputs()['torch_run']
+            s.run(.3, run_request=False)
+            s.run(1., setup=False)
+            row['arms_again'] = s.outputs()['armed']
+            s.run(.3, run_request=True)
+            row['tool_after_fresh_request'] = s.outputs()[key]
+            rows.append(row)
+            check('Single weld never starts a tool in SETUP', row['no_start_in_setup'], **row)
+            check('Single weld never restarts a tool without a fresh request', row['no_restart_with_request_held'], **row)
+            check('Single weld: the Rodent can still stop the tool', row['stops_on_controller_command'], **row)
+    shorts = []
+    for mode in ('router', 'plasma'):
+        idle = deepcopy(bases[mode])
+        idle.run(.3, run_request=False)
+        assert idle.outputs()['armed']
+        for e in gm1.CONTACTS:
+            if e.tag.split(':')[0] not in gm1.TOOL_CHAIN and not e.tag.startswith('SETUP_RUN_B'):
+                continue
+            s = deepcopy(idle)
+            s.failed_closed.add(e.tag)
+            s.run(.6)
+            ok = not s.outputs()['router_run'] and not s.outputs()['torch_run']
+            shorts.append({'mode': mode, 'shorted': e.tag, 'no_start_without_request': ok})
+            check('A single shorted start-chain contact never starts a tool without a request', ok, mode=mode, shorted=e.tag)
+    setup_shorts = 0
+    for mode in ('router', 'plasma'):
+        s0 = deepcopy(bases[mode])
+        s0.run(.3, run_request=False)
+        s0.run(.6, setup=True)
+        for e in gm1.CONTACTS:
+            if e.tag.split(':')[0] not in gm1.TOOL_CHAIN and not e.tag.startswith(('SETUP_RUN', 'IF_RUN')):
+                continue
+            s = deepcopy(s0)
+            s.failed_closed.add(e.tag)
+            s.run(.6, run_request=True)
+            setup_shorts += 1
+            check('A single shorted start-chain contact never starts a tool in SETUP, even with a request',
+                  not s.outputs()['router_run'] and not s.outputs()['torch_run'], mode=mode, shorted=e.tag)
+    s = deepcopy(bases['plasma'])
+    s.failed_closed.add('IF_RUN:13-14')
+    s.run(.3, run_request=False)
+    output_stage_short_keeps_torch = s.outputs()['torch_run']
+    s.run(.6, setup=True)
+    check('A shorted run-request output stage cannot run a tool in SETUP', not s.outputs()['torch_run'] and not s.outputs()['router_run'])
+    s.run(.6, setup=False)
+    s.run(.3, estop_ch1=False, estop_ch2=False)
+    check('A shorted run-request output stage is still stopped by the E-stop', not s.outputs()['torch_run'])
+    detected = sorted({(r['relay'], r['pole']) for r in rows if not r['arms_again']})
+    masked = sorted({(r['relay'], r['pole']) for r in rows if r['arms_again']})
+    return {'weld_cases': len(rows), 'short_cases': len(shorts), 'setup_short_cases': setup_shorts, 'rows': rows,
+            'welds_that_block_the_next_arming': [f'{a} {b}' for a, b in detected],
+            'welds_covered_by_another_channel_instead': [f'{a} {b}' for a, b in masked],
+            'run_output_stage_short_keeps_torch_after_request_drops': output_stage_short_keeps_torch}
+
+
+def rev_i_weld_cases():
+    """The review's welded-contact cases, re-run on the Rev I simulator for comparison."""
+    out = {}
+    s = rev_i_running('plasma', .01, .02)
+    s.failed_closed.add('K_REQUEST:21-24')
+    s.run(.3, run_request=False)
+    out['K_REQUEST:21-24 welded, request dropped: torch still on'] = s.outputs()['torch_run']
+    s = rev_i_running('plasma', .01, .02)
+    s.failed_closed.add('K_RUN_ARM:21-24')
+    s.run(.3, door_closed=False)
+    s.run(.3, door_closed=True)
+    out['K_RUN_ARM:21-24 welded, door cycled with request held: torch restarts'] = s.outputs()['torch_run']
+    s = rev_i_running('plasma', .01, .02)
+    s.failed_closed.add('KM_R:31-34')
+    s.run(.3, run_request=False)
+    s.run(.3, run_request=True)
+    out['KM_R:31-34 welded in plasma mode: spindle starts with the torch'] = s.outputs()['router_run']
+    return out
+
+
+def door_input():
+    s = started()
+    check('Door input closed in SETUP with no request', s.outputs()['door_ok'])
+    s.run(5., setup=False, **ROUTER)
+    s.run(.3, run_request=True)
+    check('Request before the machine is ready opens the door input (grblHAL holds)', not s.outputs()['door_ok'])
+    s.run(.3, run_request=False)
+    s.run(75.)
+    s.run(.3, run_request=True)
+    check('Armed and requested: door input closed, spindle runs', s.outputs()['door_ok'] and s.outputs()['router_run'])
+
+
+def main():
+    start = time.monotonic()
+    gm1.write_netlist(OUT)
+    report = {'scope': __doc__.strip(), 'changes': [dict(id=i, topic=t, change=c) for i, t, c in gm1.CHANGES]}
+    structure()
+    report['rev_i_behaviors'] = rev_i_behaviors()
+    print('rev i behaviors', len(CHECKS), flush=True)
+    report['stop_function'] = stop_function()
+    print('stop', len(CHECKS), flush=True)
+    report['mode_race'] = mode_race()
+    print('race', json.dumps(report['mode_race']), flush=True)
+    report['welded_contacts'] = weld_faults()
+    report['rev_i_welded_contact_cases'] = rev_i_weld_cases()
+    print('welds', report['welded_contacts']['weld_cases'], report['rev_i_welded_contact_cases'], flush=True)
+    door_input()
+    report['simulation_assumptions'] = {
+        'relay_pickup_s': list(PICKUPS), 'relay_dropout_s': list(DROPOUTS), 'contactor_pickup_dropout_s': [list(c) for c in CONTACTOR_TIMING],
+        'safety_relay_on_s': .050, 'safety_relay_off_s': .020, 'reset_min_press_s': .030, 'timer_recovery_s': .100,
+        'controller_boot_s': 2.0, 'z_brake_delay_s': 3.0, 'photomos_on_off_s': [.005, .0005],
+        'weld_semantics': 'A welded NO stays closed. Force-guided relays and contactor mirror contacts hold every NC of that relay open. '
+                          'stuck=True also keeps the relay\'s other NO contacts closed; stuck=False lets them follow the coil. '
+                          'Ordinary relays with stuck=False let their NC contacts reclose with the coil (worst case).'}
+    report['limits'] = [
+        'A model of the connection graph with assumed delays, not a measurement. Record real relay, contactor and safety-relay times at commissioning.',
+        'The safety relay is modeled by its function (two channels, discrepancy lock, reset through the feedback loop). '
+        'Its terminal numbers, cross-short detection, reset type and response times come from the purchased unit\'s manual.',
+        'No performance level or category is claimed. The run request still has one output stage (the Rodent pin and its PhotoMOS); '
+        'if that stage shorts, the tool keeps running after the Rodent drops the request, and only the E-stop stops it.',
+        'Water-contact glitches shorter than a relay dropout can still resume a held fill, as in Rev I.',
+        'Mains wiring, contactor and brake sizing, VFD and cutter interfaces, and EMC are specified in the README, not simulated.']
+    report['passed_checks'] = len(CHECKS)
+    report['checks'] = CHECKS
+    report['result'] = 'PASS' if all(c['passed'] for c in CHECKS) else 'FAIL'
+    sources = [Path(__file__), OUT / 'gm1_circuit.py', REV_I_SOURCE]
+    report['source_sha256'] = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
+    report['artifact_sha256'] = {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                                 for p in (OUT / 'gm1-terminal-netlist.json', OUT / 'GM1-TERMINALS.md')}
+    report['elapsed_s'] = round(time.monotonic() - start, 1)
+    (OUT / 'gm1-circuit-verification.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+    print(report['result'], report['passed_checks'], 'checks', report['elapsed_s'], 's', flush=True)
+
+
+if __name__ == '__main__':
+    sys.exit(main())

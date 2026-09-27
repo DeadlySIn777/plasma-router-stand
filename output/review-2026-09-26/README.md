@@ -21,6 +21,20 @@ Four independent reviews covered controls, mechanical design and the plasma head
 - **Cutter:** VIV ARC CUT-50.
 - **Bed architecture:** still the owner's open choice, so it is not judged here.
 
+**Status, 27 September.** Five findings now have a design fix in the [GM1 controls package](../controls-2026-09-27/README.md), which works with either bed line. It is simulated only, not built or wired. The five:
+
+- blockers 1–3 (Rodent inputs, E-stop, mode race);
+- the welded-relay major finding;
+- the Modbus major finding.
+
+On the Rodent's inputs, BTT's own schematic shows six isolated inputs, not five: E1-MAX, on GPIO39 or 37, is unused by grblHAL's map. Once RS485 is dropped, two spindle-header pins are also free. Together these cover all real-time signals.
+
+Still open:
+
+- blocker 4 (plasma reach);
+- the cabinet, water, plasma-head and variants findings;
+- the minor findings.
+
 ## Bottom line
 
 The other session's work is careful, and its own evidence reproduces:
@@ -38,7 +52,7 @@ Its checks prove the geometry and bookkeeping it set out to prove. They do not c
    - Rev I's `controls/README.md` says "Current controller: BIGTREETECH Kraken V1.1… The Rodent/THCAD selection… is not the current design". The head interface uses Kraken pins (PE11), and the ATC plan reserves Kraken STM32 pins. The variants' `requirements.json` records "Preserve the preference for Kraken onboard motor drivers" as confirmed.
    - **What the Rodent actually has** (grblHAL's own board map):
      - Four onboard TMC2160 drivers, all used by X, Y, Y2 and Z.
-     - **Five inputs in total:** four limits and one probe.
+     - **Five inputs in grblHAL's map:** four limits and one probe. *Correction, 27 September:* BTT's schematic shows a sixth isolated input, E1-MAX (GPIO39 on V1.1, GPIO37 on V1.0), which the map leaves unused.
      - `CONTROL_ENABLE 0`: no E-stop, feed hold, cycle start or door input.
      - One RS485 port, which takes the spindle-direction pin when Modbus is on.
      - Flood and mist outputs, and an I2C header on GPIO27/26.
@@ -47,7 +61,7 @@ Its checks prove the geometry and bookkeeping it set out to prove. They do not c
      - The ESP32 build does not include the plasma (THC) plugin.
      - There is no ESP32 counter code for the THCAD-300.
      - The plugin needs a separate arc-OK input.
-   - **Demand:** this machine needs about nine real-time inputs: four limits, probe, E-stop, permission/door, arc-OK and the THCAD frequency.
+   - **Demand:** this machine needs about nine real-time inputs: four limits, probe, E-stop, permission/door, arc-OK and the THCAD frequency. It is eight if the E-stop removes the board's power, as the [GM1 controls](../controls-2026-09-27/README.md) now do.
    - **What keeping the Rodent means:**
      - a custom board map;
      - an MCP23017 on the I2C header for slow status signals only;
