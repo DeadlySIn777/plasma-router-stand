@@ -56,8 +56,8 @@ def render(name, view=(-1.25, -1.8, 1.25), size=(1600, 1400), suffix=''):
     draw.text((42, 69), 'Actual CAD geometry. Amber parts are purchased envelopes.', font=font(False, 19), fill=(85, 101, 112))
     draw.text((42, h - 77), 'WORKING DESIGN: owner hoist, torch measurement and supplier interfaces still open. Not a fabrication release.',
               font=font(False, 19), fill=(112, 66, 18))
-    notes = {'RevL_ROUTER': 'Z slide 300 mm (nut Z960-1260). Magenta: the RapidChange magazine allocation, 520 x 60 x 80 mm.',
-             'RevL_TOOL_CHANGE': 'Deployed: magazine over the rear 60 mm of the work area; the Z body stays behind it.',
+    notes = {'RevL_ROUTER': 'Z slide 300 mm (nut Z960-1260), its body raised 110 mm over the changer. Magenta: the magazine and lid allocations.',
+             'RevL_TOOL_CHANGE': 'Deployed: magazine over the rear 60 mm of the work area; the Z body passes 17.65 mm above its lid.',
              'RevL_BED_MODULE': 'About 74 kg with the tool changer (3 kg magazine placeholder). Hook over the new centre of mass.',
              'RevL_DOCK_DETAIL': 'Two MGN12 rails on the T-slot strips, U-shaped carrier, worm gearmotor and belt on the right.'}
     draw.text((42, h - 46), notes.get(name, ''), font=font(False, 19), fill=(85, 101, 112))
