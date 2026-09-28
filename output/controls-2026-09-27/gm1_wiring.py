@@ -273,8 +273,8 @@ dev('FLOAT_FILLSTOP', 'Fill-stop float', 'Float switch, healthy = closed (Rev I 
 dev('FLOAT_HH', 'High-high float', 'Float switch, healthy = closed (Rev I XW:17-18)', 'field', {'1': '', '2': ''})
 dev('RES_LEVEL', 'Reservoir level switch', 'Level switch, healthy = closed (Rev I XW:19-20)', 'field', {'1': '', '2': ''})
 dev('DOOR_SW', 'Guard door switch', 'Door closed = closed (Rev I XH:3-4)', 'field', {'1': '', '2': ''})
-dev('ESTOP2', 'Second E-STOP station (M20)', 'Latching E-stop in a surface box at the loading end of the frame, two NC blocks, in series with the '
-    'door E-stop in both safety-relay channels', 'field', {'11': 'channel 1', '12': 'channel 1', '21': 'channel 2', '22': 'channel 2'})
+dev('ESTOP2', 'Second E-STOP station (M20)', 'Latching E-stop in a surface box at the back of the frame (the tube-loading end, away from the cabinet '
+    'door), two NC blocks, in series with the door E-stop in both safety-relay channels', 'field', {'11': 'channel 1', '12': 'channel 1', '21': 'channel 2', '22': 'channel 2'})
 dev('HEADIF', 'Head interface board (Rev I)', 'U_HEAD and U_PROBE AQY212GS, XHEAD 1-8; see HEAD-INTERFACE.md', 'panel',
     {'U_HEAD.3': 'U_HEAD output', 'U_HEAD.4': 'U_HEAD output', 'U_HEAD.1': 'U_HEAD LED +', 'U_HEAD.2': 'U_HEAD LED -',
      'U_PROBE.3': 'U_PROBE output', 'U_PROBE.4': 'U_PROBE output', 'U_PROBE.1': 'U_PROBE LED +', 'U_PROBE.2': 'U_PROBE LED -',

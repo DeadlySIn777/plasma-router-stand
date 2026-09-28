@@ -54,7 +54,7 @@ The design took the seller's figures (270 mm long, 28 mm barrel) and a photo. Wi
   Mill the X guide face's two rail seats coplanar within 0.03 mm. The Y shoes and the Z carrier take the HGH20CA blocks on the standard 32 × 36 mm M5 pattern; check it against the delivered blocks. The X guide face bolts to the 80/20 40-8080 beam with M8 T-nuts, so the beam is needed too.
 - **Tool park, bolt tray and the head's parking pads** on the reservoir lid.
 - **Tool changer steel parts** (Rev L): cut the beams, seat bars, carrier, upstands, stops, brackets, motor plate and feet. They are welded on the finished module (section 4). The carrier blank now includes the wing at its right end for the tool setter (28 Sep); drill the setter's holes from the delivered unit.
-- **Rotary shelf** (the [rotary variant](../RevL-ROTARY-CAD/README.md), only if tube notching is wanted): the 2 × 2 cross tube, two stubs, the front piece and the 1/4 in plate, welded as one bracket. Bolt it to the front legs after the frame is filled and coated; drill the plate from the delivered rotary.
+- **Rotary shelf** (the [rotary variant](../RevL-ROTARY-CAD/README.md), only if tube notching is wanted): two 240 mm rails and a 118 mm tie of 2 × 4 × .083 tube on edge, and the 1/4 in plate, welded as one U. It bolts down onto the rear upper cross tube with two M10 bolts, so **weld two M10 sleeves through that tube at X490 and X660, 25 mm behind its front face, before the frame is filled** (as the ledger sleeves). Fit the shelf after coating; drill the plate from the delivered rotary.
 
 ## 2. When the drive modules arrive
 

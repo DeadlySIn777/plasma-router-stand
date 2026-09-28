@@ -1523,7 +1523,7 @@ This is a wiring list for a working design, not a certified panel. Terminal mark
 
 ### ESTOP2
 
-**Second E-STOP station (M20)** — Latching E-stop in a surface box at the loading end of the frame, two NC blocks, in series with the door E-stop in both safety-relay channels. 
+**Second E-STOP station (M20)** — Latching E-stop in a surface box at the back of the frame (the tube-loading end, away from the cabinet door), two NC blocks, in series with the door E-stop in both safety-relay channels. 
 
 | Terminal | Function | Wire | Goes to | Net |
 |---|---|---|---|---|

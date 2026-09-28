@@ -1,10 +1,10 @@
-"""GM1 Rev L, rotary variant: Rev L (ER11) with the tube-notching rotary axis on the front of the frame (rotary_revl.py).
+"""GM1 Rev L, rotary variant: Rev L (ER11) with the tube-notching rotary axis at the back of the frame (rotary_revl.py).
 
 Rev L's sources (`../RevL-ENGINEERING`, `../RevK-ENGINEERING`, `../RevE-ENGINEERING`) are used unchanged; this folder
 holds only the rotary. Exports to ../RevL-ROTARY-CAD:
-  RevLROT_ROUTER      router mode with the rotary fitted: dock parked, gantry at the rear stop, head X575, Z up (assembly STEP)
+  RevLROT_ROUTER      router mode with the rotary fitted behind the module: dock parked, gantry at the rear stop, head X575, Z up (assembly STEP)
   RevLROT_PLASMA      module and dock out, a Ø60 tube in the chuck, the torch 4 mm over its top at Y575 (assembly STEP)
-  RevLROT_NEW_PARTS   the bracket (cross tube, stubs, shelf plate) and the two allocations: cut list, part STEP and DXF
+  RevLROT_NEW_PARTS   the bracket (two rails, tie, shelf plate) and the two allocations: cut list, part STEP and DXF
   previews            router, plasma with the tube (two views), the shelf close-up
 The rotary and the chuck are allocations; no manufacturing release is implied.
 """
@@ -57,7 +57,7 @@ def build_model(with_motion=True, gantry_y=1275.0, head_x=575.0, z_lift=z300.STR
     details['bed'] = build_revl.module_with_dock(details['bed'], details['atc'])
     details['rotary']['bracket_and_unit_mass_kg'] = rotary.mass_kg(model)
     details['machine'] = MACHINE
-    details['revision'] = 'L working design, rotary variant: Rev L with a tube-notching rotary axis on the front of the frame'
+    details['revision'] = 'L working design, rotary variant: Rev L with a tube-notching rotary axis at the back of the frame'
     details['status'] = 'WORKING CAD - NOT A FABRICATION RELEASE'
     return model, details
 
@@ -71,9 +71,9 @@ def plasma_model(router_model, **head):
 
 
 def near_shelf(part):
-    """The shelf close-up: the bracket, the rotary, the tube's first metre and the front legs, without the pan wall."""
+    """The shelf close-up: the rear cross tube, the U, the plate, the rotary and the chuck, the tube's last part."""
     b = bbox(part.shape)
-    return b[1] < 60 and b[4] > -300 and b[0] < 1160 and b[3] > -10 and b[5] > 700
+    return b[4] > 1330 and b[1] < 1700 and b[0] < 820 and b[3] > 330 and b[5] > 650
 
 
 def main():
