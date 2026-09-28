@@ -17,8 +17,8 @@ Parts (ROT_*), all on the frame, nothing on the bed module:
     module's rear edge.
   - The rotary unit as an allocation: a 210 x 200 x 175 body (spindle housing, belt reduction, NEMA 23 on
     the X driver) and a Ø125 x 65 four-jaw chuck (K72-125 class, hollow) facing the machine. Axis
-    Z954.35, chuck face at Y1363, 15 mm behind the bed module's rear edge (Y1347.8), so the rotary stays
-    fitted for router work.
+    Z954.35, chuck face at Y1380, 32 mm behind the bed module's rear edge (Y1347.8) and 15 mm behind the BT30
+    variant's parked carrier tray (Y1365), so the rotary stays fitted for router work in either variant.
   - The workpiece as an allocation: a round tube along Y from 20 mm inside the jaws, forward over the pan.
 The unit's real footprint, holes, through-bore and height come from the delivered rotary.
 """
@@ -37,7 +37,7 @@ AXIS_ABOVE_PLATE = 116.35                 # allocation: base plate to spindle ax
 BODY = (470.0, 680.0, 200.0, 175.0)       # x0, x1, length along Y, height on the plate
 CHUCK_D, CHUCK_L = 125.0, 65.0
 MODULE_REAR_Y = 1347.8                    # the bed module's rear edge (Rev J)
-CHUCK_FACE_Y = 1363.0                     # 15.2 mm behind the module, facing forward
+CHUCK_FACE_Y = 1380.0                     # 32 mm behind the Rev L module and 15 mm behind the BT30 dock's parked tray (Y1365), facing forward
 TUBE_IN_JAWS = 20.0
 TUBE_D, TUBE_WALL = 60.0, 3.0             # the checked workpiece
 TUBE_L = 1200.0

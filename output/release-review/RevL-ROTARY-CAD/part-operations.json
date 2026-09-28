@@ -1,0 +1,80 @@
+[
+  {
+    "part_number": "ROT_RAIL_2x4_240",
+    "quantity": 2,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "On the rear upper cross tube from its front face (Y1399.2) to Y1639.2, 189.2 mm behind it. One M10 x 130 through-bolt at Y1424.6 in a sleeve welded through the cross tube (not drawn)."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "ROT_TIE_2x4_118",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "Closes the U between the two rails at the back; welded."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "ROT_SHELF_PLATE_220x240",
+    "quantity": 1,
+    "individual_export_guarded": false,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": {
+      "outline": [
+        [
+          0,
+          0
+        ],
+        [
+          220.0,
+          0
+        ],
+        [
+          220.0,
+          240.0
+        ],
+        [
+          0,
+          240.0
+        ]
+      ],
+      "thickness_mm": 6.35,
+      "holes": [],
+      "slots": [],
+      "internal": []
+    },
+    "notes": [
+      "220 x 240 x 6.35 on the U, welded. The rotary's base bolts through it: drill from the delivered unit (no holes drawn)."
+    ],
+    "release": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION"
+  },
+  {
+    "part_number": "ROTARY_AXIS_ALLOCATION",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "210 x 200 x 175 envelope on the shelf: spindle housing, belt reduction (about 6:1) and the NEMA 23 stepper on the X driver. Spindle axis at Z954.3, X575. Real size, holes and bore from the delivered unit."
+    ],
+    "release": "SUPPLIER ALLOCATION - NOT A PURCHASED-PART DRAWING"
+  },
+  {
+    "part_number": "ROTARY_CHUCK_K72_125_ALLOCATION",
+    "quantity": 1,
+    "individual_export_guarded": true,
+    "datum": "LocalSTEPcoordinates;flatDXFviewislocalXY,thicknessalong+Z.",
+    "manufacturing_flat": null,
+    "notes": [
+      "\u00d8125 x 65, face at Y1380 toward the machine, 32.2 mm behind the bed module's rear edge. Independent jaws centre round and square tube. The torch axis comes back to Y1073.6, so a tube end can be notched 306 mm from the jaws."
+    ],
+    "release": "SUPPLIER ALLOCATION - NOT A PURCHASED-PART DRAWING"
+  }
+]

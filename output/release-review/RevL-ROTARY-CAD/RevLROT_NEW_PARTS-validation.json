@@ -1,0 +1,154 @@
+{
+  "parts": [
+    {
+      "id": "ROT_RAIL_L",
+      "part_number": "ROT_RAIL_2x4_240",
+      "group": "rotary",
+      "material": "2 x 4 x .083 in steel rectangular tube, on edge",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 149938.49856,
+      "bounds_mm": [
+        465.0,
+        1399.2,
+        730.0,
+        515.8,
+        1639.2,
+        831.6
+      ],
+      "notes": [
+        "On the rear upper cross tube from its front face (Y1399.2) to Y1639.2, 189.2 mm behind it. One M10 x 130 through-bolt at Y1424.6 in a sleeve welded through the cross tube (not drawn)."
+      ]
+    },
+    {
+      "id": "ROT_RAIL_R",
+      "part_number": "ROT_RAIL_2x4_240",
+      "group": "rotary",
+      "material": "2 x 4 x .083 in steel rectangular tube, on edge",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 149938.49856,
+      "bounds_mm": [
+        634.2,
+        1399.2,
+        730.0,
+        685.0,
+        1639.2,
+        831.6
+      ],
+      "notes": [
+        "On the rear upper cross tube from its front face (Y1399.2) to Y1639.2, 189.2 mm behind it. One M10 x 130 through-bolt at Y1424.6 in a sleeve welded through the cross tube (not drawn)."
+      ]
+    },
+    {
+      "id": "ROT_TIE",
+      "part_number": "ROT_TIE_2x4_118",
+      "group": "rotary",
+      "material": "2 x 4 x .083 in steel rectangular tube, on edge",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 73969.65929,
+      "bounds_mm": [
+        515.8,
+        1588.4,
+        730.0,
+        634.2,
+        1639.2,
+        831.6
+      ],
+      "notes": [
+        "Closes the U between the two rails at the back; welded."
+      ]
+    },
+    {
+      "id": "ROT_PLATE",
+      "part_number": "ROT_SHELF_PLATE_220x240",
+      "group": "rotary",
+      "material": "A36 steel plate 1/4 in",
+      "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
+      "purchased_envelope": false,
+      "volume_mm3": 335280.0,
+      "bounds_mm": [
+        465.0,
+        1399.2,
+        831.6,
+        685.0,
+        1639.2,
+        837.95
+      ],
+      "notes": [
+        "220 x 240 x 6.35 on the U, welded. The rotary's base bolts through it: drill from the delivered unit (no holes drawn)."
+      ]
+    },
+    {
+      "id": "ROT_UNIT_ALLOCATION",
+      "part_number": "ROTARY_AXIS_ALLOCATION",
+      "group": "rotary_allocation",
+      "material": "Hollow rotary axis, belt reduction, NEMA 23: allocation only",
+      "status": "SUPPLIER ALLOCATION - NOT A PURCHASED-PART DRAWING",
+      "purchased_envelope": true,
+      "volume_mm3": 7350000.0,
+      "bounds_mm": [
+        470.0,
+        1445.0,
+        837.95,
+        680.0,
+        1645.0,
+        1012.95
+      ],
+      "notes": [
+        "210 x 200 x 175 envelope on the shelf: spindle housing, belt reduction (about 6:1) and the NEMA 23 stepper on the X driver. Spindle axis at Z954.3, X575. Real size, holes and bore from the delivered unit."
+      ]
+    },
+    {
+      "id": "ROT_CHUCK_ALLOCATION",
+      "part_number": "ROTARY_CHUCK_K72_125_ALLOCATION",
+      "group": "rotary_allocation",
+      "material": "K72-125 class four-jaw independent chuck: allocation only",
+      "status": "SUPPLIER ALLOCATION - NOT A PURCHASED-PART DRAWING",
+      "purchased_envelope": true,
+      "volume_mm3": 797670.0097,
+      "bounds_mm": [
+        512.5,
+        1379.881458,
+        891.7111,
+        637.618542,
+        1445.118542,
+        1016.8889
+      ],
+      "notes": [
+        "\u00d8125 x 65, face at Y1380 toward the machine, 32.2 mm behind the bed module's rear edge. Independent jaws centre round and square tube. The torch axis comes back to Y1073.6, so a tube end can be notched 306 mm from the jaws."
+      ]
+    }
+  ],
+  "part_count": 6,
+  "broadphase_pairs": 1,
+  "unresolved_intersections": [],
+  "documented_intersections": [],
+  "note": "Positive-volume static interference test, not a strength or motion certification.",
+  "step_readback": {
+    "passed": true,
+    "solids": 6,
+    "volume_delta_mm3": 2.7939677238464355e-08,
+    "volume_tolerance_mm3": 0.8856796666110134,
+    "sha256": "b1a832e4c19ec80c954c8f2f47aab19356754058e68b57882cf8023d298deed0",
+    "file": "RevLROT_NEW_PARTS.step"
+  },
+  "individual_step_readback": [
+    {
+      "part_number": "ROT_RAIL_2x4_240",
+      "valid": true,
+      "volume_delta_mm3": 6.693881005048752e-10
+    },
+    {
+      "part_number": "ROT_TIE_2x4_118",
+      "valid": true,
+      "volume_delta_mm3": 5.820766091346741e-11
+    },
+    {
+      "part_number": "ROT_SHELF_PLATE_220x240",
+      "valid": true,
+      "volume_delta_mm3": 0.0
+    }
+  ]
+}

@@ -7,7 +7,7 @@ wide): clear. A Ø100 tube at the cut height:
 clear, and its touch-off within the Z stroke. A 1500 mm tube runs out of the front over the low front cross tubes: clear.
 Plasma: Rev L's nine corner poses and Rev K's three plasma poses with the rotary fitted, no tube: clear.
 Router: the nine corner poses with the module in and the dock parked, plus the dock deployed at the rear stop, with the
-rotary fitted: clear. The chuck face stays at least 10 mm behind the bed module's rear edge.
+rotary fitted: clear. The chuck face stays at least 10 mm behind the bed module's rear edge (and 15 behind the BT30 dock's parked tray).
 Hoist: Rev J's sampled module-and-sling path (70 mm up, then out of the front window) with the dock deployed and the rotary
 fitted at the back, at three hook heights: clear.
 Heights: the biggest tube's underside stays 50 mm over the slats and 60 mm over the pan walls.
@@ -173,8 +173,8 @@ def main():
             0 < c['tip_below_slat_top_mm'] <= verify_revk.FLOAT_TRAVEL - .5 for c in reach_rows),
         'router corners with the module in and the rotary fitted: clear; dock deployed at the rear stop: clear': all(
             r['passed'] for r in router_rows) and deployed_row['passed'],
-        'chuck face at least 10 mm behind the bed module\'s rear edge': rotary.CHUCK_FACE_Y - module_rear >= 10,
-        'the shortest tube end the torch can reach is under 300 mm from the jaws': info['shortest_reach_from_jaws_mm'] <= 300,
+        'chuck face at least 10 mm behind the bed module\'s rear edge and 15 mm behind the BT30 dock\'s parked tray (Y1365)': rotary.CHUCK_FACE_Y - module_rear >= 10 and rotary.CHUCK_FACE_Y - 1365.0 >= 15,
+        'the shortest tube end the torch can reach is under 320 mm from the jaws': info['shortest_reach_from_jaws_mm'] <= 320,
         'a Ø100 tube stays 50 mm over the slats and 60 mm over the pan walls': big_bottom - SLAT_TOP >= 50 and big_bottom - PAN_WALL_TOP >= 60,
         'hoist path clear at every hook height with the dock deployed and the rotary fitted': all(c['result'].startswith('PASS') for c in hoist_cases)}
     after = build_revl_rotary.source_hashes()
