@@ -19,6 +19,7 @@ Everything else is Rev K's, unchanged: the frame apart from its fill holes, the 
 - Checks: [poses, dock travel, tool change and hoist path](revl-checks.json), [manifest and source hashes](engineering-manifest.json), and the validations of each STEP
 - [What Rev L adds to the shopping list](../../../outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md)
 - **[What to build while the parts arrive](BUILD-ORDER.md)**: the owner has the plasma cutter and torch, and all the drive modules are ordered (27 Sep). The HGR20 rails and the bed extrusion are still to come.
+- **[Machined parts](MACHINED-PARTS.md)** (28 Sep): 56 part numbers, 141 pieces of the whole machine need a lathe or a mill; 85 of them are simple turned parts that stock items could replace. Counted from the package data; nothing is changed in the model.
 
 ![Rev L dock close-up, deployed](previews/RevL_DOCK_DETAIL.png)
 
