@@ -52,7 +52,8 @@ The RapidChange magazine, its lid, the saddles and the risers are replaced by a 
 | Stored holders | Pull-stud tops at **Z1132.1**: 10.9 mm under the gantry's lowest members (Z1143) and 17.9 mm under the Z body (Z1150). Noses at Z997.7; cutters may project at most **30 mm below the nut**, to Z967.7, 8.9 mm above the HDPE |
 | Carrier tray | Rev L's plate, 26.35 mm longer at the front (Y1038.65–1165 deployed), with six 56 mm slots open to the front for the hanging nuts, which slide in and out through them at the fork height. No front upstand: the bar stiffens the front |
 | Deployed | Over the rear 57 mm of the work area (Y1038.65–1095). The tray's lowest screw heads are at Z1015 |
-| Mass | Dock **14.9 kg** (Rev L 10.6), with six holders at 0.95 kg and forks at 0.06 kg as placeholders. The module becomes about **78 kg** (Rev L 74); with the dock deployed for a lift its centre of mass is at Y763 (Rev L 745) |
+| Tool setter | As Rev L: a Ø30 × 45 button setter on the carrier wing at **X896**, on this variant's pocket line (Y1073.65). A 40 mm cutter in the held holder touches at z_lift 151.35, the nose 40 mm above the button; wired through the dock plug into the head loop (M19) |
+| Mass | Dock **15.1 kg** (Rev L 10.6), with six holders at 0.95 kg and forks at 0.06 kg as placeholders. The module becomes about **78 kg** (Rev L 74); with the dock deployed for a lift its centre of mass is at Y763 (Rev L 745) |
 
 **Why the pitch is 90, and why 30 mm of cutter.** With the spindle nose at a holder's gauge line, the clamp's bottom is 9 mm below the neighbouring pull-stud tops, so the clamp (130 wide) must pass between them: at 90 mm pitch the studs (Ø14) clear it by 6 mm. Height: between the HDPE (Z958.8) and the gantry's lowest members (Z1143) there are 184 mm; a stored holder needs 60 (projection) + 8 (groove) + 74.4 (taper and stud) plus its cutter and two clearances. With 30 mm of cutter, 8.9 mm is left below and 10.9 above. Longer stored tools would need the dock's travel lengthened by about 55 mm so the studs park behind the gantry's guide face (Z1155 there), which is not drawn.
 
@@ -66,7 +67,7 @@ The rule is Rev L's, with 34 mm less margin: **the dock moves, and the gantry cr
 2. Deploy the dock and wait for "deployed".
 3. **Put the tool back** (if one is in the spindle): X to its pocket, gantry Y1183.6 (the holder 70 mm ahead of the pocket line), Z down to the engage height (z_lift 37.7: the nose at the gauge line), then Y +70 at slow feed so the flange slides into the fork. Release the drawbar (M15), wait for "released", raise Z fully.
 4. **Take the next tool:** X to its pocket, gantry Y1253.6 (the pocket line), Z down to the engage height so the taper enters the nose; clamp, wait for "clamped"; Y −70 out of the fork, raise Z fully.
-5. Park the dock, wait for "parked", carry on. Tool length: no setter is drawn; probe it on the plate, or store the lengths per holder.
+5. Park the dock, wait for "parked", carry on. Tool length: probe it on the setter at X896 on the pocket line (a 40 mm cutter in the held holder touches at z_lift 151.35; M19), or store the lengths per holder.
 
 The engage height is nominal: set it on the machine from the delivered spindle and holders (the nose lands a fraction above the gauge line with the taper seated).
 
@@ -82,7 +83,7 @@ As Rev L, with the head handling changed:
 
 ## Controls: the drawbar and its interlocks (M15, M16)
 
-These are written here, not built into `gm1_circuit.py`, so the ER11 circuit record (1,424 checks) is unchanged. They use the pins Rev L reserved on the MCP23017 for the RapidChange cover and IR check, which the rack does not have.
+These are written here, not built into `gm1_circuit.py`, so the ER11 circuit record (1,605 checks) is unchanged. They use the pins Rev L reserved on the MCP23017 for the RapidChange cover and IR check, which the rack does not have.
 
 - **M15, drawbar release.** A 24 V 5/2 solenoid valve on the spindle's release cylinder, switched by a relay K_DRAWBAR from MCP23017 **GPB2** through the ULN2803A. Its 24 V comes from the same source as the dock motor (after the E-stop contactors, fuse F_AIR), then passes **K_REQ_B's spare NC contact 41-42** (no release while the Rodent requests a tool; K_VFD_RUN has no spare NC) and the **VFD's "running" relay, NC side** (no release while the spindle turns, whatever the command). A second valve for the taper blow-off, if the spindle has the port, on **GPB3**. Terminal by terminal: the last section of the [GM1 wiring list](../../controls-2026-09-27/GM1-WIRING-BY-TERMINAL.md).
 - **M16, no spindle with the drawbar released.** The spindle's "released" sensor (M8 PNP) drives a relay K_RELEASED; its NC contact sits in the K_VFD_RUN coil chain, so the spindle cannot be started with the drawbar open, even by a wrong macro. The "clamped" sensor is read on **GPA6** and "released" on **GPB4** (as an input) through optocouplers, for the macro's waits.
@@ -102,15 +103,17 @@ These are written here, not built into `gm1_circuit.py`, so the ER11 circuit rec
 | Tool change at pockets 1, 3 and 6: Z up with a holder in the spindle; engage (nose at the gauge line, Z 37.7); sliding in 35 mm ahead with the pocket empty; approach 70 mm ahead | **Pass**: 12 poses. Only the pocket interface is touched, and at every engage and sliding-in pose it is touched (6 contacts: the spindle envelope on the stored holder's taper, the held holder's flange in the fork). The clamp, adapter and Z body clear the rack, the tray and the neighbouring holders |
 | Gantry over the deployed rack with Z up: gantry Y1150, 1200 and 1230 at head X575, and Y1150 at X350 and X800 | **Pass**: 5 poses, clear |
 | Z body above the stored holders' pull studs | 17.875 mm (Z1150 over Z1132.12) |
-| Stored holders under the gantry's lowest members (Z1143), dock parked or crossed | 10.875 mm (at least 8 required) |
+| Stored holders under the gantry's lowest members (the work light bar, Z1143), dock parked or crossed | 10.875 mm (at least 8 required) |
 | The Z rule | The dock may move with z_lift ≥ 267.125 (a holder with a 40 mm cutter clears the studs by 15 mm); the check requires that to be at least 30 mm below the top, so the M14 "Z at top" interlock has margin |
 | Deployed dock against 8.5 mm of stock over the HDPE | **Pass**: clear; the stored cutters' bottoms are 8.925 mm above the HDPE |
 | Held holder nose at full Z above the stored studs | 127.875 mm |
+| Tool setter: inside the tool travel on the pocket line; head over it at Z up; a 40 mm cutter in the held holder on the button (z_lift 151.35) | **Pass**: both poses clear, the holder's nose 40 mm above the button |
+| Work light under the beam: at least 15 mm above the stored studs; gantry crossing the parked rack at Y1200 and Y1180 with Z up | **Pass**: 15.875 mm over the studs (the bar is now the gantry's lowest member over the rack: 10.875 mm), both crossings clear |
 | Hoist path with the rack and six holders on the module: hook 0.7, 1.0 and 2.0 m above the lugs, over Y762.7, rolled 1.52 m | **Pass**, 78 sampled poses each. Nearest gaps: 0.7 m: MOD_RAIL_L to MF_LEG_1_1 11.2 mm, MOD_RAIL_R to FLOAT_PAN_EMPTY_BACKRAIL 14.5 mm; 1 m: MOD_RAIL_L to MF_LEG_1_1 11.2 mm, MOD_RAIL_R to FLOAT_PAN_EMPTY_BACKRAIL 14.5 mm; 2 m: SLING_LEG_3 to X_RAIL_1 1.4 mm, MOD_RAIL_L to MF_LEG_1_1 11.2 mm |
 | Frame fill: one hole per tube; none faces down; every tube at least 90 % full | **Pass**: lowest 93.7 % (epoxy, MF_END_FRONT_LOW) and 91.9 % (dry sand, MF_END_REAR_UPPER), as Rev L |
-| Static interference of the exported states: router with the rack parked (1303 solids), plasma with the parked spindle (1079), bed module with the rack (226), dock (77), changed parts (49) | 0 unresolved overlaps; STEP reimport matches |
+| Static interference of the exported states: router with the rack parked (1305 solids), plasma with the parked spindle (1080), bed module with the rack (227), dock (78), changed parts (49) | 0 unresolved overlaps; STEP reimport matches |
 
-15 of 15 checks pass; 3,586 s; sources unchanged during the run.
+17 of 17 checks pass; 4,049 s; sources unchanged during the run.
 
 These are nominal CAD checks. They do not cover the ZBX80's load rating, the fork-and-holder interface, the drawbar, cable and air routing, or the sling's real shackles.
 

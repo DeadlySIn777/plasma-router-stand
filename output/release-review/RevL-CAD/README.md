@@ -65,7 +65,8 @@ The other session's carrier (base branch, [retractable ATC](../../../variants/re
 | Travel | 200 mm. **Deployed:** magazine at Y1070–1130, over the rear 60 mm of the bed. **Parked:** Y1270–1330, behind the Z body and under the gantry |
 | Drive | 24 V worm gearmotor (about 30 rpm) and a GT2 belt on the right beam; about 20 mm/s, 10 s end to end. The worm holds the carrier |
 | Stops and sensing | A fitted front stop is the deployed datum (the pocket positions depend on it); a soft rear stop. One end microswitch per direction cuts the motor at the end. Two M8 inductive sensors tell the Rodent where the carrier is |
-| Connection | One M12 8-pin plug at the back of the module, for the motor and the sensors. Unplug it before a lift. The magazine's cover and IR lead need a second plug, not yet defined |
+| Connection | One M12 8-pin plug at the back of the module, for the motor, the sensors and the tool setter (pins 7–8). Unplug it before a lift. The magazine's cover and IR lead need a second plug, not yet defined |
+| Tool setter | A Ø30 × 45 button setter (envelope) on a wing at the tray's right end (X870–914 × Y1080–1120 deployed), axis **X896 on the pocket line**, button top Z1071.35. A tool 40 mm below the nut touches at **z_lift 151.35**, with the nut 40 mm above the button. Its NC contact goes through the dock plug into the head loop: pressed = probe triggered (controls M19) |
 | Mass | About **10.6 kg**, with 3.3 kg allowed for the magazine and cutters. The module becomes about 74 kg |
 
 **Clamping near the back of the bed.** When deployed, the tray covers the rear 65 mm of the HDPE (Y1065–1130), with its lowest screw heads at Z1015 and the stored cutters at Z1003.8. In that strip, keep stock and clamps under **40 mm** tall (50 before the magazine was lowered 10 mm to fit its lid under the gantry). Elsewhere the dock does not limit them.
@@ -98,6 +99,10 @@ The RapidChange grblHAL macros can use their normal approach. The checks below d
 
 **Plasma to router:** lower the module in and refit the six screws, as in Rev K. Then plug in the dock, park it (Z up) and **probe the pocket reference** before the first tool change. RapidChange needs the pockets within 0.2 mm, and the module's locating pins are not proven to that.
 
+## Work light
+
+An 800 mm 24 V LED bar (`GANTRY_WORK_LIGHT`, 17 × 7 channel, envelope) clips into the gantry beam's rear bottom T-slot with two M8 T-nuts, over the X travel (X175–975). Its underside is at Z1148, 15.65 mm above the parked magazine lid, and it moves with the gantry. From there the ray to the tool tip passes under the guide face, the Z body and the spindle nose at every Z, so the cut is lit from behind. It is fed from the 24 V rail through its own fuse and a door switch (controls M18), up the gantry with the Z brake leads to XG:5–6, and stays on through a stop.
+
 ## Frame fill
 
 The frame's 18 tubes are separate sealed compartments, each with one fill hole. Nothing connects them.
@@ -121,12 +126,14 @@ The percentages are the model's estimate: the part of each cavity below a level 
 
 ## Controls
 
-These are M12 to M14 in the [GM1 controls](../../controls-2026-09-27/README.md), with their simulation checks (1,424 pass).
+These are M12 to M14, and the 28 September additions M17 to M20, in the [GM1 controls](../../controls-2026-09-27/README.md), with their simulation checks (1,605 pass).
 
 - **Spindle reverse (M12).** RapidChange unloads with the spindle in reverse. A force-guided relay K_DIR at the end of the run chain sends the run command to FWD or REV, never both. The Rodent's spindle direction goes to the V-MOS HE1 output (GPIO2).
 - **Dock drive (M13).** Two relays (run and direction) drive the gearmotor. Its 24 V comes through the E-stop contactors and a spindle-run interlock, so the dock cannot move while the spindle is commanded, and it stops at every E-stop. The end microswitches stop it even if a relay welds.
 - **Z-top enable (M14).** The dock motor's feed passes a second contact of the Z top switch, closed only with the Z carriage at its top. The dock cannot move with the spindle low, whatever the macro commands, even with the run relay welded.
 - **I/O.** The Rodent reads the two dock sensors and drives the two relays through its MCP23017 expander. Inputs and outputs are reserved there for the magazine's IR check and cover.
+- **Tool setter (M19).** The setter's NC contact comes through the dock plug (XD:7–8) and replaces the XHEAD 4–5 link in the head loop, so pressing it turns off U_PROBE (the Rodent probe reads triggered) and U_HEAD (the permission drops, as a torch float trip does; the spindle is off during a length probe). Relay K_SETTER, in parallel with KM_R, bridges it outside router mode, so plasma work with the dock unplugged is unaffected. In router mode the dock must be plugged in or there is no permission.
+- **Work light (M18), pilot lamps (M17), second E-stop (M20).** The light has its own fuse and door switch on the 24 V rail. Three door lamps show STOPPED (the safety relay's NC auxiliary), WATER READY and ARMED. A second latching E-stop at the loading end sits in series in both safety-relay channels through XH:7–10.
 - The RapidChange electrical interface (cover, IR) comes from the delivered kit.
 
 ## What was checked
@@ -145,9 +152,13 @@ These are M12 to M14 in the [GM1 controls](../../controls-2026-09-27/README.md),
 | The Z rule | The dock may move with z_lift ≥ 227.35 (a 40 mm cutter clears the lid by 15 mm); the check requires that to be at least 65 mm below the top, so the M14 interlock's "Z at top" has margin |
 | Deployed dock against 40 mm of stock and clamps over the HDPE | **Pass**: clear |
 | RapidChange 90 mm rule | 127.65 mm from the lid to the nut at full Z (219.65 from the magazine plane) |
+| Tool setter: inside the tool travel on the pocket line; head over it at Z up; a 40 mm tool on the button (z_lift 151.35) | **Pass**: both poses clear, the nut 40 mm above the button |
+| Work light under the beam: at least 15 mm above the parked lid; gantry crossing the parked dock at Y1200 and Y1180 with Z up | **Pass**: 15.65 mm over the lid, both crossings clear |
 | Hoist path with the dock deployed on the module: hook 0.7, 1.0 and 2.0 m above the lugs, over Y745, rolled 1.52 m | **Pass**, 78 sampled poses each, and no sling leg touches the dock. At 0.7 and 1.0 m the nearest gaps are Rev J's: frame legs 11.2 mm, float backrails 14.5 mm. At 2.0 m a rear leg passes **2.9 mm** from the rear-parked X rail (8.6 mm in Rev K), because the hook moved back over the new centre of mass: don't use the 2.0 m sling. The container plan uses 0.7 m |
 | Frame fill: one hole per frame tube; none faces down in its fill attitude; every tube at least 90 % full (epoxy with the 15° tilts, dry sand near vertical) | **Pass**. The lowest estimates are 93.7 % (epoxy, front lower cross tube) and 91.9 % (dry sand, rear upper cross tube). Every pose above includes the moved holes |
-| Static interference of the exported states: router with the dock parked (1,299 solids), bed module with the dock deployed (228), dock (79), new and changed parts (136) | 0 unresolved overlaps; STEP reimport matches |
+| Static interference of the exported states: router with the dock parked (1,302 solids), bed module with the dock deployed (230), dock (81), new and changed parts (139) | 0 unresolved overlaps; STEP reimport matches |
+
+16 of 16 checks pass; 4,077 s; sources unchanged during the run.
 
 These are nominal CAD checks. They do not cover stiffness at the pocket, the delivered magazine, cable routing, or the sling's real shackles.
 
@@ -157,7 +168,7 @@ These are nominal CAD checks. They do not cover stiffness at the pocket, the del
 - **Pocket accuracy.** RapidChange asks for 0.2 mm. The front stop and the preloaded belt clamp should repeat to 0.05 mm; prove it in 20 cycles with an indicator. Probe the pocket reference after every bed install.
 - **Stiffness.** One block per rail. The load at the pocket is a nut threading on at low speed, but check the tray's deflection under a 150 N push at the pocket.
 - **Drive parts.** The gearmotor, pulleys, belt clamp spring and sensors are chosen by function. Fit the gearmotor's face to the motor plate once it is in hand.
-- **Tool length.** A tool setter is not drawn. It could sit on the dock's right saddle.
+- **Tool setter.** Drawn as a Ø30 × 45 envelope on the carrier wing; its mounting holes, cable exit and trip travel come from the delivered unit. Measure its trip height and set the probe macro's start height and distance from it.
 - **Chips and coolant.** The rails, belt and gearmotor sit at the back of the bed. Cover the rails (a sheet-metal cover or bellows) and use a sealed gearmotor or shield it; neither is drawn. The sensors and the plug are IP67 parts.
 - **The Z slide.** The 300 mm listing drawing confirms the 419 mm body. The height from its base to the carriage top is still not dimensioned: the model assumes 80 mm, and the drawing scales to about 62 mm. If it is about 62, the spindle and torch sit about 18 mm further back and the checks are re-run. Measure it, the carriage and the end blocks on receipt, as MOTION-MODULES.md lists.
 - **The lid.** Its 12 mm closed height is an allowance, and its open sweep (it slides along the magazine) is not drawn. Check the kit's cover against the 520 mm length and the height budget: cutters 40 mm above the HDPE below, the gantry's Z1143 above.

@@ -24,6 +24,13 @@ M9 and M10 close the review's water findings on the controls side. M11 closes it
 - M13: the drive for the tool changer's retracting magazine.
 - M14: the dock motor is fed through the Z top switch, so the dock can only move with Z up.
 
+**28 September, the cheap additions** ("keep improving the design... adding nice things that won't cost a lot"):
+
+- M17: three door pilot lamps, STOPPED, WATER READY and ARMED.
+- M18: a work light under the gantry beam, on its own fuse and switch.
+- M19: the dock's tool setter in the head loop, so the changer gets a tool-length probe on the existing probe input.
+- M20: a second E-stop station at the back of the frame, in series in both safety-relay channels.
+
 **What it builds on.** It starts from the other session's Rev I relay circuit (`output/design-finish-2026-09-26/controls/circuit.py`). That file is imported read-only and left unchanged, and its hash is recorded.
 
 **What is kept.** Rev I's water logic is kept, with three changes:
@@ -62,6 +69,10 @@ The owner's controller decision is built in: BTT Rodent with grblHAL.
 | M12 | **Spindle reverse.** A force-guided direction relay K_DIR sits at the end of the three-contact run chain. Its NC contact passes the run command to the VFD's FWD terminal and its NO contact to REV, so the VFD never sees both. The Rodent's spindle direction (V-MOS HE1, GPIO2) drives it. It only chooses the direction; the run chain still starts and stops the spindle. | Owner's tool changer (Rev L) |
 | M13 | **Tool-changer drive.** The dock's 24 V gearmotor is fed through the E-stop contactors and K_VFD_RUN's NC contact, so it cannot move while the spindle is commanded, stops if the spindle starts, and stops at every E-stop. A run relay and a direction relay drive it, so the two directions can never be driven at once. An end microswitch for each direction stops it at the end of travel, even if a relay welds. | Owner's tool changer (Rev L) |
 | M14 | **Dock enable from the Z top switch.** With the Z body raised over the changer, the only crash left is the spindle low over the magazine while the dock moves. The dock feed passes a second, NO, contact of the Z top switch (LS_ZTOP 13-14) ahead of K_DOCK_RUN, so the dock cannot move unless the Z carriage is at its top, whatever the firmware commands and even with K_DOCK_RUN welded. The switch's first contact stays the Rodent's Z limit. | Owner's catch on the Rev L picture (27 Sep): "when it retracts, or it moves forward it will hit the autochanger" |
+| M17 | **Pilot lamps.** Three 22 mm 24 V LED lights on the door, each a plain load to 0 V: red STOPPED on the safety relay's NC auxiliary 41-42 (lit whenever its safety outputs are off), green WATER READY on NOT_FILL (the selected mode's water sequence done, no fill running), white ARMED on the ARMED node (K_RUN_ARM up). Indication only. | Owner, 28 Sep: cheap improvements |
+| M18 | **Work light.** An 800 mm 24 V LED bar under the gantry beam (Rev L `GANTRY_WORK_LIGHT`), fed from the 24 V rail ahead of F_CONTROL through F_LIGHT (2 A) and the LIGHT selector, up the gantry with the Z brake leads to XG:5-6. A lamp fault cannot take the control fuse; the light stays on through a stop. | Same |
+| M19 | **Tool setter.** The dock's button setter (Rev L `MOD_ATC_TOOL_SETTER`) has an NC contact that comes through the dock plug (XD:7-8) and replaces the XHEAD 4-5 panel link in the head loop: pressed, the loop opens, U_PROBE turns off (the Rodent probe reads triggered) and U_HEAD turns off (the permission drops, as for a float trip). K_SETTER (coil with KM_R) bridges it with its NC 11-12 whenever router mode is not selected, so the loop is whole in plasma mode with the dock unplugged; in router mode the dock must be plugged in or there is no permission. | Rev L open item "a tool setter is not drawn" |
+| M20 | **Second E-stop station.** A second latching E-stop at the back of the frame (the tube-loading end, away from the cabinet door), in series with the door E-stop in both channels (SR S11-S12 and S21-S22) through XH:7-10. Either stops; both must be released before RESET. | Owner, 28 Sep |
 
 ## How a stop works
 
@@ -179,6 +190,22 @@ Dock sensors (M8 PNP) --optocouplers--> MCP23017 GPA4 (deployed), GPA5 (parked)
 - **The dock may move in SETUP** (it has to, for a bed change) and in RUN, but only with the spindle stopped. Keep hands clear: it moves at about 20 mm/s.
 - **The macros** must approach the pockets from the rear stop with the head at X975 whenever the dock moves or is out (Rev L README). They read the dock sensors with M66 and drive the dock with M64/M65.
 
+## Lamps, work light, tool setter and the second E-stop (M17–M20)
+
+- **The lamps (M17)** are loads, not logic: nothing is wired through them. STOPPED uses the PNOZ's signalling contact 41-42, which closes when the safety outputs drop, so it is lit at power-up until RESET, after any E-stop, and on a channel fault. WATER READY goes dark while a fill runs and comes back when the fill-stop float ends it. ARMED follows K_RUN_ARM: RUN selected, the head loop closed, every chain relay released before it picked up.
+- **The work light (M18)** takes nothing from the control circuit: 24 V rail, F_LIGHT, the LIGHT selector, XG:5, the bar, XG:6, 0 V. It is on when you want it, E-stop or not, and a short in the bar blows F_LIGHT alone.
+- **The tool setter (M19)** gives the changer a length probe without a second probe input. Physically its NC contact sits in the head interface board's 24 V LED loop, in place of the panel link between XHEAD 4 and 5; the simulator puts the same two contacts (the setter, and K_SETTER's NC bridge) at the loop's output after XH:5-6, which behaves the same. Pressing the button opens the loop: the probe input reads triggered and the permission drops, exactly as a torch float trip, and both return when the button releases; the request is low during a length probe, so the door input stays closed. Outside router mode K_SETTER is released and its NC contact bridges XD:7-8, so plasma work with the dock (and the setter) unplugged is unaffected. In router mode the bridge is open: an unplugged dock means no permission and no spindle, which also guarantees the dock sensors are connected before a tool change. Program the probe move (G38.2) with a short distance past the expected trip height; if the setter or K_SETTER fails, the probe never trips and grblHAL alarms at the end of that distance instead of driving on.
+- **The second E-stop (M20)** is two more NC contacts in the safety relay's two channel loops, through the XH strip. It is a station in series, not a second circuit, so the PNOZ's channel monitoring covers it: one channel opening alone locks the relay until both open.
+
+## Rotary mode: tube notching on the X driver
+
+The [rotary variant](../release-review/RevL-ROTARY-CAD/README.md) adds no relay logic and no Rodent I/O: the Rodent's four drivers are all in use (X, Y1, Y2, Z), so the rotary's NEMA 23 runs on the **X driver through a plug swap**. What it needs on the controls side:
+
+- **The plug.** The X motor's cable ends in a 4-pin plug at the cabinet's motor receptacle; the rotary's cable ends in the same plug. One of the two is in the X receptacle. **Press the E-stop before swapping** (K1/K2 drop the 48 V): a stepper driver hot-plugged loses its output stage. The X carriage is not held while its motor is unplugged; re-home X after swapping back.
+- **Settings for a tube job**, sent by a macro or the post-processor's header, and undone by its footer: `$100` (X steps per mm) set to steps per degree (a 6:1 belt on a 200-step motor at 8 microsteps gives 9600 steps per turn, 26.667 per degree) or per mm of arc for the tube's diameter; `$130` (X max travel) large; X left out of the homing cycle masks; soft limits off for X. Y and Z stay as they are.
+- **THC off for the job** (the plasma plugin's mode), and the initial height from the float touch-off on the tube top, as on a plate. The float loop and M11 work unchanged; the tube's crown is 1 mm proud of the touch point on a Ø60 tube 15 mm either side, so probe on the top line.
+- **What does not change:** the safety relay, the permission chain, the door input and the torch-start chain. The second E-stop (M20) is at the back of the frame, next to the chuck.
+
 ## Wiring by terminal
 
 **[GM1-WIRING-BY-TERMINAL.md](GM1-WIRING-BY-TERMINAL.md)** lists every screw terminal, the numbered wire on it and where that wire's other end lands, device by device: rails, fuses, the safety relay and contactors, every relay and timer, the door switches, the gantry and bed-module cables, the Rodent's connectors, the interface board, the VFD and the cutter box. The [wire list](gm1-wire-list.csv) has the same wires one per row with colour and size. `gm1_wiring.py` generates both from [the simulated netlist](gm1-terminal-netlist.json) and records the netlist's hash in [gm1-wiring.json](gm1-wiring.json); it checks that no terminal carries more than two wires.
@@ -186,7 +213,8 @@ Dock sensors (M8 PNP) --optocouplers--> MCP23017 GPA4 (deployed), GPA5 (parked)
 What it decides beyond the netlist (wiring decisions, not simulated behaviour):
 
 - **Rails.** The 0 V, C, S, +24 V, BRK and V nets, and the router-ready and fill-coil nets, each get a bridged terminal group (X0V, XC, XS24, X24, XBRK, XV, X_RR, X_FILLCOIL): one wire per side of each position, no daisy chains through relay sockets. Rev I's XW:1-4 and the old stop-loop links XW:21-22 / XH:1-2 are not fitted.
-- **Field devices** wire only to their own XW/XH position; the gantry's Z-top second contact and the Z brake land on a small XG strip; the dock's motor, end switches and sensors go through the M12 connector XD (pins 1-2 motor through the end switches, 3-4 sensor supply, 5-6 sensor signals, 7-8 spare).
+- **Field devices** wire only to their own XW/XH position; the gantry's Z-top second contact and the Z brake land on a small XG strip; the dock's motor, end switches and sensors go through the M12 connector XD (pins 1-2 motor through the end switches, 3-4 sensor supply, 5-6 sensor signals, 7-8 the tool setter's NC contact).
+- **The 28 September parts.** The lamps wire from their nodes (SR 42, K_FILL 22, the ARMED chain) to 0 V. The work light and the Z brake share the XG strip (XG:5-6). The tool setter's loop goes XHEAD 4 → K_SETTER 11 → XD:7, XD:8 → K_SETTER 12 → XHEAD 5. The second E-stop's two channels go out and back through XH:7-8 and XH:9-10.
 - **The dock motor** reverses on K_DOCK_DIR's two poles (12 and 24 to M1, 22 and 14 to M2, jumpered on the socket) with K_DOCK_RUN switching +24 V and 0 V; the end switches sit in the motor leads on the module with their diodes. The netlist models the two directions as two loads.
 - **The interface board's ULN2803A outputs are low-side:** relay coils take + from XC and their A2 goes to the board's OUT terminal. The V-MOS loads (K_DIR coil, mist valve) sit between the Rodent HE+ and HE- pins, fed from the 48-to-24 V DC-DC after K1 and K2.
 - **Two 0 V domains**, never joined: field 0 V (X0V) and the controller side (Rodent GND, the OLED, CN51-53, the board's RUN, I2C, ARC and THC terminals).
@@ -209,7 +237,7 @@ Dropping RS485 frees GPIO14 and GPIO15. That covers the eight real-time inputs G
 | Signal | Rodent connector | GPIO | Wiring |
 |---|---|---|---|
 | X, Y1, Y2, Z home/limit | X-MAX, Y-MAX, E0-MAX, Z-MAX | 35, 34, 32, 33 | NC switches, signal to GND; SW_VCC jumper on 12 V. The VCC jumper is prohibited above 24 V. |
-| Plasma float (probe) | Probe | 36 | Rev I's U_PROBE PhotoMOS switches VProbe (12 V) onto the signal pin. J44 is not fitted. Seated reads HIGH; a trip or open wire reads LOW. Router Z zero stays manual. |
+| Plasma float (probe) | Probe | 36 | Rev I's U_PROBE PhotoMOS switches VProbe (12 V) onto the signal pin. J44 is not fitted. Seated reads HIGH; a trip or open wire reads LOW. In router mode the dock's tool setter opens the same loop (M19), so tool length is probed on it; router Z zero on the work is still manual. |
 | GM1 door input | E1-MAX | 39 (V1.1), 37 (V1.0) | Dry contacts K_REQ_A NC and K_RUN_ARM NO in parallel. grblHAL safety door. |
 | Arc OK | Sp-Direction header | 15 | Dry output of an isolated DC current switch on the work lead, with a 4.7 kΩ pull-up to 3.3 V. Plasma plugin `$367`. |
 | THCAD-300 frequency | Sp-Feedback header | 14 | THCAD output through an SN74LVC1G17 on 3.3 V. Use the `/64` or `/128` divider, because the header has 0.1 µF to ground. Read by a new ESP32 capture driver. |
@@ -259,6 +287,13 @@ All parts are unpriced; the cost register gets them when it is re-baselined to t
 | 2 | Roller-lever microswitch, NC, IP67, with a 1N4007 across each | LS_OUT, LS_IN, dock end of travel (M13) | Select to fit the Rev L stop blocks |
 | 1 | Z top limit switch with two circuits (or a second switch beside the Z limit), NO contact for the dock feed | LS_ZTOP (M14) | Select with the Z limit switch |
 | 1 | Interface board: MCP23017, 2 × SN74LVC1G17, AQY212GS (U_RUN), 3.3 V LDO, ULN2803A, 2 × PC817 (dock sensor inputs), resistors | Rodent side | Schematic level; no PCB yet |
+| 3 | 22 mm 24 V LED pilot lights, red, green, white (Schneider XB5AVB4/3/1 class) | H_STOP, H_READY, H_ARMED (M17) | Select |
+| 1 | 24 V LED light bar, 800 mm, 17 × 7 channel, IP65, about 12 W, with T-slot clips | LED_BAR under the gantry beam (M18) | Select |
+| 1 | 22 mm 2-position selector, one NO block (XB5AD21 class) | SW_LIGHT (M18) | Select |
+| 1 | 2 A DIN fuse terminal | F_LIGHT (M18) | Select |
+| 1 | Finder 40.52.9.024.0000 + 95.05 | K_SETTER, bridges the setter loop outside router mode (M19) | As Rev I's water relays |
+| 1 | Z tool setter, about Ø30 × 45, spring button, NC contact | TOOL_SETTER on the dock wing (M19) | Select; measure its trip height |
+| 1 | Ø40 latching E-stop, two NC blocks, in a surface box | ESTOP2 at the back of the frame (M20) | Select |
 
 **Retired from Rev I's list:**
 
@@ -271,7 +306,7 @@ The five remaining Finder water relays, the mode relays, the timers, the pump SS
 
 ## What the simulation shows
 
-All 1424 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.json)); 1386 before M14, 1173 before M12–M13. Unless stated otherwise, each ran with every combination of relay pickup (5, 10 and 20 ms) and dropout (5, 20 and 50 ms), in the way Rev I tested its own circuit.
+All 1,605 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.json)); 1,424 before M17–M20, 1,386 before M14, 1,173 before M12–M13. Unless stated otherwise, each ran with every combination of relay pickup (5, 10 and 20 ms) and dropout (5, 20 and 50 ms), in the way Rev I tested its own circuit.
 
 - **Rev I's own behaviors are kept.** These checks were repeated on the new graph:
   - fill arm, self-hold, stops and release-to-rearm;
@@ -351,6 +386,10 @@ All 1424 checks pass ([gm1-circuit-verification.json](gm1-circuit-verification.j
 - **Dock enable from the Z top switch (M14).** In all nine timing combinations: with Z below its top the dock does not move in either direction, whatever is commanded; at the top it moves; Z leaving the top stops a moving dock at once. A welded K_DOCK_RUN still cannot move the dock with Z below its top.
   - A welded K_DOCK_RUN still stops at the end switch.
   - Direction changes never drive both directions.
+- **Lamps (M17).** In all nine timing combinations: at power-up STOPPED is lit and the other two dark; after RESET in SETUP, STOPPED and ARMED dark; router ready in RUN, WATER READY and ARMED lit; an E-stop lights STOPPED within 300 ms and drops ARMED. WATER READY goes dark while a fill runs and stays lit in SETUP; opening the head loop drops ARMED.
+- **Work light (M18).** Off until switched; lit before any RESET; stays lit through an E-stop and with F_CONTROL open; its own fuse takes it out and leaves the control circuit alone; dark without the 24 V supply.
+- **Tool setter (M19).** In all nine timing combinations: router ready has K_SETTER up, the loop closed and the probe clear; pressing the setter reads as probe triggered, drops the permission and the arming, and leaves the door input closed; releasing it restores both within 100 ms. Plasma ready has K_SETTER released, and an open setter loop (the dock unplugged) changes nothing, while the float still trips the probe and the permission. A press while the spindle runs stops it, as a float trip would. Router mode with the dock unplugged: water ready, but no permission, no arming and no spindle on a request; plugging it in restores the permission.
+- **Second E-stop (M20).** In all nine timing combinations and both modes: the second station opens the contactors, stops the tool, sets the brake and lights STOPPED; RESET with it still pressed does nothing; releasing it alone does not restart; release then RESET restores the stop output. One channel of it alone still stops; with the door button released and the second station still pressed there is no reset.
 
 ## Limits
 
