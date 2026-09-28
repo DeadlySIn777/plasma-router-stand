@@ -235,19 +235,20 @@
       "material": "A36 steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
       "purchased_envelope": false,
-      "volume_mm3": 358846.86048,
+      "volume_mm3": 370022.86048,
       "bounds_mm": [
         280.0,
         1238.65,
         1019.994784,
-        870.0,
+        914.0,
         1432.0,
         1026.355216
       ],
       "notes": [
         "1/4 in steel, one piece: tray under the rack and two arms back to the guide blocks. The tray starts 26.35 mm further forward than Rev L's (Y1038.65 deployed) and runs to Y1165.",
         "Six open-front slots 56 wide, from the front edge to 30 mm behind the pocket line, for the holders' nuts: they hang below the tray, and slide in from the front at the fork height.",
-        "Six 5.5 holes for the rack bar screws (from below). Block holes as Rev L."
+        "Six 5.5 holes for the rack bar screws (from below). Block holes as Rev L.",
+        "Wing X870-914 x Y1053.65-1093.65 (deployed) at the tray's right end carries the tool setter (as Rev L, on this variant's pocket line); drill its holes from the delivered setter."
       ]
     },
     {
@@ -1020,9 +1021,9 @@
   "step_readback": {
     "passed": true,
     "solids": 49,
-    "volume_delta_mm3": 3.725290298461914e-09,
-    "volume_tolerance_mm3": 0.7389415259799967,
-    "sha256": "8da2e724410576300e0baeaaae1cad3113d3cd1bd22116be14207a482659cd30",
+    "volume_delta_mm3": 1.7695128917694092e-08,
+    "volume_tolerance_mm3": 0.7400591259799967,
+    "sha256": "f2a2b6785da390940ae9ddd42be3a42d6ad04019b080d91eff199138d6a18776",
     "file": "RevLBT30_NEW_PARTS.step"
   },
   "individual_step_readback": [
@@ -1039,7 +1040,7 @@
     {
       "part_number": "MOD_ATC_CARRIER_BT30",
       "valid": true,
-      "volume_delta_mm3": 5.820766091346741e-11
+      "volume_delta_mm3": 7.566995918750763e-10
     },
     {
       "part_number": "MOD_ATC_UPSTAND_REAR",

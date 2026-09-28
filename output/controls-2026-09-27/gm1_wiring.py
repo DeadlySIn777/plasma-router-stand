@@ -42,11 +42,13 @@ RENAME['XM:COM'] = 'IFB:XM.COM'
 INTERNAL = {'XVFD:DIR', 'XVFD:F1', 'XVFD:F2', 'XPLASMA:S1', 'XPLASMA:S2', 'RODENT:VCC_K1', 'VFD:L_K1', 'PLASMA:L_K1',
             'XW:1', 'XW:2', 'XW:3', 'XW:4', 'XW:21', 'XW:22', 'XH:1', 'XH:2'}
 # Netlist parts that this file wires by hand instead (the modeled two-load dock motor, the V-MOS coil supply).
-EXCLUDE_NODES = {'LS_ZTOP:13', 'LS_ZTOP:14', 'IFB:DOCK_RUN.1', 'IFB:DOCK_RUN.2', 'IFB:DOCK_DIR.1', 'IFB:DOCK_DIR.2', 'DOCK_RUN_COIL', 'DOCK_DIR_COIL',
+EXCLUDE_NODES = {'HEAD_LOOP', 'LED_BAR:+', 'LED_BAR:-',   # M19 contacts modeled at the loop output; M18 bar wired through XG
+                 'LS_ZTOP:13', 'LS_ZTOP:14', 'IFB:DOCK_RUN.1', 'IFB:DOCK_RUN.2', 'IFB:DOCK_DIR.1', 'IFB:DOCK_DIR.2', 'DOCK_RUN_COIL', 'DOCK_DIR_COIL',
                  'Z_BRAKE:A1', 'Z_BRAKE:A2', 'M_DOCK_OUT:A1', 'M_DOCK_OUT:A2', 'M_DOCK_IN:A1', 'M_DOCK_IN:A2', 'M_DOCK_OUT_IN', 'M_DOCK_IN_IN',
                  'K_DOCK_DIR:11', 'K_DOCK_DIR:12', 'K_DOCK_DIR:14', 'LS_OUT:11', 'LS_OUT:12', 'LS_IN:11', 'LS_IN:12',
                  'VMOS_HE1:D', 'VMOS_HE1:S', 'DIR_COIL'}
-EXCLUDE_TAGS = {'LS_ZTOP:13-14', 'K_DOCK_DIR:11-12', 'K_DOCK_DIR:11-14', 'LS_OUT:11-12', 'LS_IN:11-12', 'VMOS_HE1:D-S'}
+EXCLUDE_TAGS = {'LS_ZTOP:13-14', 'K_DOCK_DIR:11-12', 'K_DOCK_DIR:11-14', 'LS_OUT:11-12', 'LS_IN:11-12', 'VMOS_HE1:D-S',
+                'K_SETTER:11-12', 'TOOL_SETTER:1-2'}
 EXCLUDE_WIRES = {frozenset(('K_DIR:A2', 'XW:2')), frozenset(('K_DOCK_RUN:A2', 'XW:2')), frozenset(('K_DOCK_DIR:A2', 'XW:2'))}
 
 # --------------------------------------------------------------------------------------------------------------
@@ -128,6 +130,15 @@ NET_INFO.update({
     'K1:2': ('48V_LINK', '48 V between K1 pole 1 and K2 pole 1', '48v'), 'K1:4': ('VFD_L_LINK', 'VFD mains between K1 pole 2 and K2 pole 2', 'mains'),
     'K1:6': ('PLASMA_L_LINK', 'plasma mains between K1 pole 3 and K2 pole 3', 'mains'),
     'K_READY:41': ('FILL_NC', 'FILL 21-22 to K_READY 41-42 (fill arm pickup, M8)', 'dc24'),
+    'H_STOP_SRC': ('LAMP_STOP', 'SR 41-42 (NC auxiliary) to the red STOPPED lamp (M17)', 'dc24'),
+    'F_LIGHT:2': ('LIGHT_FUSED', '24 V after F_LIGHT, to the LIGHT switch (M18)', 'dc24'),
+    'LIGHT_PWR': ('LIGHT', 'work light feed after the LIGHT switch, up the gantry through XG:5 (M18)', 'dc24'),
+    'K_SETTER:11': ('SETTER_A', 'tool-setter loop, XHEAD 4 side: K_SETTER 11 and XD:7 (M19)', 'dc24'),
+    'K_SETTER:12': ('SETTER_B', 'tool-setter loop, XHEAD 5 side: K_SETTER 12 and XD:8 (M19)', 'dc24'),
+    'XH:7': ('ESTOP_CH1', 'E-stop channel 1: door button to the second station (M20)', 'dc24'),
+    'XH:8': ('ESTOP_CH1', 'E-stop channel 1: second station back to SR S12', 'dc24'),
+    'XH:9': ('ESTOP_CH2', 'E-stop channel 2: door button to the second station (M20)', 'dc24'),
+    'XH:10': ('ESTOP_CH2', 'E-stop channel 2: second station back to SR S22', 'dc24'),
 })       # EXTRA wires of these classes only say which net a terminal joins
 # Nets that get a bridged distribution rail whatever their size, and the strip name.
 RAIL_NAMES = {'0V': 'X0V', 'C': 'XC', 'S': 'XS24', 'BRK_PWR': 'XBRK', 'V': 'XV', '24V': 'X24'}
@@ -181,6 +192,7 @@ dev('F_CONTROL', 'Fuse, control 24 V', 'DIN fuse terminal, 4 A time-delay (Rev I
 dev('F_VALVE', 'Fuse, valve 24 V', 'DIN fuse terminal, 2 A (Rev I)', 'panel', {'1': 'in', '2': 'out (V)'})
 dev('F_SAFETY', 'Fuse, safety circuit', 'DIN fuse terminal, 2 A time-delay', 'panel', {'1': 'in', '2': 'out (S)'})
 dev('F_DOCK', 'Fuse, dock motor', 'DIN fuse terminal, 2 A time-delay', 'panel', {'1': 'in (BRK)', '2': 'out (DOCK_1)'})
+dev('F_LIGHT', 'Fuse, work light (M18)', 'DIN fuse terminal, 2 A, on the 24 V rail ahead of F_CONTROL', 'panel', {'1': 'in (24 V rail)', '2': 'out to the LIGHT switch'})
 # terminal strips
 dev('XW', 'XW field terminal strip', 'DIN feed-through terminals, Rev I numbering (2.5 mm2)', 'panel',
     {'7': 'drain valve +', '8': 'drain valve 0 V', '11': 'pan-empty float', '12': 'pan-empty float', '13': 'minimum float', '14': 'minimum float',
@@ -188,15 +200,18 @@ dev('XW', 'XW field terminal strip', 'DIN feed-through terminals, Rev I numberin
      '20': 'reservoir level switch', '23': 'BED CONFIRM plasma block', '24': 'BED CONFIRM plasma block', '25': 'BED CONFIRM router block',
      '26': 'BED CONFIRM router block'},
     'Rev I positions 1-4 and 21-22 are not fitted: the rails X24, XC, XV and X0V take their job, and the old stop loop is a link inside SR 33-34.')
-dev('XH', 'XH head-loop terminal strip', 'DIN feed-through terminals (Rev I)', 'panel',
-    {'3': 'guard door switch', '4': 'guard door switch', '5': 'head loop: U_HEAD output', '6': 'head loop: U_HEAD output'},
-    'Positions 1-2 (the old hardware-stop loop) are not fitted.')
+dev('XH', 'XH head-loop and E-stop terminal strip', 'DIN feed-through terminals (Rev I, extended)', 'panel',
+    {'3': 'guard door switch', '4': 'guard door switch', '5': 'head loop: U_HEAD output', '6': 'head loop: U_HEAD output',
+     '7': 'E-stop channel 1 out to the second station (M20)', '8': 'E-stop channel 1 back', '9': 'E-stop channel 2 out to the second station',
+     '10': 'E-stop channel 2 back'},
+    'Positions 1-2 (the old hardware-stop loop) are not fitted. 7-10 carry the second E-stop station\'s two channels (M20).')
 dev('XS', 'XS safety-fuse terminal', 'DIN feed-through terminal', 'panel', {'1': 'S rail feed'})
 dev('XG', 'XG gantry terminal strip', 'DIN feed-through terminals for the gantry cables that stay in the panel circuit', 'panel',
-    {'1': 'LS_ZTOP 13 (dock feed)', '2': 'LS_ZTOP 14 (dock feed)', '3': 'Z brake +', '4': 'Z brake 0 V'})
+    {'1': 'LS_ZTOP 13 (dock feed)', '2': 'LS_ZTOP 14 (dock feed)', '3': 'Z brake +', '4': 'Z brake 0 V', '5': 'work light +24 V (M18)',
+     '6': 'work light 0 V'})
 dev('XD', 'XD dock connector', 'M12 8-pin panel receptacle at the back of the bed module (Rev L) and its plug', 'module',
     {'1': 'motor M1 (through LS_OUT)', '2': 'motor M2 (through LS_IN)', '3': '+24 V sensors', '4': '0 V sensors', '5': 'deployed sensor signal',
-     '6': 'parked sensor signal', '7': 'spare (reserved: cover / IR)', '8': 'spare'})
+     '6': 'parked sensor signal', '7': 'tool setter NC contact (M19)', '8': 'tool setter NC contact'})
 dev('XVFD', 'XVFD terminal strip to the VFD', 'DIN terminals; the VFD sits outside the cabinet on its own plate', 'panel',
     {'FWD': 'forward run (to VFD FOR)', 'REV': 'reverse run (to VFD REV)', 'COM': 'run common (to VFD DCM)', 'VI': '0-10 V speed (to VFD VI)',
      'ACM': '0-10 V common (to VFD ACM)', 'FA': 'VFD "running" relay (BT30)', 'FB': 'VFD "running" relay (BT30)'})
@@ -209,8 +224,15 @@ dev('K2', 'K2 contactor', 'Schneider LC1D18BD, 24 V DC coil', 'panel', LC1D)
 dev('ESTOP', 'E-STOP button', 'Latching E-stop, two NC blocks (channels 1 and 2)', 'door', {'11': 'channel 1', '12': 'channel 1', '21': 'channel 2', '22': 'channel 2'},
     'More stations go in series in each channel.')
 dev('RESET', 'RESET button', 'Blue momentary, 1 NO', 'door', {'13': 'NO', '14': 'NO'})
+dev('H_STOP', 'STOPPED lamp (M17)', '22 mm LED pilot light, 24 V, red: lit while the safety outputs are off', 'door', {'X1': '+ (SR 42)', 'X2': '0 V'})
+dev('H_READY', 'WATER READY lamp (M17)', '22 mm LED pilot light, 24 V, green: the selected mode\'s water sequence is done and no fill runs', 'door',
+    {'X1': '+ (NOT_FILL)', 'X2': '0 V'})
+dev('H_ARMED', 'ARMED lamp (M17)', '22 mm LED pilot light, 24 V, white: K_RUN_ARM picked up', 'door', {'X1': '+ (ARMED)', 'X2': '0 V'})
+dev('SW_LIGHT', 'LIGHT switch (M18)', '22 mm 2-position selector, one NO block', 'door', {'13': 'NO (from F_LIGHT)', '14': 'NO (to XG:5)'})
 dev('T_BRAKE', 'T_BRAKE timer', 'Finder 80.01, function AI, 3 s', 'panel', F8001)
 dev('Z_BRAKE', 'Z brake', 'Z motor power-off brake, 24 V coil (energized = released)', 'gantry', {'A1': 'coil +', 'A2': 'coil 0 V'})
+dev('LED_BAR', 'Work light (M18)', '24 V LED bar, 800 mm, under the gantry beam (CAD GANTRY_WORK_LIGHT); leads up the gantry with the Z brake', 'gantry',
+    {'+': '+24 V (XG:5)', '-': '0 V (XG:6)'})
 # operator switches
 dev('MODE_R', 'MODE selector, ROUTER block', 'Schneider XB5AD33 (ROUTER / OFF / PLASMA), NO block 1', 'door', {'13': 'NO', '14': 'NO'})
 dev('MODE_P', 'MODE selector, PLASMA block', 'the same selector, NO block 2', 'door', {'13': 'NO', '14': 'NO'})
@@ -225,7 +247,8 @@ dev('KM_R', 'KM_R router mode relay', 'Finder 55.34, 94.04 socket', 'panel', F55
 dev('KM_P', 'KM_P plasma mode relay', 'Finder 55.34, 94.04 socket', 'panel', F5534)
 for k, n in (('K_EMPTY', 'pan empty'), ('K_EMPTY_B', 'pan empty, second relay (M9)'), ('K_MIN', 'minimum level'), ('K_DRAIN', 'drain'),
              ('K_DRAINED', 'router drained latch (M9)'), ('K_ARM', 'fill armed'), ('K_FILL', 'fill'), ('K_RDY_R', 'router ready (M2)'),
-             ('K_RDY_P', 'plasma ready (M2)'), ('K_DOCK_RUN', 'dock motor run (M13)'), ('K_DOCK_DIR', 'dock motor direction (M13)')):
+             ('K_RDY_P', 'plasma ready (M2)'), ('K_DOCK_RUN', 'dock motor run (M13)'), ('K_DOCK_DIR', 'dock motor direction (M13)'),
+             ('K_SETTER', 'tool-setter bridge (M19): coil with KM_R, NC 11-12 bridges the setter loop outside router mode')):
     dev(k, f'{k} relay: {n}', 'Finder 40.52, 95.05 socket', 'panel', F4052)
 dev('T_CLOSE', 'T_CLOSE timer', 'Finder 80.01, function AI, 12 s', 'panel', F8001)
 dev('T_DRAIN', 'T_DRAIN timer', 'Finder 80.01, function AI, 75 s', 'panel', F8001)
@@ -250,12 +273,15 @@ dev('FLOAT_FILLSTOP', 'Fill-stop float', 'Float switch, healthy = closed (Rev I 
 dev('FLOAT_HH', 'High-high float', 'Float switch, healthy = closed (Rev I XW:17-18)', 'field', {'1': '', '2': ''})
 dev('RES_LEVEL', 'Reservoir level switch', 'Level switch, healthy = closed (Rev I XW:19-20)', 'field', {'1': '', '2': ''})
 dev('DOOR_SW', 'Guard door switch', 'Door closed = closed (Rev I XH:3-4)', 'field', {'1': '', '2': ''})
+dev('ESTOP2', 'Second E-STOP station (M20)', 'Latching E-stop in a surface box at the loading end of the frame, two NC blocks, in series with the '
+    'door E-stop in both safety-relay channels', 'field', {'11': 'channel 1', '12': 'channel 1', '21': 'channel 2', '22': 'channel 2'})
 dev('HEADIF', 'Head interface board (Rev I)', 'U_HEAD and U_PROBE AQY212GS, XHEAD 1-8; see HEAD-INTERFACE.md', 'panel',
     {'U_HEAD.3': 'U_HEAD output', 'U_HEAD.4': 'U_HEAD output', 'U_HEAD.1': 'U_HEAD LED +', 'U_HEAD.2': 'U_HEAD LED -',
      'U_PROBE.3': 'U_PROBE output', 'U_PROBE.4': 'U_PROBE output', 'U_PROBE.1': 'U_PROBE LED +', 'U_PROBE.2': 'U_PROBE LED -',
-     'XHEAD.1': 'float loop (R_PROBE)', 'XHEAD.2': 'float loop', 'XHEAD.3': 'presence loop (R_HEAD)', 'XHEAD.4': 'presence loop',
-     'XHEAD.5': 'presence loop', 'XHEAD.6': 'presence loop', 'XHEAD.7': 'presence loop', 'XHEAD.8': 'presence loop'},
-    'The head switches wire to XHEAD 1-8 as HEAD-INTERFACE.md draws them (four Omron D2HW on the floating head).')
+     'XHEAD.1': 'float loop (R_PROBE)', 'XHEAD.2': 'float loop', 'XHEAD.3': 'presence loop (R_HEAD)', 'XHEAD.4': 'presence loop, to the setter loop (M19)',
+     'XHEAD.5': 'presence loop, from the setter loop (M19)', 'XHEAD.6': 'presence loop', 'XHEAD.7': 'presence loop', 'XHEAD.8': 'presence loop'},
+    'The head switches wire to XHEAD 1-8 as HEAD-INTERFACE.md draws them (four Omron D2HW on the floating head). M19: the panel link 4-5 is '
+    'replaced by the tool-setter loop (K_SETTER 11-12 bridge, XD:7-8 to the setter); the 6-7 link stays.')
 dev('PUMP', 'Water pump', 'Seaflo 31 series 12/24 V or the Rev I AC pump: check the register', 'field', {'L': 'supply', 'N': 'return'})
 dev('MIST', 'Router mist valve', '24 V solenoid on the Rodent V-MOS HE0', 'field', {'1': 'coil +', '2': 'coil -'})
 dev('LS_ZTOP', 'Z top switch', 'Two-circuit limit switch at the top of Z: NC to the Rodent Z-MAX, NO into the dock feed (M14)', 'gantry',
@@ -268,6 +294,8 @@ dev('LS_IN', 'Dock end switch, parked', 'Microswitch NC, opens at the parked sto
 dev('M_DOCK', 'Dock gearmotor', '24 V worm gearmotor (Rev L)', 'module', {'M1': 'motor lead 1', 'M2': 'motor lead 2'})
 dev('SEN_OUT', 'Dock sensor, deployed', 'M8 inductive PNP NO (Rev L)', 'module', {'BN': 'brown: +24 V', 'BU': 'blue: 0 V', 'BK': 'black: signal'})
 dev('SEN_IN', 'Dock sensor, parked', 'M8 inductive PNP NO (Rev L)', 'module', {'BN': 'brown: +24 V', 'BU': 'blue: 0 V', 'BK': 'black: signal'})
+dev('TOOL_SETTER', 'Tool setter (M19)', 'Button tool setter on the dock wing (CAD MOD_ATC_TOOL_SETTER), NC contact in the head loop through XD:7-8', 'module',
+    {'1': 'NC contact', '2': 'NC contact'})
 dev('D_OUT', 'D_OUT diode', '1N4007 across LS_OUT, on the module', 'module', {'A': 'anode (motor side)', 'K': 'cathode (connector side)'})
 dev('D_IN', 'D_IN diode', '1N4007 across LS_IN, on the module', 'module', {'A': 'anode (motor side)', 'K': 'cathode (connector side)'})
 # controller side
@@ -378,6 +406,16 @@ EXTRA = [
     ('XPLASMA:START1', 'PLASMA:KTS.A1', 'signal', 'shielded pair'), ('XPLASMA:START2', 'PLASMA:KTS.A2', 'signal', ''),
     # Z brake: its leads run up the gantry to XG (the netlist wires Z_BRAKE:A1/A2 directly)
     ('XG:3', 'Z_BRAKE_COIL', 'dc24', ''), ('XG:4', 'XW:2', '0V', ''), ('XG:3', 'Z_BRAKE:A1', 'field', ''), ('XG:4', 'Z_BRAKE:A2', 'field', ''),
+    # M18 work light: the same way, XG:5-6
+    ('LIGHT_PWR', 'XG:5', 'dc24', ''), ('XG:6', 'XW:2', '0V', ''), ('XG:5', 'LED_BAR:+', 'field', 'up the gantry with the Z brake leads'),
+    ('XG:6', 'LED_BAR:-', 'field', ''),
+    # M19 tool setter: physically in the head loop at the XHEAD 4-5 link (the netlist models it at the loop output, XH:6)
+    ('XH:6', 'HEAD_SAFE', 'dc24', 'the setter and K_SETTER are in the LED loop at XHEAD 4-5, not here (M19)'),
+    ('HEADIF:XHEAD.4', 'K_SETTER:11', 'dc24', 'replaces the XHEAD 4-5 panel link (M19)'), ('K_SETTER:11', 'XD:7', 'dc24', ''),
+    ('K_SETTER:12', 'HEADIF:XHEAD.5', 'dc24', ''), ('K_SETTER:12', 'XD:8', 'dc24', ''),
+    ('XD:7', 'TOOL_SETTER:1', 'field', 'on the module'), ('XD:8', 'TOOL_SETTER:2', 'field', ''),
+    # M20 second E-stop: the strip positions pair each button contact with its terminal
+    ('ESTOP:12', 'XH:7', 'dc24', ''), ('ESTOP2:11', 'XH:7', 'dc24', ''), ('ESTOP:22', 'XH:9', 'dc24', ''), ('ESTOP2:21', 'XH:9', 'dc24', ''),
 ]
 JUMPER_NOTE = 'jumper on the socket'
 
@@ -475,6 +513,16 @@ def main():
             for tb in node_terms.get(b, ()):
                 if ta != tb:
                     partners[ta].add(tb); partners[tb].add(ta)
+    # terminals hanging off the same label node (NOT_FILL, ARMED ...) by one wire each are partners too
+    hub = defaultdict(set)
+    for a, b in graph_wires:
+        for n, other in ((a, b), (b, a)):
+            if not is_terminal(n):
+                hub[n] |= node_terms.get(other, set()) | ({other} if is_terminal(other) else set())
+    for n, ts in hub.items():
+        ts |= node_terms.get(n, set())
+        for t in ts:
+            partners[t] |= ts - {t}
 
     def where(t):
         d = device_of(t)
@@ -536,11 +584,14 @@ def main():
         for t in list(members):
             if where(t) in EXTERNAL_WHERE:
                 ps = [u for u in partners[t] if u in members and where(u) not in EXTERNAL_WHERE]
+                strip = [u for u in ps if device_of(u) in STRIPS and cap(u) >= 2]
+                if len(strip) == 1:
+                    ps = strip                 # a strip position with both sides free is where the cable lands
                 if len(ps) == 1:
                     emit(entry, ps[0], t, hint_notes.get(frozenset((ps[0], t)), ''))
                     members.remove(t)
         ends = [m for m in members if cap(m) == 1]
-        full = [m for m in members if cap(m) <= 0]
+        full = [m for m in members if cap(m) <= 0] if len(members) > 1 else []   # a lone leftover needs no further wire
         if full:
             problems.append({'net': info[0], 'no free side': full})
         rail_name = RAIL_NAMES.get(lab)
@@ -597,7 +648,7 @@ def term_sort_key(t):
 def write(realized, used, rails, checks, raw):
     lines = ['# GM1 wiring by terminal', '',
              'Every screw terminal in the GM1 controls, the wire number on it and where that wire\'s other end lands. Generated by '
-             '`gm1_wiring.py` from [the simulated circuit](gm1-terminal-netlist.json) (M1-M14) and the wiring decisions listed in that '
+             '`gm1_wiring.py` from [the simulated circuit](gm1-terminal-netlist.json) (M1-M20) and the wiring decisions listed in that '
              'file. The [wire list](gm1-wire-list.csv) has the same wires one per row.', '',
              '**How to use it.** Cut each wire, put its number on both ends, and on each end also write the terminal at the *other* end '
              '(the ferrule label reads, for example, `104 > K_ARM:A1`). Then go device by device: the table for each device lists every '

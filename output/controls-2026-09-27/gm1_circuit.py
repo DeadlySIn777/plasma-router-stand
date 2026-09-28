@@ -10,6 +10,9 @@ controller interface are replaced. Each change is listed in CHANGES.
 M12 and M13 (later on 27 September, for the Rev L tool changer) add spindle
 reverse and the tool-changer drive. M14 (the same evening) feeds the dock
 motor through the Z top switch, so the dock can only move with Z up.
+M17 to M20 (28 September, the cheap additions) add three door pilot lamps, a
+work light on the gantry, the dock's tool setter in the head loop, and a
+second E-stop station.
 
 This is a wiring-graph and relay-timing model, like Rev I's. It is not a
 certified safety function, a PL/category claim or a tested panel.
@@ -86,6 +89,26 @@ CHANGES = [
      'contact of the Z top switch (LS_ZTOP 13-14) ahead of K_DOCK_RUN, so the dock cannot move unless the Z carriage is at '
      'its top, whatever the firmware commands and even if K_DOCK_RUN is welded. The Rodent still reads the switch\'s first '
      'contact as the Z limit; the second contact is only in the dock feed.'),
+    ('M17', 'Pilot lamps', 'Three 22 mm 24 V LED pilot lights on the door, each a plain load between a circuit node and 0 V: '
+     'red STOPPED on the safety relay\'s NC auxiliary 41-42 (lit whenever the safety outputs are off: E-stop pressed, not yet '
+     'reset, or a channel fault), green WATER READY on NOT_FILL (the selected mode\'s water sequence is complete and no fill '
+     'is running), and white ARMED on the ARMED node (K_RUN_ARM picked up: RUN selected, permission present, every chain '
+     'relay released before it). They only indicate; nothing is wired through them.'),
+    ('M18', 'Work light', 'An 800 mm 24 V LED bar under the gantry beam (CAD GANTRY_WORK_LIGHT) is fed from the 24 V rail ahead '
+     'of F_CONTROL through its own 2 A fuse F_LIGHT and a door switch SW_LIGHT, so a lamp fault cannot take the control fuse '
+     'and the light stays on through a stop. Its leads run up the gantry with the Z brake leads to XG:5-6.'),
+    ('M19', 'Tool setter', 'A button tool setter on the dock (CAD MOD_ATC_TOOL_SETTER) gives the changer a tool-length probe '
+     'without a second controller input. Its NC contact comes through the dock connector (XD:7-8) and replaces the panel link '
+     'XHEAD 4-5 in the head loop, so pressing it opens the loop: U_PROBE turns off (the Rodent probe input reads triggered) '
+     'and U_HEAD turns off (the permission drops, as for a torch float trip). Relay K_SETTER, whose coil is in parallel with '
+     'KM_R (router mode), bridges the setter with its NC contact 11-12 whenever router mode is not selected, so the loop is '
+     'whole in plasma mode with the dock unplugged. In router mode the dock must be plugged in or there is no permission, '
+     'which also guarantees the dock sensors are connected. The spindle is off during a length probe (request low), so the '
+     'door input stays closed and the chain re-arms when the button releases. The simulator places the two contacts at the '
+     'loop\'s output (after XH:5-6); physically they are in the 24 V LED loop on the head interface board.'),
+    ('M20', 'Second E-stop station', 'A second latching E-stop (ESTOP2) at the loading end of the frame sits in series with the '
+     'door E-stop in both safety-relay channels, through XH:7-8 and XH:9-10. Either button stops the machine; both must be '
+     'released before RESET.'),
 ]
 
 # Relay families and poles. G7SA terminal marks follow EN 50005 (13-14 NO,
@@ -124,6 +147,8 @@ DEVICES = {
                        kind='relay', no=['11-14', '21-24'], nc=['11-12', '21-22']),
     'K_DOCK_DIR': dict(part='Finder 40.52.9.024.0000 + 95.05 socket: both poles reverse the dock motor polarity',
                        kind='relay', no=['11-14', '21-24'], nc=['11-12', '21-22']),
+    'K_SETTER': dict(part='Finder 40.52.9.024.0000 + 95.05 socket: NC 11-12 bridges the tool-setter loop outside router mode',
+                     kind='relay', no=['11-14', '21-24'], nc=['11-12', '21-22']),
 }
 GUIDED = {k for k, d in DEVICES.items() if d['kind'] in ('force-guided', 'contactor')}
 TOOL_CHAIN = ['K_READY', 'K_PERMIT', 'K_RUN_ARM', 'K_REQ_A', 'K_REQ_B', 'K_VFD_RUN', 'K_TORCH_RUN',
@@ -137,7 +162,8 @@ DROP_NODES = {'XW:21', 'XW:22', 'XH:1', 'XH:2', 'XW:31', 'XW:32', 'XW:33', 'XW:3
 DROP_CONTACTS = {'XW:21-22', 'XH:1-2'}
 DROP_WIRES = {frozenset(('FILL:22', 'ARM_COIL')),
               frozenset(('T_DRAIN:18', 'RR')),        # M9: timer output now through diodes D_TD and D_SET
-              frozenset(('K_FILL:14', 'FILL_COIL'))}  # M10: fill self-hold now through T_FILL NC
+              frozenset(('K_FILL:14', 'FILL_COIL')),  # M10: fill self-hold now through T_FILL NC
+              frozenset(('XH:6', 'HEAD_SAFE'))}       # M19: the head loop output now passes the setter / K_SETTER bridge
 DROP_DIODES = {'D_R'}                                 # M9: drain request now through K_DRAINED NC and D_R2
 
 
@@ -190,10 +216,17 @@ def definition():
     wire('SR:A2', 'XW:2')
     # Input and reset circuits are the relay's own low-voltage loops; they are
     # evaluated as dry paths by the simulator, not powered from S.
-    contact('ESTOP:11-12', 'SR:S11', 'SR:S12', 'estop_ch1', form='NC',
-            device='E-STOP pushbutton, latching, turn to release; channel 1 contact block')
-    contact('ESTOP:21-22', 'SR:S21', 'SR:S22', 'estop_ch2', form='NC',
-            device='E-STOP pushbutton, same actuator; channel 2 contact block')
+    # M20: the second station in series in both channels, through XH:7-8 and XH:9-10.
+    contact('ESTOP:11-12', 'SR:S11', 'XH:7', 'estop_ch1', form='NC',
+            device='E-STOP pushbutton on the door, latching, turn to release; channel 1 contact block')
+    contact('ESTOP2:11-12', 'XH:7', 'XH:8', 'estop2_ch1', form='NC',
+            device='Second E-STOP at the loading end of the frame, latching; channel 1 contact block (M20)')
+    wire('XH:8', 'SR:S12')
+    contact('ESTOP:21-22', 'SR:S21', 'XH:9', 'estop_ch2', form='NC',
+            device='E-STOP pushbutton on the door, same actuator; channel 2 contact block')
+    contact('ESTOP2:21-22', 'XH:9', 'XH:10', 'estop2_ch2', form='NC',
+            device='Second E-STOP, same actuator; channel 2 contact block (M20)')
+    wire('XH:10', 'SR:S22')
     contact('RESET:13-14', 'SR:S33', 'RST_1', 'reset_pressed', form='NO', device='RESET pushbutton, blue, momentary')
     contact('K1:21-22', 'RST_1', 'RST_2', 'K1', True, form='NC mirror contact (IEC 60947-4-1 Annex F)')
     contact('K2:21-22', 'RST_2', 'SR:S34', 'K2', True, form='NC mirror contact (IEC 60947-4-1 Annex F)')
@@ -322,6 +355,30 @@ def definition():
     branch('K_DOCK_DIR:14', 'LS_IN:11-12', 'dock_at_parked', 'M_DOCK_IN_IN', True, form='NC',
            device='End microswitch at the parked stop; opens when the drive tab reaches it (with a diode for backing off)')
     coil('M_DOCK_IN', 'M_DOCK_IN_IN')
+
+    # M17: pilot lamps, plain 24 V loads between a node and 0 V.
+    def lamp(tag, source, plus='X1', minus='X2'):
+        wire(source, f'{tag}:{plus}')
+        wire(f'{tag}:{minus}', 'XW:2')
+        loads[tag] = f'{tag}:{plus}'
+
+    branch('C', 'SR:41-42', 'SR_OUT', 'H_STOP_SRC', True, form='NC auxiliary (signalling)')
+    lamp('H_STOP', 'H_STOP_SRC')
+    lamp('H_READY', 'NOT_FILL')
+    lamp('H_ARMED', 'ARMED')
+    # M18: work light from the 24 V rail ahead of F_CONTROL, its own fuse, a door switch.
+    wire('24V', 'F_LIGHT:1')
+    contact('F_LIGHT', 'F_LIGHT:1', 'F_LIGHT:2', 'f_light', form='Fuse continuity', device='Work light fuse, 2 A')
+    branch('F_LIGHT:2', 'SW_LIGHT:13-14', 'light_on', 'LIGHT_PWR', form='NO',
+           device='LIGHT selector on the door, 2 positions, one NO block')
+    lamp('LED_BAR', 'LIGHT_PWR', '+', '-')
+    # M19: the tool setter in the head loop, bridged by K_SETTER outside router mode. Modeled at the
+    # loop output (XH:6 to HEAD_SAFE); the real contacts are in the LED loop at the XHEAD 4-5 link.
+    coil('K_SETTER', 'KMR_COIL')
+    wire('XH:6', 'HEAD_LOOP')
+    contact('K_SETTER:11-12', 'HEAD_LOOP', 'HEAD_SAFE', 'K_SETTER', True)
+    contact('TOOL_SETTER:1-2', 'HEAD_LOOP', 'HEAD_SAFE', 'setter_pressed', True, form='NC',
+            device='Tool setter on the dock, NC button contact through XD:7-8 (open when pressed, or with the dock unplugged)')
     return wires, contacts, diodes, loads, power, dropped
 
 
@@ -333,6 +390,7 @@ DEFAULT = {k: v for k, v in rev_i.DEFAULT.items() if k not in ('stop_ok', 'hardw
 DEFAULT.update(f_safety=True, estop_ch1=True, estop_ch2=True, reset_pressed=False, supply_48v=True, mains=True)
 DEFAULT.update(spindle_reverse=False, f_dock=True, dock_run_cmd=False, dock_in_dir=False,
                dock_at_deployed=False, dock_at_parked=True, z_at_top=True)
+DEFAULT.update(estop2_ch1=True, estop2_ch2=True, f_light=True, light_on=False, setter_pressed=False)
 
 
 class Simulator:
@@ -543,6 +601,9 @@ class Simulator:
                 'z_brake_released': self.states['Z_BRAKE'], 'sr_out': self.sr_out,
                 'router_drained': self.states['K_DRAINED'], 'fill_timed_out': self.states['T_FILL'],
                 'door_ok': 'XR:E1_GND' in self.reach(g, 'XR:E1_SIG'),
+                'lamps': {'stopped': self.states['H_STOP'], 'water_ready': self.states['H_READY'], 'armed': self.states['H_ARMED']},
+                'work_light': self.states['LED_BAR'], 'setter_relay': self.states['K_SETTER'],
+                'probe_triggered': 'HEAD_SAFE' not in self.reach(g, 'DOOR_SAFE'),
                 'controller_ready': paths['motor_power'] and self.controller_up >= self.controller_boot,
                 'status': {name: 'XM:COM' in self.reach(g, f'XM:{i}')
                            for i, name in enumerate(('ready', 'permit', 'router_water_ready', 'plasma_water_ready'), 1)}}

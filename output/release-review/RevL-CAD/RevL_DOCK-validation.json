@@ -716,18 +716,40 @@
       "material": "A36 steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
       "purchased_envelope": false,
-      "volume_mm3": 192451.35514,
+      "volume_mm3": 203627.35514,
       "bounds_mm": [
         280.0,
         1065.0,
         1019.994784,
-        870.0,
+        914.0,
         1232.0,
         1026.355216
       ],
       "notes": [
         "1/4 in steel, one piece: tray under the magazine and two arms back to the guide blocks. The middle is open behind the tray, so the Z body clears it even where the Rev K body height (Z1040) applied.",
-        "Window X335-815 x Y1080-1120 (deployed) for cutters hanging below the pockets."
+        "Window X335-815 x Y1080-1120 (deployed) for cutters hanging below the pockets.",
+        "Wing X335-815 x Y1080-1120 (deployed) at the tray's right end carries the tool setter; drill its mounting holes from the delivered setter."
+      ]
+    },
+    {
+      "id": "MOD_ATC_TOOL_SETTER",
+      "part_number": "TOOL_SETTER_D30x45_NC",
+      "group": "atc_electrical",
+      "material": "Z tool setter, 30 mm body, spring button, NC contact in a 24 V loop (envelope)",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 29157.90682,
+      "bounds_mm": [
+        881.0,
+        1084.978664,
+        1026.32155,
+        911.02845,
+        1115.021336,
+        1071.364225
+      ],
+      "notes": [
+        "Button top Z1071.35 on the wing at X896, pocket line Y1100 (deployed). A tool 40 mm below the nut touches at z_lift 151.35; the nut is then 40 mm above the button.",
+        "Its NC contact goes to the dock connector pins 7-8 (XD:7-8) and sits in the head loop in router mode (controls M19): pressed = probe triggered and permission dropped, as the torch float. Mounting holes and the cable exit come from the delivered unit."
       ]
     },
     {
@@ -1540,8 +1562,8 @@
       ]
     }
   ],
-  "part_count": 80,
-  "broadphase_pairs": 105,
+  "part_count": 81,
+  "broadphase_pairs": 107,
   "unresolved_intersections": [],
   "documented_intersections": [
     {
@@ -1578,10 +1600,10 @@
   "note": "Positive-volume static interference test, not a strength or motion certification.",
   "step_readback": {
     "passed": true,
-    "solids": 80,
-    "volume_delta_mm3": 4.190951585769653e-09,
-    "volume_tolerance_mm3": 0.4036129687434757,
-    "sha256": "945bd75f9287b3180ef3eb8ed575ce371ec50852d25991b88b0e3e0bdcaf1507",
+    "solids": 81,
+    "volume_delta_mm3": 2.561137080192566e-08,
+    "volume_tolerance_mm3": 0.4076463594250887,
+    "sha256": "b29816442b1df71990e4ce5513e1c3b8fbd7b24c13a90c8532704773c42b6849",
     "file": "RevL_DOCK.step"
   }
 }

@@ -716,19 +716,41 @@
       "material": "A36 steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
       "purchased_envelope": false,
-      "volume_mm3": 358846.86048,
+      "volume_mm3": 370022.86048,
       "bounds_mm": [
         280.0,
         1038.65,
         1019.994784,
-        870.0,
+        914.0,
         1232.0,
         1026.355216
       ],
       "notes": [
         "1/4 in steel, one piece: tray under the rack and two arms back to the guide blocks. The tray starts 26.35 mm further forward than Rev L's (Y1038.65 deployed) and runs to Y1165.",
         "Six open-front slots 56 wide, from the front edge to 30 mm behind the pocket line, for the holders' nuts: they hang below the tray, and slide in from the front at the fork height.",
-        "Six 5.5 holes for the rack bar screws (from below). Block holes as Rev L."
+        "Six 5.5 holes for the rack bar screws (from below). Block holes as Rev L.",
+        "Wing X870-914 x Y1053.65-1093.65 (deployed) at the tray's right end carries the tool setter (as Rev L, on this variant's pocket line); drill its holes from the delivered setter."
+      ]
+    },
+    {
+      "id": "MOD_ATC_TOOL_SETTER",
+      "part_number": "TOOL_SETTER_D30x45_NC",
+      "group": "atc_electrical",
+      "material": "Z tool setter, 30 mm body, spring button, NC contact in a 24 V loop (envelope)",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 29157.90682,
+      "bounds_mm": [
+        881.0,
+        1058.628664,
+        1026.32155,
+        911.02845,
+        1088.671336,
+        1071.364225
+      ],
+      "notes": [
+        "Button top Z1071.35 at X896, pocket line Y1073.65 (deployed). The held holder's cutter allocation (40 mm below the nose) touches at z_lift 151.35.",
+        "Wired as Rev L: dock connector pins 7-8 into the head loop in router mode (controls M19)."
       ]
     },
     {
@@ -1497,8 +1519,8 @@
       ]
     }
   ],
-  "part_count": 77,
-  "broadphase_pairs": 98,
+  "part_count": 78,
+  "broadphase_pairs": 100,
   "unresolved_intersections": [],
   "documented_intersections": [
     {
@@ -1571,10 +1593,10 @@
   "note": "Positive-volume static interference test, not a strength or motion certification.",
   "step_readback": {
     "passed": true,
-    "solids": 77,
-    "volume_delta_mm3": 6.565824151039124e-08,
-    "volume_tolerance_mm3": 0.2528092178396682,
-    "sha256": "d79db7f817c919d47766fb0ac80fa5b074ab247ad8fe007b62000d01f6dd6144",
+    "solids": 78,
+    "volume_delta_mm3": 5.029141902923584e-08,
+    "volume_tolerance_mm3": 0.25684260852128127,
+    "sha256": "bd54ffbaa94dcd67054268c21a360553c511110ec1395176423a293bd544f133",
     "file": "RevLBT30_DOCK.step"
   }
 }

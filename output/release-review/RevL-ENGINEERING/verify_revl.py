@@ -18,6 +18,10 @@ and the gantry may cross the deployed magazine, only with the spindle nose (plus
 the lid: z_lift at least Z_DOCK_MIN. The M14 interlock enforces this with the Z top switch.
 Stock allowance: 40 mm over the HDPE must be clear of the deployed dock (50 before the magazine was lowered 10 mm
 to fit its lid under the gantry).
+Tool setter: on the dock's wing at X896, pocket line Y1100 (deployed), inside the tool travel; the head over it with Z up,
+and with a 40 mm tool on the button (z_lift 151.35, the nut 40 mm above it): both clear.
+Work light: the LED bar under the gantry beam's rear slot is at least 15 mm above the parked lid allocation, and the
+gantry crosses the parked dock (Y1200 and Y1180, Z up) with the bar over the lid: clear.
 Hoist: Rev J's sampled module-and-sling path with the dock deployed on the module (heavier, centre
 of mass further back), head X575, Z fully up, at three hook heights, run 100 mm further forward.
 Frame fill: every pose above carries the moved fill ports (ballast_revl.py). One port per frame tube,
@@ -150,6 +154,25 @@ def main():
         row['passed'] = not row['unresolved'] and not row['invalid_local']
         over_rows.append(row)
         print('over the deployed magazine', gy, hx, 'clashes', len(row['unresolved']), flush=True)
+    cross_rows = []
+    for gy in (1200.0, 1180.0):
+        mc, _ = pose(atc_revl.TRAVEL, gy, 575.0, Z_TOP)
+        row, _ = row_of(mc, gantry_y=gy, head_x=575.0, z_lift=Z_TOP, dock='parked')
+        row['passed'] = not row['unresolved'] and not row['invalid_local']
+        cross_rows.append(row)
+        print('over the parked dock', gy, 'clashes', len(row['unresolved']), flush=True)
+    light_bottom = bbox(mc.find('GANTRY_WORK_LIGHT').shape)[2]
+    setter_z = atc_revl.SETTER_TOP - (960.0 - TOOL_BELOW_NUT)
+    setter_rows = []
+    for z, label in ((Z_TOP, 'over the setter, Z up'), (setter_z, 'a 40 mm tool on the setter button')):
+        ms, _ = pose(0.0, build_revl.POCKET_GANTRY_Y, atc_revl.SETTER_X, z)
+        row, _ = row_of(ms, gantry_y=build_revl.POCKET_GANTRY_Y, head_x=atc_revl.SETTER_X, z_lift=z, dock='deployed', step=label)
+        nose = bbox(ms.find('TOOL_SPINDLE_65x259').shape)[2]
+        row.update(spindle_nose_z_mm=round(nose, 3), nose_above_button_mm=round(nose - atc_revl.SETTER_TOP, 3))
+        row['passed'] = not row['unresolved'] and not row['invalid_local']
+        setter_rows.append(row)
+        print('tool setter', label, 'nose', round(nose, 2), 'clashes', len(row['unresolved']), flush=True)
+    setter_xy = (atc_revl.SETTER_X, atc_revl.POCKET_Y)
     body_bottom = min(bbox(p.shape)[2] for p in m.parts if p.id.startswith('ZBX80_'))
     lid_top = atc_revl.COVER_TOP
     z_dock_min = lid_top + TOOL_BELOW_NUT + CLEAR - 960.0
@@ -185,6 +208,11 @@ def main():
         'the dock can move with Z at least 65 mm below the top (a 40 mm tool clears the lid by 15 mm)': z_dock_min <= Z_TOP - 65,
         'deployed dock clear of a 40 mm stock and clamp allowance': not stock_hits,
         'RapidChange 90 mm: spindle nut at full Z at least 90 mm above the magazine lid': nut_top - lid_top >= 90,
+        'tool setter inside the tool travel, on the pocket line; head over it clear, and a 40 mm tool on the button with the nut 40 mm above it': (
+            175.0 <= setter_xy[0] <= 975.0 and 121.4 <= setter_xy[1] <= 1121.4 and all(r['passed'] for r in setter_rows)
+            and abs(setter_rows[1]['nose_above_button_mm'] - TOOL_BELOW_NUT) < 1e-6),
+        'work light under the beam at least 15 mm above the parked lid; gantry crossing the parked dock with Z up: clear': (
+            light_bottom - lid_top >= CLEAR and all(r['passed'] for r in cross_rows)),
         'hoist path clear at every hook height with the dock deployed': all(c['result'].startswith('PASS') for c in hoist_cases),
         'frame fill: one port per frame tube': sorted(p['tube'] for p in fill['ports']) == sorted(
             p.id for p in base.parts if p.group == 'main_frame') and len(fill['ports']) == 18,
@@ -195,7 +223,10 @@ def main():
     after = build_revl.source_hashes()
     report.update(status='PASS' if all(checks.values()) and before == after else 'FAIL', checks=checks,
                   router_poses=router_rows, plasma_poses=plasma_rows, dock_travel=travel_rows,
-                  tool_change_poses=change_rows, over_deployed_magazine=over_rows, stock_allowance_hits=stock_hits,
+                  tool_change_poses=change_rows, over_deployed_magazine=over_rows, gantry_over_parked_dock=cross_rows,
+                  tool_setter_poses=setter_rows, tool_setter=dict(atc_dep['tool_setter'], touch_z_lift_mm=round(setter_z, 3)),
+                  work_light_bottom_z_mm=round(light_bottom, 3), work_light_over_parked_lid_mm=round(light_bottom - lid_top, 3),
+                  stock_allowance_hits=stock_hits,
                   z_body_bottom_mm=body_bottom, lid_top_mm=lid_top, z_body_clearance_over_lid_mm=round(body_bottom - lid_top, 2),
                   dock_moves_at_z_lift_at_least_mm=round(z_dock_min, 2),
                   nut_above_magazine_plane_at_full_z_mm=round(nut_top - atc_revl.MAG, 2),

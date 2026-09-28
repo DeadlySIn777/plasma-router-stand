@@ -71,6 +71,26 @@ Fill material is not priced:
 - **Epoxy sand** (the owner is considering it): about 12–15 L of slow, low-viscosity epoxy and fine dry sand, about 36 L of fill in all. If the threaded plugs are left out, 18 push-in hole plugs for 30 mm (1-3/16 in) holes.
 - **Dry sand:** about 36 L.
 
+## 28 September additions: tool setter, work light, pilot lamps, second E-stop
+
+Small, cheap things the owner asked for ("keep improving the design... adding nice things that won't cost a lot"). CAD in the Rev L
+package (the setter on the dock's carrier wing, the light bar under the gantry beam) and controls M17–M20 in the
+[GM1 controls](../../../output/controls-2026-09-27/README.md); the wiring is in the terminal list. Rough retail prices, not quotes.
+
+| Qty | Part | For | About |
+|---|---|---|---|
+| 1 | Z tool setter, about Ø30 × 45, spring button, NC contact, 2-wire (the common aluminium "CNC Z-axis tool setting probe") | MOD_ATC_TOOL_SETTER on the dock wing; probe through the dock plug (M19) | $15–25 |
+| 1 | Finder 40.52.9.024.0000 + 95.05 socket | K_SETTER, bridges the setter loop outside router mode (M19) | $10 |
+| 1 | 24 V LED light bar, 800 mm, slim 17 × 7 aluminium channel, IP65, about 12 W, with two T-slot clips or M8 T-nut brackets | GANTRY_WORK_LIGHT under the beam's rear bottom slot (M18) | $15–25 |
+| 1 | 22 mm 2-position selector with one NO block (Schneider XB5AD21 class) | LIGHT switch (M18) | $10 |
+| 1 | 2 A DIN fuse terminal | F_LIGHT (M18) | $3 |
+| 3 | 22 mm 24 V LED pilot lights: red, green, white (Schneider XB5AVB4 / XB5AVB3 / XB5AVB1 class) | STOPPED, WATER READY, ARMED (M17) | $8 each |
+| 1 | Ø40 latching E-stop with two NC blocks, in a 1-hole yellow surface box | Second E-stop station at the loading end (M20) | $15–20 |
+| – | 2 × M12 8-pin plug pins already in the dock connector (7 and 8); XG and XH strip positions: 2 + 4 DIN feed-through terminals | Setter and light through XD and XG; the second station through XH:7–10 | $5 |
+| – | 1/4 in plate: the carrier wing is part of the carrier blank (44 × 40 mm more steel) | Setter mount | – |
+
+About **$100** in all. The setter and the light bar apply to the BT30 variant too (its [delta](REVL-BT30-PROCUREMENT-DELTA.md) says so); the lamps, the light switch and the second E-stop are cabinet parts common to both.
+
 ## How to use this
 
 The [build order](../../../output/release-review/RevL-CAD/BUILD-ORDER.md) says which of these parts gate which build steps.

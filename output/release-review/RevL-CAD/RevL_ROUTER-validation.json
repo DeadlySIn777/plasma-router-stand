@@ -19013,18 +19013,40 @@
       "material": "A36 steel",
       "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
       "purchased_envelope": false,
-      "volume_mm3": 192451.35514,
+      "volume_mm3": 203627.35514,
       "bounds_mm": [
         280.0,
         1265.0,
         1020.0,
-        870.0,
+        914.0,
         1432.0,
         1026.35
       ],
       "notes": [
         "1/4 in steel, one piece: tray under the magazine and two arms back to the guide blocks. The middle is open behind the tray, so the Z body clears it even where the Rev K body height (Z1040) applied.",
-        "Window X335-815 x Y1080-1120 (deployed) for cutters hanging below the pockets."
+        "Window X335-815 x Y1080-1120 (deployed) for cutters hanging below the pockets.",
+        "Wing X335-815 x Y1080-1120 (deployed) at the tray's right end carries the tool setter; drill its mounting holes from the delivered setter."
+      ]
+    },
+    {
+      "id": "MOD_ATC_TOOL_SETTER",
+      "part_number": "TOOL_SETTER_D30x45_NC",
+      "group": "atc_electrical",
+      "material": "Z tool setter, 30 mm body, spring button, NC contact in a 24 V loop (envelope)",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 29157.90682,
+      "bounds_mm": [
+        881.0,
+        1285.0,
+        1026.35,
+        911.0,
+        1315.0,
+        1071.35
+      ],
+      "notes": [
+        "Button top Z1071.35 on the wing at X896, pocket line Y1100 (deployed). A tool 40 mm below the nut touches at z_lift 151.35; the nut is then 40 mm above the button.",
+        "Its NC contact goes to the dock connector pins 7-8 (XD:7-8) and sits in the head loop in router mode (controls M19): pressed = probe triggered and permission dropped, as the torch float. Mounting holes and the cable exit come from the delivered unit."
       ]
     },
     {
@@ -25436,10 +25458,31 @@
       "notes": [
         "30\u00d720 ramp cam,10 mm ramp followed by20 mm land. Two\u00d84.5 attachment holes."
       ]
+    },
+    {
+      "id": "GANTRY_WORK_LIGHT",
+      "part_number": "LED_BAR_24V_800x17x7",
+      "group": "motion_electrical",
+      "material": "24 V LED light bar, 800 mm, 17 x 7 aluminium channel, IP65 (envelope)",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 95200.0,
+      "bounds_mm": [
+        175.0,
+        1366.5,
+        1148.0,
+        975.0,
+        1383.5,
+        1155.0
+      ],
+      "notes": [
+        "Clipped into the beam's rear bottom T-slot (slot centre 20 mm from the rear face) with two M8 T-nuts, spanning the X travel (X175-975). Bottom Z1148, 7 mm under the beam.",
+        "Fed from the 24 V rail through its own fuse and a door switch (controls M18), up the gantry with the Z brake leads to XG:5-6. It lights the tool from behind: the ray from the bar to the tool tip passes under the Z body and the spindle nose at every Z."
+      ]
     }
   ],
-  "part_count": 1300,
-  "broadphase_pairs": 1819,
+  "part_count": 1302,
+  "broadphase_pairs": 1821,
   "unresolved_intersections": [],
   "documented_intersections": [
     {
@@ -26166,10 +26209,10 @@
   "note": "Positive-volume static interference test, not a strength or motion certification.",
   "step_readback": {
     "passed": true,
-    "solids": 1300,
-    "volume_delta_mm3": 0.24425657093524933,
-    "volume_tolerance_mm3": 12.123805570268976,
-    "sha256": "5e8846af0b666b04bd444f822b3ed044982a938d0030f485449154d1b56efc55",
+    "solids": 1302,
+    "volume_delta_mm3": 0.2435116469860077,
+    "volume_tolerance_mm3": 12.13735896095059,
+    "sha256": "8879eed4fef1bc5243988b68c5cf7a3eaba0d422111f9890b294f030ce632ecd",
     "file": "RevL_ROUTER.step"
   }
 }

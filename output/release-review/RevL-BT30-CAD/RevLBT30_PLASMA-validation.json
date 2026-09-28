@@ -18550,6 +18550,27 @@
       ]
     },
     {
+      "id": "GANTRY_WORK_LIGHT",
+      "part_number": "LED_BAR_24V_800x17x7",
+      "group": "motion_electrical",
+      "material": "24 V LED light bar, 800 mm, 17 x 7 aluminium channel, IP65 (envelope)",
+      "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+      "purchased_envelope": true,
+      "volume_mm3": 95200.0,
+      "bounds_mm": [
+        175.0,
+        1366.5,
+        1148.0,
+        975.0,
+        1383.5,
+        1155.0
+      ],
+      "notes": [
+        "Clipped into the beam's rear bottom T-slot (slot centre 20 mm from the rear face) with two M8 T-nuts, spanning the X travel (X175-975). Bottom Z1148, 7 mm under the beam.",
+        "Fed from the 24 V rail through its own fuse and a door switch (controls M18), up the gantry with the Z brake leads to XG:5-6. It lights the tool from behind: the ray from the bar to the tool tip passes under the Z body and the spindle nose at every Z."
+      ]
+    },
+    {
       "id": "TOOL_CLAMP_MOUNT_-45_12",
       "part_number": "STD_M6x20_SOCKET",
       "group": "stored_hardware",
@@ -21120,7 +21141,7 @@
       ]
     }
   ],
-  "part_count": 1079,
+  "part_count": 1080,
   "broadphase_pairs": 2007,
   "unresolved_intersections": [],
   "documented_intersections": [
@@ -21842,10 +21863,10 @@
   "note": "Positive-volume static interference test, not a strength or motion certification.",
   "step_readback": {
     "passed": true,
-    "solids": 1079,
-    "volume_delta_mm3": 0.2782870680093765,
-    "volume_tolerance_mm3": 9.621667097545272,
-    "sha256": "f4018aca9c3f5986b1e26b5bafebd60df268cfaf02f59215ec66f3d0d9e64a8f",
+    "solids": 1080,
+    "volume_delta_mm3": 0.2779944837093353,
+    "volume_tolerance_mm3": 9.631187097545272,
+    "sha256": "80c80ca6799aed7e8d41cc6f0f726c3bac5fae8506478d2915c0f3bc3284d80b",
     "file": "RevLBT30_PLASMA.step"
   }
 }

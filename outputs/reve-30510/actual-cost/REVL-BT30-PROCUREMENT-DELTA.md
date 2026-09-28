@@ -62,6 +62,10 @@ Rev L's magazine saddles and risers are not made. About 4 kg of aluminum and ste
 
 Spindle about +$400 over the ER11, VFD +$100, six holders and forks about +$250, air about +$150–$300 (more if there is no compressor), clamp and adapter stock about +$100, relays and optocouplers about +$30, minus the RapidChange kit (−$400 to −$900): **roughly the same money as Rev L with the RapidChange kit, or a few hundred dollars more**, for a 3.2 kW spindle that changes BT30 holders instead of bare ER11 cutters. The [BT30 README](../../../output/release-review/RevL-BT30-CAD/README.md) lists what the variant costs in other ways: a 20 kg head on the ZBX80, 26 mm of Y reach moved forward, and stored tools limited to 30 mm below the nut.
 
+## 28 September additions
+
+The [Rev L delta's 28 September section](REVL-PROCUREMENT-DELTA.md#28-september-additions-tool-setter-work-light-pilot-lamps-second-e-stop) applies here unchanged: the tool setter sits on this variant's carrier wing at the same X (896) on its own pocket line (Y1073.65), the light bar is on the same gantry beam, and the lamps, light switch and second E-stop are cabinet parts. Nothing BT30-specific is added.
+
 ## How to use this
 
 Choose the spindle first: its diameter sets the clamp bore and its length the cradle spacing. Check the listing's numbers against the envelope (Ø105 × 450, 15 kg) before cutting anything. The rest of the [Rev L build order](../../../output/release-review/RevL-CAD/BUILD-ORDER.md) stands; the rack replaces step 5's magazine saddles.

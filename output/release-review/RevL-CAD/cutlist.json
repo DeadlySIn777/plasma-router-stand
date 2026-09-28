@@ -732,13 +732,32 @@
       -0.0,
       -0.0,
       -0.0052,
-      590.0,
+      634.0,
       167.0,
       6.3552
     ],
     "individual_export_guarded": false,
     "status": "ENGINEERING DEFINITION - REVIEW BEFORE FABRICATION",
-    "notes": "1/4 in steel, one piece: tray under the magazine and two arms back to the guide blocks. The middle is open behind the tray, so the Z body clears it even where the Rev K body height (Z1040) applied. | Window X335-815 x Y1080-1120 (deployed) for cutters hanging below the pockets."
+    "notes": "1/4 in steel, one piece: tray under the magazine and two arms back to the guide blocks. The middle is open behind the tray, so the Z body clears it even where the Rev K body height (Z1040) applied. | Window X335-815 x Y1080-1120 (deployed) for cutters hanging below the pockets. | Wing X335-815 x Y1080-1120 (deployed) at the tray's right end carries the tool setter; drill its mounting holes from the delivered setter."
+  },
+  {
+    "part_number": "TOOL_SETTER_D30x45_NC",
+    "quantity": 1,
+    "material": "Z tool setter, 30 mm body, spring button, NC contact in a 24 V loop (envelope)",
+    "procured_stock": "Z tool setter, 30 mm body, spring button, NC contact in a 24 V loop (envelope)",
+    "length_mm": null,
+    "thickness_mm": null,
+    "bounds_local_mm": [
+      -15.0,
+      -15.0213,
+      -0.0285,
+      15.0285,
+      15.0213,
+      45.0142
+    ],
+    "individual_export_guarded": true,
+    "status": "PURCHASED ENVELOPE - VERIFY INTERFACE",
+    "notes": "Button top Z1071.35 on the wing at X896, pocket line Y1100 (deployed). A tool 40 mm below the nut touches at z_lift 151.35; the nut is then 40 mm above the button. | Its NC contact goes to the dock connector pins 7-8 (XD:7-8) and sits in the head loop in router mode (controls M19): pressed = probe triggered and permission dropped, as the torch float. Mounting holes and the cable exit come from the delivered unit."
   },
   {
     "part_number": "MOD_ATC_UPSTAND_FRONT",

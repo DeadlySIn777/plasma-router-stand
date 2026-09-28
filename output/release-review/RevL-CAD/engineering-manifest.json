@@ -164,11 +164,11 @@
       ],
       "shackle": "3/8 in screw-pin anchor shackle, WLL at least 0.5 t each"
     },
-    "module_mass_estimate_kg": 73.8,
+    "module_mass_estimate_kg": 74.0,
     "module_cg_mm": [
-      580.2,
-      760.2,
-      928.3
+      581.0,
+      761.5,
+      928.6
     ],
     "module_mass_basis": "Nominal solids: steel 7850, aluminum 2700 (reconstructed 20100 section), HDPE 950 kg/m3, stainless hardware as steel. Weigh the module before the first lift.",
     "handling_lift_mm": 70.0,
@@ -2037,14 +2037,32 @@
       1080.0,
       1120.0
     ],
+    "tool_setter": {
+      "axis_xy_deployed_mm": [
+        896.0,
+        1100.0
+      ],
+      "button_top_z_mm": 1071.35,
+      "touch_z_lift_for_40mm_tool_mm": 151.35,
+      "envelope_mm": [
+        30.0,
+        45.0
+      ],
+      "wing_mm": [
+        870.0,
+        914.0,
+        1080.0,
+        1120.0
+      ]
+    },
     "deployed_datum": "Drive tab front face on the front stop at Y1185",
     "fixed_part_count": 36,
-    "moving_part_count": 44,
-    "mass_kg": 10.41,
+    "moving_part_count": 45,
+    "mass_kg": 10.58,
     "cg_mm": [
-      612.2,
-      1312.7,
-      1026.6
+      616.7,
+      1312.5,
+      1026.7
     ],
     "mass_basis": "Steel 7850 and aluminum 2700 kg/m3 on the modeled solids; bought parts by nominal mass; magazine 3.0 kg and cutters 0.3 kg are placeholders. Weigh the module with the dock."
   },
@@ -2100,6 +2118,22 @@
       "Candidate 23HS30-5004D-B280 replaces the stock Z motor only after shaft/coupling/pilot fit, brake timing, thermal and stopped-load retention acceptance. No production brake mount released."
     ],
     "scope_note": "No unverified purchased bolt hole was invented. Geometry checks cannot close the listed missing interfaces.",
+    "work_light": {
+      "part": "GANTRY_WORK_LIGHT",
+      "x_mm": [
+        175.0,
+        975.0
+      ],
+      "y_mm": [
+        1366.5,
+        1383.5
+      ],
+      "z_mm": [
+        1148.0,
+        1155.0
+      ],
+      "moves_with": "gantry"
+    },
     "z_slide": {
       "stroke_mm": 300.0,
       "raise_mm": 110.0,
@@ -2275,18 +2309,36 @@
         1080.0,
         1120.0
       ],
+      "tool_setter": {
+        "axis_xy_deployed_mm": [
+          896.0,
+          1100.0
+        ],
+        "button_top_z_mm": 1071.35,
+        "touch_z_lift_for_40mm_tool_mm": 151.35,
+        "envelope_mm": [
+          30.0,
+          45.0
+        ],
+        "wing_mm": [
+          870.0,
+          914.0,
+          1080.0,
+          1120.0
+        ]
+      },
       "deployed_datum": "Drive tab front face on the front stop at Y1185",
       "fixed_part_count": 36,
-      "moving_part_count": 44,
-      "mass_kg": 10.41,
+      "moving_part_count": 45,
+      "mass_kg": 10.58,
       "cg_mm": [
-        612.2,
-        1195.6,
-        1026.6
+        616.7,
+        1194.1,
+        1026.7
       ],
       "mass_basis": "Steel 7850 and aluminum 2700 kg/m3 on the modeled solids; bought parts by nominal mass; magazine 3.0 kg and cutters 0.3 kg are placeholders. Weigh the module with the dock."
     },
-    "part_count": 1300
+    "part_count": 1302
   },
   "bed_change_module": {
     "bed": {
@@ -2354,11 +2406,11 @@
         ],
         "shackle": "3/8 in screw-pin anchor shackle, WLL at least 0.5 t each"
       },
-      "module_mass_estimate_kg": 73.8,
+      "module_mass_estimate_kg": 74.0,
       "module_cg_mm": [
-        580.2,
-        743.7,
-        928.3
+        581.0,
+        744.5,
+        928.6
       ],
       "module_mass_basis": "Nominal solids: steel 7850, aluminum 2700 (reconstructed 20100 section), HDPE 950 kg/m3, stainless hardware as steel. Weigh the module before the first lift.",
       "handling_lift_mm": 70.0,
@@ -2427,64 +2479,82 @@
         1080.0,
         1120.0
       ],
+      "tool_setter": {
+        "axis_xy_deployed_mm": [
+          896.0,
+          1100.0
+        ],
+        "button_top_z_mm": 1071.35,
+        "touch_z_lift_for_40mm_tool_mm": 151.35,
+        "envelope_mm": [
+          30.0,
+          45.0
+        ],
+        "wing_mm": [
+          870.0,
+          914.0,
+          1080.0,
+          1120.0
+        ]
+      },
       "deployed_datum": "Drive tab front face on the front stop at Y1185",
       "fixed_part_count": 36,
-      "moving_part_count": 44,
-      "mass_kg": 10.41,
+      "moving_part_count": 45,
+      "mass_kg": 10.58,
       "cg_mm": [
-        612.2,
-        1195.6,
-        1026.6
+        616.7,
+        1194.1,
+        1026.7
       ],
       "mass_basis": "Steel 7850 and aluminum 2700 kg/m3 on the modeled solids; bought parts by nominal mass; magazine 3.0 kg and cutters 0.3 kg are placeholders. Weigh the module with the dock."
     },
-    "part_count": 229
+    "part_count": 230
   },
   "state_checks": {
     "router_dock_parked": {
-      "part_count": 1300,
+      "part_count": 1302,
       "step_readback": {
         "passed": true,
-        "solids": 1300,
-        "volume_delta_mm3": 0.24425657093524933,
-        "volume_tolerance_mm3": 12.123805570268976,
-        "sha256": "5e8846af0b666b04bd444f822b3ed044982a938d0030f485449154d1b56efc55",
+        "solids": 1302,
+        "volume_delta_mm3": 0.2435116469860077,
+        "volume_tolerance_mm3": 12.13735896095059,
+        "sha256": "8879eed4fef1bc5243988b68c5cf7a3eaba0d422111f9890b294f030ce632ecd",
         "file": "RevL_ROUTER.step"
       },
       "unresolved_intersections": []
     },
     "new_parts": {
-      "part_count": 138,
+      "part_count": 139,
       "step_readback": {
         "passed": true,
-        "solids": 138,
-        "volume_delta_mm3": 3.725290298461914e-09,
-        "volume_tolerance_mm3": 1.5810800999581962,
-        "sha256": "a4d0e8a15f8d12a10de8f83c5a7751c36eebad3f1141311290a7e05b58f6112a",
+        "solids": 139,
+        "volume_delta_mm3": 7.450580596923828e-08,
+        "volume_tolerance_mm3": 1.5851134906398094,
+        "sha256": "62236799a144ab3f13bb8c01cc045d7409e03dc850bd759cfe8851637e70ac21",
         "file": "RevL_NEW_PARTS.step"
       },
       "unresolved_intersections": []
     },
     "bed_module_dock_deployed": {
-      "part_count": 229,
+      "part_count": 230,
       "step_readback": {
         "passed": true,
-        "solids": 229,
+        "solids": 230,
         "volume_delta_mm3": 1.4901161193847656e-07,
-        "volume_tolerance_mm3": 2.8993768559808992,
-        "sha256": "3f6fe679a2f6a0f167b641271be5acc182f59e64972305046efee6bff6b5186a",
+        "volume_tolerance_mm3": 2.903410246662512,
+        "sha256": "dbf0824b0c543c65b58a1fac0ed1cbf350608cb194671859a2b2ddb8afd93d48",
         "file": "RevL_BED_MODULE.step"
       },
       "unresolved_intersections": []
     },
     "dock_deployed": {
-      "part_count": 80,
+      "part_count": 81,
       "step_readback": {
         "passed": true,
-        "solids": 80,
-        "volume_delta_mm3": 4.190951585769653e-09,
-        "volume_tolerance_mm3": 0.4036129687434757,
-        "sha256": "945bd75f9287b3180ef3eb8ed575ce371ec50852d25991b88b0e3e0bdcaf1507",
+        "solids": 81,
+        "volume_delta_mm3": 2.561137080192566e-08,
+        "volume_tolerance_mm3": 0.4076463594250887,
+        "sha256": "b29816442b1df71990e4ce5513e1c3b8fbd7b24c13a90c8532704773c42b6849",
         "file": "RevL_DOCK.step"
       },
       "unresolved_intersections": []
@@ -2493,6 +2563,7 @@
   "holds": [
     "ATC: deployed-position repeatability (target 0.05 mm at the pocket reference, 20 cycles), gearmotor and spring preload, and sensor settings are commissioning tests. Probe the pocket reference after every bed install.",
     "ATC: the magazine is a 520 x 60 x 80 mm allocation, not a supplier drawing. Pocket pitch, mounting holes, nut datum, cover sweep and cable come from the delivered RapidChange kit; the saddles stay blank until then.",
+    "ATC: the tool setter is a 30 x 45 envelope. Its mounting holes, cable exit and trip travel come from the delivered unit; set the probe macro's start height and distance from its measured trip height.",
     "Cabinet: the fan, glands and VFD are selected by function; confirm the received VFD size and heat, and test the cabinet temperature rise at full load.",
     "Candidate 23HS30-5004D-B280 replaces the stock Z motor only after shaft/coupling/pilot fit, brake timing, thermal and stopped-load retention acceptance. No production brake mount released.",
     "HGR20: seller P40/E20/1500 hole dimensions conflict. Actual factory holes must be verified before rail cutting or custom datum drilling.",
@@ -2509,12 +2580,12 @@
     "Z slide: the 300 mm ZBX80 is drawn from its listing drawing (body 419). Measure the delivered body, carriage, end blocks and base slots before the drop adapter and the carrier bolting are made."
   ],
   "source_sha256": {
-    "RevL-ENGINEERING/atc_revl.py": "7b31ab03a117ca62d3473bb4c9136da70737a770000b6f08b9b446d737e3a4c1",
+    "RevL-ENGINEERING/atc_revl.py": "ebced7f5e17943b026c64b2ca30f840cb2352d7836350fb089967f3d2856fa64",
     "RevL-ENGINEERING/ballast_revl.py": "4be3635e9b7ab6db627be95fc39a0fe95981b02aec1689bd2841fc120adb3f63",
     "RevL-ENGINEERING/build_revl.py": "055b4e9077fd9ff31991c9dfccd20624e0ceb95bc5b162bfe9e810d92d44e729",
     "RevL-ENGINEERING/render_revl.py": "f8b2c5ca519cc3f53e93a4880542ad09a5bd4d6e55031b471a2cc82a8373dd9d",
-    "RevL-ENGINEERING/verify_revl.py": "9326b2794a33b75eab5ce1dfd82087a435e571486728038ffd15ffbdb08980f3",
-    "RevL-ENGINEERING/z300.py": "e1ed96359440d2e6392afe7c5339ba4ebff431a7cacbc6c79bc9dd3a32a457e5",
+    "RevL-ENGINEERING/verify_revl.py": "95846123ec7b2802e5b50964812638ed70177c9d3db5ddb3630c097a87b9c90d",
+    "RevL-ENGINEERING/z300.py": "22f87fdf57017f26482781cb01688efbaedce785177f42c6c75d864575498750",
     "RevK-ENGINEERING/build_revk.py": "19f60c8ca4838097d1f63b994f3239648e61466adbd678d114f86124b5618be8",
     "RevK-ENGINEERING/plasma_drop.py": "84141e2a156240a894fdb905547c2d50d82dc4efffb5c1af438eb631c6fbb053",
     "RevK-ENGINEERING/render_revk.py": "16ee25663ae2c94d66a286030379a56c86b16f35a8221ec78c2bc87554dfc3ce",
@@ -2569,6 +2640,6 @@
     "RevE-ENGINEERING/water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
   },
   "sources_changed_during_build": {},
-  "elapsed_seconds": 252.45,
+  "elapsed_seconds": 379.95,
   "integrated_geometry_pass": true
 }

@@ -1,5 +1,6 @@
 """Exercise the GM1 panel model: Rev I behaviors, the stop, the mode race, welded contacts,
-and (M12/M13) spindle reverse and the tool-changer drive.
+(M12/M13) spindle reverse and the tool-changer drive, and (M17-M20) the pilot lamps, the work
+light, the tool setter in the head loop and the second E-stop station.
 
 Writes gm1-circuit-verification.json next to this file, plus the regenerated
 netlist (gm1-terminal-netlist.json, GM1-TERMINALS.md). Every check is a
@@ -84,9 +85,9 @@ def structure():
         'XW:21-22', 'XH:1-2', 'K_READY:11-14', 'K_READY:21-24', 'IF_RUN:13-14', 'K_REQUEST:11-12', 'K_REQUEST:21-24',
         'K_RUN_ARM:11-14', 'K_RUN_ARM:21-24', 'K_VFD_RUN:11-14', 'K_TORCH_RUN:11-14'}, removed=removed)
     rerouted = sorted(f'{e.tag} {e.a}-{e.b}' if e.directed else f'{e.a}-{e.b}' for e in gm1.DROPPED
-                      if not e.control and (e.directed or {e.a, e.b} in ({'T_DRAIN:18', 'RR'}, {'K_FILL:14', 'FILL_COIL'})))
-    check('Water logic changes reroute only the drain request, the drain-timer output and the fill self-hold',
-          rerouted == ['D_R DR_REQ-DRAIN_COIL', 'K_FILL:14-FILL_COIL', 'T_DRAIN:18-RR'], rerouted=rerouted)
+                      if not e.control and (e.directed or {e.a, e.b} in ({'T_DRAIN:18', 'RR'}, {'K_FILL:14', 'FILL_COIL'}, {'XH:6', 'HEAD_SAFE'})))
+    check('Rerouted Rev I wires: only the drain request, the drain-timer output, the fill self-hold and the head-loop output (M19)',
+          rerouted == ['D_R DR_REQ-DRAIN_COIL', 'K_FILL:14-FILL_COIL', 'T_DRAIN:18-RR', 'XH:6-HEAD_SAFE'], rerouted=rerouted)
 
 
 def rev_i_behaviors():
@@ -734,6 +735,133 @@ def tool_changer_drive():
                     'polarity pole) and the end-switch back-off diodes are wiring details in the README, not simulated.'}
 
 
+def pilot_lamps():
+    """M17: the three door lamps follow the stop output, the water sequence and the arming."""
+    for pick, drop in itertools.product(PICKUPS, DROPOUTS):
+        s = Simulator(pick, drop)
+        s.run(.3)
+        o = s.outputs()
+        check('Power on, before RESET: STOPPED lit, WATER READY and ARMED dark',
+              o['lamps'] == {'stopped': True, 'water_ready': False, 'armed': False}, pickup=pick, dropout=drop)
+        s = started(pick, drop)
+        o = s.outputs()
+        check('After RESET, in SETUP: STOPPED and ARMED dark', not o['lamps']['stopped'] and not o['lamps']['armed'], pickup=pick, dropout=drop)
+        s = ready('router', pick, drop)
+        o = s.outputs()
+        check('Router ready in RUN: WATER READY and ARMED lit, STOPPED dark',
+              o['lamps'] == {'stopped': False, 'water_ready': True, 'armed': True} and o['armed'], pickup=pick, dropout=drop)
+        s.run(.3, estop_ch1=False, estop_ch2=False)
+        o = s.outputs()
+        check('E-stop: STOPPED lit within 300 ms, ARMED dark', o['lamps']['stopped'] and not o['lamps']['armed'], pickup=pick, dropout=drop)
+    s = ready('plasma')
+    check('Plasma ready: WATER READY lit', s.outputs()['lamps']['water_ready'])
+    s = filling()
+    check('Plasma level at minimum, fill armed but not running: WATER READY lit', s.outputs()['fill_armed'] and s.outputs()['lamps']['water_ready'])
+    s.run(.15, fill_pressed=True)
+    s.run(.3, fill_pressed=False)
+    o = s.outputs()
+    check('While a fill runs: WATER READY dark', o['fill'] and not o['lamps']['water_ready'] and not o['ready'])
+    s = ready('router')
+    s.run(.3, setup=True)
+    o = s.outputs()
+    check('Back in SETUP: ARMED dark, WATER READY still lit', not o['lamps']['armed'] and o['lamps']['water_ready'])
+    s = ready('router')
+    s.run(.3, breakaway_seated=False)
+    check('Head loop open: ARMED dark', not s.outputs()['lamps']['armed'])
+
+
+def work_light():
+    """M18: the work light needs nothing but the 24 V supply, its fuse and its switch."""
+    s = Simulator()
+    s.run(.3)
+    check('Power on: the light is off until switched', not s.outputs()['work_light'])
+    s.run(.1, light_on=True)
+    check('Switched on before any RESET: lit', s.outputs()['work_light'] and not s.outputs()['sr_out'])
+    s = running('router')
+    s.run(.1, light_on=True)
+    s.run(.3, estop_ch1=False, estop_ch2=False)
+    check('Stays lit through an E-stop', s.outputs()['work_light'] and not s.outputs()['sr_out'])
+    s.run(.1, f_control=False)
+    check('Stays lit with the control fuse open', s.outputs()['work_light'])
+    s.run(.1, f_light=False)
+    check('Its own fuse takes it out', not s.outputs()['work_light'])
+    s = ready('router')
+    s.run(.1, light_on=True, f_light=False)
+    o = s.outputs()
+    check('A blown light fuse leaves the control circuit alone', o['permit'] and o['armed'] and o['lamps']['water_ready'])
+    s.run(.1, power=False)
+    check('No 24 V supply: dark', not s.outputs()['work_light'])
+
+
+def tool_setter():
+    """M19: the setter opens the head loop in router mode only; K_SETTER bridges it otherwise."""
+    for pick, drop in itertools.product(PICKUPS, DROPOUTS):
+        s = ready('router', pick, drop)
+        o = s.outputs()
+        check('Router ready: K_SETTER picked up, head loop closed, probe not triggered',
+              o['setter_relay'] and not o['probe_triggered'] and o['permit'], pickup=pick, dropout=drop)
+        s.run(.1, setter_pressed=True)
+        o = s.outputs()
+        check('Setter pressed: probe triggered, permission and arming dropped, door input still closed (no request)',
+              o['probe_triggered'] and not o['permit'] and not o['armed'] and o['door_ok'], pickup=pick, dropout=drop)
+        s.run(.1, setter_pressed=False)
+        o = s.outputs()
+        check('Setter released: probe clear, permission and arming back within 100 ms',
+              not o['probe_triggered'] and o['permit'] and o['armed'], pickup=pick, dropout=drop)
+        s = ready('plasma', pick, drop)
+        check('Plasma ready: K_SETTER released, the bridge closed', not s.outputs()['setter_relay'], pickup=pick, dropout=drop)
+        s.run(.1, setter_pressed=True)
+        o = s.outputs()
+        check('Plasma mode: an open setter loop (the dock unplugged) changes nothing',
+              not o['probe_triggered'] and o['permit'] and o['armed'], pickup=pick, dropout=drop)
+        s.run(.3, breakaway_seated=False)
+        check('Plasma mode: the float still trips the probe and the permission', s.outputs()['probe_triggered'] and not s.outputs()['permit'],
+              pickup=pick, dropout=drop)
+    s = running('router')
+    s.run(.1, setter_pressed=True)
+    check('A setter press while the spindle runs stops it, as a float trip would', not s.outputs()['router_run'])
+    s = started()
+    s.run(75.4, setup=False, setter_pressed=True, **ROUTER)
+    o = s.outputs()
+    check('Router mode with the dock unplugged: water ready, but no permission and no arming',
+          o['lamps']['water_ready'] and not o['permit'] and not o['armed'])
+    s.run(.3, run_request=True)
+    check('... and no spindle on a request', not s.outputs()['router_run'])
+    s.run(.3, run_request=False)
+    s.run(.2, setter_pressed=False)
+    check('Plugging the dock in restores the permission', s.outputs()['permit'] and s.outputs()['armed'])
+    s = started()
+    s.run(.3, setter_pressed=True)
+    check('SETUP, no mode: the setter has no effect on the stop output', s.outputs()['sr_out'] and not s.outputs()['setter_relay'])
+
+
+def second_estop():
+    """M20: either station stops everything; both must be released before a reset."""
+    for pick, drop in itertools.product(PICKUPS, DROPOUTS):
+        for mode in ('router', 'plasma'):
+            s = running(mode, pick, drop)
+            s.run(.3, estop2_ch1=False, estop2_ch2=False)
+            o = s.outputs()
+            check('Second E-stop: contactors open, tool off, brake set, STOPPED lit',
+                  not o['motor_power'] and not o[TOOL[mode]] and not o['sr_out'] and not o['z_brake_released'] and o['lamps']['stopped'],
+                  mode=mode, pickup=pick, dropout=drop)
+            s.reset()
+            check('RESET with the second E-stop still pressed does nothing', not s.outputs()['sr_out'], mode=mode, pickup=pick, dropout=drop)
+            s.run(.1, estop2_ch1=True, estop2_ch2=True)
+            check('Releasing it alone does not restart', not s.outputs()['sr_out'], mode=mode, pickup=pick, dropout=drop)
+            s.reset()
+            check('Release then RESET restores the stop output', s.outputs()['sr_out'], mode=mode, pickup=pick, dropout=drop)
+    s = running('router')
+    s.run(.3, estop2_ch1=False)
+    check('One channel of the second station alone still stops', not s.outputs()['sr_out'] and not s.outputs()['router_run'])
+    s = running('router')
+    s.run(.3, estop_ch1=False, estop_ch2=False)
+    s.run(.3, estop2_ch1=False, estop2_ch2=False)
+    s.run(.1, estop_ch1=True, estop_ch2=True)
+    s.reset()
+    check('Door E-stop released, second station still pressed: no reset', not s.outputs()['sr_out'])
+
+
 def main():
     start = time.monotonic()
     gm1.write_netlist(OUT)
@@ -757,6 +885,11 @@ def main():
     report['spindle_reverse'] = spindle_reverse()
     report['tool_changer_drive'] = tool_changer_drive()
     print('reverse and dock', len(CHECKS), flush=True)
+    pilot_lamps()
+    work_light()
+    tool_setter()
+    second_estop()
+    print('lamps, light, setter, second E-stop', len(CHECKS), flush=True)
     report['simulation_assumptions'] = {
         'relay_pickup_s': list(PICKUPS), 'relay_dropout_s': list(DROPOUTS), 'contactor_pickup_dropout_s': [list(c) for c in CONTACTOR_TIMING],
         'safety_relay_on_s': .050, 'safety_relay_off_s': .020, 'reset_min_press_s': .030, 'timer_recovery_s': .100,
@@ -774,7 +907,10 @@ def main():
         'The float stop (M11) is modeled as the existing head-loop input; the float switch itself, its cam and the probe optocoupler are not simulated.',
         'Mains wiring, contactor and brake sizing, VFD and cutter interfaces, and EMC are specified in the README, not simulated.',
         'M12/M13: the VFD\'s behavior with FWD and REV, its direction-change ramp, the dock motor current and the dock sensors are '
-        'not simulated. The dock is modeled only through its relays and end switches.']
+        'not simulated. The dock is modeled only through its relays and end switches.',
+        'M17-M20: the lamps and the work light are loads with relay-like delays; the tool setter and its K_SETTER bridge are modeled '
+        'as contacts at the head-loop output, and "probe triggered" means that loop is open (the U_PROBE PhotoMOS is not simulated). '
+        'The second E-stop is two more NC contacts in the safety-relay channel loops.']
     report['passed_checks'] = len(CHECKS)
     report['checks'] = CHECKS
     report['result'] = 'PASS' if all(c['passed'] for c in CHECKS) else 'FAIL'

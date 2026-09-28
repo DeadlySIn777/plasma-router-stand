@@ -259,7 +259,10 @@ def _carrier(m, travel, empty_pockets=()):
         sx0, sx1 = px - TRAY_SLOT_W / 2 - x0, px + TRAY_SLOT_W / 2 - x0
         back = POCKET_Y + TRAY_SLOT_BACK - y0
         outline += [(sx0, 0.0), (sx0, back), (sx1, back), (sx1, 0.0)]
-    outline += [(w, 0.0), (w, d), (w - arm, d), (w - arm, TRAY_Y1 - y0), (arm, TRAY_Y1 - y0), (arm, d), (0.0, d)]
+    wx1 = atc_revl.WING[1] - x0
+    wy0, wy1 = POCKET_Y - 20.0 - y0, POCKET_Y + 20.0 - y0
+    outline += [(w, 0.0), (w, wy0), (wx1, wy0), (wx1, wy1), (w, wy1), (w, d), (w - arm, d), (w - arm, TRAY_Y1 - y0),
+                (arm, TRAY_Y1 - y0), (arm, d), (0.0, d)]
     holes = []
     for cx in atc_revl.RAIL_X:
         holes += [(cx - x0 + dx, atc_revl.BLOCK_Y - y0 + dyy, 3.4) for dx in (-10, 10) for dyy in (-10, 10)]
@@ -270,8 +273,17 @@ def _carrier(m, travel, empty_pockets=()):
                            f'{TOOL_Y_SHIFT:g} mm further forward than Rev L\'s (Y{TRAY_Y0:g} deployed) and runs to Y{TRAY_Y1:g}.',
                            f'Six open-front slots {TRAY_SLOT_W:g} wide, from the front edge to {TRAY_SLOT_BACK:g} mm behind the pocket line, '
                            'for the holders\' nuts: they hang below the tray, and slide in from the front at the fork height.',
-                           'Six 5.5 holes for the rack bar screws (from below). Block holes as Rev L.'])
+                           'Six 5.5 holes for the rack bar screws (from below). Block holes as Rev L.',
+                           f'Wing X{x0 + w:g}-{x0 + wx1:g} x Y{y0 + wy0:g}-{y0 + wy1:g} (deployed) at the tray\'s right end carries the tool setter '
+                           '(as Rev L, on this variant\'s pocket line); drill its holes from the delivered setter.'])
     ids.append(p.id)
+    setter = _add(m, 'TOOL_SETTER', cyl(atc_revl.SETTER_D, atc_revl.SETTER_H - 5).fuse(cyl(15, 5).translate((0, 0, atc_revl.SETTER_H - 5))).clean(),
+                  (atc_revl.SETTER_X, POCKET_Y + dy, TOP), pn='TOOL_SETTER_D30x45_NC', group='atc_electrical', purchased=True,
+                  color=PURCHASED, material='Z tool setter, 30 mm body, spring button, NC contact in a 24 V loop (envelope)',
+                  notes=[f'Button top Z{atc_revl.SETTER_TOP:g} at X{atc_revl.SETTER_X:g}, pocket line Y{POCKET_Y:g} (deployed). The held '
+                         f'holder\'s cutter allocation ({HELD_CUTTER:g} mm below the nose) touches at z_lift {atc_revl.SETTER_TOP - 920:g}.',
+                         'Wired as Rev L: dock connector pins 7-8 into the head loop in router mode (controls M19).'])
+    ids.append(setter.id)
     u = _add(m, 'UPSTAND_REAR', box(530.0, 6.35, atc_revl.SADDLE_Z - TOP), (310.0, TRAY_Y1 - 6.35 + dy, TOP), pn='MOD_ATC_UPSTAND_REAR',
              group='atc_moving', color=BLUE, notes=['1/4 in steel strip on edge, welded along the tray\'s rear edge. The rack bar '
                                                      'stiffens the front, so there is no front upstand.'])
@@ -363,6 +375,9 @@ def extend_router_model(m, travel=atc_revl.TRAVEL, empty_pockets=()):
             'pocket_line_y_deployed_mm': POCKET_Y, 'pocket_x_mm': list(POCKET_X), 'pocket_pitch_mm': POCKET_PITCH,
             'bar_z_mm': [TOP, BAR_TOP], 'fork_plane_z_mm': FORK_PLANE, 'gauge_line_z_mm': GAUGE_Z, 'rack_top_z_mm': RACK_TOP,
             'stored_tool_bottom_z_mm': STORED_BOTTOM, 'stock_allowance_under_deployed_rack_mm': round(STOCK_ALLOWANCE, 3),
+            'tool_setter': {'axis_xy_deployed_mm': [atc_revl.SETTER_X, POCKET_Y], 'button_top_z_mm': atc_revl.SETTER_TOP,
+                            'touch_z_lift_for_held_holder_mm': round(atc_revl.SETTER_TOP - 920.0, 2),
+                            'envelope_mm': [atc_revl.SETTER_D, atc_revl.SETTER_H]},
             'rack_top_under_gantry_mm': round(GANTRY_UNDERSIDE - RACK_TOP, 3), 'tray_y_deployed_mm': [TRAY_Y0, TRAY_Y1],
             'deployed_datum': 'Drive tab front face on the front stop at Y1185 (Rev L, unchanged)',
             'fixed_part_count': len(fixed), 'moving_part_count': len(moving), 'mass_kg': kg, 'cg_mm': cg,

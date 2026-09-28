@@ -19,7 +19,7 @@ magazine's lid allocation (Z1132.35) by 17.65 mm. The changer can slide with
 the head anywhere and the gantry can drive over the deployed magazine, with
 Z up.
 """
-from cad_helpers import bbox, box
+from cad_helpers import PURCHASED, bbox, box
 
 import cadquery as cq
 
@@ -31,6 +31,8 @@ RAISE = 110.0                        # the Z body sits this much higher on the c
 BODY_BOTTOM = 1040.0 + RAISE         # lower end block, Z1150, level with the gantry's X blocks and carrier (Z1143)
 ADAPTER_H = 110.0 + RAISE            # the tool adapter grows upward by the raise
 ADAPTER_PN = f'TOOL_ADAPTER_110x{int(ADAPTER_H)}_DROP'
+LIGHT_X = (175.0, 975.0)             # work light bar under the gantry beam's rear bottom T-slot, over the X travel
+LIGHT_W, LIGHT_T = 17.0, 7.0         # slim LED channel
 # Parts that ride on the Z carriage (found by comparing the Rev K model at z_lift 0 and 100).
 CARRIAGE = ('ZBX80_OUTPUT_HOLD', 'TOOL_ADAPTER_110', 'TOOL_CLAMP_MOUNT_', 'TOOL_CLAMP_PINCH_',
             'TOOL_SPLIT_CLAMP_', 'TOOL_SPINDLE_65x259')
@@ -96,6 +98,16 @@ def add_motion(model, gantry_y=1275.0, head_x=575.0, z_lift=STROKE):
         if part.id in BODY:
             part.shape = part.shape.translate((0, 0, RAISE))
     drop_adapter(model)
+    beam = bbox(model.find('GANTRY_8080').shape)
+    light_origin = (LIGHT_X[0], beam[4] - 20.0 - LIGHT_W / 2, beam[2] - LIGHT_T)
+    model.add('GANTRY_WORK_LIGHT', box(LIGHT_X[1] - LIGHT_X[0], LIGHT_W, LIGHT_T), light_origin, pn='LED_BAR_24V_800x17x7',
+              group='motion_electrical', purchased=True, color=PURCHASED,
+              material='24 V LED light bar, 800 mm, 17 x 7 aluminium channel, IP65 (envelope)',
+              notes=['Clipped into the beam\'s rear bottom T-slot (slot centre 20 mm from the rear face) with two M8 T-nuts, spanning '
+                     f'the X travel (X{LIGHT_X[0]:g}-{LIGHT_X[1]:g}). Bottom Z{light_origin[2]:g}, {LIGHT_T:g} mm under the beam.',
+                     'Fed from the 24 V rail through its own fuse and a door switch (controls M18), up the gantry with the Z brake leads '
+                     'to XG:5-6. It lights the tool from behind: the ray from the bar to the tool tip passes under the Z body and the '
+                     'spindle nose at every Z.'])
     lift = z_lift - base
     moved = []
     if lift:
@@ -106,6 +118,8 @@ def add_motion(model, gantry_y=1275.0, head_x=575.0, z_lift=STROKE):
         assert 'TOOL_ADAPTER_110' in moved and 'TOOL_SPINDLE_65x259' in moved, moved
     motion['configuration']['z_lift'] = z_lift
     motion['travel_mm']['Z'] = STROKE
+    motion['work_light'] = {'part': 'GANTRY_WORK_LIGHT', 'x_mm': list(LIGHT_X), 'y_mm': [round(light_origin[1], 2), round(light_origin[1] + LIGHT_W, 2)],
+                            'z_mm': [round(light_origin[2], 2), round(beam[2], 2)], 'moves_with': 'gantry'}
     motion['z_slide'] = {'stroke_mm': STROKE, 'raise_mm': RAISE, 'body_z_mm': [origin[2] + RAISE, origin[2] + RAISE + BODY_LENGTH],
                          'spindle_nut_z_range_mm': [960.0, 960.0 + STROKE], 'adapter_height_mm': ADAPTER_H,
                          'motor_top_z_mm': round(bbox(model.find('ZBX80_MOTOR').shape)[5], 3)}

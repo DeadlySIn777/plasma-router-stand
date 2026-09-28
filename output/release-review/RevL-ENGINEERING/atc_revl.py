@@ -16,6 +16,8 @@ added to the frame.
     it is behind the Z body at the rear stop and under the gantry.
   - Drive on the right beam: a 24 V worm gearmotor and a GT2 belt, a tab on the right arm, a
     fitted front stop (the pocket datum), a rear stop, and two inductive sensors.
+  - A tool setter on a wing at the tray's right end (X896 on the pocket line): the changer's tool-length
+    probe, wired through the dock connector into the head loop (controls M19).
 The magazine is an allocation (520 x 60 x 80 mm), not a supplier drawing; the saddles are blanks.
 """
 from pathlib import Path
@@ -69,11 +71,15 @@ PULLEY_Z = 995.0
 BELT_X = (877.5, 883.5)
 SENSOR_Y = (1203.0, 1403.0)                             # deployed, parked (tab centre)
 TUBE_OUTER_X = RAIL_X[1] + TUBE_W / 2                   # 867.7, right beam outer face
+SETTER_X = 896.0                                        # tool-setter axis (deployed); its Y is the pocket line
+SETTER_D, SETTER_H = 30.0, 45.0                         # button tool setter, envelope
+SETTER_TOP = TOP + SETTER_H                             # button top Z1071.35: a 40 mm tool touches at z_lift 151.35
+WING = (870.0, 914.0, 1080.0, 1120.0)                   # x0, x1, y0, y1 deployed: the tray's right-hand extension under the setter
 DENSITY = {'steel': 7.85e-6, 'aluminum': 2.7e-6}        # kg/mm3
 BOUGHT_KG = {'HIWIN_MGN12H': .10, 'HIWIN_MGNR12_281': .18, '24V_WORM_GEARMOTOR_30RPM': .35, 'GT2_20T_8MM_BORE': .02,
              'GT2_6MM_BELT': .01, 'M8_INDUCTIVE_PNP_NO_2MM': .05, 'M12_8PIN_PANEL_RECEPTACLE': .10,
              'RAPIDCHANGE_ER11_MAGAZINE_ALLOCATION': 3.0, 'STORED_CUTTER_ALLOCATION': .30,
-             'RAPIDCHANGE_COVER_ALLOCATION': .40}   # by part number
+             'RAPIDCHANGE_COVER_ALLOCATION': .40, 'TOOL_SETTER_D30x45_NC': .08}   # by part number
 Y_TO_X = dict(u=(0, 1, 0), v=(-1, 0, 0))                # local X along world +Y, local Y along world -X
 
 
@@ -188,7 +194,9 @@ def _carrier(m, travel):
     x0, x1, y0, y1 = CARRIER
     w, d = x1 - x0, y1 - y0
     arm = 30.0
-    outline = [(0, 0), (w, 0), (w, d), (w - arm, d), (w - arm, TRAY_Y1 - y0), (arm, TRAY_Y1 - y0), (arm, d), (0, d)]
+    wx0, wx1, wy0, wy1 = WING
+    outline = [(0, 0), (w, 0), (w, wy0 - y0), (wx1 - x0, wy0 - y0), (wx1 - x0, wy1 - y0), (w, wy1 - y0), (w, d),
+               (w - arm, d), (w - arm, TRAY_Y1 - y0), (arm, TRAY_Y1 - y0), (arm, d), (0, d)]
     wx0, wx1, wy0, wy1 = WINDOW
     window = [(wx0 - x0, wy0 - y0), (wx1 - x0, wy0 - y0), (wx1 - x0, wy1 - y0), (wx0 - x0, wy1 - y0)]
     holes = []
@@ -200,8 +208,19 @@ def _carrier(m, travel):
                     pn='MOD_ATC_CARRIER', group='atc_moving', color=BLUE,
                     notes=['1/4 in steel, one piece: tray under the magazine and two arms back to the guide blocks. The middle is open '
                            'behind the tray, so the Z body clears it even where the Rev K body height (Z1040) applied.',
-                           'Window X335-815 x Y1080-1120 (deployed) for cutters hanging below the pockets.'])
+                           'Window X335-815 x Y1080-1120 (deployed) for cutters hanging below the pockets.',
+                           f'Wing X{wx0:g}-{wx1:g} x Y{wy0:g}-{wy1:g} (deployed) at the tray\'s right end carries the tool setter; drill its '
+                           'mounting holes from the delivered setter.'])
     ids.append(p.id)
+    setter = _add(m, 'TOOL_SETTER', cyl(SETTER_D, SETTER_H - 5).fuse(cyl(15, 5).translate((0, 0, SETTER_H - 5))).clean(),
+                  (SETTER_X, POCKET_Y + dy, TOP), pn='TOOL_SETTER_D30x45_NC', group='atc_electrical', purchased=True, color=PURCHASED,
+                  material='Z tool setter, 30 mm body, spring button, NC contact in a 24 V loop (envelope)',
+                  notes=[f'Button top Z{SETTER_TOP:g} on the wing at X{SETTER_X:g}, pocket line Y{POCKET_Y:g} (deployed). A tool 40 mm below '
+                         f'the nut touches at z_lift {SETTER_TOP - 920:g}; the nut is then 40 mm above the button.',
+                         'Its NC contact goes to the dock connector pins 7-8 (XD:7-8) and sits in the head loop in router mode (controls '
+                         'M19): pressed = probe triggered and permission dropped, as the torch float. Mounting holes and the cable exit '
+                         'come from the delivered unit.'])
+    ids.append(setter.id)
     for name, (ux0, ux1), (uy0, uy1) in (('UPSTAND_FRONT', (336.0, 814.0), (1065.0, 1071.35)),
                                          ('UPSTAND_REAR', (310.0, 840.0), (1133.65, 1140.0))):
         u = _add(m, name, box(ux1 - ux0, uy1 - uy0, SADDLE_Z - TOP), (ux0, uy0 + dy, TOP), pn='MOD_ATC_' + name,
@@ -290,12 +309,17 @@ def extend_router_model(m, travel=TRAVEL):
                    'cover sweep and cable come from the delivered RapidChange kit; the saddles stay blank until then.')
     m.holds.append('ATC: deployed-position repeatability (target 0.05 mm at the pocket reference, 20 cycles), gearmotor and spring '
                    'preload, and sensor settings are commissioning tests. Probe the pocket reference after every bed install.')
+    m.holds.append('ATC: the tool setter is a 30 x 45 envelope. Its mounting holes, cable exit and trip travel come from the delivered '
+                   'unit; set the probe macro\'s start height and distance from its measured trip height.')
     return {'status': 'MODULE-MOUNTED RETRACTING DOCK: WORKING CAD, NOT A FABRICATION RELEASE',
             'travel_mm': travel, 'travel_state': 'deployed' if travel == 0 else 'parked' if travel == TRAVEL else 'between',
             'stroke_mm': TRAVEL, 'rail_x_mm': list(RAIL_X), 'rail_plane_z_mm': RB, 'carrier_z_mm': [WT, TOP],
             'magazine_support_plane_z_mm': MAG, 'magazine_allocation_mm': list(MAGAZINE[2:]), 'cover_top_z_mm': COVER_TOP,
             'magazine_y_deployed_mm': [MAGAZINE[1], MAGAZINE[1] + MAGAZINE[3]], 'pocket_line_y_deployed_mm': POCKET_Y,
             'stored_cutter_bottom_z_mm': MAG - TOOL_HANG, 'tool_window_mm': list(WINDOW),
+            'tool_setter': {'axis_xy_deployed_mm': [SETTER_X, POCKET_Y], 'button_top_z_mm': SETTER_TOP,
+                            'touch_z_lift_for_40mm_tool_mm': round(SETTER_TOP - 920.0, 2), 'envelope_mm': [SETTER_D, SETTER_H],
+                            'wing_mm': list(WING)},
             'deployed_datum': 'Drive tab front face on the front stop at Y1185',
             'fixed_part_count': len(fixed), 'moving_part_count': len(moving),
             'mass_kg': kg, 'cg_mm': cg,
