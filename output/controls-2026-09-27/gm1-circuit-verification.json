@@ -1,5 +1,5 @@
 {
-  "scope": "Exercise the GM1 panel model: Rev I behaviors, the stop, the mode race, welded contacts,\nand (M12/M13) spindle reverse and the tool-changer drive.\n\nWrites gm1-circuit-verification.json next to this file, plus the regenerated\nnetlist (gm1-terminal-netlist.json, GM1-TERMINALS.md). Every check is a\nsimulation of the connection graph in gm1_circuit.py with finite relay delays;\nnone is a measurement of a built panel.",
+  "scope": "Exercise the GM1 panel model: Rev I behaviors, the stop, the mode race, welded contacts,\n(M12/M13) spindle reverse and the tool-changer drive, and (M17-M20) the pilot lamps, the work\nlight, the tool setter in the head loop and the second E-stop station.\n\nWrites gm1-circuit-verification.json next to this file, plus the regenerated\nnetlist (gm1-terminal-netlist.json, GM1-TERMINALS.md). Every check is a\nsimulation of the connection graph in gm1_circuit.py with finite relay delays;\nnone is a measurement of a built panel.",
   "changes": [
     {
       "id": "M1",
@@ -70,6 +70,26 @@
       "id": "M14",
       "topic": "Dock enable from the Z top switch",
       "change": "With the Z body raised over the changer (Rev L), the only crash left is the spindle low over the magazine while the dock moves or the gantry crosses it. The dock motor feed passes a second, NO, contact of the Z top switch (LS_ZTOP 13-14) ahead of K_DOCK_RUN, so the dock cannot move unless the Z carriage is at its top, whatever the firmware commands and even if K_DOCK_RUN is welded. The Rodent still reads the switch's first contact as the Z limit; the second contact is only in the dock feed."
+    },
+    {
+      "id": "M17",
+      "topic": "Pilot lamps",
+      "change": "Three 22 mm 24 V LED pilot lights on the door, each a plain load between a circuit node and 0 V: red STOPPED on the safety relay's NC auxiliary 41-42 (lit whenever the safety outputs are off: E-stop pressed, not yet reset, or a channel fault), green WATER READY on NOT_FILL (the selected mode's water sequence is complete and no fill is running), and white ARMED on the ARMED node (K_RUN_ARM picked up: RUN selected, permission present, every chain relay released before it). They only indicate; nothing is wired through them."
+    },
+    {
+      "id": "M18",
+      "topic": "Work light",
+      "change": "An 800 mm 24 V LED bar under the gantry beam (CAD GANTRY_WORK_LIGHT) is fed from the 24 V rail ahead of F_CONTROL through its own 2 A fuse F_LIGHT and a door switch SW_LIGHT, so a lamp fault cannot take the control fuse and the light stays on through a stop. Its leads run up the gantry with the Z brake leads to XG:5-6."
+    },
+    {
+      "id": "M19",
+      "topic": "Tool setter",
+      "change": "A button tool setter on the dock (CAD MOD_ATC_TOOL_SETTER) gives the changer a tool-length probe without a second controller input. Its NC contact comes through the dock connector (XD:7-8) and replaces the panel link XHEAD 4-5 in the head loop, so pressing it opens the loop: U_PROBE turns off (the Rodent probe input reads triggered) and U_HEAD turns off (the permission drops, as for a torch float trip). Relay K_SETTER, whose coil is in parallel with KM_R (router mode), bridges the setter with its NC contact 11-12 whenever router mode is not selected, so the loop is whole in plasma mode with the dock unplugged. In router mode the dock must be plugged in or there is no permission, which also guarantees the dock sensors are connected. The spindle is off during a length probe (request low), so the door input stays closed and the chain re-arms when the button releases. The simulator places the two contacts at the loop's output (after XH:5-6); physically they are in the 24 V LED loop on the head interface board."
+    },
+    {
+      "id": "M20",
+      "topic": "Second E-stop station",
+      "change": "A second latching E-stop (ESTOP2) at the loading end of the frame sits in series with the door E-stop in both safety-relay channels, through XH:7-8 and XH:9-10. Either button stops the machine; both must be released before RESET."
     }
   ],
   "rev_i_behaviors": {
@@ -1815,9 +1835,10 @@
     "Water-contact glitches shorter than a relay dropout can still resume a held fill, as in Rev I.",
     "The float stop (M11) is modeled as the existing head-loop input; the float switch itself, its cam and the probe optocoupler are not simulated.",
     "Mains wiring, contactor and brake sizing, VFD and cutter interfaces, and EMC are specified in the README, not simulated.",
-    "M12/M13: the VFD's behavior with FWD and REV, its direction-change ramp, the dock motor current and the dock sensors are not simulated. The dock is modeled only through its relays and end switches."
+    "M12/M13: the VFD's behavior with FWD and REV, its direction-change ramp, the dock motor current and the dock sensors are not simulated. The dock is modeled only through its relays and end switches.",
+    "M17-M20: the lamps and the work light are loads with relay-like delays; the tool setter and its K_SETTER bridge are modeled as contacts at the head-loop output, and \"probe triggered\" means that loop is open (the U_PROBE PhotoMOS is not simulated). The second E-stop is two more NC contacts in the safety-relay channel loops."
   ],
-  "passed_checks": 1424,
+  "passed_checks": 1605,
   "checks": [
     {
       "check": "Every contact tag is unique",
@@ -1844,7 +1865,8 @@
         "SR": [
           "13-14",
           "23-24",
-          "33-34"
+          "33-34",
+          "41-42"
         ],
         "T_BRAKE": [
           "15-18"
@@ -1918,6 +1940,9 @@
         "K_DOCK_DIR": [
           "11-12",
           "11-14"
+        ],
+        "K_SETTER": [
+          "11-12"
         ]
       }
     },
@@ -1957,12 +1982,13 @@
       ]
     },
     {
-      "check": "Water logic changes reroute only the drain request, the drain-timer output and the fill self-hold",
+      "check": "Rerouted Rev I wires: only the drain request, the drain-timer output, the fill self-hold and the head-loop output (M19)",
       "passed": true,
       "rerouted": [
         "D_R DR_REQ-DRAIN_COIL",
         "K_FILL:14-FILL_COIL",
-        "T_DRAIN:18-RR"
+        "T_DRAIN:18-RR",
+        "XH:6-HEAD_SAFE"
       ]
     },
     {
@@ -12721,17 +12747,1137 @@
     {
       "check": "Direction changes never drive both directions",
       "passed": true
+    },
+    {
+      "check": "Power on, before RESET: STOPPED lit, WATER READY and ARMED dark",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "After RESET, in SETUP: STOPPED and ARMED dark",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Router ready in RUN: WATER READY and ARMED lit, STOPPED dark",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "E-stop: STOPPED lit within 300 ms, ARMED dark",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Power on, before RESET: STOPPED lit, WATER READY and ARMED dark",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "After RESET, in SETUP: STOPPED and ARMED dark",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Router ready in RUN: WATER READY and ARMED lit, STOPPED dark",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "E-stop: STOPPED lit within 300 ms, ARMED dark",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Power on, before RESET: STOPPED lit, WATER READY and ARMED dark",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "After RESET, in SETUP: STOPPED and ARMED dark",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Router ready in RUN: WATER READY and ARMED lit, STOPPED dark",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "E-stop: STOPPED lit within 300 ms, ARMED dark",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Power on, before RESET: STOPPED lit, WATER READY and ARMED dark",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "After RESET, in SETUP: STOPPED and ARMED dark",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Router ready in RUN: WATER READY and ARMED lit, STOPPED dark",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "E-stop: STOPPED lit within 300 ms, ARMED dark",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Power on, before RESET: STOPPED lit, WATER READY and ARMED dark",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "After RESET, in SETUP: STOPPED and ARMED dark",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Router ready in RUN: WATER READY and ARMED lit, STOPPED dark",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "E-stop: STOPPED lit within 300 ms, ARMED dark",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Power on, before RESET: STOPPED lit, WATER READY and ARMED dark",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "After RESET, in SETUP: STOPPED and ARMED dark",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Router ready in RUN: WATER READY and ARMED lit, STOPPED dark",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "E-stop: STOPPED lit within 300 ms, ARMED dark",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Power on, before RESET: STOPPED lit, WATER READY and ARMED dark",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "After RESET, in SETUP: STOPPED and ARMED dark",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Router ready in RUN: WATER READY and ARMED lit, STOPPED dark",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "E-stop: STOPPED lit within 300 ms, ARMED dark",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Power on, before RESET: STOPPED lit, WATER READY and ARMED dark",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "After RESET, in SETUP: STOPPED and ARMED dark",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Router ready in RUN: WATER READY and ARMED lit, STOPPED dark",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "E-stop: STOPPED lit within 300 ms, ARMED dark",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Power on, before RESET: STOPPED lit, WATER READY and ARMED dark",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "After RESET, in SETUP: STOPPED and ARMED dark",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Router ready in RUN: WATER READY and ARMED lit, STOPPED dark",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "E-stop: STOPPED lit within 300 ms, ARMED dark",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Plasma ready: WATER READY lit",
+      "passed": true
+    },
+    {
+      "check": "Plasma level at minimum, fill armed but not running: WATER READY lit",
+      "passed": true
+    },
+    {
+      "check": "While a fill runs: WATER READY dark",
+      "passed": true
+    },
+    {
+      "check": "Back in SETUP: ARMED dark, WATER READY still lit",
+      "passed": true
+    },
+    {
+      "check": "Head loop open: ARMED dark",
+      "passed": true
+    },
+    {
+      "check": "Power on: the light is off until switched",
+      "passed": true
+    },
+    {
+      "check": "Switched on before any RESET: lit",
+      "passed": true
+    },
+    {
+      "check": "Stays lit through an E-stop",
+      "passed": true
+    },
+    {
+      "check": "Stays lit with the control fuse open",
+      "passed": true
+    },
+    {
+      "check": "Its own fuse takes it out",
+      "passed": true
+    },
+    {
+      "check": "A blown light fuse leaves the control circuit alone",
+      "passed": true
+    },
+    {
+      "check": "No 24 V supply: dark",
+      "passed": true
+    },
+    {
+      "check": "Router ready: K_SETTER picked up, head loop closed, probe not triggered",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Setter pressed: probe triggered, permission and arming dropped, door input still closed (no request)",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Setter released: probe clear, permission and arming back within 100 ms",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Plasma ready: K_SETTER released, the bridge closed",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Plasma mode: an open setter loop (the dock unplugged) changes nothing",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Plasma mode: the float still trips the probe and the permission",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Router ready: K_SETTER picked up, head loop closed, probe not triggered",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Setter pressed: probe triggered, permission and arming dropped, door input still closed (no request)",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Setter released: probe clear, permission and arming back within 100 ms",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Plasma ready: K_SETTER released, the bridge closed",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Plasma mode: an open setter loop (the dock unplugged) changes nothing",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Plasma mode: the float still trips the probe and the permission",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Router ready: K_SETTER picked up, head loop closed, probe not triggered",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Setter pressed: probe triggered, permission and arming dropped, door input still closed (no request)",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Setter released: probe clear, permission and arming back within 100 ms",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Plasma ready: K_SETTER released, the bridge closed",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Plasma mode: an open setter loop (the dock unplugged) changes nothing",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Plasma mode: the float still trips the probe and the permission",
+      "passed": true,
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Router ready: K_SETTER picked up, head loop closed, probe not triggered",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Setter pressed: probe triggered, permission and arming dropped, door input still closed (no request)",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Setter released: probe clear, permission and arming back within 100 ms",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Plasma ready: K_SETTER released, the bridge closed",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Plasma mode: an open setter loop (the dock unplugged) changes nothing",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Plasma mode: the float still trips the probe and the permission",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Router ready: K_SETTER picked up, head loop closed, probe not triggered",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Setter pressed: probe triggered, permission and arming dropped, door input still closed (no request)",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Setter released: probe clear, permission and arming back within 100 ms",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Plasma ready: K_SETTER released, the bridge closed",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Plasma mode: an open setter loop (the dock unplugged) changes nothing",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Plasma mode: the float still trips the probe and the permission",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Router ready: K_SETTER picked up, head loop closed, probe not triggered",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Setter pressed: probe triggered, permission and arming dropped, door input still closed (no request)",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Setter released: probe clear, permission and arming back within 100 ms",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Plasma ready: K_SETTER released, the bridge closed",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Plasma mode: an open setter loop (the dock unplugged) changes nothing",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Plasma mode: the float still trips the probe and the permission",
+      "passed": true,
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Router ready: K_SETTER picked up, head loop closed, probe not triggered",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Setter pressed: probe triggered, permission and arming dropped, door input still closed (no request)",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Setter released: probe clear, permission and arming back within 100 ms",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Plasma ready: K_SETTER released, the bridge closed",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Plasma mode: an open setter loop (the dock unplugged) changes nothing",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Plasma mode: the float still trips the probe and the permission",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Router ready: K_SETTER picked up, head loop closed, probe not triggered",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Setter pressed: probe triggered, permission and arming dropped, door input still closed (no request)",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Setter released: probe clear, permission and arming back within 100 ms",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Plasma ready: K_SETTER released, the bridge closed",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Plasma mode: an open setter loop (the dock unplugged) changes nothing",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Plasma mode: the float still trips the probe and the permission",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Router ready: K_SETTER picked up, head loop closed, probe not triggered",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Setter pressed: probe triggered, permission and arming dropped, door input still closed (no request)",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Setter released: probe clear, permission and arming back within 100 ms",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Plasma ready: K_SETTER released, the bridge closed",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Plasma mode: an open setter loop (the dock unplugged) changes nothing",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Plasma mode: the float still trips the probe and the permission",
+      "passed": true,
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "A setter press while the spindle runs stops it, as a float trip would",
+      "passed": true
+    },
+    {
+      "check": "Router mode with the dock unplugged: water ready, but no permission and no arming",
+      "passed": true
+    },
+    {
+      "check": "... and no spindle on a request",
+      "passed": true
+    },
+    {
+      "check": "Plugging the dock in restores the permission",
+      "passed": true
+    },
+    {
+      "check": "SETUP, no mode: the setter has no effect on the stop output",
+      "passed": true
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.005
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.02
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.005,
+      "dropout": 0.05
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.005
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.02
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.01,
+      "dropout": 0.05
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.005
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.02
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "router",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Second E-stop: contactors open, tool off, brake set, STOPPED lit",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "RESET with the second E-stop still pressed does nothing",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Releasing it alone does not restart",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "Release then RESET restores the stop output",
+      "passed": true,
+      "mode": "plasma",
+      "pickup": 0.02,
+      "dropout": 0.05
+    },
+    {
+      "check": "One channel of the second station alone still stops",
+      "passed": true
+    },
+    {
+      "check": "Door E-stop released, second station still pressed: no reset",
+      "passed": true
     }
   ],
   "result": "PASS",
   "source_sha256": {
-    "output/controls-2026-09-27/verify_gm1_circuit.py": "071a87c5105a94a564aa1fb7932c0c2521943d1a3eb053006b25f92ef79860a8",
-    "output/controls-2026-09-27/gm1_circuit.py": "8c603a675bdac4223162ea71cdc6749d592e03a13911703facd4642b22eeb8ab",
+    "output/controls-2026-09-27/verify_gm1_circuit.py": "cbda58fd29e6b9d839d5532b1b6835230e773d5adc2a948b0b0d5eed04e21a39",
+    "output/controls-2026-09-27/gm1_circuit.py": "df933e800bc21688ad44c35c5d7f75d9e806ad27a9b1b2c26084ce20108d415c",
     "output/design-finish-2026-09-26/controls/circuit.py": "a9370143297125a4f7a0da8843ba2ca8d9570003969337a2448bd8a327a4152b"
   },
   "artifact_sha256": {
-    "gm1-terminal-netlist.json": "d801bd9114d308c9ce955c45bec173b706f951218fdf204171130df2ae84100b",
-    "GM1-TERMINALS.md": "f47742a411945767cb2ad65bff3af0d63c9c0f3bba283c60e76dde3e637d9bd8"
+    "gm1-terminal-netlist.json": "e53f4aeaaf575f4dd63fb94851f901bfc715cbd32f6497a73e898f2f61a4e7c7",
+    "GM1-TERMINALS.md": "84e98d8e5fd931b590b11d55c1c7b979f093dfc817bfa25d5c4b882732e7a340"
   },
-  "elapsed_s": 1643.6
+  "elapsed_s": 2351.7
 }

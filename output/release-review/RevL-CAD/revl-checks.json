@@ -1,5 +1,5 @@
 {
-  "scope": "Check GM1 Rev L from fresh source CAD: the 300 mm Z, the dock on the bed module, and the bed lift.\n\nRouter: the eight X/Y/Z travel corners (Z 0 and 300) and the centre, dock parked.\nPlasma: the same nine poses with the module (and dock) out and Rev K's head and torch on the\nZ adapter, plus Rev K's three plasma-only poses (the top-of-Z one now at Z 300).\nDock travel: the carrier at 0..200 mm in 20 mm steps with the gantry at the rear stop and Z fully up,\nwith the head at X175, X575 and X975: the Z body now clears the magazine and its lid, so the dock may\nmove with the head anywhere (Z up).\nTool change: dock deployed, spindle axis on the pocket line (Y1100) at X345, X575 and X805:\n  - Z fully up (300) and 5.65 mm above the lid allocation (about 178): must clear;\n  - nut at the magazine support plane (Z 90): the spindle may only meet the magazine and lid\n    allocations, the saddles and the stored-cutter allocation (the supplier's pocket interface).\nOver the magazine: with the dock deployed and Z up, the gantry drives forward over the magazine\n(gantry Y1275 down to 1150 at head X575, and Y1150 at X345 and X805): all clear. In Rev L before the\nraise this pose clashed and the changer depended on the head being parked at X975 first.\nZ rule: the only remaining collision is the spindle itself, low over the magazine. The dock may move,\nand the gantry may cross the deployed magazine, only with the spindle nose (plus a 40 mm tool) above\nthe lid: z_lift at least Z_DOCK_MIN. The M14 interlock enforces this with the Z top switch.\nStock allowance: 40 mm over the HDPE must be clear of the deployed dock (50 before the magazine was lowered 10 mm\nto fit its lid under the gantry).\nHoist: Rev J's sampled module-and-sling path with the dock deployed on the module (heavier, centre\nof mass further back), head X575, Z fully up, at three hook heights, run 100 mm further forward.\nFrame fill: every pose above carries the moved fill ports (ballast_revl.py). One port per frame tube,\nnone facing down in its fill attitude, and each tube at least 90 % full in that attitude by the sampled\nestimate, for epoxy sand (frame tilted 15 degrees) and for dry sand (tube near vertical).\nThis is a sampled static interference check, not a motion, stiffness or cut test.",
+  "scope": "Check GM1 Rev L from fresh source CAD: the 300 mm Z, the dock on the bed module, and the bed lift.\n\nRouter: the eight X/Y/Z travel corners (Z 0 and 300) and the centre, dock parked.\nPlasma: the same nine poses with the module (and dock) out and Rev K's head and torch on the\nZ adapter, plus Rev K's three plasma-only poses (the top-of-Z one now at Z 300).\nDock travel: the carrier at 0..200 mm in 20 mm steps with the gantry at the rear stop and Z fully up,\nwith the head at X175, X575 and X975: the Z body now clears the magazine and its lid, so the dock may\nmove with the head anywhere (Z up).\nTool change: dock deployed, spindle axis on the pocket line (Y1100) at X345, X575 and X805:\n  - Z fully up (300) and 5.65 mm above the lid allocation (about 178): must clear;\n  - nut at the magazine support plane (Z 90): the spindle may only meet the magazine and lid\n    allocations, the saddles and the stored-cutter allocation (the supplier's pocket interface).\nOver the magazine: with the dock deployed and Z up, the gantry drives forward over the magazine\n(gantry Y1275 down to 1150 at head X575, and Y1150 at X345 and X805): all clear. In Rev L before the\nraise this pose clashed and the changer depended on the head being parked at X975 first.\nZ rule: the only remaining collision is the spindle itself, low over the magazine. The dock may move,\nand the gantry may cross the deployed magazine, only with the spindle nose (plus a 40 mm tool) above\nthe lid: z_lift at least Z_DOCK_MIN. The M14 interlock enforces this with the Z top switch.\nStock allowance: 40 mm over the HDPE must be clear of the deployed dock (50 before the magazine was lowered 10 mm\nto fit its lid under the gantry).\nTool setter: on the dock's wing at X896, pocket line Y1100 (deployed), inside the tool travel; the head over it with Z up,\nand with a 40 mm tool on the button (z_lift 151.35, the nut 40 mm above it): both clear.\nWork light: the LED bar under the gantry beam's rear slot is at least 15 mm above the parked lid allocation, and the\ngantry crosses the parked dock (Y1200 and Y1180, Z up) with the bar over the lid: clear.\nHoist: Rev J's sampled module-and-sling path with the dock deployed on the module (heavier, centre\nof mass further back), head X575, Z fully up, at three hook heights, run 100 mm further forward.\nFrame fill: every pose above carries the moved fill ports (ballast_revl.py). One port per frame tube,\nnone facing down in its fill attitude, and each tube at least 90 % full in that attitude by the sampled\nestimate, for epoxy sand (frame tilted 15 degrees) and for dry sand (tube near vertical).\nThis is a sampled static interference check, not a motion, stiffness or cut test.",
   "revision": "GM1 Rev L working design",
   "status": "PASS",
   "rev_k_fixed_part_count": 929,
@@ -14,6 +14,8 @@
     "the dock can move with Z at least 65 mm below the top (a 40 mm tool clears the lid by 15 mm)": true,
     "deployed dock clear of a 40 mm stock and clamp allowance": true,
     "RapidChange 90 mm: spindle nut at full Z at least 90 mm above the magazine lid": true,
+    "tool setter inside the tool travel, on the pocket line; head over it clear, and a 40 mm tool on the button with the nut 40 mm above it": true,
+    "work light under the beam at least 15 mm above the parked lid; gantry crossing the parked dock with Z up: clear": true,
     "hoist path clear at every hook height with the dock deployed": true,
     "frame fill: one port per frame tube": true,
     "frame fill: no port faces down in its fill attitude": true,
@@ -25,7 +27,7 @@
       "head_x": 175.0,
       "z_lift": 0.0,
       "dock": "parked",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true,
@@ -36,7 +38,7 @@
       "head_x": 175.0,
       "z_lift": 300.0,
       "dock": "parked",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true,
@@ -47,7 +49,7 @@
       "head_x": 975.0,
       "z_lift": 0.0,
       "dock": "parked",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true,
@@ -58,7 +60,7 @@
       "head_x": 975.0,
       "z_lift": 300.0,
       "dock": "parked",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true,
@@ -69,7 +71,7 @@
       "head_x": 175.0,
       "z_lift": 0.0,
       "dock": "parked",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true,
@@ -80,7 +82,7 @@
       "head_x": 175.0,
       "z_lift": 300.0,
       "dock": "parked",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true,
@@ -91,7 +93,7 @@
       "head_x": 975.0,
       "z_lift": 0.0,
       "dock": "parked",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true,
@@ -102,7 +104,7 @@
       "head_x": 975.0,
       "z_lift": 300.0,
       "dock": "parked",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true,
@@ -113,7 +115,7 @@
       "head_x": 575.0,
       "z_lift": 150.0,
       "dock": "parked",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true,
@@ -126,7 +128,7 @@
       "head_x": 175.0,
       "z_lift": 0.0,
       "label": "corner or centre",
-      "parts": 1074,
+      "parts": 1075,
       "tip_z_mm": 845.0,
       "torch_axis_xy_mm": [
         175.0,
@@ -143,7 +145,7 @@
       "head_x": 175.0,
       "z_lift": 300.0,
       "label": "corner or centre",
-      "parts": 1074,
+      "parts": 1075,
       "tip_z_mm": 1145.0,
       "torch_axis_xy_mm": [
         175.0,
@@ -160,7 +162,7 @@
       "head_x": 975.0,
       "z_lift": 0.0,
       "label": "corner or centre",
-      "parts": 1074,
+      "parts": 1075,
       "tip_z_mm": 845.0,
       "torch_axis_xy_mm": [
         975.0,
@@ -177,7 +179,7 @@
       "head_x": 975.0,
       "z_lift": 300.0,
       "label": "corner or centre",
-      "parts": 1074,
+      "parts": 1075,
       "tip_z_mm": 1145.0,
       "torch_axis_xy_mm": [
         975.0,
@@ -194,7 +196,7 @@
       "head_x": 175.0,
       "z_lift": 0.0,
       "label": "corner or centre",
-      "parts": 1074,
+      "parts": 1075,
       "tip_z_mm": 845.0,
       "torch_axis_xy_mm": [
         175.0,
@@ -211,7 +213,7 @@
       "head_x": 175.0,
       "z_lift": 300.0,
       "label": "corner or centre",
-      "parts": 1074,
+      "parts": 1075,
       "tip_z_mm": 1145.0,
       "torch_axis_xy_mm": [
         175.0,
@@ -228,7 +230,7 @@
       "head_x": 975.0,
       "z_lift": 0.0,
       "label": "corner or centre",
-      "parts": 1074,
+      "parts": 1075,
       "tip_z_mm": 845.0,
       "torch_axis_xy_mm": [
         975.0,
@@ -245,7 +247,7 @@
       "head_x": 975.0,
       "z_lift": 300.0,
       "label": "corner or centre",
-      "parts": 1074,
+      "parts": 1075,
       "tip_z_mm": 1145.0,
       "torch_axis_xy_mm": [
         975.0,
@@ -262,7 +264,7 @@
       "head_x": 575.0,
       "z_lift": 150.0,
       "label": "corner or centre",
-      "parts": 1074,
+      "parts": 1075,
       "tip_z_mm": 995.0,
       "torch_axis_xy_mm": [
         575.0,
@@ -279,7 +281,7 @@
       "head_x": 575.0,
       "z_lift": 0.0,
       "label": "torch over slat 8, bottom of Z",
-      "parts": 1074,
+      "parts": 1075,
       "tip_z_mm": 845.0,
       "torch_axis_xy_mm": [
         575.0,
@@ -304,7 +306,7 @@
       "head_x": 955.0,
       "z_lift": 0.0,
       "label": "level-sensor band at the plasma limit X955, bottom of Z",
-      "parts": 1074,
+      "parts": 1075,
       "tip_z_mm": 845.0,
       "torch_axis_xy_mm": [
         955.0,
@@ -321,7 +323,7 @@
       "head_x": 975.0,
       "z_lift": 300.0,
       "label": "level-sensor band at full X, top of Z",
-      "parts": 1074,
+      "parts": 1075,
       "tip_z_mm": 1145.0,
       "torch_axis_xy_mm": [
         975.0,
@@ -340,7 +342,7 @@
       "gantry_y": 1275.0,
       "head_x": 175.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -350,7 +352,7 @@
       "gantry_y": 1275.0,
       "head_x": 175.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -360,7 +362,7 @@
       "gantry_y": 1275.0,
       "head_x": 175.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -370,7 +372,7 @@
       "gantry_y": 1275.0,
       "head_x": 175.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -380,7 +382,7 @@
       "gantry_y": 1275.0,
       "head_x": 175.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -390,7 +392,7 @@
       "gantry_y": 1275.0,
       "head_x": 175.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -400,7 +402,7 @@
       "gantry_y": 1275.0,
       "head_x": 175.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -410,7 +412,7 @@
       "gantry_y": 1275.0,
       "head_x": 175.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -420,7 +422,7 @@
       "gantry_y": 1275.0,
       "head_x": 175.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -430,7 +432,7 @@
       "gantry_y": 1275.0,
       "head_x": 175.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -440,7 +442,7 @@
       "gantry_y": 1275.0,
       "head_x": 175.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -450,7 +452,7 @@
       "gantry_y": 1275.0,
       "head_x": 575.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -460,7 +462,7 @@
       "gantry_y": 1275.0,
       "head_x": 575.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -470,7 +472,7 @@
       "gantry_y": 1275.0,
       "head_x": 575.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -480,7 +482,7 @@
       "gantry_y": 1275.0,
       "head_x": 575.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -490,7 +492,7 @@
       "gantry_y": 1275.0,
       "head_x": 575.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -500,7 +502,7 @@
       "gantry_y": 1275.0,
       "head_x": 575.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -510,7 +512,7 @@
       "gantry_y": 1275.0,
       "head_x": 575.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -520,7 +522,7 @@
       "gantry_y": 1275.0,
       "head_x": 575.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -530,7 +532,7 @@
       "gantry_y": 1275.0,
       "head_x": 575.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -540,7 +542,7 @@
       "gantry_y": 1275.0,
       "head_x": 575.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -550,7 +552,7 @@
       "gantry_y": 1275.0,
       "head_x": 575.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -560,7 +562,7 @@
       "gantry_y": 1275.0,
       "head_x": 975.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -570,7 +572,7 @@
       "gantry_y": 1275.0,
       "head_x": 975.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -580,7 +582,7 @@
       "gantry_y": 1275.0,
       "head_x": 975.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -590,7 +592,7 @@
       "gantry_y": 1275.0,
       "head_x": 975.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -600,7 +602,7 @@
       "gantry_y": 1275.0,
       "head_x": 975.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -610,7 +612,7 @@
       "gantry_y": 1275.0,
       "head_x": 975.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -620,7 +622,7 @@
       "gantry_y": 1275.0,
       "head_x": 975.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -630,7 +632,7 @@
       "gantry_y": 1275.0,
       "head_x": 975.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -640,7 +642,7 @@
       "gantry_y": 1275.0,
       "head_x": 975.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -650,7 +652,7 @@
       "gantry_y": 1275.0,
       "head_x": 975.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -660,7 +662,7 @@
       "gantry_y": 1275.0,
       "head_x": 975.0,
       "z_lift": 300.0,
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -672,7 +674,7 @@
       "head_x": 345.0,
       "z_lift": 300.0,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "pocket_interface_contacts": [],
@@ -683,7 +685,7 @@
       "head_x": 345.0,
       "z_lift": 178.0,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "pocket_interface_contacts": [],
@@ -694,7 +696,7 @@
       "head_x": 345.0,
       "z_lift": 80.34999999999991,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "pocket_interface_contacts": [
@@ -716,7 +718,7 @@
       "head_x": 575.0,
       "z_lift": 300.0,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "pocket_interface_contacts": [],
@@ -727,7 +729,7 @@
       "head_x": 575.0,
       "z_lift": 178.0,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "pocket_interface_contacts": [],
@@ -738,7 +740,7 @@
       "head_x": 575.0,
       "z_lift": 80.34999999999991,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "pocket_interface_contacts": [
@@ -760,7 +762,7 @@
       "head_x": 805.0,
       "z_lift": 300.0,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "pocket_interface_contacts": [],
@@ -771,7 +773,7 @@
       "head_x": 805.0,
       "z_lift": 178.0,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "pocket_interface_contacts": [],
@@ -782,7 +784,7 @@
       "head_x": 805.0,
       "z_lift": 80.34999999999991,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "pocket_interface_contacts": [
@@ -806,7 +808,7 @@
       "head_x": 575.0,
       "z_lift": 300.0,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -816,7 +818,7 @@
       "head_x": 575.0,
       "z_lift": 300.0,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -826,7 +828,7 @@
       "head_x": 575.0,
       "z_lift": 300.0,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -836,7 +838,7 @@
       "head_x": 345.0,
       "z_lift": 300.0,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
@@ -846,12 +848,83 @@
       "head_x": 805.0,
       "z_lift": 300.0,
       "dock": "deployed",
-      "parts": 1300,
+      "parts": 1302,
       "unresolved": [],
       "invalid_local": [],
       "passed": true
     }
   ],
+  "gantry_over_parked_dock": [
+    {
+      "gantry_y": 1200.0,
+      "head_x": 575.0,
+      "z_lift": 300.0,
+      "dock": "parked",
+      "parts": 1302,
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "gantry_y": 1180.0,
+      "head_x": 575.0,
+      "z_lift": 300.0,
+      "dock": "parked",
+      "parts": 1302,
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    }
+  ],
+  "tool_setter_poses": [
+    {
+      "gantry_y": 1253.6,
+      "head_x": 896.0,
+      "z_lift": 300.0,
+      "dock": "deployed",
+      "step": "over the setter, Z up",
+      "parts": 1302,
+      "unresolved": [],
+      "invalid_local": [],
+      "spindle_nose_z_mm": 1260.0,
+      "nose_above_button_mm": 188.65,
+      "passed": true
+    },
+    {
+      "gantry_y": 1253.6,
+      "head_x": 896.0,
+      "z_lift": 151.3499999999999,
+      "dock": "deployed",
+      "step": "a 40 mm tool on the setter button",
+      "parts": 1302,
+      "unresolved": [],
+      "invalid_local": [],
+      "spindle_nose_z_mm": 1111.35,
+      "nose_above_button_mm": 40.0,
+      "passed": true
+    }
+  ],
+  "tool_setter": {
+    "axis_xy_deployed_mm": [
+      896.0,
+      1100.0
+    ],
+    "button_top_z_mm": 1071.35,
+    "touch_z_lift_for_40mm_tool_mm": 151.35,
+    "envelope_mm": [
+      30.0,
+      45.0
+    ],
+    "wing_mm": [
+      870.0,
+      914.0,
+      1080.0,
+      1120.0
+    ],
+    "touch_z_lift_mm": 151.35
+  },
+  "work_light_bottom_z_mm": 1148.0,
+  "work_light_over_parked_lid_mm": 15.65,
   "stock_allowance_hits": [],
   "z_body_bottom_mm": 1150.0,
   "lid_top_mm": 1132.35,
@@ -860,11 +933,11 @@
   "nut_above_magazine_plane_at_full_z_mm": 219.65,
   "nut_above_lid_at_full_z_mm": 127.65,
   "bed_with_dock": {
-    "module_mass_estimate_kg": 73.8,
+    "module_mass_estimate_kg": 74.0,
     "module_cg_mm": [
-      580.2,
-      743.7,
-      928.3
+      581.0,
+      744.5,
+      928.6
     ],
     "module_without_dock": {
       "mass_kg": 63.4,
@@ -880,8 +953,8 @@
     {
       "hook_rise_above_lug_holes_mm": 700.0,
       "hook_point_installed_mm": [
-        580.2,
-        743.7,
+        581.0,
+        744.5,
         1620.0
       ],
       "sling_leg_angle_from_horizontal_deg": [
@@ -891,10 +964,10 @@
         44.4
       ],
       "sling_leg_lengths_mm": [
-        1075.3,
-        1071.2,
-        1005.2,
-        1000.8
+        1076.1,
+        1071.4,
+        1005.1,
+        1000.0
       ],
       "samples": 78,
       "boolean_checks": 1557,
@@ -1030,21 +1103,21 @@
     {
       "hook_rise_above_lug_holes_mm": 1000.0,
       "hook_point_installed_mm": [
-        580.2,
-        743.7,
+        581.0,
+        744.5,
         1920.0
       ],
       "sling_leg_angle_from_horizontal_deg": [
-        50.8,
+        50.7,
         51.0,
         54.2,
-        54.4
+        54.5
       ],
       "sling_leg_lengths_mm": [
-        1290.8,
-        1287.4,
-        1233.1,
-        1229.5
+        1291.5,
+        1287.6,
+        1233.0,
+        1228.8
       ],
       "samples": 78,
       "boolean_checks": 1561,
@@ -1180,8 +1253,8 @@
     {
       "hook_rise_above_lug_holes_mm": 2000.0,
       "hook_point_installed_mm": [
-        580.2,
-        743.7,
+        581.0,
+        744.5,
         2920.0
       ],
       "sling_leg_angle_from_horizontal_deg": [
@@ -1191,10 +1264,10 @@
         70.3
       ],
       "sling_leg_lengths_mm": [
-        2160.2,
-        2158.1,
+        2160.6,
+        2158.2,
         2126.1,
-        2124.1
+        2123.7
       ],
       "samples": 78,
       "boolean_checks": 1561,
@@ -1242,13 +1315,13 @@
               "moving": "SLING_LEG_3",
               "kind": "rigging",
               "obstacle": "X_RAIL_1",
-              "gap_mm": 22.36
+              "gap_mm": 22.27
             },
             {
               "moving": "SLING_LEG_3",
               "kind": "rigging",
               "obstacle": "X_GUIDE_FACE",
-              "gap_mm": 35.83
+              "gap_mm": 35.75
             }
           ]
         },
@@ -1259,7 +1332,7 @@
               "moving": "SLING_LEG_3",
               "kind": "rigging",
               "obstacle": "X_RAIL_1",
-              "gap_mm": 2.89
+              "gap_mm": 2.83
             },
             {
               "moving": "MOD_RAIL_L",
@@ -1295,7 +1368,7 @@
               "moving": "SLING_LEG_3",
               "kind": "rigging",
               "obstacle": "X_GUIDE_FACE",
-              "gap_mm": 16.36
+              "gap_mm": 16.31
             },
             {
               "moving": "MOD_STRIP_1",
@@ -2077,12 +2150,12 @@
   },
   "sources_unchanged_during_run": true,
   "source_sha256": {
-    "RevL-ENGINEERING/atc_revl.py": "7b31ab03a117ca62d3473bb4c9136da70737a770000b6f08b9b446d737e3a4c1",
+    "RevL-ENGINEERING/atc_revl.py": "ebced7f5e17943b026c64b2ca30f840cb2352d7836350fb089967f3d2856fa64",
     "RevL-ENGINEERING/ballast_revl.py": "4be3635e9b7ab6db627be95fc39a0fe95981b02aec1689bd2841fc120adb3f63",
     "RevL-ENGINEERING/build_revl.py": "055b4e9077fd9ff31991c9dfccd20624e0ceb95bc5b162bfe9e810d92d44e729",
     "RevL-ENGINEERING/render_revl.py": "f8b2c5ca519cc3f53e93a4880542ad09a5bd4d6e55031b471a2cc82a8373dd9d",
-    "RevL-ENGINEERING/verify_revl.py": "9326b2794a33b75eab5ce1dfd82087a435e571486728038ffd15ffbdb08980f3",
-    "RevL-ENGINEERING/z300.py": "e1ed96359440d2e6392afe7c5339ba4ebff431a7cacbc6c79bc9dd3a32a457e5",
+    "RevL-ENGINEERING/verify_revl.py": "95846123ec7b2802e5b50964812638ed70177c9d3db5ddb3630c097a87b9c90d",
+    "RevL-ENGINEERING/z300.py": "22f87fdf57017f26482781cb01688efbaedce785177f42c6c75d864575498750",
     "RevK-ENGINEERING/build_revk.py": "19f60c8ca4838097d1f63b994f3239648e61466adbd678d114f86124b5618be8",
     "RevK-ENGINEERING/plasma_drop.py": "84141e2a156240a894fdb905547c2d50d82dc4efffb5c1af438eb631c6fbb053",
     "RevK-ENGINEERING/render_revk.py": "16ee25663ae2c94d66a286030379a56c86b16f35a8221ec78c2bc87554dfc3ce",
@@ -2136,5 +2209,5 @@
     "RevE-ENGINEERING/water_revj.py": "0a22d980b727d2ad286577db71968edaf8ecd24b19c8120a2159a2f22d537940",
     "RevE-ENGINEERING/water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811"
   },
-  "elapsed_seconds": 3082.3
+  "elapsed_seconds": 4076.8
 }
