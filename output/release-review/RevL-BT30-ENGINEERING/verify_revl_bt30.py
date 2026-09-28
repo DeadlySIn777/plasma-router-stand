@@ -18,8 +18,8 @@ dock parked, and the Z body clears them by at least 15 mm.
 Z rule: the dock may move, and the gantry may cross the deployed rack, only with a held tool (holder plus a 40 mm
 cutter) 15 mm above the stud tops: z_lift at least Z_DOCK_MIN, at least 30 mm below the top (the M14 top-switch interlock).
 Stock allowance: 8.5 mm over the HDPE must be clear of the deployed dock.
-Tool setter: on the dock's wing at X896, pocket line Y1073.65 (deployed), inside the tool travel; the head over it with Z up
-and the held holder's cutter allocation on the button (z_lift 151.35): nothing but that touch.
+Tool setter: on the dock's wing at X896, pocket line Y1073.65 (deployed), inside the tool travel; the head over it with Z up,
+and at z_lift 151.35 (a 40 mm cutter in the held holder touching the button, the holder's nose 40 mm above it): clear.
 Work light: the LED bar under the gantry beam counts among the gantry's lowest members (sweep rule above), and the gantry
 crosses the parked rack (Y1200 and Y1180, Z up) with the bar over the studs: clear.
 Hoist: Rev J's sampled module-and-sling path with the dock deployed on the module, at three hook heights.
@@ -175,16 +175,16 @@ def main():
     setter_z = atc_revl.SETTER_TOP - 920.0
     setter_rows = []
     touch = frozenset(('TOOL_HOLDER_HELD_ALLOCATION', atc_revl.PREFIX + 'TOOL_SETTER'))
-    for z, label in ((Z_TOP, 'over the setter, Z up'), (setter_z, 'held holder\'s cutter allocation on the setter button')):
+    for z, label in ((Z_TOP, 'over the setter, Z up'), (setter_z, 'a 40 mm cutter in the held holder on the setter button')):
         ms, _ = pose(0.0, pocket_gy, atc_revl.SETTER_X, z)
         row, _ = row_of(ms, gantry_y=pocket_gy, head_x=atc_revl.SETTER_X, z_lift=z, dock='deployed', step=label)
         other = [c for c in row['unresolved'] if frozenset((c['a'], c['b'])) != touch]
         held_bottom = bbox(ms.find('TOOL_HOLDER_HELD_ALLOCATION').shape)[2]
-        row.update(unresolved=other, held_allocation_bottom_z_mm=round(held_bottom, 3),
-                   held_bottom_above_button_mm=round(held_bottom - atc_revl.SETTER_TOP, 3))
+        row.update(unresolved=other, held_nose_z_mm=round(held_bottom, 3),
+                   held_nose_above_button_mm=round(held_bottom - atc_revl.SETTER_TOP, 3))
         row['passed'] = not other and not row['invalid_local']
         setter_rows.append(row)
-        print('tool setter', label, 'held bottom', round(held_bottom, 2), 'clashes', len(other), flush=True)
+        print('tool setter', label, 'held nose', round(held_bottom, 2), 'clashes', len(other), flush=True)
     setter_xy = (atc_revl.SETTER_X, bt30.POCKET_Y)
     z_dock_min = rack_top + bt30.HELD_CUTTER + CLEAR - 920.0
     print('Z body bottom', body_bottom, 'rack top', rack_top, 'gantry low', gantry_low, 'dock moves at z >=', z_dock_min, flush=True)
@@ -218,9 +218,9 @@ def main():
         'the dock can move with Z at least 30 mm below the top (held holder and a 40 mm cutter clear the studs by 15)': z_dock_min <= Z_TOP - 30,
         'deployed dock clear of an 8.5 mm stock allowance over the HDPE': not stock_hits,
         'held holder nose at full Z at least 100 mm above the stored studs': held_bottom_top - rack_top >= 100,
-        'tool setter inside the tool travel, on the pocket line; head over it clear, and the held cutter allocation on the button': (
+        'tool setter inside the tool travel, on the pocket line; head over it clear, and a 40 mm cutter in the held holder on the button with the nose 40 mm above it': (
             X_MIN <= setter_xy[0] <= X_MAX and 121.4 <= setter_xy[1] <= 1121.4 and all(r['passed'] for r in setter_rows)
-            and abs(setter_rows[1]['held_bottom_above_button_mm']) < 1e-6),
+            and abs(setter_rows[1]['held_nose_above_button_mm'] - bt30.HELD_CUTTER) < 1e-6),
         'work light under the beam at least 15 mm above the stored studs; gantry crossing the parked rack with Z up: clear': (
             light_bottom - rack_top >= CLEAR and all(r['passed'] for r in cross_rows)),
         'hoist path clear at every hook height with the dock deployed': all(c['result'].startswith('PASS') for c in hoist_cases),
