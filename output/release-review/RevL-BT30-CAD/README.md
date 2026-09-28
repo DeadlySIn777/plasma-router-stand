@@ -52,7 +52,7 @@ The RapidChange magazine, its lid, the saddles and the risers are replaced by a 
 | Stored holders | Pull-stud tops at **Z1132.1**: 10.9 mm under the gantry's lowest members (Z1143) and 17.9 mm under the Z body (Z1150). Noses at Z997.7; cutters may project at most **30 mm below the nut**, to Z967.7, 8.9 mm above the HDPE |
 | Carrier tray | Rev L's plate, 26.35 mm longer at the front (Y1038.65–1165 deployed), with six 56 mm slots open to the front for the hanging nuts, which slide in and out through them at the fork height. No front upstand: the bar stiffens the front |
 | Deployed | Over the rear 57 mm of the work area (Y1038.65–1095). The tray's lowest screw heads are at Z1015 |
-| Mass | Dock **14.9 kg** (Rev L 10.6), with six holders at 0.95 kg and forks at 0.06 kg as placeholders. The module becomes about **78 kg** (Rev L 74), centre of mass at Y790 (Rev L 745) |
+| Mass | Dock **14.9 kg** (Rev L 10.6), with six holders at 0.95 kg and forks at 0.06 kg as placeholders. The module becomes about **78 kg** (Rev L 74); with the dock deployed for a lift its centre of mass is at Y763 (Rev L 745) |
 
 **Why the pitch is 90, and why 30 mm of cutter.** With the spindle nose at a holder's gauge line, the clamp's bottom is 9 mm below the neighbouring pull-stud tops, so the clamp (130 wide) must pass between them: at 90 mm pitch the studs (Ø14) clear it by 6 mm. Height: between the HDPE (Z958.8) and the gantry's lowest members (Z1143) there are 184 mm; a stored holder needs 60 (projection) + 8 (groove) + 74.4 (taper and stud) plus its cutter and two clearances. With 30 mm of cutter, 8.9 mm is left below and 10.9 above. Longer stored tools would need the dock's travel lengthened by about 55 mm so the studs park behind the gantry's guide face (Z1155 there), which is not drawn.
 
@@ -76,7 +76,7 @@ As Rev L, with the head handling changed:
 
 1. SETUP, bed key UNCONFIRMED. Z fully up. **Take the adapter off the Z carriage (two screws), then the clamp with the spindle in it off the adapter (eight screws), and park the pair** on the two cradles on the reservoir lid, nose to the right, lugs forward, held by two cam straps. About 18 kg: two hands, or lower it with the hoist. Disconnect the spindle's power and air first. The pinch bolts and the eight screws go in the hardware bin.
 2. Refit the adapter with the plasma drop bracket, as Rev K.
-3. Deploy the dock, unplug it, lift and roll out as Rev L, with the hook over **Y790**, the module's centre of mass with the rack and its holders (Rev L: Y745), and rolled about 1.52 m. With the 0.7 m sling the rear legs are about 100 mm shorter than the front ones: use the chain sling's shortening clutches.
+3. Deploy the dock, unplug it, lift and roll out as Rev L, with the hook over **Y763**, the module's centre of mass with the rack and its holders deployed (Rev L: Y745), and rolled about 1.52 m. With the 0.7 m sling the rear legs are about 85 mm shorter than the front ones: use the chain sling's shortening clutches. Don't use a 2.0 m hook rise: a rear sling leg then passes 1.4 mm from the rear-parked X rail (2.9 mm in Rev L).
 
 **Plasma to router:** reverse it. Then plug in the dock, park it (Z up) and **probe the pocket positions** before the first change: the forks locate the holders to a fraction of a millimetre, and the module's pins are not proven to that.
 
@@ -94,7 +94,23 @@ These are written here, not built into `gm1_circuit.py`, so the ER11 circuit rec
 
 `verify_revl_bt30.py` → [revl-bt30-checks.json](revl-bt30-checks.json). Every record is hash-bound to its sources (this folder's and Rev L's).
 
-*The verify run is in progress; its table goes here in the next commit.*
+| Check | Result |
+|---|---|
+| Router: the X/Y/Z travel corners (Z 0 and 300) and the centre, dock parked, a holder in the spindle | **Pass**: 9 poses, 0 unresolved overlaps |
+| Plasma: the same nine poses and Rev K's three plasma-only poses; module and dock out, the spindle and its clamp parked, torch axis Y = gantry Y − 207.75 | **Pass**: 12 poses; tip Z845–1145; over slat 8 it is 5 mm below the slat top, within the 6 mm float |
+| Dock travel, 0–200 mm in 20 mm steps, gantry at the rear stop, Z up, head at X175, X575 and X975 | **Pass**: 33 positions |
+| Tool change at pockets 1, 3 and 6: Z up with a holder in the spindle; engage (nose at the gauge line, Z 37.7); sliding in 35 mm ahead with the pocket empty; approach 70 mm ahead | **Pass**: 12 poses. Only the pocket interface is touched, and at every engage and sliding-in pose it is touched (6 contacts: the spindle envelope on the stored holder's taper, the held holder's flange in the fork). The clamp, adapter and Z body clear the rack, the tray and the neighbouring holders |
+| Gantry over the deployed rack with Z up: gantry Y1150, 1200 and 1230 at head X575, and Y1150 at X350 and X800 | **Pass**: 5 poses, clear |
+| Z body above the stored holders' pull studs | 17.875 mm (Z1150 over Z1132.12) |
+| Stored holders under the gantry's lowest members (Z1143), dock parked or crossed | 10.875 mm (at least 8 required) |
+| The Z rule | The dock may move with z_lift ≥ 267.125 (a holder with a 40 mm cutter clears the studs by 15 mm); the check requires that to be at least 30 mm below the top, so the M14 "Z at top" interlock has margin |
+| Deployed dock against 8.5 mm of stock over the HDPE | **Pass**: clear; the stored cutters' bottoms are 8.925 mm above the HDPE |
+| Held holder nose at full Z above the stored studs | 127.875 mm |
+| Hoist path with the rack and six holders on the module: hook 0.7, 1.0 and 2.0 m above the lugs, over Y762.7, rolled 1.52 m | **Pass**, 78 sampled poses each. Nearest gaps: 0.7 m: MOD_RAIL_L to MF_LEG_1_1 11.2 mm, MOD_RAIL_R to FLOAT_PAN_EMPTY_BACKRAIL 14.5 mm; 1 m: MOD_RAIL_L to MF_LEG_1_1 11.2 mm, MOD_RAIL_R to FLOAT_PAN_EMPTY_BACKRAIL 14.5 mm; 2 m: SLING_LEG_3 to X_RAIL_1 1.4 mm, MOD_RAIL_L to MF_LEG_1_1 11.2 mm |
+| Frame fill: one hole per tube; none faces down; every tube at least 90 % full | **Pass**: lowest 93.7 % (epoxy, MF_END_FRONT_LOW) and 91.9 % (dry sand, MF_END_REAR_UPPER), as Rev L |
+| Static interference of the exported states: router with the rack parked (1303 solids), plasma with the parked spindle (1079), bed module with the rack (226), dock (77), changed parts (49) | 0 unresolved overlaps; STEP reimport matches |
+
+15 of 15 checks pass; 3,586 s; sources unchanged during the run.
 
 These are nominal CAD checks. They do not cover the ZBX80's load rating, the fork-and-holder interface, the drawbar, cable and air routing, or the sling's real shackles.
 
@@ -108,7 +124,8 @@ These are nominal CAD checks. They do not cover the ZBX80's load rating, the for
 - **The engage height and the pocket positions** are set on the machine and probed after every bed install.
 - **Controls M15–M16** are a specification here, not a simulated circuit. Add them to `gm1_circuit.py` when the spindle's sensor arrangement is known.
 - **The VFD and the cabinet**, the air supply, and the router circuit's 18 A.
-- **Rev L's open items** (rigging, chips, the Z slide's measurements, the frame fill) still apply.
+- **Rigging.** The hook moves 18 mm further back than Rev L's. At the 2.0 m rise a rear sling leg passes 1.4 mm from the X rail: use the 0.7 m rise the container plan calls for.
+- **Rev L's open items** (chips, the Z slide's measurements, the frame fill) still apply.
 
 ## Sources
 
