@@ -1,0 +1,3659 @@
+{
+ "scope": "GM1 wiring by terminal: every screw terminal, its wire number, and where the other end of each wire lands.\n\nBuilt from gm1-terminal-netlist.json (the circuit that verify_gm1_circuit.py simulates) plus the physical\ndecisions written in this file: which nets get a bridged distribution rail, what field device sits behind each\nXW/XH pair, how the dock motor reverses, the Rodent's connectors, the interface board's terminals, the VFD and\ncutter side, the power paths, and the BT30 variant's add-on. It writes:\n\n  GM1-WIRING-BY-TERMINAL.md   the builder's list, device by device\n  gm1-wire-list.csv           one row per wire: number, both ends, net, colour, size\n  gm1-wiring.json             the same, with the netlist's hash and the consistency checks\n\nThe simulated circuit is not changed here. Anything this file adds beyond the netlist (rails, the reversing\ncontacts, connector pins, the BT30 add-on) is a wiring decision, marked as such in the output, not a simulated\nbehaviour. Terminal marks come from the makers' datasheets named in the controls README: check them on the parts.",
+ "netlist_sha256": "d801bd9114d308c9ce955c45bec173b706f951218fdf204171130df2ae84100b",
+ "checks": {
+  "nets": 122,
+  "wires": 316,
+  "terminals_wired": 504,
+  "terminals_with_more_than_two_wires": {},
+  "terminals_with_no_free_side": [],
+  "netlist_connections": 341,
+  "netlist_excluded_by_hand": 33,
+  "devices_without_catalogue_entry": [],
+  "field_terminals_left_in_chains": [],
+  "pass": true
+ },
+ "rails": {
+  "X0V": {
+   "label": "0 V",
+   "description": "control 0 V (PSU24 V-)",
+   "positions": 18
+  },
+  "XC": {
+   "label": "C",
+   "description": "+24 V control, after F_CONTROL",
+   "positions": 7
+  },
+  "XS24": {
+   "label": "S",
+   "description": "+24 V safety-circuit supply, after F_SAFETY",
+   "positions": 3
+  },
+  "X24": {
+   "label": "+24 V",
+   "description": "+24 V from PSU24, unfused",
+   "positions": 2
+  },
+  "XBRK": {
+   "label": "BRK",
+   "description": "+24 V after K1 and K2 (Z brake, dock feed)",
+   "positions": 2
+  },
+  "X_RR": {
+   "label": "RR",
+   "description": "router ready",
+   "positions": 3
+  },
+  "X_FILLCOIL": {
+   "label": "FILL_COIL",
+   "description": "K_FILL, T_FILL and pump command +",
+   "positions": 3
+  }
+ },
+ "nets": [
+  {
+   "label": "0 V",
+   "description": "control 0 V (PSU24 V-)",
+   "cls": "0v",
+   "members": [
+    "XW:8",
+    "XG:4",
+    "PSU24:V-",
+    "SR:A2",
+    "K1:A2",
+    "K2:A2",
+    "T_BRAKE:A2",
+    "KM_R:A2",
+    "KM_P:A2",
+    "K_EMPTY:A2",
+    "K_EMPTY_B:A2",
+    "K_MIN:A2",
+    "K_DRAIN:A2",
+    "K_DRAINED:A2",
+    "K_ARM:A2",
+    "K_FILL:A2",
+    "K_RDY_R:A2",
+    "K_RDY_P:A2",
+    "K_DOCK_RUN:21",
+    "T_CLOSE:A2",
+    "T_DRAIN:A2",
+    "T_FILL:A2",
+    "R_TC:2",
+    "R_TD:2",
+    "P_LIMIT:A2",
+    "P_CMD:A2",
+    "K_READY:A2",
+    "K_PERMIT:A2",
+    "K_RUN_ARM:A2",
+    "K_REQ_A:A2",
+    "K_REQ_B:A2",
+    "K_VFD_RUN:A2",
+    "K_TORCH_RUN:A2",
+    "HEADIF:U_HEAD.2",
+    "HEADIF:U_PROBE.2",
+    "IFB:FLD.0V"
+   ],
+   "wires": [
+    {
+     "no": 101,
+     "a": "XW:8",
+     "b": "X0V:1",
+     "note": ""
+    },
+    {
+     "no": 102,
+     "a": "XG:4",
+     "b": "X0V:1",
+     "note": ""
+    },
+    {
+     "no": 103,
+     "a": "PSU24:V-",
+     "b": "X0V:2",
+     "note": ""
+    },
+    {
+     "no": 104,
+     "a": "SR:A2",
+     "b": "X0V:2",
+     "note": ""
+    },
+    {
+     "no": 105,
+     "a": "K1:A2",
+     "b": "X0V:3",
+     "note": ""
+    },
+    {
+     "no": 106,
+     "a": "K2:A2",
+     "b": "X0V:3",
+     "note": ""
+    },
+    {
+     "no": 107,
+     "a": "T_BRAKE:A2",
+     "b": "X0V:4",
+     "note": ""
+    },
+    {
+     "no": 108,
+     "a": "KM_R:A2",
+     "b": "X0V:4",
+     "note": ""
+    },
+    {
+     "no": 109,
+     "a": "KM_P:A2",
+     "b": "X0V:5",
+     "note": ""
+    },
+    {
+     "no": 110,
+     "a": "K_EMPTY:A2",
+     "b": "X0V:5",
+     "note": ""
+    },
+    {
+     "no": 111,
+     "a": "K_EMPTY_B:A2",
+     "b": "X0V:6",
+     "note": ""
+    },
+    {
+     "no": 112,
+     "a": "K_MIN:A2",
+     "b": "X0V:6",
+     "note": ""
+    },
+    {
+     "no": 113,
+     "a": "K_DRAIN:A2",
+     "b": "X0V:7",
+     "note": ""
+    },
+    {
+     "no": 114,
+     "a": "K_DRAINED:A2",
+     "b": "X0V:7",
+     "note": ""
+    },
+    {
+     "no": 115,
+     "a": "K_ARM:A2",
+     "b": "X0V:8",
+     "note": ""
+    },
+    {
+     "no": 116,
+     "a": "K_FILL:A2",
+     "b": "X0V:8",
+     "note": ""
+    },
+    {
+     "no": 117,
+     "a": "K_RDY_R:A2",
+     "b": "X0V:9",
+     "note": ""
+    },
+    {
+     "no": 118,
+     "a": "K_RDY_P:A2",
+     "b": "X0V:9",
+     "note": ""
+    },
+    {
+     "no": 119,
+     "a": "K_DOCK_RUN:21",
+     "b": "X0V:10",
+     "note": ""
+    },
+    {
+     "no": 120,
+     "a": "T_CLOSE:A2",
+     "b": "X0V:10",
+     "note": ""
+    },
+    {
+     "no": 121,
+     "a": "T_DRAIN:A2",
+     "b": "X0V:11",
+     "note": ""
+    },
+    {
+     "no": 122,
+     "a": "T_FILL:A2",
+     "b": "X0V:11",
+     "note": ""
+    },
+    {
+     "no": 123,
+     "a": "R_TC:2",
+     "b": "X0V:12",
+     "note": ""
+    },
+    {
+     "no": 124,
+     "a": "R_TD:2",
+     "b": "X0V:12",
+     "note": ""
+    },
+    {
+     "no": 125,
+     "a": "P_LIMIT:A2",
+     "b": "X0V:13",
+     "note": ""
+    },
+    {
+     "no": 126,
+     "a": "P_CMD:A2",
+     "b": "X0V:13",
+     "note": ""
+    },
+    {
+     "no": 127,
+     "a": "K_READY:A2",
+     "b": "X0V:14",
+     "note": ""
+    },
+    {
+     "no": 128,
+     "a": "K_PERMIT:A2",
+     "b": "X0V:14",
+     "note": ""
+    },
+    {
+     "no": 129,
+     "a": "K_RUN_ARM:A2",
+     "b": "X0V:15",
+     "note": ""
+    },
+    {
+     "no": 130,
+     "a": "K_REQ_A:A2",
+     "b": "X0V:15",
+     "note": ""
+    },
+    {
+     "no": 131,
+     "a": "K_REQ_B:A2",
+     "b": "X0V:16",
+     "note": ""
+    },
+    {
+     "no": 132,
+     "a": "K_VFD_RUN:A2",
+     "b": "X0V:16",
+     "note": ""
+    },
+    {
+     "no": 133,
+     "a": "K_TORCH_RUN:A2",
+     "b": "X0V:17",
+     "note": ""
+    },
+    {
+     "no": 134,
+     "a": "HEADIF:U_HEAD.2",
+     "b": "X0V:17",
+     "note": ""
+    },
+    {
+     "no": 135,
+     "a": "HEADIF:U_PROBE.2",
+     "b": "X0V:18",
+     "note": ""
+    },
+    {
+     "no": 136,
+     "a": "IFB:FLD.0V",
+     "b": "X0V:18",
+     "note": ""
+    }
+   ],
+   "rail": "X0V"
+  },
+  {
+   "label": "DV",
+   "description": "V through K_DRAIN 11-14 (drain valve +)",
+   "cls": "dc24",
+   "members": [
+    "XW:7",
+    "KM_R:21",
+    "K_DRAIN:14"
+   ],
+   "wires": [
+    {
+     "no": 137,
+     "a": "XW:7",
+     "b": "KM_R:21",
+     "note": ""
+    },
+    {
+     "no": 138,
+     "a": "KM_R:21",
+     "b": "K_DRAIN:14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "C",
+   "description": "+24 V control, after F_CONTROL",
+   "cls": "dc24",
+   "members": [
+    "XW:11",
+    "XW:13",
+    "F_CONTROL:2",
+    "SR:33",
+    "KM_R:11",
+    "KM_P:11",
+    "K_DOCK_RUN:A1",
+    "K_DOCK_DIR:A1",
+    "HEADIF:XHEAD.3",
+    "IFB:FLD.24",
+    "IFB:RUN.13",
+    "MODE_R:13",
+    "MODE_P:13",
+    "AUTO_DRAIN:13"
+   ],
+   "wires": [
+    {
+     "no": 139,
+     "a": "XW:11",
+     "b": "XC:1",
+     "note": ""
+    },
+    {
+     "no": 140,
+     "a": "XW:13",
+     "b": "XC:1",
+     "note": ""
+    },
+    {
+     "no": 141,
+     "a": "F_CONTROL:2",
+     "b": "XC:2",
+     "note": ""
+    },
+    {
+     "no": 142,
+     "a": "SR:33",
+     "b": "XC:2",
+     "note": ""
+    },
+    {
+     "no": 143,
+     "a": "KM_R:11",
+     "b": "XC:3",
+     "note": ""
+    },
+    {
+     "no": 144,
+     "a": "KM_P:11",
+     "b": "XC:3",
+     "note": ""
+    },
+    {
+     "no": 145,
+     "a": "K_DOCK_RUN:A1",
+     "b": "XC:4",
+     "note": ""
+    },
+    {
+     "no": 146,
+     "a": "K_DOCK_DIR:A1",
+     "b": "XC:4",
+     "note": ""
+    },
+    {
+     "no": 147,
+     "a": "HEADIF:XHEAD.3",
+     "b": "XC:5",
+     "note": ""
+    },
+    {
+     "no": 148,
+     "a": "IFB:FLD.24",
+     "b": "XC:5",
+     "note": ""
+    },
+    {
+     "no": 149,
+     "a": "IFB:RUN.13",
+     "b": "XC:6",
+     "note": ""
+    },
+    {
+     "no": 150,
+     "a": "MODE_R:13",
+     "b": "XC:6",
+     "note": ""
+    },
+    {
+     "no": 151,
+     "a": "MODE_P:13",
+     "b": "XC:7",
+     "note": ""
+    },
+    {
+     "no": 152,
+     "a": "AUTO_DRAIN:13",
+     "b": "XC:7",
+     "note": ""
+    }
+   ],
+   "rail": "XC"
+  },
+  {
+   "label": "EMPTY_COIL",
+   "description": "K_EMPTY and K_EMPTY_B coils +",
+   "cls": "dc24",
+   "members": [
+    "XW:12",
+    "K_EMPTY:A1",
+    "K_EMPTY_B:A1"
+   ],
+   "wires": [
+    {
+     "no": 153,
+     "a": "XW:12",
+     "b": "K_EMPTY:A1",
+     "note": ""
+    },
+    {
+     "no": 154,
+     "a": "K_EMPTY:A1",
+     "b": "K_EMPTY_B:A1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "MIN_COIL",
+   "description": "K_MIN coil +",
+   "cls": "dc24",
+   "members": [
+    "XW:14",
+    "K_MIN:A1"
+   ],
+   "wires": [
+    {
+     "no": 155,
+     "a": "XW:14",
+     "b": "K_MIN:A1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "L",
+   "description": "reservoir healthy (pump limit)",
+   "cls": "dc24",
+   "members": [
+    "XW:15",
+    "XW:20",
+    "P_LIMIT:A1"
+   ],
+   "wires": [
+    {
+     "no": 156,
+     "a": "XW:15",
+     "b": "P_LIMIT:A1",
+     "note": ""
+    },
+    {
+     "no": 157,
+     "a": "P_LIMIT:A1",
+     "b": "XW:20",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "A",
+   "description": "fill-stop healthy (fill arm source)",
+   "cls": "dc24",
+   "members": [
+    "XW:16",
+    "K_ARM:11",
+    "K_ARM:21",
+    "FILL:21"
+   ],
+   "wires": [
+    {
+     "no": 158,
+     "a": "XW:16",
+     "b": "K_ARM:11",
+     "note": ""
+    },
+    {
+     "no": 159,
+     "a": "K_ARM:11",
+     "b": "K_ARM:21",
+     "note": "jumper on the socket"
+    },
+    {
+     "no": 160,
+     "a": "K_ARM:21",
+     "b": "FILL:21",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "STOP_OK",
+   "description": "C through the safety relay output SR 33-34",
+   "cls": "dc24",
+   "members": [
+    "XW:17",
+    "XH:3",
+    "SR:34"
+   ],
+   "wires": [
+    {
+     "no": 161,
+     "a": "XW:17",
+     "b": "SR:34",
+     "note": ""
+    },
+    {
+     "no": 162,
+     "a": "SR:34",
+     "b": "XH:3",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "H",
+   "description": "STOP_HEALTHY through the high-high float (XW:17-18)",
+   "cls": "dc24",
+   "members": [
+    "XW:18",
+    "XW:25",
+    "KM_P:21"
+   ],
+   "wires": [
+    {
+     "no": 163,
+     "a": "XW:25",
+     "b": "BED_R:13",
+     "note": ""
+    },
+    {
+     "no": 164,
+     "a": "XW:18",
+     "b": "KM_P:21",
+     "note": ""
+    },
+    {
+     "no": 165,
+     "a": "KM_P:21",
+     "b": "XW:25",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "SETUP_PC",
+   "description": "PC in SETUP",
+   "cls": "dc24",
+   "members": [
+    "XW:19",
+    "SETUP_RUN:22"
+   ],
+   "wires": [
+    {
+     "no": 166,
+     "a": "XW:19",
+     "b": "SETUP_RUN:22",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "P_HEALTHY",
+   "description": "H through KM_P 21-24",
+   "cls": "dc24",
+   "members": [
+    "XW:23",
+    "KM_P:24"
+   ],
+   "wires": [
+    {
+     "no": 167,
+     "a": "XW:23",
+     "b": "BED_P:13",
+     "note": ""
+    },
+    {
+     "no": 168,
+     "a": "XW:23",
+     "b": "KM_P:24",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "P_CLEAR",
+   "description": "plasma bed confirmed",
+   "cls": "dc24",
+   "members": [
+    "XW:24",
+    "T_CLOSE:15"
+   ],
+   "wires": [
+    {
+     "no": 169,
+     "a": "XW:24",
+     "b": "BED_P:14",
+     "note": ""
+    },
+    {
+     "no": 170,
+     "a": "XW:24",
+     "b": "T_CLOSE:15",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "R_LOCKED",
+   "description": "router bed confirmed",
+   "cls": "dc24",
+   "members": [
+    "XW:26",
+    "K_EMPTY:11"
+   ],
+   "wires": [
+    {
+     "no": 171,
+     "a": "XW:26",
+     "b": "BED_R:14",
+     "note": ""
+    },
+    {
+     "no": 172,
+     "a": "XW:26",
+     "b": "K_EMPTY:11",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "DOOR_SAFE",
+   "description": "HARD_SAFE through the door switch (XH:3-4)",
+   "cls": "dc24",
+   "members": [
+    "XH:4",
+    "XH:5"
+   ],
+   "wires": [
+    {
+     "no": 173,
+     "a": "XH:4",
+     "b": "XH:5",
+     "note": "jumper on the socket"
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "HEAD_SAFE",
+   "description": "DOOR_SAFE through the head loop (XH:5-6)",
+   "cls": "dc24",
+   "members": [
+    "XH:6",
+    "K_READY:23"
+   ],
+   "wires": [
+    {
+     "no": 174,
+     "a": "XH:6",
+     "b": "K_READY:23",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "S",
+   "description": "+24 V safety-circuit supply, after F_SAFETY",
+   "cls": "dc24",
+   "members": [
+    "XS:1",
+    "F_SAFETY:2",
+    "SR:13",
+    "SR:23",
+    "SR:A1",
+    "K1:13"
+   ],
+   "wires": [
+    {
+     "no": 175,
+     "a": "XS:1",
+     "b": "XS24:1",
+     "note": ""
+    },
+    {
+     "no": 176,
+     "a": "F_SAFETY:2",
+     "b": "XS24:1",
+     "note": ""
+    },
+    {
+     "no": 177,
+     "a": "SR:13",
+     "b": "XS24:2",
+     "note": ""
+    },
+    {
+     "no": 178,
+     "a": "SR:23",
+     "b": "XS24:2",
+     "note": ""
+    },
+    {
+     "no": 179,
+     "a": "SR:A1",
+     "b": "XS24:3",
+     "note": ""
+    },
+    {
+     "no": 180,
+     "a": "K1:13",
+     "b": "XS24:3",
+     "note": ""
+    }
+   ],
+   "rail": "XS24"
+  },
+  {
+   "label": "DOCK_ZTOP",
+   "description": "dock feed after K_VFD_RUN 41-42",
+   "cls": "dc24",
+   "members": [
+    "XG:1",
+    "K_VFD_RUN:42"
+   ],
+   "wires": [
+    {
+     "no": 181,
+     "a": "XG:1",
+     "b": "K_VFD_RUN:42",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "DOCK_24V",
+   "description": "dock motor +24 V, after LS_ZTOP 13-14",
+   "cls": "dc24",
+   "members": [
+    "XG:2",
+    "K_DOCK_RUN:11"
+   ],
+   "wires": [
+    {
+     "no": 182,
+     "a": "XG:2",
+     "b": "K_DOCK_RUN:11",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "Z_BRAKE_COIL",
+   "description": "brake coil +, after T_BRAKE",
+   "cls": "dc24",
+   "members": [
+    "XG:3",
+    "T_BRAKE:18"
+   ],
+   "wires": [
+    {
+     "no": 183,
+     "a": "XG:3",
+     "b": "T_BRAKE:18",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "XVFD:COM to K_REQ_B:14",
+   "cls": "dc24",
+   "members": [
+    "XVFD:COM",
+    "K_REQ_B:14"
+   ],
+   "wires": [
+    {
+     "no": 184,
+     "a": "XVFD:COM",
+     "b": "K_REQ_B:14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "XVFD:FWD to K_DIR:32",
+   "cls": "dc24",
+   "members": [
+    "XVFD:FWD",
+    "K_DIR:32"
+   ],
+   "wires": [
+    {
+     "no": 185,
+     "a": "XVFD:FWD",
+     "b": "K_DIR:32",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "XVFD:REV to K_DIR:14",
+   "cls": "dc24",
+   "members": [
+    "XVFD:REV",
+    "K_DIR:14"
+   ],
+   "wires": [
+    {
+     "no": 186,
+     "a": "XVFD:REV",
+     "b": "K_DIR:14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "XPLASMA:START1 to K_TORCH_RUN:13",
+   "cls": "dc24",
+   "members": [
+    "XPLASMA:START1",
+    "K_TORCH_RUN:13"
+   ],
+   "wires": [
+    {
+     "no": 187,
+     "a": "XPLASMA:START1",
+     "b": "K_TORCH_RUN:13",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "XPLASMA:START2 to K_REQ_B:24",
+   "cls": "dc24",
+   "members": [
+    "XPLASMA:START2",
+    "K_REQ_B:24"
+   ],
+   "wires": [
+    {
+     "no": 188,
+     "a": "XPLASMA:START2",
+     "b": "K_REQ_B:24",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "M1",
+   "description": "dock motor lead 1: +24 V when deploying (K_DOCK_DIR 12 and 24)",
+   "cls": "dc24",
+   "members": [
+    "K_DOCK_DIR:12",
+    "K_DOCK_DIR:24"
+   ],
+   "wires": [
+    {
+     "no": 189,
+     "a": "K_DOCK_DIR:12",
+     "b": "XD:1",
+     "note": "M1: +24 V when deploying"
+    },
+    {
+     "no": 190,
+     "a": "K_DOCK_DIR:12",
+     "b": "K_DOCK_DIR:24",
+     "note": "jumper on the socket"
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "M2",
+   "description": "dock motor lead 2: +24 V when parking (K_DOCK_DIR 22 and 14)",
+   "cls": "dc24",
+   "members": [
+    "K_DOCK_DIR:14",
+    "K_DOCK_DIR:22"
+   ],
+   "wires": [
+    {
+     "no": 191,
+     "a": "K_DOCK_DIR:22",
+     "b": "XD:2",
+     "note": "M2: +24 V when parking"
+    },
+    {
+     "no": 192,
+     "a": "K_DOCK_DIR:22",
+     "b": "K_DOCK_DIR:14",
+     "note": "jumper on the socket"
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "SEN_24",
+   "description": "+24 V to the dock sensors",
+   "cls": "dc24",
+   "members": [
+    "IFB:SEN.24"
+   ],
+   "wires": [
+    {
+     "no": 193,
+     "a": "IFB:SEN.24",
+     "b": "XD:3",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "SEN_0V",
+   "description": "0 V to the dock sensors",
+   "cls": "0v",
+   "members": [
+    "IFB:SEN.0V"
+   ],
+   "wires": [
+    {
+     "no": 194,
+     "a": "IFB:SEN.0V",
+     "b": "XD:4",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "CB_VFD:2 to K1:3",
+   "cls": "dc24",
+   "members": [
+    "CB_VFD:2",
+    "K1:3"
+   ],
+   "wires": [
+    {
+     "no": 195,
+     "a": "CB_VFD:2",
+     "b": "K1:3",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "CB_PLASMA:2 to K1:5",
+   "cls": "dc24",
+   "members": [
+    "CB_PLASMA:2",
+    "K1:5"
+   ],
+   "wires": [
+    {
+     "no": 196,
+     "a": "CB_PLASMA:2",
+     "b": "K1:5",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "+24 V",
+   "description": "+24 V from PSU24, unfused",
+   "cls": "dc24",
+   "members": [
+    "PSU24:V+",
+    "F_CONTROL:1",
+    "F_VALVE:1",
+    "F_SAFETY:1"
+   ],
+   "wires": [
+    {
+     "no": 197,
+     "a": "PSU24:V+",
+     "b": "X24:1",
+     "note": ""
+    },
+    {
+     "no": 198,
+     "a": "F_CONTROL:1",
+     "b": "X24:1",
+     "note": ""
+    },
+    {
+     "no": 199,
+     "a": "F_VALVE:1",
+     "b": "X24:2",
+     "note": ""
+    },
+    {
+     "no": 200,
+     "a": "F_SAFETY:1",
+     "b": "X24:2",
+     "note": ""
+    }
+   ],
+   "rail": "X24"
+  },
+  {
+   "label": "link",
+   "description": "PSU48:V+ to K1:1",
+   "cls": "dc24",
+   "members": [
+    "PSU48:V+",
+    "K1:1"
+   ],
+   "wires": [
+    {
+     "no": 201,
+     "a": "PSU48:V+",
+     "b": "K1:1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "V",
+   "description": "+24 V valve supply, after F_VALVE",
+   "cls": "dc24",
+   "members": [
+    "F_VALVE:2",
+    "K_DRAIN:11"
+   ],
+   "wires": [
+    {
+     "no": 202,
+     "a": "F_VALVE:2",
+     "b": "K_DRAIN:11",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "K1_COIL",
+   "description": "K1 coil +, from SR 13-14",
+   "cls": "dc24",
+   "members": [
+    "SR:14",
+    "K1:A1"
+   ],
+   "wires": [
+    {
+     "no": 203,
+     "a": "SR:14",
+     "b": "K1:A1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "K2_COIL",
+   "description": "K2 coil +, from SR 23-24",
+   "cls": "dc24",
+   "members": [
+    "SR:24",
+    "K2:A1"
+   ],
+   "wires": [
+    {
+     "no": 204,
+     "a": "SR:24",
+     "b": "K2:A1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "ESTOP_CH1",
+   "description": "E-stop channel 1 loop",
+   "cls": "dc24",
+   "members": [
+    "SR:S11",
+    "ESTOP:11"
+   ],
+   "wires": [
+    {
+     "no": 205,
+     "a": "SR:S11",
+     "b": "ESTOP:11",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "ESTOP_CH1",
+   "description": "E-stop channel 1 loop",
+   "cls": "dc24",
+   "members": [
+    "SR:S12",
+    "ESTOP:12"
+   ],
+   "wires": [
+    {
+     "no": 206,
+     "a": "SR:S12",
+     "b": "ESTOP:12",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "ESTOP_CH2",
+   "description": "E-stop channel 2 loop",
+   "cls": "dc24",
+   "members": [
+    "SR:S21",
+    "ESTOP:21"
+   ],
+   "wires": [
+    {
+     "no": 207,
+     "a": "SR:S21",
+     "b": "ESTOP:21",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "ESTOP_CH2",
+   "description": "E-stop channel 2 loop",
+   "cls": "dc24",
+   "members": [
+    "SR:S22",
+    "ESTOP:22"
+   ],
+   "wires": [
+    {
+     "no": 208,
+     "a": "SR:S22",
+     "b": "ESTOP:22",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "RESET_LOOP",
+   "description": "reset loop: RESET, K1 and K2 mirror contacts",
+   "cls": "dc24",
+   "members": [
+    "SR:S33",
+    "RESET:13"
+   ],
+   "wires": [
+    {
+     "no": 209,
+     "a": "SR:S33",
+     "b": "RESET:13",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "RESET_LOOP",
+   "description": "reset loop end",
+   "cls": "dc24",
+   "members": [
+    "SR:S34",
+    "K2:22"
+   ],
+   "wires": [
+    {
+     "no": 210,
+     "a": "SR:S34",
+     "b": "K2:22",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "BRK_1",
+   "description": "S through K1 13-14",
+   "cls": "dc24",
+   "members": [
+    "K1:14",
+    "K2:13"
+   ],
+   "wires": [
+    {
+     "no": 211,
+     "a": "K1:14",
+     "b": "K2:13",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "BRK",
+   "description": "+24 V after K1 and K2 (Z brake, dock feed)",
+   "cls": "dc24",
+   "members": [
+    "F_DOCK:1",
+    "K2:14",
+    "T_BRAKE:15",
+    "T_BRAKE:A1"
+   ],
+   "wires": [
+    {
+     "no": 212,
+     "a": "F_DOCK:1",
+     "b": "XBRK:1",
+     "note": ""
+    },
+    {
+     "no": 213,
+     "a": "K2:14",
+     "b": "XBRK:1",
+     "note": ""
+    },
+    {
+     "no": 214,
+     "a": "T_BRAKE:15",
+     "b": "XBRK:2",
+     "note": ""
+    },
+    {
+     "no": 215,
+     "a": "T_BRAKE:A1",
+     "b": "XBRK:2",
+     "note": ""
+    }
+   ],
+   "rail": "XBRK"
+  },
+  {
+   "label": "DR_REQ",
+   "description": "drain request from router mode",
+   "cls": "dc24",
+   "members": [
+    "KM_R:14",
+    "K_DRAINED:11"
+   ],
+   "wires": [
+    {
+     "no": 216,
+     "a": "KM_R:14",
+     "b": "K_DRAINED:11",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "RD",
+   "description": "router drain path",
+   "cls": "dc24",
+   "members": [
+    "KM_R:24",
+    "K_EMPTY:21"
+   ],
+   "wires": [
+    {
+     "no": 217,
+     "a": "KM_R:24",
+     "b": "K_EMPTY:21",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "REQUEST",
+   "description": "ARMED through K_REQ_A 13-14 (tool request)",
+   "cls": "dc24",
+   "members": [
+    "KM_R:31",
+    "KM_P:31",
+    "K_REQ_A:14"
+   ],
+   "wires": [
+    {
+     "no": 218,
+     "a": "KM_R:31",
+     "b": "KM_P:31",
+     "note": ""
+    },
+    {
+     "no": 219,
+     "a": "KM_P:31",
+     "b": "K_REQ_A:14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "KM_R:34 to K_RDY_R:11",
+   "cls": "dc24",
+   "members": [
+    "KM_R:34",
+    "K_RDY_R:11"
+   ],
+   "wires": [
+    {
+     "no": 220,
+     "a": "KM_R:34",
+     "b": "K_RDY_R:11",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "MP",
+   "description": "plasma selected",
+   "cls": "dc24",
+   "members": [
+    "KM_R:41",
+    "MODE_P:14"
+   ],
+   "wires": [
+    {
+     "no": 221,
+     "a": "KM_R:41",
+     "b": "MODE_P:14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "KMP_COIL",
+   "description": "KM_P coil +",
+   "cls": "dc24",
+   "members": [
+    "KM_R:42",
+    "KM_P:A1"
+   ],
+   "wires": [
+    {
+     "no": 222,
+     "a": "KM_R:42",
+     "b": "KM_P:A1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "KMR_COIL",
+   "description": "KM_R coil +",
+   "cls": "dc24",
+   "members": [
+    "KM_R:A1",
+    "KM_P:42"
+   ],
+   "wires": [
+    {
+     "no": 223,
+     "a": "KM_R:A1",
+     "b": "KM_P:42",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "PCLOSE",
+   "description": "plasma close path",
+   "cls": "dc24",
+   "members": [
+    "KM_P:14",
+    "K_DRAIN:21"
+   ],
+   "wires": [
+    {
+     "no": 224,
+     "a": "KM_P:14",
+     "b": "K_DRAIN:21",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "KM_P:34 to K_RDY_P:11",
+   "cls": "dc24",
+   "members": [
+    "KM_P:34",
+    "K_RDY_P:11"
+   ],
+   "wires": [
+    {
+     "no": 225,
+     "a": "KM_P:34",
+     "b": "K_RDY_P:11",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "MR",
+   "description": "router selected",
+   "cls": "dc24",
+   "members": [
+    "KM_P:41",
+    "MODE_R:14"
+   ],
+   "wires": [
+    {
+     "no": 226,
+     "a": "KM_P:41",
+     "b": "MODE_R:14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "RE",
+   "description": "router mode with pan empty",
+   "cls": "dc24",
+   "members": [
+    "K_EMPTY:14",
+    "K_DRAINED:21",
+    "T_DRAIN:15"
+   ],
+   "wires": [
+    {
+     "no": 227,
+     "a": "K_EMPTY:14",
+     "b": "K_DRAINED:21",
+     "note": ""
+    },
+    {
+     "no": 228,
+     "a": "K_DRAINED:21",
+     "b": "T_DRAIN:15",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "TD_POWER",
+   "description": "T_DRAIN supply",
+   "cls": "dc24",
+   "members": [
+    "K_EMPTY:24",
+    "T_DRAIN:A1"
+   ],
+   "wires": [
+    {
+     "no": 229,
+     "a": "K_EMPTY:24",
+     "b": "T_DRAIN:A1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "K_EMPTY_B:11 to K_DRAINED:14",
+   "cls": "dc24",
+   "members": [
+    "K_EMPTY_B:11",
+    "K_DRAINED:14"
+   ],
+   "wires": [
+    {
+     "no": 230,
+     "a": "K_EMPTY_B:11",
+     "b": "K_DRAINED:14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "DRN_COIL",
+   "description": "K_DRAINED coil +",
+   "cls": "dc24",
+   "members": [
+    "K_EMPTY_B:14",
+    "K_DRAINED:A1",
+    "D_SET:K"
+   ],
+   "wires": [
+    {
+     "no": 231,
+     "a": "K_EMPTY_B:14",
+     "b": "K_DRAINED:A1",
+     "note": ""
+    },
+    {
+     "no": 232,
+     "a": "K_DRAINED:A1",
+     "b": "D_SET:K",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "PC",
+   "description": "plasma close done (T_CLOSE 15-18)",
+   "cls": "dc24",
+   "members": [
+    "K_MIN:11",
+    "T_CLOSE:18",
+    "R_TC:1",
+    "SETUP_RUN:21"
+   ],
+   "wires": [
+    {
+     "no": 233,
+     "a": "K_MIN:11",
+     "b": "T_CLOSE:18",
+     "note": ""
+    },
+    {
+     "no": 234,
+     "a": "T_CLOSE:18",
+     "b": "R_TC:1",
+     "note": ""
+    },
+    {
+     "no": 235,
+     "a": "R_TC:1",
+     "b": "SETUP_RUN:21",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "PR",
+   "description": "plasma ready",
+   "cls": "dc24",
+   "members": [
+    "K_MIN:14",
+    "K_RDY_P:A1",
+    "D_P_READY:A"
+   ],
+   "wires": [
+    {
+     "no": 236,
+     "a": "K_MIN:14",
+     "b": "K_RDY_P:A1",
+     "note": ""
+    },
+    {
+     "no": 237,
+     "a": "K_RDY_P:A1",
+     "b": "D_P_READY:A",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "TC_POWER",
+   "description": "T_CLOSE supply",
+   "cls": "dc24",
+   "members": [
+    "K_DRAIN:22",
+    "T_CLOSE:A1"
+   ],
+   "wires": [
+    {
+     "no": 238,
+     "a": "K_DRAIN:22",
+     "b": "T_CLOSE:A1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "DRAIN_COIL",
+   "description": "K_DRAIN coil +",
+   "cls": "dc24",
+   "members": [
+    "K_DRAIN:A1",
+    "D_O:K",
+    "D_R2:K"
+   ],
+   "wires": [
+    {
+     "no": 239,
+     "a": "K_DRAIN:A1",
+     "b": "D_O:K",
+     "note": ""
+    },
+    {
+     "no": 240,
+     "a": "D_O:K",
+     "b": "D_R2:K",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "K_DRAINED:12 to D_R2:A",
+   "cls": "dc24",
+   "members": [
+    "K_DRAINED:12",
+    "D_R2:A"
+   ],
+   "wires": [
+    {
+     "no": 241,
+     "a": "K_DRAINED:12",
+     "b": "D_R2:A",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "RR",
+   "description": "router ready",
+   "cls": "dc24",
+   "members": [
+    "K_DRAINED:24",
+    "K_RDY_R:A1",
+    "R_TD:1",
+    "D_R_READY:A",
+    "D_TD:K"
+   ],
+   "wires": [
+    {
+     "no": 242,
+     "a": "K_DRAINED:24",
+     "b": "X_RR:1",
+     "note": ""
+    },
+    {
+     "no": 243,
+     "a": "K_RDY_R:A1",
+     "b": "X_RR:1",
+     "note": ""
+    },
+    {
+     "no": 244,
+     "a": "R_TD:1",
+     "b": "X_RR:2",
+     "note": ""
+    },
+    {
+     "no": 245,
+     "a": "D_R_READY:A",
+     "b": "X_RR:2",
+     "note": ""
+    },
+    {
+     "no": 246,
+     "a": "D_TD:K",
+     "b": "X_RR:3",
+     "note": ""
+    }
+   ],
+   "rail": "X_RR"
+  },
+  {
+   "label": "ARM_COIL",
+   "description": "K_ARM coil +",
+   "cls": "dc24",
+   "members": [
+    "K_ARM:14",
+    "K_ARM:A1",
+    "K_READY:42"
+   ],
+   "wires": [
+    {
+     "no": 247,
+     "a": "K_ARM:14",
+     "b": "K_ARM:A1",
+     "note": "jumper on the socket"
+    },
+    {
+     "no": 248,
+     "a": "K_ARM:A1",
+     "b": "K_READY:42",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "AF",
+   "description": "A through K_ARM 21-24",
+   "cls": "dc24",
+   "members": [
+    "K_ARM:24",
+    "K_FILL:11",
+    "FILL:13"
+   ],
+   "wires": [
+    {
+     "no": 249,
+     "a": "K_ARM:24",
+     "b": "K_FILL:11",
+     "note": ""
+    },
+    {
+     "no": 250,
+     "a": "K_FILL:11",
+     "b": "FILL:13",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "K_FILL:14 to T_FILL:15",
+   "cls": "dc24",
+   "members": [
+    "K_FILL:14",
+    "T_FILL:15"
+   ],
+   "wires": [
+    {
+     "no": 251,
+     "a": "K_FILL:14",
+     "b": "T_FILL:15",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "J",
+   "description": "ready OR: RR or PR through the diodes",
+   "cls": "dc24",
+   "members": [
+    "K_FILL:21",
+    "D_R_READY:K",
+    "D_P_READY:K"
+   ],
+   "wires": [
+    {
+     "no": 252,
+     "a": "K_FILL:21",
+     "b": "D_R_READY:K",
+     "note": ""
+    },
+    {
+     "no": 253,
+     "a": "D_R_READY:K",
+     "b": "D_P_READY:K",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "NOT_FILL",
+   "description": "fill self-hold path",
+   "cls": "dc24",
+   "members": [
+    "K_FILL:22",
+    "SETUP_RUN:13"
+   ],
+   "wires": [
+    {
+     "no": 254,
+     "a": "K_FILL:22",
+     "b": "SETUP_RUN:13",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "FILL_COIL",
+   "description": "K_FILL, T_FILL and pump command +",
+   "cls": "dc24",
+   "members": [
+    "K_FILL:A1",
+    "T_FILL:16",
+    "T_FILL:A1",
+    "P_CMD:A1",
+    "FILL:14"
+   ],
+   "wires": [
+    {
+     "no": 255,
+     "a": "K_FILL:A1",
+     "b": "X_FILLCOIL:1",
+     "note": ""
+    },
+    {
+     "no": 256,
+     "a": "T_FILL:16",
+     "b": "X_FILLCOIL:1",
+     "note": ""
+    },
+    {
+     "no": 257,
+     "a": "T_FILL:A1",
+     "b": "X_FILLCOIL:2",
+     "note": ""
+    },
+    {
+     "no": 258,
+     "a": "P_CMD:A1",
+     "b": "X_FILLCOIL:2",
+     "note": ""
+    },
+    {
+     "no": 259,
+     "a": "FILL:14",
+     "b": "X_FILLCOIL:3",
+     "note": ""
+    }
+   ],
+   "rail": "X_FILLCOIL"
+  },
+  {
+   "label": "VFD_RUN_COIL",
+   "description": "K_VFD_RUN coil +",
+   "cls": "dc24",
+   "members": [
+    "K_RDY_R:14",
+    "K_VFD_RUN:A1"
+   ],
+   "wires": [
+    {
+     "no": 260,
+     "a": "K_RDY_R:14",
+     "b": "K_VFD_RUN:A1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "TORCH_RUN_COIL",
+   "description": "K_TORCH_RUN coil +",
+   "cls": "dc24",
+   "members": [
+    "K_RDY_P:14",
+    "K_TORCH_RUN:A1"
+   ],
+   "wires": [
+    {
+     "no": 261,
+     "a": "K_RDY_P:14",
+     "b": "K_TORCH_RUN:A1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "DOCK_PLUS",
+   "description": "dock motor +24 V, K_DOCK_RUN pole 1 to K_DOCK_DIR pole 1",
+   "cls": "dc24",
+   "members": [
+    "K_DOCK_RUN:14",
+    "K_DOCK_DIR:11"
+   ],
+   "wires": [
+    {
+     "no": 262,
+     "a": "K_DOCK_RUN:14",
+     "b": "K_DOCK_DIR:11",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "DOCK_MINUS",
+   "description": "dock motor 0 V, K_DOCK_RUN pole 2 to K_DOCK_DIR pole 2",
+   "cls": "0v",
+   "members": [
+    "K_DOCK_RUN:24",
+    "K_DOCK_DIR:21"
+   ],
+   "wires": [
+    {
+     "no": 263,
+     "a": "K_DOCK_RUN:24",
+     "b": "K_DOCK_DIR:21",
+     "note": "switched 0 V"
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "DOCK_RUN_SINK",
+   "description": "K_DOCK_RUN coil - to the ULN output",
+   "cls": "dc24",
+   "members": [
+    "K_DOCK_RUN:A2",
+    "IFB:DOCK_RUN.OUT"
+   ],
+   "wires": [
+    {
+     "no": 264,
+     "a": "K_DOCK_RUN:A2",
+     "b": "IFB:DOCK_RUN.OUT",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "DOCK_DIR_SINK",
+   "description": "K_DOCK_DIR coil - to the ULN output",
+   "cls": "dc24",
+   "members": [
+    "K_DOCK_DIR:A2",
+    "IFB:DOCK_DIR.OUT"
+   ],
+   "wires": [
+    {
+     "no": 265,
+     "a": "K_DOCK_DIR:A2",
+     "b": "IFB:DOCK_DIR.OUT",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "T_DRAIN:18 to D_SET:A",
+   "cls": "dc24",
+   "members": [
+    "T_DRAIN:18",
+    "D_TD:A",
+    "D_SET:A"
+   ],
+   "wires": [
+    {
+     "no": 266,
+     "a": "T_DRAIN:18",
+     "b": "D_TD:A",
+     "note": ""
+    },
+    {
+     "no": 267,
+     "a": "D_TD:A",
+     "b": "D_SET:A",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "PERMIT_SRC",
+   "description": "HEAD_SAFE through K_READY 23-24",
+   "cls": "dc24",
+   "members": [
+    "K_READY:24",
+    "K_PERMIT:13",
+    "K_PERMIT:23",
+    "K_RUN_ARM:61"
+   ],
+   "wires": [
+    {
+     "no": 268,
+     "a": "K_READY:24",
+     "b": "K_PERMIT:13",
+     "note": ""
+    },
+    {
+     "no": 269,
+     "a": "K_PERMIT:13",
+     "b": "K_PERMIT:23",
+     "note": "jumper on the socket"
+    },
+    {
+     "no": 270,
+     "a": "K_PERMIT:23",
+     "b": "K_RUN_ARM:61",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "RDY_SRC",
+   "description": "ready source, after AUTO_DRAIN 21-22",
+   "cls": "dc24",
+   "members": [
+    "K_READY:33",
+    "K_PERMIT:41",
+    "AUTO_DRAIN:22"
+   ],
+   "wires": [
+    {
+     "no": 271,
+     "a": "K_READY:33",
+     "b": "K_PERMIT:41",
+     "note": ""
+    },
+    {
+     "no": 272,
+     "a": "K_PERMIT:41",
+     "b": "AUTO_DRAIN:22",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "READY_COIL",
+   "description": "K_READY coil +",
+   "cls": "dc24",
+   "members": [
+    "K_READY:34",
+    "K_READY:A1",
+    "K_PERMIT:42"
+   ],
+   "wires": [
+    {
+     "no": 273,
+     "a": "K_READY:34",
+     "b": "K_READY:A1",
+     "note": "jumper on the socket"
+    },
+    {
+     "no": 274,
+     "a": "K_READY:A1",
+     "b": "K_PERMIT:42",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "FILL_NC",
+   "description": "FILL 21-22 to K_READY 41-42 (fill arm pickup, M8)",
+   "cls": "dc24",
+   "members": [
+    "K_READY:41"
+   ],
+   "wires": [
+    {
+     "no": 275,
+     "a": "K_READY:41",
+     "b": "FILL:22",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "PERMIT_COIL",
+   "description": "K_PERMIT coil +",
+   "cls": "dc24",
+   "members": [
+    "K_PERMIT:14",
+    "K_PERMIT:A1",
+    "K_RUN_ARM:62"
+   ],
+   "wires": [
+    {
+     "no": 276,
+     "a": "K_PERMIT:14",
+     "b": "K_PERMIT:A1",
+     "note": "jumper on the socket"
+    },
+    {
+     "no": 277,
+     "a": "K_PERMIT:A1",
+     "b": "K_RUN_ARM:62",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "PERMIT",
+   "description": "PERMIT_SRC through K_PERMIT 23-24",
+   "cls": "dc24",
+   "members": [
+    "K_PERMIT:24",
+    "SETUP_RUN_B:13"
+   ],
+   "wires": [
+    {
+     "no": 278,
+     "a": "K_PERMIT:24",
+     "b": "SETUP_RUN_B:13",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "ARM_SRC",
+   "description": "PERMIT through the RUN block SETUP_RUN_B 13-14",
+   "cls": "dc24",
+   "members": [
+    "K_RUN_ARM:13",
+    "K_RUN_ARM:23",
+    "K_REQ_A:31",
+    "SETUP_RUN_B:14"
+   ],
+   "wires": [
+    {
+     "no": 279,
+     "a": "K_RUN_ARM:13",
+     "b": "K_RUN_ARM:23",
+     "note": "jumper on the socket"
+    },
+    {
+     "no": 280,
+     "a": "K_RUN_ARM:23",
+     "b": "K_REQ_A:31",
+     "note": ""
+    },
+    {
+     "no": 281,
+     "a": "K_REQ_A:31",
+     "b": "SETUP_RUN_B:14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "RUN_ARM_COIL",
+   "description": "K_RUN_ARM coil +",
+   "cls": "dc24",
+   "members": [
+    "K_RUN_ARM:14",
+    "K_RUN_ARM:A1",
+    "K_TORCH_RUN:32"
+   ],
+   "wires": [
+    {
+     "no": 282,
+     "a": "K_RUN_ARM:14",
+     "b": "K_RUN_ARM:A1",
+     "note": "jumper on the socket"
+    },
+    {
+     "no": 283,
+     "a": "K_RUN_ARM:A1",
+     "b": "K_TORCH_RUN:32",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "ARMED",
+   "description": "ARM_SRC through K_RUN_ARM 23-24",
+   "cls": "dc24",
+   "members": [
+    "K_RUN_ARM:24",
+    "K_REQ_A:13"
+   ],
+   "wires": [
+    {
+     "no": 284,
+     "a": "K_RUN_ARM:24",
+     "b": "K_REQ_A:13",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "ARM_1",
+   "description": "arm chain after K_REQ_A 31-32",
+   "cls": "dc24",
+   "members": [
+    "K_REQ_A:32",
+    "K_REQ_B:31"
+   ],
+   "wires": [
+    {
+     "no": 285,
+     "a": "K_REQ_A:32",
+     "b": "K_REQ_B:31",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "REQUEST_COIL",
+   "description": "K_REQ_A and K_REQ_B coils +, from the run interface",
+   "cls": "dc24",
+   "members": [
+    "K_REQ_A:A1",
+    "K_REQ_B:A1",
+    "IFB:RUN.14"
+   ],
+   "wires": [
+    {
+     "no": 286,
+     "a": "K_REQ_A:A1",
+     "b": "K_REQ_B:A1",
+     "note": ""
+    },
+    {
+     "no": 287,
+     "a": "K_REQ_B:A1",
+     "b": "IFB:RUN.14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "ARM_2",
+   "description": "arm chain after K_REQ_B 31-32",
+   "cls": "dc24",
+   "members": [
+    "K_REQ_B:32",
+    "K_VFD_RUN:31"
+   ],
+   "wires": [
+    {
+     "no": 288,
+     "a": "K_REQ_B:32",
+     "b": "K_VFD_RUN:31",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "ARM_3",
+   "description": "arm chain after K_VFD_RUN 31-32",
+   "cls": "dc24",
+   "members": [
+    "K_VFD_RUN:32",
+    "K_TORCH_RUN:31"
+   ],
+   "wires": [
+    {
+     "no": 289,
+     "a": "K_VFD_RUN:32",
+     "b": "K_TORCH_RUN:31",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "DOCK_1",
+   "description": "dock feed after F_DOCK",
+   "cls": "dc24",
+   "members": [
+    "F_DOCK:2",
+    "K_VFD_RUN:41"
+   ],
+   "wires": [
+    {
+     "no": 290,
+     "a": "F_DOCK:2",
+     "b": "K_VFD_RUN:41",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "DO_REQ",
+   "description": "drain request from AUTO_DRAIN",
+   "cls": "dc24",
+   "members": [
+    "D_O:A",
+    "AUTO_DRAIN:14"
+   ],
+   "wires": [
+    {
+     "no": 291,
+     "a": "D_O:A",
+     "b": "AUTO_DRAIN:14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "DOOR_SIG",
+   "description": "Rodent door input signal: K_REQ_A 41-42 and K_RUN_ARM 53-54 in parallel (dry)",
+   "cls": "dry",
+   "members": [
+    "K_RUN_ARM:53",
+    "K_REQ_A:41",
+    "RODENT:E1-MAX.1"
+   ],
+   "wires": [
+    {
+     "no": 292,
+     "a": "K_RUN_ARM:53",
+     "b": "K_REQ_A:41",
+     "note": ""
+    },
+    {
+     "no": 293,
+     "a": "K_REQ_A:41",
+     "b": "RODENT:E1-MAX.1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "DOOR_GND",
+   "description": "Rodent door input return (dry)",
+   "cls": "dry",
+   "members": [
+    "K_RUN_ARM:54",
+    "K_REQ_A:42",
+    "RODENT:E1-MAX.2"
+   ],
+   "wires": [
+    {
+     "no": 294,
+     "a": "K_RUN_ARM:54",
+     "b": "K_REQ_A:42",
+     "note": ""
+    },
+    {
+     "no": 295,
+     "a": "K_REQ_A:42",
+     "b": "RODENT:E1-MAX.2",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "K2:2 to RODENT:VCC",
+   "cls": "dc24",
+   "members": [
+    "K2:2",
+    "RODENT:VCC"
+   ],
+   "wires": [
+    {
+     "no": 296,
+     "a": "RODENT:VCC",
+     "b": "K2:2",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "STATUS_READY",
+   "description": "K_READY status to the expander GPA0 (dry)",
+   "cls": "dry",
+   "members": [
+    "K_READY:13",
+    "IFB:XM.1"
+   ],
+   "wires": [
+    {
+     "no": 297,
+     "a": "K_READY:13",
+     "b": "IFB:XM.1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "STATUS_PERMIT",
+   "description": "K_PERMIT status, GPA1 (dry)",
+   "cls": "dry",
+   "members": [
+    "K_PERMIT:33",
+    "IFB:XM.2"
+   ],
+   "wires": [
+    {
+     "no": 298,
+     "a": "K_PERMIT:33",
+     "b": "IFB:XM.2",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "STATUS_RR",
+   "description": "router-ready status, GPA2 (dry)",
+   "cls": "dry",
+   "members": [
+    "K_RDY_R:21",
+    "IFB:XM.3"
+   ],
+   "wires": [
+    {
+     "no": 299,
+     "a": "K_RDY_R:21",
+     "b": "IFB:XM.3",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "STATUS_PR",
+   "description": "plasma-ready status, GPA3 (dry)",
+   "cls": "dry",
+   "members": [
+    "K_RDY_P:21",
+    "IFB:XM.4"
+   ],
+   "wires": [
+    {
+     "no": 300,
+     "a": "K_RDY_P:21",
+     "b": "IFB:XM.4",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "STATUS_DIR",
+   "description": "K_DIR status, GPA7 (dry)",
+   "cls": "dry",
+   "members": [
+    "K_DIR:23",
+    "IFB:XM.8"
+   ],
+   "wires": [
+    {
+     "no": 301,
+     "a": "K_DIR:23",
+     "b": "IFB:XM.8",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "STATUS_COM",
+   "description": "status contacts common (board 0 V)",
+   "cls": "dry",
+   "members": [
+    "K_RDY_R:24",
+    "K_RDY_P:24",
+    "K_READY:14",
+    "K_PERMIT:34",
+    "K_DIR:24",
+    "IFB:XM.COM"
+   ],
+   "wires": [
+    {
+     "no": 302,
+     "a": "K_RDY_R:24",
+     "b": "K_RDY_P:24",
+     "note": ""
+    },
+    {
+     "no": 303,
+     "a": "K_RDY_P:24",
+     "b": "K_READY:14",
+     "note": ""
+    },
+    {
+     "no": 304,
+     "a": "K_READY:14",
+     "b": "K_PERMIT:34",
+     "note": ""
+    },
+    {
+     "no": 305,
+     "a": "K_PERMIT:34",
+     "b": "K_DIR:24",
+     "note": ""
+    },
+    {
+     "no": 306,
+     "a": "K_DIR:24",
+     "b": "IFB:XM.COM",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "RUN_READY",
+   "description": "ready in RUN",
+   "cls": "dc24",
+   "members": [
+    "SETUP_RUN:14",
+    "AUTO_DRAIN:21"
+   ],
+   "wires": [
+    {
+     "no": 307,
+     "a": "SETUP_RUN:14",
+     "b": "AUTO_DRAIN:21",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "K2:4 to VFD:L1",
+   "cls": "dc24",
+   "members": [
+    "K2:4",
+    "VFD:L1"
+   ],
+   "wires": [
+    {
+     "no": 308,
+     "a": "K2:4",
+     "b": "VFD:L1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "link",
+   "description": "K2:6 to PLASMA:L1",
+   "cls": "dc24",
+   "members": [
+    "K2:6",
+    "PLASMA:L1"
+   ],
+   "wires": [
+    {
+     "no": 309,
+     "a": "K2:6",
+     "b": "PLASMA:L1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "RST_1",
+   "description": "reset loop after the RESET button",
+   "cls": "dc24",
+   "members": [
+    "K1:21"
+   ],
+   "wires": [
+    {
+     "no": 310,
+     "a": "K1:21",
+     "b": "RESET:14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "RST_2",
+   "description": "reset loop after K1 21-22",
+   "cls": "dc24",
+   "members": [
+    "K1:22",
+    "K2:21"
+   ],
+   "wires": [
+    {
+     "no": 311,
+     "a": "K1:22",
+     "b": "K2:21",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "VFD_DIR",
+   "description": "run chain: K_VFD_RUN 14 to the K_DIR commons (dry)",
+   "cls": "dry",
+   "members": [
+    "K_VFD_RUN:13",
+    "K_DIR:13",
+    "K_DIR:31"
+   ],
+   "wires": [
+    {
+     "no": 312,
+     "a": "K_VFD_RUN:13",
+     "b": "K_DIR:13",
+     "note": ""
+    },
+    {
+     "no": 313,
+     "a": "K_DIR:13",
+     "b": "K_DIR:31",
+     "note": "jumper on the socket"
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "VFD_F1",
+   "description": "run chain: K_RUN_ARM 34 to K_VFD_RUN 13 (dry)",
+   "cls": "dry",
+   "members": [
+    "K_RUN_ARM:33",
+    "K_VFD_RUN:14"
+   ],
+   "wires": [
+    {
+     "no": 314,
+     "a": "K_RUN_ARM:33",
+     "b": "K_VFD_RUN:14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "VFD_F2",
+   "description": "run chain: K_REQ_B 14 to K_RUN_ARM 33 (dry)",
+   "cls": "dry",
+   "members": [
+    "K_RUN_ARM:34",
+    "K_REQ_B:13"
+   ],
+   "wires": [
+    {
+     "no": 315,
+     "a": "K_RUN_ARM:34",
+     "b": "K_REQ_B:13",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "PLASMA_S1",
+   "description": "start chain: K_TORCH_RUN 14 to K_RUN_ARM 43 (dry)",
+   "cls": "dry",
+   "members": [
+    "K_RUN_ARM:43",
+    "K_TORCH_RUN:14"
+   ],
+   "wires": [
+    {
+     "no": 316,
+     "a": "K_RUN_ARM:43",
+     "b": "K_TORCH_RUN:14",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "PLASMA_S2",
+   "description": "start chain: K_RUN_ARM 44 to K_REQ_B 23 (dry)",
+   "cls": "dry",
+   "members": [
+    "K_RUN_ARM:44",
+    "K_REQ_B:23"
+   ],
+   "wires": [
+    {
+     "no": 317,
+     "a": "K_RUN_ARM:44",
+     "b": "K_REQ_B:23",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "48V_LINK",
+   "description": "48 V between K1 pole 1 and K2 pole 1",
+   "cls": "48v",
+   "members": [
+    "K1:2",
+    "K2:1"
+   ],
+   "wires": [
+    {
+     "no": 318,
+     "a": "K1:2",
+     "b": "K2:1",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "VFD_L_LINK",
+   "description": "VFD mains between K1 pole 2 and K2 pole 2",
+   "cls": "mains",
+   "members": [
+    "K1:4",
+    "K2:3"
+   ],
+   "wires": [
+    {
+     "no": 319,
+     "a": "K1:4",
+     "b": "K2:3",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "PLASMA_L_LINK",
+   "description": "plasma mains between K1 pole 3 and K2 pole 3",
+   "cls": "mains",
+   "members": [
+    "K1:6",
+    "K2:5"
+   ],
+   "wires": [
+    {
+     "no": 320,
+     "a": "K1:6",
+     "b": "K2:5",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "FIELD",
+   "description": "cables to field devices",
+   "cls": "field",
+   "members": [
+    "DOOR_SW:1",
+    "DOOR_SW:2",
+    "DRAIN_VALVE:1",
+    "DRAIN_VALVE:2",
+    "D_IN:A",
+    "D_IN:K",
+    "D_OUT:A",
+    "D_OUT:K",
+    "FLOAT_EMPTY:1",
+    "FLOAT_EMPTY:2",
+    "FLOAT_FILLSTOP:1",
+    "FLOAT_FILLSTOP:2",
+    "FLOAT_HH:1",
+    "FLOAT_HH:2",
+    "FLOAT_MIN:1",
+    "FLOAT_MIN:2",
+    "LS_IN:11",
+    "LS_IN:12",
+    "LS_OUT:11",
+    "LS_OUT:12",
+    "LS_ZTOP:13",
+    "LS_ZTOP:14",
+    "M_DOCK:M1",
+    "M_DOCK:M2",
+    "RES_LEVEL:1",
+    "RES_LEVEL:2",
+    "SEN_IN:BK",
+    "SEN_IN:BN",
+    "SEN_IN:BU",
+    "SEN_OUT:BK",
+    "SEN_OUT:BN",
+    "SEN_OUT:BU",
+    "XD:1",
+    "XD:2",
+    "XD:3",
+    "XD:4",
+    "XD:5",
+    "XD:6",
+    "XG:1",
+    "XG:2",
+    "XG:3",
+    "XG:4",
+    "XH:3",
+    "XH:4",
+    "XW:11",
+    "XW:12",
+    "XW:13",
+    "XW:14",
+    "XW:15",
+    "XW:16",
+    "XW:17",
+    "XW:18",
+    "XW:19",
+    "XW:20",
+    "XW:7",
+    "XW:8",
+    "Z_BRAKE:A1",
+    "Z_BRAKE:A2"
+   ],
+   "wires": [
+    {
+     "no": 321,
+     "a": "XW:7",
+     "b": "DRAIN_VALVE:1",
+     "note": ""
+    },
+    {
+     "no": 322,
+     "a": "XW:8",
+     "b": "DRAIN_VALVE:2",
+     "note": ""
+    },
+    {
+     "no": 323,
+     "a": "XW:11",
+     "b": "FLOAT_EMPTY:1",
+     "note": ""
+    },
+    {
+     "no": 324,
+     "a": "XW:12",
+     "b": "FLOAT_EMPTY:2",
+     "note": ""
+    },
+    {
+     "no": 325,
+     "a": "XW:13",
+     "b": "FLOAT_MIN:1",
+     "note": ""
+    },
+    {
+     "no": 326,
+     "a": "XW:14",
+     "b": "FLOAT_MIN:2",
+     "note": ""
+    },
+    {
+     "no": 327,
+     "a": "XW:15",
+     "b": "FLOAT_FILLSTOP:1",
+     "note": ""
+    },
+    {
+     "no": 328,
+     "a": "XW:16",
+     "b": "FLOAT_FILLSTOP:2",
+     "note": ""
+    },
+    {
+     "no": 329,
+     "a": "XW:17",
+     "b": "FLOAT_HH:1",
+     "note": ""
+    },
+    {
+     "no": 330,
+     "a": "XW:18",
+     "b": "FLOAT_HH:2",
+     "note": ""
+    },
+    {
+     "no": 331,
+     "a": "XW:19",
+     "b": "RES_LEVEL:1",
+     "note": ""
+    },
+    {
+     "no": 332,
+     "a": "XW:20",
+     "b": "RES_LEVEL:2",
+     "note": ""
+    },
+    {
+     "no": 333,
+     "a": "XH:3",
+     "b": "DOOR_SW:1",
+     "note": ""
+    },
+    {
+     "no": 334,
+     "a": "XH:4",
+     "b": "DOOR_SW:2",
+     "note": ""
+    },
+    {
+     "no": 335,
+     "a": "XG:1",
+     "b": "LS_ZTOP:13",
+     "note": ""
+    },
+    {
+     "no": 336,
+     "a": "XG:2",
+     "b": "LS_ZTOP:14",
+     "note": ""
+    },
+    {
+     "no": 337,
+     "a": "XD:1",
+     "b": "LS_OUT:11",
+     "note": "on the module"
+    },
+    {
+     "no": 338,
+     "a": "LS_OUT:12",
+     "b": "M_DOCK:M1",
+     "note": ""
+    },
+    {
+     "no": 339,
+     "a": "D_OUT:K",
+     "b": "LS_OUT:11",
+     "note": ""
+    },
+    {
+     "no": 340,
+     "a": "D_OUT:A",
+     "b": "LS_OUT:12",
+     "note": ""
+    },
+    {
+     "no": 341,
+     "a": "XD:2",
+     "b": "LS_IN:11",
+     "note": "on the module"
+    },
+    {
+     "no": 342,
+     "a": "LS_IN:12",
+     "b": "M_DOCK:M2",
+     "note": ""
+    },
+    {
+     "no": 343,
+     "a": "D_IN:K",
+     "b": "LS_IN:11",
+     "note": ""
+    },
+    {
+     "no": 344,
+     "a": "D_IN:A",
+     "b": "LS_IN:12",
+     "note": ""
+    },
+    {
+     "no": 345,
+     "a": "XD:3",
+     "b": "SEN_OUT:BN",
+     "note": "on the module"
+    },
+    {
+     "no": 346,
+     "a": "XD:4",
+     "b": "SEN_OUT:BU",
+     "note": ""
+    },
+    {
+     "no": 347,
+     "a": "XD:5",
+     "b": "SEN_OUT:BK",
+     "note": ""
+    },
+    {
+     "no": 348,
+     "a": "SEN_OUT:BN",
+     "b": "SEN_IN:BN",
+     "note": ""
+    },
+    {
+     "no": 349,
+     "a": "SEN_OUT:BU",
+     "b": "SEN_IN:BU",
+     "note": ""
+    },
+    {
+     "no": 350,
+     "a": "XD:6",
+     "b": "SEN_IN:BK",
+     "note": ""
+    },
+    {
+     "no": 351,
+     "a": "XG:3",
+     "b": "Z_BRAKE:A1",
+     "note": ""
+    },
+    {
+     "no": 352,
+     "a": "XG:4",
+     "b": "Z_BRAKE:A2",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "MAINS",
+   "description": "mains wiring",
+   "cls": "mains",
+   "members": [
+    "CB_CTRL:1",
+    "CB_CTRL:2",
+    "CB_PLASMA:1",
+    "CB_PUMP:1",
+    "CB_PUMP:2",
+    "CB_VFD:1",
+    "MAINS:L",
+    "MAINS:N",
+    "PLASMA:N",
+    "PSU24:L",
+    "PSU24:N",
+    "PSU48:L",
+    "PSU48:N",
+    "PUMP:L",
+    "PUMP:N",
+    "P_CMD:L1",
+    "P_CMD:T1",
+    "P_LIMIT:L1",
+    "P_LIMIT:T1",
+    "VFD:L2/N"
+   ],
+   "wires": [
+    {
+     "no": 353,
+     "a": "CB_CTRL:2",
+     "b": "PSU24:L",
+     "note": ""
+    },
+    {
+     "no": 354,
+     "a": "MAINS:N",
+     "b": "PSU24:N",
+     "note": ""
+    },
+    {
+     "no": 355,
+     "a": "CB_CTRL:2",
+     "b": "PSU48:L",
+     "note": ""
+    },
+    {
+     "no": 356,
+     "a": "MAINS:N",
+     "b": "PSU48:N",
+     "note": ""
+    },
+    {
+     "no": 357,
+     "a": "MAINS:L",
+     "b": "CB_CTRL:1",
+     "note": ""
+    },
+    {
+     "no": 358,
+     "a": "MAINS:L",
+     "b": "CB_VFD:1",
+     "note": ""
+    },
+    {
+     "no": 359,
+     "a": "MAINS:L",
+     "b": "CB_PLASMA:1",
+     "note": ""
+    },
+    {
+     "no": 360,
+     "a": "MAINS:L",
+     "b": "CB_PUMP:1",
+     "note": ""
+    },
+    {
+     "no": 361,
+     "a": "MAINS:N",
+     "b": "VFD:L2/N",
+     "note": ""
+    },
+    {
+     "no": 362,
+     "a": "MAINS:N",
+     "b": "PLASMA:N",
+     "note": ""
+    },
+    {
+     "no": 363,
+     "a": "CB_PUMP:2",
+     "b": "P_LIMIT:L1",
+     "note": ""
+    },
+    {
+     "no": 364,
+     "a": "P_LIMIT:T1",
+     "b": "P_CMD:L1",
+     "note": ""
+    },
+    {
+     "no": 365,
+     "a": "P_CMD:T1",
+     "b": "PUMP:L",
+     "note": ""
+    },
+    {
+     "no": 366,
+     "a": "MAINS:N",
+     "b": "PUMP:N",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "PE",
+   "description": "protective earth",
+   "cls": "pe",
+   "members": [
+    "MAINS:PE",
+    "PLASMA:PE",
+    "PSU24:PE",
+    "PSU48:PE",
+    "VFD:PE"
+   ],
+   "wires": [
+    {
+     "no": 367,
+     "a": "MAINS:PE",
+     "b": "PSU24:PE",
+     "note": ""
+    },
+    {
+     "no": 368,
+     "a": "MAINS:PE",
+     "b": "PSU48:PE",
+     "note": ""
+    },
+    {
+     "no": 369,
+     "a": "MAINS:PE",
+     "b": "VFD:PE",
+     "note": ""
+    },
+    {
+     "no": 370,
+     "a": "MAINS:PE",
+     "b": "PLASMA:PE",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "48V",
+   "description": "48 V motor supply",
+   "cls": "48v",
+   "members": [
+    "DCDC:IN+",
+    "DCDC:IN-",
+    "PSU48:V-",
+    "RODENT:GND",
+    "RODENT:VCC"
+   ],
+   "wires": [
+    {
+     "no": 371,
+     "a": "PSU48:V-",
+     "b": "RODENT:GND",
+     "note": ""
+    },
+    {
+     "no": 372,
+     "a": "RODENT:VCC",
+     "b": "DCDC:IN+",
+     "note": "second wire on the Rodent VCC terminal"
+    },
+    {
+     "no": 373,
+     "a": "PSU48:V-",
+     "b": "DCDC:IN-",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "VMOS",
+   "description": "Rodent V-MOS loads",
+   "cls": "vmos",
+   "members": [
+    "DCDC:OUT+",
+    "DCDC:OUT-",
+    "K_DIR:A1",
+    "K_DIR:A2",
+    "MIST:1",
+    "MIST:2",
+    "RODENT:HE0.+",
+    "RODENT:HE0.-",
+    "RODENT:HE1.+",
+    "RODENT:HE1.-",
+    "RODENT:VMOS.+",
+    "RODENT:VMOS.-"
+   ],
+   "wires": [
+    {
+     "no": 374,
+     "a": "DCDC:OUT+",
+     "b": "RODENT:VMOS.+",
+     "note": ""
+    },
+    {
+     "no": 375,
+     "a": "DCDC:OUT-",
+     "b": "RODENT:VMOS.-",
+     "note": ""
+    },
+    {
+     "no": 376,
+     "a": "RODENT:HE1.+",
+     "b": "K_DIR:A1",
+     "note": "K_DIR coil on the HE1 output; 1N4007 across A1-A2, cathode to A1"
+    },
+    {
+     "no": 377,
+     "a": "RODENT:HE1.-",
+     "b": "K_DIR:A2",
+     "note": ""
+    },
+    {
+     "no": 378,
+     "a": "RODENT:HE0.+",
+     "b": "MIST:1",
+     "note": "1N4007 across the valve, cathode to +"
+    },
+    {
+     "no": 379,
+     "a": "RODENT:HE0.-",
+     "b": "MIST:2",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "SIGNAL",
+   "description": "signal cables",
+   "cls": "signal",
+   "members": [
+    "ARC_SW:1",
+    "ARC_SW:2",
+    "HEADIF:U_HEAD.3",
+    "HEADIF:U_HEAD.4",
+    "IFB:ARC.COM",
+    "IFB:ARC.IN",
+    "IFB:SEN.IN",
+    "IFB:SEN.OUT",
+    "IFB:THC.GND",
+    "IFB:THC.IN",
+    "PLASMA:KTS.A1",
+    "PLASMA:KTS.A2",
+    "SPEED:OUT+",
+    "SPEED:OUT-",
+    "THCAD:FOUT",
+    "THCAD:GND",
+    "VFD:ACM",
+    "VFD:DCM",
+    "VFD:FOR",
+    "VFD:REV",
+    "VFD:VI",
+    "XD:5",
+    "XD:6",
+    "XH:5",
+    "XH:6",
+    "XPLASMA:START1",
+    "XPLASMA:START2",
+    "XVFD:ACM",
+    "XVFD:COM",
+    "XVFD:FWD",
+    "XVFD:REV",
+    "XVFD:VI"
+   ],
+   "wires": [
+    {
+     "no": 380,
+     "a": "XH:5",
+     "b": "HEADIF:U_HEAD.4",
+     "note": ""
+    },
+    {
+     "no": 381,
+     "a": "XH:6",
+     "b": "HEADIF:U_HEAD.3",
+     "note": ""
+    },
+    {
+     "no": 382,
+     "a": "XD:5",
+     "b": "IFB:SEN.OUT",
+     "note": ""
+    },
+    {
+     "no": 383,
+     "a": "XD:6",
+     "b": "IFB:SEN.IN",
+     "note": ""
+    },
+    {
+     "no": 384,
+     "a": "ARC_SW:1",
+     "b": "IFB:ARC.IN",
+     "note": ""
+    },
+    {
+     "no": 385,
+     "a": "ARC_SW:2",
+     "b": "IFB:ARC.COM",
+     "note": ""
+    },
+    {
+     "no": 386,
+     "a": "THCAD:FOUT",
+     "b": "IFB:THC.IN",
+     "note": ""
+    },
+    {
+     "no": 387,
+     "a": "THCAD:GND",
+     "b": "IFB:THC.GND",
+     "note": ""
+    },
+    {
+     "no": 388,
+     "a": "SPEED:OUT+",
+     "b": "XVFD:VI",
+     "note": ""
+    },
+    {
+     "no": 389,
+     "a": "SPEED:OUT-",
+     "b": "XVFD:ACM",
+     "note": ""
+    },
+    {
+     "no": 390,
+     "a": "XVFD:FWD",
+     "b": "VFD:FOR",
+     "note": ""
+    },
+    {
+     "no": 391,
+     "a": "XVFD:REV",
+     "b": "VFD:REV",
+     "note": ""
+    },
+    {
+     "no": 392,
+     "a": "XVFD:COM",
+     "b": "VFD:DCM",
+     "note": ""
+    },
+    {
+     "no": 393,
+     "a": "XVFD:VI",
+     "b": "VFD:VI",
+     "note": ""
+    },
+    {
+     "no": 394,
+     "a": "XVFD:ACM",
+     "b": "VFD:ACM",
+     "note": ""
+    },
+    {
+     "no": 395,
+     "a": "XPLASMA:START1",
+     "b": "PLASMA:KTS.A1",
+     "note": "shielded pair"
+    },
+    {
+     "no": 396,
+     "a": "XPLASMA:START2",
+     "b": "PLASMA:KTS.A2",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "CTL",
+   "description": "controller-side signals",
+   "cls": "ctl",
+   "members": [
+    "IFB:ARC.OUT",
+    "IFB:I2C.5V",
+    "IFB:I2C.GND",
+    "IFB:I2C.SCL",
+    "IFB:I2C.SDA",
+    "IFB:RUN.GND",
+    "IFB:RUN.IN",
+    "IFB:THC.OUT",
+    "RODENT:CN51.2",
+    "RODENT:CN51.3",
+    "RODENT:CN52.3",
+    "RODENT:CN53.3",
+    "RODENT:J47.GND",
+    "RODENT:J47.OUT",
+    "RODENT:OLED.5V",
+    "RODENT:OLED.GND",
+    "RODENT:OLED.SCL",
+    "RODENT:OLED.SDA",
+    "SPEED:IN+",
+    "SPEED:IN-"
+   ],
+   "wires": [
+    {
+     "no": 397,
+     "a": "RODENT:CN51.3",
+     "b": "IFB:RUN.IN",
+     "note": ""
+    },
+    {
+     "no": 398,
+     "a": "RODENT:CN51.2",
+     "b": "IFB:RUN.GND",
+     "note": ""
+    },
+    {
+     "no": 399,
+     "a": "RODENT:CN52.3",
+     "b": "IFB:ARC.OUT",
+     "note": ""
+    },
+    {
+     "no": 400,
+     "a": "RODENT:CN53.3",
+     "b": "IFB:THC.OUT",
+     "note": ""
+    },
+    {
+     "no": 401,
+     "a": "RODENT:OLED.5V",
+     "b": "IFB:I2C.5V",
+     "note": ""
+    },
+    {
+     "no": 402,
+     "a": "RODENT:OLED.GND",
+     "b": "IFB:I2C.GND",
+     "note": ""
+    },
+    {
+     "no": 403,
+     "a": "RODENT:OLED.SDA",
+     "b": "IFB:I2C.SDA",
+     "note": ""
+    },
+    {
+     "no": 404,
+     "a": "RODENT:OLED.SCL",
+     "b": "IFB:I2C.SCL",
+     "note": ""
+    },
+    {
+     "no": 405,
+     "a": "RODENT:J47.OUT",
+     "b": "SPEED:IN+",
+     "note": ""
+    },
+    {
+     "no": 406,
+     "a": "RODENT:J47.GND",
+     "b": "SPEED:IN-",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "LIMIT",
+   "description": "limit switches to the Rodent",
+   "cls": "limit",
+   "members": [
+    "LS_X:11",
+    "LS_X:12",
+    "LS_Y1:11",
+    "LS_Y1:12",
+    "LS_Y2:11",
+    "LS_Y2:12",
+    "LS_ZTOP:11",
+    "LS_ZTOP:12",
+    "RODENT:E0-MAX.1",
+    "RODENT:E0-MAX.2",
+    "RODENT:X-MAX.1",
+    "RODENT:X-MAX.2",
+    "RODENT:Y-MAX.1",
+    "RODENT:Y-MAX.2",
+    "RODENT:Z-MAX.1",
+    "RODENT:Z-MAX.2"
+   ],
+   "wires": [
+    {
+     "no": 407,
+     "a": "LS_ZTOP:11",
+     "b": "RODENT:Z-MAX.1",
+     "note": ""
+    },
+    {
+     "no": 408,
+     "a": "LS_ZTOP:12",
+     "b": "RODENT:Z-MAX.2",
+     "note": ""
+    },
+    {
+     "no": 409,
+     "a": "LS_X:11",
+     "b": "RODENT:X-MAX.1",
+     "note": ""
+    },
+    {
+     "no": 410,
+     "a": "LS_X:12",
+     "b": "RODENT:X-MAX.2",
+     "note": ""
+    },
+    {
+     "no": 411,
+     "a": "LS_Y1:11",
+     "b": "RODENT:Y-MAX.1",
+     "note": ""
+    },
+    {
+     "no": 412,
+     "a": "LS_Y1:12",
+     "b": "RODENT:Y-MAX.2",
+     "note": ""
+    },
+    {
+     "no": 413,
+     "a": "LS_Y2:11",
+     "b": "RODENT:E0-MAX.1",
+     "note": ""
+    },
+    {
+     "no": 414,
+     "a": "LS_Y2:12",
+     "b": "RODENT:E0-MAX.2",
+     "note": ""
+    }
+   ],
+   "rail": null
+  },
+  {
+   "label": "PROBE",
+   "description": "probe to the Rodent",
+   "cls": "probe",
+   "members": [
+    "HEADIF:U_PROBE.3",
+    "HEADIF:U_PROBE.4",
+    "RODENT:PROBE.1",
+    "RODENT:PROBE.3"
+   ],
+   "wires": [
+    {
+     "no": 415,
+     "a": "HEADIF:U_PROBE.4",
+     "b": "RODENT:PROBE.3",
+     "note": "controller side"
+    },
+    {
+     "no": 416,
+     "a": "HEADIF:U_PROBE.3",
+     "b": "RODENT:PROBE.1",
+     "note": "controller side"
+    }
+   ],
+   "rail": null
+  }
+ ]
+}

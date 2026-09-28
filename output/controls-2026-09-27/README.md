@@ -179,6 +179,20 @@ Dock sensors (M8 PNP) --optocouplers--> MCP23017 GPA4 (deployed), GPA5 (parked)
 - **The dock may move in SETUP** (it has to, for a bed change) and in RUN, but only with the spindle stopped. Keep hands clear: it moves at about 20 mm/s.
 - **The macros** must approach the pockets from the rear stop with the head at X975 whenever the dock moves or is out (Rev L README). They read the dock sensors with M66 and drive the dock with M64/M65.
 
+## Wiring by terminal
+
+**[GM1-WIRING-BY-TERMINAL.md](GM1-WIRING-BY-TERMINAL.md)** lists every screw terminal, the numbered wire on it and where that wire's other end lands, device by device: rails, fuses, the safety relay and contactors, every relay and timer, the door switches, the gantry and bed-module cables, the Rodent's connectors, the interface board, the VFD and the cutter box. The [wire list](gm1-wire-list.csv) has the same wires one per row with colour and size. `gm1_wiring.py` generates both from [the simulated netlist](gm1-terminal-netlist.json) and records the netlist's hash in [gm1-wiring.json](gm1-wiring.json); it checks that no terminal carries more than two wires.
+
+What it decides beyond the netlist (wiring decisions, not simulated behaviour):
+
+- **Rails.** The 0 V, C, S, +24 V, BRK and V nets, and the router-ready and fill-coil nets, each get a bridged terminal group (X0V, XC, XS24, X24, XBRK, XV, X_RR, X_FILLCOIL): one wire per side of each position, no daisy chains through relay sockets. Rev I's XW:1-4 and the old stop-loop links XW:21-22 / XH:1-2 are not fitted.
+- **Field devices** wire only to their own XW/XH position; the gantry's Z-top second contact and the Z brake land on a small XG strip; the dock's motor, end switches and sensors go through the M12 connector XD (pins 1-2 motor through the end switches, 3-4 sensor supply, 5-6 sensor signals, 7-8 spare).
+- **The dock motor** reverses on K_DOCK_DIR's two poles (12 and 24 to M1, 22 and 14 to M2, jumpered on the socket) with K_DOCK_RUN switching +24 V and 0 V; the end switches sit in the motor leads on the module with their diodes. The netlist models the two directions as two loads.
+- **The interface board's ULN2803A outputs are low-side:** relay coils take + from XC and their A2 goes to the board's OUT terminal. The V-MOS loads (K_DIR coil, mist valve) sit between the Rodent HE+ and HE- pins, fed from the 48-to-24 V DC-DC after K1 and K2.
+- **Two 0 V domains**, never joined: field 0 V (X0V) and the controller side (Rodent GND, the OLED, CN51-53, the board's RUN, I2C, ARC and THC terminals).
+
+The page ends with the BT30 variant's additions (M15, M16), which are wiring instructions only until they are added to `gm1_circuit.py`.
+
 ## Rodent wiring
 
 The pin plan and the board facts behind it are in [rodent-io.json](rodent-io.json). The facts come from:
