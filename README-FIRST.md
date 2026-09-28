@@ -7,7 +7,7 @@ Two sessions developed the design in parallel on 26 September 2026:
 
 **The owner chose the one-piece line on 27 September.** Rev I stays in the repository as the alternative, and the [README](README.md) compares them.
 
-**Start with the [Rev L CAD package](output/release-review/RevL-CAD/README.md).** It is Rev K with a 300 mm Z and a tool changer that rides on the bed module and lifts out with it. [REVL-PROCUREMENT-DELTA.md](outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md) lists what it adds.
+**Start with the [Rev L CAD package](output/release-review/RevL-CAD/README.md).** It is Rev K with a 300 mm Z and a tool changer that rides on the bed module and lifts out with it. [REVL-PROCUREMENT-DELTA.md](outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md) lists what it adds. The owner also asked for a BT30 type: the [BT30 variant](output/release-review/RevL-BT30-CAD/README.md) swaps in a 3.2 kW BT30 ATC spindle and a fork rack on the same dock ([its delta](outputs/reve-30510/actual-cost/REVL-BT30-PROCUREMENT-DELTA.md)).
 
 **Building now?** The owner has the plasma cutter and the torch, and all the drive modules are ordered (27 Sep). The [build order](output/release-review/RevL-CAD/BUILD-ORDER.md) says what can be made before the HGR20 rails and the bed extrusion arrive.
 

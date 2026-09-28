@@ -30,6 +30,7 @@ The owner chose the one-piece line on 27 September. The machine goes in a contai
 - **[What to build while the parts arrive](output/release-review/RevL-CAD/BUILD-ORDER.md)** (27 Sep): the owner has the plasma cutter and torch, and all the drive modules are ordered. The HGR20 rails and the bed extrusion are still to come; the page lists what can be built first
 - [Router assembly STEP](output/release-review/RevL-CAD/step/RevL_ROUTER.step); [bed module with the tool changer](output/release-review/RevL-CAD/step/RevL_BED_MODULE.step); [tool changer alone](output/release-review/RevL-CAD/step/RevL_DOCK.step); [new parts](output/release-review/RevL-CAD/step/RevL_NEW_PARTS.step)
 - [New-parts schedule](output/release-review/RevL-CAD/cutlist.csv); [what Rev L adds to the shopping list](outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md)
+- **BT30 variant** (`build_revl_bt30.py`, 27 Sep, late): [package](output/release-review/RevL-BT30-CAD/README.md). The owner asked for "two types of each.... the er17 and the bt30": the same machine with a 3.2 kW BT30 ATC spindle, a one-piece clamp on a 3/4 in adapter and a six-pocket fork rack on the dock in place of the ER11 spindle and the RapidChange magazine. Same frame, bed, water, plasma head, Z and dock drive. [What it changes on the shopping list](outputs/reve-30510/actual-cost/REVL-BT30-PROCUREMENT-DELTA.md)
 
 **Rev K, one-piece bed, completed** (`build_revk.py`), the base of Rev L:
 
@@ -79,6 +80,8 @@ The owner chose the one-piece line on 27 September. The machine goes in a contai
 - **Frame fill holes.** Each frame tube's fill hole moves to the tube's high end, so the frame can be filled full with epoxy sand or dry sand ([build order: filling the frame](output/release-review/RevL-CAD/BUILD-ORDER.md#6-filling-the-frame)).
 
 Details are in the [Rev L package](output/release-review/RevL-CAD/README.md).
+
+**The BT30 variant (27 September, late).** The owner asked for the design in two types, ER and BT30, with a link to a 3.2 kW, 24,000 rpm, 4-pole BT30 ATC spindle. The [BT30 package](output/release-review/RevL-BT30-CAD/README.md) is Rev L with the spindle (drawn as a Ø105 × 450 mm, 15 kg envelope from the listing title), a one-piece 130 mm clamp that keeps the full 800 mm X travel, a 3/4 in adapter the plasma bracket still fits, a six-pocket BT30 fork rack on the dock's carrier in place of the magazine, and two bigger parking cradles. The tool axis moves 26 mm forward, stored tools are limited to 30 mm below the nut, and the Z slide carries about 20 kg; the drawbar valve and its interlocks (M15, M16) are specified in that README, not yet simulated. The ER version is Rev L itself.
 
 ## Rev K: one-piece bed line
 
