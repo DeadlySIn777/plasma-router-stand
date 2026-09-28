@@ -16,7 +16,9 @@ ROOT=Path(__file__).resolve().parent
 ENG=ROOT/'output/release-review/RevE-ENGINEERING'
 COST=ROOT/'outputs/reve-30510/actual-cost'
 OUT=ROOT/'output/pdf'
-PDF=OUT/'plasma-router-stand-concept.pdf'
+# Historical Rev F brief. The current plasma-router-stand-concept.pdf is the Rev G
+# review copy from build_concept_revg.py; never overwrite it from here.
+PDF=OUT/'plasma-router-stand-concept-revf-historical.pdf'
 OWN=json.loads((COST/'OWNED-ALUMINUM-INVENTORY.json').read_text(encoding='utf-8'))
 pdfmetrics.registerFont(TTFont('Segoe','C:/Windows/Fonts/segoeui.ttf'))
 pdfmetrics.registerFont(TTFont('SegoeBold','C:/Windows/Fonts/segoeuib.ttf'))

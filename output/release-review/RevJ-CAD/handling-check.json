@@ -1,0 +1,548 @@
+{
+  "machine": "GM1 \u2014 Garcia Mechanical Table",
+  "revision": "J working design: one-piece bed module with the Rev H water service and Z adapter",
+  "result": "PASS SAMPLED PATH",
+  "scope": "Actual-solid sampled check of the Rev J bed-module hoist path, rigging included.\n\nThe one-piece module (every MOD_* part) and a modeled 4-leg sling move as ONE\nrigid body: lift 70 mm in place, then travel forward out of the open front\nwindow. The six BED_M10 drawdowns are removed first. The gantry is at the rear\nstop with the head centred (X575) and Z fully raised; the spindle stays in place\nas a conservative obstacle. Sling legs run from each lug-hole centre to a hook\npoint above the module centre of mass; three hook heights are checked. Fixed\nobstacles include the Rev H service hatches, the relocated Rev J refill spout\nand the Rev H braked Z-motor candidate envelope (top Z1430.5).\nRun with the project CadQuery environment.",
+  "motion_state": {
+    "gantry_y": 1275.0,
+    "beam_center_y": 1355.0,
+    "head_x": 575.0,
+    "z_lift": 100.0,
+    "tool": "router"
+  },
+  "module_part_count": 149,
+  "removed_for_handling": [
+    "BED_M10_L_1",
+    "BED_M10_WASHER_L_1",
+    "BED_M10_L_2",
+    "BED_M10_WASHER_L_2",
+    "BED_M10_L_3",
+    "BED_M10_WASHER_L_3",
+    "BED_M10_R_1",
+    "BED_M10_WASHER_R_1",
+    "BED_M10_R_2",
+    "BED_M10_WASHER_R_2",
+    "BED_M10_R_3",
+    "BED_M10_WASHER_R_3"
+  ],
+  "module_mass_estimate_kg": 63.4,
+  "module_cg_mm": [
+    575.0,
+    669.5,
+    912.2
+  ],
+  "lift_mm": 70.0,
+  "forward_mm": 1420.0,
+  "rigging_model": "Four \u00d813 mm legs from lug-hole centres to one hook point above the centre of mass; hook and block \u00d890 x 180 mm. Shackle bodies and chain sag are not modeled.",
+  "method": "Actual B-rep positive-volume intersections (threshold 0.02 mm3), AABB broad phase, lift sampled every 5 mm and travel every 25 mm. Nearest gaps by BRep distance within 40 mm. Sampled path, not a proof of all intermediate poses or of rigging behavior.",
+  "required_preconditions": [
+    "Router off and isolated; spindle removed or Z fully raised. Gantry at the front: remove the two rear M10 drawdowns.",
+    "Gantry to the rear stop, head at X575 (centre). Remove the four remaining drawdowns; all six go to the bolt tray.",
+    "Rig the 4-leg sling to the lugs, take the slack, lift 70 mm: pins clear the pads and every module part passes above the pan-float backrails (top Z910)."
+  ],
+  "fixed_obstacle_count": 817,
+  "sources_unchanged_during_run": true,
+  "source_sha256": {
+    "render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811",
+    "render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "verify_revj_motion.py": "4c8ad5ec131859ad2727934553f3261e751d604b30aaa7eba1da1a4381d2dbad",
+    "nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "verify_revj_water.py": "16ecc9ca2b3cdc15d55ca4293c8c978afe52c50c8dd0149c13af84e5125e1bcd",
+    "water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "render_revj.py": "8c379b534a0c6e625dcdd5ed76a2915cc13ab25bbaefbffffba028a32776b0dd",
+    "strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "water_revj.py": "0a22d980b727d2ad286577db71968edaf8ecd24b19c8120a2159a2f22d537940",
+    "motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "build_revj.py": "bcc085e1dae1a64cf182ba036a6ca3647cd23235dffeb821483c50021b910f93",
+    "motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "bed_revj.py": "98931c99c5ee6e04dd86193fb51ae26eca994d50b174ee31fbecec73d4744ee5",
+    "revj_handling_check.py": "b7f3b9982483a5f21a2c974a6d01abefef1ae6f8570c977e975ecb52fdaecfd7",
+    "build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4"
+  },
+  "cases": [
+    {
+      "hook_rise_above_lug_holes_mm": 700.0,
+      "hook_point_installed_mm": [
+        575.0,
+        669.5,
+        1620.0
+      ],
+      "sling_leg_angle_from_horizontal_deg": [
+        43.0,
+        43.0,
+        41.9,
+        41.9
+      ],
+      "sling_leg_lengths_mm": [
+        1026.8,
+        1026.8,
+        1047.6,
+        1047.6
+      ],
+      "samples": 74,
+      "boolean_checks": 1520,
+      "failures": [],
+      "rigging_contacts_with_module": [],
+      "segments": [
+        {
+          "stage": "lift 70 mm in place",
+          "start_translation_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end_translation_mm": [
+            0.0,
+            0.0,
+            70.0
+          ],
+          "samples": 15,
+          "step_mm": 5,
+          "passed": true
+        },
+        {
+          "stage": "forward out of the front window",
+          "start_translation_mm": [
+            0.0,
+            0.0,
+            70.0
+          ],
+          "end_translation_mm": [
+            0.0,
+            -1420.0,
+            70.0
+          ],
+          "samples": 58,
+          "step_mm": 25,
+          "passed": true
+        }
+      ],
+      "nearest_fixed_parts": [
+        {
+          "pose": "installed, sling only (module seating contacts are intended)",
+          "nearest": []
+        },
+        {
+          "pose": "lifted 70 mm",
+          "nearest": [
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "MF_LEG_1_1",
+              "gap_mm": 11.2
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_MIN_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_FILL_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_HH_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_EMPTY_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_STRIP_1",
+              "kind": "module",
+              "obstacle": "Y_BLOCK_BOLT_L_1_1",
+              "gap_mm": 18.8
+            },
+            {
+              "moving": "MOD_STRIP_9",
+              "kind": "module",
+              "obstacle": "Y_BLOCK_BOLT_R_1_1",
+              "gap_mm": 18.8
+            },
+            {
+              "moving": "MOD_LUG_R_2",
+              "kind": "module",
+              "obstacle": "FB_REAR",
+              "gap_mm": 23.0
+            },
+            {
+              "moving": "MOD_XM_END_4_L",
+              "kind": "module",
+              "obstacle": "Y_SHOE_L",
+              "gap_mm": 23.15
+            },
+            {
+              "moving": "MOD_XM_END_4_R",
+              "kind": "module",
+              "obstacle": "Y_SHOE_R",
+              "gap_mm": 23.15
+            },
+            {
+              "moving": "MOD_STRIP_5",
+              "kind": "module",
+              "obstacle": "ZBX80_BASE",
+              "gap_mm": 29.2
+            },
+            {
+              "moving": "MOD_STRIP_5",
+              "kind": "module",
+              "obstacle": "ZBX80_END_BOTTOM",
+              "gap_mm": 29.2
+            }
+          ]
+        }
+      ],
+      "module_sweep_envelope_mm": [
+        62.0,
+        -1412.0,
+        840.8,
+        1088.0,
+        1347.8,
+        1028.8
+      ],
+      "result": "PASS SAMPLED PATH"
+    },
+    {
+      "hook_rise_above_lug_holes_mm": 1000.0,
+      "hook_point_installed_mm": [
+        575.0,
+        669.5,
+        1920.0
+      ],
+      "sling_leg_angle_from_horizontal_deg": [
+        53.1,
+        53.1,
+        52.1,
+        52.1
+      ],
+      "sling_leg_lengths_mm": [
+        1250.8,
+        1250.8,
+        1267.8,
+        1267.8
+      ],
+      "samples": 74,
+      "boolean_checks": 1528,
+      "failures": [],
+      "rigging_contacts_with_module": [],
+      "segments": [
+        {
+          "stage": "lift 70 mm in place",
+          "start_translation_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end_translation_mm": [
+            0.0,
+            0.0,
+            70.0
+          ],
+          "samples": 15,
+          "step_mm": 5,
+          "passed": true
+        },
+        {
+          "stage": "forward out of the front window",
+          "start_translation_mm": [
+            0.0,
+            0.0,
+            70.0
+          ],
+          "end_translation_mm": [
+            0.0,
+            -1420.0,
+            70.0
+          ],
+          "samples": 58,
+          "step_mm": 25,
+          "passed": true
+        }
+      ],
+      "nearest_fixed_parts": [
+        {
+          "pose": "installed, sling only (module seating contacts are intended)",
+          "nearest": []
+        },
+        {
+          "pose": "lifted 70 mm",
+          "nearest": [
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "MF_LEG_1_1",
+              "gap_mm": 11.2
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_MIN_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_FILL_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_HH_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_EMPTY_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_STRIP_1",
+              "kind": "module",
+              "obstacle": "Y_BLOCK_BOLT_L_1_1",
+              "gap_mm": 18.8
+            },
+            {
+              "moving": "MOD_STRIP_9",
+              "kind": "module",
+              "obstacle": "Y_BLOCK_BOLT_R_1_1",
+              "gap_mm": 18.8
+            },
+            {
+              "moving": "MOD_LUG_R_2",
+              "kind": "module",
+              "obstacle": "FB_REAR",
+              "gap_mm": 23.0
+            },
+            {
+              "moving": "MOD_XM_END_4_L",
+              "kind": "module",
+              "obstacle": "Y_SHOE_L",
+              "gap_mm": 23.15
+            },
+            {
+              "moving": "MOD_XM_END_4_R",
+              "kind": "module",
+              "obstacle": "Y_SHOE_R",
+              "gap_mm": 23.15
+            },
+            {
+              "moving": "MOD_STRIP_5",
+              "kind": "module",
+              "obstacle": "ZBX80_BASE",
+              "gap_mm": 29.2
+            },
+            {
+              "moving": "MOD_STRIP_5",
+              "kind": "module",
+              "obstacle": "ZBX80_END_BOTTOM",
+              "gap_mm": 29.2
+            }
+          ]
+        }
+      ],
+      "module_sweep_envelope_mm": [
+        62.0,
+        -1412.0,
+        840.8,
+        1088.0,
+        1347.8,
+        1028.8
+      ],
+      "result": "PASS SAMPLED PATH"
+    },
+    {
+      "hook_rise_above_lug_holes_mm": 2000.0,
+      "hook_point_installed_mm": [
+        575.0,
+        669.5,
+        2920.0
+      ],
+      "sling_leg_angle_from_horizontal_deg": [
+        69.4,
+        69.4,
+        68.7,
+        68.7
+      ],
+      "sling_leg_lengths_mm": [
+        2136.4,
+        2136.4,
+        2146.5,
+        2146.5
+      ],
+      "samples": 74,
+      "boolean_checks": 1528,
+      "failures": [],
+      "rigging_contacts_with_module": [],
+      "segments": [
+        {
+          "stage": "lift 70 mm in place",
+          "start_translation_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end_translation_mm": [
+            0.0,
+            0.0,
+            70.0
+          ],
+          "samples": 15,
+          "step_mm": 5,
+          "passed": true
+        },
+        {
+          "stage": "forward out of the front window",
+          "start_translation_mm": [
+            0.0,
+            0.0,
+            70.0
+          ],
+          "end_translation_mm": [
+            0.0,
+            -1420.0,
+            70.0
+          ],
+          "samples": 58,
+          "step_mm": 25,
+          "passed": true
+        }
+      ],
+      "nearest_fixed_parts": [
+        {
+          "pose": "installed, sling only (module seating contacts are intended)",
+          "nearest": [
+            {
+              "moving": "SLING_LEG_3",
+              "kind": "rigging",
+              "obstacle": "X_RAIL_1",
+              "gap_mm": 30.35
+            }
+          ]
+        },
+        {
+          "pose": "lifted 70 mm",
+          "nearest": [
+            {
+              "moving": "SLING_LEG_3",
+              "kind": "rigging",
+              "obstacle": "X_RAIL_1",
+              "gap_mm": 8.61
+            },
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "MF_LEG_1_1",
+              "gap_mm": 11.2
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_MIN_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_FILL_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_HH_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_EMPTY_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_STRIP_1",
+              "kind": "module",
+              "obstacle": "Y_BLOCK_BOLT_L_1_1",
+              "gap_mm": 18.8
+            },
+            {
+              "moving": "MOD_STRIP_9",
+              "kind": "module",
+              "obstacle": "Y_BLOCK_BOLT_R_1_1",
+              "gap_mm": 18.8
+            },
+            {
+              "moving": "SLING_LEG_3",
+              "kind": "rigging",
+              "obstacle": "X_GUIDE_FACE",
+              "gap_mm": 21.52
+            },
+            {
+              "moving": "MOD_LUG_R_2",
+              "kind": "module",
+              "obstacle": "FB_REAR",
+              "gap_mm": 23.0
+            },
+            {
+              "moving": "MOD_XM_END_4_L",
+              "kind": "module",
+              "obstacle": "Y_SHOE_L",
+              "gap_mm": 23.15
+            },
+            {
+              "moving": "MOD_XM_END_4_R",
+              "kind": "module",
+              "obstacle": "Y_SHOE_R",
+              "gap_mm": 23.15
+            }
+          ]
+        }
+      ],
+      "module_sweep_envelope_mm": [
+        62.0,
+        -1412.0,
+        840.8,
+        1088.0,
+        1347.8,
+        1028.8
+      ],
+      "result": "PASS SAMPLED PATH"
+    }
+  ],
+  "elapsed_seconds": 90.4,
+  "generated_utc": "2026-09-26T21:00:56+00:00"
+}

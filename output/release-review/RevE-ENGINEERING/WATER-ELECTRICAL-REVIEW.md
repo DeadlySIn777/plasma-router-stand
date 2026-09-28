@@ -74,4 +74,4 @@ The following remain genuine release limits:
 - Record the pump's actual starting current and duration, fuse instruction, SSR case temperature, 24 V supply recovery, diode pulse heating and all held-button tests. The fuse protects the branch; no Type 2 SSR short-circuit coordination or pump locked-rotor protection has been demonstrated.
 - Shipping for the distributor substitutions and small components is unquoted. Diode, fuse and holder procurement remain within the existing branch-wiring allowance only if the final cart supports it; do not silently mark them free.
 
-The unknown cutter's torch-start, arc-voltage and arc-OK wiring is intentionally outside this water circuit. Identifying an AG-60 torch does not identify the power-source interface.
+The owner-reported VIV ARC CUT-50 cutter's torch-start, arc-voltage and arc-OK wiring (exact revision and interfaces still unverified) is intentionally outside this water circuit. Identifying an AG-60 torch does not identify the power-source interface.

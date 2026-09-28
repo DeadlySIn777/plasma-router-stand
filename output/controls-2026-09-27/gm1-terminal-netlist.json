@@ -1,0 +1,5188 @@
+{
+  "scope": "GM1 controls: the Rev I relay circuit with the review's safety fixes, for the BTT Rodent.\n\nThe other session's Rev I terminal graph\n(output/design-finish-2026-09-26/controls/circuit.py) is imported read-only;\nverify_gm1_circuit.py records its hash. The water logic (fill, drain, timers,\nbed confirmation, mode relays) stays Rev I's, with one added check contact in\nthe fill arm. The stop, the tool-permission chain, the tool outputs and the\ncontroller interface are replaced. Each change is listed in CHANGES.\n\nM12 and M13 (later on 27 September, for the Rev L tool changer) add spindle\nreverse and the tool-changer drive. M14 (the same evening) feeds the dock\nmotor through the Z top switch, so the dock can only move with Z up.\nM17 to M20 (28 September, the cheap additions) add three door pilot lamps, a\nwork light on the gantry, the dock's tool setter in the head loop, and a\nsecond E-stop station.\n\nThis is a wiring-graph and relay-timing model, like Rev I's. It is not a\ncertified safety function, a PL/category claim or a tested panel.\n",
+  "changes": [
+    {
+      "id": "M1",
+      "topic": "Stop",
+      "change": "A dual-channel safety relay (SR) with manual reset replaces the two field stop contacts (XW:21-22 and XH:1-2). SR:13-14 and SR:23-24 drive contactors K1 and K2. One main pole of each, in series, switches each of: the 48 V supply to the Rodent, VFD mains and plasma-cutter mains. Their NC mirror auxiliaries form the feedback loop in the reset circuit. SR:33-34 feeds the water and tool permission chains. The Z brake is powered through the K1 and K2 NO auxiliaries and a 3 s on-delay, so it engages whenever either contactor opens."
+    },
+    {
+      "id": "M2",
+      "topic": "Mode race",
+      "change": "Per-mode ready relays K_RDY_R (coil on RR) and K_RDY_P (coil on PR) sit in series in the spindle and torch coil paths. A tool coil can only energize after its own mode has finished its water sequence (12 s plasma, 75 s router), so changing mode with the start signal held cannot fire the other tool."
+    },
+    {
+      "id": "M3",
+      "topic": "Welded relays",
+      "change": "Every relay in the start chain is force-guided (Omron G7SA). Each relay can only pick up while the next relay down the chain is released: K_READY checks K_PERMIT, K_PERMIT checks K_RUN_ARM, and K_RUN_ARM checks both request relays and both tool relays. A welded contact therefore blocks the next start instead of starting a tool."
+    },
+    {
+      "id": "M4",
+      "topic": "Controller stop",
+      "change": "Two request relays, K_REQ_A and K_REQ_B, both follow the Rodent run request. K_REQ_A feeds the tool coils. K_REQ_B is in series in both tool outputs, so a single welded request or tool relay cannot keep a tool running after the Rodent drops its request."
+    },
+    {
+      "id": "M5",
+      "topic": "Setup",
+      "change": "A second SETUP channel: an added Schneider ZBE101 NO block on the SETUP/RUN selector sits in series ahead of K_RUN_ARM. Both the arming and every tool output need RUN, through two independent contacts."
+    },
+    {
+      "id": "M6",
+      "topic": "Tool outputs",
+      "change": "Each tool output is three contacts in series from three relays: the VFD FWD terminal uses K_VFD_RUN, K_RUN_ARM and K_REQ_B, and the cutter start uses K_TORCH_RUN, K_RUN_ARM and K_REQ_B. There is no RS485. The VFD takes run only through FWD and speed only through an isolated 0-10 V signal, so no serial command can start the spindle."
+    },
+    {
+      "id": "M7",
+      "topic": "Rodent door input",
+      "change": "A dry contact pair to the Rodent E1-MAX input: K_REQ_A NC (no request) in parallel with K_RUN_ARM NO (armed). It opens only when the Rodent is requesting a tool that is not armed. grblHAL treats that as a safety door: feed hold and spindle off."
+    },
+    {
+      "id": "M8",
+      "topic": "Fill check",
+      "change": "K_READY NC in the fill-arm pickup. FILL cannot arm in SETUP if K_READY is welded, so that fault shows up as \"fill will not start\"."
+    },
+    {
+      "id": "M9",
+      "topic": "Router drain",
+      "change": "Rev I left the pan drain open for as long as router mode was selected, so chips, aluminium fines and mist coolant ran to the plasma reservoir. A latch relay K_DRAINED now picks up when the 75 s drain dwell ends (T_DRAIN output through diode D_SET). Its NC contact opens the drain request (the valve closes) and its NO contacts hold router ready in place of the timer. The latch holds only while router mode is selected (fed from KM_R) and the pan stays empty (K_EMPTY_B, a second relay on the empty-float coil line). Liquid reaching the empty float, or leaving router mode, drops the latch; the drain then reopens and a new dwell starts. An E-stop does not drop it."
+    },
+    {
+      "id": "M10",
+      "topic": "Fill watchdog",
+      "change": "On-delay timer T_FILL runs whenever the fill is commanded; its NC contact is in the K_FILL self-hold. A fill that has not reached the fill-stop float within the set time (commission it to 1.5 x the measured fill, 25 min until then) stops and needs a new FILL press. Holding FILL keeps the pump running only while it is held."
+    },
+    {
+      "id": "M11",
+      "topic": "Float stop",
+      "change": "The torch-head float switch is added in series with the three head-presence switches in the U_HEAD loop (XH:5-6). A float trip while the torch is requested therefore drops the permission (torch off) and opens the Rodent door input (feed hold). During probing the request is low, so the door input stays closed and the chain re-arms when the float returns. The same loop drives the Rodent probe input through a second optocoupler."
+    },
+    {
+      "id": "M12",
+      "topic": "Spindle reverse",
+      "change": "The RapidChange tool changer unloads a tool with the spindle in reverse (M4), so the VFD also needs its REV terminal. A force-guided direction relay K_DIR (G7SA-2A2B) sits at the end of the three-contact run chain: its NC 31-32 passes the run command to FWD and its NO 13-14 to REV, so the VFD never sees both, even with a welded contact. Its coil is on the Rodent V-MOS HE1 output (GPIO2, the grblHAL spindle direction), fed like the mist from the 48-to-24 V DC-DC after K1 and K2. K_DIR only chooses the direction: K_VFD_RUN, K_RUN_ARM and K_REQ_B still start and stop the spindle. Its spare NO 23-24 reports the direction to the MCP23017 (XM:8)."
+    },
+    {
+      "id": "M13",
+      "topic": "Tool changer drive",
+      "change": "The Rev L dock's 24 V gearmotor is fed from the Z-brake supply, which is live only while K1 and K2 are closed, so every E-stop stops it. The feed then passes fuse F_DOCK and K_VFD_RUN NC 41-42: the dock cannot move while the spindle run relay is picked up, or if that relay is welded, and a spindle start stops a moving dock. K_DOCK_RUN switches the motor on and K_DOCK_DIR chooses the direction, so the two directions can never be driven at once. Each direction runs through its own end microswitch (LS_OUT at the deployed stop, LS_IN at the parked stop), which opens at the end of travel even if a relay welds. The Rodent drives both coils from MCP23017 outputs through a ULN2803A and reads the two dock sensors on MCP23017 inputs."
+    },
+    {
+      "id": "M14",
+      "topic": "Dock enable from the Z top switch",
+      "change": "With the Z body raised over the changer (Rev L), the only crash left is the spindle low over the magazine while the dock moves or the gantry crosses it. The dock motor feed passes a second, NO, contact of the Z top switch (LS_ZTOP 13-14) ahead of K_DOCK_RUN, so the dock cannot move unless the Z carriage is at its top, whatever the firmware commands and even if K_DOCK_RUN is welded. The Rodent still reads the switch's first contact as the Z limit; the second contact is only in the dock feed."
+    },
+    {
+      "id": "M17",
+      "topic": "Pilot lamps",
+      "change": "Three 22 mm 24 V LED pilot lights on the door, each a plain load between a circuit node and 0 V: red STOPPED on the safety relay's NC auxiliary 41-42 (lit whenever the safety outputs are off: E-stop pressed, not yet reset, or a channel fault), green WATER READY on NOT_FILL (the selected mode's water sequence is complete and no fill is running), and white ARMED on the ARMED node (K_RUN_ARM picked up: RUN selected, permission present, every chain relay released before it). They only indicate; nothing is wired through them."
+    },
+    {
+      "id": "M18",
+      "topic": "Work light",
+      "change": "An 800 mm 24 V LED bar under the gantry beam (CAD GANTRY_WORK_LIGHT) is fed from the 24 V rail ahead of F_CONTROL through its own 2 A fuse F_LIGHT and a door switch SW_LIGHT, so a lamp fault cannot take the control fuse and the light stays on through a stop. Its leads run up the gantry with the Z brake leads to XG:5-6."
+    },
+    {
+      "id": "M19",
+      "topic": "Tool setter",
+      "change": "A button tool setter on the dock (CAD MOD_ATC_TOOL_SETTER) gives the changer a tool-length probe without a second controller input. Its NC contact comes through the dock connector (XD:7-8) and replaces the panel link XHEAD 4-5 in the head loop, so pressing it opens the loop: U_PROBE turns off (the Rodent probe input reads triggered) and U_HEAD turns off (the permission drops, as for a torch float trip). Relay K_SETTER, whose coil is in parallel with KM_R (router mode), bridges the setter with its NC contact 11-12 whenever router mode is not selected, so the loop is whole in plasma mode with the dock unplugged. In router mode the dock must be plugged in or there is no permission, which also guarantees the dock sensors are connected. The spindle is off during a length probe (request low), so the door input stays closed and the chain re-arms when the button releases. The simulator places the two contacts at the loop's output (after XH:5-6); physically they are in the 24 V LED loop on the head interface board."
+    },
+    {
+      "id": "M20",
+      "topic": "Second E-stop station",
+      "change": "A second latching E-stop (ESTOP2) at the loading end of the frame sits in series with the door E-stop in both safety-relay channels, through XH:7-8 and XH:9-10. Either button stops the machine; both must be released before RESET."
+    }
+  ],
+  "base": "output/design-finish-2026-09-26/controls/circuit.py (Rev I), imported read-only",
+  "removed_rev_i_edges": [
+    {
+      "kind": "wire",
+      "tag": "W028",
+      "a": "C",
+      "b": "XW:21"
+    },
+    {
+      "kind": "wire",
+      "tag": "W029",
+      "a": "XW:22",
+      "b": "STOP_HEALTHY"
+    },
+    {
+      "kind": "wire",
+      "tag": "W067",
+      "a": "FILL:22",
+      "b": "ARM_COIL"
+    },
+    {
+      "kind": "wire",
+      "tag": "W077",
+      "a": "K_FILL:14",
+      "b": "FILL_COIL"
+    },
+    {
+      "kind": "wire",
+      "tag": "W095",
+      "a": "T_DRAIN:18",
+      "b": "RR"
+    },
+    {
+      "kind": "wire",
+      "tag": "W105",
+      "a": "AUTO_DRAIN:22",
+      "b": "READY_COIL"
+    },
+    {
+      "kind": "wire",
+      "tag": "W106",
+      "a": "READY_COIL",
+      "b": "K_READY:A1"
+    },
+    {
+      "kind": "wire",
+      "tag": "W107",
+      "a": "K_READY:A2",
+      "b": "XW:2"
+    },
+    {
+      "kind": "wire",
+      "tag": "W108",
+      "a": "HEAD_SAFE",
+      "b": "XW:31"
+    },
+    {
+      "kind": "wire",
+      "tag": "W109",
+      "a": "XW:31",
+      "b": "K_READY:11"
+    },
+    {
+      "kind": "wire",
+      "tag": "W110",
+      "a": "K_READY:14",
+      "b": "XW:32"
+    },
+    {
+      "kind": "wire",
+      "tag": "W111",
+      "a": "XW:32",
+      "b": "IF_READY:IN+"
+    },
+    {
+      "kind": "wire",
+      "tag": "W112",
+      "a": "IF_READY:IN-",
+      "b": "XW:2"
+    },
+    {
+      "kind": "wire",
+      "tag": "W113",
+      "a": "C",
+      "b": "XH:1"
+    },
+    {
+      "kind": "wire",
+      "tag": "W114",
+      "a": "XH:2",
+      "b": "HARD_SAFE"
+    },
+    {
+      "kind": "wire",
+      "tag": "W118",
+      "a": "XH:6",
+      "b": "HEAD_SAFE"
+    },
+    {
+      "kind": "wire",
+      "tag": "W119",
+      "a": "HEAD_SAFE",
+      "b": "XW:33"
+    },
+    {
+      "kind": "wire",
+      "tag": "W120",
+      "a": "XW:33",
+      "b": "K_READY:21"
+    },
+    {
+      "kind": "wire",
+      "tag": "W121",
+      "a": "K_READY:24",
+      "b": "XW:34"
+    },
+    {
+      "kind": "wire",
+      "tag": "W122",
+      "a": "XW:34",
+      "b": "PERMIT"
+    },
+    {
+      "kind": "wire",
+      "tag": "W123",
+      "a": "C",
+      "b": "IF_RUN:13"
+    },
+    {
+      "kind": "wire",
+      "tag": "W124",
+      "a": "IF_RUN:14",
+      "b": "REQUEST_COIL"
+    },
+    {
+      "kind": "wire",
+      "tag": "W125",
+      "a": "REQUEST_COIL",
+      "b": "K_REQUEST:A1"
+    },
+    {
+      "kind": "wire",
+      "tag": "W126",
+      "a": "K_REQUEST:A2",
+      "b": "XW:2"
+    },
+    {
+      "kind": "wire",
+      "tag": "W127",
+      "a": "PERMIT",
+      "b": "K_REQUEST:11"
+    },
+    {
+      "kind": "wire",
+      "tag": "W128",
+      "a": "K_REQUEST:12",
+      "b": "RUN_ARM_COIL"
+    },
+    {
+      "kind": "wire",
+      "tag": "W129",
+      "a": "PERMIT",
+      "b": "K_RUN_ARM:11"
+    },
+    {
+      "kind": "wire",
+      "tag": "W130",
+      "a": "K_RUN_ARM:14",
+      "b": "RUN_ARM_COIL"
+    },
+    {
+      "kind": "wire",
+      "tag": "W131",
+      "a": "RUN_ARM_COIL",
+      "b": "K_RUN_ARM:A1"
+    },
+    {
+      "kind": "wire",
+      "tag": "W132",
+      "a": "K_RUN_ARM:A2",
+      "b": "XW:2"
+    },
+    {
+      "kind": "wire",
+      "tag": "W133",
+      "a": "PERMIT",
+      "b": "K_RUN_ARM:21"
+    },
+    {
+      "kind": "wire",
+      "tag": "W134",
+      "a": "K_RUN_ARM:24",
+      "b": "ARMED_PERMIT"
+    },
+    {
+      "kind": "wire",
+      "tag": "W135",
+      "a": "ARMED_PERMIT",
+      "b": "K_REQUEST:21"
+    },
+    {
+      "kind": "wire",
+      "tag": "W136",
+      "a": "K_REQUEST:24",
+      "b": "REQUEST"
+    },
+    {
+      "kind": "wire",
+      "tag": "W137",
+      "a": "REQUEST",
+      "b": "KM_R:31"
+    },
+    {
+      "kind": "wire",
+      "tag": "W138",
+      "a": "KM_R:34",
+      "b": "VFD_RUN_COIL"
+    },
+    {
+      "kind": "wire",
+      "tag": "W139",
+      "a": "VFD_RUN_COIL",
+      "b": "K_VFD_RUN:A1"
+    },
+    {
+      "kind": "wire",
+      "tag": "W140",
+      "a": "K_VFD_RUN:A2",
+      "b": "XW:2"
+    },
+    {
+      "kind": "wire",
+      "tag": "W141",
+      "a": "REQUEST",
+      "b": "KM_P:31"
+    },
+    {
+      "kind": "wire",
+      "tag": "W142",
+      "a": "KM_P:34",
+      "b": "TORCH_RUN_COIL"
+    },
+    {
+      "kind": "wire",
+      "tag": "W143",
+      "a": "TORCH_RUN_COIL",
+      "b": "K_TORCH_RUN:A1"
+    },
+    {
+      "kind": "wire",
+      "tag": "W144",
+      "a": "K_TORCH_RUN:A2",
+      "b": "XW:2"
+    },
+    {
+      "kind": "contact",
+      "tag": "XW:21-22",
+      "a": "XW:21",
+      "b": "XW:22"
+    },
+    {
+      "kind": "contact",
+      "tag": "K_READY:11-14",
+      "a": "K_READY:11",
+      "b": "K_READY:14"
+    },
+    {
+      "kind": "contact",
+      "tag": "XH:1-2",
+      "a": "XH:1",
+      "b": "XH:2"
+    },
+    {
+      "kind": "contact",
+      "tag": "K_READY:21-24",
+      "a": "K_READY:21",
+      "b": "K_READY:24"
+    },
+    {
+      "kind": "contact",
+      "tag": "IF_RUN:13-14",
+      "a": "IF_RUN:13",
+      "b": "IF_RUN:14"
+    },
+    {
+      "kind": "contact",
+      "tag": "K_REQUEST:11-12",
+      "a": "K_REQUEST:11",
+      "b": "K_REQUEST:12"
+    },
+    {
+      "kind": "contact",
+      "tag": "K_RUN_ARM:11-14",
+      "a": "K_RUN_ARM:11",
+      "b": "K_RUN_ARM:14"
+    },
+    {
+      "kind": "contact",
+      "tag": "K_RUN_ARM:21-24",
+      "a": "K_RUN_ARM:21",
+      "b": "K_RUN_ARM:24"
+    },
+    {
+      "kind": "contact",
+      "tag": "K_REQUEST:21-24",
+      "a": "K_REQUEST:21",
+      "b": "K_REQUEST:24"
+    },
+    {
+      "kind": "contact",
+      "tag": "K_VFD_RUN:11-14",
+      "a": "XVFD:RUN",
+      "b": "XVFD:COM"
+    },
+    {
+      "kind": "contact",
+      "tag": "K_TORCH_RUN:11-14",
+      "a": "XPLASMA:START1",
+      "b": "XPLASMA:START2"
+    },
+    {
+      "kind": "diode",
+      "tag": "D_R",
+      "a": "DR_REQ",
+      "b": "DRAIN_COIL"
+    }
+  ],
+  "devices": {
+    "SR": {
+      "part": "Dual-channel E-stop safety relay, 24 V, 3 NO safety + 1 NC auxiliary, manual reset, external contactor feedback loop. Candidate: Pilz PNOZ X2.8P 24VACDC 3n/o 1n/c (777301)",
+      "kind": "safety relay",
+      "no": [
+        "13-14",
+        "23-24",
+        "33-34"
+      ],
+      "nc": [
+        "41-42"
+      ]
+    },
+    "K1": {
+      "part": "Schneider TeSys LC1D18BD (24 V DC coil), 3 NO main poles + 1 NO/1 NC auxiliary; NC is a mirror contact",
+      "kind": "contactor",
+      "no": [
+        "1-2",
+        "3-4",
+        "5-6",
+        "13-14"
+      ],
+      "nc": [
+        "21-22"
+      ]
+    },
+    "K2": {
+      "part": "Schneider TeSys LC1D18BD (24 V DC coil), 3 NO main poles + 1 NO/1 NC auxiliary; NC is a mirror contact",
+      "kind": "contactor",
+      "no": [
+        "1-2",
+        "3-4",
+        "5-6",
+        "13-14"
+      ],
+      "nc": [
+        "21-22"
+      ]
+    },
+    "K_READY": {
+      "part": "Omron G7SA-3A1B 24 VDC + P7SA-10F socket",
+      "kind": "force-guided",
+      "no": [
+        "13-14",
+        "23-24",
+        "33-34"
+      ],
+      "nc": [
+        "41-42"
+      ]
+    },
+    "K_PERMIT": {
+      "part": "Omron G7SA-3A1B 24 VDC + P7SA-10F socket",
+      "kind": "force-guided",
+      "no": [
+        "13-14",
+        "23-24",
+        "33-34"
+      ],
+      "nc": [
+        "41-42"
+      ]
+    },
+    "K_RUN_ARM": {
+      "part": "Omron G7SA-5A1B 24 VDC + P7SA-14F socket",
+      "kind": "force-guided",
+      "no": [
+        "13-14",
+        "23-24",
+        "33-34",
+        "43-44",
+        "53-54"
+      ],
+      "nc": [
+        "61-62"
+      ]
+    },
+    "K_REQ_A": {
+      "part": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "kind": "force-guided",
+      "no": [
+        "13-14",
+        "23-24"
+      ],
+      "nc": [
+        "31-32",
+        "41-42"
+      ]
+    },
+    "K_REQ_B": {
+      "part": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "kind": "force-guided",
+      "no": [
+        "13-14",
+        "23-24"
+      ],
+      "nc": [
+        "31-32",
+        "41-42"
+      ]
+    },
+    "K_VFD_RUN": {
+      "part": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "kind": "force-guided",
+      "no": [
+        "13-14",
+        "23-24"
+      ],
+      "nc": [
+        "31-32",
+        "41-42"
+      ]
+    },
+    "K_TORCH_RUN": {
+      "part": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "kind": "force-guided",
+      "no": [
+        "13-14",
+        "23-24"
+      ],
+      "nc": [
+        "31-32",
+        "41-42"
+      ]
+    },
+    "K_RDY_R": {
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I)",
+      "kind": "relay",
+      "no": [
+        "11-14",
+        "21-24"
+      ],
+      "nc": [
+        "11-12",
+        "21-22"
+      ]
+    },
+    "K_RDY_P": {
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I)",
+      "kind": "relay",
+      "no": [
+        "11-14",
+        "21-24"
+      ],
+      "nc": [
+        "11-12",
+        "21-22"
+      ]
+    },
+    "T_BRAKE": {
+      "part": "Finder 80.01.0.240.0000, function AI (on-delay), set 3 s (as Rev I timers)",
+      "kind": "timer",
+      "no": [
+        "15-18"
+      ],
+      "nc": [
+        "15-16"
+      ]
+    },
+    "K_DRAINED": {
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I water relays)",
+      "kind": "relay",
+      "no": [
+        "11-14",
+        "21-24"
+      ],
+      "nc": [
+        "11-12",
+        "21-22"
+      ]
+    },
+    "K_EMPTY_B": {
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket, coil in parallel with K_EMPTY",
+      "kind": "relay",
+      "no": [
+        "11-14",
+        "21-24"
+      ],
+      "nc": [
+        "11-12",
+        "21-22"
+      ]
+    },
+    "T_FILL": {
+      "part": "Finder 80.01.0.240.0000, function AI (on-delay), 25 min until the fill is timed",
+      "kind": "timer",
+      "no": [
+        "15-18"
+      ],
+      "nc": [
+        "15-16"
+      ]
+    },
+    "Z_BRAKE": {
+      "part": "Z motor power-off holding brake, 24 V coil (energized = released)",
+      "kind": "brake",
+      "no": [],
+      "nc": []
+    },
+    "K_DIR": {
+      "part": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "kind": "force-guided",
+      "no": [
+        "13-14",
+        "23-24"
+      ],
+      "nc": [
+        "31-32",
+        "41-42"
+      ]
+    },
+    "K_DOCK_RUN": {
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket: pole 1 switches the dock motor +24 V, pole 2 its 0 V",
+      "kind": "relay",
+      "no": [
+        "11-14",
+        "21-24"
+      ],
+      "nc": [
+        "11-12",
+        "21-22"
+      ]
+    },
+    "K_DOCK_DIR": {
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket: both poles reverse the dock motor polarity",
+      "kind": "relay",
+      "no": [
+        "11-14",
+        "21-24"
+      ],
+      "nc": [
+        "11-12",
+        "21-22"
+      ]
+    },
+    "K_SETTER": {
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket: NC 11-12 bridges the tool-setter loop outside router mode",
+      "kind": "relay",
+      "no": [
+        "11-14",
+        "21-24"
+      ],
+      "nc": [
+        "11-12",
+        "21-22"
+      ]
+    }
+  },
+  "pole_usage": {
+    "K1": [
+      "1-2",
+      "13-14",
+      "21-22",
+      "3-4",
+      "5-6"
+    ],
+    "K2": [
+      "1-2",
+      "13-14",
+      "21-22",
+      "3-4",
+      "5-6"
+    ],
+    "SR": [
+      "13-14",
+      "23-24",
+      "33-34",
+      "41-42"
+    ],
+    "T_BRAKE": [
+      "15-18"
+    ],
+    "K_PERMIT": [
+      "13-14",
+      "23-24",
+      "33-34",
+      "41-42"
+    ],
+    "K_READY": [
+      "13-14",
+      "23-24",
+      "33-34",
+      "41-42"
+    ],
+    "K_RUN_ARM": [
+      "13-14",
+      "23-24",
+      "33-34",
+      "43-44",
+      "53-54",
+      "61-62"
+    ],
+    "K_REQ_A": [
+      "13-14",
+      "31-32",
+      "41-42"
+    ],
+    "K_REQ_B": [
+      "13-14",
+      "23-24",
+      "31-32"
+    ],
+    "K_VFD_RUN": [
+      "13-14",
+      "31-32",
+      "41-42"
+    ],
+    "K_TORCH_RUN": [
+      "13-14",
+      "31-32"
+    ],
+    "K_RDY_R": [
+      "11-14",
+      "21-24"
+    ],
+    "K_RDY_P": [
+      "11-14",
+      "21-24"
+    ],
+    "K_DIR": [
+      "13-14",
+      "23-24",
+      "31-32"
+    ],
+    "K_DRAINED": [
+      "11-12",
+      "11-14",
+      "21-24"
+    ],
+    "K_EMPTY_B": [
+      "11-14"
+    ],
+    "T_FILL": [
+      "15-16"
+    ],
+    "K_DOCK_RUN": [
+      "11-14"
+    ],
+    "K_DOCK_DIR": [
+      "11-12",
+      "11-14"
+    ],
+    "K_SETTER": [
+      "11-12"
+    ]
+  },
+  "connections": [
+    {
+      "kind": "wire",
+      "a": "24V",
+      "b": "XW:1",
+      "tag": "W001",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:1",
+      "b": "F_CONTROL:1",
+      "tag": "W002",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "F_CONTROL:2",
+      "b": "XW:3",
+      "tag": "W003",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:3",
+      "b": "C",
+      "tag": "W004",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:1",
+      "b": "F_VALVE:1",
+      "tag": "W005",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "F_VALVE:2",
+      "b": "XW:4",
+      "tag": "W006",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:4",
+      "b": "V",
+      "tag": "W007",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "MODE_R:13",
+      "tag": "W008",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "MODE_R:14",
+      "b": "MR",
+      "tag": "W009",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "MODE_P:13",
+      "tag": "W010",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "MODE_P:14",
+      "b": "MP",
+      "tag": "W011",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "MR",
+      "b": "KM_P:41",
+      "tag": "W012",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KM_P:42",
+      "b": "KMR_COIL",
+      "tag": "W013",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KMR_COIL",
+      "b": "KM_R:A1",
+      "tag": "W014",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KM_R:A2",
+      "b": "XW:2",
+      "tag": "W015",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "MP",
+      "b": "KM_R:41",
+      "tag": "W016",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KM_R:42",
+      "b": "KMP_COIL",
+      "tag": "W017",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KMP_COIL",
+      "b": "KM_P:A1",
+      "tag": "W018",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KM_P:A2",
+      "b": "XW:2",
+      "tag": "W019",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "XW:11",
+      "tag": "W020",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:12",
+      "b": "EMPTY_COIL",
+      "tag": "W021",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "EMPTY_COIL",
+      "b": "K_EMPTY:A1",
+      "tag": "W022",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_EMPTY:A2",
+      "b": "XW:2",
+      "tag": "W023",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "XW:13",
+      "tag": "W024",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:14",
+      "b": "MIN_COIL",
+      "tag": "W025",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "MIN_COIL",
+      "b": "K_MIN:A1",
+      "tag": "W026",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_MIN:A2",
+      "b": "XW:2",
+      "tag": "W027",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "STOP_HEALTHY",
+      "b": "XW:17",
+      "tag": "W030",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:18",
+      "b": "H",
+      "tag": "W031",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "KM_R:11",
+      "tag": "W032",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KM_R:14",
+      "b": "DR_REQ",
+      "tag": "W033",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "AUTO_DRAIN:13",
+      "tag": "W034",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "AUTO_DRAIN:14",
+      "b": "DO_REQ",
+      "tag": "W035",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DRAIN_COIL",
+      "b": "K_DRAIN:A1",
+      "tag": "W036",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DRAIN:A2",
+      "b": "XW:2",
+      "tag": "W037",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "V",
+      "b": "K_DRAIN:11",
+      "tag": "W038",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DRAIN:14",
+      "b": "DV",
+      "tag": "W039",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DV",
+      "b": "XW:7",
+      "tag": "W040",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:8",
+      "b": "XW:2",
+      "tag": "W041",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "KM_P:11",
+      "tag": "W042",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KM_P:14",
+      "b": "PCLOSE",
+      "tag": "W043",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "PCLOSE",
+      "b": "K_DRAIN:21",
+      "tag": "W044",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DRAIN:22",
+      "b": "TC_POWER",
+      "tag": "W045",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "TC_POWER",
+      "b": "T_CLOSE:A1",
+      "tag": "W046",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "T_CLOSE:A2",
+      "b": "XW:2",
+      "tag": "W047",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "H",
+      "b": "KM_P:21",
+      "tag": "W048",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KM_P:24",
+      "b": "P_HEALTHY",
+      "tag": "W049",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "P_HEALTHY",
+      "b": "XW:23",
+      "tag": "W050",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:23",
+      "b": "BED_P:13",
+      "tag": "W051",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "BED_P:14",
+      "b": "XW:24",
+      "tag": "W052",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:24",
+      "b": "P_CLEAR",
+      "tag": "W053",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "P_CLEAR",
+      "b": "T_CLOSE:15",
+      "tag": "W054",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "T_CLOSE:18",
+      "b": "PC",
+      "tag": "W055",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "PC",
+      "b": "R_TC:1",
+      "tag": "W056",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "R_TC:2",
+      "b": "XW:2",
+      "tag": "W057",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "PC",
+      "b": "SETUP_RUN:21",
+      "tag": "W058",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "SETUP_RUN:22",
+      "b": "SETUP_PC",
+      "tag": "W059",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "SETUP_PC",
+      "b": "XW:19",
+      "tag": "W060",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:20",
+      "b": "L",
+      "tag": "W061",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "L",
+      "b": "P_LIMIT:A1",
+      "tag": "W062",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "P_LIMIT:A2",
+      "b": "XW:2",
+      "tag": "W063",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "L",
+      "b": "XW:15",
+      "tag": "W064",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:16",
+      "b": "A",
+      "tag": "W065",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "A",
+      "b": "FILL:21",
+      "tag": "W066",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "A",
+      "b": "K_ARM:11",
+      "tag": "W068",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_ARM:14",
+      "b": "ARM_COIL",
+      "tag": "W069",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "ARM_COIL",
+      "b": "K_ARM:A1",
+      "tag": "W070",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_ARM:A2",
+      "b": "XW:2",
+      "tag": "W071",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "A",
+      "b": "K_ARM:21",
+      "tag": "W072",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_ARM:24",
+      "b": "AF",
+      "tag": "W073",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "AF",
+      "b": "FILL:13",
+      "tag": "W074",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "FILL:14",
+      "b": "FILL_COIL",
+      "tag": "W075",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "AF",
+      "b": "K_FILL:11",
+      "tag": "W076",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "FILL_COIL",
+      "b": "K_FILL:A1",
+      "tag": "W078",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_FILL:A2",
+      "b": "XW:2",
+      "tag": "W079",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "FILL_COIL",
+      "b": "P_CMD:A1",
+      "tag": "W080",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "P_CMD:A2",
+      "b": "XW:2",
+      "tag": "W081",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DV",
+      "b": "KM_R:21",
+      "tag": "W082",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KM_R:24",
+      "b": "RD",
+      "tag": "W083",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "RD",
+      "b": "K_EMPTY:21",
+      "tag": "W084",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_EMPTY:24",
+      "b": "TD_POWER",
+      "tag": "W085",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "TD_POWER",
+      "b": "T_DRAIN:A1",
+      "tag": "W086",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "T_DRAIN:A2",
+      "b": "XW:2",
+      "tag": "W087",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "H",
+      "b": "XW:25",
+      "tag": "W088",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:25",
+      "b": "BED_R:13",
+      "tag": "W089",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "BED_R:14",
+      "b": "XW:26",
+      "tag": "W090",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:26",
+      "b": "R_LOCKED",
+      "tag": "W091",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "R_LOCKED",
+      "b": "K_EMPTY:11",
+      "tag": "W092",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_EMPTY:14",
+      "b": "RE",
+      "tag": "W093",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "RE",
+      "b": "T_DRAIN:15",
+      "tag": "W094",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "RR",
+      "b": "R_TD:1",
+      "tag": "W096",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "R_TD:2",
+      "b": "XW:2",
+      "tag": "W097",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "PC",
+      "b": "K_MIN:11",
+      "tag": "W098",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_MIN:14",
+      "b": "PR",
+      "tag": "W099",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "J",
+      "b": "K_FILL:21",
+      "tag": "W100",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_FILL:22",
+      "b": "NOT_FILL",
+      "tag": "W101",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "NOT_FILL",
+      "b": "SETUP_RUN:13",
+      "tag": "W102",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "SETUP_RUN:14",
+      "b": "RUN_READY",
+      "tag": "W103",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "RUN_READY",
+      "b": "AUTO_DRAIN:21",
+      "tag": "W104",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "HARD_SAFE",
+      "b": "XH:3",
+      "tag": "W115",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XH:4",
+      "b": "DOOR_SAFE",
+      "tag": "W116",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DOOR_SAFE",
+      "b": "XH:5",
+      "tag": "W117",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:1",
+      "b": "F_SAFETY:1",
+      "tag": "G001",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "F_SAFETY:2",
+      "b": "XS:1",
+      "tag": "G002",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XS:1",
+      "b": "S",
+      "tag": "G003",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "S",
+      "b": "SR:A1",
+      "tag": "G004",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "SR:A2",
+      "b": "XW:2",
+      "tag": "G005",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XH:8",
+      "b": "SR:S12",
+      "tag": "G006",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XH:10",
+      "b": "SR:S22",
+      "tag": "G007",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "S",
+      "b": "SR:13",
+      "tag": "G008",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "SR:14",
+      "b": "K1_COIL",
+      "tag": "G009",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K1_COIL",
+      "b": "K1:A1",
+      "tag": "G010",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K1:A2",
+      "b": "XW:2",
+      "tag": "G011",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "S",
+      "b": "SR:23",
+      "tag": "G012",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "SR:24",
+      "b": "K2_COIL",
+      "tag": "G013",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K2_COIL",
+      "b": "K2:A1",
+      "tag": "G014",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K2:A2",
+      "b": "XW:2",
+      "tag": "G015",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "SR:33",
+      "tag": "G016",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "SR:34",
+      "b": "STOP_OK",
+      "tag": "G017",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "STOP_OK",
+      "b": "XW:21",
+      "tag": "G018",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:21",
+      "b": "XW:22",
+      "tag": "G019",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XW:22",
+      "b": "STOP_HEALTHY",
+      "tag": "G020",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "STOP_OK",
+      "b": "XH:1",
+      "tag": "G021",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XH:1",
+      "b": "XH:2",
+      "tag": "G022",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XH:2",
+      "b": "HARD_SAFE",
+      "tag": "G023",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "S",
+      "b": "K1:13",
+      "tag": "G024",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K1:14",
+      "b": "BRK_1",
+      "tag": "G025",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "BRK_1",
+      "b": "K2:13",
+      "tag": "G026",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K2:14",
+      "b": "BRK_PWR",
+      "tag": "G027",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "BRK_PWR",
+      "b": "T_BRAKE:A1",
+      "tag": "G028",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "T_BRAKE:A2",
+      "b": "XW:2",
+      "tag": "G029",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "BRK_PWR",
+      "b": "T_BRAKE:15",
+      "tag": "G030",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "T_BRAKE:18",
+      "b": "Z_BRAKE_COIL",
+      "tag": "G031",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "Z_BRAKE_COIL",
+      "b": "Z_BRAKE:A1",
+      "tag": "G032",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "Z_BRAKE:A2",
+      "b": "XW:2",
+      "tag": "G033",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "AUTO_DRAIN:22",
+      "b": "RDY_SRC",
+      "tag": "G034",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "RDY_SRC",
+      "b": "K_PERMIT:41",
+      "tag": "G035",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_PERMIT:42",
+      "b": "READY_COIL",
+      "tag": "G036",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "RDY_SRC",
+      "b": "K_READY:33",
+      "tag": "G037",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_READY:34",
+      "b": "READY_COIL",
+      "tag": "G038",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "READY_COIL",
+      "b": "K_READY:A1",
+      "tag": "G039",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_READY:A2",
+      "b": "XW:2",
+      "tag": "G040",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "HEAD_SAFE",
+      "b": "K_READY:23",
+      "tag": "G041",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_READY:24",
+      "b": "PERMIT_SRC",
+      "tag": "G042",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "PERMIT_SRC",
+      "b": "K_RUN_ARM:61",
+      "tag": "G043",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_RUN_ARM:62",
+      "b": "PERMIT_COIL",
+      "tag": "G044",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "PERMIT_SRC",
+      "b": "K_PERMIT:13",
+      "tag": "G045",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_PERMIT:14",
+      "b": "PERMIT_COIL",
+      "tag": "G046",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "PERMIT_COIL",
+      "b": "K_PERMIT:A1",
+      "tag": "G047",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_PERMIT:A2",
+      "b": "XW:2",
+      "tag": "G048",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "PERMIT_SRC",
+      "b": "K_PERMIT:23",
+      "tag": "G049",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_PERMIT:24",
+      "b": "PERMIT",
+      "tag": "G050",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "PERMIT",
+      "b": "SETUP_RUN_B:13",
+      "tag": "G051",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "SETUP_RUN_B:14",
+      "b": "ARM_SRC",
+      "tag": "G052",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "ARM_SRC",
+      "b": "K_REQ_A:31",
+      "tag": "G053",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_REQ_A:32",
+      "b": "ARM_1",
+      "tag": "G054",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "ARM_1",
+      "b": "K_REQ_B:31",
+      "tag": "G055",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_REQ_B:32",
+      "b": "ARM_2",
+      "tag": "G056",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "ARM_2",
+      "b": "K_VFD_RUN:31",
+      "tag": "G057",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_VFD_RUN:32",
+      "b": "ARM_3",
+      "tag": "G058",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "ARM_3",
+      "b": "K_TORCH_RUN:31",
+      "tag": "G059",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_TORCH_RUN:32",
+      "b": "RUN_ARM_COIL",
+      "tag": "G060",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "ARM_SRC",
+      "b": "K_RUN_ARM:13",
+      "tag": "G061",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_RUN_ARM:14",
+      "b": "RUN_ARM_COIL",
+      "tag": "G062",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "RUN_ARM_COIL",
+      "b": "K_RUN_ARM:A1",
+      "tag": "G063",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_RUN_ARM:A2",
+      "b": "XW:2",
+      "tag": "G064",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "ARM_SRC",
+      "b": "K_RUN_ARM:23",
+      "tag": "G065",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_RUN_ARM:24",
+      "b": "ARMED",
+      "tag": "G066",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "IF_RUN:13",
+      "tag": "G067",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "IF_RUN:14",
+      "b": "REQUEST_COIL",
+      "tag": "G068",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "REQUEST_COIL",
+      "b": "K_REQ_A:A1",
+      "tag": "G069",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_REQ_A:A2",
+      "b": "XW:2",
+      "tag": "G070",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "REQUEST_COIL",
+      "b": "K_REQ_B:A1",
+      "tag": "G071",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_REQ_B:A2",
+      "b": "XW:2",
+      "tag": "G072",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "ARMED",
+      "b": "K_REQ_A:13",
+      "tag": "G073",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_REQ_A:14",
+      "b": "REQUEST",
+      "tag": "G074",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "RR",
+      "b": "K_RDY_R:A1",
+      "tag": "G075",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_RDY_R:A2",
+      "b": "XW:2",
+      "tag": "G076",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "PR",
+      "b": "K_RDY_P:A1",
+      "tag": "G077",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_RDY_P:A2",
+      "b": "XW:2",
+      "tag": "G078",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "REQUEST",
+      "b": "KM_R:31",
+      "tag": "G079",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KM_R:34",
+      "b": "K_RDY_R:11",
+      "tag": "G080",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_RDY_R:14",
+      "b": "VFD_RUN_COIL",
+      "tag": "G081",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "VFD_RUN_COIL",
+      "b": "K_VFD_RUN:A1",
+      "tag": "G082",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_VFD_RUN:A2",
+      "b": "XW:2",
+      "tag": "G083",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "REQUEST",
+      "b": "KM_P:31",
+      "tag": "G084",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KM_P:34",
+      "b": "K_RDY_P:11",
+      "tag": "G085",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_RDY_P:14",
+      "b": "TORCH_RUN_COIL",
+      "tag": "G086",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "TORCH_RUN_COIL",
+      "b": "K_TORCH_RUN:A1",
+      "tag": "G087",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_TORCH_RUN:A2",
+      "b": "XW:2",
+      "tag": "G088",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "BRK_PWR",
+      "b": "VMOS_HE1:D",
+      "tag": "G089",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "VMOS_HE1:S",
+      "b": "DIR_COIL",
+      "tag": "G090",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DIR_COIL",
+      "b": "K_DIR:A1",
+      "tag": "G091",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DIR:A2",
+      "b": "XW:2",
+      "tag": "G092",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "FILL:22",
+      "b": "K_READY:41",
+      "tag": "G093",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_READY:42",
+      "b": "ARM_COIL",
+      "tag": "G094",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DR_REQ",
+      "b": "K_DRAINED:11",
+      "tag": "G095",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DRAINED:14",
+      "b": "K_EMPTY_B:11",
+      "tag": "G096",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_EMPTY_B:14",
+      "b": "DRN_COIL",
+      "tag": "G097",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "EMPTY_COIL",
+      "b": "K_EMPTY_B:A1",
+      "tag": "G098",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_EMPTY_B:A2",
+      "b": "XW:2",
+      "tag": "G099",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DRN_COIL",
+      "b": "K_DRAINED:A1",
+      "tag": "G100",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DRAINED:A2",
+      "b": "XW:2",
+      "tag": "G101",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "RE",
+      "b": "K_DRAINED:21",
+      "tag": "G102",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DRAINED:24",
+      "b": "RR",
+      "tag": "G103",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "FILL_COIL",
+      "b": "T_FILL:A1",
+      "tag": "G104",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "T_FILL:A2",
+      "b": "XW:2",
+      "tag": "G105",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_FILL:14",
+      "b": "T_FILL:15",
+      "tag": "G106",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "T_FILL:16",
+      "b": "FILL_COIL",
+      "tag": "G107",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DOCK_1",
+      "b": "K_VFD_RUN:41",
+      "tag": "G108",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_VFD_RUN:42",
+      "b": "DOCK_ZTOP",
+      "tag": "G109",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DOCK_ZTOP",
+      "b": "LS_ZTOP:13",
+      "tag": "G110",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "LS_ZTOP:14",
+      "b": "DOCK_24V",
+      "tag": "G111",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "IF_DOCK_RUN:1",
+      "tag": "G112",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "IF_DOCK_RUN:2",
+      "b": "DOCK_RUN_COIL",
+      "tag": "G113",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DOCK_RUN_COIL",
+      "b": "K_DOCK_RUN:A1",
+      "tag": "G114",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DOCK_RUN:A2",
+      "b": "XW:2",
+      "tag": "G115",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "IF_DOCK_DIR:1",
+      "tag": "G116",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "IF_DOCK_DIR:2",
+      "b": "DOCK_DIR_COIL",
+      "tag": "G117",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DOCK_DIR_COIL",
+      "b": "K_DOCK_DIR:A1",
+      "tag": "G118",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DOCK_DIR:A2",
+      "b": "XW:2",
+      "tag": "G119",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "DOCK_24V",
+      "b": "K_DOCK_RUN:11",
+      "tag": "G120",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DOCK_RUN:14",
+      "b": "K_DOCK_DIR:11",
+      "tag": "G121",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DOCK_DIR:12",
+      "b": "LS_OUT:11",
+      "tag": "G122",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "LS_OUT:12",
+      "b": "M_DOCK_OUT_IN",
+      "tag": "G123",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "M_DOCK_OUT_IN",
+      "b": "M_DOCK_OUT:A1",
+      "tag": "G124",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "M_DOCK_OUT:A2",
+      "b": "XW:2",
+      "tag": "G125",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_DOCK_DIR:14",
+      "b": "LS_IN:11",
+      "tag": "G126",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "LS_IN:12",
+      "b": "M_DOCK_IN_IN",
+      "tag": "G127",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "M_DOCK_IN_IN",
+      "b": "M_DOCK_IN:A1",
+      "tag": "G128",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "M_DOCK_IN:A2",
+      "b": "XW:2",
+      "tag": "G129",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "C",
+      "b": "SR:41",
+      "tag": "G130",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "SR:42",
+      "b": "H_STOP_SRC",
+      "tag": "G131",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "H_STOP_SRC",
+      "b": "H_STOP:X1",
+      "tag": "G132",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "H_STOP:X2",
+      "b": "XW:2",
+      "tag": "G133",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "NOT_FILL",
+      "b": "H_READY:X1",
+      "tag": "G134",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "H_READY:X2",
+      "b": "XW:2",
+      "tag": "G135",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "ARMED",
+      "b": "H_ARMED:X1",
+      "tag": "G136",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "H_ARMED:X2",
+      "b": "XW:2",
+      "tag": "G137",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "24V",
+      "b": "F_LIGHT:1",
+      "tag": "G138",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "F_LIGHT:2",
+      "b": "SW_LIGHT:13",
+      "tag": "G139",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "SW_LIGHT:14",
+      "b": "LIGHT_PWR",
+      "tag": "G140",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "LIGHT_PWR",
+      "b": "LED_BAR:+",
+      "tag": "G141",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "LED_BAR:-",
+      "b": "XW:2",
+      "tag": "G142",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "KMR_COIL",
+      "b": "K_SETTER:A1",
+      "tag": "G143",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "K_SETTER:A2",
+      "b": "XW:2",
+      "tag": "G144",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "wire",
+      "a": "XH:6",
+      "b": "HEAD_LOOP",
+      "tag": "G145",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "contact",
+      "a": "F_CONTROL:1",
+      "b": "F_CONTROL:2",
+      "tag": "F_CONTROL",
+      "control": "f_control",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "Fuse continuity",
+      "device": "",
+      "closed_condition": "f_control = true"
+    },
+    {
+      "kind": "contact",
+      "a": "F_VALVE:1",
+      "b": "F_VALVE:2",
+      "tag": "F_VALVE",
+      "control": "f_valve",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "Fuse continuity",
+      "device": "",
+      "closed_condition": "f_valve = true"
+    },
+    {
+      "kind": "contact",
+      "a": "MODE_R:13",
+      "b": "MODE_R:14",
+      "tag": "MODE_R:13-14",
+      "control": "router",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "MODE / Schneider XB5AD33, router block",
+      "closed_condition": "router = true"
+    },
+    {
+      "kind": "contact",
+      "a": "MODE_P:13",
+      "b": "MODE_P:14",
+      "tag": "MODE_P:13-14",
+      "control": "plasma",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "MODE / Schneider XB5AD33, plasma block",
+      "closed_condition": "plasma = true"
+    },
+    {
+      "kind": "contact",
+      "a": "KM_P:41",
+      "b": "KM_P:42",
+      "tag": "KM_P:41-42",
+      "control": "KM_P",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "",
+      "closed_condition": "KM_P = false"
+    },
+    {
+      "kind": "contact",
+      "a": "KM_R:41",
+      "b": "KM_R:42",
+      "tag": "KM_R:41-42",
+      "control": "KM_R",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "",
+      "closed_condition": "KM_R = false"
+    },
+    {
+      "kind": "contact",
+      "a": "XW:11",
+      "b": "XW:12",
+      "tag": "XW:11-12",
+      "control": "empty",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "External closure; device form unspecified",
+      "device": "",
+      "closed_condition": "empty = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XW:13",
+      "b": "XW:14",
+      "tag": "XW:13-14",
+      "control": "minimum",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "External closure; device form unspecified",
+      "device": "",
+      "closed_condition": "minimum = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XW:17",
+      "b": "XW:18",
+      "tag": "XW:17-18",
+      "control": "high_high_healthy",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "External closure; device form unspecified",
+      "device": "",
+      "closed_condition": "high_high_healthy = true"
+    },
+    {
+      "kind": "contact",
+      "a": "KM_R:11",
+      "b": "KM_R:14",
+      "tag": "KM_R:11-14",
+      "control": "KM_R",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "KM_R = true"
+    },
+    {
+      "kind": "contact",
+      "a": "AUTO_DRAIN:13",
+      "b": "AUTO_DRAIN:14",
+      "tag": "AUTO_DRAIN:13-14",
+      "control": "drain_override",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Schneider XB5AD25",
+      "closed_condition": "drain_override = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_DRAIN:11",
+      "b": "K_DRAIN:14",
+      "tag": "K_DRAIN:11-14",
+      "control": "K_DRAIN",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "K_DRAIN = true"
+    },
+    {
+      "kind": "contact",
+      "a": "KM_P:11",
+      "b": "KM_P:14",
+      "tag": "KM_P:11-14",
+      "control": "KM_P",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "KM_P = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_DRAIN:21",
+      "b": "K_DRAIN:22",
+      "tag": "K_DRAIN:21-22",
+      "control": "K_DRAIN",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "",
+      "closed_condition": "K_DRAIN = false"
+    },
+    {
+      "kind": "contact",
+      "a": "KM_P:21",
+      "b": "KM_P:24",
+      "tag": "KM_P:21-24",
+      "control": "KM_P",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "KM_P = true"
+    },
+    {
+      "kind": "contact",
+      "a": "BED_P:13",
+      "b": "BED_P:14",
+      "tag": "BED_P:13-14",
+      "control": "bed_clear",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "BED_CONFIRM / Schneider XB5AG03, plasma block",
+      "closed_condition": "bed_clear = true"
+    },
+    {
+      "kind": "contact",
+      "a": "T_CLOSE:15",
+      "b": "T_CLOSE:18",
+      "tag": "T_CLOSE:15-18",
+      "control": "T_CLOSE",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "T_CLOSE = true"
+    },
+    {
+      "kind": "contact",
+      "a": "SETUP_RUN:21",
+      "b": "SETUP_RUN:22",
+      "tag": "SETUP_RUN:21-22",
+      "control": "setup",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Schneider XB5AD25",
+      "closed_condition": "setup = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XW:19",
+      "b": "XW:20",
+      "tag": "XW:19-20",
+      "control": "reservoir_healthy",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "External closure; device form unspecified",
+      "device": "",
+      "closed_condition": "reservoir_healthy = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XW:15",
+      "b": "XW:16",
+      "tag": "XW:15-16",
+      "control": "fill_stop_healthy",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "External closure; device form unspecified",
+      "device": "",
+      "closed_condition": "fill_stop_healthy = true"
+    },
+    {
+      "kind": "contact",
+      "a": "FILL:21",
+      "b": "FILL:22",
+      "tag": "FILL:21-22",
+      "control": "fill_pressed",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Schneider XB5AA35",
+      "closed_condition": "fill_pressed = false"
+    },
+    {
+      "kind": "contact",
+      "a": "K_ARM:11",
+      "b": "K_ARM:14",
+      "tag": "K_ARM:11-14",
+      "control": "K_ARM",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "K_ARM = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_ARM:21",
+      "b": "K_ARM:24",
+      "tag": "K_ARM:21-24",
+      "control": "K_ARM",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "K_ARM = true"
+    },
+    {
+      "kind": "contact",
+      "a": "FILL:13",
+      "b": "FILL:14",
+      "tag": "FILL:13-14",
+      "control": "fill_pressed",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Schneider XB5AA35",
+      "closed_condition": "fill_pressed = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_FILL:11",
+      "b": "K_FILL:14",
+      "tag": "K_FILL:11-14",
+      "control": "K_FILL",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "K_FILL = true"
+    },
+    {
+      "kind": "contact",
+      "a": "KM_R:21",
+      "b": "KM_R:24",
+      "tag": "KM_R:21-24",
+      "control": "KM_R",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "KM_R = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_EMPTY:21",
+      "b": "K_EMPTY:24",
+      "tag": "K_EMPTY:21-24",
+      "control": "K_EMPTY",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "K_EMPTY = true"
+    },
+    {
+      "kind": "contact",
+      "a": "BED_R:13",
+      "b": "BED_R:14",
+      "tag": "BED_R:13-14",
+      "control": "bed_locked",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "BED_CONFIRM / Schneider XB5AG03, router block",
+      "closed_condition": "bed_locked = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_EMPTY:11",
+      "b": "K_EMPTY:14",
+      "tag": "K_EMPTY:11-14",
+      "control": "K_EMPTY",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "K_EMPTY = true"
+    },
+    {
+      "kind": "contact",
+      "a": "T_DRAIN:15",
+      "b": "T_DRAIN:18",
+      "tag": "T_DRAIN:15-18",
+      "control": "T_DRAIN",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "T_DRAIN = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_MIN:11",
+      "b": "K_MIN:14",
+      "tag": "K_MIN:11-14",
+      "control": "K_MIN",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "K_MIN = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_FILL:21",
+      "b": "K_FILL:22",
+      "tag": "K_FILL:21-22",
+      "control": "K_FILL",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "",
+      "closed_condition": "K_FILL = false"
+    },
+    {
+      "kind": "contact",
+      "a": "SETUP_RUN:13",
+      "b": "SETUP_RUN:14",
+      "tag": "SETUP_RUN:13-14",
+      "control": "setup",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Schneider XB5AD25",
+      "closed_condition": "setup = false"
+    },
+    {
+      "kind": "contact",
+      "a": "AUTO_DRAIN:21",
+      "b": "AUTO_DRAIN:22",
+      "tag": "AUTO_DRAIN:21-22",
+      "control": "drain_override",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Schneider XB5AD25",
+      "closed_condition": "drain_override = false"
+    },
+    {
+      "kind": "contact",
+      "a": "XH:3",
+      "b": "XH:4",
+      "tag": "XH:3-4",
+      "control": "door_closed",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "External closure; device form unspecified",
+      "device": "",
+      "closed_condition": "door_closed = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XH:5",
+      "b": "XH:6",
+      "tag": "XH:5-6",
+      "control": "breakaway_seated",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "Normally-off PhotoMOS",
+      "device": "U_HEAD / Panasonic AQY212GS output; head-interface.json",
+      "closed_condition": "breakaway_seated = true"
+    },
+    {
+      "kind": "contact",
+      "a": "KM_R:31",
+      "b": "KM_R:34",
+      "tag": "KM_R:31-34",
+      "control": "KM_R",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "KM_R = true"
+    },
+    {
+      "kind": "contact",
+      "a": "KM_P:31",
+      "b": "KM_P:34",
+      "tag": "KM_P:31-34",
+      "control": "KM_P",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "",
+      "closed_condition": "KM_P = true"
+    },
+    {
+      "kind": "contact",
+      "a": "F_SAFETY:1",
+      "b": "F_SAFETY:2",
+      "tag": "F_SAFETY",
+      "control": "f_safety",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "Fuse continuity",
+      "device": "Safety-circuit fuse",
+      "closed_condition": "f_safety = true"
+    },
+    {
+      "kind": "contact",
+      "a": "SR:S11",
+      "b": "XH:7",
+      "tag": "ESTOP:11-12",
+      "control": "estop_ch1",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "E-STOP pushbutton on the door, latching, turn to release; channel 1 contact block",
+      "closed_condition": "estop_ch1 = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XH:7",
+      "b": "XH:8",
+      "tag": "ESTOP2:11-12",
+      "control": "estop2_ch1",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Second E-STOP at the loading end of the frame, latching; channel 1 contact block (M20)",
+      "closed_condition": "estop2_ch1 = true"
+    },
+    {
+      "kind": "contact",
+      "a": "SR:S21",
+      "b": "XH:9",
+      "tag": "ESTOP:21-22",
+      "control": "estop_ch2",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "E-STOP pushbutton on the door, same actuator; channel 2 contact block",
+      "closed_condition": "estop_ch2 = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XH:9",
+      "b": "XH:10",
+      "tag": "ESTOP2:21-22",
+      "control": "estop2_ch2",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Second E-STOP, same actuator; channel 2 contact block (M20)",
+      "closed_condition": "estop2_ch2 = true"
+    },
+    {
+      "kind": "contact",
+      "a": "SR:S33",
+      "b": "RST_1",
+      "tag": "RESET:13-14",
+      "control": "reset_pressed",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "RESET pushbutton, blue, momentary",
+      "closed_condition": "reset_pressed = true"
+    },
+    {
+      "kind": "contact",
+      "a": "RST_1",
+      "b": "RST_2",
+      "tag": "K1:21-22",
+      "control": "K1",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC mirror contact (IEC 60947-4-1 Annex F)",
+      "device": "Schneider TeSys LC1D18BD (24 V DC coil), 3 NO main poles + 1 NO/1 NC auxiliary; NC is a mirror contact",
+      "closed_condition": "K1 = false"
+    },
+    {
+      "kind": "contact",
+      "a": "RST_2",
+      "b": "SR:S34",
+      "tag": "K2:21-22",
+      "control": "K2",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC mirror contact (IEC 60947-4-1 Annex F)",
+      "device": "Schneider TeSys LC1D18BD (24 V DC coil), 3 NO main poles + 1 NO/1 NC auxiliary; NC is a mirror contact",
+      "closed_condition": "K2 = false"
+    },
+    {
+      "kind": "contact",
+      "a": "SR:13",
+      "b": "SR:14",
+      "tag": "SR:13-14",
+      "control": "SR_OUT",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "Safety NO",
+      "device": "Dual-channel E-stop safety relay, 24 V, 3 NO safety + 1 NC auxiliary, manual reset, external contactor feedback loop. Candidate: Pilz PNOZ X2.8P 24VACDC 3n/o 1n/c (777301)",
+      "closed_condition": "SR_OUT = true"
+    },
+    {
+      "kind": "contact",
+      "a": "SR:23",
+      "b": "SR:24",
+      "tag": "SR:23-24",
+      "control": "SR_OUT",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "Safety NO",
+      "device": "Dual-channel E-stop safety relay, 24 V, 3 NO safety + 1 NC auxiliary, manual reset, external contactor feedback loop. Candidate: Pilz PNOZ X2.8P 24VACDC 3n/o 1n/c (777301)",
+      "closed_condition": "SR_OUT = true"
+    },
+    {
+      "kind": "contact",
+      "a": "SR:33",
+      "b": "SR:34",
+      "tag": "SR:33-34",
+      "control": "SR_OUT",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "Safety NO",
+      "device": "Dual-channel E-stop safety relay, 24 V, 3 NO safety + 1 NC auxiliary, manual reset, external contactor feedback loop. Candidate: Pilz PNOZ X2.8P 24VACDC 3n/o 1n/c (777301)",
+      "closed_condition": "SR_OUT = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K1:13",
+      "b": "K1:14",
+      "tag": "K1:13-14",
+      "control": "K1",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Schneider TeSys LC1D18BD (24 V DC coil), 3 NO main poles + 1 NO/1 NC auxiliary; NC is a mirror contact",
+      "closed_condition": "K1 = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K2:13",
+      "b": "K2:14",
+      "tag": "K2:13-14",
+      "control": "K2",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Schneider TeSys LC1D18BD (24 V DC coil), 3 NO main poles + 1 NO/1 NC auxiliary; NC is a mirror contact",
+      "closed_condition": "K2 = true"
+    },
+    {
+      "kind": "contact",
+      "a": "T_BRAKE:15",
+      "b": "T_BRAKE:18",
+      "tag": "T_BRAKE:15-18",
+      "control": "T_BRAKE",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 80.01.0.240.0000, function AI (on-delay), set 3 s (as Rev I timers)",
+      "closed_condition": "T_BRAKE = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_PERMIT:41",
+      "b": "K_PERMIT:42",
+      "tag": "K_PERMIT:41-42",
+      "control": "K_PERMIT",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Omron G7SA-3A1B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_PERMIT = false"
+    },
+    {
+      "kind": "contact",
+      "a": "K_READY:33",
+      "b": "K_READY:34",
+      "tag": "K_READY:33-34",
+      "control": "K_READY",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-3A1B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_READY = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_READY:23",
+      "b": "K_READY:24",
+      "tag": "K_READY:23-24",
+      "control": "K_READY",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-3A1B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_READY = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_RUN_ARM:61",
+      "b": "K_RUN_ARM:62",
+      "tag": "K_RUN_ARM:61-62",
+      "control": "K_RUN_ARM",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Omron G7SA-5A1B 24 VDC + P7SA-14F socket",
+      "closed_condition": "K_RUN_ARM = false"
+    },
+    {
+      "kind": "contact",
+      "a": "K_PERMIT:13",
+      "b": "K_PERMIT:14",
+      "tag": "K_PERMIT:13-14",
+      "control": "K_PERMIT",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-3A1B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_PERMIT = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_PERMIT:23",
+      "b": "K_PERMIT:24",
+      "tag": "K_PERMIT:23-24",
+      "control": "K_PERMIT",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-3A1B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_PERMIT = true"
+    },
+    {
+      "kind": "contact",
+      "a": "SETUP_RUN_B:13",
+      "b": "SETUP_RUN_B:14",
+      "tag": "SETUP_RUN_B:13-14",
+      "control": "setup",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Schneider ZBE101 NO block added to the SETUP/RUN selector (closes in RUN)",
+      "closed_condition": "setup = false"
+    },
+    {
+      "kind": "contact",
+      "a": "K_REQ_A:31",
+      "b": "K_REQ_A:32",
+      "tag": "K_REQ_A:31-32",
+      "control": "K_REQ_A",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_REQ_A = false"
+    },
+    {
+      "kind": "contact",
+      "a": "K_REQ_B:31",
+      "b": "K_REQ_B:32",
+      "tag": "K_REQ_B:31-32",
+      "control": "K_REQ_B",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_REQ_B = false"
+    },
+    {
+      "kind": "contact",
+      "a": "K_VFD_RUN:31",
+      "b": "K_VFD_RUN:32",
+      "tag": "K_VFD_RUN:31-32",
+      "control": "K_VFD_RUN",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_VFD_RUN = false"
+    },
+    {
+      "kind": "contact",
+      "a": "K_TORCH_RUN:31",
+      "b": "K_TORCH_RUN:32",
+      "tag": "K_TORCH_RUN:31-32",
+      "control": "K_TORCH_RUN",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_TORCH_RUN = false"
+    },
+    {
+      "kind": "contact",
+      "a": "K_RUN_ARM:13",
+      "b": "K_RUN_ARM:14",
+      "tag": "K_RUN_ARM:13-14",
+      "control": "K_RUN_ARM",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-5A1B 24 VDC + P7SA-14F socket",
+      "closed_condition": "K_RUN_ARM = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_RUN_ARM:23",
+      "b": "K_RUN_ARM:24",
+      "tag": "K_RUN_ARM:23-24",
+      "control": "K_RUN_ARM",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-5A1B 24 VDC + P7SA-14F socket",
+      "closed_condition": "K_RUN_ARM = true"
+    },
+    {
+      "kind": "contact",
+      "a": "IF_RUN:13",
+      "b": "IF_RUN:14",
+      "tag": "IF_RUN:13-14",
+      "control": "run_request",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "Normally-off PhotoMOS",
+      "device": "U_RUN Panasonic AQY212GS output (Rev I run interface), driven from Rodent GPIO25 / Sp-Enable",
+      "closed_condition": "run_request = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_REQ_A:13",
+      "b": "K_REQ_A:14",
+      "tag": "K_REQ_A:13-14",
+      "control": "K_REQ_A",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_REQ_A = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_RDY_R:11",
+      "b": "K_RDY_R:14",
+      "tag": "K_RDY_R:11-14",
+      "control": "K_RDY_R",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I)",
+      "closed_condition": "K_RDY_R = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_RDY_P:11",
+      "b": "K_RDY_P:14",
+      "tag": "K_RDY_P:11-14",
+      "control": "K_RDY_P",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I)",
+      "closed_condition": "K_RDY_P = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XVFD:DIR",
+      "b": "XVFD:F1",
+      "tag": "K_VFD_RUN:13-14",
+      "control": "K_VFD_RUN",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_VFD_RUN = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XVFD:DIR",
+      "b": "XVFD:FWD",
+      "tag": "K_DIR:31-32",
+      "control": "K_DIR",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_DIR = false"
+    },
+    {
+      "kind": "contact",
+      "a": "XVFD:DIR",
+      "b": "XVFD:REV",
+      "tag": "K_DIR:13-14",
+      "control": "K_DIR",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_DIR = true"
+    },
+    {
+      "kind": "contact",
+      "a": "VMOS_HE1:D",
+      "b": "VMOS_HE1:S",
+      "tag": "VMOS_HE1:D-S",
+      "control": "spindle_reverse",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "MOSFET output (low side in the real wiring)",
+      "device": "BTT Rodent V-MOS HE1, GPIO2 = grblHAL spindle direction, fed from the 48-to-24 V DC-DC after K1/K2",
+      "closed_condition": "spindle_reverse = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XVFD:F1",
+      "b": "XVFD:F2",
+      "tag": "K_RUN_ARM:33-34",
+      "control": "K_RUN_ARM",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-5A1B 24 VDC + P7SA-14F socket",
+      "closed_condition": "K_RUN_ARM = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XVFD:F2",
+      "b": "XVFD:COM",
+      "tag": "K_REQ_B:13-14",
+      "control": "K_REQ_B",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_REQ_B = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XPLASMA:START1",
+      "b": "XPLASMA:S1",
+      "tag": "K_TORCH_RUN:13-14",
+      "control": "K_TORCH_RUN",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_TORCH_RUN = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XPLASMA:S1",
+      "b": "XPLASMA:S2",
+      "tag": "K_RUN_ARM:43-44",
+      "control": "K_RUN_ARM",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-5A1B 24 VDC + P7SA-14F socket",
+      "closed_condition": "K_RUN_ARM = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XPLASMA:S2",
+      "b": "XPLASMA:START2",
+      "tag": "K_REQ_B:23-24",
+      "control": "K_REQ_B",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_REQ_B = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XR:E1_SIG",
+      "b": "XR:E1_GND",
+      "tag": "K_REQ_A:41-42",
+      "control": "K_REQ_A",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_REQ_A = false"
+    },
+    {
+      "kind": "contact",
+      "a": "XR:E1_SIG",
+      "b": "XR:E1_GND",
+      "tag": "K_RUN_ARM:53-54",
+      "control": "K_RUN_ARM",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-5A1B 24 VDC + P7SA-14F socket",
+      "closed_condition": "K_RUN_ARM = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XM:1",
+      "b": "XM:COM",
+      "tag": "K_READY:13-14",
+      "control": "K_READY",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-3A1B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_READY = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XM:2",
+      "b": "XM:COM",
+      "tag": "K_PERMIT:33-34",
+      "control": "K_PERMIT",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-3A1B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_PERMIT = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XM:3",
+      "b": "XM:COM",
+      "tag": "K_RDY_R:21-24",
+      "control": "K_RDY_R",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I)",
+      "closed_condition": "K_RDY_R = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XM:4",
+      "b": "XM:COM",
+      "tag": "K_RDY_P:21-24",
+      "control": "K_RDY_P",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I)",
+      "closed_condition": "K_RDY_P = true"
+    },
+    {
+      "kind": "contact",
+      "a": "XM:8",
+      "b": "XM:COM",
+      "tag": "K_DIR:23-24",
+      "control": "K_DIR",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_DIR = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_READY:41",
+      "b": "K_READY:42",
+      "tag": "K_READY:41-42",
+      "control": "K_READY",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Omron G7SA-3A1B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_READY = false"
+    },
+    {
+      "kind": "contact",
+      "a": "K_DRAINED:11",
+      "b": "K_DRAINED:12",
+      "tag": "K_DRAINED:11-12",
+      "control": "K_DRAINED",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I water relays)",
+      "closed_condition": "K_DRAINED = false"
+    },
+    {
+      "kind": "contact",
+      "a": "K_DRAINED:11",
+      "b": "K_DRAINED:14",
+      "tag": "K_DRAINED:11-14",
+      "control": "K_DRAINED",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I water relays)",
+      "closed_condition": "K_DRAINED = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_EMPTY_B:11",
+      "b": "K_EMPTY_B:14",
+      "tag": "K_EMPTY_B:11-14",
+      "control": "K_EMPTY_B",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket, coil in parallel with K_EMPTY",
+      "closed_condition": "K_EMPTY_B = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_DRAINED:21",
+      "b": "K_DRAINED:24",
+      "tag": "K_DRAINED:21-24",
+      "control": "K_DRAINED",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket (as Rev I water relays)",
+      "closed_condition": "K_DRAINED = true"
+    },
+    {
+      "kind": "contact",
+      "a": "T_FILL:15",
+      "b": "T_FILL:16",
+      "tag": "T_FILL:15-16",
+      "control": "T_FILL",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Finder 80.01.0.240.0000, function AI (on-delay), 25 min until the fill is timed",
+      "closed_condition": "T_FILL = false"
+    },
+    {
+      "kind": "contact",
+      "a": "BRK_PWR",
+      "b": "DOCK_1",
+      "tag": "F_DOCK",
+      "control": "f_dock",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "Fuse continuity",
+      "device": "Dock motor fuse, 2 A time-delay",
+      "closed_condition": "f_dock = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_VFD_RUN:41",
+      "b": "K_VFD_RUN:42",
+      "tag": "K_VFD_RUN:41-42",
+      "control": "K_VFD_RUN",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Omron G7SA-2A2B 24 VDC + P7SA-10F socket",
+      "closed_condition": "K_VFD_RUN = false"
+    },
+    {
+      "kind": "contact",
+      "a": "LS_ZTOP:13",
+      "b": "LS_ZTOP:14",
+      "tag": "LS_ZTOP:13-14",
+      "control": "z_at_top",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Z top limit switch, second contact (NO): closed only with the Z carriage at its top. The first contact is the Rodent Z limit",
+      "closed_condition": "z_at_top = true"
+    },
+    {
+      "kind": "contact",
+      "a": "IF_DOCK_RUN:1",
+      "b": "IF_DOCK_RUN:2",
+      "tag": "IF_DOCK_RUN:1-2",
+      "control": "dock_run_cmd",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "Open-collector sink",
+      "device": "Interface board ULN2803A channel, driven by MCP23017 GPB0",
+      "closed_condition": "dock_run_cmd = true"
+    },
+    {
+      "kind": "contact",
+      "a": "IF_DOCK_DIR:1",
+      "b": "IF_DOCK_DIR:2",
+      "tag": "IF_DOCK_DIR:1-2",
+      "control": "dock_in_dir",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "Open-collector sink",
+      "device": "Interface board ULN2803A channel, driven by MCP23017 GPB1 (on = toward parked)",
+      "closed_condition": "dock_in_dir = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_DOCK_RUN:11",
+      "b": "K_DOCK_RUN:14",
+      "tag": "K_DOCK_RUN:11-14",
+      "control": "K_DOCK_RUN",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket: pole 1 switches the dock motor +24 V, pole 2 its 0 V",
+      "closed_condition": "K_DOCK_RUN = true"
+    },
+    {
+      "kind": "contact",
+      "a": "K_DOCK_DIR:11",
+      "b": "K_DOCK_DIR:12",
+      "tag": "K_DOCK_DIR:11-12",
+      "control": "K_DOCK_DIR",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket: both poles reverse the dock motor polarity",
+      "closed_condition": "K_DOCK_DIR = false"
+    },
+    {
+      "kind": "contact",
+      "a": "K_DOCK_DIR:11",
+      "b": "K_DOCK_DIR:14",
+      "tag": "K_DOCK_DIR:11-14",
+      "control": "K_DOCK_DIR",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket: both poles reverse the dock motor polarity",
+      "closed_condition": "K_DOCK_DIR = true"
+    },
+    {
+      "kind": "contact",
+      "a": "LS_OUT:11",
+      "b": "LS_OUT:12",
+      "tag": "LS_OUT:11-12",
+      "control": "dock_at_deployed",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "End microswitch at the deployed stop; opens when the drive tab reaches it (with a diode for backing off)",
+      "closed_condition": "dock_at_deployed = false"
+    },
+    {
+      "kind": "contact",
+      "a": "LS_IN:11",
+      "b": "LS_IN:12",
+      "tag": "LS_IN:11-12",
+      "control": "dock_at_parked",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "End microswitch at the parked stop; opens when the drive tab reaches it (with a diode for backing off)",
+      "closed_condition": "dock_at_parked = false"
+    },
+    {
+      "kind": "contact",
+      "a": "SR:41",
+      "b": "SR:42",
+      "tag": "SR:41-42",
+      "control": "SR_OUT",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC auxiliary (signalling)",
+      "device": "Dual-channel E-stop safety relay, 24 V, 3 NO safety + 1 NC auxiliary, manual reset, external contactor feedback loop. Candidate: Pilz PNOZ X2.8P 24VACDC 3n/o 1n/c (777301)",
+      "closed_condition": "SR_OUT = false"
+    },
+    {
+      "kind": "contact",
+      "a": "F_LIGHT:1",
+      "b": "F_LIGHT:2",
+      "tag": "F_LIGHT",
+      "control": "f_light",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "Fuse continuity",
+      "device": "Work light fuse, 2 A",
+      "closed_condition": "f_light = true"
+    },
+    {
+      "kind": "contact",
+      "a": "SW_LIGHT:13",
+      "b": "SW_LIGHT:14",
+      "tag": "SW_LIGHT:13-14",
+      "control": "light_on",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO",
+      "device": "LIGHT selector on the door, 2 positions, one NO block",
+      "closed_condition": "light_on = true"
+    },
+    {
+      "kind": "contact",
+      "a": "HEAD_LOOP",
+      "b": "HEAD_SAFE",
+      "tag": "K_SETTER:11-12",
+      "control": "K_SETTER",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Finder 40.52.9.024.0000 + 95.05 socket: NC 11-12 bridges the tool-setter loop outside router mode",
+      "closed_condition": "K_SETTER = false"
+    },
+    {
+      "kind": "contact",
+      "a": "HEAD_LOOP",
+      "b": "HEAD_SAFE",
+      "tag": "TOOL_SETTER:1-2",
+      "control": "setter_pressed",
+      "closed_when_control_false": true,
+      "directed": false,
+      "physical_form": "NC",
+      "device": "Tool setter on the dock, NC button contact through XD:7-8 (open when pressed, or with the dock unplugged)",
+      "closed_condition": "setter_pressed = false"
+    },
+    {
+      "kind": "diode",
+      "a": "DO_REQ",
+      "b": "DRAIN_COIL",
+      "tag": "D_O",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": true,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "diode",
+      "a": "RR",
+      "b": "J",
+      "tag": "D_R_READY",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": true,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "diode",
+      "a": "PR",
+      "b": "J",
+      "tag": "D_P_READY",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": true,
+      "physical_form": "",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "diode",
+      "a": "K_DRAINED:12",
+      "b": "DRAIN_COIL",
+      "tag": "D_R2",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": true,
+      "physical_form": "1N4007 in the terminal row",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "diode",
+      "a": "T_DRAIN:18",
+      "b": "RR",
+      "tag": "D_TD",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": true,
+      "physical_form": "1N4007 in the terminal row",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "diode",
+      "a": "T_DRAIN:18",
+      "b": "DRN_COIL",
+      "tag": "D_SET",
+      "control": "",
+      "closed_when_control_false": false,
+      "directed": true,
+      "physical_form": "1N4007 in the terminal row",
+      "device": "",
+      "closed_condition": ""
+    },
+    {
+      "kind": "power contact",
+      "a": "PSU48:+",
+      "b": "RODENT:VCC_K1",
+      "tag": "K1:1-2",
+      "control": "K1",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO main pole",
+      "device": "Schneider TeSys LC1D18BD (24 V DC coil), 3 NO main poles + 1 NO/1 NC auxiliary; NC is a mirror contact; 48 V to Rodent VCC",
+      "closed_condition": "K1 = true"
+    },
+    {
+      "kind": "power contact",
+      "a": "RODENT:VCC_K1",
+      "b": "RODENT:VCC",
+      "tag": "K2:1-2",
+      "control": "K2",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO main pole",
+      "device": "Schneider TeSys LC1D18BD (24 V DC coil), 3 NO main poles + 1 NO/1 NC auxiliary; NC is a mirror contact; 48 V to Rodent VCC",
+      "closed_condition": "K2 = true"
+    },
+    {
+      "kind": "power contact",
+      "a": "MAINS:L_VFD",
+      "b": "VFD:L_K1",
+      "tag": "K1:3-4",
+      "control": "K1",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO main pole",
+      "device": "Schneider TeSys LC1D18BD (24 V DC coil), 3 NO main poles + 1 NO/1 NC auxiliary; NC is a mirror contact; VFD mains L",
+      "closed_condition": "K1 = true"
+    },
+    {
+      "kind": "power contact",
+      "a": "VFD:L_K1",
+      "b": "VFD:L",
+      "tag": "K2:3-4",
+      "control": "K2",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO main pole",
+      "device": "Schneider TeSys LC1D18BD (24 V DC coil), 3 NO main poles + 1 NO/1 NC auxiliary; NC is a mirror contact; VFD mains L",
+      "closed_condition": "K2 = true"
+    },
+    {
+      "kind": "power contact",
+      "a": "MAINS:L_PLASMA",
+      "b": "PLASMA:L_K1",
+      "tag": "K1:5-6",
+      "control": "K1",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO main pole",
+      "device": "Schneider TeSys LC1D18BD (24 V DC coil), 3 NO main poles + 1 NO/1 NC auxiliary; NC is a mirror contact; Plasma mains L",
+      "closed_condition": "K1 = true"
+    },
+    {
+      "kind": "power contact",
+      "a": "PLASMA:L_K1",
+      "b": "PLASMA:L",
+      "tag": "K2:5-6",
+      "control": "K2",
+      "closed_when_control_false": false,
+      "directed": false,
+      "physical_form": "NO main pole",
+      "device": "Schneider TeSys LC1D18BD (24 V DC coil), 3 NO main poles + 1 NO/1 NC auxiliary; NC is a mirror contact; Plasma mains L",
+      "closed_condition": "K2 = true"
+    }
+  ],
+  "loads": {
+    "KM_R": "KM_R:A1",
+    "KM_P": "KM_P:A1",
+    "K_EMPTY": "K_EMPTY:A1",
+    "K_MIN": "K_MIN:A1",
+    "K_DRAIN": "K_DRAIN:A1",
+    "T_CLOSE": "T_CLOSE:A1",
+    "K_ARM": "K_ARM:A1",
+    "K_FILL": "K_FILL:A1",
+    "T_DRAIN": "T_DRAIN:A1",
+    "K1": "K1:A1",
+    "K2": "K2:A1",
+    "T_BRAKE": "T_BRAKE:A1",
+    "Z_BRAKE": "Z_BRAKE:A1",
+    "K_READY": "K_READY:A1",
+    "K_PERMIT": "K_PERMIT:A1",
+    "K_RUN_ARM": "K_RUN_ARM:A1",
+    "K_REQ_A": "K_REQ_A:A1",
+    "K_REQ_B": "K_REQ_B:A1",
+    "K_RDY_R": "K_RDY_R:A1",
+    "K_RDY_P": "K_RDY_P:A1",
+    "K_VFD_RUN": "K_VFD_RUN:A1",
+    "K_TORCH_RUN": "K_TORCH_RUN:A1",
+    "K_DIR": "K_DIR:A1",
+    "K_EMPTY_B": "K_EMPTY_B:A1",
+    "K_DRAINED": "K_DRAINED:A1",
+    "T_FILL": "T_FILL:A1",
+    "K_DOCK_RUN": "K_DOCK_RUN:A1",
+    "K_DOCK_DIR": "K_DOCK_DIR:A1",
+    "M_DOCK_OUT": "M_DOCK_OUT:A1",
+    "M_DOCK_IN": "M_DOCK_IN:A1",
+    "H_STOP": "H_STOP:X1",
+    "H_READY": "H_READY:X1",
+    "H_ARMED": "H_ARMED:X1",
+    "LED_BAR": "LED_BAR:+",
+    "K_SETTER": "K_SETTER:A1"
+  },
+  "contact_semantics": "closed_when_control_false is the model inversion only; physical_form is the purchased contact form. A contact whose control is an operator input (setup, router, estop_ch1 ...) is a switch block, not a relay."
+}

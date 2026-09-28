@@ -1,0 +1,1013 @@
+{
+  "scope": "Check GM1 Rev L's rotary variant from fresh source CAD: the rotary on the front of the frame and a tube in its chuck.\n\nTube (module and dock out, plasma head on the Z): a \u00d860 x 1200 tube along Y at X575 from the chuck at the back (Y1383 in the\njaws) forward to Y183, torch axis on the tube at Y200, Y575 and Y1073.6 (the torch's Y range is 73.6..1073.6): the tip on the\ntube top (touch-off) may meet nothing but the tube, and 4 mm over it (cut height) nothing. At Z0 the torch beside the tube (X465 and X685, Y575: 110 mm off the axis, the head being 117 mm\nwide): clear. A \u00d8100 tube at the cut height:\nclear, and its touch-off within the Z stroke. A 1500 mm tube runs out of the front over the low front cross tubes: clear.\nPlasma: Rev L's nine corner poses and Rev K's three plasma poses with the rotary fitted, no tube: clear.\nRouter: the nine corner poses with the module in and the dock parked, plus the dock deployed at the rear stop, with the\nrotary fitted: clear. The chuck face stays at least 10 mm behind the bed module's rear edge (and 15 behind the BT30 dock's parked tray).\nHoist: Rev J's sampled module-and-sling path (70 mm up, then out of the front window) with the dock deployed and the rotary\nfitted at the back, at three hook heights: clear.\nHeights: the biggest tube's underside stays 50 mm over the slats and 60 mm over the pan walls.\nThis is a sampled static interference check, not a motion, cut or stiffness test.",
+  "revision": "GM1 Rev L working design, rotary variant",
+  "status": "PASS",
+  "rev_k_fixed_part_count": 935,
+  "checks": {
+    "\u00d860 tube: tip on the tube top at Y100, Y575 and Y1073.6 meets nothing else; 4 mm over it, clear": true,
+    "torch at Z0 110 mm either side of the tube (X465 and X685): clear of the tube, tip within the float on a slat": true,
+    "\u00d8100 tube at the cut height: clear, and its touch-off within the Z stroke": true,
+    "1500 mm tube out of the front over the low front cross tubes, torch at Y200: clear": true,
+    "plasma corners and Rev K poses with the rotary fitted, no tube: clear": true,
+    "router corners with the module in and the rotary fitted: clear; dock deployed at the rear stop: clear": true,
+    "chuck face at least 10 mm behind the bed module's rear edge and 15 mm behind the BT30 dock's parked tray (Y1365)": true,
+    "the shortest tube end the torch can reach is under 320 mm from the jaws": true,
+    "a \u00d8100 tube stays 50 mm over the slats and 60 mm over the pan walls": true,
+    "hoist path clear at every hook height with the dock deployed and the rotary fitted": true
+  },
+  "rotary": {
+    "status": "ROTARY AXIS FOR TUBE NOTCHING: WORKING CAD, ALLOCATIONS FOR THE UNIT AND THE WORKPIECE",
+    "mount": "on the rear upper cross tube; the bed module slides out of the front window, which stays clear",
+    "axis_xz_mm": [
+      575.0,
+      954.3
+    ],
+    "chuck_face_y_mm": 1380.0,
+    "plate_top_z_mm": 837.95,
+    "rail_y_mm": [
+      1399.2,
+      1639.2
+    ],
+    "shelf_x_mm": [
+      465.0,
+      685.0
+    ],
+    "torch_max_y_mm": 1073.6,
+    "shortest_reach_from_jaws_mm": 306.4,
+    "drive": "X driver through a plug swap; the tube turns on X commands, the torch runs along Y",
+    "bracket_part_count": 4,
+    "unit_part_count": 2
+  },
+  "torch_tip_at_z0_mm": 845.0,
+  "touch_z_lift_mm": {
+    "60.0": 139.3,
+    "100.0": 159.3
+  },
+  "tube_poses": [
+    {
+      "torch_y": 200.0,
+      "gantry_y": 401.4,
+      "head_x": 575.0,
+      "z_lift": 139.3,
+      "label": "tip on the tube top",
+      "tip_z_mm": 984.3,
+      "tube_top_z_mm": 984.3,
+      "tip_over_tube_mm": 0.0,
+      "parts": 1082,
+      "tube_contacts": [],
+      "slat_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "torch_y": 200.0,
+      "gantry_y": 401.4,
+      "head_x": 575.0,
+      "z_lift": 143.3,
+      "label": "cut height, 4 mm over the tube",
+      "tip_z_mm": 988.3,
+      "tube_top_z_mm": 984.3,
+      "tip_over_tube_mm": 4.0,
+      "parts": 1082,
+      "tube_contacts": [],
+      "slat_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "torch_y": 575.0,
+      "gantry_y": 776.4,
+      "head_x": 575.0,
+      "z_lift": 139.3,
+      "label": "tip on the tube top",
+      "tip_z_mm": 984.3,
+      "tube_top_z_mm": 984.3,
+      "tip_over_tube_mm": 0.0,
+      "parts": 1082,
+      "tube_contacts": [],
+      "slat_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "torch_y": 575.0,
+      "gantry_y": 776.4,
+      "head_x": 575.0,
+      "z_lift": 143.3,
+      "label": "cut height, 4 mm over the tube",
+      "tip_z_mm": 988.3,
+      "tube_top_z_mm": 984.3,
+      "tip_over_tube_mm": 4.0,
+      "parts": 1082,
+      "tube_contacts": [],
+      "slat_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "torch_y": 1073.6,
+      "gantry_y": 1275.0,
+      "head_x": 575.0,
+      "z_lift": 139.3,
+      "label": "tip on the tube top",
+      "tip_z_mm": 984.3,
+      "tube_top_z_mm": 984.3,
+      "tip_over_tube_mm": 0.0,
+      "parts": 1082,
+      "tube_contacts": [],
+      "slat_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "torch_y": 1073.6,
+      "gantry_y": 1275.0,
+      "head_x": 575.0,
+      "z_lift": 143.3,
+      "label": "cut height, 4 mm over the tube",
+      "tip_z_mm": 988.3,
+      "tube_top_z_mm": 984.3,
+      "tip_over_tube_mm": 4.0,
+      "parts": 1082,
+      "tube_contacts": [],
+      "slat_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    }
+  ],
+  "beside_tube_poses": [
+    {
+      "head_x": 465.0,
+      "gantry_y": 776.4,
+      "z_lift": 0.0,
+      "tip_z_mm": 845.0,
+      "parts": 1082,
+      "slat_contacts": [
+        {
+          "a": "WP_SLAT_08",
+          "b": "K_TORCH_PT31",
+          "intersection_mm3": 443.89844,
+          "slat": "WP_SLAT_08",
+          "tip_below_slat_top_mm": 5.0
+        }
+      ],
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "head_x": 685.0,
+      "gantry_y": 776.4,
+      "z_lift": 0.0,
+      "tip_z_mm": 845.0,
+      "parts": 1082,
+      "slat_contacts": [
+        {
+          "a": "WP_SLAT_08",
+          "b": "K_TORCH_PT31",
+          "intersection_mm3": 443.89844,
+          "slat": "WP_SLAT_08",
+          "tip_below_slat_top_mm": 5.0
+        }
+      ],
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    }
+  ],
+  "big_tube_pose": {
+    "tube_d": 100.0,
+    "z_lift": 163.3,
+    "tip_z_mm": 1008.3,
+    "tube_top_z_mm": 1004.3,
+    "tube_bottom_z_mm": 904.3,
+    "parts": 1082,
+    "unresolved": [],
+    "slat_contacts": [],
+    "invalid_local": [],
+    "passed": true
+  },
+  "long_tube_pose": {
+    "tube_length": 1500.0,
+    "tube_y_mm": [
+      -100.0,
+      1400.0
+    ],
+    "z_lift": 143.3,
+    "parts": 1082,
+    "unresolved": [],
+    "slat_contacts": [],
+    "invalid_local": [],
+    "passed": true
+  },
+  "plasma_poses": [
+    {
+      "gantry_y": 275.0,
+      "head_x": 175.0,
+      "z_lift": 0.0,
+      "label": "corner or centre",
+      "parts": 1081,
+      "tip_z_mm": 845.0,
+      "reach_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "rotary_parts_present": 6,
+      "passed": true
+    },
+    {
+      "gantry_y": 275.0,
+      "head_x": 175.0,
+      "z_lift": 300.0,
+      "label": "corner or centre",
+      "parts": 1081,
+      "tip_z_mm": 1145.0,
+      "reach_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "rotary_parts_present": 6,
+      "passed": true
+    },
+    {
+      "gantry_y": 275.0,
+      "head_x": 975.0,
+      "z_lift": 0.0,
+      "label": "corner or centre",
+      "parts": 1081,
+      "tip_z_mm": 845.0,
+      "reach_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "rotary_parts_present": 6,
+      "passed": true
+    },
+    {
+      "gantry_y": 275.0,
+      "head_x": 975.0,
+      "z_lift": 300.0,
+      "label": "corner or centre",
+      "parts": 1081,
+      "tip_z_mm": 1145.0,
+      "reach_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "rotary_parts_present": 6,
+      "passed": true
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 175.0,
+      "z_lift": 0.0,
+      "label": "corner or centre",
+      "parts": 1081,
+      "tip_z_mm": 845.0,
+      "reach_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "rotary_parts_present": 6,
+      "passed": true
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 175.0,
+      "z_lift": 300.0,
+      "label": "corner or centre",
+      "parts": 1081,
+      "tip_z_mm": 1145.0,
+      "reach_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "rotary_parts_present": 6,
+      "passed": true
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 975.0,
+      "z_lift": 0.0,
+      "label": "corner or centre",
+      "parts": 1081,
+      "tip_z_mm": 845.0,
+      "reach_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "rotary_parts_present": 6,
+      "passed": true
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 975.0,
+      "z_lift": 300.0,
+      "label": "corner or centre",
+      "parts": 1081,
+      "tip_z_mm": 1145.0,
+      "reach_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "rotary_parts_present": 6,
+      "passed": true
+    },
+    {
+      "gantry_y": 775.0,
+      "head_x": 575.0,
+      "z_lift": 150.0,
+      "label": "corner or centre",
+      "parts": 1081,
+      "tip_z_mm": 995.0,
+      "reach_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "rotary_parts_present": 6,
+      "passed": true
+    },
+    {
+      "gantry_y": 772.9,
+      "head_x": 575.0,
+      "z_lift": 0.0,
+      "label": "torch over slat 8, bottom of Z",
+      "parts": 1081,
+      "tip_z_mm": 845.0,
+      "reach_contacts": [
+        {
+          "a": "WP_SLAT_08",
+          "b": "K_TORCH_PT31",
+          "intersection_mm3": 456.41161,
+          "slat": "WP_SLAT_08",
+          "tip_below_slat_top_mm": 5.0
+        }
+      ],
+      "unresolved": [],
+      "invalid_local": [],
+      "rotary_parts_present": 6,
+      "passed": true
+    },
+    {
+      "gantry_y": 861.4,
+      "head_x": 955.0,
+      "z_lift": 0.0,
+      "label": "level-sensor band at the plasma limit X955, bottom of Z",
+      "parts": 1081,
+      "tip_z_mm": 845.0,
+      "reach_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "rotary_parts_present": 6,
+      "passed": true
+    },
+    {
+      "gantry_y": 861.4,
+      "head_x": 975.0,
+      "z_lift": 300.0,
+      "label": "level-sensor band at full X, top of Z",
+      "parts": 1081,
+      "tip_z_mm": 1145.0,
+      "reach_contacts": [],
+      "unresolved": [],
+      "invalid_local": [],
+      "rotary_parts_present": 6,
+      "passed": true
+    }
+  ],
+  "router_poses": [
+    {
+      "gantry_y": 275.0,
+      "head_x": 175.0,
+      "z_lift": 0.0,
+      "dock": "parked",
+      "parts": 1308,
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "gantry_y": 275.0,
+      "head_x": 175.0,
+      "z_lift": 300.0,
+      "dock": "parked",
+      "parts": 1308,
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "gantry_y": 275.0,
+      "head_x": 975.0,
+      "z_lift": 0.0,
+      "dock": "parked",
+      "parts": 1308,
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "gantry_y": 275.0,
+      "head_x": 975.0,
+      "z_lift": 300.0,
+      "dock": "parked",
+      "parts": 1308,
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 175.0,
+      "z_lift": 0.0,
+      "dock": "parked",
+      "parts": 1308,
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 175.0,
+      "z_lift": 300.0,
+      "dock": "parked",
+      "parts": 1308,
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 975.0,
+      "z_lift": 0.0,
+      "dock": "parked",
+      "parts": 1308,
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 975.0,
+      "z_lift": 300.0,
+      "dock": "parked",
+      "parts": 1308,
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "gantry_y": 775.0,
+      "head_x": 575.0,
+      "z_lift": 150.0,
+      "dock": "parked",
+      "parts": 1308,
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 575.0,
+      "z_lift": 300.0,
+      "dock": "deployed",
+      "parts": 1308,
+      "unresolved": [],
+      "invalid_local": [],
+      "passed": true
+    }
+  ],
+  "module_rear_y_mm": 1347.8,
+  "chuck_clearance_to_module_mm": 32.2,
+  "big_tube_over_slats_mm": 54.3,
+  "hoist_forward_mm": 1520.0,
+  "hoist_cases": [
+    {
+      "hook_rise_above_lug_holes_mm": 700.0,
+      "hook_point_installed_mm": [
+        581.0,
+        744.5,
+        1620.0
+      ],
+      "sling_leg_angle_from_horizontal_deg": [
+        40.6,
+        40.8,
+        44.1,
+        44.4
+      ],
+      "sling_leg_lengths_mm": [
+        1076.1,
+        1071.4,
+        1005.1,
+        1000.0
+      ],
+      "samples": 78,
+      "boolean_checks": 1557,
+      "failures": [],
+      "rigging_contacts_with_module": [],
+      "segments": [
+        {
+          "stage": "lift 70 mm in place",
+          "start_translation_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end_translation_mm": [
+            0.0,
+            0.0,
+            70.0
+          ],
+          "samples": 15,
+          "step_mm": 5,
+          "passed": true
+        },
+        {
+          "stage": "forward out of the front window",
+          "start_translation_mm": [
+            0.0,
+            0.0,
+            70.0
+          ],
+          "end_translation_mm": [
+            0.0,
+            -1520.0,
+            70.0
+          ],
+          "samples": 62,
+          "step_mm": 25,
+          "passed": true
+        }
+      ],
+      "nearest_fixed_parts": [
+        {
+          "pose": "installed, sling only (module seating contacts are intended)",
+          "nearest": []
+        },
+        {
+          "pose": "lifted 70 mm",
+          "nearest": [
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "MF_LEG_1_1",
+              "gap_mm": 11.2
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_MIN_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_FILL_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_HH_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_EMPTY_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_STRIP_1",
+              "kind": "module",
+              "obstacle": "Y_BLOCK_BOLT_L_1_1",
+              "gap_mm": 18.8
+            },
+            {
+              "moving": "MOD_STRIP_9",
+              "kind": "module",
+              "obstacle": "Y_BLOCK_BOLT_R_1_1",
+              "gap_mm": 18.8
+            },
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "SAND_BUNG_2",
+              "gap_mm": 21.6
+            },
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "SAND_PLUG_2",
+              "gap_mm": 22.6
+            },
+            {
+              "moving": "MOD_LUG_R_2",
+              "kind": "module",
+              "obstacle": "FB_REAR",
+              "gap_mm": 23.0
+            },
+            {
+              "moving": "MOD_XM_END_4_L",
+              "kind": "module",
+              "obstacle": "Y_SHOE_L",
+              "gap_mm": 23.15
+            },
+            {
+              "moving": "MOD_XM_END_4_R",
+              "kind": "module",
+              "obstacle": "Y_SHOE_R",
+              "gap_mm": 23.15
+            }
+          ]
+        }
+      ],
+      "module_sweep_envelope_mm": [
+        62.0,
+        -1512.0,
+        840.8,
+        1088.0,
+        1449.0,
+        1202.35
+      ],
+      "result": "PASS SAMPLED PATH"
+    },
+    {
+      "hook_rise_above_lug_holes_mm": 1000.0,
+      "hook_point_installed_mm": [
+        581.0,
+        744.5,
+        1920.0
+      ],
+      "sling_leg_angle_from_horizontal_deg": [
+        50.7,
+        51.0,
+        54.2,
+        54.5
+      ],
+      "sling_leg_lengths_mm": [
+        1291.5,
+        1287.6,
+        1233.0,
+        1228.8
+      ],
+      "samples": 78,
+      "boolean_checks": 1561,
+      "failures": [],
+      "rigging_contacts_with_module": [],
+      "segments": [
+        {
+          "stage": "lift 70 mm in place",
+          "start_translation_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end_translation_mm": [
+            0.0,
+            0.0,
+            70.0
+          ],
+          "samples": 15,
+          "step_mm": 5,
+          "passed": true
+        },
+        {
+          "stage": "forward out of the front window",
+          "start_translation_mm": [
+            0.0,
+            0.0,
+            70.0
+          ],
+          "end_translation_mm": [
+            0.0,
+            -1520.0,
+            70.0
+          ],
+          "samples": 62,
+          "step_mm": 25,
+          "passed": true
+        }
+      ],
+      "nearest_fixed_parts": [
+        {
+          "pose": "installed, sling only (module seating contacts are intended)",
+          "nearest": []
+        },
+        {
+          "pose": "lifted 70 mm",
+          "nearest": [
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "MF_LEG_1_1",
+              "gap_mm": 11.2
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_MIN_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_FILL_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_HH_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_EMPTY_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_STRIP_1",
+              "kind": "module",
+              "obstacle": "Y_BLOCK_BOLT_L_1_1",
+              "gap_mm": 18.8
+            },
+            {
+              "moving": "MOD_STRIP_9",
+              "kind": "module",
+              "obstacle": "Y_BLOCK_BOLT_R_1_1",
+              "gap_mm": 18.8
+            },
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "SAND_BUNG_2",
+              "gap_mm": 21.6
+            },
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "SAND_PLUG_2",
+              "gap_mm": 22.6
+            },
+            {
+              "moving": "MOD_LUG_R_2",
+              "kind": "module",
+              "obstacle": "FB_REAR",
+              "gap_mm": 23.0
+            },
+            {
+              "moving": "MOD_XM_END_4_L",
+              "kind": "module",
+              "obstacle": "Y_SHOE_L",
+              "gap_mm": 23.15
+            },
+            {
+              "moving": "MOD_XM_END_4_R",
+              "kind": "module",
+              "obstacle": "Y_SHOE_R",
+              "gap_mm": 23.15
+            }
+          ]
+        }
+      ],
+      "module_sweep_envelope_mm": [
+        62.0,
+        -1512.0,
+        840.8,
+        1088.0,
+        1449.0,
+        1202.35
+      ],
+      "result": "PASS SAMPLED PATH"
+    },
+    {
+      "hook_rise_above_lug_holes_mm": 2000.0,
+      "hook_point_installed_mm": [
+        581.0,
+        744.5,
+        2920.0
+      ],
+      "sling_leg_angle_from_horizontal_deg": [
+        67.8,
+        67.9,
+        70.2,
+        70.3
+      ],
+      "sling_leg_lengths_mm": [
+        2160.6,
+        2158.2,
+        2126.1,
+        2123.7
+      ],
+      "samples": 78,
+      "boolean_checks": 1561,
+      "failures": [],
+      "rigging_contacts_with_module": [],
+      "segments": [
+        {
+          "stage": "lift 70 mm in place",
+          "start_translation_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "end_translation_mm": [
+            0.0,
+            0.0,
+            70.0
+          ],
+          "samples": 15,
+          "step_mm": 5,
+          "passed": true
+        },
+        {
+          "stage": "forward out of the front window",
+          "start_translation_mm": [
+            0.0,
+            0.0,
+            70.0
+          ],
+          "end_translation_mm": [
+            0.0,
+            -1520.0,
+            70.0
+          ],
+          "samples": 62,
+          "step_mm": 25,
+          "passed": true
+        }
+      ],
+      "nearest_fixed_parts": [
+        {
+          "pose": "installed, sling only (module seating contacts are intended)",
+          "nearest": [
+            {
+              "moving": "SLING_LEG_3",
+              "kind": "rigging",
+              "obstacle": "X_RAIL_1",
+              "gap_mm": 22.27
+            },
+            {
+              "moving": "SLING_LEG_3",
+              "kind": "rigging",
+              "obstacle": "X_GUIDE_FACE",
+              "gap_mm": 35.75
+            }
+          ]
+        },
+        {
+          "pose": "lifted 70 mm",
+          "nearest": [
+            {
+              "moving": "SLING_LEG_3",
+              "kind": "rigging",
+              "obstacle": "X_RAIL_1",
+              "gap_mm": 2.83
+            },
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "MF_LEG_1_1",
+              "gap_mm": 11.2
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_MIN_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_FILL_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_HH_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "MOD_RAIL_R",
+              "kind": "module",
+              "obstacle": "FLOAT_PAN_EMPTY_BACKRAIL",
+              "gap_mm": 14.5
+            },
+            {
+              "moving": "SLING_LEG_3",
+              "kind": "rigging",
+              "obstacle": "X_GUIDE_FACE",
+              "gap_mm": 16.31
+            },
+            {
+              "moving": "MOD_STRIP_1",
+              "kind": "module",
+              "obstacle": "Y_BLOCK_BOLT_L_1_1",
+              "gap_mm": 18.8
+            },
+            {
+              "moving": "MOD_STRIP_9",
+              "kind": "module",
+              "obstacle": "Y_BLOCK_BOLT_R_1_1",
+              "gap_mm": 18.8
+            },
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "SAND_BUNG_2",
+              "gap_mm": 21.6
+            },
+            {
+              "moving": "MOD_RAIL_L",
+              "kind": "module",
+              "obstacle": "SAND_PLUG_2",
+              "gap_mm": 22.6
+            },
+            {
+              "moving": "MOD_LUG_R_2",
+              "kind": "module",
+              "obstacle": "FB_REAR",
+              "gap_mm": 23.0
+            }
+          ]
+        }
+      ],
+      "module_sweep_envelope_mm": [
+        62.0,
+        -1512.0,
+        840.8,
+        1088.0,
+        1449.0,
+        1202.35
+      ],
+      "result": "PASS SAMPLED PATH"
+    }
+  ],
+  "frame_fill_ports": 18,
+  "sources_unchanged_during_run": true,
+  "source_sha256": {
+    "RevL-ENGINEERING/atc_revl.py": "ebced7f5e17943b026c64b2ca30f840cb2352d7836350fb089967f3d2856fa64",
+    "RevL-ENGINEERING/ballast_revl.py": "4be3635e9b7ab6db627be95fc39a0fe95981b02aec1689bd2841fc120adb3f63",
+    "RevL-ENGINEERING/build_revl.py": "055b4e9077fd9ff31991c9dfccd20624e0ceb95bc5b162bfe9e810d92d44e729",
+    "RevL-ENGINEERING/render_revl.py": "f8b2c5ca519cc3f53e93a4880542ad09a5bd4d6e55031b471a2cc82a8373dd9d",
+    "RevL-ENGINEERING/verify_revl.py": "95846123ec7b2802e5b50964812638ed70177c9d3db5ddb3630c097a87b9c90d",
+    "RevL-ENGINEERING/z300.py": "22f87fdf57017f26482781cb01688efbaedce785177f42c6c75d864575498750",
+    "RevK-ENGINEERING/build_revk.py": "19f60c8ca4838097d1f63b994f3239648e61466adbd678d114f86124b5618be8",
+    "RevK-ENGINEERING/plasma_drop.py": "84141e2a156240a894fdb905547c2d50d82dc4efffb5c1af438eb631c6fbb053",
+    "RevK-ENGINEERING/render_revk.py": "16ee25663ae2c94d66a286030379a56c86b16f35a8221ec78c2bc87554dfc3ce",
+    "RevK-ENGINEERING/revk_cabinet.py": "cacccdf69f956d11d561bd924bd732e83c3d939510a68c1b091ab13e87f2ca08",
+    "RevK-ENGINEERING/revk_service.py": "b1140fd91c370a67fe6f61c5a4dae0858378c76177706573eb99adf14a8d5089",
+    "RevK-ENGINEERING/revk_water.py": "e62ffc4828c6b8a40fd2beb99fb35c15623eb6f2b6a3321eaf0ddeef625ddf3d",
+    "RevK-ENGINEERING/verify_revk.py": "894eed021eb7e040781502c45b019053605ddf43f486db10e1bd81eab3399175",
+    "RevE-ENGINEERING/bed_cassettes.py": "9f5f6c7c70e82bf55215064a0590ffffd53c707881e753250c69b8e6b8b170ee",
+    "RevE-ENGINEERING/bed_completion.py": "629bc43a9a7482074b2ce003024d2ff79542c9f8b860b07dbab13a40d8327406",
+    "RevE-ENGINEERING/bed_details.py": "e812e6c03fadce39ad8d515a767ed8bc1e6aa77ffd49a9256eec8452c6d98a67",
+    "RevE-ENGINEERING/bed_revj.py": "98931c99c5ee6e04dd86193fb51ae26eca994d50b174ee31fbecec73d4744ee5",
+    "RevE-ENGINEERING/build_reve_engineering.py": "344aa9500e0c4af87471443068dd045cd3d8d3e1942af5a9658b846e3119017b",
+    "RevE-ENGINEERING/build_revg.py": "33ed5e31cebd22e350c8a84fcec6ce95388fd642f8dbd647e718e626deb56649",
+    "RevE-ENGINEERING/build_revh.py": "581d610a32c4ac5b78bad176eeab241c50bc1e253c372ff348b39c6382524511",
+    "RevE-ENGINEERING/build_revi.py": "2756268a5dca6ce3588d4b2ac0ebde43c87390bed8d6caa21e706fc7f83af462",
+    "RevE-ENGINEERING/build_revj.py": "bcc085e1dae1a64cf182ba036a6ca3647cd23235dffeb821483c50021b910f93",
+    "RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "RevE-ENGINEERING/check_motion_states.py": "0371972e73381e14c18963eb22e5350dca16d75a2d5da910bfd0df353f542230",
+    "RevE-ENGINEERING/controls_packaging.py": "824af0dd00797b3d85a7de57721494e1e89339b26a50ef738fad8c7e0915d2d9",
+    "RevE-ENGINEERING/export_states.py": "87eed2ba14ec6579459189de12135dbcee6d08efff1a60478a3385eb9ec8dd39",
+    "RevE-ENGINEERING/frame_details.py": "345d25acde913a053b96942d9187245ba73f361f627f9ef1d96d1bdacfca3ac1",
+    "RevE-ENGINEERING/geometry_base.py": "4dac7408ed538253479f72f53ad79e4d0b26b67481a6e5864f2564733f072c90",
+    "RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "RevE-ENGINEERING/nest_flat_parts.py": "02e6c9901096eaef8443948a85a2c8be8ac25a69eba25636a5409221b24e3bd3",
+    "RevE-ENGINEERING/package_review.py": "7135d1caa8f1da8d29d44d7f6aaffdeedf20e6b652cf38efb32a00f72edffd51",
+    "RevE-ENGINEERING/plan_tube_cuts.py": "8d84ef77fc3d1ea0aca7076a49e8162f1f21c37c27768c48250ce5cfbbb522e6",
+    "RevE-ENGINEERING/reconcile_water_revision.py": "568cd50a7914bfdbdcfc8ba52dd60749ffb46abec40fd588eb7bf318fc623d54",
+    "RevE-ENGINEERING/render_reve.py": "0510615c17971ad25aedb9384f2a17f82315cb07655efaed2a8dfc6cdeaefb5a",
+    "RevE-ENGINEERING/render_revg.py": "750cedaca79868fe12caf9411cbcb1bf02efb6bd543e95ca34d8eb2fc058d813",
+    "RevE-ENGINEERING/render_revh.py": "89912fa0224330714f76c83ce2c5998217c889f1fcb462cd30edd415d3e5481d",
+    "RevE-ENGINEERING/render_revi.py": "991d641ba4baa19a0f5147b4d29aa9d300c163973c15cadbd62d6cbe2b5ebab5",
+    "RevE-ENGINEERING/render_revj.py": "8c379b534a0c6e625dcdd5ed76a2915cc13ab25bbaefbffffba028a32776b0dd",
+    "RevE-ENGINEERING/revj_handling_check.py": "b7f3b9982483a5f21a2c974a6d01abefef1ae6f8570c977e975ecb52fdaecfd7",
+    "RevE-ENGINEERING/sensor_mounts.py": "2d83a0fab9f9f390b624deadca4320aa644bf2b5289023c8765d7ba3ff0cad88",
+    "RevE-ENGINEERING/service_finish.py": "9738b260ce8f61c7ca45b46c212b1559057bdb1b1505885bcc0616045bc228e5",
+    "RevE-ENGINEERING/strength-screen.py": "cb24e4d138e87fc9d0e2c476436a6e1a60c874cdf66b365b105b20aed8a829cd",
+    "RevE-ENGINEERING/structure_finish.py": "b0e6e7f5fc7bd5d3b9e901bc13f7186f78395c78584ab3238ba249613bea9778",
+    "RevE-ENGINEERING/swap-path-checks.py": "49cd786fac1d9b247fb0e16f3505df2231bd72b367552fd8d1d72e73fc2b0918",
+    "RevE-ENGINEERING/sweep_checks.py": "f832030b3cde1cbbef46f317bc7db33b3a3ba98ded474a1ebbb61f989380dfd6",
+    "RevE-ENGINEERING/tool_parking.py": "982393e9f9c4e8b6c9e59970fca23dc28800748d30fbc587c635a01b2bf74a73",
+    "RevE-ENGINEERING/update_timer_selection.py": "47879e136bafb582867eb59e80e688149d546798badfa2e1fa60a037e9923e5a",
+    "RevE-ENGINEERING/verify_revg_motion.py": "83b82e184881b155b9933bd223cf5cff6179023a6b04d6e29fa16cf65750ebd4",
+    "RevE-ENGINEERING/verify_revg_panel_path.py": "19ccca9709d00f565d798b01e2d53c08f15c90e1e9fc95dacc119e8c42735147",
+    "RevE-ENGINEERING/verify_revj_motion.py": "4c8ad5ec131859ad2727934553f3261e751d604b30aaa7eba1da1a4381d2dbad",
+    "RevE-ENGINEERING/verify_revj_water.py": "16ecc9ca2b3cdc15d55ca4293c8c978afe52c50c8dd0149c13af84e5125e1bcd",
+    "RevE-ENGINEERING/verify_water_design.py": "86def12979e634d91cfd1a6ecb43d05627973fddafa0a19254a394486c01ec42",
+    "RevE-ENGINEERING/water_accessories.py": "88c3b4805d3d02f96b97da407ac0a2f78a7aa49f853ebd0c644e75cf7480157e",
+    "RevE-ENGINEERING/water_completion.py": "58af76d00ee819d4e38d5adf535faa363fe2ecae8f6aa24856b8a27660bd0d47",
+    "RevE-ENGINEERING/water_revj.py": "0a22d980b727d2ad286577db71968edaf8ecd24b19c8120a2159a2f22d537940",
+    "RevE-ENGINEERING/water_system.py": "492cefd7fa29841bccbc859db53c81e517817decea353f04dd9b2516fbdbf811",
+    "RevL-ROTARY-ENGINEERING/build_revl_rotary.py": "0506367759403de387602f42ed5adcfc4f7d692b5529e9ab69cc3f02f03ff0e7",
+    "RevL-ROTARY-ENGINEERING/render_revl_rotary.py": "da1b05cbfe14003a81e07fc6625dc6b049b6be1c3f605ec26738886660b1c53c",
+    "RevL-ROTARY-ENGINEERING/rotary_revl.py": "1412f278e6ffb0a21b311206ebf11f14c6014861d545abd4163356ac0828b391",
+    "RevL-ROTARY-ENGINEERING/verify_revl_rotary.py": "823ce7d1df9977ac627208f6bf71e13cae5e83c743f3c44c6f036ec911c901b1"
+  },
+  "elapsed_seconds": 1717.4
+}

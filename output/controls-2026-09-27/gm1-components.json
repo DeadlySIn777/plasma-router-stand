@@ -1,0 +1,286 @@
+{
+  "scope": "GM1 controls parts delta against Rev I's selected controls schedule (output/design-finish-2026-09-26/controls/selected-components.json). Unpriced; no order, quote or stock check. Check terminal marks, coil currents and minimum loads against each maker's datasheet at purchase. Updated later on 27 Sep 2026 for M9-M11, the cutter-side start relay and the Rev K cabinet parts, and again for M12-M13 (Rev L tool changer). M14 (the same evening) adds the Z top switch contact in the dock feed. M17-M20 (28 Sep 2026) add three door pilot lamps, the work light on the gantry beam, the dock's tool setter in the head loop with its bridge relay, and a second E-stop station.",
+  "added": [
+    {
+      "qty": 1,
+      "part": "Pilz PNOZ X2.8P 24VACDC 3n/o 1n/c (777301), or an equivalent dual-channel safety relay with monitored reset and feedback loop",
+      "tag": "SR",
+      "status": "candidate; confirm from its manual that the manual reset is monitored (acts on release), else choose a unit that is"
+    },
+    {
+      "qty": 2,
+      "part": "Schneider TeSys LC1D18BD, 24 V DC coil, 3 NO main + 1 NO/1 NC auxiliary (mirror)",
+      "tag": "K1, K2",
+      "status": "candidate; confirm the DC-1 rating of one pole at 60 V for the Rodent current, and AC-1 against the cutter I1max"
+    },
+    {
+      "qty": 2,
+      "part": "Coil suppressor matched to LC1D18BD (vendor module, not a plain diode)",
+      "tag": "K1, K2",
+      "status": "to select; a plain diode lengthens release beyond the modeled dropout"
+    },
+    {
+      "qty": 1,
+      "part": "E-stop pushbutton, 40 mm, latching, turn to release, two NC contact blocks",
+      "tag": "ESTOP",
+      "status": "to select; add stations in series per channel"
+    },
+    {
+      "qty": 1,
+      "part": "Blue momentary pushbutton, 1 NO",
+      "tag": "RESET",
+      "status": "to select"
+    },
+    {
+      "qty": 1,
+      "part": "Safety-circuit fuse and holder",
+      "tag": "F_SAFETY",
+      "status": "to size with the contactor coils and brake"
+    },
+    {
+      "qty": 5,
+      "part": "Omron G7SA-2A2B 24 VDC force-guided relay",
+      "tag": "K_REQ_A, K_REQ_B, K_VFD_RUN, K_TORCH_RUN, K_DIR",
+      "status": "candidate"
+    },
+    {
+      "qty": 2,
+      "part": "Omron G7SA-3A1B 24 VDC force-guided relay",
+      "tag": "K_READY, K_PERMIT",
+      "status": "candidate"
+    },
+    {
+      "qty": 1,
+      "part": "Omron G7SA-5A1B 24 VDC force-guided relay",
+      "tag": "K_RUN_ARM",
+      "status": "candidate"
+    },
+    {
+      "qty": 7,
+      "part": "Omron P7SA-10F socket",
+      "tag": "G7SA 4-pole",
+      "status": "candidate"
+    },
+    {
+      "qty": 1,
+      "part": "Omron P7SA-14F socket",
+      "tag": "G7SA 6-pole",
+      "status": "candidate"
+    },
+    {
+      "qty": 2,
+      "part": "Finder 40.52.9.024.5000 (gold contacts) + 95.05 socket",
+      "tag": "K_RDY_R, K_RDY_P",
+      "status": "candidate"
+    },
+    {
+      "qty": 1,
+      "part": "Finder 80.01.0.240.0000, function AI, set 3 s",
+      "tag": "T_BRAKE",
+      "status": "as Rev I timers"
+    },
+    {
+      "qty": 1,
+      "part": "Schneider ZBE101 NO contact block on the SETUP/RUN selector",
+      "tag": "SETUP_RUN_B",
+      "status": "candidate"
+    },
+    {
+      "qty": 1,
+      "part": "Isolated 0-10 V to 0-10 V signal conditioner",
+      "tag": "spindle speed",
+      "status": "to select"
+    },
+    {
+      "qty": 1,
+      "part": "Isolated DC current switch for the plasma work lead, dry output",
+      "tag": "arc OK",
+      "status": "to select for the CUT-50 work lead"
+    },
+    {
+      "qty": 1,
+      "part": "48 V to 24 V DC-DC converter for the Rodent V-MOS input",
+      "tag": "mist supply",
+      "status": "to select"
+    },
+    {
+      "qty": 1,
+      "part": "Interface board: MCP23017, 2 x SN74LVC1G17, 3.3 V LDO, 5 x 470 ohm, 4.7 kohm, 10 kohm, Rev I run-interface parts; for M13 a ULN2803A and 2 x PC817 with resistors (dock sensor inputs)",
+      "tag": "IFB",
+      "status": "schematic level; no PCB"
+    },
+    {
+      "qty": 2,
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket",
+      "tag": "K_DRAINED, K_EMPTY_B",
+      "status": "as Rev I's water relays; M9 router drain latch"
+    },
+    {
+      "qty": 1,
+      "part": "Finder 80.01.0.240.0000, function AI, set 25 min, then 1.5 x the timed fill",
+      "tag": "T_FILL",
+      "status": "as Rev I's timers; M10 fill watchdog"
+    },
+    {
+      "qty": 1,
+      "part": "24 V DC interposing relay with reinforced coil-to-contact isolation, socket, flyback diode",
+      "tag": "K_TS",
+      "status": "to select; mounted at the cutter so the HF-exposed trigger leads never enter the cabinet"
+    },
+    {
+      "qty": 1,
+      "part": "Die-cast aluminium box about 120 x 80 x 55 mm with EMC gland, and a 24 V 10-15 W supply fed from the cutter mains after K1/K2",
+      "tag": "K_TS box",
+      "status": "to select; bond the box to the cutter chassis"
+    },
+    {
+      "qty": 1,
+      "part": "IP54 filter fan, 120 mm class, 24 V DC, 40 m3/h or more free-blowing, and a matching outlet filter",
+      "tag": "cabinet cooling (Rev K)",
+      "status": "to select; sized for about 60 W inside at 10 K rise"
+    },
+    {
+      "qty": 8,
+      "part": "EMC cable glands, nickel-plated brass, 360-degree shield contact: 4 x M20 (motors), 4 x M16 (VFD control, THCAD, head, torch start)",
+      "tag": "cabinet glands (Rev K)",
+      "status": "to select for the actual cable ODs"
+    },
+    {
+      "qty": 18,
+      "part": "Nylon cable glands (4 x M25, 2 x M20, 12 x M16) and rated blanking plugs for the spare entries",
+      "tag": "cabinet glands (Rev K)",
+      "status": "to select; 30 entries in total on two plates"
+    },
+    {
+      "qty": 1,
+      "part": "16 mm2 braided bond strap, gland plates to the cabinet PE stud, with serrated washers",
+      "tag": "cabinet bonding (Rev K)",
+      "status": "to select"
+    },
+    {
+      "qty": 2,
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket",
+      "tag": "K_DOCK_RUN, K_DOCK_DIR",
+      "status": "as Rev I's water relays; M13 tool-changer drive (run, and a polarity reverser)"
+    },
+    {
+      "qty": 1,
+      "part": "2 A time-delay fuse and holder",
+      "tag": "F_DOCK",
+      "status": "to select; M13 dock motor feed"
+    },
+    {
+      "qty": 2,
+      "part": "Roller-lever microswitch, NC, IP67, with a 1N4007 across each",
+      "tag": "LS_OUT, LS_IN",
+      "status": "to select; M13 dock end of travel, fitted at the Rev L stop blocks"
+    },
+    {
+      "qty": 1,
+      "part": "Z top limit switch with two circuits (or a second switch beside the Z limit): NO contact in the dock motor feed",
+      "tag": "LS_ZTOP",
+      "status": "to select with the Z limit switch; M14 dock enable, closes only with Z at its top"
+    },
+    {
+      "qty": 3,
+      "part": "22 mm 24 V LED pilot lights: red, green, white (Schneider XB5AVB4 / XB5AVB3 / XB5AVB1 class)",
+      "tag": "H_STOP, H_READY, H_ARMED (M17)",
+      "status": "select"
+    },
+    {
+      "qty": 1,
+      "part": "24 V LED light bar, 800 mm, 17 x 7 mm aluminium channel, IP65, about 12 W, with two T-slot clips or M8 T-nut brackets",
+      "tag": "LED_BAR (M18), GANTRY_WORK_LIGHT in the Rev L CAD",
+      "status": "select"
+    },
+    {
+      "qty": 1,
+      "part": "22 mm 2-position selector with one NO block (Schneider XB5AD21 class)",
+      "tag": "SW_LIGHT (M18)",
+      "status": "select"
+    },
+    {
+      "qty": 1,
+      "part": "DIN fuse terminal, 2 A, on the 24 V rail ahead of F_CONTROL",
+      "tag": "F_LIGHT (M18)",
+      "status": "select"
+    },
+    {
+      "qty": 1,
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket, coil in parallel with KM_R; NC 11-12 bridges the tool-setter loop outside router mode",
+      "tag": "K_SETTER (M19)",
+      "status": "as Rev I's water relays"
+    },
+    {
+      "qty": 1,
+      "part": "Z tool setter, about 30 mm body x 45 mm, spring button, NC contact, 2-wire, on the dock carrier's wing",
+      "tag": "TOOL_SETTER (M19), MOD_ATC_TOOL_SETTER in the Rev L CAD",
+      "status": "select; measure its trip height and set the probe macro from it"
+    },
+    {
+      "qty": 1,
+      "part": "Latching E-stop, 40 mm mushroom, two NC blocks, in a 1-hole surface box at the back of the frame (the tube-loading end, away from the cabinet door)",
+      "tag": "ESTOP2 (M20)",
+      "status": "select; the same type as the door E-stop"
+    },
+    {
+      "qty": 6,
+      "part": "DIN feed-through terminals: XG:5-6 (work light) and XH:7-10 (second E-stop channels)",
+      "tag": "XG, XH (M18, M20)",
+      "status": "select with the strips"
+    }
+  ],
+  "already_required": [
+    {
+      "qty": 1,
+      "part": "NEMA23 stepper with 24 V power-off brake for the Z",
+      "tag": "Z_BRAKE",
+      "note": "see output/receiving/MOTION-MODULES.md (Z power-loss hold)"
+    },
+    {
+      "qty": 1,
+      "part": "BTT Rodent (V1.0 or V1.1)",
+      "tag": "controller",
+      "note": "CA-RODENT, unpriced"
+    },
+    {
+      "qty": 1,
+      "part": "Mesa THCAD-300 (owned)",
+      "tag": "arc voltage",
+      "note": "set its output divider to /64 or /128"
+    }
+  ],
+  "retired_from_rev_i": [
+    {
+      "qty": 1,
+      "part": "CNC4PC C41S Rev1.1",
+      "reason": "needs a raw PWM pin; the Rodent has only its onboard 0-10 V output"
+    },
+    {
+      "qty": 1,
+      "part": "LITEON LTV-817 (IF_READY)",
+      "reason": "replaced by the E1-MAX door input"
+    },
+    {
+      "qty": 2,
+      "part": "Finder 40.52.9.024.0000 (K_REQUEST, K_RUN_ARM)",
+      "reason": "replaced by G7SA"
+    },
+    {
+      "qty": 2,
+      "part": "Finder 40.52.9.024.5000 (K_VFD_RUN, K_TORCH_RUN)",
+      "reason": "replaced by G7SA"
+    },
+    {
+      "qty": 1,
+      "part": "Finder 40.52.9.024.0000 (K_READY)",
+      "reason": "replaced by G7SA"
+    },
+    {
+      "qty": 3,
+      "part": "Finder 95.05 socket",
+      "reason": "net of the relay changes (10 in Rev I, 7 here)"
+    }
+  ],
+  "unchanged_from_rev_i": "Water relays K_EMPTY, K_MIN, K_DRAIN, K_ARM, K_FILL; mode relays KM_R, KM_P; timers T_CLOSE, T_DRAIN; pump SSRs; selectors; bed-confirmation key; head interface (U_HEAD, U_PROBE); run interface (U_RUN); 24 V supply."
+}
