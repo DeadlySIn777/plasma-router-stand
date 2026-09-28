@@ -48,9 +48,9 @@ def render(name, view=(-1.25, -1.8, 1.25), size=(1600, 1400), suffix=''):
         else: edge[:, :-1] |= selected
     pixels[edge] = (pixels[edge].astype(float) * .72).astype(np.uint8)
     picture = Image.fromarray(pixels); draw = ImageDraw.Draw(picture)
-    titles = {'RevLROT_ROUTER': 'GM1 Rev L rotary | Router mode with the rotary fitted at the front, dock parked, Z fully up',
-              'RevLROT_PLASMA': 'GM1 Rev L rotary | Tube notching: module out, a 60 mm tube in the chuck, torch 4 mm over it at Y575',
-              'RevLROT_SHELF_DETAIL': 'GM1 Rev L rotary | The shelf on the front legs: cross tube, U stubs, plate, rotary and chuck'}
+    titles = {'RevLROT_ROUTER': 'GM1 Rev L rotary | Router mode, rotary fitted at the front, dock parked, Z up',
+              'RevLROT_PLASMA': 'GM1 Rev L rotary | Tube notching: a 60 mm tube in the chuck, torch over it at Y575',
+              'RevLROT_SHELF_DETAIL': 'GM1 Rev L rotary | The shelf on the front legs: cross tube, stubs, plate, rotary, chuck'}
     draw.text((42, 25), titles.get(name, name), font=font(True, 30), fill=(28, 43, 50))
     draw.text((42, 69), 'Actual CAD geometry. Amber parts are purchased envelopes; magenta parts are allocations.', font=font(False, 19), fill=(85, 101, 112))
     draw.text((42, h - 77), 'WORKING DESIGN: owner hoist, torch measurement and supplier interfaces still open. Not a fabrication release.',

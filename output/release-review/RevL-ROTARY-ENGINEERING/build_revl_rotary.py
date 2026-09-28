@@ -71,8 +71,9 @@ def plasma_model(router_model, **head):
 
 
 def near_shelf(part):
+    """The shelf close-up: the bracket, the rotary, the tube's first metre and the front legs, without the pan wall."""
     b = bbox(part.shape)
-    return b[1] < 130 and b[4] > -300 and b[0] < 800 and b[3] > 350 and b[5] > 700
+    return b[1] < 60 and b[4] > -300 and b[0] < 1160 and b[3] > -10 and b[5] > 700
 
 
 def main():

@@ -53,7 +53,8 @@ The design took the seller's figures (270 mm long, 28 mm barrel) and a photo. Wi
 
   Mill the X guide face's two rail seats coplanar within 0.03 mm. The Y shoes and the Z carrier take the HGH20CA blocks on the standard 32 × 36 mm M5 pattern; check it against the delivered blocks. The X guide face bolts to the 80/20 40-8080 beam with M8 T-nuts, so the beam is needed too.
 - **Tool park, bolt tray and the head's parking pads** on the reservoir lid.
-- **Tool changer steel parts** (Rev L): cut the beams, seat bars, carrier, upstands, stops, brackets, motor plate and feet. They are welded on the finished module (section 4).
+- **Tool changer steel parts** (Rev L): cut the beams, seat bars, carrier, upstands, stops, brackets, motor plate and feet. They are welded on the finished module (section 4). The carrier blank now includes the wing at its right end for the tool setter (28 Sep); drill the setter's holes from the delivered unit.
+- **Rotary shelf** (the [rotary variant](../RevL-ROTARY-CAD/README.md), only if tube notching is wanted): the 2 × 2 cross tube, two stubs, the front piece and the 1/4 in plate, welded as one bracket. Bolt it to the front legs after the frame is filled and coated; drill the plate from the delivered rotary.
 
 ## 2. When the drive modules arrive
 
@@ -155,11 +156,13 @@ These are in the [cost register](../../../outputs/reve-30510/actual-cost/REAL-CO
   - the BTT Rodent V1.1;
   - the GM1 relay, safety and power parts;
   - the cabinet enclosure: a **steel** box at least 500 × 400 × 200 mm, like the VEVOR 20 × 16 × 8 in in the register (E05). The panel layout needs about 330 × 430 mm, and the floor takes two 175 × 150 mm gland plates. A plastic box does not shield the Rodent from the plasma's high-frequency start.
+  - the 28 September additions, about $100: the tool setter, the LED light bar, three pilot lamps, the light switch and fuse, the second E-stop station ([Rev L delta](../../../outputs/reve-30510/actual-cost/REVL-PROCUREMENT-DELTA.md#28-september-additions-tool-setter-work-light-pilot-lamps-second-e-stop)).
 
   Nothing moves under power without them.
 - **Spindle kit** with its VFD (1.5 kW, 110 V, ER11, Ø65 body). Machine the spindle clamp's bore against the actual spindle.
 - **Gantry beam:** 80/20 40-8080, 1,200 mm, and 16 M8 T-nuts. They were priced in an 8020.net cart ($272.11 with freight and tax), not ordered.
 - **Water parts:** pump, floats, valves, hoses and fittings.
+- **Rotary axis** (only for tube notching): the hollow four-jaw rotary, its plug and a roller stand, about $500 ([rotary delta](../../../outputs/reve-30510/actual-cost/REVL-ROTARY-PROCUREMENT-DELTA.md)).
 - **Materials and hardware:** HDPE sheet, fasteners, and the extra plate and stainless the deltas list.
 - **Tool changer:** the RapidChange kit and the dock's bought parts.
 - **The braked Z motor**, after the ZBX80 is measured.

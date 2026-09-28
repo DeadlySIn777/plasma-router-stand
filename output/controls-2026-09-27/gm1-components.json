@@ -1,5 +1,5 @@
 {
-  "scope": "GM1 controls parts delta against Rev I's selected controls schedule (output/design-finish-2026-09-26/controls/selected-components.json). Unpriced; no order, quote or stock check. Check terminal marks, coil currents and minimum loads against each maker's datasheet at purchase. Updated later on 27 Sep 2026 for M9-M11, the cutter-side start relay and the Rev K cabinet parts, and again for M12-M13 (Rev L tool changer). M14 (the same evening) adds the Z top switch contact in the dock feed.",
+  "scope": "GM1 controls parts delta against Rev I's selected controls schedule (output/design-finish-2026-09-26/controls/selected-components.json). Unpriced; no order, quote or stock check. Check terminal marks, coil currents and minimum loads against each maker's datasheet at purchase. Updated later on 27 Sep 2026 for M9-M11, the cutter-side start relay and the Rev K cabinet parts, and again for M12-M13 (Rev L tool changer). M14 (the same evening) adds the Z top switch contact in the dock feed. M17-M20 (28 Sep 2026) add three door pilot lamps, the work light on the gantry beam, the dock's tool setter in the head loop with its bridge relay, and a second E-stop station.",
   "added": [
     {
       "qty": 1,
@@ -180,6 +180,54 @@
       "part": "Z top limit switch with two circuits (or a second switch beside the Z limit): NO contact in the dock motor feed",
       "tag": "LS_ZTOP",
       "status": "to select with the Z limit switch; M14 dock enable, closes only with Z at its top"
+    },
+    {
+      "qty": 3,
+      "part": "22 mm 24 V LED pilot lights: red, green, white (Schneider XB5AVB4 / XB5AVB3 / XB5AVB1 class)",
+      "tag": "H_STOP, H_READY, H_ARMED (M17)",
+      "status": "select"
+    },
+    {
+      "qty": 1,
+      "part": "24 V LED light bar, 800 mm, 17 x 7 mm aluminium channel, IP65, about 12 W, with two T-slot clips or M8 T-nut brackets",
+      "tag": "LED_BAR (M18), GANTRY_WORK_LIGHT in the Rev L CAD",
+      "status": "select"
+    },
+    {
+      "qty": 1,
+      "part": "22 mm 2-position selector with one NO block (Schneider XB5AD21 class)",
+      "tag": "SW_LIGHT (M18)",
+      "status": "select"
+    },
+    {
+      "qty": 1,
+      "part": "DIN fuse terminal, 2 A, on the 24 V rail ahead of F_CONTROL",
+      "tag": "F_LIGHT (M18)",
+      "status": "select"
+    },
+    {
+      "qty": 1,
+      "part": "Finder 40.52.9.024.0000 + 95.05 socket, coil in parallel with KM_R; NC 11-12 bridges the tool-setter loop outside router mode",
+      "tag": "K_SETTER (M19)",
+      "status": "as Rev I's water relays"
+    },
+    {
+      "qty": 1,
+      "part": "Z tool setter, about 30 mm body x 45 mm, spring button, NC contact, 2-wire, on the dock carrier's wing",
+      "tag": "TOOL_SETTER (M19), MOD_ATC_TOOL_SETTER in the Rev L CAD",
+      "status": "select; measure its trip height and set the probe macro from it"
+    },
+    {
+      "qty": 1,
+      "part": "Latching E-stop, 40 mm mushroom, two NC blocks, in a 1-hole surface box at the loading end of the frame",
+      "tag": "ESTOP2 (M20)",
+      "status": "select; the same type as the door E-stop"
+    },
+    {
+      "qty": 6,
+      "part": "DIN feed-through terminals: XG:5-6 (work light) and XH:7-10 (second E-stop channels)",
+      "tag": "XG, XH (M18, M20)",
+      "status": "select with the strips"
     }
   ],
   "already_required": [
