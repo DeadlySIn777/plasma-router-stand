@@ -1,0 +1,30 @@
+"""Engineering revision XR1, millimetres. No purchasing assumptions or prices.
+
+These are design datums, not measurements of the user's delivered hardware.
+Frame profile is an envelope; section properties are independent requirements.
+"""
+REVISION = 'XR1'
+X_TRAVEL, Y_TRAVEL, Z_TRAVEL = 800., 1000., 100.
+Y_LENGTH = 1450.
+LEFT_X, RIGHT_X = 10.8, 1099.2
+INNER_LEFT, INNER_RIGHT = 50.8, 1099.2
+CROSS_LENGTH = INNER_RIGHT-INNER_LEFT
+POST_CENTRES_Y = (100., 630., 1180.)
+FOOT_PLATE_BOTTOM, FOOT_PLATE_TOP = 59.975, 69.5
+UPPER_TOP, UPPER_BOTTOM = 1053., 973.
+POST_LENGTH = UPPER_BOTTOM-FOOT_PLATE_TOP
+PAN_BEARER_TOP, PAN_BEARER_BOTTOM = 806.5, 726.5
+DRY_TOP, DRY_BOTTOM = 958.8, 888.
+SLAT_TOP, PAN_RIM = 878., 874.
+PAN_X0, PAN_X1, PAN_Y0, PAN_Y1 = 128., 1022., 100., 1196.
+PAN_FLOOR_FRONT, PAN_SLOPE = 812., .006
+PANEL_X, PANEL_WIDTH = 109., 932.
+PANEL_Y0, PANEL_PITCH, PANEL_LENGTH = 103.4, 259., 257.
+WOOD_FORCE_N = 100.
+WOOD_PROOF_FORCE_N = 300.
+DESIGN_WATER_ALLOWANCE_L = 60.
+# Conditional procurement minima, NOT properties attributed to an Amazon die.
+PROFILE_AREA_MIN_MM2 = 785.
+PROFILE_I_STRONG_MIN_MM4 = 529000.
+PROFILE_I_WEAK_MIN_MM4 = 134000.
+AL_E_MPA, STEEL_E_MPA = 69000., 200000.

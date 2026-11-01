@@ -1,0 +1,610 @@
+{
+  "revision": "XR1",
+  "release": false,
+  "prices_included": false,
+  "source_sha256": {
+    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f",
+    "frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "structure_screen.py": "a85a7ab76b6addd90d4e6a0cf323ac00ace21cdf514acd497dc01186e9da5e8b"
+  },
+  "scope": "Closed-form component and sensitivity calculations, NOT assembled-frame FEA or a certified strength result.",
+  "load_path_separation": {
+    "cutting": "Apply equal/opposite tool and work reactions for a true relative tool-to-bed stiffness model. Independent component deflections here are sensitivities, not an assembled compliance sum.",
+    "external_push": "The100/300N overturning and floor-sliding cases are external pushes, not a net unbalanced cutting force.",
+    "gravity": "Moving-assembly and wet-pan gravity cases evaluate sag and support loads separately from cutting compliance."
+  },
+  "section_requirement": {
+    "A_min_mm2": 785.0,
+    "I_strong_min_mm4": 529000.0,
+    "I_weak_min_mm4": 134000.0,
+    "source_name": "MISUMI HFSL8-4080 Light Type (reference requirement, not the selected Amazon die)",
+    "source_url": "https://us.misumi-ec.com/pdf/fa/2019/2019_US_2768.pdf",
+    "qualification": "Supplier die properties and straightness must meet these requirements. External4080 dimensions alone are insufficient."
+  },
+  "cut_list_mm": {
+    "posts": [
+      903.5,
+      903.5,
+      903.5,
+      903.5,
+      823.5,
+      823.5
+    ],
+    "headers": [
+      1450.0,
+      1450.0
+    ],
+    "pan_bearers": [
+      1048.4,
+      1048.4,
+      1048.4
+    ],
+    "flat_ledger_arms": [
+      75.2,
+      75.2,
+      75.2,
+      75.2,
+      75.2,
+      75.2
+    ],
+    "rear_footbases": [
+      300.0,
+      300.0
+    ]
+  },
+  "finished_profile_length_mm": 12357.4,
+  "mass_screen": {
+    "bare_frame_material_estimate_kg": 35.1870117259917,
+    "breakdown": {
+      "reference_profile_kg": 26.1915093,
+      "steel_straps_kg": 5.4955831459917,
+      "fishplates_kg": 1.0368,
+      "foot_plates_kg": 0.658368,
+      "pan_angles_kg": 1.2644780400000002,
+      "dry_arm_angles_kg": 0.54027324
+    },
+    "not_included": "Feet/fasteners, ledgers, pan, slats, storage, dry cassettes, wiring and all owned motion. Estimate is not a weighed machine mass."
+  },
+  "geometry": {
+    "side_post_centres_y_mm": [
+      100.0,
+      630.0,
+      1180.0
+    ],
+    "header_largest_support_span_mm": 550.0,
+    "rear_cantilever_from_post_centre_mm": 270.0,
+    "front_brace_high_edge_nominal_z_mm": 375.0,
+    "rear_support_edge_foot_centre_y_mm": 1410.0,
+    "dry_arm_clearance_above_pan_bearer_mm": 3.1499999999999773
+  },
+  "upper_header_sensitivity": [
+    {
+      "I_strong_mm4": 400000.0,
+      "I_weak_mm4": 100000.0,
+      "moving_mass_total_kg": 25.0,
+      "gravity_midspan_mm": 0.015394601012888738,
+      "gravity_rear_tip_mm": 0.02914014069293478,
+      "100N_vertical_rear_tip_mm": 0.01188586956521739,
+      "100N_transverse_rear_tip_mm": 0.04754347826086956
+    },
+    {
+      "I_strong_mm4": 400000.0,
+      "I_weak_mm4": 100000.0,
+      "moving_mass_total_kg": 50.0,
+      "gravity_midspan_mm": 0.030789202025777476,
+      "gravity_rear_tip_mm": 0.05828028138586956,
+      "100N_vertical_rear_tip_mm": 0.01188586956521739,
+      "100N_transverse_rear_tip_mm": 0.04754347826086956
+    },
+    {
+      "I_strong_mm4": 400000.0,
+      "I_weak_mm4": 100000.0,
+      "moving_mass_total_kg": 75.0,
+      "gravity_midspan_mm": 0.04618380303866621,
+      "gravity_rear_tip_mm": 0.08742042207880435,
+      "100N_vertical_rear_tip_mm": 0.01188586956521739,
+      "100N_transverse_rear_tip_mm": 0.04754347826086956
+    },
+    {
+      "I_strong_mm4": 529000.0,
+      "I_weak_mm4": 134000.0,
+      "moving_mass_total_kg": 25.0,
+      "gravity_midspan_mm": 0.011640530066456512,
+      "gravity_rear_tip_mm": 0.022034132849100024,
+      "100N_vertical_rear_tip_mm": 0.008987425002054739,
+      "100N_transverse_rear_tip_mm": 0.03548020765736535
+    },
+    {
+      "I_strong_mm4": 529000.0,
+      "I_weak_mm4": 134000.0,
+      "moving_mass_total_kg": 50.0,
+      "gravity_midspan_mm": 0.023281060132913024,
+      "gravity_rear_tip_mm": 0.04406826569820005,
+      "100N_vertical_rear_tip_mm": 0.008987425002054739,
+      "100N_transverse_rear_tip_mm": 0.03548020765736535
+    },
+    {
+      "I_strong_mm4": 529000.0,
+      "I_weak_mm4": 134000.0,
+      "moving_mass_total_kg": 75.0,
+      "gravity_midspan_mm": 0.03492159019936954,
+      "gravity_rear_tip_mm": 0.06610239854730007,
+      "100N_vertical_rear_tip_mm": 0.008987425002054739,
+      "100N_transverse_rear_tip_mm": 0.03548020765736535
+    },
+    {
+      "I_strong_mm4": 976618.0,
+      "I_weak_mm4": 252917.0,
+      "moving_mass_total_kg": 25.0,
+      "gravity_midspan_mm": 0.006305270233761302,
+      "gravity_rear_tip_mm": 0.011935123330896946,
+      "100N_vertical_rear_tip_mm": 0.0048681755057627,
+      "100N_transverse_rear_tip_mm": 0.018798055591703826
+    },
+    {
+      "I_strong_mm4": 976618.0,
+      "I_weak_mm4": 252917.0,
+      "moving_mass_total_kg": 50.0,
+      "gravity_midspan_mm": 0.012610540467522604,
+      "gravity_rear_tip_mm": 0.023870246661793892,
+      "100N_vertical_rear_tip_mm": 0.0048681755057627,
+      "100N_transverse_rear_tip_mm": 0.018798055591703826
+    },
+    {
+      "I_strong_mm4": 976618.0,
+      "I_weak_mm4": 252917.0,
+      "moving_mass_total_kg": 75.0,
+      "gravity_midspan_mm": 0.018915810701283904,
+      "gravity_rear_tip_mm": 0.035805369992690836,
+      "100N_vertical_rear_tip_mm": 0.0048681755057627,
+      "100N_transverse_rear_tip_mm": 0.018798055591703826
+    }
+  ],
+  "six_vs_four_posts": {
+    "four_post_largest_span_mm": 1080.0,
+    "six_post_largest_span_mm": 550.0,
+    "point_load_deflection_span_ratio": 7.571522163786627,
+    "four_post_with_middle_pan_hangers_profile_mm": 9992.2,
+    "note": "Four posts require a separate middle-bearer load path; a floating middle bearer is invalid."
+  },
+  "wet_pan_bearer_and_seat_cases": [
+    {
+      "wet_load_total_kg": 60.0,
+      "load_per_bearer_N": 196.133,
+      "end_reaction_N": 98.0665,
+      "bearer_midspan_mm": 0.08062425697745985,
+      "seat_deflection_at_40mm_projection_mm": 0.01776234852252884,
+      "seat_bending_stress_MPa": 7.296162192324385,
+      "per_post_bolt_shear_N": 49.03325,
+      "per_post_bolt_tension_N": 49.03325
+    },
+    {
+      "wet_load_total_kg": 100.0,
+      "load_per_bearer_N": 326.8883333333333,
+      "end_reaction_N": 163.44416666666666,
+      "bearer_midspan_mm": 0.13437376162909972,
+      "seat_deflection_at_40mm_projection_mm": 0.029603914204214734,
+      "seat_bending_stress_MPa": 12.160270320540642,
+      "per_post_bolt_shear_N": 81.72208333333333,
+      "per_post_bolt_tension_N": 81.72208333333333
+    },
+    {
+      "wet_load_total_kg": 150.0,
+      "load_per_bearer_N": 490.3325,
+      "end_reaction_N": 245.16625,
+      "bearer_midspan_mm": 0.2015606424436496,
+      "seat_deflection_at_40mm_projection_mm": 0.0444058713063221,
+      "seat_bending_stress_MPa": 18.24040548081096,
+      "per_post_bolt_shear_N": 122.583125,
+      "per_post_bolt_tension_N": 122.583125
+    }
+  ],
+  "dry_ledger": {
+    "span_mm": 550.0,
+    "angle_50_8x50_8x6_35_properties": {
+      "area_mm2": 604.8375,
+      "centroid_z_mm": 15.028333333333334,
+      "I_vertical_mm4": 144678.3581561458,
+      "J_thin_wall_mm4": 8129.520031249999
+    },
+    "angle_cases": [
+      {
+        "total_force_N": 100.0,
+        "force_per_ledger_N": 50.0,
+        "bending_mm": 0.017360577706558376,
+        "torsion_load_point_motion_mm": 0.029341536496463407,
+        "sum_components_mm": 0.04670211420302178,
+        "assumption": "Fixed twist at each support; actual unrestrained roll/joint slip can be larger."
+      },
+      {
+        "total_force_N": 300.0,
+        "force_per_ledger_N": 150.0,
+        "bending_mm": 0.05208173311967513,
+        "torsion_load_point_motion_mm": 0.08802460948939023,
+        "sum_components_mm": 0.14010634260906535,
+        "assumption": "Fixed twist at each support; actual unrestrained roll/joint slip can be larger."
+      }
+    ],
+    "closed_tube_40x40x3_properties": {
+      "I_mm4": 101972.0,
+      "J_thin_wall_mm4": 151959
+    },
+    "closed_tube_cases": [
+      {
+        "total_force_N": 100.0,
+        "force_per_ledger_N": 50.0,
+        "bending_mm": 0.024631270145010917,
+        "torsion_load_point_motion_mm": 0.001569716888737437,
+        "sum_components_mm": 0.026200987033748353,
+        "assumption": "Fixed twist at each support; actual unrestrained roll/joint slip can be larger."
+      },
+      {
+        "total_force_N": 300.0,
+        "force_per_ledger_N": 150.0,
+        "bending_mm": 0.07389381043503275,
+        "torsion_load_point_motion_mm": 0.004709150666212311,
+        "sum_components_mm": 0.07860296110124507,
+        "assumption": "Fixed twist at each support; actual unrestrained roll/joint slip can be larger."
+      }
+    ],
+    "required_support_detail": "Restrict support rotation with positive seats and at least two separated attachment stations across the bearing flange. A loose single attachment is not a fixed-twist support.",
+    "selection": "50.8x50.8x6.35 angle selected, positive seats and4 arm stations each. Closed tube retained only as a comparison."
+  },
+  "dry_flat_arm": {
+    "cantilever_load_arm_mm": 66.7,
+    "at_250N_reaction_deflection_mm": 0.002674498548922057,
+    "scope": "Unrelieved reference short4080arm only. The two front tip notches require local section/lip/contact proof; no notch section stiffness is inferred from CAD envelope. Add angle/joint/ledger/cassette compliance separately."
+  },
+  "brace_cases": {
+    "side_front": {
+      "hole_spacing_mm": 910.2197536858888,
+      "blank_length_mm": 940.2197536858888,
+      "active_horizontal_stiffness_N_per_mm": 4022.8767350115822,
+      "force_in_strap_at_100N_horizontal_N": 171.73957616714884,
+      "elastic_displacement_at_100N_mm": 0.02485783348261405,
+      "horizontal_deadband_for_0_05mm_at_each_end_mm": 0.17173957616714883,
+      "thickness_used_mm": 1.8,
+      "net_section_stress_at_300N_horizontal_MPa": 12.232163544668719
+    },
+    "side_rear": {
+      "hole_spacing_mm": 859.127464349732,
+      "blank_length_mm": 889.127464349732,
+      "active_horizontal_stiffness_N_per_mm": 5152.005600876589,
+      "force_in_strap_at_100N_horizontal_N": 156.2049935181331,
+      "elastic_displacement_at_100N_mm": 0.019409916787160614,
+      "horizontal_deadband_for_0_05mm_at_each_end_mm": 0.1562049935181331,
+      "thickness_used_mm": 1.8,
+      "net_section_stress_at_300N_horizontal_MPa": 11.12571178904082
+    },
+    "front_low": {
+      "hole_spacing_mm": 1114.546795787418,
+      "blank_length_mm": 1144.546795787418,
+      "active_horizontal_stiffness_N_per_mm": 9240.721866319805,
+      "force_in_strap_at_100N_horizontal_N": 102.40231493820451,
+      "elastic_displacement_at_100N_mm": 0.010821665390068258,
+      "horizontal_deadband_for_0_05mm_at_each_end_mm": 0.10240231493820451,
+      "thickness_used_mm": 1.8,
+      "net_section_stress_at_300N_horizontal_MPa": 7.293612175085792
+    },
+    "rear_high": {
+      "hole_spacing_mm": 1307.7612779096955,
+      "blank_length_mm": 1337.7612779096955,
+      "active_horizontal_stiffness_N_per_mm": 5720.25513592484,
+      "force_in_strap_at_100N_horizontal_N": 120.15447242830719,
+      "elastic_displacement_at_100N_mm": 0.017481737723894757,
+      "horizontal_deadband_for_0_05mm_at_each_end_mm": 0.1201544724283072,
+      "thickness_used_mm": 1.8,
+      "net_section_stress_at_300N_horizontal_MPa": 8.558010856717036
+    }
+  },
+  "brace_limits": {
+    "nominal_thickness_mm": 1.9,
+    "minimum_screen_thickness_mm": 1.8,
+    "width_mm": 30,
+    "tension_only": true,
+    "clearance_sensitivity": "0.05mm slip at each end adds roughly0.10\u20130.17mm of bay racking before elastic action.",
+    "requirements": [
+      "Bare steel, not galvanized, in hot exposure",
+      "Do not credit compression diagonal",
+      "Drill fixed end holes after frame is squared; lock and proof joints",
+      "Verify T-slot lip pullout, bolt bearing, net-section and sheet edge quality",
+      "No credit for friction before measured joint-slip proof"
+    ]
+  },
+  "column_buckling": {
+    "pinned_pinned_ideal_N": 111788.54940921467,
+    "cantilever_K2_ideal_N": 27947.137352303667,
+    "note": "Ideal straight elastic column only; joints/feet and lateral sway govern long before this ideal capacity."
+  },
+  "feet": {
+    "assumed_M8_thread_root_diameter_mm": 6.5,
+    "exposed_stud_length_mm": 44.175000000000004,
+    "100N_total_lateral_eight_feet_elastic_mm": 0.020495811201123534,
+    "100N_total_lateral_three_feet_elastic_mm": 0.054655496536329416,
+    "200kg_total_three_point_average_axial_stress_MPa": 19.70211373787311,
+    "central_nominal_thread_engagement_mm": 8.524999999999999,
+    "holds": [
+      "Actual rated foot/stud geometry and nut engagement",
+      "M8 central tapped-plate strip/pull-through proof",
+      "Two core taps and pad rating",
+      "No floor-sliding credit without measured friction/anchorage"
+    ]
+  },
+  "support_reaction_sensitivity": [
+    {
+      "total_mass_kg": 125.0,
+      "eight_equal_foot_reaction_N": 153.22890625,
+      "three_point_average_reaction_N": 408.61041666666665,
+      "screened_one_foot_reaction_N": 612.915625,
+      "note": "W/2 is a screening load, not a reaction solution; uneven floor can unload feet."
+    },
+    {
+      "total_mass_kg": 175.0,
+      "eight_equal_foot_reaction_N": 214.52046875,
+      "three_point_average_reaction_N": 572.0545833333333,
+      "screened_one_foot_reaction_N": 858.081875,
+      "note": "W/2 is a screening load, not a reaction solution; uneven floor can unload feet."
+    },
+    {
+      "total_mass_kg": 225.0,
+      "eight_equal_foot_reaction_N": 275.81203124999996,
+      "three_point_average_reaction_N": 735.4987499999999,
+      "screened_one_foot_reaction_N": 1103.2481249999998,
+      "note": "W/2 is a screening load, not a reaction solution; uneven floor can unload feet."
+    }
+  ],
+  "rear_tipping_required_stationary_mass_cases": [
+    {
+      "moving_mass_kg": 25.0,
+      "moving_cg_y_mm": 1355.0,
+      "rearward_force_N": 100.0,
+      "assumed_stationary_cg_y_mm": 650.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 21.19265471577155
+    },
+    {
+      "moving_mass_kg": 25.0,
+      "moving_cg_y_mm": 1355.0,
+      "rearward_force_N": 300.0,
+      "assumed_stationary_cg_y_mm": 650.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 63.57796414731465
+    },
+    {
+      "moving_mass_kg": 50.0,
+      "moving_cg_y_mm": 1355.0,
+      "rearward_force_N": 100.0,
+      "assumed_stationary_cg_y_mm": 650.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 21.19265471577155
+    },
+    {
+      "moving_mass_kg": 50.0,
+      "moving_cg_y_mm": 1355.0,
+      "rearward_force_N": 300.0,
+      "assumed_stationary_cg_y_mm": 650.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 63.57796414731465
+    },
+    {
+      "moving_mass_kg": 75.0,
+      "moving_cg_y_mm": 1355.0,
+      "rearward_force_N": 100.0,
+      "assumed_stationary_cg_y_mm": 650.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 21.19265471577155
+    },
+    {
+      "moving_mass_kg": 75.0,
+      "moving_cg_y_mm": 1355.0,
+      "rearward_force_N": 300.0,
+      "assumed_stationary_cg_y_mm": 650.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 63.57796414731465
+    },
+    {
+      "moving_mass_kg": 25.0,
+      "moving_cg_y_mm": 1450.0,
+      "rearward_force_N": 100.0,
+      "assumed_stationary_cg_y_mm": 650.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 23.166338926297865
+    },
+    {
+      "moving_mass_kg": 25.0,
+      "moving_cg_y_mm": 1450.0,
+      "rearward_force_N": 300.0,
+      "assumed_stationary_cg_y_mm": 650.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 65.55164835784097
+    },
+    {
+      "moving_mass_kg": 50.0,
+      "moving_cg_y_mm": 1450.0,
+      "rearward_force_N": 100.0,
+      "assumed_stationary_cg_y_mm": 650.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 25.140023136824183
+    },
+    {
+      "moving_mass_kg": 50.0,
+      "moving_cg_y_mm": 1450.0,
+      "rearward_force_N": 300.0,
+      "assumed_stationary_cg_y_mm": 650.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 67.52533256836728
+    },
+    {
+      "moving_mass_kg": 75.0,
+      "moving_cg_y_mm": 1450.0,
+      "rearward_force_N": 100.0,
+      "assumed_stationary_cg_y_mm": 650.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 27.113707347350502
+    },
+    {
+      "moving_mass_kg": 75.0,
+      "moving_cg_y_mm": 1450.0,
+      "rearward_force_N": 300.0,
+      "assumed_stationary_cg_y_mm": 650.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 69.4990167788936
+    },
+    {
+      "moving_mass_kg": 25.0,
+      "moving_cg_y_mm": 1355.0,
+      "rearward_force_N": 100.0,
+      "assumed_stationary_cg_y_mm": 850.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 28.761459971404246
+    },
+    {
+      "moving_mass_kg": 25.0,
+      "moving_cg_y_mm": 1355.0,
+      "rearward_force_N": 300.0,
+      "assumed_stationary_cg_y_mm": 850.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 86.28437991421275
+    },
+    {
+      "moving_mass_kg": 50.0,
+      "moving_cg_y_mm": 1355.0,
+      "rearward_force_N": 100.0,
+      "assumed_stationary_cg_y_mm": 850.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 28.761459971404246
+    },
+    {
+      "moving_mass_kg": 50.0,
+      "moving_cg_y_mm": 1355.0,
+      "rearward_force_N": 300.0,
+      "assumed_stationary_cg_y_mm": 850.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 86.28437991421275
+    },
+    {
+      "moving_mass_kg": 75.0,
+      "moving_cg_y_mm": 1355.0,
+      "rearward_force_N": 100.0,
+      "assumed_stationary_cg_y_mm": 850.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 28.761459971404246
+    },
+    {
+      "moving_mass_kg": 75.0,
+      "moving_cg_y_mm": 1355.0,
+      "rearward_force_N": 300.0,
+      "assumed_stationary_cg_y_mm": 850.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 86.28437991421275
+    },
+    {
+      "moving_mass_kg": 25.0,
+      "moving_cg_y_mm": 1450.0,
+      "rearward_force_N": 100.0,
+      "assumed_stationary_cg_y_mm": 850.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 31.440031399975673
+    },
+    {
+      "moving_mass_kg": 25.0,
+      "moving_cg_y_mm": 1450.0,
+      "rearward_force_N": 300.0,
+      "assumed_stationary_cg_y_mm": 850.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 88.96295134278418
+    },
+    {
+      "moving_mass_kg": 50.0,
+      "moving_cg_y_mm": 1450.0,
+      "rearward_force_N": 100.0,
+      "assumed_stationary_cg_y_mm": 850.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 34.11860282854711
+    },
+    {
+      "moving_mass_kg": 50.0,
+      "moving_cg_y_mm": 1450.0,
+      "rearward_force_N": 300.0,
+      "assumed_stationary_cg_y_mm": 850.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 91.6415227713556
+    },
+    {
+      "moving_mass_kg": 75.0,
+      "moving_cg_y_mm": 1450.0,
+      "rearward_force_N": 100.0,
+      "assumed_stationary_cg_y_mm": 850.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 36.797174257118535
+    },
+    {
+      "moving_mass_kg": 75.0,
+      "moving_cg_y_mm": 1450.0,
+      "rearward_force_N": 300.0,
+      "assumed_stationary_cg_y_mm": 850.0,
+      "required_stationary_mass_kg_for_1_5_moment_ratio": 94.32009419992704
+    }
+  ],
+  "rear_base_moment_joint": {
+    "external_push_N": 100.0,
+    "assumed_push_height_mm": 1053.0,
+    "moment_per_base_Nmm": 52650.0,
+    "bolt_row_vertical_separation_mm": 50.0,
+    "horizontal_couple_per_base_N": 1053.0,
+    "ideal_shared_shear_per_bolt_in_each_row_N": 263.25,
+    "requirement": "TheY1410 support polygon requires positive post/base moment transfer through both fishplates. Qualify clamp slip, slot lips and plate contact; do not assume a pin joint can engage the rear foot as a stabilizer."
+  },
+  "floor_sliding_sensitivity": [
+    {
+      "total_machine_mass_kg": 75.0,
+      "required_static_friction_mu_at_100N": 0.13596216173039044,
+      "required_static_friction_mu_at_300N": 0.4078864851911713
+    },
+    {
+      "total_machine_mass_kg": 125.0,
+      "required_static_friction_mu_at_100N": 0.08157729703823426,
+      "required_static_friction_mu_at_300N": 0.24473189111470278
+    },
+    {
+      "total_machine_mass_kg": 175.0,
+      "required_static_friction_mu_at_100N": 0.05826949788445304,
+      "required_static_friction_mu_at_300N": 0.17480849365335913
+    }
+  ],
+  "side_tipping_stationary_mass_only": {
+    "stationary_cg_x_mm": 575.0,
+    "foot_centre_support_edges_x_mm": [
+      30.8,
+      1119.2
+    ],
+    "minimum_stationary_mass_at_100N_and_1_5_ratio_kg": 29.596504196961366,
+    "note": "Moving mass inside the support polygon is omitted conservatively. Verify actual X CG and extreme head position."
+  },
+  "stability_limits": [
+    "No water ballast may be credited in dry mode.",
+    "Stationary CGY650/850 and movingCGY1355/1450 are explicit sensitivities, not measured values.",
+    "Weigh completed stationary and moving assemblies and solve actual reactions.",
+    "Two300mm rear base members add support centresY1410, fixing the previousY1180 support-polygon weakness within the existing plan footprint.",
+    "If actual measurements still fail moment margin, add positive rated floor anchorage before use.",
+    "External300N force is a proof sensitivity, not an allowed unattended service load.",
+    "Assembled eight-foot support must be levelled; all feet sharing gravity equally is not guaranteed."
+  ],
+  "qualification_tests": [
+    {
+      "test": "Frame and bed static compliance",
+      "acceptance": "Apply100N in\u00b1X,\u00b1Y,\u00b1Z at tool location; framework/ledger/dry-bed displacement relative to work datum\u22640.30mm. Measure tool-loop separately."
+    },
+    {
+      "test": "Joint slip",
+      "acceptance": "After squaring and controlled tightening, reversible\u00b1100N loads must not leave permanent datum motion; target\u22640.05mm slip per structural joint."
+    },
+    {
+      "test": "Service/proof separation",
+      "acceptance": "Test100N service stiffness;300N sensitivity exposes looseness/instability. Select proof procedure and load limits for actual fasteners/profile."
+    },
+    {
+      "test": "Foot loads and tipping",
+      "acceptance": "Dry rear/head worst pose: all intended feet remain seated with required overturning margin. Measure mass/CG and floor friction; qualify anchorage if needed."
+    },
+    {
+      "test": "Dynamics",
+      "acceptance": "Tap-test completed dry and wet assemblies, measure resonance/damping; avoid cutting settings that excite modes. Natural frequency cannot be inferred from memberI alone."
+    },
+    {
+      "test": "Heat/water",
+      "acceptance": "Cold-water leak/drain/overflow test; then thermal test protected storage and aluminum clearances before wood is stored during plasma."
+    }
+  ],
+  "front_transfer_notch_hold": {
+    "parts": 4,
+    "upright_channel_width_Y_mm": 72.8,
+    "upright_cassette_depth_mm": 70.8,
+    "ledger_station_count": 22,
+    "support_detail": "Two front arms retain three ledger stations each, including two X-separated back-row bolts; other arms retain four stations each.",
+    "qualification": "Verify local profile wall/slot-lip integrity, pan-seat bearing, notch edge radii, clamp slip andanti-roll response before release. Reference unnotchedI does not qualify the machined tips."
+  },
+  "non_coverage": [
+    "Owned gantry, rail blocks, motion modules, screw lead, Z/tooling and spindle bearings",
+    "Local T-slot lip bending/pullout and supplier fastener allowables",
+    "Actual joint contact/friction, damping, thermal distortion, welded-pan residual stress",
+    "Physical transfer human clearance and hose/torch-lead routes; see separate bed/motion audit"
+  ]
+}

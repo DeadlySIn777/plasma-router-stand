@@ -1,0 +1,417 @@
+{
+  "method": "Exact Minkowski box expansion: S+t intersectsB iffS intersects(B\u2212T). Each ledger is conservatively covered bytwoaxisalignedboxes ignoring holes; independent rigidtranslationsT=[\u2212400,400]X\u00d7[\u2212500,500]Y\u00d7[\u221250,50]Z. Zero exactintersectionwithboth expandedboxes proves continuousclearance ofthe actualholedledger.",
+  "reference_pose": {
+    "head_x": 575,
+    "gantry_y": 775,
+    "z_lift": 50
+  },
+  "translation_limits_mm": {
+    "X": [
+      -400,
+      400
+    ],
+    "Y": [
+      -500,
+      500
+    ],
+    "Z": [
+      -50,
+      50
+    ]
+  },
+  "ledger_containment": [
+    {
+      "ledger": "DRY_LEDGER_L_2x2xQUARTER_AL_UP_WEB",
+      "outside_conservative_two_box_union_mm3": 0.0
+    },
+    {
+      "ledger": "DRY_LEDGER_R_2x2xQUARTER_AL_UP_WEB",
+      "outside_conservative_two_box_union_mm3": 0.0
+    }
+  ],
+  "checks": [
+    {
+      "head": "XR_PLASMA_DROP_148",
+      "ledger": "DRY_LEDGER_L_2x2xQUARTER_AL_UP_WEB",
+      "ledger_piece": "flange",
+      "head_reference_bounds_mm": [
+        520.0,
+        654.1999999999998,
+        972.0,
+        630.0,
+        666.8999999999999,
+        1190.0
+      ],
+      "piece_bounds_mm": [
+        75.2,
+        80.0,
+        881.65,
+        126.0,
+        1200.0,
+        888.0
+      ],
+      "expanded_piece_bounds_mm": [
+        -324.8,
+        -420.0,
+        831.65,
+        526.0,
+        1700.0,
+        938.0
+      ],
+      "intersection_mm3": 0.0,
+      "distance_mm": 34.0
+    },
+    {
+      "head": "I_HEAD_BACKPLATE",
+      "ledger": "DRY_LEDGER_L_2x2xQUARTER_AL_UP_WEB",
+      "ledger_piece": "flange",
+      "head_reference_bounds_mm": [
+        520.0,
+        644.6749999999998,
+        972.0,
+        630.0,
+        654.1999999999998,
+        1102.0
+      ],
+      "piece_bounds_mm": [
+        75.2,
+        80.0,
+        881.65,
+        126.0,
+        1200.0,
+        888.0
+      ],
+      "expanded_piece_bounds_mm": [
+        -324.8,
+        -420.0,
+        831.65,
+        526.0,
+        1700.0,
+        938.0
+      ],
+      "intersection_mm3": 0.0,
+      "distance_mm": 34.0
+    },
+    {
+      "head": "I_HEAD_CROSSBAR_1",
+      "ledger": "DRY_LEDGER_L_2x2xQUARTER_AL_UP_WEB",
+      "ledger_piece": "flange",
+      "head_reference_bounds_mm": [
+        520.0,
+        619.6749999999998,
+        972.0,
+        630.0,
+        644.6749999999998,
+        984.0
+      ],
+      "piece_bounds_mm": [
+        75.2,
+        80.0,
+        881.65,
+        126.0,
+        1200.0,
+        888.0
+      ],
+      "expanded_piece_bounds_mm": [
+        -324.8,
+        -420.0,
+        831.65,
+        526.0,
+        1700.0,
+        938.0
+      ],
+      "intersection_mm3": 0.0,
+      "distance_mm": 34.0
+    },
+    {
+      "head": "XR_PLASMA_DROP_148",
+      "ledger": "DRY_LEDGER_L_2x2xQUARTER_AL_UP_WEB",
+      "ledger_piece": "web",
+      "head_reference_bounds_mm": [
+        520.0,
+        654.1999999999998,
+        972.0,
+        630.0,
+        666.8999999999999,
+        1190.0
+      ],
+      "piece_bounds_mm": [
+        75.2,
+        80.0,
+        888.0,
+        81.55,
+        1200.0,
+        932.45
+      ],
+      "expanded_piece_bounds_mm": [
+        -324.8,
+        -420.0,
+        838.0,
+        481.55,
+        1700.0,
+        982.45
+      ],
+      "intersection_mm3": 0.0,
+      "distance_mm": 38.44999999999999
+    },
+    {
+      "head": "I_HEAD_BACKPLATE",
+      "ledger": "DRY_LEDGER_L_2x2xQUARTER_AL_UP_WEB",
+      "ledger_piece": "web",
+      "head_reference_bounds_mm": [
+        520.0,
+        644.6749999999998,
+        972.0,
+        630.0,
+        654.1999999999998,
+        1102.0
+      ],
+      "piece_bounds_mm": [
+        75.2,
+        80.0,
+        888.0,
+        81.55,
+        1200.0,
+        932.45
+      ],
+      "expanded_piece_bounds_mm": [
+        -324.8,
+        -420.0,
+        838.0,
+        481.55,
+        1700.0,
+        982.45
+      ],
+      "intersection_mm3": 0.0,
+      "distance_mm": 38.44999999999999
+    },
+    {
+      "head": "I_HEAD_CROSSBAR_1",
+      "ledger": "DRY_LEDGER_L_2x2xQUARTER_AL_UP_WEB",
+      "ledger_piece": "web",
+      "head_reference_bounds_mm": [
+        520.0,
+        619.6749999999998,
+        972.0,
+        630.0,
+        644.6749999999998,
+        984.0
+      ],
+      "piece_bounds_mm": [
+        75.2,
+        80.0,
+        888.0,
+        81.55,
+        1200.0,
+        932.45
+      ],
+      "expanded_piece_bounds_mm": [
+        -324.8,
+        -420.0,
+        838.0,
+        481.55,
+        1700.0,
+        982.45
+      ],
+      "intersection_mm3": 0.0,
+      "distance_mm": 38.44999999999999
+    },
+    {
+      "head": "XR_PLASMA_DROP_148",
+      "ledger": "DRY_LEDGER_R_2x2xQUARTER_AL_UP_WEB",
+      "ledger_piece": "flange",
+      "head_reference_bounds_mm": [
+        520.0,
+        654.1999999999998,
+        972.0,
+        630.0,
+        666.8999999999999,
+        1190.0
+      ],
+      "piece_bounds_mm": [
+        1024.0,
+        80.0,
+        881.65,
+        1074.8,
+        1200.0,
+        888.0
+      ],
+      "expanded_piece_bounds_mm": [
+        624.0,
+        -420.0,
+        831.65,
+        1474.8,
+        1700.0,
+        938.0
+      ],
+      "intersection_mm3": 0.0,
+      "distance_mm": 34.0
+    },
+    {
+      "head": "I_HEAD_BACKPLATE",
+      "ledger": "DRY_LEDGER_R_2x2xQUARTER_AL_UP_WEB",
+      "ledger_piece": "flange",
+      "head_reference_bounds_mm": [
+        520.0,
+        644.6749999999998,
+        972.0,
+        630.0,
+        654.1999999999998,
+        1102.0
+      ],
+      "piece_bounds_mm": [
+        1024.0,
+        80.0,
+        881.65,
+        1074.8,
+        1200.0,
+        888.0
+      ],
+      "expanded_piece_bounds_mm": [
+        624.0,
+        -420.0,
+        831.65,
+        1474.8,
+        1700.0,
+        938.0
+      ],
+      "intersection_mm3": 0.0,
+      "distance_mm": 34.0
+    },
+    {
+      "head": "I_HEAD_CROSSBAR_1",
+      "ledger": "DRY_LEDGER_R_2x2xQUARTER_AL_UP_WEB",
+      "ledger_piece": "flange",
+      "head_reference_bounds_mm": [
+        520.0,
+        619.6749999999998,
+        972.0,
+        630.0,
+        644.6749999999998,
+        984.0
+      ],
+      "piece_bounds_mm": [
+        1024.0,
+        80.0,
+        881.65,
+        1074.8,
+        1200.0,
+        888.0
+      ],
+      "expanded_piece_bounds_mm": [
+        624.0,
+        -420.0,
+        831.65,
+        1474.8,
+        1700.0,
+        938.0
+      ],
+      "intersection_mm3": 0.0,
+      "distance_mm": 34.0
+    },
+    {
+      "head": "XR_PLASMA_DROP_148",
+      "ledger": "DRY_LEDGER_R_2x2xQUARTER_AL_UP_WEB",
+      "ledger_piece": "web",
+      "head_reference_bounds_mm": [
+        520.0,
+        654.1999999999998,
+        972.0,
+        630.0,
+        666.8999999999999,
+        1190.0
+      ],
+      "piece_bounds_mm": [
+        1068.45,
+        80.0,
+        888.0,
+        1074.8,
+        1200.0,
+        932.45
+      ],
+      "expanded_piece_bounds_mm": [
+        668.45,
+        -420.0,
+        838.0,
+        1474.8,
+        1700.0,
+        982.45
+      ],
+      "intersection_mm3": 0.0,
+      "distance_mm": 38.450000000000045
+    },
+    {
+      "head": "I_HEAD_BACKPLATE",
+      "ledger": "DRY_LEDGER_R_2x2xQUARTER_AL_UP_WEB",
+      "ledger_piece": "web",
+      "head_reference_bounds_mm": [
+        520.0,
+        644.6749999999998,
+        972.0,
+        630.0,
+        654.1999999999998,
+        1102.0
+      ],
+      "piece_bounds_mm": [
+        1068.45,
+        80.0,
+        888.0,
+        1074.8,
+        1200.0,
+        932.45
+      ],
+      "expanded_piece_bounds_mm": [
+        668.45,
+        -420.0,
+        838.0,
+        1474.8,
+        1700.0,
+        982.45
+      ],
+      "intersection_mm3": 0.0,
+      "distance_mm": 38.450000000000045
+    },
+    {
+      "head": "I_HEAD_CROSSBAR_1",
+      "ledger": "DRY_LEDGER_R_2x2xQUARTER_AL_UP_WEB",
+      "ledger_piece": "web",
+      "head_reference_bounds_mm": [
+        520.0,
+        619.6749999999998,
+        972.0,
+        630.0,
+        644.6749999999998,
+        984.0
+      ],
+      "piece_bounds_mm": [
+        1068.45,
+        80.0,
+        888.0,
+        1074.8,
+        1200.0,
+        932.45
+      ],
+      "expanded_piece_bounds_mm": [
+        668.45,
+        -420.0,
+        838.0,
+        1474.8,
+        1700.0,
+        982.45
+      ],
+      "intersection_mm3": 0.0,
+      "distance_mm": 38.450000000000045
+    }
+  ],
+  "continuous_clear": true,
+  "source_sha256": {
+    "motion.py": "a8e1458d3fda2a492e5b889b66e3f21ad075be14bb8340fb550b6f4e1cc4c015",
+    "bed.py": "3672fd33bf66af23238630c0df2805a5e288f2e488961633847ec51ed0537ba6",
+    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f"
+  },
+  "limits": [
+    "Threeheadparts/sixreportedledgerpairs only; otherrelativecontacts remain covered byroottravelcheck.",
+    "Rigidcataloguegeometry; realtorch/tool/clamps/cablesandfabricationvariationexcluded."
+  ],
+  "release": false
+}

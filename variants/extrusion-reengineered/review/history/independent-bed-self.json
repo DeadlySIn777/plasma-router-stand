@@ -1,0 +1,6119 @@
+{
+  "scope": "RAW exact bed SELF checks at installed/stored mode poses; no fabrication release or blanket mating exclusions.",
+  "snapshot_sha256": {
+    "bed.py": "3672fd33bf66af23238630c0df2805a5e288f2e488961633847ec51ed0537ba6",
+    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f"
+  },
+  "modes": {
+    "WOOD": {
+      "parts": 255,
+      "invalid_ids": [
+        "HOT_SIDE_SHADOW_L",
+        "HOT_SIDE_SHADOW_R",
+        "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+        "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+        "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+        "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB"
+      ],
+      "exact_pairs": 404,
+      "positive_pairs": [
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "PAN_FRAME_EAR_FL_M6_FACE_FIX_HOLD",
+          "volume_mm3": 8.856631,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            104.0,
+            120.0,
+            736.5,
+            128.0,
+            165.0,
+            812.5
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "PAN_KEEPER_FL_BOSS",
+          "volume_mm3": 349.489917,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            109.0,
+            143.0,
+            812.5,
+            123.0,
+            157.0,
+            827.5
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "PAN_KEEPER_FL_SHOULDER",
+          "volume_mm3": 36.230039,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            112.0,
+            146.0,
+            827.5,
+            120.0,
+            154.0,
+            834.5
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "PAN_KEEPER_FL_CAP_1MM_UPLIFT",
+          "volume_mm3": 140.56289,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            106.0,
+            142.0,
+            834.5,
+            126.0,
+            158.0,
+            837.5
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "PAN_WELDED_EAR_FL",
+          "volume_mm3": 69.42672,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            104.0,
+            135.0,
+            831.6,
+            128.0,
+            165.0,
+            833.5
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "PAN_KEEPER_FL_M6x20_VERIFY_THREAD",
+          "volume_mm3": 190.95787,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            111.0,
+            145.0,
+            817.5,
+            121.0,
+            155.0,
+            843.5
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "volume_mm3": 2940.530724,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "WATER_COLD_HOSE_VERTICAL_ENVELOPE_VERIFY_BEND_RADIUS",
+          "volume_mm3": 283.144291,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            67.0,
+            143.0,
+            120.0,
+            101.0,
+            177.0,
+            826.36
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "DOCK_LATCH_1_92_40_VERIFY_HARDWARE",
+          "volume_mm3": 688.320645,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            92.0,
+            129.4,
+            812.0,
+            106.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "INDEPENDENT_OPEN_OVERFLOW_40x8",
+          "b": "HOT_SIDE_SHADOW_R",
+          "volume_mm3": 436.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1022.0,
+            878.0,
+            861.0,
+            1056.0,
+            922.0,
+            873.0
+          ],
+          "bounds_b_mm": [
+            1022.0,
+            141.0,
+            870.0,
+            1032.0,
+            1139.0,
+            871.9
+          ],
+          "issue_group": "overflow_sheet_joint_or_clash"
+        },
+        {
+          "a": "PAN_FRAME_EAR_FL_M6_FACE_FIX_HOLD",
+          "b": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "volume_mm3": 563.911578,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            120.0,
+            736.5,
+            128.0,
+            165.0,
+            812.5
+          ],
+          "bounds_b_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "PAN_FRAME_EAR_FL_M6_FACE_FIX_HOLD",
+          "b": "DOCK_LATCH_1_92_40_VERIFY_HARDWARE",
+          "volume_mm3": 28.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            120.0,
+            736.5,
+            128.0,
+            165.0,
+            812.5
+          ],
+          "bounds_b_mm": [
+            92.0,
+            129.4,
+            812.0,
+            106.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_KEEPER_FL_BOSS",
+          "b": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "volume_mm3": 203.844414,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            143.0,
+            812.5,
+            123.0,
+            157.0,
+            827.5
+          ],
+          "bounds_b_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "PAN_KEEPER_FL_CAP_1MM_UPLIFT",
+          "b": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "volume_mm3": 168.394446,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            106.0,
+            142.0,
+            834.5,
+            126.0,
+            158.0,
+            837.5
+          ],
+          "bounds_b_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "PAN_WELDED_EAR_FL",
+          "b": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "volume_mm3": 116.482468,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            135.0,
+            831.6,
+            128.0,
+            165.0,
+            833.5
+          ],
+          "bounds_b_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "PAN_WELDED_EAR_FL",
+          "b": "DOCK_LATCH_1_92_40_VERIFY_HARDWARE",
+          "volume_mm3": 85.12,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            135.0,
+            831.6,
+            128.0,
+            165.0,
+            833.5
+          ],
+          "bounds_b_mm": [
+            92.0,
+            129.4,
+            812.0,
+            106.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_KEEPER_FL_M6x20_VERIFY_THREAD",
+          "b": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "volume_mm3": 20.089642,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            111.0,
+            145.0,
+            817.5,
+            121.0,
+            155.0,
+            843.5
+          ],
+          "bounds_b_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "PAN_FRAME_EAR_FR_M6_FACE_FIX_HOLD",
+          "b": "DOCK_LATCH_1_1044_40_VERIFY_HARDWARE",
+          "volume_mm3": 28.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1022.0,
+            120.0,
+            736.5,
+            1046.0,
+            165.0,
+            812.5
+          ],
+          "bounds_b_mm": [
+            1044.0,
+            129.4,
+            812.0,
+            1058.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_WELDED_EAR_FR",
+          "b": "DOCK_LATCH_1_1044_40_VERIFY_HARDWARE",
+          "volume_mm3": 85.12,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1022.0,
+            135.0,
+            831.6,
+            1046.0,
+            165.0,
+            833.5
+          ],
+          "bounds_b_mm": [
+            1044.0,
+            129.4,
+            812.0,
+            1058.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_FRAME_EAR_RL_M6_FACE_FIX_HOLD",
+          "b": "DOCK_LATCH_4_92_217_VERIFY_HARDWARE",
+          "volume_mm3": 1.4,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            1110.0,
+            736.5,
+            128.0,
+            1160.0,
+            812.5
+          ],
+          "bounds_b_mm": [
+            92.0,
+            1083.4,
+            812.0,
+            106.0,
+            1111.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_WELDED_EAR_RL",
+          "b": "DOCK_LATCH_4_92_217_VERIFY_HARDWARE",
+          "volume_mm3": 5.32,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            1110.0,
+            831.6,
+            128.0,
+            1140.0,
+            833.5
+          ],
+          "bounds_b_mm": [
+            92.0,
+            1083.4,
+            812.0,
+            106.0,
+            1111.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_FRAME_EAR_RR_M6_FACE_FIX_HOLD",
+          "b": "DOCK_LATCH_4_1044_217_VERIFY_HARDWARE",
+          "volume_mm3": 1.4,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1022.0,
+            1110.0,
+            736.5,
+            1046.0,
+            1160.0,
+            812.5
+          ],
+          "bounds_b_mm": [
+            1044.0,
+            1083.4,
+            812.0,
+            1058.0,
+            1111.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_WELDED_EAR_RR",
+          "b": "DOCK_LATCH_4_1044_217_VERIFY_HARDWARE",
+          "volume_mm3": 5.32,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1022.0,
+            1110.0,
+            831.6,
+            1046.0,
+            1140.0,
+            833.5
+          ],
+          "bounds_b_mm": [
+            1044.0,
+            1083.4,
+            812.0,
+            1058.0,
+            1111.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "b": "WATER_COLD_HOSE_VERTICAL_ENVELOPE_VERIFY_BEND_RADIUS",
+          "volume_mm3": 4202.602625,
+          "classification": "routing_service_envelopes_or_hose_junction_not_fabricated_fitting",
+          "bounds_a_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "bounds_b_mm": [
+            67.0,
+            143.0,
+            120.0,
+            101.0,
+            177.0,
+            826.36
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "b": "DOCK_LATCH_1_92_40_VERIFY_HARDWARE",
+          "volume_mm3": 2770.148914,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "bounds_b_mm": [
+            92.0,
+            129.4,
+            812.0,
+            106.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "WATER_COLD_HOSE_VERTICAL_ENVELOPE_VERIFY_BEND_RADIUS",
+          "b": "WATER_COLD_HOSE_REARWARD_ENVELOPE",
+          "volume_mm3": 1420.66266,
+          "classification": "routing_service_envelopes_or_hose_junction_not_fabricated_fitting",
+          "bounds_a_mm": [
+            67.0,
+            143.0,
+            120.0,
+            101.0,
+            177.0,
+            826.36
+          ],
+          "bounds_b_mm": [
+            67.0,
+            160.0,
+            103.0,
+            101.0,
+            780.0,
+            137.0
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "WATER_COLD_HOSE_VERTICAL_ENVELOPE_VERIFY_BEND_RADIUS",
+          "b": "DOCK_LATCH_1_92_40_VERIFY_HARDWARE",
+          "volume_mm3": 780.842618,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            67.0,
+            143.0,
+            120.0,
+            101.0,
+            177.0,
+            826.36
+          ],
+          "bounds_b_mm": [
+            92.0,
+            129.4,
+            812.0,
+            106.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "WATER_COLD_HOSE_REARWARD_ENVELOPE",
+          "b": "WATER_COLD_HOSE_INTO_RECEIVER_ENVELOPE",
+          "volume_mm3": 1420.692815,
+          "classification": "routing_service_envelopes_or_hose_junction_not_fabricated_fitting",
+          "bounds_a_mm": [
+            67.0,
+            160.0,
+            103.0,
+            101.0,
+            780.0,
+            137.0
+          ],
+          "bounds_b_mm": [
+            84.0,
+            763.0,
+            103.0,
+            260.0,
+            797.0,
+            137.0
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "WATER_COLD_HOSE_INTO_RECEIVER_ENVELOPE",
+          "b": "WATER_FLOOR_RECEIVER_ENVELOPE_REQUIRE_65L_USABLE",
+          "volume_mm3": 1668.185699,
+          "classification": "routing_service_envelopes_or_hose_junction_not_fabricated_fitting",
+          "bounds_a_mm": [
+            84.0,
+            763.0,
+            103.0,
+            260.0,
+            797.0,
+            137.0
+          ],
+          "bounds_b_mm": [
+            200.0,
+            700.0,
+            0.0,
+            1000.0,
+            1200.0,
+            300.0
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "OVERFLOW_OPEN_VERTICAL_COLLECTOR",
+          "b": "OVERFLOW_OPEN_SLOPING_RETURN_TO_RECEIVER",
+          "volume_mm3": 2279.6,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1056.0,
+            878.0,
+            372.0,
+            1076.0,
+            922.0,
+            874.0
+          ],
+          "bounds_b_mm": [
+            966.0,
+            878.0,
+            370.0,
+            1076.0,
+            922.0,
+            384.0
+          ],
+          "issue_group": "overflow_sheet_joint_or_clash"
+        },
+        {
+          "a": "OVERFLOW_OPEN_VERTICAL_COLLECTOR",
+          "b": "DOCK_LATCH_4_1044_40_VERIFY_HARDWARE",
+          "volume_mm3": 91.2,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1056.0,
+            878.0,
+            372.0,
+            1076.0,
+            922.0,
+            874.0
+          ],
+          "bounds_b_mm": [
+            1044.0,
+            906.4,
+            812.0,
+            1058.0,
+            934.4,
+            836.0
+          ],
+          "issue_group": "overflow_sheet_joint_or_clash"
+        },
+        {
+          "a": "OVERFLOW_OPEN_SLOPING_RETURN_TO_RECEIVER",
+          "b": "OVERFLOW_DOWNWARD_DEFLECTOR_ABOVE_RECEIVER",
+          "volume_mm3": 231.637291,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            966.0,
+            878.0,
+            370.0,
+            1076.0,
+            922.0,
+            384.0
+          ],
+          "bounds_b_mm": [
+            966.0,
+            878.0,
+            320.0,
+            967.9,
+            922.0,
+            382.0
+          ],
+          "issue_group": "overflow_sheet_joint_or_clash"
+        },
+        {
+          "a": "COLD_CASE_FLOOR_NOT_A_WORKBED",
+          "b": "COLD_CASE_SIDE_L",
+          "volume_mm3": 177.28,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            350.0,
+            390.0,
+            1046.0,
+            627.0,
+            390.8
+          ],
+          "bounds_b_mm": [
+            104.0,
+            350.0,
+            390.0,
+            104.8,
+            627.0,
+            710.0
+          ],
+          "issue_group": "cabinet_floor_corner_stock_laps"
+        },
+        {
+          "a": "COLD_CASE_FLOOR_NOT_A_WORKBED",
+          "b": "COLD_CASE_SIDE_R",
+          "volume_mm3": 177.28,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            350.0,
+            390.0,
+            1046.0,
+            627.0,
+            390.8
+          ],
+          "bounds_b_mm": [
+            1045.2,
+            350.0,
+            390.0,
+            1046.0,
+            627.0,
+            710.0
+          ],
+          "issue_group": "cabinet_floor_corner_stock_laps"
+        },
+        {
+          "a": "COLD_CASE_FLOOR_NOT_A_WORKBED",
+          "b": "COLD_CASE_BACK",
+          "volume_mm3": 601.856,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            350.0,
+            390.0,
+            1046.0,
+            627.0,
+            390.8
+          ],
+          "bounds_b_mm": [
+            104.8,
+            626.2,
+            390.0,
+            1045.2,
+            627.0,
+            710.0
+          ],
+          "issue_group": "cabinet_floor_corner_stock_laps"
+        },
+        {
+          "a": "CASE_CARRIER_L_AL25x25x3",
+          "b": "CASE_HANGER_L_80_M5x35_VERIFY_GRIP",
+          "volume_mm3": 56.57223,
+          "classification": "fastener_clearance_or_grip_interference_not_an_explicit_thread_permit",
+          "bounds_a_mm": [
+            187.0,
+            80.0,
+            368.0,
+            215.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            195.5,
+            90.5,
+            361.5,
+            204.5,
+            99.5,
+            400.0
+          ],
+          "issue_group": "hanger_bolt_clearance_holes"
+        },
+        {
+          "a": "CASE_CARRIER_L_AL25x25x3",
+          "b": "CASE_HANGER_L_650_M5x35_VERIFY_GRIP",
+          "volume_mm3": 56.57223,
+          "classification": "fastener_clearance_or_grip_interference_not_an_explicit_thread_permit",
+          "bounds_a_mm": [
+            187.0,
+            80.0,
+            368.0,
+            215.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            195.5,
+            630.5,
+            361.5,
+            204.5,
+            639.5,
+            400.0
+          ],
+          "issue_group": "hanger_bolt_clearance_holes"
+        },
+        {
+          "a": "CASE_CARRIER_L_AL25x25x3",
+          "b": "CASE_CROSSBEARER_F_AL25x25x3",
+          "volume_mm3": 2271.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            187.0,
+            80.0,
+            368.0,
+            215.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            104.0,
+            350.0,
+            365.0,
+            1046.0,
+            375.0,
+            390.0
+          ],
+          "issue_group": "cabinet_angle_intersections"
+        },
+        {
+          "a": "CASE_CARRIER_L_AL25x25x3",
+          "b": "CASE_CROSSBEARER_R_AL25x25x3",
+          "volume_mm3": 2271.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            187.0,
+            80.0,
+            368.0,
+            215.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            104.0,
+            602.0,
+            365.0,
+            1046.0,
+            627.0,
+            390.0
+          ],
+          "issue_group": "cabinet_angle_intersections"
+        },
+        {
+          "a": "CASE_CARRIER_R_AL25x25x3",
+          "b": "CASE_HANGER_R_80_M5x35_VERIFY_GRIP",
+          "volume_mm3": 56.57223,
+          "classification": "fastener_clearance_or_grip_interference_not_an_explicit_thread_permit",
+          "bounds_a_mm": [
+            910.0,
+            80.0,
+            368.0,
+            938.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            920.5,
+            90.5,
+            361.5,
+            929.5,
+            99.5,
+            400.0
+          ],
+          "issue_group": "hanger_bolt_clearance_holes"
+        },
+        {
+          "a": "CASE_CARRIER_R_AL25x25x3",
+          "b": "CASE_HANGER_R_650_M5x35_VERIFY_GRIP",
+          "volume_mm3": 56.57223,
+          "classification": "fastener_clearance_or_grip_interference_not_an_explicit_thread_permit",
+          "bounds_a_mm": [
+            910.0,
+            80.0,
+            368.0,
+            938.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            920.5,
+            630.5,
+            361.5,
+            929.5,
+            639.5,
+            400.0
+          ],
+          "issue_group": "hanger_bolt_clearance_holes"
+        },
+        {
+          "a": "CASE_CARRIER_R_AL25x25x3",
+          "b": "CASE_CROSSBEARER_F_AL25x25x3",
+          "volume_mm3": 2271.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            910.0,
+            80.0,
+            368.0,
+            938.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            104.0,
+            350.0,
+            365.0,
+            1046.0,
+            375.0,
+            390.0
+          ],
+          "issue_group": "cabinet_angle_intersections"
+        },
+        {
+          "a": "CASE_CARRIER_R_AL25x25x3",
+          "b": "CASE_CROSSBEARER_R_AL25x25x3",
+          "volume_mm3": 2271.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            910.0,
+            80.0,
+            368.0,
+            938.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            104.0,
+            602.0,
+            365.0,
+            1046.0,
+            627.0,
+            390.0
+          ],
+          "issue_group": "cabinet_angle_intersections"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            186.0,
+            118.4,
+            897.525,
+            194.0,
+            126.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            185.25,
+            117.65,
+            889.6,
+            194.75,
+            127.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            426.0,
+            118.4,
+            897.525,
+            434.0,
+            126.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            425.25,
+            117.65,
+            889.6,
+            434.75,
+            127.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            716.0,
+            118.4,
+            897.525,
+            724.0,
+            126.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            715.25,
+            117.65,
+            889.6,
+            724.75,
+            127.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            956.0,
+            118.4,
+            897.525,
+            964.0,
+            126.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            955.25,
+            117.65,
+            889.6,
+            964.75,
+            127.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            162.0,
+            112.9,
+            946.1,
+            988.0,
+            131.9,
+            958.8000000000001
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            180.0,
+            331.4,
+            888.0,
+            200.0,
+            351.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            186.0,
+            337.4,
+            897.525,
+            194.0,
+            345.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            185.25,
+            336.65,
+            889.6,
+            194.75,
+            346.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            420.0,
+            331.4,
+            888.0,
+            440.0,
+            351.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            426.0,
+            337.4,
+            897.525,
+            434.0,
+            345.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            425.25,
+            336.65,
+            889.6,
+            434.75,
+            346.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            710.0,
+            331.4,
+            888.0,
+            730.0,
+            351.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            716.0,
+            337.4,
+            897.525,
+            724.0,
+            345.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            715.25,
+            336.65,
+            889.6,
+            724.75,
+            346.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            950.0,
+            331.4,
+            888.0,
+            970.0,
+            351.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            956.0,
+            337.4,
+            897.525,
+            964.0,
+            345.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            955.25,
+            336.65,
+            889.6,
+            964.75,
+            346.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            103.4,
+            888.0,
+            1041.0,
+            360.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            162.0,
+            331.9,
+            946.1,
+            988.0,
+            350.9,
+            958.8000000000001
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            186.0,
+            377.4,
+            897.525,
+            194.0,
+            385.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            185.25,
+            376.65,
+            889.6,
+            194.75,
+            386.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            426.0,
+            377.4,
+            897.525,
+            434.0,
+            385.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            425.25,
+            376.65,
+            889.6,
+            434.75,
+            386.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            716.0,
+            377.4,
+            897.525,
+            724.0,
+            385.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            715.25,
+            376.65,
+            889.6,
+            724.75,
+            386.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            956.0,
+            377.4,
+            897.525,
+            964.0,
+            385.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            955.25,
+            376.65,
+            889.6,
+            964.75,
+            386.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            162.0,
+            371.9,
+            946.1,
+            988.0,
+            390.9,
+            958.8000000000001
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            180.0,
+            590.4,
+            888.0,
+            200.0,
+            610.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            186.0,
+            596.4,
+            897.525,
+            194.0,
+            604.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            185.25,
+            595.65,
+            889.6,
+            194.75,
+            605.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            420.0,
+            590.4,
+            888.0,
+            440.0,
+            610.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            426.0,
+            596.4,
+            897.525,
+            434.0,
+            604.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            425.25,
+            595.65,
+            889.6,
+            434.75,
+            605.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            710.0,
+            590.4,
+            888.0,
+            730.0,
+            610.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            716.0,
+            596.4,
+            897.525,
+            724.0,
+            604.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            715.25,
+            595.65,
+            889.6,
+            724.75,
+            605.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            950.0,
+            590.4,
+            888.0,
+            970.0,
+            610.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            956.0,
+            596.4,
+            897.525,
+            964.0,
+            604.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            955.25,
+            595.65,
+            889.6,
+            964.75,
+            605.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            362.4,
+            888.0,
+            1041.0,
+            619.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            162.0,
+            590.9,
+            946.1,
+            988.0,
+            609.9,
+            958.8000000000001
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            186.0,
+            636.4,
+            897.525,
+            194.0,
+            644.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            185.25,
+            635.65,
+            889.6,
+            194.75,
+            645.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            426.0,
+            636.4,
+            897.525,
+            434.0,
+            644.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            425.25,
+            635.65,
+            889.6,
+            434.75,
+            645.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            716.0,
+            636.4,
+            897.525,
+            724.0,
+            644.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            715.25,
+            635.65,
+            889.6,
+            724.75,
+            645.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            956.0,
+            636.4,
+            897.525,
+            964.0,
+            644.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            955.25,
+            635.65,
+            889.6,
+            964.75,
+            645.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            162.0,
+            630.9,
+            946.1,
+            988.0,
+            649.9,
+            958.8000000000001
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            180.0,
+            849.4,
+            888.0,
+            200.0,
+            869.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            186.0,
+            855.4,
+            897.525,
+            194.0,
+            863.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            185.25,
+            854.65,
+            889.6,
+            194.75,
+            864.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            420.0,
+            849.4,
+            888.0,
+            440.0,
+            869.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            426.0,
+            855.4,
+            897.525,
+            434.0,
+            863.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            425.25,
+            854.65,
+            889.6,
+            434.75,
+            864.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            710.0,
+            849.4,
+            888.0,
+            730.0,
+            869.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            716.0,
+            855.4,
+            897.525,
+            724.0,
+            863.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            715.25,
+            854.65,
+            889.6,
+            724.75,
+            864.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            950.0,
+            849.4,
+            888.0,
+            970.0,
+            869.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            956.0,
+            855.4,
+            897.525,
+            964.0,
+            863.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            955.25,
+            854.65,
+            889.6,
+            964.75,
+            864.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            621.4,
+            888.0,
+            1041.0,
+            878.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            162.0,
+            849.9,
+            946.1,
+            988.0,
+            868.9,
+            958.8000000000001
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            186.0,
+            895.4,
+            897.525,
+            194.0,
+            903.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            185.25,
+            894.65,
+            889.6,
+            194.75,
+            904.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            426.0,
+            895.4,
+            897.525,
+            434.0,
+            903.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            425.25,
+            894.65,
+            889.6,
+            434.75,
+            904.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            716.0,
+            895.4,
+            897.525,
+            724.0,
+            903.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            715.25,
+            894.65,
+            889.6,
+            724.75,
+            904.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            956.0,
+            895.4,
+            897.525,
+            964.0,
+            903.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            955.25,
+            894.65,
+            889.6,
+            964.75,
+            904.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            162.0,
+            889.9,
+            946.1,
+            988.0,
+            908.9,
+            958.8000000000001
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            180.0,
+            1108.4,
+            888.0,
+            200.0,
+            1128.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            186.0,
+            1114.4,
+            897.525,
+            194.0,
+            1122.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            185.25,
+            1113.65,
+            889.6,
+            194.75,
+            1123.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            420.0,
+            1108.4,
+            888.0,
+            440.0,
+            1128.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            426.0,
+            1114.4,
+            897.525,
+            434.0,
+            1122.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            425.25,
+            1113.65,
+            889.6,
+            434.75,
+            1123.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            710.0,
+            1108.4,
+            888.0,
+            730.0,
+            1128.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            716.0,
+            1114.4,
+            897.525,
+            724.0,
+            1122.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            715.25,
+            1113.65,
+            889.6,
+            724.75,
+            1123.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            950.0,
+            1108.4,
+            888.0,
+            970.0,
+            1128.4,
+            897.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            956.0,
+            1114.4,
+            897.525,
+            964.0,
+            1122.4,
+            946.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            955.25,
+            1113.65,
+            889.6,
+            964.75,
+            1123.15,
+            949.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            880.4,
+            888.0,
+            1041.0,
+            1137.4,
+            952.45
+          ],
+          "bounds_b_mm": [
+            162.0,
+            1108.9,
+            946.1,
+            988.0,
+            1127.9,
+            958.8000000000001
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        }
+      ],
+      "positive_count": 131,
+      "issue_group_counts": {
+        "drain_interfaces_or_retainer_latch_clashes": 9,
+        "overflow_sheet_joint_or_clash": 4,
+        "water_route_envelopes_or_actual_clashes": 11,
+        "pan_keeper_latch_clashes": 8,
+        "cabinet_floor_corner_stock_laps": 3,
+        "hanger_bolt_clearance_holes": 4,
+        "cabinet_angle_intersections": 4,
+        "cassette_clearance_subtraction": 88
+      }
+    },
+    "PLASMA": {
+      "parts": 255,
+      "invalid_ids": [
+        "HOT_SIDE_SHADOW_L",
+        "HOT_SIDE_SHADOW_R",
+        "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+        "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+        "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+        "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB"
+      ],
+      "exact_pairs": 364,
+      "positive_pairs": [
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "PAN_FRAME_EAR_FL_M6_FACE_FIX_HOLD",
+          "volume_mm3": 8.856631,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            104.0,
+            120.0,
+            736.5,
+            128.0,
+            165.0,
+            812.5
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "PAN_KEEPER_FL_BOSS",
+          "volume_mm3": 349.489917,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            109.0,
+            143.0,
+            812.5,
+            123.0,
+            157.0,
+            827.5
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "PAN_KEEPER_FL_SHOULDER",
+          "volume_mm3": 36.230039,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            112.0,
+            146.0,
+            827.5,
+            120.0,
+            154.0,
+            834.5
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "PAN_KEEPER_FL_CAP_1MM_UPLIFT",
+          "volume_mm3": 140.56289,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            106.0,
+            142.0,
+            834.5,
+            126.0,
+            158.0,
+            837.5
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "PAN_WELDED_EAR_FL",
+          "volume_mm3": 69.42672,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            104.0,
+            135.0,
+            831.6,
+            128.0,
+            165.0,
+            833.5
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "PAN_KEEPER_FL_M6x20_VERIFY_THREAD",
+          "volume_mm3": 190.95787,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            111.0,
+            145.0,
+            817.5,
+            121.0,
+            155.0,
+            843.5
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "volume_mm3": 2940.530724,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "WATER_COLD_HOSE_VERTICAL_ENVELOPE_VERIFY_BEND_RADIUS",
+          "volume_mm3": 283.144291,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            67.0,
+            143.0,
+            120.0,
+            101.0,
+            177.0,
+            826.36
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "b": "DOCK_LATCH_1_92_40_VERIFY_HARDWARE",
+          "volume_mm3": 688.320645,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            94.0,
+            146.0,
+            812.36,
+            128.0,
+            174.0,
+            840.36
+          ],
+          "bounds_b_mm": [
+            92.0,
+            129.4,
+            812.0,
+            106.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "drain_interfaces_or_retainer_latch_clashes"
+        },
+        {
+          "a": "INDEPENDENT_OPEN_OVERFLOW_40x8",
+          "b": "HOT_SIDE_SHADOW_R",
+          "volume_mm3": 436.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1022.0,
+            878.0,
+            861.0,
+            1056.0,
+            922.0,
+            873.0
+          ],
+          "bounds_b_mm": [
+            1022.0,
+            141.0,
+            870.0,
+            1032.0,
+            1139.0,
+            871.9
+          ],
+          "issue_group": "overflow_sheet_joint_or_clash"
+        },
+        {
+          "a": "PAN_FRAME_EAR_FL_M6_FACE_FIX_HOLD",
+          "b": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "volume_mm3": 563.911578,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            120.0,
+            736.5,
+            128.0,
+            165.0,
+            812.5
+          ],
+          "bounds_b_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "PAN_FRAME_EAR_FL_M6_FACE_FIX_HOLD",
+          "b": "DOCK_LATCH_1_92_40_VERIFY_HARDWARE",
+          "volume_mm3": 28.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            120.0,
+            736.5,
+            128.0,
+            165.0,
+            812.5
+          ],
+          "bounds_b_mm": [
+            92.0,
+            129.4,
+            812.0,
+            106.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_KEEPER_FL_BOSS",
+          "b": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "volume_mm3": 203.844414,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            143.0,
+            812.5,
+            123.0,
+            157.0,
+            827.5
+          ],
+          "bounds_b_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "PAN_KEEPER_FL_CAP_1MM_UPLIFT",
+          "b": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "volume_mm3": 168.394446,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            106.0,
+            142.0,
+            834.5,
+            126.0,
+            158.0,
+            837.5
+          ],
+          "bounds_b_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "PAN_WELDED_EAR_FL",
+          "b": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "volume_mm3": 116.482468,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            135.0,
+            831.6,
+            128.0,
+            165.0,
+            833.5
+          ],
+          "bounds_b_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "PAN_WELDED_EAR_FL",
+          "b": "DOCK_LATCH_1_92_40_VERIFY_HARDWARE",
+          "volume_mm3": 85.12,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            135.0,
+            831.6,
+            128.0,
+            165.0,
+            833.5
+          ],
+          "bounds_b_mm": [
+            92.0,
+            129.4,
+            812.0,
+            106.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_KEEPER_FL_M6x20_VERIFY_THREAD",
+          "b": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "volume_mm3": 20.089642,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            111.0,
+            145.0,
+            817.5,
+            121.0,
+            155.0,
+            843.5
+          ],
+          "bounds_b_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "PAN_FRAME_EAR_FR_M6_FACE_FIX_HOLD",
+          "b": "DOCK_LATCH_1_1044_40_VERIFY_HARDWARE",
+          "volume_mm3": 28.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1022.0,
+            120.0,
+            736.5,
+            1046.0,
+            165.0,
+            812.5
+          ],
+          "bounds_b_mm": [
+            1044.0,
+            129.4,
+            812.0,
+            1058.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_WELDED_EAR_FR",
+          "b": "DOCK_LATCH_1_1044_40_VERIFY_HARDWARE",
+          "volume_mm3": 85.12,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1022.0,
+            135.0,
+            831.6,
+            1046.0,
+            165.0,
+            833.5
+          ],
+          "bounds_b_mm": [
+            1044.0,
+            129.4,
+            812.0,
+            1058.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_FRAME_EAR_RL_M6_FACE_FIX_HOLD",
+          "b": "DOCK_LATCH_4_92_217_VERIFY_HARDWARE",
+          "volume_mm3": 1.4,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            1110.0,
+            736.5,
+            128.0,
+            1160.0,
+            812.5
+          ],
+          "bounds_b_mm": [
+            92.0,
+            1083.4,
+            812.0,
+            106.0,
+            1111.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_WELDED_EAR_RL",
+          "b": "DOCK_LATCH_4_92_217_VERIFY_HARDWARE",
+          "volume_mm3": 5.32,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            1110.0,
+            831.6,
+            128.0,
+            1140.0,
+            833.5
+          ],
+          "bounds_b_mm": [
+            92.0,
+            1083.4,
+            812.0,
+            106.0,
+            1111.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_FRAME_EAR_RR_M6_FACE_FIX_HOLD",
+          "b": "DOCK_LATCH_4_1044_217_VERIFY_HARDWARE",
+          "volume_mm3": 1.4,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1022.0,
+            1110.0,
+            736.5,
+            1046.0,
+            1160.0,
+            812.5
+          ],
+          "bounds_b_mm": [
+            1044.0,
+            1083.4,
+            812.0,
+            1058.0,
+            1111.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "PAN_WELDED_EAR_RR",
+          "b": "DOCK_LATCH_4_1044_217_VERIFY_HARDWARE",
+          "volume_mm3": 5.32,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1022.0,
+            1110.0,
+            831.6,
+            1046.0,
+            1140.0,
+            833.5
+          ],
+          "bounds_b_mm": [
+            1044.0,
+            1083.4,
+            812.0,
+            1058.0,
+            1111.4,
+            836.0
+          ],
+          "issue_group": "pan_keeper_latch_clashes"
+        },
+        {
+          "a": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "b": "WATER_COLD_HOSE_VERTICAL_ENVELOPE_VERIFY_BEND_RADIUS",
+          "volume_mm3": 4202.602625,
+          "classification": "routing_service_envelopes_or_hose_junction_not_fabricated_fitting",
+          "bounds_a_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "bounds_b_mm": [
+            67.0,
+            143.0,
+            120.0,
+            101.0,
+            177.0,
+            826.36
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "b": "DOCK_LATCH_1_92_40_VERIFY_HARDWARE",
+          "volume_mm3": 2770.148914,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            58.0,
+            141.0,
+            807.36,
+            112.0,
+            179.0,
+            845.36
+          ],
+          "bounds_b_mm": [
+            92.0,
+            129.4,
+            812.0,
+            106.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "WATER_COLD_HOSE_VERTICAL_ENVELOPE_VERIFY_BEND_RADIUS",
+          "b": "WATER_COLD_HOSE_REARWARD_ENVELOPE",
+          "volume_mm3": 1420.66266,
+          "classification": "routing_service_envelopes_or_hose_junction_not_fabricated_fitting",
+          "bounds_a_mm": [
+            67.0,
+            143.0,
+            120.0,
+            101.0,
+            177.0,
+            826.36
+          ],
+          "bounds_b_mm": [
+            67.0,
+            160.0,
+            103.0,
+            101.0,
+            780.0,
+            137.0
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "WATER_COLD_HOSE_VERTICAL_ENVELOPE_VERIFY_BEND_RADIUS",
+          "b": "DOCK_LATCH_1_92_40_VERIFY_HARDWARE",
+          "volume_mm3": 780.842618,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            67.0,
+            143.0,
+            120.0,
+            101.0,
+            177.0,
+            826.36
+          ],
+          "bounds_b_mm": [
+            92.0,
+            129.4,
+            812.0,
+            106.0,
+            157.4,
+            836.0
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "WATER_COLD_HOSE_REARWARD_ENVELOPE",
+          "b": "WATER_COLD_HOSE_INTO_RECEIVER_ENVELOPE",
+          "volume_mm3": 1420.692815,
+          "classification": "routing_service_envelopes_or_hose_junction_not_fabricated_fitting",
+          "bounds_a_mm": [
+            67.0,
+            160.0,
+            103.0,
+            101.0,
+            780.0,
+            137.0
+          ],
+          "bounds_b_mm": [
+            84.0,
+            763.0,
+            103.0,
+            260.0,
+            797.0,
+            137.0
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "WATER_COLD_HOSE_INTO_RECEIVER_ENVELOPE",
+          "b": "WATER_FLOOR_RECEIVER_ENVELOPE_REQUIRE_65L_USABLE",
+          "volume_mm3": 1668.185699,
+          "classification": "routing_service_envelopes_or_hose_junction_not_fabricated_fitting",
+          "bounds_a_mm": [
+            84.0,
+            763.0,
+            103.0,
+            260.0,
+            797.0,
+            137.0
+          ],
+          "bounds_b_mm": [
+            200.0,
+            700.0,
+            0.0,
+            1000.0,
+            1200.0,
+            300.0
+          ],
+          "issue_group": "water_route_envelopes_or_actual_clashes"
+        },
+        {
+          "a": "OVERFLOW_OPEN_VERTICAL_COLLECTOR",
+          "b": "OVERFLOW_OPEN_SLOPING_RETURN_TO_RECEIVER",
+          "volume_mm3": 2279.6,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1056.0,
+            878.0,
+            372.0,
+            1076.0,
+            922.0,
+            874.0
+          ],
+          "bounds_b_mm": [
+            966.0,
+            878.0,
+            370.0,
+            1076.0,
+            922.0,
+            384.0
+          ],
+          "issue_group": "overflow_sheet_joint_or_clash"
+        },
+        {
+          "a": "OVERFLOW_OPEN_VERTICAL_COLLECTOR",
+          "b": "DOCK_LATCH_4_1044_40_VERIFY_HARDWARE",
+          "volume_mm3": 91.2,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            1056.0,
+            878.0,
+            372.0,
+            1076.0,
+            922.0,
+            874.0
+          ],
+          "bounds_b_mm": [
+            1044.0,
+            906.4,
+            812.0,
+            1058.0,
+            934.4,
+            836.0
+          ],
+          "issue_group": "overflow_sheet_joint_or_clash"
+        },
+        {
+          "a": "OVERFLOW_OPEN_SLOPING_RETURN_TO_RECEIVER",
+          "b": "OVERFLOW_DOWNWARD_DEFLECTOR_ABOVE_RECEIVER",
+          "volume_mm3": 231.637291,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            966.0,
+            878.0,
+            370.0,
+            1076.0,
+            922.0,
+            384.0
+          ],
+          "bounds_b_mm": [
+            966.0,
+            878.0,
+            320.0,
+            967.9,
+            922.0,
+            382.0
+          ],
+          "issue_group": "overflow_sheet_joint_or_clash"
+        },
+        {
+          "a": "COLD_CASE_FLOOR_NOT_A_WORKBED",
+          "b": "COLD_CASE_SIDE_L",
+          "volume_mm3": 177.28,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            350.0,
+            390.0,
+            1046.0,
+            627.0,
+            390.8
+          ],
+          "bounds_b_mm": [
+            104.0,
+            350.0,
+            390.0,
+            104.8,
+            627.0,
+            710.0
+          ],
+          "issue_group": "cabinet_floor_corner_stock_laps"
+        },
+        {
+          "a": "COLD_CASE_FLOOR_NOT_A_WORKBED",
+          "b": "COLD_CASE_SIDE_R",
+          "volume_mm3": 177.28,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            350.0,
+            390.0,
+            1046.0,
+            627.0,
+            390.8
+          ],
+          "bounds_b_mm": [
+            1045.2,
+            350.0,
+            390.0,
+            1046.0,
+            627.0,
+            710.0
+          ],
+          "issue_group": "cabinet_floor_corner_stock_laps"
+        },
+        {
+          "a": "COLD_CASE_FLOOR_NOT_A_WORKBED",
+          "b": "COLD_CASE_BACK",
+          "volume_mm3": 601.856,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            104.0,
+            350.0,
+            390.0,
+            1046.0,
+            627.0,
+            390.8
+          ],
+          "bounds_b_mm": [
+            104.8,
+            626.2,
+            390.0,
+            1045.2,
+            627.0,
+            710.0
+          ],
+          "issue_group": "cabinet_floor_corner_stock_laps"
+        },
+        {
+          "a": "CASE_CARRIER_L_AL25x25x3",
+          "b": "CASE_HANGER_L_80_M5x35_VERIFY_GRIP",
+          "volume_mm3": 56.57223,
+          "classification": "fastener_clearance_or_grip_interference_not_an_explicit_thread_permit",
+          "bounds_a_mm": [
+            187.0,
+            80.0,
+            368.0,
+            215.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            195.5,
+            90.5,
+            361.5,
+            204.5,
+            99.5,
+            400.0
+          ],
+          "issue_group": "hanger_bolt_clearance_holes"
+        },
+        {
+          "a": "CASE_CARRIER_L_AL25x25x3",
+          "b": "CASE_HANGER_L_650_M5x35_VERIFY_GRIP",
+          "volume_mm3": 56.57223,
+          "classification": "fastener_clearance_or_grip_interference_not_an_explicit_thread_permit",
+          "bounds_a_mm": [
+            187.0,
+            80.0,
+            368.0,
+            215.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            195.5,
+            630.5,
+            361.5,
+            204.5,
+            639.5,
+            400.0
+          ],
+          "issue_group": "hanger_bolt_clearance_holes"
+        },
+        {
+          "a": "CASE_CARRIER_L_AL25x25x3",
+          "b": "CASE_CROSSBEARER_F_AL25x25x3",
+          "volume_mm3": 2271.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            187.0,
+            80.0,
+            368.0,
+            215.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            104.0,
+            350.0,
+            365.0,
+            1046.0,
+            375.0,
+            390.0
+          ],
+          "issue_group": "cabinet_angle_intersections"
+        },
+        {
+          "a": "CASE_CARRIER_L_AL25x25x3",
+          "b": "CASE_CROSSBEARER_R_AL25x25x3",
+          "volume_mm3": 2271.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            187.0,
+            80.0,
+            368.0,
+            215.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            104.0,
+            602.0,
+            365.0,
+            1046.0,
+            627.0,
+            390.0
+          ],
+          "issue_group": "cabinet_angle_intersections"
+        },
+        {
+          "a": "CASE_CARRIER_R_AL25x25x3",
+          "b": "CASE_HANGER_R_80_M5x35_VERIFY_GRIP",
+          "volume_mm3": 56.57223,
+          "classification": "fastener_clearance_or_grip_interference_not_an_explicit_thread_permit",
+          "bounds_a_mm": [
+            910.0,
+            80.0,
+            368.0,
+            938.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            920.5,
+            90.5,
+            361.5,
+            929.5,
+            99.5,
+            400.0
+          ],
+          "issue_group": "hanger_bolt_clearance_holes"
+        },
+        {
+          "a": "CASE_CARRIER_R_AL25x25x3",
+          "b": "CASE_HANGER_R_650_M5x35_VERIFY_GRIP",
+          "volume_mm3": 56.57223,
+          "classification": "fastener_clearance_or_grip_interference_not_an_explicit_thread_permit",
+          "bounds_a_mm": [
+            910.0,
+            80.0,
+            368.0,
+            938.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            920.5,
+            630.5,
+            361.5,
+            929.5,
+            639.5,
+            400.0
+          ],
+          "issue_group": "hanger_bolt_clearance_holes"
+        },
+        {
+          "a": "CASE_CARRIER_R_AL25x25x3",
+          "b": "CASE_CROSSBEARER_F_AL25x25x3",
+          "volume_mm3": 2271.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            910.0,
+            80.0,
+            368.0,
+            938.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            104.0,
+            350.0,
+            365.0,
+            1046.0,
+            375.0,
+            390.0
+          ],
+          "issue_group": "cabinet_angle_intersections"
+        },
+        {
+          "a": "CASE_CARRIER_R_AL25x25x3",
+          "b": "CASE_CROSSBEARER_R_AL25x25x3",
+          "volume_mm3": 2271.0,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            910.0,
+            80.0,
+            368.0,
+            938.0,
+            650.0,
+            390.0
+          ],
+          "bounds_b_mm": [
+            104.0,
+            602.0,
+            365.0,
+            1046.0,
+            627.0,
+            390.0
+          ],
+          "issue_group": "cabinet_angle_intersections"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            186.0,
+            375.0,
+            409.525,
+            194.0,
+            383.0,
+            458.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            185.25,
+            374.25,
+            401.6,
+            194.75,
+            383.75,
+            461.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            426.0,
+            375.0,
+            409.525,
+            434.0,
+            383.0,
+            458.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            425.25,
+            374.25,
+            401.6,
+            434.75,
+            383.75,
+            461.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            716.0,
+            375.0,
+            409.525,
+            724.0,
+            383.0,
+            458.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            715.25,
+            374.25,
+            401.6,
+            724.75,
+            383.75,
+            461.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            956.0,
+            375.0,
+            409.525,
+            964.0,
+            383.0,
+            458.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            955.25,
+            374.25,
+            401.6,
+            964.75,
+            383.75,
+            461.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            162.0,
+            369.5,
+            458.1,
+            988.0,
+            388.5,
+            470.8
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            180.0,
+            588.0,
+            400.0,
+            200.0,
+            608.0,
+            409.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            186.0,
+            594.0,
+            409.525,
+            194.0,
+            602.0,
+            458.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            185.25,
+            593.25,
+            401.6,
+            194.75,
+            602.75,
+            461.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            420.0,
+            588.0,
+            400.0,
+            440.0,
+            608.0,
+            409.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            426.0,
+            594.0,
+            409.525,
+            434.0,
+            602.0,
+            458.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            425.25,
+            593.25,
+            401.6,
+            434.75,
+            602.75,
+            461.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            710.0,
+            588.0,
+            400.0,
+            730.0,
+            608.0,
+            409.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            716.0,
+            594.0,
+            409.525,
+            724.0,
+            602.0,
+            458.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            715.25,
+            593.25,
+            401.6,
+            724.75,
+            602.75,
+            461.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            950.0,
+            588.0,
+            400.0,
+            970.0,
+            608.0,
+            409.525
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            956.0,
+            594.0,
+            409.525,
+            964.0,
+            602.0,
+            458.1
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            955.25,
+            593.25,
+            401.6,
+            964.75,
+            602.75,
+            461.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS1_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS1_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            400.0,
+            1041.0,
+            617.0,
+            464.45000000000005
+          ],
+          "bounds_b_mm": [
+            162.0,
+            588.5,
+            458.1,
+            988.0,
+            607.5,
+            470.8
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            186.0,
+            375.0,
+            485.325,
+            194.0,
+            383.0,
+            533.9
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            185.25,
+            374.25,
+            477.40000000000003,
+            194.75,
+            383.75,
+            537.4
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            426.0,
+            375.0,
+            485.325,
+            434.0,
+            383.0,
+            533.9
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            425.25,
+            374.25,
+            477.40000000000003,
+            434.75,
+            383.75,
+            537.4
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            716.0,
+            375.0,
+            485.325,
+            724.0,
+            383.0,
+            533.9
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            715.25,
+            374.25,
+            477.40000000000003,
+            724.75,
+            383.75,
+            537.4
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            956.0,
+            375.0,
+            485.325,
+            964.0,
+            383.0,
+            533.9
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            955.25,
+            374.25,
+            477.40000000000003,
+            964.75,
+            383.75,
+            537.4
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            162.0,
+            369.5,
+            533.9,
+            988.0,
+            388.5,
+            546.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            180.0,
+            588.0,
+            475.8,
+            200.0,
+            608.0,
+            485.325
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            186.0,
+            594.0,
+            485.325,
+            194.0,
+            602.0,
+            533.9
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            185.25,
+            593.25,
+            477.40000000000003,
+            194.75,
+            602.75,
+            537.4
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            420.0,
+            588.0,
+            475.8,
+            440.0,
+            608.0,
+            485.325
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            426.0,
+            594.0,
+            485.325,
+            434.0,
+            602.0,
+            533.9
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            425.25,
+            593.25,
+            477.40000000000003,
+            434.75,
+            602.75,
+            537.4
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            710.0,
+            588.0,
+            475.8,
+            730.0,
+            608.0,
+            485.325
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            716.0,
+            594.0,
+            485.325,
+            724.0,
+            602.0,
+            533.9
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            715.25,
+            593.25,
+            477.40000000000003,
+            724.75,
+            602.75,
+            537.4
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            950.0,
+            588.0,
+            475.8,
+            970.0,
+            608.0,
+            485.325
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            956.0,
+            594.0,
+            485.325,
+            964.0,
+            602.0,
+            533.9
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            955.25,
+            593.25,
+            477.40000000000003,
+            964.75,
+            602.75,
+            537.4
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS2_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS2_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            475.8,
+            1041.0,
+            617.0,
+            540.25
+          ],
+          "bounds_b_mm": [
+            162.0,
+            588.5,
+            533.9,
+            988.0,
+            607.5,
+            546.6
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            186.0,
+            375.0,
+            561.125,
+            194.0,
+            383.0,
+            609.7
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            185.25,
+            374.25,
+            553.2,
+            194.75,
+            383.75,
+            613.2
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            426.0,
+            375.0,
+            561.125,
+            434.0,
+            383.0,
+            609.7
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            425.25,
+            374.25,
+            553.2,
+            434.75,
+            383.75,
+            613.2
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            716.0,
+            375.0,
+            561.125,
+            724.0,
+            383.0,
+            609.7
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            715.25,
+            374.25,
+            553.2,
+            724.75,
+            383.75,
+            613.2
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            956.0,
+            375.0,
+            561.125,
+            964.0,
+            383.0,
+            609.7
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            955.25,
+            374.25,
+            553.2,
+            964.75,
+            383.75,
+            613.2
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            162.0,
+            369.5,
+            609.7,
+            988.0,
+            388.5,
+            622.4000000000001
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            180.0,
+            588.0,
+            551.6,
+            200.0,
+            608.0,
+            561.125
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            186.0,
+            594.0,
+            561.125,
+            194.0,
+            602.0,
+            609.7
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            185.25,
+            593.25,
+            553.2,
+            194.75,
+            602.75,
+            613.2
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            420.0,
+            588.0,
+            551.6,
+            440.0,
+            608.0,
+            561.125
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            426.0,
+            594.0,
+            561.125,
+            434.0,
+            602.0,
+            609.7
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            425.25,
+            593.25,
+            553.2,
+            434.75,
+            602.75,
+            613.2
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            710.0,
+            588.0,
+            551.6,
+            730.0,
+            608.0,
+            561.125
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            716.0,
+            594.0,
+            561.125,
+            724.0,
+            602.0,
+            609.7
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            715.25,
+            593.25,
+            553.2,
+            724.75,
+            602.75,
+            613.2
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            950.0,
+            588.0,
+            551.6,
+            970.0,
+            608.0,
+            561.125
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            956.0,
+            594.0,
+            561.125,
+            964.0,
+            602.0,
+            609.7
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            955.25,
+            593.25,
+            553.2,
+            964.75,
+            602.75,
+            613.2
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS3_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS3_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            551.6,
+            1041.0,
+            617.0,
+            616.0500000000001
+          ],
+          "bounds_b_mm": [
+            162.0,
+            588.5,
+            609.7,
+            988.0,
+            607.5,
+            622.4000000000001
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            186.0,
+            375.0,
+            636.925,
+            194.0,
+            383.0,
+            685.5
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            185.25,
+            374.25,
+            629.0,
+            194.75,
+            383.75,
+            689.0
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            426.0,
+            375.0,
+            636.925,
+            434.0,
+            383.0,
+            685.5
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            425.25,
+            374.25,
+            629.0,
+            434.75,
+            383.75,
+            689.0
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            716.0,
+            375.0,
+            636.925,
+            724.0,
+            383.0,
+            685.5
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            715.25,
+            374.25,
+            629.0,
+            724.75,
+            383.75,
+            689.0
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            956.0,
+            375.0,
+            636.925,
+            964.0,
+            383.0,
+            685.5
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            955.25,
+            374.25,
+            629.0,
+            964.75,
+            383.75,
+            689.0
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            162.0,
+            369.5,
+            685.5,
+            988.0,
+            388.5,
+            698.2
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            180.0,
+            588.0,
+            627.4,
+            200.0,
+            608.0,
+            636.925
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            186.0,
+            594.0,
+            636.925,
+            194.0,
+            602.0,
+            685.5
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_M5x60_VERIFY_GRIP_1",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            185.25,
+            593.25,
+            629.0,
+            194.75,
+            602.75,
+            689.0
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            420.0,
+            588.0,
+            627.4,
+            440.0,
+            608.0,
+            636.925
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            426.0,
+            594.0,
+            636.925,
+            434.0,
+            602.0,
+            685.5
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_M5x60_VERIFY_GRIP_2",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            425.25,
+            593.25,
+            629.0,
+            434.75,
+            602.75,
+            689.0
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            710.0,
+            588.0,
+            627.4,
+            730.0,
+            608.0,
+            636.925
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            716.0,
+            594.0,
+            636.925,
+            724.0,
+            602.0,
+            685.5
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_M5x60_VERIFY_GRIP_3",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            715.25,
+            593.25,
+            629.0,
+            724.75,
+            602.75,
+            689.0
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+          "volume_mm3": 2632.72128,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            950.0,
+            588.0,
+            627.4,
+            970.0,
+            608.0,
+            636.925
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+          "volume_mm3": 1287.586658,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            956.0,
+            594.0,
+            636.925,
+            964.0,
+            602.0,
+            685.5
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_M5x60_VERIFY_GRIP_4",
+          "volume_mm3": 1072.137685,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            955.25,
+            593.25,
+            629.0,
+            964.75,
+            602.75,
+            689.0
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        },
+        {
+          "a": "CAS4_GLUED_PLY_BOX_12p7_6p35_9_WEB",
+          "b": "CAS4_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+          "volume_mm3": 68315.568676,
+          "classification": "other_positive_solid_overlap_requires_joint_or_geometry_resolution",
+          "bounds_a_mm": [
+            109.0,
+            360.0,
+            627.4,
+            1041.0,
+            617.0,
+            691.85
+          ],
+          "bounds_b_mm": [
+            162.0,
+            588.5,
+            685.5,
+            988.0,
+            607.5,
+            698.2
+          ],
+          "issue_group": "cassette_clearance_subtraction"
+        }
+      ],
+      "positive_count": 131,
+      "issue_group_counts": {
+        "drain_interfaces_or_retainer_latch_clashes": 9,
+        "overflow_sheet_joint_or_clash": 4,
+        "water_route_envelopes_or_actual_clashes": 11,
+        "pan_keeper_latch_clashes": 8,
+        "cabinet_floor_corner_stock_laps": 3,
+        "hanger_bolt_clearance_holes": 4,
+        "cabinet_angle_intersections": 4,
+        "cassette_clearance_subtraction": 88
+      }
+    }
+  },
+  "threshold_mm3": 0.05,
+  "current_source_sha256_at_finish": {
+    "bed.py": "3672fd33bf66af23238630c0df2805a5e288f2e488961633847ec51ed0537ba6",
+    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f"
+  },
+  "source_unchanged_during_check": true,
+  "release": false,
+  "interpretation": {
+    "confirmed_intended_thread_overlap_pairs": 0,
+    "nominal_thread_geometry": "Modeled screws/nutbores use explicit small radial clearance; no broad thread exception explains the listed positive volumes.",
+    "routing_envelopes": "Hose/valve/receiver junction overlaps may represent unmodeled fittings and service envelopes; they remain interface holds, not a fabricated elbow/passage proof.",
+    "actual_material_groups": "Cassette wood/track/tube overlap, unbored bolt path, case angle stock and drain-retainer/latch/shadow clashes require geometry or explicit joint details.",
+    "state": "RAW positives must be resolved/reclassified individually. Not a passing self-check."
+  },
+  "cassette_boolean_diagnostic": {
+    "source_edited": false,
+    "method": "In-memory candidate only: fuse all overlapping cut tools before subtracting from crate; do not pass overlapping tool solids as an unfused Compound.",
+    "original_selected_intersections_mm3": {
+      "track": 68315.56867623827,
+      "track2_backingblock": 2632.7212795929163,
+      "compression_tube": 1287.5866578122973,
+      "M5screw": 1072.1376849083279
+    },
+    "fused_tool_candidate_selected_intersections_mm3": {
+      "track": 0,
+      "track2_backingblock": 0,
+      "compression_tube": 0,
+      "M5screw": 0
+    },
+    "candidate_valid": true,
+    "candidate_solids": 1,
+    "additional_wood_removed_per_cassette_mm3": 219968.89172785822,
+    "implementation_owner": "extrusion_beds_water; candidate must be committed/rechecked by owner before claiming resolution"
+  }
+}

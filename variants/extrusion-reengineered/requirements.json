@@ -1,0 +1,38 @@
+{
+  "revision": "XR1",
+  "intent": "Replace the small-machine extrusion table architecture before repricing or shopping.",
+  "budget_constraint_usd_delivered_complete_mechanical_table": 1000,
+  "pricing_performed_in_this_revision": false,
+  "application": ["wood carving", "woodworking", "steel-sheet plasma"],
+  "frame": "All primary structural extrusion is 4080. Six posts; the two rear posts bear directly on short rear footbase beams. Eight feet extend the support polygon rearward. Main horizontal beams use their strong axis vertically; short ledger arms lie flat.",
+  "excluded_capability": "This lightweight wood/plasma variant is not qualified for steel milling.",
+  "owned_excluded_from_procurement": ["all motion modules", "additional guide rails and blocks", "drives and motion electronics", "electronics enclosure (user reconfirmed; model not reselected)", "spindle and VFD kit", "plasma cutter and torch", "compressor", "fabrication tools", "one nominal 304.8 x 304.8 x 12.7 mm aluminum blank", "one nominal 304.8 x 304.8 x 9.525 mm aluminum blank"],
+  "selected_reservoir_candidate": "Amazon ASIN B0HN3Q77HR, red 20-gallon polypropylene storage tote with clear lid. User selected it for drain water, not electronics. Use conservative 712 x 470 x 389 mm external fit envelope. Liquid load/temperature, usable volume and lid plumbing remain verification holds; keep atmospheric venting.",
+  "nominal_axis_travel_mm": {"X":800,"Y":1000,"Z":100},
+  "conversion": "Removable dry cassettes stay within the machine plan footprint during storage and the modeled transfer. No forward parking cart.",
+  "workholding": "Aluminum T-slot tracks on dry cassettes, metal locating features and independent hold-down clamps. Track section and hole pattern remain supplier interface holds.",
+  "billet_preference": "Keep the two gantry end brackets and six compact clevis mounts as integral billet parts for stiffness/alignment. Retain practical plate construction for the frame, actuator saddles and Y-link supports. Deep billets are new material unless physically confirmed owned.",
+  "water": "Atmospheric pan and vented receiver; gravity drain is the baseline. No pressurization of a fabricated tank. Owned CV-15HS is a vacuum generator, not a liquid-transfer pump.",
+  "accepted_atc_requirement": "Removable retractable ATC on an approximately 200 mm slide remains requested. XR1 does not yet integrate or qualify the exact magazine/slide. See ATC-INTERFACE.md; do not call this an ATC-complete machine or silently exclude unowned ATC hardware from a future whole-build total.",
+  "structure": {
+    "service_cutting_force_N":100,
+    "proof_sensitivity_force_N":300,
+    "framework_relative_deflection_target_mm_at_100N":0.3,
+    "scope": "Frame, supporting ledgers and dry bed only. Actual tool-to-work error also includes owned gantry, rails, actuators, joints, Z stack and tooling.",
+    "section_property_requirement": "Do not infer stiffness from 4080 external dimensions or decorative CAD grooves. Verify actual vendor section properties against params.py."
+  },
+  "thermal": "Only uncoated steel is exposed to the hot plasma zone. Remove dust and wood from the hot bay; closed sheet-metal storage requires a measured temperature acceptance test.",
+  "qualification_holds": [
+    "Delivered module stroke, overall dimensions, mounting slots and screw lead; no assumed 10 mm lead",
+    "Exact guide seat, rail hole pattern, block height and alignment limits",
+    "Actual extrusion section, slot geometry, core holes and straightness",
+    "Actual cutter start circuit and electrically isolated CNC interface",
+    "Actual torch diameter, permitted grip, nozzle projection and cable bend radius",
+    "Tool projection, clamp height and usable cutting depth over the complete dry surface",
+    "Z retention at power loss and end stops",
+    "Exact ATC kit, slide, retained tools, spindle reverse capability and 100 mm Z clearance; prior ATC study used a different Z stack",
+    "Joint slip/pullout testing and assembled frame/tool-loop deflection",
+    "Cold-water drain/overflow test, leak test and protected-storage temperature test"
+  ],
+  "release": "Engineering development; no fabrication or CAM release until the listed physical interfaces and acceptance tests close."
+}

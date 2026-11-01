@@ -1,4 +1,13 @@
-# CNC / plasma machine — current Rev G working design
+# Start with XR1 for the current small wood/plasma table
+
+The user's current **all-4080-frame, USD 1,000 complete-mechanical-table** request
+is developed in [XR1](variants/extrusion-reengineered/README.md). Engineering
+comes before repricing or cart changes. Existing cart contents are superseded.
+No actual actuator lead is assumed in this revision.
+
+The Rev G text below is preserved history, not the newest machine to open.
+
+# Historical Rev G working design
 
 Open the [Rev G CAD package](output/release-review/RevG-CAD/README.md) and [updated concept PDF](output/pdf/plasma-router-stand-concept.pdf). The [repair report](output/cad-repair-2026-09-25/README.md) states exactly what changed, what was checked and what remains unresolved.
 

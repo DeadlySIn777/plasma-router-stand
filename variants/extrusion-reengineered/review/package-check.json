@@ -1,0 +1,285 @@
+{
+  "revision": "XR1",
+  "digital_checks": {
+    "display_pose_external_intersections_clear": true,
+    "build_source_consistent": true,
+    "FRAME_STEP_matches_roundtrip_report": true,
+    "WOOD_STEP_matches_roundtrip_report": true,
+    "PLASMA_STEP_matches_roundtrip_report": true,
+    "travel_source_consistent": true,
+    "both_modes_external_rigid_sweeps_clear": true,
+    "relative_motion_samples_clear_except_documented_threads": true,
+    "frame_self_clear": true,
+    "owned_plate_nesting": true,
+    "profile_cut_nesting": true,
+    "conditional_bed_component_screen": true,
+    "bed_transfer_clear_within_report_scope": true,
+    "conditional_water_volume_allowance": true,
+    "frame-fabrication.csv_present": true,
+    "bed-fabrication.csv_present": true,
+    "components.csv_present": true,
+    "overview.png_present": true,
+    "motion-fabrication.csv_present": true,
+    "INTERFACES.md_present": true,
+    "BED.md_present": true,
+    "WATER.md_present": true,
+    "ATC-INTERFACE.md_present": true,
+    "AUDIT.md_present": true,
+    "recorded_source_hashes_current": true,
+    "bed_takeoff_matches_metadata": true,
+    "motion_takeoff_matches_audit": true,
+    "targeted_motion_checks_passed": true
+  },
+  "missing": [],
+  "stale_sources": [],
+  "digital_review_pass": true,
+  "artifacts": {
+    ".gitattributes": {
+      "bytes": 112,
+      "sha256": "c844875d5a198bf31b075fa49060328296f42db83a698def8b88bf6f52b62c4a"
+    },
+    "ATC-INTERFACE.md": {
+      "bytes": 1594,
+      "sha256": "ef9dee3d2296695459158946f45c68f93d9d405cc58fc535f2425354bf748dea"
+    },
+    "AUDIT.md": {
+      "bytes": 6273,
+      "sha256": "fecf4300774a29756b7a07a7dc0d78d2e6270a0ef84f614aabde5fda18c205e6"
+    },
+    "audit_motion.py": {
+      "bytes": 15998,
+      "sha256": "2edd1f67a63ce3b223eaeffd00f23eedadbed05efd461bb204451ba73b0fa66a"
+    },
+    "audit_package.py": {
+      "bytes": 5445,
+      "sha256": "cad2a06e3405a956b1d19a6d119ee0458bd949c44344f6af5e9618e4b8666a6a"
+    },
+    "BED.md": {
+      "bytes": 8874,
+      "sha256": "1e2e259edd8a0393e4955c539bac359eddad3cbf1309b03541abe0ce31bd4d3c"
+    },
+    "bed.py": {
+      "bytes": 25953,
+      "sha256": "b00334d947b9e1bc9e3657d7603f67051a6c5f14460d16729d785b1d57cbbbee"
+    },
+    "bed_screen.py": {
+      "bytes": 19850,
+      "sha256": "9d758a5c34a335238ad560a759bbee5b69d6b9d9566c43d139d5faec5ed8e10c"
+    },
+    "build.py": {
+      "bytes": 4169,
+      "sha256": "6f8a4d2154e46d118ec0b77a3ec02095a97e394c72f068892749885d4422b3de"
+    },
+    "check_owned_stock.py": {
+      "bytes": 3895,
+      "sha256": "f305639bcb6883db74a361fa6ce5278b9b45fa555745f7bda6a26327e6b7bdff"
+    },
+    "check_transfer.py": {
+      "bytes": 8430,
+      "sha256": "6fc9600e49a71baddcd327b21aad3a685a4f58500444aae043b59e54e3dd867e"
+    },
+    "check_travel.py": {
+      "bytes": 6897,
+      "sha256": "145d367cc4ff321e8f086120e4d7b193df09aad59d303d8e0d296b2fe91446a3"
+    },
+    "create_review_pdf.py": {
+      "bytes": 6866,
+      "sha256": "a149aa2db304fd701679c34ee78f37867499acfc361c0c8f7a126a324b097212"
+    },
+    "cutplan.py": {
+      "bytes": 2758,
+      "sha256": "0723c4e16f64031b5c1af51f5c5373f2044468afce2624545d6c8522850ee24c"
+    },
+    "frame.py": {
+      "bytes": 10461,
+      "sha256": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e"
+    },
+    "interface-audit.json": {
+      "bytes": 9734,
+      "sha256": "6c5e6fa2c06505f97c1099b2429f9b52967949309140e5b4a1b2951aa33634e2"
+    },
+    "INTERFACES.md": {
+      "bytes": 9151,
+      "sha256": "ce252c0707eefda66e69dc62b632c75b18121548eafdf4ca52bfb10d3b9878d7"
+    },
+    "motion-fabrication.csv": {
+      "bytes": 163363,
+      "sha256": "9bed8bf9eb760b5ed4aa0bc879dba3e7b8fb5fa60327ae3cd360c1b802b14c98"
+    },
+    "motion.py": {
+      "bytes": 15831,
+      "sha256": "a8e1458d3fda2a492e5b889b66e3f21ad075be14bb8340fb550b6f4e1cc4c015"
+    },
+    "params.py": {
+      "bytes": 1189,
+      "sha256": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f"
+    },
+    "preview.py": {
+      "bytes": 2235,
+      "sha256": "42c996676e871dea5b03d79831d1c0f66043aa9ff5da6a33f5f5fce82f7f9cdf"
+    },
+    "README.md": {
+      "bytes": 7100,
+      "sha256": "b654dc6513b25853ff52cdcdf3ec2d4dc3793c1edb90f1907ce585f84f72549f"
+    },
+    "requirements.json": {
+      "bytes": 4285,
+      "sha256": "304a49f7a74d07b97489859c1cef017a57935d7905db4917fd060c2361e48c72"
+    },
+    "reservoir-interface.json": {
+      "bytes": 1974,
+      "sha256": "c06f14f6fdb2eebdfd11f3465a1aca0045e563f2b6ad6117e467a574407ddea7"
+    },
+    "review/bed-fabrication-metadata.json": {
+      "bytes": 577,
+      "sha256": "9479b62b92214a36dbeaa2c9503b44695f1c3c699309f50bdc96bf4f375d22f4"
+    },
+    "review/bed-fabrication.csv": {
+      "bytes": 15182,
+      "sha256": "ea469ddb2f930e784d5e2389a11830130d7a5650e95d44ac1ef6224b25f024dd"
+    },
+    "review/bed-screen.json": {
+      "bytes": 17372,
+      "sha256": "2d947571fccd55bd584c4d64d9ab3cfd7924667022f9662fce02ecbd5be6a3fb"
+    },
+    "review/BED.md": {
+      "bytes": 2597,
+      "sha256": "ebda4dae2ddab01d8883d3ea50d5b99d5fe0740a9335e8ff153b7b25b08890f7"
+    },
+    "review/build-check.json": {
+      "bytes": 2626,
+      "sha256": "e106c85fef847e6544ee368e46b59af71cd59ce1e4e4fdd71a953361c7984c15"
+    },
+    "review/components.csv": {
+      "bytes": 164506,
+      "sha256": "24f5fd2af83fb44a643e76877a0c5827ec130da547310d482e2dce2cf6158656"
+    },
+    "review/frame-fabrication-metadata.json": {
+      "bytes": 3047,
+      "sha256": "e6acb272677bdc3ea7861324737817c8ed33455a697e7b580aa150da9d9c4ba0"
+    },
+    "review/frame-fabrication.csv": {
+      "bytes": 28332,
+      "sha256": "f108c8210eb647268c7ad63836cd1b3c96f46f3e5ed7e78bcb951d2baff9988f"
+    },
+    "review/frame-self-check.json": {
+      "bytes": 565,
+      "sha256": "fdfeedf6cc8d212d1d0fe5b465e2bebfb5b78943ae33603f6aa75c145b73a01b"
+    },
+    "review/frame-view.png": {
+      "bytes": 71073,
+      "sha256": "b3a6d5fcc2c334f1ef24d783291e8e98e5ad9d0646e4afc8b3eb68a9cd13b821"
+    },
+    "review/history/bed-self-current.json": {
+      "bytes": 385,
+      "sha256": "77d7ee0510fccdd1966361987d3341faae48c871e9f3b27fa532c54138ac70b8"
+    },
+    "review/history/independent-bed-self.json": {
+      "bytes": 176289,
+      "sha256": "43f7aaeb4e99884ab61fa4190d2b6c4cc0d220346890b51e1648b480622c5335"
+    },
+    "review/history/independent-motion-cross-class.json": {
+      "bytes": 2520,
+      "sha256": "23a99a7859375e90ec8fc334e457791b436d69ef917429c04c3947da864ea1cf"
+    },
+    "review/history/independent-plasma-ledger-sweep.json": {
+      "bytes": 9278,
+      "sha256": "228b938d204756e8f8952b2eaaec3399ca4ece433f6fbfb30028345609ff63b5"
+    },
+    "review/history/README.md": {
+      "bytes": 525,
+      "sha256": "c568fb723e1bd56cb8bdf8ef433a529a9f449764ba619c860c952fc70d584f8a"
+    },
+    "review/overview.png": {
+      "bytes": 589737,
+      "sha256": "726e20430096f7e1990b1b9be591a3ab89796a945c44a6412163cf7b12e7d180"
+    },
+    "review/owned-stock-check.json": {
+      "bytes": 14060,
+      "sha256": "72a48179e3d09eb17be115d9aedafca9d8c50a86ddd14c0dc6c5ad1278e7a871"
+    },
+    "review/plasma-view.png": {
+      "bytes": 99237,
+      "sha256": "0ba481607317376843e089e99f669c57e01346e7882d729ae563a62d343f4201"
+    },
+    "review/profile-cuts-long_stock.csv": {
+      "bytes": 950,
+      "sha256": "e950ef00f197485ba84484d0b3a1087f84416d8c433f04aaa2938f679571ef7a"
+    },
+    "review/profile-cuts-short_stock.csv": {
+      "bytes": 953,
+      "sha256": "7c7c85deef172e6e1091dfaf3d2b63d86b2719280b5f6d51068c71e9e2c0a9cc"
+    },
+    "review/profile-nesting.json": {
+      "bytes": 8899,
+      "sha256": "aa6c58eabb78a3c55d24658d67394388ed0ec46243f458578141eb8dc41c5405"
+    },
+    "review/structure-screen.json": {
+      "bytes": 24651,
+      "sha256": "d628efa280d6009741dc0b5cd1d83a07dc4fa464e7127e7a50a48068822cafda"
+    },
+    "review/STRUCTURE.md": {
+      "bytes": 2169,
+      "sha256": "096b71776c2a98a93701b6098ee4b75a10f39512fd36878ddbbc3c8dd651af57"
+    },
+    "review/transfer-check.json": {
+      "bytes": 130462,
+      "sha256": "4de6f2a7332116ab03b83fee4c5858666d034f39aedeefd9cde7184d25843ba3"
+    },
+    "review/travel-check.json": {
+      "bytes": 53120,
+      "sha256": "eb914d0a3eb3675bd152150f38912dfd2aef13dbd77dd429f853532ebb239222"
+    },
+    "review/water-check.json": {
+      "bytes": 3051,
+      "sha256": "40069681774bac8ff94132a3a5f17219f32fa18d853df13bfa0c949a08cbbfc3"
+    },
+    "review/wood-view.png": {
+      "bytes": 113978,
+      "sha256": "caebcee7681639c12c3bf368d3865b5f1368b0cfa4536314f36bcc18573d269f"
+    },
+    "review/XR1_FRAME.step": {
+      "bytes": 4136745,
+      "sha256": "5a103ef7c3393efef54d0c2cef470dd3bfe16e058444e213e72e46037393ee23"
+    },
+    "review/XR1_PLASMA.step": {
+      "bytes": 26936503,
+      "sha256": "0e5650e8294165233cfd493cc4f4c2bccef4222228f764f2ab9d4a387ab16171"
+    },
+    "review/XR1_WOOD.step": {
+      "bytes": 25089662,
+      "sha256": "7d83db1a54b1c4a530055ac1c35192fe1e2db801c675c6363758fafac953fdfa"
+    },
+    "structure_screen.py": {
+      "bytes": 28642,
+      "sha256": "a85a7ab76b6addd90d4e6a0cf323ac00ace21cdf514acd497dc01186e9da5e8b"
+    },
+    "WATER.md": {
+      "bytes": 7712,
+      "sha256": "c5db281bebd257c064287c8a2c7d31c18fc0b0733cfa57ae5e5e68640cc94544"
+    },
+    "water_check.py": {
+      "bytes": 5437,
+      "sha256": "0742758a106a94cd74fd3fa2cf81183070ffa97978a8dcdde987892f71294601"
+    }
+  },
+  "pricing_performed": false,
+  "fabrication_release": false,
+  "remaining_release_gates": [
+    "Actual supplier interfaces and delivered lead",
+    "Complete mounted heat shields and reservoir service hatch/removal path",
+    "Final eggcrate/flat-pattern machining and bend/joinery details",
+    "Extrusion die/slot and joint capacity",
+    "Measured tool/torch reach and Z retention",
+    "Assembled stiffness, foot contact/CG and dynamic tests",
+    "Physical water-flow and protected-storage thermal tests",
+    "Retractable ATC integration using the actual kit and Z stack"
+  ],
+  "scope": "Digital checks are limited to their report scopes. This index is not a claim of complete machine qualification or a verified delivered budget.",
+  "related_root_artifacts": {
+    "output/pdf/plasma-router-stand-XR1-review.pdf": {
+      "bytes": 759674,
+      "sha256": "35e1833ddd25305e60fc74e83453f1bbb9f7ca978cb044032478ec6705accfe7"
+    }
+  }
+}

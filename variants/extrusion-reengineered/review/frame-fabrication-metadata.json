@@ -1,0 +1,117 @@
+{
+  "profile_cuts_mm": {
+    "continuous_posts": [
+      903.5,
+      903.5,
+      903.5,
+      903.5,
+      823.5,
+      823.5
+    ],
+    "Y_headers": [
+      1450.0,
+      1450.0
+    ],
+    "pan_X_bearers": [
+      1048.4,
+      1048.4,
+      1048.4
+    ],
+    "flat_ledger_arms": [
+      75.2,
+      75.2,
+      75.2,
+      75.2,
+      75.2,
+      75.2
+    ],
+    "rear_footbases": [
+      300.0,
+      300.0
+    ]
+  },
+  "finished_profile_length_mm": 12357.400000000001,
+  "primary_joint_stations": {
+    "top_fishplates": 24,
+    "pan_angles": 24,
+    "dry_arm_angles": 24,
+    "rear_footbase_fishplates": 16
+  },
+  "front_transfer_reliefs": {
+    "count": 4,
+    "parts": "Two front dry-arm tips and two front pan-angle seats",
+    "left_xy_mm": [
+      108,
+      132,
+      59,
+      72.8
+    ],
+    "right_xy_mm": [
+      1018,
+      1042,
+      59,
+      72.8
+    ],
+    "channel_clearance_to70p8_upright_mm": 2.0,
+    "ledger_attachment_stations": 22,
+    "omitted_ledger_bolts_xy_mm": [
+      [
+        116,
+        80
+      ],
+      [
+        1034,
+        80
+      ]
+    ],
+    "qualification": "Qualify local notch stress, remaining slot lips, contact support, edge radii and3-station front-ledger anti-roll joints. No member property is inferred from the relieved envelope."
+  },
+  "brace_steel": {
+    "width_mm": 30,
+    "thickness_mm": 1.9,
+    "minimum_screen_thickness_mm": 1.8,
+    "count": 12,
+    "hole_diameter_mm": 6.6,
+    "tension_only": true,
+    "front_highest_nominal_edge_z_mm": 375
+  },
+  "foot_plates": {
+    "count": 8,
+    "blank_mm": [
+      40,
+      80,
+      9.524999999999999
+    ],
+    "core_clearance_diameter_mm": 8.5,
+    "core_rows_y_from_front_mm": [
+      20,
+      60
+    ],
+    "rear_base_clearance_diameter_mm": 6.6,
+    "rear_base_rows_y_mm": [
+      [
+        1160,
+        1200
+      ],
+      [
+        1390,
+        1427
+      ]
+    ],
+    "central_adjuster_y_mm": 40,
+    "central_adjuster_thread": "M8, nominal CAD diameter8; drill6.8/tapM8",
+    "nominal_thread_engagement_mm": 8.524999999999999,
+    "qualification": "Verify end-core taps, central M8 thread stripping, adjuster rating, plate bending and floor friction."
+  },
+  "angle_requirement": "One-piece purchased or formed angle. Square-corner CAD envelope; qualify real bend radius, fastener seats and capacities.",
+  "profile_model": "Nominal mounting envelope only. Not a section-property or mass model.",
+  "release": false,
+  "part_rows": 89,
+  "hardware_station_rows": 10,
+  "source_sha256": {
+    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f",
+    "frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "structure_screen.py": "a85a7ab76b6addd90d4e6a0cf323ac00ace21cdf514acd497dc01186e9da5e8b"
+  },
+  "station_rows_are_not_additional_physical_parts": "Do not double-count named rated-hardware allowances with the corresponding station group."
+}

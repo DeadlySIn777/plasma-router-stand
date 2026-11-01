@@ -1,0 +1,2344 @@
+{
+  "revision": "XR1",
+  "poses_X_Yguide_Zlift_mm": [
+    [
+      575.0,
+      775.0,
+      50.0
+    ],
+    [
+      175.0,
+      275.0,
+      0.0
+    ],
+    [
+      175.0,
+      275.0,
+      100.0
+    ],
+    [
+      175.0,
+      1275.0,
+      0.0
+    ],
+    [
+      175.0,
+      1275.0,
+      100.0
+    ],
+    [
+      975.0,
+      275.0,
+      0.0
+    ],
+    [
+      975.0,
+      275.0,
+      100.0
+    ],
+    [
+      975.0,
+      1275.0,
+      0.0
+    ],
+    [
+      975.0,
+      1275.0,
+      100.0
+    ]
+  ],
+  "states": {
+    "WOOD": {
+      "exact_checks": 36,
+      "sample_intersections": [],
+      "moving_swept_AABB_candidates": [],
+      "conservative_AABB_pairs_resolved_by_exact_translation_proof": [],
+      "minimum_swept_bound_gap_mm": [
+        0.0,
+        "Y_BLOCK_L_1",
+        "XR_EX_L_HEADER"
+      ],
+      "relative_motion_exact_checks": 323,
+      "relative_motion_sample_intersections": [],
+      "nominal_HMS_shoe_fastener_body_intersections": [
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        }
+      ],
+      "nominal_fastener_disposition": "Only BODY vs its own SHOE_BOLT_1..4, max31.5mm3, are separated as inherited nominal carriage-thread envelopes. Actual carriage thread depth and screw-tip clearance remain supplier holds; this is not physical collision clearance.",
+      "rigid_translation_clear": true,
+      "relative_motion_samples_clear_except_nominal_threads": true
+    },
+    "PLASMA": {
+      "exact_checks": 48,
+      "sample_intersections": [],
+      "moving_swept_AABB_candidates": [],
+      "conservative_AABB_pairs_resolved_by_exact_translation_proof": [
+        {
+          "motion": "XR_PLASMA_DROP_148",
+          "ledger": "DRY_LEDGER_L_2x2xQUARTER_AL_UP_WEB",
+          "ledger_outside_envelopes_mm3": 0.0,
+          "expanded_box_intersections_mm3": [
+            0.0,
+            0.0
+          ],
+          "expanded_box_distances_mm": [
+            34.0,
+            38.44999999999999
+          ]
+        },
+        {
+          "motion": "XR_PLASMA_DROP_148",
+          "ledger": "DRY_LEDGER_R_2x2xQUARTER_AL_UP_WEB",
+          "ledger_outside_envelopes_mm3": 0.0,
+          "expanded_box_intersections_mm3": [
+            0.0,
+            0.0
+          ],
+          "expanded_box_distances_mm": [
+            34.0,
+            38.450000000000045
+          ]
+        },
+        {
+          "motion": "I_HEAD_BACKPLATE",
+          "ledger": "DRY_LEDGER_L_2x2xQUARTER_AL_UP_WEB",
+          "ledger_outside_envelopes_mm3": 0.0,
+          "expanded_box_intersections_mm3": [
+            0.0,
+            0.0
+          ],
+          "expanded_box_distances_mm": [
+            34.0,
+            38.44999999999999
+          ]
+        },
+        {
+          "motion": "I_HEAD_BACKPLATE",
+          "ledger": "DRY_LEDGER_R_2x2xQUARTER_AL_UP_WEB",
+          "ledger_outside_envelopes_mm3": 0.0,
+          "expanded_box_intersections_mm3": [
+            0.0,
+            0.0
+          ],
+          "expanded_box_distances_mm": [
+            34.0,
+            38.450000000000045
+          ]
+        },
+        {
+          "motion": "I_HEAD_CROSSBAR_1",
+          "ledger": "DRY_LEDGER_L_2x2xQUARTER_AL_UP_WEB",
+          "ledger_outside_envelopes_mm3": 0.0,
+          "expanded_box_intersections_mm3": [
+            0.0,
+            0.0
+          ],
+          "expanded_box_distances_mm": [
+            34.0,
+            38.44999999999999
+          ]
+        },
+        {
+          "motion": "I_HEAD_CROSSBAR_1",
+          "ledger": "DRY_LEDGER_R_2x2xQUARTER_AL_UP_WEB",
+          "ledger_outside_envelopes_mm3": 0.0,
+          "expanded_box_intersections_mm3": [
+            0.0,
+            0.0
+          ],
+          "expanded_box_distances_mm": [
+            34.0,
+            38.450000000000045
+          ]
+        }
+      ],
+      "minimum_swept_bound_gap_mm": [
+        0.0,
+        "Y_BLOCK_L_1",
+        "XR_EX_L_HEADER"
+      ],
+      "relative_motion_exact_checks": 323,
+      "relative_motion_sample_intersections": [],
+      "nominal_HMS_shoe_fastener_body_intersections": [
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            575.0,
+            775.0,
+            50.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            175.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            0.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_L_BODY",
+          "b": "HMS_Y_L_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_Y_R_BODY",
+          "b": "HMS_Y_R_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_1",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_2",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_3",
+          "volume_mm3": 31.41593
+        },
+        {
+          "pose": [
+            975.0,
+            1275.0,
+            100.0
+          ],
+          "a": "HMS_X_BODY",
+          "b": "HMS_X_SHOE_BOLT_4",
+          "volume_mm3": 31.41593
+        }
+      ],
+      "nominal_fastener_disposition": "Only BODY vs its own SHOE_BOLT_1..4, max31.5mm3, are separated as inherited nominal carriage-thread envelopes. Actual carriage thread depth and screw-tip clearance remain supplier holds; this is not physical collision clearance.",
+      "rigid_translation_clear": true,
+      "relative_motion_samples_clear_except_nominal_threads": true
+    }
+  },
+  "scope": "Exact external and different-motion-class intersections at center and 8 corners; external union bounds prove clearance for independent pure translations only when candidate list is empty. Internal relative-motion checks are sampled, not a continuous swept-solid proof. Switch/cam compliance and flexible cables are not modeled.",
+  "excluded": [
+    "actual cutting tool",
+    "actual torch nozzle",
+    "workpiece and clamps",
+    "flexible hoses/cables",
+    "conversion trajectory"
+  ],
+  "source_sha256": {
+    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f",
+    "frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "bed.py": "b00334d947b9e1bc9e3657d7603f67051a6c5f14460d16729d785b1d57cbbbee",
+    "motion.py": "a8e1458d3fda2a492e5b889b66e3f21ad075be14bb8340fb550b6f4e1cc4c015",
+    "check_travel.py": "145d367cc4ff321e8f086120e4d7b193df09aad59d303d8e0d296b2fe91446a3"
+  },
+  "release": false,
+  "source_consistent_during_check": true
+}

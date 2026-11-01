@@ -1,0 +1,393 @@
+{
+  "revision": "XR1",
+  "passed": true,
+  "passed_scope": "Analytical-input/source consistency only. This flag does not certify part geometry, strength, service stiffness or the whole machine.",
+  "release": false,
+  "prices_included": false,
+  "analysis_type": "Closed-form box-beam, shear, strip and slat sensitivities; not FEA.",
+  "source_sha256": {
+    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f",
+    "frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "bed.py": "b00334d947b9e1bc9e3657d7603f67051a6c5f14460d16729d785b1d57cbbbee",
+    "structure_screen.py": "a85a7ab76b6addd90d4e6a0cf323ac00ace21cdf514acd497dc01186e9da5e8b",
+    "bed_screen.py": "9d758a5c34a335238ad560a759bbee5b69d6b9d9566c43d139d5faec5ed8e10c"
+  },
+  "input_checks": {
+    "balanced_skins_12p7_mm": true,
+    "selected_core_39p05_mm": true,
+    "complete_height_matches_datums": true,
+    "seven_webs_modeled": true,
+    "five_webs_conservatively_credited": true,
+    "skin_max_clear_span_45p75_mm": true,
+    "front_pulls_preserve_Y19_web": true,
+    "groove_leaves6p35_skin_mm": true,
+    "slat_nominal_not_below_screen_min": true,
+    "cabinet_notch_326mm_segment_detected": true
+  },
+  "selected_source_inputs": {
+    "BOTTOM": 12.7,
+    "CORE": 39.05,
+    "TOP": 12.7,
+    "WEAR": 6.35,
+    "WEB": 9.0,
+    "WEB_CENTRES": [
+      4.5,
+      19.0,
+      73.75,
+      128.5,
+      183.25,
+      238.0,
+      252.5
+    ],
+    "TRACK_W": 19.0,
+    "TRACK_CENTRES": [
+      19.0,
+      238.0
+    ],
+    "SLAT_T": 1.9,
+    "SLAT_LENGTH": 880.0,
+    "SLAT_X0": 135.0
+  },
+  "geometry": {
+    "panel_width_X_mm": 932.0,
+    "panel_length_Y_mm": 257.0,
+    "hard_seat_centres_X_mm": [
+      117.5,
+      1032.5
+    ],
+    "global_span_mm": 915.0,
+    "structural_height_mm": 64.45,
+    "complete_height_mm": 70.8,
+    "front_pull_y_ends_mm": [
+      14.0
+    ],
+    "second_front_web_y_start_mm": 14.5,
+    "largest_local_clear_span_mm": 45.75
+  },
+  "section": {
+    "area_mm2": 8043.749999999999,
+    "neutral_axis_from_bottom_mm": 31.353545143745144,
+    "I_mm4": 4470952.893280794,
+    "top_skin_first_moment_mm3": 80077.70694851593,
+    "signed_rectangles": [
+      {
+        "name": "bottom_skin",
+        "w": 257.0,
+        "h": 12.7,
+        "z": 6.35,
+        "sign": 1
+      },
+      {
+        "name": "top_skin",
+        "w": 257.0,
+        "h": 12.7,
+        "z": 58.1,
+        "sign": 1
+      },
+      {
+        "name": "credited_webs",
+        "w": 45.0,
+        "h": 39.05,
+        "z": 32.224999999999994,
+        "sign": 1
+      },
+      {
+        "name": "two_top_track_grooves",
+        "w": 38.0,
+        "h": 6.35,
+        "z": 61.275000000000006,
+        "sign": -1
+      }
+    ]
+  },
+  "material_assumptions": {
+    "raw_required_E_along_span_MPa": 4000.0,
+    "weaker_material_sensitivity_E_MPa": 2500.0,
+    "global_stiffness_factor": 0.75,
+    "core_G_MPa": 400.0,
+    "shear_factor": 0.8333333333333334,
+    "interpretation": "EffectiveE is rawE\u00d70.75. This is an assumed stiffness reduction, not a qualified glue efficiency or plywood grade.",
+    "web_credit": "Seven modeled; five inner webs credited for global/shear, conservatively omitting outer edge rows. Shallow pulls preserveY19. End lifting-grip discontinuities, holes and adhesives still need physical verification.",
+    "no_stiffness_credit": [
+      "Aluminum T-slot tracks",
+      "Al compression tubes/blocks",
+      "Removable MDF wear layer",
+      "Mechanical latches acting as a bonded laminate"
+    ]
+  },
+  "cassette_cases": [
+    {
+      "force_N": 100.0,
+      "raw_plywood_E_MPa": 4000.0,
+      "effective_E_MPa": 3000.0,
+      "core_G_MPa": 400.0,
+      "EI_Nmm2": 13412858679.842382,
+      "global_bending_mm": 0.11898732360824028,
+      "web_shear_mm": 0.03905249679897567,
+      "local_top_skin": {
+        "patch_width_mm": 25.0,
+        "clear_span_mm": 45.75,
+        "full_skin_thickness_mm": 12.7,
+        "thin_segment_at_one_support_mm": 5.0,
+        "thin_segment_thickness_mm": 6.35,
+        "regular_point_strip_mm": 0.015582634265662232,
+        "short_groove_segment_extra_mm": 0.000569554944884168,
+        "deflection_mm": 0.0161521892105464,
+        "max_regular_strip_bending_stress_MPa": 1.7019034038068075,
+        "patch_average_bearing_stress_MPa": 0.16,
+        "scope": "Conservative25mm-wide strip with a midpoint point force. Actual plate distribution, grain and notch stresses are not qualified."
+      },
+      "cassette_component_sum_mm": 0.17419200961776235,
+      "global_extreme_skin_stress_MPa": 0.1693333441232663,
+      "core_average_shear_stress_MPa": 0.02845354958031015,
+      "core_peak_shear_factor1_5_MPa": 0.04268032437046522,
+      "top_skin_to_web_shear_flow_N_per_mm": 0.8955328859409516,
+      "nominal_required_glueline_shear_MPa": 0.019900730798687812,
+      "cassette_only_service_target_met": true,
+      "allowable_strength_comparison": "None: actual ply, adhesive, grain and moisture/temperature durability remain unqualified."
+    },
+    {
+      "force_N": 300.0,
+      "raw_plywood_E_MPa": 4000.0,
+      "effective_E_MPa": 3000.0,
+      "core_G_MPa": 400.0,
+      "EI_Nmm2": 13412858679.842382,
+      "global_bending_mm": 0.35696197082472086,
+      "web_shear_mm": 0.11715749039692702,
+      "local_top_skin": {
+        "patch_width_mm": 25.0,
+        "clear_span_mm": 45.75,
+        "full_skin_thickness_mm": 12.7,
+        "thin_segment_at_one_support_mm": 5.0,
+        "thin_segment_thickness_mm": 6.35,
+        "regular_point_strip_mm": 0.0467479027969867,
+        "short_groove_segment_extra_mm": 0.001708664834652504,
+        "deflection_mm": 0.048456567631639205,
+        "max_regular_strip_bending_stress_MPa": 5.105710211420423,
+        "patch_average_bearing_stress_MPa": 0.48,
+        "scope": "Conservative25mm-wide strip with a midpoint point force. Actual plate distribution, grain and notch stresses are not qualified."
+      },
+      "cassette_component_sum_mm": 0.5225760288532871,
+      "global_extreme_skin_stress_MPa": 0.508000032369799,
+      "core_average_shear_stress_MPa": 0.08536064874093044,
+      "core_peak_shear_factor1_5_MPa": 0.12804097311139567,
+      "top_skin_to_web_shear_flow_N_per_mm": 2.686598657822855,
+      "nominal_required_glueline_shear_MPa": 0.05970219239606344,
+      "cassette_only_service_target_met": false,
+      "allowable_strength_comparison": "None: actual ply, adhesive, grain and moisture/temperature durability remain unqualified."
+    },
+    {
+      "force_N": 100.0,
+      "raw_plywood_E_MPa": 2500.0,
+      "effective_E_MPa": 1875.0,
+      "core_G_MPa": 400.0,
+      "EI_Nmm2": 8383036674.901488,
+      "global_bending_mm": 0.19037971777318446,
+      "web_shear_mm": 0.03905249679897567,
+      "local_top_skin": {
+        "patch_width_mm": 25.0,
+        "clear_span_mm": 45.75,
+        "full_skin_thickness_mm": 12.7,
+        "thin_segment_at_one_support_mm": 5.0,
+        "thin_segment_thickness_mm": 6.35,
+        "regular_point_strip_mm": 0.02493221482505957,
+        "short_groove_segment_extra_mm": 0.0009112879118146688,
+        "deflection_mm": 0.02584350273687424,
+        "max_regular_strip_bending_stress_MPa": 1.7019034038068075,
+        "patch_average_bearing_stress_MPa": 0.16,
+        "scope": "Conservative25mm-wide strip with a midpoint point force. Actual plate distribution, grain and notch stresses are not qualified."
+      },
+      "cassette_component_sum_mm": 0.25527571730903437,
+      "global_extreme_skin_stress_MPa": 0.1693333441232663,
+      "core_average_shear_stress_MPa": 0.02845354958031015,
+      "core_peak_shear_factor1_5_MPa": 0.04268032437046522,
+      "top_skin_to_web_shear_flow_N_per_mm": 0.8955328859409516,
+      "nominal_required_glueline_shear_MPa": 0.019900730798687812,
+      "cassette_only_service_target_met": true,
+      "allowable_strength_comparison": "None: actual ply, adhesive, grain and moisture/temperature durability remain unqualified."
+    },
+    {
+      "force_N": 300.0,
+      "raw_plywood_E_MPa": 2500.0,
+      "effective_E_MPa": 1875.0,
+      "core_G_MPa": 400.0,
+      "EI_Nmm2": 8383036674.901488,
+      "global_bending_mm": 0.5711391533195533,
+      "web_shear_mm": 0.11715749039692702,
+      "local_top_skin": {
+        "patch_width_mm": 25.0,
+        "clear_span_mm": 45.75,
+        "full_skin_thickness_mm": 12.7,
+        "thin_segment_at_one_support_mm": 5.0,
+        "thin_segment_thickness_mm": 6.35,
+        "regular_point_strip_mm": 0.07479664447517871,
+        "short_groove_segment_extra_mm": 0.0027338637354440065,
+        "deflection_mm": 0.07753050821062271,
+        "max_regular_strip_bending_stress_MPa": 5.105710211420423,
+        "patch_average_bearing_stress_MPa": 0.48,
+        "scope": "Conservative25mm-wide strip with a midpoint point force. Actual plate distribution, grain and notch stresses are not qualified."
+      },
+      "cassette_component_sum_mm": 0.765827151927103,
+      "global_extreme_skin_stress_MPa": 0.508000032369799,
+      "core_average_shear_stress_MPa": 0.08536064874093044,
+      "core_peak_shear_factor1_5_MPa": 0.12804097311139567,
+      "top_skin_to_web_shear_flow_N_per_mm": 2.686598657822855,
+      "nominal_required_glueline_shear_MPa": 0.05970219239606344,
+      "cassette_only_service_target_met": false,
+      "allowable_strength_comparison": "None: actual ply, adhesive, grain and moisture/temperature durability remain unqualified."
+    }
+  ],
+  "combined_vertical_service_sensitivities": [
+    {
+      "raw_plywood_E_MPa": 4000.0,
+      "cassette_mm": 0.17419200961776235,
+      "ledger_bending_and_torsion_mm": 0.04670211420302178,
+      "header_vertical_strong_axis_mm": 0.008987425002054739,
+      "known_ideal_component_subtotal_mm": 0.22988154882283887,
+      "remaining_budget_to0p30_mm": 0.07011845117716112,
+      "ideal_subtotal_target_met": true,
+      "assembled_target_qualified": false,
+      "front_ledger_joint_detail": "Three stations per front arm aftertransfer relief, includingtwoX-separated back-row bolts; four perotherarm. Nominal twist restraint still requires test.",
+      "excluded_compliance": "Post axial deformation, arm/angle joints, contact bedding, joint rotation/slip, actual diaphragm/adhesive behavior and owned motion/tooling.",
+      "scope": "Aligned vertical100N component sensitivity only; no weak-axisX term, gravity sag, or unbalanced external-push displacement is added."
+    },
+    {
+      "raw_plywood_E_MPa": 2500.0,
+      "cassette_mm": 0.25527571730903437,
+      "ledger_bending_and_torsion_mm": 0.04670211420302178,
+      "header_vertical_strong_axis_mm": 0.008987425002054739,
+      "known_ideal_component_subtotal_mm": 0.3109652565141109,
+      "remaining_budget_to0p30_mm": -0.0109652565141109,
+      "ideal_subtotal_target_met": false,
+      "assembled_target_qualified": false,
+      "front_ledger_joint_detail": "Three stations per front arm aftertransfer relief, includingtwoX-separated back-row bolts; four perotherarm. Nominal twist restraint still requires test.",
+      "excluded_compliance": "Post axial deformation, arm/angle joints, contact bedding, joint rotation/slip, actual diaphragm/adhesive behavior and owned motion/tooling.",
+      "scope": "Aligned vertical100N component sensitivity only; no weak-axisX term, gravity sag, or unbalanced external-push displacement is added."
+    }
+  ],
+  "slats": {
+    "count": 8,
+    "overall_length_mm": 880.0,
+    "supports_x_mm": [
+      140.0,
+      575.0,
+      1010.0
+    ],
+    "span_mm": 435.0,
+    "height_mm": 40.0,
+    "nominal_thickness_mm": 1.9,
+    "screen_minimum_thickness_mm": 1.8,
+    "I_vertical_mm4": 9600.0,
+    "distributed150kg_case": {
+      "description": "150kg distributed among8slats and2equal spans each; no single-slat concentration",
+      "load_per435mm_span_N": 91.93734375,
+      "deflection_mm": 0.05132125572323799,
+      "bending_stress_MPa": 10.414777221679687,
+      "support_reaction_per_span_end_N": 45.968671875
+    },
+    "single200N_case": {
+      "description": "200N at midpoint ofone435mm slat span",
+      "deflection_mm": 0.17863037109375,
+      "bending_stress_MPa": 45.3125,
+      "support_reaction_per_span_end_N": 100.0
+    },
+    "individual_elastic_target_mm": 0.3,
+    "individual_cases_within_elastic_target": true,
+    "table_load_rating_qualified": false,
+    "scope": "Slat members only. No credit here for comb/floor welds, pan plate, shims, bearer joints or the full table. Slats are plasma supports, not the routing/clamping bed.",
+    "requirements": [
+      "Verify actual thickness>=1.8mm and material grade",
+      "Qualify actual comb contacts, slot clearance and weld/standoff load path",
+      "Check local edge bearing and concentrated workpiece placement",
+      "No generic mild-steel yield allowable or floor strength is asserted"
+    ]
+  },
+  "cabinet_front_strip": {
+    "load_path": "Cabinet stands on its own four floor columns. Rear links resist tipping only, not normal gravity. No cabinet ballast credit to main frame.",
+    "section_width_mm": 25.0,
+    "section_thickness_mm": 3.0,
+    "area_mm2": 75.0,
+    "I_weak_mm4": 56.25,
+    "source_return_flange_notches_z_mm": [
+      [
+        378.0,
+        704.0
+      ]
+    ],
+    "unrestrained_length_mm": 326.0,
+    "ideal_unrestrained_pinned_Euler_N": 360.44264068771946,
+    "ideal_unrestrained_K2_Euler_N": 90.11066017192987,
+    "assumed_side_skin_lateral_restraint_z_mm": [
+      410.0,
+      500.0,
+      600.0,
+      690.0
+    ],
+    "longest_assumed_braced_segment_mm": 100.0,
+    "ideal_segment_pinned_Euler_N": 3830.640208172807,
+    "ideal_segment_K2_Euler_N": 957.6600520432017,
+    "gravity_reaction_sensitivity": [
+      {
+        "cabinet_plus_contents_kg": 25.0,
+        "four_equal_column_reaction_N": 61.2915625,
+        "three_contact_average_N": 81.72208333333333
+      },
+      {
+        "cabinet_plus_contents_kg": 50.0,
+        "four_equal_column_reaction_N": 122.583125,
+        "three_contact_average_N": 163.44416666666666
+      },
+      {
+        "cabinet_plus_contents_kg": 75.0,
+        "four_equal_column_reaction_N": 183.8746875,
+        "three_contact_average_N": 245.16625
+      }
+    ],
+    "qualified": false,
+    "requirements": [
+      "Do not treat thin skin or blind rivets as perfect buckling restraints without joint/lateral-restraint qualification",
+      "Verify actual25x25x3 angle material, cut edge radius/quality and remaining weak strip",
+      "Verify floor contact/levelling, shelf/skin rivet bearing, local wall buckling and actual loaded cabinet mass",
+      "Proof rear anti-tip links and rivets independently; they must not suspend cabinet gravity loads"
+    ],
+    "scope": "Ideal straight elastic strip sensitivities only. No allowable load rating, imperfection, local plate or complete cabinet stability calculation is asserted."
+  },
+  "front_transfer_notches": {
+    "frame_parts": 4,
+    "ledge_stations": 22,
+    "status": "Local notch/profile-lip/pan-seat/contact qualification remains required; analytical unrelieved arm reference is not a notch-strength proof."
+  },
+  "skin_stock_orientation": {
+    "count": 8,
+    "blank_mm": [
+      932,
+      257,
+      12.7
+    ],
+    "one_sheet_nominal_mm": [
+      2440,
+      1220
+    ],
+    "nest": "2\u00d7932 along2440 and4\u00d7257 across1220;4mm gaps and2mm outer trim fit1872\u00d71044.",
+    "requirement": "Put the declared/measured stronger plywood bending direction along932. Generic plywood labeling or a rotated nest does not establishE4000."
+  },
+  "qualification_required": [
+    "Supplier or coupon bending/shear data in the actual grain direction and moisture condition",
+    "Continuous bonded web-to-skin interfaces, cure, sealing and repeated load/temperature durability",
+    "Static100N relative work-surface deflection tests at midpoint, near pockets and panel seams",
+    "Joint/ledger/contact compliance measured against the remaining ideal budget, not assumed zero",
+    "Track lip, fastener, backing-block, compression-tube and skin-pull-through proof under actual clamp preload",
+    "Local hand-grip and finger-pocket stress concentrations and repeated handling",
+    "Front transfer-notch profile lip/contact behavior and three-station front-ledger anti-roll response",
+    "Front cabinet stripped-angle segments, side-skin/rivet lateral restraint, floor contacts and rear anti-tip links",
+    "Positive slat-to-comb-to-pan/frame load path and cold load test before assigning a table workpiece rating"
+  ],
+  "proof_case_scope": "300N values are linear sensitivity results, not an approved machining load or an asserted nondestructive proof procedure.",
+  "non_coverage": [
+    "Full assembled tool-to-work compliance",
+    "Owned gantry, rails, drive modules, screw lead, Z/spindle/tooling",
+    "Track/clamp hardware strength and exact supplier profiles",
+    "Pan floor/weld/comb system capacity and thermal distortion",
+    "Transfer sweep, water flow, electrical interface and protected-storage temperatures"
+  ]
+}

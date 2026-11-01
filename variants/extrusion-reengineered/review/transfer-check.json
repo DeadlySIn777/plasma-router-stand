@@ -1,0 +1,4696 @@
+{
+  "revision": "XR1",
+  "source_sha256": {
+    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f",
+    "bed.py": "b00334d947b9e1bc9e3657d7603f67051a6c5f14460d16729d785b1d57cbbbee",
+    "frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "motion.py": "a8e1458d3fda2a492e5b889b66e3f21ad075be14bb8340fb550b6f4e1cc4c015",
+    "build.py": "6f8a4d2154e46d118ec0b77a3ec02095a97e394c72f068892749885d4422b3de",
+    "check_transfer.py": "6fc9600e49a71baddcd327b21aad3a685a4f58500444aae043b59e54e3dd867e"
+  },
+  "passed": true,
+  "release": false,
+  "scope": "Exact CAD intersections of conservative enclosing solids for every continuous transfer segment; actual human reach, force and retention are unqualified.",
+  "positive_volume_threshold_mm3": 0.05,
+  "aabb_overlap_tolerance_mm": 1e-05,
+  "park": {
+    "gantry_y_mm": 1275,
+    "head_x_mm": 575,
+    "z_lift_mm": 100,
+    "required": "Power isolated; REMOVE ENTIRE spindle/split-clamp module or entire plasma-drop/head/torch module before moving any cassette. Only the common Zadapter remains. Remove eightM6 clamp sets into owned tool storage; retain Z; open door. Install next tool module only after bed conversion."
+  },
+  "order": [
+    4,
+    3,
+    2,
+    1
+  ],
+  "segments": [
+    {
+      "cassette": 4,
+      "from": "installed",
+      "to": "flat_lift",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        880.4,
+        888.0,
+        1041.0,
+        1137.4,
+        1040.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 2,
+      "positive_intersections": [],
+      "initial_pin_hole_checks": [
+        {
+          "lift_mm": 0.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 0.25,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 0.5,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 1.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 1.5,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 2.0,
+          "exact_pairs": 0,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 2.01,
+          "exact_pairs": 0,
+          "positive_intersections": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "flat_lift",
+      "to": "front_flat",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        970.0,
+        1041.0,
+        1137.4,
+        1040.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 0,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "front_flat",
+      "to": "front_upright",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        970.0,
+        1041.0,
+        327.8,
+        1236.573892195016
+      ],
+      "within_plan": true,
+      "exact_pairs": 0,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "front_upright",
+      "to": "lower_front_channel",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        400.0,
+        1041.0,
+        70.8,
+        1227.0
+      ],
+      "within_plan": true,
+      "exact_pairs": 4,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "lower_front_channel",
+      "to": "rotate_below_pan",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        400.0,
+        1041.0,
+        327.8,
+        666.573892195016
+      ],
+      "within_plan": true,
+      "exact_pairs": 3,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "rotate_below_pan",
+      "to": "raise_in_front_of_case",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        400.0,
+        1041.0,
+        327.8,
+        699.1999999999999
+      ],
+      "within_plan": true,
+      "exact_pairs": 3,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "raise_in_front_of_case",
+      "to": "insert_above_shelf",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        628.4,
+        1041.0,
+        617.0,
+        699.1999999999999
+      ],
+      "within_plan": true,
+      "exact_pairs": 9,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "insert_above_shelf",
+      "to": "seat_on_shelf",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        360.0,
+        627.4,
+        1041.0,
+        617.0,
+        699.1999999999999
+      ],
+      "within_plan": true,
+      "exact_pairs": 7,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 3,
+      "from": "installed",
+      "to": "flat_lift",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        621.4,
+        888.0,
+        1041.0,
+        878.4,
+        1040.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 2,
+      "positive_intersections": [],
+      "initial_pin_hole_checks": [
+        {
+          "lift_mm": 0.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 0.25,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 0.5,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 1.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 1.5,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 2.0,
+          "exact_pairs": 0,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 2.01,
+          "exact_pairs": 0,
+          "positive_intersections": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "cassette": 3,
+      "from": "flat_lift",
+      "to": "front_flat",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        970.0,
+        1041.0,
+        878.4,
+        1040.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 0,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 3,
+      "from": "front_flat",
+      "to": "front_upright",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        970.0,
+        1041.0,
+        327.8,
+        1236.573892195016
+      ],
+      "within_plan": true,
+      "exact_pairs": 0,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 3,
+      "from": "front_upright",
+      "to": "lower_front_channel",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        400.0,
+        1041.0,
+        70.8,
+        1227.0
+      ],
+      "within_plan": true,
+      "exact_pairs": 4,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 3,
+      "from": "lower_front_channel",
+      "to": "rotate_below_pan",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        400.0,
+        1041.0,
+        327.8,
+        666.573892195016
+      ],
+      "within_plan": true,
+      "exact_pairs": 3,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 3,
+      "from": "rotate_below_pan",
+      "to": "raise_in_front_of_case",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        400.0,
+        1041.0,
+        327.8,
+        623.4
+      ],
+      "within_plan": true,
+      "exact_pairs": 1,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 3,
+      "from": "raise_in_front_of_case",
+      "to": "insert_above_shelf",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        552.6,
+        1041.0,
+        617.0,
+        623.4
+      ],
+      "within_plan": true,
+      "exact_pairs": 7,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 3,
+      "from": "insert_above_shelf",
+      "to": "seat_on_shelf",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        360.0,
+        551.6,
+        1041.0,
+        617.0,
+        623.4
+      ],
+      "within_plan": true,
+      "exact_pairs": 7,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 2,
+      "from": "installed",
+      "to": "flat_lift",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        362.4,
+        888.0,
+        1041.0,
+        619.4,
+        1040.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 2,
+      "positive_intersections": [],
+      "initial_pin_hole_checks": [
+        {
+          "lift_mm": 0.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 0.25,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 0.5,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 1.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 1.5,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 2.0,
+          "exact_pairs": 0,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 2.01,
+          "exact_pairs": 0,
+          "positive_intersections": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "cassette": 2,
+      "from": "flat_lift",
+      "to": "front_flat",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        970.0,
+        1041.0,
+        619.4,
+        1040.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 0,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 2,
+      "from": "front_flat",
+      "to": "front_upright",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        970.0,
+        1041.0,
+        327.8,
+        1236.573892195016
+      ],
+      "within_plan": true,
+      "exact_pairs": 0,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 2,
+      "from": "front_upright",
+      "to": "lower_front_channel",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        400.0,
+        1041.0,
+        70.8,
+        1227.0
+      ],
+      "within_plan": true,
+      "exact_pairs": 4,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 2,
+      "from": "lower_front_channel",
+      "to": "rotate_below_pan",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        400.0,
+        1041.0,
+        327.8,
+        666.573892195016
+      ],
+      "within_plan": true,
+      "exact_pairs": 3,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 2,
+      "from": "rotate_below_pan",
+      "to": "raise_in_front_of_case",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        400.0,
+        1041.0,
+        327.8,
+        547.6
+      ],
+      "within_plan": true,
+      "exact_pairs": 1,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 2,
+      "from": "raise_in_front_of_case",
+      "to": "insert_above_shelf",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        476.8,
+        1041.0,
+        617.0,
+        547.6
+      ],
+      "within_plan": true,
+      "exact_pairs": 7,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 2,
+      "from": "insert_above_shelf",
+      "to": "seat_on_shelf",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        360.0,
+        475.8,
+        1041.0,
+        617.0,
+        547.6
+      ],
+      "within_plan": true,
+      "exact_pairs": 7,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 1,
+      "from": "installed",
+      "to": "flat_lift",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        103.4,
+        888.0,
+        1041.0,
+        360.4,
+        1040.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 2,
+      "positive_intersections": [],
+      "initial_pin_hole_checks": [
+        {
+          "lift_mm": 0.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 0.25,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 0.5,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 1.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 1.5,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 2.0,
+          "exact_pairs": 0,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 2.01,
+          "exact_pairs": 0,
+          "positive_intersections": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "cassette": 1,
+      "from": "flat_lift",
+      "to": "front_flat",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        970.0,
+        1041.0,
+        360.4,
+        1040.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 0,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 1,
+      "from": "front_flat",
+      "to": "front_upright",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        970.0,
+        1041.0,
+        327.8,
+        1236.573892195016
+      ],
+      "within_plan": true,
+      "exact_pairs": 0,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 1,
+      "from": "front_upright",
+      "to": "lower_front_channel",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        400.0,
+        1041.0,
+        70.8,
+        1227.0
+      ],
+      "within_plan": true,
+      "exact_pairs": 4,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 1,
+      "from": "lower_front_channel",
+      "to": "rotate_below_pan",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        400.0,
+        1041.0,
+        327.8,
+        666.573892195016
+      ],
+      "within_plan": true,
+      "exact_pairs": 3,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 1,
+      "from": "rotate_below_pan",
+      "to": "raise_in_front_of_case",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        400.0,
+        1041.0,
+        327.8,
+        471.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 1,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 1,
+      "from": "raise_in_front_of_case",
+      "to": "insert_above_shelf",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        401.0,
+        1041.0,
+        617.0,
+        471.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 7,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 1,
+      "from": "insert_above_shelf",
+      "to": "seat_on_shelf",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        360.0,
+        400.0,
+        1041.0,
+        617.0,
+        471.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 7,
+      "positive_intersections": [],
+      "passed": true
+    }
+  ],
+  "nominal_thread_exceptions": [],
+  "intentional_initial_pin_enclosure_exceptions": [
+    {
+      "cassette": 4,
+      "excluded_ids": [
+        "DOCK_L_4_ROUND",
+        "DOCK_R_4_DIAMOND_X_RELIEF"
+      ],
+      "reason": "Pins occupy the conservative solid box but enter the actual vertical datum-pad bores. Analytic engagement proof: round radius2.99 is below bore radius3.02; diamond lies within the same radius. Projection2mm is below3.175mm pad bore depth; vertical coaxial lift monotonically removes engagement. Beyond2mm vertical separation is exact. Sampled exact checks corroborate this geometry."
+    },
+    {
+      "cassette": 3,
+      "excluded_ids": [
+        "DOCK_L_3_ROUND",
+        "DOCK_R_3_DIAMOND_X_RELIEF"
+      ],
+      "reason": "Pins occupy the conservative solid box but enter the actual vertical datum-pad bores. Analytic engagement proof: round radius2.99 is below bore radius3.02; diamond lies within the same radius. Projection2mm is below3.175mm pad bore depth; vertical coaxial lift monotonically removes engagement. Beyond2mm vertical separation is exact. Sampled exact checks corroborate this geometry."
+    },
+    {
+      "cassette": 2,
+      "excluded_ids": [
+        "DOCK_L_2_ROUND",
+        "DOCK_R_2_DIAMOND_X_RELIEF"
+      ],
+      "reason": "Pins occupy the conservative solid box but enter the actual vertical datum-pad bores. Analytic engagement proof: round radius2.99 is below bore radius3.02; diamond lies within the same radius. Projection2mm is below3.175mm pad bore depth; vertical coaxial lift monotonically removes engagement. Beyond2mm vertical separation is exact. Sampled exact checks corroborate this geometry."
+    },
+    {
+      "cassette": 1,
+      "excluded_ids": [
+        "DOCK_L_1_ROUND",
+        "DOCK_R_1_DIAMOND_X_RELIEF"
+      ],
+      "reason": "Pins occupy the conservative solid box but enter the actual vertical datum-pad bores. Analytic engagement proof: round radius2.99 is below bore radius3.02; diamond lies within the same radius. Projection2mm is below3.175mm pad bore depth; vertical coaxial lift monotonically removes engagement. Beyond2mm vertical separation is exact. Sampled exact checks corroborate this geometry."
+    }
+  ],
+  "mode_self": {
+    "WOOD": {
+      "exact_pairs": 554,
+      "positive_intersections": [],
+      "invalid_ids": [],
+      "part_count": 304,
+      "passed": true
+    },
+    "PLASMA": {
+      "exact_pairs": 542,
+      "positive_intersections": [],
+      "invalid_ids": [],
+      "part_count": 280,
+      "passed": true
+    }
+  },
+  "stored_case": {
+    "case_clear_x_mm": 4.2,
+    "side_shelf_rail_clear_x_mm": 2.6,
+    "shelf_vertical_gap_mm": 5.0,
+    "minimum_top_to_primary_roof_mm": 11.8,
+    "door_closed_to_panel_front_gap_mm": 11.2,
+    "floor_to_lowest_panel_mm": 21.2,
+    "passed": true
+  },
+  "limits": {
+    "machine_plan_x_mm": [
+      0,
+      1150.0
+    ],
+    "machine_plan_y_mm": [
+      0,
+      1450.0
+    ],
+    "swap_clearance_outside_plan_mm": 0
+  },
+  "physical_holds": [
+    "14mm front finger pocket ergonomic test",
+    "measured cassette mass and manageable lift",
+    "side handle proof load and edge durability",
+    "door slide guides/stop/retention actual hardware",
+    "dock pin fits and repeatability",
+    "bolt preload/thread/washer seat and sleeve tolerances",
+    "thermal and fume protection before plasma"
+  ],
+  "door_motion": {
+    "exact_pairs": 1,
+    "positive_intersections": [],
+    "passed": true
+  },
+  "restoration": "Same path in reverse with BOTH complete tool modules removed; restore cassettes1,2,3,4. Refit selected tool only after cassette conversion.",
+  "source_unchanged": true,
+  "mass_report": {
+    "cassette_installed": [
+      {
+        "kg": 6.614356933002804,
+        "cg_mm": [
+          574.9999999999958,
+          232.76511991759563,
+          925.9380261081191
+        ],
+        "parts": [
+          {
+            "name": "CAS1_GLUED_PLY_BOX_12p7_12p7_9_WEB",
+            "kg": 5.114394372973727,
+            "centre_mm": [
+              574.9999999999944,
+              232.36243310246775,
+              919.6520141689781
+            ]
+          },
+          {
+            "name": "CAS1_CLAMP_COMPRESSION_SLEEVE_117_OD10_ID6p6",
+            "kg": 0.007713714705619585,
+            "centre_mm": [
+              117.50000000000004,
+              231.9000000000001,
+              920.225
+            ]
+          },
+          {
+            "name": "CAS1_CLAMP_COMPRESSION_SLEEVE_1032_OD10_ID6p6",
+            "kg": 0.007713714705619643,
+            "centre_mm": [
+              1032.5000000000002,
+              231.89999999999995,
+              920.2249999999998
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              190.00000000000003,
+              122.40000000000003,
+              892.7625000000002
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.003476483976093204,
+            "centre_mm": [
+              190.0,
+              122.40000000000003,
+              921.8125000000001
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617801,
+            "centre_mm": [
+              190.00000000000003,
+              122.40000000000003,
+              920.7863350085119
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              430.0,
+              122.40000000000002,
+              892.7625000000002
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.003476483976093209,
+            "centre_mm": [
+              430.0,
+              122.40000000000003,
+              921.8125000000001
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_M5x60_VERIFY_GRIP_2",
+            "kg": 0.009255870794617798,
+            "centre_mm": [
+              429.99999999999994,
+              122.4,
+              920.7863350085116
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              720.0,
+              122.40000000000002,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.0034764839760932325,
+            "centre_mm": [
+              720.0,
+              122.39999999999999,
+              921.8124999999997
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617878,
+            "centre_mm": [
+              720.0,
+              122.4,
+              920.7863350085115
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              960.0,
+              122.40000000000002,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.0034764839760932325,
+            "centre_mm": [
+              959.9999999999999,
+              122.39999999999999,
+              921.8124999999997
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617878,
+            "centre_mm": [
+              960.0000000000001,
+              122.4,
+              920.7863350085115
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.29679012617092376,
+            "centre_mm": [
+              575.0000000000003,
+              122.40000000000002,
+              951.3793517524396
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              190.0,
+              341.3999999999999,
+              892.7624999999998
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.0034764839760931983,
+            "centre_mm": [
+              190.0,
+              341.40000000000015,
+              921.8125000000001
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617805,
+            "centre_mm": [
+              190.0,
+              341.4,
+              920.7863350085117
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320629,
+            "centre_mm": [
+              430.0,
+              341.3999999999999,
+              892.7624999999999
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.003476483976093202,
+            "centre_mm": [
+              430.0000000000001,
+              341.4000000000001,
+              921.8124999999999
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_M5x60_VERIFY_GRIP_2",
+            "kg": 0.0092558707946178,
+            "centre_mm": [
+              430.0,
+              341.3999999999999,
+              920.7863350085119
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              719.9999999999999,
+              341.3999999999999,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.0034764839760932256,
+            "centre_mm": [
+              720.0000000000001,
+              341.4,
+              921.8125
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617885,
+            "centre_mm": [
+              720.0,
+              341.4,
+              920.7863350085114
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              960.0,
+              341.3999999999999,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.0034764839760932256,
+            "centre_mm": [
+              959.9999999999998,
+              341.4,
+              921.8125
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617885,
+            "centre_mm": [
+              959.9999999999999,
+              341.4,
+              920.7863350085114
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.29679012617092376,
+            "centre_mm": [
+              575.0000000000003,
+              341.40000000000003,
+              951.3793517524396
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_40",
+            "kg": 0.003183375743909909,
+            "centre_mm": [
+              117.50000000000001,
+              143.40000000000003,
+              889.5875000000001
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_217",
+            "kg": 0.003428999999999951,
+            "centre_mm": [
+              117.49999999999999,
+              320.4,
+              889.5874999999999
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_40",
+            "kg": 0.0031833757439099115,
+            "centre_mm": [
+              1032.5000000000002,
+              143.39999999999998,
+              889.5875
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_217",
+            "kg": 0.003428999999999951,
+            "centre_mm": [
+              1032.4999999999998,
+              320.4,
+              889.5874999999999
+            ]
+          },
+          {
+            "name": "CAS1_REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS",
+            "kg": 0.6976149840759164,
+            "centre_mm": [
+              574.9999999999999,
+              236.64999999999998,
+              955.6233680567193
+            ]
+          }
+        ]
+      },
+      {
+        "kg": 6.649194620502804,
+        "cg_mm": [
+          574.9999999999968,
+          491.2622304486371,
+          926.0935675801758
+        ],
+        "parts": [
+          {
+            "name": "CAS2_GLUED_PLY_BOX_12p7_12p7_9_WEB",
+            "kg": 5.114394372973728,
+            "centre_mm": [
+              574.9999999999957,
+              491.36243310246624,
+              919.652014168978
+            ]
+          },
+          {
+            "name": "CAS2_CLAMP_COMPRESSION_SLEEVE_117_OD10_ID6p6",
+            "kg": 0.007713714705619572,
+            "centre_mm": [
+              117.50000000000003,
+              490.90000000000003,
+              920.2250000000001
+            ]
+          },
+          {
+            "name": "CAS2_CLAMP_COMPRESSION_SLEEVE_1032_OD10_ID6p6",
+            "kg": 0.0077137147056196235,
+            "centre_mm": [
+              1032.4999999999998,
+              490.90000000000003,
+              920.2249999999999
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              190.0,
+              381.40000000000003,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.0034764839760931983,
+            "centre_mm": [
+              190.0,
+              381.4000000000001,
+              921.8125000000001
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617805,
+            "centre_mm": [
+              190.00000000000003,
+              381.4,
+              920.7863350085117
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320629,
+            "centre_mm": [
+              430.0000000000001,
+              381.40000000000003,
+              892.7625000000002
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.003476483976093202,
+            "centre_mm": [
+              430.0000000000001,
+              381.4,
+              921.8124999999999
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_M5x60_VERIFY_GRIP_2",
+            "kg": 0.0092558707946178,
+            "centre_mm": [
+              430.0,
+              381.4,
+              920.7863350085119
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              720.0000000000001,
+              381.40000000000003,
+              892.7625000000002
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.0034764839760932256,
+            "centre_mm": [
+              720.0000000000001,
+              381.3999999999999,
+              921.8125
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617885,
+            "centre_mm": [
+              720.0,
+              381.4,
+              920.7863350085114
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              960.0,
+              381.40000000000003,
+              892.7625000000002
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.0034764839760932256,
+            "centre_mm": [
+              959.9999999999998,
+              381.3999999999999,
+              921.8125
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617885,
+            "centre_mm": [
+              959.9999999999999,
+              381.4,
+              920.7863350085114
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.29679012617092376,
+            "centre_mm": [
+              575.0000000000003,
+              381.40000000000003,
+              951.3793517524393
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              190.00000000000003,
+              600.3999999999999,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.003476483976093224,
+            "centre_mm": [
+              189.99999999999997,
+              600.3999999999999,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617779,
+            "centre_mm": [
+              189.99999999999997,
+              600.4,
+              920.7863350085116
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              430.0,
+              600.4,
+              892.7625000000002
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.0034764839760932265,
+            "centre_mm": [
+              430.0,
+              600.3999999999999,
+              921.8124999999999
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_M5x60_VERIFY_GRIP_2",
+            "kg": 0.009255870794617775,
+            "centre_mm": [
+              430.0,
+              600.4000000000001,
+              920.7863350085119
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              720.0000000000001,
+              600.3999999999999,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.003476483976093248,
+            "centre_mm": [
+              719.9999999999998,
+              600.3999999999999,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617857,
+            "centre_mm": [
+              719.9999999999999,
+              600.4,
+              920.7863350085115
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              960.0,
+              600.3999999999999,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.003476483976093248,
+            "centre_mm": [
+              959.9999999999997,
+              600.3999999999999,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617857,
+            "centre_mm": [
+              959.9999999999999,
+              600.4,
+              920.7863350085115
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.29679012617092376,
+            "centre_mm": [
+              575.0000000000003,
+              600.4000000000001,
+              951.3793517524396
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_40",
+            "kg": 0.0031833757439099094,
+            "centre_mm": [
+              117.49999999999999,
+              402.4,
+              889.5875000000001
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_217",
+            "kg": 0.003428999999999951,
+            "centre_mm": [
+              117.49999999999999,
+              579.3999999999999,
+              889.5875000000001
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_40",
+            "kg": 0.003183375743909911,
+            "centre_mm": [
+              1032.5000000000002,
+              402.4,
+              889.5875000000002
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_217",
+            "kg": 0.003428999999999951,
+            "centre_mm": [
+              1032.4999999999998,
+              579.3999999999999,
+              889.5875000000001
+            ]
+          },
+          {
+            "name": "CAS2_REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS",
+            "kg": 0.7324526715759159,
+            "centre_mm": [
+              575.0000000000003,
+              490.9000000000003,
+              955.6234456769291
+            ]
+          }
+        ]
+      },
+      {
+        "kg": 6.649194620502798,
+        "cg_mm": [
+          574.9999999999985,
+          750.2622304486356,
+          926.0935675801762
+        ],
+        "parts": [
+          {
+            "name": "CAS3_GLUED_PLY_BOX_12p7_12p7_9_WEB",
+            "kg": 5.114394372973722,
+            "centre_mm": [
+              574.9999999999978,
+              750.3624331024653,
+              919.652014168979
+            ]
+          },
+          {
+            "name": "CAS3_CLAMP_COMPRESSION_SLEEVE_117_OD10_ID6p6",
+            "kg": 0.007713714705619602,
+            "centre_mm": [
+              117.50000000000003,
+              749.8999999999999,
+              920.2250000000003
+            ]
+          },
+          {
+            "name": "CAS3_CLAMP_COMPRESSION_SLEEVE_1032_OD10_ID6p6",
+            "kg": 0.007713714705619656,
+            "centre_mm": [
+              1032.4999999999998,
+              749.9000000000002,
+              920.2249999999998
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              190.0,
+              640.4,
+              892.7624999999999
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.003476483976093224,
+            "centre_mm": [
+              189.99999999999997,
+              640.4000000000001,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617779,
+            "centre_mm": [
+              189.99999999999997,
+              640.4,
+              920.7863350085116
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              430.0,
+              640.4,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.0034764839760932265,
+            "centre_mm": [
+              430.0,
+              640.3999999999999,
+              921.8124999999999
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_M5x60_VERIFY_GRIP_2",
+            "kg": 0.009255870794617775,
+            "centre_mm": [
+              430.0,
+              640.4000000000001,
+              920.7863350085119
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              720.0,
+              640.4,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.003476483976093248,
+            "centre_mm": [
+              719.9999999999998,
+              640.3999999999997,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617857,
+            "centre_mm": [
+              719.9999999999999,
+              640.4,
+              920.7863350085115
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              960.0,
+              640.4,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.003476483976093248,
+            "centre_mm": [
+              959.9999999999997,
+              640.3999999999997,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617857,
+            "centre_mm": [
+              959.9999999999999,
+              640.4,
+              920.7863350085115
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.29679012617092376,
+            "centre_mm": [
+              575.0000000000003,
+              640.4000000000007,
+              951.3793517524396
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              190.00000000000003,
+              859.3999999999999,
+              892.7624999999999
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.003476483976093222,
+            "centre_mm": [
+              190.0,
+              859.4,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617779,
+            "centre_mm": [
+              189.99999999999997,
+              859.3999999999999,
+              920.7863350085116
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              429.99999999999994,
+              859.4,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.0034764839760932273,
+            "centre_mm": [
+              430.0,
+              859.3999999999997,
+              921.8124999999999
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_M5x60_VERIFY_GRIP_2",
+            "kg": 0.009255870794617775,
+            "centre_mm": [
+              430.0,
+              859.4,
+              920.7863350085119
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              720.0,
+              859.3999999999999,
+              892.7624999999999
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.0034764839760932486,
+            "centre_mm": [
+              719.9999999999999,
+              859.3999999999997,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617857,
+            "centre_mm": [
+              719.9999999999999,
+              859.3999999999999,
+              920.7863350085115
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              959.9999999999999,
+              859.3999999999999,
+              892.7624999999999
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.0034764839760932486,
+            "centre_mm": [
+              959.9999999999999,
+              859.3999999999997,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617857,
+            "centre_mm": [
+              959.9999999999999,
+              859.3999999999999,
+              920.7863350085115
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.29679012617092376,
+            "centre_mm": [
+              575.0000000000003,
+              859.4000000000001,
+              951.3793517524393
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_40",
+            "kg": 0.003183375743909909,
+            "centre_mm": [
+              117.49999999999999,
+              661.4,
+              889.5875000000001
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_217",
+            "kg": 0.003428999999999951,
+            "centre_mm": [
+              117.50000000000001,
+              838.3999999999999,
+              889.5874999999999
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_40",
+            "kg": 0.0031833757439099107,
+            "centre_mm": [
+              1032.4999999999998,
+              661.4,
+              889.5875000000002
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_217",
+            "kg": 0.003428999999999951,
+            "centre_mm": [
+              1032.4999999999998,
+              838.3999999999999,
+              889.5874999999999
+            ]
+          },
+          {
+            "name": "CAS3_REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS",
+            "kg": 0.7324526715759159,
+            "centre_mm": [
+              575.0000000000002,
+              749.9000000000002,
+              955.6234456769291
+            ]
+          }
+        ]
+      },
+      {
+        "kg": 6.6216911830027945,
+        "cg_mm": [
+          574.9999999999993,
+          1008.8645077260755,
+          925.9709076911279
+        ],
+        "parts": [
+          {
+            "name": "CAS4_GLUED_PLY_BOX_12p7_12p7_9_WEB",
+            "kg": 5.114394372973718,
+            "centre_mm": [
+              574.9999999999989,
+              1009.3624331024686,
+              919.6520141689836
+            ]
+          },
+          {
+            "name": "CAS4_CLAMP_COMPRESSION_SLEEVE_117_OD10_ID6p6",
+            "kg": 0.007713714705619602,
+            "centre_mm": [
+              117.50000000000003,
+              1008.8999999999999,
+              920.2249999999999
+            ]
+          },
+          {
+            "name": "CAS4_CLAMP_COMPRESSION_SLEEVE_1032_OD10_ID6p6",
+            "kg": 0.007713714705619656,
+            "centre_mm": [
+              1032.4999999999998,
+              1008.9,
+              920.2249999999998
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              190.00000000000003,
+              899.4,
+              892.7624999999999
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.003476483976093222,
+            "centre_mm": [
+              190.0,
+              899.3999999999999,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617779,
+            "centre_mm": [
+              189.99999999999997,
+              899.3999999999999,
+              920.7863350085116
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              429.99999999999994,
+              899.4,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.0034764839760932273,
+            "centre_mm": [
+              430.0,
+              899.3999999999999,
+              921.8124999999999
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_M5x60_VERIFY_GRIP_2",
+            "kg": 0.009255870794617775,
+            "centre_mm": [
+              430.0,
+              899.4,
+              920.7863350085119
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              720.0,
+              899.4,
+              892.7624999999999
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.0034764839760932486,
+            "centre_mm": [
+              719.9999999999999,
+              899.3999999999999,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617857,
+            "centre_mm": [
+              719.9999999999999,
+              899.4000000000001,
+              920.7863350085115
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              959.9999999999999,
+              899.4,
+              892.7624999999999
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.0034764839760932486,
+            "centre_mm": [
+              959.9999999999999,
+              899.3999999999999,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617857,
+            "centre_mm": [
+              959.9999999999999,
+              899.4000000000001,
+              920.7863350085115
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.2967901261709239,
+            "centre_mm": [
+              575.0000000000001,
+              899.4000000000002,
+              951.3793517524393
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              190.00000000000003,
+              1118.4,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.0034764839760932104,
+            "centre_mm": [
+              189.99999999999997,
+              1118.3999999999999,
+              921.8124999999998
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617826,
+            "centre_mm": [
+              190.0,
+              1118.3999999999999,
+              920.7863350085116
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320629,
+            "centre_mm": [
+              430.0,
+              1118.4,
+              892.7625000000002
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.003476483976093213,
+            "centre_mm": [
+              429.99999999999994,
+              1118.4,
+              921.8125
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_M5x60_VERIFY_GRIP_2",
+            "kg": 0.00925587079461782,
+            "centre_mm": [
+              430.00000000000006,
+              1118.4,
+              920.7863350085117
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              720.0000000000001,
+              1118.4,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.0034764839760932356,
+            "centre_mm": [
+              720.0,
+              1118.4000000000003,
+              921.8125
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617904,
+            "centre_mm": [
+              720.0,
+              1118.4,
+              920.7863350085114
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              960.0,
+              1118.4,
+              892.7625
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.0034764839760932356,
+            "centre_mm": [
+              960.0000000000001,
+              1118.4000000000003,
+              921.8125
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617904,
+            "centre_mm": [
+              959.9999999999999,
+              1118.4,
+              920.7863350085114
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.2967901261709239,
+            "centre_mm": [
+              575.0000000000001,
+              1118.4000000000005,
+              951.3793517524393
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_40",
+            "kg": 0.003183375743909908,
+            "centre_mm": [
+              117.49999999999999,
+              920.4000000000001,
+              889.5875000000001
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_217",
+            "kg": 0.003428999999999951,
+            "centre_mm": [
+              117.50000000000001,
+              1097.4,
+              889.5874999999999
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_40",
+            "kg": 0.0031833757439099107,
+            "centre_mm": [
+              1032.5000000000002,
+              920.4,
+              889.5875
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_217",
+            "kg": 0.003428999999999951,
+            "centre_mm": [
+              1032.4999999999998,
+              1097.4,
+              889.5874999999999
+            ]
+          },
+          {
+            "name": "CAS4_REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS",
+            "kg": 0.7049492340759167,
+            "centre_mm": [
+              575.0000000000003,
+              1005.1500000000003,
+              955.6233850353606
+            ]
+          }
+        ]
+      }
+    ],
+    "cassette_stored": [
+      {
+        "kg": 6.614356933002768,
+        "cg_mm": [
+          575.0000000000027,
+          489.36511991759807,
+          437.938026108123
+        ],
+        "parts": [
+          {
+            "name": "CAS1_GLUED_PLY_BOX_12p7_12p7_9_WEB",
+            "kg": 5.114394372973678,
+            "centre_mm": [
+              575.0000000000033,
+              488.96243310247127,
+              431.65201416898446
+            ]
+          },
+          {
+            "name": "CAS1_CLAMP_COMPRESSION_SLEEVE_117_OD10_ID6p6",
+            "kg": 0.00771371470561957,
+            "centre_mm": [
+              117.49999999999999,
+              488.5,
+              432.225
+            ]
+          },
+          {
+            "name": "CAS1_CLAMP_COMPRESSION_SLEEVE_1032_OD10_ID6p6",
+            "kg": 0.0077137147056196235,
+            "centre_mm": [
+              1032.4999999999998,
+              488.5,
+              432.2249999999999
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320627,
+            "centre_mm": [
+              190.00000000000003,
+              379.00000000000006,
+              404.7625
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.0034764839760931983,
+            "centre_mm": [
+              189.99999999999994,
+              379.0000000000001,
+              433.81249999999994
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617795,
+            "centre_mm": [
+              189.99999999999997,
+              378.99999999999994,
+              432.78633500851174
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320627,
+            "centre_mm": [
+              430.0000000000001,
+              379.0000000000001,
+              404.76250000000005
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.003476483976093202,
+            "centre_mm": [
+              429.99999999999994,
+              379.00000000000006,
+              433.81250000000006
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_M5x60_VERIFY_GRIP_2",
+            "kg": 0.00925587079461779,
+            "centre_mm": [
+              430.0,
+              379.00000000000006,
+              432.7863350085118
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320627,
+            "centre_mm": [
+              720.0,
+              379.00000000000006,
+              404.7625
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.0034764839760932247,
+            "centre_mm": [
+              720.0000000000001,
+              379.00000000000006,
+              433.8125
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617871,
+            "centre_mm": [
+              719.9999999999999,
+              378.99999999999994,
+              432.78633500851157
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320627,
+            "centre_mm": [
+              960.0,
+              379.00000000000006,
+              404.7625
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.0034764839760932247,
+            "centre_mm": [
+              960.0000000000001,
+              379.00000000000006,
+              433.8125
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617871,
+            "centre_mm": [
+              960.0,
+              378.99999999999994,
+              432.78633500851157
+            ]
+          },
+          {
+            "name": "CAS1_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.2967901261709246,
+            "centre_mm": [
+              575.0000000000002,
+              378.99999999999994,
+              463.3793517524391
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              190.00000000000006,
+              598.0000000000002,
+              404.76250000000005
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.003476483976093222,
+            "centre_mm": [
+              189.99999999999994,
+              597.9999999999999,
+              433.81249999999994
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617769,
+            "centre_mm": [
+              189.99999999999997,
+              598.0,
+              432.7863350085117
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320629,
+            "centre_mm": [
+              430.0000000000001,
+              598.0000000000002,
+              404.76250000000005
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.0034764839760932265,
+            "centre_mm": [
+              430.0,
+              597.9999999999999,
+              433.81249999999994
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_M5x60_VERIFY_GRIP_2",
+            "kg": 0.009255870794617767,
+            "centre_mm": [
+              430.0,
+              598.0,
+              432.7863350085118
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              720.0000000000001,
+              598.0000000000002,
+              404.76250000000005
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.003476483976093248,
+            "centre_mm": [
+              720.0000000000001,
+              598.0,
+              433.81250000000006
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617847,
+            "centre_mm": [
+              719.9999999999999,
+              597.9999999999999,
+              432.7863350085115
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              960.0,
+              598.0000000000002,
+              404.76250000000005
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.003476483976093248,
+            "centre_mm": [
+              960.0,
+              598.0,
+              433.81250000000006
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617847,
+            "centre_mm": [
+              959.9999999999999,
+              597.9999999999999,
+              432.7863350085115
+            ]
+          },
+          {
+            "name": "CAS1_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.2967901261709246,
+            "centre_mm": [
+              575.0000000000002,
+              598.0,
+              463.3793517524391
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_40",
+            "kg": 0.003183375743909969,
+            "centre_mm": [
+              117.50000000000001,
+              400.00000000000006,
+              401.5875000000001
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_217",
+            "kg": 0.0034290000000000123,
+            "centre_mm": [
+              117.49999999999999,
+              577.0,
+              401.5875000000001
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_40",
+            "kg": 0.00318337574390997,
+            "centre_mm": [
+              1032.5,
+              400.0000000000001,
+              401.5875000000001
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_217",
+            "kg": 0.0034290000000000123,
+            "centre_mm": [
+              1032.5,
+              577.0,
+              401.5875000000001
+            ]
+          },
+          {
+            "name": "CAS1_REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS",
+            "kg": 0.6976149840759289,
+            "centre_mm": [
+              575.0000000000005,
+              493.2500000000003,
+              467.62336805671947
+            ]
+          }
+        ]
+      },
+      {
+        "kg": 6.649194620502781,
+        "cg_mm": [
+          575.000000000002,
+          488.86223044864,
+          513.8935675801798
+        ],
+        "parts": [
+          {
+            "name": "CAS2_GLUED_PLY_BOX_12p7_12p7_9_WEB",
+            "kg": 5.114394372973688,
+            "centre_mm": [
+              575.0000000000025,
+              488.96243310247064,
+              507.45201416898374
+            ]
+          },
+          {
+            "name": "CAS2_CLAMP_COMPRESSION_SLEEVE_117_OD10_ID6p6",
+            "kg": 0.00771371470561957,
+            "centre_mm": [
+              117.49999999999999,
+              488.5,
+              508.02500000000003
+            ]
+          },
+          {
+            "name": "CAS2_CLAMP_COMPRESSION_SLEEVE_1032_OD10_ID6p6",
+            "kg": 0.007713714705619622,
+            "centre_mm": [
+              1032.4999999999998,
+              488.5000000000001,
+              508.02500000000003
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320629,
+            "centre_mm": [
+              190.00000000000003,
+              379.0,
+              480.5625
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.0034764839760931966,
+            "centre_mm": [
+              189.99999999999997,
+              379.00000000000006,
+              509.6125
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617788,
+            "centre_mm": [
+              189.99999999999997,
+              378.99999999999994,
+              508.5863350085118
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320627,
+            "centre_mm": [
+              430.00000000000006,
+              379.00000000000006,
+              480.56250000000006
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.0034764839760932013,
+            "centre_mm": [
+              429.99999999999994,
+              379.0,
+              509.6125
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_M5x60_VERIFY_GRIP_2",
+            "kg": 0.009255870794617782,
+            "centre_mm": [
+              430.0,
+              379.00000000000006,
+              508.58633500851175
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320629,
+            "centre_mm": [
+              719.9999999999999,
+              379.0,
+              480.5625
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.0034764839760932234,
+            "centre_mm": [
+              720.0000000000002,
+              379.0,
+              509.6125
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617862,
+            "centre_mm": [
+              720.0,
+              379.0,
+              508.58633500851164
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320629,
+            "centre_mm": [
+              960.0,
+              379.0,
+              480.5625
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.0034764839760932234,
+            "centre_mm": [
+              960.0000000000001,
+              379.0,
+              509.6125
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617862,
+            "centre_mm": [
+              960.0000000000002,
+              379.0,
+              508.58633500851164
+            ]
+          },
+          {
+            "name": "CAS2_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.2967901261709254,
+            "centre_mm": [
+              575.0000000000003,
+              379.00000000000006,
+              539.1793517524392
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              190.00000000000003,
+              598.0000000000001,
+              480.5625
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.0034764839760932213,
+            "centre_mm": [
+              189.99999999999997,
+              597.9999999999999,
+              509.61249999999995
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617763,
+            "centre_mm": [
+              189.99999999999997,
+              598.0,
+              508.5863350085117
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              430.00000000000006,
+              598.0,
+              480.56250000000006
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.003476483976093225,
+            "centre_mm": [
+              429.99999999999994,
+              597.9999999999999,
+              509.61249999999995
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_M5x60_VERIFY_GRIP_2",
+            "kg": 0.00925587079461776,
+            "centre_mm": [
+              430.0,
+              598.0,
+              508.5863350085117
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              720.0,
+              598.0000000000001,
+              480.5625
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.0034764839760932464,
+            "centre_mm": [
+              720.0000000000002,
+              598.0,
+              509.6125
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617838,
+            "centre_mm": [
+              720.0,
+              598.0,
+              508.5863350085116
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              960.0,
+              598.0000000000001,
+              480.5625
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.0034764839760932464,
+            "centre_mm": [
+              960.0,
+              598.0,
+              509.6125
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617838,
+            "centre_mm": [
+              960.0,
+              598.0,
+              508.5863350085116
+            ]
+          },
+          {
+            "name": "CAS2_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.2967901261709254,
+            "centre_mm": [
+              575.0000000000003,
+              598.0,
+              539.1793517524392
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_40",
+            "kg": 0.0031833757439099684,
+            "centre_mm": [
+              117.50000000000001,
+              400.00000000000006,
+              477.38750000000016
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_217",
+            "kg": 0.0034290000000000123,
+            "centre_mm": [
+              117.50000000000001,
+              577.0,
+              477.38750000000005
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_40",
+            "kg": 0.00318337574390997,
+            "centre_mm": [
+              1032.5,
+              400.0000000000001,
+              477.38750000000016
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_217",
+            "kg": 0.0034290000000000123,
+            "centre_mm": [
+              1032.5,
+              577.0,
+              477.38750000000005
+            ]
+          },
+          {
+            "name": "CAS2_REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS",
+            "kg": 0.7324526715759294,
+            "centre_mm": [
+              575.0000000000003,
+              488.50000000000006,
+              543.4234456769293
+            ]
+          }
+        ]
+      },
+      {
+        "kg": 6.649194620502767,
+        "cg_mm": [
+          575.0,
+          488.8622304486392,
+          589.693567580181
+        ],
+        "parts": [
+          {
+            "name": "CAS3_GLUED_PLY_BOX_12p7_12p7_9_WEB",
+            "kg": 5.114394372973691,
+            "centre_mm": [
+              575.0,
+              488.96243310246956,
+              583.2520141689862
+            ]
+          },
+          {
+            "name": "CAS3_CLAMP_COMPRESSION_SLEEVE_117_OD10_ID6p6",
+            "kg": 0.007713714705619572,
+            "centre_mm": [
+              117.49999999999999,
+              488.5,
+              583.8249999999999
+            ]
+          },
+          {
+            "name": "CAS3_CLAMP_COMPRESSION_SLEEVE_1032_OD10_ID6p6",
+            "kg": 0.0077137147056196235,
+            "centre_mm": [
+              1032.4999999999998,
+              488.5,
+              583.8249999999999
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320629,
+            "centre_mm": [
+              190.00000000000003,
+              379.00000000000006,
+              556.3625000000001
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.0034764839760931983,
+            "centre_mm": [
+              189.99999999999994,
+              379.0000000000001,
+              585.4125
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617805,
+            "centre_mm": [
+              190.0,
+              379.0,
+              584.3863350085117
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320627,
+            "centre_mm": [
+              430.00000000000006,
+              379.0000000000001,
+              556.3625000000002
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.003476483976093202,
+            "centre_mm": [
+              429.99999999999994,
+              379.00000000000006,
+              585.4125
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_M5x60_VERIFY_GRIP_2",
+            "kg": 0.0092558707946178,
+            "centre_mm": [
+              430.0,
+              379.0,
+              584.386335008512
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320629,
+            "centre_mm": [
+              720.0,
+              379.00000000000006,
+              556.3625000000001
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.0034764839760932247,
+            "centre_mm": [
+              720.0000000000001,
+              379.00000000000006,
+              585.4125000000001
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617883,
+            "centre_mm": [
+              720.0,
+              379.0,
+              584.3863350085118
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320629,
+            "centre_mm": [
+              960.0,
+              379.00000000000006,
+              556.3625000000001
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.0034764839760932247,
+            "centre_mm": [
+              960.0000000000001,
+              379.00000000000006,
+              585.4125000000001
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617883,
+            "centre_mm": [
+              960.0000000000001,
+              379.0,
+              584.3863350085118
+            ]
+          },
+          {
+            "name": "CAS3_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.29679012617092376,
+            "centre_mm": [
+              575.0,
+              379.0,
+              614.9793517524392
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              190.00000000000003,
+              598.0000000000001,
+              556.3625000000001
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.003476483976093222,
+            "centre_mm": [
+              189.99999999999994,
+              597.9999999999999,
+              585.4124999999999
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617779,
+            "centre_mm": [
+              190.0,
+              598.0,
+              584.3863350085118
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              430.00000000000006,
+              598.0,
+              556.3625000000002
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.0034764839760932265,
+            "centre_mm": [
+              430.0,
+              597.9999999999999,
+              585.4124999999998
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_M5x60_VERIFY_GRIP_2",
+            "kg": 0.009255870794617774,
+            "centre_mm": [
+              430.00000000000006,
+              598.0,
+              584.3863350085119
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              720.0000000000001,
+              598.0000000000001,
+              556.3625000000002
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.003476483976093248,
+            "centre_mm": [
+              720.0000000000001,
+              598.0,
+              585.4125
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617857,
+            "centre_mm": [
+              719.9999999999999,
+              598.0,
+              584.3863350085115
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              960.0,
+              598.0000000000001,
+              556.3625000000002
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.003476483976093248,
+            "centre_mm": [
+              960.0,
+              598.0,
+              585.4125
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617857,
+            "centre_mm": [
+              959.9999999999999,
+              598.0,
+              584.3863350085115
+            ]
+          },
+          {
+            "name": "CAS3_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.29679012617092376,
+            "centre_mm": [
+              575.0,
+              597.9999999999998,
+              614.9793517524392
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_40",
+            "kg": 0.003183375743909909,
+            "centre_mm": [
+              117.50000000000001,
+              400.0,
+              553.1875000000003
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_217",
+            "kg": 0.0034289999999999508,
+            "centre_mm": [
+              117.50000000000001,
+              577.0,
+              553.1875000000001
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_40",
+            "kg": 0.0031833757439099107,
+            "centre_mm": [
+              1032.5,
+              400.0000000000001,
+              553.1875000000001
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_217",
+            "kg": 0.0034289999999999508,
+            "centre_mm": [
+              1032.5000000000002,
+              577.0,
+              553.1875000000001
+            ]
+          },
+          {
+            "name": "CAS3_REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS",
+            "kg": 0.7324526715759158,
+            "centre_mm": [
+              575.0000000000005,
+              488.5000000000003,
+              619.2234456769288
+            ]
+          }
+        ]
+      },
+      {
+        "kg": 6.621691183002794,
+        "cg_mm": [
+          575.0000000000011,
+          488.4645077260749,
+          665.3709076911275
+        ],
+        "parts": [
+          {
+            "name": "CAS4_GLUED_PLY_BOX_12p7_12p7_9_WEB",
+            "kg": 5.114394372973717,
+            "centre_mm": [
+              575.0000000000011,
+              488.96243310246876,
+              659.0520141689835
+            ]
+          },
+          {
+            "name": "CAS4_CLAMP_COMPRESSION_SLEEVE_117_OD10_ID6p6",
+            "kg": 0.007713714705619572,
+            "centre_mm": [
+              117.49999999999999,
+              488.5,
+              659.6249999999999
+            ]
+          },
+          {
+            "name": "CAS4_CLAMP_COMPRESSION_SLEEVE_1032_OD10_ID6p6",
+            "kg": 0.0077137147056196235,
+            "centre_mm": [
+              1032.4999999999998,
+              488.5,
+              659.6249999999999
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              190.0,
+              379.0,
+              632.1624999999998
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.0034764839760931966,
+            "centre_mm": [
+              190.00000000000006,
+              379.0000000000001,
+              661.2125000000001
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617805,
+            "centre_mm": [
+              190.0,
+              379.0,
+              660.1863350085116
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320629,
+            "centre_mm": [
+              430.0,
+              379.00000000000006,
+              632.1624999999999
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.0034764839760932013,
+            "centre_mm": [
+              430.0000000000001,
+              379.00000000000006,
+              661.2125000000002
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_M5x60_VERIFY_GRIP_2",
+            "kg": 0.0092558707946178,
+            "centre_mm": [
+              430.0,
+              379.0,
+              660.1863350085118
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              719.9999999999999,
+              379.0,
+              632.1624999999999
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.0034764839760932247,
+            "centre_mm": [
+              720.0000000000001,
+              379.0,
+              661.2125
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617883,
+            "centre_mm": [
+              720.0,
+              379.0,
+              660.1863350085116
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              959.9999999999999,
+              379.0,
+              632.1624999999999
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.0034764839760932247,
+            "centre_mm": [
+              960.0,
+              379.0,
+              661.2125
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617883,
+            "centre_mm": [
+              960.0000000000001,
+              379.0,
+              660.1863350085116
+            ]
+          },
+          {
+            "name": "CAS4_TRACK1_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.29679012617092376,
+            "centre_mm": [
+              575.0000000000003,
+              379.0000000000001,
+              690.7793517524392
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_BACKING_BLOCK1_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              190.0,
+              598.0,
+              632.1624999999999
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_COMPRESSION_TUBE1_OD8_ID5p5",
+            "kg": 0.0034764839760932213,
+            "centre_mm": [
+              190.00000000000006,
+              598.0000000000001,
+              661.2125000000001
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_M5x60_VERIFY_GRIP_1",
+            "kg": 0.009255870794617779,
+            "centre_mm": [
+              190.0,
+              598.0,
+              660.1863350085117
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_BACKING_BLOCK2_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.00978203806832063,
+            "centre_mm": [
+              430.0,
+              598.0,
+              632.1624999999999
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_COMPRESSION_TUBE2_OD8_ID5p5",
+            "kg": 0.0034764839760932265,
+            "centre_mm": [
+              430.0,
+              597.9999999999999,
+              661.2124999999997
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_M5x60_VERIFY_GRIP_2",
+            "kg": 0.009255870794617774,
+            "centre_mm": [
+              430.00000000000006,
+              598.0,
+              660.1863350085117
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_BACKING_BLOCK3_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              720.0,
+              598.0,
+              632.1624999999999
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_COMPRESSION_TUBE3_OD8_ID5p5",
+            "kg": 0.003476483976093248,
+            "centre_mm": [
+              720.0000000000001,
+              598.0,
+              661.2125000000001
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_M5x60_VERIFY_GRIP_3",
+            "kg": 0.009255870794617857,
+            "centre_mm": [
+              719.9999999999999,
+              598.0,
+              660.1863350085114
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_BACKING_BLOCK4_AL_STOCK_ALLOCATION_PENDING",
+            "kg": 0.009782038068320632,
+            "centre_mm": [
+              959.9999999999999,
+              598.0,
+              632.1624999999999
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_COMPRESSION_TUBE4_OD8_ID5p5",
+            "kg": 0.003476483976093248,
+            "centre_mm": [
+              960.0,
+              598.0,
+              661.2125000000001
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_M5x60_VERIFY_GRIP_4",
+            "kg": 0.009255870794617857,
+            "centre_mm": [
+              959.9999999999999,
+              598.0,
+              660.1863350085114
+            ]
+          },
+          {
+            "name": "CAS4_TRACK2_AL_T_SLOT_DIE_ENVELOPE",
+            "kg": 0.29679012617092376,
+            "centre_mm": [
+              575.0000000000003,
+              598.0,
+              690.7793517524392
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_40",
+            "kg": 0.003183375743909909,
+            "centre_mm": [
+              117.50000000000001,
+              400.0,
+              628.9875000000001
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_217",
+            "kg": 0.003428999999999951,
+            "centre_mm": [
+              117.50000000000001,
+              577.0,
+              628.9875000000001
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_40",
+            "kg": 0.0031833757439099107,
+            "centre_mm": [
+              1032.5,
+              400.0,
+              628.9875
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_217",
+            "kg": 0.003428999999999951,
+            "centre_mm": [
+              1032.5,
+              577.0,
+              628.9875000000001
+            ]
+          },
+          {
+            "name": "CAS4_REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS",
+            "kg": 0.7049492340759168,
+            "centre_mm": [
+              575.0000000000003,
+              484.7500000000002,
+              695.02338503536
+            ]
+          }
+        ]
+      }
+    ],
+    "pan_slats_combs": {
+      "kg": 25.628129473345236,
+      "cg_mm": [
+        575.3200080999736,
+        644.0168009433609,
+        828.5875804480391
+      ],
+      "parts": [
+        {
+          "name": "HOT_PAN_PLAIN14GA_FLOOR",
+          "kg": 14.614074959999826,
+          "centre_mm": [
+            575.0,
+            647.9999999999999,
+            814.338
+          ]
+        },
+        {
+          "name": "HOT_PAN_WALL_L",
+          "kg": 0.9530082830423268,
+          "centre_mm": [
+            128.95,
+            641.0113243886749,
+            844.7416963276951
+          ]
+        },
+        {
+          "name": "HOT_PAN_WALL_R",
+          "kg": 0.9549828700799962,
+          "centre_mm": [
+            1021.05,
+            636.4597003527433,
+            844.5014269238725
+          ]
+        },
+        {
+          "name": "HOT_PAN_FRONT",
+          "kg": 0.8231189652019026,
+          "centre_mm": [
+            575.0000000000001,
+            100.94997088442004,
+            843.0028499126533
+          ]
+        },
+        {
+          "name": "HOT_PAN_REAR",
+          "kg": 0.7359585849901349,
+          "centre_mm": [
+            574.9999999999999,
+            1195.04996743623,
+            846.2851499023087
+          ]
+        },
+        {
+          "name": "DRAIN_SMOOTH_OD28_ID24_NPT_ADAPTER_HOLD",
+          "kg": 0.03334235115107922,
+          "centre_mm": [
+            114.99999999999999,
+            179.99999999999986,
+            826.4799999999999
+          ]
+        },
+        {
+          "name": "INDEPENDENT_OPEN_OVERFLOW_40x8",
+          "kg": 0.05551519999999999,
+          "centre_mm": [
+            1039.0,
+            900.0000000000002,
+            867.0000000000002
+          ]
+        },
+        {
+          "name": "HOT_COMB_1_WALL_JOIN_AND_WELD_HOLD",
+          "kg": 0.9696064529600041,
+          "centre_mm": [
+            139.99999999999991,
+            632.6426435121354,
+            834.5646257448282
+          ]
+        },
+        {
+          "name": "HOT_COMB_2_WALL_JOIN_AND_WELD_HOLD",
+          "kg": 0.969606452959987,
+          "centre_mm": [
+            574.9999999999991,
+            632.6426435121357,
+            834.5646257448285
+          ]
+        },
+        {
+          "name": "HOT_COMB_3_WALL_JOIN_AND_WELD_HOLD",
+          "kg": 0.969606452959987,
+          "centre_mm": [
+            1009.9999999999995,
+            632.6426435121364,
+            834.5646257448285
+          ]
+        },
+        {
+          "name": "HOT_SLAT_01_880x40x1p9_ONE_SHEET_CANDIDATE",
+          "kg": 0.5250080000000016,
+          "centre_mm": [
+            575.0000000000001,
+            130.00000000000006,
+            858.0000000000002
+          ]
+        },
+        {
+          "name": "HOT_SLAT_02_880x40x1p9_ONE_SHEET_CANDIDATE",
+          "kg": 0.5250079999999937,
+          "centre_mm": [
+            575.0,
+            278.0,
+            858.0
+          ]
+        },
+        {
+          "name": "HOT_SLAT_03_880x40x1p9_ONE_SHEET_CANDIDATE",
+          "kg": 0.5250079999999937,
+          "centre_mm": [
+            575.0,
+            426.0,
+            858.0
+          ]
+        },
+        {
+          "name": "HOT_SLAT_04_880x40x1p9_ONE_SHEET_CANDIDATE",
+          "kg": 0.5250079999999937,
+          "centre_mm": [
+            575.0000000000001,
+            574.0,
+            858.0
+          ]
+        },
+        {
+          "name": "HOT_SLAT_05_880x40x1p9_ONE_SHEET_CANDIDATE",
+          "kg": 0.5250079999999937,
+          "centre_mm": [
+            575.0,
+            722.0,
+            857.9999999999999
+          ]
+        },
+        {
+          "name": "HOT_SLAT_06_880x40x1p9_ONE_SHEET_CANDIDATE",
+          "kg": 0.5250079999999937,
+          "centre_mm": [
+            575.0,
+            869.9999999999999,
+            857.9999999999999
+          ]
+        },
+        {
+          "name": "HOT_SLAT_07_880x40x1p9_ONE_SHEET_CANDIDATE",
+          "kg": 0.5250079999999937,
+          "centre_mm": [
+            575.0,
+            1017.9999999999999,
+            858.0
+          ]
+        },
+        {
+          "name": "HOT_SLAT_08_880x40x1p9_ONE_SHEET_CANDIDATE",
+          "kg": 0.5250080000000252,
+          "centre_mm": [
+            575.0,
+            1166.0,
+            857.9999999999999
+          ]
+        },
+        {
+          "name": "PAN_FRAME_SHIM_PACK_140_100_VERIFY_ACTUAL",
+          "kg": 0.004860000000000033,
+          "centre_mm": [
+            139.99999999999997,
+            100.05555555555549,
+            808.3001666666665
+          ]
+        },
+        {
+          "name": "PAN_FRAME_SHIM_PACK_575_100_VERIFY_ACTUAL",
+          "kg": 0.004860000000000031,
+          "centre_mm": [
+            575.0,
+            100.05555555555549,
+            808.3001666666667
+          ]
+        },
+        {
+          "name": "PAN_FRAME_SHIM_PACK_1010_100_VERIFY_ACTUAL",
+          "kg": 0.004860000000000031,
+          "centre_mm": [
+            1010.0,
+            100.05555555555549,
+            808.3001666666667
+          ]
+        },
+        {
+          "name": "PAN_FRAME_SHIM_PACK_140_630_VERIFY_ACTUAL",
+          "kg": 0.009153000000000043,
+          "centre_mm": [
+            140.0,
+            630.0294985250736,
+            809.8900884955751
+          ]
+        },
+        {
+          "name": "PAN_FRAME_SHIM_PACK_575_630_VERIFY_ACTUAL",
+          "kg": 0.009153000000000043,
+          "centre_mm": [
+            574.9999999999999,
+            630.0294985250736,
+            809.8900884955751
+          ]
+        },
+        {
+          "name": "PAN_FRAME_SHIM_PACK_1010_630_VERIFY_ACTUAL",
+          "kg": 0.00915300000000004,
+          "centre_mm": [
+            1010.0000000000001,
+            630.0294985250737,
+            809.8900884955752
+          ]
+        },
+        {
+          "name": "PAN_FRAME_SHIM_PACK_140_1180_VERIFY_ACTUAL",
+          "kg": 0.013607999999999981,
+          "centre_mm": [
+            139.99999999999997,
+            1180.0198412698412,
+            811.5400595238095
+          ]
+        },
+        {
+          "name": "PAN_FRAME_SHIM_PACK_575_1180_VERIFY_ACTUAL",
+          "kg": 0.013607999999999981,
+          "centre_mm": [
+            574.9999999999999,
+            1180.0198412698412,
+            811.5400595238095
+          ]
+        },
+        {
+          "name": "PAN_FRAME_SHIM_PACK_1010_1180_VERIFY_ACTUAL",
+          "kg": 0.013607999999999981,
+          "centre_mm": [
+            1010.0,
+            1180.0198412698412,
+            811.5400595238095
+          ]
+        },
+        {
+          "name": "HOT_SIDE_SHADOW_L",
+          "kg": 0.13662139999999837,
+          "centre_mm": [
+            122.99999999999999,
+            640.8951965065502,
+            870.95
+          ]
+        },
+        {
+          "name": "HOT_SIDE_SHADOW_R",
+          "kg": 0.1297604999999984,
+          "centre_mm": [
+            1027.0000000000002,
+            627.1954022988507,
+            870.9500000000003
+          ]
+        }
+      ]
+    },
+    "pan_retainers": {
+      "kg": 0.2774462435969736,
+      "cg_mm": [
+        574.1511801315208,
+        641.6056505306572,
+        802.8113078516121
+      ],
+      "parts": [
+        {
+          "name": "PAN_FRAME_EAR_FL_M6_FACE_FIX_HOLD",
+          "kg": 0.04360353301447799,
+          "centre_mm": [
+            116.0,
+            130.8244118403598,
+            786.8746792652104
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_FL_BOSS",
+          "kg": 0.005089380098815464,
+          "centre_mm": [
+            116.00000000000003,
+            150.00000000000003,
+            820.0000000000001
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_FL_SHOULDER",
+          "kg": 0.00036085825475642774,
+          "centre_mm": [
+            115.99999999999999,
+            149.99999999999997,
+            831.0000000000001
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_FL_CAP_1MM_UPLIFT",
+          "kg": 0.002314883253619498,
+          "centre_mm": [
+            115.99999999999999,
+            150.0,
+            836.0000000000001
+          ]
+        },
+        {
+          "name": "PAN_WELDED_EAR_FL",
+          "kg": 0.009872416761620768,
+          "centre_mm": [
+            116.0,
+            149.99999999999997,
+            832.55
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_FL_M6x20_VERIFY_THREAD",
+          "kg": 0.007991559830256815,
+          "centre_mm": [
+            116.00000000000001,
+            150.00000000000003,
+            833.5175898781054
+          ]
+        },
+        {
+          "name": "PAN_FRAME_EAR_FR_M6_FACE_FIX_HOLD",
+          "kg": 0.04360353301447799,
+          "centre_mm": [
+            1034.0000000000002,
+            130.8244118403598,
+            786.8746792652104
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_FR_BOSS",
+          "kg": 0.0050893800988154525,
+          "centre_mm": [
+            1034.0000000000002,
+            150.00000000000006,
+            820.0
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_FR_SHOULDER",
+          "kg": 0.0003608582547564241,
+          "centre_mm": [
+            1033.9999999999998,
+            149.99999999999994,
+            830.9999999999999
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_FR_CAP_1MM_UPLIFT",
+          "kg": 0.002314883253619498,
+          "centre_mm": [
+            1034.0,
+            150.00000000000003,
+            836.0000000000001
+          ]
+        },
+        {
+          "name": "PAN_WELDED_EAR_FR",
+          "kg": 0.009359340761620772,
+          "centre_mm": [
+            1034.0,
+            150.00000000000003,
+            832.5500000000001
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_FR_M6x20_VERIFY_THREAD",
+          "kg": 0.007991559830256843,
+          "centre_mm": [
+            1034.0,
+            149.99999999999997,
+            833.5175898781054
+          ]
+        },
+        {
+          "name": "PAN_FRAME_EAR_RL_M6_FACE_FIX_HOLD",
+          "kg": 0.04554753301447799,
+          "centre_mm": [
+            116.00000000000001,
+            1147.6102488610288,
+            787.8403434976609
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_RL_BOSS",
+          "kg": 0.0050893800988154785,
+          "centre_mm": [
+            115.99999999999999,
+            1124.9999999999998,
+            819.9999999999998
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_RL_SHOULDER",
+          "kg": 0.00036085825475642736,
+          "centre_mm": [
+            116.00000000000001,
+            1125.0,
+            830.9999999999999
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_RL_CAP_1MM_UPLIFT",
+          "kg": 0.002314883253619499,
+          "centre_mm": [
+            115.99999999999999,
+            1125.0,
+            836.0000000000001
+          ]
+        },
+        {
+          "name": "PAN_WELDED_EAR_RL",
+          "kg": 0.008442814133013597,
+          "centre_mm": [
+            116.00000000000001,
+            1125.0,
+            832.5500000000003
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_RL_M6x20_VERIFY_THREAD",
+          "kg": 0.007991559830256824,
+          "centre_mm": [
+            116.00000000000003,
+            1125.0000000000005,
+            833.5175898781055
+          ]
+        },
+        {
+          "name": "PAN_FRAME_EAR_RR_M6_FACE_FIX_HOLD",
+          "kg": 0.045547533014477996,
+          "centre_mm": [
+            1034.0,
+            1147.610248861029,
+            787.8403434976608
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_RR_BOSS",
+          "kg": 0.0050893800988154655,
+          "centre_mm": [
+            1034.0,
+            1125.0,
+            819.9999999999999
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_RR_SHOULDER",
+          "kg": 0.0003608582547564237,
+          "centre_mm": [
+            1033.9999999999998,
+            1124.9999999999995,
+            831.0000000000001
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_RR_CAP_1MM_UPLIFT",
+          "kg": 0.0023148832536194993,
+          "centre_mm": [
+            1034.0,
+            1124.9999999999998,
+            836.0000000000001
+          ]
+        },
+        {
+          "name": "PAN_WELDED_EAR_RR",
+          "kg": 0.0084428141330136,
+          "centre_mm": [
+            1034.0000000000002,
+            1125.0000000000007,
+            832.5500000000001
+          ]
+        },
+        {
+          "name": "PAN_KEEPER_RR_M6x20_VERIFY_THREAD",
+          "kg": 0.00799155983025685,
+          "centre_mm": [
+            1034.0,
+            1125.0000000000005,
+            833.5175898781052
+          ]
+        }
+      ]
+    },
+    "water_envelopes_floor_receiver_not_frame_ballast": {
+      "kg": 7.240495434004555,
+      "cg_mm": [
+        553.8520459035692,
+        859.3275668618753,
+        290.24709777062594
+      ],
+      "parts": [
+        {
+          "name": "WATER_DRAIN_90DEG_ADAPTER_OD28_ID24_THREAD_HOLD",
+          "kg": 0.04028772587233809,
+          "centre_mm": [
+            86.56197015042707,
+            184.56197015042713,
+            826.4799999999998
+          ]
+        },
+        {
+          "name": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
+          "kg": 0.312912053075504,
+          "centre_mm": [
+            82.0,
+            226.99999999999997,
+            826.4799999999999
+          ]
+        },
+        {
+          "name": "WATER_VALVE_HANDLE_SERVICE_ENVELOPE",
+          "kg": 0.029830000000000006,
+          "centre_mm": [
+            82.0,
+            252.49999999999997,
+            847.9799999999999
+          ]
+        },
+        {
+          "name": "WATER_DOWN_ELBOW_ADAPTER_34_OD_25_ID_HOLD",
+          "kg": 0.01834266010135719,
+          "centre_mm": [
+            82.0,
+            270.2755827766928,
+            822.755582776693
+          ]
+        },
+        {
+          "name": "WATER_25MM_GRAVITY_HOSE_R100_OVER_RIM_AIRGAP21",
+          "kg": 0.64909374779989,
+          "centre_mm": [
+            149.5290519204065,
+            565.0571855772846,
+            557.903272341325
+          ]
+        },
+        {
+          "name": "WATER_RED20GAL_CANDIDATE_712x470x389_REQUIRE_65L_USABLE",
+          "kg": 4.706756,
+          "centre_mm": [
+            575.0,
+            935.0,
+            143.95161550758183
+          ]
+        },
+        {
+          "name": "WATER_REMOVABLE_LID_RETURN_PORTS_OPEN25MM_VENT_NOT_PRESSURE",
+          "kg": 0.7924455137745191,
+          "centre_mm": [
+            573.8862400395633,
+            935.9181655757695,
+            390.0000000000001
+          ]
+        },
+        {
+          "name": "OVERFLOW_WELDED_OPEN_RETURN_AIRGAP21",
+          "kg": 0.6908277333809464,
+          "centre_mm": [
+            1040.5636518146596,
+            900.0000000000003,
+            608.6945222236923
+          ]
+        }
+      ]
+    },
+    "storage_empty": {
+      "kg": 8.127979748837632,
+      "cg_mm": [
+        574.9999999999993,
+        490.2895296519162,
+        600.6123153948048
+      ],
+      "parts": [
+        {
+          "name": "COLD_CASE_FLOOR_NOT_A_WORKBED",
+          "kg": 0.5630450391360081,
+          "centre_mm": [
+            575.0,
+            488.50000000000006,
+            378.3999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_FLOOR_COLUMN_L_F_AL25x25x3",
+          "kg": 0.21172842265528458,
+          "centre_mm": [
+            106.53970511239591,
+            358.94627070464173,
+            303.52936984382933
+          ]
+        },
+        {
+          "name": "COLD_CASE_FLOOR_COLUMN_L_R_AL25x25x3",
+          "kg": 0.26960179067850193,
+          "centre_mm": [
+            108.36615168994163,
+            619.6663249842668,
+            354.46975278897105
+          ]
+        },
+        {
+          "name": "COLD_CASE_FLOOR_COLUMN_R_F_AL25x25x3",
+          "kg": 0.21172842265528452,
+          "centre_mm": [
+            1043.460294887604,
+            358.9462707046416,
+            303.52936984382933
+          ]
+        },
+        {
+          "name": "COLD_CASE_FLOOR_COLUMN_R_R_AL25x25x3",
+          "kg": 0.2696017906785019,
+          "centre_mm": [
+            1041.633848310058,
+            619.6663249842672,
+            354.46975278897116
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_L_M4_BLIND_RIVET_362_410_VERIFY_GRIP",
+          "kg": 0.0006564275382868709,
+          "centre_mm": [
+            104.10000000000001,
+            362.5,
+            410.00000000000006
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_L_M4_BLIND_RIVET_362_500_VERIFY_GRIP",
+          "kg": 0.0006564275382868709,
+          "centre_mm": [
+            104.10000000000001,
+            362.5,
+            500.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_L_M4_BLIND_RIVET_362_600_VERIFY_GRIP",
+          "kg": 0.0006564275382868725,
+          "centre_mm": [
+            104.10000000000002,
+            362.49999999999994,
+            600.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_L_M4_BLIND_RIVET_362_690_VERIFY_GRIP",
+          "kg": 0.0006564275382868725,
+          "centre_mm": [
+            104.10000000000002,
+            362.49999999999994,
+            689.9999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_L_M4_BLIND_RIVET_614_410_VERIFY_GRIP",
+          "kg": 0.0006564275382868733,
+          "centre_mm": [
+            104.1,
+            614.5,
+            410.00000000000006
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_L_M4_BLIND_RIVET_614_500_VERIFY_GRIP",
+          "kg": 0.0006564275382868733,
+          "centre_mm": [
+            104.1,
+            614.5,
+            499.99999999999994
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_L_M4_BLIND_RIVET_614_600_VERIFY_GRIP",
+          "kg": 0.0006564275382868749,
+          "centre_mm": [
+            104.1,
+            614.5000000000001,
+            600.0000000000001
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_L_M4_BLIND_RIVET_614_690_VERIFY_GRIP",
+          "kg": 0.0006564275382868749,
+          "centre_mm": [
+            104.1,
+            614.5000000000001,
+            690.0
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_0_M4_BLIND_RIVET_390_VERIFY_GRIP",
+          "kg": 0.0006564275382868709,
+          "centre_mm": [
+            104.10000000000001,
+            390.00000000000006,
+            390.0
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_0_M4_BLIND_RIVET_480_VERIFY_GRIP",
+          "kg": 0.0006564275382868709,
+          "centre_mm": [
+            104.10000000000001,
+            480.0,
+            390.0
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_0_M4_BLIND_RIVET_587_VERIFY_GRIP",
+          "kg": 0.0006564275382868733,
+          "centre_mm": [
+            104.1,
+            587.0,
+            390.0
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_0_AL20x20x1p6",
+          "kg": 0.042453662670114,
+          "centre_mm": [
+            110.41193252010775,
+            488.51198328725224,
+            394.42697791849923
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_1_M4_BLIND_RIVET_390_VERIFY_GRIP",
+          "kg": 0.0006564275382868709,
+          "centre_mm": [
+            104.09999999999998,
+            390.0,
+            465.8
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_1_M4_BLIND_RIVET_480_VERIFY_GRIP",
+          "kg": 0.0006564275382868709,
+          "centre_mm": [
+            104.09999999999998,
+            480.0,
+            465.8
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_1_M4_BLIND_RIVET_587_VERIFY_GRIP",
+          "kg": 0.0006564275382868734,
+          "centre_mm": [
+            104.09999999999998,
+            586.9999999999999,
+            465.8
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_1_AL20x20x1p6",
+          "kg": 0.042453662670114,
+          "centre_mm": [
+            110.41193252010778,
+            488.51198328725224,
+            470.2269779184992
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_2_M4_BLIND_RIVET_390_VERIFY_GRIP",
+          "kg": 0.0006564275382868725,
+          "centre_mm": [
+            104.10000000000002,
+            390.00000000000006,
+            541.6
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_2_M4_BLIND_RIVET_480_VERIFY_GRIP",
+          "kg": 0.0006564275382868725,
+          "centre_mm": [
+            104.10000000000002,
+            480.0,
+            541.6
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_2_M4_BLIND_RIVET_587_VERIFY_GRIP",
+          "kg": 0.0006564275382868749,
+          "centre_mm": [
+            104.1,
+            587.0000000000001,
+            541.6
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_2_AL20x20x1p6",
+          "kg": 0.042453662670114,
+          "centre_mm": [
+            110.41193252010784,
+            488.51198328725235,
+            546.0269779184996
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_3_M4_BLIND_RIVET_390_VERIFY_GRIP",
+          "kg": 0.0006564275382868724,
+          "centre_mm": [
+            104.1,
+            390.00000000000006,
+            617.4000000000001
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_3_M4_BLIND_RIVET_480_VERIFY_GRIP",
+          "kg": 0.0006564275382868724,
+          "centre_mm": [
+            104.1,
+            480.0,
+            617.4000000000001
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_3_M4_BLIND_RIVET_587_VERIFY_GRIP",
+          "kg": 0.0006564275382868749,
+          "centre_mm": [
+            104.1,
+            587.0,
+            617.4000000000001
+          ]
+        },
+        {
+          "name": "CASE_SHELF_L_3_AL20x20x1p6",
+          "kg": 0.042453662670114016,
+          "centre_mm": [
+            110.41193252010775,
+            488.5119832872521,
+            621.8269779184996
+          ]
+        },
+        {
+          "name": "COLD_CASE_SIDE_L",
+          "kg": 0.19531303396790334,
+          "centre_mm": [
+            104.39999999999998,
+            486.98710812471944,
+            544.4225479257781
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_R_M4_BLIND_RIVET_362_410_VERIFY_GRIP",
+          "kg": 0.0006564275382868684,
+          "centre_mm": [
+            1045.9000000000003,
+            362.49999999999994,
+            410.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_R_M4_BLIND_RIVET_362_500_VERIFY_GRIP",
+          "kg": 0.0006564275382868684,
+          "centre_mm": [
+            1045.9000000000003,
+            362.49999999999994,
+            499.99999999999994
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_R_M4_BLIND_RIVET_362_600_VERIFY_GRIP",
+          "kg": 0.0006564275382868828,
+          "centre_mm": [
+            1045.9,
+            362.5,
+            599.9999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_R_M4_BLIND_RIVET_362_690_VERIFY_GRIP",
+          "kg": 0.0006564275382868828,
+          "centre_mm": [
+            1045.9,
+            362.5,
+            689.9999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_R_M4_BLIND_RIVET_614_410_VERIFY_GRIP",
+          "kg": 0.0006564275382868708,
+          "centre_mm": [
+            1045.9,
+            614.5,
+            409.99999999999994
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_R_M4_BLIND_RIVET_614_500_VERIFY_GRIP",
+          "kg": 0.0006564275382868708,
+          "centre_mm": [
+            1045.9,
+            614.5,
+            499.9999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_R_M4_BLIND_RIVET_614_600_VERIFY_GRIP",
+          "kg": 0.0006564275382868851,
+          "centre_mm": [
+            1045.9,
+            614.5,
+            600.0000000000001
+          ]
+        },
+        {
+          "name": "COLD_CASE_COLUMN_R_M4_BLIND_RIVET_614_690_VERIFY_GRIP",
+          "kg": 0.0006564275382868851,
+          "centre_mm": [
+            1045.9,
+            614.5,
+            690.0
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_0_M4_BLIND_RIVET_390_VERIFY_GRIP",
+          "kg": 0.000656427538286871,
+          "centre_mm": [
+            1045.9,
+            390.0,
+            389.99999999999994
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_0_M4_BLIND_RIVET_480_VERIFY_GRIP",
+          "kg": 0.000656427538286871,
+          "centre_mm": [
+            1045.9,
+            479.99999999999994,
+            389.99999999999994
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_0_M4_BLIND_RIVET_587_VERIFY_GRIP",
+          "kg": 0.0006564275382868733,
+          "centre_mm": [
+            1045.9,
+            587.0,
+            390.0
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_0_AL20x20x1p6",
+          "kg": 0.04245366267011294,
+          "centre_mm": [
+            1039.5880674798923,
+            488.5119832872521,
+            394.4269779184992
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_1_M4_BLIND_RIVET_390_VERIFY_GRIP",
+          "kg": 0.0006564275382868709,
+          "centre_mm": [
+            1045.9,
+            390.0,
+            465.8
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_1_M4_BLIND_RIVET_480_VERIFY_GRIP",
+          "kg": 0.0006564275382868709,
+          "centre_mm": [
+            1045.9,
+            480.0,
+            465.8
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_1_M4_BLIND_RIVET_587_VERIFY_GRIP",
+          "kg": 0.0006564275382868734,
+          "centre_mm": [
+            1045.9,
+            587.0,
+            465.8
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_1_AL20x20x1p6",
+          "kg": 0.042453662670112934,
+          "centre_mm": [
+            1039.5880674798925,
+            488.51198328725206,
+            470.2269779184991
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_2_M4_BLIND_RIVET_390_VERIFY_GRIP",
+          "kg": 0.0006564275382868725,
+          "centre_mm": [
+            1045.9,
+            390.00000000000006,
+            541.6
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_2_M4_BLIND_RIVET_480_VERIFY_GRIP",
+          "kg": 0.0006564275382868725,
+          "centre_mm": [
+            1045.9,
+            480.0,
+            541.6
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_2_M4_BLIND_RIVET_587_VERIFY_GRIP",
+          "kg": 0.000656427538286875,
+          "centre_mm": [
+            1045.9,
+            586.9999999999999,
+            541.5999999999999
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_2_AL20x20x1p6",
+          "kg": 0.042453662670112934,
+          "centre_mm": [
+            1039.588067479892,
+            488.511983287252,
+            546.0269779184993
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_3_M4_BLIND_RIVET_390_VERIFY_GRIP",
+          "kg": 0.0006564275382868725,
+          "centre_mm": [
+            1045.9,
+            390.0,
+            617.4
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_3_M4_BLIND_RIVET_480_VERIFY_GRIP",
+          "kg": 0.0006564275382868725,
+          "centre_mm": [
+            1045.9,
+            479.99999999999994,
+            617.4
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_3_M4_BLIND_RIVET_587_VERIFY_GRIP",
+          "kg": 0.0006564275382868749,
+          "centre_mm": [
+            1045.9,
+            587.0,
+            617.4000000000001
+          ]
+        },
+        {
+          "name": "CASE_SHELF_R_3_AL20x20x1p6",
+          "kg": 0.042453662670112934,
+          "centre_mm": [
+            1039.5880674798923,
+            488.51198328725195,
+            621.8269779184992
+          ]
+        },
+        {
+          "name": "COLD_CASE_SIDE_R",
+          "kg": 0.1953130339678928,
+          "centre_mm": [
+            1045.5999999999992,
+            486.98710812471944,
+            544.4225479257786
+          ]
+        },
+        {
+          "name": "COLD_CASE_BACK",
+          "kg": 0.6424220159999634,
+          "centre_mm": [
+            575.0000000000001,
+            626.6,
+            544.4000000000001
+          ]
+        },
+        {
+          "name": "COLD_CASE_ROOF",
+          "kg": 0.5672073599999677,
+          "centre_mm": [
+            575.0000000000001,
+            488.5,
+            710.4000000000001
+          ]
+        },
+        {
+          "name": "COLD_CASE_SECONDARY_STEEL_ROOF_AIRGAP5_THERMAL_HOLD",
+          "kg": 3.9166193399999534,
+          "centre_mm": [
+            575.0,
+            488.5,
+            715.95
+          ]
+        },
+        {
+          "name": "COLD_CASE_ROOF_STANDOFF_150_365",
+          "kg": 0.00022364008499219882,
+          "centre_mm": [
+            150.0,
+            365.0,
+            712.8999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_ROOF_STANDOFF_150_610",
+          "kg": 0.00022364008499219866,
+          "centre_mm": [
+            150.0,
+            610.0,
+            712.9
+          ]
+        },
+        {
+          "name": "COLD_CASE_ROOF_STANDOFF_1000_365",
+          "kg": 0.00022364008499219985,
+          "centre_mm": [
+            999.9999999999999,
+            364.99999999999994,
+            712.8999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_ROOF_STANDOFF_1000_610",
+          "kg": 0.00022364008499219974,
+          "centre_mm": [
+            1000.0000000000003,
+            610.0000000000002,
+            712.9
+          ]
+        },
+        {
+          "name": "COLD_CASE_SLIDING_FRONT_DOOR_CLOSED",
+          "kg": 0.6755270400000095,
+          "centre_mm": [
+            575.0,
+            348.40000000000003,
+            544.0000000000001
+          ]
+        },
+        {
+          "name": "COLD_CASE_ANTITIP_L_M4x10_573",
+          "kg": 0.0018440638367765957,
+          "centre_mm": [
+            99.80541624874624,
+            610.0000000000001,
+            573.0000000000001
+          ]
+        },
+        {
+          "name": "COLD_CASE_ANTITIP_L_M4_NUT_573",
+          "kg": 0.0007503315013082127,
+          "centre_mm": [
+            106.39999999999998,
+            610.0,
+            572.9999999999997
+          ]
+        },
+        {
+          "name": "COLD_CASE_ANTITIP_L_M4x10_587",
+          "kg": 0.0018440638367765957,
+          "centre_mm": [
+            99.80541624874624,
+            610.0000000000001,
+            587.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_ANTITIP_L_M4_NUT_587",
+          "kg": 0.0007503315013082127,
+          "centre_mm": [
+            106.39999999999998,
+            610.0,
+            587.0000000000001
+          ]
+        },
+        {
+          "name": "COLD_CASE_REAR_ANTI_TIP_LINK_L_M6_POST_M4_COLUMN_HOLD",
+          "kg": 0.016356957256836824,
+          "centre_mm": [
+            75.94442523625258,
+            610.0000000000005,
+            585.9097421654994
+          ]
+        },
+        {
+          "name": "COLD_CASE_ANTITIP_R_M4x10_573",
+          "kg": 0.0018440638367766078,
+          "centre_mm": [
+            1050.1945837512535,
+            609.9999999999999,
+            573.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_ANTITIP_R_M4_NUT_573",
+          "kg": 0.0007503315013082159,
+          "centre_mm": [
+            1043.5999999999997,
+            610.0000000000002,
+            573.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_ANTITIP_R_M4x10_587",
+          "kg": 0.0018440638367766078,
+          "centre_mm": [
+            1050.1945837512535,
+            609.9999999999999,
+            587.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_ANTITIP_R_M4_NUT_587",
+          "kg": 0.0007503315013082159,
+          "centre_mm": [
+            1043.5999999999997,
+            610.0000000000002,
+            586.9999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_REAR_ANTI_TIP_LINK_R_M6_POST_M4_COLUMN_HOLD",
+          "kg": 0.01635695725683684,
+          "centre_mm": [
+            1074.0555747637472,
+            609.9999999999999,
+            585.9097421654993
+          ]
+        }
+      ]
+    },
+    "docks": {
+      "kg": 3.6435829111669604,
+      "cg_mm": [
+        574.9321969572311,
+        639.6797227304471,
+        896.7268057404343
+      ],
+      "parts": [
+        {
+          "name": "DOCK_L_1_ROUND",
+          "kg": 0.001322857781919065,
+          "centre_mm": [
+            117.5,
+            143.40000000000003,
+            887.0
+          ]
+        },
+        {
+          "name": "DOCK_L_2_ROUND",
+          "kg": 0.0013228577819190688,
+          "centre_mm": [
+            117.5,
+            402.4,
+            887.0000000000001
+          ]
+        },
+        {
+          "name": "DOCK_L_3_ROUND",
+          "kg": 0.0013228577819190679,
+          "centre_mm": [
+            117.5,
+            661.4,
+            887.0
+          ]
+        },
+        {
+          "name": "DOCK_L_4_ROUND",
+          "kg": 0.0013228577819190679,
+          "centre_mm": [
+            117.5,
+            920.4,
+            887.0
+          ]
+        },
+        {
+          "name": "DRY_LEDGER_L_2x2xQUARTER_AL_UP_WEB",
+          "kg": 1.8167700200929167,
+          "centre_mm": [
+            90.10184912645829,
+            639.9776189522562,
+            896.7536900059251
+          ]
+        },
+        {
+          "name": "DOCK_R_1_DIAMOND_X_RELIEF",
+          "kg": 0.0011878599633659557,
+          "centre_mm": [
+            1032.4999999999998,
+            143.4,
+            887.0000000000002
+          ]
+        },
+        {
+          "name": "DOCK_R_2_DIAMOND_X_RELIEF",
+          "kg": 0.0011878599633659544,
+          "centre_mm": [
+            1032.4999999999998,
+            402.40000000000003,
+            887.0000000000001
+          ]
+        },
+        {
+          "name": "DOCK_R_3_DIAMOND_X_RELIEF",
+          "kg": 0.0011878599633659615,
+          "centre_mm": [
+            1032.5,
+            661.4000000000002,
+            887.0000000000001
+          ]
+        },
+        {
+          "name": "DOCK_R_4_DIAMOND_X_RELIEF",
+          "kg": 0.0011878599633659618,
+          "centre_mm": [
+            1032.4999999999998,
+            920.4000000000001,
+            887.0
+          ]
+        },
+        {
+          "name": "DRY_LEDGER_R_2x2xQUARTER_AL_UP_WEB",
+          "kg": 1.816770020092904,
+          "centre_mm": [
+            1059.898150873542,
+            639.977618952257,
+            896.7536900059238
+          ]
+        }
+      ]
+    },
+    "assumed_density_kg_m3": {
+      "ply": 600,
+      "MDF": 750,
+      "Al": 2700,
+      "steel": 7850
+    },
+    "receiver_mass_qualification": "Clearance-shell volume with assumed950kg/m3 body and1200kg/m3 lid; NOT actual tote mass or liquid rating. Receiver and separate floor cabinet are not frame ballast."
+  }
+}

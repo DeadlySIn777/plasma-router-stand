@@ -1,0 +1,60 @@
+{
+  "revision": "XR1",
+  "prices_included": false,
+  "release": false,
+  "levels_Z_mm": {
+    "operating": 854.0,
+    "overflow_invert": 863.0,
+    "brim": 874.0,
+    "drained_residual": 814.48
+  },
+  "liquid_volumes_L_after_comb_slat_displacement": {
+    "operating": 37.0541993084799,
+    "overflow_invert": 45.684303268479994,
+    "brim": 56.23220810847994,
+    "drained_residual": 0.4482631442993438
+  },
+  "water_box_capacity_requirement": {
+    "minimum_measured_usable_L": 65.0,
+    "complete_brim_pan_drain_L": 55.78394496418059,
+    "pipe_allowance_L": 3.0,
+    "sludge_allowance_L": 2.0,
+    "required_combined_L": 60.78394496418059,
+    "margin_L_if_65L_measured_usable": 4.216055035819409,
+    "maximum_initial_receiver_water_L_for_this_case": 4.216055035819409,
+    "selected_listing_nominal_storage_US_gal": 20,
+    "physical_usable_liquid_capacity_verified": false,
+    "critical_limit": "The rectangular CAD receiver is an external clearance envelope, not the real tapered liquid interior. Do not derive capacity or water load rating from its hollow CAD volume."
+  },
+  "receiver_fit_envelope_mm": [
+    712.0,
+    470.0,
+    389.0
+  ],
+  "geometry_checks": {
+    "capacity_allowance_positive": true,
+    "overflow_above_operating_level": true,
+    "rim_above_overflow": true,
+    "receiver_candidate_height_includes_lid_mm": 391.0,
+    "all_water_solids_valid": true
+  },
+  "hydraulic_thermal_holds": [
+    "Cold-water leak, complete drain and partial-depth tail-flow test using actual fittings and hose.",
+    "Verify actual hose minimum bend radius, supports, valve sweep, continuously falling route and accessible cleanout.",
+    "Verify independent overflow capacity exceeds the actual filling rate; geometry alone is not a flow rating.",
+    "Confirm usable tote volume, long-term liquid load, temperature and coolant compatibility with the actual delivered product.",
+    "Empty receiver before filling the pan; its nominal storage capacity is not spare capacity when already partly full.",
+    "Keep vent and top returns unobstructed; no compressor pressure, sealed drain or venturi liquid pumping.",
+    "Lid removal/service path remains a physical trial; a full upward hinge sweep is not assumed to fit under the pan.",
+    "Qualify hot debris shields, protected wood-storage temperature and cooldown before mixed wood/plasma operation."
+  ],
+  "source_sha256": {
+    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f",
+    "bed.py": "b00334d947b9e1bc9e3657d7603f67051a6c5f14460d16729d785b1d57cbbbee",
+    "water_check.py": "0742758a106a94cd74fd3fa2cf81183070ffa97978a8dcdde987892f71294601",
+    "reservoir-interface.json": "c06f14f6fdb2eebdfd11f3465a1aca0045e563f2b6ad6117e467a574407ddea7"
+  },
+  "source_consistent_during_check": true,
+  "passed": true,
+  "scope": "Geometry/volume requirement check only. A passed flag does not verify the tote liquid rating, measured usable capacity, gravity/overflow flow or thermal protection."
+}

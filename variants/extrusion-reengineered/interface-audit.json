@@ -1,0 +1,298 @@
+{
+  "status": "XR1 integration candidate, not fabrication/CAM release",
+  "source_sha256": {
+    "variants/extrusion-reengineered/motion.py": "a8e1458d3fda2a492e5b889b66e3f21ad075be14bb8340fb550b6f4e1cc4c015",
+    "variants/extrusion-reengineered/params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "variants/extrusion-reengineered/audit_motion.py": "2edd1f67a63ce3b223eaeffd00f23eedadbed05efd461bb204451ba73b0fa66a",
+    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e"
+  },
+  "guide_seat_planes_X_mm": [
+    50.8,
+    1099.2
+  ],
+  "guide_center_Z_mm": 1033.0,
+  "upper_beam_Z_mm": [
+    973.0,
+    1053.0
+  ],
+  "module_base_Z_mm": 1065.7,
+  "module_rise_mm": 1.7625000000000455,
+  "saddle_station_Y_mm": [
+    190.0,
+    700.0,
+    1100.0
+  ],
+  "link_endpoint_delta_Z_mm": 1.7625000000000455,
+  "link_angle_deg": 1.2620934722036175,
+  "link_eye_distance_mm": 80.0194126837357,
+  "nominal_link_thread_engagement_each_mm": 9.990293658132153,
+  "plasma_drop_mm": 148.0,
+  "no_long_caps_or_datums": true,
+  "moving_parts": "part_motion_class() is authoritative broad classification; ZBX80 body and motor moveX/Y but output/head also movesZ through inherited geometry.",
+  "unmodeled_slot_threads": "Saddle and stop frame screws show external grip/head only. In-slot threads/Tnut bodies are not fabricated solid geometry. Rail factory screw holes and fasteners are absent pending actual pattern.",
+  "selective_billet": {
+    "gantry_end_brackets": 2,
+    "gantry_finished_envelope_mm": [
+      150,
+      80,
+      82.7
+    ],
+    "clevises": 6,
+    "clevis_finished_envelope_mm": [
+      40,
+      48,
+      32
+    ],
+    "gussets": 0,
+    "long_guide_face_modified": false
+  },
+  "targeted_kinematic_method": "Supplementary rigidXYZ translations of centre solids using part_motion_class; no flexible cable or switch-roller simulation. The main check_travel.py rebuilds actual centre/corner poses. New integral brackets are analytically rigidY.",
+  "solid_checks": {
+    "WOOD": {
+      "count": 415,
+      "invalid_ids": []
+    },
+    "PLASMA": {
+      "count": 518,
+      "invalid_ids": []
+    }
+  },
+  "targeted_new_stationary_vs_moving": [
+    {
+      "gantry_y": 275.0,
+      "head_x": 575,
+      "z_lift": 50.0,
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "gantry_y": 775,
+      "head_x": 575,
+      "z_lift": 50.0,
+      "exact_pairs": 0,
+      "hits": []
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 575,
+      "z_lift": 50.0,
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "gantry_y": 275.0,
+      "head_x": 175.0,
+      "z_lift": 0,
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "gantry_y": 275.0,
+      "head_x": 975.0,
+      "z_lift": 100.0,
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "gantry_y": 775,
+      "head_x": 175.0,
+      "z_lift": 100.0,
+      "exact_pairs": 0,
+      "hits": []
+    },
+    {
+      "gantry_y": 775,
+      "head_x": 975.0,
+      "z_lift": 0,
+      "exact_pairs": 0,
+      "hits": []
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 175.0,
+      "z_lift": 100.0,
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 975.0,
+      "z_lift": 0,
+      "exact_pairs": 4,
+      "hits": []
+    }
+  ],
+  "targeted_plasma_new_stationary_vs_moving": [
+    {
+      "gantry_y": 275.0,
+      "head_x": 575,
+      "z_lift": 50.0,
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "gantry_y": 775,
+      "head_x": 575,
+      "z_lift": 50.0,
+      "exact_pairs": 0,
+      "hits": []
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 575,
+      "z_lift": 50.0,
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "gantry_y": 275.0,
+      "head_x": 175.0,
+      "z_lift": 0,
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "gantry_y": 275.0,
+      "head_x": 975.0,
+      "z_lift": 100.0,
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "gantry_y": 775,
+      "head_x": 175.0,
+      "z_lift": 100.0,
+      "exact_pairs": 0,
+      "hits": []
+    },
+    {
+      "gantry_y": 775,
+      "head_x": 975.0,
+      "z_lift": 0,
+      "exact_pairs": 0,
+      "hits": []
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 175.0,
+      "z_lift": 100.0,
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "gantry_y": 1275.0,
+      "head_x": 975.0,
+      "z_lift": 0,
+      "exact_pairs": 4,
+      "hits": []
+    }
+  ],
+  "new_stationary_mounts_vs_frame": {
+    "exact_pairs": 4,
+    "hits": []
+  },
+  "new_gantry_and_link_brackets_vs_other_motion": {
+    "exact_pairs": 34,
+    "hits": []
+  },
+  "cross_motion_class_center_current": {
+    "exact_pairs": 23,
+    "raw_positive_pairs": [
+      {
+        "a": "HMS_Y_L_BODY",
+        "b": "HMS_Y_L_SHOE_BOLT_1",
+        "volume_mm3": 31.41593,
+        "specific_source_permit": "HMS carriage thread enters the conservative module-body envelope; specific frozen motion_details.hms() permit."
+      },
+      {
+        "a": "HMS_Y_L_BODY",
+        "b": "HMS_Y_L_SHOE_BOLT_2",
+        "volume_mm3": 31.41593,
+        "specific_source_permit": "HMS carriage thread enters the conservative module-body envelope; specific frozen motion_details.hms() permit."
+      },
+      {
+        "a": "HMS_Y_L_BODY",
+        "b": "HMS_Y_L_SHOE_BOLT_3",
+        "volume_mm3": 31.41593,
+        "specific_source_permit": "HMS carriage thread enters the conservative module-body envelope; specific frozen motion_details.hms() permit."
+      },
+      {
+        "a": "HMS_Y_L_BODY",
+        "b": "HMS_Y_L_SHOE_BOLT_4",
+        "volume_mm3": 31.41593,
+        "specific_source_permit": "HMS carriage thread enters the conservative module-body envelope; specific frozen motion_details.hms() permit."
+      },
+      {
+        "a": "HMS_Y_R_BODY",
+        "b": "HMS_Y_R_SHOE_BOLT_1",
+        "volume_mm3": 31.41593,
+        "specific_source_permit": "HMS carriage thread enters the conservative module-body envelope; specific frozen motion_details.hms() permit."
+      },
+      {
+        "a": "HMS_Y_R_BODY",
+        "b": "HMS_Y_R_SHOE_BOLT_2",
+        "volume_mm3": 31.41593,
+        "specific_source_permit": "HMS carriage thread enters the conservative module-body envelope; specific frozen motion_details.hms() permit."
+      },
+      {
+        "a": "HMS_Y_R_BODY",
+        "b": "HMS_Y_R_SHOE_BOLT_3",
+        "volume_mm3": 31.41593,
+        "specific_source_permit": "HMS carriage thread enters the conservative module-body envelope; specific frozen motion_details.hms() permit."
+      },
+      {
+        "a": "HMS_Y_R_BODY",
+        "b": "HMS_Y_R_SHOE_BOLT_4",
+        "volume_mm3": 31.41593,
+        "specific_source_permit": "HMS carriage thread enters the conservative module-body envelope; specific frozen motion_details.hms() permit."
+      },
+      {
+        "a": "HMS_X_BODY",
+        "b": "HMS_X_SHOE_BOLT_1",
+        "volume_mm3": 31.41593,
+        "specific_source_permit": "HMS carriage thread enters the conservative module-body envelope; specific frozen motion_details.hms() permit."
+      },
+      {
+        "a": "HMS_X_BODY",
+        "b": "HMS_X_SHOE_BOLT_2",
+        "volume_mm3": 31.41593,
+        "specific_source_permit": "HMS carriage thread enters the conservative module-body envelope; specific frozen motion_details.hms() permit."
+      },
+      {
+        "a": "HMS_X_BODY",
+        "b": "HMS_X_SHOE_BOLT_3",
+        "volume_mm3": 31.41593,
+        "specific_source_permit": "HMS carriage thread enters the conservative module-body envelope; specific frozen motion_details.hms() permit."
+      },
+      {
+        "a": "HMS_X_BODY",
+        "b": "HMS_X_SHOE_BOLT_4",
+        "volume_mm3": 31.41593,
+        "specific_source_permit": "HMS carriage thread enters the conservative module-body envelope; specific frozen motion_details.hms() permit."
+      }
+    ],
+    "unpermitted_pairs": []
+  },
+  "manufacturing_manifest_rows": 485,
+  "manufacturing_row_categories": {
+    "CUSTOM_MANUFACTURE_VERIFY_OWNED": 120,
+    "STANDARD_FASTENER_VERIFY_OWNED": 344,
+    "PURCHASED_INTERFACE_VERIFY_OWNED": 20,
+    "REQUIRED_HARDWARE_INTERFACE_HOLD": 1
+  },
+  "manufacturing_manifest_sha256": "9bed8bf9eb760b5ed4aa0bc879dba3e7b8fb5fa60327ae3cd360c1b802b14c98",
+  "source_unchanged_during_check": true,
+  "release": false,
+  "limits": [
+    "Supplier fits, actual rail fixing count, threads/pullout and physical stock remain held.",
+    "No whole-machine stiffness, cutting accuracy or actual tool/torch clearance follows from these checks.",
+    "Unknown rail holes, in-slot threads and nut solids are explicitly absent; required inventory is not zero.",
+    "Budget and ownership are not inferred from CAD parts or the manifest."
+  ],
+  "targeted_checks_passed": true
+}
