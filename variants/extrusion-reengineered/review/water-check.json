@@ -1,5 +1,5 @@
 {
-  "revision": "XR1",
+  "revision": "XR2",
   "prices_included": false,
   "release": false,
   "levels_Z_mm": {
@@ -9,19 +9,19 @@
     "drained_residual": 814.48
   },
   "liquid_volumes_L_after_comb_slat_displacement": {
-    "operating": 37.0541993084799,
-    "overflow_invert": 45.684303268479994,
-    "brim": 56.23220810847994,
+    "operating": 37.05419582847987,
+    "overflow_invert": 45.68429978848017,
+    "brim": 56.23220462847989,
     "drained_residual": 0.4482631442993438
   },
   "water_box_capacity_requirement": {
     "minimum_measured_usable_L": 65.0,
-    "complete_brim_pan_drain_L": 55.78394496418059,
+    "complete_brim_pan_drain_L": 55.783941484180545,
     "pipe_allowance_L": 3.0,
     "sludge_allowance_L": 2.0,
-    "required_combined_L": 60.78394496418059,
-    "margin_L_if_65L_measured_usable": 4.216055035819409,
-    "maximum_initial_receiver_water_L_for_this_case": 4.216055035819409,
+    "required_combined_L": 60.783941484180545,
+    "margin_L_if_65L_measured_usable": 4.216058515819455,
+    "maximum_initial_receiver_water_L_for_this_case": 4.216058515819455,
     "selected_listing_nominal_storage_US_gal": 20,
     "physical_usable_liquid_capacity_verified": false,
     "critical_limit": "The rectangular CAD receiver is an external clearance envelope, not the real tapered liquid interior. Do not derive capacity or water load rating from its hollow CAD volume."
@@ -31,12 +31,19 @@
     470.0,
     389.0
   ],
+  "flow_path_geometry_probes": {
+    "dedicated_vent": [],
+    "open_overflow_spill_edge": [],
+    "overflow_air_gap": []
+  },
   "geometry_checks": {
     "capacity_allowance_positive": true,
+    "dedicated_vent_and_spill_airgap_clear": true,
     "overflow_above_operating_level": true,
     "rim_above_overflow": true,
     "receiver_candidate_height_includes_lid_mm": 391.0,
-    "all_water_solids_valid": true
+    "all_water_solids_valid": true,
+    "service_geometry_current_and_passed": true
   },
   "hydraulic_thermal_holds": [
     "Cold-water leak, complete drain and partial-depth tail-flow test using actual fittings and hose.",
@@ -45,14 +52,16 @@
     "Confirm usable tote volume, long-term liquid load, temperature and coolant compatibility with the actual delivered product.",
     "Empty receiver before filling the pan; its nominal storage capacity is not spare capacity when already partly full.",
     "Keep vent and top returns unobstructed; no compressor pressure, sealed drain or venturi liquid pumping.",
-    "Lid removal/service path remains a physical trial; a full upward hinge sweep is not assumed to fit under the pan.",
+    "The large600x270hatch,positive90degreelock,brushreachandrarepan/totereplacementpathsaremodeledandcollisionchecked;confirmreceivedrim/footfit,hingepins,latchpreloadandactualhandling.",
     "Qualify hot debris shields, protected wood-storage temperature and cooldown before mixed wood/plasma operation."
   ],
+  "service_report_sha256": "382e8fe0c6ae95b5b57b82adb69aed16f5aa0c51d31605aa484ce0eb67e9625a",
   "source_sha256": {
-    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f",
-    "bed.py": "b00334d947b9e1bc9e3657d7603f67051a6c5f14460d16729d785b1d57cbbbee",
-    "water_check.py": "0742758a106a94cd74fd3fa2cf81183070ffa97978a8dcdde987892f71294601",
-    "reservoir-interface.json": "c06f14f6fdb2eebdfd11f3465a1aca0045e563f2b6ad6117e467a574407ddea7"
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "bed_service.py": "9edda1991107e5714c999724e5da23602a1e3cf229c5d71678e5608c67d1bb6a",
+    "water_check.py": "003bb3fafbaba62d1b479edfd54f73e77b398d7402bfd7637bd0a96ff5553eef",
+    "reservoir-interface.json": "9176a81b3be118c45705b890d4678c27374d4119ea9e0af07694dffeeafe2b0f"
   },
   "source_consistent_during_check": true,
   "passed": true,

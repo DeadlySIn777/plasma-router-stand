@@ -1,0 +1,151 @@
+{
+  "observed_date": "2026-11-01",
+  "scope": "Read-only primary supplier research; no prices or purchasing. Candidate is not selected as a confirmed drop-in replacement.",
+  "candidate": {
+    "manufacturer": "STEPPERONLINE",
+    "part": "23HS22-2804D-B200",
+    "product_url": "https://www.omc-stepperonline.com/nema-23-stepper-1-26nm-178oz-in-w-brake-friction-torque-2-0nm-283oz-in-23hs22-2804d-b200",
+    "datasheet_url": "https://files.omc-stepperonline.com/23HS22-2804D-B200_Full_Datasheet.pdf",
+    "published_frame_mm": [
+      57,
+      57
+    ],
+    "published_body_package_length_mm": 88,
+    "published_front_shaft_diameter_mm": 8,
+    "published_front_shaft_length_mm": 21,
+    "published_D_cut_length_mm": 15,
+    "published_phase_current_A": 2.8,
+    "published_motor_holding_torque_Nm": 1.26,
+    "published_brake_type": "Non-excited / power-off brake",
+    "published_brake_static_torque_Nm": 2,
+    "published_brake_supply_VDC": 24,
+    "published_brake_power_W": 11.5,
+    "ownership": "New/unowned candidate; not an assumed owned module option"
+  },
+  "compatibility_gate": {
+    "status": "OPEN - no verified ZXHT80-200 shaft/coupler and front flange drawing. NEMA23 alone is insufficient.",
+    "front_datum": "A motor replacement can preserve the module motor front mounting plane only when shaft, pilot and flange match. Keeping this datum would add32mm rear package compared with the56mm stock envelope.",
+    "must_verify": [
+      "ZXHT80 actual motor pilot diameter/projection, four-hole pitch and fastener access",
+      "Existing motor shaft diameter, stickout and flat/key; primary module listing does not give them",
+      "Coupler motor bore, engagement, clamping geometry and alignment; if it differs, select a real matching coupling without assuming screw journal dimensions",
+      "Candidate complete motor/brake drawing, front pilot/bolt dimensions and88mm package reference plane",
+      "Motor current/driver compatibility and torque-speed performance with the actual moving Z load",
+      "Brake electrical/control sequencing, power-loss response, temperature/duty and allowable stopping energy"
+    ],
+    "drawing_access": "Supplier product fields and power-off behavior were verified. Full datasheet link is real, but image/PDF downloads returned403 in this environment; no unviewed mounting dimensions are asserted."
+  },
+  "retrofit_addon": {
+    "part": "SWB-03",
+    "manufacturer_url": "https://www.omc-stepperonline.com/dc-electromagnetic-brake-24v-2-0nm-283oz-in-for-nema-23-24-stepper-motor-swb-03",
+    "status": "Not a supported drop-in add-on to current supplied motor",
+    "reason": "Manufacturer requires a matching exposed rear shaft plus matching rear housing mount holes. ZXHT80 listing describes a single output shaft and does not establish those rear interfaces."
+  },
+  "static_requirement": {
+    "formula": "T = (m*g + additional_downward_force)*lead/(2*pi). Reverse efficiency1 is a conservative torque upper bound; friction/detent holding is not credited. Multiply by chosen3x screening factor.",
+    "lead_mm": 5,
+    "screen_factor": 3,
+    "cases": [
+      {
+        "moving_mass_kg": 5.0,
+        "additional_downward_force_N": 0.0,
+        "total_downward_N": 49.033249999999995,
+        "ideal_backdrive_torque_Nm": 0.03901942056680338,
+        "screen_factor": 3.0,
+        "required_static_holding_torque_Nm": 0.11705826170041014,
+        "candidate2Nm_to_required_ratio": 17.08550913833528
+      },
+      {
+        "moving_mass_kg": 5.0,
+        "additional_downward_force_N": 100.0,
+        "total_downward_N": 149.03325,
+        "ideal_backdrive_torque_Nm": 0.11859689211275107,
+        "screen_factor": 3.0,
+        "required_static_holding_torque_Nm": 0.35579067633825323,
+        "candidate2Nm_to_required_ratio": 5.621282773859377
+      },
+      {
+        "moving_mass_kg": 10.0,
+        "additional_downward_force_N": 0.0,
+        "total_downward_N": 98.06649999999999,
+        "ideal_backdrive_torque_Nm": 0.07803884113360676,
+        "screen_factor": 3.0,
+        "required_static_holding_torque_Nm": 0.2341165234008203,
+        "candidate2Nm_to_required_ratio": 8.54275456916764
+      },
+      {
+        "moving_mass_kg": 10.0,
+        "additional_downward_force_N": 100.0,
+        "total_downward_N": 198.0665,
+        "ideal_backdrive_torque_Nm": 0.15761631267955445,
+        "screen_factor": 3.0,
+        "required_static_holding_torque_Nm": 0.47284893803866335,
+        "candidate2Nm_to_required_ratio": 4.229680642396762
+      },
+      {
+        "moving_mass_kg": 15.0,
+        "additional_downward_force_N": 0.0,
+        "total_downward_N": 147.09975,
+        "ideal_backdrive_torque_Nm": 0.11705826170041016,
+        "screen_factor": 3.0,
+        "required_static_holding_torque_Nm": 0.35117478510123046,
+        "candidate2Nm_to_required_ratio": 5.6951697127784255
+      },
+      {
+        "moving_mass_kg": 15.0,
+        "additional_downward_force_N": 100.0,
+        "total_downward_N": 247.09975,
+        "ideal_backdrive_torque_Nm": 0.19663573324635786,
+        "screen_factor": 3.0,
+        "required_static_holding_torque_Nm": 0.5899071997390736,
+        "candidate2Nm_to_required_ratio": 3.3903637739709493
+      },
+      {
+        "moving_mass_kg": 20.0,
+        "additional_downward_force_N": 0.0,
+        "total_downward_N": 196.13299999999998,
+        "ideal_backdrive_torque_Nm": 0.15607768226721352,
+        "screen_factor": 3.0,
+        "required_static_holding_torque_Nm": 0.4682330468016406,
+        "candidate2Nm_to_required_ratio": 4.27137728458382
+      },
+      {
+        "moving_mass_kg": 20.0,
+        "additional_downward_force_N": 100.0,
+        "total_downward_N": 296.133,
+        "ideal_backdrive_torque_Nm": 0.2356551538131612,
+        "screen_factor": 3.0,
+        "required_static_holding_torque_Nm": 0.7069654614394836,
+        "candidate2Nm_to_required_ratio": 2.828992516731598
+      }
+    ],
+    "limits": [
+      "Static holding comparison only; not a certified safety factor or an upgraded module load rating",
+      "Brake2Nm does not increase the module seller20kg vertical-load claim",
+      "Actual moving mass, overhung loads, coupler/ballscrew/ballnut integrity and dynamic stopping remain separate"
+    ]
+  },
+  "engagement_delay_sensitivity": {
+    "model": "Unconstrained free fall upper-bound illustration, d=0.5*g*t^2; no screw/rotor-inertia credit. Actual response must be measured.",
+    "cases": [
+      {
+        "delay_ms": 10,
+        "drop_mm": 0.49033249999999995
+      },
+      {
+        "delay_ms": 20,
+        "drop_mm": 1.9613299999999998
+      },
+      {
+        "delay_ms": 50,
+        "drop_mm": 12.258312500000002
+      },
+      {
+        "delay_ms": 100,
+        "drop_mm": 49.03325000000001
+      }
+    ],
+    "interpretation": "Static torque capacity alone does not establish acceptable drop during power loss. No brake application time or dynamic energy rating was recovered."
+  },
+  "release": false
+}

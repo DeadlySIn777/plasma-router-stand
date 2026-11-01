@@ -27,7 +27,7 @@ def fluid_at(z):
     return shape
 
 def run():
-    sources=[HERE/n for n in ('params.py','bed.py','water_check.py','reservoir-interface.json')]
+    sources=[HERE/n for n in ('params.py','bed.py','bed_service.py','water_check.py','reservoir-interface.json')]
     start={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
     parts=pan_parts();outlet=next(s for n,s,_ in parts if n.startswith('DRAIN_SMOOTH_'))
     bb=outlet.BoundingBox();centre=(bb.zmin+bb.zmax)/2
@@ -44,8 +44,16 @@ def run():
     receiver=next(s for n,s,_ in water if n.startswith('WATER_RED20GAL_'))
     rb=receiver.BoundingBox()
     lid=next(s for n,s,_ in water if n.startswith('WATER_REMOVABLE_LID_'));lb=lid.BoundingBox()
+    service_path=HERE/'review'/'service-check.json'
+    service=json.loads(service_path.read_text(encoding='utf-8')) if service_path.exists() else{}
+    service_current=service.get('passed',False) and all((HERE/n).exists() and hashlib.sha256((HERE/n).read_bytes()).hexdigest()==h for n,h in service.get('source_sha256',{}).items())
+    probes={'dedicated_vent':cq.Solid.makeCylinder(12.5,211.1,cq.Vector(900,1000,388.9)),
+      'open_overflow_spill_edge':cq.Solid.makeBox(3,40,2,cq.Vector(899,880,464.1)),
+      'overflow_air_gap':cq.Solid.makeBox(2.3,40,18.8,cq.Vector(897.9,880,391.1))}
+    probe_hits={key:[{'id':n,'volume_mm3':q.Volume()} for n,s,c in water
+       if (q:=s.intersect(probe)).Volume()>.05] for key,probe in probes.items()}
     result={
-      'revision':'XR1','prices_included':False,'release':False,
+      'revision':P.REVISION,'prices_included':False,'release':False,
       'levels_Z_mm':levels,'liquid_volumes_L_after_comb_slat_displacement':volumes,
       'water_box_capacity_requirement':{
           'minimum_measured_usable_L':RECEIVER_REQUIRED_USABLE_L,
@@ -57,11 +65,12 @@ def run():
           'physical_usable_liquid_capacity_verified':False,
           'critical_limit':'The rectangular CAD receiver is an external clearance envelope, not the real tapered liquid interior. Do not derive capacity or water load rating from its hollow CAD volume.'},
       'receiver_fit_envelope_mm':[rb.xlen,rb.ylen,rb.zlen],
-      'geometry_checks':{'capacity_allowance_positive':margin>0,
+      'flow_path_geometry_probes':probe_hits,
+      'geometry_checks':{'capacity_allowance_positive':margin>0,'dedicated_vent_and_spill_airgap_clear':not any(probe_hits.values()),
           'overflow_above_operating_level':levels['overflow_invert']>levels['operating'],
           'rim_above_overflow':P.PAN_RIM>levels['overflow_invert'],
           'receiver_candidate_height_includes_lid_mm':lb.zmax,
-          'all_water_solids_valid':all(s.isValid() and s.Volume()>0 for _,s,_ in water)},
+          'all_water_solids_valid':all(s.isValid() and s.Volume()>0 for _,s,_ in water),'service_geometry_current_and_passed':service_current},
       'hydraulic_thermal_holds':[
           'Cold-water leak, complete drain and partial-depth tail-flow test using actual fittings and hose.',
           'Verify actual hose minimum bend radius, supports, valve sweep, continuously falling route and accessible cleanout.',
@@ -69,12 +78,13 @@ def run():
           'Confirm usable tote volume, long-term liquid load, temperature and coolant compatibility with the actual delivered product.',
           'Empty receiver before filling the pan; its nominal storage capacity is not spare capacity when already partly full.',
           'Keep vent and top returns unobstructed; no compressor pressure, sealed drain or venturi liquid pumping.',
-          'Lid removal/service path remains a physical trial; a full upward hinge sweep is not assumed to fit under the pan.',
+          'The large600x270hatch,positive90degreelock,brushreachandrarepan/totereplacementpathsaremodeledandcollisionchecked;confirmreceivedrim/footfit,hingepins,latchpreloadandactualhandling.',
           'Qualify hot debris shields, protected wood-storage temperature and cooldown before mixed wood/plasma operation.'
       ],
+      'service_report_sha256':hashlib.sha256(service_path.read_bytes()).hexdigest() if service_path.exists() else None,
       'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}}
     result['source_consistent_during_check']=start==result['source_sha256']
-    result['passed']=all(result['geometry_checks'][k] for k in ('capacity_allowance_positive','overflow_above_operating_level','rim_above_overflow','all_water_solids_valid')) and result['source_consistent_during_check']
+    result['passed']=all(result['geometry_checks'][k] for k in ('capacity_allowance_positive','overflow_above_operating_level','rim_above_overflow','all_water_solids_valid','service_geometry_current_and_passed','dedicated_vent_and_spill_airgap_clear')) and result['source_consistent_during_check']
     result['scope']='Geometry/volume requirement check only. A passed flag does not verify the tote liquid rating, measured usable capacity, gravity/overflow flow or thermal protection.'
     (HERE/'review'/'water-check.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({'volumes_L':volumes,'receiver_margin_L_if_verified':margin,'passed':result['passed']},indent=2),flush=True)

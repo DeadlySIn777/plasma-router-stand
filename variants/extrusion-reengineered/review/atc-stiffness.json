@@ -1,0 +1,184 @@
+{
+  "revision": "XR2",
+  "generated_UTC": "2026-11-01T20:12:44.512508+00:00",
+  "passed": true,
+  "pass_scope": "Calculation checks, current geometry/manufacturing input binding and unchanged input files only.",
+  "screen_only": true,
+  "physical_target_pass": null,
+  "physical_rigidity_qualified": false,
+  "release": false,
+  "source_sha256": {
+    "atc_stiffness.py": "c977187b7a22b26c1d3e7977778c3a06aa8d0cea748527581f231ff31e0309e5",
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "check_atc.py": "e6ab7b7e1215d1947c375fd6350819f91fdaa5daa9963d158f657a9fc1a89069",
+    "review/atc-check.json": "233713afbc0011e5f740c7ea0898b7523acb95faa5bc80a1811f7d80cc7b6edf",
+    "review/atc-manufacturing.json": "ac8b22cb76277f8c96f30238b9660eacb7f1d2aad29f47daabb91b134a268329"
+  },
+  "source_consistent_during_check": true,
+  "geometry_check_current": true,
+  "geometry_check_source_binding": true,
+  "manufacturing_source_binding": true,
+  "calculation_checks_pass": true,
+  "input_geometry": {
+    "left_pin_world_X_mm": 113.0,
+    "right_pin_world_X_mm": 1037.0,
+    "support_span_mm": 924.0,
+    "accepted_pocket_X_mm": [
+      345.0,
+      805.0
+    ],
+    "load_position_a_mm": [
+      232.0,
+      692.0
+    ],
+    "actual_RHS_length_mm": 875.3499999999999,
+    "outer_depth_Y_mm": 25.40000000000009,
+    "outer_height_Z_mm": 50.80000000000007,
+    "inferred_uniform_wall_mm": 3.1750000000000522,
+    "section_area_mm2": 443.5475000000075,
+    "I_vertical_axis_mm4": 43763.916168230084,
+    "E_assumed_MPa": 200000.0
+  },
+  "load_model": {
+    "reversible_Z_couple_Nm": [
+      -19.0,
+      19.0
+    ],
+    "positive_case_Nmm": 19000.0,
+    "support_model": "Two ideal translational supports at the deployed pin centres; unrestricted beam rotation, no support settlement.",
+    "member_model": "One uniform prismatic RHS section over the full pin span. The actual shorter tube and its end adapters/joints are not a qualified equivalent assembly.",
+    "application": "One concentrated in-plane couple at an accepted pocket X; not an envelope for every possible distributed magazine/contact load."
+  },
+  "analytic_derivation": {
+    "displacement": "v=(M/EI)*(x^3/(6L)-max(0,x-a)^2/2+x*((L-a)^2/(2L)-L/6))",
+    "x_stationary_left": "x=sqrt(-2LC), C=(L-a)^2/(2L)-L/6, include only 0<=x<=a.",
+    "x_stationary_right": "x=L +/- sqrt(L^2-2L(a+C)), include only a<=x<=L.",
+    "load_position_extrema": "For positive M, df/da=-x*(L-a)/L for x<a, and -a*(1-x/L) for x>a. Both are nonpositive throughout 0<=x,a<=L. Thus every x displacement is monotone in a; global positive/negative extrema over the pocket field occur at its endpoint load positions. Reversing M reverses signs only.",
+    "boundary_deflection_error_mm": 0.0
+  },
+  "endpoint_load_cases": [
+    {
+      "couple_at_world_X_mm": 345.0,
+      "couple_a_mm": 232.0,
+      "candidates": [
+        {
+          "x_from_left_pin_mm": 0.0,
+          "world_X_mm": 113.0,
+          "deflection_mm": 0.0
+        },
+        {
+          "x_from_left_pin_mm": 232.0,
+          "world_X_mm": 345.0,
+          "deflection_mm": 0.057831720516361776
+        },
+        {
+          "x_from_left_pin_mm": 443.6168196116771,
+          "world_X_mm": 556.6168196116771,
+          "deflection_mm": 0.08681156411924605
+        },
+        {
+          "x_from_left_pin_mm": 924.0,
+          "world_X_mm": 1037.0,
+          "deflection_mm": 0.0
+        }
+      ],
+      "worst": {
+        "x_from_left_pin_mm": 443.6168196116771,
+        "world_X_mm": 556.6168196116771,
+        "deflection_mm": 0.08681156411924605
+      }
+    },
+    {
+      "couple_at_world_X_mm": 805.0,
+      "couple_a_mm": 692.0,
+      "candidates": [
+        {
+          "x_from_left_pin_mm": 0.0,
+          "world_X_mm": 113.0,
+          "deflection_mm": 0.0
+        },
+        {
+          "x_from_left_pin_mm": 480.3831803883229,
+          "world_X_mm": 593.3831803883229,
+          "deflection_mm": -0.08681156411924601
+        },
+        {
+          "x_from_left_pin_mm": 692.0,
+          "world_X_mm": 805.0,
+          "deflection_mm": -0.05783172051636177
+        },
+        {
+          "x_from_left_pin_mm": 924.0,
+          "world_X_mm": 1037.0,
+          "deflection_mm": 0.0
+        }
+      ],
+      "worst": {
+        "x_from_left_pin_mm": 480.3831803883229,
+        "world_X_mm": 593.3831803883229,
+        "deflection_mm": -0.08681156411924601
+      }
+    }
+  ],
+  "center_only_case": {
+    "couple_at_world_X_mm": 575.0,
+    "couple_a_mm": 462.0,
+    "candidates": [
+      {
+        "x_from_left_pin_mm": 0.0,
+        "world_X_mm": 113.0,
+        "deflection_mm": 0.0
+      },
+      {
+        "x_from_left_pin_mm": 266.73582436560713,
+        "world_X_mm": 379.73582436560713,
+        "deflection_mm": -0.01486134945612909
+      },
+      {
+        "x_from_left_pin_mm": 462.0,
+        "world_X_mm": 575.0,
+        "deflection_mm": 0.0
+      },
+      {
+        "x_from_left_pin_mm": 657.2641756343928,
+        "world_X_mm": 770.2641756343928,
+        "deflection_mm": 0.014861349456129084
+      },
+      {
+        "x_from_left_pin_mm": 924.0,
+        "world_X_mm": 1037.0,
+        "deflection_mm": 0.0
+      }
+    ],
+    "worst": {
+      "x_from_left_pin_mm": 266.73582436560713,
+      "world_X_mm": 379.73582436560713,
+      "deflection_mm": -0.01486134945612909
+    }
+  },
+  "center_only_beam_deflection_mm": 0.014861349456129092,
+  "worst_case": {
+    "load_world_X_mm": 345.0,
+    "x_from_left_pin_mm": 443.6168196116771,
+    "world_X_mm": 556.6168196116771,
+    "deflection_mm": 0.08681156411924605
+  },
+  "worst_pocket_beam_deflection_mm": 0.08681156411924605,
+  "old_check_atc_value_disposition": "The approximately0.01486mm value in the geometry check is a centre-couple component case only. This source-bound report supersedes any interpretation of it as the worst over the accepted pocket field.",
+  "nominal_alignment_reference_mm": 0.2,
+  "alignment_disposition": "No whole-assembly or physical0.2mm target pass is inferred from this component calculation.",
+  "excluded_compliance": [
+    "magazine housing/endcaps and nut pocket",
+    "aluminum U bridge and risers",
+    "frame/backbar/cradle flexibility",
+    "end adapters, welds and bolted joints",
+    "guide/contact play",
+    "pin/lug fits and seating",
+    "thermal drift",
+    "actual measured material/section properties",
+    "dynamic spindle and tool-change forces"
+  ],
+  "acceptance": "Measure reversible loaded alignment and repeatability at every actual pocket, under actual change torque, before releasing automatic operation."
+}

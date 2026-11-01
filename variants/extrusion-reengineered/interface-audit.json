@@ -1,14 +1,14 @@
 {
-  "status": "XR1 integration candidate, not fabrication/CAM release",
+  "status": "XR2 integration candidate, not fabrication/CAM release",
   "source_sha256": {
-    "variants/extrusion-reengineered/motion.py": "a8e1458d3fda2a492e5b889b66e3f21ad075be14bb8340fb550b6f4e1cc4c015",
-    "variants/extrusion-reengineered/params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
     "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
     "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
     "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
     "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
     "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
-    "variants/extrusion-reengineered/audit_motion.py": "2edd1f67a63ce3b223eaeffd00f23eedadbed05efd461bb204451ba73b0fa66a",
+    "variants/extrusion-reengineered/audit_motion.py": "d2b49a3ca238c661d2976ec201c0c92d27de990a96287c00b822b67f94f46bee",
     "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e"
   },
   "guide_seat_planes_X_mm": [
@@ -32,7 +32,53 @@
   "link_eye_distance_mm": 80.0194126837357,
   "nominal_link_thread_engagement_each_mm": 9.990293658132153,
   "plasma_drop_mm": 148.0,
+  "plasma_release_tether_eye_mount_local_XY_mm": [
+    94.0,
+    100.0
+  ],
+  "plasma_release_tether_eye_shift_X_mm": -10.0,
   "no_long_caps_or_datums": true,
+  "selected_Z_module": {
+    "model": "ZXHT80-200",
+    "asin": "B09MYD6Z23",
+    "owned": false,
+    "product_url": "https://www.amazon.com/dp/B09MYD6Z23",
+    "top_drawing": "https://m.media-amazon.com/images/I/61XtaSA5UmL._SL1500_.jpg",
+    "side_drawing": "https://m.media-amazon.com/images/I/61imEqsCa9L._SL1500_.jpg",
+    "body_length_mm": 319.0,
+    "overall_length_mm": 430.0,
+    "base_width_mm": 80.0,
+    "end_plate_thickness_mm": 12.0,
+    "stroke_mm": 200.0,
+    "base_fasteners": "M5 movable nuts; exact slot profile and pitch remain held",
+    "output_interface": "90x50 nominal; transverse small-hole spacing70 only; along-travel pitch/thread/depth and base-to-output height remain held",
+    "power_off_retention": "Planned23HS22-2804D-B200 power-off2Nm brake motor, new/unowned. Flange/pilot/shaft/coupler compatibility and dynamic stopping remain explicit design release holds; supplied module motor has no brake."
+  },
+  "selected_Z_brake_motor_candidate": {
+    "part": "23HS22-2804D-B200",
+    "owned": false,
+    "body_mm": [
+      57.0,
+      57.0,
+      88.0
+    ],
+    "shaft_mm": [
+      8.0,
+      21.0
+    ],
+    "brake_Nm": 2.0,
+    "brake_VDC": 24.0,
+    "brake_W": 11.5,
+    "phase_A": 2.8,
+    "compatibility_verified": false,
+    "source": "https://www.omc-stepperonline.com/nema-23-stepper-1-26nm-178oz-in-w-brake-friction-torque-2-0nm-283oz-in-23hs22-2804d-b200",
+    "representation": "Nominal conditional replacement housing at original front mount plane. Unpublished pilot/bolt/coupler geometry is not fabricated."
+  },
+  "selected_Z_stroke_mm": 200.0,
+  "Z_lower_datum_preserved": true,
+  "Z_carrier_extension_mm": 100.0,
+  "spindle_axial_grip_adjustment_mm": 10.0,
+  "spindle_lower_reference_Z_mm_at_zero_lift": 970.0,
   "moving_parts": "part_motion_class() is authoritative broad classification; ZBX80 body and motor moveX/Y but output/head also movesZ through inherited geometry.",
   "unmodeled_slot_threads": "Saddle and stop frame screws show external grip/head only. In-slot threads/Tnut bodies are not fabricated solid geometry. Rail factory screw holes and fasteners are absent pending actual pattern.",
   "selective_billet": {
@@ -66,21 +112,21 @@
     {
       "gantry_y": 275.0,
       "head_x": 575,
-      "z_lift": 50.0,
+      "z_lift": 100.0,
       "exact_pairs": 4,
       "hits": []
     },
     {
       "gantry_y": 775,
       "head_x": 575,
-      "z_lift": 50.0,
+      "z_lift": 100.0,
       "exact_pairs": 0,
       "hits": []
     },
     {
       "gantry_y": 1275.0,
       "head_x": 575,
-      "z_lift": 50.0,
+      "z_lift": 100.0,
       "exact_pairs": 4,
       "hits": []
     },
@@ -94,14 +140,14 @@
     {
       "gantry_y": 275.0,
       "head_x": 975.0,
-      "z_lift": 100.0,
+      "z_lift": 200.0,
       "exact_pairs": 4,
       "hits": []
     },
     {
       "gantry_y": 775,
       "head_x": 175.0,
-      "z_lift": 100.0,
+      "z_lift": 200.0,
       "exact_pairs": 0,
       "hits": []
     },
@@ -115,7 +161,7 @@
     {
       "gantry_y": 1275.0,
       "head_x": 175.0,
-      "z_lift": 100.0,
+      "z_lift": 200.0,
       "exact_pairs": 4,
       "hits": []
     },
@@ -131,21 +177,21 @@
     {
       "gantry_y": 275.0,
       "head_x": 575,
-      "z_lift": 50.0,
+      "z_lift": 100.0,
       "exact_pairs": 4,
       "hits": []
     },
     {
       "gantry_y": 775,
       "head_x": 575,
-      "z_lift": 50.0,
+      "z_lift": 100.0,
       "exact_pairs": 0,
       "hits": []
     },
     {
       "gantry_y": 1275.0,
       "head_x": 575,
-      "z_lift": 50.0,
+      "z_lift": 100.0,
       "exact_pairs": 4,
       "hits": []
     },
@@ -159,14 +205,14 @@
     {
       "gantry_y": 275.0,
       "head_x": 975.0,
-      "z_lift": 100.0,
+      "z_lift": 200.0,
       "exact_pairs": 4,
       "hits": []
     },
     {
       "gantry_y": 775,
       "head_x": 175.0,
-      "z_lift": 100.0,
+      "z_lift": 200.0,
       "exact_pairs": 0,
       "hits": []
     },
@@ -180,7 +226,7 @@
     {
       "gantry_y": 1275.0,
       "head_x": 175.0,
-      "z_lift": 100.0,
+      "z_lift": 200.0,
       "exact_pairs": 4,
       "hits": []
     },
@@ -278,14 +324,16 @@
     ],
     "unpermitted_pairs": []
   },
-  "manufacturing_manifest_rows": 485,
+  "manufacturing_manifest_rows": 487,
   "manufacturing_row_categories": {
     "CUSTOM_MANUFACTURE_VERIFY_OWNED": 120,
     "STANDARD_FASTENER_VERIFY_OWNED": 344,
     "PURCHASED_INTERFACE_VERIFY_OWNED": 20,
+    "PURCHASED_Z200_MODULE_NEW": 1,
+    "PURCHASED_Z_BRAKE_MOTOR_NEW": 1,
     "REQUIRED_HARDWARE_INTERFACE_HOLD": 1
   },
-  "manufacturing_manifest_sha256": "9bed8bf9eb760b5ed4aa0bc879dba3e7b8fb5fa60327ae3cd360c1b802b14c98",
+  "manufacturing_manifest_sha256": "59630eda41ede28a0345f729f962243977876b5b2ae9d1520f9c935a4d6243ca",
   "source_unchanged_during_check": true,
   "release": false,
   "limits": [

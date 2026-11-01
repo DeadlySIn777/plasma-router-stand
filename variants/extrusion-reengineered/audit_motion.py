@@ -144,6 +144,13 @@ def source_metadata():
                 z_lift=P.Z_TRAVEL/2, tool='router')
     apply_completion(model, replacement_brake_motor=False)
     head, _ = make_head(float_lift=0, breakaway_offset=0, torch=None)
+    rp=head.find('I_HEAD_RELEASE_PLATE')
+    rp.local=rp.local.fuse(motion.cylinder(3.3,6.35,(104,85,0))).clean().cut(motion.cylinder(3.3,8,(94,85,-1))).clean()
+    rp.shape=rp.local.translate((0,15,44))
+    rp.flat['holes']=[h for h in rp.flat['holes']if not(abs(h[0]-104)<1e-6 and abs(h[1]-85)<1e-6)]
+    rp.flat['holes'].append((94.,85.,3.3))
+    rp.notes.append('XR2release-tethereye mount moved10mm inward to local94,100;M4tap3.3pilot. Original104,100hole omitted.')
+    for name in('I_HEAD_TETHER_EYE_RELEASE','I_HEAD_TETHER_RELEASE'):head.find(name).notes.append('XR2mount10mm inward;localanchor94,100,not104,100.')
     return {p.id:p for p in model.parts+head.parts}
 
 
@@ -174,8 +181,24 @@ def fabrication_rows(wood, plasma):
     selected = {n:(s,c) for n,s,c in wood+plasma}
     rows = []
     for name,(shape,_) in selected.items():
+        if name=='ZBX80_BRAKE_MOTOR_CANDIDATE':
+            rows.append(row(name,'PURCHASED_Z_BRAKE_MOTOR_NEW',motion.BRAKE_MOTOR['part'],[57,57,88],'STEPPERONLINE brake motor; actual fit held','New/unowned conditional replacement;2Nm power-off,24V11.5W,8x21shaft. Actual flange/pilot/coupler not verified.'))
+            continue
         if name in metadata:
             p = metadata[name]
+            if name.startswith('ZBX80_'):
+                if name == 'ZBX80_BRAKE_MOTOR_CANDIDATE':
+                    rows.append(row(name,'PURCHASED_Z_BRAKE_MOTOR_NEW',motion.BRAKE_MOTOR['part'],[57,57,88],'STEPPERONLINE brake motor; actual fit held', ['New/unowned conditional replacement;2Nm power-off,24V11.5W,8x21shaft. Actual flange/pilot/coupler not verified.']))
+                    continue
+                if name == 'ZBX80_BASE':
+                    rows.append(row(name, 'PURCHASED_Z200_MODULE_NEW',
+                        'ZXHT80-200_B09MYD6Z23', [80,319,430],
+                        'Purchased200mm screw Z module; supplier materials',
+                        'New/unowned replacement. One complete module includes '
+                        'end blocks, motor and carriage;430overall/319body. '
+                        'M5 movable base nuts; output pitch/thread/height and '
+                        'power-off retention remain physical release holds.'))
+                continue
             if p.purchased:
                 if owned_catalogue_motion(p):
                     continue
@@ -187,7 +210,13 @@ def fabrication_rows(wood, plasma):
                 category = STANDARD if hardware else PURCHASED
             else:
                 category = CUSTOM
-            note = ' | '.join(p.notes)
+            notes = []
+            for text in p.notes:
+                if name.startswith('Y_SHOE_'):
+                    text = text.replace('33×7.35', '49×7.35').replace('33x7.35', '49x7.35')
+                if text not in notes:
+                    notes.append(text)
+            note = ' | '.join(notes)
             if name.startswith('GANTRY_END_BRACKET_'):
                 note += (' | XR1 selected integral billet: 150x80x82.7 finished '
                          'envelope; web8mm outward; raw billet needs machining '
@@ -196,12 +225,19 @@ def fabrication_rows(wood, plasma):
                 note += (' | XR1 selected integral40x48x32 billet; no ear/base '
                          'edge joint; raw stock needs machining allowance.')
             elif name.startswith('Y_SHOE_'):
-                note += (' | XR1: translate8mm outward; link window49x7.35 '
-                         'replaces33x7.35; supplier interfaces remain held.')
+                note += (' | XR1: translate8mm outward; the final link window is '
+                         '49x7.35; supplier interfaces remain held.')
             elif name == 'X_GUIDE_FACE':
                 note += (' | XR1: inherited long aluminum guide-face plate '
                          'unchanged; no assumed owned-sheet credit.')
-            rows.append(row(name, category, p.part_number, dimensions(p.local),
+            elif name == 'Z_CARRIER':
+                note += (' | Z200 revision: extend upper blank100mm, preserving '
+                         'all guide/link attachment coordinates. Supplier Z '
+                         'base pattern remains a guarded measured interface.')
+            size = dimensions(p.local)
+            if name == 'Z_CARRIER':
+                size = [260,270.2,12.7]
+            rows.append(row(name, category, p.part_number, size,
                             p.material, note))
             continue
 

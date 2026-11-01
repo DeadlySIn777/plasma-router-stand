@@ -1,19 +1,20 @@
-"""Nominal rigid-axis travel against the XR1 frame/bed; no tool or cable invention."""
+"""Nominal rigid-axis travel against the current frame, bed, guards and ATC."""
 from itertools import product
 from pathlib import Path
 import hashlib,json,os,sys
 import re
 import params as P
 import cadquery as cq
-from build import bounds,overlap,clashes
+from build import bounds,overlap,clashes,accessory_parts
 from frame import frame_parts
 from bed import bed_parts
 from motion import motion_parts,part_motion_class
+from material_cover import translation_cover_proof
 
 HERE=Path(__file__).resolve().parent
 
 def run():
-    sources=[HERE/n for n in ('params.py','frame.py','bed.py','motion.py','check_travel.py')]
+    sources=[HERE/n for n in ('params.py','frame.py','bed.py','motion.py','shields.py','atc.py','build.py','check_travel.py','material_cover.py')]
     start_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
     states={};poses=[(575.,775.,P.Z_TRAVEL/2),*product((575-P.X_TRAVEL/2,575+P.X_TRAVEL/2),(775-P.Y_TRAVEL/2,775+P.Y_TRAVEL/2),(0.,P.Z_TRAVEL))]
     # Build each nominal pose once, with the two installed tools sharing the
@@ -24,7 +25,7 @@ def run():
         for hot in (False,True):bodies[hot].append(motion_parts(hot,gantry_y=y,head_x=x,z_lift=z))
     for hot in (False,True):
         label='PLASMA' if hot else 'WOOD'
-        fixed=frame_parts()+bed_parts(hot);sweeps={};center={};references={};hits=[];tested=0
+        fixed=frame_parts()+bed_parts(hot)+accessory_parts(hot);sweeps={};center={};references={};hits=[];tested=0
         internal_hits=[];nominal_threads=[];internal_tested=0
         for ix,(x,y,z) in enumerate(poses):
             parts=bodies[hot][ix]
@@ -64,7 +65,17 @@ def run():
         fixed_lookup={n:s for n,s,_ in fixed}
         for n,nf in candidates:
             if not (hot and nf.startswith('DRY_LEDGER_') and part_motion_class(n)=='Y_X_Z_tool'):
-                unresolved.append([n,nf]);continue
+                # Guard and ATC shapes can produce overly broad full-travel
+                # AABBs. Resolve them using a complete obstacle cover rather
+                # than dismissing an overlap based on sampled clear poses.
+                tmin=[sweeps[n][k]-center[n][k] for k in range(3)]
+                tmax=[sweeps[n][k+3]-center[n][k+3] for k in range(3)]
+                proof=translation_cover_proof(references[n],fixed_lookup[nf],tmin,tmax)
+                if proof['passed']:resolved.append(dict(motion=n,fixed=nf,**proof))
+                else:unresolved.append({'motion':n,'fixed':nf,'proof':proof})
+                if (len(resolved)+len(unresolved))%25==0:
+                    print(label,'continuous pairs',len(resolved)+len(unresolved),'unresolved',len(unresolved),flush=True)
+                continue
             s=fixed_lookup[nf];bb=bounds(s);t=6.35
             def box(b):return cq.Solid.makeBox(b[3]-b[0],b[4]-b[1],b[5]-b[2],cq.Vector(*b[:3]))
             shelf=bb.copy();shelf[5]=bb[2]+t
@@ -90,8 +101,8 @@ def run():
             'nominal_fastener_disposition':'Only BODY vs its own SHOE_BOLT_1..4, max31.5mm3, are separated as inherited nominal carriage-thread envelopes. Actual carriage thread depth and screw-tip clearance remain supplier holds; this is not physical collision clearance.',
             'rigid_translation_clear':not hits and not unresolved,
             'relative_motion_samples_clear_except_nominal_threads':not internal_hits}
-    r={'revision':'XR1','poses_X_Yguide_Zlift_mm':poses,'states':states,
-       'scope':'Exact external and different-motion-class intersections at center and 8 corners; external union bounds prove clearance for independent pure translations only when candidate list is empty. Internal relative-motion checks are sampled, not a continuous swept-solid proof. Switch/cam compliance and flexible cables are not modeled.',
+    r={'revision':P.REVISION,'poses_X_Yguide_Zlift_mm':poses,'states':states,
+       'scope':'Exact external and different-motion-class intersections at center and 8 corners. External rigid translations are covered by union bounds plus conservative complete translation-cover proofs for overlapping bounds; any unresolved candidate fails. Internal relative-motion checks are sampled, not a continuous swept-solid proof. Switch/cam compliance and flexible cables are not modeled.',
        'excluded':['actual cutting tool','actual torch nozzle','workpiece and clamps','flexible hoses/cables','conversion trajectory'],
        'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},
        'release':False}

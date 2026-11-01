@@ -1,0 +1,64 @@
+{
+  "revision": "XR2",
+  "passed": true,
+  "source_consistent_during_check": true,
+  "source_sha256": {
+    "variants/extrusion-reengineered/check_atc_capacity_field.py": "349fc3ad95a030621b62ddd725cef8a07e34d7a7a7655b3ebbbee1d4a0bd7330",
+    "variants/extrusion-reengineered/atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/retractable-atc/hardware/hardware.py": "b4c134ef05aebafded4362991f04a6118ad36be874887fafb81ee8d105757df0",
+    "variants/extrusion-reengineered/review/atc-check.json": "233713afbc0011e5f740c7ea0898b7523acb95faa5bc80a1811f7d80cc7b6edf",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  },
+  "invalid_parts": [],
+  "upstream_ATC_mechanism_check_pass": true,
+  "upstream_ATC_sources_current": true,
+  "upstream_ATC_check_sha256": "233713afbc0011e5f740c7ea0898b7523acb95faa5bc80a1811f7d80cc7b6edf",
+  "reference_X_Yguide_Zlift_mm": [
+    575.0,
+    775.0,
+    100.0
+  ],
+  "reference_tool_Y_mm": 621.4,
+  "loaded_tool_capacity_projection_mm": 50.0,
+  "loaded_tool_capacity_radius_mm": 7.5,
+  "parked_capacity": [
+    {
+      "id": "SUPPLIER_KIT_ACCEPTANCE_NOT_A_PART",
+      "bounds_mm": [
+        315.0,
+        1282.0,
+        1030.15,
+        835.0,
+        1342.0,
+        1110.15
+      ]
+    },
+    {
+      "id": "RETAINED_TOOL_PROJECTION_ACCEPTANCE_NOT_A_PART",
+      "bounds_mm": [
+        337.5,
+        1284.5,
+        1003.8,
+        812.5,
+        1328.9,
+        1030.15
+      ]
+    }
+  ],
+  "broad_phase_clear_pairs": 832,
+  "exact_candidate_pairs": 0,
+  "exact_records": [],
+  "minimum_broad_bound_gap": {
+    "moving": "ZBX80_BASE",
+    "capacity": "SUPPLIER_KIT_ACCEPTANCE_NOT_A_PART",
+    "gap_mm": 22.40000000000009
+  },
+  "release": false,
+  "scope": "Continuous independent nominal XYZ translation of every physical wood motion part and declared P50/radius7.5 cutter capacity against both parked supplier-kit and retained-tool capacity boxes. Gate pose does not change these capacity boxes. Exact B-T box expansion; this does not establish actual vendor pocket fit, nut datum, tool release or an executable M6 cycle."
+}

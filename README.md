@@ -1,17 +1,18 @@
 # Plasma / router CNC stand
 
-Public working design for **800 mm X / 1000 mm Y / 100 mm Z nominal travel**.
+Current small-table design: **800 mm X / 1000 mm Y / 200 mm Z nominal travel**.
+The original 100 mm Z is superseded by the user-authorized full-bed ATC redesign.
 
-**Current small-table redesign: [XR1 — re-engineered 4080 wood/plasma table](variants/extrusion-reengineered/README.md).**
+**Current small-table redesign: [XR2 — re-engineered 4080 wood/plasma table](variants/extrusion-reengineered/README.md).**
 This replaces the previous extrusion-table and cart proposals for the user's
 current build. The complete mechanical-table budget is capped at USD 1,000;
 pricing and shopping are paused until the engineering review is complete.
 Owned motion, guides, drives and spindle/VFD are excluded from future purchasing.
-The XR1 package has its own geometry, checks and physical-interface holds.
+The XR2 package has its own geometry, checks and physical-interface holds.
 Its budget is a constraint, not a verified delivered quote. It is not a steel-milling qualification.
 
 Earlier CAD, prices, carts, lead values and test results below are historical
-and must not be transferred to XR1. The 4x8 and ATC studies remain separate;
+and must not be transferred to XR2. The 4x8 and ATC studies remain separate;
 they have not been silently incorporated into this small-table budget revision.
 
 **Preserved baseline: Rev I.** It adds a floating/breakaway head mechanism,
@@ -29,8 +30,8 @@ the preserved Rev I baseline and earlier fixed-dock studies.
 
 ## Open the current design
 
-- [Current XR1 4080 small table, engineering before pricing](variants/extrusion-reengineered/README.md)
-- [XR1 printable design and audit review](output/pdf/plasma-router-stand-XR1-review.pdf)
+- [Current XR2 4080 small table, engineering before pricing](variants/extrusion-reengineered/README.md)
+- [XR2 printable design and audit review](output/pdf/plasma-router-stand-XR2-review.pdf)
 - [Historical welded-table budget study and simulations](variants/whole-table-600/README.md)
 - [Earlier reinforced nine-foot table study](variants/budget-hybrid-600/README.md)
 - [Latest small and 4x8 retractable ATC work](variants/retractable-atc/README.md)
@@ -38,7 +39,7 @@ the preserved Rev I baseline and earlier fixed-dock studies.
 - [Baseline router assembly STEP](output/release-review/RevI-CAD/step/RevI_ROUTER.step)
 - [Baseline bed stored assembly STEP](output/release-review/RevI-CAD/step/RevI_BED_STORED.step)
 - [Plasma head hardware STEP](output/release-review/RevI-CAD/step/RevI_PLASMA_HARDWARE.step) — measured torch not yet installed
-- [Preserved baseline concept PDF](output/pdf/plasma-router-stand-concept.pdf)
+- [Preserved pre-XR2 concept PDF](output/pdf/plasma-router-stand-concept-before-XR2.pdf)
 - [Changes, evidence and reproduction](output/design-finish-2026-09-26/README.md)
 - [Baseline verification index](output/design-finish-2026-09-26/ACCEPTANCE.md)
 - [Every original audit finding](output/design-finish-2026-09-26/FINDING-DISPOSITION.md)

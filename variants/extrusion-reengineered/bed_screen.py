@@ -22,13 +22,42 @@ SERVICE_TARGET=.30
 SLAT_MIN_THICKNESS=1.8
 G=9.80665
 
+def dimension_value(node,env):
+    """Evaluate only literal dimension arithmetic and tuple/range generators."""
+    if isinstance(node,ast.Constant):return node.value
+    if isinstance(node,ast.Name):return env[node.id]
+    if isinstance(node,ast.Attribute) and isinstance(node.value,ast.Name) and node.value.id=='P':
+        value=getattr(P,node.attr)
+        if not isinstance(value,(int,float)):raise ValueError('Non-numeric parameter')
+        return value
+    if isinstance(node,ast.UnaryOp) and isinstance(node.op,ast.USub):return -dimension_value(node.operand,env)
+    if isinstance(node,ast.BinOp):
+        a,b=dimension_value(node.left,env),dimension_value(node.right,env)
+        for kind,fn in ((ast.Add,lambda:a+b),(ast.Sub,lambda:a-b),(ast.Mult,lambda:a*b),(ast.Div,lambda:a/b)):
+            if isinstance(node.op,kind):return fn()
+    if isinstance(node,(ast.Tuple,ast.List)):
+        values=[]
+        for item in node.elts:
+            if isinstance(item,ast.Starred):values.extend(dimension_value(item.value,env))
+            else:values.append(dimension_value(item,env))
+        return tuple(values) if isinstance(node,ast.Tuple) else values
+    if isinstance(node,ast.GeneratorExp) and len(node.generators)==1:
+        gen=node.generators[0]
+        if gen.ifs or not isinstance(gen.target,ast.Name):raise ValueError('Unsupported dimension generator')
+        return tuple(dimension_value(node.elt,dict(env,**{gen.target.id:v})) for v in dimension_value(gen.iter,env))
+    if isinstance(node,ast.Call) and isinstance(node.func,ast.Name) and not node.keywords:
+        args=[dimension_value(a,env) for a in node.args]
+        if node.func.id=='range':return tuple(range(*args))
+        if node.func.id=='tuple':return tuple(*args)
+    raise ValueError('Not a dimension expression')
+
 def source_values():
     tree=ast.parse((HERE/'bed.py').read_text(encoding='utf-8'))
     values={};pocket_ends=[];cabinet_notches=[]
     for node in tree.body:
         if not isinstance(node,ast.Assign):continue
-        try:value=ast.literal_eval(node.value)
-        except (ValueError,TypeError):continue
+        try:value=dimension_value(node.value,values)
+        except (ValueError,TypeError,KeyError,AttributeError):continue
         for target in node.targets:
             if isinstance(target,ast.Name):values[target.id]=value
             elif isinstance(target,ast.Tuple) and isinstance(value,(tuple,list)):
@@ -84,20 +113,46 @@ def cassette_case(force,Eraw,c,sec,skin_span,thin_length):
     E=Eraw*STIFFNESS_FACTOR
     EI=E*sec['I_mm4']
     bend=force*SPAN**3/(48*EI)
+    # Nominal half-lap sensitivity: skin-only composite bending I within joint
+    # bands plus reduced longitudinal-web shear area. Both still assume ideal
+    # composite coupling through the rib grid. Local notch/Vierendeel/adhesive
+    # transfer compliance is omitted, so this is NOT a proven lower-stiffness
+    # bound for a manufactured joint. Physical coupon/bed tests remain required.
+    bands=[]
+    for cx in c['CROSS_X_CENTRES']:
+        a=max(0.,cx-c['LAP_SLOT_WIDTH']/2-117.5)
+        b=min(SPAN,cx+c['LAP_SLOT_WIDTH']/2-117.5)
+        if b>a:bands.append((a,b))
+    skin_only=section(c['BOTTOM'],c['CORE'],c['TOP'],P.PANEL_LENGTH,c['WEB'],0,c['TRACK_W'],6.35)
+    def moment_integral(a,b):
+        middle=SPAN/2
+        if b<=middle:return (b**3-a**3)/3
+        if a>=middle:return ((SPAN-a)**3-(SPAN-b)**3)/3
+        return moment_integral(a,middle)+moment_integral(middle,b)
+    bend_lap_extra=force/(4*E)*(1/skin_only['I_mm4']-1/sec['I_mm4'])*sum(moment_integral(a,b) for a,b in bands)
+    bend+=bend_lap_extra
     As=WEB_COUNT_CREDITED*c['WEB']*c['CORE']
-    shear=force*SPAN/(4*SHEAR_FACTOR*G_CORE*As)
+    As_lap=WEB_COUNT_CREDITED*c['WEB']*(c['CORE']-c['LAP_NOTCH_DEPTH'])
+    lap_length=sum(b-a for a,b in bands)
+    shear=force/(4*SHEAR_FACTOR*G_CORE)*((SPAN-lap_length)/As+lap_length/As_lap)
     local=local_skin(force,skin_span,E,c['TOP'],thin_length,c['TOP']-6.35)
     M=force*SPAN/4
-    neutral=sec['neutral_axis_from_bottom_mm'];height=c['BOTTOM']+c['CORE']+c['TOP']
+    neutral=skin_only['neutral_axis_from_bottom_mm'];height=c['BOTTOM']+c['CORE']+c['TOP']
     V=force/2
     q=V*sec['top_skin_first_moment_mm3']/sec['I_mm4']
     return {'force_N':force,'raw_plywood_E_MPa':Eraw,'effective_E_MPa':E,'core_G_MPa':G_CORE,
         'EI_Nmm2':EI,'global_bending_mm':bend,'web_shear_mm':shear,'local_top_skin':local,
+        'half_lap_effects':{'joint_bands_along_support_span_mm':bands,'total_band_length_mm':lap_length,
+            'skin_only_I_in_joint_bands_mm4':skin_only['I_mm4'],'added_global_bending_mm':bend_lap_extra,
+            'unnotched_shear_area_mm2':As,'notched_shear_area_mm2':As_lap,
+            'extra_shear_mm':shear-force*SPAN/(4*SHEAR_FACTOR*G_CORE*As),
+            'scope':'Nominal piecewise unit-load sensitivity. It assumes composite skin coupling across the lap bands and an effective reduced-web shear path. Local notch/Vierendeel/glue-transfer compliance is omitted; this is not a proven conservative stiffness bound.'},
         'cassette_component_sum_mm':bend+shear+local['deflection_mm'],
-        'global_extreme_skin_stress_MPa':M*max(neutral,height-neutral)/sec['I_mm4'],
-        'core_average_shear_stress_MPa':V/As,'core_peak_shear_factor1_5_MPa':1.5*V/As,
+        'global_extreme_skin_stress_MPa':M*max(neutral,height-neutral)/skin_only['I_mm4'],
+        'core_average_shear_stress_MPa':V/As_lap,'core_peak_shear_factor1_5_MPa':1.5*V/As_lap,
         'top_skin_to_web_shear_flow_N_per_mm':q,
         'nominal_required_glueline_shear_MPa':q/(WEB_COUNT_CREDITED*c['WEB']),
+        'glueline_demand_scope':'Unnotched-section nominal demand distributed over five full web contacts. It does not represent peak glue demand at half-laps, cutouts, end grips or load introduction.',
         'cassette_only_service_target_met':force<=P.WOOD_FORCE_N and bend+shear+local['deflection_mm']<=SERVICE_TARGET,
         'allowable_strength_comparison':'None: actual ply, adhesive, grain and moisture/temperature durability remain unqualified.'}
 
@@ -147,7 +202,8 @@ def cabinet_strip_case(notches):
 
 def run():
     c,pocket_ends,cabinet_notches=source_values()
-    required=('BOTTOM','CORE','TOP','WEAR','WEB','WEB_CENTRES','TRACK_W','TRACK_CENTRES','SLAT_T','SLAT_LENGTH','SLAT_X0')
+    required=('BOTTOM','CORE','TOP','WEAR','WEB','WEB_CENTRES','TRACK_W','TRACK_CENTRES','SLAT_T','SLAT_LENGTH','SLAT_X0',
+              'JOINT_CLEARANCE','LAP_SLOT_WIDTH','LAP_NOTCH_DEPTH','CROSS_X_CENTRES')
     assert all(k in c for k in required),'Missing explicit bed.py input'
     height=sum(c[k] for k in ('BOTTOM','CORE','TOP','WEAR'))
     spans=[b-a-c['WEB'] for a,b in zip(c['WEB_CENTRES'],c['WEB_CENTRES'][1:])]
@@ -158,6 +214,9 @@ def run():
         'complete_height_matches_datums':abs(height-(P.DRY_TOP-P.DRY_BOTTOM))<1e-8,
         'seven_webs_modeled':len(c['WEB_CENTRES'])==7,
         'five_webs_conservatively_credited':WEB_COUNT_CREDITED==5,
+        'eight_half_lap_crossings':len(c['CROSS_X_CENTRES'])==8,
+        'positive_half_lap_remaining_web':0<c['LAP_NOTCH_DEPTH']<c['CORE'],
+        'half_lap_slot_clearance':abs(c['LAP_SLOT_WIDTH']-c['WEB']-c['JOINT_CLEARANCE'])<1e-8,
         'skin_max_clear_span_45p75_mm':abs(skin_span-45.75)<1e-8,
         'front_pulls_preserve_Y19_web':bool(pocket_ends) and max(pocket_ends)<second_web_front,
         'groove_leaves6p35_skin_mm':abs(c['TOP']-6.35-6.35)<1e-8,
@@ -195,7 +254,7 @@ def run():
         'material_assumptions':{'raw_required_E_along_span_MPa':E_PLY_BASE,'weaker_material_sensitivity_E_MPa':E_PLY_WEAK,
             'global_stiffness_factor':STIFFNESS_FACTOR,'core_G_MPa':G_CORE,'shear_factor':SHEAR_FACTOR,
             'interpretation':'EffectiveE is rawE×0.75. This is an assumed stiffness reduction, not a qualified glue efficiency or plywood grade.',
-            'web_credit':'Seven modeled; five inner webs credited for global/shear, conservatively omitting outer edge rows. Shallow pulls preserveY19. End lifting-grip discontinuities, holes and adhesives still need physical verification.',
+            'web_credit':'Seven modeled; five inner webs credited. All eight half-lap bands use skin-only composite bending I and reduced-web shear integration as a nominal sensitivity. Actual local coupling and joint compliance are unqualified. End grips preserve internal webs. Holes and adhesive durability still need physical verification.',
             'no_stiffness_credit':['Aluminum T-slot tracks','Al compression tubes/blocks','Removable MDF wear layer','Mechanical latches acting as a bonded laminate']},
         'cassette_cases':cases,'combined_vertical_service_sensitivities':combined,
         'slats':slat_cases(c['SLAT_T'],c['SLAT_LENGTH']),
@@ -221,11 +280,11 @@ def run():
     OUT.mkdir(exist_ok=True)
     (OUT/'bed-screen.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     nominal=combined[0];weak=combined[1];sl=report['slats']
-    lines=['# XR1 bed structure — conditional analytical screen','',
+    lines=[f'# {P.REVISION} bed structure - conditional analytical screen','',
         f'The selected cassette is932×257×{height:.1f}mm:12.7mm plywood skins around39.05mm core, plus6.35mm removable MDF wear. Seven9mm webs are modeled; five inner webs receive conservative global/shear credit. The front pulls end atY14, preserving theY19web. Aluminum tracks and MDF receive no stiffness credit.','',
         f'At100N and raw plywoodE4000MPa reduced by25%, the ideal cassette component sum is{nominal["cassette_mm"]:.3f}mm. Adding aligned vertical ledger and header components gives{nominal["known_ideal_component_subtotal_mm"]:.3f}mm against the0.30mm framework/bed target, leaving{nominal["remaining_budget_to0p30_mm"]:.3f}mm for omitted joints/contact/other components. This is an analytical budget, not a measured assembled pass.','',
         f'The weakerE2500MPa sensitivity gives{weak["known_ideal_component_subtotal_mm"]:.3f}mm before those omitted components and therefore misses the target. Actual plywood stiffness in the915mm span direction must be established. Orient the932mm dimension along the declared stronger bending direction: a2×4skin layout fits one2440×1220sheet without rotating the span across that direction.','',
-        f'The top-skin calculation uses a25mm load strip over the45.75mm maximum clear web gap and includes the5mm short, thinner groove segment near one support. Core shear and global bending are separate terms. Glue stresses are demands only; no adhesive allowable or durability is established.','',
+        'The top-skin calculation uses a25mm load strip over the45.75mm maximum clear web gap and includes the5mm short, thinner groove segment near one support. Eight half-lap bands use skin-only composite bending I and reduced-web shear area in a nominal sensitivity over the915mm span. Local notch/Vierendeel/glue-transfer compliance is omitted, so this is not a proven conservative stiffness bound. Glue demand is for an unnotched full-contact section, not joint peak stress.','',
         f'For nominal1.9mm slats screened at1.8mm minimum, the member-only results are{sl["distributed150kg_case"]["deflection_mm"]:.3f}mm for150kg distributed among all8slats/two spans and{sl["single200N_case"]["deflection_mm"]:.3f}mm for200N at one435mm span midpoint. These do not establish a pan/table load rating: comb contacts, feet/welds, floor, shims and bearer joints require a positive load path and tests.','',
         'The four local front-frame notches clear the upright cassette channel. The front ledger joints retain three stations each, including twoX-separated back-row bolts; their local lip/contact and anti-roll behavior remains unqualified.','',
         'The cabinet stands on its own four columns and contributes no credited frame ballast. Its relieved front25×3mm strips have about360N pinned ideal buckling load over326mm (about90N forK2). Qualified side-skin restraints at410/500/600/690 shorten the largest segment to100mm, with about3831N ideal pinned buckling load. These ideal results do not qualify skin/rivet restraint, column feet, shelf connections or cabinet load capacity.','',

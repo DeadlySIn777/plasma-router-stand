@@ -1,0 +1,81 @@
+{
+  "revision": "XR2",
+  "release": false,
+  "states": {
+    "WOOD": {
+      "parts": 91,
+      "invalid_or_disconnected": [],
+      "self": {
+        "exact_pairs": 142,
+        "positive_intersections": []
+      },
+      "frame": {
+        "exact_pairs": 0,
+        "positive_intersections": []
+      },
+      "bed": {
+        "exact_pairs": 1,
+        "positive_intersections": []
+      },
+      "motion_union_box_proof": {
+        "exact_pairs": 26,
+        "positive_intersections": []
+      }
+    },
+    "HOT": {
+      "parts": 111,
+      "invalid_or_disconnected": [],
+      "self": {
+        "exact_pairs": 178,
+        "positive_intersections": []
+      },
+      "frame": {
+        "exact_pairs": 6,
+        "positive_intersections": []
+      },
+      "bed": {
+        "exact_pairs": 23,
+        "positive_intersections": []
+      },
+      "motion_union_box_proof": {
+        "exact_pairs": 36,
+        "positive_intersections": []
+      }
+    }
+  },
+  "nominal_axis_travel_mm": {
+    "X": 800.0,
+    "Y": 1000.0,
+    "Z": 200.0
+  },
+  "checked_endpoint_head_X_mm": [
+    175.0,
+    975.0
+  ],
+  "checked_endpoint_Yguide_mm": [
+    275.0,
+    1275.0
+  ],
+  "checked_endpoint_Zlift_mm": [
+    0.0,
+    200.0
+  ],
+  "receiver_roof_service": {
+    "exact_pairs": 3,
+    "positive_intersections": [],
+    "scope": "Conservativefullpull/liftboxesandfilledquarterdiskplusupperbandcovercontinuous90degreefrontdownrotation. Closehatchandremove4M4roofjointsbeforepull7.1,lift40,rotate."
+  },
+  "receiver_hatch_open": {
+    "exact_pairs": 0,
+    "positive_intersections": []
+  },
+  "passed": true,
+  "scope": "Exactguardself/frame/bed checks and exactguardagainstconservativeunionboxofeachmotionpartat8corners. Emptyunionboxintersectionsproveexternalclearanceforinheritedindependenttranslations;ATCaccessoriesandconversion/servicegetseparatechecks.",
+  "source_sha256": {
+    "shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50"
+  }
+}

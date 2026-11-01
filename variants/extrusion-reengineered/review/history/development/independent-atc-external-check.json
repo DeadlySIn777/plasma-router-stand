@@ -1,0 +1,5222 @@
+{
+  "revision": "XR2",
+  "scope": "Independent parked ATC exact external checks at XYZ endpoints plus conservative per-motion-part XYZ union boxes. Positive union-box hits are candidates, not by themselves confirmed collisions.",
+  "source_sha256": {
+    "atc.py": "9201a597c6a3fb7eb92ac2e33bf5a6eeeccdc4bac0bc399aa7fb3d0ffe22916b",
+    "shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "motion.py": "54a961b2b31cd6349c61fe85bd2a2d7d00b11a696c4cb13d7ffbef4eaf080d7e",
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780"
+  },
+  "states": {
+    "WOOD": {
+      "shield": {
+        "exact_pairs": 36,
+        "positive_intersections": []
+      },
+      "actual_endpoint_poses": [
+        {
+          "X": 175.0,
+          "Yguide": 275.0,
+          "Z": 0.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "X": 175.0,
+          "Yguide": 275.0,
+          "Z": 200.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "X": 175.0,
+          "Yguide": 1275.0,
+          "Z": 0.0,
+          "exact_pairs": 24,
+          "positive_intersections": []
+        },
+        {
+          "X": 175.0,
+          "Yguide": 1275.0,
+          "Z": 200.0,
+          "exact_pairs": 24,
+          "positive_intersections": []
+        },
+        {
+          "X": 975.0,
+          "Yguide": 275.0,
+          "Z": 0.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "X": 975.0,
+          "Yguide": 275.0,
+          "Z": 200.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "X": 975.0,
+          "Yguide": 1275.0,
+          "Z": 0.0,
+          "exact_pairs": 24,
+          "positive_intersections": []
+        },
+        {
+          "X": 975.0,
+          "Yguide": 1275.0,
+          "Z": 200.0,
+          "exact_pairs": 24,
+          "positive_intersections": []
+        }
+      ],
+      "conservative_motion_union_boxes": {
+        "exact_pairs": 105,
+        "positive_intersections": [
+          {
+            "a": "ATC_MOVING_WING_L",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1410.25539
+          },
+          {
+            "a": "ATC_MOVING_WING_R",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1410.25539
+          },
+          {
+            "a": "ATC_2GT_6MM_OPEN_BELT_ROUTE",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 2570.32888
+          },
+          {
+            "a": "ATC_16T_IDLER",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 365.05918
+          },
+          {
+            "a": "ATC_IDLER_M5x25_AXLE",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 406.44355
+          },
+          {
+            "a": "ATC_IDLER_LOWER_WASHER",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 11.46053
+          },
+          {
+            "a": "ATC_IDLER_AXIAL_SPACER",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 72.57079
+          },
+          {
+            "a": "ATC_IDLER_RUNNING_BUSH",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 149.5373
+          },
+          {
+            "a": "ATC_IDLER_UPPER_WASHER",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 57.30265
+          },
+          {
+            "a": "ATC_IDLER_M5_NUT",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 189.68182
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_FIXED",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 5942.52887
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_PIN",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 807.38931
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_FLAG",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1101.93808
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_FLAG_M4_NUT",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 116.24259
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_FLAG_WASHER",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 98.57532
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_SPRING_CAP",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 578.03928
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_CAP_POST_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_CAP_NUT_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_CAP_POST_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_CAP_NUT_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 127.2345
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1978.20234
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_CYLINDER_PANEL",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 844.57435
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_SENSOR_SUPPORT",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1707.11312
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_E2E_C03SR8_0",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_0",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_E2E_C03SR8_1",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_1",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_LOCK_PARK_FIXED",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 4771.92887
+          },
+          {
+            "a": "ATC_LOCK_PARK_PIN",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 807.38931
+          },
+          {
+            "a": "ATC_LOCK_PARK_FLAG",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1101.93808
+          },
+          {
+            "a": "ATC_LOCK_PARK_FLAG_M4_NUT",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 116.24259
+          },
+          {
+            "a": "ATC_LOCK_PARK_FLAG_WASHER",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 98.57532
+          },
+          {
+            "a": "ATC_LOCK_PARK_SPRING_CAP",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 578.03928
+          },
+          {
+            "a": "ATC_LOCK_PARK_CAP_POST_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_LOCK_PARK_CAP_NUT_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_LOCK_PARK_CAP_POST_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_LOCK_PARK_CAP_NUT_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 127.2345
+          },
+          {
+            "a": "ATC_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1978.20234
+          },
+          {
+            "a": "ATC_LOCK_PARK_CYLINDER_PANEL",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 844.57435
+          },
+          {
+            "a": "ATC_LOCK_PARK_SENSOR_SUPPORT",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1726.35537
+          },
+          {
+            "a": "ATC_LOCK_PARK_E2E_C03SR8_0",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_LOCK_PARK_SENSOR_M2_SET_0",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_LOCK_PARK_E2E_C03SR8_1",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_LOCK_PARK_SENSOR_M2_SET_1",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_FIXED",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 5942.52887
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_PIN",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 807.38931
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_FLAG",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1101.93808
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_FLAG_M4_NUT",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 116.24259
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_FLAG_WASHER",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 98.57532
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SPRING_CAP",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 578.03928
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_CAP_POST_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_CAP_NUT_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_CAP_POST_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_CAP_NUT_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 127.2345
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1978.20234
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_CYLINDER_PANEL",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 844.57435
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SENSOR_SUPPORT",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1707.11312
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_0",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_0",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_1",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_1",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_FIXED",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 4771.92887
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_PIN",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 807.38931
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_FLAG",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1101.93808
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_FLAG_M4_NUT",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 116.24259
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_FLAG_WASHER",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 98.57532
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_SPRING_CAP",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 578.03928
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_CAP_POST_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_CAP_NUT_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_CAP_POST_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_CAP_NUT_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 127.2345
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1978.20234
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_CYLINDER_PANEL",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 844.57435
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_SENSOR_SUPPORT",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1726.35537
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_E2E_C03SR8_0",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_SENSOR_M2_SET_0",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_E2E_C03SR8_1",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_SENSOR_M2_SET_1",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_MOVING_PIN_BUSHING_L",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 129.10768
+          },
+          {
+            "a": "ATC_MOVING_PIN_BUSHING_R",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 129.10768
+          }
+        ]
+      },
+      "continuous_union_candidate_proofs": [
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_MOVING_WING_L",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.3000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_MOVING_WING_R",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_2GT_6MM_OPEN_BELT_ROUTE",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.007041821059147,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_16T_IDLER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 7.599999999999909,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_IDLER_M5x25_AXLE",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 9.549999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_IDLER_LOWER_WASHER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.799999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_IDLER_AXIAL_SPACER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 9.799999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_IDLER_RUNNING_BUSH",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 10.299999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_IDLER_UPPER_WASHER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.799999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_IDLER_M5_NUT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 9.180000000000064,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_FIXED",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_PIN",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_FLAG",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_FLAG_M4_NUT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.758500000000012,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_FLAG_WASHER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_SPRING_CAP",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_CAP_POST_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_CAP_NUT_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.1245000000000118,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_CAP_POST_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_CAP_NUT_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.8999999999998636,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.0500000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_CYLINDER_PANEL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_SENSOR_SUPPORT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.3000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_E2E_C03SR8_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_E2E_C03SR8_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_FIXED",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_PIN",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_FLAG",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_FLAG_M4_NUT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.758500000000012,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_FLAG_WASHER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_SPRING_CAP",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_CAP_POST_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_CAP_NUT_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.1245000000000118,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_CAP_POST_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_CAP_NUT_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.8999999999998636,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.0500000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_CYLINDER_PANEL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_SENSOR_SUPPORT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.3000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_E2E_C03SR8_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_SENSOR_M2_SET_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_E2E_C03SR8_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_SENSOR_M2_SET_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_FIXED",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_PIN",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_FLAG",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_FLAG_M4_NUT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7584999999999127,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_FLAG_WASHER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_SPRING_CAP",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_CAP_POST_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_CAP_NUT_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.1244999999998981,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_CAP_POST_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_CAP_NUT_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.8999999999998636,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.0499999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_CYLINDER_PANEL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_SENSOR_SUPPORT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.299999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.299999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_FIXED",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_PIN",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_FLAG",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_FLAG_M4_NUT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7584999999999127,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_FLAG_WASHER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_SPRING_CAP",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_CAP_POST_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_CAP_NUT_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.1244999999998981,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_CAP_POST_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_CAP_NUT_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.8999999999998636,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.0499999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_CYLINDER_PANEL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_SENSOR_SUPPORT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_E2E_C03SR8_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_SENSOR_M2_SET_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.299999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_E2E_C03SR8_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_SENSOR_M2_SET_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.299999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_MOVING_PIN_BUSHING_L",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_MOVING_PIN_BUSHING_R",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        }
+      ],
+      "continuous_union_candidates_clear": true
+    },
+    "PLASMA": {
+      "shield": {
+        "exact_pairs": 36,
+        "positive_intersections": []
+      },
+      "actual_endpoint_poses": [
+        {
+          "X": 175.0,
+          "Yguide": 275.0,
+          "Z": 0.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "X": 175.0,
+          "Yguide": 275.0,
+          "Z": 200.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "X": 175.0,
+          "Yguide": 1275.0,
+          "Z": 0.0,
+          "exact_pairs": 34,
+          "positive_intersections": []
+        },
+        {
+          "X": 175.0,
+          "Yguide": 1275.0,
+          "Z": 200.0,
+          "exact_pairs": 24,
+          "positive_intersections": []
+        },
+        {
+          "X": 975.0,
+          "Yguide": 275.0,
+          "Z": 0.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "X": 975.0,
+          "Yguide": 275.0,
+          "Z": 200.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "X": 975.0,
+          "Yguide": 1275.0,
+          "Z": 0.0,
+          "exact_pairs": 24,
+          "positive_intersections": []
+        },
+        {
+          "X": 975.0,
+          "Yguide": 1275.0,
+          "Z": 200.0,
+          "exact_pairs": 24,
+          "positive_intersections": []
+        }
+      ],
+      "conservative_motion_union_boxes": {
+        "exact_pairs": 156,
+        "positive_intersections": [
+          {
+            "a": "ATC_MOVING_WING_L",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1410.25539
+          },
+          {
+            "a": "ATC_MGNR12_R_335",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 2210.36941
+          },
+          {
+            "a": "ATC_RAIL_M3x12_R_0",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 74.98589
+          },
+          {
+            "a": "ATC_MOVING_WING_R",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1410.25539
+          },
+          {
+            "a": "ATC_2GT_6MM_OPEN_BELT_ROUTE",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 2570.32888
+          },
+          {
+            "a": "ATC_16T_IDLER",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 365.05918
+          },
+          {
+            "a": "ATC_IDLER_M5x25_AXLE",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 406.44355
+          },
+          {
+            "a": "ATC_IDLER_LOWER_WASHER",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 11.46053
+          },
+          {
+            "a": "ATC_IDLER_AXIAL_SPACER",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 72.57079
+          },
+          {
+            "a": "ATC_IDLER_RUNNING_BUSH",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 149.5373
+          },
+          {
+            "a": "ATC_IDLER_UPPER_WASHER",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 57.30265
+          },
+          {
+            "a": "ATC_IDLER_M5_NUT",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 189.68182
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_FIXED",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 5942.52887
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_PIN",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 807.38931
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_FLAG",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1101.93808
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_FLAG_M4_NUT",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 116.24259
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_FLAG_WASHER",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 98.57532
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_SPRING_CAP",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 578.03928
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_CAP_POST_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_CAP_NUT_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_CAP_POST_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_CAP_NUT_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 127.2345
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1978.20234
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_CYLINDER_PANEL",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 844.57435
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_SENSOR_SUPPORT",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1707.11312
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_E2E_C03SR8_0",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_0",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_E2E_C03SR8_1",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_1",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_LOCK_PARK_FIXED",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 4771.92887
+          },
+          {
+            "a": "ATC_LOCK_PARK_PIN",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 807.38931
+          },
+          {
+            "a": "ATC_LOCK_PARK_FLAG",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1101.93808
+          },
+          {
+            "a": "ATC_LOCK_PARK_FLAG_M4_NUT",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 116.24259
+          },
+          {
+            "a": "ATC_LOCK_PARK_FLAG_WASHER",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 98.57532
+          },
+          {
+            "a": "ATC_LOCK_PARK_SPRING_CAP",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 578.03928
+          },
+          {
+            "a": "ATC_LOCK_PARK_CAP_POST_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_LOCK_PARK_CAP_NUT_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_LOCK_PARK_CAP_POST_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_LOCK_PARK_CAP_NUT_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 127.2345
+          },
+          {
+            "a": "ATC_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1978.20234
+          },
+          {
+            "a": "ATC_LOCK_PARK_CYLINDER_PANEL",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 844.57435
+          },
+          {
+            "a": "ATC_LOCK_PARK_SENSOR_SUPPORT",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 1726.35537
+          },
+          {
+            "a": "ATC_LOCK_PARK_E2E_C03SR8_0",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_LOCK_PARK_SENSOR_M2_SET_0",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_LOCK_PARK_E2E_C03SR8_1",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_LOCK_PARK_SENSOR_M2_SET_1",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_FIXED",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 5942.52887
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_FIXED",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 2305.67885
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_PIN",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 807.38931
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_PIN",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 403.69466
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_FLAG",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1101.93808
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_FLAG",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 310.49856
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_FLAG_M4_NUT",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 116.24259
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_FLAG_M4_NUT",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 57.64819
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_FLAG_WASHER",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 98.57532
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_FLAG_WASHER",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 42.41204
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SPRING_CAP",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 578.03928
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SPRING_CAP",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 199.52539
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_CAP_POST_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_CAP_NUT_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_CAP_NUT_110.5",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 4.33153
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_CAP_POST_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_CAP_NUT_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 127.2345
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 52.64646
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1978.20234
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 989.10117
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_CYLINDER_PANEL",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 844.57435
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_CYLINDER_PANEL",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 422.28718
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SENSOR_SUPPORT",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1707.11312
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SENSOR_SUPPORT",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 844.02022
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_0",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_0",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 106.02875
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_0",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_0",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_1",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_1",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 106.02875
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_1",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_1",
+            "b": "UNION_I_HEAD_TETHER_EYE_RELEASE",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_FIXED",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 4771.92887
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_PIN",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 807.38931
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_FLAG",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1101.93808
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_FLAG_M4_NUT",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 116.24259
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_FLAG_WASHER",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 98.57532
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_SPRING_CAP",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 578.03928
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_CAP_POST_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_CAP_NUT_110.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_CAP_POST_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 162.57742
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_CAP_NUT_115.5",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 59.06546
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 127.2345
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1978.20234
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_CYLINDER_PANEL",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 844.57435
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_SENSOR_SUPPORT",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 1726.35537
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_E2E_C03SR8_0",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_SENSOR_M2_SET_0",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_E2E_C03SR8_1",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 212.0575
+          },
+          {
+            "a": "ATC_R_LOCK_PARK_SENSOR_M2_SET_1",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 9.42478
+          },
+          {
+            "a": "ATC_MOVING_PIN_BUSHING_L",
+            "b": "UNION_GANTRY_END_BRACKET_L",
+            "volume_mm3": 129.10768
+          },
+          {
+            "a": "ATC_MOVING_PIN_BUSHING_R",
+            "b": "UNION_GANTRY_END_BRACKET_R",
+            "volume_mm3": 129.10768
+          }
+        ]
+      },
+      "continuous_union_candidate_proofs": [
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_MOVING_WING_L",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.3000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_MGNR12_R_335",
+          "passed": false,
+          "cells_examined": 19,
+          "empty_cells": 0,
+          "separated_material_cells": 5,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1035.975,
+                1102.94921875,
+                1054.5,
+                1037.975,
+                1104.2578125,
+                1056.0
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 11.079609375000214
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.40781250000006253,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_RAIL_M3x12_R_0",
+          "passed": false,
+          "cells_examined": 19,
+          "empty_cells": 3,
+          "separated_material_cells": 2,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1036.2875,
+                1087.0625,
+                1051.71875,
+                1036.75625,
+                1087.40625,
+                1052.0625
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 102.6000000000131
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.22499999999990905,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_MOVING_WING_R",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_2GT_6MM_OPEN_BELT_ROUTE",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.007041821059147,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_16T_IDLER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 7.599999999999909,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_IDLER_M5x25_AXLE",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 9.549999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_IDLER_LOWER_WASHER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.799999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_IDLER_AXIAL_SPACER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 9.799999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_IDLER_RUNNING_BUSH",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 10.299999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_IDLER_UPPER_WASHER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.799999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_IDLER_M5_NUT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 9.180000000000064,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_FIXED",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_PIN",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_FLAG",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_FLAG_M4_NUT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.758500000000012,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_FLAG_WASHER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_SPRING_CAP",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_CAP_POST_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_CAP_NUT_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.1245000000000118,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_CAP_POST_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_CAP_NUT_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.8999999999998636,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.0500000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_CYLINDER_PANEL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_SENSOR_SUPPORT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.3000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_E2E_C03SR8_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_E2E_C03SR8_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_FIXED",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_PIN",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_FLAG",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_FLAG_M4_NUT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.758500000000012,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_FLAG_WASHER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_SPRING_CAP",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_CAP_POST_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_CAP_NUT_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.1245000000000118,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_CAP_POST_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_CAP_NUT_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.8999999999998636,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.0500000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_CYLINDER_PANEL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_SENSOR_SUPPORT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.3000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_E2E_C03SR8_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_SENSOR_M2_SET_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_E2E_C03SR8_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_LOCK_PARK_SENSOR_M2_SET_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.300000000000011,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_FIXED",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_FIXED",
+          "passed": false,
+          "cells_examined": 17,
+          "empty_cells": 0,
+          "separated_material_cells": 3,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1037.0,
+                1103.75,
+                1118.6671875,
+                1038.25,
+                1105.0,
+                1120.35
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 0.0
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 1.1500000000000625,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_PIN",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_PIN",
+          "passed": false,
+          "cells_examined": 18,
+          "empty_cells": 1,
+          "separated_material_cells": 3,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1037.0,
+                1101.5,
+                1128.484375,
+                1037.375,
+                1102.25,
+                1129.0
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 0.0
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.375,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_FLAG",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_FLAG",
+          "passed": false,
+          "cells_examined": 22,
+          "empty_cells": 1,
+          "separated_material_cells": 7,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1037.0,
+                1103.859375,
+                1122.0,
+                1037.5,
+                1104.5859375,
+                1123.0
+              ],
+              "depth": 13,
+              "distance_mm": 0.009375000000062528,
+              "reference_intersection_mm3": 0.0
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.5000878829015968,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_FLAG_M4_NUT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7584999999999127,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_FLAG_M4_NUT",
+          "passed": false,
+          "cells_examined": 18,
+          "empty_cells": 0,
+          "separated_material_cells": 4,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1037.0,
+                1103.7889062499999,
+                1126.625,
+                1037.25259375,
+                1104.0415,
+                1127.0
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 0.0
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.25259374999996,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_FLAG_WASHER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_FLAG_WASHER",
+          "passed": false,
+          "cells_examined": 21,
+          "empty_cells": 0,
+          "separated_material_cells": 7,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1037.0,
+                1103.75,
+                1123.75,
+                1037.1875,
+                1104.125,
+                1124.0
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 0.0
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.1875,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_SPRING_CAP",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_SPRING_CAP",
+          "passed": false,
+          "cells_examined": 20,
+          "empty_cells": 0,
+          "separated_material_cells": 6,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1037.0,
+                1103.75,
+                1135.625,
+                1037.375,
+                1104.375,
+                1136.0
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 0.0
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.375,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_CAP_POST_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_CAP_NUT_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.1244999999998981,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_CAP_NUT_110.5",
+          "passed": false,
+          "cells_examined": 19,
+          "empty_cells": 2,
+          "separated_material_cells": 3,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1036.91990625,
+                1093.9846875,
+                1138.1000000000001,
+                1037.118375,
+                1094.1831562500001,
+                1138.4
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 9.481798476569484
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.11837500000001455,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_CAP_POST_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_CAP_NUT_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.8999999999998636,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.0499999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+          "passed": false,
+          "cells_examined": 92,
+          "empty_cells": 17,
+          "separated_material_cells": 26,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1037.0,
+                1095.25,
+                1132.4375,
+                1037.296875,
+                1095.84375,
+                1133.0
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 0.0
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.296875,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+          "passed": false,
+          "cells_examined": 19,
+          "empty_cells": 4,
+          "separated_material_cells": 1,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1037.0,
+                1060.8660254037845,
+                1119.921875,
+                1037.75,
+                1061.7320508075688,
+                1121.0
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 0.0
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.75,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_CYLINDER_PANEL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_CYLINDER_PANEL",
+          "passed": false,
+          "cells_examined": 18,
+          "empty_cells": 0,
+          "separated_material_cells": 4,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1037.0,
+                1089.34375,
+                1111.5,
+                1037.375,
+                1090.0,
+                1112.0
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 0.0
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.375,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_SENSOR_SUPPORT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_SENSOR_SUPPORT",
+          "passed": false,
+          "cells_examined": 19,
+          "empty_cells": 3,
+          "separated_material_cells": 2,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1036.99999995,
+                1089.0624999984375,
+                1119.0,
+                1038.1249999625002,
+                1090.0,
+                1120.0
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 0.0
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 1.1249999625001692,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_0",
+          "passed": false,
+          "cells_examined": 16,
+          "empty_cells": 0,
+          "separated_material_cells": 2,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1037.0,
+                1052.265625,
+                1123.125,
+                1037.375,
+                1052.5,
+                1123.5
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 0.0
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.375,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.299999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_0",
+          "passed": false,
+          "cells_examined": 16,
+          "empty_cells": 2,
+          "separated_material_cells": 0,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1035.40625,
+                1033.75,
+                1122.625,
+                1035.5,
+                1033.875,
+                1122.75
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 229.5
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": null,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_1",
+          "passed": false,
+          "cells_examined": 16,
+          "empty_cells": 0,
+          "separated_material_cells": 2,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1037.0,
+                1052.265625,
+                1129.125,
+                1037.375,
+                1052.5,
+                1129.5
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 0.0
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": 0.375,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.299999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "I_HEAD_TETHER_EYE_RELEASE",
+          "atc": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_1",
+          "passed": false,
+          "cells_examined": 16,
+          "empty_cells": 2,
+          "separated_material_cells": 0,
+          "unresolved_cells": [
+            {
+              "cell_bounds_mm": [
+                1035.40625,
+                1033.75,
+                1128.625,
+                1035.5,
+                1033.875,
+                1128.75
+              ],
+              "depth": 13,
+              "distance_mm": 0.0,
+              "reference_intersection_mm3": 229.5
+            }
+          ],
+          "minimum_expanded_cell_gap_mm": null,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            800.0,
+            999.9999999999999,
+            200.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_FIXED",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_PIN",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_FLAG",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_FLAG_M4_NUT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7584999999999127,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_FLAG_WASHER",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_SPRING_CAP",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_CAP_POST_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_CAP_NUT_110.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.1244999999998981,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_CAP_POST_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_CAP_NUT_115.5",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.8999999999998636,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.0499999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_CYLINDER_PANEL",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_SENSOR_SUPPORT",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_E2E_C03SR8_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_SENSOR_M2_SET_0",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.299999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_E2E_C03SR8_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.2999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_R_LOCK_PARK_SENSOR_M2_SET_1",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 8.299999999999955,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_L",
+          "atc": "ATC_MOVING_PIN_BUSHING_L",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.8000000000000114,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "motion": "GANTRY_END_BRACKET_R",
+          "atc": "ATC_MOVING_PIN_BUSHING_R",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.7999999999999545,
+          "translation_min_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            1000.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        }
+      ],
+      "continuous_union_candidates_clear": false
+    }
+  },
+  "source_consistent_during_check": true,
+  "end_source_sha256": {
+    "atc.py": "9201a597c6a3fb7eb92ac2e33bf5a6eeeccdc4bac0bc399aa7fb3d0ffe22916b",
+    "shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "motion.py": "54a961b2b31cd6349c61fe85bd2a2d7d00b11a696c4cb13d7ffbef4eaf080d7e",
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780"
+  },
+  "all_actual_endpoints_clear": true,
+  "shields_clear": true,
+  "release": false,
+  "continuous_proof_source_sha256": {
+    "atc.py": "9201a597c6a3fb7eb92ac2e33bf5a6eeeccdc4bac0bc399aa7fb3d0ffe22916b",
+    "motion.py": "54a961b2b31cd6349c61fe85bd2a2d7d00b11a696c4cb13d7ffbef4eaf080d7e",
+    "shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "sweep_proof.py": "bbcf6676ca8ad24987d37943dc2540e9e263ddfe67468fa8539cd4782491e450"
+  },
+  "continuous_proof_source_consistent": false
+}

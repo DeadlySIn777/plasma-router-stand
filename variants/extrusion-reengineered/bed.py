@@ -3,13 +3,13 @@
 Engineering envelopes in mm. No purchasing or fabrication release is implied.
 Tracks, threads, glue lines, plasma nozzle, cables and shielding require real parts.
 """
-from math import pi, sqrt
+from math import pi, sqrt, tan, radians
 from functools import lru_cache
 import cadquery as cq
 import params as P
 
 AL=(.63,.69,.72); PLY=(.65,.50,.32); MDF=(.73,.62,.43)
-HOT=(.29,.36,.40); LIGHT=(.71,.75,.77); PIN=(.25,.31,.34)
+HOT=(.29,.36,.40); LIGHT=(.71,.75,.77); PIN=(.25,.31,.34); EPOXY=(.85,.72,.28)
 PAN_T=1.9
 SLAT_T=1.9
 SLAT_X0=135.
@@ -21,9 +21,13 @@ WEAR=6.35
 BOX_H=BOTTOM+CORE+TOP
 CASSETTE_H=BOX_H+WEAR
 WEB=9.
+JOINT_CLEARANCE=.10
+LAP_SLOT_WIDTH=WEB+JOINT_CLEARANCE
+LAP_NOTCH_DEPTH=CORE/2+JOINT_CLEARANCE/2
 # Seven continuous webs leave no more than45.75mm unsupported top-skin gap.
 WEB_CENTRES=(4.5,19.,73.75,128.5,183.25,238.,252.5)
 CROSS_CENTRES=tuple(9.+(P.PANEL_WIDTH-18.)*i/7 for i in range(1,7))
+CROSS_X_CENTRES=(P.PANEL_X+WEB/2,P.PANEL_X+P.PANEL_WIDTH-WEB/2,*tuple(P.PANEL_X+q for q in CROSS_CENTRES))
 TRACK_CENTRES=(19.,238.)
 TRACK_X0,TRACK_LENGTH,TRACK_W,TRACK_H=162.,826.,19.,12.7
 TRACK_BOLTS=(190.,430.,720.,960.)
@@ -31,8 +35,13 @@ SKIM=(190.,960.,141.4,1101.4)
 STORE_Y=360.
 STORE_LEVELS=(400.,475.8,551.6,627.4)
 TRANSFER_FRONT_Y=CASSETTE_H
-TRANSFER_FLAT_BOTTOM=970.
+TRANSFER_FLAT_BOTTOM=950.
 TRANSFER_LOW_BOTTOM=400.
+HATCH_OPENING=(275.,850.,600.,270.)
+HATCH_COVER=(265.,840.,620.,290.)
+HATCH_BASE_Z=394.
+HATCH_AXIS_Y,HATCH_AXIS_Z=1130.,398.
+HATCH_PIN_X=(350.,800.)
 
 def box(x,y,z,dx,dy,dz): return cq.Solid.makeBox(dx,dy,dz,cq.Vector(x,y,z))
 def cyl(x,y,z,r,h,d=(0,0,1)): return cq.Solid.makeCylinder(r,h,cq.Vector(x,y,z),cq.Vector(*d))
@@ -51,27 +60,47 @@ def cassette_local_parts(index):
     """Local Y0..257,Z0..70.8, with world X109..1041 preserved."""
     p=[]; add=lambda n,s,c:p.append((f'CAS{index+1}_'+n,s.clean(),c))
     x0,w,l=P.PANEL_X,P.PANEL_WIDTH,P.PANEL_LENGTH
-    shells=[box(x0,0,0,w,l,BOTTOM),box(x0,0,BOTTOM+CORE,w,l,TOP)]
-    for cy in WEB_CENTRES: shells.append(box(x0,cy-WEB/2,BOTTOM,w,WEB,CORE))
-    # Full end walls and six internal diaphragms; glued not merely dry-stacked.
-    for cx in (x0+WEB/2,x0+w-WEB/2,*[x0+q for q in CROSS_CENTRES]):
-        shells.append(box(cx-WEB/2,0,BOTTOM,WEB,l,CORE))
-    crate=fuse(shells)
+    front=P.PANEL_Y0+index*P.PANEL_PITCH
+    ya=max(28.5,SKIM[2]-front);yb=min(228.5,SKIM[3]-front)
+    wood=[('BOTTOM_SKIN',box(x0,0,0,w,l,BOTTOM)),
+          ('TOP_SKIN',box(x0,0,BOTTOM+CORE,w,l,TOP))]
+    for j,cy in enumerate(WEB_CENTRES,1):
+        rib=box(x0,cy-WEB/2,BOTTOM,w,WEB,CORE)
+        slots=[box(cx-LAP_SLOT_WIDTH/2,cy-WEB/2-.1,
+                   BOTTOM+CORE-LAP_NOTCH_DEPTH,LAP_SLOT_WIDTH,WEB+.2,LAP_NOTCH_DEPTH+.1)
+               for cx in CROSS_X_CENTRES]
+        wood.append((f'LONG_WEB_{j:02}_TOP_HALF_LAPS',cutmany(rib,slots)))
+    for j,cx in enumerate(CROSS_X_CENTRES,1):
+        rib=box(cx-WEB/2,0,BOTTOM,WEB,l,CORE)
+        slots=[box(cx-WEB/2-.1,cy-LAP_SLOT_WIDTH/2,BOTTOM-.1,
+                   WEB+.2,LAP_SLOT_WIDTH,LAP_NOTCH_DEPTH+.1)
+               for cy in WEB_CENTRES]
+        wood.append((f'CROSS_WEB_{j:02}_BOTTOM_HALF_LAPS',cutmany(rib,slots)))
     holes=[]
     # Lifting grips in low-moment end zones, plus front recessed pulls for shelf insertion.
-    for x in (132.,994.): holes.append(box(x,90,-.1,24,70,BOX_H+.2))
+    for x in (132.,994.): holes.append(box(x,82,-.1,24,40,BOX_H+.2))
     for x in (250.,820.): holes.append(box(x,-.1,22.,80,14.1,20.))
     for cy in TRACK_CENTRES:
         holes.append(box(TRACK_X0-.1,cy-TRACK_W/2-.1,BOX_H-6.35,
                          TRACK_LENGTH+.2,TRACK_W+.2,6.55))
         for x in TRACK_BOLTS:
-            holes.append(box(x-10,cy-10,-.1,20,20,9.625))
-            holes.append(cyl(x,cy,-.1,4.,BOX_H+1))
+            holes.append(box(x-10.1,cy-10.1,-.1,20.2,20.2,9.625))
+            holes.append(cyl(x,cy,-.1,4.1,BOX_H+1))
     for x in (117.5,1032.5):
         for y in (40.,217.):
-            holes.append(box(x-8,y-12.5,-.1,16,25,3.275))
-    for x in (117.5,1032.5): holes.append(cyl(x,128.5,-.1,5.,BOX_H+.2))
-    add('GLUED_PLY_BOX_12p7_12p7_9_WEB',cutmany(crate,holes),PLY)
+            holes.append(box(x-8.1,y-12.6,-.1,16.2,25.2,3.425))
+    for x in (117.5,1032.5):
+        for y in (40.,217.):
+            for dx,dy in ((-4.,-7.),(4.,7.)):
+                holes.append(cyl(x+dx,y+dy,-.1,1.1,10.2))
+    for x in (117.5,1032.5): holes.append(cyl(x,128.5,-.1,5.1,BOX_H+.2))
+    for x in (205.,445.,705.,945.):
+        for y in (ya+20,yb-20):holes.append(cyl(x,y,52.7,1.25,11.85))
+    cutter=fuse(holes)
+    for name,part in wood:
+        pieces=part.cut(cutter).Solids()
+        for k,piece in enumerate(pieces,1):
+            add(name+(f'_SEG{k:02}' if len(pieces)>1 else''),piece,PLY)
     for x in (117.5,1032.5):
         sleeve=cyl(x,128.5,0,5.,BOX_H).cut(cyl(x,128.5,-.1,3.3,BOX_H+.2))
         add(f'CLAMP_COMPRESSION_SLEEVE_{int(x)}_OD10_ID6p6',sleeve,AL)
@@ -101,8 +130,20 @@ def cassette_local_parts(index):
     for x in (117.5,1032.5):
         for y in (40.,217.):
             pad=box(x-8,y-12.5,0,16,25,3.175)
-            if y==40.: pad=pad.cut(cyl(x,y,-.1,3.02,3.4))
+            bedding=box(x-8,y-12.5,3.175,16,25,.15)
+            if y==40.:
+                pad=pad.cut(cyl(x,y,-.1,3.02,3.4))
+                bedding=bedding.cut(cyl(x,y,3.1,3.02,.3))
+            for dx,dy in ((-4.,-7.),(4.,7.)):
+                xx,yy=x+dx,y+dy
+                pad=pad.cut(cyl(xx,yy,-.1,1.1,3.4))
+                pad=pad.cut(cq.Solid.makeCone(2.8,1.1,1.7,cq.Vector(xx,yy,0),cq.Vector(0,0,1)))
+                bedding=bedding.cut(cyl(xx,yy,3.1,1.1,.3))
+                screw=fuse([cyl(xx,yy,1.7,1.,8.3),
+                    cq.Solid.makeCone(2.7,1.,1.7,cq.Vector(xx,yy,0),cq.Vector(0,0,1))])
+                add(f'DOCK_PAD_{int(x)}_{int(y)}_WOODSCREW3x10_MINORCORE_{int(dx)}',screw,PIN)
             add(f'DOCK_PAD_{int(x)}_{int(y)}',pad,AL)
+            add(f'DOCK_PAD_{int(x)}_{int(y)}_HARD_EPOXY_BEDDING_0p15',bedding,EPOXY)
     # All unreachable structural plywood remains6.35 below the wear datum.
     # Only the broad central infill is declared machinable; exposed tracks,
     # panel seams, recessed perimeter and screws are separate CAM keep-outs.
@@ -119,6 +160,11 @@ def cassette_local_parts(index):
                          cq.Vector(x,y,CASSETTE_H-3.65),cq.Vector(0,0,1)))
                 wear=wear.cut(cyl(x,y,BOX_H-.1,1.75,WEAR+.2))
         add('REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS',wear,MDF)
+        for x in (205.,445.,705.,945.):
+            for y in (ya+20,yb-20):
+                screw=fuse([cyl(x,y,52.8,1.1,14.35),
+                    cq.Solid.makeCone(1.1,3.3,1.65,cq.Vector(x,y,67.15),cq.Vector(0,0,1))])
+                add(f'WEAR_WOODSCREW3p5x16_MINORCORE_{int(x)}_{y:.2f}',screw,PIN)
     return p
 
 def cassette_parts(index,location='installed',angle=None,y=None,z=None):
@@ -197,8 +243,10 @@ def pan_parts():
     # Right-side independent overflow stays clear of front transfer channel.
     # Its wall opening is cut in the actual wall below; chute remains open to air.
     overflow=box(b,878.,P.PAN_RIM-13,34,44,12).cut(
-                 box(b-.1,880.,P.PAN_RIM-11,34.2,40,8))
+                 box(b-.1,879.9,P.PAN_RIM-11.1,34.2,40.2,8.2))
     add('INDEPENDENT_OPEN_OVERFLOW_40x8',overflow)
+    for yy in (872.,928.):
+        add(f'PAN_OVERFLOW_WELDED_M4x16_STUD_{int(yy)}',cyl(b,yy,838.,1.95,16.,(1,0,0)),PIN)
     # Three short longitudinal combs support transverse slats, with drainage gaps.
     slat_bottom=P.SLAT_TOP-40.
     slat_ys=tuple(lo+30+(hi-lo-60)*i/7 for i in range(8))
@@ -213,13 +261,14 @@ def pan_parts():
                          (hi-9,pan_floor_z(hi-9)),(lo+9,pan_floor_z(lo+9))])
         comb=comb.cut(below)
         for y in slat_ys:
-            comb=comb.cut(box(x-3,y-SLAT_T/2-.15,slat_bottom,6,SLAT_T+.3,20))
+            comb=comb.cut(box(x-3,y-SLAT_T/2-.15,slat_bottom+(3. if j==1 else 0.),6,SLAT_T+.3,20))
         for y in range(int(lo)+40,int(hi)-30,120):
             comb=comb.cut(box(x-3,y,pan_floor_z(y)-.1,6,20,8))
         add(f'HOT_COMB_{j+1}_WALL_JOIN_AND_WELD_HOLD',comb)
     for i,y in enumerate(slat_ys,1):
         add(f'HOT_SLAT_{i:02}_880x40x1p9_ONE_SHEET_CANDIDATE',
-            box(SLAT_X0,y-SLAT_T/2,slat_bottom,SLAT_LENGTH,SLAT_T,40))
+            box(SLAT_X0,y-SLAT_T/2,slat_bottom,SLAT_LENGTH,SLAT_T,40).cut(
+                box(575.-1.8,y-SLAT_T/2-.1,slat_bottom-.1,3.6,SLAT_T+.2,3.1)))
     # Nine small frame-to-floor shim packs replace long milled saddles.
     # Each pack must be assembled/measured on the real frame; no stock ownership credit.
     for cy in P.POST_CENTRES_Y:
@@ -227,13 +276,29 @@ def pan_parts():
             add(f'PAN_FRAME_SHIM_PACK_{int(x)}_{int(cy)}_VERIFY_ACTUAL',
                 yz(x-12.5,25,[(cy-10,P.PAN_BEARER_TOP),(cy+10,P.PAN_BEARER_TOP),
                     (cy+10,pan_floor_z(cy+10)-t),(cy-10,pan_floor_z(cy-10)-t)]),AL)
-    # Clipandstand-off geometry protectsAlfromdirectspatter butisnotthermalproof.
-    for left,x in ((True,118.),(False,1022.)):
-        shadow=box(x,lo,870.,10.,hi-lo,1.9)
-        for cy in P.POST_CENTRES_Y:shadow=shadow.cut(box(x-1,cy-41,869,12,82,5))
-        if not left:shadow=shadow.cut(box(x-1,877.,869,12,46,5))
-        add('HOT_SIDE_SHADOW_'+('L' if left else'R'),shadow)
     return p
+
+def cabinet_cover(stage='closed'):
+    s=box(97.,346.2,378.,956.,.8,332.)
+    for x in (103.,1047.):
+        for z in (410.,690.):s=s.cut(cyl(x,346.1,z,2.2,1.,(0,1,0)))
+    if stage=='closed':return s
+    s=s.translate((0,-346.2,-378.))
+    if stage=='front':return s.translate((0,0,378.))
+    if stage=='lowered':return s.translate((0,0,25.))
+    s=s.rotate((0,0,0),(1,0,0),-8.)
+    return s.translate((0,2.+20*tan(radians(8.)) if stage=='leaned' else 2.,25. if stage=='leaned' else 5.))
+
+
+def cabinet_cover_blocks(parked=False):
+    out=[]
+    for i,x in enumerate((150.,950.)):
+        block=box(x,0,0,30,60,20)
+        slot=box(x-.1,-.2,0,30.2,1.2,400).rotate((0,0,0),(1,0,0),-8.).translate((0,2,5))
+        block=block.cut(slot)
+        if not parked:block=block.translate((50 if i==0 else -50,400,378.8))
+        out.append((f'COLD_CASE_COVER_PARKING_BLOCK_{i}',block,PLY))
+    return out
 
 @lru_cache(None)
 def storage_parts(door_open=False):
@@ -250,6 +315,8 @@ def storage_parts(door_open=False):
             xx=x0 if left else x1-22.
             yy=y0 if front else y1-3.
             floor=floor.cut(box(xx-.01,yy-.01,z0-.1,22.02,3.02,1.))
+    for xx in (114.,1036.):
+        for yy in (363.,614.):floor=floor.cut(cyl(xx,yy,377.9,1.65,1.))
     add('COLD_CASE_FLOOR_NOT_A_WORKBED',floor)
     # 25x25x3 structural Al corner angles bear directly on floor shims.
     for left in (True,False):
@@ -263,17 +330,33 @@ def storage_parts(door_open=False):
                 # Full-width panels pass between the outboard side legs. Retain
                 # the return belowfloor/abovepanels; side skin braces the flat segment.
                 post=post.cut(box(fx-.01,fy-.01,378.,22.02,3.02,326.))
+            if front:
+                tx=97. if left else 1041.
+                hx=103. if left else 1047.
+                for zz in (410.,690.):
+                    post=post.fuse(box(tx,347,zz-10,12,6,20)).clean()
+                    post=post.cut(cyl(hx,346.9,zz,2.,6.1,(0,1,0)))
             # Rivets join the case wall to the outboard column, never to wood.
             for zz in (410.,500.,600.,690.):
                 ry=yy+12.5
                 post=post.cut(cyl(xx-.1,ry,zz,2.1,3.2,(1,0,0)))
             if not front:
                 for zz in (573.,587.):post=post.cut(cyl(xx-.1,610.,zz,2.2,3.2,(1,0,0)))
+            # Positivefloorledges and roofthreadblocks completehoodattachment.
+            px=104. if left else 1026.;py=353. if front else 604.
+            rx=109. if left else 1029.;ry=353. if front else 612.
+            post=post.fuse(box(px,py,375.,20,20,3),box(rx,ry,704.,12,12,6)).clean()
+            post=post.cut(cyl(px+10,py+10,374.9,1.5,3.2))
+            post=post.cut(cyl(rx+6,ry+6,703.9,1.5,6.2))
+            # Backskin is lappedonto the rearreturn instead of an unsupportedbuttjoint.
+            if not front:
+                for zz in (410.,500.,600.,690.):post=post.cut(cyl(rx+6,623.9,zz,2.1,3.2,(0,1,0)))
             add(f'COLD_CASE_FLOOR_COLUMN_{tag}_'+('F' if front else'R')+'_AL25x25x3',post,AL)
     sides=[]
     for left in (True,False):
         tag='L' if left else'R'; x=x0 if left else x1-t
         wall=box(x,y0,z0+t,t,y1-y0-3,z1-z0-t).cut(box(x-.1,y0-.1,704.,t+.2,3.2,6.1))
+        for zz in (410.,690.):wall=wall.cut(box(x-.1,349.9,zz-10.1,t+.2,3.2,20.2))
         for yy in (362.5,614.5):
             for zz in (410.,500.,600.,690.):
                 wall=wall.cut(cyl(x-.1,yy,zz,2.1,t+.2,(1,0,0)))
@@ -298,16 +381,54 @@ def storage_parts(door_open=False):
                 add(f'CASE_SHELF_{tag}_{i}_M4_BLIND_RIVET_{int(yy)}_VERIFY_GRIP',rivet,PIN)
             add(f'CASE_SHELF_{tag}_{i}_AL20x20x1p6',rail,AL)
         add('COLD_CASE_SIDE_'+tag,wall)
-    add('COLD_CASE_BACK',box(126.,y1-t,z0+t,898.,t,z1-z0-t))
-    add('COLD_CASE_ROOF',box(101.,y0,z1,948.,y1-y0,t))
-    add('COLD_CASE_SECONDARY_STEEL_ROOF_AIRGAP5_THERMAL_HOLD',box(101.,y0,z1+5,948.,y1-y0,1.9),HOT)
+    back=box(104.,627.,z0+t,942.,t,z1-z0-t)
+    for xx in (115.,1035.):
+        for zz in (410.,500.,600.,690.):
+            back=back.cut(cyl(xx,626.9,zz,2.1,1.,(0,1,0)))
+            add(f'COLD_CASE_BACK_BLIND_RIVET_{int(xx)}_{int(zz)}',cyl(xx,623.8,zz,1.95,7.,(0,1,0)),PIN)
+    add('COLD_CASE_BACK',back)
+    primary=box(101.,y0,z1,948.,277.8,t)
+    secondary=box(101.,y0,z1+5,948.,277.8,1.9)
+    for xx in (150.,1000.):
+        for yy in (365.,610.):
+            primary=primary.cut(cyl(xx,yy,709.9,1.65,1.))
+            secondary=secondary.cut(cyl(xx,yy,714.9,1.65,2.1))
+    for xx in (115.,1035.):
+        for yy in (359.,618.):primary=primary.cut(cyl(xx,yy,709.9,1.65,1.))
+    add('COLD_CASE_ROOF',primary)
+    add('COLD_CASE_SECONDARY_STEEL_ROOF_AIRGAP5_THERMAL_HOLD',secondary,HOT)
+    def fastener3(key,x,y,head_z,length,washer_t=.8):
+        bolt=fuse([cyl(x,y,head_z-length,1.45,length),cyl(x,y,head_z,2.75,2.4)])
+        add(key+'_M3x'+str(length),bolt,PIN)
+        if washer_t>0:
+            washer=cyl(x,y,head_z-washer_t,4.5,washer_t).cut(cyl(x,y,head_z-washer_t-.1,1.65,washer_t+.2))
+            add(key+'_WASHER',washer,PIN)
+    for xx in (114.,1036.):
+        for yy in (363.,614.):fastener3(f'COLD_CASE_FLOOR_FIX_{int(xx)}_{int(yy)}',xx,yy,379.6,6.)
+    for xx in (115.,1035.):
+        for yy in (359.,618.):fastener3(f'COLD_CASE_PRIMARY_ROOF_FIX_{int(xx)}_{int(yy)}',xx,yy,711.6,8.)
+    for xx in (150.,1000.):
+        for yy in (365.,610.):
+            fastener3(f'COLD_CASE_SHIELD_FIX_{int(xx)}_{int(yy)}',xx,yy,716.9,12.,washer_t=0.)
+            nut=cq.Workplane('XY').polygon(6,6.351).extrude(2.4).val().translate((xx,yy,706.8))
+            nut=nut.cut(cyl(xx,yy,706.7,1.5,2.6))
+            washer=cyl(xx,yy,709.2,4.5,.8).cut(cyl(xx,yy,709.1,1.65,1.))
+            add(f'COLD_CASE_SHIELD_NUT_{int(xx)}_{int(yy)}',nut,PIN)
+            add(f'COLD_CASE_SHIELD_LOWER_WASHER_{int(xx)}_{int(yy)}',washer,PIN)
     for xx in (150.,1000.):
         for yy in (365.,610.):
             add(f'COLD_CASE_ROOF_STANDOFF_{int(xx)}_{int(yy)}',
                 cyl(xx,yy,z1+t,3.,5-t).cut(cyl(xx,yy,z1+t-.1,1.65,5)),AL)
-    dz=-342. if door_open else 0.
-    add('COLD_CASE_SLIDING_FRONT_DOOR_'+('OPEN' if door_open else'CLOSED'),
-        box(x0,y0-2,z0+dz,x1-x0,t,z1-z0))
+    add('COLD_CASE_LIFTOFF_FRONT_COVER_'+('PARKED' if door_open else'CLOSED'),
+        cabinet_cover('parked' if door_open else'closed'))
+    p+=cabinet_cover_blocks(door_open)
+    if not door_open:
+        for x in (103.,1047.):
+            for z in (410.,690.):
+                bolt=fuse([cyl(x,344.6,z,1.95,8.,(0,1,0)),cyl(x,341.8,z,3.5,2.8,(0,1,0))])
+                washer=cyl(x,344.6,z,4.5,1.6,(0,1,0)).cut(cyl(x,344.5,z,2.2,1.8,(0,1,0)))
+                add(f'COLD_CASE_COVER_M4x8_{int(x)}_{int(z)}',bolt,PIN)
+                add(f'COLD_CASE_COVER_WASHER_{int(x)}_{int(z)}',washer,PIN)
     # Two rear anti-tip links to centre post inner faces. Not cabinet suspension.
     for left in (True,False):
         tag='L' if left else'R'
@@ -383,36 +504,147 @@ def swept_pipe(points,midpoints,outer,inner):
     return cq.Solid.sweep(ow,[iw],path,True,True).clean()
 
 @lru_cache(None)
+def receiver_hatch_parts(opened=False):
+    """Steel service hatch on metal cross-angles bearing directly on the tote rim.
+
+    Two fabricated pin hinges and two removable index pins lock90deg open.
+    Lid carries no hatch bending/preload: four feet and compression sleeves bypass it.
+    """
+    out=[];add=lambda n,s,c=AL:out.append((n,s.clean(),c))
+    for rear,y in ((False,835.),(True,1125.)):
+        tag='R' if rear else'F'
+        web_y=y+22 if rear else y
+        rail=fuse([box(219,y,391,712,25,3),box(244,web_y,369,662,3,22)])
+        holes=[]
+        if rear:
+            for cx in HATCH_PIN_X:
+                for x in (cx-14,cx+14):holes.append(cyl(x,1140,390.9,2.2,3.2))
+        else:
+            for x in (300.,850.):holes.append(cyl(x,845,390.9,3.1,3.2))
+        add('RECEIVER_HATCH_CROSS_ANGLE_'+tag+'_25x25x3_COPED',cutmany(rail,holes))
+        for left,x in ((True,219.),(False,906.)):
+            add('RECEIVER_HATCH_RIM_FOOT_'+tag+('L' if left else'R'),box(x,y,389,25,25,2))
+    cover=box(*HATCH_COVER[:2],HATCH_BASE_Z,HATCH_COVER[2],HATCH_COVER[3],PAN_T)
+    for x in (300.,850.):
+        cover=cover.cut(cyl(x,845,393.9,2.2,2.2))
+        cover=cover.cut(cyl(x,845,393.9,5.1,.9))
+        # M4rivetnut, grip3mmAl; plastic aroundtail is relieved, not compressed.
+        rn=fuse([cyl(x,845,384,3,7),cyl(x,845,389,4,2),
+                 cyl(x,845,391,3,3),cyl(x,845,394,5,.8)])
+        add(f'RECEIVER_HATCH_M4_RIVNUT_{int(x)}',rn.cut(cyl(x,845,383.9,2.,11.1)),PIN)
+        if not opened:
+            knob=fuse([cyl(x,845,379.9,1.95,16),cyl(x,845,395.9,7,8)])
+            add(f'RECEIVER_HATCH_M4x16_KNOB_REMOVE_FOR_OPEN_{int(x)}',knob,PIN)
+    moving=[]
+    for cx in HATCH_PIN_X:
+        # FixedknuckleX[-10,-2], movingknuckle[2,10] leave independent2mmears.
+        fixed=fuse([box(cx-20,1131.5,394,40,18.5,1.9),
+            cyl(cx-10,HATCH_AXIS_Y,HATCH_AXIS_Z,4,8,(1,0,0)),
+            cyl(cx-1.9,1140,400,5,1.9,(1,0,0))])
+        fixed=fixed.cut(cyl(cx-20.1,HATCH_AXIS_Y,HATCH_AXIS_Z,2.2,40.2,(1,0,0)))
+        fixed=fixed.cut(box(cx+1.8,1131.4,393.9,8.4,2.8,2.2))
+        fixed=fixed.cut(cyl(cx-2.,1140,400,2.2,2.2,(1,0,0)))
+        fixed=fixed.cut(box(cx+.4,1130,393.9,2.3,15.2,2.1))
+        fixed=fixed.cut(box(cx-15.2,1131.4,393.9,3.4,2.4,2.2))
+        for x in (cx-14,cx+14):
+            fixed=fixed.cut(cyl(x,1140,393.9,2.2,2.2))
+            sleeve=cyl(x,1140,389,3,2).cut(cyl(x,1140,388.9,2.2,2.2))
+            add(f'RECEIVER_HATCH_HINGE_{int(x)}_LID_BYPASS_SLEEVE',sleeve)
+            bolt=fuse([cyl(x,1140,379.9,1.95,16),cyl(x,1140,395.9,3.5,4)])
+            washer=cyl(x,1140,387.4,4.5,1.6).cut(cyl(x,1140,387.3,2.2,1.8))
+            nut=cq.Workplane('XY').polygon(6,8.083).extrude(3.2).val().translate((x,1140,384.2))
+            nut=nut.cut(cyl(x,1140,384.1,2.,3.4))
+            for tag,part in (('M4x16',bolt),('WASHER',washer),('M4NUT',nut)):
+                add(f'RECEIVER_HATCH_HINGE_{int(x)}_'+tag,part,PIN)
+        add(f'RECEIVER_HATCH_FIXED_HINGE_{int(cx)}',fixed,HOT)
+        # Clearedfixedknucklevolume is rotationally invariant about this axis.
+        cover=cover.cut(box(cx-10.2,1125.8,393.9,8.4,4.3,2.2))
+        cover=cover.cut(box(cx-15.2,1126.2,393.9,3.4,3.9,2.2))
+        moving.append(cyl(cx+2,HATCH_AXIS_Y,HATCH_AXIS_Z,4,8,(1,0,0)).cut(
+                      cyl(cx+1.9,HATCH_AXIS_Y,HATCH_AXIS_Z,2.2,8.2,(1,0,0))))
+        ear=fuse([cyl(cx+.6,1128,408,5,1.9,(1,0,0)),
+                  box(cx+.6,1125.5,395,1.9,5,13)])
+        ear=ear.cut(cyl(cx+.5,1128,408,2.2,2.1,(1,0,0)))
+        # At-90degrees(1128,408) maps to(1140,400).
+        moving.append(ear)
+        pin=fuse([cyl(cx-12,HATCH_AXIS_Y,HATCH_AXIS_Z,1.95,30,(1,0,0)),
+                  cyl(cx-15,HATCH_AXIS_Y,HATCH_AXIS_Z,3.5,3,(1,0,0))])
+        pin=pin.cut(cyl(cx+15,HATCH_AXIS_Y-3,HATCH_AXIS_Z,.8,6,(0,1,0)))
+        add(f'RECEIVER_HATCH_MAIN_PIN_M4x30_{int(cx)}',pin,PIN)
+        lock=fuse([cyl(cx-4,1140,400,1.95,9,(1,0,0)),
+                   cyl(cx-7,1140,400,3.5,3,(1,0,0))])
+        lock=lock.cut(cyl(cx+4,1136.9,400,.4,6.2,(0,1,0)))
+        add(f'RECEIVER_HATCH_OPEN_INDEX_PIN_REMOVE_DURING_SWING_{int(cx)}',lock,PIN)
+        clip=fuse([cyl(cx+4,1137,400,.35,6,(0,1,0)),
+                    cyl(cx+7,1137,400,.35,6,(0,1,0)),
+                    cyl(cx+4,1137,400,.35,3,(1,0,0))])
+        add(f'RECEIVER_HATCH_INDEX_R_CLIP_REMOVE_DURING_SWING_{int(cx)}',clip,PIN)
+    moving=fuse([cover,*moving])
+    for cx in HATCH_PIN_X:moving=moving.cut(cyl(cx-20.1,HATCH_AXIS_Y,HATCH_AXIS_Z,2.2,40.2,(1,0,0)))
+    if opened:moving=moving.rotate((0,HATCH_AXIS_Y,HATCH_AXIS_Z),(1,HATCH_AXIS_Y,HATCH_AXIS_Z),-90)
+    add('RECEIVER_HATCH_COVER_'+('OPEN_LOCKED' if opened else'CLOSED'),moving,HOT)
+    return out
+
+def overflow_bent_bracket(y):
+    """14ga tab, two outer legs53/20, actualinside bendR2,90deg, K.4."""
+    def V(x,z):return cq.Vector(x,y,z)
+    a,b,c,d,e,f,g,h=[V(*q) for q in ((1023,826.9),(1023,843),(1026.9,846.9),
+       (1076,846.9),(1076,845),(1026.9,845),(1024.9,843),(1024.9,826.9))]
+    edges=[cq.Edge.makeLine(a,b),cq.Edge.makeThreePointArc(b,V(1024.142284,845.757716),c),
+           cq.Edge.makeLine(c,d),cq.Edge.makeLine(d,e),cq.Edge.makeLine(e,f),
+           cq.Edge.makeThreePointArc(f,V(1025.485786,844.414214),g),
+           cq.Edge.makeLine(g,h),cq.Edge.makeLine(h,a)]
+    s=cq.Solid.extrudeLinear(cq.Wire.assembleEdges(edges),[],cq.Vector(0,12,0))
+    return s.cut(cyl(1022.9,y+6,838,2.2,2.2,(1,0,0)))
+
+
+def water_hatch_parts(opened=False):
+    return receiver_hatch_parts(opened)
+
+@lru_cache(None)
 def water_envelopes():
     """Vented floor receiver and gravity returns. Hardware dimensions remain holds."""
     out=[];add=lambda n,s,c:out.append((n,s.clean(),c))
     zc=pan_floor_z(180.)+14.
     # Swept 90-degree side adapter and valve turn the outlet rearward.
-    elbow=swept_pipe([(102.,180.,zc),(82.,200.,zc)],
-                    {0:(87.857864,185.857864,zc)},14.,12.)
+    elbow=swept_pipe([(102.,180.,zc),(78.,204.,zc)],
+                    {0:(85.029437,187.029437,zc)},14.,12.)
     add('WATER_DRAIN_90DEG_ADAPTER_OD28_ID24_THREAD_HOLD',elbow,HOT)
-    valve=cyl(82.,200.,zc,19.,54.,(0,1,0)).cut(cyl(82.,199.9,zc,12.,54.2,(0,1,0)))
+    valve=cyl(78.,204.,zc,19.,54.,(0,1,0)).cut(cyl(78.,203.9,zc,12.,54.2,(0,1,0)))
     add('WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE',valve,(.62,.49,.25))
-    add('WATER_VALVE_HANDLE_SERVICE_ENVELOPE',box(78,205,zc+19,8,95,5),PIN)
-    elbow=swept_pipe([(82.,254.,zc),(82.,274.,zc-20.)],
-                    {0:(82.,268.142136,zc-5.857864)},17.,12.5)
+    add('WATER_VALVE_HANDLE_SERVICE_ENVELOPE',box(74,209,zc+19,8,95,5),PIN)
+    elbow=swept_pipe([(78.,258.,zc),(78.,278.,zc-20.)],
+                    {0:(78.,272.142136,zc-5.857864)},17.,12.5)
     add('WATER_DOWN_ELBOW_ADAPTER_34_OD_25_ID_HOLD',elbow,(.22,.27,.30))
     # No rising section. 100mm centreline bend radius; verify actual hose minimum.
-    pts=[(82.,274.,zc-20.),(82.,274.,630.),(82.,374.,530.),
-         (82.,700.,530.),(182.,800.,530.),(300.,800.,530.),
+    pts=[(78.,278.,zc-20.),(78.,278.,630.),(78.,378.,530.),
+         (78.,700.,530.),(178.,800.,530.),(300.,800.,530.),
          (400.,800.,430.),(400.,800.,410.)]
-    mids={1:(82.,303.289322,559.289322),3:(111.289322,770.710678,530.),
+    mids={1:(78.,307.289322,559.289322),3:(107.289322,770.710678,530.),
           5:(370.710678,800.,500.710678)}
-    add('WATER_25MM_GRAVITY_HOSE_R100_OVER_RIM_AIRGAP21',
+    add('WATER_25MM_GRAVITY_HOSE_R100_OVER_RIM_AIRGAP19',
         swept_pipe(pts,mids,17.,12.5),(.22,.27,.30))
     # Conservative listing clearance incl handles:712x470x389. Listing is not a liquid rating.
     receiver=box(219,700,0,712,470,389).cut(box(223,704,4,704,462,386))
     add('WATER_RED20GAL_CANDIDATE_712x470x389_REQUIRE_65L_USABLE',receiver,(.65,.09,.08))
     lid=box(219,700,389,712,470,2.)
-    for x,y,r in ((400.,800.,25.),(700.,1000.,12.5)):
+    hx,hy,hw,hh=HATCH_OPENING
+    aperture=fuse([box(hx+3,hy,388.9,hw-6,hh,2.2),box(hx,hy+3,388.9,hw,hh-6,2.2),
+        *[cyl(xx,yy,388.9,3,2.2) for xx in (hx+3,hx+hw-3) for yy in (hy+3,hy+hh-3)]])
+    lid=lid.cut(aperture)
+    # Fourrimfeet and copedangle webs bypass the lid through clearance apertures.
+    for yy in (835.,1125.):
+        for xx in (219.,906.):lid=lid.cut(box(xx-.1,yy-.1,388.9,25.2,25.2,2.2))
+        wy=yy if yy==835. else yy+22
+        lid=lid.cut(box(243.9,wy-.1,388.9,662.2,3.2,2.2))
+    for cx in HATCH_PIN_X:
+        for xx in (cx-14,cx+14):lid=lid.cut(cyl(xx,1140,388.9,3.1,2.2))
+    for xx in (300.,850.):lid=lid.cut(cyl(xx,845,388.9,4.1,2.2))
+    for x,y,r in ((400.,800.,25.),(900.,1000.,12.5)):
         lid=lid.cut(cyl(x,y,388.9,r,2.2))
     lid=lid.cut(box(880,875,388.9,40,50,2.2))
     add('WATER_REMOVABLE_LID_RETURN_PORTS_OPEN25MM_VENT_NOT_PRESSURE',lid,LIGHT)
+    out+=receiver_hatch_parts(False)
     wall=box(1056,878,465,20,44,P.PAN_RIM-465)
     wall=wall.cut(box(1055.9,879.9,466.9,18.2,40.2,P.PAN_RIM-465))
     overflow_pieces=[wall]
@@ -424,8 +656,16 @@ def water_envelopes():
         pp=[cq.Vector(900,y,462),cq.Vector(1076,y,465),
             cq.Vector(1076,y,477),cq.Vector(900,y,474)]
         sides.append(cq.Solid.extrudeLinear(cq.Wire.makePolygon(pp+[pp[0]]),[],cq.Vector(0,1.9,0)))
-    overflow_pieces += [base,*sides,box(900,878,410,1.9,44,64)]
-    add('OVERFLOW_WELDED_OPEN_RETURN_AIRGAP21',fuse(overflow_pieces),HOT)
+    overflow_pieces += [base,*sides,box(898.1,878,410,1.9,44,53.9),
+                        overflow_bent_bracket(866.),overflow_bent_bracket(922.)]
+    for yy in (872.,928.):
+        spacer=cyl(1022,yy,838,4.,1.,(1,0,0)).cut(cyl(1021.9,yy,838,2.2,1.2,(1,0,0)))
+        washer=cyl(1024.9,yy,838,4.5,1.6,(1,0,0)).cut(cyl(1024.8,yy,838,2.2,1.8,(1,0,0)))
+        nut=cq.Workplane('YZ').polygon(6,8.083).extrude(3.2).val().translate((1026.5,yy,838))
+        nut=nut.cut(cyl(1026.4,yy,838,2.,3.4,(1,0,0)))
+        for tag,q in (('SPACER1',spacer),('WASHER',washer),('M4NUT',nut)):
+            add(f'OVERFLOW_REMOVABLE_SUPPORT_{int(yy)}_'+tag,q,PIN)
+    add('OVERFLOW_WELDED_OPEN_RETURN_AIRGAP19',fuse(overflow_pieces),HOT)
     return out
 
 
@@ -436,7 +676,9 @@ def retention_parts():
     for i in range(4):
         yy=P.PANEL_Y0+i*P.PANEL_PITCH+128.5
         for x in (117.5,1032.5):
-            z=P.DRY_BOTTOM+BOX_H
+            z=P.DRY_BOTTOM+BOX_H+1.6
+            upper=cyl(x,yy,P.DRY_BOTTOM+BOX_H,9.,1.6).cut(cyl(x,yy,P.DRY_BOTTOM+BOX_H-.1,3.3,1.8))
+            upper=upper.intersect(box(110 if x<575 else 1010,yy-10,P.DRY_BOTTOM+BOX_H-.1,30,20,1.8))
             bolt=fuse([cyl(x,yy,z-80,2.95,80),cyl(x,yy,z,5.,6.)])
             washer=cyl(x,yy,P.DRY_BOTTOM-6.35-1.6,6.,1.6).cut(
                        cyl(x,yy,P.DRY_BOTTOM-8.,3.3,2.))
@@ -444,7 +686,7 @@ def retention_parts():
                        (x,yy,P.DRY_BOTTOM-6.35-1.6-5.)).cut(
                        cyl(x,yy,P.DRY_BOTTOM-14.,3.,7.))
             for tag,s in (('M6x80_SOCKET_REMOVE_BEFORE_LIFT',bolt),
-                          ('M6_WASHER_OD12',washer),('M6_HEX_NUT_AF10',nut)):
+                          ('M6_UPPER_D_WASHER_OD18_CLIP1p5',upper),('M6_WASHER_OD12',washer),('M6_HEX_NUT_AF10',nut)):
                 p.append((f'CAS{i+1}_CLAMP_{int(x)}_'+tag,s.clean(),PIN))
     return p
 
@@ -458,7 +700,7 @@ def transfer_fixed_parts():
     return pan_parts()+pan_retainers()+water_envelopes()+dock_parts()+storage_parts(True)
 
 def mass_report():
-    densities={PLY:600.,MDF:750.,AL:2700.,LIGHT:2700.,HOT:7850.,PIN:7850.,
+    densities={PLY:600.,MDF:750.,AL:2700.,LIGHT:2700.,HOT:7850.,PIN:7850.,EPOXY:1500.,
                (.62,.49,.25):8500.,(.22,.27,.30):1400.,(.30,.43,.39):950.,(.65,.09,.08):950.}
     def group(parts):
         rows=[];total=0.;mom=[0.,0.,0.]

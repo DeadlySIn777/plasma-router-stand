@@ -1,24 +1,24 @@
-# Start with XR1 for the current small wood/plasma table
+# Start with XR2
 
-The user's current **all-4080-frame, USD 1,000 complete-mechanical-table** request
-is developed in [XR1](variants/extrusion-reengineered/README.md). Engineering
-comes before repricing or cart changes. Existing cart contents are superseded.
-No actual actuator lead is assumed in this revision.
+The current small-table design is **XR2: 800 X / 1000 Y / 200 Z mm nominal
+travel**, with a 4080 frame, removable dry cassettes, steel plasma pan and
+retractable ATC hardware. The user authorized a different Z unit to retain
+full-bed ATC; the original 100 mm Z is superseded in this variant.
 
-The Rev G text below is preserved history, not the newest machine to open.
+- [Current design and ownership](variants/extrusion-reengineered/README.md)
+- [Current woodworking STEP](variants/extrusion-reengineered/review/XR2_WOOD.step)
+- [Current plasma STEP](variants/extrusion-reengineered/review/XR2_PLASMA.step)
+- [Current printable review](output/pdf/plasma-router-stand-XR2-review.pdf)
+- [Current evidence index](variants/extrusion-reengineered/review/package-check.json)
+- [Physical release register](variants/extrusion-reengineered/review/release-register.json)
+- [CAM setup and custom-part files](variants/extrusion-reengineered/CAM-SETUP.md)
 
-# Historical Rev G working design
+This is a nominal engineering/CAM-preparation package. Actual vendor interfaces,
+retention, assembled stiffness, water flow, thermal behavior and automatic ATC
+operation still require the specified evidence. The USD 1,000 delivered cap
+has not been verified. No new pricing or shopping was performed in XR2.
 
-Open the [Rev G CAD package](output/release-review/RevG-CAD/README.md) and [updated concept PDF](output/pdf/plasma-router-stand-concept.pdf). The [repair report](output/cad-repair-2026-09-25/README.md) states exactly what changed, what was checked and what remains unresolved.
-
-Rev G uses six manual panels and four beams stored inside the stand. Five two-packs means ten 1220 mm bars; each supplies three 397 mm lengths. Separate finished spoilboards lie within the nominal center-travel rectangle. The old one-piece hoisted bed, external parking and assumed winch are obsolete.
-
-**Not finished or released for fabrication.** Exact purchased interfaces, plasma tooling, whole-machine rigidity, retention, water hardware and human handling still require closure. No current complete build price is asserted. Do not use older drawings, procurement quantities, strength screens or firmware as a Rev G manufacturing package.
-
-- [Router assembly](output/release-review/RevG-CAD/step/RevG_ROUTER.step)
-- [Stored-bed layout](output/release-review/RevG-CAD/step/RevG_BED_STORED.step)
-- [Current cut list](output/release-review/RevG-CAD/cutlist.csv)
-- [Historical full CAD audit](output/cad-reaudit-2026-09-25/README.md)
-- [Unsent supplier dimension request](output/cad-repair-2026-09-25/SUPPLIER-DRAWING-REQUEST.md)
-
-The source directory remains named RevE-ENGINEERING, but current generated files are in RevG-CAD. Fusion has not been verified to load this revision.
+Earlier XR1, Rev G/Rev I, 4x8 and other variants are historical or separate
+development. Do not mix their drawings, screw leads, firmware, tests or
+purchase quantities into XR2. Use the [variant index](variants/README.md)
+for historical context.

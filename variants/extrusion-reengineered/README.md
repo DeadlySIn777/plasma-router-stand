@@ -1,132 +1,171 @@
-# XR1 — re-engineered small 4080 wood/plasma table
+# XR2 - 4080 woodworking / plasma table with retractable ATC
 
-This is the current small-table design. It replaces the previous 4040, welded
-budget-frame and unoptimized all-4080 cart proposals. It uses the user's owned
-motion modules, guide rails, drives, spindle/VFD and fabrication tools.
-The electronics enclosure is also already owned and excluded from new purchases.
+This is the current small-table design: **800 X / 1000 Y / 200 Z mm nominal travel**.
+The user selected full-bed ATC and authorized a different Z unit. The original
+100 mm Z is superseded; the new 200 mm replacement is not assumed owned.
+Existing X/Y motion, matching guides, drives, spindle/VFD and the electronics
+enclosure remain owned.
 
-**Engineering development, not a fabrication/CAM release.** The complete
-mechanical-table budget is **USD 1,000 delivered**. That is a design constraint;
-this revision contains no new prices, quote or purchasing authorization. The
-old Amazon cart is superseded and was left untouched during this redesign.
+**Engineering design and CAM preparation, with physical release gates.**
+The **USD 1,000 delivered complete-table cap remains unverified**. No new prices
+or cart changes were made during this revision. Include all unowned ATC and
+replacement-Z hardware in the next complete-build total.
 
-![Actual XR1 CAD](review/overview.png)
+![Actual current CAD](review/overview.png)
 
-## Open this revision
+## Current files
 
-- [Woodworking assembly](review/XR1_WOOD.step)
-- [Plasma assembly with dry cassettes stored](review/XR1_PLASMA.step)
-- [Frame assembly](review/XR1_FRAME.step)
-- [Printable design review](../../output/pdf/plasma-router-stand-XR1-review.pdf)
-- [Audit and release conditions](AUDIT.md)
-- [Structure calculations and limits](review/STRUCTURE.md)
+- [Woodworking assembly](review/XR2_WOOD.step)
+- [Plasma assembly with dry cassettes stored](review/XR2_PLASMA.step)
+- [Frame](review/XR2_FRAME.step)
+- [ATC deployed with head at safe transport park](review/XR2_ATC_DEPLOYED.step)
+- [Separate supplier kit/tool acceptance-volume layout](review/XR2_ATC_ACCEPTANCE_LAYOUT.step)
+- [Printable design and audit review](../../output/pdf/plasma-router-stand-XR2-review.pdf)
+- [Machine-readable evidence index](review/package-check.json)
+- [Audit and physical release conditions](AUDIT.md)
 - [Bed construction and conversion](BED.md)
-- [Water and thermal details](WATER.md)
-- [Motion interfaces](INTERFACES.md)
-- [Retained ATC requirement and unresolved interfaces](ATC-INTERFACE.md)
-- [Requirements and owned equipment](requirements.json)
+- [Water, clean-out hatch and service](WATER.md)
+- [Motion, mounted shielding and supplier interfaces](INTERFACES.md)
+- [ATC mechanism and redesigned Z](ATC-INTERFACE.md)
+- [Custom-part STEP pack and reference DXFs](fabrication/README.md)
+- [Setup datums and CAM surface references](CAM-SETUP.md)
+- [Blank measurement worksheet](MEASUREMENTS-BLANK.csv)
+- [Requirements and ownership](requirements.json)
 
-## What changed and why
+## Structure and independent beds
 
-The frame has six posts, two upper Y rails and three transverse pan bearers.
-The two rear posts stand on short 4080 base beams that carry additional rear
-feet. This extends the support polygon toward the parked gantry while staying
-inside the existing plan footprint. There are eight feet. Rear posts bear
-directly on their base beams; the other four posts run directly to foot plates.
-Fishplates maintain alignment and bearing angles carry the pan and dry-bed
-arms. Structural gravity loads do not depend solely on bracket friction.
+Six posts carry two 1450 mm headers. Short rear 4080 bases add rear feet at
+Y1410, giving eight main feet. Three strong-axis crossmembers carry the pan;
+short flat arms and aluminum ledgers carry the dry bed separately. Direct
+bearing carries gravity loads. Fishplates and paired steel tension straps
+resist racking. The main frame has **19 cuts totaling 12.3574 m of 4080**.
 
-Main horizontal 4080 beams have their 80 mm dimension vertical. Short dry-bed
-arms lie flat because their cantilever is only 75.2 mm. The nominal frame
-contains **12.3574 m of finished 4080**. Stock length, pack quantities and saw
-kerf must be nested before purchasing; finished length is not an order quantity.
-The decorative extrusion grooves in the model establish mounting envelopes,
-not actual section stiffness, weight or T-nut capacity.
+The extrusion model establishes mounting envelopes, not actual section
+properties or slot capacity. Required properties and sensitivities are in
+the structure report. The stock nests include saw gaps and trim, without
+assuming a vendor's pack quantity.
 
-The independent Y guides mount on the upper extrusion's inner faces, removing
-the two long steel guide strips. Six short side-access actuator saddles replace
-the two long steel top caps. Per the user's preference, the two gantry end
-brackets and six compact clevis mounts remain integral billet parts for stiffness
-and alignment. Y-link supports use bolted plate construction. The actual module slots, guide hole pattern, delivered lead and
-Z retention remain measured interfaces. No 10 mm lead is assumed.
+The joint steel nest combines **94 nominal 1.9 mm blanks** for the pan,
+shields, cabinet, straps and ATC. The checked rectangular-blank layouts use
+two 4 x 8 ft sheets or one 5 x 10 ft sheet, with 3 mm kerf and 5 mm edge trim.
+Other gauges, bars and hollow sections remain separate stock. This is a
+feasible stock layout, not an optimality proof or a delivered quotation.
 
-The dry bed consists of four plywood torsion boxes with replaceable
-MDF wear pads and aluminum T-slot tracks. Independent aluminum ledgers carry
-them; the pan floor does not carry router cutting loads. Track bolts clamp
-through metal compression sleeves and solid blocking rather than pulling
-against unsupported MDF. Metal location and separate hold-downs control return
-position. Do not put precision locating pins directly into wood or HDPE.
+Two integral billet gantry corners and six integral clevises retain the user's
+billet preference. The two owned 12-inch aluminum blanks are allocated once
+in a checked **83-blank nest**, including eight small cabinet tabs/blocks.
+Deep billets and unlisted parts remain new stock.
+Six accessible actuator saddles replace the old continuous steel caps.
 
-Both structural skins are 12.7 mm plywood, with a 39.05 mm ribbed core and
-6.35 mm replaceable MDF wear layer, totaling 70.8 mm. All eight structural
-skins fit one 4-by-8 plywood sheet with the strong face-grain direction along
-the 932 mm span. The rib grid needs defined glue/half-lap joinery; a fused
-review solid does not imply overlapping raw strips assemble unchanged.
+Four **932 x 257 x 70.8 mm** dry carriers have separate half-lapped ribs,
+12.7 mm plywood skins, a 39.05 mm core and 6.35 mm replaceable MDF wear pads.
+Metal datum pads, round/diamond location and independent hold-downs establish
+repeatable docking. Aluminum T-slot tracks remain. The **770 x 960 mm enclosing
+wear field** has track, seam, screw and clamp keep-outs; it is not one clear slab.
 
-The pan is set lower and rearward to preserve a front cassette transfer channel.
-Dry cassettes park in covered storage under the pan. Only plain steel pan/slats
-are exposed to the hot plasma zone. Thermal shields, cleaning, cooldown and
-physical temperature tests remain necessary before stored wood can be qualified
-for use during plasma operation.
+The fixed plain-steel pan is **894 x 1096 mm outside**. Eight center-keyed
+880 mm slats sit on three combs. Center keys limit walk while leaving the ends
+free to expand. Pan ears provide positive capture with thermal float.
 
-Remove the entire spindle/clamp module or the entire plasma drop/head/torch
-module before cassette transfer. Only the common Z adapter remains. Remove
-the eight M6 cassette clamp sets, retain Z, park the gantry and open the storage
-door. Install the next tool module after converting the bed. Removing only
-the torch does not establish clearance for the long plasma-head bracket.
+## Conversion, guards and water service
 
-Water drains by gravity to a vented receiver. The owned CV-15HS is not used as a
-liquid pump. This mechanical baseline does not pressurize a fabricated pan or
-receiver. Automatic valve/pump hardware is not assumed installed or qualified.
-The user's selected red 20-gallon tote is the reservoir candidate, with a
-712 × 470 × 389 mm external clearance envelope. Require 65 L of measured
-usable capacity; nominal storage volume is not a verified liquid rating.
-The [reservoir interface record](reservoir-interface.json) distinguishes
-the photo's body dimensions from the larger lid/handle dimensions.
+Bed conversion stays inside the modeled plan. Remove the complete installed
+spindle/clamp or plasma drop/head/torch assembly, cassette clamp sets and
+plasma-only ledger armors. Retain Z, park at the specified transfer pose and
+keep ATC parked. Refit the next tool module after conversion. Permanent guide
+guards stay fitted. The transfer report covers the complete segment enclosures;
+human clearance and actual handling loads require a trial.
 
-## Reach and stiffness targets
+Mounted plain-steel guide guards, ledger armors and a receiver roof replace
+the disconnected shadow strips. The receiver roof has two thicker mounting
+brackets to control gravity sag. The guards are nonsealed and do not provide
+fume extraction. Protected wood storage requires actual thermal testing.
 
-Nominal axis travel remains **800 X × 1,000 Y × 100 Z mm**. The full carrier
-outline is larger than the axis-center rectangle. The defined in-machine dry
-surfacing field has a **770 × 960 mm enclosing outline**, X190–960 and Y141.4–1101.4,
-with tracks, seams and screw locations as CAM keep-outs. It allows up
-to a 15 mm cutter radius within the nominal router center-travel limits.
-Outer carrier material and locator ears are not claimed to be fully surfacable
-in the machine. Actual cutter length, workpiece, clamps and Z clearance still
-determine useful cutting depth.
+The selected red box is the **drain-water reservoir**, not the electronics
+enclosure. It stays atmospheric with gravity drain and independent overflow.
+A metal-supported, lock-open clean-out hatch permits routine cleaning without
+hinging the whole lid or removing the tank. Rare tank replacement has its own
+disassembly/handling sequence. Verify **65 L measured usable capacity** and
+actual liquid-load/temperature suitability. Nominal storage volume is not a
+liquid rating. The CV-15HS is not used as a liquid pump.
 
-The framework/ledger/bed deflection target is **0.30 mm at 100 N**, with a 300 N
-sensitivity case. Component calculations are conditional on the specified
-extrusion and wood properties and qualified joints. They do not establish the
-complete spindle-to-work stiffness of the owned gantry, guides, actuators and
-tool stack. This variant is for woodworking and steel-sheet plasma; it is not
-a steel-milling machine qualification.
+## ATC and Z
 
-## Reproduce the evidence
+The carrier has **200 mm travel on finished 335 mm guides cut from 350 mm blanks**. It includes its supporting
+load path, removable carrier, hard location, endpoint retention and protective
+parking. Manufacturer magazine/tool acceptance volumes are distinct from
+verified supplier geometry; the actual kit/nut/pocket interfaces remain to verify.
 
-Run from this directory with a Python environment containing CadQuery 2.7,
-NumPy, Pillow and VTK:
+The selected nominal replacement is **RATTMMOTOR ZXHT80-200 / B09MYD6Z23**:
+200 mm stroke, 319 mm body and 430 mm overall package in the primary drawings.
+The module's low output datum is retained. The spindle's nominal axial setup
+is10 mm higher in its existing clamp, with modeled reference Z970..1170.
+The checked case uses up to50 mm loaded-tool projection and up to26.35 mm
+retained projection below the magazine base over40 mm combined stock/clamps.
+Actual gripping limits, nut planes and tool envelopes still require confirmation.
+The stock-motor package is430 mm overall; the conditional brake-motor provision
+adds32 mm behind the motor's front datum. The source record separates verified
+dimensions from omitted output, coupling and retention details. Use the current ATC report for the modeled stock,
+clamp and tool limits. No automatic M6 cycle is claimed qualified.
 
-```text
+## Evidence and manufacturing
+
+Checks separate valid solids and STEP read-back, external travel, continuous
+bed transfer, shield/service paths, ATC mechanism/reach, stock nesting and
+nominal component calculations. The **0.30 mm at 100 N** framework/bed target
+is not measured complete spindle-to-work accuracy. The half-lap calculation
+is a nominal sensitivity with local joint/adhesive compliance omitted.
+This version is for woodworking and steel-sheet plasma; steel milling is
+not qualified.
+
+Individual custom STEP files preserve current nominal geometry. Plate files
+labeled MIDSECTION_REFERENCE are cross-sections, not complete machining
+drawings. Counterbores, countersinks, edge holes, taps and bends require the
+STEP and matching notes. Bed, shields and ATC have separate fabrication
+schedules and flat files. No production G-code is supplied.
+
+Freeze geometry and parameters before regenerating reports. The package
+index checks source and output hashes, including custom STEP and reference
+DXF files. Runtime dependencies are CadQuery 2.7, NumPy, Pillow, VTK and ezdxf;
+the PDF uses ReportLab and pypdf. CAD scripts exit explicitly around the
+known local OCCT interpreter-teardown defect.
+
+Regenerate from this directory with the same frozen sources. Run these in
+order; a nonzero exit or a false check is a failed check, not a release:
+
+```powershell
 python structure_screen.py --fabrication
-python bed_screen.py
-python check_owned_stock.py
 python cutplan.py
+python check_owned_stock.py
+python bed_screen.py
+python bed_fabrication.py
+python bed_takeoff.py
 python audit_motion.py --manifest
+python shields.py --check
+python atc_fabrication.py
+python manufacture.py
+python cam_reference.py
+python release_register.py
 python build.py
 python check_travel.py
+python review/check_internal_continuous.py
+python check_atc.py
+python check_atc_capacity_field.py
+python atc_stiffness.py
+python atc_tab_update_audit.py
 python check_transfer.py
+python service_check.py
 python water_check.py
+python render_details.py
+python steel_nesting.py
+python audit_package.py
+python create_review_pdf.py
 python audit_package.py
 ```
 
-The bed fabrication CSV is a maintained candidate schedule; its metadata binds
-it to the current geometry. Keep the explicit unselected shield, service and
-hardware rows when updating it. Do not price missing interfaces as zero.
+Render and inspect all four PDF pages after regeneration. The package index
+also records the PDF hash; it does not turn the physical release flag on.
 
-The CAD scripts flush output and use `os._exit` to avoid the known local OCCT
-interpreter-teardown fault. Each report states its scope. A valid STEP solid
-is evidence of geometry validity, not evidence of stiffness or safe operation.
-The final package index binds the evidence to source hashes and marks any
-stale report. The 4×8 and retractable ATC variants remain separate development
-work; no old test result or price is inherited by XR1.
+Earlier XR1, Rev I, 4x8 and ATC studies remain historical or separate work.
+Their prices, firmware, screw leads and test results do not transfer to XR2.
+The old Amazon cart remains superseded.

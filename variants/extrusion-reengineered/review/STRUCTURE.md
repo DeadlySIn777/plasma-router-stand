@@ -1,4 +1,4 @@
-# XR1 structure screen — development, not fabrication release
+# XR2 structure screen — development, not fabrication release
 
 Finished profile: **12.3574m**. Six continuous posts reduce the largest supported header span to550mm; a four-post1080mm span bends7.57times as much under an equal midpoint point load.
 

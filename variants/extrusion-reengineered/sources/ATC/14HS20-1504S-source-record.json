@@ -1,0 +1,33 @@
+{
+  "observed_date": "2026-11-01",
+  "manufacturer_part": "14HS20-1504S",
+  "product_url": "https://www.omc-stepperonline.com/nema-14-bipolar-1-8deg-40ncm-56-7oz-in-1-5a-4-2v-35x35x52mm-4-wires-14hs20-1504s",
+  "current_datasheet_url_from_product_page": "https://files.omc-stepperonline.com/14HS20-1504SFull_Datasheet.pdf",
+  "method": "Primary PDF dimension callouts extracted by the web tool; not a claim of visual screenshot inspection. Local download was blocked by a Cloudflare challenge, and no challenge was bypassed.",
+  "drawing_callouts": {
+    "front_hole_square_mm": {"nominal": 26, "tolerance_plus_minus": 0.2},
+    "front_threads": "4-M3, depth 4.0 mm minimum",
+    "pilot_diameter_mm": {"nominal": 22, "upper_deviation": 0, "lower_deviation": -0.05},
+    "shaft_diameter_mm": {"nominal": 5, "upper_deviation": 0, "lower_deviation": -0.012},
+    "shaft_projection_mm": {"nominal": 24, "tolerance_plus_minus": 1},
+    "motor_body_length_mm": {"nominal": 52, "tolerance_plus_minus": 1},
+    "flat_length_mm": {"nominal": 15, "tolerance_plus_minus": 0.25},
+    "face_max_callouts_mm": [35.2, 35.3],
+    "lead_length_mm": {"nominal": 400, "tolerance_plus_minus": 10}
+  },
+  "conservative_clearance_envelope_requirement": {
+    "face_square_mm": 35.3,
+    "body_length_mm": 53,
+    "shaft_projection_mm": 25,
+    "qualification": "Conservative independent maxima; cable bend, connector and mounting-tolerance allowances remain additional. The two face callout directions were not visually distinguished."
+  },
+  "electrical_product_facts": {
+    "phase_current_A": 1.5,
+    "holding_torque_Nm": 0.4,
+    "step_angle_deg": 1.8,
+    "phase_resistance_ohm": 2.8,
+    "phase_inductance_mH": 3.8
+  },
+  "correction": "The current primary datasheet and product specification show a 24 mm nominal shaft. Do not use an 18 mm shaft envelope for this revision.",
+  "release": false
+}

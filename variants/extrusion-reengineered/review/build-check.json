@@ -1,5 +1,5 @@
 {
-  "revision": "XR1",
+  "revision": "XR2",
   "assemblies": {
     "FRAME": {
       "components": 89,
@@ -12,33 +12,59 @@
         1450.0,
         1053.0000000000002
       ],
-      "sha256": "5a103ef7c3393efef54d0c2cef470dd3bfe16e058444e213e72e46037393ee23"
+      "sha256": "e8fb07f1a08908816a1c8c8d441872cc8ac1384d267ef5a9df5ef5ac7edeb9cc"
     },
     "WOOD": {
-      "components": 808,
-      "solids": 811,
+      "components": 1369,
+      "solids": 1371,
       "bounds_mm": [
         -25.0,
         -9.996346783347509e-30,
         0.0,
         1175.0,
         1450.0,
-        1370.0
+        1502.0
       ],
-      "sha256": "7d83db1a54b1c4a530055ac1c35192fe1e2db801c675c6363758fafac953fdfa"
+      "sha256": "471128bee1febf420763fb95846724932fc37d91346d72e708a40ce827108a9b"
     },
     "PLASMA": {
-      "components": 887,
-      "solids": 890,
+      "components": 1460,
+      "solids": 1462,
       "bounds_mm": [
         -25.0,
         -9.996346783347509e-30,
         0.0,
         1175.0,
         1450.0,
-        1370.0
+        1502.0
       ],
-      "sha256": "0e5650e8294165233cfd493cc4f4c2bccef4222228f764f2ab9d4a387ab16171"
+      "sha256": "8b9fe5f63d74704522a0e78132923c82fe62a34c13b70e9b1d37aae7b69f24d4"
+    },
+    "ATC_DEPLOYED": {
+      "components": 1369,
+      "solids": 1371,
+      "bounds_mm": [
+        -25.0,
+        -9.996346783347509e-30,
+        0.0,
+        1175.0,
+        1450.0,
+        1502.0
+      ],
+      "sha256": "43d01419f68ca6bc003196a0014b288e53af2408ba04be3515add4beda858b0a"
+    },
+    "ATC_ACCEPTANCE_LAYOUT": {
+      "components": 1372,
+      "solids": 1374,
+      "bounds_mm": [
+        -25.0,
+        -9.996346783347509e-30,
+        0.0,
+        1175.0,
+        1450.0,
+        1502.0
+      ],
+      "sha256": "e9b215fece4b1191962b4935708d63249872a4c972a6cccc3c165348e47c0476"
     }
   },
   "interfaces": {
@@ -48,7 +74,7 @@
     },
     "WOOD": {
       "frame_bed": {
-        "exact_pairs": 16,
+        "exact_pairs": 20,
         "positive_intersections": []
       },
       "frame_motion": {
@@ -57,12 +83,28 @@
       },
       "bed_motion": {
         "exact_pairs": 0,
+        "positive_intersections": []
+      },
+      "accessory_frame": {
+        "exact_pairs": 4,
+        "positive_intersections": []
+      },
+      "accessory_bed": {
+        "exact_pairs": 1,
+        "positive_intersections": []
+      },
+      "accessory_motion": {
+        "exact_pairs": 30,
+        "positive_intersections": []
+      },
+      "accessory_self": {
+        "exact_pairs": 610,
         "positive_intersections": []
       }
     },
     "PLASMA": {
       "frame_bed": {
-        "exact_pairs": 18,
+        "exact_pairs": 28,
         "positive_intersections": []
       },
       "frame_motion": {
@@ -72,17 +114,74 @@
       "bed_motion": {
         "exact_pairs": 0,
         "positive_intersections": []
+      },
+      "accessory_frame": {
+        "exact_pairs": 10,
+        "positive_intersections": []
+      },
+      "accessory_bed": {
+        "exact_pairs": 23,
+        "positive_intersections": []
+      },
+      "accessory_motion": {
+        "exact_pairs": 30,
+        "positive_intersections": []
+      },
+      "accessory_self": {
+        "exact_pairs": 648,
+        "positive_intersections": []
+      }
+    },
+    "ATC_DEPLOYED": {
+      "frame_bed": {
+        "exact_pairs": 20,
+        "positive_intersections": []
+      },
+      "frame_motion": {
+        "exact_pairs": 4,
+        "positive_intersections": []
+      },
+      "bed_motion": {
+        "exact_pairs": 0,
+        "positive_intersections": []
+      },
+      "accessory_frame": {
+        "exact_pairs": 4,
+        "positive_intersections": []
+      },
+      "accessory_bed": {
+        "exact_pairs": 1,
+        "positive_intersections": []
+      },
+      "accessory_motion": {
+        "exact_pairs": 30,
+        "positive_intersections": []
+      },
+      "accessory_self": {
+        "exact_pairs": 591,
+        "positive_intersections": []
       }
     }
   },
+  "ATC_acceptance_vs_physical": {
+    "exact_pairs": 2,
+    "positive_intersections": []
+  },
+  "ATC_acceptance_self": {
+    "exact_pairs": 0,
+    "positive_intersections": []
+  },
+  "ATC_state_scope": "Deployed display uses a safe-retracted head at the transport park. The pink/orange acceptance layout is a separate supplier-capacity reference; it is not actual manufacturer magazine geometry or a simulated automatic M6 cycle.",
   "source_sha256": {
-    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f",
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
     "frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
-    "bed.py": "b00334d947b9e1bc9e3657d7603f67051a6c5f14460d16729d785b1d57cbbbee",
-    "motion.py": "a8e1458d3fda2a492e5b889b66e3f21ad075be14bb8340fb550b6f4e1cc4c015",
-    "build.py": "6f8a4d2154e46d118ec0b77a3ec02095a97e394c72f068892749885d4422b3de",
-    "preview.py": "42c996676e871dea5b03d79831d1c0f66043aa9ff5da6a33f5f5fce82f7f9cdf",
-    "requirements.json": "304a49f7a74d07b97489859c1cef017a57935d7905db4917fd060c2361e48c72"
+    "bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "build.py": "6825d593b1cd1ec67a492cbb2089520304e98cbbc3d17a1123db4fd316d0b69f",
+    "preview.py": "2dce4d21a01fb960255807d456a577e4db26d1df9fb3bf4f7bd7b33b49930333",
+    "requirements.json": "3103c05199be930c72204bee0a4d77bb356dee90a98180cb47cc349363962636"
   },
   "source_consistent_during_build": true,
   "release": false,

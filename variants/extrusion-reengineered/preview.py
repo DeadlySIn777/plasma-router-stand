@@ -2,6 +2,7 @@
 from pathlib import Path
 import importlib.util
 from PIL import Image, ImageDraw
+import params as P
 
 HERE=Path(__file__).resolve().parent
 spec=importlib.util.spec_from_file_location('legacy_render',HERE.parent/'extrusion-wood-plasma'/'preview.py')
@@ -14,8 +15,8 @@ def draw(assemblies,out):
         im.save(out/f'{label.lower()}-view.png');ims.append(im)
     page=Image.new('RGB',(1800,1020),'#f3f6f7');d=ImageDraw.Draw(page)
     ink='#15333e';mut='#4b6670';font=legacy.font
-    d.text((46,28),'XR1  |  4080 WOOD + PLASMA TABLE',font=font(43,True),fill=ink)
-    d.text((48,91),'800 X / 1,000 Y / 100 Z nominal travel     •     Engineering revision',font=font(25),fill=mut)
+    d.text((46,28),P.REVISION+'  |  4080 WOOD + PLASMA TABLE',font=font(43,True),fill=ink)
+    d.text((48,91),f'{P.X_TRAVEL:,.0f} X / {P.Y_TRAVEL:,.0f} Y / {P.Z_TRAVEL:,.0f} Z nominal travel     •     Engineering revision',font=font(25),fill=mut)
     titles=('01  WOODWORKING','02  PLASMA','03  FRAME')
     captions=('Removable dry bed with aluminum T-slot workholding.',
               'Steel hot zone; dry bed in covered storage.',
@@ -32,6 +33,6 @@ def draw(assemblies,out):
             lines[-1]+=(' ' if lines[-1] else '')+word
         for k,line in enumerate(lines):d.text((x+15,759+k*24),line,font=font(19),fill=mut)
     d.text((48,866),'Geometry, loads and conversion paths are checked separately.',font=font(28,True),fill=ink)
-    d.text((48,916),'Supplier interfaces and physical acceptance tests remain release gates. No prices in this revision.',font=font(23),fill=mut)
+    d.text((48,916),'Read the current ATC fit result and physical release register before fabrication. No prices.',font=font(23),fill=mut)
     d.text((48,958),'Actual CAD solids shown. Tool, torch and cable envelopes remain subject to measurement.',font=font(21),fill=mut)
     page.save(out/'overview.png')

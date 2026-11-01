@@ -39,6 +39,31 @@ def run():
                 if found:break
             if found:break
         assert found,('Owned-stock offcut nest cannot fit',name)
+    # Optional cabinet/hatch flat blanks remain NEW unless they actually fit
+    # after all75 previous allocations. No machining chips/split thickness
+    # receive a second material credit. Fused cabinet columns are still new
+    # angle stock; only these individually named welded subparts are credited.
+    extras=[]
+    for family,w,h,t in [('CABINET_COVER_THREADED_TAB',12.,20.,6.),
+                          ('CABINET_ROOF_THREADED_BLOCK',12.,12.,6.),
+                          ('CABINET_FLOOR_LEDGE',20.,20.,3.),
+                          ('PAN_KEEPER_CAP_1MM_UPLIFT',20.,16.,3.),
+                          ('RECEIVER_HATCH_RIM_FOOT',25.,25.,2.)]:
+        for i in range(4):extras.append((f'{family}_{i+1}',w,h,t))
+    optional_credit=[];uncredited=[]
+    for name,w,h,t in extras:
+        found=False
+        for sheet in reversed(sheets):
+            placed=sheet['parts'];xs=sorted({2.,*[a['x']+a['w']+4 for a in placed]});ys=sorted({2.,*[a['y']+a['h']+4 for a in placed]})
+            for ww,hh in ((w,h),(h,w)):
+                for yy in ys:
+                    for xx in xs:
+                        p=dict(id=name,x=xx,y=yy,w=ww,h=hh,finish_t=t)
+                        if fits(p,placed):placed.append(p);optional_credit.append(dict(**p,sheet=sheet['id']));found=True;break
+                    if found:break
+                if found:break
+            if found:break
+        if not found:uncredited.append(dict(id=name,w=w,h=h,finish_t=t))
     for sheet in sheets:
         for p in sheet['parts']:
             assert min(p['x'],p['y'])>=2
@@ -51,7 +76,8 @@ def run():
                 assert separated,(a,b)
         sheet['used_blank_area_mm2']=sum(p['w']*p['h'] for p in sheet['parts'])
     r={'stock_size_mm':[SIZE,SIZE],'cut_gap_mm':4,'edge_allowance_mm':2,'sheets':sheets,
-       'passed':True,'scope':'Nominal cut nesting only. Confirm true stock dimensions, alloy, temper, damage, machining allowance and the final component drawing before cutting.',
+       'passed':True,'additional_optional_credit':optional_credit,'optional_blanks_remaining_new':uncredited,
+       'scope':'Nominal cut nesting only. Confirm true stock dimensions, alloy, temper, damage, machining allowance and weld compatibility before cutting. Additional cabinet credits apply only to the listed flat blanks, not whole fused column assemblies.',
        'not_covered':'All parts not explicitly listed, including the two deep gantry billets and six clevis billets, remain new material unless physically confirmed owned.',
        'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (Path(__file__),HERE/'params.py')}}
     (HERE/'review').mkdir(exist_ok=True)

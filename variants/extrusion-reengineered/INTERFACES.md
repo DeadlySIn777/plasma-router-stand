@@ -1,4 +1,4 @@
-# XR1 motion interfaces — engineering development
+# XR2 motion interfaces — engineering development
 
 This integration removes both continuous 1,450 mm steel cap bars and both continuous steel Y datum strips. The owned HGR20 guides carry the gantry loads directly on the inner faces of the 4080 upper beams. The HMS40 modules remain drive-only; removing independent guides would change the load path and is outside this design.
 
@@ -6,13 +6,13 @@ No purchasing, price assumption, CAM release, real torch dimension or new owners
 
 ## Planes and geometry
 
-| Interface | XR1 nominal geometry | Consequence |
+| Interface | XR2 nominal geometry | Consequence |
 |---|---|---|
 | Upper 4080 beams | Bottom Z973; top Z1053; section 40 wide × 80 high | Inner side-slot centres Z993/1033; guide centre stays Z1033. |
 | Left / right HGR20 seats | X50.8 / X1099.2; Y15–1435; Z1023–1043 | No 8 mm datum strip. The 20 mm rail base spans the 8.2 mm slot mouth with nominal 5.9 mm lands on each side. |
 | Guide block outputs | Left X80.8; right X1069.2 | Both block/shoe groups move 8 mm toward the outside. Y block spacing remains 180 mm. |
 | Y side shoes | Left X80.8–93.5; right X1056.5–1069.2; Z1011–1142.3 | Existing beam mounting coordinates stay in Y/Z. Link window is widened from 33 to 49 mm, retaining 7.35 mm height. |
-| HMS40 base | Z1065.7, from nominal 12.7 mm pads on Z1053 | Module only rises 1.7625 mm. Guide, gantry and tool Z stay unchanged. |
+| HMS40 base | Z1065.7, from nominal 12.7 mm pads on Z1053 | Module only rises 1.7625 mm. Guide and gantry planes stay unchanged. The selected spindle axial grip adjustment is a separate10 mm change documented below. |
 | Y module centres | X25.4 / 1124.6; nonmotor end Y1220 | Body envelope Y95–1220; complete inline-motor envelope Y19–1220. Actual endpoint and cables remain unmeasured. |
 | Y drive link | End-height difference 1.7625 mm over 80 mm Y | 1.262093° inclination; eye distance 80.019413 mm. Nominal rod engagement 9.990294 mm each. Existing spherical joints accommodate the modeled angular change, subject to real assembly clearance. |
 | Plasma drop | 148 mm; 110 × 218 × 12.7 mm plate | Tracks the slat reduction from Z911 to Z878. Actual torch grip, nozzle and cable remain absent. |
@@ -44,3 +44,27 @@ Four short welded steel stop carriers replace the old cap attachment. Their lowe
 - **Material credit:** Two nominal 12 inch owned sheets are finite shared inventory. The pad, sideplate, foot, head and other frame-plate allocations must be nested together. Every remaining fabricated part stays in the new-stock takeoff until physically verified owned.
 
 Primary nominal sources: [HMS40 engineering drawing](https://m.media-amazon.com/images/S/aplus-media-library-service-media/e029d02f-52aa-453f-bd88-9a2b586ceecb.jpg), [4080 section drawing](https://m.media-amazon.com/images/I/61wXCBace9L._SL1500_.jpg), and the locally preserved `output/release-review/sources/iMetrx-HGR20-dimensioned-drawing.jpg`. These drawings supply the stated nominal fields, not a certification of the assembled machine.
+
+## Mounted steel shielding — XR2
+
+`shields.py:shield_parts(hot=False)` supplies permanently mounted guide guards and the receiver roof. Plasma mode adds two removable ledger armors. Plain 1.9 mm steel is the nominal shield material; the two receiver brackets use separate 6 mm steel stock. No material is assumed owned or recovered from the already allocated aluminum sheets.
+
+Each guide guard is a formed channel from Y65 to Y1435, with a 2 mm inside bottom bend and a 1 mm inside open hem. The left web is X101–102.9, Z936–1067; the right is mirrored about X575. Its high hem stays outboard, X97.1–102.9, so it clears the rotating cassette. Twelve M4 × 8 joints attach both guards to six formed, 60 mm wide standoff clips. Twelve M6 × 12 frame stations secure those clips to the actual post slots. Frame fasteners show exterior grip only, matching the motion model convention; actual slot nuts, engagement, screw-tip clearance and permissible tightening remain measured interfaces.
+
+The upper band is relieved over Y1055–1422, Z1031.5–1068, clearing the steel ATC backbars and front idler bridge. Two local slots per side, Y1223–1267 and 1323–1367 at Z1000.65–1035.5, clear the shifted backbar support cradles. The right rear guard also has a local motor relief at X1000–1070, Y1402–1450, Z1018–1075, with a lower extension to Z1012 over Y1409–1450. Its lower web remains continuous. The ATC backbars, cradles and fixed steel motor shroud must be installed to replace the missing spatter barrier. Small perimeter gaps and open ends make these guards nonsealed; they are not a fume extractor or a complete thermal enclosure. The external guard M4 heads stop at X105.9 on the left and X1044.1 on the right, leaving 3.1 mm nominal clearance to the cassette edges.
+
+Each ledger armor follows the angle's inner faces: a low roof at Z892–893.9 extends to X132 on the left and X1018 on the right, with a downturned lip ending at Z876. Its upper cap is Z934.1–936. Three welded mounting tabs and captive M4 nuts hang each armor under the guide's lower return. Remove the six top-access M4 × 8 screws and both armors before moving a dry cassette; the fixed guide guards remain installed. The existing narrow, unsupported shadow strips are superseded by these mounted parts.
+
+The receiver has a welded, returned roof, X208–942, Y834–1154, with its lowest metal at Z700. Two 98 × 40 × 6 mm steel brackets attach through four M6 × 16 stations on the rear bearer; four M4 × 12 joints carry the roof. The open moving cover reaches Z688 (12 mm to that plane). Including lock hardware, the complete open assembly reaches Z689.32, giving a conservative 10.68 mm vertical allowance. The ideal bracket-bending component consumes about 0.25 mm, leaving about 10.44 mm before omitted roof, weld, contact, fastener and thermal effects. The shield report's 12 mm field concerns the moving cover alone. Actual fit/load testing remains required. This is a guard, not a storage shelf or working surface.
+
+Routine receiver-hatch cleaning leaves the roof installed. For roof maintenance, close the hatch and remove all four roof M4 joints, pull the roof 7.1 mm forward first, lift it 40 mm, then rotate its front downward 90 degrees about the raised rear edge at Y1146.9/Z740. Pulling first clears the frame-screw heads. The continuous conservative service envelope is checked independently from normal hatch opening. Rare receiver replacement follows the bed service sequence and may require further machine disassembly.
+
+`review/shield-fabrication.csv` and `review/shield-manufacturing.json` list blanks, bends, welds and all shield hardware. `review/shields/` contains millimeter DXFs with separate bend-reference layers and finished-component STEP files with read-back checks. Flat development uses a stated nominal K factor; the shop must verify its bend coupon and finish to the modeled profiles. `review/shield-check.json` records exact guard self/frame/bed checks, conservative continuous motion-box tests and roof/hatch service checks. Guard temperatures, actual tool/cable motion, corrosion protection, protective bonding and real fastener capacities remain physical acceptance tests.
+
+## Removable ATC and new Z clearance — XR2
+
+The removable200 mm carrier uses two335 mm MGN12 guides and two-sided positive capture at each endpoint. Its current magazine capacity is520×60×80 mm on baseZ1030.15; only60 mm width is manufacturer-confirmed. No real magazine mounting pattern or pocket centres are invented. The new/unowned ZXHT80-200 nominal Z module has319 mm body/430 mm overall; output height/pattern and motor/brake compatibility remain measured interfaces. Axial spindle grip moves10 mm upward while retaining the full40 mm clamp contact. This gives referenceZ970..1170 and a conditional15–50 mm loaded-tool projection case; retained projection below magazine base is limited to26.35 mm over40 mm stock/clamps.
+
+Enter tool-change mode via headX255/gantry guideY700 at full retract; after deployment, move rearward atX255 before moving across to calibrated pockets. This avoids sweeping the fixed Z-module body through the magazine. The steel gate opens161 mm and remains indexed open during cold routing; plasma requires it indexed closed and the rack parked with both parked pins engaged. The release tether eye moves10 mm inward to local94,100 with its matching tapped mount.
+
+[ATC-INTERFACE.md](ATC-INTERFACE.md) defines the datum equations, actual hardware, legal poses, capture, controls and supplier gates. `check_atc.py` checks declared kit/tool capacity separately from physical parts and records legal motion scope; the main travel check covers full cutting travel with the rack parked. Actual nut engagement, loaded tools, pressure/force, thermal protection, controller M6 and cable/air routing remain commissioning gates.

@@ -34,6 +34,21 @@ SADDLE_STATIONS = (190., 700., 1100.)
 PLASMA_DROP = 115. + 911. - P.SLAT_TOP
 LINK_Z = 1154.7875
 LINK_ANGLE_DEG = -math.degrees(math.atan2(MODULE_RISE, 80.))
+SELECTED_Z_STROKE = 200.
+Z_BODY_GROWTH = 100.
+PLASMA_RELEASE_EYE_SHIFT_X=-10.
+BRAKE_MOTOR = dict(part='23HS22-2804D-B200',owned=False,body_mm=[57.,57.,88.],shaft_mm=[8.,21.],brake_Nm=2.,brake_VDC=24.,brake_W=11.5,phase_A=2.8,compatibility_verified=False,source='https://www.omc-stepperonline.com/nema-23-stepper-1-26nm-178oz-in-w-brake-friction-torque-2-0nm-283oz-in-23hs22-2804d-b200',representation='Nominal conditional replacement housing at original front mount plane. Unpublished pilot/bolt/coupler geometry is not fabricated.')
+SELECTED_Z = {
+    'model':'ZXHT80-200', 'asin':'B09MYD6Z23', 'owned':False,
+    'product_url':'https://www.amazon.com/dp/B09MYD6Z23',
+    'top_drawing':'https://m.media-amazon.com/images/I/61XtaSA5UmL._SL1500_.jpg',
+    'side_drawing':'https://m.media-amazon.com/images/I/61imEqsCa9L._SL1500_.jpg',
+    'body_length_mm':319., 'overall_length_mm':430., 'base_width_mm':80.,
+    'end_plate_thickness_mm':12., 'stroke_mm':200.,
+    'base_fasteners':'M5 movable nuts; exact slot profile and pitch remain held',
+    'output_interface':'90x50 nominal; transverse small-hole spacing70 only; along-travel pitch/thread/depth and base-to-output height remain held',
+    'power_off_retention':'Planned23HS22-2804D-B200 power-off2Nm brake motor, new/unowned. Flange/pilot/shaft/coupler compatibility and dynamic stopping remain explicit design release holds; supplied module motor has no brake.',
+}
 
 
 def box(x, y, z, dx, dy, dz):
@@ -216,6 +231,11 @@ def _add_plasma(router):
         return place(s, origin, u=(1, 0, 0), v=(0, 0, 1))
     common.append(('XR_PLASMA_DROP_'+str(int(PLASMA_DROP)), install(blank.clean(), bracket), (.30, .50, .52)))
     for n, s, c in _local_head():
+        if n in ('I_HEAD_TETHER_EYE_RELEASE','I_HEAD_TETHER_RELEASE'):
+            s=s.translate((PLASMA_RELEASE_EYE_SHIFT_X,0,0))
+        elif n=='I_HEAD_RELEASE_PLATE':
+            s=s.fuse(cylinder(3.3,6.35,(104,100,44))).clean()
+            s=s.cut(cylinder(3.3,8,(94,100,43))).clean()
         common.append((n, install(s, lower), c))
     screw = cyl(6, 16).fuse(cyl(10.2, 6).translate((0, 0, 16))).clean()
     for i, (x, y) in enumerate(MOUNT_PATTERN, 1):
@@ -227,14 +247,36 @@ def _add_plasma(router):
 
 @lru_cache(maxsize=8)
 def _wood(gantry_y, head_x, z_lift):
+    assert 0 <= z_lift <= SELECTED_Z_STROKE
     out = []
-    old = _bare_motion(gantry_y, head_x, z_lift)
+    # Recover the unchanged lower datum from the frozen100mm machine, then
+    # install the sourced319mm/430mm replacement and its extra100mm output
+    # travel. This is a new/unowned200mm unit, never a stretched owned slide.
+    inherited_lift = min(z_lift, 100.)
+    extra_lift = z_lift-inherited_lift
+    old = _bare_motion(gantry_y, head_x, inherited_lift)
     for name, shape, color in old:
         if name in ('Y_DATUM_L', 'Y_DATUM_R'):
             continue
         if name.startswith('Y_STOP_') and ('_CAP_' in name or '_NUT_' in name):
             continue
-        if name.startswith('GANTRY_END_BRACKET_'):
+        if name == 'ZBX80_BASE':
+            x,y,z,*_ = bbox(shape)
+            shape = box(x,y,z,80,20,319)
+        elif name == 'ZBX80_MOTOR':
+            x,y,z,*_=bbox(shape)
+            shape=box(x,y,z+Z_BODY_GROWTH,57,57,88)
+            name='ZBX80_BRAKE_MOTOR_CANDIDATE'
+        elif name in ('ZBX80_END_TOP','ZBX80_COUPLER_GUARD'):
+            shape = shape.translate((0,0,Z_BODY_GROWTH))
+        elif name == 'Z_CARRIER':
+            x,y,z,x1,y1,z1 = bbox(shape)
+            shape = shape.fuse(box(x,y,z1,x1-x,y1-y,Z_BODY_GROWTH)).clean()
+        elif name == 'ZBX80_OUTPUT_HOLD' or name.startswith('TOOL_'):
+            if name=='TOOL_SPINDLE_65x259':shape=shape.translate((0,0,10))
+            if extra_lift:
+                shape = shape.translate((0,0,extra_lift))
+        elif name.startswith('GANTRY_END_BRACKET_'):
             shape = _gantry_bracket(name.endswith('_L'), gantry_y)
         elif name.startswith('Y_LINK_SUPPORT_'):
             out += _link_support(name.endswith('_L'), gantry_y)
@@ -300,7 +342,7 @@ def interface_metadata():
     sources = [Path(__file__), HERE/'params.py', OLD/'motion_context.py']
     sources += [SOURCE/(n+'.py') for n in ('motion_details', 'motion_completion', 'motion_finish', 'cad_helpers')]
     return {
-        'status':'XR1 integration candidate, not fabrication/CAM release',
+        'status':f'{P.REVISION} integration candidate, not fabrication/CAM release',
         'source_sha256':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},
         'guide_seat_planes_X_mm':[50.8,1099.2], 'guide_center_Z_mm':GUIDE_Z,
         'upper_beam_Z_mm':[P.UPPER_BOTTOM,P.UPPER_TOP],
@@ -311,7 +353,16 @@ def interface_metadata():
         'link_eye_distance_mm':math.hypot(80,MODULE_RISE),
         'nominal_link_thread_engagement_each_mm':10-(math.hypot(80,MODULE_RISE)-80)/2,
         'plasma_drop_mm':PLASMA_DROP,
+        'plasma_release_tether_eye_mount_local_XY_mm':[94.,100.],
+        'plasma_release_tether_eye_shift_X_mm':PLASMA_RELEASE_EYE_SHIFT_X,
         'no_long_caps_or_datums':True,
+        'selected_Z_module':SELECTED_Z,
+        'selected_Z_brake_motor_candidate':BRAKE_MOTOR,
+        'selected_Z_stroke_mm':SELECTED_Z_STROKE,
+        'Z_lower_datum_preserved':True,
+        'Z_carrier_extension_mm':Z_BODY_GROWTH,
+        'spindle_axial_grip_adjustment_mm':10.,
+        'spindle_lower_reference_Z_mm_at_zero_lift':970.,
         'moving_parts':'part_motion_class() is authoritative broad classification; ZBX80 body and motor moveX/Y but output/head also movesZ through inherited geometry.',
         'unmodeled_slot_threads':'Saddle and stop frame screws show external grip/head only. In-slot threads/Tnut bodies are not fabricated solid geometry. Rail factory screw holes and fasteners are absent pending actual pattern.',
     }

@@ -12,7 +12,7 @@ import cadquery as cq
 import params as P
 from bed import (box,bed_parts,transfer_fixed_parts,transfer_poses,cassette_parts,
     CASSETTE_H,STORE_LEVELS,STORE_Y,pan_parts,pan_retainers,dock_parts,
-    storage_parts,water_envelopes,retention_parts,mass_report)
+    storage_parts,water_envelopes,retention_parts,mass_report,cabinet_cover,cabinet_cover_blocks)
 from frame import frame_parts
 from motion import motion_parts
 from build import clashes,bounds,overlap
@@ -47,20 +47,27 @@ def swept_enclosure(a,b):
 def run():
     OUT.mkdir(exist_ok=True)
     source={n:hashlib.sha256((HERE/n).read_bytes()).hexdigest() for n in
-            ('params.py','bed.py','frame.py','motion.py','build.py','check_transfer.py')}
-    motion=[q for q in motion_parts(False,1275.,575.,100.) if not q[0].startswith(
+            tuple(n for n in ('params.py','bed.py','frame.py','motion.py','build.py','shields.py','atc.py','check_transfer.py') if (HERE/n).exists())}
+    motion=[q for q in motion_parts(False,1275.,575.,P.Z_TRAVEL) if not q[0].startswith(
         ('TOOL_SPINDLE_','TOOL_SPLIT_CLAMP_','TOOL_CLAMP_'))]
-    static=transfer_fixed_parts()+frame_parts()+motion
+    from shields import shield_parts
+    accessories=shield_parts(False)
+    missing=[]
+    try:
+        from atc import atc_parts
+        accessories+=atc_parts(False,deployed=False)
+    except (ImportError,SyntaxError) as e:missing.append('atc.py unavailable/in-progress: '+str(e))
+    static=transfer_fixed_parts()+frame_parts()+motion+accessories
     report={'revision':P.REVISION,'source_sha256':source,'passed':False,'release':False,
       'scope':'Exact CAD intersections of conservative enclosing solids for every continuous transfer segment; actual human reach, force and retention are unqualified.',
       'positive_volume_threshold_mm3':.05,'aabb_overlap_tolerance_mm':1e-5,
-      'park':{'gantry_y_mm':1275,'head_x_mm':575,'z_lift_mm':100,
+      'park':{'gantry_y_mm':1275,'head_x_mm':575,'z_lift_mm':P.Z_TRAVEL,
         'required':'Power isolated; REMOVE ENTIRE spindle/split-clamp module or entire plasma-drop/head/torch module before moving any cassette. Only the common Zadapter remains. Remove eightM6 clamp sets into owned tool storage; retain Z; open door. Install next tool module only after bed conversion.'},
-      'order':[4,3,2,1],'segments':[],'nominal_thread_exceptions':[],
+      'missing_accessories':missing,'order':[1,2,3,4],'segments':[],'nominal_thread_exceptions':[],
       'intentional_initial_pin_enclosure_exceptions':[],
       'mode_self':{},'stored_case':{},'limits':{'machine_plan_x_mm':[0,1150.],
          'machine_plan_y_mm':[0,1450.],'swap_clearance_outside_plan_mm':0},
-      'physical_holds':['14mm front finger pocket ergonomic test','measured cassette mass and manageable lift','side handle proof load and edge durability','door slide guides/stop/retention actual hardware','dock pin fits and repeatability','bolt preload/thread/washer seat and sleeve tolerances','thermal and fume protection before plasma']}
+      'physical_holds':['14mm front finger pocket ergonomic test','measured cassette mass and manageable lift','side handle proof load and edge durability','lift-off cover screw/tapped-tab and parking-stand physical tests','dock pin fits and repeatability','bolt preload/thread/washer seat and sleeve tolerances','thermal and fume protection before plasma']}
     # Raw self checks retain every positive, including nominalthreads if any.
     for label,hot in (('WOOD',False),('PLASMA',True)):
         parts=bed_parts(hot);raw=clashes(parts,parts,True)
@@ -70,10 +77,10 @@ def run():
     # Closed storage envelope including all stored cassettes (already exact selftested above).
     report['stored_case']={'case_clear_x_mm':4.2,'side_shelf_rail_clear_x_mm':2.6,
       'shelf_vertical_gap_mm':5.,'minimum_top_to_primary_roof_mm':11.8,
-      'door_closed_to_panel_front_gap_mm':11.2,
+      'door_closed_to_panel_front_gap_mm':13.0,'minimum_parking_block_to_lowest_stored_panel_mm':1.2,
       'floor_to_lowest_panel_mm':21.2,'passed':report['mode_self']['PLASMA']['passed']}
     removed=[]
-    for i in (3,2,1,0):
+    for i in (0,1,2,3):
         obstacles=list(static)
         for j in range(4):
             if j==i:continue
@@ -104,21 +111,35 @@ def run():
                 not c['positive_intersections'] for c in row.get('initial_pin_hole_checks',[]))
             report['segments'].append(row)
         removed.append(i)
-    # Opening the slidingdoor is also inside theplan and separatefrombedmoving.
-    door=box(104.,348.,36.,942.,.8,674.)
-    fixed_closed=[q for q in static if not q[0].startswith('COLD_CASE_SLIDING_FRONT_DOOR_')]
-    report['door_motion']=clashes([('DOOR_CONTINUOUS_ENCLOSURE',door,(.4,.4,.4))],fixed_closed)
-    report['door_motion']['passed']=not report['door_motion']['positive_intersections']
-    report['restoration']='Same path in reverse with BOTH complete tool modules removed; restore cassettes1,2,3,4. Refit selected tool only after cassette conversion.'
+    # Lift-offcover:pullforward,lower,lean,and slidealongits8deg stands.
+    doorfixed=[q for q in static if not q[0].startswith(('COLD_CASE_LIFTOFF_FRONT_COVER_',
+        'COLD_CASE_COVER_PARKING_BLOCK_'))]
+    stages=('closed','front','lowered','leaned','parked');door_checks=[]
+    for aa,bb in zip(stages,stages[1:]):
+        sa,sb=cabinet_cover(aa),cabinet_cover(bb);ba,bc=bounds(sa),bounds(sb)
+        lo=[min(ba[i],bc[i]) for i in range(3)];hi=[max(ba[i],bc[i]) for i in range(3,6)]
+        enc=box(*lo,*(hi[i]-lo[i] for i in range(3)))
+        row={'from':aa,'to':bb,**clashes([('COVER_CONTINUOUS_ENCLOSURE',enc,(.4,.4,.4))],doorfixed)}
+        row['within_plan']=lo[0]>=0 and hi[0]<=1150 and lo[1]>=-1e-6 and hi[1]<=1450
+        row['passed']=not row['positive_intersections'] and row['within_plan'];door_checks.append(row)
+    slot_checks=[]
+    for k in range(5):
+        ss=cabinet_cover('parked').translate((0,5*k*__import__('math').tan(__import__('math').radians(8)),5*k))
+        slot_checks.append({'axial_lift_vertical_component_mm':5*k,**clashes([('COVER',ss,(.4,.4,.4))],cabinet_cover_blocks(True))})
+    report['door_motion']={'segments':door_checks,'slot_checks':slot_checks,
+        'continuous_slot_proof':'The1.2mm slot and.8mm cover sharean8degreeaxis;finaltranslationisalongthataxiswith.2mmnominalsideclearance. Basefloor5mmprovidespositivebearing.',
+        'rotation_proof':'During0..8degrotation,nonnegativepanelY/ZcoordinateshaveYincreasing/Zdecreasing;theendpointenclosurecoversallanglesandthemonotonicbaseYshift.',
+        'passed':all(q['passed'] for q in door_checks) and all(not q['positive_intersections'] for q in slot_checks)}
+    report['restoration']='Same path in reverse with BOTH complete tool modules removed; restore cassettes4,3,2,1. Refit selected tool only after cassette conversion.'
     report['source_unchanged']=all(hashlib.sha256((HERE/n).read_bytes()).hexdigest()==h for n,h in source.items())
-    report['passed']=report['source_unchanged'] and all(r['passed'] for r in report['segments']) and all(
+    report['passed']=not missing and report['source_unchanged'] and all(r['passed'] for r in report['segments']) and all(
         q['passed'] for q in report['mode_self'].values()) and report['stored_case']['passed'] and report['door_motion']['passed']
     report['mass_report']=mass_report()
     (OUT/'transfer-check.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps({'passed':report['passed'],'segments':len(report['segments']),
       'failed_segments':[{'cassette':r['cassette'],'from':r['from'],'to':r['to'],'positive_intersections':r['positive_intersections']} for r in report['segments'] if not r['passed']],
       'self_positives':{k:len(v['positive_intersections']) for k,v in report['mode_self'].items()},
-      'door':report['door_motion']},indent=2),flush=True)
+      'door_passed':report['door_motion']['passed'],'source_consistent':report['source_unchanged']},indent=2),flush=True)
     return 0 if report['passed'] else 1
 
 if __name__=='__main__':

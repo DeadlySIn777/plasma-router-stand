@@ -1,0 +1,114 @@
+{
+  "observed_date": "2026-11-01",
+  "scope": "Read-only bounded public-source search; no pricing, contacts, Discord membership, login or account changes.",
+  "primary_sources": {
+    "faq": "https://rapidchangeatc.com/faq/",
+    "product": "https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/",
+    "official_github_org": "https://github.com/greilick-industries",
+    "faq_download_link21": "https://discord.com/channels/1077383334080032898/1191144591840268318",
+    "former_dimension_page": "https://rapidchangeatc.com/docs/magazine-information/magazine-dimensions/"
+  },
+  "confirmed_current_family_facts": {
+    "body_width_mm": 60,
+    "same_body_geometry": [
+      "ER11",
+      "ER16",
+      "ER20"
+    ],
+    "replaced_older_width_mm": 54,
+    "recommended_unrecessed_Z_clearance_mm": 90,
+    "approx_tool_stickout_without_riser_or_recess_mm": 24,
+    "available_pocket_counts": [
+      4,
+      6,
+      8
+    ]
+  },
+  "not_verified": [
+    "Pocket centres/pitch or first-pocket datum",
+    "Mounting hole positions, diameters or countersinks",
+    "True base/housing length and maximum height for chosen pocket count/tier",
+    "Base-to-collet-nut/engagement/IR plane",
+    "Cover/servo swept volume and exact cable connector envelope"
+  ],
+  "public_access_findings": {
+    "FAQ_link21": "Discord channel page, not a direct CAD asset; no attachment available unauthenticated here. No join/login was attempted.",
+    "old_dimensions_URL": "Could not retrieve a dimension page in the public web tool.",
+    "public_WordPress_media_searches": {
+      "magazine": 0,
+      "step": 0,
+      "qualification": "Only public indexedmedia API results, not proof that no public file exists anywhere."
+    },
+    "official_GitHub_tree_checks": [
+      {
+        "repo": "FluidNC-RapidChange",
+        "tree_entries": 604,
+        "truncated": false,
+        "CAD_or_archive_paths": []
+      },
+      {
+        "repo": "ESP3D-WEBUI-RapidChange",
+        "tree_entries": 221,
+        "truncated": false,
+        "CAD_or_archive_paths": []
+      },
+      {
+        "repo": "FluidNC-RapidChangeATC",
+        "tree_entries": 577,
+        "truncated": false,
+        "CAD_or_archive_paths": []
+      },
+      {
+        "repo": "mach4-rapidchange-scripts",
+        "tree_entries": 25,
+        "truncated": false,
+        "CAD_or_archive_paths": []
+      },
+      {
+        "repo": "rapidchange-sidewinder-mach4",
+        "tree_entries": 27,
+        "truncated": false,
+        "CAD_or_archive_paths": []
+      },
+      {
+        "repo": "rcatc-scripts-grblhal",
+        "tree_entries": 9,
+        "truncated": false,
+        "CAD_or_archive_paths": []
+      },
+      {
+        "repo": "rapidchange-attiny",
+        "tree_entries": 18,
+        "truncated": false,
+        "CAD_or_archive_paths": []
+      }
+    ],
+    "extensions_checked": [
+      "step",
+      "stp",
+      "stl",
+      "3mf",
+      "f3d",
+      "f3z",
+      "dxf",
+      "dwg",
+      "iges",
+      "igs",
+      "zip",
+      "7z",
+      "rar"
+    ]
+  },
+  "non_drawing_data_excluded": {
+    "product_additional_information_dimensions_mm": [
+      520,
+      120,
+      120
+    ],
+    "reason": "Generic product/shipping information is not a dimensioned mechanical drawing for the selected magazine; do not derive pocket centres, nut planes or80mm height from it."
+  },
+  "conclusion": "Vendor-data/access gate remains. Current carrier acceptance volume may be modeled as a design allowance, but is not verified purchased magazine CAD or a released mounting template.",
+  "release_gate": "Obtain the selected current60mm-family model/template from the vendor or authorized owner access, or measure the actual chosen unit; then update carrier holes, engagement height, socket coordinates, cover clearance and tool-change proof.",
+  "important_access_distinction": "FAQ verified-owner CAD statement refers to replacement parts. The mounting-model FAQ points to Discord; this search does not assert that purchasing is required for outer mounting CAD.",
+  "release": false
+}

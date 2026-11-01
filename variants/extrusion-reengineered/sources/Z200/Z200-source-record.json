@@ -1,0 +1,132 @@
+{
+  "observed_date": "2026-11-01",
+  "research_scope": "Primary seller nominal geometry only; no pricing, ordering, account changes or CAD edits.",
+  "candidate": {
+    "brand": "RATTMMOTOR",
+    "model": "ZXHT80-200 / ZBX80 200mm",
+    "asin": "B09MYD6Z23",
+    "product_url": "https://www.amazon.com/dp/B09MYD6Z23",
+    "ownership": "New replacement part; not assumed owned",
+    "nominal_selection": "200mm member of the same seller family as existing100mm B09MVYGLNQ"
+  },
+  "primary_images": [
+    {
+      "file": "Z200-gallery-1.jpg",
+      "url": "https://m.media-amazon.com/images/I/61gGHoAJpHL._SL1500_.jpg",
+      "sha256": "229245abdaf432702cfbc3bb9c15dfa0721c034a05d9f91c3dfa1a731bf659d5"
+    },
+    {
+      "file": "Z200-gallery-2.jpg",
+      "url": "https://m.media-amazon.com/images/I/61XtaSA5UmL._SL1500_.jpg",
+      "sha256": "94a2ca140913b67163d0b3775da129e0eca6236f9a0885731cde0943ce028071"
+    },
+    {
+      "file": "Z200-gallery-3.jpg",
+      "url": "https://m.media-amazon.com/images/I/61imEqsCa9L._SL1500_.jpg",
+      "sha256": "24e4aefef2f64a9fdb1edd302ac216ba8885273d8c010edb6c56230615e8599e"
+    },
+    {
+      "file": "Z200-gallery-4.jpg",
+      "url": "https://m.media-amazon.com/images/I/51wBxuUiRML._SL1500_.jpg",
+      "sha256": "6c29288b37b625de54ed8d832e98b027ac3ae089b718a3b760982c8a3e05b5a3"
+    },
+    {
+      "file": "Z200-gallery-5.jpg",
+      "url": "https://m.media-amazon.com/images/I/71GtJ9+LPzL._SL1500_.jpg",
+      "sha256": "56899d5b3250552536b599e559812d4adbb90274bd89ef0806e1a669df25d507"
+    },
+    {
+      "file": "Z200-gallery-6.jpg",
+      "url": "https://m.media-amazon.com/images/I/71b61vplnTL._SL1500_.jpg",
+      "sha256": "8a2494e95cc036eec313e302d8e1f185a609af178a6f7c7a914128a6471955a6"
+    },
+    {
+      "file": "Z200-gallery-7.jpg",
+      "url": "https://m.media-amazon.com/images/I/616l7IqUO5L._SL1500_.jpg",
+      "sha256": "f631c92b07dcfe3098a8676c4d9a44f42aca43b945e598bfa9fb919f1909bc41"
+    },
+    {
+      "file": "Z200-gallery-8.jpg",
+      "url": "https://m.media-amazon.com/images/I/61j0QnDrXPL._SL1500_.jpg",
+      "sha256": "aaf0c75490e553ceded4e7a3010204480da57e6764611fceb1e9381c3a5dbd9e"
+    },
+    {
+      "file": "Z200-gallery-9.jpg",
+      "url": "https://m.media-amazon.com/images/I/514TkJxotHL._SL1500_.jpg",
+      "sha256": "6680052a88365808aa3cee8c547b74dcb077ff78ff0d85d68ea60d117f08491c"
+    }
+  ],
+  "explicit_nominal_mm": {
+    "effective_stroke": 200,
+    "body_length_including_endplates": 319,
+    "overall_including_motor": 430,
+    "body_width": 80,
+    "endplate_thickness_each": 12,
+    "inside_endplate_span": 295,
+    "nonmotor_end_height": 67,
+    "motor_end_height": 78,
+    "base_extrusion_height": 20,
+    "carriage_across_width": 90,
+    "carriage_along_travel_length": 50,
+    "carriage_body_height_callout": 35,
+    "small_output_hole_diameter_callout": 5,
+    "large_bore_diameter_callout": 7,
+    "small_output_hole_transverse_pitch": 70,
+    "motor_face": [
+      57,
+      57
+    ],
+    "motor_length": 56
+  },
+  "mounting": {
+    "bottom": "M5 movable mounting nuts, explicitly identified by primary gallery6 and A+ text. Longitudinal position adjustable.",
+    "side": "M5 movable nuts are shown, but A+ describes the side slot for limit-switch attachment; structural side-mount capacity is not established.",
+    "bottom_view_raw_across_callouts_mm": [
+      80,
+      66,
+      54,
+      26,
+      14
+    ],
+    "bottom_outer_slot_centre_pitch": "60mm is a conditional arithmetic inference from symmetric66/54 edge dimensions, not an explicit centre-to-centre dimension. Do not release holes from this alone.",
+    "output": "Four small holes are identified as countertop fixing holes. Drawing marks diameter5, but thread designation, depth and along-travel pitch are not given. Large diameter7 bores are not established as usable output mounting holes."
+  },
+  "drive": {
+    "seller_screw_designation": "SFU1605",
+    "lead_mm": 5,
+    "motor_type": "Standard57/NEMA23 four-wire stepper shown; brake not specified",
+    "seller_motor_current_A": 3,
+    "seller_motor_holding_torque_Nm": 1.2,
+    "seller_step_angle_deg": 1.8,
+    "power_off_retention": "Not specified. No brake/anti-fall device or self-locking claim is established. Do not credit20kg vertical-load marketing as power-off retention."
+  },
+  "claims_not_qualified_design_allowables": {
+    "seller_horizontal_load_kg": 80,
+    "seller_vertical_load_kg": 20,
+    "accuracy": "Seller gallery says0.03mm while A+ text says0.003mm. No qualified accuracy/moment rating is inferred."
+  },
+  "not_given": [
+    "Output plane height above mounting face:35mm callout is carriage-body height, not full stack",
+    "Output hole longitudinal pitch, thread and engagement depth",
+    "Bottom nut cavity and permissible fastener length/torque",
+    "Motor shaft/coupler bore and connector envelope",
+    "Mechanical/home endpoint coordinates and limit-switch geometry",
+    "Spring brake or anti-fall retention",
+    "Actual stiffness, overhung moment capacity and loaded speed limits"
+  ],
+  "integration_guidance": [
+    "Use published319/430mm Z200 dimensions; do not merely assert a stretched100mm part exists. They confirm the same111mm motor/bracket extension as100mm family.",
+    "Move motor/end/coupler envelopes with changed body length; keep output stroke200mm only within verified effective endpoints.",
+    "Keep the provisional output adapter guarded until actual output pattern and stack are supplied/measured.",
+    "Keep replacement module, its different mounts/fasteners and any brake/counterbalance as new/unowned manifest entries."
+  ],
+  "alternative_if_fully_dimensioned_output_required": {
+    "manufacturer": "FUYU",
+    "family": "FSL80",
+    "official_catalog_url": "https://www.fuyumotion.com/uploads/2f7664ea.pdf",
+    "official_manual_url": "https://www.fuyuautomation.com/resource/attachments/d5fdd5f1023d4c19a4ba4af2be044d46_8.pdf",
+    "official_2D_download_page": "https://www.fuyuautomation.com/articles/fsl80x.html",
+    "status": "Not selected. Manufacturer catalog has carriage tapped patterns and a brake option; different body/motor geometry requires an explicit new integration, not interchangeability."
+  },
+  "release": false
+}

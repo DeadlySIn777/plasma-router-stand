@@ -1,0 +1,1392 @@
+{
+  "passed": true,
+  "source_consistent_during_check": true,
+  "reference_hash_line_endings": "CRLF for bundled baseline comparison; actual native-file hashes recorded separately.",
+  "scope": "Onlythemounttabmaterialremovalplusunchangedpartidentityandcomponentproxy.",
+  "old_source_sha256": "0ab5bc8755287a8100ad735a2139aa21d05855d855bd32fd9e8d6f8bb8998d2d",
+  "new_source_sha256": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+  "source_sha256": {
+    "atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "atc_tab_update_audit.py": "579adc6f5915f3c455b15ad5cb5a7cb0adf957c52e61e82d06f1f5d88c2e0eb5"
+  },
+  "unchanged_part_count": 222,
+  "unchanged_parts": [
+    {
+      "id": "ATC_16T_DRIVE",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_16T_IDLER",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_2GT_6MM_OPEN_BELT_ROUTE",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_ARM_M4x14_L_1132_1042",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_ARM_M4x14_L_1132_1058",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_ARM_M4x14_L_1192_1042",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_ARM_M4x14_L_1192_1058",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_ARM_M4x14_R_1132_1042",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_ARM_M4x14_R_1132_1058",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_ARM_M4x14_R_1192_1042",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_ARM_M4x14_R_1192_1058",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BACKBAR_L",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BACKBAR_R",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BELT_CLAMP_M3x16",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BELT_GRIP_D2_PIN",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BELT_GRIP_M4x22",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_L_0_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_L_0_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_L_0_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_L_0_3",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_L_1_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_L_1_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_L_1_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_L_1_3",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_R_0_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_R_0_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_R_0_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_R_0_3",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_R_1_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_R_1_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_R_1_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_BLOCK_M3x8_R_1_3",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_CARRIER_END_L",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_CARRIER_END_R",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_DRAWDOWN_M6x25_305_1097",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_DRAWDOWN_M6x25_305_1132",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_DRAWDOWN_M6x25_845_1097",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_DRAWDOWN_M6x25_845_1132",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_DRIVE_CASE_M3x8_1016.0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_DRIVE_CASE_M3x8_1044.0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_DRIVE_PULLEY_M3_GRUB",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_DRIVE_STANDOFF_1016.0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_DRIVE_STANDOFF_1044.0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_DRIVE_STEEL_CASE",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_FRAME_M6x16_EXTERNAL_L_1_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_FRAME_M6x16_EXTERNAL_L_1_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_FRAME_M6x16_EXTERNAL_L_2_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_FRAME_M6x16_EXTERNAL_L_2_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_FRAME_M6x16_EXTERNAL_R_1_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_FRAME_M6x16_EXTERNAL_R_1_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_FRAME_M6x16_EXTERNAL_R_2_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_FRAME_M6x16_EXTERNAL_R_2_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_GATE_HANDLE",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_GATE_INDEX_PIN",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_GATE_PM_CLOSED",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_GATE_PM_OPEN",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_GATE_SENSOR_M3x8_BUTTON_CLOSED_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_GATE_SENSOR_M3x8_BUTTON_CLOSED_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_GATE_SENSOR_M3x8_BUTTON_OPEN_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_GATE_SENSOR_M3x8_BUTTON_OPEN_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HARD_SEAT_305_1097",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HARD_SEAT_305_1132",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HARD_SEAT_845_1097",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HARD_SEAT_845_1132",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HOOD_FLOOR",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HOOD_FRAME_M6x16_315_746",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HOOD_FRAME_M6x16_315_786",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HOOD_FRAME_M6x16_835_746",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HOOD_FRAME_M6x16_835_786",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HOOD_L",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HOOD_R",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HOOD_REAR",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HOOD_STAND_315",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HOOD_STAND_835",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_HOOD_SUPPORT_RHS",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_IDLER_AXIAL_SPACER",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_IDLER_BAR_BRIDGE",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_IDLER_LOWER_WASHER",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_IDLER_M5_NUT",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_IDLER_M5x25_AXLE",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_IDLER_RUNNING_BUSH",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_IDLER_UPPER_WASHER",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCATOR_DIAMOND",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCATOR_RISER_325",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCATOR_RISER_825",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCATOR_RISER_M4x12_325_1153",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCATOR_RISER_M4x12_325_1165",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCATOR_RISER_M4x12_825_1153",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCATOR_RISER_M4x12_825_1165",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCATOR_ROUND",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_CAP_NUT_110.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_CAP_NUT_115.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_CAP_POST_110.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_CAP_POST_115.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_CYLINDER_PANEL",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_E2E_C03SR8_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_E2E_C03SR8_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_FIXED",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_FLAG",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_FLAG_M4_NUT",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_FLAG_WASHER",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_PIN",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_SENSOR_SUPPORT",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_DEPLOY_SPRING_CAP",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_CAP_NUT_110.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_CAP_NUT_115.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_CAP_POST_110.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_CAP_POST_115.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_CYLINDER_PANEL",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_E2E_C03SR8_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_E2E_C03SR8_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_FIXED",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_FLAG",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_FLAG_M4_NUT",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_FLAG_WASHER",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_PIN",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_SENSOR_M2_SET_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_SENSOR_M2_SET_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_SENSOR_SUPPORT",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOCK_PARK_SPRING_CAP",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_LOWER_U_CARRIER",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MGN12H_L_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MGN12H_L_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MGN12H_R_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MGN12H_R_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MGNR12_L_335",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MGNR12_R_335",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOTOR_M3x10_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOTOR_M3x10_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOTOR_M3x10_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOTOR_M3x10_3",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOVING_BELT_GRIP",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOVING_BELT_LINER_A",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOVING_BELT_LINER_B",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOVING_PIN_BUSHING_L",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOVING_PIN_BUSHING_R",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOVING_RHS_875p35x50p8x25p4",
+      "symmetric_difference_mm3": 3.4924596548080444e-10,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOVING_STAGE_STEEL_PATCH",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOVING_WING_L",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_MOVING_WING_R",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_NEMA14_14HS20_1504S",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_10",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_11",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_12",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_3",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_4",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_6",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_7",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_8",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_L_9",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_10",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_11",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_12",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_3",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_4",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_6",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_7",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_8",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_RAIL_M3x12_R_9",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_REAR_CRADLE_L_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_REAR_CRADLE_L_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_REAR_CRADLE_R_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_REAR_CRADLE_R_2",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_REMOVABLE_MAGAZINE_U_BRIDGE",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_CAP_NUT_110.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_CAP_NUT_115.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_CAP_POST_110.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_CAP_POST_115.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_CYLINDER_PANEL",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_FIXED",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_FLAG",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_FLAG_M4_NUT",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_FLAG_WASHER",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_PIN",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_SENSOR_SUPPORT",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_DEPLOY_SPRING_CAP",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_CAP_NUT_110.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_CAP_NUT_115.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_CAP_POST_110.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_CAP_POST_115.5",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_CYLINDER_PANEL",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_E2E_C03SR8_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_E2E_C03SR8_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_FIXED",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_FLAG",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_FLAG_M4_NUT",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_FLAG_WASHER",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_PIN",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_SENSOR_M2_SET_0",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_SENSOR_M2_SET_1",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_SENSOR_SUPPORT",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_R_LOCK_PARK_SPRING_CAP",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_STAGE_E2E_C03SR8_DEPLOY",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_STAGE_E2E_C03SR8_PARK",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_STAGE_PATCH_M2x4",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_STAGE_SENSOR_M2_SET_DEPLOY",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_STAGE_SENSOR_M2_SET_PARK",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_STAGE_SENSOR_MOUNT_DEPLOY",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_STAGE_SENSOR_MOUNT_PARK",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    },
+    {
+      "id": "ATC_STEEL_GATE",
+      "symmetric_difference_mm3": 0.0,
+      "bbox_difference_mm": 0.0,
+      "passed": true
+    }
+  ],
+  "modified_part": "ATC_MOTOR_WELDED_MOUNT",
+  "new_part_valid": true,
+  "new_part_solid_count": 1,
+  "new_material_outside_old_mm3": 0.0,
+  "removed_volume_mm3": 304.6495312500088,
+  "expected_removed_cuboid_mm": [
+    1039.975,
+    1390,
+    1069.675,
+    1047.65,
+    1411.75,
+    1071.5
+  ],
+  "removal_symmetric_difference_mm3": 0.0,
+  "exact_nominal_minimum_gap_mm": 2.625,
+  "monotone_clearance_disposition": "Theupdatedfixedmountisapuresubsetofthepreviousone;allother222physicalpartsaremateriallyidentical. Removingmaterialcannotintroduceageometriccollisionwiththisfixedmount. Theparentstillregeneratesaffectedreports/exports.",
+  "component_screen": {
+    "scope": "Isolatedtabcomponentlinearstaticproxy;notphysicalorweldqualification.",
+    "width_mm": 7.675,
+    "raw_stock_thickness_mm": 3.175,
+    "cantilever_mm": 9.75,
+    "rigid_motor_centre_offset_mm": 17.65,
+    "assumed_mass_kg": 1.0,
+    "radial_belt_resultant_N": 50.0,
+    "motor_reaction_about_Z_Nm": 0.4,
+    "assumed_E_MPa": 200000.0,
+    "assumed_poisson": 0.3,
+    "I_out_of_plane_mm4": 20.47049417317708,
+    "I_in_plane_mm4": 119.61830276692707,
+    "out_of_plane_motor_centre_deflection_mm": 0.041303244993709035,
+    "torsion_motor_centre_deflection_proxy_mm": 0.003913692299382677,
+    "in_plane_motor_centre_deflection_mm": 0.010011916808644716,
+    "combined_deflection_proxy_mm": 0.04631209233397483,
+    "bending_plus_axial_stress_bound_MPa": 100.1920307505771,
+    "combined_stress_proxy_MPa": 101.07606067292531,
+    "assumed_yield_reference_MPa": 235.0,
+    "yield_reference_to_stress_proxy_ratio": 2.3249817853551167,
+    "weld_capacity_qualified": false,
+    "fatigue_qualified": false,
+    "fabrication": "Use3.175mm plainsteelstock; weld/fit while retaining the modeled top envelope. Inspectfor distortion and verify>=2mm fulltravelphysicalclearance. Weldcapacitymustbequalifiedseparately."
+  },
+  "physical_rigidity_qualified": false,
+  "release": false
+}

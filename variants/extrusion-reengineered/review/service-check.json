@@ -1,0 +1,384 @@
+{
+  "revision": "XR2",
+  "release": false,
+  "prices_included": false,
+  "source_sha256": {
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "build.py": "6825d593b1cd1ec67a492cbb2089520304e98cbbc3d17a1123db4fd316d0b69f",
+    "bed_service.py": "9edda1991107e5714c999724e5da23602a1e3cf229c5d71678e5608c67d1bb6a",
+    "service_check.py": "fb31762af08eecd9cf1129d9f529653b4f7535215400863d3c90b5d8ef93eae5",
+    "shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "reservoir-interface.json": "9176a81b3be118c45705b890d4678c27374d4119ea9e0af07694dffeeafe2b0f"
+  },
+  "positive_volume_threshold_mm3": 0.05,
+  "missing_accessories": [],
+  "routine_hatch": {
+    "continuous_external": {
+      "exact_pairs": 0,
+      "positive_intersections": [],
+      "label": "HATCH_CONTINUOUS_ENCLOSURE",
+      "bounds_mm": [
+        265.0,
+        839.9724151050241,
+        392.34314575050763,
+        885.0,
+        1145.52417469626,
+        688.3876719146535
+      ],
+      "within_plan": true,
+      "passed": true
+    },
+    "open_self": {
+      "exact_pairs": 58,
+      "positive_intersections": []
+    },
+    "hinge_exact_checkpoints": [
+      {
+        "angle_deg": 0,
+        "exact_pairs": 6,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 0.01,
+        "exact_pairs": 6,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 0.05,
+        "exact_pairs": 6,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 0.1,
+        "exact_pairs": 6,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 0.2,
+        "exact_pairs": 6,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 1,
+        "exact_pairs": 6,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 5,
+        "exact_pairs": 6,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 15,
+        "exact_pairs": 6,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 30,
+        "exact_pairs": 8,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 45,
+        "exact_pairs": 8,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 60,
+        "exact_pairs": 8,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 75,
+        "exact_pairs": 8,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 89,
+        "exact_pairs": 8,
+        "positive_intersections": []
+      },
+      {
+        "angle_deg": 90,
+        "exact_pairs": 8,
+        "positive_intersections": []
+      }
+    ],
+    "continuous_hinge_geometry_proof": [
+      "Fixed/movingindexears have disjointXintervals with0.6mm axialgap; their bores align at90deg.",
+      "Mainpins r1.95 stayinside rotating/stationaryr2.2 coaxial bores at allangles.",
+      "Fixedleaf has rotationalclearance for movingbarrel and full ear trajectory; cover has cylindricalclearance for fixedbarrel.",
+      "Cover bottomneverbelow394; carrierangles end394. Knuckleminimum394 and neckminimum394.95.",
+      "Forfirst0.2deg,flange radialshift<.016mm versus.1mm counterboreclearance; thereafter frontlatchpoints riseabove .8mm rivnutflanges."
+    ],
+    "full_open_Z_max_mm": 688.0000000000215,
+    "continuous_sweep_Z_max_mm": 1852.227491040101,
+    "shield_Z_min_mm": 700.0,
+    "nominal_vertical_gap_mm": 11.999999999978513,
+    "latches_and_index_pins_removed_before_swing": true,
+    "positive_open_lock": "Two4mm indexpins reinsertedat90deg.",
+    "brush_reach": {
+      "opening_mm": [
+        275.0,
+        850.0,
+        600.0,
+        270.0
+      ],
+      "handle_length_mm": 450.0,
+      "head_mm": [
+        60,
+        60,
+        60
+      ],
+      "maximum_entry_reach_mm": 398.02638103522736,
+      "convex_full_floor_reach": true,
+      "corner_collision_checks": [
+        {
+          "floor_head_centre_mm": [
+            253.0,
+            734.0,
+            34.0
+          ],
+          "entry_mm": [
+            320.0,
+            890.0,
+            394.0
+          ],
+          "required_handle_to_entry_mm": 398.02638103522736,
+          "exact_pairs": 6,
+          "positive_intersections": []
+        },
+        {
+          "floor_head_centre_mm": [
+            253.0,
+            1136.0,
+            34.0
+          ],
+          "entry_mm": [
+            320.0,
+            1080.0,
+            394.0
+          ],
+          "required_handle_to_entry_mm": 370.43892883982915,
+          "exact_pairs": 11,
+          "positive_intersections": []
+        },
+        {
+          "floor_head_centre_mm": [
+            897.0,
+            734.0,
+            34.0
+          ],
+          "entry_mm": [
+            830.0,
+            890.0,
+            394.0
+          ],
+          "required_handle_to_entry_mm": 398.02638103522736,
+          "exact_pairs": 6,
+          "positive_intersections": []
+        },
+        {
+          "floor_head_centre_mm": [
+            897.0,
+            1136.0,
+            34.0
+          ],
+          "entry_mm": [
+            830.0,
+            1080.0,
+            394.0
+          ],
+          "required_handle_to_entry_mm": 370.43892883982915,
+          "exact_pairs": 11,
+          "positive_intersections": []
+        }
+      ]
+    }
+  },
+  "rare_pan_tote_replacement": {
+    "pan_continuous_checks": [
+      {
+        "stage": 1,
+        "continuous_subenclosures": 16,
+        "exact_pairs": 0,
+        "bounds_mm": [
+          102.0,
+          100.0,
+          810.1,
+          1056.0,
+          1196.0,
+          944.0
+        ],
+        "positive_intersections": [],
+        "passed": true,
+        "initial_shim_contact_proof": true
+      },
+      {
+        "stage": 2,
+        "continuous_subenclosures": 16,
+        "exact_pairs": 0,
+        "bounds_mm": [
+          102.0,
+          30.0,
+          880.1,
+          1056.0,
+          1196.0,
+          944.0
+        ],
+        "positive_intersections": [],
+        "passed": true,
+        "initial_shim_contact_proof": false
+      },
+      {
+        "stage": 3,
+        "continuous_subenclosures": 1440,
+        "exact_pairs": 0,
+        "bounds_mm": [
+          102.0,
+          6.490642179512321,
+          811.9742190332731,
+          1056.0,
+          1126.001759257751,
+          1909.8715873103995
+        ],
+        "positive_intersections": [],
+        "passed": true,
+        "initial_shim_contact_proof": false
+      },
+      {
+        "stage": 4,
+        "continuous_subenclosures": 16,
+        "exact_pairs": 0,
+        "bounds_mm": [
+          102.0,
+          37.99999999999999,
+          812.0,
+          1056.0,
+          301.9,
+          1908.0
+        ],
+        "positive_intersections": [],
+        "passed": true,
+        "initial_shim_contact_proof": false
+      },
+      {
+        "stage": 5,
+        "continuous_subenclosures": 16,
+        "exact_pairs": 0,
+        "bounds_mm": [
+          102.0,
+          238.0,
+          19.99999999999997,
+          1056.0,
+          301.9,
+          1908.0
+        ],
+        "positive_intersections": [],
+        "passed": true,
+        "initial_shim_contact_proof": false
+      }
+    ],
+    "pan_support_intersections": {
+      "exact_pairs": 0,
+      "positive_intersections": []
+    },
+    "empty_tote_checks": [
+      {
+        "exact_pairs": 0,
+        "positive_intersections": [],
+        "label": "EMPTY_TOTE_FORWARD44",
+        "bounds_mm": [
+          219.0,
+          656.0,
+          0.0,
+          931.0,
+          1170.0,
+          413.0
+        ],
+        "within_plan": true,
+        "passed": true
+      },
+      {
+        "exact_pairs": 0,
+        "positive_intersections": [],
+        "label": "EMPTY_TOTE_VERTICAL_HANDOFF820",
+        "bounds_mm": [
+          219.0,
+          656.0,
+          0.0,
+          931.0,
+          1126.0,
+          1233.0
+        ],
+        "within_plan": true,
+        "passed": true
+      }
+    ],
+    "union_access": {
+      "exact_pairs": 0,
+      "positive_intersections": [],
+      "label": "DISCONNECT_UNION_TOOL_ACCESS",
+      "bounds_mm": [
+        50,
+        185,
+        790,
+        125,
+        320,
+        875
+      ],
+      "within_plan": true,
+      "passed": true
+    },
+    "pan_moving_steel_mass_kg": 21.11668182873811,
+    "pan_max_handling_height_mm": 1909.8715873103995,
+    "parked_pan_bounds_mm": [
+      102.0,
+      238.0,
+      19.99999999999997,
+      1056.0,
+      301.9,
+      1116.0
+    ],
+    "steps": [
+      "Drainpan,letcool,removebothcomplete toolmodules and parkcommonZ at fullretract.",
+      "Remove slats;combs remainwelded. Removeheatshields/clips,Alledgers,TWOfrontledgerarms;removeALLbolt-onATCsubassemblies:rail/drive/lockcarrier AND independentlymountedhood/supports,aftertoolsout/airbled/electricaldisconnected. Undo theirseparateframebolts;doNOTremoveHGRrails/blocks.",
+      "Uncouple valve/returnhose at wetstubunion,releasehoseclips,coilR150under cabinet. Undo2overflowM4nuts and slideassembly17mmrightoffstuds before lifting/storing.",
+      "Remove4keeperbolts/caps/shoulders. Twopeople controlpan throughout lift70,shift70forward,rotateupright,shift200rearward andloweronto20mmdunnage.",
+      "Clamp two minimum500N adjustable safetyprops to parkedpanrim and verifylatching/restraint before handlersrelease.",
+      "Move EMPTY closedreceiver44mmforward toY656..1126;liftthroughvacatedbay to820mm baseheight for handoff. Reverseforreplacement.",
+      "Handoff then carryingouttheemptytote is rare disassemblyservice, not the zero-outside-space cassette-swap operation."
+    ],
+    "removed_parts_not_assumed_owned": [
+      "2minimum500Nclamp-headsafetyprops",
+      "2dunnage75x70x20",
+      "union/cliptools"
+    ],
+    "physical_holds": [
+      "Confirm actual empty masses,handles,operatorreach and two-personpanhandling; noownedhoist is assumed.",
+      "Verify\u22651.92m free overhead handlingheight and rated restraint/tool compatibility;CADnonintersection is not an ergonomicrating.",
+      "Prove temporaryprop headclamp/slip resistance and fullfloorcontact before releasinghumancontrol.",
+      "Receivedtote geometry/rimbearing,usablecapacityandthermal/liquidcompatibility mustmeet stated interfaceenvelopes."
+    ]
+  },
+  "mode_self": {
+    "WOOD": {
+      "exact_pairs": 1483,
+      "positive_intersections": [],
+      "invalid_ids": [],
+      "passed": true
+    },
+    "PLASMA": {
+      "exact_pairs": 1449,
+      "positive_intersections": [],
+      "invalid_ids": [],
+      "passed": true
+    }
+  },
+  "source_consistent_during_check": true,
+  "passed": true
+}

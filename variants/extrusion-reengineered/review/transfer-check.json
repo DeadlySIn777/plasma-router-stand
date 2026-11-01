@@ -1,12 +1,14 @@
 {
-  "revision": "XR1",
+  "revision": "XR2",
   "source_sha256": {
-    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f",
-    "bed.py": "b00334d947b9e1bc9e3657d7603f67051a6c5f14460d16729d785b1d57cbbbee",
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
     "frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
-    "motion.py": "a8e1458d3fda2a492e5b889b66e3f21ad075be14bb8340fb550b6f4e1cc4c015",
-    "build.py": "6f8a4d2154e46d118ec0b77a3ec02095a97e394c72f068892749885d4422b3de",
-    "check_transfer.py": "6fc9600e49a71baddcd327b21aad3a685a4f58500444aae043b59e54e3dd867e"
+    "motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "build.py": "6825d593b1cd1ec67a492cbb2089520304e98cbbc3d17a1123db4fd316d0b69f",
+    "shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "check_transfer.py": "c6903aa00e001d61b686cc319e23b1fbc2f22b2d6f69e0eafdb3222d857a2c31"
   },
   "passed": true,
   "release": false,
@@ -16,27 +18,28 @@
   "park": {
     "gantry_y_mm": 1275,
     "head_x_mm": 575,
-    "z_lift_mm": 100,
+    "z_lift_mm": 200.0,
     "required": "Power isolated; REMOVE ENTIRE spindle/split-clamp module or entire plasma-drop/head/torch module before moving any cassette. Only the common Zadapter remains. Remove eightM6 clamp sets into owned tool storage; retain Z; open door. Install next tool module only after bed conversion."
   },
+  "missing_accessories": [],
   "order": [
-    4,
-    3,
+    1,
     2,
-    1
+    3,
+    4
   ],
   "segments": [
     {
-      "cassette": 4,
+      "cassette": 1,
       "from": "installed",
       "to": "flat_lift",
       "continuous_enclosure_bounds_mm": [
         109.0,
-        880.4,
+        103.4,
         888.0,
         1041.0,
-        1137.4,
-        1040.8
+        360.4,
+        1020.8
       ],
       "within_plan": true,
       "exact_pairs": 2,
@@ -81,16 +84,16 @@
       "passed": true
     },
     {
-      "cassette": 4,
+      "cassette": 1,
       "from": "flat_lift",
       "to": "front_flat",
       "continuous_enclosure_bounds_mm": [
         109.0,
         70.8,
-        970.0,
+        950.0,
         1041.0,
-        1137.4,
-        1040.8
+        360.4,
+        1020.8
       ],
       "within_plan": true,
       "exact_pairs": 0,
@@ -98,16 +101,16 @@
       "passed": true
     },
     {
-      "cassette": 4,
+      "cassette": 1,
       "from": "front_flat",
       "to": "front_upright",
       "continuous_enclosure_bounds_mm": [
         109.0,
         0.0,
-        970.0,
+        950.0,
         1041.0,
         327.8,
-        1236.573892195016
+        1216.573892195016
       ],
       "within_plan": true,
       "exact_pairs": 0,
@@ -115,7 +118,7 @@
       "passed": true
     },
     {
-      "cassette": 4,
+      "cassette": 1,
       "from": "front_upright",
       "to": "lower_front_channel",
       "continuous_enclosure_bounds_mm": [
@@ -124,7 +127,7 @@
         400.0,
         1041.0,
         70.8,
-        1227.0
+        1207.0
       ],
       "within_plan": true,
       "exact_pairs": 4,
@@ -132,7 +135,7 @@
       "passed": true
     },
     {
-      "cassette": 4,
+      "cassette": 1,
       "from": "lower_front_channel",
       "to": "rotate_below_pan",
       "continuous_enclosure_bounds_mm": [
@@ -149,7 +152,7 @@
       "passed": true
     },
     {
-      "cassette": 4,
+      "cassette": 1,
       "from": "rotate_below_pan",
       "to": "raise_in_front_of_case",
       "continuous_enclosure_bounds_mm": [
@@ -158,180 +161,7 @@
         400.0,
         1041.0,
         327.8,
-        699.1999999999999
-      ],
-      "within_plan": true,
-      "exact_pairs": 3,
-      "positive_intersections": [],
-      "passed": true
-    },
-    {
-      "cassette": 4,
-      "from": "raise_in_front_of_case",
-      "to": "insert_above_shelf",
-      "continuous_enclosure_bounds_mm": [
-        109.0,
-        70.8,
-        628.4,
-        1041.0,
-        617.0,
-        699.1999999999999
-      ],
-      "within_plan": true,
-      "exact_pairs": 9,
-      "positive_intersections": [],
-      "passed": true
-    },
-    {
-      "cassette": 4,
-      "from": "insert_above_shelf",
-      "to": "seat_on_shelf",
-      "continuous_enclosure_bounds_mm": [
-        109.0,
-        360.0,
-        627.4,
-        1041.0,
-        617.0,
-        699.1999999999999
-      ],
-      "within_plan": true,
-      "exact_pairs": 7,
-      "positive_intersections": [],
-      "passed": true
-    },
-    {
-      "cassette": 3,
-      "from": "installed",
-      "to": "flat_lift",
-      "continuous_enclosure_bounds_mm": [
-        109.0,
-        621.4,
-        888.0,
-        1041.0,
-        878.4,
-        1040.8
-      ],
-      "within_plan": true,
-      "exact_pairs": 2,
-      "positive_intersections": [],
-      "initial_pin_hole_checks": [
-        {
-          "lift_mm": 0.0,
-          "exact_pairs": 4,
-          "positive_intersections": []
-        },
-        {
-          "lift_mm": 0.25,
-          "exact_pairs": 4,
-          "positive_intersections": []
-        },
-        {
-          "lift_mm": 0.5,
-          "exact_pairs": 4,
-          "positive_intersections": []
-        },
-        {
-          "lift_mm": 1.0,
-          "exact_pairs": 4,
-          "positive_intersections": []
-        },
-        {
-          "lift_mm": 1.5,
-          "exact_pairs": 4,
-          "positive_intersections": []
-        },
-        {
-          "lift_mm": 2.0,
-          "exact_pairs": 0,
-          "positive_intersections": []
-        },
-        {
-          "lift_mm": 2.01,
-          "exact_pairs": 0,
-          "positive_intersections": []
-        }
-      ],
-      "passed": true
-    },
-    {
-      "cassette": 3,
-      "from": "flat_lift",
-      "to": "front_flat",
-      "continuous_enclosure_bounds_mm": [
-        109.0,
-        70.8,
-        970.0,
-        1041.0,
-        878.4,
-        1040.8
-      ],
-      "within_plan": true,
-      "exact_pairs": 0,
-      "positive_intersections": [],
-      "passed": true
-    },
-    {
-      "cassette": 3,
-      "from": "front_flat",
-      "to": "front_upright",
-      "continuous_enclosure_bounds_mm": [
-        109.0,
-        0.0,
-        970.0,
-        1041.0,
-        327.8,
-        1236.573892195016
-      ],
-      "within_plan": true,
-      "exact_pairs": 0,
-      "positive_intersections": [],
-      "passed": true
-    },
-    {
-      "cassette": 3,
-      "from": "front_upright",
-      "to": "lower_front_channel",
-      "continuous_enclosure_bounds_mm": [
-        109.0,
-        0.0,
-        400.0,
-        1041.0,
-        70.8,
-        1227.0
-      ],
-      "within_plan": true,
-      "exact_pairs": 4,
-      "positive_intersections": [],
-      "passed": true
-    },
-    {
-      "cassette": 3,
-      "from": "lower_front_channel",
-      "to": "rotate_below_pan",
-      "continuous_enclosure_bounds_mm": [
-        109.0,
-        0.0,
-        400.0,
-        1041.0,
-        327.8,
-        666.573892195016
-      ],
-      "within_plan": true,
-      "exact_pairs": 3,
-      "positive_intersections": [],
-      "passed": true
-    },
-    {
-      "cassette": 3,
-      "from": "rotate_below_pan",
-      "to": "raise_in_front_of_case",
-      "continuous_enclosure_bounds_mm": [
-        109.0,
-        70.8,
-        400.0,
-        1041.0,
-        327.8,
-        623.4
+        471.8
       ],
       "within_plan": true,
       "exact_pairs": 1,
@@ -339,16 +169,16 @@
       "passed": true
     },
     {
-      "cassette": 3,
+      "cassette": 1,
       "from": "raise_in_front_of_case",
       "to": "insert_above_shelf",
       "continuous_enclosure_bounds_mm": [
         109.0,
         70.8,
-        552.6,
+        401.0,
         1041.0,
         617.0,
-        623.4
+        471.8
       ],
       "within_plan": true,
       "exact_pairs": 7,
@@ -356,16 +186,16 @@
       "passed": true
     },
     {
-      "cassette": 3,
+      "cassette": 1,
       "from": "insert_above_shelf",
       "to": "seat_on_shelf",
       "continuous_enclosure_bounds_mm": [
         109.0,
         360.0,
-        551.6,
+        400.0,
         1041.0,
         617.0,
-        623.4
+        471.8
       ],
       "within_plan": true,
       "exact_pairs": 7,
@@ -382,7 +212,7 @@
         888.0,
         1041.0,
         619.4,
-        1040.8
+        1020.8
       ],
       "within_plan": true,
       "exact_pairs": 2,
@@ -433,10 +263,10 @@
       "continuous_enclosure_bounds_mm": [
         109.0,
         70.8,
-        970.0,
+        950.0,
         1041.0,
         619.4,
-        1040.8
+        1020.8
       ],
       "within_plan": true,
       "exact_pairs": 0,
@@ -450,10 +280,10 @@
       "continuous_enclosure_bounds_mm": [
         109.0,
         0.0,
-        970.0,
+        950.0,
         1041.0,
         327.8,
-        1236.573892195016
+        1216.573892195016
       ],
       "within_plan": true,
       "exact_pairs": 0,
@@ -470,7 +300,7 @@
         400.0,
         1041.0,
         70.8,
-        1227.0
+        1207.0
       ],
       "within_plan": true,
       "exact_pairs": 4,
@@ -546,16 +376,16 @@
       "passed": true
     },
     {
-      "cassette": 1,
+      "cassette": 3,
       "from": "installed",
       "to": "flat_lift",
       "continuous_enclosure_bounds_mm": [
         109.0,
-        103.4,
+        621.4,
         888.0,
         1041.0,
-        360.4,
-        1040.8
+        878.4,
+        1020.8
       ],
       "within_plan": true,
       "exact_pairs": 2,
@@ -600,16 +430,16 @@
       "passed": true
     },
     {
-      "cassette": 1,
+      "cassette": 3,
       "from": "flat_lift",
       "to": "front_flat",
       "continuous_enclosure_bounds_mm": [
         109.0,
         70.8,
-        970.0,
+        950.0,
         1041.0,
-        360.4,
-        1040.8
+        878.4,
+        1020.8
       ],
       "within_plan": true,
       "exact_pairs": 0,
@@ -617,16 +447,16 @@
       "passed": true
     },
     {
-      "cassette": 1,
+      "cassette": 3,
       "from": "front_flat",
       "to": "front_upright",
       "continuous_enclosure_bounds_mm": [
         109.0,
         0.0,
-        970.0,
+        950.0,
         1041.0,
         327.8,
-        1236.573892195016
+        1216.573892195016
       ],
       "within_plan": true,
       "exact_pairs": 0,
@@ -634,7 +464,7 @@
       "passed": true
     },
     {
-      "cassette": 1,
+      "cassette": 3,
       "from": "front_upright",
       "to": "lower_front_channel",
       "continuous_enclosure_bounds_mm": [
@@ -643,7 +473,7 @@
         400.0,
         1041.0,
         70.8,
-        1227.0
+        1207.0
       ],
       "within_plan": true,
       "exact_pairs": 4,
@@ -651,7 +481,7 @@
       "passed": true
     },
     {
-      "cassette": 1,
+      "cassette": 3,
       "from": "lower_front_channel",
       "to": "rotate_below_pan",
       "continuous_enclosure_bounds_mm": [
@@ -668,7 +498,7 @@
       "passed": true
     },
     {
-      "cassette": 1,
+      "cassette": 3,
       "from": "rotate_below_pan",
       "to": "raise_in_front_of_case",
       "continuous_enclosure_bounds_mm": [
@@ -677,7 +507,7 @@
         400.0,
         1041.0,
         327.8,
-        471.8
+        623.4
       ],
       "within_plan": true,
       "exact_pairs": 1,
@@ -685,16 +515,16 @@
       "passed": true
     },
     {
-      "cassette": 1,
+      "cassette": 3,
       "from": "raise_in_front_of_case",
       "to": "insert_above_shelf",
       "continuous_enclosure_bounds_mm": [
         109.0,
         70.8,
-        401.0,
+        552.6,
         1041.0,
         617.0,
-        471.8
+        623.4
       ],
       "within_plan": true,
       "exact_pairs": 7,
@@ -702,16 +532,189 @@
       "passed": true
     },
     {
-      "cassette": 1,
+      "cassette": 3,
       "from": "insert_above_shelf",
       "to": "seat_on_shelf",
       "continuous_enclosure_bounds_mm": [
         109.0,
         360.0,
-        400.0,
+        551.6,
         1041.0,
         617.0,
-        471.8
+        623.4
+      ],
+      "within_plan": true,
+      "exact_pairs": 7,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "installed",
+      "to": "flat_lift",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        880.4,
+        888.0,
+        1041.0,
+        1137.4,
+        1020.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 2,
+      "positive_intersections": [],
+      "initial_pin_hole_checks": [
+        {
+          "lift_mm": 0.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 0.25,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 0.5,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 1.0,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 1.5,
+          "exact_pairs": 4,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 2.0,
+          "exact_pairs": 0,
+          "positive_intersections": []
+        },
+        {
+          "lift_mm": 2.01,
+          "exact_pairs": 0,
+          "positive_intersections": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "flat_lift",
+      "to": "front_flat",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        950.0,
+        1041.0,
+        1137.4,
+        1020.8
+      ],
+      "within_plan": true,
+      "exact_pairs": 0,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "front_flat",
+      "to": "front_upright",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        950.0,
+        1041.0,
+        327.8,
+        1216.573892195016
+      ],
+      "within_plan": true,
+      "exact_pairs": 0,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "front_upright",
+      "to": "lower_front_channel",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        400.0,
+        1041.0,
+        70.8,
+        1207.0
+      ],
+      "within_plan": true,
+      "exact_pairs": 4,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "lower_front_channel",
+      "to": "rotate_below_pan",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        0.0,
+        400.0,
+        1041.0,
+        327.8,
+        666.573892195016
+      ],
+      "within_plan": true,
+      "exact_pairs": 3,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "rotate_below_pan",
+      "to": "raise_in_front_of_case",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        400.0,
+        1041.0,
+        327.8,
+        699.1999999999999
+      ],
+      "within_plan": true,
+      "exact_pairs": 3,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "raise_in_front_of_case",
+      "to": "insert_above_shelf",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        70.8,
+        628.4,
+        1041.0,
+        617.0,
+        699.1999999999999
+      ],
+      "within_plan": true,
+      "exact_pairs": 9,
+      "positive_intersections": [],
+      "passed": true
+    },
+    {
+      "cassette": 4,
+      "from": "insert_above_shelf",
+      "to": "seat_on_shelf",
+      "continuous_enclosure_bounds_mm": [
+        109.0,
+        360.0,
+        627.4,
+        1041.0,
+        617.0,
+        699.1999999999999
       ],
       "within_plan": true,
       "exact_pairs": 7,
@@ -722,18 +725,10 @@
   "nominal_thread_exceptions": [],
   "intentional_initial_pin_enclosure_exceptions": [
     {
-      "cassette": 4,
+      "cassette": 1,
       "excluded_ids": [
-        "DOCK_L_4_ROUND",
-        "DOCK_R_4_DIAMOND_X_RELIEF"
-      ],
-      "reason": "Pins occupy the conservative solid box but enter the actual vertical datum-pad bores. Analytic engagement proof: round radius2.99 is below bore radius3.02; diamond lies within the same radius. Projection2mm is below3.175mm pad bore depth; vertical coaxial lift monotonically removes engagement. Beyond2mm vertical separation is exact. Sampled exact checks corroborate this geometry."
-    },
-    {
-      "cassette": 3,
-      "excluded_ids": [
-        "DOCK_L_3_ROUND",
-        "DOCK_R_3_DIAMOND_X_RELIEF"
+        "DOCK_L_1_ROUND",
+        "DOCK_R_1_DIAMOND_X_RELIEF"
       ],
       "reason": "Pins occupy the conservative solid box but enter the actual vertical datum-pad bores. Analytic engagement proof: round radius2.99 is below bore radius3.02; diamond lies within the same radius. Projection2mm is below3.175mm pad bore depth; vertical coaxial lift monotonically removes engagement. Beyond2mm vertical separation is exact. Sampled exact checks corroborate this geometry."
     },
@@ -746,27 +741,35 @@
       "reason": "Pins occupy the conservative solid box but enter the actual vertical datum-pad bores. Analytic engagement proof: round radius2.99 is below bore radius3.02; diamond lies within the same radius. Projection2mm is below3.175mm pad bore depth; vertical coaxial lift monotonically removes engagement. Beyond2mm vertical separation is exact. Sampled exact checks corroborate this geometry."
     },
     {
-      "cassette": 1,
+      "cassette": 3,
       "excluded_ids": [
-        "DOCK_L_1_ROUND",
-        "DOCK_R_1_DIAMOND_X_RELIEF"
+        "DOCK_L_3_ROUND",
+        "DOCK_R_3_DIAMOND_X_RELIEF"
+      ],
+      "reason": "Pins occupy the conservative solid box but enter the actual vertical datum-pad bores. Analytic engagement proof: round radius2.99 is below bore radius3.02; diamond lies within the same radius. Projection2mm is below3.175mm pad bore depth; vertical coaxial lift monotonically removes engagement. Beyond2mm vertical separation is exact. Sampled exact checks corroborate this geometry."
+    },
+    {
+      "cassette": 4,
+      "excluded_ids": [
+        "DOCK_L_4_ROUND",
+        "DOCK_R_4_DIAMOND_X_RELIEF"
       ],
       "reason": "Pins occupy the conservative solid box but enter the actual vertical datum-pad bores. Analytic engagement proof: round radius2.99 is below bore radius3.02; diamond lies within the same radius. Projection2mm is below3.175mm pad bore depth; vertical coaxial lift monotonically removes engagement. Beyond2mm vertical separation is exact. Sampled exact checks corroborate this geometry."
     }
   ],
   "mode_self": {
     "WOOD": {
-      "exact_pairs": 554,
+      "exact_pairs": 1483,
       "positive_intersections": [],
       "invalid_ids": [],
-      "part_count": 304,
+      "part_count": 551,
       "passed": true
     },
     "PLASMA": {
-      "exact_pairs": 542,
+      "exact_pairs": 1449,
       "positive_intersections": [],
       "invalid_ids": [],
-      "part_count": 280,
+      "part_count": 519,
       "passed": true
     }
   },
@@ -775,7 +778,8 @@
     "side_shelf_rail_clear_x_mm": 2.6,
     "shelf_vertical_gap_mm": 5.0,
     "minimum_top_to_primary_roof_mm": 11.8,
-    "door_closed_to_panel_front_gap_mm": 11.2,
+    "door_closed_to_panel_front_gap_mm": 13.0,
+    "minimum_parking_block_to_lowest_stored_panel_mm": 1.2,
     "floor_to_lowest_panel_mm": 21.2,
     "passed": true
   },
@@ -794,35 +798,258 @@
     "14mm front finger pocket ergonomic test",
     "measured cassette mass and manageable lift",
     "side handle proof load and edge durability",
-    "door slide guides/stop/retention actual hardware",
+    "lift-off cover screw/tapped-tab and parking-stand physical tests",
     "dock pin fits and repeatability",
     "bolt preload/thread/washer seat and sleeve tolerances",
     "thermal and fume protection before plasma"
   ],
   "door_motion": {
-    "exact_pairs": 1,
-    "positive_intersections": [],
+    "segments": [
+      {
+        "from": "closed",
+        "to": "front",
+        "exact_pairs": 3,
+        "positive_intersections": [],
+        "within_plan": true,
+        "passed": true
+      },
+      {
+        "from": "front",
+        "to": "lowered",
+        "exact_pairs": 0,
+        "positive_intersections": [],
+        "within_plan": true,
+        "passed": true
+      },
+      {
+        "from": "lowered",
+        "to": "leaned",
+        "exact_pairs": 0,
+        "positive_intersections": [],
+        "within_plan": true,
+        "passed": true
+      },
+      {
+        "from": "leaned",
+        "to": "parked",
+        "exact_pairs": 0,
+        "positive_intersections": [],
+        "within_plan": true,
+        "passed": true
+      }
+    ],
+    "slot_checks": [
+      {
+        "axial_lift_vertical_component_mm": 0,
+        "exact_pairs": 2,
+        "positive_intersections": []
+      },
+      {
+        "axial_lift_vertical_component_mm": 5,
+        "exact_pairs": 2,
+        "positive_intersections": []
+      },
+      {
+        "axial_lift_vertical_component_mm": 10,
+        "exact_pairs": 2,
+        "positive_intersections": []
+      },
+      {
+        "axial_lift_vertical_component_mm": 15,
+        "exact_pairs": 2,
+        "positive_intersections": []
+      },
+      {
+        "axial_lift_vertical_component_mm": 20,
+        "exact_pairs": 0,
+        "positive_intersections": []
+      }
+    ],
+    "continuous_slot_proof": "The1.2mm slot and.8mm cover sharean8degreeaxis;finaltranslationisalongthataxiswith.2mmnominalsideclearance. Basefloor5mmprovidespositivebearing.",
+    "rotation_proof": "During0..8degrotation,nonnegativepanelY/ZcoordinateshaveYincreasing/Zdecreasing;theendpointenclosurecoversallanglesandthemonotonicbaseYshift.",
     "passed": true
   },
-  "restoration": "Same path in reverse with BOTH complete tool modules removed; restore cassettes1,2,3,4. Refit selected tool only after cassette conversion.",
+  "restoration": "Same path in reverse with BOTH complete tool modules removed; restore cassettes4,3,2,1. Refit selected tool only after cassette conversion.",
   "source_unchanged": true,
   "mass_report": {
     "cassette_installed": [
       {
-        "kg": 6.614356933002804,
+        "kg": 6.651112311458815,
         "cg_mm": [
-          574.9999999999958,
-          232.76511991759563,
-          925.9380261081191
+          574.9999999999997,
+          232.85342111956004,
+          925.9206049676203
         ],
         "parts": [
           {
-            "name": "CAS1_GLUED_PLY_BOX_12p7_12p7_9_WEB",
-            "kg": 5.114394372973727,
+            "name": "CAS1_BOTTOM_SKIN",
+            "kg": 1.7864553863615815,
             "centre_mm": [
-              574.9999999999944,
-              232.36243310246775,
-              919.6520141689781
+              574.9999999999994,
+              232.11702506704557,
+              894.3729553306281
+            ]
+          },
+          {
+            "name": "CAS1_TOP_SKIN",
+            "kg": 1.6865343048376225,
+            "centre_mm": [
+              574.9999999999994,
+              232.1291032846718,
+              945.8753954303663
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_01_TOP_HALF_LAPS",
+            "kg": 0.1718973012857141,
+            "centre_mm": [
+              575.0000000000002,
+              107.90000000000002,
+              919.8216675753946
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_02_TOP_HALF_LAPS",
+            "kg": 0.18389671713265815,
+            "centre_mm": [
+              575.0000000000003,
+              122.40000000000005,
+              919.8180852471268
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_03_TOP_HALF_LAPS",
+            "kg": 0.1888460864999998,
+            "centre_mm": [
+              575.0000000000002,
+              177.14999999999995,
+              919.8287498653367
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_04_TOP_HALF_LAPS_SEG01",
+            "kg": 0.00043920850720839563,
+            "centre_mm": [
+              111.15598200109993,
+              231.89999999999992,
+              910.4374999999995
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_04_TOP_HALF_LAPS_SEG02",
+            "kg": 0.1853511115141351,
+            "centre_mm": [
+              574.9999999999985,
+              231.90000000000003,
+              919.9217921442267
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_04_TOP_HALF_LAPS_SEG03",
+            "kg": 0.00043920850720809195,
+            "centre_mm": [
+              1038.8440179989022,
+              231.90000000000003,
+              910.4375
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_05_TOP_HALF_LAPS",
+            "kg": 0.1888460864999998,
+            "centre_mm": [
+              575.0000000000002,
+              286.6499999999998,
+              919.8287498653367
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_06_TOP_HALF_LAPS",
+            "kg": 0.18389671713265815,
+            "centre_mm": [
+              575.0000000000003,
+              341.40000000000026,
+              919.8180852471268
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_07_TOP_HALF_LAPS",
+            "kg": 0.1888460864999998,
+            "centre_mm": [
+              575.0000000000002,
+              355.89999999999975,
+              919.8287498653367
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_01_BOTTOM_HALF_LAPS",
+            "kg": 0.046907416251104984,
+            "centre_mm": [
+              113.47401338687187,
+              231.90000000000006,
+              921.514050860343
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_02_BOTTOM_HALF_LAPS",
+            "kg": 0.046907416251104825,
+            "centre_mm": [
+              1036.525986613128,
+              231.9,
+              921.514050860343
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_03_BOTTOM_HALF_LAPS",
+            "kg": 0.047126116982142835,
+            "centre_mm": [
+              248.5497506415354,
+              232.7795340883813,
+              921.5980797235609
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_04_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999956,
+            "centre_mm": [
+              379.14285714285717,
+              231.9000000000001,
+              921.6040309246631
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_05_BOTTOM_HALF_LAPS",
+            "kg": 0.047470752000000255,
+            "centre_mm": [
+              509.7142857142856,
+              231.90000000000006,
+              921.604030924663
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_06_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075199999995,
+            "centre_mm": [
+              640.2857142857139,
+              231.90000000000015,
+              921.6040309246632
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_07_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075199999997,
+            "centre_mm": [
+              770.8571428571428,
+              231.90000000000012,
+              921.6040309246629
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_08_BOTTOM_HALF_LAPS",
+            "kg": 0.04712611698214285,
+            "centre_mm": [
+              901.4502493584644,
+              232.7795340883812,
+              921.5980797235607
             ]
           },
           {
@@ -1078,39 +1305,147 @@
             ]
           },
           {
-            "name": "CAS1_DOCK_PAD_117_40",
-            "kg": 0.003183375743909909,
+            "name": "CAS1_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934145,
             "centre_mm": [
-              117.50000000000001,
-              143.40000000000003,
-              889.5875000000001
+              113.49999999999997,
+              136.4,
+              891.6023455246311
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934145,
+            "centre_mm": [
+              121.49999999999999,
+              150.4,
+              891.6023455246311
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_40",
+            "kg": 0.0030364891656746253,
+            "centre_mm": [
+              117.49999999999997,
+              143.39999999999998,
+              889.616267107364
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193166822e-05,
+            "centre_mm": [
+              117.50000000000004,
+              143.4,
+              891.2500000000001
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593406,
+            "centre_mm": [
+              113.49999999999999,
+              313.3999999999999,
+              891.6023455246311
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593406,
+            "centre_mm": [
+              121.5,
+              327.3999999999999,
+              891.6023455246311
             ]
           },
           {
             "name": "CAS1_DOCK_PAD_117_217",
-            "kg": 0.003428999999999951,
+            "kg": 0.003282113421764667,
             "centre_mm": [
-              117.49999999999999,
+              117.5,
+              320.39999999999986,
+              889.6141142569178
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.82894028001746e-05,
+            "centre_mm": [
+              117.5,
               320.4,
-              889.5874999999999
+              891.2500000000001
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593465,
+            "centre_mm": [
+              1028.5,
+              136.4,
+              891.6023455246311
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593465,
+            "centre_mm": [
+              1036.5,
+              150.4,
+              891.6023455246311
             ]
           },
           {
             "name": "CAS1_DOCK_PAD_1032_40",
-            "kg": 0.0031833757439099115,
+            "kg": 0.003036489165674631,
             "centre_mm": [
-              1032.5000000000002,
-              143.39999999999998,
-              889.5875
+              1032.4999999999998,
+              143.39999999999995,
+              889.6162671073643
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193166839e-05,
+            "centre_mm": [
+              1032.5,
+              143.4,
+              891.2499999999998
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934563,
+            "centre_mm": [
+              1028.5000000000002,
+              313.4,
+              891.602345524631
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934563,
+            "centre_mm": [
+              1036.5,
+              327.4,
+              891.602345524631
             ]
           },
           {
             "name": "CAS1_DOCK_PAD_1032_217",
-            "kg": 0.003428999999999951,
+            "kg": 0.003282113421764671,
             "centre_mm": [
-              1032.4999999999998,
+              1032.4999999999995,
+              320.39999999999986,
+              889.614114256917
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.828940280017468e-05,
+            "centre_mm": [
+              1032.5000000000002,
               320.4,
-              889.5874999999999
+              891.2500000000001
             ]
           },
           {
@@ -1121,24 +1456,258 @@
               236.64999999999998,
               955.6233680567193
             ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_205_58.00",
+            "kg": 0.0006415689831326379,
+            "centre_mm": [
+              204.99999999999997,
+              161.39999999999998,
+              950.7198837209302
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_205_208.50",
+            "kg": 0.000641568983132637,
+            "centre_mm": [
+              205.00000000000003,
+              311.9,
+              950.7198837209304
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_445_58.00",
+            "kg": 0.0006415689831326448,
+            "centre_mm": [
+              445.00000000000006,
+              161.4,
+              950.7198837209303
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_445_208.50",
+            "kg": 0.0006415689831326438,
+            "centre_mm": [
+              445.00000000000006,
+              311.9,
+              950.7198837209302
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_705_58.00",
+            "kg": 0.0006415689831326254,
+            "centre_mm": [
+              704.9999999999999,
+              161.4,
+              950.7198837209298
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_705_208.50",
+            "kg": 0.0006415689831326244,
+            "centre_mm": [
+              705.0,
+              311.9,
+              950.7198837209299
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_945_58.00",
+            "kg": 0.0006415689831326254,
+            "centre_mm": [
+              944.9999999999999,
+              161.4,
+              950.7198837209298
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_945_208.50",
+            "kg": 0.0006415689831326243,
+            "centre_mm": [
+              944.9999999999999,
+              311.9,
+              950.71988372093
+            ]
           }
         ]
       },
       {
-        "kg": 6.649194620502804,
+        "kg": 6.685949998958815,
         "cg_mm": [
-          574.9999999999968,
-          491.2622304486371,
-          926.0935675801758
+          574.9999999999997,
+          491.3493864300669,
+          926.075382139402
         ],
         "parts": [
           {
-            "name": "CAS2_GLUED_PLY_BOX_12p7_12p7_9_WEB",
-            "kg": 5.114394372973728,
+            "name": "CAS2_BOTTOM_SKIN",
+            "kg": 1.7864553863615822,
             "centre_mm": [
-              574.9999999999957,
-              491.36243310246624,
-              919.652014168978
+              574.9999999999991,
+              491.1170250670447,
+              894.3729553306283
+            ]
+          },
+          {
+            "name": "CAS2_TOP_SKIN",
+            "kg": 1.6865343048376225,
+            "centre_mm": [
+              574.9999999999994,
+              491.1298830203966,
+              945.8753954303663
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_01_TOP_HALF_LAPS",
+            "kg": 0.17189730128571412,
+            "centre_mm": [
+              575.0000000000002,
+              366.8999999999997,
+              919.8216675753944
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_02_TOP_HALF_LAPS",
+            "kg": 0.18389671713265815,
+            "centre_mm": [
+              575.0000000000003,
+              381.4000000000002,
+              919.8180852471268
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_03_TOP_HALF_LAPS",
+            "kg": 0.1888460864999998,
+            "centre_mm": [
+              575.0000000000002,
+              436.15000000000015,
+              919.8287498653367
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_04_TOP_HALF_LAPS_SEG01",
+            "kg": 0.00043920850720839563,
+            "centre_mm": [
+              111.15598200109994,
+              490.90000000000003,
+              910.4375000000001
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_04_TOP_HALF_LAPS_SEG02",
+            "kg": 0.1853511115141352,
+            "centre_mm": [
+              574.9999999999983,
+              490.8999999999999,
+              919.9217921442266
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_04_TOP_HALF_LAPS_SEG03",
+            "kg": 0.00043920850720809184,
+            "centre_mm": [
+              1038.8440179989022,
+              490.8999999999999,
+              910.4375000000001
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_05_TOP_HALF_LAPS",
+            "kg": 0.1888460864999998,
+            "centre_mm": [
+              575.0000000000002,
+              545.6499999999996,
+              919.8287498653367
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_06_TOP_HALF_LAPS",
+            "kg": 0.18389671713265818,
+            "centre_mm": [
+              575.0000000000002,
+              600.4000000000005,
+              919.8180852471269
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_07_TOP_HALF_LAPS",
+            "kg": 0.1888460864999998,
+            "centre_mm": [
+              575.0000000000002,
+              614.8999999999997,
+              919.8287498653367
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_01_BOTTOM_HALF_LAPS",
+            "kg": 0.046907416251104984,
+            "centre_mm": [
+              113.47401338687185,
+              490.9,
+              921.514050860343
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_02_BOTTOM_HALF_LAPS",
+            "kg": 0.046907416251104804,
+            "centre_mm": [
+              1036.5259866131285,
+              490.8999999999998,
+              921.5140508603433
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_03_BOTTOM_HALF_LAPS",
+            "kg": 0.04712611698214282,
+            "centre_mm": [
+              248.5497506415354,
+              491.77953408838107,
+              921.5980797235607
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_04_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999936,
+            "centre_mm": [
+              379.14285714285717,
+              490.9000000000001,
+              921.6040309246631
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_05_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075200000025,
+            "centre_mm": [
+              509.71428571428555,
+              490.89999999999986,
+              921.604030924663
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_06_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999936,
+            "centre_mm": [
+              640.285714285714,
+              490.9000000000001,
+              921.6040309246631
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_07_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075199999995,
+            "centre_mm": [
+              770.8571428571429,
+              490.90000000000003,
+              921.6040309246629
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_08_BOTTOM_HALF_LAPS",
+            "kg": 0.04712611698214284,
+            "centre_mm": [
+              901.4502493584644,
+              491.7795340883812,
+              921.5980797235609
             ]
           },
           {
@@ -1394,39 +1963,147 @@
             ]
           },
           {
-            "name": "CAS2_DOCK_PAD_117_40",
-            "kg": 0.0031833757439099094,
+            "name": "CAS2_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593406,
             "centre_mm": [
-              117.49999999999999,
-              402.4,
-              889.5875000000001
+              113.49999999999999,
+              395.3999999999999,
+              891.6023455246311
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593406,
+            "centre_mm": [
+              121.5,
+              409.4,
+              891.6023455246311
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_40",
+            "kg": 0.003036489165674625,
+            "centre_mm": [
+              117.5,
+              402.40000000000003,
+              889.6162671073644
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193166822e-05,
+            "centre_mm": [
+              117.5,
+              402.40000000000003,
+              891.2500000000001
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593427,
+            "centre_mm": [
+              113.5,
+              572.4000000000001,
+              891.6023455246312
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593427,
+            "centre_mm": [
+              121.50000000000001,
+              586.4,
+              891.6023455246312
             ]
           },
           {
             "name": "CAS2_DOCK_PAD_117_217",
-            "kg": 0.003428999999999951,
+            "kg": 0.003282113421764667,
             "centre_mm": [
-              117.49999999999999,
+              117.5,
               579.3999999999999,
-              889.5875000000001
+              889.6141142569173
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.828940280017461e-05,
+            "centre_mm": [
+              117.5,
+              579.3999999999999,
+              891.25
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934563,
+            "centre_mm": [
+              1028.5000000000002,
+              395.4,
+              891.602345524631
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934563,
+            "centre_mm": [
+              1036.5,
+              409.4,
+              891.602345524631
             ]
           },
           {
             "name": "CAS2_DOCK_PAD_1032_40",
-            "kg": 0.003183375743909911,
+            "kg": 0.0030364891656746306,
             "centre_mm": [
-              1032.5000000000002,
-              402.4,
-              889.5875000000002
+              1032.4999999999998,
+              402.40000000000003,
+              889.6162671073644
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193166839e-05,
+            "centre_mm": [
+              1032.5,
+              402.3999999999999,
+              891.2499999999999
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934774,
+            "centre_mm": [
+              1028.5,
+              572.4000000000001,
+              891.6023455246312
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934774,
+            "centre_mm": [
+              1036.5000000000002,
+              586.4000000000001,
+              891.6023455246312
             ]
           },
           {
             "name": "CAS2_DOCK_PAD_1032_217",
-            "kg": 0.003428999999999951,
+            "kg": 0.003282113421764671,
+            "centre_mm": [
+              1032.4999999999993,
+              579.3999999999996,
+              889.6141142569171
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.828940280017469e-05,
             "centre_mm": [
               1032.4999999999998,
-              579.3999999999999,
-              889.5875000000001
+              579.4,
+              891.25
             ]
           },
           {
@@ -1437,24 +2114,258 @@
               490.9000000000003,
               955.6234456769291
             ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_205_48.50",
+            "kg": 0.0006415689831326371,
+            "centre_mm": [
+              205.0,
+              410.9,
+              950.7198837209303
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_205_208.50",
+            "kg": 0.0006415689831326386,
+            "centre_mm": [
+              204.99999999999997,
+              570.8999999999999,
+              950.7198837209303
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_445_48.50",
+            "kg": 0.0006415689831326438,
+            "centre_mm": [
+              445.00000000000006,
+              410.9,
+              950.7198837209302
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_445_208.50",
+            "kg": 0.0006415689831326452,
+            "centre_mm": [
+              445.00000000000006,
+              570.9,
+              950.7198837209302
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_705_48.50",
+            "kg": 0.0006415689831326244,
+            "centre_mm": [
+              705.0,
+              410.8999999999999,
+              950.7198837209299
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_705_208.50",
+            "kg": 0.0006415689831326258,
+            "centre_mm": [
+              705.0,
+              570.8999999999999,
+              950.7198837209298
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_945_48.50",
+            "kg": 0.0006415689831326244,
+            "centre_mm": [
+              944.9999999999998,
+              410.8999999999999,
+              950.7198837209299
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_945_208.50",
+            "kg": 0.0006415689831326258,
+            "centre_mm": [
+              944.9999999999999,
+              570.9,
+              950.7198837209298
+            ]
           }
         ]
       },
       {
-        "kg": 6.649194620502798,
+        "kg": 6.6859499989588125,
         "cg_mm": [
-          574.9999999999985,
-          750.2622304486356,
-          926.0935675801762
+          574.9999999999997,
+          750.3493864300664,
+          926.0753821394021
         ],
         "parts": [
           {
-            "name": "CAS3_GLUED_PLY_BOX_12p7_12p7_9_WEB",
-            "kg": 5.114394372973722,
+            "name": "CAS3_BOTTOM_SKIN",
+            "kg": 1.7864553863615797,
             "centre_mm": [
-              574.9999999999978,
-              750.3624331024653,
-              919.652014168979
+              574.9999999999991,
+              750.1170250670459,
+              894.3729553306297
+            ]
+          },
+          {
+            "name": "CAS3_TOP_SKIN",
+            "kg": 1.6865343048376225,
+            "centre_mm": [
+              574.9999999999994,
+              750.1298830203967,
+              945.8753954303666
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_01_TOP_HALF_LAPS",
+            "kg": 0.17189730128571412,
+            "centre_mm": [
+              575.0000000000001,
+              625.8999999999999,
+              919.8216675753944
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_02_TOP_HALF_LAPS",
+            "kg": 0.18389671713265815,
+            "centre_mm": [
+              575.0000000000003,
+              640.4000000000004,
+              919.8180852471268
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_03_TOP_HALF_LAPS",
+            "kg": 0.1888460864999998,
+            "centre_mm": [
+              575.0000000000002,
+              695.15,
+              919.8287498653367
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_04_TOP_HALF_LAPS_SEG01",
+            "kg": 0.00043920850720839536,
+            "centre_mm": [
+              111.15598200109993,
+              749.9000000000001,
+              910.4375
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_04_TOP_HALF_LAPS_SEG02",
+            "kg": 0.18535111151413514,
+            "centre_mm": [
+              574.9999999999984,
+              749.9000000000001,
+              919.9217921442267
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_04_TOP_HALF_LAPS_SEG03",
+            "kg": 0.00043920850720809075,
+            "centre_mm": [
+              1038.844017998902,
+              749.8999999999999,
+              910.4375
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_05_TOP_HALF_LAPS",
+            "kg": 0.1888460864999998,
+            "centre_mm": [
+              575.0000000000002,
+              804.6500000000001,
+              919.8287498653367
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_06_TOP_HALF_LAPS",
+            "kg": 0.18389671713265815,
+            "centre_mm": [
+              575.0000000000003,
+              859.4000000000009,
+              919.8180852471268
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_07_TOP_HALF_LAPS",
+            "kg": 0.1888460864999998,
+            "centre_mm": [
+              575.0000000000002,
+              873.9,
+              919.8287498653367
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_01_BOTTOM_HALF_LAPS",
+            "kg": 0.04690741625110499,
+            "centre_mm": [
+              113.47401338687187,
+              749.8999999999999,
+              921.514050860343
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_02_BOTTOM_HALF_LAPS",
+            "kg": 0.04690741625110482,
+            "centre_mm": [
+              1036.5259866131285,
+              749.8999999999996,
+              921.5140508603432
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_03_BOTTOM_HALF_LAPS",
+            "kg": 0.047126116982142835,
+            "centre_mm": [
+              248.54975064153547,
+              750.779534088381,
+              921.598079723561
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_04_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999956,
+            "centre_mm": [
+              379.14285714285717,
+              749.8999999999999,
+              921.6040309246629
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_05_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075200000026,
+            "centre_mm": [
+              509.71428571428555,
+              749.9000000000003,
+              921.6040309246627
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_06_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999956,
+            "centre_mm": [
+              640.285714285714,
+              749.8999999999999,
+              921.6040309246631
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_07_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075199999997,
+            "centre_mm": [
+              770.8571428571428,
+              749.9000000000001,
+              921.6040309246629
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_08_BOTTOM_HALF_LAPS",
+            "kg": 0.04712611698214285,
+            "centre_mm": [
+              901.4502493584644,
+              750.7795340883808,
+              921.5980797235605
             ]
           },
           {
@@ -1710,39 +2621,147 @@
             ]
           },
           {
+            "name": "CAS3_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593427,
+            "centre_mm": [
+              113.5,
+              654.4000000000001,
+              891.6023455246312
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593427,
+            "centre_mm": [
+              121.50000000000001,
+              668.4000000000001,
+              891.6023455246312
+            ]
+          },
+          {
             "name": "CAS3_DOCK_PAD_117_40",
-            "kg": 0.003183375743909909,
+            "kg": 0.003036489165674625,
+            "centre_mm": [
+              117.49999999999997,
+              661.3999999999997,
+              889.6162671073641
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193166821e-05,
             "centre_mm": [
               117.49999999999999,
               661.4,
-              889.5875000000001
+              891.25
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593427,
+            "centre_mm": [
+              113.5,
+              831.4000000000001,
+              891.6023455246312
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593427,
+            "centre_mm": [
+              121.50000000000001,
+              845.4000000000001,
+              891.6023455246312
             ]
           },
           {
             "name": "CAS3_DOCK_PAD_117_217",
-            "kg": 0.003428999999999951,
+            "kg": 0.003282113421764667,
             "centre_mm": [
-              117.50000000000001,
-              838.3999999999999,
-              889.5874999999999
+              117.5,
+              838.4000000000001,
+              889.6141142569173
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.82894028001746e-05,
+            "centre_mm": [
+              117.5,
+              838.4,
+              891.2500000000001
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934774,
+            "centre_mm": [
+              1028.5,
+              654.4000000000001,
+              891.6023455246312
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934774,
+            "centre_mm": [
+              1036.5000000000002,
+              668.4000000000001,
+              891.6023455246312
             ]
           },
           {
             "name": "CAS3_DOCK_PAD_1032_40",
-            "kg": 0.0031833757439099107,
+            "kg": 0.0030364891656746306,
             "centre_mm": [
-              1032.4999999999998,
-              661.4,
-              889.5875000000002
+              1032.4999999999995,
+              661.3999999999997,
+              889.6162671073644
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193166836e-05,
+            "centre_mm": [
+              1032.5,
+              661.3999999999996,
+              891.2499999999998
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934774,
+            "centre_mm": [
+              1028.5,
+              831.4000000000002,
+              891.6023455246312
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934774,
+            "centre_mm": [
+              1036.5000000000002,
+              845.4000000000001,
+              891.6023455246312
             ]
           },
           {
             "name": "CAS3_DOCK_PAD_1032_217",
-            "kg": 0.003428999999999951,
+            "kg": 0.003282113421764671,
             "centre_mm": [
-              1032.4999999999998,
-              838.3999999999999,
-              889.5874999999999
+              1032.4999999999995,
+              838.3999999999997,
+              889.6141142569173
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.828940280017468e-05,
+            "centre_mm": [
+              1032.5,
+              838.4,
+              891.2500000000001
             ]
           },
           {
@@ -1753,24 +2772,258 @@
               749.9000000000002,
               955.6234456769291
             ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_205_48.50",
+            "kg": 0.0006415689831326386,
+            "centre_mm": [
+              204.99999999999997,
+              669.8999999999999,
+              950.7198837209303
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_205_208.50",
+            "kg": 0.0006415689831326386,
+            "centre_mm": [
+              204.99999999999997,
+              829.8999999999999,
+              950.7198837209303
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_445_48.50",
+            "kg": 0.0006415689831326452,
+            "centre_mm": [
+              445.00000000000006,
+              669.9,
+              950.7198837209302
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_445_208.50",
+            "kg": 0.0006415689831326452,
+            "centre_mm": [
+              445.00000000000006,
+              829.8999999999999,
+              950.7198837209302
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_705_48.50",
+            "kg": 0.0006415689831326258,
+            "centre_mm": [
+              705.0,
+              669.8999999999999,
+              950.7198837209298
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_705_208.50",
+            "kg": 0.0006415689831326258,
+            "centre_mm": [
+              705.0,
+              829.8999999999999,
+              950.7198837209298
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_945_48.50",
+            "kg": 0.0006415689831326258,
+            "centre_mm": [
+              944.9999999999999,
+              669.8999999999999,
+              950.7198837209298
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_945_208.50",
+            "kg": 0.0006415689831326258,
+            "centre_mm": [
+              944.9999999999999,
+              829.8999999999999,
+              950.7198837209298
+            ]
           }
         ]
       },
       {
-        "kg": 6.6216911830027945,
+        "kg": 6.658446561458814,
         "cg_mm": [
-          574.9999999999993,
-          1008.8645077260755,
-          925.9709076911279
+          575.0,
+          1008.9514844865682,
+          925.9533242298769
         ],
         "parts": [
           {
-            "name": "CAS4_GLUED_PLY_BOX_12p7_12p7_9_WEB",
-            "kg": 5.114394372973718,
+            "name": "CAS4_BOTTOM_SKIN",
+            "kg": 1.7864553863615797,
             "centre_mm": [
-              574.9999999999989,
-              1009.3624331024686,
-              919.6520141689836
+              575.0,
+              1009.1170250670459,
+              894.3729553306293
+            ]
+          },
+          {
+            "name": "CAS4_TOP_SKIN",
+            "kg": 1.686534304837623,
+            "centre_mm": [
+              574.9999999999994,
+              1009.1304986012324,
+              945.8753954303663
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_01_TOP_HALF_LAPS",
+            "kg": 0.1718973012857141,
+            "centre_mm": [
+              575.0000000000002,
+              884.8999999999995,
+              919.8216675753946
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_02_TOP_HALF_LAPS",
+            "kg": 0.18389671713265818,
+            "centre_mm": [
+              575.0000000000002,
+              899.4000000000002,
+              919.8180852471266
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_03_TOP_HALF_LAPS",
+            "kg": 0.1888460864999998,
+            "centre_mm": [
+              575.0000000000002,
+              954.1499999999999,
+              919.8287498653367
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_04_TOP_HALF_LAPS_SEG01",
+            "kg": 0.0004392085072083955,
+            "centre_mm": [
+              111.15598200109991,
+              1008.8999999999997,
+              910.4374999999995
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_04_TOP_HALF_LAPS_SEG02",
+            "kg": 0.1853511115141351,
+            "centre_mm": [
+              574.9999999999984,
+              1008.9000000000003,
+              919.9217921442267
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_04_TOP_HALF_LAPS_SEG03",
+            "kg": 0.0004392085072080907,
+            "centre_mm": [
+              1038.8440179989025,
+              1008.9000000000001,
+              910.4375000000001
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_05_TOP_HALF_LAPS",
+            "kg": 0.18884608649999976,
+            "centre_mm": [
+              575.0000000000002,
+              1063.6499999999999,
+              919.8287498653368
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_06_TOP_HALF_LAPS",
+            "kg": 0.18389671713265815,
+            "centre_mm": [
+              575.0000000000003,
+              1118.400000000001,
+              919.8180852471268
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_07_TOP_HALF_LAPS",
+            "kg": 0.1888460864999998,
+            "centre_mm": [
+              575.0000000000002,
+              1132.9,
+              919.8287498653367
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_01_BOTTOM_HALF_LAPS",
+            "kg": 0.04690741625110499,
+            "centre_mm": [
+              113.47401338687185,
+              1008.9,
+              921.514050860343
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_02_BOTTOM_HALF_LAPS",
+            "kg": 0.04690741625110482,
+            "centre_mm": [
+              1036.5259866131282,
+              1008.9000000000001,
+              921.5140508603434
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_03_BOTTOM_HALF_LAPS",
+            "kg": 0.04712611698214282,
+            "centre_mm": [
+              248.54975064153547,
+              1009.7795340883813,
+              921.5980797235609
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_04_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999936,
+            "centre_mm": [
+              379.14285714285717,
+              1008.9000000000002,
+              921.6040309246632
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_05_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075200000025,
+            "centre_mm": [
+              509.7142857142857,
+              1008.9,
+              921.604030924663
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_06_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999936,
+            "centre_mm": [
+              640.2857142857141,
+              1008.9000000000004,
+              921.6040309246632
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_07_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075199999995,
+            "centre_mm": [
+              770.857142857143,
+              1008.9000000000003,
+              921.6040309246632
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_08_BOTTOM_HALF_LAPS",
+            "kg": 0.04712611698214285,
+            "centre_mm": [
+              901.4502493584644,
+              1009.7795340883808,
+              921.5980797235607
             ]
           },
           {
@@ -2026,39 +3279,147 @@
             ]
           },
           {
+            "name": "CAS4_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593427,
+            "centre_mm": [
+              113.5,
+              913.4000000000002,
+              891.6023455246312
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593427,
+            "centre_mm": [
+              121.50000000000001,
+              927.4000000000002,
+              891.6023455246312
+            ]
+          },
+          {
             "name": "CAS4_DOCK_PAD_117_40",
-            "kg": 0.003183375743909908,
+            "kg": 0.003036489165674625,
+            "centre_mm": [
+              117.49999999999997,
+              920.3999999999996,
+              889.6162671073641
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193166821e-05,
             "centre_mm": [
               117.49999999999999,
-              920.4000000000001,
-              889.5875000000001
+              920.3999999999999,
+              891.25
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934124,
+            "centre_mm": [
+              113.50000000000001,
+              1090.4,
+              891.6023455246313
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934124,
+            "centre_mm": [
+              121.50000000000001,
+              1104.4,
+              891.6023455246313
             ]
           },
           {
             "name": "CAS4_DOCK_PAD_117_217",
-            "kg": 0.003428999999999951,
+            "kg": 0.0032821134217646663,
             "centre_mm": [
               117.50000000000001,
+              1097.4000000000005,
+              889.6141142569177
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.828940280017462e-05,
+            "centre_mm": [
+              117.49999999999999,
               1097.4,
-              889.5874999999999
+              891.25
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934785,
+            "centre_mm": [
+              1028.4999999999998,
+              913.3999999999999,
+              891.6023455246309
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934785,
+            "centre_mm": [
+              1036.5,
+              927.4,
+              891.6023455246309
             ]
           },
           {
             "name": "CAS4_DOCK_PAD_1032_40",
-            "kg": 0.0031833757439099107,
+            "kg": 0.0030364891656746306,
             "centre_mm": [
-              1032.5000000000002,
-              920.4,
-              889.5875
+              1032.4999999999995,
+              920.3999999999996,
+              889.6162671073644
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193166836e-05,
+            "centre_mm": [
+              1032.5,
+              920.3999999999996,
+              891.2499999999999
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593463,
+            "centre_mm": [
+              1028.5000000000002,
+              1090.3999999999999,
+              891.6023455246311
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593463,
+            "centre_mm": [
+              1036.5,
+              1104.4,
+              891.6023455246311
             ]
           },
           {
             "name": "CAS4_DOCK_PAD_1032_217",
-            "kg": 0.003428999999999951,
+            "kg": 0.0032821134217646698,
             "centre_mm": [
-              1032.4999999999998,
+              1032.5000000000005,
+              1097.4000000000005,
+              889.6141142569177
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.82894028001747e-05,
+            "centre_mm": [
+              1032.5000000000002,
               1097.4,
-              889.5874999999999
+              891.2500000000001
             ]
           },
           {
@@ -2069,26 +3430,260 @@
               1005.1500000000003,
               955.6233850353606
             ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_205_48.50",
+            "kg": 0.0006415689831326384,
+            "centre_mm": [
+              205.00000000000003,
+              928.9000000000001,
+              950.7198837209304
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_205_201.00",
+            "kg": 0.0006415689831326312,
+            "centre_mm": [
+              204.99999999999997,
+              1081.4,
+              950.7198837209302
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_445_48.50",
+            "kg": 0.0006415689831326452,
+            "centre_mm": [
+              445.00000000000006,
+              928.9,
+              950.7198837209302
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_445_201.00",
+            "kg": 0.0006415689831326379,
+            "centre_mm": [
+              445.00000000000006,
+              1081.4,
+              950.7198837209302
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_705_48.50",
+            "kg": 0.0006415689831326257,
+            "centre_mm": [
+              705.0,
+              928.9,
+              950.71988372093
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_705_201.00",
+            "kg": 0.0006415689831326184,
+            "centre_mm": [
+              705.0,
+              1081.4,
+              950.71988372093
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_945_48.50",
+            "kg": 0.0006415689831326258,
+            "centre_mm": [
+              944.9999999999999,
+              928.8999999999999,
+              950.7198837209298
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_945_201.00",
+            "kg": 0.0006415689831326184,
+            "centre_mm": [
+              945.0000000000001,
+              1081.4,
+              950.71988372093
+            ]
           }
         ]
       }
     ],
     "cassette_stored": [
       {
-        "kg": 6.614356933002768,
+        "kg": 6.651112311458815,
         "cg_mm": [
-          575.0000000000027,
-          489.36511991759807,
-          437.938026108123
+          574.9999999999999,
+          489.4534211195599,
+          437.9206049676197
         ],
         "parts": [
           {
-            "name": "CAS1_GLUED_PLY_BOX_12p7_12p7_9_WEB",
-            "kg": 5.114394372973678,
+            "name": "CAS1_BOTTOM_SKIN",
+            "kg": 1.7864553863615735,
             "centre_mm": [
-              575.0000000000033,
-              488.96243310247127,
-              431.65201416898446
+              574.9999999999991,
+              488.7170250670455,
+              406.3729553306295
+            ]
+          },
+          {
+            "name": "CAS1_TOP_SKIN",
+            "kg": 1.6865343048376142,
+            "centre_mm": [
+              575.0,
+              488.729103284672,
+              457.8753954303658
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_01_TOP_HALF_LAPS",
+            "kg": 0.17189730128571434,
+            "centre_mm": [
+              574.9999999999997,
+              364.4999999999999,
+              431.82166757539443
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_02_TOP_HALF_LAPS",
+            "kg": 0.18389671713265848,
+            "centre_mm": [
+              575.0,
+              379.0000000000002,
+              431.8180852471269
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_03_TOP_HALF_LAPS",
+            "kg": 0.1888460865,
+            "centre_mm": [
+              575.0000000000001,
+              433.75,
+              431.8287498653369
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_04_TOP_HALF_LAPS_SEG01",
+            "kg": 0.00043920850720839834,
+            "centre_mm": [
+              111.15598200109993,
+              488.50000000000006,
+              422.4374999999999
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_04_TOP_HALF_LAPS_SEG02",
+            "kg": 0.18535111151413539,
+            "centre_mm": [
+              574.9999999999982,
+              488.49999999999994,
+              431.9217921442266
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_04_TOP_HALF_LAPS_SEG03",
+            "kg": 0.0004392085072080946,
+            "centre_mm": [
+              1038.8440179989022,
+              488.49999999999994,
+              422.43749999999994
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_05_TOP_HALF_LAPS",
+            "kg": 0.1888460865,
+            "centre_mm": [
+              575.0000000000001,
+              543.2499999999998,
+              431.8287498653369
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_06_TOP_HALF_LAPS",
+            "kg": 0.18389671713265848,
+            "centre_mm": [
+              575.0,
+              598.0000000000002,
+              431.8180852471269
+            ]
+          },
+          {
+            "name": "CAS1_LONG_WEB_07_TOP_HALF_LAPS",
+            "kg": 0.1888460865,
+            "centre_mm": [
+              575.0000000000001,
+              612.5000000000002,
+              431.8287498653369
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_01_BOTTOM_HALF_LAPS",
+            "kg": 0.04690741625110506,
+            "centre_mm": [
+              113.47401338687192,
+              488.4999999999999,
+              433.51405086034316
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_02_BOTTOM_HALF_LAPS",
+            "kg": 0.046907416251104866,
+            "centre_mm": [
+              1036.5259866131282,
+              488.50000000000006,
+              433.5140508603434
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_03_BOTTOM_HALF_LAPS",
+            "kg": 0.047126116982142884,
+            "centre_mm": [
+              248.54975064153547,
+              489.3795340883814,
+              433.5980797235614
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_04_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075200000002,
+            "centre_mm": [
+              379.14285714285734,
+              488.50000000000006,
+              433.6040309246628
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_05_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075200000034,
+            "centre_mm": [
+              509.7142857142857,
+              488.5,
+              433.6040309246629
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_06_BOTTOM_HALF_LAPS",
+            "kg": 0.047470752000000026,
+            "centre_mm": [
+              640.2857142857141,
+              488.50000000000006,
+              433.60403092466277
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_07_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075200000002,
+            "centre_mm": [
+              770.8571428571435,
+              488.5000000000001,
+              433.60403092466294
+            ]
+          },
+          {
+            "name": "CAS1_CROSS_WEB_08_BOTTOM_HALF_LAPS",
+            "kg": 0.04712611698214289,
+            "centre_mm": [
+              901.4502493584648,
+              489.37953408838126,
+              433.5980797235611
             ]
           },
           {
@@ -2344,39 +3939,147 @@
             ]
           },
           {
+            "name": "CAS1_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593402,
+            "centre_mm": [
+              113.5,
+              393.0,
+              403.6023455246312
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593402,
+            "centre_mm": [
+              121.50000000000001,
+              407.00000000000006,
+              403.6023455246312
+            ]
+          },
+          {
             "name": "CAS1_DOCK_PAD_117_40",
-            "kg": 0.003183375743909969,
+            "kg": 0.0030364891656746856,
+            "centre_mm": [
+              117.49999999999996,
+              399.99999999999994,
+              401.6162671073642
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193160209e-05,
             "centre_mm": [
               117.50000000000001,
-              400.00000000000006,
-              401.5875000000001
+              399.99999999999994,
+              403.25000000000006
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593424,
+            "centre_mm": [
+              113.50000000000001,
+              570.0000000000001,
+              403.6023455246312
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593424,
+            "centre_mm": [
+              121.50000000000003,
+              584.0,
+              403.6023455246312
             ]
           },
           {
             "name": "CAS1_DOCK_PAD_117_217",
-            "kg": 0.0034290000000000123,
+            "kg": 0.0032821134217647283,
             "centre_mm": [
-              117.49999999999999,
+              117.5,
+              577.0000000000001,
+              401.6141142569174
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_117_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.828940280010683e-05,
+            "centre_mm": [
+              117.5,
               577.0,
-              401.5875000000001
+              403.2499999999999
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593453,
+            "centre_mm": [
+              1028.5,
+              392.99999999999994,
+              403.6023455246311
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593453,
+            "centre_mm": [
+              1036.5,
+              406.99999999999994,
+              403.6023455246311
             ]
           },
           {
             "name": "CAS1_DOCK_PAD_1032_40",
-            "kg": 0.00318337574390997,
+            "kg": 0.00303648916567469,
             "centre_mm": [
-              1032.5,
-              400.0000000000001,
-              401.5875000000001
+              1032.4999999999998,
+              400.00000000000006,
+              401.61626710736425
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193160224e-05,
+            "centre_mm": [
+              1032.5000000000002,
+              399.9999999999999,
+              403.24999999999994
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934747,
+            "centre_mm": [
+              1028.5,
+              569.9999999999999,
+              403.6023455246311
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934747,
+            "centre_mm": [
+              1036.5,
+              584.0000000000001,
+              403.6023455246311
             ]
           },
           {
             "name": "CAS1_DOCK_PAD_1032_217",
-            "kg": 0.0034290000000000123,
+            "kg": 0.0032821134217647326,
             "centre_mm": [
               1032.5,
-              577.0,
-              401.5875000000001
+              576.9999999999999,
+              401.6141142569175
+            ]
+          },
+          {
+            "name": "CAS1_DOCK_PAD_1032_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.82894028001069e-05,
+            "centre_mm": [
+              1032.5000000000002,
+              577.0000000000001,
+              403.25
             ]
           },
           {
@@ -2387,24 +4090,258 @@
               493.2500000000003,
               467.62336805671947
             ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_205_58.00",
+            "kg": 0.000641568983132642,
+            "centre_mm": [
+              205.0,
+              418.00000000000006,
+              462.71988372093034
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_205_208.50",
+            "kg": 0.0006415689831326435,
+            "centre_mm": [
+              204.99999999999997,
+              568.5,
+              462.7198837209302
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_445_58.00",
+            "kg": 0.0006415689831326489,
+            "centre_mm": [
+              445.0,
+              418.0,
+              462.71988372093017
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_445_208.50",
+            "kg": 0.0006415689831326501,
+            "centre_mm": [
+              445.0,
+              568.5,
+              462.7198837209302
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_705_58.00",
+            "kg": 0.0006415689831326293,
+            "centre_mm": [
+              705.0000000000001,
+              418.00000000000006,
+              462.71988372093006
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_705_208.50",
+            "kg": 0.0006415689831326306,
+            "centre_mm": [
+              705.0,
+              568.5,
+              462.71988372093006
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_945_58.00",
+            "kg": 0.0006415689831326293,
+            "centre_mm": [
+              945.0,
+              418.00000000000006,
+              462.71988372093006
+            ]
+          },
+          {
+            "name": "CAS1_WEAR_WOODSCREW3p5x16_MINORCORE_945_208.50",
+            "kg": 0.0006415689831326307,
+            "centre_mm": [
+              944.9999999999998,
+              568.4999999999999,
+              462.71988372093
+            ]
           }
         ]
       },
       {
-        "kg": 6.649194620502781,
+        "kg": 6.685949998958824,
         "cg_mm": [
-          575.000000000002,
-          488.86223044864,
-          513.8935675801798
+          574.9999999999997,
+          488.9493864300669,
+          513.8753821394024
         ],
         "parts": [
           {
-            "name": "CAS2_GLUED_PLY_BOX_12p7_12p7_9_WEB",
-            "kg": 5.114394372973688,
+            "name": "CAS2_BOTTOM_SKIN",
+            "kg": 1.786455386361574,
             "centre_mm": [
-              575.0000000000025,
-              488.96243310247064,
-              507.45201416898374
+              574.999999999999,
+              488.71702506704514,
+              482.1729553306292
+            ]
+          },
+          {
+            "name": "CAS2_TOP_SKIN",
+            "kg": 1.686534304837623,
+            "centre_mm": [
+              574.999999999999,
+              488.7298830203971,
+              533.6753954303658
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_01_TOP_HALF_LAPS",
+            "kg": 0.17189730128571415,
+            "centre_mm": [
+              575.0000000000002,
+              364.50000000000017,
+              507.6216675753943
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_02_TOP_HALF_LAPS",
+            "kg": 0.1838967171326583,
+            "centre_mm": [
+              575.0000000000003,
+              378.99999999999994,
+              507.61808524712666
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_03_TOP_HALF_LAPS",
+            "kg": 0.18884608649999982,
+            "centre_mm": [
+              575.0000000000003,
+              433.74999999999994,
+              507.62874986533683
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_04_TOP_HALF_LAPS_SEG01",
+            "kg": 0.00043920850720839834,
+            "centre_mm": [
+              111.15598200109993,
+              488.50000000000006,
+              498.2374999999999
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_04_TOP_HALF_LAPS_SEG02",
+            "kg": 0.18535111151413522,
+            "centre_mm": [
+              574.9999999999984,
+              488.5,
+              507.7217921442267
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_04_TOP_HALF_LAPS_SEG03",
+            "kg": 0.0004392085072080946,
+            "centre_mm": [
+              1038.8440179989022,
+              488.49999999999994,
+              498.23750000000007
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_05_TOP_HALF_LAPS",
+            "kg": 0.18884608649999982,
+            "centre_mm": [
+              575.0000000000003,
+              543.25,
+              507.62874986533683
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_06_TOP_HALF_LAPS",
+            "kg": 0.1838967171326583,
+            "centre_mm": [
+              575.0000000000003,
+              597.9999999999998,
+              507.61808524712677
+            ]
+          },
+          {
+            "name": "CAS2_LONG_WEB_07_TOP_HALF_LAPS",
+            "kg": 0.18884608649999982,
+            "centre_mm": [
+              575.0000000000003,
+              612.5,
+              507.62874986533683
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_01_BOTTOM_HALF_LAPS",
+            "kg": 0.04690741625110499,
+            "centre_mm": [
+              113.47401338687185,
+              488.49999999999994,
+              509.3140508603432
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_02_BOTTOM_HALF_LAPS",
+            "kg": 0.0469074162511048,
+            "centre_mm": [
+              1036.5259866131282,
+              488.49999999999983,
+              509.31405086034334
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_03_BOTTOM_HALF_LAPS",
+            "kg": 0.0471261169821428,
+            "centre_mm": [
+              248.5497506415354,
+              489.3795340883813,
+              509.3980797235612
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_04_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075199999995,
+            "centre_mm": [
+              379.1428571428572,
+              488.5,
+              509.40403092466244
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_05_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075200000026,
+            "centre_mm": [
+              509.71428571428555,
+              488.4999999999999,
+              509.40403092466266
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_06_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999936,
+            "centre_mm": [
+              640.2857142857144,
+              488.5000000000001,
+              509.40403092466266
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_07_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999956,
+            "centre_mm": [
+              770.8571428571431,
+              488.5,
+              509.40403092466255
+            ]
+          },
+          {
+            "name": "CAS2_CROSS_WEB_08_BOTTOM_HALF_LAPS",
+            "kg": 0.04712611698214282,
+            "centre_mm": [
+              901.4502493584647,
+              489.3795340883811,
+              509.39807972356107
             ]
           },
           {
@@ -2660,39 +4597,147 @@
             ]
           },
           {
+            "name": "CAS2_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934037,
+            "centre_mm": [
+              113.49999999999999,
+              393.0,
+              479.4023455246312
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934037,
+            "centre_mm": [
+              121.49999999999999,
+              407.0,
+              479.4023455246312
+            ]
+          },
+          {
             "name": "CAS2_DOCK_PAD_117_40",
-            "kg": 0.0031833757439099684,
+            "kg": 0.0030364891656746843,
+            "centre_mm": [
+              117.50000000000003,
+              400.0000000000001,
+              477.41626710736426
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193160207e-05,
             "centre_mm": [
               117.50000000000001,
-              400.00000000000006,
-              477.38750000000016
+              400.0,
+              479.05000000000007
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934254,
+            "centre_mm": [
+              113.5,
+              570.0,
+              479.40234552463113
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934254,
+            "centre_mm": [
+              121.50000000000001,
+              584.0,
+              479.40234552463113
             ]
           },
           {
             "name": "CAS2_DOCK_PAD_117_217",
-            "kg": 0.0034290000000000123,
+            "kg": 0.003282113421764728,
+            "centre_mm": [
+              117.5,
+              577.0000000000001,
+              477.4141142569177
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_117_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.828940280010682e-05,
             "centre_mm": [
               117.50000000000001,
               577.0,
-              477.38750000000005
+              479.05000000000007
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934525,
+            "centre_mm": [
+              1028.5000000000002,
+              393.0,
+              479.40234552463113
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934525,
+            "centre_mm": [
+              1036.5,
+              407.0,
+              479.40234552463113
             ]
           },
           {
             "name": "CAS2_DOCK_PAD_1032_40",
-            "kg": 0.00318337574390997,
+            "kg": 0.00303648916567469,
             "centre_mm": [
               1032.5,
               400.0000000000001,
-              477.38750000000016
+              477.41626710736415
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193160222e-05,
+            "centre_mm": [
+              1032.5000000000002,
+              400.0,
+              479.05000000000007
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934747,
+            "centre_mm": [
+              1028.4999999999998,
+              569.9999999999999,
+              479.402345524631
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934747,
+            "centre_mm": [
+              1036.5,
+              584.0,
+              479.402345524631
             ]
           },
           {
             "name": "CAS2_DOCK_PAD_1032_217",
-            "kg": 0.0034290000000000123,
+            "kg": 0.0032821134217647326,
             "centre_mm": [
               1032.5,
-              577.0,
-              477.38750000000005
+              576.9999999999999,
+              477.4141142569176
+            ]
+          },
+          {
+            "name": "CAS2_DOCK_PAD_1032_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.82894028001069e-05,
+            "centre_mm": [
+              1032.5000000000002,
+              577.0000000000002,
+              479.05
             ]
           },
           {
@@ -2703,24 +4748,258 @@
               488.50000000000006,
               543.4234456769293
             ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_205_48.50",
+            "kg": 0.000641568983132637,
+            "centre_mm": [
+              205.0,
+              408.50000000000006,
+              538.5198837209302
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_205_208.50",
+            "kg": 0.0006415689831326383,
+            "centre_mm": [
+              205.0,
+              568.5,
+              538.5198837209302
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_445_48.50",
+            "kg": 0.0006415689831326438,
+            "centre_mm": [
+              444.9999999999999,
+              408.5,
+              538.5198837209301
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_445_208.50",
+            "kg": 0.000641568983132645,
+            "centre_mm": [
+              445.0,
+              568.5,
+              538.5198837209302
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_705_48.50",
+            "kg": 0.0006415689831326242,
+            "centre_mm": [
+              705.0000000000001,
+              408.50000000000006,
+              538.51988372093
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_705_208.50",
+            "kg": 0.0006415689831326255,
+            "centre_mm": [
+              705.0,
+              568.5,
+              538.51988372093
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_945_48.50",
+            "kg": 0.0006415689831326242,
+            "centre_mm": [
+              945.0000000000001,
+              408.50000000000006,
+              538.51988372093
+            ]
+          },
+          {
+            "name": "CAS2_WEAR_WOODSCREW3p5x16_MINORCORE_945_208.50",
+            "kg": 0.0006415689831326256,
+            "centre_mm": [
+              944.9999999999999,
+              568.5,
+              538.51988372093
+            ]
           }
         ]
       },
       {
-        "kg": 6.649194620502767,
+        "kg": 6.685949998958813,
         "cg_mm": [
-          575.0,
-          488.8622304486392,
-          589.693567580181
+          574.9999999999999,
+          488.9493864300669,
+          589.6753821394021
         ],
         "parts": [
           {
-            "name": "CAS3_GLUED_PLY_BOX_12p7_12p7_9_WEB",
-            "kg": 5.114394372973691,
+            "name": "CAS3_BOTTOM_SKIN",
+            "kg": 1.7864553863615806,
             "centre_mm": [
-              575.0,
-              488.96243310246956,
-              583.2520141689862
+              574.9999999999999,
+              488.71702506704565,
+              557.9729553306305
+            ]
+          },
+          {
+            "name": "CAS3_TOP_SKIN",
+            "kg": 1.6865343048376222,
+            "centre_mm": [
+              574.9999999999998,
+              488.7298830203973,
+              609.4753954303665
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_01_TOP_HALF_LAPS",
+            "kg": 0.17189730128571412,
+            "centre_mm": [
+              574.9999999999998,
+              364.49999999999994,
+              583.4216675753942
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_02_TOP_HALF_LAPS",
+            "kg": 0.1838967171326582,
+            "centre_mm": [
+              575.0000000000003,
+              378.99999999999983,
+              583.418085247127
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_03_TOP_HALF_LAPS",
+            "kg": 0.18884608649999973,
+            "centre_mm": [
+              575.0000000000003,
+              433.7499999999997,
+              583.4287498653373
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_04_TOP_HALF_LAPS_SEG01",
+            "kg": 0.0004392085072083957,
+            "centre_mm": [
+              111.15598200109993,
+              488.5,
+              574.0374999999999
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_04_TOP_HALF_LAPS_SEG02",
+            "kg": 0.18535111151413522,
+            "centre_mm": [
+              574.9999999999984,
+              488.4999999999997,
+              583.5217921442265
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_04_TOP_HALF_LAPS_SEG03",
+            "kg": 0.0004392085072080918,
+            "centre_mm": [
+              1038.8440179989025,
+              488.5000000000001,
+              574.0374999999999
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_05_TOP_HALF_LAPS",
+            "kg": 0.18884608649999973,
+            "centre_mm": [
+              575.0000000000003,
+              543.2500000000001,
+              583.4287498653373
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_06_TOP_HALF_LAPS",
+            "kg": 0.1838967171326582,
+            "centre_mm": [
+              575.0000000000003,
+              598.0000000000003,
+              583.4180852471271
+            ]
+          },
+          {
+            "name": "CAS3_LONG_WEB_07_TOP_HALF_LAPS",
+            "kg": 0.18884608649999973,
+            "centre_mm": [
+              575.0000000000003,
+              612.5,
+              583.4287498653373
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_01_BOTTOM_HALF_LAPS",
+            "kg": 0.04690741625110499,
+            "centre_mm": [
+              113.47401338687187,
+              488.5000000000001,
+              585.1140508603434
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_02_BOTTOM_HALF_LAPS",
+            "kg": 0.046907416251104804,
+            "centre_mm": [
+              1036.5259866131278,
+              488.49999999999994,
+              585.1140508603434
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_03_BOTTOM_HALF_LAPS",
+            "kg": 0.047126116982142835,
+            "centre_mm": [
+              248.5497506415352,
+              489.37953408838126,
+              585.198079723561
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_04_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999936,
+            "centre_mm": [
+              379.14285714285745,
+              488.5000000000003,
+              585.2040309246632
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_05_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075200000027,
+            "centre_mm": [
+              509.7142857142856,
+              488.50000000000006,
+              585.2040309246628
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_06_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999936,
+            "centre_mm": [
+              640.2857142857147,
+              488.5000000000003,
+              585.2040309246631
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_07_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075199999995,
+            "centre_mm": [
+              770.8571428571435,
+              488.5000000000003,
+              585.204030924663
+            ]
+          },
+          {
+            "name": "CAS3_CROSS_WEB_08_BOTTOM_HALF_LAPS",
+            "kg": 0.04712611698214284,
+            "centre_mm": [
+              901.4502493584644,
+              489.3795340883814,
+              585.198079723561
             ]
           },
           {
@@ -2976,39 +5255,147 @@
             ]
           },
           {
+            "name": "CAS3_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934053,
+            "centre_mm": [
+              113.5,
+              393.00000000000006,
+              555.2023455246311
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934053,
+            "centre_mm": [
+              121.50000000000001,
+              407.0,
+              555.2023455246311
+            ]
+          },
+          {
             "name": "CAS3_DOCK_PAD_117_40",
-            "kg": 0.003183375743909909,
+            "kg": 0.0030364891656746245,
+            "centre_mm": [
+              117.50000000000003,
+              400.0000000000001,
+              553.2162671073644
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193166821e-05,
             "centre_mm": [
               117.50000000000001,
               400.0,
-              553.1875000000003
+              554.8499999999998
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593427,
+            "centre_mm": [
+              113.5,
+              570.0,
+              555.2023455246313
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593427,
+            "centre_mm": [
+              121.50000000000001,
+              584.0000000000001,
+              555.2023455246313
             ]
           },
           {
             "name": "CAS3_DOCK_PAD_117_217",
-            "kg": 0.0034289999999999508,
+            "kg": 0.0032821134217646667,
             "centre_mm": [
-              117.50000000000001,
-              577.0,
-              553.1875000000001
+              117.50000000000003,
+              577.0000000000001,
+              553.2141142569177
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_117_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.82894028001746e-05,
+            "centre_mm": [
+              117.49999999999999,
+              577.0000000000001,
+              554.8499999999999
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934563,
+            "centre_mm": [
+              1028.5000000000002,
+              393.00000000000006,
+              555.202345524631
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934563,
+            "centre_mm": [
+              1036.5,
+              406.99999999999994,
+              555.202345524631
             ]
           },
           {
             "name": "CAS3_DOCK_PAD_1032_40",
-            "kg": 0.0031833757439099107,
+            "kg": 0.0030364891656746293,
+            "centre_mm": [
+              1032.5000000000002,
+              400.00000000000006,
+              553.2162671073645
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193166837e-05,
             "centre_mm": [
               1032.5,
-              400.0000000000001,
-              553.1875000000001
+              399.9999999999999,
+              554.8499999999999
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934785,
+            "centre_mm": [
+              1028.4999999999998,
+              570.0,
+              555.202345524631
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934785,
+            "centre_mm": [
+              1036.5,
+              584.0,
+              555.202345524631
             ]
           },
           {
             "name": "CAS3_DOCK_PAD_1032_217",
-            "kg": 0.0034289999999999508,
+            "kg": 0.0032821134217646706,
+            "centre_mm": [
+              1032.4999999999995,
+              577.0,
+              553.2141142569174
+            ]
+          },
+          {
+            "name": "CAS3_DOCK_PAD_1032_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.828940280017468e-05,
             "centre_mm": [
               1032.5000000000002,
-              577.0,
-              553.1875000000001
+              576.9999999999999,
+              554.85
             ]
           },
           {
@@ -3019,24 +5406,258 @@
               488.5000000000003,
               619.2234456769288
             ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_205_48.50",
+            "kg": 0.0006415689831326471,
+            "centre_mm": [
+              205.0,
+              408.5,
+              614.3198837209304
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_205_208.50",
+            "kg": 0.0006415689831326486,
+            "centre_mm": [
+              204.99999999999997,
+              568.4999999999999,
+              614.3198837209303
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_445_48.50",
+            "kg": 0.0006415689831326541,
+            "centre_mm": [
+              445.0,
+              408.49999999999994,
+              614.3198837209302
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_445_208.50",
+            "kg": 0.0006415689831326553,
+            "centre_mm": [
+              445.0,
+              568.5,
+              614.3198837209303
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_705_48.50",
+            "kg": 0.0006415689831326346,
+            "centre_mm": [
+              705.0000000000001,
+              408.5,
+              614.3198837209303
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_705_208.50",
+            "kg": 0.0006415689831326359,
+            "centre_mm": [
+              705.0,
+              568.5,
+              614.3198837209303
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_945_48.50",
+            "kg": 0.0006415689831326346,
+            "centre_mm": [
+              944.9999999999999,
+              408.5,
+              614.3198837209303
+            ]
+          },
+          {
+            "name": "CAS3_WEAR_WOODSCREW3p5x16_MINORCORE_945_208.50",
+            "kg": 0.0006415689831326359,
+            "centre_mm": [
+              944.9999999999999,
+              568.5,
+              614.3198837209303
+            ]
           }
         ]
       },
       {
-        "kg": 6.621691183002794,
+        "kg": 6.658446561458816,
         "cg_mm": [
-          575.0000000000011,
-          488.4645077260749,
-          665.3709076911275
+          574.9999999999999,
+          488.5514844865678,
+          665.353324229877
         ],
         "parts": [
           {
-            "name": "CAS4_GLUED_PLY_BOX_12p7_12p7_9_WEB",
-            "kg": 5.114394372973717,
+            "name": "CAS4_BOTTOM_SKIN",
+            "kg": 1.7864553863615824,
             "centre_mm": [
-              575.0000000000011,
-              488.96243310246876,
-              659.0520141689835
+              574.9999999999993,
+              488.71702506704526,
+              633.772955330629
+            ]
+          },
+          {
+            "name": "CAS4_TOP_SKIN",
+            "kg": 1.6865343048376225,
+            "centre_mm": [
+              574.9999999999994,
+              488.73049860123217,
+              685.2753954303647
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_01_TOP_HALF_LAPS",
+            "kg": 0.1718973012857141,
+            "centre_mm": [
+              575.0,
+              364.4999999999999,
+              659.2216675753945
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_02_TOP_HALF_LAPS",
+            "kg": 0.1838967171326582,
+            "centre_mm": [
+              575.0,
+              379.00000000000006,
+              659.2180852471272
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_03_TOP_HALF_LAPS",
+            "kg": 0.18884608649999973,
+            "centre_mm": [
+              575.0000000000005,
+              433.75,
+              659.2287498653371
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_04_TOP_HALF_LAPS_SEG01",
+            "kg": 0.0004392085072083957,
+            "centre_mm": [
+              111.15598200109993,
+              488.5,
+              649.8374999999997
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_04_TOP_HALF_LAPS_SEG02",
+            "kg": 0.18535111151413514,
+            "centre_mm": [
+              574.9999999999985,
+              488.5000000000001,
+              659.3217921442268
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_04_TOP_HALF_LAPS_SEG03",
+            "kg": 0.00043920850720809184,
+            "centre_mm": [
+              1038.8440179989025,
+              488.50000000000006,
+              649.8375000000001
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_05_TOP_HALF_LAPS",
+            "kg": 0.18884608649999973,
+            "centre_mm": [
+              575.0000000000005,
+              543.2500000000001,
+              659.2287498653371
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_06_TOP_HALF_LAPS",
+            "kg": 0.1838967171326582,
+            "centre_mm": [
+              575.0,
+              598.0,
+              659.2180852471272
+            ]
+          },
+          {
+            "name": "CAS4_LONG_WEB_07_TOP_HALF_LAPS",
+            "kg": 0.18884608649999973,
+            "centre_mm": [
+              575.0000000000005,
+              612.5000000000006,
+              659.2287498653371
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_01_BOTTOM_HALF_LAPS",
+            "kg": 0.04690741625110499,
+            "centre_mm": [
+              113.4740133868719,
+              488.49999999999994,
+              660.9140508603432
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_02_BOTTOM_HALF_LAPS",
+            "kg": 0.04690741625110482,
+            "centre_mm": [
+              1036.5259866131273,
+              488.5000000000001,
+              660.9140508603435
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_03_BOTTOM_HALF_LAPS",
+            "kg": 0.04712611698214284,
+            "centre_mm": [
+              248.5497506415352,
+              489.37953408838115,
+              660.9980797235607
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_04_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999956,
+            "centre_mm": [
+              379.14285714285734,
+              488.5000000000001,
+              661.0040309246627
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_05_BOTTOM_HALF_LAPS",
+            "kg": 0.047470752000000255,
+            "centre_mm": [
+              509.714285714286,
+              488.5000000000002,
+              661.0040309246626
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_06_BOTTOM_HALF_LAPS",
+            "kg": 0.047470751999999956,
+            "centre_mm": [
+              640.2857142857147,
+              488.5000000000002,
+              661.0040309246629
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_07_BOTTOM_HALF_LAPS",
+            "kg": 0.04747075199999997,
+            "centre_mm": [
+              770.8571428571431,
+              488.5000000000002,
+              661.0040309246626
+            ]
+          },
+          {
+            "name": "CAS4_CROSS_WEB_08_BOTTOM_HALF_LAPS",
+            "kg": 0.047126116982142835,
+            "centre_mm": [
+              901.4502493584642,
+              489.3795340883814,
+              660.9980797235617
             ]
           },
           {
@@ -3292,39 +5913,147 @@
             ]
           },
           {
+            "name": "CAS4_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593405,
+            "centre_mm": [
+              113.50000000000001,
+              393.0,
+              631.0023455246311
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593405,
+            "centre_mm": [
+              121.50000000000001,
+              407.00000000000006,
+              631.0023455246311
+            ]
+          },
+          {
             "name": "CAS4_DOCK_PAD_117_40",
-            "kg": 0.003183375743909909,
+            "kg": 0.003036489165674625,
+            "centre_mm": [
+              117.5,
+              400.0,
+              629.016267107364
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193166821e-05,
             "centre_mm": [
               117.50000000000001,
               400.0,
-              628.9875000000001
+              630.6500000000002
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593427,
+            "centre_mm": [
+              113.5,
+              570.0,
+              631.0023455246311
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593427,
+            "centre_mm": [
+              121.5,
+              584.0,
+              631.0023455246311
             ]
           },
           {
             "name": "CAS4_DOCK_PAD_117_217",
-            "kg": 0.003428999999999951,
+            "kg": 0.003282113421764667,
+            "centre_mm": [
+              117.5,
+              576.9999999999999,
+              629.0141142569175
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_117_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.82894028001746e-05,
             "centre_mm": [
               117.50000000000001,
-              577.0,
-              628.9875000000001
+              577.0000000000001,
+              630.65
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.00035827408535934563,
+            "centre_mm": [
+              1028.5000000000002,
+              393.0,
+              631.002345524631
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_40_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.00035827408535934563,
+            "centre_mm": [
+              1036.5,
+              406.99999999999994,
+              631.002345524631
             ]
           },
           {
             "name": "CAS4_DOCK_PAD_1032_40",
-            "kg": 0.0031833757439099107,
+            "kg": 0.0030364891656746306,
+            "centre_mm": [
+              1032.4999999999998,
+              400.00000000000006,
+              629.0162671073642
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_40_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.184257193166837e-05,
             "centre_mm": [
               1032.5,
-              400.0,
-              628.9875
+              399.9999999999999,
+              630.6499999999996
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_-4",
+            "kg": 0.0003582740853593478,
+            "centre_mm": [
+              1028.5,
+              570.0,
+              631.0023455246311
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_217_WOODSCREW3x10_MINORCORE_4",
+            "kg": 0.0003582740853593478,
+            "centre_mm": [
+              1036.5,
+              584.0000000000001,
+              631.0023455246311
             ]
           },
           {
             "name": "CAS4_DOCK_PAD_1032_217",
-            "kg": 0.003428999999999951,
+            "kg": 0.00328211342176467,
             "centre_mm": [
-              1032.5,
+              1032.4999999999995,
               577.0,
-              628.9875000000001
+              629.0141142569177
+            ]
+          },
+          {
+            "name": "CAS4_DOCK_PAD_1032_217_HARD_EPOXY_BEDDING_0p15",
+            "kg": 8.828940280017468e-05,
+            "centre_mm": [
+              1032.5000000000002,
+              577.0000000000001,
+              630.65
             ]
           },
           {
@@ -3335,16 +6064,88 @@
               484.7500000000002,
               695.02338503536
             ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_205_48.50",
+            "kg": 0.0006415689831326471,
+            "centre_mm": [
+              205.0,
+              408.5,
+              690.1198837209303
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_205_201.00",
+            "kg": 0.0006415689831326486,
+            "centre_mm": [
+              205.00000000000003,
+              561.0,
+              690.1198837209303
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_445_48.50",
+            "kg": 0.000641568983132654,
+            "centre_mm": [
+              445.0,
+              408.50000000000006,
+              690.1198837209301
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_445_201.00",
+            "kg": 0.0006415689831326553,
+            "centre_mm": [
+              445.0000000000001,
+              561.0000000000001,
+              690.1198837209303
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_705_48.50",
+            "kg": 0.0006415689831326345,
+            "centre_mm": [
+              705.0000000000002,
+              408.5000000000001,
+              690.1198837209301
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_705_201.00",
+            "kg": 0.0006415689831326359,
+            "centre_mm": [
+              705.0,
+              561.0000000000001,
+              690.1198837209301
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_945_48.50",
+            "kg": 0.0006415689831326345,
+            "centre_mm": [
+              944.9999999999999,
+              408.5000000000001,
+              690.1198837209301
+            ]
+          },
+          {
+            "name": "CAS4_WEAR_WOODSCREW3p5x16_MINORCORE_945_201.00",
+            "kg": 0.0006415689831326359,
+            "centre_mm": [
+              945.0000000000001,
+              561.0000000000001,
+              690.1198837209301
+            ]
           }
         ]
       }
     ],
     "pan_slats_combs": {
-      "kg": 25.628129473345236,
+      "kg": 25.36220278694885,
       "cg_mm": [
-        575.3200080999736,
-        644.0168009433609,
-        828.5875804480391
+        575.45240045475,
+        644.1240027502602,
+        828.1398720675874
       ],
       "parts": [
         {
@@ -3403,11 +6204,29 @@
         },
         {
           "name": "INDEPENDENT_OPEN_OVERFLOW_40x8",
-          "kg": 0.05551519999999999,
+          "kg": 0.05294228399999942,
           "centre_mm": [
-            1039.0,
-            900.0000000000002,
-            867.0000000000002
+            1038.9999999999998,
+            899.9999999999999,
+            866.9999999999997
+          ]
+        },
+        {
+          "name": "PAN_OVERFLOW_WELDED_M4x16_STUD_872",
+          "kg": 0.0015004058017985713,
+          "centre_mm": [
+            1030.0000000000002,
+            871.9999999999999,
+            838.0
+          ]
+        },
+        {
+          "name": "PAN_OVERFLOW_WELDED_M4x16_STUD_928",
+          "kg": 0.0015004058017985713,
+          "centre_mm": [
+            1030.0000000000002,
+            928.0000000000001,
+            838.0
           ]
         },
         {
@@ -3421,11 +6240,11 @@
         },
         {
           "name": "HOT_COMB_2_WALL_JOIN_AND_WELD_HOLD",
-          "kg": 0.969606452959987,
+          "kg": 0.9709224269599868,
           "centre_mm": [
-            574.9999999999991,
-            632.6426435121357,
-            834.5646257448285
+            574.9999999999995,
+            632.6634586476047,
+            834.5713150786205
           ]
         },
         {
@@ -3439,74 +6258,74 @@
         },
         {
           "name": "HOT_SLAT_01_880x40x1p9_ONE_SHEET_CANDIDATE",
-          "kg": 0.5250080000000016,
+          "kg": 0.5248469180000016,
           "centre_mm": [
-            575.0000000000001,
-            130.00000000000006,
-            858.0000000000002
+            575.0,
+            130.00000000000003,
+            858.0056778784399
           ]
         },
         {
           "name": "HOT_SLAT_02_880x40x1p9_ONE_SHEET_CANDIDATE",
-          "kg": 0.5250079999999937,
+          "kg": 0.5248469179999937,
           "centre_mm": [
             575.0,
-            278.0,
-            858.0
+            278.00000000000006,
+            858.00567787844
           ]
         },
         {
           "name": "HOT_SLAT_03_880x40x1p9_ONE_SHEET_CANDIDATE",
-          "kg": 0.5250079999999937,
+          "kg": 0.5248469179999937,
           "centre_mm": [
             575.0,
-            426.0,
-            858.0
+            426.00000000000006,
+            858.00567787844
           ]
         },
         {
           "name": "HOT_SLAT_04_880x40x1p9_ONE_SHEET_CANDIDATE",
-          "kg": 0.5250079999999937,
+          "kg": 0.5248469179999937,
           "centre_mm": [
-            575.0000000000001,
-            574.0,
-            858.0
+            575.0,
+            573.9999999999999,
+            858.00567787844
           ]
         },
         {
           "name": "HOT_SLAT_05_880x40x1p9_ONE_SHEET_CANDIDATE",
-          "kg": 0.5250079999999937,
+          "kg": 0.5248469179999937,
           "centre_mm": [
             575.0,
             722.0,
-            857.9999999999999
+            858.00567787844
           ]
         },
         {
           "name": "HOT_SLAT_06_880x40x1p9_ONE_SHEET_CANDIDATE",
-          "kg": 0.5250079999999937,
+          "kg": 0.5248469179999937,
           "centre_mm": [
             575.0,
-            869.9999999999999,
-            857.9999999999999
+            870.0000000000001,
+            858.00567787844
           ]
         },
         {
           "name": "HOT_SLAT_07_880x40x1p9_ONE_SHEET_CANDIDATE",
-          "kg": 0.5250079999999937,
+          "kg": 0.5248469179999937,
           "centre_mm": [
             575.0,
-            1017.9999999999999,
-            858.0
+            1018.0,
+            858.00567787844
           ]
         },
         {
           "name": "HOT_SLAT_08_880x40x1p9_ONE_SHEET_CANDIDATE",
-          "kg": 0.5250080000000252,
+          "kg": 0.5248469180000251,
           "centre_mm": [
             575.0,
             1166.0,
-            857.9999999999999
+            858.00567787844
           ]
         },
         {
@@ -3588,24 +6407,6 @@
             1010.0,
             1180.0198412698412,
             811.5400595238095
-          ]
-        },
-        {
-          "name": "HOT_SIDE_SHADOW_L",
-          "kg": 0.13662139999999837,
-          "centre_mm": [
-            122.99999999999999,
-            640.8951965065502,
-            870.95
-          ]
-        },
-        {
-          "name": "HOT_SIDE_SHADOW_R",
-          "kg": 0.1297604999999984,
-          "centre_mm": [
-            1027.0000000000002,
-            627.1954022988507,
-            870.9500000000003
           ]
         }
       ]
@@ -3837,28 +6638,28 @@
       ]
     },
     "water_envelopes_floor_receiver_not_frame_ballast": {
-      "kg": 7.240495434004555,
+      "kg": 10.16729930735909,
       "cg_mm": [
-        553.8520459035692,
-        859.3275668618753,
-        290.24709777062594
+        560.3281864279013,
+        895.9072220539147,
+        321.7019932241777
       ],
       "parts": [
         {
           "name": "WATER_DRAIN_90DEG_ADAPTER_OD28_ID24_THREAD_HOLD",
-          "kg": 0.04028772587233809,
+          "kg": 0.04834527067096222,
           "centre_mm": [
-            86.56197015042707,
-            184.56197015042713,
-            826.4799999999998
+            84.4664302147367,
+            186.46643021473662,
+            826.4799999999997
           ]
         },
         {
           "name": "WATER_1IN_FULL_PORT_VALVE_ENVELOPE_NO_THREAD_RELEASE",
           "kg": 0.312912053075504,
           "centre_mm": [
-            82.0,
-            226.99999999999997,
+            77.99999999999999,
+            230.99999999999997,
             826.4799999999999
           ]
         },
@@ -3866,27 +6667,27 @@
           "name": "WATER_VALVE_HANDLE_SERVICE_ENVELOPE",
           "kg": 0.029830000000000006,
           "centre_mm": [
-            82.0,
-            252.49999999999997,
+            77.99999999999999,
+            256.49999999999994,
             847.9799999999999
           ]
         },
         {
           "name": "WATER_DOWN_ELBOW_ADAPTER_34_OD_25_ID_HOLD",
-          "kg": 0.01834266010135719,
+          "kg": 0.018342660101357187,
           "centre_mm": [
-            82.0,
-            270.2755827766928,
-            822.755582776693
+            78.00000000000001,
+            274.2755827766927,
+            822.7555827766931
           ]
         },
         {
-          "name": "WATER_25MM_GRAVITY_HOSE_R100_OVER_RIM_AIRGAP21",
-          "kg": 0.64909374779989,
+          "name": "WATER_25MM_GRAVITY_HOSE_R100_OVER_RIM_AIRGAP19",
+          "kg": 0.6490937477975778,
           "centre_mm": [
-            149.5290519204065,
-            565.0571855772846,
-            557.903272341325
+            146.95775708340332,
+            567.7829092607204,
+            557.9032723421393
           ]
         },
         {
@@ -3900,75 +6701,444 @@
         },
         {
           "name": "WATER_REMOVABLE_LID_RETURN_PORTS_OPEN25MM_VENT_NOT_PRESSURE",
-          "kg": 0.7924455137745191,
+          "kg": 0.3868832957733188,
           "centre_mm": [
-            573.8862400395633,
-            935.9181655757695,
-            390.0000000000001
+            572.1096877396745,
+            884.1274731750548,
+            390.00000000000034
           ]
         },
         {
-          "name": "OVERFLOW_WELDED_OPEN_RETURN_AIRGAP21",
-          "kg": 0.6908277333809464,
+          "name": "RECEIVER_HATCH_CROSS_ANGLE_F_25x25x3_COPED",
+          "kg": 0.26165931057250386,
           "centre_mm": [
-            1040.5636518146596,
-            900.0000000000003,
-            608.6945222236923
+            574.9999999999995,
+            842.5453523950869,
+            386.86440844862886
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_RIM_FOOT_FL",
+          "kg": 0.0033750000000000004,
+          "centre_mm": [
+            231.5,
+            847.5,
+            390.0
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_RIM_FOOT_FR",
+          "kg": 0.0033750000000000004,
+          "centre_mm": [
+            918.5,
+            847.5,
+            390.0
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_CROSS_ANGLE_R_25x25x3_COPED",
+          "kg": 0.2616557480064347,
+          "centre_mm": [
+            574.9999999999999,
+            1142.4546810260942,
+            386.86433171739924
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_RIM_FOOT_RL",
+          "kg": 0.0033750000000000004,
+          "centre_mm": [
+            231.5,
+            1137.5000000000002,
+            390.0
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_RIM_FOOT_RR",
+          "kg": 0.0033750000000000004,
+          "centre_mm": [
+            918.5,
+            1137.5000000000002,
+            390.0
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_M4_RIVNUT_300",
+          "kg": 0.001992649388318937,
+          "centre_mm": [
+            299.99999999999994,
+            844.9999999999999,
+            390.2960396039603
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_M4x16_KNOB_REMOVE_FOR_OPEN_300",
+          "kg": 0.011167714715425088,
+          "centre_mm": [
+            300.0,
+            845.0000000000001,
+            398.2877749315432
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_M4_RIVNUT_850",
+          "kg": 0.001992649388318948,
+          "centre_mm": [
+            850.0,
+            845.0000000000002,
+            390.29603960396037
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_M4x16_KNOB_REMOVE_FOR_OPEN_850",
+          "kg": 0.011167714715425095,
+          "centre_mm": [
+            850.0000000000001,
+            845.0000000000002,
+            398.2877749315432
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_336_LID_BYPASS_SLEEVE",
+          "kg": 7.057273737024078e-05,
+          "centre_mm": [
+            336.0,
+            1140.0,
+            389.9999999999999
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_336_M4x16",
+          "kg": 0.0027088194160018717,
+          "centre_mm": [
+            335.99999999999994,
+            1140.0,
+            392.36103423160966
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_336_WASHER",
+          "kg": 0.0006080540014652428,
+          "centre_mm": [
+            335.9999999999999,
+            1140.0,
+            388.19999999999993
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_336_M4NUT",
+          "kg": 0.0007503315013081786,
+          "centre_mm": [
+            335.99999999999994,
+            1139.9999999999998,
+            385.79999999999995
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_364_LID_BYPASS_SLEEVE",
+          "kg": 7.057273737024078e-05,
+          "centre_mm": [
+            363.9999999999999,
+            1140.0,
+            389.9999999999999
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_364_M4x16",
+          "kg": 0.0027088194160018717,
+          "centre_mm": [
+            364.0,
+            1140.0,
+            392.36103423160966
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_364_WASHER",
+          "kg": 0.0006080540014652428,
+          "centre_mm": [
+            363.99999999999994,
+            1140.0,
+            388.19999999999993
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_364_M4NUT",
+          "kg": 0.0007503315013081786,
+          "centre_mm": [
+            364.00000000000006,
+            1139.9999999999998,
+            385.79999999999995
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_FIXED_HINGE_350",
+          "kg": 0.012672038090370492,
+          "centre_mm": [
+            348.85904993367444,
+            1139.2870240212471,
+            395.85069089183025
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_MAIN_PIN_M4x30_350",
+          "kg": 0.003659338350829783,
+          "centre_mm": [
+            348.7159178117476,
+            1130.0,
+            397.9999999479427
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_OPEN_INDEX_PIN_REMOVE_DURING_SWING_350",
+          "kg": 0.0017349767273285193,
+          "centre_mm": [
+            347.3348580215992,
+            1140.0000000000002,
+            400.000001557486
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_INDEX_R_CLIP_REMOVE_DURING_SWING_350",
+          "kg": 4.441799386527061e-05,
+          "centre_mm": [
+            355.5,
+            1139.4453703797626,
+            399.9999999999984
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_786_LID_BYPASS_SLEEVE",
+          "kg": 7.057273737024108e-05,
+          "centre_mm": [
+            786.0,
+            1140.0000000000002,
+            390.0
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_786_M4x16",
+          "kg": 0.0027088194160018787,
+          "centre_mm": [
+            785.9999999999999,
+            1140.0,
+            392.3610342316096
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_786_WASHER",
+          "kg": 0.0006080540014652405,
+          "centre_mm": [
+            786.0000000000003,
+            1140.0000000000005,
+            388.2
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_786_M4NUT",
+          "kg": 0.0007503315013081827,
+          "centre_mm": [
+            785.9999999999999,
+            1139.9999999999998,
+            385.7999999999999
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_814_LID_BYPASS_SLEEVE",
+          "kg": 7.057273737024108e-05,
+          "centre_mm": [
+            813.9999999999998,
+            1140.0000000000002,
+            390.0
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_814_M4x16",
+          "kg": 0.0027088194160018787,
+          "centre_mm": [
+            813.9999999999999,
+            1140.0,
+            392.3610342316096
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_814_WASHER",
+          "kg": 0.0006080540014652405,
+          "centre_mm": [
+            814.0,
+            1140.0000000000005,
+            388.2
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_HINGE_814_M4NUT",
+          "kg": 0.0007503315013081827,
+          "centre_mm": [
+            813.9999999999998,
+            1139.9999999999998,
+            385.7999999999999
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_FIXED_HINGE_800",
+          "kg": 0.012672038090370508,
+          "centre_mm": [
+            798.8590499336742,
+            1139.2870240212465,
+            395.8506908918302
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_MAIN_PIN_M4x30_800",
+          "kg": 0.003659338350829802,
+          "centre_mm": [
+            798.7159178117479,
+            1130.0000000000005,
+            397.9999999479427
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_OPEN_INDEX_PIN_REMOVE_DURING_SWING_800",
+          "kg": 0.0017349767273285197,
+          "centre_mm": [
+            797.3348580215992,
+            1140.0000000000002,
+            400.00000155748586
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_INDEX_R_CLIP_REMOVE_DURING_SWING_800",
+          "kg": 4.4417993865323406e-05,
+          "centre_mm": [
+            805.4999999999991,
+            1139.4453703797606,
+            399.99999999999835
+          ]
+        },
+        {
+          "name": "RECEIVER_HATCH_COVER_CLOSED",
+          "kg": 2.6853985535936675,
+          "centre_mm": [
+            575.0142991601156,
+            985.3347177649049,
+            394.96568627280027
+          ]
+        },
+        {
+          "name": "OVERFLOW_REMOVABLE_SUPPORT_872_SPACER1",
+          "kg": 0.00027522236601038844,
+          "centre_mm": [
+            1022.5000000000001,
+            871.9999999999999,
+            838.0000000000001
+          ]
+        },
+        {
+          "name": "OVERFLOW_REMOVABLE_SUPPORT_872_WASHER",
+          "kg": 0.0006080540014652367,
+          "centre_mm": [
+            1025.7,
+            872.0000000000001,
+            837.9999999999999
+          ]
+        },
+        {
+          "name": "OVERFLOW_REMOVABLE_SUPPORT_872_M4NUT",
+          "kg": 0.0007503315013082131,
+          "centre_mm": [
+            1028.1000000000001,
+            871.9999999999999,
+            838.0
+          ]
+        },
+        {
+          "name": "OVERFLOW_REMOVABLE_SUPPORT_928_SPACER1",
+          "kg": 0.00027522236601038844,
+          "centre_mm": [
+            1022.5000000000001,
+            928.0000000000001,
+            838.0000000000001
+          ]
+        },
+        {
+          "name": "OVERFLOW_REMOVABLE_SUPPORT_928_WASHER",
+          "kg": 0.0006080540014652367,
+          "centre_mm": [
+            1025.7,
+            928.0000000000002,
+            837.9999999999999
+          ]
+        },
+        {
+          "name": "OVERFLOW_REMOVABLE_SUPPORT_928_M4NUT",
+          "kg": 0.0007503315013082131,
+          "centre_mm": [
+            1028.1,
+            928.0,
+            838.0
+          ]
+        },
+        {
+          "name": "OVERFLOW_WELDED_OPEN_RETURN_AIRGAP19",
+          "kg": 0.7105620708733391,
+          "centre_mm": [
+            1041.5228157530673,
+            899.9999999999994,
+            617.7387188011924
           ]
         }
       ]
     },
     "storage_empty": {
-      "kg": 8.127979748837632,
+      "kg": 8.28727536408998,
       "cg_mm": [
-        574.9999999999993,
-        490.2895296519162,
-        600.6123153948048
+        574.9486644267035,
+        490.15818282446855,
+        599.0727239760802
       ],
       "parts": [
         {
           "name": "COLD_CASE_FLOOR_NOT_A_WORKBED",
-          "kg": 0.5630450391360081,
+          "kg": 0.5629711413369732,
           "centre_mm": [
-            575.0,
-            488.50000000000006,
-            378.3999999999999
+            574.9999999999999,
+            488.5000000000001,
+            378.40000000000015
           ]
         },
         {
           "name": "COLD_CASE_FLOOR_COLUMN_L_F_AL25x25x3",
-          "kg": 0.21172842265528458,
+          "kg": 0.22352954566904423,
           "centre_mm": [
-            106.53970511239591,
-            358.94627070464173,
-            303.52936984382933
+            106.63072835883705,
+            358.74187310577986,
+            315.62931580953045
           ]
         },
         {
           "name": "COLD_CASE_FLOOR_COLUMN_L_R_AL25x25x3",
-          "kg": 0.26960179067850193,
+          "kg": 0.2745539407754513,
           "centre_mm": [
-            108.36615168994163,
-            619.6663249842668,
-            354.46975278897105
+            108.47421449171425,
+            619.577637514714,
+            357.2537606568063
           ]
         },
         {
           "name": "COLD_CASE_FLOOR_COLUMN_R_F_AL25x25x3",
-          "kg": 0.21172842265528452,
+          "kg": 0.22352954566904434,
           "centre_mm": [
-            1043.460294887604,
-            358.9462707046416,
-            303.52936984382933
+            1043.369271641164,
+            358.74187310578,
+            315.6293158095303
           ]
         },
         {
           "name": "COLD_CASE_FLOOR_COLUMN_R_R_AL25x25x3",
-          "kg": 0.2696017906785019,
+          "kg": 0.27455394077545126,
           "centre_mm": [
-            1041.633848310058,
-            619.6663249842672,
-            354.46975278897116
+            1041.5257855082846,
+            619.5776375147138,
+            357.25376065680626
           ]
         },
         {
@@ -4189,11 +7359,11 @@
         },
         {
           "name": "COLD_CASE_SIDE_L",
-          "kg": 0.19531303396790334,
+          "kg": 0.1950425155679034,
           "centre_mm": [
-            104.39999999999998,
-            486.98710812471944,
-            544.4225479257781
+            104.39999999999995,
+            487.174955526522,
+            544.4148121590054
           ]
         },
         {
@@ -4414,38 +7584,362 @@
         },
         {
           "name": "COLD_CASE_SIDE_R",
-          "kg": 0.1953130339678928,
+          "kg": 0.19504251556789293,
           "centre_mm": [
-            1045.5999999999992,
-            486.98710812471944,
-            544.4225479257786
+            1045.5999999999988,
+            487.17495552652224,
+            544.4148121590056
+          ]
+        },
+        {
+          "name": "COLD_CASE_BACK_BLIND_RIVET_115_410",
+          "kg": 0.0006564275382868697,
+          "centre_mm": [
+            114.99999999999999,
+            627.2999999999997,
+            409.99999999999994
+          ]
+        },
+        {
+          "name": "COLD_CASE_BACK_BLIND_RIVET_115_500",
+          "kg": 0.0006564275382868697,
+          "centre_mm": [
+            114.99999999999999,
+            627.2999999999997,
+            500.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_BACK_BLIND_RIVET_115_600",
+          "kg": 0.0006564275382868712,
+          "centre_mm": [
+            114.99999999999997,
+            627.2999999999998,
+            599.9999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_BACK_BLIND_RIVET_115_690",
+          "kg": 0.0006564275382868712,
+          "centre_mm": [
+            114.99999999999997,
+            627.2999999999998,
+            689.9999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_BACK_BLIND_RIVET_1035_410",
+          "kg": 0.0006564275382868684,
+          "centre_mm": [
+            1035.0,
+            627.2999999999998,
+            410.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_BACK_BLIND_RIVET_1035_500",
+          "kg": 0.0006564275382868684,
+          "centre_mm": [
+            1035.0,
+            627.2999999999998,
+            500.00000000000006
+          ]
+        },
+        {
+          "name": "COLD_CASE_BACK_BLIND_RIVET_1035_600",
+          "kg": 0.00065642753828687,
+          "centre_mm": [
+            1035.0,
+            627.2999999999998,
+            600.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_BACK_BLIND_RIVET_1035_690",
+          "kg": 0.00065642753828687,
+          "centre_mm": [
+            1035.0,
+            627.2999999999998,
+            689.9999999999999
           ]
         },
         {
           "name": "COLD_CASE_BACK",
-          "kg": 0.6424220159999634,
+          "kg": 0.6736598595601134,
           "centre_mm": [
-            575.0000000000001,
-            626.6,
-            544.4000000000001
+            574.9999999999998,
+            627.3999999999996,
+            544.398009878659
           ]
         },
         {
           "name": "COLD_CASE_ROOF",
-          "kg": 0.5672073599999677,
+          "kg": 0.5686977084018979,
           "centre_mm": [
-            575.0000000000001,
-            488.5,
-            710.4000000000001
+            575.0,
+            488.9002338958577,
+            710.3999999999997
           ]
         },
         {
           "name": "COLD_CASE_SECONDARY_STEEL_ROOF_AIRGAP5_THERMAL_HOLD",
-          "kg": 3.9166193399999534,
+          "kg": 3.927420604855229,
           "centre_mm": [
-            575.0,
-            488.5,
-            715.95
+            574.9999999999998,
+            488.90018189536454,
+            715.9499999999998
+          ]
+        },
+        {
+          "name": "COLD_CASE_FLOOR_FIX_114_363_M3x6.0",
+          "kg": 0.000758711119203366,
+          "centre_mm": [
+            113.99999999999999,
+            362.99999999999994,
+            379.07781569965863
+          ]
+        },
+        {
+          "name": "COLD_CASE_FLOOR_FIX_114_363_WASHER",
+          "kg": 0.00034580358568079444,
+          "centre_mm": [
+            114.0,
+            363.0,
+            379.20000000000005
+          ]
+        },
+        {
+          "name": "COLD_CASE_FLOOR_FIX_114_614_M3x6.0",
+          "kg": 0.0007587111192033664,
+          "centre_mm": [
+            113.99999999999997,
+            613.9999999999999,
+            379.07781569965863
+          ]
+        },
+        {
+          "name": "COLD_CASE_FLOOR_FIX_114_614_WASHER",
+          "kg": 0.0003458035856807942,
+          "centre_mm": [
+            114.00000000000001,
+            613.9999999999999,
+            379.2
+          ]
+        },
+        {
+          "name": "COLD_CASE_FLOOR_FIX_1036_363_M3x6.0",
+          "kg": 0.0007587111192033693,
+          "centre_mm": [
+            1036.0,
+            363.0,
+            379.0778156996588
+          ]
+        },
+        {
+          "name": "COLD_CASE_FLOOR_FIX_1036_363_WASHER",
+          "kg": 0.00034580358568079314,
+          "centre_mm": [
+            1036.0,
+            363.0,
+            379.20000000000005
+          ]
+        },
+        {
+          "name": "COLD_CASE_FLOOR_FIX_1036_614_M3x6.0",
+          "kg": 0.0007587111192033697,
+          "centre_mm": [
+            1035.9999999999998,
+            613.9999999999999,
+            379.0778156996587
+          ]
+        },
+        {
+          "name": "COLD_CASE_FLOOR_FIX_1036_614_WASHER",
+          "kg": 0.000345803585680793,
+          "centre_mm": [
+            1036.0000000000002,
+            614.0000000000001,
+            379.20000000000005
+          ]
+        },
+        {
+          "name": "COLD_CASE_PRIMARY_ROOF_FIX_115_359_M3x8.0",
+          "kg": 0.000862412736503875,
+          "centre_mm": [
+            114.99999999999999,
+            358.99999999999994,
+            710.2988847583645
+          ]
+        },
+        {
+          "name": "COLD_CASE_PRIMARY_ROOF_FIX_115_359_WASHER",
+          "kg": 0.00034580358568078886,
+          "centre_mm": [
+            114.99999999999994,
+            359.0,
+            711.2
+          ]
+        },
+        {
+          "name": "COLD_CASE_PRIMARY_ROOF_FIX_115_618_M3x8.0",
+          "kg": 0.0008624127365038757,
+          "centre_mm": [
+            115.0,
+            618.0,
+            710.2988847583642
+          ]
+        },
+        {
+          "name": "COLD_CASE_PRIMARY_ROOF_FIX_115_618_WASHER",
+          "kg": 0.00034580358568078853,
+          "centre_mm": [
+            114.99999999999996,
+            618.0,
+            711.2000000000002
+          ]
+        },
+        {
+          "name": "COLD_CASE_PRIMARY_ROOF_FIX_1035_359_M3x8.0",
+          "kg": 0.0008624127365038795,
+          "centre_mm": [
+            1034.9999999999998,
+            359.0,
+            710.2988847583644
+          ]
+        },
+        {
+          "name": "COLD_CASE_PRIMARY_ROOF_FIX_1035_359_WASHER",
+          "kg": 0.00034580358568078756,
+          "centre_mm": [
+            1035.0000000000002,
+            359.00000000000006,
+            711.2000000000002
+          ]
+        },
+        {
+          "name": "COLD_CASE_PRIMARY_ROOF_FIX_1035_618_M3x8.0",
+          "kg": 0.0008624127365038801,
+          "centre_mm": [
+            1035.0,
+            618.0,
+            710.2988847583642
+          ]
+        },
+        {
+          "name": "COLD_CASE_PRIMARY_ROOF_FIX_1035_618_WASHER",
+          "kg": 0.00034580358568078745,
+          "centre_mm": [
+            1035.0,
+            618.0,
+            711.2
+          ]
+        },
+        {
+          "name": "COLD_CASE_SHIELD_FIX_150_365_M3x12.0",
+          "kg": 0.001069815971104893,
+          "centre_mm": [
+            150.0,
+            365.0,
+            713.91244813278
+          ]
+        },
+        {
+          "name": "COLD_CASE_SHIELD_NUT_150_365",
+          "kg": 0.00036040727980810456,
+          "centre_mm": [
+            150.00000000000003,
+            364.99999999999994,
+            707.9999999999998
+          ]
+        },
+        {
+          "name": "COLD_CASE_SHIELD_LOWER_WASHER_150_365",
+          "kg": 0.00034580358568078853,
+          "centre_mm": [
+            149.99999999999997,
+            365.0,
+            709.6000000000001
+          ]
+        },
+        {
+          "name": "COLD_CASE_SHIELD_FIX_150_610_M3x12.0",
+          "kg": 0.0010698159711048944,
+          "centre_mm": [
+            150.00000000000003,
+            610.0,
+            713.9124481327801
+          ]
+        },
+        {
+          "name": "COLD_CASE_SHIELD_NUT_150_610",
+          "kg": 0.0003604072798081123,
+          "centre_mm": [
+            150.0,
+            609.9999999999999,
+            707.9999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_SHIELD_LOWER_WASHER_150_610",
+          "kg": 0.0003458035856807883,
+          "centre_mm": [
+            150.0,
+            610.0000000000001,
+            709.6000000000001
+          ]
+        },
+        {
+          "name": "COLD_CASE_SHIELD_FIX_1000_365_M3x12.0",
+          "kg": 0.0010698159711048946,
+          "centre_mm": [
+            1000.0000000000002,
+            365.00000000000006,
+            713.91244813278
+          ]
+        },
+        {
+          "name": "COLD_CASE_SHIELD_NUT_1000_365",
+          "kg": 0.0003604072798081131,
+          "centre_mm": [
+            999.9999999999999,
+            365.0000000000001,
+            707.9999999999998
+          ]
+        },
+        {
+          "name": "COLD_CASE_SHIELD_LOWER_WASHER_1000_365",
+          "kg": 0.0003458035856807885,
+          "centre_mm": [
+            1000.0000000000001,
+            364.99999999999994,
+            709.6000000000001
+          ]
+        },
+        {
+          "name": "COLD_CASE_SHIELD_FIX_1000_610_M3x12.0",
+          "kg": 0.0010698159711048964,
+          "centre_mm": [
+            999.9999999999998,
+            610.0,
+            713.9124481327801
+          ]
+        },
+        {
+          "name": "COLD_CASE_SHIELD_NUT_1000_610",
+          "kg": 0.0003604072798081197,
+          "centre_mm": [
+            1000.0,
+            609.9999999999999,
+            708.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_SHIELD_LOWER_WASHER_1000_610",
+          "kg": 0.00034580358568078826,
+          "centre_mm": [
+            999.9999999999999,
+            610.0,
+            709.6
           ]
         },
         {
@@ -4485,12 +7979,102 @@
           ]
         },
         {
-          "name": "COLD_CASE_SLIDING_FRONT_DOOR_CLOSED",
-          "kg": 0.6755270400000095,
+          "name": "COLD_CASE_LIFTOFF_FRONT_COVER_CLOSED",
+          "kg": 0.6854353461350589,
           "centre_mm": [
-            575.0,
-            348.40000000000003,
-            544.0000000000001
+            574.9999999999999,
+            346.6000000000001,
+            543.9988500108811
+          ]
+        },
+        {
+          "name": "COLD_CASE_COVER_PARKING_BLOCK_0",
+          "kg": 0.021271601593692145,
+          "centre_mm": [
+            214.99999999999997,
+            430.4098081189946,
+            388.76183504010424
+          ]
+        },
+        {
+          "name": "COLD_CASE_COVER_PARKING_BLOCK_1",
+          "kg": 0.021271601593692145,
+          "centre_mm": [
+            914.9999999999999,
+            430.4098081189946,
+            388.76183504010424
+          ]
+        },
+        {
+          "name": "COLD_CASE_COVER_M4x8_103_410",
+          "kg": 0.0015960924308416,
+          "centre_mm": [
+            103.00000000000001,
+            345.7381334981458,
+            410.00000000000006
+          ]
+        },
+        {
+          "name": "COLD_CASE_COVER_WASHER_103_410",
+          "kg": 0.0006080540014652443,
+          "centre_mm": [
+            103.0,
+            345.3999999999999,
+            410.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_COVER_M4x8_103_690",
+          "kg": 0.001596092430841603,
+          "centre_mm": [
+            102.99999999999999,
+            345.73813349814594,
+            690.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_COVER_WASHER_103_690",
+          "kg": 0.0006080540014652422,
+          "centre_mm": [
+            102.99999999999999,
+            345.4,
+            689.9999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_COVER_M4x8_1047_410",
+          "kg": 0.0015960924308416006,
+          "centre_mm": [
+            1046.9999999999998,
+            345.7381334981459,
+            410.0
+          ]
+        },
+        {
+          "name": "COLD_CASE_COVER_WASHER_1047_410",
+          "kg": 0.0006080540014652428,
+          "centre_mm": [
+            1046.9999999999998,
+            345.3999999999999,
+            409.9999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_COVER_M4x8_1047_690",
+          "kg": 0.0015960924308416034,
+          "centre_mm": [
+            1047.0000000000002,
+            345.7381334981459,
+            689.9999999999999
+          ]
+        },
+        {
+          "name": "COLD_CASE_COVER_WASHER_1047_690",
+          "kg": 0.0006080540014652406,
+          "centre_mm": [
+            1046.9999999999998,
+            345.4,
+            689.9999999999999
           ]
         },
         {

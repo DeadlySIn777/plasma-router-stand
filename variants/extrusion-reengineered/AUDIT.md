@@ -1,79 +1,95 @@
-# XR1 engineering audit
+# XR2 audit and release conditions
 
-The redesign resolves specific architecture defects. Physical supplier
-interfaces and assembled-machine performance remain release gates; they are
-not hidden behind a successful CAD export.
+XR2 closes the independent mechanical details left open in XR1. It preserves
+the wood/carving and steel-sheet-plasma application and the user's USD1,000
+delivered cap. Pricing is paused; no complete delivered price is asserted.
 
-## Open CAD details before a purchasing or manufacturing release
+The user selected full-bed ATC and authorized a different Z. Current nominal
+travel is800X/1000Y/200Z. The original100Z is superseded, not silently stretched
+or counted as an owned200Z. The selected nominalZXHT80-200 has preserved
+primary drawings; the brake-motor provision has a separate interface gate.
 
-The digital pass applies to the assemblies and motions that are actually
-modeled. It does not close the following unfinished design details:
+## Implemented details and their evidence
 
-- Full ledger/guide and receiver heat shields and their attachments. The two
-  narrow shadow-strip blanks become five disconnected pieces after relief
-  cuts; they are not a complete mounted thermal enclosure.
-- A reservoir lid hatch/removal and deep-cleaning path. The selected box fits
-  its operating bay, but full upward lid hinging and simple forward withdrawal
-  do not fit the current cabinet/pan arrangement.
-- Final eggcrate half-lap machining, pan/overflow flat patterns, actual bend
-  radii, glue process and delivered-plywood thickness allowances.
-- Retractable ATC installation and its tool/slide/Z interference proof. The
-  earlier kit study has not been integrated into XR1.
-
-These are design tasks, separately from physical load, flow and thermal tests.
-They must not be silently called complete or treated as zero-cost omissions.
-The takeoff records unselected shields, water hardware and service interfaces.
-Pricing remains paused, and this package is for engineering review.
-
-| Issue | XR1 disposition | Required evidence |
+| Detail | XR2 implementation | Evidence |
 |---|---|---|
-| Redundant double-tier frame, short upper posts and long machined steel caps | Replaced with six posts, two headers, three pan bearers and short accessible saddles | Frame geometry, cut schedule and interface checks |
-| Rear support too far forward of parked gantry | Two short 4080 base beams add rear feet at Y1410 | Stability sensitivity plus measured mass/CG and foot contact |
-| Weak open-ledger torsion | Larger 50.8 × 50.8 × 6.35 aluminum angle with multiple arm fasteners | Ledger bending/twist screen; actual joint and beam tests |
-| Thin MDF carrier flex | Glued plywood torsion boxes; MDF is a replaceable wear layer | Bed sensitivity, adhesive/fabrication process and proof test |
-| Added dry-bed beams collide with old slat height | Revised complete vertical stack; lower pan and slats | Actual assembly and rigid-axis travel checks |
-| Front bed exchange exceeds footprint or hits braces | Front channel, low front crossbraces and under-pan cassette storage | Sampled transfer path and actual handling trial |
-| Router load goes through pan sheet | Separate dry ledgers and bearing arms | Continuous modeled load path; bracket/slot qualification |
-| Unreachable full-table surfacing | Defined 770 × 960 mm wear field within nominal tool-center limits | Field inset and actual tool/clamp clearance |
-| Custom mounts omitted or indiscriminately simplified | Selective billet gantry brackets and clevises; plate Y-link supports, per user preference; explicit manufacturing list | Stock, fastener access, thread/bearing calculations and proof loads |
-| Owned aluminum counted more than once | Two explicit 304.8 mm square stock nests with cut gaps | Owned-stock geometry report; actual alloy and size |
-| Sand or water assumed to fix frame rigidity | Neither receives elastic-stiffness credit; dry stability is screened independently | Measured dry assembly and actual joints |
-| Nominal 4080 size treated as a section property | Published reference minima and weaker-section sensitivity | Actual vendor die, straightness and T-slot allowables |
-| Drain/overflow capacity and wood storage | Atmospheric receiver and explicit volume/clearance checks; closed shields | Cold-water flow/leak test and hot-zone temperature trial |
-| Unknown cutter/torch represented as operational | No invented nozzle, electrical interface or delivered lead | Delivered equipment measurements and correct interface documentation |
+| Mounted guards | Formed steel guide guards, removable ledger armor, supported receiver roof, actual clips/holes/hardware | shield-check.json; shield-manufacturing.json |
+| Receiver cleaning | Framed large hatch with rim-bearing metal supports, real hinges and positive open locks; brush access | service-check.json |
+| Rare receiver replacement | Reversible disassembly and supported pan parking; no HGR rail removal or assumed owned hoist | service-check.json; bed_service.py |
+| Plywood joinery | Separate skins and half-lapped ribs with fit clearance, operation tables and matched flat profiles | bed-manufacturing-check.json |
+| Dry docking/clamping | Metal datums with controlled bedding/retention, compression sleeves, full-seat clipped fender washers | bed.py; bed-fabrication.csv |
+| Slat retention/expansion | Center notches/keys limit walk; ends float; cold bearing and thermal sensitivity are recorded | bed-manufacturing-check.json |
+| Pan/overflow fabrication | Separate flat wet-pan plates with a weld schedule; bolted removable overflow and supported plumbing | bed-manufacturing-check.json; water-check.json |
+| Bed conversion | Entire tool module and plasma armor removed; fixed guards and parked ATC retained; complete path enclosures | transfer-check.json |
+| Retractable ATC | Supported200travel mechanism, whole rail holes after trimming, hard location, endpoint retention, protected parking | atc-check.json; atc-manufacturing.json |
+| Z clearance | User-authorized real200stroke replacement; preserved low datum and higher retract; conditional brake package | interface-audit.json; sources/Z200/ |
+| Relative axis motion | Shared translations canceled between motion groups; three cam-following rollers bounded separately with explicit mating-cam checks | internal-continuous-check.json |
+| Custom manufacturing pack | Current individual STEP solids with read-back checks; explicitly limited cross-section DXFs and transforms | custom-parts-check.json |
+| CAM setup | Actual wear-pad solids, boundaries and measured-WCS instructions, with file hashes | cam-reference-check.json |
+| Stock efficiency | Finite owned-plate allocation, profile nests and combined new-steel blank nests | owned-stock-check.json; profile-nesting.json; steel-nesting.json |
 
-## Acceptance before fabrication release
+All evidence is bound to the current sources in package-check.json.
+A green digital review covers these report scopes. It does not manufacture
+supplier dimensions or qualify a complete operating machine.
 
-1. Record the actual X/Y/Z mounting geometry, rail/block dimensions, module
-   stroke and screw lead. Update adapter holes and compare the delivered
-   hardware to the modeled envelopes. The old cart is not a source of dimensions.
-2. Obtain or measure the actual 4080 section and slot geometry. Confirm the
-   section-property minimum, nut fit, core tapping, rail seat straightness and
-   allowed bolt preload. Decorative CAD grooves cannot establish these.
-3. Close the custom-part manufacturing list, plate allocation and every joint
-   thread/edge-distance detail. Verify tool access and that screws cannot bottom
-   in the shallow extrusion cavities. Do not assume custom mounts arrived with
-   the user's owned actuators.
-4. Square the frame, fit all bearing seats and level the eight feet. Test
-   ±100 N loads at the intended tool/work datum and inspect for permanent joint
-   slip. Measure frame/bed and complete tool-loop displacement separately.
-   Select any higher proof load using the actual fastener/profile allowables.
-5. Check rear/side tipping and floor sliding at the extreme gantry poses using
-   measured dry masses and CGs. Do not count pan water as dry-mode ballast.
-6. Cold-test the pan, drain and overflow at the actual fill rate. Verify usable
-   receiver volume, venting, hose fall, fittings, thermal float and service access.
-7. Trial conversion with equivalent cassette weights, unpowered axes and the
-   final guards/hoses installed. CAD transfer poses do not prove hand clearance.
-8. Verify the actual torch grip/projection, plasma-start interface, interference
-   suppression, Z power-loss retention and interlocks. Measure storage/shield
-   temperatures during representative plasma use before permitting wood there.
+## Supplier interfaces still needed before final mating drawings or orders
 
-## What the calculations do not certify
+- Confirm the exact magazine model/CAD, retained tools, pocket/nut planes,
+  mounting holes and complete end-cap/cover envelope against the ATC acceptance
+  specification. Replaceable mounting blanks are defined; unpublished supplier
+  holes are not invented. These are unresolved mating interfaces, not just tests.
+- Confirm theZXHT80-200 base/output fixing pattern and depths, actual shaft,
+  coupling and motor flange/pilot. The documented brake-motor candidate is not
+  a proven drop-in replacement. Resolve those interfaces before purchasing or
+  machining the mating parts; select a compatible brake/coupling combination.
+- Confirm the owned X/Y modules, real travel/lead, guide/block dimensions and
+  hole positions, real extrusion die/slot/core, track profile, spindle/nut and
+  torch grip/nozzle. Pilot arc alone does not identify the cutter start circuit.
+- Confirm all stock sizes, alloy/temper, plywood thickness/grain, adhesive
+  system and actual bolt/nut grip stacks. Nominal thread bores in assembly STEP
+  files are not tap-drill instructions.
 
-Closed-form screens examine individual members, support brackets, load paths,
-mass/CG sensitivity and ideal torsion-box behavior. They are not a complete
-assembled-frame FEA, weld qualification, contact/friction analysis, modal test
-or operational machine certification. Dynamic cutting, actual adhesive quality,
-profile lip pullout, thermal distortion, fatigue and flexible services require
-their stated physical acceptance tests. The budget cannot be declared met
-until the audited takeoff has been repriced with shipping and tax.
+The source records state exactly what the public supplier drawings establish.
+No supplier was contacted or account changed. Do not substitute an old cart,
+a dimension inferred from a photo, or a previous variant's hole pattern.
+
+## Physical acceptance before commissioning
+
+1. Square and align the actual guides and profile seats under final tightening.
+   Verify screw engagement, tip clearance, washer seating and access at every
+   joint. Check100N framework/bed response in both directions on all axes,
+   then measure the complete tool-to-work loop separately. The0.30mm target
+   is not a measured pass. Select any proof load from the real allowables.
+2. Measure fixed/moving masses and CGs, level all eight feet and check dry
+   sliding/tipping at extreme poses. No receiver water or freestanding cabinet
+   is credited as attached ballast. Check joint slip and dynamic response.
+3. Verify brake hold, release/engage sequence, loss-of-power motion and dynamic
+   stopping with the actual Z/motor/coupler. A static2Nm brake rating alone does
+   not qualify the assembly or its electrical control.
+4. Cold-test pan leaks, drain/overflow throughput, receiver useful capacity and
+   service connections. Verify the selected tote's actual rim, liquid load
+   and thermal suitability. Keep the reservoir atmospheric.
+5. Trial cassette conversion and rare service with final hoses, guards, ATC,
+   measured weights, handling tools and restraints. CAD separation does not
+   establish hand clearance, reach or a rated lifting/support system.
+6. Clean out wood dust and qualify protected wood, receiver, hoses and guide
+   temperatures during representative plasma duty. Nonsealed guards are not
+   a fume-extraction system.
+7. Verify the real cutter's isolated start/arc interfaces, bonding/work return,
+   touch-off/breakaway and EMI behavior. Verify ATC docking repeatability,
+   loaded pocket alignment, tool sensing and spindle/VFD sequence before
+   enabling automatic tool changes.
+
+## Calculation limits
+
+The elastic reports are closed-form component sensitivities, not assembled
+frame FEA. The half-lap calculation assumes composite coupling across the
+notched grid and omits local notch/Vierendeel/adhesive transfer compliance.
+Its unnotched glue demand is not peak joint stress. Actual profile lips,
+contacts, fasteners, glue durability, thermal distortion and the owned motion
+stack remain outside a claimed complete rigidity qualification.
+
+The modeled ATC stock/clamp and retained-tool envelopes are limits of the
+checked case, not unlimited stock height or verified supplier tooling.
+No posted G-code or successful automaticM6 cycle is asserted. This lightweight
+variant is not qualified for steel milling. The4x8 remains separate work.

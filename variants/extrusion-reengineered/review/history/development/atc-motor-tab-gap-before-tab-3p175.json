@@ -1,0 +1,84 @@
+{
+  "source_sha256": {
+    "atc.py": "0ab5bc8755287a8100ad735a2139aa21d05855d855bd32fd9e8d6f8bb8998d2d",
+    "motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50"
+  },
+  "source_geometry_changed": false,
+  "exact_near_worst_samples": [
+    {
+      "gantry_Y": 1250.0,
+      "exact_gap_mm": 20.015993605114883,
+      "volume_mm3": 0.0
+    },
+    {
+      "gantry_Y": 1260.0,
+      "exact_gap_mm": 10.031948963187558,
+      "volume_mm3": 0.0
+    },
+    {
+      "gantry_Y": 1269.0,
+      "exact_gap_mm": 1.2806248474865414,
+      "volume_mm3": 0.0
+    },
+    {
+      "gantry_Y": 1270.0,
+      "exact_gap_mm": 0.7999999999999545,
+      "volume_mm3": 0.0
+    },
+    {
+      "gantry_Y": 1271.0,
+      "exact_gap_mm": 0.7999999999999545,
+      "volume_mm3": 0.0
+    },
+    {
+      "gantry_Y": 1275.0,
+      "exact_gap_mm": 0.7999999999999545,
+      "volume_mm3": 0.0
+    }
+  ],
+  "containment": {
+    "mount_outside_two_boxes_mm3": 0.0,
+    "bracket_outside_two_boxes_mm3": 0.0
+  },
+  "continuous_conservative_two_box_cover_pairs": [
+    {
+      "bracket_envelope": "sweptflange",
+      "mount_envelope": "motorplate",
+      "gap_mm": 69.9840338934532
+    },
+    {
+      "bracket_envelope": "sweptflange",
+      "mount_envelope": "weldtab",
+      "gap_mm": 70.79999999999995
+    },
+    {
+      "bracket_envelope": "sweptweb",
+      "mount_envelope": "motorplate",
+      "gap_mm": 16.75
+    },
+    {
+      "bracket_envelope": "sweptweb",
+      "mount_envelope": "weldtab",
+      "gap_mm": 0.7999999999999545
+    }
+  ],
+  "continuous_nominal_lower_bound_mm": 0.7999999999999545,
+  "attained_exact_minimum_mm": 0.7999999999999545,
+  "witness_surfaces_mm": [
+    [
+      1045,
+      1392,
+      1071.5
+    ],
+    [
+      1045,
+      1392,
+      1072.3
+    ]
+  ],
+  "can_certify1mm": false,
+  "physical_tolerance_qualified": false,
+  "option_without_geometry_edit": "Changing only welded tab thickness5\u21923.175mm while keepingbottom1066.5 wouldincrease webgap0.8\u21922.625mm; rootauthorization/targetedloadandgeometrychecksrequired.",
+  "historical_only": true,
+  "superseded_by": "atc-tab-update-check.json"
+}

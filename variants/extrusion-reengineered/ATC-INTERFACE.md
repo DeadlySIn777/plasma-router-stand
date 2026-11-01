@@ -1,26 +1,54 @@
-# Retractable ATC remains an open XR1 interface
+# XR2 ATC interface and operating definition
 
-The user's earlier request for removable ATC on an approximately 200 mm linear
-slide remains a requirement. The current XR1 STEP assemblies do **not** contain
-an installed or qualified ATC magazine. The older
-[small retractable mechanism](../retractable-atc/small-mechanism/README.md)
-is a separate development assembly with different frame and Z assumptions.
-Its clearances cannot be copied into XR1.
+This is a complete nominal mechanism study around a removable 200 mm carrier. It is not a verified RapidChange magazine model, an executable M6 sequence, or a fabrication release. The purchased magazine mounting drawing, actual nut/engagement datum and the installed spindle model are still missing. The supplier gate is physical and explicit; an empty carrier is not a claimed compatible installed magazine.
 
-Integration must use the actual kit mounting face, pocket centers, retained-tool
-envelope, spindle/collet compatibility and required reverse cycle. It must check
-both slide endpoints and the complete slide sweep against the full XYZ travel,
-the rear-frame braces, splash shielding and dry-bed transfer/storage path.
-The baseline owned Z is nominally 100 mm travel; earlier ATC proposals assumed
-a different stack. Tool-change reach cannot be inferred from the rail stroke.
+## Geometry and datum contract
 
-A magazine mounting plate must locate on metal round/diamond datums and hard
-seats with separate clamps. Position sensing, mechanical retention and release,
-covered plasma parking and a verified spindle/tool-change sequence are required.
-No exact hole pattern, pocket coordinates or successful automatic M6 cycle is
-asserted without those interfaces.
+The existing X/Y travels remain800/1000 mm. A new, unowned ZXHT80-200 nominal module provides200 mm Z stroke. Its spindle axial grip is10 mm higher within the existing clamp, giving nominal lower referenceZ970 and maximum retractZ1170. That reference is not a measured collet-nut plane. The separate new brake-motor candidate is23HS22-2804D-B200; its57×57×88 housing is shown at the old motor front plane. Shaft, pilot, flange and coupler fit are unverified. The supplied Z module has no qualified power-off brake.
 
-Future pricing must explicitly include every unowned ATC component if the user
-wants an ATC-complete total. Owning a spindle/VFD and motion rails does not prove
-ownership or compatibility of a particular magazine kit. The current USD 1,000
-constraint is preserved; no unpriced feature is silently declared included.
+Two vertical MGNR12 guides,335 mm finished from350 mm stock, carry two MGN12H blocks each,65 mm apart. Trim15 mm from the front of the source350 geometry: retained holes are20+25n,n=0..12; far end15 mm. The deployed/parked block centres are1100/1165 and1300/1365, with12.1 mm nominal block-end reserve. Do not cut through the source hole at335 mm. Left guide seatX110.025; right1039.975. Steel9.525 mm backbars occupyX100.5..110.025 and the mirror. Their2 mm clearance from inherited Y-block bolt-head maximum98.5 is a nominal design gap. Fixed rail maximum118.025 clears the head minimum120 by1.975 mm. Delivered rail, fastener-head and adapter dimensions must be measured.
+
+The carrier travels200 mm parallel toY. The aluminum removable U bridge is on four hard seats atZ1030.15; three establish the plane and the fourth is hard-shimmed to bear. Round/diamond6 mm locators relieve transverse thermal expansion; fourM6 draw-downs retain the bridge. Ground fits and actual repeatability are qualified by measurement. The pocket acceptance field isX345..805,Y1092..1121.4. These are permitted coordinates, not invented manufacturer pocket centres. A nominal four-pocket illustration could lie inside this field, but no mounting or pocket pattern is released.
+
+The magazine design capacity is520 mm length ×60 mm width ×80 mm height. Only the60 mm width is confirmed by the current manufacturer FAQ; length/height are available carrier space. Body capacity isX315..835,Y1082..1142,Z1030.15..1110.15 deployed; add200Y when parked. The complete physical mechanism, pins, drive, hood, sensors, mounts and fasteners are in `atc_parts`. The supplier/tool design volumes are isolated in `acceptance_parts`; they are not counted physical components.
+
+The 40 mm stock-plus-clamp allowance puts the highest obstacle atZ998.8. Carrier and retained cutter tips must stay at or aboveZ1003.8, providing5 mm. The four underside riser screws have recessed heads; projecting heads would invalidate this allowance. Maximum accepted cutter projection below magazine base is26.35 mm, subject to actual pocket and bottom-opening geometry. This is different from stickout below an actual collet nut. The manufacturer’s approximately24 mm unrecessed stickout does not mean24 mm below the magazine base.
+
+The selected loaded cutter projection P, measured below the nominal spindle reference, is15–50 mm. At full retract, P50 has tipZ1120 and9.85 mm clearance over the80 mm kit capacity. Maximum P for a5 mm gap is54.85 mm. The manufacturer’s90 mm non-inset packaging screen leaves49.85 mm. The minimum safe P50 approach Z lift over the40 mm stock/clamp capacity is83.8 mm. For the conditional zero nut-offset case, actual nut-seat height H must be at least23.65 mm above magazine base to keep P50’s below-base projection within26.35 mm; the geometric seat range isZlift83.8..140.15. A0.5 mm approach above the upper seat extends the checked clearance interval toZlift140.65; it is not a claim that the seat lies above the80 mm body capacity. Actual nut-plane offset and pocket heights are unknown and must be measured. These screens do not prove actual spindle or nut compatibility.
+
+The lower U carrier remains atZ1003.8; the rear50.8×25.4 steel crossbeam is lowered toZ980.15..1030.95, behind the stock, to clear the fixed Z-module bottom atZ1040 during pickup. The top bridge and locator risers are lowered20 mm, usingM6×25 draw-downs. The hood floor/support are lowered27.6 mm and both stationary gate channels have explicit crossbeam passages. The open gate stroke is161 mm, leaving its topZ978 below the crossbeam by2.15 mm. The steel hood roof endsZ1140.9 and guide/sensor structure ends at or belowZ1141; inherited X-guide and X-block bodies startZ1143.
+
+Retracting Z does not retract the Z-module body. The required entry route is throughX255 at gantry guideY700/full Z, then rearward to a tool rowY1092..1121.4, then acrossX to calibrated pockets. AtX255 the common adapter endsX310,5 mm before kit capacityX315, and the Z body endsX295,20 mm before it. At the rear row, the module front is at leastY1152.2,10.2 mm behind kit rearY1142. A straight rearward approach atX575 crosses the magazine housing and is prohibited. Reverse this bypass when exiting.
+
+
+## Load path, capture and controls
+
+Two positive6 mm pins engage at each endpoint, one on each side,924 mm apart. Fitted stops establish approach position; the belt transports the carrier and is not a torque lock. The19 Nm reversible Z-torque screen puts20.56 N shear into each pin and approximately0.86 MPa bearing stress in a4 mm engaged seat. Pin diameter clearance0.05 mm gives0.025 mm translational play and approximately0.0124 mm angular contribution at230 mm pocket offset. A closed-section steel crossbeam carries the magazine reactions between the two captured ends. The crossbeam point-moment component screen must use the full pocket field:19 Nm at the outer pockets gives approximately0.0868 mm maximum beam deflection, compared with0.0149 mm for a centre moment. This is not a whole-assembly deflection claim. Welds, the U bridge, frame joints, guide ratings, support compliance and actual pin fits still require proof against the manufacturer’s0.2 mm alignment limit. One-sided capture is not credited. `atc_stiffness.py` reproduces the analytic point-couple extrema over the complete declared pocket field and writes `review/atc-stiffness.json`, bound to the final geometry-check and manufacturing hashes. Its `passed` flag is calculation/input consistency only; it never certifies the physical0.2 mm target. The approximately0.01486 mm centre-only value in the geometry report is superseded for any whole-field interpretation by the0.08681 mm component result.
+
+Four SMC CJPB6-10 nominal single-acting cylinders withdraw the four pins6 mm; separate pin springs engage on air loss. The primary legacy catalog gives6 mm bore,10 mm stroke,H9,S25.5,Z34.5,M10×1 panel thread andM3 rod. Current delivered revision and port fittings are supplier gates. At0.5 MPa the ideal bore force is14.14 N; subtract1.42 N internal spring,2.4 N maximum external pin spring and4 N allocated friction to leave6.32 N withdrawal margin. This is a screen, not a measured release force. The required return springs haveOD≤9.5,ID≥8.5,free11,installed9,compressed3,solid≤2.5 mm,k≤0.3 N/mm. A real spring meeting these constraints must be selected and tested; the annular CAD envelope is not a solid fabricated tube.
+
+Each pin has independent engaged/withdrawn proximity sensing: eight Omron E2E-C03SR8-WC-B1 sensors total. Two additional sensors see a steel patch flush in the rear wing and establish actual carrier endpoint. They do not infer carrier position from a commanded pin or an empty pin hole. Nominal sensing gap0.5 mm is within the manufacturer’s0.56 mm setting range for the3 mm shielded model. Their30 mm body allocation is conservative; exact delivered length, cable exit and mounting instructions remain to verify. The two Panasonic PM-U25-P sensors detect the manual hood gate. All24 V signals require suitable isolated controller inputs.
+
+The compact new transport motor is STEPPERONLINE 14HS20-1504S, 0.4 Nm, 1.5 A, 35 x 35 x 52 mm nominal. The current primary PDF specifies a 35.3 mm maximum face, 52 +/-1 mm body, 24 +/-1 mm shaft length, 15 +/-0.25 mm D-flat, 26 +/-0.2 mm mounting square, 22 mm pilot, 5 mm shaft and four M3 mounting threads at least 4 mm deep. CAD reserves the maximum 35.3 mm face, 53 mm body and 25 mm shaft. Verify the delivered revision. The 16T, 2 mm-pitch transport requires 0.102 Nm at 20 N belt force. Holding-torque comparison is 3.9 times; running torque, acceleration, cable drag and belt tension must be proved. The custom idler has an acetal 7 OD / 5.02 ID / 8 mm sleeve, axial shims, an M5 shoulder/low-head axle, washers and locknut. The real pulley profile and shaft retention are selection gates. Prove the belt grip to 50 N without slip.
+
+Legal operating sequence:
+
+1. For plasma: carrier parked, both parked pins engaged, actual parked sensor true, steel gate indexed closed, spindle tooling removed/managed. The manufacturer’s servo pocket covers are a separate interface. The vented steel hood is not claimed sealed or thermally qualified.
+2. Before a cold routing job: with carrier parked and machine stopped, withdraw the captive manual gate pin, lower the gate161 mm, reinsert it in the open index hole and verify the open sensor.
+3. For every change: stop spindle; retract to the calibrated clearance plane; park gantry guideY700 and headX255; verify head clear. Withdraw all four pins and verify all withdrawn inputs. Move the carrier200 mm. Approach the fitted stop slowly, remove transport torque as appropriate, engage and verify both deployed pins and the actual deployed sensor.
+4. Use the X255 bypass to reach the rear tool row, then enter only calibrated supplier pocket coordinates inside the acceptance field. Run the manufacturer-approved tighten/loosen and IR/nut-detection sequence with the actual spindle and controller. Current FAQ requires low-speed reverse and programmable speed; an unmodified Kraken/printing firmware configuration is not evidence of this capability.
+5. Retract fully, retreat acrossX255 before returning to the front safe head pose, withdraw both capture pairs, park the rack, engage both parked pins and verify actual parked position before resuming full-field routing. Gate can remain open for the cold job. Close/index it before plasma.
+
+The official grblHAL macro source is `https://github.com/greilick-industries/rcatc-scripts-grblhal`; it does not establish compatibility with the present controller. No firmware or machine motion is commissioned here. Pneumatic valves, regulator, flow controls, tubing, electrical isolation and cable bend routes are interface/takeoff requirements, not verified owned items. CV-15HS is a vacuum generator and is not silently treated as a pin valve or a water-fill device.
+
+## Fabrication and removal
+
+The motor-mount tab uses standard 3.175 mm steel with its bottom retained at Z1066.5 and top at Z1069.675. The nearest gantry-bracket underside is Z1072.3, leaving a 2.625 mm nominal full-travel gap. `atc_tab_update_audit.py` and `review/atc-tab-update-check.json` prove that this update removes only 304.6495 mm3 from the previous tab: the other 222 physical components are materially identical. Its isolated component proxy is 0.0463 mm combined displacement and 101.08 MPa stress under the stated 1 kg, 50 N belt resultant and 0.4 Nm motor-reaction assumptions. Weld strength, fatigue and actual fabrication distortion remain unqualified; inspect the welded assembly and verify at least 2 mm physical running clearance.
+
+All new ATC material and hardware is unowned unless separately verified. The560 mm bridge does not fit either owned304.8 mm square aluminum blank. The main guide/backbar module uses eight accessible frameM6 bolts. The separate hood support uses four frameM6 bolts at the rear pan bearer. Ground/inspect the rail seats after welding. Actual 40-series slot nuts, screw penetration and frame-hole positions remain supplier measurements; the CAD shows external grip/head only.
+
+For rare pan replacement, remove tools/magazine, park and mechanically retain the carrier, bleed/disconnect air and unplug labeled electrical connectors, support the complete rail/carrier module and remove its frame bolts. Do not remove main Y guides or the gantry. Confirm actual handling mass before lifting. Routine receiver cleaning uses the separate service procedure.
+
+The stock/part list and nominal STEP/DXF artifacts are engineering definitions. Tapped-hole solids use nominal major diameter to avoid artificial threaded-volume collisions; the manufacturing operation must use the specified tap drill and thread, not laser-cut a major-diameter hole and expect a usable thread. Purchased envelopes, unmeasured fits, welds, thermal behavior, electrical interlocks and actual tool-change trials remain release gates. Geometry validity alone does not close those gates.
+
+Primary current transport-motor drawing: [14HS20-1504S full datasheet](https://files.omc-stepperonline.com/14HS20-1504SFull_Datasheet.pdf). The older download filename is not used to assert current shaft length. The plasma release tether eye and its M4 tapped mount move10 mm inward to local94,100; the previous104,100 mount is omitted, keeping the eye inside the110 mm head width and clear of the ATC rail corridor. The actual tether remains unmodeled and requires an arrest/load test.

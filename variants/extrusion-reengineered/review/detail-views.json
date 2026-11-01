@@ -1,0 +1,87 @@
+{
+  "revision": "XR2",
+  "rendered": true,
+  "source_sha256": {
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "bed_service.py": "9edda1991107e5714c999724e5da23602a1e3cf229c5d71678e5608c67d1bb6a",
+    "render_details.py": "1443466107012781eb2c85f99ceac485ee33fa229871eb1d2673d0a005b318c2",
+    "preview.py": "2dce4d21a01fb960255807d456a577e4db26d1df9fb3bf4f7bd7b33b49930333"
+  },
+  "receiver_hatch_open_max_z_mm": 689.3194330949542,
+  "ATC_metadata": {
+    "revision": "XR2",
+    "stroke_mm": 200.0,
+    "guide_length_mm": 335.0,
+    "guide_pitch_mm": 65.0,
+    "rail_end_reserves_mm": [
+      12.1,
+      12.1
+    ],
+    "rail_hole_end_distances_mm": [
+      20.0,
+      15.0
+    ],
+    "rail_seat_X_mm": [
+      110.025,
+      1039.975
+    ],
+    "magazine_base_Z_mm": 1030.15,
+    "carrier_lowest_over_stock_Z_mm": 1003.8,
+    "stock_plus_clamp_height_mm": 40.0,
+    "stock_top_Z_mm": 998.8,
+    "stock_clearance_mm": 5.0,
+    "max_tool_projection_below_magazine_base_mm": 26.350000000000136,
+    "pocket_centre_acceptance_XY_mm": [
+      345.0,
+      1092.0,
+      805.0,
+      1121.4
+    ],
+    "actual_pocket_centres": null,
+    "actual_magazine_mount_pattern": null,
+    "actual_kit_interface_verified": false,
+    "stage_transport_gantry_Y": 700.0,
+    "loaded_tool_projection_P_mm": [
+      15.0,
+      50.0
+    ],
+    "loaded_tool_radius_mm": 7.5,
+    "safe_running_gap_mm": 5.0,
+    "required_running_gap_mm": 5.0,
+    "nominal_spindle_reference_zero": 970.0,
+    "pin_stroke_mm": 6.0,
+    "gate_stroke_mm": 161.0,
+    "manufacturer_requirements": {
+      "non_inset_clearance_mm": 90,
+      "body_width_mm": 60,
+      "ER11_max_tool_OD_mm": 15,
+      "typical_unrecessed_stickout_mm": 24,
+      "source": "https://rapidchangeatc.com/faq/"
+    },
+    "spindle_reference_is_measured_nut_plane": false,
+    "original_Z100_packaging_screen_margin_mm": -60.15000000000009,
+    "selected_Z200_packaging_screen_margin_mm": 49.84999999999991,
+    "entry_bypass_head_X_mm": 255.0,
+    "pin_actuation_proof": "Endpointchecks only; physicalwithdraw/returnforceanddynamicactuationremaincommissioninggates.",
+    "current_steel_gate": "Manual opening before cold wood job; parked/closed input required for plasma. It is not the vendor servo dust cover.",
+    "release": false
+  },
+  "views": {
+    "receiver-service": {
+      "parts": 58,
+      "file": "review/receiver-service.png",
+      "sha256": "78533689ce736794a18cdd3e4c091ef914c240198b6eb19834d72001e87e7330"
+    },
+    "atc-deployed": {
+      "parts": 223,
+      "file": "review/atc-deployed.png",
+      "sha256": "ae57afa688f6f7c9a170a41e3b9f04defcc0fbcab77c5fe3be545251909671ac"
+    }
+  },
+  "scope": "Actual generated service and ATC mechanism solids. Service detail deliberately omits surrounding machine parts, which remain in the service collision check. Manufacturer magazine internals, tool setup and operational qualification remain governed by the ATC report."
+}

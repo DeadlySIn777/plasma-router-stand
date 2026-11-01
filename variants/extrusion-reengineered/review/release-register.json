@@ -1,0 +1,166 @@
+{
+  "revision": "XR2",
+  "physical_release": false,
+  "meaning": "A CAD pass never fills this worksheet. Actual measurements and supplier evidence are required before manufacturing unknown mating interfaces and commissioning the machine.",
+  "rows": [
+    {
+      "id": "Y_MODULE",
+      "measurement": "X/Y motion module model, actual stroke, screw lead, motor variant",
+      "units": "model; mm/rev; mm",
+      "design_basis": "HMS40 nominal integration; 1000Y/800X travel",
+      "verification": "Measure one full screw revolution against carriage travel; record real bottom slots, carriage face and endpoint envelopes. Update interface adapters against actual modules.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "Z_AND_TOOL",
+      "measurement": "Delivered replacement Z geometry, spindle/collet datums and longest retained tool",
+      "units": "mm",
+      "design_basis": "200mm redesigned Z; nominal spindle reference970..1170 with10mm axial setup rise",
+      "verification": "Record actual collet/nut and tool-tip datums, permitted clamp gripping region, motor/brake/retention and thread depths. Verify the15..50mm loaded-tool and26.35mm below-magazine-base limits against actual tools; these use different reference planes.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "GUIDES",
+      "measurement": "Guide rail/block model, fixing positions, straightness and parallelism",
+      "units": "model; mm",
+      "design_basis": "HGR20 design seats; 0.05mm/1000mm nominal alignment target",
+      "verification": "Record every physical rail hole and screw stack. Verify seat straightness under final torque and rail parallelism over travel; no invented fixed rail pitch.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "EXTRUSION",
+      "measurement": "Actual 4080 die, section properties, slot/core geometry, allowable joints",
+      "units": "mm2; mm4; N; Nmm",
+      "design_basis": "A>=785; Istrong>=529000; Iweak>=134000",
+      "verification": "Obtain supplier section drawing and permitted slot-nut/bolt preloads. Confirm all used faces, nut fit, core taps and screw bottoming in the selected profile.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "FASTENERS",
+      "measurement": "Actual grade, thread engagement and tightening for each grip stack",
+      "units": "mm; Nmm",
+      "design_basis": "Use the frame, bed, motion, shields and ATC schedules together",
+      "verification": "Check every thin plate seat, washer ligament, slot lip, screw tip and tool access. Nominal threaded CAD bores are not pilot-drill sizes.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "STOCK",
+      "measurement": "Owned aluminum dimensions/alloy, plywood thickness/grain and glue process",
+      "units": "mm; alloy; grade",
+      "design_basis": "Two 304.8mm-square Al blanks; 12.7mm skins; qualified span E>=4000MPa",
+      "verification": "Verify measured stocks and machining allowance. Cut rib joints to measured ply; face/prepare datum surfaces. Deep billets and unlisted plates have no ownership credit.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "ATC_KIT",
+      "measurement": "Exact magazine, spindle/nut compatibility, retained tools and reverse sequence",
+      "units": "model; mm; rpm",
+      "design_basis": "See ATC-INTERFACE.md and actual reach report",
+      "verification": "Verify the actual supplier magazine envelope and pocket/thread interfaces. Confirm spindle/VFD can execute the manufacturer tool-change cycle and the designed clearance applies to actual tools/fixtures.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "ATC_MECHANISM",
+      "measurement": "Selected lock springs, cylinders, drive, belt, guides and sensors",
+      "units": "model; N; mm",
+      "design_basis": "See the ATC fabrication schedule and mechanism report",
+      "verification": "Select real springs meeting the stated rate, free length, compressed length and coil-bind limits. Confirm delivered actuator revision/fittings and drive/coupler/belt fits. Test withdrawal and return forces, positive pin engagement, gate retention, sensor gaps and loss-of-air behavior with the actual loaded rack.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "PLASMA",
+      "measurement": "Cutter identity/start type, isolated CNC start and torch grip/nozzle",
+      "units": "model; mm",
+      "design_basis": "User CUT50/VIVARC identification is incomplete",
+      "verification": "Use the real cutter manual and torch dimensions. Verify isolated start/arc sensing, EMI arrangement, touch-off/breakaway and direct work-return/bonding path. Do not infer start type from pilot arc.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "RESERVOIR",
+      "measurement": "Red tote measured usable volume and liquid/temperature load suitability",
+      "units": "L; degC",
+      "design_basis": "65L usable minimum; atmospheric venting",
+      "verification": "Measure the actual tapered box/lid, approved liquid load and usable fill mark. Confirm removable return plumbing and empty-box service access with real lid/handles.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "FRAME_LOAD",
+      "measurement": "Framework/bed displacement and permanent joint movement",
+      "units": "mm at N",
+      "design_basis": "<=0.30mm at100N; permanent structural-joint motion target<=0.05mm",
+      "verification": "Measure +/-X,+/-Y,+/-Z at representative and extreme head positions. Measure complete spindle-to-work compliance separately. Select any proof load only after checking actual hardware allowables.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "STABILITY",
+      "measurement": "Dry fixed/moving masses, CGs, all-foot contact and floor friction",
+      "units": "kg; mm; N",
+      "design_basis": "Rear and side stability per structure-screen.json",
+      "verification": "Weigh assemblies, calculate actual support reactions in extreme poses, level all eight feet and verify overturning/sliding margins. Floor cabinet and receiver are not attached frame ballast.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "WATER_TEST",
+      "measurement": "Pan leak, gravity drain, overflow flow and real residual water",
+      "units": "L/min; L",
+      "design_basis": "Test at intended maximum fill flow",
+      "verification": "Cold-test with real fittings/hoses and verify independent overflow reaches the vented receiver. Confirm lid air gaps and capacity, then empty/disconnect and trial the entire service path.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "THERMAL_TEST",
+      "measurement": "Protected wood, aluminum/guide, receiver and hose temperatures",
+      "units": "degC",
+      "design_basis": "Use limits for the actual selected materials/components",
+      "verification": "Clean dust/chips, perform representative plasma duty cycles with guards installed, and measure protected surfaces. Qualify wood storage during plasma only after this test.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    },
+    {
+      "id": "CONVERSION",
+      "measurement": "Cassette mass, grips, human clearance and actual accessories",
+      "units": "kg; mm",
+      "design_basis": "32 continuous CAD segment enclosures plus actual handling trial",
+      "verification": "Power isolate, positively retain Z and remove complete tool module and cassette clamps. Trial with final shields, ATC parked, plumbing and actual weights. No outside-footprint parking is allocated.",
+      "actual_value": "",
+      "evidence": "",
+      "status": "UNMEASURED"
+    }
+  ],
+  "budget": {
+    "cap_usd": 1000,
+    "verified_delivered_total": null,
+    "pricing_paused": true
+  },
+  "source_sha256": {
+    "release_register.py": "4aa23121241146c764936e553ae82ea900c1fb91f09c8a85975d44ff0c8b3d52",
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780"
+  }
+}

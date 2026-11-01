@@ -191,7 +191,7 @@ def run():
     folder=Path(__file__).resolve().parent/'review';folder.mkdir(exist_ok=True)
     (folder/'structure-screen.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8')
     sample=next(v for v in upper if v['I_strong_mm4']==P.PROFILE_I_STRONG_MIN_MM4 and v['moving_mass_total_kg']==75)
-    lines=['# XR1 structure screen — development, not fabrication release','',
+    lines=[f'# {P.REVISION} structure screen — development, not fabrication release','',
       f'Finished profile: **{total/1000:.4f}m**. Six continuous posts reduce the largest supported header span to{span:.0f}mm; a four-post1080mm span bends{(1080/span)**3:.2f}times as much under an equal midpoint point load.','',
       f'At the conditional minimum section properties,75kg moving mass split across the headers produces an ideal rear-overhang gravity deflection of{sample["gravity_rear_tip_mm"]:.3f}mm per header. A100N transverse service force split between them adds{sample["100N_transverse_rear_tip_mm"]:.3f}mm at the270mm overhang. These are member calculations; they do not include joint or owned motion compliance.','',
       'The selected50.8×50.8×6.35 dry ledgers require torsion restraint. Under100N split across both ledgers, the ideal550mm-span bending plus eccentric-torsion component is'+f'{out["dry_ledger"]["angle_cases"][0]["sum_components_mm"]:.3f}mm, versus{out["dry_ledger"]["closed_tube_cases"][0]["sum_components_mm"]:.3f}mm for40×40×3 closed tube. Four attachment stations per arm restrain support roll; actual joint compliance still needs a test.','',

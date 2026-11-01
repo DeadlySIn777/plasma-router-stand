@@ -1,0 +1,2778 @@
+{
+  "revision": "XR2",
+  "release": false,
+  "source_sha256": {
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "sweep_proof.py": "bbcf6676ca8ad24987d37943dc2540e9e263ddfe67468fa8539cd4782491e450",
+    "review/check_internal_continuous.py": "81421279a95e0c38bd4dbd16fee7d56019c0e45cd215d850ef36167f186c2523"
+  },
+  "motion_source_closure_sha256": {
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  },
+  "states": {
+    "WOOD": {
+      "translation_validation": {
+        "parts": 415,
+        "class_counts": {
+          "stationary": 168,
+          "Y_gantry_or_drive": 171,
+          "Y_X_head": 65,
+          "Y_X_Z_tool": 11
+        },
+        "corner_instances": 3320,
+        "exact_shape_comparisons": 3320,
+        "shared_geometry_reused": 0,
+        "max_bound_error_mm": 4.547473508864641e-13,
+        "max_shape_sym_difference_mm3": 3.026798367500305e-09,
+        "failures": [],
+        "passed": true
+      },
+      "continuous_proofs": [
+        {
+          "moving": "Y_SHOE_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_L_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 13,
+          "empty_cells": 2,
+          "separated_material_cells": 5,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.75,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_L_REAR_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 23,
+          "empty_cells": 7,
+          "separated_material_cells": 5,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.75,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_L_FRONT",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 33,
+          "empty_cells": 7,
+          "separated_material_cells": 10,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.056640625,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_L_REAR",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 57,
+          "empty_cells": 13,
+          "separated_material_cells": 16,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.625,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_BLOCK_L_1",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_L_FRONT",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 77,
+          "empty_cells": 15,
+          "separated_material_cells": 24,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.412109375,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_BLOCK_L_2",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_L_REAR",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 77,
+          "empty_cells": 15,
+          "separated_material_cells": 24,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.412109375,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "HMS_Y_L_BODY",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 16.59999999999991,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_L_2_MODULE_M4x16_1",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 69.29999999999995,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_L_2_MODULE_M4x16_2",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 50.6,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_L_3_MODULE_M4x16_1",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 69.29999999999995,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_L_3_MODULE_M4x16_2",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 50.6,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_R_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 13,
+          "empty_cells": 2,
+          "separated_material_cells": 5,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.75,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_R_REAR_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 23,
+          "empty_cells": 7,
+          "separated_material_cells": 5,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.75,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_R_FRONT",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 33,
+          "empty_cells": 7,
+          "separated_material_cells": 10,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.056640625,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_R_REAR",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 57,
+          "empty_cells": 13,
+          "separated_material_cells": 16,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.625,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_BLOCK_R_1",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_R_FRONT",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 77,
+          "empty_cells": 15,
+          "separated_material_cells": 24,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.412109375,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_BLOCK_R_2",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_R_REAR",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 77,
+          "empty_cells": 15,
+          "separated_material_cells": 24,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.412109375,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "HMS_Y_R_BODY",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 16.59999999999991,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_R_2_MODULE_M4x16_1",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 69.29999999999995,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_R_2_MODULE_M4x16_2",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 50.59999999999991,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_R_3_MODULE_M4x16_1",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 69.29999999999995,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_R_3_MODULE_M4x16_2",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 50.59999999999991,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_L_FRONT_SCREW_1",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_L_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 9,
+          "empty_cells": 1,
+          "separated_material_cells": 4,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.6499999999999915,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_L_FRONT",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_LIMIT_L_FRONT_SCREW_2",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 7.299999999999997,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_L_FRONT",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_L_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 9,
+          "empty_cells": 1,
+          "separated_material_cells": 4,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.4125000000001364,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_L_FRONT",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_LIMIT_L_FRONT_BODY",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.6603886792339235,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_R_FRONT_SCREW_1",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_R_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 9,
+          "empty_cells": 1,
+          "separated_material_cells": 4,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.6499999999998636,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_R_FRONT",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_LIMIT_R_FRONT_SCREW_2",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 7.2999999999999545,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_R_FRONT",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_R_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 9,
+          "empty_cells": 1,
+          "separated_material_cells": 4,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.4125000000001364,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_R_FRONT",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_LIMIT_R_FRONT_BODY",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.6603886792339235,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_BLOCK_2_1",
+          "moving_class": "Y_X_head",
+          "obstacle": "X_STOP_LEFT_BODY",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 11,
+          "empty_cells": 2,
+          "separated_material_cells": 4,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 16.5,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Z_CARRIER",
+          "moving_class": "Y_X_head",
+          "obstacle": "X_STOP_LEFT_BODY",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 25,
+          "empty_cells": 6,
+          "separated_material_cells": 7,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.1499999999998636,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_LINK_SUPPORT",
+          "moving_class": "Y_X_head",
+          "obstacle": "HMS_X_BODY",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 18.200000000000045,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_LINK_SUPPORT",
+          "moving_class": "Y_X_head",
+          "obstacle": "HMS_X_MOTOR",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 21.200000000000045,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_LINK_SUPPORT",
+          "moving_class": "Y_X_head",
+          "obstacle": "HMS_X_MOTOR_BRACKET",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.2000000000000455,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_HOME_CAM_BOLT_1",
+          "moving_class": "Y_X_head",
+          "obstacle": "X_STOP_LEFT_BODY",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 15,
+          "empty_cells": 2,
+          "separated_material_cells": 6,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.14999999999986358,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_HOME_CAM",
+          "moving_class": "Y_X_head",
+          "obstacle": "X_HOME_SCREW_2",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.0,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_HOME_CAM",
+          "moving_class": "Y_X_head",
+          "obstacle": "X_HOME_BODY",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.6603886792339235,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_HOME_CAM",
+          "moving_class": "Y_X_head",
+          "obstacle": "X_STOP_LEFT_BODY",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 23,
+          "empty_cells": 5,
+          "separated_material_cells": 7,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.14999999999986358,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_LIMIT_L_FRONT_ROLLER",
+          "moving_class": "stationary",
+          "obstacle": "Y_STOP_L_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 23,
+          "empty_cells": 3,
+          "separated_material_cells": 9,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.6875000000000142,
+          "translation_min_mm": [
+            -0.0,
+            -0.0,
+            -3.176572579716585
+          ],
+          "translation_max_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_LIMIT_R_FRONT_ROLLER",
+          "moving_class": "stationary",
+          "obstacle": "Y_STOP_R_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 23,
+          "empty_cells": 3,
+          "separated_material_cells": 9,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.6875000000002274,
+          "translation_min_mm": [
+            -0.0,
+            -0.0,
+            -3.176572579716585
+          ],
+          "translation_max_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        }
+      ],
+      "cam_follower_extra_Z_bounds_mm": {
+        "Y_LIMIT_L_FRONT_ROLLER": [
+          -3.176572579716585,
+          0.0
+        ],
+        "Y_LIMIT_R_FRONT_ROLLER": [
+          -3.176572579716585,
+          0.0
+        ],
+        "X_HOME_ROLLER": [
+          -3.176572579716585,
+          0.0
+        ]
+      },
+      "designed_zero_volume_cam_contacts": [
+        {
+          "roller": "Y_LIMIT_L_FRONT_ROLLER",
+          "cam": "Y_CAM_L_FRONT",
+          "passed": true,
+          "cam_below_ramp_plane_in_roller_axial_slab_mm3": 0.0,
+          "roller_reference_geometry_error_mm": 1.8207657603852567e-13,
+          "max_sample_actual_positive_intersection_mm3": 0.0,
+          "sample_pose_count": 9,
+          "additional_Z_range_mm": [
+            -3.176572579716585,
+            0.0
+          ],
+          "maximum_inside_mm": 8.0,
+          "slope": 0.63,
+          "radius_mm": 2.4,
+          "tangent_allowance_mm": 0.43657257971658453,
+          "minimum_ideal_surface_gap_mm": 0.0,
+          "method": "Exact cam material containment above its ramp plane in the roller axial slab, plus analytic circle/plane separation. For inside0..8, deltaZ=min(0,2.3-0.63*inside-r*(sqrt(1+0.63^2)-1)); perpendicular centre distance is at least radius2.4. For inside<0, the leading cam edge is above the free roller. The extra 10/12.4/30mm source-law transitions lie outside soft travel. Nominal tangency is deliberate zero-volume contact, not a positive-penetration exception.",
+          "physical_hold": "The small switch lever, actual operating-force/compliance and trip adjustment are not qualified by the roller-only cam-following envelope."
+        },
+        {
+          "roller": "Y_LIMIT_R_FRONT_ROLLER",
+          "cam": "Y_CAM_R_FRONT",
+          "passed": true,
+          "cam_below_ramp_plane_in_roller_axial_slab_mm3": 0.0,
+          "roller_reference_geometry_error_mm": 1.8207657603852567e-13,
+          "max_sample_actual_positive_intersection_mm3": 0.0,
+          "sample_pose_count": 9,
+          "additional_Z_range_mm": [
+            -3.176572579716585,
+            0.0
+          ],
+          "maximum_inside_mm": 8.0,
+          "slope": 0.63,
+          "radius_mm": 2.4,
+          "tangent_allowance_mm": 0.43657257971658453,
+          "minimum_ideal_surface_gap_mm": 0.0,
+          "method": "Exact cam material containment above its ramp plane in the roller axial slab, plus analytic circle/plane separation. For inside0..8, deltaZ=min(0,2.3-0.63*inside-r*(sqrt(1+0.63^2)-1)); perpendicular centre distance is at least radius2.4. For inside<0, the leading cam edge is above the free roller. The extra 10/12.4/30mm source-law transitions lie outside soft travel. Nominal tangency is deliberate zero-volume contact, not a positive-penetration exception.",
+          "physical_hold": "The small switch lever, actual operating-force/compliance and trip adjustment are not qualified by the roller-only cam-following envelope."
+        },
+        {
+          "roller": "X_HOME_ROLLER",
+          "cam": "X_HOME_CAM",
+          "passed": true,
+          "cam_below_ramp_plane_in_roller_axial_slab_mm3": 0.0,
+          "roller_reference_geometry_error_mm": 1.8207657603852567e-13,
+          "max_sample_actual_positive_intersection_mm3": 0.0,
+          "sample_pose_count": 9,
+          "additional_Z_range_mm": [
+            -3.176572579716585,
+            0.0
+          ],
+          "maximum_inside_mm": 8.0,
+          "slope": 0.63,
+          "radius_mm": 2.4,
+          "tangent_allowance_mm": 0.43657257971658453,
+          "minimum_ideal_surface_gap_mm": 0.0,
+          "method": "Exact cam material containment above its ramp plane in the roller axial slab, plus analytic circle/plane separation. For inside0..8, deltaZ=min(0,2.3-0.63*inside-r*(sqrt(1+0.63^2)-1)); perpendicular centre distance is at least radius2.4. For inside<0, the leading cam edge is above the free roller. The extra 10/12.4/30mm source-law transitions lie outside soft travel. Nominal tangency is deliberate zero-volume contact, not a positive-penetration exception.",
+          "physical_hold": "The small switch lever, actual operating-force/compliance and trip adjustment are not qualified by the roller-only cam-following envelope."
+        }
+      ],
+      "nominal_guide_prism_proofs": [
+        {
+          "moving": "Y_BLOCK_L_1",
+          "obstacle": "Y_RAIL_L",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            50.8,
+            -485.0,
+            1023.0,
+            68.3,
+            1935.0,
+            1043.0
+          ],
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "Y_BLOCK_L_2",
+          "obstacle": "Y_RAIL_L",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            50.8,
+            -485.0,
+            1023.0,
+            68.3,
+            1935.0,
+            1043.0
+          ],
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "Y_BLOCK_R_1",
+          "obstacle": "Y_RAIL_R",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            1081.7,
+            -485.0,
+            1023.0,
+            1099.2,
+            1935.0,
+            1043.0
+          ],
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "Y_BLOCK_R_2",
+          "obstacle": "Y_RAIL_R",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            1081.7,
+            -485.0,
+            1023.0,
+            1099.2,
+            1935.0,
+            1043.0
+          ],
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "X_BLOCK_1_1",
+          "obstacle": "X_RAIL_1",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            -425.0,
+            784.8,
+            1155.0,
+            1575.0,
+            802.3,
+            1175.0
+          ],
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "X_BLOCK_1_2",
+          "obstacle": "X_RAIL_1",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            -425.0,
+            784.8,
+            1155.0,
+            1575.0,
+            802.3,
+            1175.0
+          ],
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "X_BLOCK_2_1",
+          "obstacle": "X_RAIL_2",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            -425.0,
+            784.8,
+            1215.0,
+            1575.0,
+            802.3,
+            1235.0
+          ],
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "X_BLOCK_2_2",
+          "obstacle": "X_RAIL_2",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            -425.0,
+            784.8,
+            1215.0,
+            1575.0,
+            802.3,
+            1235.0
+          ],
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        }
+      ],
+      "nominal_thread_envelopes": [
+        {
+          "a": "HMS_Y_L_SHOE_BOLT_1",
+          "b": "HMS_Y_L_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.415926535898134,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_L_SHOE_BOLT_2",
+          "b": "HMS_Y_L_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.415926535898137,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_L_SHOE_BOLT_3",
+          "b": "HMS_Y_L_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.415926535898134,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_L_SHOE_BOLT_4",
+          "b": "HMS_Y_L_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.415926535898137,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_R_SHOE_BOLT_1",
+          "b": "HMS_Y_R_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589837,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_R_SHOE_BOLT_2",
+          "b": "HMS_Y_R_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589837,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_R_SHOE_BOLT_3",
+          "b": "HMS_Y_R_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589837,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_R_SHOE_BOLT_4",
+          "b": "HMS_Y_R_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589837,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_X_SHOE_BOLT_1",
+          "b": "HMS_X_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589817,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_X_SHOE_BOLT_2",
+          "b": "HMS_X_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589817,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_X_SHOE_BOLT_3",
+          "b": "HMS_X_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589817,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_X_SHOE_BOLT_4",
+          "b": "HMS_X_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589817,
+          "thread_fit_qualified": false
+        }
+      ],
+      "unresolved_pairs": [],
+      "cross_class_pairs": 55207,
+      "same_class_follower_pairs": 503,
+      "broadphase_candidates": 64,
+      "continuous_relative_clear_except_nominal_threads": true
+    },
+    "PLASMA": {
+      "translation_validation": {
+        "parts": 518,
+        "class_counts": {
+          "stationary": 168,
+          "Y_gantry_or_drive": 171,
+          "Y_X_head": 65,
+          "Y_X_Z_tool": 114
+        },
+        "corner_instances": 4144,
+        "exact_shape_comparisons": 4144,
+        "shared_geometry_reused": 0,
+        "max_bound_error_mm": 4.547473508864641e-13,
+        "max_shape_sym_difference_mm3": 3.026798367500305e-09,
+        "failures": [],
+        "passed": true
+      },
+      "continuous_proofs": [
+        {
+          "moving": "Y_SHOE_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_L_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 13,
+          "empty_cells": 2,
+          "separated_material_cells": 5,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.75,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_L_REAR_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 23,
+          "empty_cells": 7,
+          "separated_material_cells": 5,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.75,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_L_FRONT",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 33,
+          "empty_cells": 7,
+          "separated_material_cells": 10,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.056640625,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_L_REAR",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 57,
+          "empty_cells": 13,
+          "separated_material_cells": 16,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.625,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_BLOCK_L_1",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_L_FRONT",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 77,
+          "empty_cells": 15,
+          "separated_material_cells": 24,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.412109375,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_BLOCK_L_2",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_L_REAR",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 77,
+          "empty_cells": 15,
+          "separated_material_cells": 24,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.412109375,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "HMS_Y_L_BODY",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 16.59999999999991,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_L_2_MODULE_M4x16_1",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 69.29999999999995,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_L_2_MODULE_M4x16_2",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 50.6,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_L_3_MODULE_M4x16_1",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 69.29999999999995,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_L_3_MODULE_M4x16_2",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 50.6,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_R_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 13,
+          "empty_cells": 2,
+          "separated_material_cells": 5,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.75,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_R_REAR_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 23,
+          "empty_cells": 7,
+          "separated_material_cells": 5,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.75,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_R_FRONT",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 33,
+          "empty_cells": 7,
+          "separated_material_cells": 10,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.056640625,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_R_REAR",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 57,
+          "empty_cells": 13,
+          "separated_material_cells": 16,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.625,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_BLOCK_R_1",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_R_FRONT",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 77,
+          "empty_cells": 15,
+          "separated_material_cells": 24,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.412109375,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_BLOCK_R_2",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_STOP_CARRIER_R_REAR",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 77,
+          "empty_cells": 15,
+          "separated_material_cells": 24,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.412109375,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "HMS_Y_R_BODY",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 16.59999999999991,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_R_2_MODULE_M4x16_1",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 69.29999999999995,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_R_2_MODULE_M4x16_2",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 50.59999999999991,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_R_3_MODULE_M4x16_1",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 69.29999999999995,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "XR_SADDLE_R_3_MODULE_M4x16_2",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 50.59999999999991,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_L_FRONT_SCREW_1",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_L_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 9,
+          "empty_cells": 1,
+          "separated_material_cells": 4,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.6499999999999915,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_L_FRONT",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_LIMIT_L_FRONT_SCREW_2",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 7.299999999999997,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_L_FRONT",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_L_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 9,
+          "empty_cells": 1,
+          "separated_material_cells": 4,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.4125000000001364,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_L_FRONT",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_LIMIT_L_FRONT_BODY",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.6603886792339235,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_R_FRONT_SCREW_1",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_R_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 9,
+          "empty_cells": 1,
+          "separated_material_cells": 4,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 2.6499999999998636,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_R_FRONT",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_LIMIT_R_FRONT_SCREW_2",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 7.2999999999999545,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_R_FRONT",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_STOP_R_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 9,
+          "empty_cells": 1,
+          "separated_material_cells": 4,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.4125000000001364,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_CAM_R_FRONT",
+          "moving_class": "Y_gantry_or_drive",
+          "obstacle": "Y_LIMIT_R_FRONT_BODY",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.6603886792339235,
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_BLOCK_2_1",
+          "moving_class": "Y_X_head",
+          "obstacle": "X_STOP_LEFT_BODY",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 11,
+          "empty_cells": 2,
+          "separated_material_cells": 4,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 16.5,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Z_CARRIER",
+          "moving_class": "Y_X_head",
+          "obstacle": "X_STOP_LEFT_BODY",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 25,
+          "empty_cells": 6,
+          "separated_material_cells": 7,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.1499999999998636,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_LINK_SUPPORT",
+          "moving_class": "Y_X_head",
+          "obstacle": "HMS_X_BODY",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 18.200000000000045,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_LINK_SUPPORT",
+          "moving_class": "Y_X_head",
+          "obstacle": "HMS_X_MOTOR",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 21.200000000000045,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_LINK_SUPPORT",
+          "moving_class": "Y_X_head",
+          "obstacle": "HMS_X_MOTOR_BRACKET",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.2000000000000455,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_HOME_CAM_BOLT_1",
+          "moving_class": "Y_X_head",
+          "obstacle": "X_STOP_LEFT_BODY",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 15,
+          "empty_cells": 2,
+          "separated_material_cells": 6,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.14999999999986358,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_HOME_CAM",
+          "moving_class": "Y_X_head",
+          "obstacle": "X_HOME_SCREW_2",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 3.0,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_HOME_CAM",
+          "moving_class": "Y_X_head",
+          "obstacle": "X_HOME_BODY",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 1,
+          "empty_cells": 0,
+          "separated_material_cells": 1,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 5.6603886792339235,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "X_HOME_CAM",
+          "moving_class": "Y_X_head",
+          "obstacle": "X_STOP_LEFT_BODY",
+          "obstacle_class": "Y_gantry_or_drive",
+          "passed": true,
+          "cells_examined": 23,
+          "empty_cells": 5,
+          "separated_material_cells": 7,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 0.14999999999986358,
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_LIMIT_L_FRONT_ROLLER",
+          "moving_class": "stationary",
+          "obstacle": "Y_STOP_L_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 23,
+          "empty_cells": 3,
+          "separated_material_cells": 9,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.6875000000000142,
+          "translation_min_mm": [
+            -0.0,
+            -0.0,
+            -3.176572579716585
+          ],
+          "translation_max_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        },
+        {
+          "moving": "Y_LIMIT_R_FRONT_ROLLER",
+          "moving_class": "stationary",
+          "obstacle": "Y_STOP_R_FRONT_BRACKET",
+          "obstacle_class": "stationary",
+          "passed": true,
+          "cells_examined": 23,
+          "empty_cells": 3,
+          "separated_material_cells": 9,
+          "unresolved_cells": [],
+          "minimum_expanded_cell_gap_mm": 1.6875000000002274,
+          "translation_min_mm": [
+            -0.0,
+            -0.0,
+            -3.176572579716585
+          ],
+          "translation_max_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "method": "Recursive covering of the complete fixed solid, expanded by the negative independent translation box; exact reference-solid distance. No path sampling. Empty-volume numerical threshold1e-7mm3; required proven separation0.01mm."
+        }
+      ],
+      "cam_follower_extra_Z_bounds_mm": {
+        "Y_LIMIT_L_FRONT_ROLLER": [
+          -3.176572579716585,
+          0.0
+        ],
+        "Y_LIMIT_R_FRONT_ROLLER": [
+          -3.176572579716585,
+          0.0
+        ],
+        "X_HOME_ROLLER": [
+          -3.176572579716585,
+          0.0
+        ]
+      },
+      "designed_zero_volume_cam_contacts": [
+        {
+          "roller": "Y_LIMIT_L_FRONT_ROLLER",
+          "cam": "Y_CAM_L_FRONT",
+          "passed": true,
+          "cam_below_ramp_plane_in_roller_axial_slab_mm3": 0.0,
+          "roller_reference_geometry_error_mm": 1.8207657603852567e-13,
+          "max_sample_actual_positive_intersection_mm3": 0.0,
+          "sample_pose_count": 9,
+          "additional_Z_range_mm": [
+            -3.176572579716585,
+            0.0
+          ],
+          "maximum_inside_mm": 8.0,
+          "slope": 0.63,
+          "radius_mm": 2.4,
+          "tangent_allowance_mm": 0.43657257971658453,
+          "minimum_ideal_surface_gap_mm": 0.0,
+          "method": "Exact cam material containment above its ramp plane in the roller axial slab, plus analytic circle/plane separation. For inside0..8, deltaZ=min(0,2.3-0.63*inside-r*(sqrt(1+0.63^2)-1)); perpendicular centre distance is at least radius2.4. For inside<0, the leading cam edge is above the free roller. The extra 10/12.4/30mm source-law transitions lie outside soft travel. Nominal tangency is deliberate zero-volume contact, not a positive-penetration exception.",
+          "physical_hold": "The small switch lever, actual operating-force/compliance and trip adjustment are not qualified by the roller-only cam-following envelope."
+        },
+        {
+          "roller": "Y_LIMIT_R_FRONT_ROLLER",
+          "cam": "Y_CAM_R_FRONT",
+          "passed": true,
+          "cam_below_ramp_plane_in_roller_axial_slab_mm3": 0.0,
+          "roller_reference_geometry_error_mm": 1.8207657603852567e-13,
+          "max_sample_actual_positive_intersection_mm3": 0.0,
+          "sample_pose_count": 9,
+          "additional_Z_range_mm": [
+            -3.176572579716585,
+            0.0
+          ],
+          "maximum_inside_mm": 8.0,
+          "slope": 0.63,
+          "radius_mm": 2.4,
+          "tangent_allowance_mm": 0.43657257971658453,
+          "minimum_ideal_surface_gap_mm": 0.0,
+          "method": "Exact cam material containment above its ramp plane in the roller axial slab, plus analytic circle/plane separation. For inside0..8, deltaZ=min(0,2.3-0.63*inside-r*(sqrt(1+0.63^2)-1)); perpendicular centre distance is at least radius2.4. For inside<0, the leading cam edge is above the free roller. The extra 10/12.4/30mm source-law transitions lie outside soft travel. Nominal tangency is deliberate zero-volume contact, not a positive-penetration exception.",
+          "physical_hold": "The small switch lever, actual operating-force/compliance and trip adjustment are not qualified by the roller-only cam-following envelope."
+        },
+        {
+          "roller": "X_HOME_ROLLER",
+          "cam": "X_HOME_CAM",
+          "passed": true,
+          "cam_below_ramp_plane_in_roller_axial_slab_mm3": 0.0,
+          "roller_reference_geometry_error_mm": 1.8207657603852567e-13,
+          "max_sample_actual_positive_intersection_mm3": 0.0,
+          "sample_pose_count": 9,
+          "additional_Z_range_mm": [
+            -3.176572579716585,
+            0.0
+          ],
+          "maximum_inside_mm": 8.0,
+          "slope": 0.63,
+          "radius_mm": 2.4,
+          "tangent_allowance_mm": 0.43657257971658453,
+          "minimum_ideal_surface_gap_mm": 0.0,
+          "method": "Exact cam material containment above its ramp plane in the roller axial slab, plus analytic circle/plane separation. For inside0..8, deltaZ=min(0,2.3-0.63*inside-r*(sqrt(1+0.63^2)-1)); perpendicular centre distance is at least radius2.4. For inside<0, the leading cam edge is above the free roller. The extra 10/12.4/30mm source-law transitions lie outside soft travel. Nominal tangency is deliberate zero-volume contact, not a positive-penetration exception.",
+          "physical_hold": "The small switch lever, actual operating-force/compliance and trip adjustment are not qualified by the roller-only cam-following envelope."
+        }
+      ],
+      "nominal_guide_prism_proofs": [
+        {
+          "moving": "Y_BLOCK_L_1",
+          "obstacle": "Y_RAIL_L",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            50.8,
+            -485.0,
+            1023.0,
+            68.3,
+            1935.0,
+            1043.0
+          ],
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "Y_BLOCK_L_2",
+          "obstacle": "Y_RAIL_L",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            50.8,
+            -485.0,
+            1023.0,
+            68.3,
+            1935.0,
+            1043.0
+          ],
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "Y_BLOCK_R_1",
+          "obstacle": "Y_RAIL_R",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            1081.7,
+            -485.0,
+            1023.0,
+            1099.2,
+            1935.0,
+            1043.0
+          ],
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "Y_BLOCK_R_2",
+          "obstacle": "Y_RAIL_R",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            1081.7,
+            -485.0,
+            1023.0,
+            1099.2,
+            1935.0,
+            1043.0
+          ],
+          "translation_min_mm": [
+            -0.0,
+            -500.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            0.0,
+            500.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "X_BLOCK_1_1",
+          "obstacle": "X_RAIL_1",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            -425.0,
+            784.8,
+            1155.0,
+            1575.0,
+            802.3,
+            1175.0
+          ],
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "X_BLOCK_1_2",
+          "obstacle": "X_RAIL_1",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            -425.0,
+            784.8,
+            1155.0,
+            1575.0,
+            802.3,
+            1175.0
+          ],
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "X_BLOCK_2_1",
+          "obstacle": "X_RAIL_2",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            -425.0,
+            784.8,
+            1215.0,
+            1575.0,
+            802.3,
+            1235.0
+          ],
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        },
+        {
+          "moving": "X_BLOCK_2_2",
+          "obstacle": "X_RAIL_2",
+          "passed": true,
+          "actual_rail_outside_reference_prism_mm3": 0.0,
+          "swept_rail_prism_bounds_mm": [
+            -425.0,
+            784.8,
+            1215.0,
+            1575.0,
+            802.3,
+            1235.0
+          ],
+          "translation_min_mm": [
+            -400.0,
+            -0.0,
+            -0.0
+          ],
+          "translation_max_mm": [
+            400.0,
+            0.0,
+            0.0
+          ],
+          "block_intersection_with_full_swept_rail_prism_mm3": 0.0,
+          "minimum_modeled_gap_mm": 0.0,
+          "method": "The generated rail is an exact-tested subset of its full reference bounding prism. Expanding that prism by the negative relative translation box contains the complete rail sweep. Zero block intersection therefore proves continuous nonpenetration, including zero modeled bearing-interface running gap. Only exact matched HGR rail/block IDs use this case.",
+          "supplier_qualification": false
+        }
+      ],
+      "nominal_thread_envelopes": [
+        {
+          "a": "HMS_Y_L_SHOE_BOLT_1",
+          "b": "HMS_Y_L_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.415926535898134,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_L_SHOE_BOLT_2",
+          "b": "HMS_Y_L_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.415926535898137,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_L_SHOE_BOLT_3",
+          "b": "HMS_Y_L_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.415926535898134,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_L_SHOE_BOLT_4",
+          "b": "HMS_Y_L_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.415926535898137,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_R_SHOE_BOLT_1",
+          "b": "HMS_Y_R_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589837,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_R_SHOE_BOLT_2",
+          "b": "HMS_Y_R_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589837,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_R_SHOE_BOLT_3",
+          "b": "HMS_Y_R_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589837,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_Y_R_SHOE_BOLT_4",
+          "b": "HMS_Y_R_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589837,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_X_SHOE_BOLT_1",
+          "b": "HMS_X_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589817,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_X_SHOE_BOLT_2",
+          "b": "HMS_X_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589817,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_X_SHOE_BOLT_3",
+          "b": "HMS_X_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589817,
+          "thread_fit_qualified": false
+        },
+        {
+          "a": "HMS_X_SHOE_BOLT_4",
+          "b": "HMS_X_BODY",
+          "sample_pose_count": 9,
+          "max_sample_overlap_mm3": 31.41592653589817,
+          "thread_fit_qualified": false
+        }
+      ],
+      "unresolved_pairs": [],
+      "cross_class_pairs": 96819,
+      "same_class_follower_pairs": 503,
+      "broadphase_candidates": 64,
+      "continuous_relative_clear_except_nominal_threads": true
+    }
+  },
+  "center_pose_X_Yguide_Z_mm": [
+    575.0,
+    775.0,
+    100.0
+  ],
+  "class_axis_factors_X_Y_Z": {
+    "stationary": [
+      0,
+      0,
+      0
+    ],
+    "Y_gantry_or_drive": [
+      0,
+      1,
+      0
+    ],
+    "Y_X_head": [
+      1,
+      1,
+      0
+    ],
+    "Y_X_Z_tool": [
+      1,
+      1,
+      1
+    ]
+  },
+  "scope": "Corner validation of each named solid as its declared rigid translation, with three explicit source-law cam followers. Continuous relative translation proofs cancel shared axes; conservative independent-Z boxes bound each follower and also test follower pairs within a class. Designed roller/cam tangency is separately proved analytically. Other same-class rigid assembly self-intersections, frame/bed/accessory collisions, flex cables, measured compliance, contact loads and dynamics are outside this diagnostic.",
+  "numeric_thresholds": {
+    "translation_bound_mm": 1e-05,
+    "shape_sym_difference_mm3": 0.05,
+    "intersection_mm3": 0.05,
+    "cam_zero_volume_mm3": 1e-07,
+    "proof_gap_mm": 0.01
+  },
+  "nominal_thread_rule": "Only HMS_Y_L/Y_R/X_BODY against its own exact HMS_axis_SHOE_BOLT_1..4, max31.5mm3 sampled overlap, can be separated as inherited nominal thread envelopes. This is not proof of actual thread fit or screw depth.",
+  "end_source_sha256": {
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "sweep_proof.py": "bbcf6676ca8ad24987d37943dc2540e9e263ddfe67468fa8539cd4782491e450",
+    "review/check_internal_continuous.py": "81421279a95e0c38bd4dbd16fee7d56019c0e45cd215d850ef36167f186c2523"
+  },
+  "source_consistent_during_check": true,
+  "complete": true,
+  "passed": true
+}

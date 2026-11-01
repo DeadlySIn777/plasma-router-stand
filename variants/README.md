@@ -1,4 +1,15 @@
-# Small ATC and full-sheet 4x8 variants
+# Current small machine and separate 4x8 studies
+
+**Current small-table package: [XR2 — 4080 wood/plasma table with retractable ATC](extrusion-reengineered/README.md).**
+Use its 800 X / 1000 Y / 200 Z nominal assemblies, manufacturing files,
+source-bound checks and release register. Its original 100 mm Z is superseded.
+Supplier mating dimensions and physical qualification remain open; the
+USD 1,000 complete delivered budget is unverified.
+
+The XR2 checks do not qualify the separate 4x8 machine. The material below
+records the earlier dual-machine studies and shared-interface work.
+
+## Earlier dual-machine work
 
 Two development variants extend the [existing Rev I small machine](../output/release-review/RevI-CAD/README.md).
 The requested ATC, repeatable removable table interfaces and second full-sheet
@@ -11,7 +22,7 @@ its existing checks do not automatically qualify these additions.
 | [Full-sheet retractable ATC](retractable-atc/large-mechanism/README.md) | 1219.2 × 2438.4 mm stock; additional deck-surfacing travel | Separate dry side bay, 200 mm slide and guided outer shutter; based on the [4x8 development frame](48x96/README.md) |
 | [Shared locating interfaces](common/location/README.md) | Metal datum chain, independently checked fits and thermal allowances | Round pin + diamond pin, replaceable metal bushings, hard Z seats and separate clamps |
 
-**Latest package:** [retractable ATC on both machines](retractable-atc/README.md),
+**Earlier dual-machine package:** [retractable ATC on both machines](retractable-atc/README.md),
 with a 200 mm useful-stroke target, detailed mechanism candidates and an offline
 interlock model. The earlier [fixed small dock](small-atc/README.md) and first
 packaging studies remain historical candidates. They are not the newest ATC
@@ -24,7 +35,7 @@ working assumptions and open inputs.
 ![Full-sheet machine development layout](48x96/layout-router.png)
 
 The image above shows the underlying 4x8 frame layout. Current ATC mechanism
-views and exchange files are linked from the latest package.
+views and exchange files are linked from that earlier dual-machine package.
 
 ## Repeatable removal
 

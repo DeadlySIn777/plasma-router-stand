@@ -3,8 +3,8 @@
 These are design datums, not measurements of the user's delivered hardware.
 Frame profile is an envelope; section properties are independent requirements.
 """
-REVISION = 'XR1'
-X_TRAVEL, Y_TRAVEL, Z_TRAVEL = 800., 1000., 100.
+REVISION = 'XR2'
+X_TRAVEL, Y_TRAVEL, Z_TRAVEL = 800., 1000., 200.
 Y_LENGTH = 1450.
 LEFT_X, RIGHT_X = 10.8, 1099.2
 INNER_LEFT, INNER_RIGHT = 50.8, 1099.2

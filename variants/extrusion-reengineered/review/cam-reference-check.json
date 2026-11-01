@@ -1,0 +1,89 @@
+{
+  "revision": "XR2",
+  "passed": true,
+  "source_unchanged": true,
+  "source_sha256": {
+    "cam_reference.py": "5382aaacf85c304e0c13b33b9fbe4d1738b51cd78776589d2490ecfcf870866c",
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6"
+  },
+  "output_sha256": {
+    "fabrication/cam-reference/WOOD_WEAR_TOP_BOUNDARIES_AND_SCREW_RECESSES.dxf": "770b602fe69a916e8b9bec44d049bfb775f236c4aa0cb716bc741944ccf16182",
+    "fabrication/cam-reference/WOOD_REPLACEABLE_WEAR_PADS.step": "bbaf264ab0188d5cf0bbd4101a22f008712267dbec519e32c591861a0c69dfc2"
+  },
+  "nominal_wood_setup_origin_world_mm": [
+    190.0,
+    141.4,
+    958.8
+  ],
+  "setup_axes": "X right, Y rear, Z up. Setup Z0 is the modeled final wear-pad top; establish it by measurement after installation.",
+  "enclosing_wear_field_mm": [
+    770.0,
+    960.0000000000001
+  ],
+  "actual_surface_pads": [
+    {
+      "id": "CAS1_REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS",
+      "setup_local_bounds_mm": [
+        0.0,
+        0.0,
+        -6.3499999999999375,
+        770.0,
+        190.5,
+        8.526512829121202e-14
+      ],
+      "top_face_area_mm2": 146282.87614034046
+    },
+    {
+      "id": "CAS2_REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS",
+      "setup_local_bounds_mm": [
+        0.0,
+        249.49999999999997,
+        -6.3499999999999375,
+        770.0,
+        449.5,
+        8.526512829121202e-14
+      ],
+      "top_face_area_mm2": 153597.87614034046
+    },
+    {
+      "id": "CAS3_REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS",
+      "setup_local_bounds_mm": [
+        0.0,
+        508.5,
+        -6.3499999999999375,
+        770.0,
+        708.5,
+        8.526512829121202e-14
+      ],
+      "top_face_area_mm2": 153597.87614034046
+    },
+    {
+      "id": "CAS4_REPLACEABLE_6p35_MDF_WEAR_KEEP_OUT_SCREWS",
+      "setup_local_bounds_mm": [
+        0.0,
+        767.5,
+        -6.3499999999999375,
+        770.0,
+        960.0000000000001,
+        8.526512829121202e-14
+      ],
+      "top_face_area_mm2": 147822.87614034055
+    }
+  ],
+  "boundary_dxf": "fabrication/cam-reference/WOOD_WEAR_TOP_BOUNDARIES_AND_SCREW_RECESSES.dxf",
+  "surface_step": "fabrication/cam-reference/WOOD_REPLACEABLE_WEAR_PADS.step",
+  "manufacturing_release": false,
+  "required_CAM_inputs": [
+    "Actual cutter envelope and projection",
+    "Workpiece and hold-down/clamp solids",
+    "Purchased track die and any inserted track bolts",
+    "Measured machine WCS and tool-length offset",
+    "Actual cutting tool reach over the whole stock",
+    "Machine controller and correct verified postprocessor"
+  ],
+  "keepout_rule": "The enclosing770x960 field is not one uninterrupted spoilboard. Only the exported pad faces are wear surface. Tracks, seams, recessed edge structure, locating/clamping hardware and screw recesses are separate keep-outs. Offset every obstacle by the actual cutter and holder envelope before creating a path.",
+  "surface_maintenance": "Prepare replaceable wear pads to final6.35mm before installing flush with tracks. Repeatedly skimming below the track tops does not preserve a continuous flat support plane. Replace pads or deliberately re-establish the complete finished datum.",
+  "plasma_setup": "No operational plasma nozzle WCS or THC values are invented. Use actual torch projection, touch-off and verified postprocessor after cutter integration.",
+  "scope": "Geometric wear-surface setup reference only. No stock layout, feeds/speeds, toolpath, simulation of cutting or machine program has been generated."
+}

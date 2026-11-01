@@ -1,0 +1,283 @@
+{
+  "revision": "XR2",
+  "release": false,
+  "parts": [
+    [
+      "GUIDE_FORMED_L",
+      1,
+      1370,
+      152.05995483854505,
+      1.9,
+      "BottomR2/90deg;topR1/180deg openhem2mmgap;web124.2straight;return7.1. FinishedY65..1435;commonATCreliefand2localsupportshelfnotches."
+    ],
+    [
+      "GUIDE_FORMED_R",
+      1,
+      1370,
+      152.05995483854505,
+      1.9,
+      "Mirrorformedsection;commonATCandcradlereliefsplusrearMOTORreliefY1402..1450/Z1018..1075,locallydeepertoZ1012overY1409..1450. ATCsteelmotorshroudreplacesthemissingbarrier."
+    ],
+    [
+      "GUIDE_CLIP",
+      6,
+      60,
+      83.86769832808989,
+      1.9,
+      "2xR2/90deg bends;straightlegs16.1/bridge42.4.2post\u00d86.6+2guard\u00d84.5."
+    ],
+    [
+      "LEDGER_MAIN_J",
+      2,
+      1120,
+      102.1176983280899,
+      1.9,
+      "2xR2/90deg bends;straightlengths38.2/40.65/14. Hot-only; removebeforecassetteconversion."
+    ],
+    [
+      "LEDGER_TOPCAP",
+      2,
+      1120,
+      12.25,
+      1.9,
+      "Butt/T-weldtocrownofJsheet; seal/stitchafterfixturing."
+    ],
+    [
+      "LEDGER_MOUNTTAB",
+      6,
+      30,
+      13.55,
+      1.9,
+      "Buttweldtotopcapedge;\u00d84.5 atworldX94/Y200,700,1100."
+    ],
+    [
+      "RECEIVER_BASE",
+      1,
+      734,
+      320,
+      1.9,
+      "Flatrectweldedtofourreturns;Z700."
+    ],
+    [
+      "RECEIVER_SIDE",
+      2,
+      318.1,
+      18.1,
+      1.9,
+      "Weldontopbase;2sideedges."
+    ],
+    [
+      "RECEIVER_FRONT",
+      1,
+      730.2,
+      18.1,
+      1.9,
+      "Weldbetweensideedges."
+    ],
+    [
+      "RECEIVER_REAR",
+      1,
+      734,
+      26.1,
+      1.9,
+      "Weldontopbase;4x\u00d84.5 atX300/850,Z709/720."
+    ],
+    [
+      "RECEIVER_CLIP",
+      2,
+      98,
+      40,
+      6.0,
+      "NEW6mmsteelstripstock;4bores:2x\u00d86.6 tobearerZ746.5/786.5;2x\u00d84.5 toroofZ709/720."
+    ]
+  ],
+  "flat_columns": [
+    "blank_id",
+    "quantity",
+    "length_mm",
+    "developed_width_mm",
+    "thickness_mm",
+    "notes"
+  ],
+  "hole_and_bend_instructions": {
+    "guide_panel": "6x\u00d84.5 normalX atY80/120/610/650/1160/1200,Z952;3x\u00d84.5 normalZ atX94,Y200/700/1100. Mirrorforright.",
+    "ATC_relief": "CommonupperbandY1055..1422,Z1031.5..1068 throughprofile. LocalBOTHsidewebslotsY1223..1267and1323..1367,Z1000.65..1035.5,throughX80..125left/mirroredright,cleartheATCsupportcradles. RIGHTONLYrearreliefX1000..1070,Y1402..1450,Z1018..1075;lowerextensionZ1012..1018overY1409..1450only. MatchATCsteelbackbars+cradles+fixedmotorshroud;lowerguidewebstayscontinuous.",
+    "hem": "Rinside1,Router2.9;2mmgapbetweenreturnedlegandweb. DeburrandcloseendswithoutgrowingXbeyond102.9.",
+    "bend_note": "DevelopmentusesneutralK0.5 nominal. Shopmustvalidatebendcoupon/springbackandsheetthickness;finishprofilesandholecoordinatescontrol. No guessed Kfactorisafabricationtolerance."
+  },
+  "hardware": {
+    "M6x12_button_guide_external_grip": 12,
+    "M6x16_button_receiver_external_grip": 4,
+    "M6_washer_OD12_t1p6": 16,
+    "matching_M6_slot_nut_actualfit_hold": 16,
+    "M4x8_button_fixedguide": 12,
+    "M4x12_button_receiver": 4,
+    "M4_washer_OD9_t0p8_fixed": 16,
+    "M4_hexnut_fixed": 16,
+    "M4x8_removable_armor": 6,
+    "M4_washer_removable": 6,
+    "M4_weldnut_armor": 6
+  },
+  "gross_rectangular_sheet_area_mm2": 992068.5319106472,
+  "stock_by_thickness_mm": {
+    "1.9_gross_rectangular_area_mm2": 984228.5319106472,
+    "6.0_receiver_clips_area_mm2": 7840
+  },
+  "mode": "Guidesandreceiverroofremaininbothmodes. Ledgerarmorandits6removablescrews/washersarehot-only.",
+  "support": "Guideclipstotwoactualverticalpostslots;receiverclipstorearbearerfronttwohorizontalrows. Externalgripendsattheframeface;matchingslotnutsandthreadtipsnotfakedinsolidprofileenvelope.",
+  "service": [
+    "Remove6top-accessM4armorscrewsandliftbothledgerarmorsbeforebedconversion. Keepweldnutswitharmor.",
+    "Normalreceiverhatchservice:roofstaysinstalled,minimumroofZ700versushatchmax688;12mmnominalgapbeforecompliance.",
+    "Roofmaintenanceonly:closehatch,remove4M4roofjoints,pull7.1mmforwardFIRST,lift40mm,rotatefrontdown90degaboutrearY1146.9/Z740. Testactualhandsandclearancesbeforeuse.",
+    "Guidesarenonsealedspatterguards;remove12M4screwsforrailgreasing/inspectionwhileframeclipsstayinstalled."
+  ],
+  "limits": [
+    "Notafumeextractor,pressurereceiverorcompletefireenclosure",
+    "ATCbackbarsreplacetherelievedupperguideband;verifytheminstalledbeforeplasma",
+    "Noexposedgalvanizedorcoatedsteelinthehotzone",
+    "Qualifyguardtemperature,spatterpath,corrosion/bonding,clippreloadandactualtool/cablemotion"
+  ],
+  "source_sha256": {
+    "shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780"
+  },
+  "manufacturing_files": [
+    {
+      "file": "review\\shields\\GUIDE_FORMED_L.dxf",
+      "quantity": 1,
+      "sha256": "53a7a166d7b5b22cc7fadde33e32cd2ff90a6fc3e095e7c8ae339f1f5940d783",
+      "units": "mm",
+      "cut_holes": 9,
+      "bend_reference_lines": 3
+    },
+    {
+      "file": "review\\shields\\GUIDE_FORMED_R.dxf",
+      "quantity": 1,
+      "sha256": "0e7e4e322c4458045785624dfaeac11b8d39a8e40d312eb21e1c6403c7c2254d",
+      "units": "mm",
+      "cut_holes": 9,
+      "bend_reference_lines": 2
+    },
+    {
+      "file": "review\\shields\\GUIDE_CLIP.dxf",
+      "quantity": 6,
+      "sha256": "beb69688bde9c938d98ad160997e3b00eea1152e4c0e1552fb75da3fe834c816",
+      "units": "mm",
+      "cut_holes": 4,
+      "bend_reference_lines": 2
+    },
+    {
+      "file": "review\\shields\\LEDGER_MAIN_J.dxf",
+      "quantity": 2,
+      "sha256": "18b90e9a7bc2a7abd61ade69c565ed024687a415f0a078822131c238c881de99",
+      "units": "mm",
+      "cut_holes": 0,
+      "bend_reference_lines": 2
+    },
+    {
+      "file": "review\\shields\\LEDGER_TOPCAP.dxf",
+      "quantity": 2,
+      "sha256": "8d8a54a6ab82b60662aba634c13f27f60b2531a407f4aede5b3a32d038a6f96c",
+      "units": "mm",
+      "cut_holes": 0,
+      "bend_reference_lines": 0
+    },
+    {
+      "file": "review\\shields\\LEDGER_MOUNTTAB.dxf",
+      "quantity": 6,
+      "sha256": "12349867c26ba5fc019b80c702b6e45d38c966ec7262a1902ba9de24d1d47753",
+      "units": "mm",
+      "cut_holes": 1,
+      "bend_reference_lines": 0
+    },
+    {
+      "file": "review\\shields\\RECEIVER_BASE.dxf",
+      "quantity": 1,
+      "sha256": "c132353013bb0dbdf4c67fca1dd65ba745bb04fc9e0ca2398d6451a7df0ff1cb",
+      "units": "mm",
+      "cut_holes": 0,
+      "bend_reference_lines": 0
+    },
+    {
+      "file": "review\\shields\\RECEIVER_SIDE.dxf",
+      "quantity": 2,
+      "sha256": "ea55daec515e2d10708aa65e7253276916953efb496ac5ce909594fbf24015bf",
+      "units": "mm",
+      "cut_holes": 0,
+      "bend_reference_lines": 0
+    },
+    {
+      "file": "review\\shields\\RECEIVER_FRONT.dxf",
+      "quantity": 1,
+      "sha256": "9029f31827bb0e0f2376a96160e2ab9633849e20420611a0260e32bdd68cbb5c",
+      "units": "mm",
+      "cut_holes": 0,
+      "bend_reference_lines": 0
+    },
+    {
+      "file": "review\\shields\\RECEIVER_REAR.dxf",
+      "quantity": 1,
+      "sha256": "bb0e2b3b95dba954767e5ad8178fba8196e7f2dc655002aeece4ad04772cc65f",
+      "units": "mm",
+      "cut_holes": 4,
+      "bend_reference_lines": 0
+    },
+    {
+      "file": "review\\shields\\RECEIVER_CLIP.dxf",
+      "quantity": 2,
+      "sha256": "7ffedbef53ac7058dc6cc4c3b387a1bb83ad86fb2b61aff39154cc0da92ecd8f",
+      "units": "mm",
+      "cut_holes": 4,
+      "bend_reference_lines": 0
+    },
+    {
+      "file": "review\\shields\\GUIDE_FINISHED_L.step",
+      "sha256": "9b685376235d718c98f70cea60d4ee57f3cd57b7f72080c8134997040a826ba5",
+      "step_roundtrip_valid": true,
+      "solids": 1
+    },
+    {
+      "file": "review\\shields\\GUIDE_FINISHED_R.step",
+      "sha256": "e74144f420bdc699cf28aef275f7ab1d20ab6fcb06f86560d92300c55430cc2d",
+      "step_roundtrip_valid": true,
+      "solids": 1
+    },
+    {
+      "file": "review\\shields\\GUIDE_CLIP_FINISHED.step",
+      "sha256": "570203047492bccc8ea11a7ce2260d2be29cc0c2bbe2e5177990cce8dfdd9ad0",
+      "step_roundtrip_valid": true,
+      "solids": 1
+    },
+    {
+      "file": "review\\shields\\LEDGER_ARMOR_FINISHED.step",
+      "sha256": "e56c4e3d57568c62f05b90d03f66c2c229974944549b62c4dc06d7606c9069cf",
+      "step_roundtrip_valid": true,
+      "solids": 1
+    },
+    {
+      "file": "review\\shields\\RECEIVER_ROOF_FINISHED.step",
+      "sha256": "1a0e5c2b18b2e5004ac63496890a3f2fa83d5fc7a3352bb27e4a7c8627a5bd0d",
+      "step_roundtrip_valid": true,
+      "solids": 1
+    },
+    {
+      "file": "review\\shields\\RECEIVER_CLIP_FINISHED.step",
+      "sha256": "98eba1db41b6ba9bc18dedb5d47ea0fa3c0fb428a799c08781125c74b4be2c1a",
+      "step_roundtrip_valid": true,
+      "solids": 1
+    }
+  ],
+  "receiver_support_screen": {
+    "roof_mass_kg_from_solid": 4.15689436329779,
+    "clip_thickness_mm": 6.0,
+    "ideal_clip_rotation_rad": 0.0007247148108059427,
+    "ideal_roof_tip_drop_due_clip_bending_mm": 0.24350417643079675,
+    "hatch_open_max_z_mm": 688.0,
+    "nominal_vertical_hatch_gap_mm": 12.0,
+    "hatch_gap_minus_clip_component_mm": 11.756495823569203,
+    "per_clip_gravity_moment_Nmm": 3261.216648626742,
+    "M4_force_couple_component_N": 296.4742407842493,
+    "qualification": "Ideal steelstripbendingonly;addroof/weld/fastener/contactcompliance. No operator,storageorworkloadrating."
+  }
+}

@@ -1,0 +1,5384 @@
+{
+  "revision": "XR2",
+  "mechanism_geometry_pass": true,
+  "selectedZ_clearance_case_pass": true,
+  "actual_kit_interface_verified": false,
+  "source_sha256": {
+    "variants\\extrusion-reengineered\\atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "variants\\extrusion-reengineered\\motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants\\extrusion-reengineered\\params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants\\extrusion-reengineered\\frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "variants\\extrusion-reengineered\\bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants\\extrusion-reengineered\\shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "variants\\extrusion-reengineered\\check_atc.py": "e6ab7b7e1215d1947c375fd6350819f91fdaa5daa9963d158f657a9fc1a89069",
+    "variants\\retractable-atc\\hardware\\hardware.py": "b4c134ef05aebafded4362991f04a6118ad36be874887fafb81ee8d105757df0",
+    "variants\\extrusion-wood-plasma\\motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output\\release-review\\RevE-ENGINEERING\\motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output\\release-review\\RevE-ENGINEERING\\motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output\\release-review\\RevE-ENGINEERING\\motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output\\release-review\\RevE-ENGINEERING\\cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  },
+  "source_consistent_during_check": true,
+  "legal_static_states": {
+    "park_closed": {
+      "invalid": [],
+      "self": {
+        "exact_pairs": 434,
+        "hits": []
+      },
+      "frame": {
+        "exact_pairs": 4,
+        "hits": []
+      },
+      "bed": {
+        "exact_pairs": 0,
+        "hits": []
+      },
+      "shields": {
+        "exact_pairs": 36,
+        "hits": []
+      },
+      "safe_head": {
+        "exact_pairs": 4,
+        "hits": []
+      }
+    },
+    "park_open": {
+      "invalid": [],
+      "self": {
+        "exact_pairs": 432,
+        "hits": []
+      },
+      "frame": {
+        "exact_pairs": 4,
+        "hits": []
+      },
+      "bed": {
+        "exact_pairs": 0,
+        "hits": []
+      },
+      "shields": {
+        "exact_pairs": 36,
+        "hits": []
+      },
+      "safe_head": {
+        "exact_pairs": 4,
+        "hits": []
+      }
+    },
+    "deployed_open": {
+      "invalid": [],
+      "self": {
+        "exact_pairs": 413,
+        "hits": []
+      },
+      "frame": {
+        "exact_pairs": 4,
+        "hits": []
+      },
+      "bed": {
+        "exact_pairs": 0,
+        "hits": []
+      },
+      "shields": {
+        "exact_pairs": 36,
+        "hits": []
+      },
+      "safe_head": {
+        "exact_pairs": 4,
+        "hits": []
+      }
+    },
+    "deployed_unlocked": {
+      "invalid": [],
+      "self": {
+        "exact_pairs": 409,
+        "hits": []
+      },
+      "frame": {
+        "exact_pairs": 4,
+        "hits": []
+      },
+      "bed": {
+        "exact_pairs": 0,
+        "hits": []
+      },
+      "shields": {
+        "exact_pairs": 36,
+        "hits": []
+      },
+      "safe_head": {
+        "exact_pairs": 4,
+        "hits": []
+      }
+    },
+    "park_unlocked": {
+      "invalid": [],
+      "self": {
+        "exact_pairs": 428,
+        "hits": []
+      },
+      "frame": {
+        "exact_pairs": 4,
+        "hits": []
+      },
+      "bed": {
+        "exact_pairs": 0,
+        "hits": []
+      },
+      "shields": {
+        "exact_pairs": 36,
+        "hits": []
+      },
+      "safe_head": {
+        "exact_pairs": 4,
+        "hits": []
+      }
+    }
+  },
+  "cutting_poses": [
+    {
+      "hot": false,
+      "gate_open": false,
+      "pose": [
+        575.0,
+        775.0,
+        100.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": false,
+      "pose": [
+        175.0,
+        275.0,
+        0.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": false,
+      "pose": [
+        175.0,
+        275.0,
+        200.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": false,
+      "pose": [
+        175.0,
+        1275.0,
+        0.0
+      ],
+      "exact_pairs": 24,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": false,
+      "pose": [
+        175.0,
+        1275.0,
+        200.0
+      ],
+      "exact_pairs": 24,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": false,
+      "pose": [
+        975.0,
+        275.0,
+        0.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": false,
+      "pose": [
+        975.0,
+        275.0,
+        200.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": false,
+      "pose": [
+        975.0,
+        1275.0,
+        0.0
+      ],
+      "exact_pairs": 24,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": false,
+      "pose": [
+        975.0,
+        1275.0,
+        200.0
+      ],
+      "exact_pairs": 24,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": true,
+      "pose": [
+        575.0,
+        775.0,
+        100.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": true,
+      "pose": [
+        175.0,
+        275.0,
+        0.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": true,
+      "pose": [
+        175.0,
+        275.0,
+        200.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": true,
+      "pose": [
+        175.0,
+        1275.0,
+        0.0
+      ],
+      "exact_pairs": 24,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": true,
+      "pose": [
+        175.0,
+        1275.0,
+        200.0
+      ],
+      "exact_pairs": 24,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": true,
+      "pose": [
+        975.0,
+        275.0,
+        0.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": true,
+      "pose": [
+        975.0,
+        275.0,
+        200.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": true,
+      "pose": [
+        975.0,
+        1275.0,
+        0.0
+      ],
+      "exact_pairs": 24,
+      "hits": []
+    },
+    {
+      "hot": false,
+      "gate_open": true,
+      "pose": [
+        975.0,
+        1275.0,
+        200.0
+      ],
+      "exact_pairs": 24,
+      "hits": []
+    },
+    {
+      "hot": true,
+      "gate_open": false,
+      "pose": [
+        575.0,
+        775.0,
+        100.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": true,
+      "gate_open": false,
+      "pose": [
+        175.0,
+        275.0,
+        0.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": true,
+      "gate_open": false,
+      "pose": [
+        175.0,
+        275.0,
+        200.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": true,
+      "gate_open": false,
+      "pose": [
+        175.0,
+        1275.0,
+        0.0
+      ],
+      "exact_pairs": 34,
+      "hits": []
+    },
+    {
+      "hot": true,
+      "gate_open": false,
+      "pose": [
+        175.0,
+        1275.0,
+        200.0
+      ],
+      "exact_pairs": 24,
+      "hits": []
+    },
+    {
+      "hot": true,
+      "gate_open": false,
+      "pose": [
+        975.0,
+        275.0,
+        0.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": true,
+      "gate_open": false,
+      "pose": [
+        975.0,
+        275.0,
+        200.0
+      ],
+      "exact_pairs": 4,
+      "hits": []
+    },
+    {
+      "hot": true,
+      "gate_open": false,
+      "pose": [
+        975.0,
+        1275.0,
+        0.0
+      ],
+      "exact_pairs": 24,
+      "hits": []
+    },
+    {
+      "hot": true,
+      "gate_open": false,
+      "pose": [
+        975.0,
+        1275.0,
+        200.0
+      ],
+      "exact_pairs": 24,
+      "hits": []
+    }
+  ],
+  "transport_samples": [
+    {
+      "travel_mm": 0.0,
+      "self": {
+        "exact_pairs": 409,
+        "hits": []
+      },
+      "external": {
+        "exact_pairs": 44,
+        "hits": []
+      }
+    },
+    {
+      "travel_mm": 50.0,
+      "self": {
+        "exact_pairs": 405,
+        "hits": []
+      },
+      "external": {
+        "exact_pairs": 44,
+        "hits": []
+      }
+    },
+    {
+      "travel_mm": 100.0,
+      "self": {
+        "exact_pairs": 418,
+        "hits": []
+      },
+      "external": {
+        "exact_pairs": 44,
+        "hits": []
+      }
+    },
+    {
+      "travel_mm": 150.0,
+      "self": {
+        "exact_pairs": 417,
+        "hits": []
+      },
+      "external": {
+        "exact_pairs": 44,
+        "hits": []
+      }
+    },
+    {
+      "travel_mm": 200.0,
+      "self": {
+        "exact_pairs": 428,
+        "hits": []
+      },
+      "external": {
+        "exact_pairs": 44,
+        "hits": []
+      }
+    }
+  ],
+  "gate_samples": [
+    {
+      "fraction": 0.0,
+      "self": {
+        "exact_pairs": 434,
+        "hits": []
+      },
+      "external": {
+        "exact_pairs": 44,
+        "hits": []
+      }
+    },
+    {
+      "fraction": 0.25,
+      "self": {
+        "exact_pairs": 432,
+        "hits": []
+      },
+      "external": {
+        "exact_pairs": 44,
+        "hits": []
+      }
+    },
+    {
+      "fraction": 0.5,
+      "self": {
+        "exact_pairs": 432,
+        "hits": []
+      },
+      "external": {
+        "exact_pairs": 44,
+        "hits": []
+      }
+    },
+    {
+      "fraction": 0.75,
+      "self": {
+        "exact_pairs": 432,
+        "hits": []
+      },
+      "external": {
+        "exact_pairs": 44,
+        "hits": []
+      }
+    },
+    {
+      "fraction": 1.0,
+      "self": {
+        "exact_pairs": 432,
+        "hits": []
+      },
+      "external": {
+        "exact_pairs": 44,
+        "hits": []
+      }
+    }
+  ],
+  "pickup_samples": [
+    {
+      "pose_X_Ytool_Z": [
+        345.0,
+        1092.0,
+        83.79999999999995
+      ],
+      "mechanism": {
+        "exact_pairs": 41,
+        "hits": []
+      },
+      "loaded_cutter": {
+        "exact_pairs": 2,
+        "hits": []
+      }
+    },
+    {
+      "pose_X_Ytool_Z": [
+        345.0,
+        1092.0,
+        140.1500000000001
+      ],
+      "mechanism": {
+        "exact_pairs": 41,
+        "hits": []
+      },
+      "loaded_cutter": {
+        "exact_pairs": 0,
+        "hits": []
+      }
+    },
+    {
+      "pose_X_Ytool_Z": [
+        345.0,
+        1092.0,
+        200.0
+      ],
+      "mechanism": {
+        "exact_pairs": 41,
+        "hits": []
+      },
+      "loaded_cutter": {
+        "exact_pairs": 0,
+        "hits": []
+      }
+    },
+    {
+      "pose_X_Ytool_Z": [
+        345.0,
+        1121.4,
+        83.79999999999995
+      ],
+      "mechanism": {
+        "exact_pairs": 22,
+        "hits": []
+      },
+      "loaded_cutter": {
+        "exact_pairs": 2,
+        "hits": []
+      }
+    },
+    {
+      "pose_X_Ytool_Z": [
+        345.0,
+        1121.4,
+        140.1500000000001
+      ],
+      "mechanism": {
+        "exact_pairs": 22,
+        "hits": []
+      },
+      "loaded_cutter": {
+        "exact_pairs": 0,
+        "hits": []
+      }
+    },
+    {
+      "pose_X_Ytool_Z": [
+        345.0,
+        1121.4,
+        200.0
+      ],
+      "mechanism": {
+        "exact_pairs": 22,
+        "hits": []
+      },
+      "loaded_cutter": {
+        "exact_pairs": 0,
+        "hits": []
+      }
+    },
+    {
+      "pose_X_Ytool_Z": [
+        805.0,
+        1092.0,
+        83.79999999999995
+      ],
+      "mechanism": {
+        "exact_pairs": 41,
+        "hits": []
+      },
+      "loaded_cutter": {
+        "exact_pairs": 2,
+        "hits": []
+      }
+    },
+    {
+      "pose_X_Ytool_Z": [
+        805.0,
+        1092.0,
+        140.1500000000001
+      ],
+      "mechanism": {
+        "exact_pairs": 41,
+        "hits": []
+      },
+      "loaded_cutter": {
+        "exact_pairs": 0,
+        "hits": []
+      }
+    },
+    {
+      "pose_X_Ytool_Z": [
+        805.0,
+        1092.0,
+        200.0
+      ],
+      "mechanism": {
+        "exact_pairs": 41,
+        "hits": []
+      },
+      "loaded_cutter": {
+        "exact_pairs": 0,
+        "hits": []
+      }
+    },
+    {
+      "pose_X_Ytool_Z": [
+        805.0,
+        1121.4,
+        83.79999999999995
+      ],
+      "mechanism": {
+        "exact_pairs": 22,
+        "hits": []
+      },
+      "loaded_cutter": {
+        "exact_pairs": 2,
+        "hits": []
+      }
+    },
+    {
+      "pose_X_Ytool_Z": [
+        805.0,
+        1121.4,
+        140.1500000000001
+      ],
+      "mechanism": {
+        "exact_pairs": 22,
+        "hits": []
+      },
+      "loaded_cutter": {
+        "exact_pairs": 0,
+        "hits": []
+      }
+    },
+    {
+      "pose_X_Ytool_Z": [
+        805.0,
+        1121.4,
+        200.0
+      ],
+      "mechanism": {
+        "exact_pairs": 22,
+        "hits": []
+      },
+      "loaded_cutter": {
+        "exact_pairs": 0,
+        "hits": []
+      }
+    }
+  ],
+  "continuous_rack_translation": {
+    "candidate_pairs": 139,
+    "proofs": [
+      {
+        "moving": "ATC_MGN12H_L_0",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 7,
+        "empty_cells": 0,
+        "separated_cells": 4,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_0",
+        "fixed": "ATC_MGNR12_L_335",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_0",
+        "fixed": "ATC_RAIL_M3x12_L_0",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_0",
+        "fixed": "ATC_RAIL_M3x12_L_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_0",
+        "fixed": "ATC_RAIL_M3x12_L_2",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_0",
+        "fixed": "ATC_RAIL_M3x12_L_3",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_0",
+        "fixed": "ATC_RAIL_M3x12_L_4",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_0",
+        "fixed": "ATC_RAIL_M3x12_L_5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_0",
+        "fixed": "ATC_RAIL_M3x12_L_6",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_0",
+        "fixed": "ATC_RAIL_M3x12_L_7",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_0",
+        "fixed": "ATC_RAIL_M3x12_L_8",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_0",
+        "fixed": "ATC_RAIL_M3x12_L_9",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_BLOCK_M3x8_L_0_0",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_BLOCK_M3x8_L_0_1",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_BLOCK_M3x8_L_0_2",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_BLOCK_M3x8_L_0_3",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_1",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 17,
+        "empty_cells": 0,
+        "separated_cells": 9,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_1",
+        "fixed": "ATC_MGNR12_L_335",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_1",
+        "fixed": "ATC_RAIL_M3x12_L_3",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_1",
+        "fixed": "ATC_RAIL_M3x12_L_4",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_1",
+        "fixed": "ATC_RAIL_M3x12_L_5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_1",
+        "fixed": "ATC_RAIL_M3x12_L_6",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_1",
+        "fixed": "ATC_RAIL_M3x12_L_7",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_1",
+        "fixed": "ATC_RAIL_M3x12_L_8",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_1",
+        "fixed": "ATC_RAIL_M3x12_L_9",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_1",
+        "fixed": "ATC_RAIL_M3x12_L_10",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_1",
+        "fixed": "ATC_RAIL_M3x12_L_11",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_L_1",
+        "fixed": "ATC_RAIL_M3x12_L_12",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_BLOCK_M3x8_L_1_0",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 7,
+        "empty_cells": 0,
+        "separated_cells": 4,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_BLOCK_M3x8_L_1_1",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 7,
+        "empty_cells": 0,
+        "separated_cells": 4,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_BLOCK_M3x8_L_1_2",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_BLOCK_M3x8_L_1_3",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 15,
+        "empty_cells": 0,
+        "separated_cells": 6,
+        "zero_volume_contact_cells": 2
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_MGNR12_L_335",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_0",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_2",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_3",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_4",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_6",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_7",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_8",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_9",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_10",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_11",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_RAIL_M3x12_L_12",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_LOCK_DEPLOY_FIXED",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 2,
+        "zero_volume_contact_cells": 1
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_LOCK_PARK_FIXED",
+        "passed": true,
+        "cells": 11,
+        "empty_cells": 0,
+        "separated_cells": 6,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_L",
+        "fixed": "ATC_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_ARM_M4x14_L_1132_1042",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 7,
+        "empty_cells": 0,
+        "separated_cells": 4,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_ARM_M4x14_L_1132_1058",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 7,
+        "empty_cells": 0,
+        "separated_cells": 4,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_ARM_M4x14_L_1192_1042",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 13,
+        "empty_cells": 0,
+        "separated_cells": 7,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_ARM_M4x14_L_1192_1058",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 13,
+        "empty_cells": 0,
+        "separated_cells": 7,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_CARRIER_END_L",
+        "fixed": "FULL_DRYBED_40MM_STOCK_CLAMP_CAPACITY",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_0",
+        "fixed": "ATC_MGNR12_R_335",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_0",
+        "fixed": "ATC_RAIL_M3x12_R_0",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_0",
+        "fixed": "ATC_RAIL_M3x12_R_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_0",
+        "fixed": "ATC_RAIL_M3x12_R_2",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_0",
+        "fixed": "ATC_RAIL_M3x12_R_3",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_0",
+        "fixed": "ATC_RAIL_M3x12_R_4",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_0",
+        "fixed": "ATC_RAIL_M3x12_R_5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_0",
+        "fixed": "ATC_RAIL_M3x12_R_6",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_0",
+        "fixed": "ATC_RAIL_M3x12_R_7",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_0",
+        "fixed": "ATC_RAIL_M3x12_R_8",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_0",
+        "fixed": "ATC_RAIL_M3x12_R_9",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_1",
+        "fixed": "ATC_MGNR12_R_335",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_1",
+        "fixed": "ATC_RAIL_M3x12_R_3",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_1",
+        "fixed": "ATC_RAIL_M3x12_R_4",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_1",
+        "fixed": "ATC_RAIL_M3x12_R_5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_1",
+        "fixed": "ATC_RAIL_M3x12_R_6",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_1",
+        "fixed": "ATC_RAIL_M3x12_R_7",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_1",
+        "fixed": "ATC_RAIL_M3x12_R_8",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_1",
+        "fixed": "ATC_RAIL_M3x12_R_9",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_1",
+        "fixed": "ATC_RAIL_M3x12_R_10",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_1",
+        "fixed": "ATC_RAIL_M3x12_R_11",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MGN12H_R_1",
+        "fixed": "ATC_RAIL_M3x12_R_12",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_BACKBAR_R",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_MGNR12_R_335",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_0",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_2",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_3",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_4",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_6",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_7",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_8",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_9",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_10",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_11",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_RAIL_M3x12_R_12",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_2GT_6MM_OPEN_BELT_ROUTE",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_16T_IDLER",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_IDLER_BAR_BRIDGE",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_IDLER_M5x25_AXLE",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_IDLER_LOWER_WASHER",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_IDLER_AXIAL_SPACER",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_IDLER_RUNNING_BUSH",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_IDLER_UPPER_WASHER",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_IDLER_M5_NUT",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_MOTOR_WELDED_MOUNT",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_FIXED",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 2,
+        "zero_volume_contact_cells": 1
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_R_LOCK_PARK_FIXED",
+        "passed": true,
+        "cells": 11,
+        "empty_cells": 0,
+        "separated_cells": 6,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_WING_R",
+        "fixed": "ATC_R_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_CARRIER_END_R",
+        "fixed": "FULL_DRYBED_40MM_STOCK_CLAMP_CAPACITY",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_RHS_875p35x50p8x25p4",
+        "fixed": "ATC_HOOD_L",
+        "passed": true,
+        "cells": 35,
+        "empty_cells": 1,
+        "separated_cells": 17,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_RHS_875p35x50p8x25p4",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 55,
+        "empty_cells": 9,
+        "separated_cells": 19,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_HARD_SEAT_305_1097",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 3,
+        "empty_cells": 0,
+        "separated_cells": 2,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_DRAWDOWN_M6x25_305_1097",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 3,
+        "empty_cells": 0,
+        "separated_cells": 2,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_HARD_SEAT_305_1132",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 3,
+        "empty_cells": 0,
+        "separated_cells": 2,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_DRAWDOWN_M6x25_305_1132",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 3,
+        "empty_cells": 0,
+        "separated_cells": 2,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_HARD_SEAT_845_1097",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_DRAWDOWN_M6x25_845_1097",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_HARD_SEAT_845_1132",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_DRAWDOWN_M6x25_845_1132",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_LOCATOR_RISER_M4x12_325_1153",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 3,
+        "empty_cells": 0,
+        "separated_cells": 2,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_LOCATOR_RISER_M4x12_325_1165",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 3,
+        "empty_cells": 0,
+        "separated_cells": 2,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_LOCATOR_RISER_325",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 3,
+        "empty_cells": 0,
+        "separated_cells": 2,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_LOCATOR_ROUND",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 3,
+        "empty_cells": 0,
+        "separated_cells": 2,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_LOCATOR_RISER_M4x12_825_1153",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_LOCATOR_RISER_M4x12_825_1165",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_LOCATOR_RISER_825",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_LOCATOR_DIAMOND",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_LOWER_U_CARRIER",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_REMOVABLE_MAGAZINE_U_BRIDGE",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_BELT_GRIP_M4x22",
+        "fixed": "ATC_MOTOR_WELDED_MOUNT",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_BELT_GRIP_D2_PIN",
+        "fixed": "ATC_MOTOR_WELDED_MOUNT",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_BELT_CLAMP_M3x16",
+        "fixed": "ATC_MOTOR_WELDED_MOUNT",
+        "passed": true,
+        "cells": 7,
+        "empty_cells": 0,
+        "separated_cells": 4,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_BELT_CLAMP_M3x16",
+        "fixed": "ATC_R_LOCK_PARK_FIXED",
+        "passed": true,
+        "cells": 7,
+        "empty_cells": 1,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_BELT_GRIP",
+        "fixed": "ATC_2GT_6MM_OPEN_BELT_ROUTE",
+        "passed": true,
+        "cells": 117,
+        "empty_cells": 0,
+        "separated_cells": 59,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_BELT_GRIP",
+        "fixed": "ATC_MOTOR_WELDED_MOUNT",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_BELT_LINER_B",
+        "fixed": "ATC_2GT_6MM_OPEN_BELT_ROUTE",
+        "passed": true,
+        "cells": 117,
+        "empty_cells": 0,
+        "separated_cells": 59,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_STAGE_STEEL_PATCH",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 13,
+        "empty_cells": 0,
+        "separated_cells": 7,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_STAGE_PATCH_M2x4",
+        "fixed": "ATC_BACKBAR_L",
+        "passed": true,
+        "cells": 13,
+        "empty_cells": 0,
+        "separated_cells": 7,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_PIN_BUSHING_L",
+        "fixed": "ATC_LOCK_DEPLOY_FIXED",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_PIN_BUSHING_L",
+        "fixed": "ATC_LOCK_PARK_FIXED",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_PIN_BUSHING_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_FIXED",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_MOVING_PIN_BUSHING_R",
+        "fixed": "ATC_R_LOCK_PARK_FIXED",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      }
+    ],
+    "passed": true
+  },
+  "continuous_gate_translation": {
+    "candidate_pairs": 10,
+    "proofs": [
+      {
+        "moving": "ATC_STEEL_GATE",
+        "fixed": "ATC_HOOD_L",
+        "passed": true,
+        "cells": 533,
+        "empty_cells": 13,
+        "separated_cells": 254,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_STEEL_GATE",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 399,
+        "empty_cells": 69,
+        "separated_cells": 130,
+        "zero_volume_contact_cells": 1
+      },
+      {
+        "moving": "ATC_STEEL_GATE",
+        "fixed": "ATC_GATE_INDEX_PIN",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_STEEL_GATE",
+        "fixed": "ATC_HOOD_STAND_315",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_STEEL_GATE",
+        "fixed": "ATC_HOOD_STAND_835",
+        "passed": true,
+        "cells": 5,
+        "empty_cells": 0,
+        "separated_cells": 3,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_STEEL_GATE",
+        "fixed": "ATC_GATE_PM_CLOSED",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_STEEL_GATE",
+        "fixed": "ATC_GATE_SENSOR_M3x8_BUTTON_CLOSED_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_STEEL_GATE",
+        "fixed": "ATC_GATE_PM_OPEN",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_STEEL_GATE",
+        "fixed": "ATC_GATE_SENSOR_M3x8_BUTTON_OPEN_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "ATC_GATE_HANDLE",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 7,
+        "empty_cells": 0,
+        "separated_cells": 4,
+        "zero_volume_contact_cells": 0
+      }
+    ],
+    "passed": true
+  },
+  "capacity_static": {
+    "exact_pairs": 2,
+    "hits": []
+  },
+  "continuous_capacity_translation": {
+    "candidate_pairs": 2,
+    "proofs": [
+      {
+        "moving": "SUPPLIER_KIT_ACCEPTANCE_NOT_A_PART",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 21,
+        "empty_cells": 0,
+        "separated_cells": 11,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "RETAINED_TOOL_PROJECTION_ACCEPTANCE_NOT_A_PART",
+        "fixed": "ATC_HOOD_R",
+        "passed": true,
+        "cells": 9,
+        "empty_cells": 0,
+        "separated_cells": 5,
+        "zero_volume_contact_cells": 0
+      }
+    ],
+    "passed": true
+  },
+  "entry_bypass_X255": {
+    "candidate_pairs": 101,
+    "proofs": [
+      {
+        "moving": "Y_SHOE_L",
+        "fixed": "ATC_REAR_CRADLE_L_1",
+        "passed": true,
+        "cells": 27,
+        "empty_cells": 0,
+        "separated_cells": 14,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_SHOE_L",
+        "fixed": "ATC_REAR_CRADLE_L_2",
+        "passed": true,
+        "cells": 27,
+        "empty_cells": 0,
+        "separated_cells": 14,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_BLOCK_L_2",
+        "fixed": "ATC_REAR_CRADLE_L_1",
+        "passed": true,
+        "cells": 11,
+        "empty_cells": 0,
+        "separated_cells": 6,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_BLOCK_L_2",
+        "fixed": "ATC_REAR_CRADLE_L_2",
+        "passed": true,
+        "cells": 11,
+        "empty_cells": 0,
+        "separated_cells": 6,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_BLOCK_BOLT_L_2_1",
+        "fixed": "ATC_REAR_CRADLE_L_1",
+        "passed": true,
+        "cells": 75,
+        "empty_cells": 0,
+        "separated_cells": 38,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_BLOCK_BOLT_L_2_3",
+        "fixed": "ATC_REAR_CRADLE_L_1",
+        "passed": true,
+        "cells": 75,
+        "empty_cells": 0,
+        "separated_cells": 38,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_BLOCK_BOLT_L_2_3",
+        "fixed": "ATC_REAR_CRADLE_L_2",
+        "passed": true,
+        "cells": 71,
+        "empty_cells": 0,
+        "separated_cells": 36,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_MOVING_WING_L",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_FIXED",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_PIN",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_FLAG",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_FLAG_M4_NUT",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_FLAG_WASHER",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_SPRING_CAP",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_CAP_POST_110.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_CAP_NUT_110.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_CAP_POST_115.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_CAP_NUT_115.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_CYLINDER_PANEL",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_SENSOR_SUPPORT",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_E2E_C03SR8_0",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_0",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_E2E_C03SR8_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_FIXED",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_PIN",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_FLAG",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_FLAG_M4_NUT",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_FLAG_WASHER",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_SPRING_CAP",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_CAP_POST_110.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_CAP_NUT_110.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_CAP_POST_115.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_CAP_NUT_115.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_CYLINDER_PANEL",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_SENSOR_SUPPORT",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_E2E_C03SR8_0",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_SENSOR_M2_SET_0",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_E2E_C03SR8_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_LOCK_PARK_SENSOR_M2_SET_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_L",
+        "fixed": "ATC_MOVING_PIN_BUSHING_L",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_SHOE_R",
+        "fixed": "ATC_REAR_CRADLE_R_1",
+        "passed": true,
+        "cells": 27,
+        "empty_cells": 0,
+        "separated_cells": 14,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_SHOE_R",
+        "fixed": "ATC_REAR_CRADLE_R_2",
+        "passed": true,
+        "cells": 27,
+        "empty_cells": 0,
+        "separated_cells": 14,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_BLOCK_R_2",
+        "fixed": "ATC_REAR_CRADLE_R_1",
+        "passed": true,
+        "cells": 11,
+        "empty_cells": 0,
+        "separated_cells": 6,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_BLOCK_R_2",
+        "fixed": "ATC_REAR_CRADLE_R_2",
+        "passed": true,
+        "cells": 11,
+        "empty_cells": 0,
+        "separated_cells": 6,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_BLOCK_BOLT_R_2_1",
+        "fixed": "ATC_REAR_CRADLE_R_1",
+        "passed": true,
+        "cells": 75,
+        "empty_cells": 0,
+        "separated_cells": 38,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_BLOCK_BOLT_R_2_3",
+        "fixed": "ATC_REAR_CRADLE_R_1",
+        "passed": true,
+        "cells": 75,
+        "empty_cells": 0,
+        "separated_cells": 38,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "Y_BLOCK_BOLT_R_2_3",
+        "fixed": "ATC_REAR_CRADLE_R_2",
+        "passed": true,
+        "cells": 71,
+        "empty_cells": 0,
+        "separated_cells": 36,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_MOVING_WING_R",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_2GT_6MM_OPEN_BELT_ROUTE",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_16T_IDLER",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_IDLER_M5x25_AXLE",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_IDLER_LOWER_WASHER",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_IDLER_AXIAL_SPACER",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_IDLER_RUNNING_BUSH",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_IDLER_UPPER_WASHER",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_IDLER_M5_NUT",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_BELT_CLAMP_M3x16",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_MOVING_BELT_GRIP",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_MOVING_BELT_LINER_B",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_FIXED",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_PIN",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_FLAG",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_FLAG_M4_NUT",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_FLAG_WASHER",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_SPRING_CAP",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_CAP_POST_110.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_CAP_NUT_110.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_CAP_POST_115.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_CAP_NUT_115.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_CYLINDER_PANEL",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_SENSOR_SUPPORT",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_0",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_0",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_FIXED",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_PIN",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_FLAG",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_FLAG_M4_NUT",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_FLAG_WASHER",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_SPRING_CAP",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_CAP_POST_110.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_CAP_NUT_110.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_CAP_POST_115.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_CAP_NUT_115.5",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_CYLINDER_PANEL",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_SENSOR_SUPPORT",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_E2E_C03SR8_0",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_SENSOR_M2_SET_0",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_E2E_C03SR8_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_R_LOCK_PARK_SENSOR_M2_SET_1",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      },
+      {
+        "moving": "GANTRY_END_BRACKET_R",
+        "fixed": "ATC_MOVING_PIN_BUSHING_R",
+        "passed": true,
+        "cells": 1,
+        "empty_cells": 0,
+        "separated_cells": 1,
+        "zero_volume_contact_cells": 0
+      }
+    ],
+    "passed": true
+  },
+  "entry_bypass_XY_head_traverse": {
+    "Y_gantry_or_drive": {
+      "candidate_pairs": 40,
+      "proofs": [
+        {
+          "moving": "Y_SHOE_L",
+          "fixed": "ATC_REAR_CRADLE_L_1",
+          "passed": true,
+          "cells": 27,
+          "empty_cells": 0,
+          "separated_cells": 14,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_SHOE_L",
+          "fixed": "ATC_REAR_CRADLE_L_2",
+          "passed": true,
+          "cells": 27,
+          "empty_cells": 0,
+          "separated_cells": 14,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_L_2",
+          "fixed": "ATC_REAR_CRADLE_L_2",
+          "passed": true,
+          "cells": 11,
+          "empty_cells": 0,
+          "separated_cells": 6,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_L_2_1",
+          "fixed": "ATC_REAR_CRADLE_L_2",
+          "passed": true,
+          "cells": 61,
+          "empty_cells": 0,
+          "separated_cells": 31,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_L_2_3",
+          "fixed": "ATC_REAR_CRADLE_L_2",
+          "passed": true,
+          "cells": 37,
+          "empty_cells": 0,
+          "separated_cells": 19,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_FIXED",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_PIN",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_FLAG",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_FLAG_M4_NUT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_FLAG_WASHER",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_SPRING_CAP",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CAP_POST_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CAP_NUT_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CAP_POST_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CAP_NUT_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CYLINDER_PANEL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_SENSOR_SUPPORT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "fixed": "ATC_REAR_CRADLE_R_1",
+          "passed": true,
+          "cells": 27,
+          "empty_cells": 0,
+          "separated_cells": 14,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "fixed": "ATC_REAR_CRADLE_R_2",
+          "passed": true,
+          "cells": 27,
+          "empty_cells": 0,
+          "separated_cells": 14,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_R_2",
+          "fixed": "ATC_REAR_CRADLE_R_2",
+          "passed": true,
+          "cells": 11,
+          "empty_cells": 0,
+          "separated_cells": 6,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_R_2_1",
+          "fixed": "ATC_REAR_CRADLE_R_2",
+          "passed": true,
+          "cells": 61,
+          "empty_cells": 0,
+          "separated_cells": 31,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_R_2_3",
+          "fixed": "ATC_REAR_CRADLE_R_2",
+          "passed": true,
+          "cells": 37,
+          "empty_cells": 0,
+          "separated_cells": 19,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_2GT_6MM_OPEN_BELT_ROUTE",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_MOTOR_WELDED_MOUNT",
+          "passed": true,
+          "cells": 7,
+          "empty_cells": 0,
+          "separated_cells": 4,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_FIXED",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_PIN",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_FLAG",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_FLAG_M4_NUT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_FLAG_WASHER",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_SPRING_CAP",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CAP_POST_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CAP_NUT_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CAP_POST_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CAP_NUT_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CYLINDER_PANEL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_SENSOR_SUPPORT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        }
+      ],
+      "passed": true
+    },
+    "Y_X_head": {
+      "candidate_pairs": 0,
+      "proofs": [],
+      "passed": true
+    },
+    "Y_X_Z_tool": {
+      "candidate_pairs": 0,
+      "proofs": [],
+      "passed": true
+    }
+  },
+  "continuous_physical_pickup_XYZ_field": {
+    "Y_gantry_or_drive": {
+      "candidate_pairs": 40,
+      "proofs": [
+        {
+          "moving": "Y_SHOE_L",
+          "fixed": "ATC_REAR_CRADLE_L_1",
+          "passed": true,
+          "cells": 27,
+          "empty_cells": 0,
+          "separated_cells": 14,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_SHOE_L",
+          "fixed": "ATC_REAR_CRADLE_L_2",
+          "passed": true,
+          "cells": 27,
+          "empty_cells": 0,
+          "separated_cells": 14,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_L_2",
+          "fixed": "ATC_REAR_CRADLE_L_2",
+          "passed": true,
+          "cells": 11,
+          "empty_cells": 0,
+          "separated_cells": 6,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_L_2_1",
+          "fixed": "ATC_REAR_CRADLE_L_2",
+          "passed": true,
+          "cells": 61,
+          "empty_cells": 0,
+          "separated_cells": 31,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_L_2_3",
+          "fixed": "ATC_REAR_CRADLE_L_2",
+          "passed": true,
+          "cells": 37,
+          "empty_cells": 0,
+          "separated_cells": 19,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_FIXED",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_PIN",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_FLAG",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_FLAG_M4_NUT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_FLAG_WASHER",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_SPRING_CAP",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CAP_POST_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CAP_NUT_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CAP_POST_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CAP_NUT_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CYLINDER_PANEL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_SENSOR_SUPPORT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "fixed": "ATC_REAR_CRADLE_R_1",
+          "passed": true,
+          "cells": 27,
+          "empty_cells": 0,
+          "separated_cells": 14,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "fixed": "ATC_REAR_CRADLE_R_2",
+          "passed": true,
+          "cells": 27,
+          "empty_cells": 0,
+          "separated_cells": 14,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_R_2",
+          "fixed": "ATC_REAR_CRADLE_R_2",
+          "passed": true,
+          "cells": 11,
+          "empty_cells": 0,
+          "separated_cells": 6,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_R_2_1",
+          "fixed": "ATC_REAR_CRADLE_R_2",
+          "passed": true,
+          "cells": 61,
+          "empty_cells": 0,
+          "separated_cells": 31,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_R_2_3",
+          "fixed": "ATC_REAR_CRADLE_R_2",
+          "passed": true,
+          "cells": 37,
+          "empty_cells": 0,
+          "separated_cells": 19,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_2GT_6MM_OPEN_BELT_ROUTE",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_MOTOR_WELDED_MOUNT",
+          "passed": true,
+          "cells": 7,
+          "empty_cells": 0,
+          "separated_cells": 4,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_FIXED",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_PIN",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_FLAG",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_FLAG_M4_NUT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_FLAG_WASHER",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_SPRING_CAP",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CAP_POST_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CAP_NUT_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CAP_POST_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CAP_NUT_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CYLINDER_PANEL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_SENSOR_SUPPORT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        }
+      ],
+      "passed": true
+    },
+    "Y_X_head": {
+      "candidate_pairs": 0,
+      "proofs": [],
+      "passed": true
+    },
+    "Y_X_Z_tool": {
+      "candidate_pairs": 2,
+      "proofs": [
+        {
+          "moving": "POCKET_FIELD_P50_D15",
+          "fixed": "ATC_LOWER_U_CARRIER",
+          "passed": true,
+          "cells": 31,
+          "empty_cells": 0,
+          "separated_cells": 16,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "POCKET_FIELD_P50_D15",
+          "fixed": "ATC_REMOVABLE_MAGAZINE_U_BRIDGE",
+          "passed": true,
+          "cells": 31,
+          "empty_cells": 0,
+          "separated_cells": 16,
+          "zero_volume_contact_cells": 0
+        }
+      ],
+      "passed": true
+    }
+  },
+  "continuous_parked_closed_wood_XYZ": {
+    "Y_gantry_or_drive": {
+      "candidate_pairs": 101,
+      "proofs": [
+        {
+          "moving": "Y_SHOE_L",
+          "fixed": "ATC_REAR_CRADLE_L_1",
+          "passed": true,
+          "cells": 27,
+          "empty_cells": 0,
+          "separated_cells": 14,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_SHOE_L",
+          "fixed": "ATC_REAR_CRADLE_L_2",
+          "passed": true,
+          "cells": 27,
+          "empty_cells": 0,
+          "separated_cells": 14,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_L_2",
+          "fixed": "ATC_REAR_CRADLE_L_1",
+          "passed": true,
+          "cells": 11,
+          "empty_cells": 0,
+          "separated_cells": 6,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_L_2",
+          "fixed": "ATC_REAR_CRADLE_L_2",
+          "passed": true,
+          "cells": 11,
+          "empty_cells": 0,
+          "separated_cells": 6,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_L_2_1",
+          "fixed": "ATC_REAR_CRADLE_L_1",
+          "passed": true,
+          "cells": 75,
+          "empty_cells": 0,
+          "separated_cells": 38,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_L_2_1",
+          "fixed": "ATC_REAR_CRADLE_L_2",
+          "passed": true,
+          "cells": 61,
+          "empty_cells": 0,
+          "separated_cells": 31,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_L_2_3",
+          "fixed": "ATC_REAR_CRADLE_L_1",
+          "passed": true,
+          "cells": 75,
+          "empty_cells": 0,
+          "separated_cells": 38,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_L_2_3",
+          "fixed": "ATC_REAR_CRADLE_L_2",
+          "passed": true,
+          "cells": 75,
+          "empty_cells": 0,
+          "separated_cells": 38,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_MOVING_WING_L",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_FIXED",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_PIN",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_FLAG",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_FLAG_M4_NUT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_FLAG_WASHER",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_SPRING_CAP",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_CAP_POST_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_CAP_NUT_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_CAP_POST_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_CAP_NUT_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_CYLINDER_PANEL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_SENSOR_SUPPORT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_E2E_C03SR8_0",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_0",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_E2E_C03SR8_1",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_DEPLOY_SENSOR_M2_SET_1",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_FIXED",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_PIN",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_FLAG",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_FLAG_M4_NUT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_FLAG_WASHER",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_SPRING_CAP",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CAP_POST_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CAP_NUT_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CAP_POST_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CAP_NUT_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_CYLINDER_PANEL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_SENSOR_SUPPORT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_E2E_C03SR8_0",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_SENSOR_M2_SET_0",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_E2E_C03SR8_1",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_LOCK_PARK_SENSOR_M2_SET_1",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_L",
+          "fixed": "ATC_MOVING_PIN_BUSHING_L",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "fixed": "ATC_REAR_CRADLE_R_1",
+          "passed": true,
+          "cells": 27,
+          "empty_cells": 0,
+          "separated_cells": 14,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_SHOE_R",
+          "fixed": "ATC_REAR_CRADLE_R_2",
+          "passed": true,
+          "cells": 27,
+          "empty_cells": 0,
+          "separated_cells": 14,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_R_2",
+          "fixed": "ATC_REAR_CRADLE_R_1",
+          "passed": true,
+          "cells": 11,
+          "empty_cells": 0,
+          "separated_cells": 6,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_R_2",
+          "fixed": "ATC_REAR_CRADLE_R_2",
+          "passed": true,
+          "cells": 11,
+          "empty_cells": 0,
+          "separated_cells": 6,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_R_2_1",
+          "fixed": "ATC_REAR_CRADLE_R_1",
+          "passed": true,
+          "cells": 75,
+          "empty_cells": 0,
+          "separated_cells": 38,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_R_2_1",
+          "fixed": "ATC_REAR_CRADLE_R_2",
+          "passed": true,
+          "cells": 61,
+          "empty_cells": 0,
+          "separated_cells": 31,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_R_2_3",
+          "fixed": "ATC_REAR_CRADLE_R_1",
+          "passed": true,
+          "cells": 75,
+          "empty_cells": 0,
+          "separated_cells": 38,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "Y_BLOCK_BOLT_R_2_3",
+          "fixed": "ATC_REAR_CRADLE_R_2",
+          "passed": true,
+          "cells": 75,
+          "empty_cells": 0,
+          "separated_cells": 38,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_MOVING_WING_R",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_2GT_6MM_OPEN_BELT_ROUTE",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_16T_IDLER",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_IDLER_M5x25_AXLE",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_IDLER_LOWER_WASHER",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_IDLER_AXIAL_SPACER",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_IDLER_RUNNING_BUSH",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_IDLER_UPPER_WASHER",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_IDLER_M5_NUT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_MOTOR_WELDED_MOUNT",
+          "passed": true,
+          "cells": 7,
+          "empty_cells": 0,
+          "separated_cells": 4,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_FIXED",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_PIN",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_FLAG",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_FLAG_M4_NUT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_FLAG_WASHER",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_SPRING_CAP",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_CAP_POST_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_CAP_NUT_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_CAP_POST_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_CAP_NUT_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_CYLINDER_PANEL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_SENSOR_SUPPORT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_0",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_0",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_1",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_DEPLOY_SENSOR_M2_SET_1",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_FIXED",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_PIN",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_FLAG",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_FLAG_M4_NUT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_FLAG_WASHER",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_SPRING_CAP",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CAP_POST_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CAP_NUT_110.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CAP_POST_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CAP_NUT_115.5",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_CYLINDER_PANEL",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_SENSOR_SUPPORT",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_E2E_C03SR8_0",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_SENSOR_M2_SET_0",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_E2E_C03SR8_1",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_R_LOCK_PARK_SENSOR_M2_SET_1",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        },
+        {
+          "moving": "GANTRY_END_BRACKET_R",
+          "fixed": "ATC_MOVING_PIN_BUSHING_R",
+          "passed": true,
+          "cells": 1,
+          "empty_cells": 0,
+          "separated_cells": 1,
+          "zero_volume_contact_cells": 0
+        }
+      ],
+      "passed": true
+    },
+    "Y_X_head": {
+      "candidate_pairs": 0,
+      "proofs": [],
+      "passed": true
+    },
+    "Y_X_Z_tool": {
+      "candidate_pairs": 0,
+      "proofs": [],
+      "passed": true
+    }
+  },
+  "continuous_pin_actuation": {
+    "passed": true,
+    "stroke_mm": 6.0,
+    "rigid_stack_translation": {
+      "passed": true,
+      "candidate_pairs": 32,
+      "proofs": [
+        {
+          "moving": "ATC_LOCK_DEPLOY_PIN",
+          "fixed": "ATC_MOVING_WING_L",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_DEPLOY_PIN",
+          "fixed": "ATC_LOCK_DEPLOY_FIXED",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_DEPLOY_PIN",
+          "fixed": "ATC_LOCK_DEPLOY_SPRING_CAP",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_DEPLOY_PIN",
+          "fixed": "ATC_MOVING_PIN_BUSHING_L",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_DEPLOY_FLAG",
+          "fixed": "ATC_LOCK_DEPLOY_FIXED",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_DEPLOY_FLAG",
+          "fixed": "ATC_LOCK_DEPLOY_CAP_POST_110.5",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_DEPLOY_FLAG",
+          "fixed": "ATC_LOCK_DEPLOY_CAP_POST_115.5",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_DEPLOY_FLAG",
+          "fixed": "ATC_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_DEPLOY_FLAG",
+          "fixed": "ATC_LOCK_DEPLOY_SENSOR_SUPPORT",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_PARK_PIN",
+          "fixed": "ATC_LOCK_PARK_FIXED",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_PARK_PIN",
+          "fixed": "ATC_LOCK_PARK_SPRING_CAP",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_PARK_FLAG",
+          "fixed": "ATC_LOCK_PARK_FIXED",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_PARK_FLAG",
+          "fixed": "ATC_LOCK_PARK_CAP_POST_110.5",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_PARK_FLAG",
+          "fixed": "ATC_LOCK_PARK_CAP_POST_115.5",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_PARK_FLAG",
+          "fixed": "ATC_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_LOCK_PARK_FLAG",
+          "fixed": "ATC_LOCK_PARK_SENSOR_SUPPORT",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_DEPLOY_PIN",
+          "fixed": "ATC_MOVING_WING_R",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_DEPLOY_PIN",
+          "fixed": "ATC_R_LOCK_DEPLOY_FIXED",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_DEPLOY_PIN",
+          "fixed": "ATC_R_LOCK_DEPLOY_SPRING_CAP",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_DEPLOY_PIN",
+          "fixed": "ATC_MOVING_PIN_BUSHING_R",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_DEPLOY_FLAG",
+          "fixed": "ATC_R_LOCK_DEPLOY_FIXED",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_DEPLOY_FLAG",
+          "fixed": "ATC_R_LOCK_DEPLOY_CAP_POST_110.5",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_DEPLOY_FLAG",
+          "fixed": "ATC_R_LOCK_DEPLOY_CAP_POST_115.5",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_DEPLOY_FLAG",
+          "fixed": "ATC_R_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_DEPLOY_FLAG",
+          "fixed": "ATC_R_LOCK_DEPLOY_SENSOR_SUPPORT",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_PARK_PIN",
+          "fixed": "ATC_R_LOCK_PARK_FIXED",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_PARK_PIN",
+          "fixed": "ATC_R_LOCK_PARK_SPRING_CAP",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_PARK_FLAG",
+          "fixed": "ATC_R_LOCK_PARK_FIXED",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_PARK_FLAG",
+          "fixed": "ATC_R_LOCK_PARK_CAP_POST_110.5",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_PARK_FLAG",
+          "fixed": "ATC_R_LOCK_PARK_CAP_POST_115.5",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_PARK_FLAG",
+          "fixed": "ATC_R_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        },
+        {
+          "moving": "ATC_R_LOCK_PARK_FLAG",
+          "fixed": "ATC_R_LOCK_PARK_SENSOR_SUPPORT",
+          "swept_intersection_mm3": 0.0,
+          "passed": true
+        }
+      ],
+      "swept_parts": [
+        {
+          "part": "ATC_LOCK_DEPLOY_PIN",
+          "horizontal_boundary_faces": 3,
+          "valid": true
+        },
+        {
+          "part": "ATC_LOCK_DEPLOY_FLAG",
+          "horizontal_boundary_faces": 4,
+          "valid": true
+        },
+        {
+          "part": "ATC_LOCK_DEPLOY_FLAG_M4_NUT",
+          "horizontal_boundary_faces": 2,
+          "valid": true
+        },
+        {
+          "part": "ATC_LOCK_DEPLOY_FLAG_WASHER",
+          "horizontal_boundary_faces": 2,
+          "valid": true
+        },
+        {
+          "part": "ATC_LOCK_PARK_PIN",
+          "horizontal_boundary_faces": 3,
+          "valid": true
+        },
+        {
+          "part": "ATC_LOCK_PARK_FLAG",
+          "horizontal_boundary_faces": 4,
+          "valid": true
+        },
+        {
+          "part": "ATC_LOCK_PARK_FLAG_M4_NUT",
+          "horizontal_boundary_faces": 2,
+          "valid": true
+        },
+        {
+          "part": "ATC_LOCK_PARK_FLAG_WASHER",
+          "horizontal_boundary_faces": 2,
+          "valid": true
+        },
+        {
+          "part": "ATC_R_LOCK_DEPLOY_PIN",
+          "horizontal_boundary_faces": 3,
+          "valid": true
+        },
+        {
+          "part": "ATC_R_LOCK_DEPLOY_FLAG",
+          "horizontal_boundary_faces": 4,
+          "valid": true
+        },
+        {
+          "part": "ATC_R_LOCK_DEPLOY_FLAG_M4_NUT",
+          "horizontal_boundary_faces": 2,
+          "valid": true
+        },
+        {
+          "part": "ATC_R_LOCK_DEPLOY_FLAG_WASHER",
+          "horizontal_boundary_faces": 2,
+          "valid": true
+        },
+        {
+          "part": "ATC_R_LOCK_PARK_PIN",
+          "horizontal_boundary_faces": 3,
+          "valid": true
+        },
+        {
+          "part": "ATC_R_LOCK_PARK_FLAG",
+          "horizontal_boundary_faces": 4,
+          "valid": true
+        },
+        {
+          "part": "ATC_R_LOCK_PARK_FLAG_M4_NUT",
+          "horizontal_boundary_faces": 2,
+          "valid": true
+        },
+        {
+          "part": "ATC_R_LOCK_PARK_FLAG_WASHER",
+          "horizontal_boundary_faces": 2,
+          "valid": true
+        }
+      ],
+      "method": "Exact prismatic positive-Z sweeps from verified horizontal/vertical planar and Z-coaxial cylindrical boundaries; zero-volume designed bearing contacts permitted."
+    },
+    "endpoint_translation_identity": [
+      {
+        "part": "ATC_LOCK_DEPLOY_FLAG",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_LOCK_DEPLOY_FLAG_M4_NUT",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_LOCK_DEPLOY_FLAG_WASHER",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_LOCK_DEPLOY_PIN",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_LOCK_PARK_FLAG",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_LOCK_PARK_FLAG_M4_NUT",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_LOCK_PARK_FLAG_WASHER",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_LOCK_PARK_PIN",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_R_LOCK_DEPLOY_FLAG",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_R_LOCK_DEPLOY_FLAG_M4_NUT",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_R_LOCK_DEPLOY_FLAG_WASHER",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_R_LOCK_DEPLOY_PIN",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_R_LOCK_PARK_FLAG",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_R_LOCK_PARK_FLAG_M4_NUT",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_R_LOCK_PARK_FLAG_WASHER",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      },
+      {
+        "part": "ATC_R_LOCK_PARK_PIN",
+        "stroke_mm": 6.0,
+        "symmetric_difference_mm3": 0.0,
+        "passed": true
+      }
+    ],
+    "deforming_part_relations": [
+      {
+        "spring_part": "ATC_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+        "actuator": "ATC_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+        "passed": true,
+        "spring_relations": {
+          "annulus_geometry_error_mm3": 0.0,
+          "final_spring_outside_initial_mm3": 0.0,
+          "inner_radius_mm": 4.250000000000009,
+          "maximum_pin_radius_mm": 3.0,
+          "radial_gap_mm": 1.2500000000000089,
+          "fixed_top_error_mm": 0.0,
+          "moving_bottom_error_mm": 0.0,
+          "shortening_matches_pin_stroke_mm": 0.0,
+          "final_height_mm": 3.0,
+          "final_spring_outside_translated_initial_mm3": 0.0,
+          "initial_rigid_stack_intersection_mm3": 0.0
+        },
+        "rod_relations": {
+          "initial_outside_final_mm3": 0.0,
+          "added_rod_cylinder_error_mm3": 0.0,
+          "added_rod_length_error_mm": 0.0,
+          "added_rod_bottom_error_mm": 0.0,
+          "rod_tip_flag_underside_error_mm": 0.0,
+          "final_tip_flag_underside_error_mm": 0.0
+        }
+      },
+      {
+        "spring_part": "ATC_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+        "actuator": "ATC_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+        "passed": true,
+        "spring_relations": {
+          "annulus_geometry_error_mm3": 0.0,
+          "final_spring_outside_initial_mm3": 0.0,
+          "inner_radius_mm": 4.250000000000009,
+          "maximum_pin_radius_mm": 3.0,
+          "radial_gap_mm": 1.2500000000000089,
+          "fixed_top_error_mm": 0.0,
+          "moving_bottom_error_mm": 0.0,
+          "shortening_matches_pin_stroke_mm": 0.0,
+          "final_height_mm": 3.0,
+          "final_spring_outside_translated_initial_mm3": 0.0,
+          "initial_rigid_stack_intersection_mm3": 0.0
+        },
+        "rod_relations": {
+          "initial_outside_final_mm3": 0.0,
+          "added_rod_cylinder_error_mm3": 0.0,
+          "added_rod_length_error_mm": 0.0,
+          "added_rod_bottom_error_mm": 0.0,
+          "rod_tip_flag_underside_error_mm": 0.0,
+          "final_tip_flag_underside_error_mm": 0.0
+        }
+      },
+      {
+        "spring_part": "ATC_R_LOCK_DEPLOY_RETURN_SPRING_ENVELOPE",
+        "actuator": "ATC_R_LOCK_DEPLOY_SMC_CJPB6_10_NOMINAL",
+        "passed": true,
+        "spring_relations": {
+          "annulus_geometry_error_mm3": 0.0,
+          "final_spring_outside_initial_mm3": 0.0,
+          "inner_radius_mm": 4.250000000000003,
+          "maximum_pin_radius_mm": 3.0,
+          "radial_gap_mm": 1.2500000000000027,
+          "fixed_top_error_mm": 0.0,
+          "moving_bottom_error_mm": 0.0,
+          "shortening_matches_pin_stroke_mm": 0.0,
+          "final_height_mm": 3.0,
+          "final_spring_outside_translated_initial_mm3": 0.0,
+          "initial_rigid_stack_intersection_mm3": 0.0
+        },
+        "rod_relations": {
+          "initial_outside_final_mm3": 0.0,
+          "added_rod_cylinder_error_mm3": 0.0,
+          "added_rod_length_error_mm": 0.0,
+          "added_rod_bottom_error_mm": 0.0,
+          "rod_tip_flag_underside_error_mm": 0.0,
+          "final_tip_flag_underside_error_mm": 0.0
+        }
+      },
+      {
+        "spring_part": "ATC_R_LOCK_PARK_RETURN_SPRING_ENVELOPE",
+        "actuator": "ATC_R_LOCK_PARK_SMC_CJPB6_10_NOMINAL",
+        "passed": true,
+        "spring_relations": {
+          "annulus_geometry_error_mm3": 0.0,
+          "final_spring_outside_initial_mm3": 0.0,
+          "inner_radius_mm": 4.250000000000003,
+          "maximum_pin_radius_mm": 3.0,
+          "radial_gap_mm": 1.2500000000000027,
+          "fixed_top_error_mm": 0.0,
+          "moving_bottom_error_mm": 0.0,
+          "shortening_matches_pin_stroke_mm": 0.0,
+          "final_height_mm": 3.0,
+          "final_spring_outside_translated_initial_mm3": 0.0,
+          "initial_rigid_stack_intersection_mm3": 0.0
+        },
+        "rod_relations": {
+          "initial_outside_final_mm3": 0.0,
+          "added_rod_cylinder_error_mm3": 0.0,
+          "added_rod_length_error_mm": 0.0,
+          "added_rod_bottom_error_mm": 0.0,
+          "rod_tip_flag_underside_error_mm": 0.0,
+          "final_tip_flag_underside_error_mm": 0.0
+        }
+      }
+    ],
+    "pin_flag_targets": [
+      {
+        "sensor": "ATC_LOCK_DEPLOY_E2E_C03SR8_0",
+        "engaged_flag_gap_mm": 0.5,
+        "withdrawn_flag_gap_mm": 4.031128874149275,
+        "geometric_target_pass": true,
+        "scope": "Point at nominal sensing-face centre to opaque steel flag; not an electrical sensor commissioning test."
+      },
+      {
+        "sensor": "ATC_LOCK_DEPLOY_E2E_C03SR8_1",
+        "engaged_flag_gap_mm": 4.031128874149275,
+        "withdrawn_flag_gap_mm": 0.5,
+        "geometric_target_pass": true,
+        "scope": "Point at nominal sensing-face centre to opaque steel flag; not an electrical sensor commissioning test."
+      },
+      {
+        "sensor": "ATC_LOCK_PARK_E2E_C03SR8_0",
+        "engaged_flag_gap_mm": 0.5,
+        "withdrawn_flag_gap_mm": 4.031128874149275,
+        "geometric_target_pass": true,
+        "scope": "Point at nominal sensing-face centre to opaque steel flag; not an electrical sensor commissioning test."
+      },
+      {
+        "sensor": "ATC_LOCK_PARK_E2E_C03SR8_1",
+        "engaged_flag_gap_mm": 4.031128874149275,
+        "withdrawn_flag_gap_mm": 0.5,
+        "geometric_target_pass": true,
+        "scope": "Point at nominal sensing-face centre to opaque steel flag; not an electrical sensor commissioning test."
+      },
+      {
+        "sensor": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_0",
+        "engaged_flag_gap_mm": 0.5,
+        "withdrawn_flag_gap_mm": 4.031128874149275,
+        "geometric_target_pass": true,
+        "scope": "Point at nominal sensing-face centre to opaque steel flag; not an electrical sensor commissioning test."
+      },
+      {
+        "sensor": "ATC_R_LOCK_DEPLOY_E2E_C03SR8_1",
+        "engaged_flag_gap_mm": 4.031128874149275,
+        "withdrawn_flag_gap_mm": 0.5,
+        "geometric_target_pass": true,
+        "scope": "Point at nominal sensing-face centre to opaque steel flag; not an electrical sensor commissioning test."
+      },
+      {
+        "sensor": "ATC_R_LOCK_PARK_E2E_C03SR8_0",
+        "engaged_flag_gap_mm": 0.5,
+        "withdrawn_flag_gap_mm": 4.031128874149275,
+        "geometric_target_pass": true,
+        "scope": "Point at nominal sensing-face centre to opaque steel flag; not an electrical sensor commissioning test."
+      },
+      {
+        "sensor": "ATC_R_LOCK_PARK_E2E_C03SR8_1",
+        "engaged_flag_gap_mm": 4.031128874149275,
+        "withdrawn_flag_gap_mm": 0.5,
+        "geometric_target_pass": true,
+        "scope": "Point at nominal sensing-face centre to opaque steel flag; not an electrical sensor commissioning test."
+      }
+    ],
+    "scope": "Continuous nominal pin/flag translation; return-spring annuli shorten inside their initial envelopes and rods grow inside final envelopes with tips tracking flag undersides. Spring force/solid height/rod load and actual sensing remain physical acceptance items."
+  },
+  "selected_Z_clearance_case": {
+    "magazine_base_Z_mm": 1030.15,
+    "kit_height_capacity_mm": 80.0,
+    "kit_top_Z_mm": 1110.15,
+    "stock_top_Z_mm": 998.8,
+    "stock_plus_clamps_mm": 40.0,
+    "spindle_reference_at_zero_Z_mm": 970.0,
+    "spindle_reference_at_full_Z_mm": 1170.0,
+    "reference_is_measured_nut_plane": false,
+    "loaded_projection_P_mm": [
+      15.0,
+      50.0
+    ],
+    "max_loaded_projection_for5mm_gap_mm": 54.84999999999991,
+    "loaded_P50_tip_at_full_Z_mm": 1120.0,
+    "loaded_P50_overflight_gap_mm": 9.849999999999909,
+    "minimum_P50_safe_Z_lift_mm": 83.79999999999995,
+    "retained_projection_below_base_R_mm": 26.350000000000136,
+    "retained_tip_to_stock_mm": 5.0,
+    "conditional_nut_seat_height_above_base_H_mm": [
+      23.649999999999864,
+      80.0
+    ],
+    "conditional_reference_datum_engagement_Z_lift_mm": [
+      83.79999999999995,
+      140.1500000000001
+    ],
+    "actual_nut_plane_offset_mm": null,
+    "manufacturer90mm_packaging_margin_mm": 49.84999999999991,
+    "actual_kit_interface_verified": false
+  },
+  "Z_torque_screen": {
+    "applied_Z_torque_Nm": 19.0,
+    "two_sided_pin_span_mm": 924.0,
+    "pin_shear_N": 20.562770562770563,
+    "pin_bearing_MPa": 0.8567821067821068,
+    "pin_diametral_clearance_mm": 0.05,
+    "translation_play_mm": 0.025,
+    "pocket_angular_play_mm": 0.012445887445887446,
+    "beam_I_vertical_axis_mm4": 43763.91616822915,
+    "paired_support_point_moment_beam_deflection_mm": 0.01486134945612941,
+    "screen_only": true,
+    "actual_joint_guide_pin_and_spindle_proof_required": true
+  },
+  "interface": {
+    "revision": "XR2",
+    "stroke_mm": 200.0,
+    "guide_length_mm": 335.0,
+    "guide_pitch_mm": 65.0,
+    "rail_end_reserves_mm": [
+      12.1,
+      12.1
+    ],
+    "rail_hole_end_distances_mm": [
+      20.0,
+      15.0
+    ],
+    "rail_seat_X_mm": [
+      110.025,
+      1039.975
+    ],
+    "magazine_base_Z_mm": 1030.15,
+    "carrier_lowest_over_stock_Z_mm": 1003.8,
+    "stock_plus_clamp_height_mm": 40.0,
+    "stock_top_Z_mm": 998.8,
+    "stock_clearance_mm": 5.0,
+    "max_tool_projection_below_magazine_base_mm": 26.350000000000136,
+    "pocket_centre_acceptance_XY_mm": [
+      345.0,
+      1092.0,
+      805.0,
+      1121.4
+    ],
+    "actual_pocket_centres": null,
+    "actual_magazine_mount_pattern": null,
+    "actual_kit_interface_verified": false,
+    "stage_transport_gantry_Y": 700.0,
+    "loaded_tool_projection_P_mm": [
+      15.0,
+      50.0
+    ],
+    "loaded_tool_radius_mm": 7.5,
+    "safe_running_gap_mm": 5.0,
+    "required_running_gap_mm": 5.0,
+    "nominal_spindle_reference_zero": 970.0,
+    "pin_stroke_mm": 6.0,
+    "gate_stroke_mm": 161.0,
+    "manufacturer_requirements": {
+      "non_inset_clearance_mm": 90,
+      "body_width_mm": 60,
+      "ER11_max_tool_OD_mm": 15,
+      "typical_unrecessed_stickout_mm": 24,
+      "source": "https://rapidchangeatc.com/faq/"
+    },
+    "spindle_reference_is_measured_nut_plane": false,
+    "original_Z100_packaging_screen_margin_mm": -60.15000000000009,
+    "selected_Z200_packaging_screen_margin_mm": 49.84999999999991,
+    "entry_bypass_head_X_mm": 255.0,
+    "pin_actuation_proof": "Endpointchecks only; physicalwithdraw/returnforceanddynamicactuationremaincommissioninggates.",
+    "current_steel_gate": "Manual opening before cold wood job; parked/closed input required for plasma. It is not the vendor servo dust cover.",
+    "release": false
+  },
+  "scope": "Exactsampledlegalstates;conservativecontinuousnonpenetrationforrack,gate,declaredcapacity,entry,pocketXYZfield,closedwoodXYZandnominalpinactuation.Zero-volumebearing/stopcontactsallowed,notclaimedpositiverunningclearance.Actualvendorpocketvoids/nutdatum/realcutters/cables/airhosesunverified;notanM6programorcollisionproofforactualpocketengagement.",
+  "release": false
+}

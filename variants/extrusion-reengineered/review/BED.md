@@ -1,12 +1,12 @@
-# XR1 bed structure — conditional analytical screen
+# XR2 bed structure - conditional analytical screen
 
 The selected cassette is932×257×70.8mm:12.7mm plywood skins around39.05mm core, plus6.35mm removable MDF wear. Seven9mm webs are modeled; five inner webs receive conservative global/shear credit. The front pulls end atY14, preserving theY19web. Aluminum tracks and MDF receive no stiffness credit.
 
-At100N and raw plywoodE4000MPa reduced by25%, the ideal cassette component sum is0.174mm. Adding aligned vertical ledger and header components gives0.230mm against the0.30mm framework/bed target, leaving0.070mm for omitted joints/contact/other components. This is an analytical budget, not a measured assembled pass.
+At100N and raw plywoodE4000MPa reduced by25%, the ideal cassette component sum is0.177mm. Adding aligned vertical ledger and header components gives0.233mm against the0.30mm framework/bed target, leaving0.067mm for omitted joints/contact/other components. This is an analytical budget, not a measured assembled pass.
 
-The weakerE2500MPa sensitivity gives0.311mm before those omitted components and therefore misses the target. Actual plywood stiffness in the915mm span direction must be established. Orient the932mm dimension along the declared stronger bending direction: a2×4skin layout fits one2440×1220sheet without rotating the span across that direction.
+The weakerE2500MPa sensitivity gives0.314mm before those omitted components and therefore misses the target. Actual plywood stiffness in the915mm span direction must be established. Orient the932mm dimension along the declared stronger bending direction: a2×4skin layout fits one2440×1220sheet without rotating the span across that direction.
 
-The top-skin calculation uses a25mm load strip over the45.75mm maximum clear web gap and includes the5mm short, thinner groove segment near one support. Core shear and global bending are separate terms. Glue stresses are demands only; no adhesive allowable or durability is established.
+The top-skin calculation uses a25mm load strip over the45.75mm maximum clear web gap and includes the5mm short, thinner groove segment near one support. Eight half-lap bands use skin-only composite bending I and reduced-web shear area in a nominal sensitivity over the915mm span. Local notch/Vierendeel/glue-transfer compliance is omitted, so this is not a proven conservative stiffness bound. Glue demand is for an unnotched full-contact section, not joint peak stress.
 
 For nominal1.9mm slats screened at1.8mm minimum, the member-only results are0.051mm for150kg distributed among all8slats/two spans and0.179mm for200N at one435mm span midpoint. These do not establish a pan/table load rating: comb contacts, feet/welds, floor, shims and bearer joints require a positive load path and tests.
 

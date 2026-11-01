@@ -1,16 +1,16 @@
 {
-  "revision": "XR1",
+  "revision": "XR2",
   "passed": true,
   "passed_scope": "Analytical-input/source consistency only. This flag does not certify part geometry, strength, service stiffness or the whole machine.",
   "release": false,
   "prices_included": false,
   "analysis_type": "Closed-form box-beam, shear, strip and slat sensitivities; not FEA.",
   "source_sha256": {
-    "params.py": "17a2d2b805eb895517e0088a9a055329915a824fad334068c44db37ae21f326f",
+    "params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
     "frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
-    "bed.py": "b00334d947b9e1bc9e3657d7603f67051a6c5f14460d16729d785b1d57cbbbee",
-    "structure_screen.py": "a85a7ab76b6addd90d4e6a0cf323ac00ace21cdf514acd497dc01186e9da5e8b",
-    "bed_screen.py": "9d758a5c34a335238ad560a759bbee5b69d6b9d9566c43d139d5faec5ed8e10c"
+    "bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "structure_screen.py": "60c0f4a6ce7936274a9228f4756d106a24b94ead6f76b6abc3dfe2600461f299",
+    "bed_screen.py": "f127ea012896f802ce1ba600ef940ccf2def5cadacafdfc9a7b3549471621fa1"
   },
   "input_checks": {
     "balanced_skins_12p7_mm": true,
@@ -18,6 +18,9 @@
     "complete_height_matches_datums": true,
     "seven_webs_modeled": true,
     "five_webs_conservatively_credited": true,
+    "eight_half_lap_crossings": true,
+    "positive_half_lap_remaining_web": true,
+    "half_lap_slot_clearance": true,
     "skin_max_clear_span_45p75_mm": true,
     "front_pulls_preserve_Y19_web": true,
     "groove_leaves6p35_skin_mm": true,
@@ -46,7 +49,20 @@
     ],
     "SLAT_T": 1.9,
     "SLAT_LENGTH": 880.0,
-    "SLAT_X0": 135.0
+    "SLAT_X0": 135.0,
+    "JOINT_CLEARANCE": 0.1,
+    "LAP_SLOT_WIDTH": 9.1,
+    "LAP_NOTCH_DEPTH": 19.575,
+    "CROSS_X_CENTRES": [
+      113.5,
+      1036.5,
+      248.57142857142858,
+      379.14285714285717,
+      509.7142857142857,
+      640.2857142857143,
+      770.8571428571429,
+      901.4285714285714
+    ]
   },
   "geometry": {
     "panel_width_X_mm": 932.0,
@@ -107,7 +123,7 @@
     "core_G_MPa": 400.0,
     "shear_factor": 0.8333333333333334,
     "interpretation": "EffectiveE is rawE\u00d70.75. This is an assumed stiffness reduction, not a qualified glue efficiency or plywood grade.",
-    "web_credit": "Seven modeled; five inner webs credited for global/shear, conservatively omitting outer edge rows. Shallow pulls preserveY19. End lifting-grip discontinuities, holes and adhesives still need physical verification.",
+    "web_credit": "Seven modeled; five inner webs credited. All eight half-lap bands use skin-only composite bending I and reduced-web shear integration as a nominal sensitivity. Actual local coupling and joint compliance are unqualified. End grips preserve internal webs. Holes and adhesive durability still need physical verification.",
     "no_stiffness_credit": [
       "Aluminum T-slot tracks",
       "Al compression tubes/blocks",
@@ -122,8 +138,8 @@
       "effective_E_MPa": 3000.0,
       "core_G_MPa": 400.0,
       "EI_Nmm2": 13412858679.842382,
-      "global_bending_mm": 0.11898732360824028,
-      "web_shear_mm": 0.03905249679897567,
+      "global_bending_mm": 0.11941785522693392,
+      "web_shear_mm": 0.04144199776791217,
       "local_top_skin": {
         "patch_width_mm": 25.0,
         "clear_span_mm": 45.75,
@@ -137,12 +153,56 @@
         "patch_average_bearing_stress_MPa": 0.16,
         "scope": "Conservative25mm-wide strip with a midpoint point force. Actual plate distribution, grain and notch stresses are not qualified."
       },
-      "cassette_component_sum_mm": 0.17419200961776235,
-      "global_extreme_skin_stress_MPa": 0.1693333441232663,
-      "core_average_shear_stress_MPa": 0.02845354958031015,
-      "core_peak_shear_factor1_5_MPa": 0.04268032437046522,
+      "half_lap_effects": {
+        "joint_bands_along_support_span_mm": [
+          [
+            0.0,
+            0.5499999999999972
+          ],
+          [
+            914.45,
+            915.0
+          ],
+          [
+            126.52142857142857,
+            135.6214285714286
+          ],
+          [
+            257.09285714285716,
+            266.1928571428572
+          ],
+          [
+            387.6642857142857,
+            396.76428571428573
+          ],
+          [
+            518.2357142857144,
+            527.3357142857143
+          ],
+          [
+            648.8071428571429,
+            657.9071428571428
+          ],
+          [
+            779.3785714285715,
+            788.4785714285714
+          ]
+        ],
+        "total_band_length_mm": 55.69999999999975,
+        "skin_only_I_in_joint_bands_mm4": 4245942.435183964,
+        "added_global_bending_mm": 0.00043053161869363696,
+        "unnotched_shear_area_mm2": 1757.2499999999998,
+        "notched_shear_area_mm2": 876.3749999999999,
+        "extra_shear_mm": 0.002389500968936503,
+        "scope": "Nominal piecewise unit-load sensitivity. It assumes composite skin coupling across the lap bands and an effective reduced-web shear path. Local notch/Vierendeel/glue-transfer compliance is omitted; this is not a proven conservative stiffness bound."
+      },
+      "cassette_component_sum_mm": 0.1770120422053925,
+      "global_extreme_skin_stress_MPa": 0.17961940533703605,
+      "core_average_shear_stress_MPa": 0.05705320211096849,
+      "core_peak_shear_factor1_5_MPa": 0.08557980316645272,
       "top_skin_to_web_shear_flow_N_per_mm": 0.8955328859409516,
       "nominal_required_glueline_shear_MPa": 0.019900730798687812,
+      "glueline_demand_scope": "Unnotched-section nominal demand distributed over five full web contacts. It does not represent peak glue demand at half-laps, cutouts, end grips or load introduction.",
       "cassette_only_service_target_met": true,
       "allowable_strength_comparison": "None: actual ply, adhesive, grain and moisture/temperature durability remain unqualified."
     },
@@ -152,8 +212,8 @@
       "effective_E_MPa": 3000.0,
       "core_G_MPa": 400.0,
       "EI_Nmm2": 13412858679.842382,
-      "global_bending_mm": 0.35696197082472086,
-      "web_shear_mm": 0.11715749039692702,
+      "global_bending_mm": 0.3582535656808018,
+      "web_shear_mm": 0.1243259933037365,
       "local_top_skin": {
         "patch_width_mm": 25.0,
         "clear_span_mm": 45.75,
@@ -167,12 +227,56 @@
         "patch_average_bearing_stress_MPa": 0.48,
         "scope": "Conservative25mm-wide strip with a midpoint point force. Actual plate distribution, grain and notch stresses are not qualified."
       },
-      "cassette_component_sum_mm": 0.5225760288532871,
-      "global_extreme_skin_stress_MPa": 0.508000032369799,
-      "core_average_shear_stress_MPa": 0.08536064874093044,
-      "core_peak_shear_factor1_5_MPa": 0.12804097311139567,
+      "half_lap_effects": {
+        "joint_bands_along_support_span_mm": [
+          [
+            0.0,
+            0.5499999999999972
+          ],
+          [
+            914.45,
+            915.0
+          ],
+          [
+            126.52142857142857,
+            135.6214285714286
+          ],
+          [
+            257.09285714285716,
+            266.1928571428572
+          ],
+          [
+            387.6642857142857,
+            396.76428571428573
+          ],
+          [
+            518.2357142857144,
+            527.3357142857143
+          ],
+          [
+            648.8071428571429,
+            657.9071428571428
+          ],
+          [
+            779.3785714285715,
+            788.4785714285714
+          ]
+        ],
+        "total_band_length_mm": 55.69999999999975,
+        "skin_only_I_in_joint_bands_mm4": 4245942.435183964,
+        "added_global_bending_mm": 0.0012915948560809109,
+        "unnotched_shear_area_mm2": 1757.2499999999998,
+        "notched_shear_area_mm2": 876.3749999999999,
+        "extra_shear_mm": 0.007168502906809482,
+        "scope": "Nominal piecewise unit-load sensitivity. It assumes composite skin coupling across the lap bands and an effective reduced-web shear path. Local notch/Vierendeel/glue-transfer compliance is omitted; this is not a proven conservative stiffness bound."
+      },
+      "cassette_component_sum_mm": 0.5310361266161775,
+      "global_extreme_skin_stress_MPa": 0.5388582160111082,
+      "core_average_shear_stress_MPa": 0.17115960633290545,
+      "core_peak_shear_factor1_5_MPa": 0.2567394094993582,
       "top_skin_to_web_shear_flow_N_per_mm": 2.686598657822855,
       "nominal_required_glueline_shear_MPa": 0.05970219239606344,
+      "glueline_demand_scope": "Unnotched-section nominal demand distributed over five full web contacts. It does not represent peak glue demand at half-laps, cutouts, end grips or load introduction.",
       "cassette_only_service_target_met": false,
       "allowable_strength_comparison": "None: actual ply, adhesive, grain and moisture/temperature durability remain unqualified."
     },
@@ -182,8 +286,8 @@
       "effective_E_MPa": 1875.0,
       "core_G_MPa": 400.0,
       "EI_Nmm2": 8383036674.901488,
-      "global_bending_mm": 0.19037971777318446,
-      "web_shear_mm": 0.03905249679897567,
+      "global_bending_mm": 0.19106856836309427,
+      "web_shear_mm": 0.04144199776791217,
       "local_top_skin": {
         "patch_width_mm": 25.0,
         "clear_span_mm": 45.75,
@@ -197,12 +301,56 @@
         "patch_average_bearing_stress_MPa": 0.16,
         "scope": "Conservative25mm-wide strip with a midpoint point force. Actual plate distribution, grain and notch stresses are not qualified."
       },
-      "cassette_component_sum_mm": 0.25527571730903437,
-      "global_extreme_skin_stress_MPa": 0.1693333441232663,
-      "core_average_shear_stress_MPa": 0.02845354958031015,
-      "core_peak_shear_factor1_5_MPa": 0.04268032437046522,
+      "half_lap_effects": {
+        "joint_bands_along_support_span_mm": [
+          [
+            0.0,
+            0.5499999999999972
+          ],
+          [
+            914.45,
+            915.0
+          ],
+          [
+            126.52142857142857,
+            135.6214285714286
+          ],
+          [
+            257.09285714285716,
+            266.1928571428572
+          ],
+          [
+            387.6642857142857,
+            396.76428571428573
+          ],
+          [
+            518.2357142857144,
+            527.3357142857143
+          ],
+          [
+            648.8071428571429,
+            657.9071428571428
+          ],
+          [
+            779.3785714285715,
+            788.4785714285714
+          ]
+        ],
+        "total_band_length_mm": 55.69999999999975,
+        "skin_only_I_in_joint_bands_mm4": 4245942.435183964,
+        "added_global_bending_mm": 0.0006888505899098192,
+        "unnotched_shear_area_mm2": 1757.2499999999998,
+        "notched_shear_area_mm2": 876.3749999999999,
+        "extra_shear_mm": 0.002389500968936503,
+        "scope": "Nominal piecewise unit-load sensitivity. It assumes composite skin coupling across the lap bands and an effective reduced-web shear path. Local notch/Vierendeel/glue-transfer compliance is omitted; this is not a proven conservative stiffness bound."
+      },
+      "cassette_component_sum_mm": 0.2583540688678807,
+      "global_extreme_skin_stress_MPa": 0.17961940533703605,
+      "core_average_shear_stress_MPa": 0.05705320211096849,
+      "core_peak_shear_factor1_5_MPa": 0.08557980316645272,
       "top_skin_to_web_shear_flow_N_per_mm": 0.8955328859409516,
       "nominal_required_glueline_shear_MPa": 0.019900730798687812,
+      "glueline_demand_scope": "Unnotched-section nominal demand distributed over five full web contacts. It does not represent peak glue demand at half-laps, cutouts, end grips or load introduction.",
       "cassette_only_service_target_met": true,
       "allowable_strength_comparison": "None: actual ply, adhesive, grain and moisture/temperature durability remain unqualified."
     },
@@ -212,8 +360,8 @@
       "effective_E_MPa": 1875.0,
       "core_G_MPa": 400.0,
       "EI_Nmm2": 8383036674.901488,
-      "global_bending_mm": 0.5711391533195533,
-      "web_shear_mm": 0.11715749039692702,
+      "global_bending_mm": 0.5732057050892828,
+      "web_shear_mm": 0.1243259933037365,
       "local_top_skin": {
         "patch_width_mm": 25.0,
         "clear_span_mm": 45.75,
@@ -227,12 +375,56 @@
         "patch_average_bearing_stress_MPa": 0.48,
         "scope": "Conservative25mm-wide strip with a midpoint point force. Actual plate distribution, grain and notch stresses are not qualified."
       },
-      "cassette_component_sum_mm": 0.765827151927103,
-      "global_extreme_skin_stress_MPa": 0.508000032369799,
-      "core_average_shear_stress_MPa": 0.08536064874093044,
-      "core_peak_shear_factor1_5_MPa": 0.12804097311139567,
+      "half_lap_effects": {
+        "joint_bands_along_support_span_mm": [
+          [
+            0.0,
+            0.5499999999999972
+          ],
+          [
+            914.45,
+            915.0
+          ],
+          [
+            126.52142857142857,
+            135.6214285714286
+          ],
+          [
+            257.09285714285716,
+            266.1928571428572
+          ],
+          [
+            387.6642857142857,
+            396.76428571428573
+          ],
+          [
+            518.2357142857144,
+            527.3357142857143
+          ],
+          [
+            648.8071428571429,
+            657.9071428571428
+          ],
+          [
+            779.3785714285715,
+            788.4785714285714
+          ]
+        ],
+        "total_band_length_mm": 55.69999999999975,
+        "skin_only_I_in_joint_bands_mm4": 4245942.435183964,
+        "added_global_bending_mm": 0.0020665517697294575,
+        "unnotched_shear_area_mm2": 1757.2499999999998,
+        "notched_shear_area_mm2": 876.3749999999999,
+        "extra_shear_mm": 0.007168502906809482,
+        "scope": "Nominal piecewise unit-load sensitivity. It assumes composite skin coupling across the lap bands and an effective reduced-web shear path. Local notch/Vierendeel/glue-transfer compliance is omitted; this is not a proven conservative stiffness bound."
+      },
+      "cassette_component_sum_mm": 0.775062206603642,
+      "global_extreme_skin_stress_MPa": 0.5388582160111082,
+      "core_average_shear_stress_MPa": 0.17115960633290545,
+      "core_peak_shear_factor1_5_MPa": 0.2567394094993582,
       "top_skin_to_web_shear_flow_N_per_mm": 2.686598657822855,
       "nominal_required_glueline_shear_MPa": 0.05970219239606344,
+      "glueline_demand_scope": "Unnotched-section nominal demand distributed over five full web contacts. It does not represent peak glue demand at half-laps, cutouts, end grips or load introduction.",
       "cassette_only_service_target_met": false,
       "allowable_strength_comparison": "None: actual ply, adhesive, grain and moisture/temperature durability remain unqualified."
     }
@@ -240,11 +432,11 @@
   "combined_vertical_service_sensitivities": [
     {
       "raw_plywood_E_MPa": 4000.0,
-      "cassette_mm": 0.17419200961776235,
+      "cassette_mm": 0.1770120422053925,
       "ledger_bending_and_torsion_mm": 0.04670211420302178,
       "header_vertical_strong_axis_mm": 0.008987425002054739,
-      "known_ideal_component_subtotal_mm": 0.22988154882283887,
-      "remaining_budget_to0p30_mm": 0.07011845117716112,
+      "known_ideal_component_subtotal_mm": 0.232701581410469,
+      "remaining_budget_to0p30_mm": 0.06729841858953098,
       "ideal_subtotal_target_met": true,
       "assembled_target_qualified": false,
       "front_ledger_joint_detail": "Three stations per front arm aftertransfer relief, includingtwoX-separated back-row bolts; four perotherarm. Nominal twist restraint still requires test.",
@@ -253,11 +445,11 @@
     },
     {
       "raw_plywood_E_MPa": 2500.0,
-      "cassette_mm": 0.25527571730903437,
+      "cassette_mm": 0.2583540688678807,
       "ledger_bending_and_torsion_mm": 0.04670211420302178,
       "header_vertical_strong_axis_mm": 0.008987425002054739,
-      "known_ideal_component_subtotal_mm": 0.3109652565141109,
-      "remaining_budget_to0p30_mm": -0.0109652565141109,
+      "known_ideal_component_subtotal_mm": 0.3140436080729572,
+      "remaining_budget_to0p30_mm": -0.014043608072957237,
       "ideal_subtotal_target_met": false,
       "assembled_target_qualified": false,
       "front_ledger_joint_detail": "Three stations per front arm aftertransfer relief, includingtwoX-separated back-row bolts; four perotherarm. Nominal twist restraint still requires test.",
