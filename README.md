@@ -3,6 +3,11 @@
 Current small-table design: **800 mm X / 1000 mm Y / 200 mm Z nominal travel**.
 The original 100 mm Z is superseded by the user-authorized full-bed ATC redesign.
 
+**Owned Z update:** the user confirms a **300 mm-travel Z module**. Its model
+and physical interfaces are pending. [Assess this owned unit](variants/owned-z300-assessment/README.md)
+before purchasing the proposed 200 mm replacement. XR2 remains the audited
+200 mm CAD baseline until the actual owned module is integrated and rechecked.
+
 **Current small-table redesign: [XR2 — re-engineered 4080 wood/plasma table](variants/extrusion-reengineered/README.md).**
 This replaces the previous extrusion-table and cart proposals for the user's
 current build. The complete mechanical-table budget is capped at USD 1,000;

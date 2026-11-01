@@ -5,6 +5,10 @@ travel**, with a 4080 frame, removable dry cassettes, steel plasma pan and
 retractable ATC hardware. The user authorized a different Z unit to retain
 full-bed ATC; the original 100 mm Z is superseded in this variant.
 
+**Owned hardware update:** a [300 mm-travel Z is already owned](variants/owned-z300-assessment/README.md).
+The proposed new 200 mm purchase is on hold pending its model and fit check.
+The XR2 CAD below still represents the audited 200 mm candidate.
+
 - [Current design and ownership](variants/extrusion-reengineered/README.md)
 - [Current woodworking STEP](variants/extrusion-reengineered/review/XR2_WOOD.step)
 - [Current plasma STEP](variants/extrusion-reengineered/review/XR2_PLASMA.step)
