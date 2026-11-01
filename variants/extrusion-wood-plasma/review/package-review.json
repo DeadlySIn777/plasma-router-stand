@@ -1,0 +1,426 @@
+{
+  "status": "PASS",
+  "scope": "File consistency and declared bounded checks only, not a machine fabrication or operation release.",
+  "checks": [
+    {
+      "check": "bed-check.json: process_bed.py",
+      "pass": true
+    },
+    {
+      "check": "bed-check.json: check_process_bed.py",
+      "pass": true
+    },
+    {
+      "check": "bed-check.json: frame.py",
+      "pass": true
+    },
+    {
+      "check": "bed-check.json: motion_context.py",
+      "pass": true
+    },
+    {
+      "check": "BED-MODES.md: ../../output/release-review/RevE-ENGINEERING/WATER-CONTROL.md",
+      "pass": true
+    },
+    {
+      "check": "BED-MODES.md: ../../output/release-review/RevE-ENGINEERING/PLASMA-COMPATIBILITY.md",
+      "pass": true
+    },
+    {
+      "check": "BED-MODES.md: bed-check.json",
+      "pass": true
+    },
+    {
+      "check": "BED-MODES.md: check_process_bed.py",
+      "pass": true
+    },
+    {
+      "check": "FRAME-HARDWARE.md: frame.py",
+      "pass": true
+    },
+    {
+      "check": "FRAME-HARDWARE.md: FASTENERS.md",
+      "pass": true
+    },
+    {
+      "check": "FRAME-HARDWARE.md: SOURCING.md",
+      "pass": true
+    },
+    {
+      "check": "motion-evidence.json: output/release-review/RevE-ENGINEERING/cad_helpers.py",
+      "pass": true
+    },
+    {
+      "check": "motion-evidence.json: output/release-review/RevE-ENGINEERING/motion_details.py",
+      "pass": true
+    },
+    {
+      "check": "motion-evidence.json: output/release-review/RevE-ENGINEERING/motion_completion.py",
+      "pass": true
+    },
+    {
+      "check": "motion-evidence.json: output/release-review/RevE-ENGINEERING/motion_finish.py",
+      "pass": true
+    },
+    {
+      "check": "motion-evidence.json: variants/extrusion-wood-plasma/motion_context.py",
+      "pass": true
+    },
+    {
+      "check": "motion-evidence.json: variants/extrusion-wood-plasma/process_bed.py",
+      "pass": true
+    },
+    {
+      "check": "MOTION.md: ../../output/release-review/RevE-ENGINEERING/verified-purchases.json",
+      "pass": true
+    },
+    {
+      "check": "MOTION.md: ../../output/design-finish-2026-09-26/motion/README.md",
+      "pass": true
+    },
+    {
+      "check": "MOTION.md: frame.py",
+      "pass": true
+    },
+    {
+      "check": "MOTION.md: motion-detail/WP_PLASMA_DROP_115.step",
+      "pass": true
+    },
+    {
+      "check": "MOTION.md: motion-detail/WP_PLASMA_DROP_115.dxf",
+      "pass": true
+    },
+    {
+      "check": "MOTION.md: motion-evidence.json",
+      "pass": true
+    },
+    {
+      "check": "MOTION.md: motion-detail/clearance-check.json",
+      "pass": true
+    },
+    {
+      "check": "MOTION.md: motion-detail/external-envelope.json",
+      "pass": true
+    },
+    {
+      "check": "README.md: review/overview.png",
+      "pass": true
+    },
+    {
+      "check": "README.md: SOURCING.md",
+      "pass": true
+    },
+    {
+      "check": "README.md: FASTENERS.md",
+      "pass": true
+    },
+    {
+      "check": "README.md: SOURCING.md",
+      "pass": true
+    },
+    {
+      "check": "README.md: stock-and-cuts.csv",
+      "pass": true
+    },
+    {
+      "check": "README.md: extra-pack-9-feet.csv",
+      "pass": true
+    },
+    {
+      "check": "README.md: review/support-screen.json",
+      "pass": true
+    },
+    {
+      "check": "README.md: BED-MODES.md",
+      "pass": true
+    },
+    {
+      "check": "README.md: MOTION.md",
+      "pass": true
+    },
+    {
+      "check": "README.md: review/WOOD.step",
+      "pass": true
+    },
+    {
+      "check": "README.md: review/PLASMA.step",
+      "pass": true
+    },
+    {
+      "check": "README.md: review/FRAME_9_FEET.step",
+      "pass": true
+    },
+    {
+      "check": "README.md: review/FRAME.step",
+      "pass": true
+    },
+    {
+      "check": "README.md: FRAME-HARDWARE.md",
+      "pass": true
+    },
+    {
+      "check": "README.md: plate-profiles/index.csv",
+      "pass": true
+    },
+    {
+      "check": "README.md: review/overview.png",
+      "pass": true
+    },
+    {
+      "check": "README.md: review/wood-view.png",
+      "pass": true
+    },
+    {
+      "check": "README.md: review/plasma-view.png",
+      "pass": true
+    },
+    {
+      "check": "README.md: review/component-index.csv",
+      "pass": true
+    },
+    {
+      "check": "README.md: WATER.md",
+      "pass": true
+    },
+    {
+      "check": "README.md: review/build-check.json",
+      "pass": true
+    },
+    {
+      "check": "README.md: review/interface-checks.json",
+      "pass": true
+    },
+    {
+      "check": "README.md: bed-check.json",
+      "pass": true
+    },
+    {
+      "check": "README.md: motion-detail/external-envelope.json",
+      "pass": true
+    },
+    {
+      "check": "README.md: MOTION.md",
+      "pass": true
+    },
+    {
+      "check": "SOURCING.md: stock-and-cuts.csv",
+      "pass": true
+    },
+    {
+      "check": "WATER.md: review/WATER.step",
+      "pass": true
+    },
+    {
+      "check": "WATER.md: bed-check.json",
+      "pass": true
+    },
+    {
+      "check": "WATER.md: water_option.py",
+      "pass": true
+    },
+    {
+      "check": "WATER.md: review/water-option.json",
+      "pass": true
+    },
+    {
+      "check": "clearance-check.json: output/release-review/RevE-ENGINEERING/cad_helpers.py",
+      "pass": true
+    },
+    {
+      "check": "clearance-check.json: output/release-review/RevE-ENGINEERING/motion_details.py",
+      "pass": true
+    },
+    {
+      "check": "clearance-check.json: output/release-review/RevE-ENGINEERING/motion_completion.py",
+      "pass": true
+    },
+    {
+      "check": "clearance-check.json: output/release-review/RevE-ENGINEERING/motion_finish.py",
+      "pass": true
+    },
+    {
+      "check": "clearance-check.json: variants/extrusion-wood-plasma/motion_context.py",
+      "pass": true
+    },
+    {
+      "check": "clearance-check.json: variants/extrusion-wood-plasma/check_motion_drop.py",
+      "pass": true
+    },
+    {
+      "check": "external-envelope.json: variants/extrusion-wood-plasma/check_work_envelope.py",
+      "pass": true
+    },
+    {
+      "check": "external-envelope.json: variants/extrusion-wood-plasma/motion_context.py",
+      "pass": true
+    },
+    {
+      "check": "external-envelope.json: variants/extrusion-wood-plasma/process_bed.py",
+      "pass": true
+    },
+    {
+      "check": "external-envelope.json: variants/extrusion-wood-plasma/frame.py",
+      "pass": true
+    },
+    {
+      "check": "build-check.json: build.py",
+      "pass": true
+    },
+    {
+      "check": "build-check.json: frame.py",
+      "pass": true
+    },
+    {
+      "check": "build-check.json: preview.py",
+      "pass": true
+    },
+    {
+      "check": "build-check.json: motion_context.py",
+      "pass": true
+    },
+    {
+      "check": "build-check.json: process_bed.py",
+      "pass": true
+    },
+    {
+      "check": "STEP readbacks",
+      "pass": true
+    },
+    {
+      "check": "frame/bed/motion/interface clashes",
+      "pass": true
+    },
+    {
+      "check": "travel screening",
+      "pass": true
+    },
+    {
+      "check": "new plasma head checks",
+      "pass": true
+    },
+    {
+      "check": "manual transfer samples",
+      "pass": true
+    },
+    {
+      "check": "internal bed checks",
+      "pass": true
+    },
+    {
+      "check": "all four pan mounts captured",
+      "pass": true
+    },
+    {
+      "check": "optional water layout has room for full return",
+      "pass": true
+    },
+    {
+      "check": "support screen uses retained pan mass",
+      "pass": true
+    },
+    {
+      "check": "the 36 frame profiles are included",
+      "pass": true
+    },
+    {
+      "check": "budget nesting and variants",
+      "pass": true
+    },
+    {
+      "check": "pack counts",
+      "pass": true
+    },
+    {
+      "check": "wood preview",
+      "pass": true
+    },
+    {
+      "check": "plasma preview",
+      "pass": true
+    },
+    {
+      "check": "frame preview",
+      "pass": true
+    }
+  ],
+  "files_sha256": {
+    "bed-check.json": "6bbc406b4745579bacacff7b78d0c4aa08eaaeda3941be04c816f431e7427a1c",
+    "BED-MODES.md": "424540c10ce132cee03e97db58aed88884d7c7df144e749d1378dc0cb10194f2",
+    "build.py": "f839a0143ebc3e933332c6cfacd3c376e0f7df1656da53b1bbe926b4c8d7e537",
+    "check_motion_drop.py": "190f34f6d9b1727e0f729445e06fc1e1ba40f09a0b0071e1434566beb0469dd2",
+    "check_process_bed.py": "e2c9ab402fff217dd470bafad8d71a79941eeff48f2e6447f4a6a6425e8e9c93",
+    "check_work_envelope.py": "38de89f471755e75d7f055628e2ffd927f1cdea71b77542b78b4aaec02e79d7e",
+    "extra-pack-9-feet.csv": "16e2389c29d0722d43fbdcd0415528143eb174456523c0e0c951a6a61ccc7d3f",
+    "FASTENERS.md": "a17ecd2c40eb1e898685f6a26e864d8f6221d7fa9d3e259c0fd8578f60729118",
+    "FRAME-HARDWARE.md": "7cf4535670efe7dafa6ac7d0eb4ce3292cea48720f537eff95e2eea637019cbc",
+    "frame.py": "1c17e5b79eaf61f549f46572ab6eb1e602866d9ff84e45d1f99e44f340e946b7",
+    "motion-detail/clearance-check.json": "fc8326aad9a75a57a72f4f5dead2cc6cbea7aea0cf852746a305dad595657cb1",
+    "motion-detail/external-envelope.json": "4d5d98ac5df08b013ec9653d97369eb032fc4ad8659134f290b4fc117e18ee46",
+    "motion-detail/WP_PLASMA_DROP_115.dxf": "90873e5edee2c7727f450fd09da6fe90095c83bdf761dd1d4b2cb92b82372f15",
+    "motion-detail/WP_PLASMA_DROP_115.step": "d18d3ef60e747c8ad387765494c2f7cec82c5f8600ef6fd78262aac024fd9229",
+    "motion-evidence.json": "8a914dba45ee47eca7ccad3483129499b94d8b47bb7a843e4da8e66867a1ed11",
+    "MOTION.md": "17c09e359b2a583670bf3f1943c988e8ca4207b9788f1b0cde6dc7245be9785f",
+    "motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "plate-profiles/BEARING_SHELF_L_1.dxf": "6d7fb18ed27c531ee7b2222d68b6b295f779bfb06f5086bd9eb4739fe31f9c1a",
+    "plate-profiles/BEARING_SHELF_L_2.dxf": "fda228ca95b1148b07696e2715ecd1c7655d1c9b74506f33640de17e182a31d9",
+    "plate-profiles/BEARING_SHELF_L_3.dxf": "f7685fd79de16b6855372e66cc8b0703f40339f14d182d5404f109ad6c36eb8b",
+    "plate-profiles/BEARING_SHELF_R_1.dxf": "32983bb346663708f05340be4a7fff07ddaa11f96e7c795c402dbaac282df02a",
+    "plate-profiles/BEARING_SHELF_R_2.dxf": "385d656eaeb12b6c77728827ec1c2d2ed2f0ffc4542c86bdc2dbdde82b87b066",
+    "plate-profiles/BEARING_SHELF_R_3.dxf": "906ea09815dd5dda7b93894bb1f7108c60d2270d23816301ddd6576ba0880d68",
+    "plate-profiles/BRACE_END_F_1.dxf": "73ae309acb18ecb9c08f68915b1fe1dcc9f9930b1fd52af987f64552defbabcd",
+    "plate-profiles/BRACE_END_F_2.dxf": "79e025b54476076ad43159389b22b340159bad3b17816e816547ec98e062ea87",
+    "plate-profiles/BRACE_END_R_1.dxf": "5d13d5a2dcd5533db068175bc6eb453ea44488be0531878217e4e3b74089edb8",
+    "plate-profiles/BRACE_END_R_2.dxf": "2facf271756c325c38a98d35e6124e6f756dc9b0d68a453f39cc6e3d6a382f4f",
+    "plate-profiles/BRACE_SIDE_L_1_1.dxf": "2352b6b6daf56d311ffa1cd122c9ca142873d67de390fe2846456643baaafb5b",
+    "plate-profiles/BRACE_SIDE_L_1_2.dxf": "d9f761cd8f3f410cfc8b40fb3b91292e8b1d0ff3713d6efcc503f105cabdb514",
+    "plate-profiles/BRACE_SIDE_L_2_1.dxf": "79507cf7674bb08bead525c53176f1ce12f26871113cc0f885c5a6571c106787",
+    "plate-profiles/BRACE_SIDE_L_2_2.dxf": "266fbd1933cd8094b04ab852ba53728c43a932c4aefabb98b56c3a0c339d0b96",
+    "plate-profiles/BRACE_SIDE_R_1_1.dxf": "badfcdae725bb94366ab77f5b6159b057ef1c5f4beeef5b7c69054b90f4f1860",
+    "plate-profiles/BRACE_SIDE_R_1_2.dxf": "4b14eb748e63599fe368af0be5666e45d348a8b1ccc32451c8593201670e2393",
+    "plate-profiles/BRACE_SIDE_R_2_1.dxf": "1167d9d58a7265b840ab94aa6a2d67954a8a2a5136623cef5701bd9a1aa180ab",
+    "plate-profiles/BRACE_SIDE_R_2_2.dxf": "a385d9b985e337ba6c7e186b5fd10892884106a6f96bbdeb2aec6df782e9d8d1",
+    "plate-profiles/index.csv": "4a4c918ea8ccbc371ce06d5153b6bd6cf38ed805e226e0375cf031ba9b91329c",
+    "plate-profiles/JOIN_L_1_MID.dxf": "63b71ddabe36e37ac61a5fd64261f8733b203593789107c80dc992f4c6e1b02f",
+    "plate-profiles/JOIN_L_1_TOP.dxf": "da58cfc2322980874dc0e0128c582c98f8937bf2d328aac1062e77109f03678d",
+    "plate-profiles/JOIN_L_2_MID.dxf": "523c18cc234a0162a59a58fa7bca61c0d814b2aed42621daeb3737a3b0966dec",
+    "plate-profiles/JOIN_L_2_TOP.dxf": "2fe4707cf05f32b6b55d87552412f42cae2c8ccd0f39de84efc7973c92b11f6b",
+    "plate-profiles/JOIN_L_3_MID.dxf": "c3c5b15f903691f156341e28653f39fb9433a124b0cbd2043b3fd5b87468718f",
+    "plate-profiles/JOIN_L_3_TOP.dxf": "b78742d295dc736d90f5b253b3027ca5b5d2d57ee369f32035b7156e7cb6df3a",
+    "plate-profiles/JOIN_R_1_MID.dxf": "db7366bde6625031c1113b1ebfc6b832b49da6c94cb3458780dd508de1e8bdf1",
+    "plate-profiles/JOIN_R_1_TOP.dxf": "8fdd46d75b791fd8725d070f90c7fbf4ca0558feefedf28a2015c11446da8145",
+    "plate-profiles/JOIN_R_2_MID.dxf": "571c158c296b1c6c1658d3037ad057885b81663578b977f910be9fc41d91b4f6",
+    "plate-profiles/JOIN_R_2_TOP.dxf": "0e9b98df9ec0c16552b4f45dcf9eb5c4955c0d34169d385b8e0f54b8d06056f9",
+    "plate-profiles/JOIN_R_3_MID.dxf": "044c08e53ed904d44d56c06a4c3d65a4a004d10e16fc2b6a036ff213366b9a8a",
+    "plate-profiles/JOIN_R_3_TOP.dxf": "37d0e5cf89abdba9f9770999191e51513d3cc276a0fa7da81b9ce5cd86ac88e3",
+    "plate-profiles/OPT_BEARER_CLIP_1_1.dxf": "8591b84911732d8522f8716d4f03a072d6be227126d572944b6e8ef47fbc2ff4",
+    "plate-profiles/OPT_BEARER_CLIP_1_2.dxf": "2ef1e7f8c9be0af67e75fa6b36182b5658fff376213585f5892f8d1011697501",
+    "plate-profiles/OPT_BEARER_CLIP_2_1.dxf": "5cae55b77402e4a2f7a000b720f50e42459c9fa3641b78e30c264059bd5cbcdb",
+    "plate-profiles/OPT_BEARER_CLIP_2_2.dxf": "4f3926bcab86c61f2a12a112485f0f6a56dfed987934d020b2509a509f0f5934",
+    "plate-profiles/OPT_BEARER_CLIP_3_1.dxf": "8460b53276f0f63b87172d285080872faf750749227939643d415ee312d031e4",
+    "plate-profiles/OPT_BEARER_CLIP_3_2.dxf": "ac3d3f2f49f0e233bb0f62fb1695ce31a99a4ff67062690e0728b003d8f5f3c7",
+    "plate_profiles.py": "3039f695bcedc45b093e804031795a22217cae2c332149cab7e473d04b6f9377",
+    "preview.py": "1c6be84779cce50e7d9486c5aa5135ec0b8ea345cd8b4df27ba0684d0fe89bad",
+    "process_bed.py": "8582c0fe6a1399a3a74bec26e861621b142ef867582e76e93aebc2c24bf8d95e",
+    "README.md": "8efd98d6d67e7670a11a3d6c015ea902e63c448899413a68a06454d4baa305e4",
+    "review/build-check.json": "bb1fcd574f5e61d3ec3c23b800b3d1a033ab52e12ce5b5edba3baebc8a013a15",
+    "review/component-index.csv": "1645ab955c5acb3e71a7f2c1eb9b50584f3ec618dad63a0e23b7a170f442e257",
+    "review/frame-view.png": "e2a0c82e7b0b42f0b3980e8104e237eefa77375d24ba7ea2ce7435acc80fc906",
+    "review/FRAME.step": "cc1d6e2feae0af793ff5c7dde846cdfdc581d0d8c485c730e89283bdf1009187",
+    "review/FRAME_9_FEET.step": "842d06cc5a99196bfd7e16838e4451273f18b68fc010a7a237c8d6fcfedbd2e7",
+    "review/interface-checks.json": "a7512362f4417b9ed4ed24518f0ac420e95d180b075c88a4e1511d3d38b9c89f",
+    "review/overview.png": "4cf18a214a34d37b51141132a0e5d60b8b51c244c49ea70775492715511aed7a",
+    "review/plasma-view.png": "e24a06ced9c9094cf670cabf9cac27b8f8ad17d5dc5e6e0bf7d6f81bd99c4581",
+    "review/PLASMA.step": "2083b394856c734b55b7e14208365b96dcb21257124f9bca1b48ceab6edc597e",
+    "review/support-screen.json": "4d52fffa5680ee9e16a76ca0434c180b7334caa5afdb7145cad25f196e904833",
+    "review/water-option.json": "d86b40493ffd7d3f92fc765a299b246f3988aae5d6a03fe3078234c5191ba1ba",
+    "review/WATER.step": "5484760856d91f48cecb0a24727e400c61e269c8335b4628cc27a90307d56a8d",
+    "review/wood-view.png": "52affbb9597d776761fd7c1a5f3c4029bdf281e2e9bc1478312e222fdee842c9",
+    "review/WOOD.step": "bae6219da49e8a510da432d2464de4253305d78bb105b47a957b7fa96c0edaab",
+    "SOURCING.md": "ad2212ef6d3768384a9730c55969263fc52559a10617d3eb48b524b4c5f3fc44",
+    "stock-and-cuts.csv": "52b7ab31f9d19f49a4d05bd4700275dbef627287cc0aaf0c1d58bb5ba1337deb",
+    "support_screen.py": "6375a095dbf7d506203d85a62bca2354a4040f369ded8b9dc03b559ef8cfa778",
+    "verify_package.py": "4352134e585f9e28e2d52b7e37847d3445c654d8ace215570310ff393562ff7e",
+    "WATER.md": "1b92ec394c8253ff51157e36f68257a15c8283a5ff31a25bff4e0d94e19ffb63",
+    "water_option.py": "55d8773d2c986ec1e3e0288d92da2b6d31fd53e3b93169546d3c796b3be7edbb"
+  }
+}

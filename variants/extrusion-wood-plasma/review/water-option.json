@@ -1,0 +1,108 @@
+{
+  "source": "Separate optional WATER.step in same coordinates as WOOD/PLASMA. All capacities approximate.",
+  "tank_external_mm": [
+    380.0,
+    840.0,
+    310.0
+  ],
+  "tank_internal_floor_z_mm": 22.0,
+  "tank_rim_z_mm": 330.0,
+  "operating_charge_max_L": 65.0,
+  "gross_to_rim_L": 96.815488,
+  "high_high_gross_L": 84.87072,
+  "reserved_hardware_sludge_L": 2.0,
+  "usable_to_HH_after_reserve_L": 82.87072,
+  "remaining_to_HH_at_max_charge_L": 17.870720000000006,
+  "gross_capacity_at_low_cutoff_L": 16.659808,
+  "reconstructed_pan_overflow_upper_bound_L": 47.79060768000004,
+  "full_return_test_L": 79.33819168000005,
+  "full_return_test_headroom_L": 3.5325283199999546,
+  "line_drainback_allowance_L": 2.0,
+  "fill_nozzle_outlet_above_pan_rim_mm": 32.0,
+  "pan_levels_mm": {
+    "low": 851,
+    "work": 887,
+    "HH": 893,
+    "overflow_invert": 896,
+    "rim": 907.0
+  },
+  "tank_levels_mm": {
+    "low": 75,
+    "drain_start_limit": 116,
+    "HH": 292
+  },
+  "gross_capacity_at_drain_start_threshold_L": 29.547584,
+  "routing_world_bounds_mm": [
+    120.0,
+    4.0,
+    0.0,
+    899.0,
+    1000.0,
+    963.0
+  ],
+  "geometry_checks": {
+    "self": {
+      "exact_intersections_after_bounds_filter": 20,
+      "interferences_gt_0p05_mm3": []
+    },
+    "both_frame_options": {
+      "exact_intersections_after_bounds_filter": 6,
+      "interferences_gt_0p05_mm3": []
+    },
+    "wood_bed": {
+      "exact_intersections_after_bounds_filter": 30,
+      "interferences_gt_0p05_mm3": []
+    },
+    "wood_full_step": {
+      "exact_intersections_after_bounds_filter": 36,
+      "interferences_gt_0p05_mm3": []
+    },
+    "plasma_bed": {
+      "exact_intersections_after_bounds_filter": 25,
+      "interferences_gt_0p05_mm3": []
+    },
+    "plasma_full_step": {
+      "exact_intersections_after_bounds_filter": 32,
+      "interferences_gt_0p05_mm3": []
+    },
+    "lid_lift_stack_volume_vs_others": {
+      "exact_intersections_after_bounds_filter": 1,
+      "interferences_gt_0p05_mm3": []
+    }
+  },
+  "max_unintended_clash_mm3": 0,
+  "limits": "Layout and nominal volume only. No pressure vessel, actual pump curve, overflow/vent capacity, dynamic spray, wiring or operating release.",
+  "review_only_sequence_checks": [
+    "startup_requires_reset",
+    "reset_no_restart",
+    "fill_awaits_proof",
+    "fill_proved",
+    "contradictory_valve_feedback",
+    "lost_valve_proof",
+    "normal_level",
+    "wood_not_clear",
+    "no_airspace",
+    "start_drain",
+    "start_threshold_becomes_wet",
+    "drain_tail_only_after_low",
+    "drain_done",
+    "tank_HH_trip",
+    "pan_HH_trip",
+    "pump_run_dry_protection",
+    "power_loss",
+    "timeout",
+    "machine_isolation_lost"
+  ],
+  "STEP": {
+    "named_components": 26,
+    "STEP_solid_count": 26,
+    "world_bounds_mm": [
+      120.0,
+      4.0,
+      0.0,
+      899.0,
+      1000.0,
+      963.0
+    ]
+  }
+}

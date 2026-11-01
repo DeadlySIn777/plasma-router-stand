@@ -1,0 +1,55 @@
+{
+  "base_frame_usd": 319.88,
+  "additional_4x1000_pack_usd": 59.9,
+  "nine_foot_extrusion_usd": 379.78,
+  "wet_bed_weight_N": 1121.3604126184362,
+  "example_sheet_not_machine_rating": {
+    "stock_mm": [
+      800,
+      960,
+      3
+    ],
+    "kg": 18.0864
+  },
+  "assumed_aluminium_E_MPa": 69000,
+  "simple_uniform_bearer_sensitivities": [
+    {
+      "one_bearer_share": 0.3333,
+      "span_case": "full",
+      "ideal_span_mm": 1088.4,
+      "same_distributed_load_N_per_mm": 0.3977481952647421,
+      "load_on_span_N": 432.90913572614534,
+      "I_required_cm4_for_0p5mm_static_sag": 21.065997828883816,
+      "I_required_cm4_for_1mm_static_sag": 10.532998914441908
+    },
+    {
+      "one_bearer_share": 0.3333,
+      "span_case": "center_support_engaged",
+      "ideal_span_mm": 544.2,
+      "same_distributed_load_N_per_mm": 0.3977481952647421,
+      "load_on_span_N": 216.45456786307267,
+      "I_required_cm4_for_0p5mm_static_sag": 1.3166248643052385,
+      "I_required_cm4_for_1mm_static_sag": 0.6583124321526193
+    },
+    {
+      "one_bearer_share": 0.5,
+      "span_case": "full",
+      "ideal_span_mm": 1088.4,
+      "same_distributed_load_N_per_mm": 0.5966222928971132,
+      "load_on_span_N": 649.3637035892181,
+      "I_required_cm4_for_0p5mm_static_sag": 31.598996743325728,
+      "I_required_cm4_for_1mm_static_sag": 15.799498371662864
+    },
+    {
+      "one_bearer_share": 0.5,
+      "span_case": "center_support_engaged",
+      "ideal_span_mm": 544.2,
+      "same_distributed_load_N_per_mm": 0.5966222928971132,
+      "load_on_span_N": 324.68185179460903,
+      "I_required_cm4_for_0p5mm_static_sag": 1.974937296457858,
+      "I_required_cm4_for_1mm_static_sag": 0.987468648228929
+    }
+  ],
+  "scope": "Conditions only. Actual load distribution includes concentrated ledger and rear rack reactions. Selected series section I, joints, feet/floor, local tray sag, tool/drive loop and dynamic behavior unqualified. 0.5 and 1 mm are comparison sag values, not machining tolerances.",
+  "reference": "https://ocw.mit.edu/courses/1-050-solid-mechanics-fall-2004/fd4eff39aec922b8c07660006f40686e_pset04_11.pdf"
+}

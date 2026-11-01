@@ -1,0 +1,182 @@
+{
+  "scope": "Nominal as-modeled whole XYZ rigid motion vs actual external frame and complete bed for each operating state. Swept axis-aligned boxes are conservative clearance bounds for pure translation; switches widened for cam/roll excursion. Separately checks all stationary interfaces with nominal solids at sample poses.",
+  "assumptions": "Independent translational axes over stated ranges; float seated and breakaway seated. No rotation of main bodies or flexible leads. Installed mode only, not bed conversion. Identically fixed reference faces can intentionally touch.",
+  "poses_X_Yguide_Zlift": [
+    [
+      575.0,
+      775.0,
+      50.0
+    ],
+    [
+      175.0,
+      275.0,
+      0.0
+    ],
+    [
+      175.0,
+      275.0,
+      100.0
+    ],
+    [
+      175.0,
+      1275.0,
+      0.0
+    ],
+    [
+      175.0,
+      1275.0,
+      100.0
+    ],
+    [
+      975.0,
+      275.0,
+      0.0
+    ],
+    [
+      975.0,
+      275.0,
+      100.0
+    ],
+    [
+      975.0,
+      1275.0,
+      0.0
+    ],
+    [
+      975.0,
+      1275.0,
+      100.0
+    ],
+    [
+      175.0,
+      775.0,
+      0.0
+    ],
+    [
+      975.0,
+      775.0,
+      0.0
+    ]
+  ],
+  "states": {
+    "wood": {
+      "fixed_frame_bed_objects": 252,
+      "motion_objects": 291,
+      "finite_shape_positive_overlap_checks": 88,
+      "fixed_mount_BB_overlap_pairs": [
+        [
+          "Y_STOP_L_FRONT_CAP_1",
+          "CAP_L_BOLTED"
+        ],
+        [
+          "Y_STOP_L_FRONT_CAP_2",
+          "CAP_L_BOLTED"
+        ],
+        [
+          "Y_STOP_L_REAR_CAP_1",
+          "CAP_L_BOLTED"
+        ],
+        [
+          "Y_STOP_L_REAR_CAP_2",
+          "CAP_L_BOLTED"
+        ],
+        [
+          "Y_STOP_R_FRONT_CAP_1",
+          "CAP_R_BOLTED"
+        ],
+        [
+          "Y_STOP_R_FRONT_CAP_2",
+          "CAP_R_BOLTED"
+        ],
+        [
+          "Y_STOP_R_REAR_CAP_1",
+          "CAP_R_BOLTED"
+        ],
+        [
+          "Y_STOP_R_REAR_CAP_2",
+          "CAP_R_BOLTED"
+        ]
+      ],
+      "sampled_positive_intersection_mm3": [],
+      "moving_swept_AABB_positive_overlap_pairs": [],
+      "smallest_moving_vs_external_AABB_clearance_mm": [
+        1.0,
+        "Y_BLOCK_L_1",
+        "CAP_L_BOLTED"
+      ],
+      "smallest_working_head_vs_external_AABB_clearance_mm": [
+        1.2,
+        "TOOL_SPINDLE_65x259",
+        "JOB_sacrificial_backer_1_remove_with_stock"
+      ],
+      "smallest_moving_vs_rack_or_stored_panels_AABB_clearance_mm": [
+        32.0,
+        "Y_SHOE_R",
+        "RACK_keeper_pivot_1"
+      ]
+    },
+    "plasma": {
+      "fixed_frame_bed_objects": 244,
+      "motion_objects": 394,
+      "finite_shape_positive_overlap_checks": 88,
+      "fixed_mount_BB_overlap_pairs": [
+        [
+          "Y_STOP_L_FRONT_CAP_1",
+          "CAP_L_BOLTED"
+        ],
+        [
+          "Y_STOP_L_FRONT_CAP_2",
+          "CAP_L_BOLTED"
+        ],
+        [
+          "Y_STOP_L_REAR_CAP_1",
+          "CAP_L_BOLTED"
+        ],
+        [
+          "Y_STOP_L_REAR_CAP_2",
+          "CAP_L_BOLTED"
+        ],
+        [
+          "Y_STOP_R_FRONT_CAP_1",
+          "CAP_R_BOLTED"
+        ],
+        [
+          "Y_STOP_R_FRONT_CAP_2",
+          "CAP_R_BOLTED"
+        ],
+        [
+          "Y_STOP_R_REAR_CAP_1",
+          "CAP_R_BOLTED"
+        ],
+        [
+          "Y_STOP_R_REAR_CAP_2",
+          "CAP_R_BOLTED"
+        ]
+      ],
+      "sampled_positive_intersection_mm3": [],
+      "moving_swept_AABB_positive_overlap_pairs": [],
+      "smallest_moving_vs_external_AABB_clearance_mm": [
+        1.0,
+        "Y_BLOCK_L_1",
+        "CAP_L_BOLTED"
+      ],
+      "smallest_working_head_vs_external_AABB_clearance_mm": [
+        6.5,
+        "I_HEAD_BACKPLATE",
+        "LOC_L_1_dowel"
+      ],
+      "smallest_moving_vs_rack_or_stored_panels_AABB_clearance_mm": [
+        32.0,
+        "Y_SHOE_R",
+        "RACK_keeper_pivot_1"
+      ]
+    }
+  },
+  "passed": true,
+  "source_sha256": {
+    "variants/extrusion-wood-plasma/check_work_envelope.py": "38de89f471755e75d7f055628e2ffd927f1cdea71b77542b78b4aaec02e79d7e",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "variants/extrusion-wood-plasma/process_bed.py": "8582c0fe6a1399a3a74bec26e861621b142ef867582e76e93aebc2c24bf8d95e",
+    "variants/extrusion-wood-plasma/frame.py": "1c17e5b79eaf61f549f46572ab6eb1e602866d9ff84e45d1f99e44f340e946b7"
+  }
+}

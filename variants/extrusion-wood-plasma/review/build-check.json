@@ -1,0 +1,68 @@
+{
+  "assemblies": {
+    "FRAME": {
+      "named_components": 69,
+      "STEP_solid_count": 69,
+      "world_bounds_mm": [
+        -23.8,
+        -13.0,
+        0.0,
+        1173.8,
+        1463.0,
+        1063.938
+      ]
+    },
+    "FRAME_9_FEET": {
+      "named_components": 81,
+      "STEP_solid_count": 81,
+      "world_bounds_mm": [
+        -23.8,
+        -13.0,
+        0.0,
+        1173.8,
+        1463.0,
+        1063.938
+      ]
+    },
+    "WOOD": {
+      "named_components": 543,
+      "STEP_solid_count": 583,
+      "world_bounds_mm": [
+        -25.0,
+        -13.0,
+        0.0,
+        1175.0,
+        1463.0,
+        1370.0
+      ]
+    },
+    "PLASMA": {
+      "named_components": 638,
+      "STEP_solid_count": 666,
+      "world_bounds_mm": [
+        -25.0,
+        -13.0,
+        0.0,
+        1175.0,
+        1463.0,
+        1370.0
+      ]
+    }
+  },
+  "cutlist_19_matches_CAD": true,
+  "source_sha256": {
+    "build.py": "f839a0143ebc3e933332c6cfacd3c376e0f7df1656da53b1bbe926b4c8d7e537",
+    "frame.py": "1c17e5b79eaf61f549f46572ab6eb1e602866d9ff84e45d1f99e44f340e946b7",
+    "preview.py": "1c6be84779cce50e7d9486c5aa5135ec0b8ea345cd8b4df27ba0684d0fe89bad",
+    "motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "process_bed.py": "8582c0fe6a1399a3a74bec26e861621b142ef867582e76e93aebc2c24bf8d95e"
+  },
+  "six_foot_extrusion_parts": 19,
+  "six_foot_stock_bars": 12,
+  "default_hybrid_step_extrusion_parts": 22,
+  "default_hybrid_step_stock_bars": 16,
+  "total_frame_extrusion_finished_mm": 14384.2,
+  "boundary_clashes_remaining": 0,
+  "machining_or_plasma_release": false,
+  "limitations": "Mid-travel displayed poses only. No blanket inheritance of other variant tests. See individual handling and head checks, and assembly holds."
+}
