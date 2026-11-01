@@ -17,6 +17,7 @@ the preserved Rev I baseline and earlier fixed-dock studies.
 
 ## Open the current design
 
+- [Reinforced nine-foot woodworking and plasma table, delivered budget and simulations](variants/budget-hybrid-600/README.md)
 - [Latest small and 4x8 retractable ATC work](variants/retractable-atc/README.md)
 - [Baseline Rev I CAD package and limitations](output/release-review/RevI-CAD/README.md)
 - [Baseline router assembly STEP](output/release-review/RevI-CAD/step/RevI_ROUTER.step)

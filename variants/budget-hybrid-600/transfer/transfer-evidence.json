@@ -1,0 +1,163 @@
+{
+  "test": "elevated storage, final CAD",
+  "sampled_poses": 308,
+  "sweep_bbox_candidates": [
+    [
+      3,
+      0,
+      "bridge_0_crossrail_1",
+      "locator_0_3",
+      1
+    ],
+    [
+      3,
+      0,
+      "bridge_0_crossrail_1",
+      "locator_1_3",
+      1
+    ],
+    [
+      2,
+      0,
+      "bridge_0_crossrail_1",
+      "locator_0_2",
+      1
+    ],
+    [
+      2,
+      0,
+      "bridge_0_crossrail_1",
+      "locator_1_2",
+      1
+    ],
+    [
+      1,
+      0,
+      "bridge_0_crossrail_1",
+      "locator_0_1",
+      1
+    ],
+    [
+      1,
+      0,
+      "bridge_0_crossrail_1",
+      "locator_1_1",
+      1
+    ],
+    [
+      0,
+      0,
+      "bridge_0_crossrail_1",
+      "locator_0_0",
+      1
+    ],
+    [
+      0,
+      0,
+      "bridge_0_crossrail_1",
+      "locator_1_0",
+      1
+    ]
+  ],
+  "continuous_full_xyz_hot_rack_candidates": [],
+  "interferences": [],
+  "hot_rear_samples": {
+    "1240.0": [],
+    "1250.0": [
+      [
+        "ZBX80_BASE",
+        "bridge_0_crossrail_1"
+      ],
+      [
+        "ZBX80_BASE",
+        "bridge_0_crossrail_2"
+      ],
+      [
+        "ZBX80_END_BOTTOM",
+        "bridge_0_crossrail_1"
+      ]
+    ],
+    "1256.9": [
+      [
+        "ZBX80_BASE",
+        "bridge_0_crossrail_1"
+      ],
+      [
+        "ZBX80_BASE",
+        "bridge_0_crossrail_2"
+      ],
+      [
+        "ZBX80_END_BOTTOM",
+        "bridge_0_crossrail_1"
+      ]
+    ],
+    "1275.0": [
+      [
+        "ZBX80_BASE",
+        "bridge_0_crossrail_1"
+      ],
+      [
+        "ZBX80_BASE",
+        "bridge_0_crossrail_2"
+      ],
+      [
+        "ZBX80_BASE",
+        "bridge_0_end_tie_0_1"
+      ],
+      [
+        "ZBX80_BASE",
+        "bridge_0_end_tie_1_1"
+      ],
+      [
+        "ZBX80_END_BOTTOM",
+        "bridge_0_crossrail_1"
+      ],
+      [
+        "ZBX80_END_BOTTOM",
+        "bridge_0_end_tie_0_1"
+      ],
+      [
+        "ZBX80_END_BOTTOM",
+        "bridge_0_end_tie_1_1"
+      ]
+    ]
+  },
+  "park_xyz_mm": {
+    "head_x": 575,
+    "gantry_y": 275,
+    "lift_z": 100
+  },
+  "slots_y_mm": [
+    1281.0,
+    1336.0,
+    1391.0,
+    1446.0
+  ],
+  "seated_origin_z_mm": [
+    903.0,
+    903.0,
+    903.0,
+    903.0
+  ],
+  "continuous_hot_range": {
+    "head_x": [
+      175,
+      975
+    ],
+    "gantry_y": [
+      275,
+      1240
+    ],
+    "lift_z": [
+      0,
+      100
+    ]
+  },
+  "limits": "Rigid modeled bodies only. Unmodeled hand/tool/lead, wear, compliance and keeper envelope excluded.",
+  "source_sha256": {
+    "test_swap.py": "3b1583579d681fe93f5c84402417c31174b648edd42b009aab8cb1657813ffe1",
+    "build_candidate.py": "eceacee430831905310a832b8cf58a19aabdce5a42b3e6072d29df7410f92aac",
+    "motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "frame.py": "1c17e5b79eaf61f549f46572ab6eb1e602866d9ff84e45d1f99e44f340e946b7"
+  }
+}

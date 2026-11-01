@@ -1,0 +1,1343 @@
+{
+  "basis": {
+    "x_stations_mm": [
+      30.8,
+      575.0,
+      1119.2
+    ],
+    "y_stations_mm": [
+      100.0,
+      725.0,
+      1330.0
+    ],
+    "legacy_y_stations_mm": [
+      20.0,
+      725.0,
+      1430.0
+    ],
+    "z_rail_center_mm": 1036.0,
+    "brace_low_high_z_mm": [
+      150.0,
+      950.0
+    ],
+    "wet_bed_and_stock_N": 1298.7274071784361,
+    "steel_E_MPa": 200000.0,
+    "aluminum_E_MPa": 69000.0,
+    "tube_width_mm": 31.75,
+    "outer_corner_radius_over_wall": 2,
+    "wet_load_composition": "Inherited 1121.36 N wet assembly plus 18.0864 kg example sheet; no chassis/gantry self-weight applied in individual member load screens."
+  },
+  "tube_section_I_mm4": {
+    "1.5": 26341.044393627584,
+    "1.9": 31590.444825291066,
+    "2.1": 33958.463234714975
+  },
+  "vertical_wet_crossbeams": [
+    {
+      "wall_mm": 1.5,
+      "wet_share": 0.3333333333333333,
+      "center_gap_mm": 0.0,
+      "center_contact": true,
+      "peak_sag_mm": 0.03586199883116674,
+      "left_center_right_reactions_N": [
+        81.17046294865224,
+        270.56820982884085,
+        81.17046294865224
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.3795522194106955
+    },
+    {
+      "wall_mm": 1.5,
+      "wet_share": 0.3333333333333333,
+      "center_gap_mm": 0.5,
+      "center_contact": true,
+      "peak_sag_mm": 0.5,
+      "left_center_right_reactions_N": [
+        130.2023527933911,
+        172.50443013936317,
+        130.20235279339107
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.3795522194106955
+    },
+    {
+      "wall_mm": 1.5,
+      "wet_share": 0.3333333333333333,
+      "center_gap_mm": 1.0,
+      "center_contact": true,
+      "peak_sag_mm": 1.0,
+      "left_center_right_reactions_N": [
+        179.23424263812987,
+        74.4406504498856,
+        179.23424263812987
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.3795522194106955
+    },
+    {
+      "wall_mm": 1.5,
+      "wet_share": 0.3333333333333333,
+      "center_gap_mm": null,
+      "center_contact": false,
+      "peak_sag_mm": 1.3795522194106955,
+      "left_center_right_reactions_N": [
+        216.45456786307258,
+        0.0,
+        216.45456786307264
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.3795522194106955
+    },
+    {
+      "wall_mm": 1.5,
+      "wet_share": 0.5,
+      "center_gap_mm": 0.0,
+      "center_contact": true,
+      "peak_sag_mm": 0.0537929982467501,
+      "left_center_right_reactions_N": [
+        121.7556944229784,
+        405.8523147432613,
+        121.7556944229784
+      ],
+      "gap_that_just_loses_center_contact_mm": 2.069328329116043
+    },
+    {
+      "wall_mm": 1.5,
+      "wet_share": 0.5,
+      "center_gap_mm": 0.5,
+      "center_contact": true,
+      "peak_sag_mm": 0.5,
+      "left_center_right_reactions_N": [
+        170.78758426771716,
+        307.7885350537837,
+        170.78758426771722
+      ],
+      "gap_that_just_loses_center_contact_mm": 2.069328329116043
+    },
+    {
+      "wall_mm": 1.5,
+      "wet_share": 0.5,
+      "center_gap_mm": 1.0,
+      "center_contact": true,
+      "peak_sag_mm": 1.0,
+      "left_center_right_reactions_N": [
+        219.81947411245605,
+        209.72475536430596,
+        219.81947411245605
+      ],
+      "gap_that_just_loses_center_contact_mm": 2.069328329116043
+    },
+    {
+      "wall_mm": 1.5,
+      "wet_share": 0.5,
+      "center_gap_mm": null,
+      "center_contact": false,
+      "peak_sag_mm": 2.069328329116043,
+      "left_center_right_reactions_N": [
+        324.68185179460886,
+        0.0,
+        324.68185179460886
+      ],
+      "gap_that_just_loses_center_contact_mm": 2.069328329116043
+    },
+    {
+      "wall_mm": 1.9,
+      "wet_share": 0.3333333333333333,
+      "center_gap_mm": 0.0,
+      "center_contact": true,
+      "peak_sag_mm": 0.029902792077802904,
+      "left_center_right_reactions_N": [
+        81.17046294865226,
+        270.56820982884085,
+        81.17046294865224
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.1503113190014964
+    },
+    {
+      "wall_mm": 1.9,
+      "wet_share": 0.3333333333333333,
+      "center_gap_mm": 0.5,
+      "center_contact": true,
+      "peak_sag_mm": 0.5,
+      "left_center_right_reactions_N": [
+        139.97372024070904,
+        152.96169524472728,
+        139.97372024070904
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.1503113190014964
+    },
+    {
+      "wall_mm": 1.9,
+      "wet_share": 0.3333333333333333,
+      "center_gap_mm": 1.0,
+      "center_contact": true,
+      "peak_sag_mm": 1.0,
+      "left_center_right_reactions_N": [
+        198.7769775327658,
+        35.35518066061371,
+        198.7769775327658
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.1503113190014964
+    },
+    {
+      "wall_mm": 1.9,
+      "wet_share": 0.3333333333333333,
+      "center_gap_mm": null,
+      "center_contact": false,
+      "peak_sag_mm": 1.1503113190014964,
+      "left_center_right_reactions_N": [
+        216.45456786307264,
+        0.0,
+        216.45456786307264
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.1503113190014964
+    },
+    {
+      "wall_mm": 1.9,
+      "wet_share": 0.5,
+      "center_gap_mm": 0.0,
+      "center_contact": true,
+      "peak_sag_mm": 0.04485418811670435,
+      "left_center_right_reactions_N": [
+        121.7556944229784,
+        405.8523147432613,
+        121.7556944229784
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.7254669785022447
+    },
+    {
+      "wall_mm": 1.9,
+      "wet_share": 0.5,
+      "center_gap_mm": 0.5,
+      "center_contact": true,
+      "peak_sag_mm": 0.5,
+      "left_center_right_reactions_N": [
+        180.5589517150352,
+        288.24580015914773,
+        180.55895171503516
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.7254669785022447
+    },
+    {
+      "wall_mm": 1.9,
+      "wet_share": 0.5,
+      "center_gap_mm": 1.0,
+      "center_contact": true,
+      "peak_sag_mm": 1.0,
+      "left_center_right_reactions_N": [
+        239.36220900709193,
+        170.6392855750342,
+        239.36220900709193
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.7254669785022447
+    },
+    {
+      "wall_mm": 1.9,
+      "wet_share": 0.5,
+      "center_gap_mm": null,
+      "center_contact": false,
+      "peak_sag_mm": 1.7254669785022447,
+      "left_center_right_reactions_N": [
+        324.681851794609,
+        0.0,
+        324.681851794609
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.7254669785022447
+    },
+    {
+      "wall_mm": 2.1,
+      "wet_share": 0.3333333333333333,
+      "center_gap_mm": 0.0,
+      "center_contact": true,
+      "peak_sag_mm": 0.027817586936333932,
+      "left_center_right_reactions_N": [
+        81.17046294865224,
+        270.56820982884085,
+        81.17046294865224
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.070096900547496
+    },
+    {
+      "wall_mm": 2.1,
+      "wet_share": 0.3333333333333333,
+      "center_gap_mm": 0.5,
+      "center_contact": true,
+      "peak_sag_mm": 0.5,
+      "left_center_right_reactions_N": [
+        144.38160992291444,
+        144.14591588031647,
+        144.3816099229144
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.070096900547496
+    },
+    {
+      "wall_mm": 2.1,
+      "wet_share": 0.3333333333333333,
+      "center_gap_mm": 1.0,
+      "center_contact": true,
+      "peak_sag_mm": 1.0,
+      "left_center_right_reactions_N": [
+        207.59275689717666,
+        17.723621931791968,
+        207.59275689717666
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.070096900547496
+    },
+    {
+      "wall_mm": 2.1,
+      "wet_share": 0.3333333333333333,
+      "center_gap_mm": null,
+      "center_contact": false,
+      "peak_sag_mm": 1.070096900547496,
+      "left_center_right_reactions_N": [
+        216.4545678630727,
+        0.0,
+        216.4545678630727
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.070096900547496
+    },
+    {
+      "wall_mm": 2.1,
+      "wet_share": 0.5,
+      "center_gap_mm": 0.0,
+      "center_contact": true,
+      "peak_sag_mm": 0.0417263804045009,
+      "left_center_right_reactions_N": [
+        121.7556944229784,
+        405.8523147432613,
+        121.7556944229784
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.6051453508212439
+    },
+    {
+      "wall_mm": 2.1,
+      "wet_share": 0.5,
+      "center_gap_mm": 0.5,
+      "center_contact": true,
+      "peak_sag_mm": 0.5,
+      "left_center_right_reactions_N": [
+        184.9668413972406,
+        279.43002079473683,
+        184.96684139724061
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.6051453508212439
+    },
+    {
+      "wall_mm": 2.1,
+      "wet_share": 0.5,
+      "center_gap_mm": 1.0,
+      "center_contact": true,
+      "peak_sag_mm": 1.0,
+      "left_center_right_reactions_N": [
+        248.17798837150272,
+        153.00772684621262,
+        248.17798837150272
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.6051453508212439
+    },
+    {
+      "wall_mm": 2.1,
+      "wet_share": 0.5,
+      "center_gap_mm": null,
+      "center_contact": false,
+      "peak_sag_mm": 1.6051453508212439,
+      "left_center_right_reactions_N": [
+        324.681851794609,
+        0.0,
+        324.681851794609
+      ],
+      "gap_that_just_loses_center_contact_mm": 1.6051453508212439
+    }
+  ],
+  "vertical_Y_beams": [
+    {
+      "case": "prior_4040",
+      "al_I_cm4": 6.0,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.1277649550570332,
+      "load_y_at_peak_mm": 348.0,
+      "max_incremental_uplift_N": 9.622253469344287
+    },
+    {
+      "case": "new_unbacked",
+      "al_I_cm4": 6.0,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.08847222202873567,
+      "load_y_at_peak_mm": 396.3333333333333,
+      "max_incremental_uplift_N": 29.434710743802427
+    },
+    {
+      "case": "new_half_participation",
+      "al_I_cm4": 6.0,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.0501812257858785,
+      "load_y_at_peak_mm": 396.3333333333333,
+      "max_incremental_uplift_N": 29.43471074380021
+    },
+    {
+      "case": "new_full_noncomposite",
+      "al_I_cm4": 6.0,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.035023129026989064,
+      "load_y_at_peak_mm": 396.3333333333333,
+      "max_incremental_uplift_N": 29.43471074380178
+    },
+    {
+      "case": "new_middle_station_lost",
+      "al_I_cm4": 6.0,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.37069908136901963,
+      "load_y_at_peak_mm": 715.3333333333333,
+      "max_incremental_uplift_N": 9.756097560977196
+    },
+    {
+      "case": "prior_4040",
+      "al_I_cm4": 8.3,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.09236020847496353,
+      "load_y_at_peak_mm": 348.0,
+      "max_incremental_uplift_N": 9.622253469351563
+    },
+    {
+      "case": "new_unbacked",
+      "al_I_cm4": 8.3,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.0639558231533027,
+      "load_y_at_peak_mm": 396.3333333333333,
+      "max_incremental_uplift_N": 29.43471074380186
+    },
+    {
+      "case": "new_half_participation",
+      "al_I_cm4": 8.3,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.04121912735403248,
+      "load_y_at_peak_mm": 396.3333333333333,
+      "max_incremental_uplift_N": 29.43471074380113
+    },
+    {
+      "case": "new_full_noncomposite",
+      "al_I_cm4": 8.3,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.030408658687494688,
+      "load_y_at_peak_mm": 396.3333333333333,
+      "max_incremental_uplift_N": 29.434710743801464
+    },
+    {
+      "case": "new_middle_station_lost",
+      "al_I_cm4": 8.3,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.3218576453415023,
+      "load_y_at_peak_mm": 715.3333333333333,
+      "max_incremental_uplift_N": 9.756097560975832
+    },
+    {
+      "case": "prior_4040",
+      "al_I_cm4": 10.0,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.07665897303421985,
+      "load_y_at_peak_mm": 1102.0,
+      "max_incremental_uplift_N": 9.622253469347925
+    },
+    {
+      "case": "new_unbacked",
+      "al_I_cm4": 10.0,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.05308333321724123,
+      "load_y_at_peak_mm": 396.3333333333333,
+      "max_incremental_uplift_N": 29.43471074380104
+    },
+    {
+      "case": "new_half_participation",
+      "al_I_cm4": 10.0,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.036412504173246645,
+      "load_y_at_peak_mm": 396.3333333333333,
+      "max_incremental_uplift_N": 29.43471074380197
+    },
+    {
+      "case": "new_full_noncomposite",
+      "al_I_cm4": 10.0,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.02771013269521825,
+      "load_y_at_peak_mm": 396.3333333333333,
+      "max_incremental_uplift_N": 29.43471074380099
+    },
+    {
+      "case": "new_middle_station_lost",
+      "al_I_cm4": 10.0,
+      "backer_wall_mm": 1.9,
+      "load_N": 100.0,
+      "peak_abs_mm": 0.29329534567899834,
+      "load_y_at_peak_mm": 715.3333333333333,
+      "max_incremental_uplift_N": 9.756097560976741
+    }
+  ],
+  "pan_frame_concentrated": [
+    {
+      "wall_mm": 1.5,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 100.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        140.2770011915354,
+        140.2770011915354
+      ],
+      "peak_crossbeam_abs_mm": 0.03083390932234366,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 1.5,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 100.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        140.2770011915354,
+        140.2770011915354
+      ],
+      "peak_crossbeam_abs_mm": 1.164218916304318,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 1.5,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 725.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        330.7636174122539,
+        330.7636174122539
+      ],
+      "peak_crossbeam_abs_mm": 0.07270425871518571,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 1.5,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 725.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        330.7636174122539,
+        330.7636174122539
+      ],
+      "peak_crossbeam_abs_mm": 2.7451489335076182,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 1.5,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 1330.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        19.29188139621266,
+        19.29188139621266
+      ],
+      "peak_crossbeam_abs_mm": 0.004240496421904718,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 1.5,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 1330.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        19.29188139621266,
+        19.29188139621266
+      ],
+      "peak_crossbeam_abs_mm": 0.16011158680176735,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 1.5,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 100.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        182.3601015489913,
+        98.19390083407404
+      ],
+      "peak_crossbeam_abs_mm": 0.05539202460434443,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 1.5,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 100.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        182.3601015489913,
+        98.19390083407404
+      ],
+      "peak_crossbeam_abs_mm": 1.1654589311247123,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 1.5,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 725.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        429.9927026359301,
+        231.5345321885777
+      ],
+      "peak_crossbeam_abs_mm": 0.13061062239921684,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 1.5,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 725.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        429.9927026359301,
+        231.5345321885777
+      ],
+      "peak_crossbeam_abs_mm": 2.7480728040221147,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 1.5,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 1330.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        25.07944581507661,
+        13.504316977348935
+      ],
+      "peak_crossbeam_abs_mm": 0.007617901437057734,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 1.5,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 1330.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        25.07944581507661,
+        13.504316977348935
+      ],
+      "peak_crossbeam_abs_mm": 0.16028212237525377,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 1.9,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 100.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        140.2770011915354,
+        140.2770011915354
+      ],
+      "peak_crossbeam_abs_mm": 0.02571022278352671,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 1.9,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 100.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        140.2770011915354,
+        140.2770011915354
+      ],
+      "peak_crossbeam_abs_mm": 0.9707600614006476,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 1.9,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 725.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        330.7636174122539,
+        330.7636174122539
+      ],
+      "peak_crossbeam_abs_mm": 0.06062295472614788,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 1.9,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 725.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        330.7636174122539,
+        330.7636174122539
+      ],
+      "peak_crossbeam_abs_mm": 2.2889861261704483,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 1.9,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 1330.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        19.29188139621266,
+        19.29188139621266
+      ],
+      "peak_crossbeam_abs_mm": 0.003535850954874357,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 1.9,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 1330.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        19.29188139621266,
+        19.29188139621266
+      ],
+      "peak_crossbeam_abs_mm": 0.1335057622393163,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 1.9,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 100.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        182.3601015489913,
+        98.19390083407404
+      ],
+      "peak_crossbeam_abs_mm": 0.04618750344369375,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 1.9,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 100.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        182.3601015489913,
+        98.19390083407404
+      ],
+      "peak_crossbeam_abs_mm": 0.9717940223218504,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 1.9,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 725.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        429.9927026359301,
+        231.5345321885777
+      ],
+      "peak_crossbeam_abs_mm": 0.10890698823407281,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 1.9,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 725.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        429.9927026359301,
+        231.5345321885777
+      ],
+      "peak_crossbeam_abs_mm": 2.2914241356207583,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 1.9,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 1330.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        25.07944581507661,
+        13.504316977348935
+      ],
+      "peak_crossbeam_abs_mm": 0.006352030845072734,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 1.9,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 1330.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        25.07944581507661,
+        13.504316977348935
+      ],
+      "peak_crossbeam_abs_mm": 0.1336479598290224,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 2.1,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 100.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        140.2770011915354,
+        140.2770011915354
+      ],
+      "peak_crossbeam_abs_mm": 0.02391737719917345,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 2.1,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 100.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        140.2770011915354,
+        140.2770011915354
+      ],
+      "peak_crossbeam_abs_mm": 0.9030662532138259,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 2.1,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 725.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        330.7636174122539,
+        330.7636174122539
+      ],
+      "peak_crossbeam_abs_mm": 0.056395546912285544,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 2.1,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 725.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        330.7636174122539,
+        330.7636174122539
+      ],
+      "peak_crossbeam_abs_mm": 2.1293687357066187,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 2.1,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 1330.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        19.29188139621266,
+        19.29188139621266
+      ],
+      "peak_crossbeam_abs_mm": 0.003289286200272563,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 2.1,
+      "left_stringer_fraction": 0.5,
+      "frame_station_y": 1330.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        19.29188139621266,
+        19.29188139621266
+      ],
+      "peak_crossbeam_abs_mm": 0.12419603286311587,
+      "pan_stringer_peak_abs_mm": 0.08283830757366557
+    },
+    {
+      "wall_mm": 2.1,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 100.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        182.3601015489913,
+        98.19390083407404
+      ],
+      "peak_crossbeam_abs_mm": 0.042966719932849014,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 2.1,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 100.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        182.3601015489913,
+        98.19390083407404
+      ],
+      "peak_crossbeam_abs_mm": 0.9040281131545124,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 2.1,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 725.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        429.9927026359301,
+        231.5345321885777
+      ],
+      "peak_crossbeam_abs_mm": 0.10131260001718914,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 2.1,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 725.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        429.9927026359301,
+        231.5345321885777
+      ],
+      "peak_crossbeam_abs_mm": 2.1316367359541912,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 2.1,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 1330.0,
+      "middle_foot_seated": true,
+      "left_right_seat_loads_N": [
+        25.07944581507661,
+        13.504316977348935
+      ],
+      "peak_crossbeam_abs_mm": 0.005909086007598938,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    },
+    {
+      "wall_mm": 2.1,
+      "left_stringer_fraction": 0.65,
+      "frame_station_y": 1330.0,
+      "middle_foot_seated": false,
+      "left_right_seat_loads_N": [
+        25.07944581507661,
+        13.504316977348935
+      ],
+      "peak_crossbeam_abs_mm": 0.12432831461806015,
+      "pan_stringer_peak_abs_mm": 0.10768979984576518
+    }
+  ],
+  "simplified_pan_floor_strips": [
+    {
+      "thickness_mm": 1.8974,
+      "assumed_water_depth_mm": 34.0,
+      "pressure_plus_floor_weight_N_mm2": 0.00047949213102350003,
+      "isolated_simple_span_between_stringers_mm": 1.549637983154271,
+      "isolated_cantilever_lip_with_fixed_root_mm": 1.0238662746699128
+    },
+    {
+      "thickness_mm": 1.8974,
+      "assumed_water_depth_mm": 43.0,
+      "pressure_plus_floor_weight_N_mm2": 0.0005677519810234999,
+      "isolated_simple_span_between_stringers_mm": 1.8348789852444491,
+      "isolated_cantilever_lip_with_fixed_root_mm": 1.212328770664443
+    },
+    {
+      "thickness_mm": 2.6568,
+      "assumed_water_depth_mm": 34.0,
+      "pressure_plus_floor_weight_N_mm2": 0.000537952415602,
+      "isolated_simple_span_between_stringers_mm": 0.6332755655823759,
+      "isolated_cantilever_lip_with_fixed_root_mm": 0.41841352704359985
+    },
+    {
+      "thickness_mm": 2.6568,
+      "assumed_water_depth_mm": 43.0,
+      "pressure_plus_floor_weight_N_mm2": 0.0006262122656019999,
+      "isolated_simple_span_between_stringers_mm": 0.7371747299060795,
+      "isolated_cantilever_lip_with_fixed_root_mm": 0.48706107664798853
+    }
+  ],
+  "pan_volume_liters_flat_steel": {
+    "34.0": 26.8652325,
+    "43.0": 34.5593325
+  },
+  "slat_midspan_100N_mm": {
+    "1.8974": 0.15615911051770645,
+    "2.6568": 0.1115237489823458
+  },
+  "thermal_screen": {
+    "ambient_C": 20.0,
+    "steel_alpha_per_K": 1.2e-05,
+    "al_alpha_per_K": 2.35e-05,
+    "uniform_temperature_scenarios": [
+      {
+        "body_C": 45,
+        "pan_steel_length_growth_mm": 0.30900000000000005,
+        "longitudinal_rail_backer_free_growth_difference_mm": 0.41687499999999994
+      },
+      {
+        "body_C": 65,
+        "pan_steel_length_growth_mm": 0.5562,
+        "longitudinal_rail_backer_free_growth_difference_mm": 0.7503749999999999
+      }
+    ],
+    "transverse_410mm_free_strip_bow_due_to_5K_face_to_face_mm": {
+      "1.8974": 0.6644618952250448,
+      "2.6568": 0.47453703703703703
+    }
+  },
+  "racking": [
+    {
+      "case": "rejected_side",
+      "bay_width_mm": 605.0,
+      "brace_height_mm": 630.0,
+      "horizontal_force_N": 100.0,
+      "net_axial_end_slip_mm": 0.0,
+      "tension_N": 144.3728562347364,
+      "lateral_drift_mm": 0.01128767712619549
+    },
+    {
+      "case": "rejected_side",
+      "bay_width_mm": 605.0,
+      "brace_height_mm": 630.0,
+      "horizontal_force_N": 100.0,
+      "net_axial_end_slip_mm": 0.1,
+      "tension_N": 144.3728562347364,
+      "lateral_drift_mm": 0.15566053336093189
+    },
+    {
+      "case": "rejected_side",
+      "bay_width_mm": 605.0,
+      "brace_height_mm": 630.0,
+      "horizontal_force_N": 100.0,
+      "net_axial_end_slip_mm": 0.3,
+      "tension_N": 144.3728562347364,
+      "lateral_drift_mm": 0.4444062458304047
+    },
+    {
+      "case": "side_front",
+      "bay_width_mm": 625.0,
+      "brace_height_mm": 800.0,
+      "horizontal_force_N": 100.0,
+      "net_axial_end_slip_mm": 0.0,
+      "tension_N": 162.43152403397562,
+      "lateral_drift_mm": 0.016606707367600334
+    },
+    {
+      "case": "side_front",
+      "bay_width_mm": 625.0,
+      "brace_height_mm": 800.0,
+      "horizontal_force_N": 100.0,
+      "net_axial_end_slip_mm": 0.1,
+      "tension_N": 162.43152403397562,
+      "lateral_drift_mm": 0.17903823140157596
+    },
+    {
+      "case": "side_front",
+      "bay_width_mm": 625.0,
+      "brace_height_mm": 800.0,
+      "horizontal_force_N": 100.0,
+      "net_axial_end_slip_mm": 0.3,
+      "tension_N": 162.43152403397562,
+      "lateral_drift_mm": 0.5039012794695272
+    },
+    {
+      "case": "side_rear",
+      "bay_width_mm": 605.0,
+      "brace_height_mm": 800.0,
+      "horizontal_force_N": 100.0,
+      "net_axial_end_slip_mm": 0.0,
+      "tension_N": 165.78644232067293,
+      "lateral_drift_mm": 0.01709208203442954
+    },
+    {
+      "case": "side_rear",
+      "bay_width_mm": 605.0,
+      "brace_height_mm": 800.0,
+      "horizontal_force_N": 100.0,
+      "net_axial_end_slip_mm": 0.1,
+      "tension_N": 165.78644232067293,
+      "lateral_drift_mm": 0.1828785243551025
+    },
+    {
+      "case": "side_rear",
+      "bay_width_mm": 605.0,
+      "brace_height_mm": 800.0,
+      "horizontal_force_N": 100.0,
+      "net_axial_end_slip_mm": 0.3,
+      "tension_N": 165.78644232067293,
+      "lateral_drift_mm": 0.5144514089964483
+    },
+    {
+      "case": "end",
+      "bay_width_mm": 1088.4,
+      "brace_height_mm": 585.0,
+      "horizontal_force_N": 100.0,
+      "net_axial_end_slip_mm": 0.0,
+      "tension_N": 113.529354568089,
+      "lateral_drift_mm": 0.009874283627748762
+    },
+    {
+      "case": "end",
+      "bay_width_mm": 1088.4,
+      "brace_height_mm": 585.0,
+      "horizontal_force_N": 100.0,
+      "net_axial_end_slip_mm": 0.1,
+      "tension_N": 113.529354568089,
+      "lateral_drift_mm": 0.12340363819583777
+    },
+    {
+      "case": "end",
+      "bay_width_mm": 1088.4,
+      "brace_height_mm": 585.0,
+      "horizontal_force_N": 100.0,
+      "net_axial_end_slip_mm": 0.3,
+      "tension_N": 113.529354568089,
+      "lateral_drift_mm": 0.35046234733201576
+    }
+  ],
+  "individual_post_above_upper_brace_deflection_at_100N_mm": {
+    "780.0": {
+      "1.5": 0.10615382689014119,
+      "1.9": 0.08851419098815753,
+      "2.1": 0.08234184943352123
+    },
+    "830.0": {
+      "1.5": 0.05531175269898573,
+      "1.9": 0.046120570362051215,
+      "2.1": 0.042904454281779934
+    },
+    "950.0": {
+      "1.5": 0.004024492413785198,
+      "1.9": 0.003355740443656655,
+      "2.1": 0.0031217352976374495
+    }
+  },
+  "horizontal_tool_load_foot_checks": {
+    "force_N": 100.0,
+    "centered_wet_subset_N": 1298.7274071784361,
+    "required_mu_if_all_subset_weight_engaged": 0.07699845205950959,
+    "transferred_opposing_support_line_load_N_X": 95.18559353178978,
+    "transferred_opposing_support_line_load_N_Y": 84.22764227642277
+  },
+  "dry_ledger_and_work_stiffness": [
+    {
+      "extra_web_net_mm": 0.0,
+      "extra_web_thickness_mm": 1.9,
+      "ledger_I_mm4": 9042.397384759113,
+      "cases": {
+        "directly_over_one_bar": {
+          "panel_index": 2,
+          "load_y_mm": 397.09999999999997,
+          "ledger_settlement_mm": 0.13490294223653124,
+          "dry_bar_bending_mm": 0.11094267167195984,
+          "mdf_midbay_mm": 0.0,
+          "partial_work_deflection_mm": 0.24584561390849108
+        },
+        "between_two_bars": {
+          "panel_index": 2,
+          "load_y_mm": 444.59999999999997,
+          "ledger_settlement_mm": 0.12345787807824984,
+          "dry_bar_bending_mm": 0.05547133583597992,
+          "mdf_midbay_mm": 0.0496166087962963,
+          "partial_work_deflection_mm": 0.2285458227105261
+        }
+      }
+    },
+    {
+      "extra_web_net_mm": 25.0,
+      "extra_web_thickness_mm": 1.9,
+      "ledger_I_mm4": 44889.43447652733,
+      "cases": {
+        "directly_over_one_bar": {
+          "panel_index": 2,
+          "load_y_mm": 397.09999999999997,
+          "ledger_settlement_mm": 0.02865203580989811,
+          "dry_bar_bending_mm": 0.11094267167195984,
+          "mdf_midbay_mm": 0.0,
+          "partial_work_deflection_mm": 0.13959470748185795
+        },
+        "between_two_bars": {
+          "panel_index": 2,
+          "load_y_mm": 444.59999999999997,
+          "ledger_settlement_mm": 0.02631284632473268,
+          "dry_bar_bending_mm": 0.05547133583597992,
+          "mdf_midbay_mm": 0.0496166087962963,
+          "partial_work_deflection_mm": 0.1314007909570089
+        }
+      }
+    }
+  ],
+  "dry_crossbars": {
+    "width_mm": 25.4,
+    "wall_mm": 1.5,
+    "span_mm": 906.6,
+    "beam_center_pitch_mm": 190.0,
+    "single_midspan_100N_mm": 0.6057774163471749,
+    "equal_shared_50N_per_bar_mm": 0.30288870817358743
+  },
+  "rack_shelves": {
+    "bare_tube_mass_per_carrier_kg": 4.7920609877788864,
+    "stocked_center_y_mm": 1338.1,
+    "approx_carrier_center_z_mm": 1032.7,
+    "positions_y_mm": [
+      1255.6,
+      1310.6,
+      1365.6,
+      1420.6
+    ],
+    "front_and_rear_shelf_lengths_mm": [
+      76.59999999999991,
+      94.59999999999991
+    ],
+    "cases": [
+      {
+        "web_depth_mm": 0.0,
+        "load_share_to_one_arm": 0.5,
+        "maximum_tip_displacement_including_post_rotation_mm": 0.08522036483324812,
+        "maximum_shelf_root_MPa": 18.470897177482016
+      },
+      {
+        "web_depth_mm": 0.0,
+        "load_share_to_one_arm": 1.0,
+        "maximum_tip_displacement_including_post_rotation_mm": 0.17044072966649623,
+        "maximum_shelf_root_MPa": 36.94179435496403
+      },
+      {
+        "web_depth_mm": 25.0,
+        "load_share_to_one_arm": 0.5,
+        "maximum_tip_displacement_including_post_rotation_mm": 0.004899494043317894,
+        "maximum_shelf_root_MPa": 4.005937873009636
+      },
+      {
+        "web_depth_mm": 25.0,
+        "load_share_to_one_arm": 1.0,
+        "maximum_tip_displacement_including_post_rotation_mm": 0.009798988086635789,
+        "maximum_shelf_root_MPa": 8.011875746019273
+      }
+    ]
+  },
+  "narrow_final_carriers": {
+    "bearing_span_mm": 866.6,
+    "single_bar_sag_mm_100N": 0.09689637503606349
+  },
+  "revised_dry_crossbars": {
+    "tube_width_mm": 25.4,
+    "tube_height_mm": 50.8,
+    "wall_mm": 1.5,
+    "quantity_per_module": 3,
+    "span_mm": 906.6,
+    "pitch_mm": 95.0,
+    "major_I_mm4": 69964.42849962314,
+    "midspan_mm_by_load_per_bar_N": {
+      "100.0": 0.11094267167195984,
+      "50.0": 0.05547133583597992,
+      "33.333333333333336": 0.03698089055731995
+    }
+  },
+  "mdf_strip_sensitivity": [
+    {
+      "width_engaged_mm": 50.0,
+      "E_MPa": 2200.0,
+      "pitch_mm": 95.0,
+      "sag_mm_100N": 0.11276501999158249
+    },
+    {
+      "width_engaged_mm": 50.0,
+      "E_MPa": 2500.0,
+      "pitch_mm": 95.0,
+      "sag_mm_100N": 0.0992332175925926
+    },
+    {
+      "width_engaged_mm": 50.0,
+      "E_MPa": 3000.0,
+      "pitch_mm": 95.0,
+      "sag_mm_100N": 0.08269434799382716
+    },
+    {
+      "width_engaged_mm": 100.0,
+      "E_MPa": 2200.0,
+      "pitch_mm": 95.0,
+      "sag_mm_100N": 0.056382509995791245
+    },
+    {
+      "width_engaged_mm": 100.0,
+      "E_MPa": 2500.0,
+      "pitch_mm": 95.0,
+      "sag_mm_100N": 0.0496166087962963
+    },
+    {
+      "width_engaged_mm": 100.0,
+      "E_MPa": 3000.0,
+      "pitch_mm": 95.0,
+      "sag_mm_100N": 0.04134717399691358
+    },
+    {
+      "width_engaged_mm": 200.0,
+      "E_MPa": 2200.0,
+      "pitch_mm": 95.0,
+      "sag_mm_100N": 0.028191254997895623
+    },
+    {
+      "width_engaged_mm": 200.0,
+      "E_MPa": 2500.0,
+      "pitch_mm": 95.0,
+      "sag_mm_100N": 0.02480830439814815
+    },
+    {
+      "width_engaged_mm": 200.0,
+      "E_MPa": 3000.0,
+      "pitch_mm": 95.0,
+      "sag_mm_100N": 0.02067358699845679
+    },
+    {
+      "width_engaged_mm": 50.0,
+      "E_MPa": 2200.0,
+      "pitch_mm": 190.0,
+      "sag_mm_100N": 0.9021201599326599
+    },
+    {
+      "width_engaged_mm": 50.0,
+      "E_MPa": 2500.0,
+      "pitch_mm": 190.0,
+      "sag_mm_100N": 0.7938657407407408
+    },
+    {
+      "width_engaged_mm": 50.0,
+      "E_MPa": 3000.0,
+      "pitch_mm": 190.0,
+      "sag_mm_100N": 0.6615547839506173
+    },
+    {
+      "width_engaged_mm": 100.0,
+      "E_MPa": 2200.0,
+      "pitch_mm": 190.0,
+      "sag_mm_100N": 0.45106007996632996
+    },
+    {
+      "width_engaged_mm": 100.0,
+      "E_MPa": 2500.0,
+      "pitch_mm": 190.0,
+      "sag_mm_100N": 0.3969328703703704
+    },
+    {
+      "width_engaged_mm": 100.0,
+      "E_MPa": 3000.0,
+      "pitch_mm": 190.0,
+      "sag_mm_100N": 0.33077739197530864
+    },
+    {
+      "width_engaged_mm": 200.0,
+      "E_MPa": 2200.0,
+      "pitch_mm": 190.0,
+      "sag_mm_100N": 0.22553003998316498
+    },
+    {
+      "width_engaged_mm": 200.0,
+      "E_MPa": 2500.0,
+      "pitch_mm": 190.0,
+      "sag_mm_100N": 0.1984664351851852
+    },
+    {
+      "width_engaged_mm": 200.0,
+      "E_MPa": 3000.0,
+      "pitch_mm": 190.0,
+      "sag_mm_100N": 0.16538869598765432
+    }
+  ],
+  "dry_seat_100N_extra": {
+    "comment": "Isolated member point load at halfway between left and middle column; ignores work carrier/deck compliance.",
+    "midbay_100N_max_abs_mm": 0.03829364723653241
+  },
+  "checks": "Two closed-form simple-beam comparisons reproduce to 1e-9 mm; force equilibrium checked on every solve."
+}

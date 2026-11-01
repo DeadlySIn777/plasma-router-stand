@@ -1,0 +1,195 @@
+{
+  "source_sha256": {
+    "build_candidate.py": "eceacee430831905310a832b8cf58a19aabdce5a42b3e6072d29df7410f92aac",
+    "check_water.py": "16924e34c898959667a00a073cd017cab5142a8d0a19c0d931e03c09d9a8e752"
+  },
+  "units": "Millimetres, litres; plasma configuration, 12-ga 2.6568 mm steel. Open, unpressurized system.",
+  "pan": {
+    "outer_XY_mm": [
+      830.0,
+      1030.0
+    ],
+    "inner_XY_mm": [
+      824.6864,
+      1024.6864
+    ],
+    "floor_rise_along_Y_mm": 5.15,
+    "slope_percent": 0.5,
+    "wet_inner_floor_front_Z_mm": 854.67008,
+    "wet_inner_floor_rear_Z_mm": 859.79352,
+    "installed_slats_and_combs": 13,
+    "pan_liquid_only": {
+      "ideal_drain_stop": {
+        "surface_Z_mm": 856.5,
+        "gross_L": 0.276154,
+        "displaced_comb_slat_L": 0.00264,
+        "water_L": 0.273514,
+        "depth_at_wet_front_mm": 1.8299
+      },
+      "normal": {
+        "surface_Z_mm": 888.6568,
+        "gross_L": 26.555537,
+        "displaced_comb_slat_L": 0.455852,
+        "water_L": 26.099685,
+        "depth_at_wet_front_mm": 33.9867
+      },
+      "overflow_begins": {
+        "surface_Z_mm": 893.6568,
+        "gross_L": 30.780762,
+        "displaced_comb_slat_L": 0.572897,
+        "water_L": 30.207865,
+        "depth_at_wet_front_mm": 38.9867
+      },
+      "first_rim_spill": {
+        "surface_Z_mm": 902.0,
+        "gross_L": 37.831141,
+        "displaced_comb_slat_L": 0.755547,
+        "water_L": 37.075594,
+        "depth_at_wet_front_mm": 47.3299
+      }
+    },
+    "normal_to_notch_L": 4.1082,
+    "normal_to_rim_L": 10.9759,
+    "notch_to_rim_L": 6.8677,
+    "normal_recoverable_before_line_inventory_L": 25.8262,
+    "residual_wet_length_from_front_mm": 365.98,
+    "method": "Intersect the interior sloped prism at each level with all three installed combs and ten slats; gross volume cross-checked by analytic integration. No stock, debris, splash or weld beads."
+  },
+  "drain": {
+    "bore_mm": 20.0,
+    "center_XZ_mm": [
+      305.0,
+      866.5000000000001
+    ],
+    "invert_Z_mm": 856.5,
+    "note": "Gravity flow leaves a shallow wedge. Inspect for retained water and debris and dry the machine before switching to wood; include line inventory in receiver sizing."
+  },
+  "overflow": {
+    "slot_X_limits_mm": [
+      480.0,
+      560.0
+    ],
+    "crest_Z_mm": 893.6568,
+    "crest_width_mm": 80.0,
+    "head_to_exterior_rim_mm": 8.3432,
+    "slot_area_below_rim_mm2": 667.46,
+    "drop_box_clear_width_mm": 82.2,
+    "box_top_Z_mm": 903.0,
+    "centered_bottom_outlet_mm": [
+      40.0,
+      14.0
+    ],
+    "notch_overlap_inside_box_each_side_mm": 1.1,
+    "outlet_to_chute_lateral_margin_each_side_mm": 9.1,
+    "collector_bottom_to_chute_inlet_surface_Z_difference_mm": 22.0,
+    "hood_lip_over_low_rim_mm": 1.0,
+    "collector_outlet_XY_mm": [
+      500.0,
+      28,
+      540.0,
+      42
+    ],
+    "note": "The under-notch collector feeds a centered downward outlet. Its bare 560 mm2 aperture, 1.1 mm side margins and shallow chute returns require wet testing for debris and splashing; this volume check establishes no flow capacity."
+  },
+  "checks": {
+    "open_gauge_intersections_over_0p05_mm3": {
+      "drain_bore_19_8mm": [],
+      "nipple_25_8mm": [],
+      "notch_into_hood": [],
+      "hood_bottom_outlet": []
+    },
+    "plumbing_fixed_collisions_over_0p05_mm3": [],
+    "chutes": {
+      "open_drain_chute": {
+        "center_X_mm": 305.0,
+        "run_Y_mm": 251.0,
+        "fall_mm": 348.0,
+        "clear_width_mm": 58.2,
+        "vertical_side_return_mm": 12.0,
+        "inlet_YZ_mm": [
+          16.0,
+          665.0
+        ],
+        "exit_YZ_mm": [
+          267.0,
+          317.0
+        ],
+        "static_clearance_to_frame_mm": {
+          "end_X_0_0": 81.022,
+          "end_X_0_1": 63.066,
+          "center_post_0": 223.125,
+          "bearer_0": 113.475
+        },
+        "edge_to_nominal_receiver_rim_vertical_gap_mm": 44.0,
+        "vertical_projection_to_inner_rim_min_margin_mm": 153.73
+      },
+      "open_overflow_chute": {
+        "center_X_mm": 520.0,
+        "run_Y_mm": 244.0,
+        "fall_mm": 515.0,
+        "clear_width_mm": 58.2,
+        "vertical_side_return_mm": 12.0,
+        "inlet_YZ_mm": [
+          21.0,
+          825.0
+        ],
+        "exit_YZ_mm": [
+          265.0,
+          310.0
+        ],
+        "static_clearance_to_frame_mm": {
+          "end_X_0_0": 62.941,
+          "end_X_0_1": 7.514,
+          "center_post_0": 8.125,
+          "bearer_0": 27.396
+        },
+        "edge_to_nominal_receiver_rim_vertical_gap_mm": 37.0,
+        "vertical_projection_to_inner_rim_min_margin_mm": 45.76
+      }
+    },
+    "result": "PASS for modeled static checks",
+    "limits": "Selected water hardware and static frame BReps, without real valve/lever, joints, supply flow, jet trajectory, floor pitch, heat, debris, handles, motion cable or splash/dynamic certification. Receiver is a gross shape, use maker 56.8 L, not CAD cylinder volume."
+  },
+  "receiver": {
+    "envelope_center_XY_mm": [
+      345.0,
+      365.0
+    ],
+    "gross_supplier_L": 56.8,
+    "minimum_marked_usable_L": 48.0,
+    "reserved_fitting_and_chute_liquid_L": 2.0,
+    "worst_liquid_bound_L": 39.83114,
+    "initial_max_L_at_worst_gross_pan": 8.16886,
+    "initial_max_L_at_normal_net_pan_conservative": 19.90031,
+    "policy": "Drain only into an empty, leak-tested receiver with the usable mark verified. A full receiver has no safe drain or overflow capacity. The separate overflow cannot prevent receiver overflow."
+  },
+  "faults": [
+    {
+      "state": "Valve shut, open overflow",
+      "outcome": "Liquid rises from normal to crest; at crest water starts into independent return. No passive throughput rating or unattended fill authorization."
+    },
+    {
+      "state": "Valve shut, blocked overflow",
+      "outcome": "Only 6.87 L between notch onset and first spill. At a hypothetical constant 5 L/min this is 82.4 s until rim spill. Stop filling; fail-safe procedure required."
+    },
+    {
+      "state": "Valve open, empty receiver",
+      "outcome": "Gravity can recover about 25.83 L of normal pan water; add actual drop-box, nipple and fittings inventory. Low wedge and sludge remain."
+    },
+    {
+      "state": "Drain plugged or obstructed",
+      "outcome": "An open valve proves neither flow nor emptiness. Visually check level and isolate before cleaning."
+    },
+    {
+      "state": "Receiver at its usable mark",
+      "outcome": "Zero remaining safe capacity; drain and additional filling must be inhibited. Pan overflow or opening drain can spill on the floor."
+    }
+  ],
+  "acceptance_tests": [
+    "Level the actual frame in both axes, leak-test all seams, and measure pan water by weight or calibrated volume at normal, notch onset, rim reference and after gravity draining. Check all three comb bases pass water.",
+    "Mark the real receiver usable level only after demonstrating at least 48 L of clean-water capacity with freeboard and allowance for debris. Check tooling, handle/removal path and both chutes against the actual tub.",
+    "With tools isolated and a separate spill catch in place, verify the installed valve travel, minimum flow at near-empty head, drain time, venting, plume and both discharge landing zones. Confirm independent overflow functions with drain shut.",
+    "Meter the maximum permitted fill rate. Prove clean and partially obstructed overflow routing keeps water below rim with margin at that rate, including splash and blocked-drain conditions; otherwise reduce/prohibit that rate or revise the collector. Deliberately blocked overflow requires stopping the fill before spill. Never continue filling a full receiver.",
+    "Repeat with realistic solids capture, strainer and residue. Demonstrate cooling, complete MDF removal before hot work, empty/clean tray before dry conversion and the real independent level isolation if automation is ever added."
+  ]
+}

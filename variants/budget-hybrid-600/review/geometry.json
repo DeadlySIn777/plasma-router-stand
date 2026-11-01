@@ -1,0 +1,80 @@
+{
+  "STAND": {
+    "export": {
+      "named_components": 57,
+      "STEP_solid_count": 57,
+      "world_bounds_mm": [
+        10.8,
+        -0.0,
+        0.0,
+        1139.2,
+        1450.0,
+        1056.0
+      ]
+    },
+    "frame": {
+      "exact_intersections_after_bounds_filter": 52,
+      "interferences_gt_0p05_mm3": []
+    }
+  },
+  "CARVING": {
+    "export": {
+      "named_components": 470,
+      "STEP_solid_count": 470,
+      "world_bounds_mm": [
+        -25.0,
+        -0.0,
+        0.0,
+        1175.0,
+        1450.0,
+        1370.0
+      ]
+    },
+    "frame_and_bed": {
+      "exact_intersections_after_bounds_filter": 130,
+      "interferences_gt_0p05_mm3": []
+    },
+    "deck_vs_fixed": {
+      "exact_intersections_after_bounds_filter": 8,
+      "interferences_gt_0p05_mm3": []
+    },
+    "deck_self": {
+      "exact_intersections_after_bounds_filter": 0,
+      "interferences_gt_0p05_mm3": []
+    },
+    "motion_vs_frame_deck_display_pose": {
+      "exact_intersections_after_bounds_filter": 8,
+      "interferences_gt_0p05_mm3": []
+    }
+  },
+  "PLASMA": {
+    "export": {
+      "named_components": 573,
+      "STEP_solid_count": 573,
+      "world_bounds_mm": [
+        -25.0,
+        -0.0,
+        0.0,
+        1175.0,
+        1450.0,
+        1370.0
+      ]
+    },
+    "frame_and_bed": {
+      "exact_intersections_after_bounds_filter": 130,
+      "interferences_gt_0p05_mm3": []
+    },
+    "deck_vs_fixed": {
+      "exact_intersections_after_bounds_filter": 4,
+      "interferences_gt_0p05_mm3": []
+    },
+    "deck_self": {
+      "exact_intersections_after_bounds_filter": 4,
+      "interferences_gt_0p05_mm3": []
+    },
+    "motion_vs_frame_deck_display_pose": {
+      "exact_intersections_after_bounds_filter": 8,
+      "interferences_gt_0p05_mm3": []
+    }
+  }
+}

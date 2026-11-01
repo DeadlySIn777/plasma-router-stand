@@ -1,0 +1,276 @@
+{
+  "columns": [
+    {
+      "post": "outside",
+      "length_mm": 914.75,
+      "wall_mm": 1.5,
+      "K": 1,
+      "ideal_elastic_Pcr_N": 62138.08931596508,
+      "stress_at_Pcr_MPa": 353.64858105302164,
+      "slenderness": 74.71002996138157
+    },
+    {
+      "post": "outside",
+      "length_mm": 914.75,
+      "wall_mm": 1.5,
+      "K": 2,
+      "ideal_elastic_Pcr_N": 15534.52232899127,
+      "stress_at_Pcr_MPa": 88.41214526325541,
+      "slenderness": 149.42005992276313
+    },
+    {
+      "post": "center",
+      "length_mm": 698.25,
+      "wall_mm": 1.5,
+      "K": 1,
+      "ideal_elastic_Pcr_N": 106645.08447288728,
+      "stress_at_Pcr_MPa": 606.9527276312014,
+      "slenderness": 57.02790753816308
+    },
+    {
+      "post": "center",
+      "length_mm": 698.25,
+      "wall_mm": 1.5,
+      "K": 2,
+      "ideal_elastic_Pcr_N": 26661.27111822182,
+      "stress_at_Pcr_MPa": 151.73818190780034,
+      "slenderness": 114.05581507632616
+    },
+    {
+      "post": "outside",
+      "length_mm": 914.75,
+      "wall_mm": 1.9,
+      "K": 1,
+      "ideal_elastic_Pcr_N": 74521.33836272203,
+      "stress_at_Pcr_MPa": 342.5269221352198,
+      "slenderness": 75.91323769826302
+    },
+    {
+      "post": "outside",
+      "length_mm": 914.75,
+      "wall_mm": 1.9,
+      "K": 2,
+      "ideal_elastic_Pcr_N": 18630.334590680508,
+      "stress_at_Pcr_MPa": 85.63173053380496,
+      "slenderness": 151.82647539652604
+    },
+    {
+      "post": "center",
+      "length_mm": 698.25,
+      "wall_mm": 1.9,
+      "K": 1,
+      "ideal_elastic_Pcr_N": 127897.95296591466,
+      "stress_at_Pcr_MPa": 587.8650751490566,
+      "slenderness": 57.946344053361194
+    },
+    {
+      "post": "center",
+      "length_mm": 698.25,
+      "wall_mm": 1.9,
+      "K": 2,
+      "ideal_elastic_Pcr_N": 31974.488241478666,
+      "stress_at_Pcr_MPa": 146.96626878726414,
+      "slenderness": 115.89268810672239
+    },
+    {
+      "post": "outside",
+      "length_mm": 914.75,
+      "wall_mm": 2.1,
+      "K": 1,
+      "ideal_elastic_Pcr_N": 80107.45473790377,
+      "stress_at_Pcr_MPa": 337.00611045839725,
+      "slenderness": 76.53251456736609
+    },
+    {
+      "post": "outside",
+      "length_mm": 914.75,
+      "wall_mm": 2.1,
+      "K": 2,
+      "ideal_elastic_Pcr_N": 20026.863684475942,
+      "stress_at_Pcr_MPa": 84.25152761459931,
+      "slenderness": 153.06502913473219
+    },
+    {
+      "post": "center",
+      "length_mm": 698.25,
+      "wall_mm": 2.1,
+      "K": 1,
+      "ideal_elastic_Pcr_N": 137485.17811661743,
+      "stress_at_Pcr_MPa": 578.3899298055969,
+      "slenderness": 58.41905252436553
+    },
+    {
+      "post": "center",
+      "length_mm": 698.25,
+      "wall_mm": 2.1,
+      "K": 2,
+      "ideal_elastic_Pcr_N": 34371.29452915436,
+      "stress_at_Pcr_MPa": 144.59748245139923,
+      "slenderness": 116.83810504873107
+    }
+  ],
+  "foot": {
+    "seller_static_one_foot_N": 978.60875535731,
+    "largest_partial_wet_case_one_support_N": 405.8523147432613,
+    "note": "Wet member reactions exclude other frame, gantry and process loads. No installed foot rating or nine-foot load-sharing factor derived."
+  },
+  "lateral_sensitivity": [
+    {
+      "direction": "Y",
+      "panel": "side_front",
+      "assumed_net_axial_joint_motion_mm": 0.0,
+      "secant_stiffness_at_100N_N_per_mm": 5009.4057074307875,
+      "equivalent_Hz_by_effective_kg": {
+        "20": 79.65228462052814,
+        "60": 45.9872679672306,
+        "120": 32.51790902787166
+      }
+    },
+    {
+      "direction": "Y",
+      "panel": "side_front",
+      "assumed_net_axial_joint_motion_mm": 0.1,
+      "secant_stiffness_at_100N_N_per_mm": 548.2637336548236,
+      "equivalent_Hz_by_effective_kg": {
+        "20": 26.35116943374481,
+        "60": 15.213854766034006,
+        "120": 10.757819873049922
+      }
+    },
+    {
+      "direction": "Y",
+      "panel": "side_front",
+      "assumed_net_axial_joint_motion_mm": 0.3,
+      "secant_stiffness_at_100N_N_per_mm": 197.13872075563356,
+      "equivalent_Hz_by_effective_kg": {
+        "20": 15.801237502446247,
+        "60": 9.122848725566548,
+        "120": 6.45082819758716
+      }
+    },
+    {
+      "direction": "Y",
+      "panel": "side_rear",
+      "assumed_net_axial_joint_motion_mm": 0.0,
+      "secant_stiffness_at_100N_N_per_mm": 4890.496291581628,
+      "equivalent_Hz_by_effective_kg": {
+        "20": 78.70124465832116,
+        "60": 45.438184789040314,
+        "120": 32.129648589137844
+      }
+    },
+    {
+      "direction": "Y",
+      "panel": "side_rear",
+      "assumed_net_axial_joint_motion_mm": 0.1,
+      "secant_stiffness_at_100N_N_per_mm": 536.9581162094844,
+      "equivalent_Hz_by_effective_kg": {
+        "20": 26.078063554620222,
+        "60": 15.056177013204154,
+        "120": 10.646324864781677
+      }
+    },
+    {
+      "direction": "Y",
+      "panel": "side_rear",
+      "assumed_net_axial_joint_motion_mm": 0.3,
+      "secant_stiffness_at_100N_N_per_mm": 193.1220920918688,
+      "equivalent_Hz_by_effective_kg": {
+        "20": 15.639436913709803,
+        "60": 9.029433112104526,
+        "120": 6.384773383839462
+      }
+    },
+    {
+      "direction": "X",
+      "panel": "end",
+      "assumed_net_axial_joint_motion_mm": 0.0,
+      "secant_stiffness_at_100N_N_per_mm": 1785.8783955078445,
+      "equivalent_Hz_by_effective_kg": {
+        "20": 47.558820537589796,
+        "60": 27.458097839718572,
+        "120": 19.415807180948697
+      }
+    },
+    {
+      "direction": "X",
+      "panel": "end",
+      "assumed_net_axial_joint_motion_mm": 0.1,
+      "secant_stiffness_at_100N_N_per_mm": 589.8862519440819,
+      "equivalent_Hz_by_effective_kg": {
+        "20": 27.333123966470758,
+        "60": 15.780786479835303,
+        "120": 11.15870113234853
+      }
+    },
+    {
+      "direction": "X",
+      "panel": "end",
+      "assumed_net_axial_joint_motion_mm": 0.3,
+      "secant_stiffness_at_100N_N_per_mm": 252.1540780965817,
+      "equivalent_Hz_by_effective_kg": {
+        "20": 17.870558767491065,
+        "60": 10.317571914979991,
+        "120": 7.295625066462225
+      }
+    }
+  ],
+  "ideal_no_slip_frequency_scenarios_Hz": [
+    19.415807180948697,
+    79.65228462052814
+  ],
+  "all_secant_frequency_scenarios_Hz": [
+    6.384773383839462,
+    79.65228462052814
+  ],
+  "excitation_examples": [
+    {
+      "rpm": 3000,
+      "shaft_1x_Hz": 50.0,
+      "two_flute_pass_Hz": 100.0
+    },
+    {
+      "rpm": 6000,
+      "shaft_1x_Hz": 100.0,
+      "two_flute_pass_Hz": 200.0
+    },
+    {
+      "rpm": 12000,
+      "shaft_1x_Hz": 200.0,
+      "two_flute_pass_Hz": 400.0
+    },
+    {
+      "rpm": 24000,
+      "shaft_1x_Hz": 400.0,
+      "two_flute_pass_Hz": 800.0
+    }
+  ],
+  "dry_stability": {
+    "dry_steel_subset_kg": 26.79765131653057,
+    "rail_force_height_mm": 1036.0,
+    "assumed_footprint": "Both opposed outer support lines engaged; center feet inside polygon",
+    "required_static_friction_for_100N_on_subset_only": 0.38052447243721677,
+    "cases": [
+      {
+        "axis": "X",
+        "subset_CG_mm": 575.0,
+        "outer_pivot_spacing_mm": 1088.4,
+        "smaller_restoring_arm_mm": 544.2,
+        "condition_for_ideal_rigid_tip_external_force_N": 138.04357231616518,
+        "transfer_between_outer_lines_at_100N_N": 95.18559353178978,
+        "plane_tilt_for_0p5mm_differential_deg": 0.026321102298113176,
+        "height_difference_across_nominal_travel_mm": 0.36751194413818444
+      },
+      {
+        "axis": "Y",
+        "subset_CG_mm": 717.9077922517877,
+        "outer_pivot_spacing_mm": 1230.0,
+        "smaller_restoring_arm_mm": 612.0922077482123,
+        "condition_for_ideal_rigid_tip_external_force_N": 155.26533433379555,
+        "transfer_between_outer_lines_at_100N_N": 84.22764227642277,
+        "plane_tilt_for_0p5mm_differential_deg": 0.023290965998831303,
+        "height_difference_across_nominal_travel_mm": 0.4065040650406504
+      }
+    ]
+  }
+}
