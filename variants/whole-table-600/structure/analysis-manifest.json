@@ -1,0 +1,66 @@
+{
+  "authoritative_results": [
+    "plate-shifted.json",
+    "plate-shifted-linear.json",
+    "frame.json"
+  ],
+  "source_sha256": {
+    "variants/whole-table-600/structure/plate_fem.py": "72c512f265b17b09178e198c75c8393be4280e6e10246ed2058d26052fa938f1",
+    "variants/whole-table-600/structure/frame.py": "28d421f3e11452bb854e94651c4ea4a2538131d04f332c37a943e08c06b7fa19",
+    "variants/budget-hybrid-600/simulation/structure.py": "e2c7d1e72993d1bbff92a15e969144b81a7446d71e33c18f344b918c663bcc67"
+  },
+  "result_sha256": {
+    "plate-shifted.json": "72948eb51fa25eedd64ca7fdb75b4ba4dfe23ba7659800e3f404bb3a5c1253b3",
+    "plate-shifted-linear.json": "1796126a5842f4542ffa1b68dc8949b88a12b6f0842e7b8e7f86766cc0ecbde4",
+    "frame.json": "0af904f0637833b971fc74721be520a5bd0564f7e1039ff1115b0c1ba966a94c"
+  },
+  "plate_runtime": {
+    "PyNiteFEA": "3.2.1",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  },
+  "run_arguments": [
+    "plate_fem.py shifted 2500 50 0 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 1 19.05 1 46.4",
+    "plate_fem.py shifted-linear 2500 50 0 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 0 19.05 1 46.4"
+  ],
+  "geometry_basis": {
+    "outer_sheet_mm": 1.8974,
+    "slat_y_mm": [
+      161.4,
+      331.4,
+      412.4,
+      582.4,
+      663.4,
+      833.4,
+      914.4,
+      1084.4
+    ],
+    "window_height_mm": 12,
+    "wood_actual_mm": 19.05,
+    "outer_wall_over_inside_floor_mm": 33.1026,
+    "lip_strip_mm": 25,
+    "minimum_comb_residual_mm": 5,
+    "guide_support_y_mm": [
+      100,
+      600,
+      1100
+    ],
+    "slat_depth_mm": 40,
+    "support_x_model_mm": [
+      33.4,
+      1116.6
+    ],
+    "side_brace_anchors_Z_mm": [
+      150,
+      775
+    ],
+    "side_brace_rectangular_body_mm": 804.390529679106,
+    "pad_front_y_mm": [
+      121.4,
+      372.4,
+      623.4,
+      874.4
+    ]
+  },
+  "scope": "Completed final-offset sixteen-case contact and signed-seat plate solves, and final frame member calculation. Prior pad-position mesh and material comparisons remain explicitly labelled as earlier geometry."
+}

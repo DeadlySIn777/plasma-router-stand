@@ -1,0 +1,600 @@
+{
+  "source_sha256": "8ab1492cdab20ed035175dad74c311abbe6e85ea15de944a1b75b75f4371bf09",
+  "pose": {
+    "gantry_y": 275,
+    "head_x": 575,
+    "z_lift": 100,
+    "cutter": "No cutter modeled; cutter must be removed. Spindle envelope retained in this check."
+  },
+  "limits": "Discrete 12 subdivisions per segment, actual CAD common volumes after AABB culling, plus conservative bounding solids enclosing each complete translation/rotation phase. No cable, hand-access, structural or thermal qualification.",
+  "water": {
+    "inside_floor_z_mm": 737.7474,
+    "wall_rim_z_mm": 770.85,
+    "gross_floor_area_mm2": 854900,
+    "normal_fill_20mm_upper_L": 17.098,
+    "overflow_26mm_upper_L": 22.2274,
+    "absolute_rim_upper_L": 28.29941274,
+    "hose_allowance_L": 1,
+    "absolute_rim_plus_hose_upper_L": 29.29941274,
+    "receiver_required_measured_usable_L": 30,
+    "capacity_bound_pass": true,
+    "note": "Gross bound ignores all wall, comb, slat and fixture displacement, hence conservatively exceeds actual water volume. Nominal34L receiver is not a measured usable volume.",
+    "overflow_geometry": {
+      "component_solids": [
+        {
+          "valid": true,
+          "bounds_mm": [
+            478.0,
+            65.0,
+            650.0,
+            562.0,
+            85.0,
+            773.7474
+          ]
+        },
+        {
+          "valid": true,
+          "bounds_mm": [
+            478.0,
+            65.0,
+            646.1026,
+            562.0,
+            250.0,
+            662.0
+          ]
+        },
+        {
+          "valid": true,
+          "bounds_mm": [
+            478.0,
+            250.0,
+            550.0,
+            562.0,
+            251.8974,
+            660.0
+          ]
+        }
+      ],
+      "deflector_bounds_mm": [
+        478.0,
+        250.0,
+        550.0,
+        562.0,
+        251.8974,
+        660.0
+      ],
+      "receiver_nominal_envelope_mm": [
+        320,
+        140,
+        0,
+        720,
+        790,
+        300
+      ],
+      "receiver_open_fit_envelope_mm": [
+        324,
+        144,
+        300,
+        716,
+        786,
+        300
+      ],
+      "downward_outlet_projection_inside_receiver": true,
+      "front_projection_margin_mm": 106.0,
+      "side_projection_margin_mm": 154.0,
+      "vs_frame_interferences": [],
+      "flow_qualification": "Drop box intercepts front notch; back low opening feeds under-beam return; end deflector blocks forward jet and gives downward outlet. Gravity projection only: overflow throughput, wetting, splash, blockage and heating need cold-water/operating validation. No CFD claim.",
+      "receiver_temperature": "Deploy as cold-service receiver only with tools isolated and pan cooled unless its shielding and liquid temperature are separately qualified. Primary pan coverage alone does not prove thermal safety."
+    }
+  },
+  "cabinet": {
+    "closed_guard_parts_present_in_plasma": [
+      "cold_case_lid_sheet",
+      "cold_case_lid_Al_patch"
+    ],
+    "lid_parts_in_carving": [],
+    "use": "All four pads enclosed and lid mechanically secured before plasma mode. Open case only with tools isolated, water and steel cooled, cutter removed, and no work/fixtures on pads.",
+    "qualification": "Thin galvanized secondary spark/dust guard beyond nominal tool travel. Neither hermetic sealing nor thermal/fire protection is established by this geometry.",
+    "receiver": "Cold stationary open service receiver only, full bottom supported, no lifting filled, no pressure; usable volume must be measured at >=30L before draining."
+  },
+  "path": [
+    {
+      "pad": 3,
+      "installed_bounds_mm": [
+        162.0,
+        874.4,
+        789.7474,
+        988.0,
+        1124.4,
+        808.7973999999999
+      ],
+      "stored_bounds_mm": [
+        162.0,
+        1301.65,
+        559.69,
+        988.0,
+        1320.7,
+        809.6900000000002
+      ],
+      "final_pose_symmetric_difference_mm3": 0.0,
+      "steps": [
+        {
+          "stage": "lift_to_bottom850",
+          "bounds_mm": [
+            162.0,
+            874.4,
+            789.7474,
+            988.0,
+            1124.4,
+            869.05
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "translate_centerY1282",
+          "bounds_mm": [
+            162.0,
+            874.4,
+            850.0,
+            988.0,
+            1407.0,
+            869.05
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "raise_to_bottom950",
+          "bounds_mm": [
+            162.0,
+            1157.0,
+            850.0,
+            988.0,
+            1407.0,
+            969.05
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "rotate90_about_center",
+          "bounds_mm": [
+            162.0,
+            1156.63762276903,
+            834.1626227690301,
+            988.0,
+            1407.36237723097,
+            1084.8873772309698
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "align_vertical_slot",
+          "bounds_mm": [
+            162.0,
+            1272.4749999999997,
+            834.525,
+            988.0,
+            1320.6999999999998,
+            1084.525
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "lower_into_slot",
+          "bounds_mm": [
+            162.0,
+            1301.6499999999999,
+            559.69,
+            988.0,
+            1320.6999999999998,
+            1084.525
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        }
+      ]
+    },
+    {
+      "pad": 2,
+      "installed_bounds_mm": [
+        162.0,
+        623.4,
+        789.7474,
+        988.0,
+        873.4,
+        808.7973999999999
+      ],
+      "stored_bounds_mm": [
+        162.0,
+        1281.6,
+        559.69,
+        988.0,
+        1300.6499999999999,
+        809.69
+      ],
+      "final_pose_symmetric_difference_mm3": 0.0,
+      "steps": [
+        {
+          "stage": "lift_to_bottom850",
+          "bounds_mm": [
+            162.0,
+            623.4,
+            789.7474,
+            988.0,
+            873.4,
+            869.05
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "translate_centerY1282",
+          "bounds_mm": [
+            162.0,
+            623.4,
+            850.0,
+            988.0,
+            1407.0,
+            869.05
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "raise_to_bottom950",
+          "bounds_mm": [
+            162.0,
+            1157.0,
+            850.0,
+            988.0,
+            1407.0,
+            969.05
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "rotate90_about_center",
+          "bounds_mm": [
+            162.0,
+            1156.63762276903,
+            834.1626227690301,
+            988.0,
+            1407.36237723097,
+            1084.8873772309698
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "align_vertical_slot",
+          "bounds_mm": [
+            162.0,
+            1272.4749999999997,
+            834.525,
+            988.0,
+            1300.6499999999996,
+            1084.525
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "lower_into_slot",
+          "bounds_mm": [
+            162.0,
+            1281.5999999999997,
+            559.69,
+            988.0,
+            1300.6499999999996,
+            1084.525
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        }
+      ]
+    },
+    {
+      "pad": 1,
+      "installed_bounds_mm": [
+        162.0,
+        372.4,
+        789.7474,
+        988.0,
+        622.4,
+        808.7973999999999
+      ],
+      "stored_bounds_mm": [
+        162.0,
+        1261.55,
+        559.69,
+        988.0,
+        1280.6,
+        809.69
+      ],
+      "final_pose_symmetric_difference_mm3": 0.0,
+      "steps": [
+        {
+          "stage": "lift_to_bottom850",
+          "bounds_mm": [
+            162.0,
+            372.4,
+            789.7474,
+            988.0,
+            622.4,
+            869.05
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "translate_centerY1282",
+          "bounds_mm": [
+            162.0,
+            372.4,
+            850.0,
+            988.0,
+            1407.0,
+            869.05
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "raise_to_bottom950",
+          "bounds_mm": [
+            162.0,
+            1157.0,
+            850.0,
+            988.0,
+            1407.0,
+            969.05
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "rotate90_about_center",
+          "bounds_mm": [
+            162.0,
+            1156.63762276903,
+            834.1626227690301,
+            988.0,
+            1407.36237723097,
+            1084.8873772309698
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "align_vertical_slot",
+          "bounds_mm": [
+            162.0,
+            1261.5499999999995,
+            834.525,
+            988.0,
+            1291.5249999999996,
+            1084.525
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "lower_into_slot",
+          "bounds_mm": [
+            162.0,
+            1261.5499999999995,
+            559.69,
+            988.0,
+            1280.5999999999995,
+            1084.525
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        }
+      ]
+    },
+    {
+      "pad": 0,
+      "installed_bounds_mm": [
+        162.0,
+        121.4,
+        789.7474,
+        988.0,
+        371.4,
+        808.7973999999999
+      ],
+      "stored_bounds_mm": [
+        162.0,
+        1241.5,
+        559.69,
+        988.0,
+        1260.55,
+        809.69
+      ],
+      "final_pose_symmetric_difference_mm3": 0.0,
+      "steps": [
+        {
+          "stage": "lift_to_bottom850",
+          "bounds_mm": [
+            162.0,
+            121.4,
+            789.7474,
+            988.0,
+            371.4,
+            869.05
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "translate_centerY1282",
+          "bounds_mm": [
+            162.0,
+            121.4,
+            850.0,
+            988.0,
+            1407.0,
+            869.05
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "raise_to_bottom950",
+          "bounds_mm": [
+            162.0,
+            1157.0,
+            850.0,
+            988.0,
+            1407.0,
+            969.05
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "rotate90_about_center",
+          "bounds_mm": [
+            162.0,
+            1156.63762276903,
+            834.1626227690301,
+            988.0,
+            1407.36237723097,
+            1084.8873772309698
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "align_vertical_slot",
+          "bounds_mm": [
+            162.0,
+            1241.4999999999998,
+            834.525,
+            988.0,
+            1291.5249999999996,
+            1084.525
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        },
+        {
+          "stage": "lower_into_slot",
+          "bounds_mm": [
+            162.0,
+            1241.4999999999998,
+            559.69,
+            988.0,
+            1260.5499999999997,
+            1084.525
+          ],
+          "outside_table_XY": false,
+          "interferences": [],
+          "conservative_sweep_envelope_interferences": [],
+          "sweep_note": "Linear phase: union endpoint AABB encloses entire translation. Rotation: full YZ radius encloses every angle. An empty envelope intersection is a sufficient modeled-geometry clearance condition."
+        }
+      ]
+    }
+  ],
+  "stored_pad_pair_min_gaps_Y_mm": [
+    1.0,
+    1.0,
+    1.0000000000002274
+  ],
+  "process_extent": {
+    "wood_board_extents_XY_mm": [
+      162.0,
+      121.4,
+      988.0,
+      1124.4
+    ],
+    "router_nominal_axis_X_mm": [
+      175.0,
+      975.0
+    ],
+    "router_nominal_axis_Y_mm": [
+      121.40000000000003,
+      1121.4
+    ],
+    "nominal_router_rectangle_within_board_outer_extents": true,
+    "wood_panel_seams_mm": [
+      [
+        371.4,
+        372.4
+      ],
+      [
+        622.4,
+        623.4
+      ],
+      [
+        873.4,
+        874.4
+      ]
+    ],
+    "wood_note": "Nominal1000mm axis extent is supported by the board arrangement, with three1mm panel seams. This does not establish facing every outer edge or actual cutter/work/clamp clearance.",
+    "plasma_nominal_axis_Y_mm": [
+      73.6,
+      1073.6
+    ],
+    "pan_outer_Y_mm": [
+      85,
+      1115
+    ],
+    "plasma_note": "Inherited plasma axis begins11.4mm ahead of pan. Select actual cuts within supported pan/slat area with measured torch margins; this model does not set safe operating limits."
+  },
+  "path_pass": true,
+  "recorded_pair_gaps_pass": true,
+  "source_hash_at_completion": "8ab1492cdab20ed035175dad74c311abbe6e85ea15de944a1b75b75f4371bf09",
+  "source_unchanged_during_check": true
+}

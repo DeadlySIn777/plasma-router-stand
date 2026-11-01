@@ -1,0 +1,39 @@
+{
+  "Ewood_MPa": 2500.0,
+  "wood_mm": 19.05,
+  "mesh_mm": 50.0,
+  "middle_foot": false,
+  "node_count": 1774,
+  "quad_count": 1320,
+  "steel_member_count": 272,
+  "ideal_seat_ks_N_per_mm": 10000000.0,
+  "compression_contact": true,
+  "edge_composite_I_mm4": 54936.04303704823,
+  "cases": [
+    {
+      "patch_XY_mm": [
+        365.0,
+        87.5
+      ],
+      "worst_wood_node_XY_mm": [
+        365.0,
+        75.0
+      ],
+      "max_workside_mm": 0.1896689201063875,
+      "sum_RZ_N": 100.00000008324525
+    },
+    {
+      "patch_XY_mm": [
+        575.0,
+        200.0
+      ],
+      "worst_wood_node_XY_mm": [
+        575.0,
+        187.5
+      ],
+      "max_workside_mm": 0.1250970386124397,
+      "sum_RZ_N": 100.0000000614366
+    }
+  ],
+  "max_mm": 0.1896689201063875
+}

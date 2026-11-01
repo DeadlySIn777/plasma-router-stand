@@ -1,0 +1,983 @@
+{
+  "as_of": "2026-10-31",
+  "basis": "Final raw stock in final-steel-five-braces.json. Candidate geometry audit, not released cut sheet. All dimensions millimetres unless stated.",
+  "kerf_mm": 3,
+  "end_facing_per_stock_bar_mm": 4,
+  "stock": [
+    {
+      "stock": "2in square14ga,8ft",
+      "quantity": 2,
+      "length_mm": 2438.4,
+      "cuts_mm": [
+        1450,
+        793.6375
+      ],
+      "remaining_each_mm": 184.7625,
+      "covers": "Two continuous top motion beams and two middle legs from drops."
+    },
+    {
+      "stock": "1.25in square14ga,8ft",
+      "quantity": 1,
+      "length_mm": 2438.4,
+      "cuts_mm": [
+        793.6375,
+        793.6375,
+        793.6375
+      ],
+      "remaining_each_mm": 44.4875,
+      "covers": "Three side legs."
+    },
+    {
+      "stock": "1.25in square14ga,4ft",
+      "quantity": 1,
+      "length_mm": 1219.2,
+      "cuts_mm": [
+        793.6375,
+        59.975,
+        59.975,
+        59.975,
+        59.975,
+        59.975,
+        59.975
+      ],
+      "remaining_each_mm": 40.7125,
+      "covers": "One outer leg and six hollow fixed-foot standoffs59.975mm long. Sum1178.4875mm including7cuts×3mm and4mmfacing inside1219.2mm."
+    },
+    {
+      "stock": "1×2in RHS16ga,8ft",
+      "quantity": 1,
+      "length_mm": 2438.4,
+      "cuts_mm": [
+        1051.45,
+        1051.45
+      ],
+      "remaining_each_mm": 325.5,
+      "covers": "Front/rear crossbearers actual1051.45mm each."
+    },
+    {
+      "stock": "1×2in RHS16ga,8ft",
+      "quantity": 1,
+      "length_mm": 2438.4,
+      "cuts_mm": [
+        1032.4,
+        474.6,
+        474.6
+      ],
+      "remaining_each_mm": 443.8,
+      "covers": "Middle crossbearer1032.4 plus two centered pan-backbone halves474.6."
+    },
+    {
+      "stock": "3/4×1/8in flat,8ft",
+      "quantity": 3,
+      "length_mm": 2438.4,
+      "cuts_mm": [
+        804.3905296791061,
+        804.3905296791061,
+        804.3905296791061
+      ],
+      "remaining_each_mm": 12.22841096268212,
+      "covers": "Nine804.39053mm side-brace flat-ended blanks: eight installed. Anchor centerline deltaY500/deltaZ625 plus4mm total end stock. Ninth spare supplies twenty-four20mm tabs (sixteen wood clamps plus eight steel top-stop3.175mm layers).480mm parts+72mmkerf+4mmfacing=556mm; remainder248.39053mm. Final end weld overlap and anchor offsets must match CAD."
+    },
+    {
+      "stock": "3/4×1/8in flat,8ft",
+      "quantity": 2,
+      "length_mm": 2438.4,
+      "cuts_mm": [
+        1188.7878459876267,
+        1188.7878459876267
+      ],
+      "remaining_each_mm": 50.82430802474664,
+      "covers": "Four1188.78785mm end-brace flat-ended blanks, two per bar. Centerline deltaX1083.2/deltaZ480 plus4mm total end stock. Final flat-end/weld overlap must match CAD."
+    },
+    {
+      "stock": "1.25×1/8in flat,4ft",
+      "quantity": 3,
+      "length_mm": 1219.2,
+      "cuts_mm": null,
+      "covers": "Three pan comb/support raw bars; notch map and end attachment need final CAD. Available original length1219.2 each."
+    }
+  ],
+  "leg_count": {
+    "two_in_square_middle": 2,
+    "one_and_quarter_in_square_outer": 4,
+    "total": 6,
+    "warning": "This quoted stock does not supply six1.25in legs. Parent CAD must preserve mixed sections or reprice."
+  },
+  "plate_nesting": {
+    "stock_mm": [
+      101.6,
+      609.6,
+      4.7625
+    ],
+    "kerf_mm": 3,
+    "edge_margin_mm": 2,
+    "rectangles": [
+      {
+        "quantity": 2,
+        "dimensions_mm": [
+          55,
+          55
+        ],
+        "positions_mm": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            60
+          ]
+        ],
+        "use": "Middle-leg top caps"
+      },
+      {
+        "quantity": 10,
+        "dimensions_mm": [
+          47,
+          47
+        ],
+        "positions_mm": [
+          [
+            2,
+            118
+          ],
+          [
+            52,
+            118
+          ],
+          [
+            2,
+            168
+          ],
+          [
+            52,
+            168
+          ],
+          [
+            2,
+            218
+          ],
+          [
+            52,
+            218
+          ],
+          [
+            2,
+            268
+          ],
+          [
+            52,
+            268
+          ],
+          [
+            2,
+            318
+          ],
+          [
+            52,
+            318
+          ]
+        ],
+        "use": "Four outer-leg top caps and six foot pads"
+      },
+      {
+        "quantity": 16,
+        "dimensions_mm": [
+          9,
+          9
+        ],
+        "positions_mm": [
+          [
+            2,
+            368
+          ],
+          [
+            14,
+            368
+          ],
+          [
+            26,
+            368
+          ],
+          [
+            38,
+            368
+          ],
+          [
+            50,
+            368
+          ],
+          [
+            62,
+            368
+          ],
+          [
+            74,
+            368
+          ],
+          [
+            86,
+            368
+          ],
+          [
+            2,
+            380
+          ],
+          [
+            14,
+            380
+          ],
+          [
+            26,
+            380
+          ],
+          [
+            38,
+            380
+          ],
+          [
+            50,
+            380
+          ],
+          [
+            62,
+            380
+          ],
+          [
+            74,
+            380
+          ],
+          [
+            86,
+            380
+          ]
+        ],
+        "use": "Tap-boss blanks; thread capacity requires separate check"
+      },
+      {
+        "quantity": 32,
+        "dimensions_mm": [
+          19.05,
+          15
+        ],
+        "positions_mm": [
+          [
+            2,
+            392
+          ],
+          [
+            24.05,
+            392
+          ],
+          [
+            46.1,
+            392
+          ],
+          [
+            68.15,
+            392
+          ],
+          [
+            2,
+            410
+          ],
+          [
+            24.05,
+            410
+          ],
+          [
+            46.1,
+            410
+          ],
+          [
+            68.15,
+            410
+          ],
+          [
+            2,
+            428
+          ],
+          [
+            24.05,
+            428
+          ],
+          [
+            46.1,
+            428
+          ],
+          [
+            68.15,
+            428
+          ],
+          [
+            2,
+            446
+          ],
+          [
+            24.05,
+            446
+          ],
+          [
+            46.1,
+            446
+          ],
+          [
+            68.15,
+            446
+          ],
+          [
+            2,
+            464
+          ],
+          [
+            24.05,
+            464
+          ],
+          [
+            46.1,
+            464
+          ],
+          [
+            68.15,
+            464
+          ],
+          [
+            2,
+            482
+          ],
+          [
+            24.05,
+            482
+          ],
+          [
+            46.1,
+            482
+          ],
+          [
+            68.15,
+            482
+          ],
+          [
+            2,
+            500
+          ],
+          [
+            24.05,
+            500
+          ],
+          [
+            46.1,
+            500
+          ],
+          [
+            68.15,
+            500
+          ],
+          [
+            2,
+            518
+          ],
+          [
+            24.05,
+            518
+          ],
+          [
+            46.1,
+            518
+          ],
+          [
+            68.15,
+            518
+          ]
+        ],
+        "use": "Two4.7625mm layers form each of sixteen9.525mm brace-anchor offsets"
+      },
+      {
+        "quantity": 8,
+        "dimensions_mm": [
+          19,
+          20
+        ],
+        "positions_mm": [
+          [
+            2,
+            536
+          ],
+          [
+            24,
+            536
+          ],
+          [
+            46,
+            536
+          ],
+          [
+            68,
+            536
+          ],
+          [
+            2,
+            559
+          ],
+          [
+            24,
+            559
+          ],
+          [
+            46,
+            559
+          ],
+          [
+            68,
+            559
+          ]
+        ],
+        "use": "Welded steel top-stop flanges"
+      }
+    ],
+    "extents_mm": [
+      99,
+      579
+    ],
+    "total_finished_blank_area_mm2": 41620,
+    "qualification": "68rectangular blanks fit with3mm minimum part separation and2mm outer margins. Former6bearingtabs33×32.5 and6cornerpads24×40 are removed because absent from current CAD; this replacement nest does not supply those obsolete parts. All connections, offsets and tap/weld capacities need the final CAD details."
+  },
+  "pan_sheet_nest": {
+    "stock_mm": [
+      1219.2,
+      1219.2
+    ],
+    "pan_gross_blank_mm": [
+      900,
+      1100
+    ],
+    "pan_nominal_floor_before_bend_allowance_mm": [
+      830,
+      1030
+    ],
+    "pan_nominal_wall_mm": 35,
+    "slats": {
+      "quantity": 8,
+      "length_mm": 824,
+      "width_mm": 40,
+      "thickness": "14ga sheet; measure actual decimal"
+    },
+    "side_region_layout": {
+      "items": [
+        "900wide pan blank",
+        "six40wide slats",
+        "two25wide strips"
+      ],
+      "total_item_width_mm": 1190,
+      "inter_item_kerfs": 8,
+      "total_kerf_width_mm": 24,
+      "outer_edge_margin_total_mm": 4,
+      "required_stock_width_mm": 1218,
+      "stock_width_surplus_mm": 1.2,
+      "coordinates_mm": {
+        "pan": {
+          "x": [
+            2,
+            902
+          ],
+          "y": [
+            2,
+            1102
+          ]
+        },
+        "six_slats": [
+          {
+            "x": [
+              905,
+              945
+            ],
+            "y": [
+              2,
+              826
+            ]
+          },
+          {
+            "x": [
+              948,
+              988
+            ],
+            "y": [
+              2,
+              826
+            ]
+          },
+          {
+            "x": [
+              991,
+              1031
+            ],
+            "y": [
+              2,
+              826
+            ]
+          },
+          {
+            "x": [
+              1034,
+              1074
+            ],
+            "y": [
+              2,
+              826
+            ]
+          },
+          {
+            "x": [
+              1077,
+              1117
+            ],
+            "y": [
+              2,
+              826
+            ]
+          },
+          {
+            "x": [
+              1120,
+              1160
+            ],
+            "y": [
+              2,
+              826
+            ]
+          }
+        ],
+        "two_edge_strips": [
+          {
+            "x": [
+              1163,
+              1188
+            ],
+            "y": [
+              2,
+              1052
+            ]
+          },
+          {
+            "x": [
+              1191,
+              1216
+            ],
+            "y": [
+              2,
+              1052
+            ]
+          }
+        ]
+      }
+    },
+    "bottom_region_two_slats": [
+      {
+        "x": [
+          2,
+          826
+        ],
+        "y": [
+          1105,
+          1145
+        ]
+      },
+      {
+        "x": [
+          2,
+          826
+        ],
+        "y": [
+          1148,
+          1188
+        ]
+      }
+    ],
+    "qualification": "Only1.2mm nominal width surplus after planned kerf/margins; verify actual sheet dimensions and cutting process before release. Pan bend development must be rechecked with actual thickness/radius; any larger blank can consume this tiny reserve. Eight slats replace obsolete ten30mm-slat plan. Two25×1050 strips can exist with this exact nesting; no large rear shield remains.",
+    "overflow_fabrication_blanks": {
+      "material": "Uncoated14ga steel from tail below six824mm slats; no additional cash purchase.",
+      "parts": [
+        {
+          "name": "Vertical gutter/body development",
+          "dimensions_mm": [
+            124,
+            137
+          ],
+          "coordinates_mm": [
+            905,
+            829,
+            1029,
+            966
+          ]
+        },
+        {
+          "name": "Return development",
+          "dimensions_mm": [
+            108,
+            185
+          ],
+          "coordinates_mm": [
+            1032,
+            829,
+            1140,
+            1014
+          ]
+        },
+        {
+          "name": "Downward end deflector",
+          "dimensions_mm": [
+            84,
+            110
+          ],
+          "coordinates_mm": [
+            1032,
+            1017,
+            1116,
+            1127
+          ]
+        }
+      ],
+      "qualification": "These three developments replace the obsolete single104x50lip blank. Minimum3mm interpart separation, clear of both25mm edge strips. Cut the tail before ripping slat columns full length. Bend allowance, joints, catcher alignment and downhill liquid path remain final CAD details."
+    }
+  },
+  "cold_storage_sheet": {
+    "stock_mm": [
+      914.4,
+      609.6
+    ],
+    "material": "30ga galvanized sheet; cold secondary skin, outside hot zone",
+    "proposed_U_blank_mm": [
+      830,
+      594
+    ],
+    "proposed_outside_cabinet_mm": [
+      830,
+      84,
+      255
+    ],
+    "qualification": "Separate thin-skin cutting rule. Cut nominal 830 x 594 mm U blank and 609.6 x 84 mm roof from 914.4 x 609.6 mm sheet using tin snips with negligible material loss and factory edges. Lengthwise nominal remainder is only 84.4 mm. The 3 mm saw kerf and 2 mm cleanup rule used for thick stock is not feasible for this roof. Measure full usable sheet before commitment; set bend deduction on the real sheet. Owned 239.45 x 84 mm Al roof patch and two 255 x 84 mm endcaps complete the case. Skin carries local bearing into the two steel arms."
+  },
+  "owned_aluminum_cabinet_nest": {
+    "stock_mm": [
+      304.8,
+      304.8,
+      9.525
+    ],
+    "kerf_mm": 3,
+    "edge_margin_mm": 2,
+    "cabinet_rectangles": [
+      {
+        "dimensions_mm": [
+          84,
+          255
+        ],
+        "quantity": 1,
+        "positions_mm": [
+          [
+            2,
+            2
+          ]
+        ],
+        "use": "Endcap"
+      },
+      {
+        "dimensions_mm": [
+          84,
+          255
+        ],
+        "quantity": 1,
+        "positions_mm": [
+          [
+            89,
+            2
+          ]
+        ],
+        "use": "Endcap"
+      },
+      {
+        "dimensions_mm": [
+          84,
+          239.45
+        ],
+        "quantity": 1,
+        "positions_mm": [
+          [
+            176,
+            2
+          ]
+        ],
+        "use": "Roof patch"
+      }
+    ],
+    "backing_pad_dimension_mm": [
+      18,
+      12
+    ],
+    "backing_pad_quantity": 60,
+    "backing_pad_positions_mm": [
+      [
+        263,
+        2
+      ],
+      [
+        284,
+        2
+      ],
+      [
+        263,
+        17
+      ],
+      [
+        284,
+        17
+      ],
+      [
+        263,
+        32
+      ],
+      [
+        284,
+        32
+      ],
+      [
+        263,
+        47
+      ],
+      [
+        284,
+        47
+      ],
+      [
+        263,
+        62
+      ],
+      [
+        284,
+        62
+      ],
+      [
+        263,
+        77
+      ],
+      [
+        284,
+        77
+      ],
+      [
+        263,
+        92
+      ],
+      [
+        284,
+        92
+      ],
+      [
+        263,
+        107
+      ],
+      [
+        284,
+        107
+      ],
+      [
+        263,
+        122
+      ],
+      [
+        284,
+        122
+      ],
+      [
+        263,
+        137
+      ],
+      [
+        284,
+        137
+      ],
+      [
+        263,
+        152
+      ],
+      [
+        284,
+        152
+      ],
+      [
+        263,
+        167
+      ],
+      [
+        284,
+        167
+      ],
+      [
+        263,
+        182
+      ],
+      [
+        284,
+        182
+      ],
+      [
+        263,
+        197
+      ],
+      [
+        284,
+        197
+      ],
+      [
+        263,
+        212
+      ],
+      [
+        284,
+        212
+      ],
+      [
+        263,
+        227
+      ],
+      [
+        284,
+        227
+      ],
+      [
+        263,
+        242
+      ],
+      [
+        284,
+        242
+      ],
+      [
+        263,
+        257
+      ],
+      [
+        284,
+        257
+      ],
+      [
+        263,
+        272
+      ],
+      [
+        284,
+        272
+      ],
+      [
+        263,
+        287
+      ],
+      [
+        284,
+        287
+      ],
+      [
+        2,
+        260
+      ],
+      [
+        23,
+        260
+      ],
+      [
+        44,
+        260
+      ],
+      [
+        65,
+        260
+      ],
+      [
+        86,
+        260
+      ],
+      [
+        107,
+        260
+      ],
+      [
+        128,
+        260
+      ],
+      [
+        149,
+        260
+      ],
+      [
+        170,
+        260
+      ],
+      [
+        191,
+        260
+      ],
+      [
+        2,
+        275
+      ],
+      [
+        23,
+        275
+      ],
+      [
+        44,
+        275
+      ],
+      [
+        65,
+        275
+      ],
+      [
+        86,
+        275
+      ],
+      [
+        107,
+        275
+      ],
+      [
+        128,
+        275
+      ],
+      [
+        149,
+        275
+      ],
+      [
+        170,
+        275
+      ],
+      [
+        191,
+        275
+      ]
+    ],
+    "qualification": "Nut-backing pad rectangles12×18 are rotated18wide×12high in this nest. Forty occupy the full-height right strip; twenty occupy two rows below the main cabinet pieces. This proves material fit only, not thread/preload/access suitability.",
+    "separate_half_inch_stock": {
+      "stock_mm": [
+        304.8,
+        304.8,
+        12.7
+      ],
+      "torch_plate_reserve_mm": [
+        110,
+        185
+      ],
+      "reserve_lower_left_mm": [
+        2,
+        2
+      ],
+      "qualification": "Reserve preserved; remaining material not credited as unlimited."
+    }
+  },
+  "material_goods_usd": 260.31,
+  "shipping_usd": 166,
+  "total_before_tax_usd": 426.31,
+  "final_case_hanger_mm": 176.475,
+  "case_hanger_cut_sum_per_2in_bar_mm": 2433.1125,
+  "case_hanger_stock_surplus_mm": 5.2875
+}
