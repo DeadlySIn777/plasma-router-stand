@@ -1,14 +1,16 @@
 # Plasma / router CNC stand
 
-Current small-table design: **800 mm X / 1000 mm Y / 200 mm Z nominal travel**.
-The original 100 mm Z is superseded by the user-authorized full-bed ATC redesign.
+**Current integration candidate: [owned RATTMMOTOR ZBX80, 300 mm stroke, on the 4080 table](variants/owned-z300-assessment/README.md).**
+The recovered purchase record already identified this unit. The candidate keeps
+800 mm X / 1000 mm Y and assesses 200 mm of working Z; the full 300 mm operating
+domain is not qualified. It retains the gantry height and carrier outer blank.
+Corrected carrier/flange clearance and lower support taps are included in the
+new proposal assemblies. The proposed new 200 mm Z purchase remains excluded.
 
-**Owned Z update:** the user confirms a **300 mm-travel Z module**. Its model
-and physical interfaces are pending. [Assess this owned unit](variants/owned-z300-assessment/README.md)
-before purchasing the proposed 200 mm replacement. XR2 remains the audited
-200 mm CAD baseline until the actual owned module is integrated and rechecked.
-
-**Current small-table redesign: [XR2 — re-engineered 4080 wood/plasma table](variants/extrusion-reengineered/README.md).**
+**Frozen source baseline: [XR2 — re-engineered 4080 wood/plasma table](variants/extrusion-reengineered/README.md).**
+Its whole-machine STEP and fabrication files retain the earlier 200 mm Z and
+the inherited custom-joint defects documented in the new candidate. Use the
+new proposal and repair files when reviewing the owned-Z300 integration.
 This replaces the previous extrusion-table and cart proposals for the user's
 current build. The complete mechanical-table budget is capped at USD 1,000;
 pricing and shopping are paused until the engineering review is complete.

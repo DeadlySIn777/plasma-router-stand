@@ -1,0 +1,2356 @@
+{
+  "study": "NOMINAL_OWNED_ZBX80_300_INCREMENTAL_BULK_FIT_ONLY",
+  "owned_catalog_stroke_mm": 300.0,
+  "assessed_working_stroke_mm": 200.0,
+  "actual_delivered_interfaces_verified": false,
+  "gantry_raise_mm": 0,
+  "nominal_family_dimensions_mm": {
+    "base": 419.0,
+    "stock_motor_overall": 530.0,
+    "width": 80
+  },
+  "actual_stage_mass_kg": null,
+  "mass_note": "Do not derive supplier actuator mass from solid envelope volumes.",
+  "cases": {
+    "Z300_STOCK_EXISTING_CARRIER": {
+      "changed_parts": [
+        "Z300_STOCK_MOTOR_NOMINAL",
+        "ZBX80_BASE",
+        "ZBX80_COUPLER_GUARD",
+        "ZBX80_END_TOP"
+      ],
+      "invalid": [],
+      "modes": {
+        "WOOD": {
+          "passed": true,
+          "incremental_relative": {
+            "passed": true,
+            "broad_phase_clear_pairs": 1644,
+            "exact_candidate_pairs": 0,
+            "proofs": []
+          },
+          "incremental_external": {
+            "passed": true,
+            "broad_phase_clear_pairs": 3816,
+            "exact_candidate_pairs": 0,
+            "proofs": []
+          },
+          "whole_changed_part_samples": [
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                575.0,
+                775.0,
+                100.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                1275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                1275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                1275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                1275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "PLASMA": {
+          "passed": true,
+          "incremental_relative": {
+            "passed": true,
+            "broad_phase_clear_pairs": 2056,
+            "exact_candidate_pairs": 0,
+            "proofs": []
+          },
+          "incremental_external": {
+            "passed": true,
+            "broad_phase_clear_pairs": 3768,
+            "exact_candidate_pairs": 0,
+            "proofs": []
+          },
+          "whole_changed_part_samples": [
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                575.0,
+                775.0,
+                100.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                1275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                1275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                1275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                1275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "passed": true
+    },
+    "Z300_OPTIONAL_BRAKE": {
+      "changed_parts": [
+        "Z300_OPTIONAL_BRAKE_NOT_OWNED",
+        "ZBX80_BASE",
+        "ZBX80_COUPLER_GUARD",
+        "ZBX80_END_TOP"
+      ],
+      "invalid": [],
+      "modes": {
+        "WOOD": {
+          "passed": true,
+          "incremental_relative": {
+            "passed": true,
+            "broad_phase_clear_pairs": 1644,
+            "exact_candidate_pairs": 0,
+            "proofs": []
+          },
+          "incremental_external": {
+            "passed": true,
+            "broad_phase_clear_pairs": 3816,
+            "exact_candidate_pairs": 0,
+            "proofs": []
+          },
+          "whole_changed_part_samples": [
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                575.0,
+                775.0,
+                100.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                1275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                1275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                1275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                1275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "PLASMA": {
+          "passed": true,
+          "incremental_relative": {
+            "passed": true,
+            "broad_phase_clear_pairs": 2056,
+            "exact_candidate_pairs": 0,
+            "proofs": []
+          },
+          "incremental_external": {
+            "passed": true,
+            "broad_phase_clear_pairs": 3768,
+            "exact_candidate_pairs": 0,
+            "proofs": []
+          },
+          "whole_changed_part_samples": [
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                575.0,
+                775.0,
+                100.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                1275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                1275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                1275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                1275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 1,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "passed": true
+    },
+    "Z300_OPTIONAL_EXTENDED_CARRIER": {
+      "changed_parts": [
+        "Z300_STOCK_MOTOR_NOMINAL",
+        "ZBX80_BASE",
+        "ZBX80_COUPLER_GUARD",
+        "ZBX80_END_TOP",
+        "Z_CARRIER"
+      ],
+      "invalid": [],
+      "modes": {
+        "WOOD": {
+          "passed": false,
+          "incremental_relative": {
+            "passed": true,
+            "broad_phase_clear_pairs": 2050,
+            "exact_candidate_pairs": 0,
+            "proofs": []
+          },
+          "incremental_external": {
+            "passed": true,
+            "broad_phase_clear_pairs": 4770,
+            "exact_candidate_pairs": 0,
+            "proofs": []
+          },
+          "whole_changed_part_samples": [
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                575.0,
+                775.0,
+                100.0
+              ],
+              "cross": {
+                "exact_pairs": 24,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 25,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 25,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                1275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 25,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                1275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 25,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 24,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 24,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                1275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 24,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                1275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 24,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "PLASMA": {
+          "passed": false,
+          "incremental_relative": {
+            "passed": true,
+            "broad_phase_clear_pairs": 2565,
+            "exact_candidate_pairs": 0,
+            "proofs": []
+          },
+          "incremental_external": {
+            "passed": true,
+            "broad_phase_clear_pairs": 4710,
+            "exact_candidate_pairs": 0,
+            "proofs": []
+          },
+          "whole_changed_part_samples": [
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                575.0,
+                775.0,
+                100.0
+              ],
+              "cross": {
+                "exact_pairs": 24,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 25,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 25,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                1275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 25,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                175.0,
+                1275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 25,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 24,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 24,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19199.999999999996,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                1275.0,
+                0.0
+              ],
+              "cross": {
+                "exact_pairs": 24,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            },
+            {
+              "pose_X_Yguide_Zlift_mm": [
+                975.0,
+                1275.0,
+                200.0
+              ],
+              "cross": {
+                "exact_pairs": 24,
+                "unexpected": [
+                  {
+                    "a": "Z_CARRIER",
+                    "b": "X_LINK_SUPPORT",
+                    "volume_mm3": 12580.619999999977
+                  }
+                ],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_BOTTOM",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              },
+              "changed_self": {
+                "exact_pairs": 2,
+                "unexpected": [],
+                "nominal_stage_envelope_joints": [
+                  {
+                    "a": "ZBX80_BASE",
+                    "b": "ZBX80_END_TOP",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  },
+                  {
+                    "a": "ZBX80_END_TOP",
+                    "b": "ZBX80_BASE",
+                    "volume_mm3": 19200.0,
+                    "same_as_baseline_volume_mm3": 19200.0
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "passed": false
+    }
+  },
+  "source_sha256": {
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "variants/extrusion-reengineered/bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants/extrusion-reengineered/shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "variants/extrusion-reengineered/atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "variants/extrusion-reengineered/build.py": "6825d593b1cd1ec67a492cbb2089520304e98cbbc3d17a1123db4fd316d0b69f",
+    "variants/extrusion-reengineered/material_cover.py": "60f490eb392c24b677d818c0977ac24a316e7261886882b423bf4be7f46f6919",
+    "variants/extrusion-reengineered/preview.py": "2dce4d21a01fb960255807d456a577e4db26d1df9fb3bf4f7bd7b33b49930333",
+    "variants/extrusion-wood-plasma/preview.py": "1c6be84779cce50e7d9486c5aa5135ec0b8ea345cd8b4df27ba0684d0fe89bad",
+    "variants/extrusion-reengineered/review/internal-continuous-check.json": "d3a02a8882ff3602408c7bc9a7c392c1e8fb3bb6ec776109e95f30ca04454c98",
+    "variants/owned-z300-assessment/owned-hardware-evidence.json": "2373580dbfc1fa149b43a9f2db7bc115bc2b2f8b67defbccf1b9ef93db51026a",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  },
+  "fabrication_release": false,
+  "physical_rigidity_qualified": false,
+  "carrier_comparison": {
+    "existing_height_mm": 270.20000020000066,
+    "stage_base_Z_mm": [
+      1040,
+      1459
+    ],
+    "existing_carrier_Z_mm": [
+      1142.9999998999997,
+      1413.2000001000004
+    ],
+    "axial_support_overlap_mm": 270.20000020000066,
+    "upper_base_extent_above_carrier_mm": 45.79999989999965,
+    "optional_extended_height_mm": 370.20000020000066,
+    "optional_added_nominal_Al_kg": 1.0272433009708481,
+    "optional_extension_required": false,
+    "support_capacity_verified": false
+  },
+  "height_comparison_mm": {
+    "module_lower_Z": 1040,
+    "Z200_stock_top": 1470,
+    "current_XR2_Z200_brake_candidate_top": 1502,
+    "Z300_stock_top": 1570,
+    "Z300_optional_brake_top": 1602,
+    "stock_to_stock_increase": 100,
+    "owned_stock_vs_XR2_conditional_brake_increase": 68
+  },
+  "conditional_full_stroke_arithmetic": {
+    "assumed_reference_zero_Z": 970,
+    "reference_at300": 1270,
+    "loaded_tool_projection": 50,
+    "kit_top": 1110.15,
+    "loaded_tool_tip_at300": 1220,
+    "flyover_gap_at300": 109.85,
+    "full300_operating_domain_simulated": false
+  },
+  "method": "Only modified parts and their newly added material are screened. Shared axis translations are canceled for relative proofs, with the complete XR2 cam-follower Z bound. Existing two base/endcap envelope overlaps are recorded separately; nominal manufacturer internals are not qualified. Unchanged XR2 geometry is referenced, not reapproved.",
+  "outputs": {
+    "Z200_STOCK": {
+      "file": "output/Z200_STOCK.step",
+      "sha256": "f3ddc47631d1004c6ccfc91628641e1f22f8e4fdf90ea11568a1f567cc8c1359",
+      "valid": true,
+      "solid_count": 17,
+      "roundtrip_volume_error_mm3": 4.423782229423523e-08
+    },
+    "Z300_STOCK_EXISTING_CARRIER": {
+      "file": "output/Z300_STOCK_EXISTING_CARRIER.step",
+      "sha256": "15040d6e8ae400a34a86264280c50bd10670fd2a53f3ebd62dd0efbb383e3d93",
+      "valid": true,
+      "solid_count": 17,
+      "roundtrip_volume_error_mm3": 4.330649971961975e-08
+    },
+    "Z300_OPTIONAL_BRAKE": {
+      "file": "output/Z300_OPTIONAL_BRAKE.step",
+      "sha256": "0222808ad76930452289b666cb4625442f5b8150f282c7440148318e6273ee67",
+      "valid": true,
+      "solid_count": 17,
+      "roundtrip_volume_error_mm3": 4.423782229423523e-08
+    },
+    "Z300_OPTIONAL_EXTENDED_CARRIER": {
+      "file": "output/Z300_OPTIONAL_EXTENDED_CARRIER.step",
+      "sha256": "370730c5c8f95481d2ce944d6c5fbff7bc77fc6e3a583ac660209dd168d518de",
+      "valid": true,
+      "solid_count": 17,
+      "roundtrip_volume_error_mm3": 4.1443854570388794e-08
+    }
+  },
+  "comparison_image": {
+    "file": "output/z300-head-comparison.png",
+    "sha256": "f39fbcf92fb9b71b3f27933d66c59bb7716bf50c54a43b830b1606cb17feb69f",
+    "common_camera_and_scale": true
+  },
+  "source_consistent_during_check": true,
+  "passed": false
+}

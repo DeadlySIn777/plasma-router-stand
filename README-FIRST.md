@@ -1,19 +1,26 @@
-# Start with XR2
+# Start with the owned-Z300 candidate
 
-The current small-table design is **XR2: 800 X / 1000 Y / 200 Z mm nominal
-travel**, with a 4080 frame, removable dry cassettes, steel plasma pan and
-retractable ATC hardware. The user authorized a different Z unit to retain
-full-bed ATC; the original 100 mm Z is superseded in this variant.
+The current [integration candidate](variants/owned-z300-assessment/README.md)
+uses the already-owned **RATTMMOTOR ZBX80 with 300 mm stroke** on the 4080
+wood/plasma frame. The assessed working box is **800 X / 1000 Y / 200 Z mm**;
+full 300 mm operation remains unqualified. No gantry raise is proposed.
+Two inherited custom-joint defects are corrected in the new proposal parts.
+The new 200 mm Z is excluded from this candidate's purchase plan.
 
-**Owned hardware update:** a [300 mm-travel Z is already owned](variants/owned-z300-assessment/README.md).
-The proposed new 200 mm purchase is on hold pending its model and fit check.
-The XR2 CAD below still represents the audited 200 mm candidate.
+- [Owned-Z300 woodworking proposal](variants/owned-z300-assessment/output/proposal-assemblies/Z300_STOCK_WORK200_CUSTOM_JOINT_PROPOSAL_WOOD.step)
+- [Owned-Z300 plasma proposal](variants/owned-z300-assessment/output/proposal-assemblies/Z300_STOCK_WORK200_CUSTOM_JOINT_PROPOSAL_PLASMA.step)
+- [Proposal assembly checks](variants/owned-z300-assessment/output/proposal-assemblies/candidate-assembly-check.json)
+- [Custom-joint repair and machining detail](variants/owned-z300-assessment/RELIEF-DETAIL.md)
+- [Current ownership and candidate limits](variants/owned-z300-assessment/candidate-requirements.json)
 
-- [Current design and ownership](variants/extrusion-reengineered/README.md)
-- [Current woodworking STEP](variants/extrusion-reengineered/review/XR2_WOOD.step)
-- [Current plasma STEP](variants/extrusion-reengineered/review/XR2_PLASMA.step)
-- [Current printable review](output/pdf/plasma-router-stand-XR2-review.pdf)
-- [Current evidence index](variants/extrusion-reengineered/review/package-check.json)
+The entries below are the frozen XR2 200 mm baseline. Its old carrier/link
+support must not be substituted for the corrected candidate parts.
+
+- [Frozen XR2 design](variants/extrusion-reengineered/README.md)
+- [Frozen XR2 woodworking STEP](variants/extrusion-reengineered/review/XR2_WOOD.step)
+- [Frozen XR2 plasma STEP](variants/extrusion-reengineered/review/XR2_PLASMA.step)
+- [Earlier XR2 printable review](output/pdf/plasma-router-stand-XR2-review.pdf)
+- [Scoped XR2 evidence index](variants/extrusion-reengineered/review/package-check.json)
 - [Physical release register](variants/extrusion-reengineered/review/release-register.json)
 - [CAM setup and custom-part files](variants/extrusion-reengineered/CAM-SETUP.md)
 

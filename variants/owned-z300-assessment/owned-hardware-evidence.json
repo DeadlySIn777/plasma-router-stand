@@ -1,0 +1,175 @@
+{
+  "schema": 1,
+  "recorded_date": "2026-11-01",
+  "status": "OWNED_ZBX80_300_ORDER_HISTORY_RECOVERED_PHYSICAL_INTERFACES_PENDING",
+  "privacy_scope": "Product identity, useful quantity, published dimensions and evidence provenance only. No private order identifiers, account details, addresses or prices.",
+  "owned_hardware": {
+    "manufacturer_as_ordered": "RATTMMOTOR",
+    "family_as_ordered": "ZBX80",
+    "owner_order_description": "RATTMMOTOR ZBX80 300mm stage",
+    "owner_confirmed_travel_mm": 300,
+    "quantity_reported": 1,
+    "quantity_basis": "purchased_module_audit records one; owner_order_register itself leaves order_quantity unset.",
+    "ownership_basis": "Recovered owner-supplied order-description record, corroborated by the current owner confirmation of 300mm travel.",
+    "identity_confidence": "High for owner-reported manufacturer/family and advertised stroke; physical delivered-unit inspection remains separate.",
+    "exact_receipt_ASIN_verified": false,
+    "physical_identity_verified": false
+  },
+  "primary_variations": {
+    "evidence_source_id": "archived_primary_family_html",
+    "size_to_child_ASIN": {
+      "100mm": "B09MVYGLNQ",
+      "200mm": "B09MYD6Z23",
+      "300mm": "B09MY7XP9L"
+    },
+    "selected_300mm_product_url": "https://www.amazon.com/dp/B09MY7XP9L",
+    "canonical_parent_ASIN": "B0BF9G3QGJ",
+    "canonical_relationship": "A parent/canonical ASIN alongside a selected child is normal variation structure. It is not evidence that the selected 300mm listing is wrong. It also does not independently verify the ASIN on the owner receipt.",
+    "historical_record_interpretation": "The original recovered records flagged the canonical-ASIN difference conservatively. Preserve those originals unchanged; distinguish that concern from normal current parent/child variation behavior."
+  },
+  "current_primary_page_observation": {
+    "source_kind": "Direct primary-page web-tool observation reported by the parent review agent; no local artifact claimed.",
+    "url": "https://www.amazon.com/dp/B09MY7XP9L",
+    "observed_date": "2026-11-01",
+    "current_child_ASIN": "B09MY7XP9L",
+    "selected_size": "300mm",
+    "canonical_parent_ASIN": "B0BF9G3QGJ",
+    "observation_locators": {
+      "variation_fields": "Web extraction lines 3094-3108",
+      "published_features": "Web extraction lines 3218-3221"
+    },
+    "local_artifact_logical_path": null,
+    "sha256": null
+  },
+  "published_nominal_product_dimensions": {
+    "source": "current_primary_page_observation and recovered owner_order_register supplier_source",
+    "effective_stroke_mm": 300,
+    "base_length_without_motor_and_bracket_mm": 419,
+    "overall_length_including_motor_mm": 530,
+    "base_width_mm": 80,
+    "motor_body_mm": [
+      57,
+      57,
+      56
+    ],
+    "motor_current_as_listed_A": 3,
+    "motor_holding_torque_as_listed_Nm": 1.2,
+    "scope": "Published nominal selected-product/family dimensions, usable for a labeled envelope study; not measured delivered geometry, a load rating, or a released mounting template."
+  },
+  "screw_and_calibration": {
+    "supplier_designation": "SFU1605",
+    "planning_lead_candidate_mm_per_revolution": 5,
+    "basis": "Nominal interpretation of the supplier screw designation, corroborated by recovered family research.",
+    "physical_lead_measured": false,
+    "controller_scale_or_safe_limits_authorized": false,
+    "note": "Do not infer Z lead from the purchased X/Y 10mm lead. A nominal 5mm candidate is not physical calibration."
+  },
+  "saved_gallery_review": {
+    "actual_300mm_specific_dimensioned_gallery_found": false,
+    "search_scope": "Existing saved primary family HTML, image manifest, ZBX80 gallery/A+ sources and 800x1000x300 interface/compact-study records in the alternate project.",
+    "archived_300_variation_gallery_note": "The parsed 300mm variation entry offers a shared primary hero image; this is not a complete dimensioned 300mm mounting drawing.",
+    "reviewed_saved_drawings": [
+      {
+        "logical_path": "output/release-review/sources/B09MVYGLNQ-gallery-2.jpg",
+        "sha256": "7438f858f4694965e4a6fbb0c03acd4b66071d94d9b8cee21576d02e3c4c8dd3",
+        "source_url": "https://m.media-amazon.com/images/I/61WxScULDML._SL1500_.jpg",
+        "source_ASIN": "B09MVYGLNQ",
+        "variant_scope": "100mm family drawing; not an exact 300mm OEM mounting drawing",
+        "visual_review": "Top drawing explicitly labels 100mm travel, 219mm base and 330mm overall."
+      },
+      {
+        "logical_path": "output/release-review/sources/B09MVYGLNQ-gallery-3.jpg",
+        "sha256": "4cebbf0621a8e22ac5bdc3eb0bac914ce706fe6338098f4334e5b683c65382f2",
+        "source_url": "https://m.media-amazon.com/images/I/61HH-r4RqQL._SL1500_.jpg",
+        "source_ASIN": "B09MVYGLNQ",
+        "variant_scope": "100mm family drawing; not an exact 300mm OEM mounting drawing",
+        "visual_review": "Side/bottom drawing saved with the 100mm gallery; no transfer of mounting dimensions to the owned 300mm stage."
+      },
+      {
+        "logical_path": "output/release-review/sources/B09MVYGLNQ-gallery-4.jpg",
+        "sha256": "6c29288b37b625de54ed8d832e98b027ac3ae089b718a3b760982c8a3e05b5a3",
+        "source_url": "https://m.media-amazon.com/images/I/51wBxuUiRML._SL1500_.jpg",
+        "source_ASIN": "B09MVYGLNQ",
+        "variant_scope": "100mm family drawing; not an exact 300mm OEM mounting drawing",
+        "visual_review": "Side/bottom drawing saved with the 100mm gallery; no transfer of mounting dimensions to the owned 300mm stage."
+      },
+      {
+        "logical_path": "output/release-review/sources/ZBX80-aplus-58582b4f-6106-4d08-bfd2-23ddea5f8192.jpg",
+        "sha256": "22248503cdd6109f98cc3b3578aaea6996277d1e85e65bd8474bb7d02a90a9a6",
+        "source_url": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/58582b4f-6106-4d08-bfd2-23ddea5f8192.__CR0,0,350,175_PT0_SX350_V1___.jpg",
+        "variant_scope": "100mm example inside the family A+ material; not a 300mm mounting template",
+        "visual_review": "Image explicitly labels 100mm travel, 219mm base and 330mm overall."
+      }
+    ],
+    "rule": "Do not substitute or scale a 100mm or 200mm gallery drawing and present it as the owned 300mm OEM drawing.",
+    "A_plus_images_visually_reviewed_count": 15,
+    "A_plus_review_result": "Photographs, generic component/application illustrations and an explicitly dimensioned 100mm/219mm/330mm example; no 300mm-specific dimensioned OEM mounting drawing found."
+  },
+  "interfaces_still_held": [
+    "Delivered revision and receipt-ASIN match, actual body/motor/cable envelope and mass/centre of gravity",
+    "Base mounting slots, nuts, pitches, screw engagement and insertion/access route",
+    "Assembled base-mounting-plane to output-face height",
+    "Output fixing-hole coordinates, diameters or threads, usable depths and availability",
+    "Output positions at physical travel limits, safe overtravel and measured screw lead",
+    "Actual motor/drive data, brake or other power-loss retention and coupler compatibility",
+    "Stiffness, tool overhang, guide moment limits and complete machine clearances"
+  ],
+  "procurement_and_design_status": {
+    "new_200mm_replacement_purchase": "ON_HOLD_PENDING_OWNED_300MM_FIT_ASSESSMENT",
+    "baseline_XR2_CAD_changed_by_this_record": false,
+    "CAD_scaling_performed": false,
+    "actual_300mm_compatibility_claimed": false,
+    "fabrication_release": false
+  },
+  "evidence_sources": [
+    {
+      "id": "owner_order_register",
+      "corpus": "alternate_local_plasma_router_stand_project",
+      "logical_path": "variants/800x1000x300/purchase-evidence.json",
+      "sha256": "44f78afa7eac2f2696f156d94dc02ffad0ec49d0fc116b31c73f7d958b7907cb",
+      "scope": "Agent-saved transcription of owner-supplied delivered-order descriptions, followed by the owner selection of 800X/1000Y/300Z. Original private receipt is not included."
+    },
+    {
+      "id": "selected_hardware_register",
+      "corpus": "alternate_local_plasma_router_stand_project",
+      "logical_path": "variants/800x1000x300/PURCHASED-HARDWARE.md",
+      "sha256": "3cfcac20197fede5a5aa3a352905edc464f038484309c75f4579d377ed3c27d0",
+      "scope": "Selected purchased hardware and supplier-family evidence, recorded 2026-09-30."
+    },
+    {
+      "id": "purchased_module_audit",
+      "corpus": "alternate_local_plasma_router_stand_project",
+      "logical_path": "output/cad-audit-2026-09-30/motion/purchased-module-evidence.json",
+      "sha256": "003e83d9d14a213ce91a47431f691fd136bf8d735c46a327c76d4bc3b18ac9f7",
+      "scope": "Later owner-reported purchase summary; one RATTMMOTOR ZBX80 with 300mm stroke; exact_ASIN_matched=false."
+    },
+    {
+      "id": "archived_primary_family_html",
+      "corpus": "alternate_local_plasma_router_stand_project",
+      "logical_path": "output/release-review/sources/amazon-B09MVYGLNQ.html",
+      "sha256": "67a2ca5d1db9fc69a59047c4d2056019cc0683a4c3d514e0cd460a85cff586aa",
+      "scope": "Primary Amazon family HTML archive. The requested 100mm listing includes explicit 100/200/300mm variation-to-ASIN data; this is not a receipt."
+    },
+    {
+      "id": "gallery_manifest",
+      "corpus": "alternate_local_plasma_router_stand_project",
+      "logical_path": "output/release-review/sources/module-gallery-source-manifest.json",
+      "sha256": "785b473d726de8a397715363eba3facb36e12842368aac4d97467fef9c6d3866",
+      "scope": "Primary-image URLs and hashes saved under the 100mm ASIN; observed 2026-09-24."
+    },
+    {
+      "id": "interface_register",
+      "corpus": "alternate_local_plasma_router_stand_project",
+      "logical_path": "variants/800x1000x300/integration/interface-register.json",
+      "sha256": "1f1a7fc96625d333568dfac9228e193001baf0749c2ceb9d81f69616fadd1181",
+      "scope": "Saved nominal 300mm product-family dimensions; exact delivered interfaces remain unverified."
+    },
+    {
+      "id": "compact_Z_study",
+      "corpus": "alternate_local_plasma_router_stand_project",
+      "logical_path": "variants/800x1000x300/integration/z-compact-study/assessment.json",
+      "sha256": "547a3a5f4b8db18093e67574d9241aa2112eeab275e04dd55a4066848a157dc1",
+      "scope": "Earlier dimensional study already distinguishes owned 300mm travel and 530mm nominal overall length from shorter alternatives."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "candidate": "OWNED_ZBX80_300_ON_XR2",
+  "source_baseline": "variants/extrusion-reengineered, frozen XR2",
+  "owned_Z": {
+    "manufacturer": "RATTMMOTOR",
+    "family": "ZBX80",
+    "advertised_stroke_mm": 300,
+    "owned": true,
+    "owner_record_previously_supplied": true,
+    "product_family_reference_ASIN": "B09MY7XP9L",
+    "received_ASIN_and_revision_inspected": false,
+    "published_base_length_mm": 419,
+    "published_stock_motor_overall_length_mm": 530,
+    "published_base_width_mm": 80
+  },
+  "assessed_working_travel_mm": {"X": 800, "Y": 1000, "Z": 200},
+  "full_300_Z_operating_domain_qualified": false,
+  "controller_limits_or_settings_applied": false,
+  "proposed_gantry_height_change_mm": 0,
+  "existing_carrier_outer_blank_mm": [260, 270.2, 12.7],
+  "candidate_custom_joint_changes": [
+    "Machined through-slot around the inherited X-link flange, with a retained bottom bearing seat and rounded milling ends",
+    "Integral X-link support downstand enlarged from 30 to 37 mm, retaining the four bolt axes and nominal grip while completing the lower M6 holes"
+  ],
+  "purchase_basis": {
+    "additional_200_mm_Z_module_planned": false,
+    "300_mm_module_owned_credit": true,
+    "optional_brake_motor_owned": false,
+    "revised_custom_parts_owned_credit": false,
+    "note": "The new support billet and machined carrier are not assumed owned; use an actual nonoverlapping stock allocation before granting any credit. The 200 mm replacement remains excluded while the owned unit is integrated."
+  },
+  "budget_usd_complete_delivered": 1000,
+  "delivered_budget_verified": false,
+  "pricing_or_cart_changes_performed": false,
+  "release_gates": [
+    "Delivered module mounting/support and output interface dimensions, actual mass, lead and endpoint datums",
+    "Actual shaft/coupler and power-off retention; a stock stepper is not a qualified anti-drop device",
+    "Real magazine pocket/nut datums, tool envelopes and executable ATC sequence",
+    "Material, screw/thread and joint capacity; assembled stiffness and alignment",
+    "Full candidate path and operating qualification, including any use of the additional 100 mm stroke",
+    "Water, thermal, handling and electrical commissioning and complete delivered pricing"
+  ],
+  "fabrication_release": false
+}

@@ -1,0 +1,33 @@
+{
+  "pair": [
+    "Z_CARRIER",
+    "X_LINK_SUPPORT"
+  ],
+  "old_overlap_mm3": 12580.619999999977,
+  "new_overlap_mm3": 12580.619999999977,
+  "added_material_overlap_mm3": 0.0,
+  "overlap_symmetric_difference_mm3": 0.0,
+  "actual_original_interface_qualified": false,
+  "meaning": "Unchanged inherited positive-volume interference between custom parts, not introduced by the300mm overlay. This is a real unresolved design defect, not permitted bearing contact; the separate relief/support repair must be verified before fabrication.",
+  "unchanged_overlap": true,
+  "optional_carrier_exact_STEP_material": {
+    "primary_head_volume_mm3": 3655237.556189329,
+    "optional_head_volume_mm3": 3985437.556189328,
+    "complete_head_volume_difference_mm3": 330199.99999999907,
+    "carrier_volume_difference_mm3": 330199.99999999814,
+    "added_material_volume_mm3": 330199.9999999982,
+    "removed_material_volume_mm3": 0.0,
+    "assumed_aluminum_density_kg_per_m3": 2700,
+    "optional_added_nominal_Al_kg": 0.8915399999999951,
+    "verified": true,
+    "meaning": "Exact imported STEP carrier material addition; not a tessellated bounding-box proxy and not the mass of the purchased Z stage."
+  },
+  "source_sha256": {
+    "variants/owned-z300-assessment/verify_extension_contact.py": "9428c1293822d386653fae21efb051e85af49d48a693f6ae7dce347feb037519",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/owned-z300-assessment/output/Z300_STOCK_EXISTING_CARRIER.step": "15040d6e8ae400a34a86264280c50bd10670fd2a53f3ebd62dd0efbb383e3d93",
+    "variants/owned-z300-assessment/output/Z300_OPTIONAL_EXTENDED_CARRIER.step": "370730c5c8f95481d2ce944d6c5fbff7bc77fc6e3a583ac660209dd168d518de"
+  }
+}

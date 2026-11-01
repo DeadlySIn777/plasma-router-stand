@@ -1,0 +1,224 @@
+{
+  "study": "FULL_REVIEW_PROPOSALS_WITH_OWNED_FAMILY_Z300_AND_CUSTOM_JOINT_REPAIR",
+  "catalogue_module_stroke_mm": 300,
+  "assessed_working_stroke_mm": 200,
+  "actual_delivered_module_identity_and_interfaces_verified": false,
+  "optional_brake_installed": false,
+  "gantry_raise_mm": 0,
+  "proposal_pose_X_Yguide_Zlift_mm": [
+    575,
+    775,
+    50
+  ],
+  "source_sha256": {
+    "variants/owned-z300-assessment/export_candidate_assembly.py": "a56088e0b563fbb13d99b45fa588748449d08a1803f74bae8d4b6ef533e80667",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/owned-z300-assessment/custom_joint_repair.py": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "variants/owned-z300-assessment/output/custom-joint-repair-check.json": "938abdcbf26924dc5fcf5a763390f57ae64422accdf1c37aa0c0894b9ee4bbe5",
+    "variants/owned-z300-assessment/output/z300-fit-decision.json": "be5696cde1975aa2523f126520782c624b72200ea9a2bd4d8b07307f09fed725",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/owned-z300-assessment/owned-hardware-evidence.json": "2373580dbfc1fa149b43a9f2db7bc115bc2b2f8b67defbccf1b9ef93db51026a",
+    "variants/extrusion-reengineered/motion-fabrication.csv": "59630eda41ede28a0345f729f962243977876b5b2ae9d1520f9c935a4d6243ca",
+    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "variants/extrusion-reengineered/bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants/extrusion-reengineered/shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "variants/extrusion-reengineered/atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "variants/extrusion-reengineered/build.py": "6825d593b1cd1ec67a492cbb2089520304e98cbbc3d17a1123db4fd316d0b69f",
+    "variants/extrusion-reengineered/material_cover.py": "60f490eb392c24b677d818c0977ac24a316e7261886882b423bf4be7f46f6919",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "variants/owned-z300-assessment/output/Z_CARRIER_RELIEVED_CANDIDATE.step": "658fc99cb0b733e57e4221413a8d5f3bca5aa3704f5bb94e910e993e5a4537fb",
+    "variants/owned-z300-assessment/output/X_LINK_SUPPORT_D37_CANDIDATE.step": "3e5debbeed24700bef0817d63fca9e53e272051374af73d1a4eb7444d22d3f2f",
+    "variants/owned-z300-assessment/output/Z300_STOCK_HEAD_REPAIRED_CUSTOM_JOINT.step": "efc272d17f77aa3104339701952ad1163b2fda0adeaaa7c8440101e3c040fa5e"
+  },
+  "upstream_evidence": {
+    "bulk_fit": {
+      "file": "output/z300-fit-decision.json",
+      "sha256": "be5696cde1975aa2523f126520782c624b72200ea9a2bd4d8b07307f09fed725",
+      "passed": true
+    },
+    "custom_joint_repair": {
+      "file": "output/custom-joint-repair-check.json",
+      "sha256": "938abdcbf26924dc5fcf5a763390f57ae64422accdf1c37aa0c0894b9ee4bbe5",
+      "passed": true
+    }
+  },
+  "assemblies": {
+    "WOOD": {
+      "file": "output/proposal-assemblies/Z300_STOCK_WORK200_CUSTOM_JOINT_PROPOSAL_WOOD.step",
+      "sha256": "30b643d8c1a3ec07732eb3c48e33c839be9f43d56b457960499ed5c196da9541",
+      "assembly_identifier": "Z300_STOCK_WORK200_CUSTOM_JOINT_PROPOSAL_WOOD",
+      "components": 1369,
+      "solid_count": 1371,
+      "valid_STEP_readback": true,
+      "native_component_volume_sum_mm3": 122956769.0486576,
+      "imported_component_volume_sum_mm3": 122956768.7327738,
+      "roundtrip_volume_error_mm3": 0.3158838003873825,
+      "roundtrip_bbox_error_mm": 9.996346783347509e-30,
+      "bounds_mm": [
+        -25.0,
+        -9.996346783347509e-30,
+        0.0,
+        1175.0,
+        1450.0,
+        1570.0
+      ],
+      "volume_scope": "Sum of nominal component solids for format fidelity; not physical material mass or a union volume.",
+      "preview": {
+        "file": "output/proposal-assemblies/Z300_STOCK_WORK200_CUSTOM_JOINT_PROPOSAL_WOOD.png",
+        "sha256": "6d949bbe20793e6e7d1bb327dace03d279c159e48a4fb6c37b687ec51093d1c6"
+      }
+    },
+    "PLASMA": {
+      "file": "output/proposal-assemblies/Z300_STOCK_WORK200_CUSTOM_JOINT_PROPOSAL_PLASMA.step",
+      "sha256": "3aad9a231ecd457abdd0c3e6731b6b839dcf1611a99e6a420c4712085e6269fc",
+      "assembly_identifier": "Z300_STOCK_WORK200_CUSTOM_JOINT_PROPOSAL_PLASMA",
+      "components": 1460,
+      "solid_count": 1462,
+      "valid_STEP_readback": true,
+      "native_component_volume_sum_mm3": 123310684.83735783,
+      "imported_component_volume_sum_mm3": 123310684.51070926,
+      "roundtrip_volume_error_mm3": 0.3266485780477524,
+      "roundtrip_bbox_error_mm": 9.996346783347509e-30,
+      "bounds_mm": [
+        -25.0,
+        -9.996346783347509e-30,
+        0.0,
+        1175.0,
+        1450.0,
+        1570.0
+      ],
+      "volume_scope": "Sum of nominal component solids for format fidelity; not physical material mass or a union volume.",
+      "preview": {
+        "file": "output/proposal-assemblies/Z300_STOCK_WORK200_CUSTOM_JOINT_PROPOSAL_PLASMA.png",
+        "sha256": "d2936349bbb0a77a7662df849c493fa0de0c6f4dd61b9418e6a9d98173f0b3eb"
+      }
+    }
+  },
+  "interface_checks": {
+    "WOOD": {
+      "groups": {
+        "frame_bed": {
+          "exact_pairs": 20,
+          "unexpected": [],
+          "nominal_stage_envelope_joints": []
+        },
+        "frame_motion": {
+          "exact_pairs": 4,
+          "unexpected": [],
+          "nominal_stage_envelope_joints": []
+        },
+        "bed_motion": {
+          "exact_pairs": 0,
+          "unexpected": [],
+          "nominal_stage_envelope_joints": []
+        },
+        "accessory_frame": {
+          "exact_pairs": 4,
+          "unexpected": [],
+          "nominal_stage_envelope_joints": []
+        },
+        "accessory_bed": {
+          "exact_pairs": 1,
+          "unexpected": [],
+          "nominal_stage_envelope_joints": []
+        },
+        "accessory_motion": {
+          "exact_pairs": 30,
+          "unexpected": [],
+          "nominal_stage_envelope_joints": []
+        }
+      },
+      "repaired_custom_joint_intersection_mm3": 0.0,
+      "invalid_parts": [],
+      "inherited_multisolid_component_allocations": [
+        {
+          "id": "WATER_REMOVABLE_LID_RETURN_PORTS_OPEN25MM_VENT_NOT_PRESSURE",
+          "solid_count": 3
+        }
+      ],
+      "passed": true
+    },
+    "PLASMA": {
+      "groups": {
+        "frame_bed": {
+          "exact_pairs": 28,
+          "unexpected": [],
+          "nominal_stage_envelope_joints": []
+        },
+        "frame_motion": {
+          "exact_pairs": 4,
+          "unexpected": [],
+          "nominal_stage_envelope_joints": []
+        },
+        "bed_motion": {
+          "exact_pairs": 0,
+          "unexpected": [],
+          "nominal_stage_envelope_joints": []
+        },
+        "accessory_frame": {
+          "exact_pairs": 10,
+          "unexpected": [],
+          "nominal_stage_envelope_joints": []
+        },
+        "accessory_bed": {
+          "exact_pairs": 23,
+          "unexpected": [],
+          "nominal_stage_envelope_joints": []
+        },
+        "accessory_motion": {
+          "exact_pairs": 30,
+          "unexpected": [],
+          "nominal_stage_envelope_joints": []
+        }
+      },
+      "repaired_custom_joint_intersection_mm3": 0.0,
+      "invalid_parts": [],
+      "inherited_multisolid_component_allocations": [
+        {
+          "id": "WATER_REMOVABLE_LID_RETURN_PORTS_OPEN25MM_VENT_NOT_PRESSURE",
+          "solid_count": 3
+        }
+      ],
+      "passed": true
+    }
+  },
+  "repair_export_correspondence": {
+    "WOOD": {
+      "Z_CARRIER": {
+        "symmetric_difference_from_verified_repair_STEP_mm3": 0.0,
+        "passed": true
+      },
+      "X_LINK_SUPPORT": {
+        "symmetric_difference_from_verified_repair_STEP_mm3": 0.0,
+        "passed": true
+      }
+    },
+    "PLASMA": {
+      "Z_CARRIER": {
+        "symmetric_difference_from_verified_repair_STEP_mm3": 0.0,
+        "passed": true
+      },
+      "X_LINK_SUPPORT": {
+        "symmetric_difference_from_verified_repair_STEP_mm3": 0.0,
+        "passed": true
+      }
+    }
+  },
+  "fabrication_release": false,
+  "operating_release": false,
+  "physical_rigidity_qualified": false,
+  "frozen_XR2_modified": false,
+  "earlier_raw_fit_study_modified": false,
+  "source_consistent_during_build": true,
+  "passed": true,
+  "scope": "Full nominal display assemblies with valid solids and STEP readback, six external group checks at the stated pose, and exact correspondence to the verified two-part repair. Working200 bulk-fit and incremental repair evidence is linked separately. Existing source limits, supplier interfaces, any other inherited internal contacts, flexible routing, actual support/strength and commissioning remain open. No full300 operating domain or machine release is asserted.",
+  "components_csv": {
+    "file": "output/proposal-assemblies/proposal-components.csv",
+    "sha256": "821abe6055301e36bf8234d4633123d60b78549650d360649f332b7b25702cbc"
+  }
+}

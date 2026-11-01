@@ -1,0 +1,356 @@
+{
+  "study": "SEPARATE_CUSTOM_JOINT_REPAIR_CANDIDATE",
+  "source_sha256": {
+    "variants/owned-z300-assessment/custom_joint_repair.py": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/owned-z300-assessment/owned-hardware-evidence.json": "2373580dbfc1fa149b43a9f2db7bc115bc2b2f8b67defbccf1b9ef93db51026a",
+    "variants/extrusion-reengineered/motion-fabrication.csv": "59630eda41ede28a0345f729f962243977876b5b2ae9d1520f9c935a4d6243ca",
+    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "variants/extrusion-reengineered/bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants/extrusion-reengineered/shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "variants/extrusion-reengineered/atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "variants/extrusion-reengineered/build.py": "6825d593b1cd1ec67a492cbb2089520304e98cbbc3d17a1123db4fd316d0b69f",
+    "variants/extrusion-reengineered/material_cover.py": "60f490eb392c24b677d818c0977ac24a316e7261886882b423bf4be7f46f6919",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  },
+  "source_consistent_during_check": true,
+  "passed": true,
+  "check_scope": "Custom solid interference, bearing/fastener geometry, incremental added-support material clearance and STEP fidelity only; not assembled strength or supplier fit.",
+  "checks": {
+    "original_custom_interference_identified": true,
+    "carrier_valid_one_solid": true,
+    "support_valid_integral_one_solid": true,
+    "original_support_material_preserved": true,
+    "carrier_outer_blank_unchanged": true,
+    "carrier_no_added_material": true,
+    "original_lower_carrier_material_unchanged": true,
+    "zero_positive_custom_part_overlap": true,
+    "full_positive_bearing_patch": true,
+    "four_complete_carrier_head_seats": true,
+    "four_complete_tap_bores_and_shells": true,
+    "new_material_static_clear": true,
+    "new_material_relative_sweep_clear": true,
+    "whole_changed_custom_parts_static_clear": true,
+    "new_material_external_sweeps_clear": true
+  },
+  "pose_X_Yguide_Zlift_mm": [
+    575,
+    775,
+    0
+  ],
+  "original_interference_mm3": 12580.619999999977,
+  "original_interference_bounds_mm": [
+    497.0,
+    759.5999999999999,
+    1313.2,
+    653.0,
+    772.3,
+    1319.55
+  ],
+  "original_carrier_bounds_mm": [
+    445.0,
+    759.5999999999999,
+    1143.0,
+    705.0,
+    772.3,
+    1413.2
+  ],
+  "repaired_carrier_bounds_mm": [
+    445.0,
+    759.5999999999999,
+    1143.0,
+    705.0,
+    772.3,
+    1413.2
+  ],
+  "carrier_relief": {
+    "face_axes": "X across plate, Z up plate; thickness along worldY",
+    "overall_slot_length_mm": 162.95,
+    "slot_height_mm": 6.5499999999999545,
+    "end_radius_mm": 3.2749999999999773,
+    "end_centres_world_X_mm": [
+      496.8,
+      653.2
+    ],
+    "floor_world_Z_mm": 1313.2,
+    "top_world_Z_mm": 1319.75,
+    "centre_from_carrier_min_X_Z_mm": [
+      130.0,
+      173.4749999999999
+    ],
+    "tool_bounds_mm": [
+      493.525,
+      759.4999999999999,
+      1313.1999999999998,
+      656.475,
+      772.4,
+      1319.75
+    ],
+    "bearing_contact_area_carrier_mm2": 1981.200000000007,
+    "bearing_contact_area_support_mm2": 1981.1999999999998,
+    "support_intersection_after_repair_mm3": 0.0,
+    "removed_original_lower_material_mm3": 0.0
+  },
+  "revised_support": {
+    "original_downstand_height_mm": 30,
+    "new_downstand_height_mm": 37,
+    "original_bottom_Z_mm": 1283.2,
+    "new_bottom_Z_mm": 1276.2,
+    "top_Z_mm": 1313.2,
+    "added_strip_envelope_mm": [
+      497.0,
+      772.3,
+      1276.2,
+      653.0,
+      780.3,
+      1283.2
+    ],
+    "added_material_volume_mm3": 8686.440286718213,
+    "unchanged_nominal_thread_depth_mm": 8,
+    "raw_stock_status": "NEW_OR_VERIFIED_EXISTING_BILLET_REQUIRED; NO OWNED_STOCK_CREDIT",
+    "finished_bounding_blank_mm": [
+      156,
+      120.8,
+      43.35
+    ],
+    "cleanup_allowance_included": false,
+    "original_finished_bounding_blank_mm": [
+      156,
+      120.8,
+      36.35
+    ]
+  },
+  "M6_carrier_seats_and_unchanged_stacks": [
+    {
+      "id": "X_LINK_BRIDGE_BOLT_18_-12",
+      "axis_X_Z_mm": [
+        515.0,
+        1301.2
+      ],
+      "D12_carrier_seat_missing_material_mm3": 0.0,
+      "D10_head_top_to_relief_floor_mm": 7.0,
+      "clearance_bore_edge_to_relief_floor_mm": 8.7,
+      "unchanged_nominal_carrier_grip_mm": 12.700000000000045,
+      "unchanged_nominal_support_thread_engagement_mm": 7.2999999999999545,
+      "unchanged_nominal_screw_tip_reserve_mm": 0.7000000000000455
+    },
+    {
+      "id": "X_LINK_BRIDGE_BOLT_18_-28",
+      "axis_X_Z_mm": [
+        515.0,
+        1285.2
+      ],
+      "D12_carrier_seat_missing_material_mm3": 0.0,
+      "D10_head_top_to_relief_floor_mm": 23.0,
+      "clearance_bore_edge_to_relief_floor_mm": 24.7,
+      "unchanged_nominal_carrier_grip_mm": 12.700000000000045,
+      "unchanged_nominal_support_thread_engagement_mm": 7.2999999999999545,
+      "unchanged_nominal_screw_tip_reserve_mm": 0.7000000000000455
+    },
+    {
+      "id": "X_LINK_BRIDGE_BOLT_138_-12",
+      "axis_X_Z_mm": [
+        635.0,
+        1301.2
+      ],
+      "D12_carrier_seat_missing_material_mm3": 0.0,
+      "D10_head_top_to_relief_floor_mm": 7.0,
+      "clearance_bore_edge_to_relief_floor_mm": 8.7,
+      "unchanged_nominal_carrier_grip_mm": 12.700000000000045,
+      "unchanged_nominal_support_thread_engagement_mm": 7.2999999999999545,
+      "unchanged_nominal_screw_tip_reserve_mm": 0.7000000000000455
+    },
+    {
+      "id": "X_LINK_BRIDGE_BOLT_138_-28",
+      "axis_X_Z_mm": [
+        635.0,
+        1285.2
+      ],
+      "D12_carrier_seat_missing_material_mm3": 0.0,
+      "D10_head_top_to_relief_floor_mm": 23.0,
+      "clearance_bore_edge_to_relief_floor_mm": 24.7,
+      "unchanged_nominal_carrier_grip_mm": 12.700000000000045,
+      "unchanged_nominal_support_thread_engagement_mm": 7.2999999999999545,
+      "unchanged_nominal_screw_tip_reserve_mm": 0.7000000000000455
+    }
+  ],
+  "M6_nominal_tap_geometry": [
+    {
+      "axis_X_Z_mm": [
+        515.0,
+        1301.2
+      ],
+      "major_diameter_mm": 6,
+      "old_lower_edge_ligament_mm": 15.0,
+      "new_lower_edge_ligament_mm": 22.0,
+      "minimum_outer_major_diameter_ligament_mm": 9.0,
+      "nominal_tap_bore_intersection_mm3": 0.0,
+      "D8_annular_shell_missing_material_mm3": 0.0
+    },
+    {
+      "axis_X_Z_mm": [
+        515.0,
+        1285.2
+      ],
+      "major_diameter_mm": 6,
+      "old_lower_edge_ligament_mm": -1.0,
+      "new_lower_edge_ligament_mm": 6.0,
+      "minimum_outer_major_diameter_ligament_mm": 6.0,
+      "nominal_tap_bore_intersection_mm3": 0.0,
+      "D8_annular_shell_missing_material_mm3": 0.0
+    },
+    {
+      "axis_X_Z_mm": [
+        635.0,
+        1301.2
+      ],
+      "major_diameter_mm": 6,
+      "old_lower_edge_ligament_mm": 15.0,
+      "new_lower_edge_ligament_mm": 22.0,
+      "minimum_outer_major_diameter_ligament_mm": 9.0,
+      "nominal_tap_bore_intersection_mm3": 0.0,
+      "D8_annular_shell_missing_material_mm3": 0.0
+    },
+    {
+      "axis_X_Z_mm": [
+        635.0,
+        1285.2
+      ],
+      "major_diameter_mm": 6,
+      "old_lower_edge_ligament_mm": -1.0,
+      "new_lower_edge_ligament_mm": 6.0,
+      "minimum_outer_major_diameter_ligament_mm": 6.0,
+      "nominal_tap_bore_intersection_mm3": 0.0,
+      "D8_annular_shell_missing_material_mm3": 0.0
+    }
+  ],
+  "whole_changed_custom_parts_static": {
+    "exact_pairs": 35,
+    "unexpected": [],
+    "nominal_stage_envelope_joints": []
+  },
+  "added_material_static": {
+    "exact_pairs": 2,
+    "unexpected": [],
+    "nominal_stage_envelope_joints": []
+  },
+  "added_material_relative": {
+    "passed": true,
+    "broad_phase_clear_pairs": 409,
+    "exact_candidate_pairs": 0,
+    "proofs": [],
+    "nominal_co_moving_M6_thread_interfaces": [
+      {
+        "fastener": "X_LINK_BRIDGE_BOLT_18_-12",
+        "support": "X_LINK_SUPPORT",
+        "same_rigid_motion_class": true,
+        "added_material_intersection_mm3": 0.0,
+        "whole_support_intersection_mm3": 0.0,
+        "passed": true,
+        "scope": "Source-defined co-moving nominal M6 major-diameter thread interface. This is exact geometric nonpenetration, not physical thread fit, a tap-drill size or rated engagement."
+      },
+      {
+        "fastener": "X_LINK_BRIDGE_BOLT_18_-28",
+        "support": "X_LINK_SUPPORT",
+        "same_rigid_motion_class": true,
+        "added_material_intersection_mm3": 0.0,
+        "whole_support_intersection_mm3": 0.0,
+        "passed": true,
+        "scope": "Source-defined co-moving nominal M6 major-diameter thread interface. This is exact geometric nonpenetration, not physical thread fit, a tap-drill size or rated engagement."
+      },
+      {
+        "fastener": "X_LINK_BRIDGE_BOLT_138_-12",
+        "support": "X_LINK_SUPPORT",
+        "same_rigid_motion_class": true,
+        "added_material_intersection_mm3": 0.0,
+        "whole_support_intersection_mm3": 0.0,
+        "passed": true,
+        "scope": "Source-defined co-moving nominal M6 major-diameter thread interface. This is exact geometric nonpenetration, not physical thread fit, a tap-drill size or rated engagement."
+      },
+      {
+        "fastener": "X_LINK_BRIDGE_BOLT_138_-28",
+        "support": "X_LINK_SUPPORT",
+        "same_rigid_motion_class": true,
+        "added_material_intersection_mm3": 0.0,
+        "whole_support_intersection_mm3": 0.0,
+        "passed": true,
+        "scope": "Source-defined co-moving nominal M6 major-diameter thread interface. This is exact geometric nonpenetration, not physical thread fit, a tap-drill size or rated engagement."
+      }
+    ]
+  },
+  "added_material_external": {
+    "WOOD": {
+      "passed": true,
+      "broad_phase_clear_pairs": 954,
+      "exact_candidate_pairs": 0,
+      "proofs": []
+    },
+    "PLASMA": {
+      "passed": true,
+      "broad_phase_clear_pairs": 942,
+      "exact_candidate_pairs": 0,
+      "proofs": []
+    }
+  },
+  "structural_geometry_only": {
+    "continuous_side_web_widths_mm": [
+      48.52499999999998,
+      48.52499999999998
+    ],
+    "minimum_combined_side_web_area_mm2": 1232.5349999999994,
+    "isolated_minimum_weak_axis_section_ratio": 0.3732692307692306,
+    "isolated_minimum_inplane_section_ratio": 0.7538255079440714,
+    "qualification": "Geometric net-section ratios for a homogeneous rectangular plate only; no strength, joint stiffness, fatigue, modal or full tool-loop qualification."
+  },
+  "outputs": {
+    "carrier": {
+      "file": "output/Z_CARRIER_RELIEVED_CANDIDATE.step",
+      "sha256": "658fc99cb0b733e57e4221413a8d5f3bca5aa3704f5bb94e910e993e5a4537fb",
+      "source_world_min_corner_mm": [
+        445.0,
+        759.5999999999999,
+        1143.0
+      ],
+      "local_axes": "World-aligned X/Y/Z; translated minimum corner is0,0,0; millimetres.",
+      "valid": true,
+      "solid_count": 1,
+      "roundtrip_volume_error_mm3": 2.3283064365386963e-09
+    },
+    "support": {
+      "file": "output/X_LINK_SUPPORT_D37_CANDIDATE.step",
+      "sha256": "3e5debbeed24700bef0817d63fca9e53e272051374af73d1a4eb7444d22d3f2f",
+      "source_world_min_corner_mm": [
+        497.0,
+        759.5999999999999,
+        1276.2
+      ],
+      "local_axes": "World-aligned X/Y/Z; translated minimum corner is0,0,0; millimetres.",
+      "valid": true,
+      "solid_count": 1,
+      "roundtrip_volume_error_mm3": 3.7834979593753815e-10
+    },
+    "stock_300_head": {
+      "file": "output/Z300_STOCK_HEAD_REPAIRED_CUSTOM_JOINT.step",
+      "sha256": "efc272d17f77aa3104339701952ad1163b2fda0adeaaa7c8440101e3c040fa5e",
+      "valid": true,
+      "solid_count": 22,
+      "roundtrip_volume_error_mm3": 4.0978193283081055e-08
+    }
+  },
+  "frozen_XR2_modified": false,
+  "earlier_fit_study_modified": false,
+  "supplier_mounting_interfaces_verified": false,
+  "fabrication_release": false,
+  "remaining": [
+    "Verify actual300mm module fastening rows avoid the relief and have adequate edge distances and support span.",
+    "Verify actual billet alloy/temper, nominal thread pilot5.0/tapM6x1 process, thread tolerances/usable depth and tightening.",
+    "Set a machining and assembly tolerance stack for the exact bearing floor and0.20mm top clearance; no collision tolerance is substituted.",
+    "Qualify the two side-web load paths, local stress concentrations, carrier bending, support flange/downstand and complete tool-loop stiffness."
+  ]
+}
