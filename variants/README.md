@@ -1,13 +1,16 @@
 # Current small machine and separate 4x8 studies
 
-**Current small-table package: [XR2 — 4080 wood/plasma table with retractable ATC](extrusion-reengineered/README.md).**
-Use its 800 X / 1000 Y / 200 Z nominal assemblies, manufacturing files,
-source-bound checks and release register. Its original 100 mm Z is superseded.
-Supplier mating dimensions and physical qualification remain open; the
-USD 1,000 complete delivered budget is unverified.
+**Current small-table package: [integrated 4080 small machine](integrated-4080-small/README.md).**
+The owner's original clamp/boot geometry, continuous HDPE/20100 bed, owned
+300 mm Z and selected 200 mm magazine slide now share one source assembly.
+It assesses 800 X /1000 Y /250 Z. Actual-interface and physical qualification
+remain open, and the USD 1000 delivered budget fails with the currently
+sourced new bed/ATC goods. This is not a fabrication/CAM or operating release.
 
-The XR2 checks do not qualify the separate 4x8 machine. The material below
-records the earlier dual-machine studies and shared-interface work.
+The [earlier owned-Z assessment](owned-z300-assessment/README.md) and
+[frozen XR2](extrusion-reengineered/README.md) remain provenance. Their earlier
+passes do not establish completion of the new integrated requirement set.
+The new small-machine evidence does not qualify the separate 4x8 machine.
 
 ## Earlier dual-machine work
 

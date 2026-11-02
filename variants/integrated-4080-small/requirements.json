@@ -1,0 +1,25 @@
+{
+  "revision": "INTEGRATED_4080_SMALL",
+  "date": "2026-11-01",
+  "scope": "Current small wood/carving and plasma table. Separate 4x8 and steel-machining studies are not qualified by this package.",
+  "owned_equipment_excluded_from_new_cost": ["X/Y/Z motion and stock motors", "extra guides and blocks", "drives/controller", "spindle/VFD kit", "existing working clamp/boot/actuator", "electronics enclosure", "CUT50/torch", "compressor", "CV15HS"],
+  "declared_raw_stock": ["one 304.8mm square x12.7mm aluminum", "one 304.8mm square x9.525mm aluminum"],
+  "new_parts_not_credited_owned": ["4080 chassis stock", "ten 1220mm 20100 profiles", "two full HDPE layers", "RapidChange magazine", "pan and slat stock", "unallocated custom billets and hardware"],
+  "required_motion_mm": {"X": 800, "Y": 1000, "owned_catalogue_Z": 300, "assessed_working_Z": 250, "magazine_slide": 200},
+  "primary_frame": "4080 extrusion, six posts, paired 4080 gantry; steel tension straps, local hangers, pan/slats and thermal screens remain functional metal parts.",
+  "bed": {"size_mm": [1000, 1220], "face_Y_mm": [-40, 1180], "rear_crossbearer_Y_mm": 1140, "profiles": "10 uncut 20100 x1220mm", "HDPE": "2 full 1000x1219.2x12.7mm layers, saw cuts and round drilling only", "crossbearers": "4 x980mm 4080", "workplane_Z_mm": 967.8, "storage": "front top-plane hinge inside permanent frame plan"},
+  "head": "Unchanged owner clamp and boot source solids on a removable full-thickness billet plate; shared fixed dock retained for plasma.",
+  "ATC": "Selected 311mm-overall/200mm-travel SFU1605 module, rear parking bay, pinned endpoint reaction seats and removable plasma cover. Vendor magazine is a labeled capacity envelope until exact supplier geometry is registered.",
+  "wet_system": "Vented red receiver, gravity drain with supported motorized valve and independent overflow. No compressed-air pressure applied to consumer tote. CV15HS is not a liquid pump.",
+  "budget": {"currency": "USD", "complete_new_delivered_cap": 1000, "status": "FAIL_WITH_CURRENT_VERIFIED_NEW_GOODS", "complete_delivered_quote": null, "tax_or_unknown_shipping_assumed_zero": false},
+  "release": {"fabrication": false, "CAM": false, "operation": false},
+  "remaining_actual_interface_gates": [
+    "Register the existing working boot home and 50mm moving joint from the physical assembly; identity and ownership are already established.",
+    "Register the received spindle nose/collet/grip datum and chosen RapidChange nut/engagement planes, pocket coordinates, endcaps, IR hardware and cable exits.",
+    "Transfer the actual Z output, slide-carriage, guide, profile slot/core and vendor mounting patterns; no unpublished holes are invented.",
+    "Qualify actual material, modified sections, joints, full tool-to-work stiffness, Z power-loss retention, bed handling and positive supports.",
+    "Complete controller/firmware, VFD reverse/stop, tool setter, state detection, isolated plasma-start/THC and EMI qualification on the owned equipment.",
+    "Verify receiver liquid capacity, fill/drain/overflow behavior, valve fit and temperature, actual strut dimensions/force and guide shielding.",
+    "Resolve the delivered budget shortfall before procurement."
+  ]
+}

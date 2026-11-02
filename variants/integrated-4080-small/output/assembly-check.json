@@ -1,0 +1,133 @@
+{
+  "revision": "INTEGRATED_4080_SMALL",
+  "source_sha256": {
+    "variants/integrated-4080-small/assembly.py": "a0e62db2bc605a41556aedb096610c029cac785dcec090f35104a716c8ffea96",
+    "variants/integrated-4080-small/mechanical.py": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "variants/integrated-4080-small/front_stop_bed_clearance.py": "e3f079dbd78b4046d60a68e621f9aaab2015581c9fd7ed4d9a2875b83ecf2a3b",
+    "variants/integrated-4080-small/head/quick_dock.py": "1f5d3ce7552837d78868108fc564956f613e5d4e67d0cac2741cd68b67e72d18",
+    "variants/integrated-4080-small/head/plasma_quick_dock.py": "db1576e2bcbeac634daa64b78fab9bdefabf895e532f9cd70bb76ee416b9096e",
+    "variants/integrated-4080-small/head/owner_head.py": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
+    "variants/integrated-4080-small/atc/actual_atc.py": "5e79642b4b3245989232c6aae8a73374efc266fda06057f41afc509fee8e55ff",
+    "variants/integrated-4080-small/bed/integrated_bed.py": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa",
+    "variants/integrated-4080-small/utilities/integrated_utilities.py": "8fcbe7ea06a6610c5ce22936c6f363c0c21da910297fb21e403e835c3f0dd98a",
+    "variants/integrated-4080-small/verify_assembly_outputs.py": "8d9de547153d9df7a5711c7a5e29042c36d76e341d1c46ca39b9fbfcc75be9fd",
+    "variants/integrated-4080-small/render_preview.py": "9a6def157d23313a92ad60d419c2b5e9ee7c961186afb04f7f7e45448dc55675"
+  },
+  "assessed_X_Y_Z_mm": [
+    800,
+    1000,
+    250
+  ],
+  "owned_catalogue_Z_mm": 300,
+  "frame_header_length_mm": 1760.0,
+  "frame_header_Y_mm": [
+    -160.0,
+    1600.0
+  ],
+  "Y_side_shift_each_mm": 25,
+  "gantry_rise_mm": 40,
+  "workplane_Z_mm": 967.8,
+  "owner_clamp_boot_geometry_modified": false,
+  "actual_boot_working_registration_encoded": false,
+  "actual_vendor_spindle_or_magazine_model": false,
+  "budget_cap_usd": 1000,
+  "delivered_budget_verified": false,
+  "fabrication_release": false,
+  "operating_release": false,
+  "assemblies": {
+    "WOOD": {
+      "file": "output/INTEGRATED_4080_SMALL_WOOD.step",
+      "sha256": "95df3b4b7fe96a50a1cb5a61f2404c816af5f9d3bb92906e1b0bbfe9054c4139",
+      "components": 1131,
+      "solids": 1133,
+      "native_solids": 1133,
+      "valid": true,
+      "volume_error_mm3": 0.7116378843784332,
+      "bounds_mm": [
+        -50.00000000000001,
+        -160.0,
+        0.0,
+        1200.0,
+        1600.0,
+        1610.0
+      ],
+      "sum_component_volume_is_not_physical_mass": true,
+      "passed": true,
+      "preview": {
+        "file": "output/INTEGRATED_4080_SMALL_WOOD.png",
+        "sha256": "c39cb487f998748a07bdc46edc6cbe26e960e110468426d6269c465844e8c461",
+        "camera_fitted_to_actual_visible_bounds": true,
+        "viewport_edge_check_passed": true
+      },
+      "initial_nonadaptive_volume_error_mm3": 598.8270659446716,
+      "adaptive_volume_tolerance": 1e-08,
+      "adaptive_expected_volume_mm3": 148387090.31200567,
+      "adaptive_readback_volume_mm3": 148387091.02364355,
+      "maximum_bbox_error_mm": 7.105427357601002e-15
+    },
+    "PLASMA": {
+      "file": "output/INTEGRATED_4080_SMALL_PLASMA.step",
+      "sha256": "eb93cd07c3a8b4daa1e5893a5c8f4cecf22629273d991f9c6288a911b92620b9",
+      "components": 1223,
+      "solids": 1225,
+      "native_solids": 1225,
+      "valid": true,
+      "volume_error_mm3": 0.002559870481491089,
+      "bounds_mm": [
+        -50.00000000000001,
+        -160.0,
+        0.0,
+        1200.0,
+        1600.0,
+        2247.8
+      ],
+      "sum_component_volume_is_not_physical_mass": true,
+      "passed": true,
+      "preview": {
+        "file": "output/INTEGRATED_4080_SMALL_PLASMA.png",
+        "sha256": "813588daf69aef6b707faa3022e18b2842c26f5a783a493a3ff9c2fb2f42791c",
+        "camera_fitted_to_actual_visible_bounds": true,
+        "viewport_edge_check_passed": true
+      },
+      "initial_nonadaptive_volume_error_mm3": 0.19569754600524902,
+      "adaptive_volume_tolerance": 1e-08,
+      "adaptive_expected_volume_mm3": 148082934.76147574,
+      "adaptive_readback_volume_mm3": 148082934.75891587,
+      "maximum_bbox_error_mm": 1.0000012710574864e-07
+    },
+    "CHANGEOVER": {
+      "file": "output/INTEGRATED_4080_SMALL_CHANGEOVER.step",
+      "sha256": "d58cd6d17f6eaf8a456e641581839119a3720c81e7c6c92233f3470bddf78b9f",
+      "components": 1095,
+      "solids": 1097,
+      "native_solids": 1097,
+      "valid": true,
+      "volume_error_mm3": 0.004447042942047119,
+      "bounds_mm": [
+        -50.00000000000001,
+        -160.0,
+        0.0,
+        1200.0,
+        1600.0,
+        1872.896679919
+      ],
+      "sum_component_volume_is_not_physical_mass": true,
+      "passed": true,
+      "preview": {
+        "file": "output/INTEGRATED_4080_SMALL_CHANGEOVER.png",
+        "sha256": "09335f013a8e45308af94945a9a5c41dec27a2b96e872b63b7c1f309b309b124",
+        "camera_fitted_to_actual_visible_bounds": true,
+        "viewport_edge_check_passed": true
+      },
+      "initial_nonadaptive_volume_error_mm3": 0.18355688452720642,
+      "adaptive_volume_tolerance": 1e-08,
+      "adaptive_expected_volume_mm3": 146725067.23543772,
+      "adaptive_readback_volume_mm3": 146725067.23988476,
+      "maximum_bbox_error_mm": 1.0000012710574864e-07
+    }
+  },
+  "source_consistent_during_build": true,
+  "passed": true,
+  "meaning_of_pass": "Assembly validity and independent STEP readback only; combined clearance, requirements, actual supplier interfaces and delivered cost are separate release gates.",
+  "readback_verification": "Adaptive1e-8 volume integration, same relative1e-7 acceptance, independent valid STEP readback, exact solid counts and1e-5mm bounds agreement. Initial non-adaptive quadrature errors retained for diagnosis."
+}

@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-01",
+  "status": "SIMPLIFICATION_CANDIDATES_NOT_COMPLETE_MECHANISMS",
+  "owner_direction": [
+    "The plasma wand mechanism is too complex and should be smarter.",
+    "Simplify the magazine drive using the carriage shown in the two supplied drawings.",
+    "DRAWING SAYS 311 WELL FOLLOW THAT"
+  ],
+  "magazine_actuator": {
+    "overall_length_governing_mm": 311,
+    "overall_length_authority": "Owner explicitly selected the dimension on both supplied drawings over the 360 mm listing text.",
+    "listing_overall_length_superseded_mm": 360,
+    "effective_travel_from_owner_listing_mm": 200,
+    "carriage_length_on_travel_axis_drawing_mm": 60,
+    "carriage_mounts_drawing": "4-M6; full hole positions and usable thread depth must be matched to the received unit.",
+    "listing_drive_claim": {"type": "SFU1605", "diameter_mm": 16, "lead_mm_per_rev": 5},
+    "listing_performance_claims": {"repeat_positioning_mm": 0.03, "horizontal_payload_kg": 30, "vertical_payload_kg": 15, "speed_range_mm_s": [0, 50]},
+    "listing_claims_are_received_measurements": false,
+    "drawing_and_listing_other_dimensions_verified_same_revision": false,
+    "motor_included_in_311_mm_dimension": "Not established; drawings show the mounting end, not a full motor envelope.",
+    "moment_capacity_Nm": null,
+    "self_locking_or_power_off_retention_assumed": false,
+    "controller_or_steps_per_mm_modified": false
+  },
+  "torch_candidate": {
+    "keep": ["Independent initial-height float sensing", "Separate collision release and seated detection", "Insulated wand grip", "Lead strain relief and slack retention tether"],
+    "remove_from_new_architecture": ["Nested wrap-receiver and carrier service interfaces", "Unmeasured 135.6 mm horizontal offset web", "Assumed 145 mm nozzle projection", "Optional laser and redundant adjustment brackets"],
+    "mounting_direction": "Compact head on a single common Z dock; preserve complete router clamp, spindle and powered dust-shield assembly as the other head.",
+    "target_primary_function_bodies": 3,
+    "three_bodies_is_complete_mechanism_part_count": false,
+    "actual_Z_interface_known": false,
+    "owner_clamp_or_boot_modified": false,
+    "dust_shield_actuator_reused_for_plasma": false,
+    "nominal_wand_bore_study_mm": 28,
+    "wand_body_or_nozzle_projection_modeled_as_measured": false
+  },
+  "magazine_candidate": {
+    "direction": "One complete slide, one square-stock carrier, fixed deployed reaction seats and one retained-position function.",
+    "duplicated_drive_parts_not_in_new_candidate": ["Separate TR8 screw/motor", "Separate screw nut carrier", "Second pair of 350 mm guide rails and four blocks"],
+    "deleting_auxiliary_guides_is_conditional_on_travelling_moment_and_stiffness": true,
+    "tool_change_reaction_path": "Frame-mounted dock, with actual preload/capture and bidirectional load paths to be detailed; not a motor holding-torque claim.",
+    "retention_and_sensors_implemented": false,
+    "actual_magazine_mounts_and_loaded_tool_envelope_known": false,
+    "plasma_protection_or_removal_proved": false
+  },
+  "common_constraints": {
+    "structural_stock_outside_mm": 50.8,
+    "tube_wall_measured": false,
+    "limited_aluminium_stock_quantity_known": false,
+    "HDPE_requires_only_round_through_drilling": true,
+    "owned_machine_Z_travel_mm": 300,
+    "replacement_200_mm_machine_Z_assumed_purchased": false,
+    "dust_shield_independent_travel_mm": 50,
+    "new_mechanisms_integrated_with_full_machine": false
+  },
+  "complete_machine_verified": false,
+  "fabrication_release": false,
+  "operating_release": false
+}

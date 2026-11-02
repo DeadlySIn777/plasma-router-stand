@@ -1,0 +1,41 @@
+{
+  "source_sha256": {
+    "export_drill_patterns.py": "ddf82df7da304515f22d8741216a02eb1518678b16c3b53e18e557528d6d8304",
+    "HDPE-DRILL.csv": "ae96aaac8b8f936a43554d718698a7b136584447d051b68697aaaae9e4bd818b",
+    "bed-local-check.json": "2f7a5112077591acb90cb91613cd5d91ff4b2d6bb9d76633f7e7680cc420a8ec"
+  },
+  "source_consistent": true,
+  "passed": true,
+  "exports": [
+    {
+      "part": "FULL_HDPE_1",
+      "file": "FULL_HDPE_1_ROUND_DRILL.dxf",
+      "sha256": "5aaec18f8888b49290c0c99f9eb8f4844d6ae2cd5b903c382dc90a59e141fe76",
+      "readback_valid": true,
+      "outline_mm": [
+        1000,
+        1219.2
+      ],
+      "drill_count": 80,
+      "datum_count": 1,
+      "ordinary_clearance_count": 79
+    },
+    {
+      "part": "FULL_HDPE_2",
+      "file": "FULL_HDPE_2_ROUND_DRILL.dxf",
+      "sha256": "52cc18d7e14d5df309e1b39cdee9197fb2f52bbec11b1bbcb0e53fd6555ad51b",
+      "readback_valid": true,
+      "outline_mm": [
+        1000,
+        1219.2
+      ],
+      "drill_count": 80,
+      "datum_count": 1,
+      "ordinary_clearance_count": 79
+    }
+  ],
+  "units": "mm",
+  "origin": "Each HDPE sheet lower-left; globalX75/Y\u221239.6. Xright,Yrear.",
+  "operations": "Circular through drilling only. No pockets, slots, countersinks or counterbores in HDPE.",
+  "fabrication_release": false
+}

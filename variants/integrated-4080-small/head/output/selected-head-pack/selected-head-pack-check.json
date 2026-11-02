@@ -1,0 +1,595 @@
+{
+  "study": "SELECTED_ROUTER_PLASMA_SHARED_HEAD_STOCK_AND_TAKEOFF",
+  "source_sha256": {
+    "variants/integrated-4080-small/head/selected_head_pack.py": "601e9781eeaf30dcbfdde7dd2263e1e8e7c11fd95cb45f0f709dd22926470d76",
+    "variants/integrated-4080-small/head/quick_dock.py": "1f5d3ce7552837d78868108fc564956f613e5d4e67d0cac2741cd68b67e72d18",
+    "variants/integrated-4080-small/head/plasma_quick_dock.py": "db1576e2bcbeac634daa64b78fab9bdefabf895e532f9cd70bb76ee416b9096e",
+    "variants/integrated-4080-small/head/owner_head.py": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
+    "variants/integrated-4080-small/head/build_head.py": "72b2cde101afdab443c28c8a1a2dc01c76c230f565013c993289141095de7e7e",
+    "variants/integrated-4080-small/head/spindle-reference-evidence.json": "f149cd1308af05333ec4e9ecf931fdae19650a22a75641fff32c21039d15ddc4",
+    "variants/owned-z300-assessment/sources/owned-head/R10 - original uncut 65 mm spindle clamp.step": "506d12b3f749db3eeec03e133b519fd93e45ff1b6cb80bd8fa568d3fb0dba1cb",
+    "variants/owned-z300-assessment/sources/owned-head/Spindle dust boot.step": "3716855cf25a308de3db696ae827578d7803bfe4665fd1a6535f311a5246a044",
+    "variants/owned-z300-assessment/sources/owned-head/prior-mating-inspection.json": "e96a990b591ceaa0f1277c0af2d6654d29b563310cb813afe967c389a3438cb6",
+    "variants/owned-z300-assessment/sources/owned-head/owner-working-boot.json": "69503af028789fa48e38c1b5d2451c04ac0e752b5195f948e4af9daaa644a6aa",
+    "variants/owned-z300-assessment/sources/owned-head/owner-decisions.json": "f996fbf6aac86a0ce1c32cf2530c33b8f4c005ac4e21132c8e6a417b7f541b25",
+    "variants/owned-z300-assessment/sources/owned-head/owner-actuator-selection.json": "4441da633745fa5c1170706454fa6991e24695a599bf4765743022d10fc8b66f",
+    "variants/owned-z300-assessment/candidate_motion_factory.py": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/owned-z300-assessment/front_stop_repair.py": "5006c52b713dd58a1f73f98e1075e5e4fc76ecdb9c82711a20ae66e9742278c0",
+    "variants/owned-z300-assessment/custom_joint_repair.py": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "variants/integrated-4080-small/head/output/quick-dock/quick-dock-check.json": "7756f1de7d57863040b71c1f1739687986faa61fc37b9128b2c670165cc5f670",
+    "variants/integrated-4080-small/head/output/plasma-quick-dock/plasma-dock-check.json": "3e5b008cbf08697a6572afac318e1cb6108c09ee6f989ffcb64d01915eff0b3e"
+  },
+  "ownership_basis": "One owner-reported304.8x304.8x12.7sheet allocated exclusively to these10rectangles; actual alloy/thickness/flatness remain verified before machining. Old83-part allocations are superseded for this sheet, not additional free stock.",
+  "stock_mm": [
+    304.8,
+    304.8,
+    12.7
+  ],
+  "outer_margin_mm": 2,
+  "minimum_profile_gap_mm": 4,
+  "machining_basis": "Full-sheet contours to finished nominal perimeters with cutter diameter\u22644mm and adequate tabs/fixture. No additional per-part saw/facing allowance is included; this is not a saw-cut blank nest.",
+  "allocation": [
+    {
+      "id": "OWNER_ROUTER_HEAD_PLATE",
+      "raw_plane": [
+        2,
+        2,
+        146,
+        175
+      ],
+      "sheet_thickness_axis": "partY",
+      "finished_thickness_mm": 12.7
+    },
+    {
+      "id": "CD_RECEIVER",
+      "raw_plane": [
+        152,
+        2,
+        146,
+        132
+      ],
+      "sheet_thickness_axis": "partY",
+      "finished_thickness_mm": 12.7
+    },
+    {
+      "id": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "raw_plane": [
+        2,
+        188,
+        146,
+        110
+      ],
+      "sheet_thickness_axis": "partY",
+      "finished_thickness_mm": 12.7
+    },
+    {
+      "id": "PLASMA_U_SPLICE_PLATE",
+      "raw_plane": [
+        152,
+        188,
+        110,
+        114
+      ],
+      "sheet_thickness_axis": "partY",
+      "finished_thickness_mm": 12.7
+    },
+    {
+      "id": "CD_CAPTIVE_CAGE_L",
+      "raw_plane": [
+        266,
+        188,
+        20.8,
+        28
+      ],
+      "sheet_thickness_axis": "partX",
+      "finished_thickness_mm": 12.7
+    },
+    {
+      "id": "CD_CAPTIVE_CAGE_R",
+      "raw_plane": [
+        266,
+        220,
+        20.8,
+        28
+      ],
+      "sheet_thickness_axis": "partX",
+      "finished_thickness_mm": 12.7
+    },
+    {
+      "id": "OWNER_CLAMP_SPACER_1_1",
+      "raw_plane": [
+        266,
+        252,
+        12,
+        12
+      ],
+      "sheet_thickness_axis": "partY",
+      "finished_thickness_mm": 6.0,
+      "face_down_from_owned12p7": true
+    },
+    {
+      "id": "OWNER_CLAMP_SPACER_1_2",
+      "raw_plane": [
+        266,
+        268,
+        12,
+        12
+      ],
+      "sheet_thickness_axis": "partY",
+      "finished_thickness_mm": 6.0,
+      "face_down_from_owned12p7": true
+    },
+    {
+      "id": "OWNER_CLAMP_SPACER_2_1",
+      "raw_plane": [
+        282,
+        252,
+        12,
+        12
+      ],
+      "sheet_thickness_axis": "partY",
+      "finished_thickness_mm": 6.0,
+      "face_down_from_owned12p7": true
+    },
+    {
+      "id": "OWNER_CLAMP_SPACER_2_2",
+      "raw_plane": [
+        282,
+        268,
+        12,
+        12
+      ],
+      "sheet_thickness_axis": "partY",
+      "finished_thickness_mm": 6.0,
+      "face_down_from_owned12p7": true
+    }
+  ],
+  "all_nonoverlap_pair_checks": [
+    {
+      "a": "OWNER_ROUTER_HEAD_PLATE",
+      "b": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "axis_gap_mm": 11
+    },
+    {
+      "a": "OWNER_ROUTER_HEAD_PLATE",
+      "b": "PLASMA_U_SPLICE_PLATE",
+      "axis_gap_mm": 11
+    },
+    {
+      "a": "CD_RECEIVER",
+      "b": "OWNER_ROUTER_HEAD_PLATE",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "CD_RECEIVER",
+      "b": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "axis_gap_mm": 54
+    },
+    {
+      "a": "CD_RECEIVER",
+      "b": "PLASMA_U_SPLICE_PLATE",
+      "axis_gap_mm": 54
+    },
+    {
+      "a": "CD_RECEIVER",
+      "b": "OWNER_CLAMP_SPACER_1_1",
+      "axis_gap_mm": 118
+    },
+    {
+      "a": "CD_RECEIVER",
+      "b": "OWNER_CLAMP_SPACER_1_2",
+      "axis_gap_mm": 134
+    },
+    {
+      "a": "CD_RECEIVER",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "axis_gap_mm": 118
+    },
+    {
+      "a": "CD_RECEIVER",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "axis_gap_mm": 134
+    },
+    {
+      "a": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "b": "PLASMA_U_SPLICE_PLATE",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "OWNER_ROUTER_HEAD_PLATE",
+      "axis_gap_mm": 118
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "CD_RECEIVER",
+      "axis_gap_mm": 54
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "axis_gap_mm": 118
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "PLASMA_U_SPLICE_PLATE",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "CD_CAPTIVE_CAGE_R",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "OWNER_CLAMP_SPACER_1_1",
+      "axis_gap_mm": 36
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "OWNER_CLAMP_SPACER_1_2",
+      "axis_gap_mm": 52
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "axis_gap_mm": 36
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "axis_gap_mm": 52
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_R",
+      "b": "OWNER_ROUTER_HEAD_PLATE",
+      "axis_gap_mm": 118
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_R",
+      "b": "CD_RECEIVER",
+      "axis_gap_mm": 86
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_R",
+      "b": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "axis_gap_mm": 118
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_R",
+      "b": "PLASMA_U_SPLICE_PLATE",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_R",
+      "b": "OWNER_CLAMP_SPACER_1_1",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_R",
+      "b": "OWNER_CLAMP_SPACER_1_2",
+      "axis_gap_mm": 20
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_R",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "CD_CAPTIVE_CAGE_R",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "axis_gap_mm": 20
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_1_1",
+      "b": "OWNER_ROUTER_HEAD_PLATE",
+      "axis_gap_mm": 118
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_1_1",
+      "b": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "axis_gap_mm": 118
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_1_1",
+      "b": "PLASMA_U_SPLICE_PLATE",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_1_1",
+      "b": "OWNER_CLAMP_SPACER_1_2",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_1_1",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_1_1",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_1_2",
+      "b": "OWNER_ROUTER_HEAD_PLATE",
+      "axis_gap_mm": 118
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_1_2",
+      "b": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "axis_gap_mm": 118
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_1_2",
+      "b": "PLASMA_U_SPLICE_PLATE",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_1_2",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_1_2",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_2_1",
+      "b": "OWNER_ROUTER_HEAD_PLATE",
+      "axis_gap_mm": 134
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_2_1",
+      "b": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "axis_gap_mm": 134
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_2_1",
+      "b": "PLASMA_U_SPLICE_PLATE",
+      "axis_gap_mm": 20
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_2_1",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "axis_gap_mm": 4
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_2_2",
+      "b": "OWNER_ROUTER_HEAD_PLATE",
+      "axis_gap_mm": 134
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_2_2",
+      "b": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "axis_gap_mm": 134
+    },
+    {
+      "a": "OWNER_CLAMP_SPACER_2_2",
+      "b": "PLASMA_U_SPLICE_PLATE",
+      "axis_gap_mm": 20
+    }
+  ],
+  "outputs": {
+    "OWNER_ROUTER_HEAD_PLATE": {
+      "file": "output/selected-head-pack/OWNER_ROUTER_HEAD_PLATE.step",
+      "sha256": "0de35b9b9d8914ad9e6e6258ba39906068c1a847bb1cf413ff66727e12b75e0e",
+      "source_min_corner": [
+        -73.0,
+        12.7,
+        -65.0
+      ],
+      "bounding_dimensions_mm": [
+        146.0,
+        12.7,
+        175.0
+      ]
+    },
+    "CD_RECEIVER": {
+      "file": "output/selected-head-pack/CD_RECEIVER.step",
+      "sha256": "a63c9e717920516c512ed85d0d86fad536a12c09cc76bbfa344c26f9dd7d13dd",
+      "source_min_corner": [
+        -73.0,
+        -3.3306690738754696e-16,
+        -22.0
+      ],
+      "bounding_dimensions_mm": [
+        146.0,
+        12.7,
+        132.0
+      ]
+    },
+    "PLASMA_REMOVABLE_HEAD_PLATE": {
+      "file": "output/selected-head-pack/PLASMA_REMOVABLE_HEAD_PLATE.step",
+      "sha256": "f0bc1a617d3fbc71d0b9bdd5f3828e51b5b2702a91a309aee5c48b1d9f37d834",
+      "source_min_corner": [
+        502.0,
+        654.1999999999999,
+        1142.0
+      ],
+      "bounding_dimensions_mm": [
+        146.0,
+        12.700000000000045,
+        110.0
+      ]
+    },
+    "PLASMA_U_SPLICE_PLATE": {
+      "file": "output/selected-head-pack/PLASMA_U_SPLICE_PLATE.step",
+      "sha256": "e5d141ece4b76448d69d74ec059e279c4ebd43fe817232d4f055c7207d440251",
+      "source_min_corner": [
+        520.0,
+        641.5,
+        1082.0
+      ],
+      "bounding_dimensions_mm": [
+        110.0,
+        12.700000000000045,
+        114.0
+      ]
+    },
+    "CD_CAPTIVE_CAGE_L": {
+      "file": "output/selected-head-pack/CD_CAPTIVE_CAGE_L.step",
+      "sha256": "a593d0dee03fa1993750ce43fe988c58f23d4a56a1de540722d07c5a4ac1d808",
+      "source_min_corner": [
+        -34.35,
+        25.4,
+        26.0
+      ],
+      "bounding_dimensions_mm": [
+        12.7,
+        20.800000000000004,
+        28.0
+      ]
+    },
+    "CD_CAPTIVE_CAGE_R": {
+      "file": "output/selected-head-pack/CD_CAPTIVE_CAGE_R.step",
+      "sha256": "44cef7eeb27f96f38cb58628aca83f450999c81df8a6603c6209a21e4402f4a9",
+      "source_min_corner": [
+        21.65,
+        25.4,
+        26.0
+      ],
+      "bounding_dimensions_mm": [
+        12.699999999999996,
+        20.800000000000004,
+        28.0
+      ]
+    },
+    "OWNER_CLAMP_SPACER_1_1": {
+      "file": "output/selected-head-pack/OWNER_CLAMP_SPACER_1_1.step",
+      "sha256": "5d4742529338f0790e6eba47a1b6d4d795dbc99108eae85fa5aabe225ece5329",
+      "source_min_corner": [
+        -30.0,
+        25.4,
+        -55.0
+      ],
+      "bounding_dimensions_mm": [
+        10.0,
+        6.0,
+        10.0
+      ]
+    },
+    "OWNER_CLAMP_SPACER_1_2": {
+      "file": "output/selected-head-pack/OWNER_CLAMP_SPACER_1_2.step",
+      "sha256": "c1a0e1b05f0c4ca712ace9782f72a71b2d29dc7e5c45b3133dab0407d07b63bc",
+      "source_min_corner": [
+        -30.0,
+        25.4,
+        -25.0
+      ],
+      "bounding_dimensions_mm": [
+        10.0,
+        6.0,
+        10.0
+      ]
+    },
+    "OWNER_CLAMP_SPACER_2_1": {
+      "file": "output/selected-head-pack/OWNER_CLAMP_SPACER_2_1.step",
+      "sha256": "1d1057219c15b49ef21d55aeaeab288460d4f1530d1a76a570114e3edb03e3bf",
+      "source_min_corner": [
+        20.0,
+        25.4,
+        -55.0
+      ],
+      "bounding_dimensions_mm": [
+        10.0,
+        6.0,
+        10.0
+      ]
+    },
+    "OWNER_CLAMP_SPACER_2_2": {
+      "file": "output/selected-head-pack/OWNER_CLAMP_SPACER_2_2.step",
+      "sha256": "d968de3eefacafdd90eff1fcdb9615000721860a981c902f0d68084a43b3652f",
+      "source_min_corner": [
+        20.0,
+        25.4,
+        -25.0
+      ],
+      "bounding_dimensions_mm": [
+        10.0,
+        6.0,
+        10.0
+      ]
+    }
+  },
+  "quarter_three_eighth_sheet_additional_allocation": "Only one30x12.7ledge requested here; parent must reconcile with all other3/8allocations",
+  "unpriced_requirement_CSV": {
+    "file": "output/selected-head-pack/selected-head-requirements.csv",
+    "sha256": "0e44ef023973d3187f2dbd66372dfdcbffa44def859487950cf55868ccf33fd2"
+  },
+  "retained_plasma_takeoff": {
+    "file": "output/selected-head-pack/retained-plasma-source-requirements.csv",
+    "sha256": "29990be8081b826a17b865eee51efbb187e019e09767b423ff4284dddd185615",
+    "rows": 103,
+    "source_file": "variants/extrusion-reengineered/motion-fabrication.csv",
+    "source_sha256": "59630eda41ede28a0345f729f962243977876b5b2ae9d1520f9c935a4d6243ca"
+  },
+  "integral_switch_plunger_nonadditive_crosswalk": {
+    "I_HEAD_FLOAT_SWITCH_PIN": "I_HEAD_FLOAT_SWITCH_CASE",
+    "I_HEAD_PRESENCE_LEFT_PIN": "I_HEAD_PRESENCE_LEFT_CASE",
+    "I_HEAD_PRESENCE_RIGHT_PIN": "I_HEAD_PRESENCE_RIGHT_CASE",
+    "I_HEAD_PRESENCE_TOP_PIN": "I_HEAD_PRESENCE_TOP_CASE"
+  },
+  "ideal_head_plate_screen": {
+    "E_MPa": 69000.0,
+    "gross_I_mm4": 24921.993166666663,
+    "uniform_section_mm": [
+      146,
+      12.7
+    ],
+    "assumed_fixed_section": "Continuous ideal clamp atM6rowZ1182",
+    "bottom_source_clamp_mount_Z_mm": 1092,
+    "nominal_spindle_lower_reference_Z_mm": 970,
+    "cases": [
+      {
+        "force_N": 25,
+        "loaded_projection_below_nominal_reference_mm": 15,
+        "ideal_tool_displacement_mm": 0.04422364202482599
+      },
+      {
+        "force_N": 25,
+        "loaded_projection_below_nominal_reference_mm": 50,
+        "ideal_tool_displacement_mm": 0.062495873773596514
+      },
+      {
+        "force_N": 50,
+        "loaded_projection_below_nominal_reference_mm": 15,
+        "ideal_tool_displacement_mm": 0.08844728404965198
+      },
+      {
+        "force_N": 50,
+        "loaded_projection_below_nominal_reference_mm": 50,
+        "ideal_tool_displacement_mm": 0.12499174754719303
+      },
+      {
+        "force_N": 100,
+        "loaded_projection_below_nominal_reference_mm": 15,
+        "ideal_tool_displacement_mm": 0.17689456809930396
+      },
+      {
+        "force_N": 100,
+        "loaded_projection_below_nominal_reference_mm": 50,
+        "ideal_tool_displacement_mm": 0.24998349509438605
+      }
+    ],
+    "formula": "F/(E*I)*(L^3/3+a*L^2+a^2*L),L90,a122+toolprojection",
+    "limitations": "Gross section idealization only; excludes holes, true finite bolted supports, receiver bending, source clamp, rails, spindle bearings and everyotherframe/bedjoint. No complete-machine rigidity or stock-alloy qualification."
+  },
+  "no_owned_material_credit_for_Z_carrier_or_plasma_drop": true,
+  "source_consistent_during_check": true,
+  "costs_or_shipping_not_fabricated": true,
+  "complete_working_boot_registration": false,
+  "physical_strength_qualified": false,
+  "fabrication_release": false,
+  "operating_release": false,
+  "stock_nest_and_takeoff_passed": true
+}

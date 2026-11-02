@@ -1,0 +1,173 @@
+{
+  "study": "FULL_BED_CHANGEOVER_ACTUAL_FIXED_DOCK_FRAME_ATC_AND_UTILITIES",
+  "source_sha256": {
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "variants/extrusion-reengineered/bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants/extrusion-reengineered/build.py": "6825d593b1cd1ec67a492cbb2089520304e98cbbc3d17a1123db4fd316d0b69f",
+    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "variants/extrusion-reengineered/material_cover.py": "60f490eb392c24b677d818c0977ac24a316e7261886882b423bf4be7f46f6919",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/extrusion-reengineered/shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "variants/integrated-4080-small/assembly.py": "a0e62db2bc605a41556aedb096610c029cac785dcec090f35104a716c8ffea96",
+    "variants/integrated-4080-small/atc/actual_atc.py": "5e79642b4b3245989232c6aae8a73374efc266fda06057f41afc509fee8e55ff",
+    "variants/integrated-4080-small/bed/build_bed.py": "d1a1dbf42a6a461b3a005bcd829be5c6b604eed583f2969b9ca3960e97d74729",
+    "variants/integrated-4080-small/bed/check_machine_changeover.py": "5777779dbc1640340c9b314f5d380abc2111031726188e72f302a549838374ee",
+    "variants/integrated-4080-small/bed/integrated_bed.py": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa",
+    "variants/integrated-4080-small/bed/output/bed-local-check.json": "2f7a5112077591acb90cb91613cd5d91ff4b2d6bb9d76633f7e7680cc420a8ec",
+    "variants/integrated-4080-small/front_stop_bed_clearance.py": "e3f079dbd78b4046d60a68e621f9aaab2015581c9fd7ed4d9a2875b83ecf2a3b",
+    "variants/integrated-4080-small/head/build_head.py": "72b2cde101afdab443c28c8a1a2dc01c76c230f565013c993289141095de7e7e",
+    "variants/integrated-4080-small/head/common_dock_source.py": "b335af2c8b5505812259e5ee0ce723d2064fd0a05f70a1e0df757474f1b0ef9f",
+    "variants/integrated-4080-small/head/owner_head.py": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
+    "variants/integrated-4080-small/head/plasma_quick_dock.py": "db1576e2bcbeac634daa64b78fab9bdefabf895e532f9cd70bb76ee416b9096e",
+    "variants/integrated-4080-small/head/quick_dock.py": "1f5d3ce7552837d78868108fc564956f613e5d4e67d0cac2741cd68b67e72d18",
+    "variants/integrated-4080-small/mechanical.py": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "variants/integrated-4080-small/utilities/integrated_utilities.py": "8fcbe7ea06a6610c5ce22936c6f363c0c21da910297fb21e403e835c3f0dd98a",
+    "variants/owned-z300-assessment/candidate_motion_factory.py": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
+    "variants/owned-z300-assessment/custom_joint_repair.py": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "variants/owned-z300-assessment/front_stop_repair.py": "5006c52b713dd58a1f73f98e1075e5e4fc76ecdb9c82711a20ae66e9742278c0",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4"
+  },
+  "source_consistent_during_check": true,
+  "source_paths_added_during_check": [],
+  "local_evidence": {
+    "file": "output/bed-local-check.json",
+    "sha256": "2f7a5112077591acb90cb91613cd5d91ff4b2d6bb9d76633f7e7680cc420a8ec",
+    "passed": true
+  },
+  "machine_park": {
+    "gantry_y": 1275.0,
+    "head_x": 975.0,
+    "z_lift": 250.0,
+    "module_removed": true,
+    "spindle_context": false
+  },
+  "ATC": {
+    "deployment_mm": 200,
+    "hood": "fitted",
+    "capacity_envelopes_included": true
+  },
+  "utilities": {
+    "guards_fitted": false,
+    "stored_screen_racks_included": true,
+    "actual_rerouted_gravity_hose_included": true
+  },
+  "external_component_count": 791,
+  "static": {
+    "closed": {
+      "exact_pairs": 30,
+      "registered_vendor_joint_overlaps": 0,
+      "unexpected": [],
+      "passed": true
+    },
+    "upright": {
+      "exact_pairs": 8,
+      "registered_vendor_joint_overlaps": 0,
+      "unexpected": [],
+      "passed": true
+    }
+  },
+  "continuous_rigid_bed": {
+    "passed": true,
+    "rigid_parts": 268,
+    "interval_deg": 5,
+    "enumerated_pairs": 3815784,
+    "AABB_certificates": 3815666,
+    "exact_distance_certificates": 166,
+    "unresolved": [],
+    "swept_enclosing_bounds_mm": [
+      44.45,
+      -132.01562118716424,
+      850.4,
+      1105.55,
+      1182.8457272797848,
+      2247.8
+    ],
+    "proof": "Continuous trigonometric corner bounds on every material-part AABB; exact distance at interval midpoint exceeds angular displacement bound, or adaptive subdivision. No finite pose sampling is called a rigid-bed path proof."
+  },
+  "telescoping_assist": {
+    "sampled_poses": [
+      {
+        "angle_deg": 0,
+        "exact_pairs": 10,
+        "registered_vendor_joint_overlaps": 0,
+        "unexpected": [],
+        "passed": true
+      },
+      {
+        "angle_deg": 10,
+        "exact_pairs": 10,
+        "registered_vendor_joint_overlaps": 0,
+        "unexpected": [],
+        "passed": true
+      },
+      {
+        "angle_deg": 20,
+        "exact_pairs": 8,
+        "registered_vendor_joint_overlaps": 0,
+        "unexpected": [],
+        "passed": true
+      },
+      {
+        "angle_deg": 30,
+        "exact_pairs": 6,
+        "registered_vendor_joint_overlaps": 0,
+        "unexpected": [],
+        "passed": true
+      },
+      {
+        "angle_deg": 40,
+        "exact_pairs": 4,
+        "registered_vendor_joint_overlaps": 0,
+        "unexpected": [],
+        "passed": true
+      },
+      {
+        "angle_deg": 50,
+        "exact_pairs": 2,
+        "registered_vendor_joint_overlaps": 0,
+        "unexpected": [],
+        "passed": true
+      },
+      {
+        "angle_deg": 60,
+        "exact_pairs": 2,
+        "registered_vendor_joint_overlaps": 0,
+        "unexpected": [],
+        "passed": true
+      },
+      {
+        "angle_deg": 70,
+        "exact_pairs": 0,
+        "registered_vendor_joint_overlaps": 0,
+        "unexpected": [],
+        "passed": true
+      },
+      {
+        "angle_deg": 80,
+        "exact_pairs": 0,
+        "registered_vendor_joint_overlaps": 0,
+        "unexpected": [],
+        "passed": true
+      },
+      {
+        "angle_deg": 90,
+        "exact_pairs": 0,
+        "registered_vendor_joint_overlaps": 0,
+        "unexpected": [],
+        "passed": true
+      }
+    ],
+    "continuous_motion_proved": false,
+    "scope": "Ten exact finite poses only, inherited local internal checks remain source bound."
+  },
+  "whole_head_removed": true,
+  "fabrication_release": false,
+  "lift_operation_release": false,
+  "status_scope": "Nominal boundary geometry and source fidelity. Actual gas dimensions/force, catch/impact control, joint/material strength and physical handling remain separate acceptance gates.",
+  "passed": true
+}

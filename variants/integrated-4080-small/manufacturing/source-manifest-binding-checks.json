@@ -1,0 +1,506 @@
+[
+  {
+    "manifest": "variants/integrated-4080-small/manufacturing/current-custom-check.json",
+    "file": "variants/integrated-4080-small/manufacturing/export_current_custom.py",
+    "expected_sha256": "a21a85b0da2d191e685872f3dc9ef18363f161033455159f59b5c75f2a68fb4c",
+    "actual_sha256": "a21a85b0da2d191e685872f3dc9ef18363f161033455159f59b5c75f2a68fb4c",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/manufacturing/current-custom-check.json",
+    "file": "variants/integrated-4080-small/assembly.py",
+    "expected_sha256": "a0e62db2bc605a41556aedb096610c029cac785dcec090f35104a716c8ffea96",
+    "actual_sha256": "a0e62db2bc605a41556aedb096610c029cac785dcec090f35104a716c8ffea96",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/manufacturing/current-custom-check.json",
+    "file": "variants/integrated-4080-small/mechanical.py",
+    "expected_sha256": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "actual_sha256": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/manufacturing/current-custom-check.json",
+    "file": "variants/extrusion-reengineered/review/frame-fabrication.csv",
+    "expected_sha256": "f108c8210eb647268c7ad63836cd1b3c96f46f3e5ed7e78bcb951d2baff9988f",
+    "actual_sha256": "f108c8210eb647268c7ad63836cd1b3c96f46f3e5ed7e78bcb951d2baff9988f",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/manufacturing/current-custom-check.json",
+    "file": "variants/extrusion-reengineered/motion-fabrication.csv",
+    "expected_sha256": "59630eda41ede28a0345f729f962243977876b5b2ae9d1520f9c935a4d6243ca",
+    "actual_sha256": "59630eda41ede28a0345f729f962243977876b5b2ae9d1520f9c935a4d6243ca",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/manufacturing/current-custom-check.json",
+    "file": "variants/owned-z300-assessment/candidate_motion_factory.py",
+    "expected_sha256": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
+    "actual_sha256": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/manufacturing/current-custom-check.json",
+    "file": "variants/integrated-4080-small/head/quick_dock.py",
+    "expected_sha256": "1f5d3ce7552837d78868108fc564956f613e5d4e67d0cac2741cd68b67e72d18",
+    "actual_sha256": "1f5d3ce7552837d78868108fc564956f613e5d4e67d0cac2741cd68b67e72d18",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/manufacturing/current-custom-check.json",
+    "file": "variants/integrated-4080-small/head/plasma_quick_dock.py",
+    "expected_sha256": "db1576e2bcbeac634daa64b78fab9bdefabf895e532f9cd70bb76ee416b9096e",
+    "actual_sha256": "db1576e2bcbeac634daa64b78fab9bdefabf895e532f9cd70bb76ee416b9096e",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/manufacturing/current-custom-check.json",
+    "file": "variants/integrated-4080-small/head/owner_head.py",
+    "expected_sha256": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
+    "actual_sha256": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/manufacturing/current-custom-check.json",
+    "file": "variants/integrated-4080-small/front_stop_bed_clearance.py",
+    "expected_sha256": "e3f079dbd78b4046d60a68e621f9aaab2015581c9fd7ed4d9a2875b83ecf2a3b",
+    "actual_sha256": "e3f079dbd78b4046d60a68e621f9aaab2015581c9fd7ed4d9a2875b83ecf2a3b",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/integrated-4080-small/head/selected_head_pack.py",
+    "expected_sha256": "601e9781eeaf30dcbfdde7dd2263e1e8e7c11fd95cb45f0f709dd22926470d76",
+    "actual_sha256": "601e9781eeaf30dcbfdde7dd2263e1e8e7c11fd95cb45f0f709dd22926470d76",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/integrated-4080-small/head/quick_dock.py",
+    "expected_sha256": "1f5d3ce7552837d78868108fc564956f613e5d4e67d0cac2741cd68b67e72d18",
+    "actual_sha256": "1f5d3ce7552837d78868108fc564956f613e5d4e67d0cac2741cd68b67e72d18",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/integrated-4080-small/head/plasma_quick_dock.py",
+    "expected_sha256": "db1576e2bcbeac634daa64b78fab9bdefabf895e532f9cd70bb76ee416b9096e",
+    "actual_sha256": "db1576e2bcbeac634daa64b78fab9bdefabf895e532f9cd70bb76ee416b9096e",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/integrated-4080-small/head/owner_head.py",
+    "expected_sha256": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
+    "actual_sha256": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/integrated-4080-small/head/build_head.py",
+    "expected_sha256": "72b2cde101afdab443c28c8a1a2dc01c76c230f565013c993289141095de7e7e",
+    "actual_sha256": "72b2cde101afdab443c28c8a1a2dc01c76c230f565013c993289141095de7e7e",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/integrated-4080-small/head/spindle-reference-evidence.json",
+    "expected_sha256": "f149cd1308af05333ec4e9ecf931fdae19650a22a75641fff32c21039d15ddc4",
+    "actual_sha256": "f149cd1308af05333ec4e9ecf931fdae19650a22a75641fff32c21039d15ddc4",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/owned-z300-assessment/sources/owned-head/R10 - original uncut 65 mm spindle clamp.step",
+    "expected_sha256": "506d12b3f749db3eeec03e133b519fd93e45ff1b6cb80bd8fa568d3fb0dba1cb",
+    "actual_sha256": "506d12b3f749db3eeec03e133b519fd93e45ff1b6cb80bd8fa568d3fb0dba1cb",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/owned-z300-assessment/sources/owned-head/Spindle dust boot.step",
+    "expected_sha256": "3716855cf25a308de3db696ae827578d7803bfe4665fd1a6535f311a5246a044",
+    "actual_sha256": "3716855cf25a308de3db696ae827578d7803bfe4665fd1a6535f311a5246a044",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/owned-z300-assessment/sources/owned-head/prior-mating-inspection.json",
+    "expected_sha256": "e96a990b591ceaa0f1277c0af2d6654d29b563310cb813afe967c389a3438cb6",
+    "actual_sha256": "e96a990b591ceaa0f1277c0af2d6654d29b563310cb813afe967c389a3438cb6",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/owned-z300-assessment/sources/owned-head/owner-working-boot.json",
+    "expected_sha256": "69503af028789fa48e38c1b5d2451c04ac0e752b5195f948e4af9daaa644a6aa",
+    "actual_sha256": "69503af028789fa48e38c1b5d2451c04ac0e752b5195f948e4af9daaa644a6aa",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/owned-z300-assessment/sources/owned-head/owner-decisions.json",
+    "expected_sha256": "f996fbf6aac86a0ce1c32cf2530c33b8f4c005ac4e21132c8e6a417b7f541b25",
+    "actual_sha256": "f996fbf6aac86a0ce1c32cf2530c33b8f4c005ac4e21132c8e6a417b7f541b25",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/owned-z300-assessment/sources/owned-head/owner-actuator-selection.json",
+    "expected_sha256": "4441da633745fa5c1170706454fa6991e24695a599bf4765743022d10fc8b66f",
+    "actual_sha256": "4441da633745fa5c1170706454fa6991e24695a599bf4765743022d10fc8b66f",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/owned-z300-assessment/candidate_motion_factory.py",
+    "expected_sha256": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
+    "actual_sha256": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/owned-z300-assessment/z300_fit_study.py",
+    "expected_sha256": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "actual_sha256": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/owned-z300-assessment/front_stop_repair.py",
+    "expected_sha256": "5006c52b713dd58a1f73f98e1075e5e4fc76ecdb9c82711a20ae66e9742278c0",
+    "actual_sha256": "5006c52b713dd58a1f73f98e1075e5e4fc76ecdb9c82711a20ae66e9742278c0",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/owned-z300-assessment/custom_joint_repair.py",
+    "expected_sha256": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "actual_sha256": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/extrusion-reengineered/motion.py",
+    "expected_sha256": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "actual_sha256": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/extrusion-reengineered/params.py",
+    "expected_sha256": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "actual_sha256": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/extrusion-wood-plasma/motion_context.py",
+    "expected_sha256": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "actual_sha256": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+    "expected_sha256": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "actual_sha256": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "output/release-review/RevE-ENGINEERING/motion_completion.py",
+    "expected_sha256": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "actual_sha256": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "output/release-review/RevE-ENGINEERING/motion_finish.py",
+    "expected_sha256": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "actual_sha256": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "output/release-review/RevE-ENGINEERING/cad_helpers.py",
+    "expected_sha256": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "actual_sha256": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/integrated-4080-small/head/output/quick-dock/quick-dock-check.json",
+    "expected_sha256": "7756f1de7d57863040b71c1f1739687986faa61fc37b9128b2c670165cc5f670",
+    "actual_sha256": "7756f1de7d57863040b71c1f1739687986faa61fc37b9128b2c670165cc5f670",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
+    "file": "variants/integrated-4080-small/head/output/plasma-quick-dock/plasma-dock-check.json",
+    "expected_sha256": "3e5b008cbf08697a6572afac318e1cb6108c09ee6f989ffcb64d01915eff0b3e",
+    "actual_sha256": "3e5b008cbf08697a6572afac318e1cb6108c09ee6f989ffcb64d01915eff0b3e",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/atc/output/atc-integration-check.json",
+    "file": "variants/integrated-4080-small/atc/build_atc.py",
+    "expected_sha256": "0942d3d28728987e68754db30f01602f66173349057e253d5c7d7f62dc8c9abf",
+    "actual_sha256": "0942d3d28728987e68754db30f01602f66173349057e253d5c7d7f62dc8c9abf",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/atc/output/atc-integration-check.json",
+    "file": "variants/integrated-4080-small/atc/actual_atc.py",
+    "expected_sha256": "5e79642b4b3245989232c6aae8a73374efc266fda06057f41afc509fee8e55ff",
+    "actual_sha256": "5e79642b4b3245989232c6aae8a73374efc266fda06057f41afc509fee8e55ff",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/atc/output/atc-integration-check.json",
+    "file": "variants/extrusion-reengineered/frame.py",
+    "expected_sha256": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "actual_sha256": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/atc/output/atc-integration-check.json",
+    "file": "variants/extrusion-reengineered/params.py",
+    "expected_sha256": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "actual_sha256": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/atc/output/atc-integration-check.json",
+    "file": "variants/integrated-4080-small/atc/sources/current-primary-evidence.json",
+    "expected_sha256": "15e67c2c41273f14f27eed48227f5895ec89a2bbda41ecf0776c2b1f14ee09fa",
+    "actual_sha256": "15e67c2c41273f14f27eed48227f5895ec89a2bbda41ecf0776c2b1f14ee09fa",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/atc/output/atc-integration-check.json",
+    "file": "variants/integrated-4080-small/atc/sources/owner-selected-slide.json",
+    "expected_sha256": "34495fe6be7b810d5a9ed95ee9ddeba1e19d24e4c9ec4a546f0af48d07c49b4e",
+    "actual_sha256": "34495fe6be7b810d5a9ed95ee9ddeba1e19d24e4c9ec4a546f0af48d07c49b4e",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/atc/output/atc-integration-check.json",
+    "file": "variants/integrated-4080-small/atc/sources/prior-hardware-evidence.json",
+    "expected_sha256": "dda7f3e92b88019f1604e27ba42192a27ef8db6b746ca42fbb4c628a45dddb14",
+    "actual_sha256": "dda7f3e92b88019f1604e27ba42192a27ef8db6b746ca42fbb4c628a45dddb14",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/atc/output/atc-integration-check.json",
+    "file": "variants/integrated-4080-small/atc/sources/RapidChange-prior-public-evidence.json",
+    "expected_sha256": "6bf697bd7ab84e22e34d69d233abcb417f2ff1af0d85ce7a56718201007a3934",
+    "actual_sha256": "6bf697bd7ab84e22e34d69d233abcb417f2ff1af0d85ce7a56718201007a3934",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/atc/output/atc-integration-check.json",
+    "file": "variants/integrated-4080-small/atc/sources/selected-slide-drawing-1.jpg",
+    "expected_sha256": "718bb79556af45e539f54f66770cd14a7908027b9cc8342430b0cda6378558f7",
+    "actual_sha256": "718bb79556af45e539f54f66770cd14a7908027b9cc8342430b0cda6378558f7",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/atc/output/atc-integration-check.json",
+    "file": "variants/integrated-4080-small/atc/sources/selected-slide-drawing-2.jpg",
+    "expected_sha256": "ddb7e2d9922ee106eb1d5b91ef52c55183b17b0f163dae502f05409774d677f3",
+    "actual_sha256": "ddb7e2d9922ee106eb1d5b91ef52c55183b17b0f163dae502f05409774d677f3",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/bed/output/custom-part-index.json",
+    "file": "variants/integrated-4080-small/bed/manufacturing_takeoff.py",
+    "expected_sha256": "a7a37a4c9431921ab9241087876aa4978551a19a8e2e9604661de62ac0639c97",
+    "actual_sha256": "a7a37a4c9431921ab9241087876aa4978551a19a8e2e9604661de62ac0639c97",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/bed/output/custom-part-index.json",
+    "file": "variants/integrated-4080-small/bed/integrated_bed.py",
+    "expected_sha256": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa",
+    "actual_sha256": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/bed/output/custom-part-index.json",
+    "file": "variants/integrated-4080-small/bed/output/bed-local-check.json",
+    "expected_sha256": "2f7a5112077591acb90cb91613cd5d91ff4b2d6bb9d76633f7e7680cc420a8ec",
+    "actual_sha256": "2f7a5112077591acb90cb91613cd5d91ff4b2d6bb9d76633f7e7680cc420a8ec",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/bed/output/bed-local-check.json",
+    "file": "variants/integrated-4080-small/bed/build_bed.py",
+    "expected_sha256": "d1a1dbf42a6a461b3a005bcd829be5c6b604eed583f2969b9ca3960e97d74729",
+    "actual_sha256": "d1a1dbf42a6a461b3a005bcd829be5c6b604eed583f2969b9ca3960e97d74729",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/bed/output/bed-local-check.json",
+    "file": "variants/integrated-4080-small/bed/integrated_bed.py",
+    "expected_sha256": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa",
+    "actual_sha256": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/bed/output/bed-local-check.json",
+    "file": "variants/extrusion-reengineered/bed.py",
+    "expected_sha256": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "actual_sha256": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/bed/output/bed-local-check.json",
+    "file": "variants/extrusion-reengineered/frame.py",
+    "expected_sha256": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "actual_sha256": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/utilities/output/utility-check.json",
+    "file": "variants\\integrated-4080-small\\utilities\\integrated_utilities.py",
+    "expected_sha256": "8fcbe7ea06a6610c5ce22936c6f363c0c21da910297fb21e403e835c3f0dd98a",
+    "actual_sha256": "8fcbe7ea06a6610c5ce22936c6f363c0c21da910297fb21e403e835c3f0dd98a",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/utilities/output/utility-check.json",
+    "file": "variants\\integrated-4080-small\\bed\\integrated_bed.py",
+    "expected_sha256": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa",
+    "actual_sha256": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/utilities/output/utility-check.json",
+    "file": "variants\\integrated-4080-small\\mechanical.py",
+    "expected_sha256": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "actual_sha256": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/utilities/output/utility-check.json",
+    "file": "variants\\extrusion-reengineered\\bed.py",
+    "expected_sha256": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "actual_sha256": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/utilities/output/utility-check.json",
+    "file": "variants\\extrusion-reengineered\\shields.py",
+    "expected_sha256": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "actual_sha256": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/bed/output/HDPE-drill-dxf-check.json",
+    "file": "export_drill_patterns.py",
+    "expected_sha256": "ddf82df7da304515f22d8741216a02eb1518678b16c3b53e18e557528d6d8304",
+    "actual_sha256": "ddf82df7da304515f22d8741216a02eb1518678b16c3b53e18e557528d6d8304",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/bed/output/HDPE-drill-dxf-check.json",
+    "file": "HDPE-DRILL.csv",
+    "expected_sha256": "ae96aaac8b8f936a43554d718698a7b136584447d051b68697aaaae9e4bd818b",
+    "actual_sha256": "ae96aaac8b8f936a43554d718698a7b136584447d051b68697aaaae9e4bd818b",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/bed/output/HDPE-drill-dxf-check.json",
+    "file": "bed-local-check.json",
+    "expected_sha256": "2f7a5112077591acb90cb91613cd5d91ff4b2d6bb9d76633f7e7680cc420a8ec",
+    "actual_sha256": "2f7a5112077591acb90cb91613cd5d91ff4b2d6bb9d76633f7e7680cc420a8ec",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/output/front-stop-bed-clearance/front-stop-bed-clearance-check.json",
+    "file": "variants\\integrated-4080-small\\front_stop_bed_clearance.py",
+    "expected_sha256": "e3f079dbd78b4046d60a68e621f9aaab2015581c9fd7ed4d9a2875b83ecf2a3b",
+    "actual_sha256": "e3f079dbd78b4046d60a68e621f9aaab2015581c9fd7ed4d9a2875b83ecf2a3b",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/output/front-stop-bed-clearance/front-stop-bed-clearance-check.json",
+    "file": "variants\\integrated-4080-small\\mechanical.py",
+    "expected_sha256": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "actual_sha256": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/output/front-stop-bed-clearance/front-stop-bed-clearance-check.json",
+    "file": "variants\\integrated-4080-small\\bed\\integrated_bed.py",
+    "expected_sha256": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa",
+    "actual_sha256": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/output/front-stop-bed-clearance/front-stop-bed-clearance-check.json",
+    "file": "variants\\integrated-4080-small\\utilities\\integrated_utilities.py",
+    "expected_sha256": "8fcbe7ea06a6610c5ce22936c6f363c0c21da910297fb21e403e835c3f0dd98a",
+    "actual_sha256": "8fcbe7ea06a6610c5ce22936c6f363c0c21da910297fb21e403e835c3f0dd98a",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/output/front-stop-bed-clearance/front-stop-bed-clearance-check.json",
+    "file": "variants\\integrated-4080-small\\atc\\actual_atc.py",
+    "expected_sha256": "5e79642b4b3245989232c6aae8a73374efc266fda06057f41afc509fee8e55ff",
+    "actual_sha256": "5e79642b4b3245989232c6aae8a73374efc266fda06057f41afc509fee8e55ff",
+    "passed": true
+  },
+  {
+    "manifest": "variants/integrated-4080-small/output/front-stop-bed-clearance/front-stop-bed-clearance-check.json",
+    "file": "variants\\integrated-4080-small\\assembly.py",
+    "expected_sha256": "a0e62db2bc605a41556aedb096610c029cac785dcec090f35104a716c8ffea96",
+    "actual_sha256": "a0e62db2bc605a41556aedb096610c029cac785dcec090f35104a716c8ffea96",
+    "passed": true
+  },
+  {
+    "manifest": "variants/extrusion-reengineered/review/bed-manufacturing-check.json",
+    "file": "params.py",
+    "expected_sha256": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "actual_sha256": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "passed": true
+  },
+  {
+    "manifest": "variants/extrusion-reengineered/review/bed-manufacturing-check.json",
+    "file": "bed.py",
+    "expected_sha256": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "actual_sha256": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "passed": true
+  },
+  {
+    "manifest": "variants/extrusion-reengineered/review/bed-manufacturing-check.json",
+    "file": "bed_fabrication.py",
+    "expected_sha256": "997ef19e03f1a9aec0282d9cac6f49a394b711e41df56e6e4071a1b317b78484",
+    "actual_sha256": "997ef19e03f1a9aec0282d9cac6f49a394b711e41df56e6e4071a1b317b78484",
+    "passed": true
+  },
+  {
+    "manifest": "variants/extrusion-reengineered/review/shield-manufacturing.json",
+    "file": "shields.py",
+    "expected_sha256": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "actual_sha256": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "passed": true
+  },
+  {
+    "manifest": "variants/extrusion-reengineered/review/shield-manufacturing.json",
+    "file": "frame.py",
+    "expected_sha256": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "actual_sha256": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "passed": true
+  },
+  {
+    "manifest": "variants/extrusion-reengineered/review/shield-manufacturing.json",
+    "file": "params.py",
+    "expected_sha256": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "actual_sha256": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "passed": true
+  }
+]

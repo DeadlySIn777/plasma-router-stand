@@ -1,0 +1,44 @@
+{
+  "checked_date": "2026-10-01",
+  "selection_status": "Engineering candidates only; no purchase, wiring or energized test",
+  "lock": {
+    "manufacturer": "Kendrion",
+    "model": "LLV050058 / 1333547",
+    "current_product_url": "https://www.kendrion.com/en/productfinder/group/product/locking-solenoids/1333547",
+    "dimension_source": "kendrion-locking-drawings.pdf, PDF page 5, printed page 9",
+    "dimension_source_url": "https://www.kendrion.com/fileadmin/user_upload/Downloads/Brochures_and_Flyers/Electromagnets_Actuators/Locking-Solenoids-Kendrion-EN.pdf",
+    "diameter_mm": 14,
+    "stroke_mm": 10,
+    "voltage_VDC": 24,
+    "power_W": 18.3,
+    "duty_percent": 100,
+    "initial_force_N": 7,
+    "unpowered_action": "integrated spring extends pin; electrical power retracts pin",
+    "feedback": "integrated microswitch reports actual bolt locked/unlocked positions; switching 0.5-1 mm from the position does not establish full bearing engagement",
+    "catalog_radial_load_N": 3000,
+    "catalog_radial_rating_applied_to_machine": false,
+    "emergency_opener": false,
+    "archived_geometry": {"body_to_bellows_reference_mm": 125, "body_square_mm": 50, "front_housing_axial_mm": 55, "front_reference_to_extended_tip_mm": 23, "side_mount_thread": "2-M6 depth 8", "side_mount_axial_pitch_mm": 35, "side_mount_height_pitch_mm": 30, "nearest_mount_from_front_mm": 10},
+    "revision_hold": "Current product lists 119x50x50 while archived drawing gives 148 overall including nose/pin and connector projection. Use archived conservative envelope and drawing interface as a matched candidate; received drawing revision must be confirmed before drilling the solenoid mount. Do not combine the 119 length with the archived hole pattern."
+  },
+  "fasteners": {
+    "standard": "ISO 4762 candidate cap screws; plain nominal shanks/thread-major receiving voids for CAD, not helical thread proof",
+    "head_dimensions_source": "https://www.bossard.com/nl-en/-/media/bossard-group/website/documents/technical-resources/en/f-040-en.pdf",
+    "tool_sizes_source": "https://media.bossard.com/za-en/-/media/bossard-group/website/documents/technical-resources/en/f-077-en.pdf",
+    "M5x70_candidate": "TR00006101-000",
+    "M8x130_candidate": "TR00006280-000",
+    "M8_head_diameter_height_AF_mm": [13,8,6],
+    "M6_head_diameter_height_AF_mm": [10,6,5],
+    "M5_head_diameter_height_AF_mm": [8.5,5,4],
+    "strength_grade_or_preload_qualified": false
+  },
+  "slide": {
+    "owner_selected_overall_mm": 311,
+    "nominal_effective_travel_mm": 200,
+    "lead_5mm_is_listing_only": true,
+    "body_base_channels": "N-M4 called out; 16/24 inner/outer channel dimensions imply nominal axes +/-10 mm. Actual undercut/nut geometry and thread depth are unreleased.",
+    "carriage": "4-M6 and 60 mm axial length shown; transverse hole centers and usable depth unreleased. Custom adapter is a transfer-drill blank on its vendor side.",
+    "supplier_base_fasteners_implemented": false,
+    "supplier_carriage_fasteners_implemented": false
+  }
+}

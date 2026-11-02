@@ -1,0 +1,53 @@
+{
+  "observed_date": "2026-11-01",
+  "scope": "Read-only official public pages and supplied drawings; no purchase, account join or supplier contact",
+  "official_FAQ": "https://rapidchangeatc.com/faq/",
+  "official_product": "https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/",
+  "official_CAD_download_channel": "https://discord.com/channels/1077383334080032898/1191144591840268318",
+  "direct_public_download_result": "Channel serves JavaScript application shell; no CAD attachment available in the read-only public result",
+  "former_dimensions_page": "https://rapidchangeatc.com/docs/magazine-information/magazine-dimensions/",
+  "former_dimensions_result": "Not accessible in current public web tool",
+  "current_family_facts": {
+    "body_width_mm": 60,
+    "recommended_noninset_Z_clearance_mm": 90,
+    "maximum_alignment_error_before_instability_mm": 0.2,
+    "ER11_max_tool_diameter_mm": 15,
+    "manufacturer_requires_reverse_capable_spindle": true,
+    "manufacturer_requires_tool_setter": true,
+    "customer_CAD_contains_mounting_and_pocket_holes": true,
+    "product_additional_info_weight_kg": 1.6,
+    "product_additional_info_dimensions_cm": [
+      52,
+      12,
+      12
+    ],
+    "generic_family_dimensions_not_verified_for_selected_variant": true
+  },
+  "current_product_form_USD_excluding_tax_shipping": {
+    "base4pocket_basic": 400,
+    "Pro_IR_upgrade": 100,
+    "Premium_IR_and_cover_upgrade": 200,
+    "optional_optical_toolsetter": 50,
+    "mounting_package4screws": 5,
+    "mounting_screws_included_without_package": false
+  },
+  "still_unavailable": [
+    "Selected4ER11 pocket centres, base length/height and true endcap/connector/cover envelope",
+    "Actual mounting hole pattern and fastener type/length",
+    "Base-to-nut/IR engagement planes",
+    "Received selected slide carriage four-M6 complete pattern/depth and exact height",
+    "Received slide underside channel-nut contour and depth"
+  ],
+  "design_treatment": "120mm height screened conservatively, 60mm body width from FAQ. This is a capacity allocation rather than verified actual variant CAD. Neither product family dimensions nor purple boxes are used as drilling templates.",
+  "release": false,
+  "installed_capacity_requirement_not_exact_vendor_CAD": {
+    "XYZ_mm": [
+      520,
+      60,
+      120
+    ],
+    "body_width_basis": "FAQ60mm body only",
+    "family_52x12x12cm_is_exact_installed_kit": false,
+    "endcap_IR_cable_mount_map_qualified": false
+  }
+}

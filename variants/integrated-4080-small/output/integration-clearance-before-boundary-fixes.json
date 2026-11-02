@@ -1,0 +1,4754 @@
+{
+  "study": "CURRENT_INTEGRATED_SUBSYSTEM_BOUNDARIES",
+  "source_sha256": {
+    "variants/integrated-4080-small/check_integration.py": "a16594cb9d3777cb0d1c81f3f5e92d515f6051b3c280a44a1224b91fd8c87f8b",
+    "variants/integrated-4080-small/assembly.py": "9f4031dc7c0b5d66bda805fab606fa5b477facb319ba68c95d52c5bb19312d0c",
+    "variants/integrated-4080-small/mechanical.py": "9ecd1ee33b3b68270d476051526e91e658a6839213f611652bc3ba25f76939f2",
+    "variants/integrated-4080-small/head/quick_dock.py": "1f5d3ce7552837d78868108fc564956f613e5d4e67d0cac2741cd68b67e72d18",
+    "variants/integrated-4080-small/head/plasma_quick_dock.py": "db1576e2bcbeac634daa64b78fab9bdefabf895e532f9cd70bb76ee416b9096e",
+    "variants/integrated-4080-small/atc/actual_atc.py": "e14e48c044cb4987e8f3a3927b82d8395e363930fa1e895bbbcfe9b28aff3612",
+    "variants/integrated-4080-small/bed/integrated_bed.py": "c3549d85f769ed72e261cd6941e57fa49b124c4ead4b68420e492e462f0a79ad",
+    "variants/integrated-4080-small/head/common_dock_source.py": "b335af2c8b5505812259e5ee0ce723d2064fd0a05f70a1e0df757474f1b0ef9f",
+    "variants/integrated-4080-small/utilities/integrated_utilities.py": "cabf62fc4aec0263c5780e6df95f0b06bf4ed27540fc1f29ca6c1146bb365eae",
+    "variants/extrusion-reengineered/bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants/extrusion-reengineered/shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "variants/integrated-4080-small/head/owner_head.py": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
+    "variants/integrated-4080-small/head/build_head.py": "72b2cde101afdab443c28c8a1a2dc01c76c230f565013c993289141095de7e7e",
+    "variants/integrated-4080-small/head/spindle-reference-evidence.json": "f149cd1308af05333ec4e9ecf931fdae19650a22a75641fff32c21039d15ddc4",
+    "variants/owned-z300-assessment/sources/owned-head/R10 - original uncut 65 mm spindle clamp.step": "506d12b3f749db3eeec03e133b519fd93e45ff1b6cb80bd8fa568d3fb0dba1cb",
+    "variants/owned-z300-assessment/sources/owned-head/Spindle dust boot.step": "3716855cf25a308de3db696ae827578d7803bfe4665fd1a6535f311a5246a044",
+    "variants/owned-z300-assessment/sources/owned-head/prior-mating-inspection.json": "e96a990b591ceaa0f1277c0af2d6654d29b563310cb813afe967c389a3438cb6",
+    "variants/owned-z300-assessment/sources/owned-head/owner-working-boot.json": "69503af028789fa48e38c1b5d2451c04ac0e752b5195f948e4af9daaa644a6aa",
+    "variants/owned-z300-assessment/sources/owned-head/owner-decisions.json": "f996fbf6aac86a0ce1c32cf2530c33b8f4c005ac4e21132c8e6a417b7f541b25",
+    "variants/owned-z300-assessment/sources/owned-head/owner-actuator-selection.json": "4441da633745fa5c1170706454fa6991e24695a599bf4765743022d10fc8b66f",
+    "variants/owned-z300-assessment/candidate_motion_factory.py": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/owned-z300-assessment/front_stop_repair.py": "5006c52b713dd58a1f73f98e1075e5e4fc76ecdb9c82711a20ae66e9742278c0",
+    "variants/owned-z300-assessment/custom_joint_repair.py": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  },
+  "motion_box": {
+    "X": [
+      175,
+      975
+    ],
+    "guide_Y": [
+      275,
+      1275
+    ],
+    "working_Z": [
+      0,
+      250
+    ]
+  },
+  "cases": {
+    "WOOD": {
+      "tool_against_rest_of_motion": {
+        "passed": true,
+        "broad_phase_separated": 14624,
+        "candidate_pairs": 0,
+        "proofs": []
+      },
+      "motion_against_fixed_subsystems": {
+        "passed": false,
+        "broad_phase_separated": 307940,
+        "candidate_pairs": 130,
+        "proofs": [
+          {
+            "moving": "Y_RAIL_L",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": false,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 9725.508311230567
+          },
+          {
+            "moving": "Y_RAIL_L",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_RAIL_L",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_RAIL_L",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_SHOE_L",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 23.65,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_SHOE_L",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 8.0,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_SHOE_L",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 8.0,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_SHOE_L",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 8.0,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_1",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  31.35625,
+                  338.75,
+                  1092.27177734375,
+                  32.15,
+                  340.0,
+                  1093.0
+                ],
+                "material_bounds_mm": [
+                  31.35625,
+                  338.75,
+                  1092.27177734375,
+                  32.15,
+                  340.0,
+                  1093.0
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 44.79707183837607
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.049999999999997,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.049999999999997,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 10,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.049999999999997,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_1",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.35,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 17,
+            "empty_cells": 0,
+            "separated_material_cells": 9,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_2",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.35,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 9,
+            "empty_cells": 0,
+            "separated_material_cells": 5,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_3",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.35,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 17,
+            "empty_cells": 0,
+            "separated_material_cells": 9,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 6.75,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_4",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.35,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 9,
+            "empty_cells": 0,
+            "separated_material_cells": 5,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 6.75,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_2",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  31.35625,
+                  338.75,
+                  1092.27177734375,
+                  32.15,
+                  340.0,
+                  1093.0
+                ],
+                "material_bounds_mm": [
+                  31.35625,
+                  338.75,
+                  1092.27177734375,
+                  32.15,
+                  340.0,
+                  1093.0
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 7.947867584228012
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 34.2,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.049999999999997,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 10,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.049999999999997,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_2",
+            "obstacle": "ATC_DROP_PLATE_L_1",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  31.35625,
+                  1319.375,
+                  1052.45234375,
+                  32.15,
+                  1320.0,
+                  1053.0
+                ],
+                "material_bounds_mm": [
+                  31.35625,
+                  1319.375,
+                  1052.45234375,
+                  32.15,
+                  1320.0,
+                  1053.0
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 33.689416503909015
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "HMS_Y_L_MOTOR",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "HMS_Y_L_MOTOR_BRACKET",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_RAIL_R",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": false,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 9725.508311230786
+          },
+          {
+            "moving": "Y_RAIL_R",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_RAIL_R",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_RAIL_R",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_SHOE_R",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 23.649999999999864,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_SHOE_R",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 8.0,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_SHOE_R",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 8.0,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_SHOE_R",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 8.0,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_1",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  1123.40625,
+                  338.75,
+                  1092.27177734375,
+                  1124.2,
+                  340.0,
+                  1093.0
+                ],
+                "material_bounds_mm": [
+                  1123.40625,
+                  338.75,
+                  1092.27177734375,
+                  1124.2,
+                  340.0,
+                  1093.0
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 44.79707183837867
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.0499999999999545,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.0499999999999545,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 10,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.0499999999999545,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_1",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.34999999999991,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 17,
+            "empty_cells": 0,
+            "separated_material_cells": 9,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_2",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.34999999999991,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 9,
+            "empty_cells": 0,
+            "separated_material_cells": 5,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_3",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.34999999999991,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 17,
+            "empty_cells": 0,
+            "separated_material_cells": 9,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 6.75,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_4",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.34999999999991,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 9,
+            "empty_cells": 0,
+            "separated_material_cells": 5,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 6.75,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_2",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  1123.40625,
+                  338.75,
+                  1092.27177734375,
+                  1124.2,
+                  340.0,
+                  1093.0
+                ],
+                "material_bounds_mm": [
+                  1123.40625,
+                  338.75,
+                  1092.27177734375,
+                  1124.2,
+                  340.0,
+                  1093.0
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 7.947867584228474
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 34.200000000000045,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.0499999999999545,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 10,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.0499999999999545,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_2",
+            "obstacle": "ATC_DROP_PLATE_R_1",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  1123.4062499999998,
+                  1319.375,
+                  1052.45234375,
+                  1124.1999999999998,
+                  1320.0,
+                  1053.0
+                ],
+                "material_bounds_mm": [
+                  1123.4062499999998,
+                  1319.375,
+                  1052.45234375,
+                  1124.1999999999998,
+                  1320.0,
+                  1053.0
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 33.68941650391741
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "HMS_Y_R_MOTOR",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "HMS_Y_R_MOTOR_BRACKET",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_STOP_L_FRONT_BRACKET",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_STOP_L_REAR_BRACKET",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_STOP_R_FRONT_BRACKET",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_STOP_R_REAR_BRACKET",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_L_FRONT",
+            "obstacle": "XR_EX_L_HEADER",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_L_FRONT",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_BASE_M6x12_L_FRONT_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_BASE_M6x12_L_FRONT_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_M6x16_EXTERNAL_GRIP_L_FRONT_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_WASHER_L_FRONT_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_M6x16_EXTERNAL_GRIP_L_FRONT_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_WASHER_L_FRONT_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_L_REAR",
+            "obstacle": "XR_EX_L_HEADER",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_L_REAR",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_BASE_M6x12_L_REAR_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_M6x16_EXTERNAL_GRIP_L_REAR_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_WASHER_L_REAR_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_R_FRONT",
+            "obstacle": "XR_EX_R_HEADER",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_R_FRONT",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_BASE_M6x12_R_FRONT_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_BASE_M6x12_R_FRONT_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_M6x16_EXTERNAL_GRIP_R_FRONT_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_WASHER_R_FRONT_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_M6x16_EXTERNAL_GRIP_R_FRONT_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_WASHER_R_FRONT_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_R_REAR",
+            "obstacle": "XR_EX_R_HEADER",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_R_REAR",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_BASE_M6x12_R_REAR_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_M6x16_EXTERNAL_GRIP_R_REAR_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_WASHER_R_REAR_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "OWNER_ROUTER_HEAD_PLATE",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 69.85000000000008,
+            "translation_min_mm": [
+              -400.0,
+              -500.0,
+              -125.0
+            ],
+            "translation_max_mm": [
+              400.0,
+              500.0,
+              125.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "OWNER_ROUTER_HEAD_PLATE",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 69.84999999999991,
+            "translation_min_mm": [
+              -400.0,
+              -500.0,
+              -125.0
+            ],
+            "translation_max_mm": [
+              400.0,
+              500.0,
+              125.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "OWNER_POWERED_SHIELD_BOOT_BODY",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 52.44741300834437,
+            "translation_min_mm": [
+              -400.0,
+              -500.0,
+              -125.0
+            ],
+            "translation_max_mm": [
+              400.0,
+              500.0,
+              125.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "OWNER_POWERED_SHIELD_BOOT_BODY",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  1059.525,
+                  486.078125,
+                  1106.5632812499998,
+                  1060.0,
+                  487.0,
+                  1107.3
+                ],
+                "material_bounds_mm": [
+                  1059.525,
+                  486.078125,
+                  1106.5632812499998,
+                  1060.0,
+                  487.0,
+                  1107.3
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 2156.9704327727445
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -400.0,
+              -500.0,
+              -125.0
+            ],
+            "translation_max_mm": [
+              400.0,
+              500.0,
+              125.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "OWNER_POWERED_SHIELD_BOOT_BODY",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  1059.525,
+                  960.078125,
+                  1106.5632812499998,
+                  1060.0,
+                  961.0,
+                  1107.3
+                ],
+                "material_bounds_mm": [
+                  1059.525,
+                  960.078125,
+                  1106.5632812499998,
+                  1060.0,
+                  961.0,
+                  1107.3
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 2156.9704327729505
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -400.0,
+              -500.0,
+              -125.0
+            ],
+            "translation_max_mm": [
+              400.0,
+              500.0,
+              125.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "OWNER_POWERED_SHIELD_BOOT_BODY",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": false,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  1059.05,
+                  1093.90625,
+                  1106.5632812499998,
+                  1059.525,
+                  1094.828125,
+                  1107.3
+                ],
+                "material_bounds_mm": [
+                  1059.05,
+                  1093.90625,
+                  1106.5632812499998,
+                  1059.525,
+                  1094.828125,
+                  1107.3
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 0.7741999346542748
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": 0.029285636694446913,
+            "translation_min_mm": [
+              -400.0,
+              -500.0,
+              -125.0
+            ],
+            "translation_max_mm": [
+              400.0,
+              500.0,
+              125.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          }
+        ]
+      }
+    },
+    "PLASMA": {
+      "tool_against_rest_of_motion": {
+        "passed": true,
+        "broad_phase_separated": 61238,
+        "candidate_pairs": 0,
+        "proofs": []
+      },
+      "motion_against_fixed_subsystems": {
+        "passed": false,
+        "broad_phase_separated": 366292,
+        "candidate_pairs": 128,
+        "proofs": [
+          {
+            "moving": "Y_RAIL_L",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": false,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 9725.508311230567
+          },
+          {
+            "moving": "Y_RAIL_L",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_RAIL_L",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_RAIL_L",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_SHOE_L",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 23.65,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_SHOE_L",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 8.0,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_SHOE_L",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 8.0,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_SHOE_L",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 8.0,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_1",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  31.35625,
+                  338.75,
+                  1092.27177734375,
+                  32.15,
+                  340.0,
+                  1093.0
+                ],
+                "material_bounds_mm": [
+                  31.35625,
+                  338.75,
+                  1092.27177734375,
+                  32.15,
+                  340.0,
+                  1093.0
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 44.79707183837607
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.049999999999997,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.049999999999997,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 10,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.049999999999997,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_1",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.35,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 17,
+            "empty_cells": 0,
+            "separated_material_cells": 9,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_2",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.35,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 9,
+            "empty_cells": 0,
+            "separated_material_cells": 5,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_3",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.35,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 17,
+            "empty_cells": 0,
+            "separated_material_cells": 9,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 6.75,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_4",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.35,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 9,
+            "empty_cells": 0,
+            "separated_material_cells": 5,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 6.75,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_1_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_2",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_L",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  31.35625,
+                  338.75,
+                  1092.27177734375,
+                  32.15,
+                  340.0,
+                  1093.0
+                ],
+                "material_bounds_mm": [
+                  31.35625,
+                  338.75,
+                  1092.27177734375,
+                  32.15,
+                  340.0,
+                  1093.0
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 7.947867584228012
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 34.2,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.049999999999997,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 10,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.049999999999997,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_L_2",
+            "obstacle": "ATC_DROP_PLATE_L_1",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  31.35625,
+                  1319.375,
+                  1052.45234375,
+                  32.15,
+                  1320.0,
+                  1053.0
+                ],
+                "material_bounds_mm": [
+                  31.35625,
+                  1319.375,
+                  1052.45234375,
+                  32.15,
+                  1320.0,
+                  1053.0
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 33.689416503909015
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_L_2_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999994,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "HMS_Y_L_MOTOR",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "HMS_Y_L_MOTOR_BRACKET",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_RAIL_R",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": false,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 9725.508311230786
+          },
+          {
+            "moving": "Y_RAIL_R",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_RAIL_R",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_RAIL_R",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_SHOE_R",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 23.649999999999864,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_SHOE_R",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 8.0,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_SHOE_R",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 8.0,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_SHOE_R",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 8.0,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_1",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  1123.40625,
+                  338.75,
+                  1092.27177734375,
+                  1124.2,
+                  340.0,
+                  1093.0
+                ],
+                "material_bounds_mm": [
+                  1123.40625,
+                  338.75,
+                  1092.27177734375,
+                  1124.2,
+                  340.0,
+                  1093.0
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 44.79707183837867
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.0499999999999545,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.0499999999999545,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 10,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.0499999999999545,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_1",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.34999999999991,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 17,
+            "empty_cells": 0,
+            "separated_material_cells": 9,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_2",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.34999999999991,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 9,
+            "empty_cells": 0,
+            "separated_material_cells": 5,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_3",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.34999999999991,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 17,
+            "empty_cells": 0,
+            "separated_material_cells": 9,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 6.75,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_4",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 18.34999999999991,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 9,
+            "empty_cells": 0,
+            "separated_material_cells": 5,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 6.75,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_1_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_2",
+            "obstacle": "INT_PAN_FRONT_HEADER_HANGER_R",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  1123.40625,
+                  338.75,
+                  1092.27177734375,
+                  1124.2,
+                  340.0,
+                  1093.0
+                ],
+                "material_bounds_mm": [
+                  1123.40625,
+                  338.75,
+                  1092.27177734375,
+                  1124.2,
+                  340.0,
+                  1093.0
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 7.947867584228474
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 34.200000000000045,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.0499999999999545,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 10,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 3.0499999999999545,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_R_2",
+            "obstacle": "ATC_DROP_PLATE_R_1",
+            "passed": false,
+            "cells_examined": 19,
+            "empty_cells": 0,
+            "separated_material_cells": 0,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  1123.4062499999998,
+                  1319.375,
+                  1052.45234375,
+                  1124.1999999999998,
+                  1320.0,
+                  1053.0
+                ],
+                "material_bounds_mm": [
+                  1123.4062499999998,
+                  1319.375,
+                  1052.45234375,
+                  1124.1999999999998,
+                  1320.0,
+                  1053.0
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 33.68941650391741
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": null,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 25,
+            "empty_cells": 0,
+            "separated_material_cells": 13,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_3",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 29,
+            "empty_cells": 0,
+            "separated_material_cells": 15,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 11.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "cells_examined": 3,
+            "empty_cells": 0,
+            "separated_material_cells": 2,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 16.5,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+            "passed": true,
+            "cells_examined": 11,
+            "empty_cells": 0,
+            "separated_material_cells": 6,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_BLOCK_BOLT_R_2_4",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "cells_examined": 15,
+            "empty_cells": 0,
+            "separated_material_cells": 8,
+            "unresolved_cells": [],
+            "minimum_expanded_cell_gap_mm": 14.599999999999909,
+            "translation_min_mm": [
+              -0.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              0.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "HMS_Y_R_MOTOR",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "HMS_Y_R_MOTOR_BRACKET",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "X_BLOCK_1_1",
+            "obstacle": "ATC_COVER_FOLDED_HANDLE_L",
+            "passed": false,
+            "cells_examined": 23,
+            "empty_cells": 0,
+            "separated_material_cells": 4,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  272.0857769616264,
+                  1302.28125,
+                  1183.9043477292885,
+                  272.18805444299664,
+                  1302.37109375,
+                  1183.9562779195521
+                ],
+                "material_bounds_mm": [
+                  272.0857769616264,
+                  1302.28125,
+                  1183.904347729264,
+                  272.13815823419344,
+                  1302.37109375,
+                  1183.9562779195521
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 0.07546105776236262
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": 0.07109375000004547,
+            "translation_min_mm": [
+              -400.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              400.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "X_BLOCK_1_1",
+            "obstacle": "ATC_COVER_FOLDED_HANDLE_R",
+            "passed": false,
+            "cells_examined": 23,
+            "empty_cells": 0,
+            "separated_material_cells": 4,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  882.0857769615534,
+                  1302.28125,
+                  1183.9043477293499,
+                  882.1880544429495,
+                  1302.37109375,
+                  1183.9562779196283
+                ],
+                "material_bounds_mm": [
+                  882.0857769615507,
+                  1302.28125,
+                  1183.9043477293499,
+                  882.1381582340837,
+                  1302.37109375,
+                  1183.9562779196283
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 0.0503049924931355
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": 0.07109375000004547,
+            "translation_min_mm": [
+              -400.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              400.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "X_BLOCK_1_2",
+            "obstacle": "ATC_COVER_FOLDED_HANDLE_L",
+            "passed": false,
+            "cells_examined": 23,
+            "empty_cells": 0,
+            "separated_material_cells": 4,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  272.0857769616264,
+                  1302.28125,
+                  1183.9043477292885,
+                  272.18805444299664,
+                  1302.37109375,
+                  1183.9562779195521
+                ],
+                "material_bounds_mm": [
+                  272.0857769616264,
+                  1302.28125,
+                  1183.904347729264,
+                  272.13815823419344,
+                  1302.37109375,
+                  1183.9562779195521
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 0.05441780047409726
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": 0.07109375000004547,
+            "translation_min_mm": [
+              -400.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              400.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "X_BLOCK_1_2",
+            "obstacle": "ATC_COVER_FOLDED_HANDLE_R",
+            "passed": false,
+            "cells_examined": 23,
+            "empty_cells": 0,
+            "separated_material_cells": 4,
+            "unresolved_cells": [
+              {
+                "cell_bounds_mm": [
+                  882.0857769615534,
+                  1302.28125,
+                  1183.9043477293499,
+                  882.1880544429495,
+                  1302.37109375,
+                  1183.9562779196283
+                ],
+                "material_bounds_mm": [
+                  882.0857769615507,
+                  1302.28125,
+                  1183.9043477293499,
+                  882.1381582340837,
+                  1302.37109375,
+                  1183.9562779196283
+                ],
+                "depth": 18,
+                "distance_mm": 0.0,
+                "reference_intersection_mm3": 0.07546105774815531
+              }
+            ],
+            "minimum_expanded_cell_gap_mm": 0.07109375000004547,
+            "translation_min_mm": [
+              -400.0,
+              -500.0,
+              -0.0
+            ],
+            "translation_max_mm": [
+              400.0,
+              500.0,
+              0.0
+            ],
+            "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+          },
+          {
+            "moving": "Y_STOP_L_FRONT_BRACKET",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_STOP_L_REAR_BRACKET",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_STOP_R_FRONT_BRACKET",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "Y_STOP_R_REAR_BRACKET",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_L_FRONT",
+            "obstacle": "XR_EX_L_HEADER",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_L_FRONT",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_BASE_M6x12_L_FRONT_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_BASE_M6x12_L_FRONT_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_M6x16_EXTERNAL_GRIP_L_FRONT_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_WASHER_L_FRONT_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_M6x16_EXTERNAL_GRIP_L_FRONT_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_WASHER_L_FRONT_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_L_REAR",
+            "obstacle": "XR_EX_L_HEADER",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_L_REAR",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_BASE_M6x12_L_REAR_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_M6x16_EXTERNAL_GRIP_L_REAR_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_WASHER_L_REAR_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_R_FRONT",
+            "obstacle": "XR_EX_R_HEADER",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_R_FRONT",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_BASE_M6x12_R_FRONT_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_BASE_M6x12_R_FRONT_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_M6x16_EXTERNAL_GRIP_R_FRONT_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_WASHER_R_FRONT_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_M6x16_EXTERNAL_GRIP_R_FRONT_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_WASHER_R_FRONT_2",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_R_REAR",
+            "obstacle": "XR_EX_R_HEADER",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_CARRIER_R_REAR",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_BASE_M6x12_R_REAR_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_M6x16_EXTERNAL_GRIP_R_REAR_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          },
+          {
+            "moving": "XR_STOP_FRAME_WASHER_R_REAR_1",
+            "obstacle": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+            "passed": true,
+            "method": "Exact static material intersection; mating tangency allowed.",
+            "overlap_mm3": 0.0
+          }
+        ]
+      }
+    }
+  },
+  "source_consistent_during_check": true,
+  "exclusions": [
+    "Internal joints within each subsystem remain governed by its own current manifest.",
+    "ATC deployment and manual cover/bed changeover are separate interlocked paths.",
+    "Unregistered working boot, spindle nose and actual vendor magazine geometry are not certified by nominal envelopes.",
+    "No stiffness, safe-stop, thread, lifting, EMC or delivered-price qualification."
+  ],
+  "fabrication_release": false,
+  "operating_release": false,
+  "passed": false,
+  "unresolved_pair_count": 23
+}

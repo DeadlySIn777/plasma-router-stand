@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "valve_model": "USS-MSV00009 / JFMSV00009",
+    "valve_unit_price_USD": 50.42,
+    "shipping_USD": null,
+    "valve_package_published_in": {
+      "port_length": 3.2,
+      "motor_width": 3.0,
+      "total_height": 4.3,
+      "bore": 0.98
+    },
+    "valve_is_exact_supplier_solid": false,
+    "voltage": "9\u201324VAC/DC,2wire auto-return NC",
+    "charge_seconds_minimum": 60,
+    "actuator_ambient_C": [
+      -10,
+      40
+    ],
+    "medium_C": [
+      0,
+      90
+    ],
+    "max_power_W": 5,
+    "actuation_seconds": [
+      6,
+      8
+    ],
+    "reservoir_atmospheric": true,
+    "compressed_air_connection": false,
+    "receiver_usable_capacity_requirement_L": 65,
+    "receiver_listing_is_liquid_rating": false,
+    "return_airgap_mm": 19.0,
+    "drain_path_centerline_never_rises": true,
+    "drain_thread_union_orientation_support_qualified": false,
+    "guide_screen_X_mm": [
+      75.0,
+      76.9
+    ],
+    "guide_screen_Z_mm": [
+      1013.0,
+      1107.3
+    ],
+    "guide_section_quantity": 6,
+    "guide_section_sheet_mm": [
+      472.0,
+      94.3,
+      1.9
+    ],
+    "guide_section_gap_mm": 2.0,
+    "guide_section_removed_before_bed_tilt": true,
+    "guide_screen_handling_path_qualified": false,
+    "guide_is_direct_splash_screen_not_complete_module_enclosure": true,
+    "manufacturer_wiper_bellows_selection_held": true,
+    "pan_retention_front_station_moved_Y_mm": 530.0,
+    "pan_retention_local_floor_delta_mm": 3.18,
+    "old_cassette_cabinet_included": false,
+    "fabrication_release": false,
+    "operating_release": false
+  },
+  "source_sha256": {
+    "variants\\integrated-4080-small\\utilities\\integrated_utilities.py": "8fcbe7ea06a6610c5ce22936c6f363c0c21da910297fb21e403e835c3f0dd98a",
+    "variants\\integrated-4080-small\\bed\\integrated_bed.py": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa",
+    "variants\\integrated-4080-small\\mechanical.py": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "variants\\extrusion-reengineered\\bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants\\extrusion-reengineered\\shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe"
+  },
+  "component_count": 159,
+  "new_component_count": 40,
+  "invalid": [],
+  "checks": {
+    "WOOD": {
+      "new_vs_frame_motion": [],
+      "new_vs_bed": [],
+      "new_vs_retained_wet": []
+    },
+    "PLASMA": {
+      "new_vs_frame_motion": [],
+      "new_vs_bed": [],
+      "new_vs_retained_wet": []
+    },
+    "BED_TRANSITION_5_DEG_DIAGNOSTIC": []
+  },
+  "holds": [
+    "Exact received motorized valve threads, permitted mounting orientation, union lengths and independent pipe/actuator support require verification. Rounded supplier dimensions are conservative package allocations, not exact solids.",
+    "Receiver usable volume at least65L, wall/bulkhead support, liquid rating and hot-return temperature remain physical acceptance items; reservoir is vented and never pressurized.",
+    "All six screen sections must be transferred to the under-pan racks before bed tilt and refitted before cutting. The9stagehandlingroute requires actual-source finite/continuous checks before conversion release.",
+    "Guide screens are spatter/dust barriers, not a sealed extraction enclosure or tested thermal barrier. Rail block shoes prevent a continuous fixed wall atX44throughrailheight.",
+    "Valve NC power-off return requires at least60s energized charging per manufacturer. Drain closure, receiver-present/level and mode interlocks require actual controller I/O qualification.",
+    "New formed/welded screen parts require developed bend/weld fabrication drawings and actual slot fastener fit/engagement; the nominal solids are not final sheet flat patterns."
+  ],
+  "transition_is_continuously_proved": false,
+  "passed_static_geometry": true,
+  "fabrication_release": false,
+  "operating_release": false,
+  "source_consistent_after_build": true
+}

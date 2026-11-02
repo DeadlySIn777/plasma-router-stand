@@ -1,0 +1,208 @@
+{
+  "study": "PAN_FRONT_COMB_AND_FLOOR_SCREEN_THREE_BEARERS_300_630_1180",
+  "source_sha256": {
+    "variants/integrated-4080-small/bed/pan_front_screen.py": "562aab05d6aeb432b43a60584e7422ebe90618eebf2ed236d95bfac6419a2632",
+    "variants/extrusion-reengineered/bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6"
+  },
+  "floor_slope": 0.006,
+  "comb_material": "Steel E200GPa;minyield250MParequired",
+  "floor_thickness_mm": 1.9,
+  "comb_thickness_mm": 3.175,
+  "comb_slot_centres_Y_mm": [
+    130.0,
+    278.0,
+    426.0,
+    574.0,
+    722.0,
+    870.0,
+    1018.0,
+    1166.0
+  ],
+  "comb_slot_width_mm": 2.2,
+  "outer_slot_bottom_Z_mm": 838,
+  "centre_slot_bottom_Z_mm": 841,
+  "bottom_drain_notches_Y_mm": [
+    [
+      140,
+      160
+    ],
+    [
+      260,
+      280
+    ],
+    [
+      380,
+      400
+    ],
+    [
+      500,
+      520
+    ],
+    [
+      620,
+      640
+    ],
+    [
+      740,
+      760
+    ],
+    [
+      860,
+      880
+    ],
+    [
+      980,
+      1000
+    ],
+    [
+      1100,
+      1120
+    ]
+  ],
+  "bottom_drain_notch_height_mm": 8,
+  "ribs": [
+    {
+      "model": "Uncompositeactualnotchedwebonly",
+      "tributary_width_mm": 229.5,
+      "central_comb": false,
+      "water_depth_bound_mm": 62.0,
+      "uniform_line_load_N_per_mm": 0.13953882285,
+      "support_Y_mm": [
+        300.0,
+        630.0,
+        1180.0
+      ],
+      "support_condition": "Simple vertical supports; all rotations free, actual front/rear overhangs retained",
+      "nodes": 394,
+      "max_abs_rib_deflection_mm": 0.05138195236766219,
+      "front_rib_deflection_mm": 0.035712835128008,
+      "max_web_or_T_extreme_bending_stress_MPa": 31.648521169527186,
+      "max_nominal_longitudinal_weld_shear_MPa": 0,
+      "max_floor_flange_axial_force_N": 0,
+      "flange_force_transfer_over_10mm_twin_weld_MPa": 0.0,
+      "vertical_reactions_N": [
+        47.55977034033151,
+        71.83377489284487,
+        33.540993375895596
+      ],
+      "reaction_equilibrium_error_N": 1.1234528017212142e-05,
+      "reaction_moment_equilibrium_error_Nmm": 0.006830504280515015
+    },
+    {
+      "model": "Uncompositeactualnotchedwebonly",
+      "tributary_width_mm": 435.0,
+      "central_comb": true,
+      "water_depth_bound_mm": 62.0,
+      "uniform_line_load_N_per_mm": 0.2644853505,
+      "support_Y_mm": [
+        300.0,
+        630.0,
+        1180.0
+      ],
+      "support_condition": "Simple vertical supports; all rotations free, actual front/rear overhangs retained",
+      "nodes": 394,
+      "max_abs_rib_deflection_mm": 0.0931611700996722,
+      "front_rib_deflection_mm": 0.06401747045272027,
+      "max_web_or_T_extreme_bending_stress_MPa": 40.700982231591986,
+      "max_nominal_longitudinal_weld_shear_MPa": 0,
+      "max_floor_flange_axial_force_N": 0,
+      "flange_force_transfer_over_10mm_twin_weld_MPa": 0.0,
+      "vertical_reactions_N": [
+        90.66768308822132,
+        135.32077726675266,
+        63.8874680451181
+      ],
+      "reaction_equilibrium_error_N": 1.574790786662561e-05,
+      "reaction_moment_equilibrium_error_Nmm": 0.004910144052701071
+    },
+    {
+      "model": "WeldedTwherefootintact;web-onlyat8mmfootdrainnotches",
+      "tributary_width_mm": 229.5,
+      "central_comb": false,
+      "water_depth_bound_mm": 62.0,
+      "uniform_line_load_N_per_mm": 0.13953882285,
+      "support_Y_mm": [
+        300.0,
+        630.0,
+        1180.0
+      ],
+      "support_condition": "Simple vertical supports; all rotations free, actual front/rear overhangs retained",
+      "nodes": 394,
+      "max_abs_rib_deflection_mm": 0.02703732197009312,
+      "front_rib_deflection_mm": 0.01857862994841099,
+      "max_web_or_T_extreme_bending_stress_MPa": 30.831237059802156,
+      "max_nominal_longitudinal_weld_shear_MPa": 0.9593524519801823,
+      "max_floor_flange_axial_force_N": 212.76423165396164,
+      "flange_force_transfer_over_10mm_twin_weld_MPa": 10.031316909663444,
+      "vertical_reactions_N": [
+        47.14250483573289,
+        72.50138732034122,
+        33.29062429662895
+      ],
+      "reaction_equilibrium_error_N": 3.339089693099595e-05,
+      "reaction_moment_equilibrium_error_Nmm": 0.026166095805820078
+    },
+    {
+      "model": "WeldedTwherefootintact;web-onlyat8mmfootdrainnotches",
+      "tributary_width_mm": 435.0,
+      "central_comb": true,
+      "water_depth_bound_mm": 62.0,
+      "uniform_line_load_N_per_mm": 0.2644853505,
+      "support_Y_mm": [
+        300.0,
+        630.0,
+        1180.0
+      ],
+      "support_condition": "Simple vertical supports; all rotations free, actual front/rear overhangs retained",
+      "nodes": 394,
+      "max_abs_rib_deflection_mm": 0.04628643677267929,
+      "front_rib_deflection_mm": 0.03091740090076151,
+      "max_web_or_T_extreme_bending_stress_MPa": 40.40847612567956,
+      "max_nominal_longitudinal_weld_shear_MPa": 1.6193853105092564,
+      "max_floor_flange_axial_force_N": 363.4566539180965,
+      "flange_force_transfer_over_10mm_twin_weld_MPa": 17.136098723154007,
+      "vertical_reactions_N": [
+        90.44367998279698,
+        135.67929025390254,
+        63.75310060936907
+      ],
+      "reaction_equilibrium_error_N": 0.00012669806864096245,
+      "reaction_moment_equilibrium_error_Nmm": 0.10376594922854565
+    }
+  ],
+  "floor_plate": {
+    "method": "Simply supported rectangular plate Navier series,30x30oddterms atcentre",
+    "bay_XY_mm": [
+      435.0,
+      550.0
+    ],
+    "thickness_mm": 1.9,
+    "water_depth_bound_mm": 62.0,
+    "relative_centre_deflection_mm": 1.0628877163006114,
+    "centre_bending_stress_MPa": 12.822638957079826,
+    "support_assumption": "Three comb lines, welded frontwall and three crossbearers form supported200/330/550mmYbays. Largest435x550mm considered. Rib movement is added; it is not silently clamped away."
+  },
+  "no_composite_total_displacement_screen_mm": 1.1560488864002836,
+  "no_composite_2mm_displacement_target_passed": true,
+  "conditional_welded_T_total_displacement_screen_mm": 1.1091741530732906,
+  "conditional_2mm_displacement_target_passed": true,
+  "required_welding": {
+    "twin_fillet_leg_mm": 1.5,
+    "scope": "Both sides of every intact comb-to-floor foot, with at least10mm sound run adjacent to each drain notch end. No weld closes a drain notch.",
+    "process": "Continuous/fitted low-distortion thin-sheet weld procedure, verified full fusion/leak test; dimensions are design requirements, not a claim about an existing weld.",
+    "design_shear_allowance_MPa": 100,
+    "front_wall_to_floor_weld_required": true,
+    "note": "Tflangecreditrequiresqualifiedfoot/shear/endtransfer. Atdrainnotchesnocompositeflangeiscounted. Floorfrontwallandweldsprovidesupportededge; actualflexiblejoint/warpingnotincluded."
+  },
+  "passed_without_composite_credit": true,
+  "passed_conditional_screen": true,
+  "full_machine_FEA": false,
+  "physical_water_or_thermal_qualification": false,
+  "fabrication_release": false,
+  "limitations": [
+    "One-dimensional rib and supported-plate idealizations, not coupled3Dplate/weldFEA",
+    "Actual floor waviness,weld distortions,local notch peaks and corrosion excluded",
+    "Weld/end-transfer and support contact conditions must be verified before Tcredit",
+    "Does not change wood-bed rigidity evidence or claim steel machining"
+  ]
+}

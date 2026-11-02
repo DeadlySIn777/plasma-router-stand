@@ -1,0 +1,578 @@
+{
+  "study": "PAIRED4080_GANTRY_AND_FRONT_PARKING_BAY_CHASSIS",
+  "frame_cutlist": [
+    {
+      "id": "CHASSIS_POST_1",
+      "length_mm": 943.5,
+      "section": "4080"
+    },
+    {
+      "id": "CHASSIS_POST_2",
+      "length_mm": 943.5,
+      "section": "4080"
+    },
+    {
+      "id": "CHASSIS_POST_3",
+      "length_mm": 943.5,
+      "section": "4080"
+    },
+    {
+      "id": "CHASSIS_POST_4",
+      "length_mm": 943.5,
+      "section": "4080"
+    },
+    {
+      "id": "CHASSIS_POST_5",
+      "length_mm": 863.5,
+      "section": "4080"
+    },
+    {
+      "id": "CHASSIS_POST_6",
+      "length_mm": 863.5,
+      "section": "4080"
+    },
+    {
+      "id": "CHASSIS_Y_L",
+      "length_mm": 1760.0,
+      "section": "4080"
+    },
+    {
+      "id": "CHASSIS_Y_R",
+      "length_mm": 1760.0,
+      "section": "4080"
+    },
+    {
+      "id": "PAN_FRONT_300",
+      "length_mm": 1085.7,
+      "section": "4080"
+    },
+    {
+      "id": "PAN_X_2",
+      "length_mm": 1098.4,
+      "section": "4080"
+    },
+    {
+      "id": "PAN_X_3",
+      "length_mm": 1098.4,
+      "section": "4080"
+    },
+    {
+      "id": "REAR_FOOTBASE_L",
+      "length_mm": 300,
+      "section": "4080"
+    },
+    {
+      "id": "REAR_FOOTBASE_R",
+      "length_mm": 300,
+      "section": "4080"
+    },
+    {
+      "id": "DRY_BED_ARM_L_2",
+      "length_mm": 100.2,
+      "section": "4080"
+    },
+    {
+      "id": "DRY_BED_ARM_L_3",
+      "length_mm": 100.2,
+      "section": "4080"
+    },
+    {
+      "id": "DRY_BED_ARM_R_2",
+      "length_mm": 100.2,
+      "section": "4080"
+    },
+    {
+      "id": "DRY_BED_ARM_R_3",
+      "length_mm": 100.2,
+      "section": "4080"
+    },
+    {
+      "id": "GANTRY_FRONT",
+      "length_mm": 1250.0,
+      "section": "4080"
+    },
+    {
+      "id": "GANTRY_REAR",
+      "length_mm": 1250.0,
+      "section": "4080"
+    }
+  ],
+  "gantry_cross_section_mm": [
+    80,
+    80
+  ],
+  "gantry_4080_quantity": 2,
+  "guide_datum_bars": {
+    "quantity": 2,
+    "finished_mm": [
+      1200,
+      40,
+      12.7
+    ],
+    "source": "Two exact material subsets of the former full-width face; retained source holes/counterbores. New/unowned long stock unless evidenced.",
+    "new_supplier_HGR_holes": "Transfer from the actual supplied1200mm rails; original phase/pitch is not silently changed."
+  },
+  "profile_interface_representation": "Outer mounting model with minimum T-slot cavity clearance allocations. Not supplier die geometry. No machining of those purchased-profile cavity allocations is instructed.",
+  "required_Tnut_cavity": {
+    "opening_min_mm": 8.2,
+    "nut_envelope_mm": [
+      22,
+      13.7,
+      5.9
+    ],
+    "nut_inset_mm": 4.32,
+    "screw_projection_mm": 11.3
+  },
+  "beam_section_properties_basis": "Two independently qualified4080profiles. No parallel-axis/composite stiffness credit or torsional capacity is asserted for the unqualified coupler joints.",
+  "Y_side_translation_mm": {
+    "L": -25.0,
+    "R": 25.0
+  },
+  "gantry_and_header_rise_mm": 40.0,
+  "owned_module_catalogue_stroke_mm": 300,
+  "assessed_working_Z_mm": 250.0,
+  "tool_working_Z_datums_changed": false,
+  "fixed_frame_inner_X_mm": [
+    25.799999999999997,
+    1124.2
+  ],
+  "fixed_frame_header_Y_mm": [
+    -160.0,
+    1600.0
+  ],
+  "front_post_centre_Y_mm": -100.0,
+  "pan_bearer_centres_Y_mm": [
+    300.0,
+    630.0,
+    1180.0
+  ],
+  "front_pan_hangers": {
+    "quantity": 2,
+    "stepped_plate_bounding_blank_mm": [
+      160,
+      325.85,
+      6.35
+    ],
+    "plate_profile": "80mm-wide vertical stem Y260..340,Z720.15..1046; integral160mm-wide top Y220..380,Z1013..1046",
+    "welded_seat_mm": [
+      80,
+      80,
+      6.35
+    ],
+    "header_bolt_Y_mm": [
+      240,
+      280,
+      320,
+      360
+    ],
+    "header_bolt_Z_mm": 1033,
+    "header_fixings": "8 M6 profile-face sets total, actual compatible nuts/screw lengths and joint capacity held",
+    "beam_end_fixings": "4 M8 end-core sets total; nominal thread-major CAD bores are not tap drills",
+    "load_path": "Pan -> fitted shims -> 4080 beam -> welded bearing seats -> steel hanger cheeks -> continuous 4080 headers -> six posts."
+  },
+  "reason_for_front_bay": "Moves the upright full bed ahead of the entire plasma-head working sweep while keeping changeover inside the permanent frame plan.",
+  "coupling": {
+    "count": 10,
+    "axes_X_mm": [
+      -25.0,
+      75.0,
+      225.0,
+      375.0,
+      525.0,
+      675.0,
+      825.0,
+      975.0,
+      1125.0,
+      1175.0
+    ],
+    "centre_Z_from_beam_bottom_mm": 40,
+    "through_bores_mm": 10.1,
+    "compression_tubes_mm": [
+      10,
+      7,
+      80
+    ],
+    "screws": "M6x100",
+    "washers": 20,
+    "nuts": 10,
+    "qualification": "Actual profile flat land, drilled webs, preload, sleeve length tolerance, slip, thread and load sharing require inspection/qualification."
+  },
+  "display_pairs": {
+    "exact_pairs": 44,
+    "unexpected": [],
+    "nominal_stage_envelope_joints": []
+  },
+  "relative_continuous": [
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "GANTRY_UNDERSIDE_BOLT_L_1",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "GANTRY_TNUT_L_1",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "GANTRY_UNDERSIDE_BOLT_L_3",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "GANTRY_TNUT_L_3",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "GANTRY_UNDERSIDE_BOLT_R_1",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "GANTRY_TNUT_R_1",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "GANTRY_UNDERSIDE_BOLT_R_3",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "GANTRY_TNUT_R_3",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_BOLT_1",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_TNUT_1",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_BOLT_2",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_TNUT_2",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_BOLT_3",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_TNUT_3",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_BOLT_4",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_TNUT_4",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_BOLT_5",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_TNUT_5",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_BOLT_6",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_TNUT_6",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_BOLT_7",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_TNUT_7",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_BOLT_8",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_FRONT",
+      "obstacle": "X_FACE_TNUT_8",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_REAR",
+      "obstacle": "GANTRY_UNDERSIDE_BOLT_L_2",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_REAR",
+      "obstacle": "GANTRY_TNUT_L_2",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_REAR",
+      "obstacle": "GANTRY_UNDERSIDE_BOLT_L_4",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_REAR",
+      "obstacle": "GANTRY_TNUT_L_4",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_REAR",
+      "obstacle": "GANTRY_UNDERSIDE_BOLT_R_2",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_REAR",
+      "obstacle": "GANTRY_TNUT_R_2",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_REAR",
+      "obstacle": "GANTRY_UNDERSIDE_BOLT_R_4",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_4080_REAR",
+      "obstacle": "GANTRY_TNUT_R_4",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_GUIDE_BAR_LOWER",
+      "obstacle": "X_FACE_BOLT_1",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_GUIDE_BAR_LOWER",
+      "obstacle": "X_FACE_BOLT_3",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_GUIDE_BAR_LOWER",
+      "obstacle": "X_FACE_BOLT_5",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_GUIDE_BAR_LOWER",
+      "obstacle": "X_FACE_BOLT_7",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "obstacle": "X_FACE_BOLT_2",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "obstacle": "X_FACE_BOLT_4",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "obstacle": "X_FACE_BOLT_6",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "obstacle": "X_FACE_BOLT_8",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "obstacle": "X_STOP_LEFT_BOLT_1",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "obstacle": "X_STOP_LEFT_BOLT_2",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "obstacle": "X_STOP_RIGHT_BOLT_1",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "obstacle": "X_STOP_RIGHT_BOLT_2",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    }
+  ],
+  "new_self_intersections": [],
+  "tube_checks": [
+    {
+      "station": 1,
+      "beam_intersection_mm3": 0.0,
+      "bolt_intersection_mm3": 0.0
+    },
+    {
+      "station": 2,
+      "beam_intersection_mm3": 0.0,
+      "bolt_intersection_mm3": 0.0
+    },
+    {
+      "station": 3,
+      "beam_intersection_mm3": 0.0,
+      "bolt_intersection_mm3": 0.0
+    },
+    {
+      "station": 4,
+      "beam_intersection_mm3": 0.0,
+      "bolt_intersection_mm3": 0.0
+    },
+    {
+      "station": 5,
+      "beam_intersection_mm3": 0.0,
+      "bolt_intersection_mm3": 0.0
+    },
+    {
+      "station": 6,
+      "beam_intersection_mm3": 0.0,
+      "bolt_intersection_mm3": 0.0
+    },
+    {
+      "station": 7,
+      "beam_intersection_mm3": 0.0,
+      "bolt_intersection_mm3": 0.0
+    },
+    {
+      "station": 8,
+      "beam_intersection_mm3": 0.0,
+      "bolt_intersection_mm3": 0.0
+    },
+    {
+      "station": 9,
+      "beam_intersection_mm3": 0.0,
+      "bolt_intersection_mm3": 0.0
+    },
+    {
+      "station": 10,
+      "beam_intersection_mm3": 0.0,
+      "bolt_intersection_mm3": 0.0
+    }
+  ],
+  "frame_finished4080_length_mm": 15804.300000000001,
+  "source_sha256": {
+    "variants/integrated-4080-small/mechanical.py": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "variants/owned-z300-assessment/candidate_motion_factory.py": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e"
+  },
+  "fabrication_release": false,
+  "physical_rigidity_qualified": false,
+  "passed": true
+}

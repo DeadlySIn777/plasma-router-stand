@@ -1,0 +1,575 @@
+{
+  "sheets": [
+    {
+      "id": "EXCLUSIVE_OWNER_HALF",
+      "stock_mm": [
+        304.8,
+        304.8,
+        12.7
+      ],
+      "parts": [
+        {
+          "id": "OWNER_ROUTER_HEAD_PLATE",
+          "x": 2,
+          "y": 2,
+          "w": 146,
+          "h": 175,
+          "finish_t": 12.7
+        },
+        {
+          "id": "CD_RECEIVER",
+          "x": 152,
+          "y": 2,
+          "w": 146,
+          "h": 132,
+          "finish_t": 12.7
+        },
+        {
+          "id": "PLASMA_REMOVABLE_HEAD_PLATE",
+          "x": 2,
+          "y": 188,
+          "w": 146,
+          "h": 110,
+          "finish_t": 12.7
+        },
+        {
+          "id": "PLASMA_U_SPLICE_PLATE",
+          "x": 152,
+          "y": 188,
+          "w": 110,
+          "h": 114,
+          "finish_t": 12.7
+        },
+        {
+          "id": "CD_CAPTIVE_CAGE_L",
+          "x": 266,
+          "y": 188,
+          "w": 20.8,
+          "h": 28,
+          "finish_t": 12.7
+        },
+        {
+          "id": "CD_CAPTIVE_CAGE_R",
+          "x": 266,
+          "y": 220,
+          "w": 20.8,
+          "h": 28,
+          "finish_t": 12.7
+        },
+        {
+          "id": "OWNER_CLAMP_SPACER_1_1",
+          "x": 266,
+          "y": 252,
+          "w": 12,
+          "h": 12,
+          "finish_t": 6.0
+        },
+        {
+          "id": "OWNER_CLAMP_SPACER_1_2",
+          "x": 266,
+          "y": 268,
+          "w": 12,
+          "h": 12,
+          "finish_t": 6.0
+        },
+        {
+          "id": "OWNER_CLAMP_SPACER_2_1",
+          "x": 282,
+          "y": 252,
+          "w": 12,
+          "h": 12,
+          "finish_t": 6.0
+        },
+        {
+          "id": "OWNER_CLAMP_SPACER_2_2",
+          "x": 282,
+          "y": 268,
+          "w": 12,
+          "h": 12,
+          "finish_t": 6.0
+        }
+      ]
+    },
+    {
+      "id": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
+      "stock_mm": [
+        304.8,
+        304.8,
+        9.525
+      ],
+      "parts": [
+        {
+          "id": "BED_HINGE_MOVING_SIDEPLATE_L",
+          "x": 2,
+          "y": 2,
+          "w": 270,
+          "h": 120,
+          "finish_t": 9.525
+        },
+        {
+          "id": "BED_HINGE_MOVING_SIDEPLATE_R",
+          "x": 2,
+          "y": 126,
+          "w": 270,
+          "h": 120,
+          "finish_t": 9.525
+        },
+        {
+          "id": "CD_GRAVITY_LEDGE",
+          "x": 2,
+          "y": 250,
+          "w": 30,
+          "h": 12.7,
+          "finish_t": 9.525
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_ROUTER_HEAD_PLATE",
+      "passed": true
+    },
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_RECEIVER",
+      "passed": true
+    },
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "passed": true
+    },
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_U_SPLICE_PLATE",
+      "passed": true
+    },
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_CAPTIVE_CAGE_L",
+      "passed": true
+    },
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_CAPTIVE_CAGE_R",
+      "passed": true
+    },
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_CLAMP_SPACER_1_1",
+      "passed": true
+    },
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_CLAMP_SPACER_1_2",
+      "passed": true
+    },
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_CLAMP_SPACER_2_1",
+      "passed": true
+    },
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_CLAMP_SPACER_2_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_ROUTER_HEAD_PLATE",
+      "b": "CD_RECEIVER",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_ROUTER_HEAD_PLATE",
+      "b": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_ROUTER_HEAD_PLATE",
+      "b": "PLASMA_U_SPLICE_PLATE",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_ROUTER_HEAD_PLATE",
+      "b": "CD_CAPTIVE_CAGE_L",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_ROUTER_HEAD_PLATE",
+      "b": "CD_CAPTIVE_CAGE_R",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_ROUTER_HEAD_PLATE",
+      "b": "OWNER_CLAMP_SPACER_1_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_ROUTER_HEAD_PLATE",
+      "b": "OWNER_CLAMP_SPACER_1_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_ROUTER_HEAD_PLATE",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_ROUTER_HEAD_PLATE",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_RECEIVER",
+      "b": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_RECEIVER",
+      "b": "PLASMA_U_SPLICE_PLATE",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_RECEIVER",
+      "b": "CD_CAPTIVE_CAGE_L",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_RECEIVER",
+      "b": "CD_CAPTIVE_CAGE_R",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_RECEIVER",
+      "b": "OWNER_CLAMP_SPACER_1_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_RECEIVER",
+      "b": "OWNER_CLAMP_SPACER_1_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_RECEIVER",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_RECEIVER",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "b": "PLASMA_U_SPLICE_PLATE",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "b": "CD_CAPTIVE_CAGE_L",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "b": "CD_CAPTIVE_CAGE_R",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "b": "OWNER_CLAMP_SPACER_1_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "b": "OWNER_CLAMP_SPACER_1_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_U_SPLICE_PLATE",
+      "b": "CD_CAPTIVE_CAGE_L",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_U_SPLICE_PLATE",
+      "b": "CD_CAPTIVE_CAGE_R",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_U_SPLICE_PLATE",
+      "b": "OWNER_CLAMP_SPACER_1_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_U_SPLICE_PLATE",
+      "b": "OWNER_CLAMP_SPACER_1_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_U_SPLICE_PLATE",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "PLASMA_U_SPLICE_PLATE",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "CD_CAPTIVE_CAGE_R",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "OWNER_CLAMP_SPACER_1_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "OWNER_CLAMP_SPACER_1_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_CAPTIVE_CAGE_L",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_CAPTIVE_CAGE_R",
+      "b": "OWNER_CLAMP_SPACER_1_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_CAPTIVE_CAGE_R",
+      "b": "OWNER_CLAMP_SPACER_1_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_CAPTIVE_CAGE_R",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "CD_CAPTIVE_CAGE_R",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_CLAMP_SPACER_1_1",
+      "b": "OWNER_CLAMP_SPACER_1_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_CLAMP_SPACER_1_1",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_CLAMP_SPACER_1_1",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_CLAMP_SPACER_1_2",
+      "b": "OWNER_CLAMP_SPACER_2_1",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_CLAMP_SPACER_1_2",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_HALF",
+      "a": "OWNER_CLAMP_SPACER_2_1",
+      "b": "OWNER_CLAMP_SPACER_2_2",
+      "passed": true
+    },
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
+      "a": "BED_HINGE_MOVING_SIDEPLATE_L",
+      "passed": true
+    },
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
+      "a": "BED_HINGE_MOVING_SIDEPLATE_R",
+      "passed": true
+    },
+    {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
+      "a": "CD_GRAVITY_LEDGE",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
+      "a": "BED_HINGE_MOVING_SIDEPLATE_L",
+      "b": "BED_HINGE_MOVING_SIDEPLATE_R",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
+      "a": "BED_HINGE_MOVING_SIDEPLATE_L",
+      "b": "CD_GRAVITY_LEDGE",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
+      "a": "BED_HINGE_MOVING_SIDEPLATE_R",
+      "b": "CD_GRAVITY_LEDGE",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "old83blank_nest_applied": false,
+  "qualification": "Exclusive new nominal allocations; actual alloy, thickness, dimensions, flatness, tool access and finished cleanup remain verification gates. Chips/split thickness/offcuts are never counted as extra owned stock.",
+  "HDPE_new_stock": {
+    "source_mm": [
+      2438.4,
+      1219.2,
+      12.7
+    ],
+    "parts": [
+      {
+        "id": "HDPE_LAYER_1",
+        "x": 0,
+        "y": 0,
+        "w": 1000,
+        "h": 1219.2
+      },
+      {
+        "id": "HDPE_LAYER_2",
+        "x": 1003,
+        "y": 0,
+        "w": 1000,
+        "h": 1219.2
+      }
+    ],
+    "separation_kerf_mm": 3,
+    "crosscut_kerf_count": 2,
+    "remaining_nominal_length_mm": 432.4,
+    "owned": false,
+    "rule": "Two1000mmcrosscuts across full48in factory sheet width. Width/squareness must meet actual1219.2mm full-layer requirement; no extra long-edge trim allowance assumed. Saw cuts/circular drilling only."
+  }
+}

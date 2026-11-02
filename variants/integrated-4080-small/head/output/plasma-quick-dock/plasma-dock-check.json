@@ -1,0 +1,1431 @@
+{
+  "study": "COMMON_FIXED_RECEIVER_WITH_REMOVABLE_PLASMA_MODULE",
+  "source_sha256": {
+    "variants/integrated-4080-small/head/plasma_quick_dock.py": "db1576e2bcbeac634daa64b78fab9bdefabf895e532f9cd70bb76ee416b9096e",
+    "variants/integrated-4080-small/head/quick_dock.py": "1f5d3ce7552837d78868108fc564956f613e5d4e67d0cac2741cd68b67e72d18",
+    "variants/integrated-4080-small/head/common_dock_source.py": "b335af2c8b5505812259e5ee0ce723d2064fd0a05f70a1e0df757474f1b0ef9f",
+    "variants/integrated-4080-small/head/owner_head.py": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
+    "variants/integrated-4080-small/head/build_head.py": "72b2cde101afdab443c28c8a1a2dc01c76c230f565013c993289141095de7e7e",
+    "variants/integrated-4080-small/head/spindle-reference-evidence.json": "f149cd1308af05333ec4e9ecf931fdae19650a22a75641fff32c21039d15ddc4",
+    "variants/owned-z300-assessment/sources/owned-head/R10 - original uncut 65 mm spindle clamp.step": "506d12b3f749db3eeec03e133b519fd93e45ff1b6cb80bd8fa568d3fb0dba1cb",
+    "variants/owned-z300-assessment/sources/owned-head/Spindle dust boot.step": "3716855cf25a308de3db696ae827578d7803bfe4665fd1a6535f311a5246a044",
+    "variants/owned-z300-assessment/sources/owned-head/prior-mating-inspection.json": "e96a990b591ceaa0f1277c0af2d6654d29b563310cb813afe967c389a3438cb6",
+    "variants/owned-z300-assessment/sources/owned-head/owner-working-boot.json": "69503af028789fa48e38c1b5d2451c04ac0e752b5195f948e4af9daaa644a6aa",
+    "variants/owned-z300-assessment/sources/owned-head/owner-decisions.json": "f996fbf6aac86a0ce1c32cf2530c33b8f4c005ac4e21132c8e6a417b7f541b25",
+    "variants/owned-z300-assessment/sources/owned-head/owner-actuator-selection.json": "4441da633745fa5c1170706454fa6991e24695a599bf4765743022d10fc8b66f",
+    "variants/owned-z300-assessment/candidate_motion_factory.py": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/owned-z300-assessment/front_stop_repair.py": "5006c52b713dd58a1f73f98e1075e5e4fc76ecdb9c82711a20ae66e9742278c0",
+    "variants/owned-z300-assessment/custom_joint_repair.py": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  },
+  "shared_receiver_world_geometry_identical_to_router": true,
+  "source_stack_preserved_world_pose": {
+    "I_HEAD_BACKPLATE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CROSSBAR_1": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BAR_1_45": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BAR_1_65": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CROSSBAR_2": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BAR_2_45": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BAR_2_65": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_ROD_25": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_ROD_TOP_25": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_ROD_BOTTOM_25": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_ROD_85": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_ROD_TOP_85": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_ROD_BOTTOM_85": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_FLOAT_CARRIAGE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BUSH_25_28": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BUSH_25_75.85": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BUSH_SPACER_25": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BUSH_85_28": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BUSH_85_75.85": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BUSH_SPACER_85": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BEARING_CAP_1": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CAP_1_7_17": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CAP_1_7_29": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CAP_1_103_17": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CAP_1_103_29": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BEARING_CAP_2": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CAP_2_7_17": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CAP_2_7_29": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CAP_2_103_17": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CAP_2_103_29": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_FLOAT_STOP": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_STOP_49": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_STOP_61": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_SEAT_CONE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BUTTON_CONE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_SEAT_V": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BUTTON_V": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_SEAT_FLAT": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BUTTON_FLAT": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_RELEASE_PLATE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BUTTON_SCREW_CONE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BUTTON_SCREW_V": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_BUTTON_SCREW_FLAT": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_MAGNET_SPACER_1": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_MAGNET_1": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_MAGNET_SCREW_1": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_MAGNET_SPACER_2": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_MAGNET_2": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_MAGNET_SCREW_2": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_MAGNET_SPACER_3": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_MAGNET_3": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_MAGNET_SCREW_3": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CLAMP_REAR": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CLAMP_FRONT": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CLAMP_MOUNT_25_35": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CLAMP_MOUNT_25_55": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CLAMP_MOUNT_85_35": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CLAMP_MOUNT_85_55": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CLAMP_PINCH_15": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CLAMP_PINCH_95": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_INSERT_REAR": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_INSERT_FRONT": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_SPLASH_SCREEN": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_SPLASH_TAB_5": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_SPLASH_5": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_SPLASH_TAB_105": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_SPLASH_105": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_FLOAT_CAM": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CAM_91": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_CAM_96.5": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_FLOAT_SWITCH_CASE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_FLOAT_SWITCH_PIN": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_FLOAT_SWITCH_BRACKET": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_FLOAT_SWITCH_M3": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_0": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_FLOAT_SWITCH_FOOT_0": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_1": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_FLOAT_SWITCH_FOOT_1": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_LEFT_CASE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_LEFT_PIN": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_LEFT_BRACKET": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_LEFT_M3": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_LEFT_FOOT_0": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_LEFT_FOOT_1": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_RIGHT_CASE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_RIGHT_PIN": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_RIGHT_BRACKET": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_RIGHT_M3": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_RIGHT_FOOT_0": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_RIGHT_FOOT_1": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_TOP_CASE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_TOP_PIN": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_TOP_BRACKET": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_TOP_M3": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_TOP_FOOT_0": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_PRESENCE_TOP_FOOT_1": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_LEAD_SADDLE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_LEAD_84": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_LEAD_100": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_TETHER_EYE_FIXED": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_TETHER_FIXED": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_TETHER_EYE_RELEASE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "I_HEAD_TETHER_RELEASE": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "XR_DROP_M6x16_LOWER_1": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "XR_DROP_M6x16_LOWER_2": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "XR_DROP_M6x16_LOWER_3": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    },
+    "XR_DROP_M6x16_LOWER_4": {
+      "symdiff_mm3": 0.0,
+      "bbox_error_mm": 0.0
+    }
+  },
+  "old_drop_change": "Only four upper customM6attachmentbores become6.6clearance and10.5rear counterbores6.1deep; all otherdrop/float/headgeometryandtorchheightunchanged.",
+  "new_part_intersections": [],
+  "matched_eight_M6_mount_checks": [
+    {
+      "X": 530.0,
+      "Z": 1092.0,
+      "full_head_seat_missing_mm3": 0.0,
+      "D9_thread_landing_missing_mm3": 0.0,
+      "thread_engagement_mm": 9.4,
+      "splice_tip_reserve_mm": 3.3,
+      "host_web_mm": 6.6,
+      "host_rear_counterbore_depth_mm": 6.1,
+      "head_rear_flush_reserve_mm": 0.1
+    },
+    {
+      "X": 530.0,
+      "Z": 1118.0,
+      "full_head_seat_missing_mm3": 0.0,
+      "D9_thread_landing_missing_mm3": 0.0,
+      "thread_engagement_mm": 9.4,
+      "splice_tip_reserve_mm": 3.3,
+      "host_web_mm": 6.6,
+      "host_rear_counterbore_depth_mm": 6.1,
+      "head_rear_flush_reserve_mm": 0.1
+    },
+    {
+      "X": 530.0,
+      "Z": 1160.0,
+      "full_head_seat_missing_mm3": 0.0,
+      "D9_thread_landing_missing_mm3": 0.0,
+      "thread_engagement_mm": 9.4,
+      "splice_tip_reserve_mm": 3.3,
+      "host_web_mm": 6.6,
+      "host_rear_counterbore_depth_mm": 6.1,
+      "head_rear_flush_reserve_mm": 0.1
+    },
+    {
+      "X": 530.0,
+      "Z": 1186.0,
+      "full_head_seat_missing_mm3": 0.0,
+      "D9_thread_landing_missing_mm3": 0.0,
+      "thread_engagement_mm": 9.4,
+      "splice_tip_reserve_mm": 3.3,
+      "host_web_mm": 6.6,
+      "host_rear_counterbore_depth_mm": 6.1,
+      "head_rear_flush_reserve_mm": 0.1
+    },
+    {
+      "X": 620.0,
+      "Z": 1092.0,
+      "full_head_seat_missing_mm3": 0.0,
+      "D9_thread_landing_missing_mm3": 0.0,
+      "thread_engagement_mm": 9.4,
+      "splice_tip_reserve_mm": 3.3,
+      "host_web_mm": 6.6,
+      "host_rear_counterbore_depth_mm": 6.1,
+      "head_rear_flush_reserve_mm": 0.1
+    },
+    {
+      "X": 620.0,
+      "Z": 1118.0,
+      "full_head_seat_missing_mm3": 0.0,
+      "D9_thread_landing_missing_mm3": 0.0,
+      "thread_engagement_mm": 9.4,
+      "splice_tip_reserve_mm": 3.3,
+      "host_web_mm": 6.6,
+      "host_rear_counterbore_depth_mm": 6.1,
+      "head_rear_flush_reserve_mm": 0.1
+    },
+    {
+      "X": 620.0,
+      "Z": 1160.0,
+      "full_head_seat_missing_mm3": 0.0,
+      "D9_thread_landing_missing_mm3": 0.0,
+      "thread_engagement_mm": 9.4,
+      "splice_tip_reserve_mm": 3.3,
+      "host_web_mm": 6.6,
+      "host_rear_counterbore_depth_mm": 6.1,
+      "head_rear_flush_reserve_mm": 0.1
+    },
+    {
+      "X": 620.0,
+      "Z": 1186.0,
+      "full_head_seat_missing_mm3": 0.0,
+      "D9_thread_landing_missing_mm3": 0.0,
+      "thread_engagement_mm": 9.4,
+      "splice_tip_reserve_mm": 3.3,
+      "host_web_mm": 6.6,
+      "host_rear_counterbore_depth_mm": 6.1,
+      "head_rear_flush_reserve_mm": 0.1
+    }
+  ],
+  "removal": {
+    "broad_pairs_clear": 1001,
+    "proofs": [
+      {
+        "moving": "PLASMA_REMOVABLE_HEAD_PLATE",
+        "fixed": "CD_GRAVITY_LEDGE",
+        "passed": true,
+        "conservative_ledge_prism_intersection_mm3": 0.0,
+        "method": "Complete fixed ledge bounding prism extruded by opposite18mm; zero exact positive material, designed gravity-seat tangency retained."
+      },
+      {
+        "moving": "PLASMA_REMOVABLE_HEAD_PLATE",
+        "fixed": "CD_LEDGE_WASHER_L",
+        "passed": true,
+        "cells_examined": 1,
+        "empty_cells": 0,
+        "separated_material_cells": 1,
+        "unresolved_cells": [],
+        "minimum_expanded_cell_gap_mm": 1.849999999999909,
+        "translation_min_mm": [
+          0,
+          -18,
+          0
+        ],
+        "translation_max_mm": [
+          0,
+          0,
+          0
+        ],
+        "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+      },
+      {
+        "moving": "PLASMA_REMOVABLE_HEAD_PLATE",
+        "fixed": "CD_LEDGE_SCREW_L",
+        "passed": true,
+        "cells_examined": 1,
+        "empty_cells": 0,
+        "separated_material_cells": 1,
+        "unresolved_cells": [],
+        "minimum_expanded_cell_gap_mm": 2.849999999999909,
+        "translation_min_mm": [
+          0,
+          -18,
+          0
+        ],
+        "translation_max_mm": [
+          0,
+          0,
+          0
+        ],
+        "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+      },
+      {
+        "moving": "PLASMA_REMOVABLE_HEAD_PLATE",
+        "fixed": "CD_LEDGE_WASHER_R",
+        "passed": true,
+        "cells_examined": 1,
+        "empty_cells": 0,
+        "separated_material_cells": 1,
+        "unresolved_cells": [],
+        "minimum_expanded_cell_gap_mm": 1.849999999999909,
+        "translation_min_mm": [
+          0,
+          -18,
+          0
+        ],
+        "translation_max_mm": [
+          0,
+          0,
+          0
+        ],
+        "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+      },
+      {
+        "moving": "PLASMA_REMOVABLE_HEAD_PLATE",
+        "fixed": "CD_LEDGE_SCREW_R",
+        "passed": true,
+        "cells_examined": 1,
+        "empty_cells": 0,
+        "separated_material_cells": 1,
+        "unresolved_cells": [],
+        "minimum_expanded_cell_gap_mm": 2.849999999999909,
+        "translation_min_mm": [
+          0,
+          -18,
+          0
+        ],
+        "translation_max_mm": [
+          0,
+          0,
+          0
+        ],
+        "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+      },
+      {
+        "moving": "PLASMA_REMOVABLE_HEAD_PLATE",
+        "fixed": "CD_LOCATOR_L",
+        "passed": true,
+        "cells_examined": 8197,
+        "empty_cells": 0,
+        "separated_material_cells": 4099,
+        "unresolved_cells": [],
+        "minimum_expanded_cell_gap_mm": 0.014798654668432474,
+        "translation_min_mm": [
+          0,
+          -18,
+          0
+        ],
+        "translation_max_mm": [
+          0,
+          0,
+          0
+        ],
+        "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+      },
+      {
+        "moving": "PLASMA_REMOVABLE_HEAD_PLATE",
+        "fixed": "CD_LOCATOR_R",
+        "passed": true,
+        "cells_examined": 65,
+        "empty_cells": 0,
+        "separated_material_cells": 33,
+        "unresolved_cells": [],
+        "minimum_expanded_cell_gap_mm": 0.09999999999990905,
+        "translation_min_mm": [
+          0,
+          -18,
+          0
+        ],
+        "translation_max_mm": [
+          0,
+          0,
+          0
+        ],
+        "method": "Complete obstacle partition; bbox of actual obstacle material in each cell expanded by the negative independent translation box. No path sampling or pair exemptions. Empty-volume threshold1e-7mm3; required separation0.01mm."
+      }
+    ],
+    "passed": true
+  },
+  "working250_relative_proof": {
+    "passed": true,
+    "working_Z_travel_mm": 250,
+    "broad_pairs_clear": 54270,
+    "exact_cover_pairs": 0,
+    "results": []
+  },
+  "exports": {
+    "assembly": {
+      "file": "output/plasma-quick-dock/SHARED_RECEIVER_COMPLETE_PLASMA_MODULE.step",
+      "sha256": "55c96df5837c4b207b2dfdf97fcf4ae08fb4d4473a865095d6889a56806ce9db",
+      "valid": true,
+      "solids": 134,
+      "expected_solids": 134,
+      "volume_error_mm3": 0.016176267992705107
+    },
+    "PLASMA_REMOVABLE_HEAD_PLATE": {
+      "file": "output/plasma-quick-dock/PLASMA_REMOVABLE_HEAD_PLATE.step",
+      "sha256": "5acaf5fd078a0e21a300c77f8269ada4e844bec4335db4e8a13554c4c19cb775",
+      "source_world_min_corner_mm": [
+        502.0,
+        654.1999999999999,
+        1142.0
+      ],
+      "bounds_mm": [
+        502.0,
+        654.1999999999999,
+        1142.0,
+        648.0,
+        666.9,
+        1252.0
+      ]
+    },
+    "PLASMA_U_SPLICE_PLATE": {
+      "file": "output/plasma-quick-dock/PLASMA_U_SPLICE_PLATE.step",
+      "sha256": "9bc5a363da0c6b00e5fda4fe665c9dd5294d8d8d3fa9fb8ee183bd7253d41d69",
+      "source_world_min_corner_mm": [
+        520.0,
+        641.5,
+        1082.0
+      ],
+      "bounds_mm": [
+        520.0,
+        641.5,
+        1082.0,
+        630.0,
+        654.2,
+        1196.0
+      ]
+    },
+    "XR_PLASMA_DROP_148": {
+      "file": "output/plasma-quick-dock/XR_PLASMA_DROP_SHARED_DOCK_CLEARANCE_BORES.step",
+      "sha256": "262845466a66791c675c32efbb5086a0594c1fadbbcbb5b164bdc8370e87c494",
+      "source_world_min_corner_mm": [
+        520.0,
+        654.1999999999998,
+        922.0
+      ],
+      "added_material_mm3": 0.0,
+      "removed_material_mm3": 1579.6587596706895
+    }
+  },
+  "assessed_working_Z_mm": 250,
+  "controller_limits_or_settings_applied": false,
+  "part_validity": [
+    {
+      "id": "CD_RECEIVER",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_GRAVITY_LEDGE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_LEDGE_WASHER_L",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_LEDGE_SCREW_L",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_LEDGE_WASHER_R",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_LEDGE_SCREW_R",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_LOCATOR_L",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_LOCATOR_R",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_CAPTIVE_CAGE_L",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_RELEASE_SCREW_L",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_CAGE_FIX_L_29",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_CAGE_FIX_L_51",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_CAPTIVE_CAGE_R",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_RELEASE_SCREW_R",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_CAGE_FIX_R_29",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "CD_CAGE_FIX_R_51",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "PLASMA_REMOVABLE_HEAD_PLATE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "PLASMA_U_SPLICE_PLATE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "XR_PLASMA_DROP_148",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "PLASMA_SPLICE_M6X16_1_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "PLASMA_SPLICE_M6X16_1_2",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "PLASMA_SPLICE_M6X16_1_3",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "PLASMA_SPLICE_M6X16_1_4",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "PLASMA_SPLICE_M6X16_2_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "PLASMA_SPLICE_M6X16_2_2",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "PLASMA_SPLICE_M6X16_2_3",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "PLASMA_SPLICE_M6X16_2_4",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BACKPLATE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CROSSBAR_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BAR_1_45",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BAR_1_65",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CROSSBAR_2",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BAR_2_45",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BAR_2_65",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_ROD_25",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_ROD_TOP_25",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_ROD_BOTTOM_25",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_ROD_85",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_ROD_TOP_85",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_ROD_BOTTOM_85",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_FLOAT_CARRIAGE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BUSH_25_28",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BUSH_25_75.85",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BUSH_SPACER_25",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BUSH_85_28",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BUSH_85_75.85",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BUSH_SPACER_85",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BEARING_CAP_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CAP_1_7_17",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CAP_1_7_29",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CAP_1_103_17",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CAP_1_103_29",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BEARING_CAP_2",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CAP_2_7_17",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CAP_2_7_29",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CAP_2_103_17",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CAP_2_103_29",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_FLOAT_STOP",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_STOP_49",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_STOP_61",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_SEAT_CONE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BUTTON_CONE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_SEAT_V",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BUTTON_V",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_SEAT_FLAT",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BUTTON_FLAT",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_RELEASE_PLATE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BUTTON_SCREW_CONE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BUTTON_SCREW_V",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_BUTTON_SCREW_FLAT",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_MAGNET_SPACER_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_MAGNET_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_MAGNET_SCREW_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_MAGNET_SPACER_2",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_MAGNET_2",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_MAGNET_SCREW_2",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_MAGNET_SPACER_3",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_MAGNET_3",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_MAGNET_SCREW_3",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CLAMP_REAR",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CLAMP_FRONT",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CLAMP_MOUNT_25_35",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CLAMP_MOUNT_25_55",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CLAMP_MOUNT_85_35",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CLAMP_MOUNT_85_55",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CLAMP_PINCH_15",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CLAMP_PINCH_95",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_INSERT_REAR",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_INSERT_FRONT",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_SPLASH_SCREEN",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_SPLASH_TAB_5",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_SPLASH_5",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_SPLASH_TAB_105",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_SPLASH_105",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_FLOAT_CAM",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CAM_91",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_CAM_96.5",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_CASE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_PIN",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_BRACKET",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_M3",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_0",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_FOOT_0",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_FOOT_SPACER_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_FLOAT_SWITCH_FOOT_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_CASE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_PIN",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_BRACKET",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_M3",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_FOOT_0",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_LEFT_FOOT_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_CASE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_PIN",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_BRACKET",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_M3",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_FOOT_0",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_RIGHT_FOOT_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_CASE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_PIN",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_BRACKET",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_M3",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_FOOT_0",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_PRESENCE_TOP_FOOT_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_LEAD_SADDLE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_LEAD_84",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_LEAD_100",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_TETHER_EYE_FIXED",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_TETHER_FIXED",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_TETHER_EYE_RELEASE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "I_HEAD_TETHER_RELEASE",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "XR_DROP_M6x16_LOWER_1",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "XR_DROP_M6x16_LOWER_2",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "XR_DROP_M6x16_LOWER_3",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "XR_DROP_M6x16_LOWER_4",
+      "valid": true,
+      "solids": 1
+    }
+  ],
+  "full_float_breakaway_or_actual_torch_motion_qualified": false,
+  "source_consistent_during_check": true,
+  "fabrication_release": false,
+  "operating_release": false,
+  "known_shared_plasma_interface_passed": true
+}

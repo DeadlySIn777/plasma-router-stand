@@ -1,0 +1,264 @@
+{
+  "study": "ACTUAL_OWNER_CLAMP_CUSTOM_ADAPTER_INTEGRATION",
+  "metadata": {
+    "owner_clamp_and_boot_source_geometry_modified": false,
+    "owner_clamp_matches_as_machined_owner_confirmed": true,
+    "owned_working_whole_boot_preserved": true,
+    "selected_actuator": "Pegelong B0D6BCQCVR",
+    "whole_boot_travel_mm": 50,
+    "actual_working_boot_registration_encoded": false,
+    "illustrated_boot_pose_is_operating_registration": false,
+    "spindle_family_reference_ASIN": "B0BF5R3LNC",
+    "spindle_family_mount_diameter_mm": 65,
+    "historical_spindle_length_mm": 259,
+    "current_manufacturer_family_length_mm": 268,
+    "exact_received_spindle_nose_and_collet_datum_verified": false,
+    "nominal_spindle_axis_at_reference_mm": [
+      575,
+      618.39794074868
+    ],
+    "nominal_reference_lower_Z_mm": 970,
+    "reference_is_measured_collet_plane": false,
+    "adapter_finished_blank_X_Z_thickness_mm": [
+      110,
+      110,
+      12.7
+    ],
+    "adapter_unchanged_outer_world_bounds_mm": [
+      520.0,
+      666.8999999999999,
+      1070.0,
+      630.0,
+      679.5999999999999,
+      1180.0
+    ],
+    "new_tapped_pattern_X_Z_mm": [
+      [
+        -25,
+        22
+      ],
+      [
+        25,
+        22
+      ],
+      [
+        -25,
+        52
+      ],
+      [
+        25,
+        52
+      ]
+    ],
+    "adapter_local_datum": "X0 at platecentre; Z0 at lowerZ1070; Y front666.9 at X575/Y775/Z0",
+    "clamp_mount_bores_mm": 5.5,
+    "clamp_mount_pattern_mm": [
+      50,
+      30
+    ],
+    "clamp_source_wall_to_counterbore_seat_mm": 7.00205925132,
+    "spacer_length_mm": 6.0,
+    "mount_screw": "4x M5x25 socket head, nominal8.5ODx5 head, with10OD5.3ID1thick steelspreader",
+    "spreader_reason": "One source counterbore has a small outer-seat interruption. The10mm steelwasher bridges it while fully supporting the8.5mm screwhead; the owner clamp is not cut.",
+    "nominal_M5_engagement_mm": 10.997940748680001,
+    "adapter_thread_thickness_mm": 12.7,
+    "nominal_screw_tip_reserve_before_rear_face_mm": 1.702059251319998,
+    "custom_tap_process": "4.2mm pilot through, M5x0.8; minor drill is not5mm major CAD void",
+    "removed_substitute_clamp_parts": true,
+    "supplier_Z_output_pattern_invented": false,
+    "fabrication_release": false,
+    "operating_release": false
+  },
+  "source_sha256": {
+    "variants/integrated-4080-small/head/owner_head.py": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
+    "variants/integrated-4080-small/head/build_head.py": "72b2cde101afdab443c28c8a1a2dc01c76c230f565013c993289141095de7e7e",
+    "variants/integrated-4080-small/head/spindle-reference-evidence.json": "f149cd1308af05333ec4e9ecf931fdae19650a22a75641fff32c21039d15ddc4",
+    "variants/owned-z300-assessment/sources/owned-head/R10 - original uncut 65 mm spindle clamp.step": "506d12b3f749db3eeec03e133b519fd93e45ff1b6cb80bd8fa568d3fb0dba1cb",
+    "variants/owned-z300-assessment/sources/owned-head/Spindle dust boot.step": "3716855cf25a308de3db696ae827578d7803bfe4665fd1a6535f311a5246a044",
+    "variants/owned-z300-assessment/sources/owned-head/prior-mating-inspection.json": "e96a990b591ceaa0f1277c0af2d6654d29b563310cb813afe967c389a3438cb6",
+    "variants/owned-z300-assessment/sources/owned-head/owner-working-boot.json": "69503af028789fa48e38c1b5d2451c04ac0e752b5195f948e4af9daaa644a6aa",
+    "variants/owned-z300-assessment/sources/owned-head/owner-decisions.json": "f996fbf6aac86a0ce1c32cf2530c33b8f4c005ac4e21132c8e6a417b7f541b25",
+    "variants/owned-z300-assessment/sources/owned-head/owner-actuator-selection.json": "4441da633745fa5c1170706454fa6991e24695a599bf4765743022d10fc8b66f",
+    "variants/owned-z300-assessment/candidate_motion_factory.py": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/owned-z300-assessment/front_stop_repair.py": "5006c52b713dd58a1f73f98e1075e5e4fc76ecdb9c82711a20ae66e9742278c0",
+    "variants/owned-z300-assessment/custom_joint_repair.py": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  },
+  "invalid_parts": [],
+  "illustrated_registration_static_overlaps": [],
+  "exact_four_mount_seat_and_landing_checks": [
+    {
+      "X": 550.0,
+      "Z": 1092.0,
+      "adapter_spacer_seat_missing_mm3": 0.0,
+      "clamp_spacer_seat_missing_mm3": 0.0,
+      "bolt_head_on_spreader_missing_mm3": 0.0,
+      "spreader_contact_fraction": 0.9699624530671583,
+      "spreader_contact_missing_mm3": 0.0848230016445882,
+      "D9_thread_landing_shell_missing_mm3": 0.0
+    },
+    {
+      "X": 550.0,
+      "Z": 1122.0,
+      "adapter_spacer_seat_missing_mm3": 0.0,
+      "clamp_spacer_seat_missing_mm3": 0.0,
+      "bolt_head_on_spreader_missing_mm3": 0.0,
+      "spreader_contact_fraction": 0.9699624530671583,
+      "spreader_contact_missing_mm3": 0.0848230016445882,
+      "D9_thread_landing_shell_missing_mm3": 0.0
+    },
+    {
+      "X": 600.0,
+      "Z": 1092.0,
+      "adapter_spacer_seat_missing_mm3": 0.0,
+      "clamp_spacer_seat_missing_mm3": 0.0,
+      "bolt_head_on_spreader_missing_mm3": 0.0,
+      "spreader_contact_fraction": 0.9699624530671583,
+      "spreader_contact_missing_mm3": 0.0848230016445882,
+      "D9_thread_landing_shell_missing_mm3": 0.0
+    },
+    {
+      "X": 600.0,
+      "Z": 1122.0,
+      "adapter_spacer_seat_missing_mm3": 0.0,
+      "clamp_spacer_seat_missing_mm3": 0.0,
+      "bolt_head_on_spreader_missing_mm3": 0.0,
+      "spreader_contact_fraction": 0.8696331436426903,
+      "spreader_contact_missing_mm3": 0.36814284788034557,
+      "D9_thread_landing_shell_missing_mm3": 0.0
+    }
+  ],
+  "known_adapter_joint_passed": true,
+  "spreader_qualification": "The complete8.5mm screwhead is supported by a10mm steelwasher. Washer/clamp contact is96.996% for three and86.963% for one: all have the5.3-to5.5inner-bore lip, and the fourth retains an outer source-seat interruption. Contactfraction is reported without an invented acceptance threshold. Actual preload, steelgrade and washerbridge capacity remain unqualified.",
+  "washer_bridge_or_bearing_strength_qualified": false,
+  "source_geometry_preservation": {
+    "clamp_faces": [
+      114,
+      114
+    ],
+    "clamp_volume_error_mm3": 2.3283064365386963e-10,
+    "boot_faces": [
+      162,
+      162
+    ],
+    "boot_volume_error_mm3": 4.656612873077393e-10,
+    "original_files_modified": false
+  },
+  "known_clamp_adapter_relative_continuous_motion": {
+    "passed": true,
+    "working_Z_travel_mm": 200.0,
+    "broad_pairs_clear": 5670,
+    "exact_cover_pairs": 0,
+    "results": []
+  },
+  "adapter_STEP": {
+    "file": "output/OWNER_CLAMP_ADAPTER110_WITH_M5_ROWS.step",
+    "sha256": "812bc66b44170e970bf8bdb1e9ab84289bd1191122c6e90a490dc15f035ddc43",
+    "valid": true,
+    "bounds_mm": [
+      0.0,
+      -2.273736754432e-13,
+      0.0,
+      110.0,
+      12.7,
+      110.0
+    ],
+    "solid_count": 1,
+    "volume_error_mm3": 1.57160684466362e-09
+  },
+  "known_head_STEP": {
+    "file": "output/EXACT_OWNER_CLAMP_ON_Z_ADAPTER.step",
+    "sha256": "2bb0b88a9cf7a2034605457b32d0420df7642d677e3ab363f730f8b95a2d8873",
+    "valid": true,
+    "solid_count": 14,
+    "expected_solid_count": 14,
+    "volume_error_mm3": 0.33644159440882504,
+    "bounds_mm": [
+      520.0,
+      575.89794064868,
+      1070.0,
+      630.0,
+      679.6,
+      1180.0
+    ],
+    "preserved_source_entity_graph": false,
+    "geometry_is_rigidly_transformed_owner_solids": true
+  },
+  "unregistered_boot_reference_STEP": {
+    "file": "output/OWNER_HEAD_WITH_UNREGISTERED_BOOT_REFERENCE.step",
+    "sha256": "3d10fa50df072e09924f781dad3069e2129054c2214f1805c6400aa5d73d3465",
+    "valid": true,
+    "solid_count": 15,
+    "expected_solid_count": 15,
+    "volume_error_mm3": 70.43699450220447,
+    "bounds_mm": [
+      520.0,
+      567.39730895249,
+      1050.582086214,
+      666.5478892727104,
+      679.6,
+      1180.0
+    ],
+    "preserved_source_entity_graph": false,
+    "geometry_is_rigidly_transformed_owner_solids": true
+  },
+  "new_tap_operation_DXF": {
+    "file": "output/ADAPTER_FOUR_NEW_M5_PILOTS_OPERATION_ONLY.dxf",
+    "sha256": "0b4df1f71515eb51678ab64e7e716879bf1b4e2e66c04d44b99f5cf00ba25165",
+    "passed": true,
+    "readback_holes": [
+      [
+        30.0,
+        22.0,
+        4.2
+      ],
+      [
+        30.0,
+        52.0,
+        4.2
+      ],
+      [
+        80.0,
+        22.0,
+        4.2
+      ],
+      [
+        80.0,
+        52.0,
+        4.2
+      ]
+    ],
+    "outer_layer_is_reference_only": true
+  },
+  "new_tap_coordinate_CSV": {
+    "file": "output/adapter-new-hole-coordinates.csv",
+    "sha256": "bf29c5ab6853fcb33d7a17341035f463f599fda179081b6f17dd69032499473d"
+  },
+  "boot_home_registration_known": false,
+  "full_working_boot_50mm_proved": false,
+  "missing_installed_datums": [
+    "Working boot home relative to the unmodified clamp",
+    "Spindle collet/nose datum relative to clamp grip",
+    "Actual received Z output mounting pattern/depth and thickness"
+  ],
+  "owner_identity_questions_already_answered": [
+    "Clamp matches original-uncutSTEP",
+    "Whole boot moves50mm",
+    "PegelongB0D6BCQCVR",
+    "Existing assembly already works"
+  ],
+  "conservative_boot_handling": "Factory refuses nonzero boot_lift without an explicit registration. Include the exact boot at its labeled reference pose, or use a measured registration; never treat the earlier inferred joint as qualified.",
+  "complete_head_machine_integration": false,
+  "fabrication_release": false,
+  "operating_release": false,
+  "source_consistent_during_check": true,
+  "known_clamp_adapter_integration_passed": true,
+  "inspection_and_export_completed": true
+}

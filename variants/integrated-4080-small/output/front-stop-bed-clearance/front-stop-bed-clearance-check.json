@@ -1,0 +1,160 @@
+{
+  "source_sha256": {
+    "variants\\integrated-4080-small\\front_stop_bed_clearance.py": "e3f079dbd78b4046d60a68e621f9aaab2015581c9fd7ed4d9a2875b83ecf2a3b",
+    "variants\\integrated-4080-small\\mechanical.py": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "variants\\integrated-4080-small\\bed\\integrated_bed.py": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa",
+    "variants\\integrated-4080-small\\utilities\\integrated_utilities.py": "8fcbe7ea06a6610c5ce22936c6f363c0c21da910297fb21e403e835c3f0dd98a",
+    "variants\\integrated-4080-small\\atc\\actual_atc.py": "5e79642b4b3245989232c6aae8a73374efc266fda06057f41afc509fee8e55ff",
+    "variants\\integrated-4080-small\\assembly.py": "a0e62db2bc605a41556aedb096610c029cac785dcec090f35104a716c8ffea96"
+  },
+  "source_consistent_after_build": true,
+  "method": "Conservative material-cover cells; continuous axis translations enclosed exactly by unioned endpoint bounds. All source material containment checked.",
+  "original_operating_parts_unchanged": true,
+  "operating_buffer_and_roller_cam_datums_changed": false,
+  "park_offset_Y_mm": 400,
+  "manual_path_mm": [
+    [
+      "inboard_X",
+      40
+    ],
+    [
+      "rearward_Y",
+      400
+    ],
+    [
+      "outboard_X",
+      40
+    ]
+  ],
+  "coverage": {
+    "Y_LIMIT_L_FRONT_SCREW_1": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_LIMIT_L_FRONT_SCREW_2": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_BUFFER_L_FRONT_SCREW_1": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_BUFFER_L_FRONT_SCREW_2": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_STOP_L_FRONT_BRACKET": {
+      "cells": 4,
+      "missing_material_mm3": 0.0
+    },
+    "Y_STOP_L_FRONT_BUFFER": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_LIMIT_L_FRONT_BODY": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_LIMIT_L_FRONT_ROLLER": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "XR_STOP_CARRIER_L_FRONT": {
+      "cells": 3,
+      "missing_material_mm3": 0.0
+    },
+    "XR_STOP_BASE_M6x12_L_FRONT_1": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "XR_STOP_BASE_M6x12_L_FRONT_2": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_LIMIT_R_FRONT_SCREW_1": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_LIMIT_R_FRONT_SCREW_2": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_BUFFER_R_FRONT_SCREW_1": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_BUFFER_R_FRONT_SCREW_2": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_STOP_R_FRONT_BRACKET": {
+      "cells": 4,
+      "missing_material_mm3": 0.0
+    },
+    "Y_STOP_R_FRONT_BUFFER": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_LIMIT_R_FRONT_BODY": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "Y_LIMIT_R_FRONT_ROLLER": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "XR_STOP_CARRIER_R_FRONT": {
+      "cells": 3,
+      "missing_material_mm3": 0.0
+    },
+    "XR_STOP_BASE_M6x12_R_FRONT_1": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    },
+    "XR_STOP_BASE_M6x12_R_FRONT_2": {
+      "cells": 1,
+      "missing_material_mm3": 0.0
+    }
+  },
+  "enclosures": 192,
+  "hits": [],
+  "whole_route_bounds_mm": [
+    24.5,
+    80.0,
+    1013.0,
+    1125.5,
+    551.0,
+    1164.7
+  ],
+  "checked_bed_angles_deg": [
+    0.0,
+    90.0
+  ],
+  "reverse_route_has_same_geometry": true,
+  "prerequisites": [
+    "Bedfullyflatoremptiedandpositivelypinned90deg; neverintermediateangle",
+    "Allguideguardsstored",
+    "Headremoved; commonX975/Y1275/Z250; motionlocked",
+    "DisconnectbothNCswitchserviceconnectors",
+    "Removeandhold4M6headerscrewsand4washers",
+    "Transferleftthenright",
+    "Reseatandclampatparkdatumblocks"
+  ],
+  "restore_before_motion": [
+    "ReturncompletestopgroupsagainstoriginalY80datumblocks",
+    "ReconnectNCswitches",
+    "ProvebothNCinputsandretentioninterlock",
+    "Rehomeatcommissioningspeed; verifytripandbufferdistances"
+  ],
+  "new_items": [
+    "Four20x20x6.35steeldatumblocks",
+    "FourM6x16buttonhead/washer/actualslotnutsets",
+    "FourextraM6parkheaderTnuts;originaloperatingTnutsstayinplace",
+    "TwoNCswitchserviceconnectorpairs",
+    "Stop-operating/parkedinterlockhardwarecompatiblewithactualcontroller"
+  ],
+  "hold": "Actual connectors, cable handling, slot engagement, anti-drop handling and positive state sensing require qualification. Nominal stop contact is preserved; commissioning crash-energy rating is unchanged and unqualified.",
+  "fabrication_release": false,
+  "operating_release": false,
+  "passed": true
+}

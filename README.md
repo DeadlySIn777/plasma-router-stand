@@ -1,5 +1,38 @@
 # Plasma / router CNC stand
 
+**Current small machine: [integrated 4080 design](variants/integrated-4080-small/README.md).**
+It now combines the owner's original head geometry, full HDPE/20100 bed,
+owned 300 mm Z and selected retractable magazine slide in one source assembly.
+It replaces the earlier provisional head and cassette-bed candidates.
+
+**Review CAD only: fabrication/CAM release and the USD 1000 delivered budget do not pass.**
+Read the [current status](variants/integrated-4080-small/STATUS.md) and
+[stock, ownership and cost register](variants/integrated-4080-small/manufacturing/README.md).
+Known owned motion, guides, drives, spindle/VFD and working head are excluded
+from new costs. The currently sourced tracks, HDPE and Basic ATC alone extend
+to $1060.35 before the frame, pan, hardware and delivery charges.
+
+- [Wood-mode STEP](variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_WOOD.step)
+- [Plasma-mode STEP](variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_PLASMA.step)
+- [Assembly and STEP readback](variants/integrated-4080-small/output/assembly-check.json)
+- [Current subsystem clearance evidence](variants/integrated-4080-small/output/integration-clearance-check.json)
+- [Printable current review](output/pdf/plasma-router-stand-integrated-4080-review.pdf)
+- [Variant index and separate 4x8 studies](variants/README.md)
+
+![Current integrated wood mode](variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_WOOD.png)
+
+The full 1000 x1220 mm bed tilts into a permanent front parking bay; the ATC
+parks in the rear bay. The six-post 4080 frame uses a paired-4080 gantry and a
+third pan bearer. Source geometry checks are distinct from actual supplier
+interfaces, physical rigidity, safe handling, controls and a delivered quote.
+Purple spindle/boot/magazine context must not be used as verified installed
+vendor geometry. The complete machine is not qualified for steel milling.
+
+<details>
+<summary>Historical packages and prior design notes</summary>
+
+# Plasma / router CNC stand
+
 **Not finished or fabrication-ready. [Current status](variants/owned-z300-assessment/STATUS.md)**
 records the remaining owner-head, continuous HDPE/20100 bed and magazine-slide
 integration work. The current proposal uses provisional alternatives for those
@@ -136,3 +169,5 @@ concept brief. This is not a native Fusion feature-history or machine-specific
 CAM release. The [original snapshot manifest](REPOSITORY-SNAPSHOT.json)
 describes the initial import only. Supplier material retains its existing
 license notices; this repository grants no new rights over it.
+
+</details>
