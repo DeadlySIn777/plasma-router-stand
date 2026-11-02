@@ -1,0 +1,270 @@
+{
+  "scope": "Read-only rigid mating study of the supplied clamp and dust boot.\n\nNo cutting, drilling, rescaling or source STEP mutation. Candidate placement is\nderived from coaxial analytic surfaces and equal axial lengths; it is not owner\nconfirmation of mounting orientation, physical fit or a fastening scheme.\n",
+  "source_files": {
+    "C:\\Users\\Gluis\\Downloads\\R10 - original uncut 65 mm spindle clamp.step": "506d12b3f749db3eeec03e133b519fd93e45ff1b6cb80bd8fa568d3fb0dba1cb",
+    "C:\\Users\\Gluis\\Downloads\\Spindle dust boot.step": "3716855cf25a308de3db696ae827578d7803bfe4665fd1a6535f311a5246a044"
+  },
+  "source_inspection_sha256": "d81eb0f724c1e9d6358a2b4a76d28a3fd183ff819a34d930f5561374a586f913",
+  "clamp_bore_diameter_mm": 65,
+  "clamp_outer_partial_cylinder_diameter_mm": 85,
+  "boot_sleeve_diameter_mm": 86,
+  "nominal_cylindrical_radial_gap_mm": 0.5,
+  "sleeve_axial_interval_mm": [
+    164.0,
+    241.5
+  ],
+  "candidates": [
+    {
+      "pitch_about_native_Y_deg": -90,
+      "yaw_about_boot_Z_deg": 0,
+      "translation_after_rotations_mm": [
+        264.0940300085948,
+        -135.030440921491,
+        241.20000010000996
+      ],
+      "clamp_bounds_in_boot_frame_mm": [
+        144.24623565673477,
+        -269.9693809214276,
+        163.99999999999994,
+        229.2482950080551,
+        -174.46938092141093,
+        241.50000020000996
+      ],
+      "intersection_mm3": 102.0000000000127,
+      "minimum_solid_distance_mm": 2.842170943040401e-14,
+      "nominal_no_overlap": false,
+      "placement_is_proper_rigid_transform": true
+    },
+    {
+      "pitch_about_native_Y_deg": -90,
+      "yaw_about_boot_Z_deg": 90,
+      "translation_after_rotations_mm": [
+        99.55935490813502,
+        -144.87364582087116,
+        241.20000010000996
+      ],
+      "clamp_bounds_in_boot_frame_mm": [
+        138.99829490805487,
+        -264.72144017273126,
+        163.99999999999997,
+        234.49829490807156,
+        -179.71938082141097,
+        241.50000020000996
+      ],
+      "intersection_mm3": 17163.254022535257,
+      "minimum_solid_distance_mm": 0.0,
+      "nominal_no_overlap": false,
+      "placement_is_proper_rigid_transform": true
+    },
+    {
+      "pitch_about_native_Y_deg": -90,
+      "yaw_about_boot_Z_deg": 180,
+      "translation_after_rotations_mm": [
+        109.40255980751517,
+        -309.408320921331,
+        241.20000010000996
+      ],
+      "clamp_bounds_in_boot_frame_mm": [
+        144.24829480805494,
+        -269.9693809214111,
+        164.00000000000003,
+        229.2503541593752,
+        -174.46938092139433,
+        241.50000020001
+      ],
+      "intersection_mm3": 10851.396124230896,
+      "minimum_solid_distance_mm": 0.0,
+      "nominal_no_overlap": false,
+      "placement_is_proper_rigid_transform": true
+    },
+    {
+      "pitch_about_native_Y_deg": -90,
+      "yaw_about_boot_Z_deg": 270,
+      "translation_after_rotations_mm": [
+        273.9372349079749,
+        -299.5651160219508,
+        241.20000010000996
+      ],
+      "clamp_bounds_in_boot_frame_mm": [
+        138.99829490803836,
+        -264.71938102141104,
+        164.0,
+        234.49829490805504,
+        -179.71732167009068,
+        241.50000020000996
+      ],
+      "intersection_mm3": 22066.446591698375,
+      "minimum_solid_distance_mm": 0.0,
+      "nominal_no_overlap": false,
+      "placement_is_proper_rigid_transform": true
+    },
+    {
+      "pitch_about_native_Y_deg": 90,
+      "yaw_about_boot_Z_deg": 0,
+      "translation_after_rotations_mm": [
+        109.40255980751519,
+        -135.030440921491,
+        164.30000009999998
+      ],
+      "clamp_bounds_in_boot_frame_mm": [
+        144.24829480805505,
+        -269.9693809214278,
+        163.99999999999997,
+        229.25035415937526,
+        -174.469380921411,
+        241.5000002000099
+      ],
+      "intersection_mm3": 14253.596251837602,
+      "minimum_solid_distance_mm": 0.0,
+      "nominal_no_overlap": false,
+      "placement_is_proper_rigid_transform": true
+    },
+    {
+      "pitch_about_native_Y_deg": 90,
+      "yaw_about_boot_Z_deg": 90,
+      "translation_after_rotations_mm": [
+        99.55935490813499,
+        -299.56511602195076,
+        164.30000009999998
+      ],
+      "clamp_bounds_in_boot_frame_mm": [
+        138.99829490805493,
+        -264.7193810214109,
+        163.99999999999997,
+        234.49829490807178,
+        -179.71732167009063,
+        241.50000020000996
+      ],
+      "intersection_mm3": 16989.528610890604,
+      "minimum_solid_distance_mm": 0.0,
+      "nominal_no_overlap": false,
+      "placement_is_proper_rigid_transform": true
+    },
+    {
+      "pitch_about_native_Y_deg": 90,
+      "yaw_about_boot_Z_deg": 180,
+      "translation_after_rotations_mm": [
+        264.09403000859476,
+        -309.408320921331,
+        164.30000009999998
+      ],
+      "clamp_bounds_in_boot_frame_mm": [
+        144.24623565673483,
+        -269.96938092141096,
+        163.99999999999997,
+        229.24829500805504,
+        -174.46938092139428,
+        241.50000020000996
+      ],
+      "intersection_mm3": 0.0,
+      "minimum_solid_distance_mm": 9.999996564147295e-08,
+      "nominal_no_overlap": true,
+      "placement_is_proper_rigid_transform": true
+    },
+    {
+      "pitch_about_native_Y_deg": 90,
+      "yaw_about_boot_Z_deg": 270,
+      "translation_after_rotations_mm": [
+        273.937234907975,
+        -144.87364582087122,
+        164.30000009999998
+      ],
+      "clamp_bounds_in_boot_frame_mm": [
+        138.9982949080383,
+        -264.7214401727312,
+        163.99999999999997,
+        234.4982949080551,
+        -179.71938082141102,
+        241.50000020000996
+      ],
+      "intersection_mm3": 20943.245571546635,
+      "minimum_solid_distance_mm": 0.0,
+      "nominal_no_overlap": false,
+      "placement_is_proper_rigid_transform": true
+    }
+  ],
+  "views": [
+    {
+      "image": "output/owner-hardware-2026-10-01/mated-iso.png",
+      "width": 1400,
+      "height": 1100,
+      "body_count": 2,
+      "triangles": 56496,
+      "occupied_pixels": 416469,
+      "visible_mechanism_pixels": 316120,
+      "camera_toward_viewer": [
+        1,
+        -1,
+        1
+      ],
+      "full_machine_context": false,
+      "orthographic_scale_pixels_per_mm": 4.745448175246319,
+      "allocation_names": [],
+      "sha256": "65940036405882887539d63f507819fce1ce6f739eacde700ba82f9de0ae6671"
+    },
+    {
+      "image": "output/owner-hardware-2026-10-01/mated-open-side.png",
+      "width": 1400,
+      "height": 1100,
+      "body_count": 2,
+      "triangles": 56496,
+      "occupied_pixels": 462231,
+      "visible_mechanism_pixels": 263879,
+      "camera_toward_viewer": [
+        -1,
+        -1,
+        0.8
+      ],
+      "full_machine_context": false,
+      "orthographic_scale_pixels_per_mm": 5.0883268615818436,
+      "allocation_names": [],
+      "sha256": "1158f48a3d54b7d9c3885571dfcaa12288307d6b1ef72693e3800976bd8e2371"
+    },
+    {
+      "image": "output/owner-hardware-2026-10-01/mated-top.png",
+      "width": 1400,
+      "height": 1100,
+      "body_count": 2,
+      "triangles": 56496,
+      "occupied_pixels": 248488,
+      "visible_mechanism_pixels": 117626,
+      "camera_toward_viewer": [
+        0,
+        -0.001,
+        1
+      ],
+      "full_machine_context": false,
+      "orthographic_scale_pixels_per_mm": 5.629994380099534,
+      "allocation_names": [],
+      "sha256": "3e246b7167937256d2dc4d6bd736dfd034e7a872b477d40b892c4ada96038c31"
+    }
+  ],
+  "zero_overlap_candidate_count": 1,
+  "illustrated_candidate": {
+    "pitch_about_native_Y_deg": 90,
+    "yaw_about_boot_Z_deg": 180,
+    "translation_after_rotations_mm": [
+      264.09403000859476,
+      -309.408320921331,
+      164.30000009999998
+    ],
+    "clamp_bounds_in_boot_frame_mm": [
+      144.24623565673483,
+      -269.96938092141096,
+      163.99999999999997,
+      229.24829500805504,
+      -174.46938092139428,
+      241.50000020000996
+    ],
+    "intersection_mm3": 0.0,
+    "minimum_solid_distance_mm": 9.999996564147295e-08,
+    "nominal_no_overlap": true,
+    "placement_is_proper_rigid_transform": true
+  },
+  "originals_unchanged": true,
+  "source_sha256": {
+    "output/owner-hardware-2026-10-01/check_mating.py": "5d1355a495586aeb51aff93433d53e7bc851279856e0108a3d48ba9f93578dbb",
+    "output/owner-hardware-2026-10-01/inspect_owner_parts.py": "d1675ca655214851abb8397064f256f975edd5d32c5ac6d07447078579cf35e0",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  }
+}

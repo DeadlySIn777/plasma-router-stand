@@ -13,14 +13,23 @@
     "published_stock_motor_overall_length_mm": 530,
     "published_base_width_mm": 80
   },
-  "assessed_working_travel_mm": {"X": 800, "Y": 1000, "Z": 200},
+  "assessed_working_travel_mm": {
+    "X": 800,
+    "Y": 1000,
+    "Z": 200
+  },
   "full_300_Z_operating_domain_qualified": false,
   "controller_limits_or_settings_applied": false,
   "proposed_gantry_height_change_mm": 0,
-  "existing_carrier_outer_blank_mm": [260, 270.2, 12.7],
+  "existing_carrier_outer_blank_mm": [
+    260,
+    270.2,
+    12.7
+  ],
   "candidate_custom_joint_changes": [
     "Machined through-slot around the inherited X-link flange, with a retained bottom bearing seat and rounded milling ends",
-    "Integral X-link support downstand enlarged from 30 to 37 mm, retaining the four bolt axes and nominal grip while completing the lower M6 holes"
+    "Integral X-link support downstand enlarged from 30 to 37 mm, retaining the four bolt axes and nominal grip while completing the lower M6 holes",
+    "Both front Y-stop brackets/carriers: matched corner relief and forward M6 axes moved from Y90 to105; reduced35mm mounting spacing requires capacity qualification"
   ],
   "purchase_basis": {
     "additional_200_mm_Z_module_planned": false,
@@ -33,6 +42,10 @@
   "delivered_budget_verified": false,
   "pricing_or_cart_changes_performed": false,
   "release_gates": [
+    "CAD: integrate the existing owner clamp/working whole-boot assembly and machine/hose interfaces",
+    "CAD: replace or explicitly reconcile provisional routed cassettes with the retained uncut20100/drill-only full HDPE bed requirement",
+    "CAD: reconcile previously selected311mm/200stroke magazine slide with custom rail/belt proposal",
+    "CAD/supplier: actual RapidChange mounting, pocket/nut datums, tool envelopes, sensing and executable sequence",
     "Delivered module mounting/support and output interface dimensions, actual mass, lead and endpoint datums",
     "Actual shaft/coupler and power-off retention; a stock stepper is not a qualified anti-drop device",
     "Real magazine pocket/nut datums, tool envelopes and executable ATC sequence",
@@ -40,5 +53,36 @@
     "Full candidate path and operating qualification, including any use of the additional 100 mm stroke",
     "Water, thermal, handling and electrical commissioning and complete delivered pricing"
   ],
-  "fabrication_release": false
+  "fabrication_release": false,
+  "owner_head": {
+    "clamp_STEP_previously_supplied": true,
+    "as_machined_matches_STEP_owner_confirmed": true,
+    "boot_STEP_previously_supplied": true,
+    "whole_boot_travel_mm": 50,
+    "actuator_brand": "Pegelong",
+    "actuator_ASIN": "B0D6BCQCVR",
+    "working_assembly_owner_confirmed": true,
+    "modification_or_replacement_selected": false,
+    "integrated_in_current_proposal": false,
+    "reference": "OWNER-HEAD-INTEGRATION.md"
+  },
+  "retained_bed_requirement": {
+    "20100_profile_quantity": 10,
+    "profile_length_mm": 1220,
+    "uncut_profiles": true,
+    "full_HDPE_layer_quantity": 2,
+    "nominal_layer_thickness_mm": 12.7,
+    "HDPE_operations": "Ordinary circular through-drilling only",
+    "stock_ownership_verified": false,
+    "integrated_in_current_proposal": false,
+    "current_cassettes_selected_for_fabrication": false
+  },
+  "selected_magazine_slide": {
+    "overall_length_mm": 311,
+    "stroke_mm": 200,
+    "current_custom_rail_belt_alternative_disposition": "Unselected pending reconciliation",
+    "exact_interfaces_verified": false
+  },
+  "design_complete": false,
+  "status_reference": "STATUS.md"
 }

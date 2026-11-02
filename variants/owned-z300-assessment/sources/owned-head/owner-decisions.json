@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-02",
+  "scope": "Continuation of the owner-stock stand project; no Controller project changes.",
+  "whole_boot_motion": {
+    "moving_body": "Entire supplied Spindle dust boot.step solid",
+    "requested_nominal_travel_mm": 50,
+    "separate_lower_skirt": false,
+    "actuator_location_intent": "Existing front pocket",
+    "received_actuator_model_confirmed": false
+  },
+  "brush": {
+    "mount": "Existing groove for an off-the-shelf strip/row bristle brush",
+    "groove_geometry_must_remain_unchanged": true,
+    "owner_will_trim_free_bristles_with_scissors": true,
+    "exact_strip_backing_profile_unconfirmed": true
+  },
+  "clamp": {
+    "owner_confirms_machined_part_matches_original_uncut_STEP": true,
+    "previous_relief_cut_present": false,
+    "original_file_must_remain_available": true,
+    "any_new_clearance_cut_is_separate_proposal": true
+  },
+  "preserved_design_basis": {
+    "motion_travel_target_mm": {"X": 800, "Y": 1000, "Z": 300},
+    "square_tube_outside_mm": 50.8,
+    "wall_purchase_target_in": [0.120, 0.125],
+    "nominal_modeled_wall_mm": 3.048,
+    "received_tube_wall_measured": false,
+    "bed": "Two flat drill-only HDPE layers below 20100 aluminum extrusion",
+    "frame_color": "Red",
+    "aluminum_color": "Metallic aluminum; photo-supported dark carriage/bracket finishes retained",
+    "side_panels": "Optional cosmetic concept only",
+    "fill": "All tubes, including moving gantry; 30 percent epoxy binder and 70 percent sand by volume",
+    "steel_milling": "Requested capability; not established by current geometric checks"
+  }
+}

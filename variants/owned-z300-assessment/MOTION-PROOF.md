@@ -1,0 +1,22 @@
+# Owned Z300 candidate: working-domain motion evidence
+
+The current review factory is `candidate_motion_factory.motion_parts(plasma, gantry_y, head_x, z_lift)`. It applies the nominal owned-family 300 mm stage overlay, then the frozen carrier/support repair, then the separate front-stop repair. The physical stage is represented as 419 mm body / 530 mm overall with its nominal supplied motor. Only X175–975, Y-guide275–1275 and Z-lift0–200 mm are assessed. Full catalogue 300 mm operating travel is deliberately outside this working domain. No controller limits have been applied.
+
+The continuous internal check was rerun with this complete factory. It validates 3,320 wood and 4,144 plasma corner solids by exact shape comparison, then proves the relative class translations continuously. Each mode has 41 recursive separation proofs, eight exact matched rail/block prism proofs and three analytic cam/roller nonpenetration proofs. Twelve specifically named HMS body/own-shoe-bolt pairs remain nominal thread-envelope dispositions. There are no unresolved relative-motion pairs.
+
+The external checker enumerates every motion/fixed-part pair: 395,910 wood and 487,956 plasma pairs. It reuses 119 unchanged pair proofs in each mode only after verifying frozen upstream source hashes, current retained topology and enclosing translation bounds. These are inherited proofs, not newly rerun upstream checks. Fifty plasma proofs are recomputed. Sixteen stationary external intersections are tested exactly in each mode. No external pair is unresolved.
+
+The additional same-class scan covers every co-moving pair involving a custom motion part. Wood has no positive intersections. Plasma has 57 individually recorded, source-declared mating-thread pairs. There is no blanket fastener exemption. The three integral M4 cone/V/flat seat spigots were checked against independent D4 / D3.3 × 6 mm annuli: symmetric difference is zero for all three. Their positive volume comes entirely from the nominal spigot/pilot thread representation, not penetrating seating faces. This does not qualify physical thread forms, engagement, preload or contact finishes.
+
+Two inherited front-stop bases intersected the conservative purchased motor-bracket envelopes by 404.601 mm³ each. The separate repair creates a full-depth base corner relief with 0.5 mm nominal clearance and relocates the forward M6 mounting axis from Y90 to Y105 in the stop, matching carrier and screw. Rear Y140, buffer, switch and frame mounting datums remain fixed. The full D10 head seats and D9 landing shells are present; nominal engagement remains 5.65 mm with 0.70 mm tip reserve. The two-bolt spacing changes from 50 to 35 mm. Actual crash-stop joint capacity and welds remain unqualified. Four local finished STEP models and four base operation-reference DXFs are supplied; the DXF base profiles have zero exact difference from the revised 3D bases. The old Y90 holes are absent in these new-manufacture designs; filling an existing hole is not a fabrication instruction.
+
+These are nominal geometry checks, not fabrication or operating release. They do not establish actual supplier mounting patterns, mass, coupler fit, stage support capacity, power-off retention, structural stiffness, cutting loads, flexible routing, homing overtravel or the fit of the user's actual clamp/boot/head and exact ATC kit. Frame/bed internal joints and purchased-part interiors are outside the same-class custom-motion scan. Bed-transfer/service trajectories are documented by the separate candidate path report. Stock, clamps and actual cutter/nozzle envelopes need their own verified operating setup. Use the full-assembly export whose source report binds this factory; earlier proposals do not include the front-stop revision.
+
+Evidence:
+
+- `output/candidate-internal-continuous-check.json`: complete rerun of candidate internal relative motion.
+- `output/candidate-external-sweep-check.json`: complete external enumeration with explicit inherited-proof binding.
+- `output/candidate-static-thread-check.json`: exact same-class findings and 57 specific thread dispositions.
+- `output/front-stop-repair/front-stop-repair-check.json`: relocated mounts, seats, nominal threads and motor-envelope clearance.
+- `output/front-stop-repair/front-stop-base-reference-check.json`: exact DXF-to-3D base correspondence.
+- `output/candidate-same-class-diagnostic.json`: discovery evidence from before the front-stop repair, explicitly not the final factory.

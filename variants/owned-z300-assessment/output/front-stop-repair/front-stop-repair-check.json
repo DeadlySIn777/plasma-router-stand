@@ -1,0 +1,173 @@
+{
+  "study": "CANDIDATE_FRONT_STOP_RELIEF_AND_RELOCATED_MATCHED_FORWARD_MOUNT",
+  "source_sha256": {
+    "variants/owned-z300-assessment/front_stop_repair.py": "5006c52b713dd58a1f73f98e1075e5e4fc76ecdb9c82711a20ae66e9742278c0",
+    "variants/owned-z300-assessment/custom_joint_repair.py": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/owned-z300-assessment/owned-hardware-evidence.json": "2373580dbfc1fa149b43a9f2db7bc115bc2b2f8b67defbccf1b9ef93db51026a",
+    "variants/extrusion-reengineered/motion-fabrication.csv": "59630eda41ede28a0345f729f962243977876b5b2ae9d1520f9c935a4d6243ca",
+    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "variants/extrusion-reengineered/bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants/extrusion-reengineered/shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "variants/extrusion-reengineered/atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "variants/extrusion-reengineered/build.py": "6825d593b1cd1ec67a492cbb2089520304e98cbbc3d17a1123db4fd316d0b69f",
+    "variants/extrusion-reengineered/material_cover.py": "60f490eb392c24b677d818c0977ac24a316e7261886882b423bf4be7f46f6919",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  },
+  "checks": {
+    "L": {
+      "old_motor_stop_intersection_mm3": 404.60109427463533,
+      "motor_stop_intersection_mm3": 0.0,
+      "motor_stop_gap_mm": 0.5,
+      "moved_screw_motor_gap_mm": 5.469479452198189,
+      "clearance_grip_intersection_mm3": 0.0,
+      "major_thread_screw_carrier_intersection_mm3": 0.0,
+      "D10_head_seat_missing_material_mm3": 0.0,
+      "D9_landing_shell_missing_material_mm3": 0.0,
+      "nominal_engagement_mm": 5.65,
+      "nominal_tip_reserve_mm": 0.7,
+      "base_thickness_mm": 6.35,
+      "clearance_bore_mm": 6.6,
+      "forward_axis_X_Y_mm": [
+        58.5,
+        105
+      ],
+      "rear_axis_X_Y_mm": [
+        58.5,
+        140
+      ],
+      "minimum_clearance_bore_ligament_mm": 5.7,
+      "minimum_new_major_thread_ligament_mm": 6.0,
+      "full_head_seat_outer_diameter_mm": 10.0,
+      "holes_spacing_mm": 35.0,
+      "mount_capacity_qualified": false,
+      "passed": true
+    },
+    "R": {
+      "old_motor_stop_intersection_mm3": 404.6010942746925,
+      "motor_stop_intersection_mm3": 0.0,
+      "motor_stop_gap_mm": 0.5,
+      "moved_screw_motor_gap_mm": 5.469479452198171,
+      "clearance_grip_intersection_mm3": 0.0,
+      "major_thread_screw_carrier_intersection_mm3": 0.0,
+      "D10_head_seat_missing_material_mm3": 0.0,
+      "D9_landing_shell_missing_material_mm3": 0.0,
+      "nominal_engagement_mm": 5.65,
+      "nominal_tip_reserve_mm": 0.7,
+      "base_thickness_mm": 6.35,
+      "clearance_bore_mm": 6.6,
+      "forward_axis_X_Y_mm": [
+        1091.5,
+        105
+      ],
+      "rear_axis_X_Y_mm": [
+        1091.5,
+        140
+      ],
+      "minimum_clearance_bore_ligament_mm": 5.7,
+      "minimum_new_major_thread_ligament_mm": 6.0,
+      "full_head_seat_outer_diameter_mm": 10.0,
+      "holes_spacing_mm": 35.0,
+      "mount_capacity_qualified": false,
+      "passed": true
+    }
+  },
+  "outputs": {
+    "Y_STOP_L_FRONT_BRACKET": {
+      "file": "output/front-stop-repair/Y_STOP_L_FRONT_BRACKET_REVISED.step",
+      "sha256": "1d7a3ffdbc019564fad037bf7e744dfd4980e5878495f46b0eb262bd6081a1fc",
+      "source_world_min_corner_mm": [
+        49.5,
+        80.0,
+        1063.9375
+      ],
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        43.3,
+        71.0,
+        56.34999999999991
+      ],
+      "valid": true,
+      "solid_count": 1
+    },
+    "XR_STOP_CARRIER_L_FRONT": {
+      "file": "output/front-stop-repair/XR_STOP_CARRIER_L_FRONT_REVISED.step",
+      "sha256": "b98746c9fd33e64a77a6e5b72fadca6b5d41dae20438d6df68f0b1af679362dd",
+      "source_world_min_corner_mm": [
+        49.5,
+        80.0,
+        973.0
+      ],
+      "bounds_local_mm": [
+        0.0,
+        0.0,
+        0.0,
+        43.3,
+        71.0,
+        90.93750000000009
+      ],
+      "valid": true,
+      "solid_count": 1
+    },
+    "Y_STOP_R_FRONT_BRACKET": {
+      "file": "output/front-stop-repair/Y_STOP_R_FRONT_BRACKET_REVISED.step",
+      "sha256": "ba6ee47f65bec41319457f5798b11c6a509576cd25e95df36d2fc2e1a206c4b2",
+      "source_world_min_corner_mm": [
+        1057.2,
+        80.0,
+        1063.9375
+      ],
+      "bounds_local_mm": [
+        -4.618527782440651e-14,
+        0.0,
+        0.0,
+        43.3,
+        71.0,
+        56.34999999999991
+      ],
+      "valid": true,
+      "solid_count": 1
+    },
+    "XR_STOP_CARRIER_R_FRONT": {
+      "file": "output/front-stop-repair/XR_STOP_CARRIER_R_FRONT_REVISED.step",
+      "sha256": "6e78c137539976a42fb69f409ebc1471a539ad938791b5e3f7cc667cf7dce491",
+      "source_world_min_corner_mm": [
+        1057.2,
+        80.0,
+        973.0
+      ],
+      "bounds_local_mm": [
+        -4.263256414560601e-14,
+        0.0,
+        0.0,
+        43.3,
+        71.0,
+        90.93750000000009
+      ],
+      "valid": true,
+      "solid_count": 1
+    }
+  },
+  "changed_parts": [
+    "XR_STOP_BASE_M6x12_L_FRONT_1",
+    "XR_STOP_BASE_M6x12_R_FRONT_1",
+    "XR_STOP_CARRIER_L_FRONT",
+    "XR_STOP_CARRIER_R_FRONT",
+    "Y_STOP_L_FRONT_BRACKET",
+    "Y_STOP_R_FRONT_BRACKET"
+  ],
+  "manufacturing_intent": "New custom parts. Superseded Y90 hole is absent in the revised finished solids. Stop clearance D6.6 atY105 and nominal majorD6 carrier tap atY105 replace it. Actual M6x1 pilot/tapping, weld size and stop-load capacity require fabrication/joint qualification.",
+  "switch_and_buffer_datums_changed": false,
+  "frame_mount_axes_changed": false,
+  "source_consistent_during_check": true,
+  "fabrication_release": false,
+  "passed": true
+}

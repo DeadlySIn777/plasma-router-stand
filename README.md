@@ -1,11 +1,17 @@
 # Plasma / router CNC stand
 
+**Not finished or fabrication-ready. [Current status](variants/owned-z300-assessment/STATUS.md)**
+records the remaining owner-head, continuous HDPE/20100 bed and magazine-slide
+integration work. The current proposal uses provisional alternatives for those
+items; its passing geometry checks do not establish requirement completion.
+
 **Current integration candidate: [owned RATTMMOTOR ZBX80, 300 mm stroke, on the 4080 table](variants/owned-z300-assessment/README.md).**
 The recovered purchase record already identified this unit. The candidate keeps
 800 mm X / 1000 mm Y and assesses 200 mm of working Z; the full 300 mm operating
 domain is not qualified. It retains the gantry height and carrier outer blank.
 Corrected carrier/flange clearance and lower support taps are included in the
-new proposal assemblies. The proposed new 200 mm Z purchase remains excluded.
+review assemblies, along with matched front-stop/motor-envelope relief and
+relocated forward mounting holes. The proposed new 200 mm Z purchase remains excluded.
 
 **Frozen source baseline: [XR2 — re-engineered 4080 wood/plasma table](variants/extrusion-reengineered/README.md).**
 Its whole-machine STEP and fabrication files retain the earlier 200 mm Z and
@@ -37,6 +43,8 @@ the preserved Rev I baseline and earlier fixed-dock studies.
 
 ## Open the current design
 
+- [Current status, required owner integration and remaining design work](variants/owned-z300-assessment/STATUS.md)
+- [Latest owned-Z300 review and checked candidate parts](variants/owned-z300-assessment/README.md)
 - [Current XR2 4080 small table, engineering before pricing](variants/extrusion-reengineered/README.md)
 - [XR2 printable design and audit review](output/pdf/plasma-router-stand-XR2-review.pdf)
 - [Historical welded-table budget study and simulations](variants/whole-table-600/README.md)

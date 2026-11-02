@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "latest_owner_statement": "Latest owner instruction in current project: all motion, extra rails, drives, spindle/VFD kit and electronics enclosure already owned. Verify exact received interfaces; assembly ownership does not prove spare fasteners or new ATC subassemblies.",
+  "owned_Z_complete_assembly_quantity": 1,
+  "new_Z200_purchase_removed": true,
+  "optional_brake_motor": {
+    "owned": false,
+    "selected_base": false,
+    "quantity": 1,
+    "status": "Only selected after qualified retention decision"
+  },
+  "owned_stock_allocated_blank_count": 83,
+  "owned_stock_credit_basis": "Exact original83blank nest, no new blank allocation",
+  "spindle_clamp": {
+    "source_file": "variants/owned-z300-assessment/sources/owned-head/R10 - original uncut 65 mm spindle clamp.step",
+    "sha256": "506d12b3f749db3eeec03e133b519fd93e45ff1b6cb80bd8fa568d3fb0dba1cb",
+    "ownership": "Owner supplied complete clamp, preserve unchanged",
+    "status": "Pose and mating integration held"
+  },
+  "dust_boot": {
+    "source_file": "variants/owned-z300-assessment/sources/owned-head/Spindle dust boot.step",
+    "sha256": "3716855cf25a308de3db696ae827578d7803bfe4665fd1a6535f311a5246a044",
+    "ownership": "Owner confirms already working whole-moving powered50mm boot, preserve unchanged",
+    "actuator": "PegelongB0D6BCQCVR50mm12V40N0.6in/s owner-selected",
+    "status": "Installed machine attachment/home transform and moving clearances require integration; identity/clamp revision/moving-body scope already answered",
+    "superseding_evidence": [
+      "variants/owned-z300-assessment/sources/owned-head/owner-working-boot.json",
+      "variants/owned-z300-assessment/sources/owned-head/owner-decisions.json",
+      "variants/owned-z300-assessment/sources/owned-head/owner-actuator-selection.json"
+    ]
+  },
+  "interpretation": "Latest owner assembly ownership overrides older not-ordered notes. It does not grant new material, replacement brake, ATC kit, new fasteners or unmeasured spare-channel credit.",
+  "prices_included": false,
+  "fabrication_release": false
+}

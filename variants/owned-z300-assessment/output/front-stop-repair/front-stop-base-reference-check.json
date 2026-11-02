@@ -1,0 +1,131 @@
+{
+  "study": "REVISED_FRONT_STOP_BASE_OPERATION_REFERENCES",
+  "source_sha256": {
+    "variants/owned-z300-assessment/front_stop_details.py": "7ad3ce45a460c0840d1df24c3344cf3b820394b5234081b73d5b792a85293e81",
+    "variants/owned-z300-assessment/front_stop_repair.py": "5006c52b713dd58a1f73f98e1075e5e4fc76ecdb9c82711a20ae66e9742278c0",
+    "variants/owned-z300-assessment/output/front-stop-repair/front-stop-repair-check.json": "da51c2cba52f18c396080013aa11f4139ea85171a775df013684542ac1d1d84f",
+    "variants/owned-z300-assessment/custom_joint_repair.py": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/owned-z300-assessment/owned-hardware-evidence.json": "2373580dbfc1fa149b43a9f2db7bc115bc2b2f8b67defbccf1b9ef93db51026a",
+    "variants/extrusion-reengineered/motion-fabrication.csv": "59630eda41ede28a0345f729f962243977876b5b2ae9d1520f9c935a4d6243ca",
+    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "variants/extrusion-reengineered/bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants/extrusion-reengineered/shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "variants/extrusion-reengineered/atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "variants/extrusion-reengineered/build.py": "6825d593b1cd1ec67a492cbb2089520304e98cbbc3d17a1123db4fd316d0b69f",
+    "variants/extrusion-reengineered/material_cover.py": "60f490eb392c24b677d818c0977ac24a316e7261886882b423bf4be7f46f6919",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  },
+  "outputs": {
+    "Y_STOP_L_FRONT_BRACKET": {
+      "file": "output/front-stop-repair/Y_STOP_L_FRONT_BRACKET_BASE_OPERATION_REFERENCE.dxf",
+      "sha256": "b45d44383faf45bbb13ae8bfb3055977bf8484e635ba0738abade66860ac21eb",
+      "local_origin_world_X_Y_mm": [
+        49.5,
+        80.0
+      ],
+      "base_lower_world_Z_mm": 1063.9375,
+      "thickness_mm": 6.35,
+      "nominal_hole_axes_world_X_Y_mm": [
+        [
+          58.5,
+          105
+        ],
+        [
+          58.5,
+          140
+        ]
+      ],
+      "DXF_units": "millimetres",
+      "dxf_circles": 2,
+      "exact_profile_symmetric_difference_mm3": 0.0,
+      "passed": true,
+      "instruction": "Base constituent only;6.6mm clearance holes. Keep the original welded uprights and buffer/switch axes from revised finished3D. Superseded Y90hole is absent."
+    },
+    "XR_STOP_CARRIER_L_FRONT": {
+      "file": "output/front-stop-repair/XR_STOP_CARRIER_L_FRONT_BASE_OPERATION_REFERENCE.dxf",
+      "sha256": "f0b20a73cf67a71bff568494f36ac16caf5d5e57ef7cbef6521d9753f088650d",
+      "local_origin_world_X_Y_mm": [
+        49.5,
+        80.0
+      ],
+      "base_lower_world_Z_mm": 1057.5875,
+      "thickness_mm": 6.35,
+      "nominal_hole_axes_world_X_Y_mm": [
+        [
+          58.5,
+          105
+        ],
+        [
+          58.5,
+          140
+        ]
+      ],
+      "DXF_units": "millimetres",
+      "dxf_circles": 2,
+      "exact_profile_symmetric_difference_mm3": 0.0,
+      "passed": true,
+      "instruction": "Base constituent only; welded post/switch upright/tower and other bores follow the revised finished3D model. Carrier circle is nominal thread-major geometry; specify M6x1 thread with suitable pilot (nominal5mm), not a6mm drilled clearance hole."
+    },
+    "Y_STOP_R_FRONT_BRACKET": {
+      "file": "output/front-stop-repair/Y_STOP_R_FRONT_BRACKET_BASE_OPERATION_REFERENCE.dxf",
+      "sha256": "d917d61e4ca4c164c45aab2ede6403bfc1bb25e721b0d6ecf9066cff076e0ea8",
+      "local_origin_world_X_Y_mm": [
+        1057.2,
+        80.0
+      ],
+      "base_lower_world_Z_mm": 1063.9375,
+      "thickness_mm": 6.35,
+      "nominal_hole_axes_world_X_Y_mm": [
+        [
+          1091.5,
+          105
+        ],
+        [
+          1091.5,
+          140
+        ]
+      ],
+      "DXF_units": "millimetres",
+      "dxf_circles": 2,
+      "exact_profile_symmetric_difference_mm3": 0.0,
+      "passed": true,
+      "instruction": "Base constituent only;6.6mm clearance holes. Keep the original welded uprights and buffer/switch axes from revised finished3D. Superseded Y90hole is absent."
+    },
+    "XR_STOP_CARRIER_R_FRONT": {
+      "file": "output/front-stop-repair/XR_STOP_CARRIER_R_FRONT_BASE_OPERATION_REFERENCE.dxf",
+      "sha256": "9e0a444bd9903dc990d8648fa4d97c0b2e9cb1996287e67b2767cdf4059897a0",
+      "local_origin_world_X_Y_mm": [
+        1057.2,
+        80.0
+      ],
+      "base_lower_world_Z_mm": 1057.5875,
+      "thickness_mm": 6.35,
+      "nominal_hole_axes_world_X_Y_mm": [
+        [
+          1091.5,
+          105
+        ],
+        [
+          1091.5,
+          140
+        ]
+      ],
+      "DXF_units": "millimetres",
+      "dxf_circles": 2,
+      "exact_profile_symmetric_difference_mm3": 0.0,
+      "passed": true,
+      "instruction": "Base constituent only; welded post/switch upright/tower and other bores follow the revised finished3D model. Carrier circle is nominal thread-major geometry; specify M6x1 thread with suitable pilot (nominal5mm), not a6mm drilled clearance hole."
+    }
+  },
+  "scope": "Four exact base outlines/hole references tied to revised finished3D. These do not flatten the complete welded assemblies or qualify welds, tapping or joint capacity.",
+  "fabrication_release": false,
+  "source_consistent_during_check": true,
+  "passed": true
+}

@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-01",
+  "status": "OWNER_CORRECTED_MATERIAL_AND_HARDWARE_BASIS",
+  "reason": "Owner rejects structural flat sheet/plate stock and invented spindle mount in Rev N. Two-inch square stock and actual owner aluminum mounts govern the rebuild.",
+  "user_statement": "its alll wrong.. why do we have flat sheet on top? we dont have flat sheet all we have is 2in square.... and a few aluminum mounts..... the design is completely wrong.... the whole thing sucks. this is the spindle mount ive already machined",
+  "confirmed_constraints": {
+    "structural_square_stock_outside_mm": 50.8,
+    "structural_plate_stock_available": false,
+    "actual_clamp_file_is_authoritative": true,
+    "actual_dust_boot_file_is_authoritative": true,
+    "modify_owner_STEP_files": false,
+    "aluminum_mounts": "Owner reports a few; exact remaining blanks and quantities unknown.",
+    "HDPE_fabrication": "Flat rectangular sheets with ordinary circular through-drilled holes only. No CNC, routed pockets, slots, edge notches, counterbores or surfacing requirement.",
+    "dust_shield": {
+      "powered_Z_adjustment": true,
+      "actuator_travel_mm": 50,
+      "front_pocket_purpose": "Owner identifies the front pocket as the dust-shield linear actuator provision.",
+      "travel_source": "Owner: THATS WHAT THAT POCKET IN THE FRONT. MOVES 50MM",
+      "moving_component_scope": "Dust shield per owner. The STEP moving/fixed component split and actual stroke endpoints remain to verify; do not assume the entire imported shoe translates."
+    }
+  },
+  "unknowns": {
+    "square_stock_wall_mm": null,
+    "square_stock_usable_lengths_mm": null,
+    "steel_grade": null,
+    "remaining_aluminum_stock": null,
+    "actual_Z_output_interface": null,
+    "physical_clamp_differs_from_uncut_filename": null,
+    "HDPE_received_layer_thicknesses_mm": null,
+    "dust_shield_actuator_model_mounts_and_body_dimensions": null,
+    "dust_shield_motion_component_split_and_stroke_endpoints": null
+  },
+  "preserved_prior_user_requirements": {
+    "router_bed": "Two HDPE layers then20100 extrusion; latest explicit correction is drill-only HDPE. Previous CNC-dependent cassette details are rejected.",
+    "motion": "Purchased 800 X / 1000 Y / 300 Z basis; shorter 200 Z remains unpurchased candidate.",
+    "process": "Frequent manual router/plasma mode change and requested router ATC capability.",
+    "dust_shield": "Include the owner's front-pocket linear actuator and independent 50 mm shield Z travel in head mounts, moving-clearance and service-route checks."
+  },
+  "rejected_assumptions": [
+    "Two 160 x 1650 x 12 steel rail-support plates",
+    "160 x 100 gantry RHS and 120 x 100 gantry towers",
+    "1200 x 160 x 12.7 full-width aluminium guide face",
+    "Six 140 x 140 x 20 plate feet",
+    "Invented 40 mm grip spindle clamp and 50 x 12 mounting pattern",
+    "CNC pockets, radial slots, clamp windows, counterbores and surfacing in HDPE"
+  ],
+  "other_reconsidered_assumptions": [
+    "Four bed cassettes and extensive machined retention hardware",
+    "Additional non-2-inch tube sections and plate brackets",
+    "Aluminium carrier size, stock quantities and extensive custom thrust-link machining"
+  ],
+  "owner_hardware_sources": [
+    {
+      "original_path": "C:\\Users\\Gluis\\Downloads\\R10 - original uncut 65 mm spindle clamp.step",
+      "project_copy": "variants/owner-stock-rebuild/sources/R10 - original uncut 65 mm spindle clamp.step",
+      "sha256": "506d12b3f749db3eeec03e133b519fd93e45ff1b6cb80bd8fa568d3fb0dba1cb",
+      "bytes": 249311,
+      "geometry_modified": false
+    },
+    {
+      "original_path": "C:\\Users\\Gluis\\Downloads\\Spindle dust boot.step",
+      "project_copy": "variants/owner-stock-rebuild/sources/Spindle dust boot.step",
+      "sha256": "3716855cf25a308de3db696ae827578d7803bfe4665fd1a6535f311a5246a044",
+      "bytes": 472539,
+      "geometry_modified": false
+    }
+  ],
+  "prior_candidate": {
+    "revision": "Rev N",
+    "acceptance": "SUPERSEDED_USER_SCOPE_REJECTED",
+    "historical_gate_sha256": "a88cc2777ec8ea31c4d96d7b70ee57c429d5e59d58b4345fefb43f80a1a8f9f6",
+    "test_meaning": "Historical modeled-geometry and artifact-consistency results for the rejected candidate only; no evidence of compliance with latest owner stock and hardware.",
+    "entry_documents_before_change": {
+      "README.md": {
+        "sha256": "b0b490892c2b315dc7bb7157d4c77828c61ad8ed6af00c5435b85e258039c41b",
+        "historical_copy": "variants/owner-stock-rebuild/history/entry-docs-before-owner-correction/README.md"
+      },
+      "README-FIRST.md": {
+        "sha256": "a828e511039f4a848bcefaca9910205f2c6b420de6dc7396b51de07c687b1d8a",
+        "historical_copy": "variants/owner-stock-rebuild/history/entry-docs-before-owner-correction/README-FIRST.md"
+      },
+      "variants/README.md": {
+        "sha256": "e6c9bfb92c06df2f44977d9f6b21aa69077603d00c15d92e2a7871c8b9fa286e",
+        "historical_copy": "variants/owner-stock-rebuild/history/entry-docs-before-owner-correction/variants-README.md"
+      }
+    }
+  },
+  "complete_machine_verified": false,
+  "fabrication_release": false,
+  "operating_release": false,
+  "latest_owner_clarifications": [
+    "like i noticed you wanted me to cnc the hdpe i cant do that.. ill just drill it",
+    "THE DUST SHOE ALSO HAS A LINIAR MOTOR TO SET Z ON THE DUST SHIELD.",
+    "THATS WHAT THAT POCKET IN THE FRONT. MOVES 50MM"
+  ]
+}

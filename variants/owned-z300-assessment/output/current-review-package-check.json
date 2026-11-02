@@ -1,0 +1,112 @@
+{
+  "study": "CURRENT_REVIEW_EVIDENCE_AND_REQUIREMENTS_BINDING",
+  "checks": {
+    "output/z300-fit-decision.json": {
+      "sha256": "be5696cde1975aa2523f126520782c624b72200ea9a2bd4d8b07307f09fed725",
+      "required_flag": "passed",
+      "result": true
+    },
+    "output/custom-joint-repair-check.json": {
+      "sha256": "938abdcbf26924dc5fcf5a763390f57ae64422accdf1c37aa0c0894b9ee4bbe5",
+      "required_flag": "passed",
+      "result": true
+    },
+    "output/front-stop-repair/front-stop-repair-check.json": {
+      "sha256": "da51c2cba52f18c396080013aa11f4139ea85171a775df013684542ac1d1d84f",
+      "required_flag": "passed",
+      "result": true
+    },
+    "output/front-stop-repair/front-stop-base-reference-check.json": {
+      "sha256": "2a211056452f9cffbd05fa80432e4850c7e1b9ed001b2ea7541e1e88bae0e6be",
+      "required_flag": "passed",
+      "result": true
+    },
+    "output/candidate-internal-continuous-check.json": {
+      "sha256": "b62ac91363aa252cc107e022f2b54ed66a2bc285251dccf206e74fbd707535e8",
+      "required_flag": "passed",
+      "result": true
+    },
+    "output/candidate-external-sweep-check.json": {
+      "sha256": "9e231d4e3a9bcae516f77b47c08773c7cfe92d5e2dc9059d41716627be368a9c",
+      "required_flag": "passed",
+      "result": true
+    },
+    "output/candidate-static-thread-check.json": {
+      "sha256": "561ba60dbd272ce344cf8d918165a6cbe23d72c7fcdebcb343cc6f8430880f2a",
+      "required_flag": "passed",
+      "result": true
+    },
+    "output/candidate-motion-evidence-manifest.json": {
+      "sha256": "bf4fa71c63d5fcdce25a85d3db1173561e6dba5774c2b49b164db13e1340ca2e",
+      "required_flag": "passed",
+      "result": true
+    },
+    "output/candidate-path-service-check.json": {
+      "sha256": "3b95adb53a0cc1d96833a478d787cf925b4cd295638300ae8a4e22887ae5d266",
+      "required_flag": "passed",
+      "result": true
+    },
+    "output/proposal-assemblies-v2/candidate-assembly-v2-check.json": {
+      "sha256": "47545238f3f1949446e4627726b080d2753da2a64417787a07ba17c221db0a98",
+      "required_flag": "passed",
+      "result": true
+    },
+    "output/owned-head-inspection.json": {
+      "sha256": "f08d95137bad36093467062346600410f2bd65bf66386c68c7a39dcc7f71191f",
+      "required_flag": "inspection_completed",
+      "result": true
+    },
+    "manufacturing/manufacturing-pack-check.json": {
+      "sha256": "e126ec24ba3a7b33c4fe47f01f5c3b8e651fa9c397c749ac6b52cf1ac7363fff",
+      "required_flag": "passed",
+      "result": true,
+      "counts": {
+        "source_takeoff_rows": {
+          "frame_takeoff": 99,
+          "motion_takeoff": 487,
+          "bed_takeoff": 123,
+          "shield_takeoff": 11,
+          "atc_takeoff": 344
+        },
+        "consolidated_rows": 1125,
+        "additive_requirement_rows": 1023,
+        "nonadditive_reference_rows": 102,
+        "new_procurement_requirement_rows": 648,
+        "unresolved_quantity_rows": 5,
+        "owned_stock_blank_allocations": 83,
+        "custom_STEP_index_rows": 174,
+        "selected_candidate_owned_blank_allocations": 27,
+        "linked_artifact_checks": 553
+      }
+    }
+  },
+  "verified_source_or_output_bindings": 882,
+  "manufacturing_artifacts_freshly_rechecked": 553,
+  "failures": [],
+  "passed": true,
+  "meaning_of_pass": "The listed scoped review evidence remains source/output consistent. This is not machine-design completion or a fabrication/operation release.",
+  "source_sha256": {
+    "variants/owned-z300-assessment/check_review_package.py": "a6334d7ca1cefa68b43338a2aa5a9b7c517b913ad5d5f871862a51dc422efa10",
+    "variants/owned-z300-assessment/README.md": "cbfe990ebb0960310cb61aaa63ec96e8696b6a38bd6b9796e2f2c6dbb60f452f",
+    "variants/owned-z300-assessment/STATUS.md": "45e91aad824ab3d859f5eff130c1a6ddff98e2718bcf40af39976a9239d94f36",
+    "variants/owned-z300-assessment/OWNER-HEAD-INTEGRATION.md": "0739368f6bc7b8b4464d5fffd17cc50b85c636402017dc999be7c79166e05477",
+    "variants/owned-z300-assessment/MOTION-PROOF.md": "4753cca35edab109f198a76110e6961abe96f334619bfb0b193f47749674f512",
+    "variants/owned-z300-assessment/PATH-SERVICE-PROOF.md": "3c72e9464efb4bdfbffaf84ea3f72600a029165ae4e43bedaf76926541e66cdb",
+    "variants/owned-z300-assessment/manufacturing/README.md": "794f79cebd24e299d71c52e14979d4a842e6914c85884ac93ceedc3de4b89d75",
+    "README-FIRST.md": "290a4270c7bd846607a6313ee4d1b371154e922a6fd700399b521bfeede543d3",
+    "variants/owned-z300-assessment/candidate-requirements.json": "ae28be7cc8eea447bae0190f4674210aa6ae2e95073199adb5cac038bb4acdd8"
+  },
+  "unresolved_CAD": [
+    "Owned clamp and working whole-boot assembly machine integration",
+    "Full drill-only HDPE/uncut20100 bed, support, retention and in-footprint conversion",
+    "Inherited8080 gantry member versus4080-only preference",
+    "Previously selected magazine slide reconciliation and exact ATC interfaces"
+  ],
+  "design_complete": false,
+  "fabrication_release": false,
+  "operating_release": false,
+  "full_300_Z_operating_domain_qualified": false,
+  "physical_rigidity_qualified": false,
+  "complete_delivered_budget_verified": false,
+  "separate_4x8_completed": false
+}

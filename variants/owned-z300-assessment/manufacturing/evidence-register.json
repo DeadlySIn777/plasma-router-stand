@@ -1,0 +1,193 @@
+{
+  "schema": 1,
+  "path_basis": "Repository-relative paths unless explicitly called alternate local project evidence",
+  "sources": {
+    "frame_takeoff": {
+      "file": "variants/extrusion-reengineered/review/frame-fabrication.csv",
+      "sha256": "f108c8210eb647268c7ad63836cd1b3c96f46f3e5ed7e78bcb951d2baff9988f"
+    },
+    "frame_manifest": {
+      "file": "variants/extrusion-reengineered/review/frame-fabrication-metadata.json",
+      "sha256": "afdea50597619c317c732e96b307fda49dff4fbb73dffe8af98473898e34c530"
+    },
+    "motion_takeoff": {
+      "file": "variants/extrusion-reengineered/motion-fabrication.csv",
+      "sha256": "59630eda41ede28a0345f729f962243977876b5b2ae9d1520f9c935a4d6243ca"
+    },
+    "bed_takeoff": {
+      "file": "variants/extrusion-reengineered/review/bed-fabrication.csv",
+      "sha256": "d38d3c79438d46c80e36c1dc3a48ee1b62caeb5fc0ef9e36632d531a99108d0d"
+    },
+    "bed_manifest": {
+      "file": "variants/extrusion-reengineered/review/bed-manufacturing-check.json",
+      "sha256": "76430eb4ea5c7d615c10066a2bc9d7a79d1dfd3fdf29553446ad7245a75ffd71"
+    },
+    "bed_takeoff_manifest": {
+      "file": "variants/extrusion-reengineered/review/bed-fabrication-metadata.json",
+      "sha256": "8281e1b21ce0184604fcc4ed6ca37ad4bfaecaf6d6c587f2aeafc628e5d58fae"
+    },
+    "shield_takeoff": {
+      "file": "variants/extrusion-reengineered/review/shield-fabrication.csv",
+      "sha256": "b3b82891c651dc55e4743d75cdbba2c87f88c0bac14405151dc7fec2251b8fff"
+    },
+    "shield_manifest": {
+      "file": "variants/extrusion-reengineered/review/shield-manufacturing.json",
+      "sha256": "7c5935b879c0e7fbb7639a1a7838b9c3272a7c038a34248ca50390e06bc8f6df"
+    },
+    "atc_takeoff": {
+      "file": "variants/extrusion-reengineered/review/atc-fabrication.csv",
+      "sha256": "308ebe9de93c0150f0752cc31ab325cb2f9d154a15312c181e3d74f47f3aec4c"
+    },
+    "atc_manifest": {
+      "file": "variants/extrusion-reengineered/review/atc-manufacturing.json",
+      "sha256": "ac8b22cb76277f8c96f30238b9660eacb7f1d2aad29f47daabb91b134a268329"
+    },
+    "owned_stock_nest": {
+      "file": "variants/extrusion-reengineered/review/owned-stock-check.json",
+      "sha256": "24ca881ebf0f927e01517cb33231b667a1c580470b5a391a626aeaeba3ec7c81"
+    },
+    "custom_index": {
+      "file": "variants/extrusion-reengineered/fabrication/custom-part-index.csv",
+      "sha256": "e41e89af3a454328c74de9497f574a03cd30d9cd779c76463e0efd43c4f377d0"
+    },
+    "custom_manifest": {
+      "file": "variants/extrusion-reengineered/review/custom-parts-check.json",
+      "sha256": "8ee12f19f43be404f996db02766c1a5ded9b39c6d7a8ff02b9d7b8055670134e"
+    },
+    "profile_nest": {
+      "file": "variants/extrusion-reengineered/review/profile-nesting.json",
+      "sha256": "01e3c37c40c2eeb20784794d19d1ae16b2e0fd70fa371e361954f33ab94b3878"
+    },
+    "steel_nest": {
+      "file": "variants/extrusion-reengineered/review/steel-nesting.json",
+      "sha256": "8c467ee0aa39251c9f5fedf291d1a46f64c32c57b8e897009585f9b99132b9f3"
+    },
+    "owned_Z_evidence": {
+      "file": "variants/owned-z300-assessment/owned-hardware-evidence.json",
+      "sha256": "2373580dbfc1fa149b43a9f2db7bc115bc2b2f8b67defbccf1b9ef93db51026a"
+    },
+    "custom_repair_manifest": {
+      "file": "variants/owned-z300-assessment/output/custom-joint-repair-check.json",
+      "sha256": "938abdcbf26924dc5fcf5a763390f57ae64422accdf1c37aa0c0894b9ee4bbe5"
+    },
+    "custom_repair_source": {
+      "file": "variants/owned-z300-assessment/custom_joint_repair.py",
+      "sha256": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785"
+    },
+    "Z300_overlay_source": {
+      "file": "variants/owned-z300-assessment/z300_fit_study.py",
+      "sha256": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4"
+    },
+    "carrier_STEP": {
+      "file": "variants/owned-z300-assessment/output/Z_CARRIER_RELIEVED_CANDIDATE.step",
+      "sha256": "658fc99cb0b733e57e4221413a8d5f3bca5aa3704f5bb94e910e993e5a4537fb"
+    },
+    "support_STEP": {
+      "file": "variants/owned-z300-assessment/output/X_LINK_SUPPORT_D37_CANDIDATE.step",
+      "sha256": "3e5debbeed24700bef0817d63fca9e53e272051374af73d1a4eb7444d22d3f2f"
+    },
+    "source_motion_details": {
+      "file": "output/release-review/RevE-ENGINEERING/motion_details.py",
+      "sha256": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d"
+    },
+    "source_motion_finish": {
+      "file": "output/release-review/RevE-ENGINEERING/motion_finish.py",
+      "sha256": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f"
+    },
+    "source_motion_integration": {
+      "file": "variants/extrusion-reengineered/motion.py",
+      "sha256": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50"
+    },
+    "front_stop_repair_source": {
+      "file": "variants/owned-z300-assessment/front_stop_repair.py",
+      "sha256": "5006c52b713dd58a1f73f98e1075e5e4fc76ecdb9c82711a20ae66e9742278c0"
+    },
+    "front_stop_repair_manifest": {
+      "file": "variants/owned-z300-assessment/output/front-stop-repair/front-stop-repair-check.json",
+      "sha256": "da51c2cba52f18c396080013aa11f4139ea85171a775df013684542ac1d1d84f"
+    },
+    "front_stop_details_source": {
+      "file": "variants/owned-z300-assessment/front_stop_details.py",
+      "sha256": "7ad3ce45a460c0840d1df24c3344cf3b820394b5234081b73d5b792a85293e81"
+    },
+    "front_stop_operation_manifest": {
+      "file": "variants/owned-z300-assessment/output/front-stop-repair/front-stop-base-reference-check.json",
+      "sha256": "2a211056452f9cffbd05fa80432e4850c7e1b9ed001b2ea7541e1e88bae0e6be"
+    },
+    "owner_head_basis": {
+      "file": "variants/owned-z300-assessment/sources/owned-head/recovered-owner-basis.json",
+      "sha256": "5fe8aec0abf344e0793a1de92a2276e302db7d45496f3f636642e0c427c3bfdc"
+    },
+    "owner_working_boot": {
+      "file": "variants/owned-z300-assessment/sources/owned-head/owner-working-boot.json",
+      "sha256": "69503af028789fa48e38c1b5d2451c04ac0e752b5195f948e4af9daaa644a6aa"
+    },
+    "owner_head_decisions": {
+      "file": "variants/owned-z300-assessment/sources/owned-head/owner-decisions.json",
+      "sha256": "f996fbf6aac86a0ce1c32cf2530c33b8f4c005ac4e21132c8e6a417b7f541b25"
+    },
+    "owner_actuator_selection": {
+      "file": "variants/owned-z300-assessment/sources/owned-head/owner-actuator-selection.json",
+      "sha256": "4441da633745fa5c1170706454fa6991e24695a599bf4765743022d10fc8b66f"
+    },
+    "owner_clamp_STEP": {
+      "file": "variants/owned-z300-assessment/sources/owned-head/R10 - original uncut 65 mm spindle clamp.step",
+      "sha256": "506d12b3f749db3eeec03e133b519fd93e45ff1b6cb80bd8fa568d3fb0dba1cb"
+    },
+    "owner_boot_STEP": {
+      "file": "variants/owned-z300-assessment/sources/owned-head/Spindle dust boot.step",
+      "sha256": "3716855cf25a308de3db696ae827578d7803bfe4665fd1a6535f311a5246a044"
+    },
+    "candidate_requirements": {
+      "file": "variants/owned-z300-assessment/candidate-requirements.json",
+      "sha256": "ae28be7cc8eea447bae0190f4674210aa6ae2e95073199adb5cac038bb4acdd8"
+    },
+    "owner_head_integration_note": {
+      "file": "variants/owned-z300-assessment/OWNER-HEAD-INTEGRATION.md",
+      "sha256": "0739368f6bc7b8b4464d5fffd17cc50b85c636402017dc999be7c79166e05477"
+    }
+  },
+  "source_snapshots": {
+    "frame_takeoff": {
+      "file": "variants/owned-z300-assessment/manufacturing/source-evidence/XR2_SOURCE_ONLY_frame_takeoff.csv",
+      "sha256": "f108c8210eb647268c7ad63836cd1b3c96f46f3e5ed7e78bcb951d2baff9988f",
+      "matches_source": true,
+      "role": "EXACT_BASELINE_SOURCE_EVIDENCE_NOT_AN_ADDITIONAL_PURCHASE_LIST"
+    },
+    "motion_takeoff": {
+      "file": "variants/owned-z300-assessment/manufacturing/source-evidence/XR2_SOURCE_ONLY_motion_takeoff.csv",
+      "sha256": "59630eda41ede28a0345f729f962243977876b5b2ae9d1520f9c935a4d6243ca",
+      "matches_source": true,
+      "role": "EXACT_BASELINE_SOURCE_EVIDENCE_NOT_AN_ADDITIONAL_PURCHASE_LIST"
+    },
+    "bed_takeoff": {
+      "file": "variants/owned-z300-assessment/manufacturing/source-evidence/XR2_SOURCE_ONLY_bed_takeoff.csv",
+      "sha256": "d38d3c79438d46c80e36c1dc3a48ee1b62caeb5fc0ef9e36632d531a99108d0d",
+      "matches_source": true,
+      "role": "EXACT_BASELINE_SOURCE_EVIDENCE_NOT_AN_ADDITIONAL_PURCHASE_LIST"
+    },
+    "shield_takeoff": {
+      "file": "variants/owned-z300-assessment/manufacturing/source-evidence/XR2_SOURCE_ONLY_shield_takeoff.csv",
+      "sha256": "b3b82891c651dc55e4743d75cdbba2c87f88c0bac14405151dc7fec2251b8fff",
+      "matches_source": true,
+      "role": "EXACT_BASELINE_SOURCE_EVIDENCE_NOT_AN_ADDITIONAL_PURCHASE_LIST"
+    },
+    "atc_takeoff": {
+      "file": "variants/owned-z300-assessment/manufacturing/source-evidence/XR2_SOURCE_ONLY_atc_takeoff.csv",
+      "sha256": "308ebe9de93c0150f0752cc31ab325cb2f9d154a15312c181e3d74f47f3aec4c",
+      "matches_source": true,
+      "role": "EXACT_BASELINE_SOURCE_EVIDENCE_NOT_AN_ADDITIONAL_PURCHASE_LIST"
+    },
+    "atc_manifest": {
+      "file": "variants/owned-z300-assessment/manufacturing/source-evidence/XR2_SOURCE_ONLY_atc_manifest.json",
+      "sha256": "ac8b22cb76277f8c96f30238b9660eacb7f1d2aad29f47daabb91b134a268329",
+      "matches_source": true,
+      "role": "EXACT_BASELINE_SOURCE_EVIDENCE_NOT_AN_ADDITIONAL_PURCHASE_LIST"
+    }
+  },
+  "latest_owner_statement_evidence": "Current conversation; privacy-minimized interpretation in ownership-decisions.json",
+  "source_category_rule": "Original source category/quantity/owned/procure remain separate columns; candidate decisions never rewrite source evidence.",
+  "baseline_modified": false,
+  "CAD_modified": false,
+  "prices_included": false
+}

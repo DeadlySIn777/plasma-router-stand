@@ -1,0 +1,1054 @@
+{
+  "study": "CANDIDATE_SAME_CLASS_CUSTOM_INTERSECTION_ENUMERATION",
+  "source_sha256": {
+    "variants/owned-z300-assessment/candidate_static_threads.py": "f721c4324425bad7e4b939297582ff3e588420a02eaf7dd4753c7c486da2f27c",
+    "variants/owned-z300-assessment/candidate_motion_factory.py": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
+    "variants/owned-z300-assessment/front_stop_repair.py": "5006c52b713dd58a1f73f98e1075e5e4fc76ecdb9c82711a20ae66e9742278c0",
+    "variants/owned-z300-assessment/custom_joint_repair.py": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/owned-z300-assessment/owned-hardware-evidence.json": "2373580dbfc1fa149b43a9f2db7bc115bc2b2f8b67defbccf1b9ef93db51026a",
+    "variants/extrusion-reengineered/motion-fabrication.csv": "59630eda41ede28a0345f729f962243977876b5b2ae9d1520f9c935a4d6243ca",
+    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "variants/extrusion-reengineered/bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants/extrusion-reengineered/shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
+    "variants/extrusion-reengineered/atc.py": "3fd018d7817fbc7652f07f93e6dded23e7bc84c66c2994cf071a9bb50c70ed1a",
+    "variants/extrusion-reengineered/build.py": "6825d593b1cd1ec67a492cbb2089520304e98cbbc3d17a1123db4fd316d0b69f",
+    "variants/extrusion-reengineered/material_cover.py": "60f490eb392c24b677d818c0977ac24a316e7261886882b423bf4be7f46f6919",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  },
+  "states": {
+    "WOOD": {
+      "exact_pairs": 396,
+      "nominal_thread_dispositions": [],
+      "unresolved": [],
+      "seat_spigot_annulus_checks": [],
+      "same_class_custom_clear_except_specific_nominal_threads": true
+    },
+    "PLASMA": {
+      "exact_pairs": 546,
+      "nominal_thread_dispositions": [
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_1_45",
+          "volume_mm3": 20.06692307480464,
+          "intersection_bounds_mm": [
+            563.0,
+            644.6749999999998,
+            1026.0,
+            567.0,
+            649.6749999999998,
+            1030.0
+          ],
+          "inherited_baseline_volume_mm3": 20.06692307480464,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_1_65",
+          "volume_mm3": 20.066923074804585,
+          "intersection_bounds_mm": [
+            583.0,
+            644.6749999999998,
+            1026.0,
+            587.0,
+            649.6749999999998,
+            1030.0
+          ],
+          "inherited_baseline_volume_mm3": 20.066923074804585,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_2_45",
+          "volume_mm3": 20.06692307480464,
+          "intersection_bounds_mm": [
+            563.0,
+            644.6749999999998,
+            1144.0,
+            567.0,
+            649.6749999999998,
+            1148.0
+          ],
+          "inherited_baseline_volume_mm3": 20.06692307480464,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_BAR_2_65",
+          "volume_mm3": 20.066923074804585,
+          "intersection_bounds_mm": [
+            583.0,
+            644.6749999999998,
+            1144.0,
+            587.0,
+            649.6749999999998,
+            1148.0
+          ],
+          "inherited_baseline_volume_mm3": 20.066923074804585,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_STOP_49",
+          "volume_mm3": 18.160565382698096,
+          "intersection_bounds_mm": [
+            567.0,
+            644.6749999999998,
+            1075.0,
+            571.0,
+            649.1999999999998,
+            1079.0
+          ],
+          "inherited_baseline_volume_mm3": 18.160565382698096,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "I_HEAD_STOP_61",
+          "volume_mm3": 18.160565382698096,
+          "intersection_bounds_mm": [
+            579.0,
+            644.6749999999998,
+            1075.0,
+            583.0,
+            649.1999999999998,
+            1079.0
+          ],
+          "inherited_baseline_volume_mm3": 18.160565382698096,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "XR_DROP_M6x16_LOWER_1",
+          "volume_mm3": 80.34623211555908,
+          "intersection_bounds_mm": [
+            527.0,
+            644.8999999999999,
+            1041.0,
+            533.0,
+            654.1999999999998,
+            1047.0
+          ],
+          "inherited_baseline_volume_mm3": 80.34623211555908,
+          "actual_thread_fit_qualified": false,
+          "disposition": "EXACT_CUSTOM_BACKPLATE_M6_MOUNT_THREAD",
+          "source_reason": "Exactly numbered lower custom M6 mounting screw into the existing D5 pilot of I_HEAD_BACKPLATE, per _add_plasma and MOUNT_PATTERN."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "XR_DROP_M6x16_LOWER_2",
+          "volume_mm3": 80.34623211555908,
+          "intersection_bounds_mm": [
+            527.0,
+            644.8999999999999,
+            1067.0,
+            533.0,
+            654.1999999999998,
+            1073.0
+          ],
+          "inherited_baseline_volume_mm3": 80.34623211555908,
+          "actual_thread_fit_qualified": false,
+          "disposition": "EXACT_CUSTOM_BACKPLATE_M6_MOUNT_THREAD",
+          "source_reason": "Exactly numbered lower custom M6 mounting screw into the existing D5 pilot of I_HEAD_BACKPLATE, per _add_plasma and MOUNT_PATTERN."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "XR_DROP_M6x16_LOWER_3",
+          "volume_mm3": 80.34623211555908,
+          "intersection_bounds_mm": [
+            617.0,
+            644.8999999999999,
+            1041.0,
+            623.0,
+            654.1999999999998,
+            1047.0
+          ],
+          "inherited_baseline_volume_mm3": 80.34623211555908,
+          "actual_thread_fit_qualified": false,
+          "disposition": "EXACT_CUSTOM_BACKPLATE_M6_MOUNT_THREAD",
+          "source_reason": "Exactly numbered lower custom M6 mounting screw into the existing D5 pilot of I_HEAD_BACKPLATE, per _add_plasma and MOUNT_PATTERN."
+        },
+        {
+          "a": "I_HEAD_BACKPLATE",
+          "b": "XR_DROP_M6x16_LOWER_4",
+          "volume_mm3": 80.34623211555908,
+          "intersection_bounds_mm": [
+            617.0,
+            644.8999999999999,
+            1067.0,
+            623.0,
+            654.1999999999998,
+            1073.0
+          ],
+          "inherited_baseline_volume_mm3": 80.34623211555908,
+          "actual_thread_fit_qualified": false,
+          "disposition": "EXACT_CUSTOM_BACKPLATE_M6_MOUNT_THREAD",
+          "source_reason": "Exactly numbered lower custom M6 mounting screw into the existing D5 pilot of I_HEAD_BACKPLATE, per _add_plasma and MOUNT_PATTERN."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_FLOAT_SWITCH_FOOT_0",
+          "volume_mm3": 11.285189860316871,
+          "intersection_bounds_mm": [
+            521.5,
+            619.6749999999998,
+            1145.8,
+            524.5,
+            624.8999999999999,
+            1148.8
+          ],
+          "inherited_baseline_volume_mm3": 11.285189860316871,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_FLOAT_SWITCH_FOOT_1",
+          "volume_mm3": 11.285189860316864,
+          "intersection_bounds_mm": [
+            541.5,
+            619.6749999999998,
+            1145.8,
+            544.5,
+            624.8999999999999,
+            1148.8
+          ],
+          "inherited_baseline_volume_mm3": 11.285189860316864,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_LEAD_84",
+          "volume_mm3": 8.639379797371744,
+          "intersection_bounds_mm": [
+            602.5,
+            619.6749999999998,
+            1144.5,
+            605.5,
+            623.6749999999998,
+            1147.5
+          ],
+          "inherited_baseline_volume_mm3": 8.639379797371744,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_LEAD_100",
+          "volume_mm3": 8.639379797371744,
+          "intersection_bounds_mm": [
+            618.5,
+            619.6749999999998,
+            1144.5,
+            621.5,
+            623.6749999999998,
+            1147.5
+          ],
+          "inherited_baseline_volume_mm3": 8.639379797371744,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CROSSBAR_2",
+          "b": "I_HEAD_TETHER_FIXED",
+          "volume_mm3": 16.05353845984383,
+          "intersection_bounds_mm": [
+            573.0,
+            619.6749999999998,
+            1142.0,
+            577.0,
+            623.6749999999998,
+            1146.0
+          ],
+          "inherited_baseline_volume_mm3": 16.05353845984383,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_25",
+          "b": "I_HEAD_ROD_TOP_25",
+          "volume_mm3": 40.13384614960947,
+          "intersection_bounds_mm": [
+            543.0,
+            630.1999999999998,
+            1136.0,
+            547.0,
+            634.1999999999998,
+            1146.0
+          ],
+          "inherited_baseline_volume_mm3": 40.13384614960947,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_25",
+          "b": "I_HEAD_ROD_BOTTOM_25",
+          "volume_mm3": 40.133846149609454,
+          "intersection_bounds_mm": [
+            543.0,
+            630.1999999999998,
+            1028.0,
+            547.0,
+            634.1999999999998,
+            1038.0
+          ],
+          "inherited_baseline_volume_mm3": 40.133846149609454,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_85",
+          "b": "I_HEAD_ROD_TOP_85",
+          "volume_mm3": 40.13384614960947,
+          "intersection_bounds_mm": [
+            603.0,
+            630.1999999999998,
+            1136.0,
+            607.0,
+            634.1999999999998,
+            1146.0
+          ],
+          "inherited_baseline_volume_mm3": 40.13384614960947,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_ROD_85",
+          "b": "I_HEAD_ROD_BOTTOM_85",
+          "volume_mm3": 40.133846149609454,
+          "intersection_bounds_mm": [
+            603.0,
+            630.1999999999998,
+            1028.0,
+            607.0,
+            634.1999999999998,
+            1038.0
+          ],
+          "inherited_baseline_volume_mm3": 40.133846149609454,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_7_17",
+          "volume_mm3": 12.959069696058279,
+          "intersection_bounds_mm": [
+            525.5,
+            635.6999999999998,
+            1050.0,
+            528.5,
+            638.6999999999998,
+            1056.0
+          ],
+          "inherited_baseline_volume_mm3": 12.959069696058279,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_7_29",
+          "volume_mm3": 12.959069696058272,
+          "intersection_bounds_mm": [
+            525.5,
+            623.6999999999998,
+            1050.0,
+            528.5,
+            626.6999999999998,
+            1056.0
+          ],
+          "inherited_baseline_volume_mm3": 12.959069696058272,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_103_17",
+          "volume_mm3": 12.959069696058279,
+          "intersection_bounds_mm": [
+            621.5,
+            635.6999999999998,
+            1050.0,
+            624.5,
+            638.6999999999998,
+            1056.0
+          ],
+          "inherited_baseline_volume_mm3": 12.959069696058279,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_1_103_29",
+          "volume_mm3": 12.959069696058272,
+          "intersection_bounds_mm": [
+            621.5,
+            623.6999999999998,
+            1050.0,
+            624.5,
+            626.6999999999998,
+            1056.0
+          ],
+          "inherited_baseline_volume_mm3": 12.959069696058272,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_7_17",
+          "volume_mm3": 12.959069696058169,
+          "intersection_bounds_mm": [
+            525.5,
+            635.6999999999998,
+            1116.0,
+            528.5,
+            638.6999999999998,
+            1122.0
+          ],
+          "inherited_baseline_volume_mm3": 12.959069696058169,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_7_29",
+          "volume_mm3": 12.959069696058158,
+          "intersection_bounds_mm": [
+            525.5,
+            623.6999999999998,
+            1116.0,
+            528.5,
+            626.6999999999998,
+            1122.0
+          ],
+          "inherited_baseline_volume_mm3": 12.959069696058158,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_103_17",
+          "volume_mm3": 12.959069696058169,
+          "intersection_bounds_mm": [
+            621.5,
+            635.6999999999998,
+            1116.0,
+            624.5,
+            638.6999999999998,
+            1122.0
+          ],
+          "inherited_baseline_volume_mm3": 12.959069696058169,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAP_2_103_29",
+          "volume_mm3": 12.959069696058158,
+          "intersection_bounds_mm": [
+            621.5,
+            623.6999999999998,
+            1116.0,
+            624.5,
+            626.6999999999998,
+            1122.0
+          ],
+          "inherited_baseline_volume_mm3": 12.959069696058158,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_SEAT_CONE",
+          "volume_mm3": 24.080307689765714,
+          "intersection_bounds_mm": [
+            528.0,
+            620.1999999999998,
+            1060.0,
+            532.0,
+            626.1999999999998,
+            1064.0
+          ],
+          "inherited_baseline_volume_mm3": 24.080307689765714,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Integral M4 seat thread in matching tapped float body."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_SEAT_V",
+          "volume_mm3": 24.080307689765657,
+          "intersection_bounds_mm": [
+            618.0,
+            620.1999999999998,
+            1060.0,
+            622.0,
+            626.1999999999998,
+            1064.0
+          ],
+          "inherited_baseline_volume_mm3": 24.080307689765657,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Integral M4 seat thread in matching tapped float body."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_SEAT_FLAT",
+          "volume_mm3": 24.080307689765743,
+          "intersection_bounds_mm": [
+            573.0,
+            620.1999999999998,
+            1110.0,
+            577.0,
+            626.1999999999998,
+            1114.0
+          ],
+          "inherited_baseline_volume_mm3": 24.080307689765743,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Integral M4 seat thread in matching tapped float body."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_MAGNET_SCREW_1",
+          "volume_mm3": 24.882984612758364,
+          "intersection_bounds_mm": [
+            535.0,
+            620.1999999999998,
+            1108.0,
+            539.0,
+            626.3999999999999,
+            1112.0
+          ],
+          "inherited_baseline_volume_mm3": 24.882984612758364,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "M4 screw engages6.2mm in tapped carriage."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_MAGNET_SCREW_2",
+          "volume_mm3": 24.8829846127583,
+          "intersection_bounds_mm": [
+            611.0,
+            620.1999999999998,
+            1110.0,
+            615.0,
+            626.3999999999999,
+            1114.0
+          ],
+          "inherited_baseline_volume_mm3": 24.8829846127583,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "M4 screw engages6.2mm in tapped carriage."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_MAGNET_SCREW_3",
+          "volume_mm3": 24.882984612758378,
+          "intersection_bounds_mm": [
+            573.0,
+            620.1999999999998,
+            1060.0,
+            577.0,
+            626.3999999999999,
+            1064.0
+          ],
+          "inherited_baseline_volume_mm3": 24.882984612758378,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "M4 screw engages6.2mm in tapped carriage."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAM_91",
+          "volume_mm3": 12.959069696057627,
+          "intersection_bounds_mm": [
+            521.5,
+            620.1999999999998,
+            1111.5,
+            524.5,
+            626.1999999999998,
+            1114.5
+          ],
+          "inherited_baseline_volume_mm3": 12.959069696057627,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_CAM_96.5",
+          "volume_mm3": 12.959069696057627,
+          "intersection_bounds_mm": [
+            521.5,
+            620.1999999999998,
+            1117.0,
+            524.5,
+            626.1999999999998,
+            1120.0
+          ],
+          "inherited_baseline_volume_mm3": 12.959069696057627,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_LEFT_FOOT_0",
+          "volume_mm3": 8.63937979737175,
+          "intersection_bounds_mm": [
+            521.5,
+            620.1999999999998,
+            1079.5,
+            524.5,
+            624.1999999999998,
+            1082.5
+          ],
+          "inherited_baseline_volume_mm3": 8.63937979737175,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_LEFT_FOOT_1",
+          "volume_mm3": 8.639379797371747,
+          "intersection_bounds_mm": [
+            541.5,
+            620.1999999999998,
+            1079.5,
+            544.5,
+            624.1999999999998,
+            1082.5
+          ],
+          "inherited_baseline_volume_mm3": 8.639379797371747,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_RIGHT_FOOT_0",
+          "volume_mm3": 8.639379797371744,
+          "intersection_bounds_mm": [
+            605.5,
+            620.1999999999998,
+            1079.5,
+            608.5,
+            624.1999999999998,
+            1082.5
+          ],
+          "inherited_baseline_volume_mm3": 8.639379797371744,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_RIGHT_FOOT_1",
+          "volume_mm3": 8.639379797371744,
+          "intersection_bounds_mm": [
+            625.5,
+            620.1999999999998,
+            1079.5,
+            628.5,
+            624.1999999999998,
+            1082.5
+          ],
+          "inherited_baseline_volume_mm3": 8.639379797371744,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_TOP_FOOT_0",
+          "volume_mm3": 8.63937979737175,
+          "intersection_bounds_mm": [
+            565.5,
+            620.1999999999998,
+            1113.5,
+            568.5,
+            624.1999999999998,
+            1116.5
+          ],
+          "inherited_baseline_volume_mm3": 8.63937979737175,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_CARRIAGE",
+          "b": "I_HEAD_PRESENCE_TOP_FOOT_1",
+          "volume_mm3": 8.639379797371744,
+          "intersection_bounds_mm": [
+            595.5,
+            620.1999999999998,
+            1113.5,
+            598.5,
+            624.1999999999998,
+            1116.5
+          ],
+          "inherited_baseline_volume_mm3": 8.639379797371744,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BUTTON_CONE",
+          "b": "I_HEAD_BUTTON_SCREW_CONE",
+          "volume_mm3": 7.88343406510163,
+          "intersection_bounds_mm": [
+            528.5,
+            610.1999999999998,
+            1060.5,
+            531.5,
+            613.8499999999998,
+            1063.5
+          ],
+          "inherited_baseline_volume_mm3": 7.88343406510163,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BUTTON_V",
+          "b": "I_HEAD_BUTTON_SCREW_V",
+          "volume_mm3": 7.88343406510163,
+          "intersection_bounds_mm": [
+            618.5,
+            610.1999999999998,
+            1060.5,
+            621.5,
+            613.8499999999998,
+            1063.5
+          ],
+          "inherited_baseline_volume_mm3": 7.88343406510163,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_BUTTON_FLAT",
+          "b": "I_HEAD_BUTTON_SCREW_FLAT",
+          "volume_mm3": 7.88343406510163,
+          "intersection_bounds_mm": [
+            573.5,
+            610.1999999999998,
+            1110.5,
+            576.5,
+            613.8499999999998,
+            1113.5
+          ],
+          "inherited_baseline_volume_mm3": 7.88343406510163,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_RELEASE_PLATE",
+          "b": "I_HEAD_SPLASH_5",
+          "volume_mm3": 9.719302272043294,
+          "intersection_bounds_mm": [
+            523.5,
+            603.8499999999998,
+            1040.0,
+            526.5,
+            608.3499999999998,
+            1043.0
+          ],
+          "inherited_baseline_volume_mm3": 9.719302272043294,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_RELEASE_PLATE",
+          "b": "I_HEAD_SPLASH_105",
+          "volume_mm3": 9.719302272043294,
+          "intersection_bounds_mm": [
+            623.5,
+            603.8499999999998,
+            1040.0,
+            626.5,
+            608.3499999999998,
+            1043.0
+          ],
+          "inherited_baseline_volume_mm3": 9.719302272043294,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_RELEASE_PLATE",
+          "b": "I_HEAD_TETHER_RELEASE",
+          "volume_mm3": 16.05353845984394,
+          "intersection_bounds_mm": [
+            612.0,
+            603.8499999999998,
+            1120.0,
+            616.0,
+            607.8499999999998,
+            1124.0
+          ],
+          "inherited_baseline_volume_mm3": 16.05353845984394,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_25_35",
+          "volume_mm3": 46.755930764295215,
+          "intersection_bounds_mm": [
+            543.0,
+            592.1999999999998,
+            1055.0,
+            547.0,
+            603.8499999999998,
+            1059.0
+          ],
+          "inherited_baseline_volume_mm3": 46.755930764295215,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_25_55",
+          "volume_mm3": 46.755930764295215,
+          "intersection_bounds_mm": [
+            543.0,
+            592.1999999999998,
+            1075.0,
+            547.0,
+            603.8499999999998,
+            1079.0
+          ],
+          "inherited_baseline_volume_mm3": 46.755930764295215,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_85_35",
+          "volume_mm3": 46.7559307642949,
+          "intersection_bounds_mm": [
+            603.0,
+            592.1999999999998,
+            1055.0,
+            607.0,
+            603.8499999999998,
+            1059.0
+          ],
+          "inherited_baseline_volume_mm3": 46.7559307642949,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_MOUNT_85_55",
+          "volume_mm3": 46.7559307642949,
+          "intersection_bounds_mm": [
+            603.0,
+            592.1999999999998,
+            1075.0,
+            607.0,
+            603.8499999999998,
+            1079.0
+          ],
+          "inherited_baseline_volume_mm3": 46.7559307642949,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_PINCH_15",
+          "volume_mm3": 38.12715384212906,
+          "intersection_bounds_mm": [
+            533.0,
+            573.8499999999998,
+            1065.0,
+            537.0,
+            583.3499999999998,
+            1069.0
+          ],
+          "inherited_baseline_volume_mm3": 38.12715384212906,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_CLAMP_REAR",
+          "b": "I_HEAD_CLAMP_PINCH_95",
+          "volume_mm3": 38.12715384212896,
+          "intersection_bounds_mm": [
+            613.0,
+            573.8499999999998,
+            1065.0,
+            617.0,
+            583.3499999999998,
+            1069.0
+          ],
+          "inherited_baseline_volume_mm3": 38.12715384212896,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_FLOAT_SWITCH_BRACKET",
+          "b": "I_HEAD_FLOAT_SWITCH_M3",
+          "volume_mm3": 10.151271261912248,
+          "intersection_bounds_mm": [
+            534.15,
+            613.1999999999998,
+            1137.3,
+            537.15,
+            616.1999999999998,
+            1142.0
+          ],
+          "inherited_baseline_volume_mm3": 10.151271261912248,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PRESENCE_LEFT_BRACKET",
+          "b": "I_HEAD_PRESENCE_LEFT_M3",
+          "volume_mm3": 10.151271261912244,
+          "intersection_bounds_mm": [
+            534.15,
+            614.4999999999998,
+            1086.3,
+            537.15,
+            617.4999999999998,
+            1091.0
+          ],
+          "inherited_baseline_volume_mm3": 10.151271261912244,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PRESENCE_RIGHT_BRACKET",
+          "b": "I_HEAD_PRESENCE_RIGHT_M3",
+          "volume_mm3": 10.151271261912234,
+          "intersection_bounds_mm": [
+            625.65,
+            614.4999999999998,
+            1086.3,
+            628.65,
+            617.4999999999998,
+            1091.0
+          ],
+          "inherited_baseline_volume_mm3": 10.151271261912234,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        },
+        {
+          "a": "I_HEAD_PRESENCE_TOP_BRACKET",
+          "b": "I_HEAD_PRESENCE_TOP_M3",
+          "volume_mm3": 10.151271261912376,
+          "intersection_bounds_mm": [
+            586.5,
+            614.4999999999998,
+            1120.3,
+            589.5,
+            617.4999999999998,
+            1125.0
+          ],
+          "inherited_baseline_volume_mm3": 10.151271261912376,
+          "actual_thread_fit_qualified": false,
+          "disposition": "SOURCE_EXACT_HEAD_THREAD_PAIR",
+          "source_reason": "Nominal screw thread engagement in tapped hole; pilot solid has thread minor diameter."
+        }
+      ],
+      "unresolved": [],
+      "seat_spigot_annulus_checks": [
+        {
+          "seat": "I_HEAD_SEAT_CONE",
+          "carriage": "I_HEAD_FLOAT_CARRIAGE",
+          "spigot_major_diameter_mm": 4,
+          "modeled_pilot_diameter_mm": 3.3,
+          "engaged_length_mm": 6,
+          "analytic_nominal_thread_annulus_mm3": 24.080307689765768,
+          "actual_intersection_mm3": 24.080307689765714,
+          "exact_annulus_symmetric_difference_mm3": 0.0,
+          "passed": true,
+          "interpretation": "The entire positive intersection is exactly the intended integral M4 spigot/pilot annulus. Cone/V/flat contact geometry contributes no positive intersection with the carriage. This does not qualify contact polish, preload or actual thread fit."
+        },
+        {
+          "seat": "I_HEAD_SEAT_V",
+          "carriage": "I_HEAD_FLOAT_CARRIAGE",
+          "spigot_major_diameter_mm": 4,
+          "modeled_pilot_diameter_mm": 3.3,
+          "engaged_length_mm": 6,
+          "analytic_nominal_thread_annulus_mm3": 24.080307689765768,
+          "actual_intersection_mm3": 24.080307689765657,
+          "exact_annulus_symmetric_difference_mm3": 0.0,
+          "passed": true,
+          "interpretation": "The entire positive intersection is exactly the intended integral M4 spigot/pilot annulus. Cone/V/flat contact geometry contributes no positive intersection with the carriage. This does not qualify contact polish, preload or actual thread fit."
+        },
+        {
+          "seat": "I_HEAD_SEAT_FLAT",
+          "carriage": "I_HEAD_FLOAT_CARRIAGE",
+          "spigot_major_diameter_mm": 4,
+          "modeled_pilot_diameter_mm": 3.3,
+          "engaged_length_mm": 6,
+          "analytic_nominal_thread_annulus_mm3": 24.080307689765768,
+          "actual_intersection_mm3": 24.080307689765743,
+          "exact_annulus_symmetric_difference_mm3": 0.0,
+          "passed": true,
+          "interpretation": "The entire positive intersection is exactly the intended integral M4 spigot/pilot annulus. Cone/V/flat contact geometry contributes no positive intersection with the carriage. This does not qualify contact polish, preload or actual thread fit."
+        }
+      ],
+      "same_class_custom_clear_except_specific_nominal_threads": true
+    }
+  },
+  "scope": "All pairs within each declared motion class involving at least one custom part, at the reference pose. Rigid common-class translations preserve these intersections; independent source-law roller motion is covered by the separate internal continuous checker. This does not declare all purchased internal envelopes physically clear.",
+  "nominal_thread_rule": "Exact pair lookup from make_head().allowed_intersections, restricted to a reason describing a thread/spigot/tapped mating, plus exactly four XR_DROP_M6x16_LOWER_i to I_HEAD_BACKPLATE mounting threads from _add_plasma. Every remaining positive pair is unresolved. Recorded intended thread-envelope material overlap is not proof of actual tap form, engagement or screw-tip clearance.",
+  "fabrication_release": false,
+  "physical_thread_fit_qualified": false,
+  "source_consistent_during_check": true,
+  "passed": true
+}

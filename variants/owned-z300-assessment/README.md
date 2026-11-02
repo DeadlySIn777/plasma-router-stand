@@ -1,5 +1,11 @@
 # Owned RATTMMOTOR ZBX80 — 300 mm travel
 
+**Not a finished machine: [current status and remaining design work](STATUS.md).**
+The supplied owner clamp/powered boot and full drill-only HDPE/20100 bed are
+not yet represented by this provisional head/cassette layout. The previously
+selected magazine slide also needs explicit integration/disposition. Read the
+[recovered head note](OWNER-HEAD-INTEGRATION.md) before using any tooling files.
+
 The owner's September 30 purchase register already identifies **RATTMMOTOR
 ZBX80, 300 mm travel**. That record was in the other project copy and has now
 been recovered. The model family is known; it does not need to be supplied again.
@@ -43,11 +49,14 @@ loads still need verification.
 The image compares outer envelopes before the custom-joint repair described
 below. Use the proposal assemblies and repaired part files for those details.
 
-## Current proposal and evidence
+## Current review revision and evidence
 
-- [Full woodworking proposal](output/proposal-assemblies/Z300_STOCK_WORK200_CUSTOM_JOINT_PROPOSAL_WOOD.step)
-- [Full plasma proposal](output/proposal-assemblies/Z300_STOCK_WORK200_CUSTOM_JOINT_PROPOSAL_PLASMA.step)
-- [Assembly export, interface and source checks](output/proposal-assemblies/candidate-assembly-check.json)
+- [Latest full woodworking review](output/proposal-assemblies-v2/Z300_WORK200_JOINT_AND_STOP_REPAIRED_REVIEW_WOOD.step)
+- [Latest full plasma review](output/proposal-assemblies-v2/Z300_WORK200_JOINT_AND_STOP_REPAIRED_REVIEW_PLASMA.step)
+- [Latest assembly export, interface and source checks](output/proposal-assemblies-v2/candidate-assembly-v2-check.json)
+- [Scoped motion proof and contact dispositions](MOTION-PROOF.md)
+- [Current candidate conversion and service proof](PATH-SERVICE-PROOF.md)
+- [Unpriced manufacturing takeoff and holds](manufacturing/README.md)
 - [Selected bulk-fit decision](output/z300-fit-decision.json)
 - [Two-part repair check](output/custom-joint-repair-check.json)
 - [Machining detail and limits](RELIEF-DETAIL.md)
@@ -62,6 +71,13 @@ downstand edge. The new candidate has a bearing-floor through-relief and a
 37 mm integral downstand. Its carrier blank remains unchanged. The larger
 support billet remains new/unverified stock; no owned-stock credit is assumed.
 
+The latest revision also relieves the two front Y-stop bases around the
+conservative motor-bracket envelope. The matched forward clearance/tap axes
+and screws move from Y90 to Y105. Full head seats and landing material remain;
+the exact nominal gap is 0.5 mm. Reduced 35 mm bolt spacing, actual bracket
+dimensions and stop-load capacity remain qualification items. Earlier proposal
+assemblies are retained in `output/proposal-assemblies` as superseded evidence.
+
 The raw all-candidate study preserves its failed whole-part screen for the
 unneeded taller carrier. Exact comparison shows that interference was already
 present in the lower joint. The selected bulk-fit decision distinguishes that
@@ -70,7 +86,10 @@ corrected joint. Existing XR2 files remain unchanged as historical evidence.
 
 Reproduce with CadQuery Python: `z300_fit_study.py`,
 `verify_extension_contact.py`, `fit_decision.py`, `custom_joint_repair.py`, then
-`export_candidate_assembly.py`. The raw all-candidate study intentionally
+`export_candidate_assembly.py` for the earlier two-part revision. The latest
+review uses `front_stop_repair.py`, the shared `candidate_motion_factory.py`,
+the scoped motion/path checkers and `export_review_revision.py`.
+The raw all-candidate study intentionally
 returns nonzero for its retained custom-joint finding; inspect the selected
 decision and the repair report rather than treating it as a new Z300 clash.
 

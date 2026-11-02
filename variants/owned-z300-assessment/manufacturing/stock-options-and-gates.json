@@ -1,0 +1,56 @@
+{
+  "role": "NONADDITIVE_PURCHASE_PACKAGING_OPTIONS_FOR_EXISTING_REQUIREMENTS",
+  "prices_included": false,
+  "selected_stock_option": null,
+  "fabrication_release": false,
+  "chassis_4080": {
+    "cut_count": 19,
+    "finished_mm": 12357.4,
+    "option_stock_mm": {
+      "short_stock": 13500.0,
+      "long_stock": 13000.0
+    },
+    "source": "variants/extrusion-reengineered/review/profile-nesting.json",
+    "source_sha256": "01e3c37c40c2eeb20784794d19d1ae16b2e0fd70fa371e361954f33ab94b3878",
+    "note": "Choose one actual supplier option; no 4080 section/slot properties or cost inferred. Extra inherited gantry beam is separate."
+  },
+  "nominal_1p9_steel": {
+    "blank_count": 94,
+    "gross_blank_area_m2": 3.7653500415192447,
+    "options": {
+      "4x8": {
+        "sheet_count": 2,
+        "nominal_sheet_mm": [
+          2438.4,
+          1219.2
+        ]
+      },
+      "4x10": {
+        "sheet_count": 2,
+        "nominal_sheet_mm": [
+          3048.0,
+          1219.2
+        ]
+      },
+      "5x10": {
+        "sheet_count": 1,
+        "nominal_sheet_mm": [
+          3048.0,
+          1524.0
+        ]
+      }
+    },
+    "source": "variants/extrusion-reengineered/review/steel-nesting.json",
+    "source_sha256": "8c467ee0aa39251c9f5fedf291d1a46f64c32c57b8e897009585f9b99132b9f3",
+    "note": "One combined nest covers frame straps + bed + shields + ATC1.9 sheet. Other steel gauges/round stock/billets are separate. Do not add sheets on top of additive blank requirements."
+  },
+  "remaining_stock_gates": [
+    "Z carrier new stock 260x270.2x12.7 finished; support new integral billet156x120.8x43.35 finished; cleanup allowance held.",
+    "Two deep150x80x82.7 gantry billets and six clevis billets are new; not from the owned sheets.",
+    "ATC moving wings require two NEW1x3x6in6061 blanks; final fused thickness19.875mm cannot come from6.35mm plate.",
+    "Other ATC steel gauges,3.175mm motor tab, angles/round/EPDM/acetal/stainless and adhesive quantities need supplier-compatible stock packaging.",
+    "9mm core plywood/9.525 MDF rows are material lots, not an asserted one-sheet retail package; no complete raw-sheet nest claimed.",
+    "Owned83blank nest only: verify alloy/temper, actual dimensions, damage, cleanup, weld compatibility. No added owned material credit.",
+    "No pricing, tax, shipping, availability or USD1000 delivered-budget claim."
+  ]
+}
