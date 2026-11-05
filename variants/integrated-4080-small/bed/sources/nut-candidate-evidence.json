@@ -1,0 +1,39 @@
+{
+  "observed_date": "2026-11-05",
+  "status": "DIMENSIONAL_STANDARD_CANDIDATE_ONLY_NOT_A_PURCHASE_OR_FIT_RELEASE",
+  "candidate": "M5 x 0.8 DIN 562 thin square nut",
+  "modeled_requirement": {
+    "quantity": 80,
+    "across_flats_mm": 8.0,
+    "height_mm": 2.7,
+    "thread": "M5 x 0.8",
+    "cad_or_bom_changed_by_this_evidence": false
+  },
+  "published_dimensions": {
+    "across_flats_nominal_mm": 8.0,
+    "across_flats_minimum_mm": 7.64,
+    "across_flats_maximum_mm": 8.0,
+    "height_nominal_mm": 2.7,
+    "height_minimum_mm": 2.3,
+    "height_maximum_mm": 2.7,
+    "cited_product_material": "Class 4 zinc-plated steel"
+  },
+  "primary_sources": [
+    {
+      "publisher": "Aspen Fasteners",
+      "title": "M5-0.8 DIN 562 Metric Thin Square Nuts",
+      "url": "https://www.aspenfasteners.com/m5-0-8-din-562-metric-thin-square-nuts-class-4-steel-zinc-plated/",
+      "supports": "M5 x 0.8; AF 8 nominal, 7.64..8.00; height 2.3..2.7; cited class-4 material"
+    }
+  ],
+  "acceptance_still_required": [
+    "Actual received 20100 extrusion die, channel width/depth, lip geometry and end-loading access",
+    "Actual nut dimensions, rotational restraint in the channel, thread engagement and grade",
+    "Qualified slot-lip/nut/washer capacity and installation preload"
+  ],
+  "pricing_or_shipping_claimed": false,
+  "additional_purchase_quantity": 0,
+  "reason_no_additional_quantity": "This is a candidate for the existing 80-nut requirement, not 80 extra nuts.",
+  "fabrication_release": false,
+  "operating_release": false
+}

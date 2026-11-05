@@ -81,11 +81,11 @@ per-unit force, and the modeled housing/socket envelopes. The nominal mounting
 eye distance varies **484.875..688.269 mm**. Metal brackets adapt the actual ball
 stud neck; no substitute actuator is silently claimed owned.
 
-The ideal rear-edge force calculation gives **56–79 N**, but that edge rises
+The ideal rear-edge force calculation gives **58–81 N**, but that edge rises
 above normal reach. A separate reach screen transfers the grip at 35° to the
 actual mid-side edge at Y550, 650 mm from the hinge: maximum grip height is
-**1702 mm** and nominal force is **102–143 N**, for deck masses **62.3–66.7 kg**.
-With one effective spring that reachable-grip case rises to **311–351 N**.
+**1702 mm** and nominal force is **104–145 N**, for deck masses **62.5–66.9 kg**.
+With one effective spring that reachable-grip case rises to **313–353 N**.
 The model is static and excludes tools/workpieces/clamps; clear the bed before
 lifting. These figures do not qualify manual handling or an unmeasured assembly mass.
 The gas/stay assemblies' own changing weight is outside that ideal deck-force

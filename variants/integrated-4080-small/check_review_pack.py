@@ -15,6 +15,7 @@ SPECS=[
  ('atc/output/er11-retained-capacity-check.json','passed'),
  ('bed/output/stay-pivot-retention-check.json','passed'),
  ('bed/output/profile-fastener-retention-check.json','passed'),
+ ('bed/output/bed-handling-reach-screen.json','source_consistent'),
  ('bed/output/bed-local-check.json','passed'),
  ('bed/output/bed-machine-changeover-check.json','passed'),
  ('bed/output/pan-front-structure-screen.json','passed_without_composite_credit'),
@@ -31,7 +32,7 @@ def run():
   p=HERE/name;j=json.loads(p.read_text(encoding='utf-8-sig'));current=[]
   for n,h in j.get('source_sha256',j.get('source_bindings',{})).items():
    if isinstance(h,dict):n,h=h['file'],h['sha256']
-   candidates=[ROOT/Path(n),HERE/Path(n),p.parent/Path(n)]
+   candidates=[ROOT/Path(n),HERE/Path(n),p.parent/Path(n),p.parent.parent/Path(n)]
    source=next((x for x in candidates if x.is_file()),None)
    passed=source is not None and sha(source)==h
    row=dict(source=n,passed=passed);current.append(row)
