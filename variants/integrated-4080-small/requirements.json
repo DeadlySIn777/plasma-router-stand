@@ -1,25 +1,159 @@
 {
   "revision": "INTEGRATED_4080_SMALL",
-  "date": "2026-11-01",
+  "date": "2026-11-05",
   "scope": "Current small wood/carving and plasma table. Separate 4x8 and steel-machining studies are not qualified by this package.",
-  "owned_equipment_excluded_from_new_cost": ["X/Y/Z motion and stock motors", "extra guides and blocks", "drives/controller", "spindle/VFD kit", "existing working clamp/boot/actuator", "electronics enclosure", "CUT50/torch", "compressor", "CV15HS"],
-  "declared_raw_stock": ["one 304.8mm square x12.7mm aluminum", "one 304.8mm square x9.525mm aluminum"],
-  "new_parts_not_credited_owned": ["4080 chassis stock", "ten 1220mm 20100 profiles", "two full HDPE layers", "RapidChange magazine", "pan and slat stock", "unallocated custom billets and hardware"],
-  "required_motion_mm": {"X": 800, "Y": 1000, "owned_catalogue_Z": 300, "assessed_working_Z": 250, "magazine_slide": 200},
+  "owned_equipment_excluded_from_new_cost": [
+    "X/Y/Z motion and stock motors",
+    "extra guides and blocks",
+    "drives/controller",
+    "spindle/VFD kit",
+    "existing working clamp/boot/actuator",
+    "electronics enclosure",
+    "CUT50/torch",
+    "compressor",
+    "CV15HS",
+    "owner-reported selected 200mm magazine slide"
+  ],
+  "declared_raw_stock": [
+    "one 304.8mm square x12.7mm aluminum",
+    "one 304.8mm square x9.525mm aluminum"
+  ],
+  "new_parts_not_credited_owned": [
+    "4080 chassis stock",
+    "ten 1220mm 20100 profiles",
+    "two full HDPE layers",
+    "RapidChange magazine",
+    "pan and slat stock",
+    "unallocated custom billets and hardware"
+  ],
+  "required_motion_mm": {
+    "X": 800,
+    "Y": 1000,
+    "owned_catalogue_Z": 300,
+    "assessed_working_Z": 250,
+    "magazine_slide": 200
+  },
   "primary_frame": "4080 extrusion, six posts, paired 4080 gantry; steel tension straps, local hangers, pan/slats and thermal screens remain functional metal parts.",
-  "bed": {"size_mm": [1000, 1220], "face_Y_mm": [-40, 1180], "rear_crossbearer_Y_mm": 1140, "profiles": "10 uncut 20100 x1220mm", "HDPE": "2 full 1000x1219.2x12.7mm layers, saw cuts and round drilling only", "crossbearers": "4 x980mm 4080", "workplane_Z_mm": 967.8, "storage": "front top-plane hinge inside permanent frame plan"},
-  "head": "Unchanged owner clamp and boot source solids on a removable full-thickness billet plate; shared fixed dock retained for plasma.",
-  "ATC": "Selected 311mm-overall/200mm-travel SFU1605 module, rear parking bay, pinned endpoint reaction seats and removable plasma cover. Vendor magazine is a labeled capacity envelope until exact supplier geometry is registered.",
+  "bed": {
+    "size_mm": [
+      1000,
+      1220
+    ],
+    "face_Y_mm": [
+      -40,
+      1180
+    ],
+    "rear_crossbearer_Y_mm": 1140,
+    "profiles": "10 uncut 20100 x1220mm",
+    "HDPE": "2 full 1000x1219.2x12.7mm layers, saw cuts and round drilling only",
+    "crossbearers": "4 x980mm 4080",
+    "workplane_Z_mm": 967.8,
+    "storage": "front top-plane hinge inside permanent frame plan",
+    "pin_retention": {
+      "stay_pivots": 4,
+      "full_open_locks": 2,
+      "plain_12mm_front_hinges": 2,
+      "M6_DIN937_low_nuts": 6,
+      "M8_hinge_nuts": 0,
+      "DIN94_1p6x14_cotters": 6,
+      "DIN94_2x16_hinge_cotters": 2,
+      "hinge_pins_face": "inboard",
+      "hinge_service_withdrawal_mm": 26,
+      "new_raw_bar_mm": [
+        19.05,
+        304.8
+      ],
+      "raw_bar_used_mm": 303,
+      "raw_bar_covers": "All eight pins and four hinge rings; finished parts and the raw-stock option are nonadditive.",
+      "physical_capacity_qualified": false
+    },
+    "fastener_bearing_path": {
+      "bridge_washers": {
+        "quantity": 80,
+        "standard": "M6 DIN9021",
+        "OD_mm": 18,
+        "ID_mm": 6.4,
+        "thickness_mm": 1.6
+      },
+      "stock_socket_screws": {
+        "quantity": 80,
+        "thread": "M5x0.8",
+        "purchased_underhead_length_mm": 75,
+        "finished_underhead_length_mm": 72,
+        "finish_tolerance_mm": 0.1,
+        "end_chamfer_max_mm": 0.4
+      },
+      "metal_column_length_mm": 65.4,
+      "nominal_slot_nut_engagement_mm": 2.7,
+      "nominal_tip_projection_mm": 1,
+      "nominal_cavity_reserve_mm": 1.1,
+      "receiver_clearance_holes_mm": 22,
+      "dry_arm_head_access_mm": 12.5,
+      "received_fit_and_capacity_qualified": false
+    }
+  },
+  "head": "Unchanged owner clamp and boot source solids on a removable 146x175x12.7 mm billet plate; shared fixed dock retained for plasma. One bolted/doweled side rib from the unused owned 3/8-inch sheet strengthens the router plate without changing the owner solids.",
+  "ATC": "Selected 311 mm overall / 200 mm travel SFU1605 module, rear parking bay, passive captured endpoint tongues/guides and removable plasma cover; no manual endpoint bolts. The dated original manufacturer 271.2x60x80.8 mm installation model, pocket XY and mounting axes are integrated without scaling. Two 28x242x25.4 mm billet arms use the existing 600 mm 4080 carrier. Family installation reference bodies have zero new quantity; purchase one Basic $400 kit. Actual internal ER11 socket/nut planes, IR/cables, supplied tier/revision, powered axial holding and state interlocks remain qualification gates; Basic does not include IR detection.",
   "wet_system": "Vented red receiver, gravity drain with supported motorized valve and independent overflow. No compressed-air pressure applied to consumer tote. CV15HS is not a liquid pump.",
-  "budget": {"currency": "USD", "complete_new_delivered_cap": 1000, "status": "FAIL_WITH_CURRENT_VERIFIED_NEW_GOODS", "complete_delivered_quote": null, "tax_or_unknown_shipping_assumed_zero": false},
-  "release": {"fabrication": false, "CAM": false, "operation": false},
+  "budget": {
+    "currency": "USD",
+    "complete_new_delivered_cap": 1000,
+    "status": "FAIL_WITH_CURRENT_VERIFIED_NEW_GOODS",
+    "complete_delivered_quote": null,
+    "tax_or_unknown_shipping_assumed_zero": false,
+    "last_reconciled_date": "2026-11-05",
+    "black_HDPE_raw_sheet_goods_USD": "225.75",
+    "three_core_goods_basis_USD": "1025.70",
+    "known_basic_goods_subset_USD": "1108.94",
+    "separate_vendor_mount_package_quantity": 0,
+    "partial_cart_evidence": "manufacturing/selected-cart-evidence.json",
+    "all_required_parts_in_cart": false
+  },
+  "release": {
+    "fabrication": false,
+    "CAM": false,
+    "operation": false
+  },
   "remaining_actual_interface_gates": [
     "Register the existing working boot home and 50mm moving joint from the physical assembly; identity and ownership are already established.",
-    "Register the received spindle nose/collet/grip datum and chosen RapidChange nut/engagement planes, pocket coordinates, endcaps, IR hardware and cable exits.",
+    "Confirm the received spindle nose/collet/grip datum and RapidChange internal ER11 socket/nut engagement planes, IR hardware and cable exits. Published pocketXY/mount axes are now registered; actual supplied tier/revision remains to be checked.",
     "Transfer the actual Z output, slide-carriage, guide, profile slot/core and vendor mounting patterns; no unpublished holes are invented.",
     "Qualify actual material, modified sections, joints, full tool-to-work stiffness, Z power-loss retention, bed handling and positive supports.",
     "Complete controller/firmware, VFD reverse/stop, tool setter, state detection, isolated plasma-start/THC and EMI qualification on the owned equipment.",
     "Verify receiver liquid capacity, fill/drain/overflow behavior, valve fit and temperature, actual strut dimensions/force and guide shielding.",
     "Resolve the delivered budget shortfall before procurement."
-  ]
+  ],
+  "exclusive_owned_stock_nests": {
+    "total_finished_blanks": 14,
+    "half_inch_sheet_blanks": 10,
+    "three_eighth_sheet_blanks": 4,
+    "three_eighth_contents": [
+      "two 270x120x9.525 mm bed hinge arms",
+      "one 30x12.7 mm gravity ledge footprint",
+      "one 20x110 mm router rib footprint at sheet coordinates 276,2"
+    ],
+    "duplicate_credits_allowed": false
+  },
+  "head_stiffener": {
+    "id": "OWNER_ROUTER_SIDE_RIB",
+    "finished_mm": [
+      9.525,
+      20,
+      110
+    ],
+    "owned_three_eighth_raw_plane_mm": [
+      276,
+      2,
+      20,
+      110
+    ],
+    "new_M4x25_socket_screws": 3,
+    "new_ground_4x20_dowels": 2,
+    "known_boot_X_clearance_mm": 7.75,
+    "clearance_independent_of_boot_vertical_home": true,
+    "boot_vertical_stroke_mm": 50,
+    "ideal_hole_aware_100N_P50_bending_mm": 0.093141,
+    "former_ideal_flat_plate_100N_P50_mm": 0.249983,
+    "joint_slip_torsion_and_actual_material_qualified": false
+  }
 }

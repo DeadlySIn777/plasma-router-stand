@@ -19,12 +19,17 @@ TOP=960.8;PROFILE_BOTTOM=TOP-20.;HDPE_BOTTOM=PROFILE_BOTTOM-25.4
 ASSEMBLY_Z_SHIFT=7.;WORK_TOP=TOP+ASSEMBLY_Z_SHIFT
 CROSS_BOTTOM=HDPE_BOTTOM-40.;CROSS_CENTRES=(100.,395.,780.,1140.)
 CROSS_X0,CROSS_LENGTH=85.,980.
+PROFILE_BRIDGE_WASHER_OD=18.;PROFILE_BRIDGE_WASHER_ID=6.4;PROFILE_BRIDGE_WASHER_T=1.6
+PROFILE_SCREW_STOCK_LENGTH=75.;PROFILE_SCREW_FINISHED_LENGTH=72.
 PIVOT=(-100.,TOP)
 GAS_ROOT=(-70.,768.);GAS_MOVING=(395.,905.4)
 STAY_ROOT=(-40.,743.);STAY_MOVING=(395.,855.4)
 GAS_FORCE=889.;GAS_MIN,GAS_MAX=450.,700.
 GAS_AXES=(59.15,1090.85)
 STAY_AXES=(54.,1096.)
+STAY_PIN_HEAD_X=44.55;STAY_PIN_HEAD_LENGTH=2.5
+STAY_PIN_SHOULDER_X=66.2;STAY_PIN_END_X=75.4
+STAY_PIN_COTTER_X=72.4
 AL=(.65,.70,.74);HDPE=(.16,.48,.57);STEEL=(.25,.31,.34);BLACK=(.12,.15,.17)
 
 def bounds(s):
@@ -93,13 +98,106 @@ def deck_local_parts():
   p.append(item('BED_REAR_END_CAP_'+side,_mirror(cap.clean(),side),'steel',True,'6.35endplate, two8.5through fixingholes into rear4080end cores. Carries closed-mode side drawdowns through metal only.'))
  for k,(cy,x)in enumerate(anchors,1):
   p.append(item(f'BED_COLUMN_{k:02}',ring(12.7,6.35,65.4,(x,cy,CROSS_BOTTOM)),'aluminum',True,'Straight compression tube:12.7ODx6.35ID,65.4 long nominal. Fit length to actual HDPE stack; metal supports profile and bypasses plastic preload.'))
-  screw=cyl(5,70,(x,cy,CROSS_BOTTOM)).fuse(cyl(8.5,5,(x,cy,CROSS_BOTTOM-5))).clean()
-  p.append(item(f'BED_M5x70_{k:02}',screw,'steel',True,'Underhead directly on square sleeve end.2.7 nominal nut engagement plus0.6 tip; no washer stack. Actual compatible nut/torque must be selected.'))
+  washer_bottom=CROSS_BOTTOM-PROFILE_BRIDGE_WASHER_T
+  washer=ring(PROFILE_BRIDGE_WASHER_OD,PROFILE_BRIDGE_WASHER_ID,PROFILE_BRIDGE_WASHER_T,(x,cy,washer_bottom))
+  p.append(item(f'BED_CROSS_BRIDGE_WASHER_{k:02}',washer,'steel',True,'SteelM6DIN9021/ISO7093largewasher18OD6.4IDx1.6bridges13.1crossbarbore. Seatsbothsquarecolumnendandcrossbarunderside;positivelycapturesthecrossbar. Keepwashercentredandverifybothseats.'))
+  screw=cyl(5,PROFILE_SCREW_FINISHED_LENGTH,(x,cy,washer_bottom)).fuse(cyl(8.5,5,(x,cy,washer_bottom-5))).clean()
+  p.append(item(f'BED_M5x72_FINISHED_{k:02}',screw,'steel',True,'M5x75stocktrimmedto72.0+/-0.1underhead,deburr/endchamfer<=0.4. Underheadon18ODbridgewasher;2.7nominalslot-nutengagementplus1.0tipand1.1cavityceilingreserve. Neverinstalluncut75;actualdie/nut/torqueacceptance.'))
   nut=box(x-4,cy-4,PROFILE_BOTTOM+1.3,8,8,2.7).cut(cyl(5,4.7,(x,cy,PROFILE_BOTTOM+.3))).clean()
   p.append(item(f'BED_M5_BOTTOM_NUT_{k:02}',nut,'steel',True,'Recovered8x8x2.7 nominal slot-nut envelope, end-loaded. Actual selected nut and lip capacity remain a supplier fit acceptance item.'))
  return tuple(p)
 
 def _mirror(s,side):return s if side=='L'else s.mirror('YZ',(575,0,0))
+
+def slotted_nut(thread,af,height,body,slot_width,point):
+ nx,cy,zz=point
+ pts=[(af/math.sqrt(3)*math.cos(math.radians(30+60*k)),af/math.sqrt(3)*math.sin(math.radians(30+60*k)))for k in range(6)]
+ nut=plane_plate(pts,height,origin=point,normal=(1,0,0),xdir=(0,1,0))
+ nut=nut.cut(cyl(thread,height+2,(nx-1,cy,zz),(1,0,0)))
+ for aa in(0,60,120):
+  gap=box(nx+body,cy-af,zz-slot_width/2,height-body+1,2*af,slot_width)
+  nut=nut.cut(gap.rotate((0,cy,zz),(1,cy,zz),aa))
+ return nut.clean()
+
+def installed_cotter(diameter,point,loop_plane='XY'):
+ """Conservative formed split-pin material envelope, cross-hole axis Y."""
+ x,cy,zz=point;s=diameter/1.6
+ start=-7*s
+ # Bent-tail centreline lengths from the under-loop tangent are <=14/16mm.
+ # The old scalable tail shape exceeded the stated stock length for M8.
+ branch,tail_y,tail_z=(5.4,6.6,1.7)if diameter==1.6 else(6.,7.5,1.)
+ shank=cyl(diameter,branch-start,(x,cy+start,zz),(0,1,0))
+ loop=ring(4*s,2*s,.8*s,(x,cy-8.5*s,zz-.4*s))
+ if loop_plane=='YZ':loop=loop.rotate((x,cy,zz),(x,cy+1,zz),90)
+ tails=[line_cylinder(.8*s,(x,cy+branch-.1,zz),(x,cy+tail_y,zz+dz))for dz in(-tail_z,tail_z)]
+ return shank.fuse(loop,*tails).clean()
+
+def hinge_pin_parts(side):
+ """Inboard headed12mm hinges withdraw toward the clear front-bed centre.
+
+ The front post/base blocks an outboard-fed headed pin. Reverse the head and
+ retain outside with a plain washer/cotter; no inaccessible wrench is needed.
+ """
+ cy,zz=PIVOT;tip=51.15;shoulder=75.2;cross=54.35
+ pin=cyl(18,3,(shoulder,cy,zz),(1,0,0)).fuse(cyl(12,shoulder-tip,(tip,cy,zz),(1,0,0)))
+ pin=pin.cut(cyl(2.2,16,(cross,cy-8,zz),(0,1,0))).clean()
+ washer=ring(18,12.2,1.6,(55.45,cy,zz),(1,0,0))
+ cotter=installed_cotter(2,(cross,cy,zz),loop_plane='YZ')
+ thickness=1.85 if side=='L'else 1.35
+ shim=ring(18,12.2,thickness,(63.5,cy,zz),(1,0,0))
+ specs=(('PIN',pin,'Turned12mmplainhingepin:18headx3facinginboard,12smoothshaft24.05;27.05overall,D2.2throughcrosshole23.85fromouterheadface. Pull26mminboardintosupportedfrontbedbayforremoval;nooutboard-fedpinorwrenchrequired.'),
+  ('RETAINER_WASHER',washer,'Customsteel18OD12.2IDx1.6retainingwasheroutsidefixedcheek. Retainedby2x16cotter;madefromsamepinbar,notM8purchasedhardware.'),
+  ('RETAINER_COTTER',cotter,'DIN94/ISO1234splitpin2x16,headloopandtailsformedinYZplanetoclearwasher;replaceafterremoval. RemovefromfrontYdirectionbeforewithdrawingpin.'),
+  ('AXIAL_SHIM',shim,f'Steel18OD12.2IDx{thickness}axialspacer. Leftnominalclearance0.125,right0.625betweenfixedcheekandmovingarm. Fitmetalshimstomeasuredassemblyandthermalfloat.'))
+ return[item(f'BED_HINGE_{tag}_{side}',_mirror(s,side),'steel',False,note)for tag,s,note in specs]
+
+def full_open_pin_parts(side,station,normal):
+ """A removable headed10mm pin, independent of gas force, fully retained."""
+ # Local X is the through-pin axis; local Y maps to global X for accessible
+ # inboard/outboard cotter access. The outer tube occupies localX-10..10.
+ head=-13.1;land=-10.1;shoulder=10.2;end=19.4;cross=16.4
+ pin=cyl(16,3,(head,0,0),(1,0,0)).fuse(cyl(10,shoulder-land,(land,0,0),(1,0,0)),cyl(6,end-shoulder,(shoulder,0,0),(1,0,0)))
+ pin=pin.cut(cyl(1.8,8,(cross,-4,0),(0,1,0))).clean()
+ washer=ring(12,6.4,1.6,(shoulder,0,0),(1,0,0))
+ nut=slotted_nut(6,10,6,3.5,2,(shoulder+1.6,0,0))
+ cotter=installed_cotter(1.6,(cross,0,0))
+ n=cq.Vector(*normal).normalized();o=cq.Vector(*station)
+ # Cotter heads face the accessible outside of each side, above the Y rails;
+ # mirroring the right transverse axis avoids trapping its loop by the arm.
+ z=n.cross(cq.Vector(1 if side=='L'else-1,0,0))
+ tf=cq.Location(cq.Plane(origin=o,xDir=n,normal=z))
+ specs=(('POSITIVE_PIN',pin,'Turned10mmsmoothfull-openpin,16headx3,20.3bearingland,M6x1x9.2end;32.5overall. Passesbothwallsofbothstaytubes. Noimpactratinginferred.'),
+  ('RETAINER_WASHER',washer,'M6DIN125washer12OD6.4IDx1.6;seats on lock-pin shoulder.'),
+  ('RETAINER_CASTLE_NUT',nut,'M6x1DIN937AF10/h6/body3.5/slots2min;nutandcotter positivelycapturefull-openpin.'),
+  ('RETAINER_COTTER',cotter,'NewDIN94/ISO1234splitpin1.6x14,installedformedtailenvelope;replaceeachremoval.'))
+ return[item(f'BED_FULL_OPEN_{tag}_{side}',s.moved(tf),'steel',False,note)for tag,s,note in specs]
+
+def stay_pivot_parts(tag,point,side,move=False):
+ """Captured pivots; the outboard head is recessed, never an external clip.
+
+ The reduced M6 thread, nut and split pin only retain the joint axially.
+ The unthreaded 10 mm land carries both clevis/eye bearing interfaces.
+ The washer bottoms on the pin shoulder, retaining 0.2 mm nominal axial float.
+ """
+ cy,zz=point;p=[]
+ pin=cyl(14,STAY_PIN_HEAD_LENGTH,(STAY_PIN_HEAD_X,cy,zz),(1,0,0))
+ pin=pin.fuse(cyl(10,STAY_PIN_SHOULDER_X-(STAY_PIN_HEAD_X+STAY_PIN_HEAD_LENGTH),(STAY_PIN_HEAD_X+STAY_PIN_HEAD_LENGTH,cy,zz),(1,0,0)),
+              cyl(6,STAY_PIN_END_X-STAY_PIN_SHOULDER_X,(STAY_PIN_SHOULDER_X,cy,zz),(1,0,0)))
+ pin=pin.cut(cyl(1.8,8,(STAY_PIN_COTTER_X,cy-4,zz),(0,1,0))).clean()
+ washer=ring(12,6.4,1.6,(STAY_PIN_SHOULDER_X,cy,zz),(1,0,0))
+ # DIN937 M6: AF10, height6, full body3.5, slots >=2 wide.
+ # Sharp hex corners conservatively enclose the published minimum E11.05.
+ nx=STAY_PIN_SHOULDER_X+1.6
+ nut=slotted_nut(6,10,6,3.5,2,(nx,cy,zz))
+ # Installed split-pin material envelope. The D1.6 central section fits the
+ # D1.8 drilling. Use a new DIN94 1.6x14 split pin after every disassembly.
+ cotter=installed_cotter(1.6,(STAY_PIN_COTTER_X,cy,zz))
+ specs=(('PIN',pin,'Turned C45/4140 steel pivot:14headx2.5,10smoothbearingland19.15,M6x1retentionthread9.2;overall30.85. Outerhead recessed0.1;D1.8crosshole at27.85fromouterface. See dedicated pivot drawing for fits. Material/load rating needs qualification.'),
+        ('WASHER',washer,'M6DIN125washer12OD6.4IDx1.6;seats on pin shoulder and leaves0.2nominal clevis axial float.'),
+        ('CASTLE_NUT',nut.clean(),'M6x1DIN937slottednut:AF10,h6,3.5body,slots2minimum. Positive retention by installed split pin, never torque against moving clevis.'),
+        ('COTTER',cotter,'DIN94 1.6x14 split pin, installed/bent-tail material envelope;replace after removal. Both tails retained within inboard gap.'))
+ for part,shape,note in specs:p.append(item(f'BED_STAY_PIVOT_{part}_{tag}_{side}',_mirror(shape,side),'steel',move,note))
+ return p
 
 def fixed_receiver_parts():
  p=[];t=3.175
@@ -110,10 +208,16 @@ def fixed_receiver_parts():
   # Local clearance for the moving assist clevis, replaced by an integral
   # lower reinforcement web. No unsupported slit through the bearing flange.
   web=web.cut(box(71.,355,CROSS_BOTTOM-1,t+2,100,34.))
-  flange=flange.cut(box(71.,355,CROSS_BOTTOM-t-1,4.175,100,t+2))
+  # The inboard retained-pin thread crosses the flange height during lift.
+  # Widen the existing assist notch to X76.0, leaving0.6mm to its X75.4 tip;
+  # the reinforced lower web starts at76.2 and the crossbar bearing atX85.
+  flange=flange.cut(box(71.,355,CROSS_BOTTOM-t-1,5.,100,t+2))
   reinforcement=box(76.2,345,840.4,t,120,35.)
   s=flange.fuse(web,reinforcement).clean()
-  for cy in CROSS_CENTRES:s=s.cut(cyl(12.5,t+2,(105.,cy,CROSS_BOTTOM-t-1)))
+  # Closed-mode bridge washers project below the crossbar. These22mm holes
+  # clear their18mmOD, including reasonable lateral assembly float; the
+  # receiver bearing remains around each local access hole.
+  for cy in CROSS_CENTRES:s=s.cut(cyl(22.,t+2,(105.,cy,CROSS_BOTTOM-t-1)))
   for cy in(100.,630.,1180.):
    for xx in(96.,116.):
      for yy in(cy-20,cy+20):
@@ -136,8 +240,7 @@ def fixed_receiver_parts():
   bridge=box(32.15,-125,940.8,25.,50,6.35)
   fixed=base.fuse(cheek,bridge).cut(cyl(12.1,8.35,(56.15,-100,TOP),(1,0,0))).clean()
   p.append(item(f'BED_HINGE_FIXED_{side}',_mirror(fixed,side),'steel',False,'Welded6.35mm fixed hinge bracket;4M6front-vertical-post fasteners atY−120/−80,Z967/1000world. Paired hinge axisY−100/Z967.8world; actual pin/bushing and weld loads require qualification.'))
-  pin=cyl(12,24.2,(54.3,-100,TOP),(1,0,0)).fuse(cyl(18,3,(51.3,-100,TOP),(1,0,0))).clean()
-  p.append(item(f'BED_HINGE_PIN_{side}',_mirror(pin,side),'steel',False,'Retained12mm hinge pin. Source model smooth, specify retained steel pin and bushings; no threaded pivot running surface.'))
+  p.extend(hinge_pin_parts(side))
   for tag,point in(('GAS',GAS_ROOT),('CAPTURE',STAY_ROOT)):
    cy,zz=point;plate=box(40.7 if tag=='GAS'else 25.8,-140,zz-40,6.35,80 if tag=='GAS'else 120,80)
    for yy in(-120.,-80.):
@@ -149,15 +252,17 @@ def fixed_receiver_parts():
    plate=plate.cut(cyl(8.5 if tag=='GAS'else 10.2,8.35,((39.7 if tag=='GAS'else 24.8),cy,zz),(1,0,0)))
    if tag=='CAPTURE':
     floor=box(32.15,cy-20,zz-19.15,33.85,40,6.35)
-    ears=ring(24,10.2,3.175,(44.45,cy,zz),(1,0,0)).fuse(ring(24,10.2,3.175,(62.825,cy,zz),(1,0,0)))
-    stems=box(44.45,cy-6,zz-20,3.175,12,18.2).fuse(box(62.825,cy-6,zz-20,3.175,12,18.2))
+    ears=ring(24,10.2,5.,(44.45,cy,zz),(1,0,0)).fuse(ring(24,10.2,3.175,(62.825,cy,zz),(1,0,0)))
+    stems=box(44.45,cy-6,zz-20,5.,12,18.2).fuse(box(62.825,cy-6,zz-20,3.175,12,18.2))
     plate=plate.fuse(floor,ears,stems).cut(cyl(10.2,42.2,(24.8,cy,zz),(1,0,0))).clean()
+    plate=plate.cut(cyl(14.2,2.6,(44.45,cy,zz),(1,0,0))).clean()
     # Independent gas-column/stud clearance through the rear capture bracket;
     # the two stationary anchor sets are not overlapping fictitious solids.
     for yy in(-120.,-80.):
      for z in(GAS_ROOT[1]-20,GAS_ROOT[1]+20):plate=plate.cut(cyl(13.1,9.,(24.8,yy,z),(1,0,0)))
     plate=plate.cut(cyl(8.5,9.,(24.8,GAS_ROOT[0],GAS_ROOT[1]),(1,0,0)))
    p.append(item(f'BED_{tag}_ROOT_MOUNT_{side}',_mirror(plate.clean(),side),'steel',False,'6.35mm anchorplate;4M6post mounts atY−120/−80,Zanchor±20. Gas uses14.9standoffs; capture directpost. Cantilever web transfers anchor load within its plane. Uppercontacthardware kept separate.'))
+   if tag=='CAPTURE':p.extend(stay_pivot_parts('LOWER',STAY_ROOT,side))
    if tag=='GAS':
     stud=cyl(8,27.1,(27.05,cy,zz),(1,0,0))
     p.append(item(f'BED_GAS_ROOT_BALL_STUD_{side}',_mirror(stud,side),'steel',False,'10mmballstudM8x20thread plus7.1mmexposedneck; ballcentre12.1mmfromface. Actualballstudnecksetsfittedspacer, not a claimed supplied-kit bracket.'))
@@ -194,12 +299,14 @@ def deck_brackets():
   upper=box(44.45,365,909.05,34.2,60,6.35).cut(box(46.15,364,906.5,26,46,12))
   top_ear=box(75.2,375,895.4,3.175,40,20.)
   lower_ear=ring(24,10.2,3.175,(62.825,395,855.4),(1,0,0)).fuse(box(62.825,405.4,855.4,3.175,10,53.65))
-  far_ear=ring(24,10.2,3.175,(44.45,395,855.4),(1,0,0)).fuse(box(44.45,405.4,855.4,3.175,10,53.65))
+  far_ear=ring(24,10.2,5.,(44.45,395,855.4),(1,0,0)).fuse(box(44.45,405.4,855.4,5.,10,53.65))
   s=web.fuse(upper,top_ear,lower_ear,far_ear).clean()
   for yy in(375.,415.):s=s.cut(cyl(8.5,8.35,(77.65,yy,895.4),(1,0,0)))
   s=s.cut(cyl(8.5,5.175,(74.2,395,905.4),(1,0,0)))
   s=s.cut(cyl(10.2,24.,(43.45,395,855.4),(1,0,0)))
+  s=s.cut(cyl(14.2,2.6,(44.45,395,855.4),(1,0,0))).clean()
   p.append(item(f'BED_ASSIST_C_BRACKET_{side}',_mirror(s,side),'steel',True,'Fabricated6.35steel bracket;2M8x25end-core bolts, top10mmgasballstud and lowerstayclevis. Ballstud axesX preserve spherical articulation inYZ. Ordinary welded stock; weld capacity acceptance required.'))
+  p.extend(stay_pivot_parts('UPPER',STAY_MOVING,side,True))
  return p
 
 def gas_and_stays(angle=0.):
@@ -230,9 +337,7 @@ def gas_and_stays(angle=0.):
   outer=outer.cut(cyl(10.2,26,tuple(station-normal*13),normal.toTuple())).clean()
   p.append(item(f'BED_CAPTURE_OUTER_{side}',outer,'steel',False,'20x20x2tube390; joint centres and independent full-open10mm positive pin. Index catch is not assigned an impact rating.'))
   p.append(item(f'BED_CAPTURE_INNER_{side}',inner.clean(),'steel',False,'15x15x1.5tube375; drilled index row, min74mm nominal full-open overlap. Physical safe transition/catch validation remains mandatory.'))
-  if angle==90.:
-   pin=cyl(10,40,tuple(station-normal*20),normal.toTuple())
-   p.append(item(f'BED_FULL_OPEN_POSITIVE_PIN_{side}',pin,'steel',False,'Independent10mm steel through-pin passes both walls of both tubes at90deg. Retained with positive head/clip; no gas-spring holding credit.'))
+  if angle==90.:p.extend(full_open_pin_parts(side,station.toTuple(),normal.toTuple()))
   for tag,pt in(('LOWER',a),('UPPER',b)):
    eye=ring(24,10.2,6.35,(x-3.175,pt[1],pt[2]),(1,0,0))
    p.append(item(f'BED_CAPTURE_EYE_{side}_{tag}',eye,'steel',False,'Welded eye to telescopic stay;10mm retained pivot in double-shear clevis required.'))
@@ -248,7 +353,13 @@ def metadata():
  return dict(bed_footprint_mm=[X0,Y0,W,L],workplane_Z_mm=WORK_TOP,layer_thicknesses_mm=[12.7,12.7],
   profile_quantity=10,uncut_profile_length_mm=1220,HDPE_operations='80 ordinary circular through holes per full1000x1219.2 sheet only; profile overhang0.4each end',
   support_crossmember_centres_Y_mm=list(CROSS_CENTRES),crossmember_quantity=4,crossmember_4080_cut_mm=CROSS_LENGTH,
-  sleeve_quantity=80,sleeve_dimensions_mm=dict(OD=12.7,ID=6.35,length=65.4),profile_fasteners='80M5x70 direct sleeve seats with compatible bottom-slot nuts',
+  sleeve_quantity=80,sleeve_dimensions_mm=dict(OD=12.7,ID=6.35,length=65.4),
+  profile_fasteners='80M5x75stockfinished72underhead+80steelM6DIN9021bridgewashers18OD6.4IDx1.6+compatiblebottomslotnuts',
+  profile_fastener_retention=dict(crossbar_bore_mm=13.1,bridge_washer_mm=[18,6.4,1.6],
+   screw_stock_length_mm=75,screw_finished_underhead_length_mm=72,screw_finish_tolerance_mm=.1,
+   nominal_nut_thread_engagement_mm=2.7,nominal_tip_beyond_nut_mm=1.,nominal_tip_to_cavity_ceiling_mm=1.1,
+   receiver_washer_access_hole_mm=22,nominal_washer_radial_bore_bridge_mm=2.45,
+   lower_slot_ceiling_is_nominal_supplier_section=True,preload_or_slot_capacity_qualified=False),
   hinge_axis_Y_Z_mm=[PIVOT[0],PIVOT[1]+ASSEMBLY_Z_SHIFT],assembly_Z_shift_mm=ASSEMBLY_Z_SHIFT,operating_angle_deg=[0,90],gas_force_nominal_N_each=GAS_FORCE,
   gas_required_eye_acceptance_mm=dict(maximum_compressed=GAS_MIN,minimum_expanded=GAS_MAX),gas_product_ASIN='B08CNGT5Z7',
   gas_selected_listing='ARANA ST280M20028in200lb,4x10mmballstuds; exactcompressed length unconfirmed and force bullet contradictory. Verify200lb889Neach label and dimensions before installation.',
@@ -258,4 +369,17 @@ def metadata():
   permanent_machine_plan_bounds_mm=[-50.,-160.,1200.,1600.],
   head_prerequisite='Remove entire installed removable head/tool assembly, retain commonZ, park gantryY1275/Zmax; ATC fullyparked.',
   gas_is_anti_drop_device=False,transition_fall_control_qualified=False,full_open_uses_independent_positive_pins=True,
+  stay_pivot_retention=dict(quantity=4,outer_clevis_thickness_mm=5,outer_counterbore_mm=[14.2,2.6],
+   pin=dict(head_mm=[14,2.5],bearing_mm=[10,19.15],thread='M6x1x9.2',overall_mm=30.85,cotter_crossdrill_mm=1.8),
+   washer='M6DIN125,12OD6.4IDx1.6',nut='M6DIN937,AF10,height6',cotter='DIN94,1.6x14,replace after removal',
+   outer_head_recess_mm=.1,nominal_axial_float_mm=.2,thread_end_to_receiver_reinforcement_nominal_mm=.8,
+   shaft_surface='10.00/-0.02..-0.05 steel bearing land; all sharp edges deburred; threads excluded from shear planes',
+   source='https://www.aspenfasteners.com/content/pdf/Metric_DIN_937_spec.pdf',load_capacity_qualified=False),
+  hinge_pin_retention=dict(quantity=2,head_mm=[18,3],smooth_shaft_mm=[12,24.05],thread=None,overall_mm=27.05,
+   crossdrill_mm=2.2,crossdrill_from_outer_head_face_mm=23.85,washer='Customsteel18OD12.2IDx1.6',nut=None,cotter='DIN94,2x16',
+   head_faces='inboard',service_withdrawal_mm=26,service_side='inboardintoemptyfrontbedbay;cotterandwasherremovedfirst',
+   axial_shims_mm=dict(left=1.85,right=1.35),nominal_cheek_gap_mm=dict(left=.125,right=.625),load_capacity_qualified=False),
+  full_open_pin_retention=dict(quantity=2,head_mm=[16,3],bearing_mm=[10,20.3],thread='M6x1x9.2',overall_mm=32.5,
+   crossdrill_mm=1.8,washer='M6DIN125,12OD6.4IDx1.6',nut='M6DIN937,AF10,height6',cotter='DIN94,1.6x14',
+   installed_at_angle_deg=90,load_capacity_qualified=False),
   fabrication_release=False)

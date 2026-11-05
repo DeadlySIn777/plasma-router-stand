@@ -31,7 +31,11 @@ does not establish stiffness.
 
 The 1000 by 1220 mm workbed has ten uncut 20100 profiles on two full HDPE
 layers and four 980 mm 4080 crossbearers. Metal sleeves bypass plastic bolt
-preload. The work surface is Z967.8. Front hinges, rear metal drawdowns and
+preload. Eighty 18 OD/6.4 ID by 1.6 mm crossmember bridge washers complete the
+fastener bearing path. The eighty M5x75 stock screws finish to 72.0 mm under
+the head; the metal columns remain 65.4 mm long. The work surface is Z967.8.
+Actual washer/section bearing and
+slot-nut capacity still require qualification. Front hinges, rear drawdowns and
 fitted side bearing ledgers carry the bed. Two gas springs assist handling;
 separate pinned telescoping stays support the upright state. The full bed
 stands ahead of the plasma working sweep, inside the permanent machine plan.
@@ -51,13 +55,31 @@ The fixed 146 by 132 mm receiver retains the raised output contact while
 clearing the bed's tilt arc. A matching plasma plate and splice reuse the
 existing float/breakaway mechanism. The actual working boot registration and
 spindle nose datum remain unencoded; a purple family cylinder is context.
+One 9.525 by 20 by 110 mm side rib now stiffens the router plate using unused
+owned three-eighth-inch stock, three M4x25 screws and two ground 4x20 mm dowels.
+It clears the supplied boot body by 7.75 mm in X for any vertical home and
+the full 50 mm boot stroke. The hole-aware ideal composite bending screen
+falls from 0.250 to 0.093 mm at 100 N with 50 mm tool projection. Actual bolt
+preload, dowel fit, joint slip, torsion and alloy remain qualification gates.
+
+All eight bed support/hinge pins now have explicit retention geometry and
+drawings. Four stay pivots and two full-open locks use M6 DIN937 low nuts and
+1.6x14 mm split pins. The two plain 12 mm front hinge pins face inboard and
+use outside custom washers and 2x16 mm split pins; they require no M8 nuts.
+One new three-quarter-inch by 12-inch steel bar supplies all eight pins and
+four hinge rings through a 303 mm nested cut plan. This is new stock.
 
 The magazine parks in the rear bay on the selected 311 mm overall / 200 mm
-travel SFU1605 stage. Endpoint reaction seats and removable shoulder fasteners
-support its working and parked poses. These endpoint fasteners are manual;
-the slide does not have a qualified automatic pin-release cycle. Purple
-magazine/tool volumes are capacity allocations, not actual supplier CAD.
-A removable steel cover protects the parked magazine during plasma mode.
+travel SFU1605 stage. Integral billet tongues enter passive steel capture
+roofs/guides at both endpoints; the slide deploys and retracts without manual
+endpoint fasteners or another lock actuator. The original 60 mm-width
+manufacturer four-pocket housing, pocket XY axes and mounting pattern are
+integrated without scaling. Two 28 by 242 by 25.4 mm billet arms use the
+existing 600 mm 4080 carrier. Purple volumes remain capacity allocations for
+tool/kit clearance. Actual ER11 sockets, nut engagement, IR/cables, received
+revision, powered axial holding force and controller interlocks still require
+qualification. A removable steel cover, retained by two short M4x6 service
+screws, protects the parked magazine during plasma mode.
 
 The pan bears at Y300, Y630 and Y1180. The new front bearer hangs from the
 headers on welded steel bearing seats. The conservative full-brim rib/floor
@@ -73,16 +95,20 @@ They do not replace actual module wipers/bellows or thermal qualification.
 
 The USD 1000 complete new-parts delivered cap **does not pass**. The current
 observed goods extension for ten tracks ($399.95), the sheet supplying both
-HDPE layers ($260.40) and a Basic four-pocket magazine ($400) is already
-**$1060.35**, before any 4080 frame, pan, hardware, shipping or tax. This is a
+HDPE layers (one black sheet, $225.75) and a Basic four-pocket magazine ($400)
+is already **$1025.70**, before any 4080 frame, pan, hardware, shipping or tax. This is a
 dated selected-source comparison, not a universal market minimum or a landed
 quote. Required stock quantity and all delivery charges are not verified.
 
 Known owned equipment and the two declared aluminum sheets are excluded.
-The two sheets have exclusive nests; no plate is credited twice. Tracks,
+The two sheets have 14 exclusive blanks: ten from the half-inch sheet and
+four from the three-eighth-inch sheet. No plate is credited twice. Tracks,
 full HDPE sheets and the RapidChange kit have no established ownership credit.
 See the [price register](manufacturing/price-and-budget-register.json), with
 source links, unknown charges and new-material requirements kept explicit.
+The [selected AliExpress cart evidence](manufacturing/selected-cart-evidence.json)
+records only the dated project fastener selections. It is a partial cart,
+not the complete BOM, a purchase, or a complete delivered build quote.
 
 ## Reproduce and review
 

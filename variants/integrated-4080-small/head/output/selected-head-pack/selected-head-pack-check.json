@@ -1,9 +1,9 @@
 {
   "study": "SELECTED_ROUTER_PLASMA_SHARED_HEAD_STOCK_AND_TAKEOFF",
   "source_sha256": {
-    "variants/integrated-4080-small/head/selected_head_pack.py": "601e9781eeaf30dcbfdde7dd2263e1e8e7c11fd95cb45f0f709dd22926470d76",
-    "variants/integrated-4080-small/head/quick_dock.py": "1f5d3ce7552837d78868108fc564956f613e5d4e67d0cac2741cd68b67e72d18",
-    "variants/integrated-4080-small/head/plasma_quick_dock.py": "db1576e2bcbeac634daa64b78fab9bdefabf895e532f9cd70bb76ee416b9096e",
+    "variants/integrated-4080-small/head/selected_head_pack.py": "06a99608b0881fdd2e74816c27b451354cdc387d3f85070119a4714e875cf08c",
+    "variants/integrated-4080-small/head/quick_dock.py": "59dbb2ea09bdf47605f41a11309294bcd160e2c97605d17b52b82a3144a2b83a",
+    "variants/integrated-4080-small/head/plasma_quick_dock.py": "0aa25c8a4c75cc7148ab5ae1f3520814be392c0abf26624f5c9305f1c14a1713",
     "variants/integrated-4080-small/head/owner_head.py": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
     "variants/integrated-4080-small/head/build_head.py": "72b2cde101afdab443c28c8a1a2dc01c76c230f565013c993289141095de7e7e",
     "variants/integrated-4080-small/head/spindle-reference-evidence.json": "f149cd1308af05333ec4e9ecf931fdae19650a22a75641fff32c21039d15ddc4",
@@ -24,8 +24,8 @@
     "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
     "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
     "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a",
-    "variants/integrated-4080-small/head/output/quick-dock/quick-dock-check.json": "7756f1de7d57863040b71c1f1739687986faa61fc37b9128b2c670165cc5f670",
-    "variants/integrated-4080-small/head/output/plasma-quick-dock/plasma-dock-check.json": "3e5b008cbf08697a6572afac318e1cb6108c09ee6f989ffcb64d01915eff0b3e"
+    "variants/integrated-4080-small/head/output/quick-dock/quick-dock-check.json": "82880d197e40c57a6265a4d442a81e0ecc399ea76f42ca4f6c7956e5d1849fd0",
+    "variants/integrated-4080-small/head/output/plasma-quick-dock/plasma-dock-check.json": "d454e88008022984a7d1a5a6cb1a9145fe2691c8d9fa1a1a715f108d156c660a"
   },
   "ownership_basis": "One owner-reported304.8x304.8x12.7sheet allocated exclusively to these10rectangles; actual alloy/thickness/flatness remain verified before machining. Old83-part allocations are superseded for this sheet, not additional free stock.",
   "stock_mm": [
@@ -382,7 +382,7 @@
   "outputs": {
     "OWNER_ROUTER_HEAD_PLATE": {
       "file": "output/selected-head-pack/OWNER_ROUTER_HEAD_PLATE.step",
-      "sha256": "0de35b9b9d8914ad9e6e6258ba39906068c1a847bb1cf413ff66727e12b75e0e",
+      "sha256": "e13f0bf401c6cdcf1f35bf9b5c248d1986322b44c94dd685b9f75434f5e6b30b",
       "source_min_corner": [
         -73.0,
         12.7,
@@ -396,7 +396,7 @@
     },
     "CD_RECEIVER": {
       "file": "output/selected-head-pack/CD_RECEIVER.step",
-      "sha256": "a63c9e717920516c512ed85d0d86fad536a12c09cc76bbfa344c26f9dd7d13dd",
+      "sha256": "71577582a643d7d347da5a00d90d6d58e8e9fa62dda722eb84a82ea98819d636",
       "source_min_corner": [
         -73.0,
         -3.3306690738754696e-16,
@@ -410,7 +410,7 @@
     },
     "PLASMA_REMOVABLE_HEAD_PLATE": {
       "file": "output/selected-head-pack/PLASMA_REMOVABLE_HEAD_PLATE.step",
-      "sha256": "f0bc1a617d3fbc71d0b9bdd5f3828e51b5b2702a91a309aee5c48b1d9f37d834",
+      "sha256": "b273cd7657015e2c9d3668f57d9b7835dc977a1118c5846a762faeb247a59b9e",
       "source_min_corner": [
         502.0,
         654.1999999999999,
@@ -424,7 +424,7 @@
     },
     "PLASMA_U_SPLICE_PLATE": {
       "file": "output/selected-head-pack/PLASMA_U_SPLICE_PLATE.step",
-      "sha256": "e5d141ece4b76448d69d74ec059e279c4ebd43fe817232d4f055c7207d440251",
+      "sha256": "6e31e0f401db151609b4bd9b87d96378ca91f906c20973998041f39360fec9c2",
       "source_min_corner": [
         520.0,
         641.5,
@@ -438,7 +438,7 @@
     },
     "CD_CAPTIVE_CAGE_L": {
       "file": "output/selected-head-pack/CD_CAPTIVE_CAGE_L.step",
-      "sha256": "a593d0dee03fa1993750ce43fe988c58f23d4a56a1de540722d07c5a4ac1d808",
+      "sha256": "0fe4819dd9cb0108c983ef01f40ee82a20f18c8d6b37776262a936bf0d797ecd",
       "source_min_corner": [
         -34.35,
         25.4,
@@ -452,7 +452,7 @@
     },
     "CD_CAPTIVE_CAGE_R": {
       "file": "output/selected-head-pack/CD_CAPTIVE_CAGE_R.step",
-      "sha256": "44cef7eeb27f96f38cb58628aca83f450999c81df8a6603c6209a21e4402f4a9",
+      "sha256": "1ebbf096fb734b497d71b9f6c97aa1a73bd969169da68a03b0e74337a6f208ac",
       "source_min_corner": [
         21.65,
         25.4,
@@ -466,7 +466,7 @@
     },
     "OWNER_CLAMP_SPACER_1_1": {
       "file": "output/selected-head-pack/OWNER_CLAMP_SPACER_1_1.step",
-      "sha256": "5d4742529338f0790e6eba47a1b6d4d795dbc99108eae85fa5aabe225ece5329",
+      "sha256": "b587115c032ae0db6663ae4b05ddf009edff5827d71782c6601937d2fc0c0a9c",
       "source_min_corner": [
         -30.0,
         25.4,
@@ -480,7 +480,7 @@
     },
     "OWNER_CLAMP_SPACER_1_2": {
       "file": "output/selected-head-pack/OWNER_CLAMP_SPACER_1_2.step",
-      "sha256": "c1a0e1b05f0c4ca712ace9782f72a71b2d29dc7e5c45b3133dab0407d07b63bc",
+      "sha256": "1755e2730412dcff87452297ba8ca7a21cec2b7ca0779bca2d1a3a5441d33647",
       "source_min_corner": [
         -30.0,
         25.4,
@@ -494,7 +494,7 @@
     },
     "OWNER_CLAMP_SPACER_2_1": {
       "file": "output/selected-head-pack/OWNER_CLAMP_SPACER_2_1.step",
-      "sha256": "1d1057219c15b49ef21d55aeaeab288460d4f1530d1a76a570114e3edb03e3bf",
+      "sha256": "631c41b0a6cf014b5437b868bf7a2d9dc5b4ce276fcde886c9b44980cc1da49a",
       "source_min_corner": [
         20.0,
         25.4,
@@ -508,7 +508,7 @@
     },
     "OWNER_CLAMP_SPACER_2_2": {
       "file": "output/selected-head-pack/OWNER_CLAMP_SPACER_2_2.step",
-      "sha256": "d968de3eefacafdd90eff1fcdb9615000721860a981c902f0d68084a43b3652f",
+      "sha256": "eeb226a5af652b9c136f8d8f5c0fe41fc0aafb49ace65961bdaa8f82384a435b",
       "source_min_corner": [
         20.0,
         25.4,
@@ -519,12 +519,339 @@
         6.0,
         10.0
       ]
+    },
+    "OWNER_ROUTER_SIDE_RIB": {
+      "file": "output/selected-head-pack/OWNER_ROUTER_SIDE_RIB.step",
+      "sha256": "10a19fe41e90194813851af38b7ff7369428a910bca247e8486eafe135f0c5c0",
+      "source_min_corner": [
+        60.0,
+        25.4,
+        -60.0
+      ],
+      "bounding_dimensions_mm": [
+        9.525000000000006,
+        20.0,
+        110.0
+      ]
     }
   },
-  "quarter_three_eighth_sheet_additional_allocation": "Only one30x12.7ledge requested here; parent must reconcile with all other3/8allocations",
+  "quarter_three_eighth_sheet_additional_allocation": "Gravityledge30x12.7 at2,250 plus side-rib20x110 at276,2; parent must reconcile both with the two270x120bed sideplates. One actual3/8sheet, no duplicate credits.",
+  "additional_three_eighth_allocation": [
+    {
+      "id": "OWNER_ROUTER_SIDE_RIB",
+      "raw_plane": [
+        276,
+        2,
+        20,
+        110
+      ],
+      "finished_thickness_mm": 9.525
+    }
+  ],
+  "stiffener_drill_drawings": [
+    {
+      "file": "output/selected-head-pack/OWNER_ROUTER_SIDE_RIB_DRILLING.dxf",
+      "sha256": "73e6d9c4c1ee087f5dc3cee1a61c47796e7753a82b14ceafe93f17dfa80286af",
+      "units": "mm",
+      "role": "ADDITIONAL_RIB_DRILLING",
+      "readback_passed": true
+    },
+    {
+      "file": "output/selected-head-pack/OWNER_ROUTER_HEAD_RIB_ADDITIONAL_BORES.dxf",
+      "sha256": "630d9467eb81e63f0aee60737c8f14f97bea8c149b2468241a7026eceec185ec",
+      "units": "mm",
+      "role": "ADDITIONAL_RIB_DRILLING",
+      "readback_passed": true
+    }
+  ],
+  "stiffener_boot_registration_independent_clearance": {
+    "id": "OWNER_ROUTER_SIDE_RIB",
+    "section_XY_mm": [
+      9.525,
+      20.0
+    ],
+    "local_bounds_mm": [
+      60.0,
+      25.4,
+      -60.0,
+      69.525,
+      45.4,
+      50.0
+    ],
+    "raw_3p8_sheet_plane_mm": [
+      276,
+      2,
+      20,
+      110
+    ],
+    "fixings": "3M4x25DIN912",
+    "positive_shear_locators": "2groundsteel4x20dowels;Z-35,+25;rearflush;7.3ribembed",
+    "head_plate_clearance_bore_mm": 4.5,
+    "rear_counterbore_mm": [
+      7.6,
+      4.1
+    ],
+    "head_recess_mm": 0.1,
+    "nominal_rib_thread_engagement_mm": 16.4,
+    "thread_tip_to_front_reserve_mm": 3.6,
+    "boot_X_gap_mm": 7.749999999999972,
+    "clamp_X_gap_mm": 12.249999999999922,
+    "clearance_scope": "Complete boot and clamp X bounding boxes are left of the rib and its screw heads. Independent of every boot Z home and the full50mm vertical stroke; does not qualify hoses or unknown actuator accessories.",
+    "load_capacity_or_bolted_composite_action_qualified": false
+  },
+  "stiffener_connection_screen": {
+    "force_N": 100,
+    "tool_lever_from_support_mm": 262,
+    "unsymmetric_first_moment_Qeffective_mm3": 2315.369706582704,
+    "longitudinal_shear_flow_N_per_mm": 3.349380952354196,
+    "maximum_rib_axial_resultant_N": 877.5378095167994,
+    "worst_single_locator_or_bolt_transfer_N": 877.5378095167994,
+    "friction_only_screen": {
+      "assumed_friction_coefficient": 0.1,
+      "bolt_count": 3,
+      "required_preload_per_bolt_N": 2925.1260317226643,
+      "example_preload_per_bolt_N": 3000,
+      "nominal_three_bolt_friction_N": 900,
+      "preload_or_friction_qualified": false
+    },
+    "M4_thread_screen": {
+      "nominal_engagement_mm": 16.4,
+      "pitch_diameter_mm": 3.545,
+      "assumed_effective_shear_area_mm2": 91.3229568472017,
+      "required_allowable_internal_thread_shear_MPa_at3000N": 32.85044750598136,
+      "formula": "Ashear=0.5*pi*dp*Le is a simplified nominal thread-strip screen; actual flank geometry, alloy and preload require qualification"
+    },
+    "positive_dowel_screen": {
+      "quantity": 2,
+      "diameter_mm": 4,
+      "length_mm": 20,
+      "rib_embed_mm": 7.3,
+      "head_embed_mm": 12.7,
+      "centres_local_Z_mm": [
+        -35.0,
+        25.0
+      ],
+      "centre_spacing_mm": 60,
+      "required_allowable_pin_shear_MPa_single_pin": 69.83224006731635,
+      "required_allowable_rib_bearing_MPa_single_pin": 30.05266470947943,
+      "required_allowable_head_bearing_MPa_single_pin": 17.274366329070855,
+      "nominal_fit_requirement": "Matchedlightpressinhead;measured0..0.005mmdiametralclearanceinrib;rearflush;verifyreceivedgrade,engagementandload-slip.",
+      "physical_fit_or_capacity_qualified": false
+    },
+    "qualification": "Positive dowels avoid relying solely on unmeasured friction. Fully composite action, joint microslip and <=0.02mm loaded compliance are not proved by nominal bore/pin cylinders. Load test the assembled head; this is not a machine-rigidity release."
+  },
+  "stiffener_net_section_screen": {
+    "E_MPa": 69000,
+    "support_local_Z_mm": 40,
+    "lower_clamp_row_local_Z_mm": -50,
+    "nominal_lower_tool_reference_local_Z_mm": -172,
+    "section_step_mm": 0.05,
+    "minimum_effective_net_I_mm4": 48702.70440009216,
+    "uniform_minimum_section_ideal_bending_100N_P50_mm": 0.12792075990979157,
+    "remaining_from_0p15_plate_target_mm": 0.022079240090208424,
+    "integration": "Integral F*(z-ztool)^2/(E*Ieffective(z)) dz; unsymmetric hole-aware section at each station",
+    "cases": [
+      {
+        "force_N": 25,
+        "tool_projection_mm": 15,
+        "ideal_fully_composite_displacement_mm": 0.016479191215076957
+      },
+      {
+        "force_N": 25,
+        "tool_projection_mm": 50,
+        "ideal_fully_composite_displacement_mm": 0.023285287266021193
+      },
+      {
+        "force_N": 50,
+        "tool_projection_mm": 15,
+        "ideal_fully_composite_displacement_mm": 0.032958382430153914
+      },
+      {
+        "force_N": 50,
+        "tool_projection_mm": 50,
+        "ideal_fully_composite_displacement_mm": 0.046570574532042386
+      },
+      {
+        "force_N": 100,
+        "tool_projection_mm": 15,
+        "ideal_fully_composite_displacement_mm": 0.06591676486030783
+      },
+      {
+        "force_N": 100,
+        "tool_projection_mm": 50,
+        "ideal_fully_composite_displacement_mm": 0.09314114906408477
+      }
+    ],
+    "refinement_100N_P50_0p01mm": 0.09314401200445041,
+    "refinement_delta_mm": 2.862940365638833e-06,
+    "modeled_removed_bores": [
+      [
+        -25,
+        -50,
+        2.5,
+        12.7,
+        25.4
+      ],
+      [
+        -25,
+        -20,
+        2.5,
+        12.7,
+        25.4
+      ],
+      [
+        25,
+        -50,
+        2.5,
+        12.7,
+        25.4
+      ],
+      [
+        25,
+        -20,
+        2.5,
+        12.7,
+        25.4
+      ],
+      [
+        -28,
+        40,
+        3.3,
+        12.7,
+        25.4
+      ],
+      [
+        -28,
+        29,
+        1.5,
+        17.4,
+        25.4
+      ],
+      [
+        -28,
+        51,
+        1.5,
+        17.4,
+        25.4
+      ],
+      [
+        28,
+        40,
+        3.3,
+        12.7,
+        25.4
+      ],
+      [
+        28,
+        29,
+        1.5,
+        17.4,
+        25.4
+      ],
+      [
+        28,
+        51,
+        1.5,
+        17.4,
+        25.4
+      ],
+      [
+        64.7625,
+        -50.0,
+        3.8,
+        12.7,
+        16.8
+      ],
+      [
+        64.7625,
+        -50.0,
+        2.25,
+        16.8,
+        25.4
+      ],
+      [
+        64.7625,
+        -50.0,
+        2,
+        25.4,
+        45.4
+      ],
+      [
+        64.7625,
+        -5.0,
+        3.8,
+        12.7,
+        16.8
+      ],
+      [
+        64.7625,
+        -5.0,
+        2.25,
+        16.8,
+        25.4
+      ],
+      [
+        64.7625,
+        -5.0,
+        2,
+        25.4,
+        45.4
+      ],
+      [
+        64.7625,
+        40.0,
+        3.8,
+        12.7,
+        16.8
+      ],
+      [
+        64.7625,
+        40.0,
+        2.25,
+        16.8,
+        25.4
+      ],
+      [
+        64.7625,
+        40.0,
+        2,
+        25.4,
+        45.4
+      ],
+      [
+        64.7625,
+        -35.0,
+        2,
+        12.7,
+        25.4
+      ],
+      [
+        64.7625,
+        -35.0,
+        2,
+        25.4,
+        34.4
+      ],
+      [
+        64.7625,
+        25.0,
+        2,
+        12.7,
+        25.4
+      ],
+      [
+        64.7625,
+        25.0,
+        2,
+        25.4,
+        34.4
+      ]
+    ],
+    "limitations": "Includes nominal clamp/release/cage/rib screw and dowel bores across the90mm span. Still assumes full composite action and ideal continuous fixed support; excludes shear deformation, torsion, bolt slip, nonlinear contact and actual alloy qualification."
+  },
   "unpriced_requirement_CSV": {
     "file": "output/selected-head-pack/selected-head-requirements.csv",
-    "sha256": "0e44ef023973d3187f2dbd66372dfdcbffa44def859487950cf55868ccf33fd2"
+    "sha256": "297203386b20c5643bac69fcdb132afc01657561f7d7949b7f8d3596b5f84035"
   },
   "retained_plasma_takeoff": {
     "file": "output/selected-head-pack/retained-plasma-source-requirements.csv",
@@ -541,11 +868,22 @@
   },
   "ideal_head_plate_screen": {
     "E_MPa": 69000.0,
-    "gross_I_mm4": 24921.993166666663,
-    "uniform_section_mm": [
-      146,
-      12.7
-    ],
+    "gross_I_mm4": 69128.28786929384,
+    "unreinforced_gross_I_mm4": 24921.993166666663,
+    "coupled_section": {
+      "area_mm2": 2044.6999999999998,
+      "centroid_XY_mm": [
+        6.033773291925467,
+        20.573291925465835
+      ],
+      "Ixx_mm4": 77452.37013871633,
+      "Iyy_mm4": 4019668.8865972757,
+      "Ixy_mm4": 182920.89685947204,
+      "effective_I_for_My_zero_mm4": 69128.28786929384,
+      "formula": "Ieffective=Ixx-Ixy^2/Iyy; includes unsymmetric bending coupling",
+      "gross_ratio_to_flat_plate": 2.77378648677881,
+      "full_composite_action_or_torsion_qualified": false
+    },
     "assumed_fixed_section": "Continuous ideal clamp atM6rowZ1182",
     "bottom_source_clamp_mount_Z_mm": 1092,
     "nominal_spindle_lower_reference_Z_mm": 970,
@@ -553,36 +891,37 @@
       {
         "force_N": 25,
         "loaded_projection_below_nominal_reference_mm": 15,
-        "ideal_tool_displacement_mm": 0.04422364202482599
+        "ideal_tool_displacement_mm": 0.015943419666804556
       },
       {
         "force_N": 25,
         "loaded_projection_below_nominal_reference_mm": 50,
-        "ideal_tool_displacement_mm": 0.062495873773596514
+        "ideal_tool_displacement_mm": 0.022530888398037005
       },
       {
         "force_N": 50,
         "loaded_projection_below_nominal_reference_mm": 15,
-        "ideal_tool_displacement_mm": 0.08844728404965198
+        "ideal_tool_displacement_mm": 0.03188683933360911
       },
       {
         "force_N": 50,
         "loaded_projection_below_nominal_reference_mm": 50,
-        "ideal_tool_displacement_mm": 0.12499174754719303
+        "ideal_tool_displacement_mm": 0.04506177679607401
       },
       {
         "force_N": 100,
         "loaded_projection_below_nominal_reference_mm": 15,
-        "ideal_tool_displacement_mm": 0.17689456809930396
+        "ideal_tool_displacement_mm": 0.06377367866721823
       },
       {
         "force_N": 100,
         "loaded_projection_below_nominal_reference_mm": 50,
-        "ideal_tool_displacement_mm": 0.24998349509438605
+        "ideal_tool_displacement_mm": 0.09012355359214802
       }
     ],
     "formula": "F/(E*I)*(L^3/3+a*L^2+a^2*L),L90,a122+toolprojection",
-    "limitations": "Gross section idealization only; excludes holes, true finite bolted supports, receiver bending, source clamp, rails, spindle bearings and everyotherframe/bedjoint. No complete-machine rigidity or stock-alloy qualification."
+    "unreinforced_100N_P50_mm": 0.24998349509438605,
+    "limitations": "Ideal fully composite gross rib/plate section and continuous fixed line only. Coupled bending included; bolt slip, asymmetric-section shear-center/torsion, holes, actual preload/alloy, receiver/clamp/rails/spindle and every other joint excluded. The computed improvement is not a physical stiffness guarantee or complete-machine rigidity qualification."
   },
   "no_owned_material_credit_for_Z_carrier_or_plasma_drop": true,
   "source_consistent_during_check": true,

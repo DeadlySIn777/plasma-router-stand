@@ -1,0 +1,107 @@
+{
+  "observed_date": "2026-11-05",
+  "currency": "USD",
+  "scope": "Primary-source research only. No cart mutation, order, vendor contact or supplier CAD substitution.",
+  "selected_machine": {
+    "spindle": "Owned 65 mm ZhongHuaJiang 1.5 kW ER11 kit",
+    "magazine_slide": "Owner-reported 311 mm overall, 200 mm travel SFU1605 motion module",
+    "existing_magazine_capacity": "Four-pocket RapidChange ER11, exact vendor geometry not supplied",
+    "existing_endpoint_lock": "Current revision uses passive captured horizontal tongues/roofs; former removable shoulder bolts/nuts/washers removed."
+  },
+  "options": [
+    {
+      "id": "RAPIDCHANGE_LINEAR_4_BASIC",
+      "url": "https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/",
+      "goods_USD": "400.00",
+      "tool_setter_additional_USD": "50.00",
+      "four_mount_screws_additional_USD": "5.00",
+      "shipping_USD": null,
+      "tax_USD": null,
+      "pockets": 4,
+      "preserves_requested_automatic_multi_tool_function": true,
+      "form_observation": "ER11 Type A is offered. Four pockets is the minimum on the current direct form. The Basic model excludes IR tool detection and dust cover; Pro adds $100 and Premium adds $200 on this direct form.",
+      "exact_CAD_available_in_public_result": false,
+      "recommendation": "Retain current four-pocket selection until a delivered alternative with complete selected-variant geometry is established."
+    },
+    {
+      "id": "RAPIDCHANGE_MODULAR_TWO_POCKET",
+      "control_url": "https://rapidchangeatc.com/shop/automatic-tool-changer/rapidchange-atc-tower/",
+      "expansion_url": "https://rapidchangeatc.com/shop/automatic-tool-changer/rapidchange-atc-tower-additional-pockets/",
+      "control_direct_form_USD": "200.00",
+      "expansion_direct_addon_form_USD": "175.00",
+      "two_pocket_goods_conservative_USD": "375.00",
+      "setter_minimum_additional_USD": "50.00",
+      "mount_screws_additional_USD": null,
+      "shipping_USD": null,
+      "tax_USD": null,
+      "pockets": 2,
+      "function": "Modular automatic load/unload with tool/nut state confirmation; manufacturer says it requires a reverse-capable spindle, one controller input, and a tool setter for full measurement automation.",
+      "price_conflict": "The expansion standalone page showed a $150 sale while the control product addon showed $175. A cached shop wizard also showed a $175 control sale while the current direct control form showed $200. No cart price or delivered total was verified; do not combine cached sale prices into a claimed quote.",
+      "exact_CAD_available_in_public_result": false,
+      "requirement_change": "Reduces magazine capacity from four tools to two and changes supplier mounting geometry. Not adopted.",
+      "recommendation": "Only a candidate if two pockets are acceptable; a $25 conservative goods saving does not resolve the whole-machine budget."
+    },
+    {
+      "id": "RAPIDCHANGE_SOLO",
+      "url": "https://rapidchangeatc.com/shop/automatic-tool-changer/solo-tool-changer/",
+      "goods_USD": "100.00",
+      "tool_setter_additional_USD": "50.00",
+      "shipping_USD": null,
+      "tax_USD": null,
+      "pockets": 1,
+      "preserves_requested_automatic_multi_tool_function": false,
+      "reason_rejected": "Manufacturer explicitly describes a manual/semi-automatic single-pocket product requiring the operator to place the next endmill. It cannot be substituted silently for unattended multi-tool ATC."
+    },
+    {
+      "id": "OPENATC_ER20",
+      "primary_repository": "https://github.com/sn3ro/OpenATC",
+      "fork_examined": "https://github.com/lethedream007/openatc",
+      "license": "MIT as stated by repository",
+      "source_spindle": "Standard ER20 2.2 kW at approximately 700 rpm",
+      "reported_torque_Nm": 8,
+      "goods_USD": null,
+      "shipping_USD": null,
+      "tax_USD": null,
+      "ER11_variant_verified": false,
+      "reason_rejected_for_direct_substitution": "Primary README describes ER20. BOM, assembly and configuration sections contain TBC placeholders. No documented ER11 variant or ER11 clamp-torque qualification was found. Uniform scaling does not establish ER11 nut compatibility, engagement, spindle inertia or reliable tightening."
+    },
+    {
+      "id": "ALIEXPRESS_ER11_RETROFIT_SEARCH",
+      "queries": [
+        "site.aliexpress.com ER11 automatic tool changer magazine",
+        "site.aliexpress.com ER11 ATC Rapid",
+        "ER11 tool changer retrofit magazine automatic low cost manufacturer"
+      ],
+      "qualified_selected_listing": null,
+      "delivered_price_USD": null,
+      "result": "No primary selected-variant listing with both documented ER11 retrofit function and usable mounting/engagement geometry was verified. Conventional ATC spindle or ISO/HSK tool forks are different interfaces and were not counted as a cheap compatible magazine. This is a research result, not proof that no such product exists."
+    }
+  ],
+  "automatic_slide_lock_engineering": {
+    "vertical_pull_pin_is_sufficient_replacement": false,
+    "reason": "The present shoulder bolt plus nut/washer supplies both location and uplift retention. Merely retracting a plain vertical pin loses the uplift clamp function.",
+    "candidate_architecture": "Pneumatic guided-pin alternative researched but not selected; no cylinder/valve cost or geometry is included in the actual new passive revision.",
+    "candidate_cylinder_family_primary_drawing": "https://as-th.airtac.com/upload/034-SDA-202409290930260236.PDF",
+    "candidate_cylinder_source": "https://airtacdistr.com/products/airtac-sda16-compact-air-cylinder",
+    "source_family_price_from_USD": "17.90",
+    "selected_order_code": null,
+    "selected_exact_price_USD": null,
+    "selected_installed_geometry_verified": false,
+    "note": "A family from-price is not a quantity-extended selected-cylinder budget. Cylinder stroke, magnet/confirmation version, mounting, ports, pressure, pin bearing/shear, hose clearance and all solids require a complete redesign/check before adoption.",
+    "CAD_mutated": true,
+    "former_manual_lock_qualified_as_automatic": false,
+    "implemented_architecture": "Integral billet tongues/bearing lands, welded fixed guide cheeks/capture roofs and opposite endpoint stops. Existing owned SFU1605 axis drives directly in/out; no separate lock actuator or manual endpoint bolts.",
+    "actual_geometry_report": "output/atc-integration-check.json",
+    "retained_tool_capacity_report": "output/er11-retained-capacity-check.json",
+    "power_loss_axial_lock": false,
+    "axis_axial_force_qualified": false,
+    "hardware": "6xM6x30,4xM6x55bodymount,2xM4x6hoodservicebolts;noadditional4080bar;noaddedpneumaticcylinders"
+  },
+  "conclusion": {
+    "cheaper_documented_drop_in_four_pocket_ER11_ATC_verified": false,
+    "complete_delivered_budget_verified": false,
+    "no_silent_downgrade": "No Solo/manual changer, ER20 open-source mechanism, bare ISO tool fork or generic unpriced cylinder was substituted for the requested ER11 automatic tool changer.",
+    "release": false
+  },
+  "manufacturer_external_geometry_recovered": "Original60mmwidth4solidmanufacturerinstallationSTEP nowintegrated; datedsourceprovenance in sources/manufacturer-housing-provenance.json. Nutengagement/internalER11socket/IRandreceivedrevisionremainheld."
+}

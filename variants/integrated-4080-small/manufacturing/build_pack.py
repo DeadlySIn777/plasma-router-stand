@@ -23,6 +23,7 @@ def cwrite(p,rows):
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
 
 INPUT={
+ 'pack_builder':Path(__file__),
  'frame_geometry':MACHINE/'mechanical.py',
  'assembly_factory':MACHINE/'assembly.py',
  'current_custom_manifest':HERE/'current-custom-check.json',
@@ -69,7 +70,8 @@ def stock_nests(head):
         half.append(dict(id=r['id'],x=x,y=y,w=w,h=h,finish_t=r['finished_thickness_mm']))
     three=[dict(id='BED_HINGE_MOVING_SIDEPLATE_L',x=2,y=2,w=270,h=120,finish_t=9.525),
         dict(id='BED_HINGE_MOVING_SIDEPLATE_R',x=2,y=126,w=270,h=120,finish_t=9.525),
-        dict(id='CD_GRAVITY_LEDGE',x=2,y=250,w=30,h=12.7,finish_t=9.525)]
+        dict(id='CD_GRAVITY_LEDGE',x=2,y=250,w=30,h=12.7,finish_t=9.525),
+        dict(id='OWNER_ROUTER_SIDE_RIB',x=276,y=2,w=20,h=110,finish_t=9.525)]
     sheets=[dict(id='EXCLUSIVE_OWNER_HALF',stock_mm=[304.8,304.8,12.7],parts=half),
             dict(id='EXCLUSIVE_OWNER_THREE_EIGHTHS',stock_mm=[304.8,304.8,9.525],parts=three)]
     checks=[]
@@ -82,7 +84,7 @@ def stock_nests(head):
                 gap=(a['x']+a['w']+4<=b['x']or b['x']+b['w']+4<=a['x']or
                      a['y']+a['h']+4<=b['y']or b['y']+b['h']+4<=a['y'])
                 checks.append(dict(kind='four_mm_separation',sheet=sheet['id'],a=a['id'],b=b['id'],passed=gap))
-    assert len(half)==10 and len(three)==3 and all(r['passed']for r in checks)
+    assert len(half)==10 and len(three)==4 and all(r['passed']for r in checks)
     return dict(sheets=sheets,checks=checks,passed=True,old83blank_nest_applied=False,
         qualification='Exclusive new nominal allocations; actual alloy, thickness, dimensions, flatness, tool access and finished cleanup remain verification gates. Chips/split thickness/offcuts are never counted as extra owned stock.',
         HDPE_new_stock=dict(source_mm=[2438.4,1219.2,12.7],parts=[dict(id='HDPE_LAYER_1',x=0,y=0,w=1000,h=1219.2),dict(id='HDPE_LAYER_2',x=1003,y=0,w=1000,h=1219.2)],
@@ -92,17 +94,17 @@ def stock_nests(head):
 def budget_record():
     facts=[
       dict(id='20100_BED',quantity=5,unit='two-profile1220mmpack',unit_USD='79.99',url='https://www.amazon.com/dp/B0BXNWK99C',
-           shipping='Observed freePrime to30510',scope='Observed silver1220x2; only2silverpacks available. Black displayed79.99/in stock; required5pack stock quantity and final cart not confirmed.',selected_case='required'),
-      dict(id='HDPE_RAW',quantity=1,unit='48x96x1/2inrawsheet',unit_USD='260.40',url='https://shop.flexpipeinc.com/us_en/d-hdpew-481-2-white-hdpe-plastic-1-2',
-           shipping='UNKNOWN_NOT_ZERO',scope='One rawsheet cuts both full layers; shipping/cutting/tax not quoted.',selected_case='required'),
+           shipping='Observed freePrime to30510',scope='2026-11-05: silver1220x2 has only1pack available; black79.99/in stock. Five-pack quantity is not reserved. A separate listing titled4Pack actually selects2 and is not credited as4.',selected_case='required',observed_date='2026-11-05'),
+      dict(id='HDPE_RAW',quantity=1,unit='48x96x1/2inblackrawsheet',unit_USD='225.75',url='https://shop.flexpipeinc.com/us_en/d-hdpeb-481-2-black-hdpe-plastic-1-2',
+           shipping='UNKNOWN_NOT_ZERO',scope='Same12.7mm thickness and1219.2x2438.4mm rawsize; black replaceswhite with34.65goods saving. One sheet cuts both full layers. Freight/cutting/tax not quoted.',selected_case='required',observed_date='2026-11-05'),
       dict(id='RAPIDCHANGE_BASIC4',quantity=1,unit='4pocketER11Basic',unit_USD='400.00',url='https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/',
            shipping='UNKNOWN_NOT_ZERO',scope='Basic goods floor; ProIR upgrade is separately shown. Actual selected-kit interfaces remain a release gate.',selected_case='minimum_basic'),
       dict(id='ARANA_PAIR',quantity=1,unit='28in200lbpair,4ballstudsincluded,noLmounts',unit_USD='33.24',url='https://www.amazon.com/dp/B08CNGT5Z7',
            shipping='Observed freePrime to30510',scope='SelectedST280M200/28IN200LB candidate, sale33.24/typical36.97. Four10mmballstuds included; mountingbrackets extra. Compressedlength unpublished and a60lbbullet contradicts selected200lb variant. Purchase/fit gate requires actualcompressed<=450mm,extended>=700mm and verifiedforce; these are designacceptance limits, not published dimensions.',selected_case='required_candidate_physical_gate'),
       dict(id='RAPIDCHANGE_TOOLSETTER',quantity=1,unit='opticaltoolsetter',unit_USD='50.00',url='https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/',
            shipping='UNKNOWN_NOT_ZERO',scope='Manufacturer requires tool setter; no proven owned probe credit.',selected_case='required_unless_existing_qualified_probe'),
-      dict(id='RAPIDCHANGE_MOUNT_SET',quantity=1,unit='4screwpackage',unit_USD='5.00',url='https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/',
-           shipping='UNKNOWN_NOT_ZERO',scope='Official package is separate; kit body price does not include these screws.',selected_case='required'),
+      dict(id='RAPIDCHANGE_MOUNT_SET',quantity=0,unit='4screwpackage',unit_USD='5.00',url='https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/',
+           shipping='NOT_PURCHASED',scope='Nonpurchased reference: custom matched mounting uses4M6x55 fromthehardwaretakeoff. Do not buy a second vendor mounting package.',selected_case='nonpurchased_reference'),
       dict(id='RAPIDCHANGE_PRO_IR_UPGRADE',quantity=1,unit='ProIRupgrade',unit_USD='100.00',url='https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/',
            shipping='UNKNOWN_NOT_ZERO',scope='Preferred ProIR case; added toBasic, not a secondmagazine.',selected_case='preferred_upgrade'),
       dict(id='USS_MSV00009_DRAIN_VALVE',quantity=1,unit='1inNPTmotorizedNCvalve',unit_USD='50.42',url='https://ussolid.com/products/u-s-solid-motorized-ball-valve-1-stainless-steel-electrical-ball-valve-with-full-port-9-24-v-ac-dc-2-wire-auto-return-html',
@@ -112,9 +114,9 @@ def budget_record():
     amount={r['id']:Decimal(r['extended_USD'])for r in facts}
     three=amount['20100_BED']+amount['HDPE_RAW']+amount['RAPIDCHANGE_BASIC4']
     known=sum((amount[k]for k in ['20100_BED','HDPE_RAW','RAPIDCHANGE_BASIC4','ARANA_PAIR','RAPIDCHANGE_TOOLSETTER','RAPIDCHANGE_MOUNT_SET']),Decimal(0))
-    assert three==Decimal('1060.35') and known==Decimal('1148.59')
+    assert three==Decimal('1025.70') and known==Decimal('1108.94')
     return dict(observed_date='2026-11-01',currency='USD',delivery_price_region='30510',
-        basis='Root agent verified public product facts during this session. Unit-price extensions are not a saved cart, availability reservation, order or a complete delivered quote.',
+        last_reconciled_date='2026-11-05',basis='Public product observations; per-row dates override the general observation date. AliExpress cart evidence is separate and does not make these core goods a saved cart or a complete delivered quote. No unavailable or short teaser variant is extended as full-length stock.',
         rows=facts,three_core_goods_basis_USD=str(three),known_basic_goods_subset_USD=str(known),
         known_preferred_ProIR_goods_subset_USD=str(known+amount['RAPIDCHANGE_PRO_IR_UPGRADE']),
         known_basic_with_drain_valve_goods_subset_USD=str(known+amount['USS_MSV00009_DRAIN_VALVE']),
@@ -259,7 +261,7 @@ def run():
         if item=='Owned router clamp/boot/actuator/spindle/VFD':continue # ownedinventory below
         if item=='Retained plasma float/breakaway stack':
             add('HEAD',item,1,r['specification'],role='NONADDITIVE_REFERENCE',new=0,source=relative(INPUT['head_takeoff']),notes='Detailed retained plasma requirements follow; do not charge complete assembly again.');continue
-        if item=='Positive gravity ledge':ownership='OWNED_EXCLUSIVE_THREE_EIGHTHS_NEST';new=0
+        if item in('Positive gravity ledge','Router side stiffener'):ownership='OWNED_EXCLUSIVE_THREE_EIGHTHS_NEST';new=0
         elif ownership=='OWNED_HALF_SHEET':ownership='OWNED_EXCLUSIVE_HALF_NEST';new=0
         else:new=int(new)if new else ''
         add('HEAD',item,q,r['specification'],ownership=ownership,new=new,source=relative(INPUT['head_takeoff']),notes=r['qualification'])
@@ -272,9 +274,11 @@ def run():
     atc_index={r['id']:r for r in jread(INPUT['atc_custom_index'])}
     for r in cread(INPUT['atc_takeoff']):
         item=r['id'];q=int(r['quantity']);owned=r['ownership'].startswith('owned-motion')
-        role='NONADDITIVE_REFERENCE'if owned else'DISTINCT_REQUIREMENT'
-        ownership='OWNED_INCLUDED_ATC_MODULE_REFERENCE'if owned else'NEW_UNLESS_PHYSICALLY_VERIFIED'
-        new=0 if owned else q;notes=r['notes'];artifact=''
+        included=r['ownership']in('new-kit-included-reference','new-kit-family-geometry-reference')
+        role='NONADDITIVE_REFERENCE'if owned or included else'DISTINCT_REQUIREMENT'
+        ownership='OWNED_INCLUDED_ATC_MODULE_REFERENCE'if owned else'NEW_KIT_FAMILY_GEOMETRY_REFERENCE'if included else'NEW_UNLESS_PHYSICALLY_VERIFIED'
+        new=0 if owned or included else q;notes=r['notes'];artifact=''
+        if item=='ATC_TOOLSETTER_AND_IR_INTERFACE':role='INTERFACE_HOLD';new=''
         if item in credit:ownership='OWNED_EXCLUSIVE_THREE_EIGHTHS_NEST';new=0;notes+=' | Facedfromoneexclusive3/8nest; nootherpartmayclaimthesameblank.'
         if item in atc_index:artifact=relative(MACHINE/'atc'/atc_index[item]['step'])
         add('ATC',item,q,r['section_or_finished_stock']or'Includedowned311mmslideenvelope',ownership=ownership,new=new,role=role,
@@ -309,7 +313,7 @@ def run():
             new=0 if is_owned or role=='NONADDITIVE_REFERENCE'else''if role=='INTERFACE_HOLD'else q
             ownership='OWNED_SOURCE_REPORTED_VERIFY_CONTENTS'if is_owned else'NEW_UNLESS_PHYSICALLY_VERIFIED'
             if item in credit:
-                ownership='OWNED_EXCLUSIVE_THREE_EIGHTHS_NEST';new=0;notes+=' | Exclusiveglobal13blanknest; nosecondallocationofthismaterial.'
+                ownership='OWNED_EXCLUSIVE_THREE_EIGHTHS_NEST';new=0;notes+=' | Exclusiveglobal14blanknest; nosecondallocationofthismaterial.'
             add(scope,item,q,spec,r.get('material',r.get('section','')),ownership=ownership,new=new,role=role,
                 source=relative(INPUT[key]),notes=notes,artifacts=r.get('artifacts',''),unit=r.get('unit','each'))
             if (str(r.get('section',''))=='4080'or(r.get('category')=='extrusion'and'4080'in str(spec)))and role!='NONADDITIVE_REFERENCE':
@@ -394,8 +398,16 @@ def run():
         role='PROFILE_OPERATION_REFERENCE_NOT_SUPPLIER_DIE'if r['category']=='Profile envelope operation reference'else'CURRENT_FINISHED_CUSTOM_STEP',notes=r['notes'])for r in current]
     for item,r in head['outputs'].items():
         path=MACHINE/'head'/r['file'];drawings.append(dict(id=item,scope='HEAD',file=relative(path),sha256=r['sha256'],role='CURRENT_SELECTED_HEAD_STEP',notes='Exclusiveheadstockallocation;notanadditionalpurchase.'))
+    for r in head.get('stiffener_drill_drawings',[]):
+        path=MACHINE/'head'/r['file'];drawings.append(dict(id=path.stem,scope='HEAD_STIFFENER_DRILL',file=relative(path),sha256=r['sha256'],role='CURRENT_HEAD_STIFFENER_DRILL_DXF',notes='Local mm drilling reference; current STEP defines counterbores and dowel engagement.'))
+    turned_drawings=set()
     for scope,key in [('ATC','atc_custom_index'),('BED','bed_custom_index'),('UTILITIES','utilities_custom_index')]:
-        raw=jread(INPUT[key]);raw=raw.get('parts',raw.get('outputs',[]))if isinstance(raw,dict)else raw
+        manifest=jread(INPUT[key])
+        if isinstance(manifest,dict):
+            for d in manifest.get('additional_manufacturing_drawings',[]):
+                path=MACHINE/scope.lower()/d['file']
+                drawings.append(dict(id=d['id'],scope=scope+'_MANUFACTURING_DXF',file=relative(path),sha256=d['sha256'],role=d['role'],notes='Current source-bound manufacturing operation; no additional raw-stock purchase.'))
+        raw=manifest.get('parts',manifest.get('outputs',[]))if isinstance(manifest,dict)else manifest
         if isinstance(raw,dict):raw=[dict(id=k,**v)for k,v in raw.items()]
         for r in raw:
             file=r.get('step',r.get('file'));path=MACHINE/scope.lower()/file
@@ -404,6 +416,9 @@ def run():
             if r['id'].startswith('U_GRAVITY_HOSE_'):
                 drawing_role='PURCHASED_FLEXIBLE_HOSE_ROUTE_REFERENCE';drawing_note+=' | Reference route, not a part to machine as rigid material; actual hose/fittings and length toverify.'
             drawings.append(dict(id=r['id'],scope=scope,file=relative(path),sha256=r.get('sha256',sha(path)),role=drawing_role,notes=drawing_note))
+            if scope=='BED' and r.get('drawing') and r['drawing']not in turned_drawings:
+                turned_drawings.add(r['drawing']);path=MACHINE/'bed'/r['drawing']
+                drawings.append(dict(id=path.stem,scope='BED_TURNED_PIN_DRAWING',file=relative(path),sha256=r['drawing_sha256'],role='CURRENT_BED_TURNED_PIN_DXF',notes='Axial/radial turning and retention drilling; finished STEP and current pin-retention report govern.'))
     for r in jread(INPUT['retained_wet_drawing_manifest'])['flat_parts']:
         if r['id']not in retained_flat_ids and not r['id'].startswith('HATCH_CROSS_ANGLE_'):continue
         path=BASE/r['dxf'].replace('\\','/')
@@ -449,7 +464,9 @@ def run():
     drill_rows=cread(INPUT['HDPE_drill_coordinates'])
     drill_counts=Counter(r['part']for r in drill_rows)
     checks=dict(source_consistent=source_current,current_custom_passed=custom_report['passed'],exclusive_stock_nests_pass=nests['passed'],
-        exactly13_unique_rawstock_credits=half_credit==10 and three_credit==3,
+        exactly14_unique_rawstock_credits=half_credit==10 and three_credit==4,
+        ATC_four_installation_housing_refs_nonadditive=sum(r['role']=='NONADDITIVE_REFERENCE'and r['new_quantity']==0 for r in rows if r['ownership']=='NEW_KIT_FAMILY_GEOMETRY_REFERENCE')==4,
+        bed_three_current_pin_drawings=len(turned_drawings)==3,
         ATC_five_plate_blanks_new=all(row_by_id['ATC:'+item]['new_quantity']==1 for item in atc_new_plates),
         bed_two10mmspacers_new=row_by_id['BED:BED_HINGE_SPACERS']['new_quantity']==2,
         bed_gas_ballstuds_not_doublepurchased=not row_by_id['BED:BED_GAS_INCLUDED_BALLS']['additive'],
@@ -472,7 +489,7 @@ def run():
     report=dict(study='CURRENT_INTEGRATED_MANUFACTURING_AND_BUDGET_RECONCILIATION',checks=checks,passed=all(checks.values()),
         detailed_requirement_rows=len(rows),compact_family_rows=len(compact),current_drawing_rows=len(drawings),
         source_sha256={k:dict(file=relative(p),sha256=start[k])for k,p in INPUT.items()},
-        output_sha256={relative(p):sha(p)for p in HERE.rglob('*')if p.is_file()and p.name!='manufacturing-check.json'and'__pycache__'not in p.parts},
+        output_sha256={relative(HERE/n):sha(HERE/n)for n in('exclusive-stock-nests.json','detailed-requirements.csv','stock-and-hardware-families.csv','subsystem-source-snapshots.json','price-and-budget-register.json','owned-equipment-register.json','current-drawing-index.csv','4080-cut-stock-options.json','source-manifest-binding-checks.json')},
         complete_delivered_price_USD=None,budget_gate='FAIL',fabrication_release=False,operating_release=False,
         meaning_of_pass='Source/stock/reference/arithmeticreconciliationonly. Actualsupplierfit,materials,strengthandcommissioninggatesremain;budgetFAILisnotconcealedbyapassflag.')
     jwrite(HERE/'manufacturing-check.json',report)

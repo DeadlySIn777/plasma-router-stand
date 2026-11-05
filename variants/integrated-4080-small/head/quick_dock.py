@@ -16,6 +16,29 @@ PLATE_WIDTH=146.
 HEAD_FRONT_Y=25.4
 HEAD_FORWARD_SHIFT=3.175
 RELEASE_WITHDRAWAL=12.8
+RIB_X=60.;RIB_THICKNESS=9.525;RIB_DEPTH=20.;RIB_Z0=-60.;RIB_HEIGHT=110.
+RIB_FIX_Z=(-50.,-5.,40.)
+RIB_PIN_Z=(-35.,25.)
+
+def side_stiffener_parts():
+    """One bolted rib outside the entire owner's boot X envelope.
+
+    Its material comes from a separately reconciled unused 3/8-sheet strip.
+    The rear-recessed screw heads preserve the receiver mating plane.
+    """
+    x=RIB_X+RIB_THICKNESS/2
+    rib=D.box(RIB_THICKNESS,RIB_DEPTH,RIB_HEIGHT,(RIB_X,HEAD_FRONT_Y,RIB_Z0))
+    screws=[]
+    for z in RIB_FIX_Z:
+        rib=rib.cut(D.cy(4,RIB_DEPTH+2,(x,HEAD_FRONT_Y-1,z)))
+        screw=D.socket_screw_y(4,25,(0,0,0)).rotate((0,0,0),(0,0,1),180).translate((x,41.8,z))
+        screws.append(dict(id=f'OWNER_ROUTER_SIDE_RIB_SCREW_{z:g}',shape=screw,move='head'))
+    for z in RIB_PIN_Z:
+        rib=rib.cut(D.cy(4,9,(x,HEAD_FRONT_Y,z)))
+        screws.append(dict(id=f'OWNER_ROUTER_SIDE_RIB_DOWEL_{z:g}',shape=D.cy(4,20,(x,12.7,z)),move='head',
+            notes='Groundsteel4x20dowel;rearflush,12.7head+7.3ribengagement. Matchedpressfitinheadand0..0.005mmtransitionclearanceinribrequired;actualgrade/fitsverified.'))
+    return [dict(id='OWNER_ROUTER_SIDE_RIB',shape=rib.clean(),move='head',group='custom',
+        material='Aluminium9.525',notes='9.525x20x110, threeM4x0.7through-taps; threeM4x25socketfixings,16.4nominalengagement/3.6tiprecess. Raw20x110at276,2inexclusiveowner3/8sheet.')]+screws
 
 def release_parts(withdrawal=0.):
     if not 0<=withdrawal<=RELEASE_WITHDRAWAL:raise ValueError('Captive stroke0..12.8mm')
@@ -32,7 +55,7 @@ def release_parts(withdrawal=0.):
             out.append(dict(id=f'CD_CAGE_FIX_{tag}_{z}',shape=D.socket_screw_y(3,10,(x,18.4,z)),move='head'))
     return out
 
-def local_parts(withdrawal=0.,separation=0.):
+def local_parts(withdrawal=0.,separation=0.,*,stiffener=True):
     fixed,meta=D.common_dock();release=release_parts(withdrawal)
     old=fixed[0]['shape'];envelope=D.box(80,12.7,110,(-40,0,0))
     # The raised gantry places the output hold atZ1120..1170 at zero lift.
@@ -51,9 +74,16 @@ def local_parts(withdrawal=0.,separation=0.):
     head=head.cut(slot)
     for x in(-25,25):
         for z in(-50,-20):head=head.cut(D.cy(5,14.7,(x,11.7,z)))
+    if stiffener:
+        x=RIB_X+RIB_THICKNESS/2
+        for z in RIB_FIX_Z:
+            head=head.cut(D.cy(4.5,14.7,(x,11.7,z)))
+            head=head.cut(D.cy(7.6,4.2,(x,12.6,z)))
+        for z in RIB_PIN_Z:head=head.cut(D.cy(4,14.7,(x,11.7,z)))
     moving=[dict(id='OWNER_ROUTER_HEAD_PLATE',shape=head.clean(),move='head',group='custom',
         material='Aluminium12.7billet',notes='146x175x12.7full-thickness; commonfeatureXZpositions retained, M6x25release12.8stroke, fourM5through-taps50x30.')]
     moving+=release
+    if stiffener:moving+=side_stiffener_parts()
     clamp,boot=H.source_owner_local()
     moving.extend([dict(id='OWNER_65MM_CLAMP',shape=clamp.translate((0,HEAD_FORWARD_SHIFT,0)),move='head'),dict(id='OWNER_POWERED_SHIELD_BOOT_BODY',shape=boot.translate((0,HEAD_FORWARD_SHIFT,0)),move='head')])
     for i,x in enumerate((-25,25),1):
@@ -83,6 +113,17 @@ def local_parts(withdrawal=0.,separation=0.):
         release_withdrawn_tip_clearance_mm=.5,head_front_Y_mm=HEAD_FRONT_Y,
         cage_internal_front_Y_mm=44.2,cage_screw_retention_qualified=False,
         spindle_and_boot_mating_registration_not_measured=True)
+    if stiffener:
+        cb=H.bounds(clamp);bb=H.bounds(boot)
+        meta['one_sided_stiffener']=dict(id='OWNER_ROUTER_SIDE_RIB',section_XY_mm=[RIB_THICKNESS,RIB_DEPTH],
+            local_bounds_mm=[RIB_X,HEAD_FRONT_Y,RIB_Z0,RIB_X+RIB_THICKNESS,HEAD_FRONT_Y+RIB_DEPTH,RIB_Z0+RIB_HEIGHT],
+            raw_3p8_sheet_plane_mm=[276,2,20,110],fixings='3M4x25DIN912',
+            positive_shear_locators='2groundsteel4x20dowels;Z-35,+25;rearflush;7.3ribembed',
+            head_plate_clearance_bore_mm=4.5,rear_counterbore_mm=[7.6,4.1],head_recess_mm=.1,
+            nominal_rib_thread_engagement_mm=16.4,thread_tip_to_front_reserve_mm=3.6,
+            boot_X_gap_mm=RIB_X-(bb[3]),clamp_X_gap_mm=RIB_X-cb[3],
+            clearance_scope='Complete boot and clamp X bounding boxes are left of the rib and its screw heads. Independent of every boot Z home and the full50mm vertical stroke; does not qualify hoses or unknown actuator accessories.',
+            load_capacity_or_bolted_composite_action_qualified=False)
     meta.pop('release_tip_reserve_mm',None)
     return fixed+moving,meta
 
@@ -170,7 +211,7 @@ def verify_and_export():
         exports[name]=dict(file=path.relative_to(H.HERE).as_posix(),sha256=H.sha(path),valid=back.isValid(),
             solids=len(back.Solids()),expected_solids=len(parts),volume_error_mm3=abs(back.Volume()-sum(s.Volume()for n,s,c in parts)))
     for p in local:
-        if p['id']not in('CD_RECEIVER','OWNER_ROUTER_HEAD_PLATE'):continue
+        if p['id']not in('CD_RECEIVER','OWNER_ROUTER_HEAD_PLATE','OWNER_ROUTER_SIDE_RIB'):continue
         s=p['shape'];b=H.bounds(s);path=OUT/(p['id']+'.step')
         cq.exporters.export(s.translate(tuple(-v for v in b[:3])),str(path))
         exports[p['id']]=dict(file=path.relative_to(H.HERE).as_posix(),sha256=H.sha(path),local_source_bounds_mm=b)

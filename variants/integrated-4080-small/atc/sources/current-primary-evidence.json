@@ -1,10 +1,10 @@
 {
-  "observed_date": "2026-11-01",
-  "scope": "Read-only official public pages and supplied drawings; no purchase, account join or supplier contact",
+  "observed_date": "2026-11-05",
+  "scope": "Official public source facts plus manufacturer installation STEP downloaded by parent through existing authorized browser session. No purchase, vendor contact or account join.",
   "official_FAQ": "https://rapidchangeatc.com/faq/",
   "official_product": "https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/",
   "official_CAD_download_channel": "https://discord.com/channels/1077383334080032898/1191144591840268318",
-  "direct_public_download_result": "Channel serves JavaScript application shell; no CAD attachment available in the read-only public result",
+  "direct_public_download_result": "Public JS shell had no attachment; existing authorized member browser subsequently provided dated manufacturer STEP.",
   "former_dimensions_page": "https://rapidchangeatc.com/docs/magazine-information/magazine-dimensions/",
   "former_dimensions_result": "Not accessible in current public web tool",
   "current_family_facts": {
@@ -21,7 +21,8 @@
       12,
       12
     ],
-    "generic_family_dimensions_not_verified_for_selected_variant": true
+    "generic_family_dimensions_not_verified_for_selected_variant": true,
+    "ER11_ER16_ER20_external_geometry_shared_except_sockets": true
   },
   "current_product_form_USD_excluding_tax_shipping": {
     "base4pocket_basic": 400,
@@ -32,22 +33,24 @@
     "mounting_screws_included_without_package": false
   },
   "still_unavailable": [
-    "Selected4ER11 pocket centres, base length/height and true endcap/connector/cover envelope",
-    "Actual mounting hole pattern and fastener type/length",
-    "Base-to-nut/IR engagement planes",
+    "Received/current kit revision match to dated4pocketinstallationmodel",
+    "Actual internal ER11 socket/nut engagement planes and IR/cable exits",
     "Received selected slide carriage four-M6 complete pattern/depth and exact height",
     "Received slide underside channel-nut contour and depth"
   ],
-  "design_treatment": "120mm height screened conservatively, 60mm body width from FAQ. This is a capacity allocation rather than verified actual variant CAD. Neither product family dimensions nor purple boxes are used as drilling templates.",
+  "design_treatment": "Original unscaled271.2x60x80.8manufacturerhousing and actualfourpocket/mountaxes integrated. Actual fourM6x55 mounts connect28x60x12.7pads; pads on28x25.4deepbilletarms use existing6004080rearcarrier. Conservative107.3mm kit-height allocation above revised1051.85base retains original1159.15capacityceiling. Actualnutengageheight stillcalibrationhold.",
   "release": false,
   "installed_capacity_requirement_not_exact_vendor_CAD": {
     "XYZ_mm": [
       520,
       60,
-      120
+      107.3
     ],
     "body_width_basis": "FAQ60mm body only",
     "family_52x12x12cm_is_exact_installed_kit": false,
     "endcap_IR_cable_mount_map_qualified": false
-  }
+  },
+  "manufacturer_housing_source": "sources/ER20_4_Standard_20240204.step",
+  "manufacturer_housing_sha256": "e15fe7e41ed1bfba54a0d2203c92355fa509f06b4ed8c3b588b37d9589fee572",
+  "manufacturer_external_installation_geometry_recovered": true
 }

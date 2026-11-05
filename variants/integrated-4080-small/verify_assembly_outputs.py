@@ -24,7 +24,7 @@ def run():
         back=cq.importers.importStep(str(step)).val()
         expected=native.Volume(1e-8);received=back.Volume(1e-8);error=abs(expected-received)
         bbox_error=max(abs(a-b)for a,b in zip(E.S.bounds(native),E.S.bounds(back)))
-        row['initial_nonadaptive_volume_error_mm3']=row['volume_error_mm3']
+        row.setdefault('initial_nonadaptive_volume_error_mm3',row['volume_error_mm3'])
         row.update(volume_error_mm3=error,adaptive_volume_tolerance=1e-8,
             adaptive_expected_volume_mm3=expected,adaptive_readback_volume_mm3=received,
             maximum_bbox_error_mm=bbox_error,

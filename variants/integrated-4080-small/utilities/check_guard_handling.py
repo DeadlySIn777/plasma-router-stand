@@ -23,6 +23,11 @@ def arc_bounds(s,cx,cy,a,b):
    xx.append(cx+dx*math.cos(t)-dy*math.sin(t));yy.append(cy+dx*math.sin(t)+dy*math.cos(t))
  z=U.bb(s);return[min(xx),min(yy),z[2],max(xx),max(yy),z[5]]
 def run():
+ sources=list(dict.fromkeys([Path(p)for p in(__file__,HERE/'build_utilities.py',U.__file__,U.B.__file__,I.M.__file__,A.__file__,I.__file__,T.__file__,
+  I.Q.__file__,I.P.__file__,I.Q.D.__file__,U.O.__file__,U.SH.__file__,I.M.X.__file__,I.M.X.P.__file__,U.O.P.__file__,
+  A.VENDOR_HOUSING_SOURCE,*I.H.sources())]))
+ hashes=lambda:{p.relative_to(ROOT).as_posix():sha(p)for p in sources}
+ source_start=hashes()
  fixed=I.M.frame_parts()+U.retained_wet_parts()+list(U.drain_parts())+list(U.guide_rack_parts())
  common=I.integrated_motion(False,1275,975,250,module_removed=True,spindle_context=False)
  fixed +=[p for p in common if not T.is_front_module(p[0])]
@@ -30,8 +35,7 @@ def run():
  fixed+=A.actual_atc_parts(200,hood='stored',include_allocations=True)
  fixed +=[('ALTERNATE_FITTED_'+n,s,c)for n,s,c in A.hood_parts('fitted')]
  guides={(side,i):U.guide_screen(side,i)for side in('L','R')for i in range(3)}
- sources=[Path(U.__file__),Path(U.B.__file__),Path(I.M.__file__),Path(A.__file__),Path(I.__file__),Path(T.__file__)]
- report=dict(source_sha256={str(p.relative_to(ROOT)):sha(p)for p in sources},
+ report=dict(source_sha256=source_start,
   checked_bed_angles_deg=[0.,90.],checked_hood_states=['stored','fitted'],prerequisites=['Bedat0orpositivelypinned90; usematchingcorridor','Removecompletehead/toolmodule','CommonheadX975/Y1275/Z250','ATCparked200;hoodstoredorfitted;frontstopsoperating',
    'TransferL1,L2,L3,R1,R2,R3inorder','All12M6guidefastenerstransfertostoragerackaftereachpanelisplaced'],
   method='Four conservative exterior boxes per section; translation AABBs are exact axis-aligned sweeps. Rotation XYbounds include analytic vertex arc extrema in1degreeintervals. Borevoids ignored conservatively.',
@@ -69,7 +73,8 @@ def run():
     print('bed',90 if upright else 0,side,i+1,'pathdone hits',len(report['hits']),flush=True)
  report['whole_route_bounds_mm']=[min(b[j]for b in bounds)for j in range(3)]+[max(b[j]for b in bounds)for j in range(3,6)]
  report['within_fixed_machine_plan']=report['whole_route_bounds_mm'][0]>=-50 and report['whole_route_bounds_mm'][1]>=-160 and report['whole_route_bounds_mm'][3]<=1200 and report['whole_route_bounds_mm'][4]<=1600
- report['passed']=not report['hits']and report['within_fixed_machine_plan']
+ report['source_consistent_during_check']=source_start==hashes()
+ report['passed']=not report['hits']and report['within_fixed_machine_plan']and report['source_consistent_during_check']
  report['fabrication_release']=False
  (OUT/'guide-handling-check.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
  print('guardhandling',report['passed'],report['whole_route_bounds_mm'],report['hits'][:5],flush=True)

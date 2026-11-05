@@ -4,7 +4,9 @@
     "source_consistent": true,
     "current_custom_passed": true,
     "exclusive_stock_nests_pass": true,
-    "exactly13_unique_rawstock_credits": true,
+    "exactly14_unique_rawstock_credits": true,
+    "ATC_four_installation_housing_refs_nonadditive": true,
+    "bed_three_current_pin_drawings": true,
     "ATC_five_plate_blanks_new": true,
     "bed_two10mmspacers_new": true,
     "bed_gas_ballstuds_not_doublepurchased": true,
@@ -27,25 +29,29 @@
     "bed_and_utilities_takeoffs_present": true
   },
   "passed": true,
-  "detailed_requirement_rows": 806,
-  "compact_family_rows": 401,
-  "current_drawing_rows": 312,
+  "detailed_requirement_rows": 820,
+  "compact_family_rows": 416,
+  "current_drawing_rows": 329,
   "source_sha256": {
+    "pack_builder": {
+      "file": "variants/integrated-4080-small/manufacturing/build_pack.py",
+      "sha256": "5bb8f92cf5a383f9fb1db4a12bac1e7fddd3ffc0393eba1cd8bda7bd56dd1df6"
+    },
     "frame_geometry": {
       "file": "variants/integrated-4080-small/mechanical.py",
       "sha256": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4"
     },
     "assembly_factory": {
       "file": "variants/integrated-4080-small/assembly.py",
-      "sha256": "a0e62db2bc605a41556aedb096610c029cac785dcec090f35104a716c8ffea96"
+      "sha256": "26a21090c052b3d4d07e5e60c82ecfd1bea71f899a4ce25dfc58aa2e0a687a60"
     },
     "current_custom_manifest": {
       "file": "variants/integrated-4080-small/manufacturing/current-custom-check.json",
-      "sha256": "901a531201092f45b7af80dd1e3631fa4b23c79032242d6f9cb20452a8acedc7"
+      "sha256": "b34f559b9ac2584cd5ad3d0a558f0721f356624cd1ec022a7d8553ac2bde6102"
     },
     "current_custom_index": {
       "file": "variants/integrated-4080-small/manufacturing/current-custom-index.json",
-      "sha256": "d131159789ec11d9c23103ab2a49d631eff88d9f31aa31263c476dd2a2e98b70"
+      "sha256": "49eb405f9840d4353dc32a20b56312f9b15329d1f929ac017866ed1461828e83"
     },
     "frame_source_takeoff": {
       "file": "variants/extrusion-reengineered/review/frame-fabrication.csv",
@@ -57,11 +63,11 @@
     },
     "head_takeoff": {
       "file": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-requirements.csv",
-      "sha256": "0e44ef023973d3187f2dbd66372dfdcbffa44def859487950cf55868ccf33fd2"
+      "sha256": "297203386b20c5643bac69fcdb132afc01657561f7d7949b7f8d3596b5f84035"
     },
     "head_manifest": {
       "file": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
-      "sha256": "24cb368f2418370c278f3a1072b5af47eee5f53f9cbde3c8ac46d7f45504042d"
+      "sha256": "13c0703f77e49cd06a96f134ed4aeaaea1fb515d129d3d8fc52bf0267ec3b46c"
     },
     "plasma_takeoff": {
       "file": "variants/integrated-4080-small/head/output/selected-head-pack/retained-plasma-source-requirements.csv",
@@ -69,19 +75,19 @@
     },
     "atc_takeoff": {
       "file": "variants/integrated-4080-small/atc/output/atc-takeoff.csv",
-      "sha256": "5bd563a0c6794c7cc160b1ce7645ea1205d6154c643e4425aaed1aac96fc9421"
+      "sha256": "26aa4e1668dfc8bf32c5cb16afe3fc04884f05712a090508bce3665ba8710451"
     },
     "atc_custom_index": {
       "file": "variants/integrated-4080-small/atc/output/custom-part-index.json",
-      "sha256": "da9a687ec7a1d849a54f1c59776a0d607529f90c4cb78b8091967175c8abeffc"
+      "sha256": "eece49d04bb68742dfc8b8fffa0f061b528be396da99fef0ba5e0f71f4420e71"
     },
     "atc_manifest": {
       "file": "variants/integrated-4080-small/atc/output/atc-integration-check.json",
-      "sha256": "ebc446210331b3be6f060b03ef322ee75d09880a8184700449d9c7bc7612db8e"
+      "sha256": "46bab4593e33033bb8bbcba17aa9260ffea7a4b8724d93bc40c9aab269679f01"
     },
     "atc_primary_prices": {
       "file": "variants/integrated-4080-small/atc/sources/current-primary-evidence.json",
-      "sha256": "15e67c2c41273f14f27eed48227f5895ec89a2bbda41ecf0776c2b1f14ee09fa"
+      "sha256": "cba7f5a8690cd1187d946ff7970693a96421bbd0688d58202ea2171bd8421ba8"
     },
     "owned_z_evidence": {
       "file": "variants/owned-z300-assessment/owned-hardware-evidence.json",
@@ -105,11 +111,11 @@
     },
     "front_stop_transfer_source": {
       "file": "variants/integrated-4080-small/front_stop_bed_clearance.py",
-      "sha256": "e3f079dbd78b4046d60a68e621f9aaab2015581c9fd7ed4d9a2875b83ecf2a3b"
+      "sha256": "a7f0e99f587d352e0234885d42b97ca660a6606c8c28060b44fe326d77bd1a5c"
     },
     "front_stop_transfer_report": {
       "file": "variants/integrated-4080-small/output/front-stop-bed-clearance/front-stop-bed-clearance-check.json",
-      "sha256": "b77c1496c428367762e5b417c441c95ecf6fb1084c83e2589188460371fb30bb"
+      "sha256": "dddb13bfb8a0e2d1abeef30e3a1b6d84d3f1f7742b0b969e34b716a03884654c"
     },
     "front_stop_additive_takeoff": {
       "file": "variants/integrated-4080-small/output/front-stop-bed-clearance/front-stop-additive-takeoff.csv",
@@ -121,7 +127,7 @@
     },
     "bed_takeoff": {
       "file": "variants/integrated-4080-small/bed/output/bed-takeoff.csv",
-      "sha256": "fc66b284eb0891ab7cb61e687236a89d017e37ec73dda1352b65151a72f1725e"
+      "sha256": "5b0067af2772a3eb8b561e372a4a777bf1df801a0ddb208880a3636ab34722ba"
     },
     "utilities_takeoff": {
       "file": "variants/integrated-4080-small/utilities/output/utility-takeoff.csv",
@@ -129,15 +135,15 @@
     },
     "bed_custom_index": {
       "file": "variants/integrated-4080-small/bed/output/custom-part-index.json",
-      "sha256": "b1ebbc2e4cccbca65d321f11f39fc39996cad428ab0cf0853e9183205970f9ae"
+      "sha256": "6ad8a8d9d492b418b4c0a4f02b5920c38160569f3c48e1c721923fa134253377"
     },
     "utilities_custom_index": {
       "file": "variants/integrated-4080-small/utilities/output/custom-part-index.json",
-      "sha256": "5383251ada2978f908f336efe08b2d1c01698fd72565c56b892d0d2acbf255bf"
+      "sha256": "b99d8338a1e481dd2d3ee924f0db5c2c4505c4f5b1467650c1118ea2c198551a"
     },
     "bed_geometry": {
       "file": "variants/integrated-4080-small/bed/integrated_bed.py",
-      "sha256": "74236fafd81bbc4b322059907ef3b2726a6a9d802f137099361ac1fd529c58fa"
+      "sha256": "d0f35b5c1ec0618280516fa6edb730bcb6238ffb0a2cf41288cfb27110a15d81"
     },
     "utilities_geometry": {
       "file": "variants/integrated-4080-small/utilities/integrated_utilities.py",
@@ -145,11 +151,11 @@
     },
     "bed_geometry_report": {
       "file": "variants/integrated-4080-small/bed/output/bed-local-check.json",
-      "sha256": "2f7a5112077591acb90cb91613cd5d91ff4b2d6bb9d76633f7e7680cc420a8ec"
+      "sha256": "9868aabf97f5fccd23b99b81ead498df5fd616b798e00fd242b38fe4d1a36a76"
     },
     "utilities_geometry_report": {
       "file": "variants/integrated-4080-small/utilities/output/utility-check.json",
-      "sha256": "f9dc887c00e4866f1d8c471f1e092671f7f0d25032f84fbcb0708f972b7af1c0"
+      "sha256": "7d50e9b892106e85db5c046bccc8bdb1a5a704ca7419943b6779559b1df9768d"
     },
     "HDPE_drill_coordinates": {
       "file": "variants/integrated-4080-small/bed/output/HDPE-DRILL.csv",
@@ -157,219 +163,19 @@
     },
     "HDPE_drill_DXF_manifest": {
       "file": "variants/integrated-4080-small/bed/output/HDPE-drill-dxf-check.json",
-      "sha256": "27a795a3ed1dd2029fed5a04899db12d624a7d43514f8165db1013ef69caddf8"
+      "sha256": "beae3586bc656ef648ef8e68d14404cac158de1cf863b01d79dea33d1482aff7"
     }
   },
   "output_sha256": {
-    "variants/integrated-4080-small/manufacturing/.gitattributes": "50f73ee827c7beba7181f3ea223c0f4e1d3ae04cfd68fc2d4dadde99ffc332f6",
-    "variants/integrated-4080-small/manufacturing/4080-cut-stock-options.json": "212e3a80105c37fa0ed6b330872476eba767a7d93e6cbc2fe0067374456dcabd",
-    "variants/integrated-4080-small/manufacturing/build_pack.py": "84c66f75c8c99e795dbf03441b2e3b8210db8a22a785ed916164f4eedc0a0ee2",
-    "variants/integrated-4080-small/manufacturing/current-custom-check.json": "901a531201092f45b7af80dd1e3631fa4b23c79032242d6f9cb20452a8acedc7",
-    "variants/integrated-4080-small/manufacturing/current-custom-index.json": "d131159789ec11d9c23103ab2a49d631eff88d9f31aa31263c476dd2a2e98b70",
-    "variants/integrated-4080-small/manufacturing/current-drawing-index.csv": "c0f58cb1e19978e5c5374334c97c6ee294909155872844c55599d8ad9c14fcc9",
-    "variants/integrated-4080-small/manufacturing/detailed-requirements.csv": "43919868a9f8eedee77817dea16d4fa62898f993086af594ab40a7351f6bd7bf",
-    "variants/integrated-4080-small/manufacturing/exclusive-stock-nests.json": "8ddc668a7da7d4c26203b4b6d261ee8498d53e5d96a23aabca305c22172faf14",
-    "variants/integrated-4080-small/manufacturing/export_current_custom.py": "a21a85b0da2d191e685872f3dc9ef18363f161033455159f59b5c75f2a68fb4c",
+    "variants/integrated-4080-small/manufacturing/exclusive-stock-nests.json": "55c3c7b739c9418d8083c00a889c8597d6fc1e94aabfd9ac922a061ab31a79b0",
+    "variants/integrated-4080-small/manufacturing/detailed-requirements.csv": "4ec1d7c2ac33a1fd698229a29d02c277b1fe2855a61ffae6c70fd42896dadff4",
+    "variants/integrated-4080-small/manufacturing/stock-and-hardware-families.csv": "13e89b1ab1b8a6897317c4dadfa765a95ccfade26108823408b219668979acf9",
+    "variants/integrated-4080-small/manufacturing/subsystem-source-snapshots.json": "d71998d96632e9f97d4b5dd7a365ca249b9eb78ba458c521552d445f8263af18",
+    "variants/integrated-4080-small/manufacturing/price-and-budget-register.json": "5fdd565dc682f6fde8eb37ed8eb43dccfeb8bdaf8e78baaa59d61dc9a75617cc",
     "variants/integrated-4080-small/manufacturing/owned-equipment-register.json": "e5f917ca1ac9a3e0b51c1951c924753ef791ea15483da3d3dcee555f42814f80",
-    "variants/integrated-4080-small/manufacturing/price-and-budget-register.json": "e3b3352f678cb559ce43fe5ff95408f8b12de21e9db4932a9fddafb24ef17510",
-    "variants/integrated-4080-small/manufacturing/README.md": "8292b011fcc21c720d2af6317b9f57619d9272b6437a9b290e626d1529082f68",
-    "variants/integrated-4080-small/manufacturing/source-manifest-binding-checks.json": "e968d6eefd18e180edbf171f998b1246a5842ee2215e5efe4d0942e300f4771b",
-    "variants/integrated-4080-small/manufacturing/stock-and-hardware-families.csv": "38e89430e5dea6347d0951c5dc1874e81eb044a0dcd20775188d4291e01f2de6",
-    "variants/integrated-4080-small/manufacturing/subsystem-source-snapshots.json": "7c024abc5ad15cf1ccf462d7a22df06a440964c544f7ccb4d98b67526cdca476",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/CD_GRAVITY_LEDGE_INTEGRATED.step": "3738050d4fc6109476d956adf6be7b2c1d40463f085767cee59e3007b2dee9ca",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/GANTRY_END_BRACKET_L_INTEGRATED.step": "d6d746a17a8de680365e7e59611ba61743f33c5a6f7817654ca72469519ae947",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/GANTRY_END_BRACKET_R_INTEGRATED.step": "cc567a2f0715ef9accb0bb844305fd1d392943dc465d2ac2f50a5864e552dce5",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/HMS_X_SHOE_INTEGRATED.step": "246c0a19f2ed0b993176105cd1dd5a64d63ac527dcb70259045b421c0bb588d3",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/HMS_Y_L_SHOE_INTEGRATED.step": "ab4ee23283b5d1e91f40b2e1c5b0088d985f892135bcca65646cb7f9d9a9f290",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/HMS_Y_R_SHOE_INTEGRATED.step": "7d268f05a46c39bf0d8f4f22bce1f1d67e5f61a958eb4da82f7d63bbecb17c4b",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/INT_EX_PAN_FRONT_300_INTEGRATED.step": "ad07a8312973023d852863be9ccaf08271dbac153c9c5c4d1e94e191c486ed01",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/INT_GANTRY_4080_FRONT_INTEGRATED.step": "b6c05e876579c2c302baabe2c4d653dff29d264faf2a6afe5e9f00ae085ad2d6",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/INT_GANTRY_4080_REAR_INTEGRATED.step": "bac8b0f9a02f151ed94574556ab2a4683432cf622558dc014c470f6e35721f11",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/INT_GANTRY_GUIDE_BAR_LOWER_INTEGRATED.step": "72af2be002814c17b574c8889cbb77b76e8c479c56517eb2d412e3a3444cff42",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/INT_GANTRY_GUIDE_BAR_UPPER_INTEGRATED.step": "fbeced715d3a880d900b0abb38ec76ac31dc05589325dbb6a094d81a1e27254a",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/INT_PAN_FRONT_HEADER_HANGER_L_INTEGRATED.step": "128d868aad7ef2b1c4d81d6c4cccf97227f90a4ed71f10030ac703a9f03cd906",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/INT_PAN_FRONT_HEADER_HANGER_R_INTEGRATED.step": "d34c4c43bd4f20f1df70d5b5bfceb582b0ead692f032bd6efb17236e8b08e6f2",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/INT_STOP_DATUM_L_OPERATING_BLOCK_INTEGRATED.step": "5e9475aa3da67e1a964486a0829e3f48380c0af20a6cfc8cb6a9f0a52cacf839",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/INT_STOP_DATUM_L_PARKED_BLOCK_INTEGRATED.step": "10c9577b4cb594f8c5523710341550690bb2d10f2fe7661376f9ebb39383013d",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/INT_STOP_DATUM_R_OPERATING_BLOCK_INTEGRATED.step": "28a6a951e3c62b689e3a86ded909d40e77fba63712bd5604120d25c1f1a54bad",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/INT_STOP_DATUM_R_PARKED_BLOCK_INTEGRATED.step": "6a53904979bc7133cf57db2d322bb5ccedb1938a97e59639f69be0a5ee294ee3",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_BACKPLATE_INTEGRATED.step": "096ffd6f8ef10040da39e7a505cb47ae73b59bd59e9b7351bbcd81b5588bc27e",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_BEARING_CAP_1_INTEGRATED.step": "3e0379d94a038feba6d18e0417dd5ba9a626aee97400806cffcd659f570966a4",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_BEARING_CAP_2_INTEGRATED.step": "b4f965d08675b1462c910210d66caee52dc93970b8d62b0d9943907d8e28674c",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_BUSH_SPACER_25_INTEGRATED.step": "c2c06eb52cfb49de058b172213f35140beed7b82ae243c7bb158fd02a10d4735",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_BUSH_SPACER_85_INTEGRATED.step": "0d8e2da4dcb8c16f9120818da620b72e4bda35b957d432ae2630945fb19adc36",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_BUTTON_CONE_INTEGRATED.step": "0d2ee17b97ab38b172db4b22deb65a3996d150db88edd5e0d34ef57685d6526a",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_BUTTON_FLAT_INTEGRATED.step": "cb767ee40776ca1c2d4c5da1f4f91e006885943b5ae21a296374f9e0d6626fcb",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_BUTTON_V_INTEGRATED.step": "a34b29335dda7ff3d6f8737203260d8b8b41445377910c7a5464662e6c5ee134",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_CLAMP_FRONT_INTEGRATED.step": "edcc6c1dd4760da8c02827b9f11347ef6c5f00820c4bd6cb3c30bb4e6038f887",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_CLAMP_REAR_INTEGRATED.step": "5ac71dfd2c298855e00e6c3cb1e2b0818817991efdf9590555eb9975686d89d5",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_CROSSBAR_1_INTEGRATED.step": "6b3bd3fd5cf65d744f5c1745e51358ad76a9990319a5a9335eec5157e96ec936",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_CROSSBAR_2_INTEGRATED.step": "da7b01f0effe7e562416b9ac0a0b01116b8b904d8be6fed32d79cc277d652eda",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_FLOAT_CAM_INTEGRATED.step": "23b69abe3819a1fd39f613783a0a0e1fbbf1b63a3c97be94542251c33f83c11b",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_FLOAT_CARRIAGE_INTEGRATED.step": "6d481cc3f58d704c1e88d2091822b728fb12c22f7542d245515dc0b3ff1a1421",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_FLOAT_STOP_INTEGRATED.step": "8a67bf8c444418c54cb4cede33ea905b08e26a4fa364dacda3756369b53f15bc",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_FLOAT_SWITCH_BRACKET_INTEGRATED.step": "3953cfc8137f0f57f4fc31c84761a39a3f946a630a91ade08f8f8c03361cb992",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_FLOAT_SWITCH_FOOT_SPACER_0_INTEGRATED.step": "5dfde0bf590d2d10b54dfd5ed42b2ca7a55f34d1d0aa9b0e19c55307787a8062",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_FLOAT_SWITCH_FOOT_SPACER_1_INTEGRATED.step": "329393922595f8e48647ec182f2af2c1da29348bf88a7dc10f1f782a52d1499a",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_INSERT_FRONT_INTEGRATED.step": "8e2a1b1a6035c7b70b4c282f02e89f8a89994d12fff8d9b7911e6f37780785df",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_INSERT_REAR_INTEGRATED.step": "2c29b9dc28c7a8d64881c7ba53d078ad8dd819255fbcd5b68eae5ad07a719dd9",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_LEAD_SADDLE_INTEGRATED.step": "95467595021fd13f395e4bec7488e63b776d5c1d3ea241910a46a4a14d3ef678",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_MAGNET_SPACER_1_INTEGRATED.step": "4166ed6da7ae100184b34a2995f786ed3c184d71d82f8e64db1283253b59627a",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_MAGNET_SPACER_2_INTEGRATED.step": "805241eb078370e3c0ab2700752d740552c9b456d11a5104e3ec33f2ce15bfc4",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_MAGNET_SPACER_3_INTEGRATED.step": "29e7060a8c7593a6ebb344e17e5504abba5ff9dc0b3d43954181e7220304d5af",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_PRESENCE_LEFT_BRACKET_INTEGRATED.step": "0efb52282eb8a5a2f4f56f04fd336aedb8d46315d4aed995c1244afdbe484860",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_PRESENCE_RIGHT_BRACKET_INTEGRATED.step": "b4baf2f2d78bba4dde4838cd12e3209d904942b9eed78e17dd0293a9e3a65a8c",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_PRESENCE_TOP_BRACKET_INTEGRATED.step": "2622a635b32416ffe34816e5c7e047e9dbec9a09fbe90e3a28661a24021a708a",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_RELEASE_PLATE_INTEGRATED.step": "8a839d11d3d5da9b44120881e005f0f9c0f316c25a7495566a24c7a06985532a",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_ROD_25_INTEGRATED.step": "42077ca7c95fbc942de07127f7ea31c01c9d1882dd4ed93b31fa46b9bfd31a29",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_ROD_85_INTEGRATED.step": "1be3b28debe902b4c892e6bb11f8ac58267f7e5cde8ddcd6cdbedfefcf1af30b",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_SEAT_CONE_INTEGRATED.step": "c2acaa11f73c846c9cb42918d1138b5bea2064faa6f80541771405ec1a9d0846",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_SEAT_FLAT_INTEGRATED.step": "9e921371f0f855473c268265bda219b8e432e6a6c202b6d2b0dc3acdf4f8b9d1",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_SEAT_V_INTEGRATED.step": "9523d86e756e7deb62583efb31f574441a0dc0f705bad559553d5b45c22838bb",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_SPLASH_SCREEN_INTEGRATED.step": "8e769326c933f54f139beed5e96c71599d4ab6f6674786e1991a0dbfbda991f0",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_SPLASH_TAB_105_INTEGRATED.step": "73ab1da4c324b2c24130dbe1afe46b89b74002a1de6193368588f48320945480",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_SPLASH_TAB_5_INTEGRATED.step": "8905ad099c5b7804d4311aa3c55ef78152b8b847044bddc622fb81dc076e75fa",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_TETHER_EYE_FIXED_INTEGRATED.step": "45f277cfdf9ce2c513e43da267d5f554ab2c682c96f7f25c607aba1ee5c355cb",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/I_HEAD_TETHER_EYE_RELEASE_INTEGRATED.step": "427b6cc8429ae2a049b4019b63ef43ed36e574da18d21426712f79cc5f00716b",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_DRY_ARM_ANGLE_L_2_INTEGRATED.step": "5f8569a29387aca116b7339eedab803ce1188fb19bb6957ca12d060418526beb",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_DRY_ARM_ANGLE_L_3_INTEGRATED.step": "ead9915078dc2689fa37db4e6e94664e1b675217a1976701e8c3cad83deb63a7",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_DRY_ARM_ANGLE_R_2_INTEGRATED.step": "f2f0ace877217f6d98256f6f8afb17d711bf321024b3c68a5b6898539758f745",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_DRY_ARM_ANGLE_R_3_INTEGRATED.step": "07ef834c9214a9e9f75eee56b3ffdf4d757e2f7dff27d4ef96ed2a4bb0523e3b",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_END_SPACER_FRONT_1_INTEGRATED.step": "f7d1064743700e18944580702e9298d01c603feb6fa6a66127db832fda2dc5a9",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_END_SPACER_FRONT_2_INTEGRATED.step": "fdabd896ea7c290facab276871df98c49d3b2983e3e5d71156813762074ad1a0",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_END_SPACER_REAR_1_INTEGRATED.step": "7410c5a00c65dca15828166361512069146c67a250c1e7dd6111598e14915a1a",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_END_SPACER_REAR_2_INTEGRATED.step": "83915d92ca90b9720e3b6f0b264634ada6641734d6ca752d52c9c17e4b5e4722",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_END_X_FRONT_1_INTEGRATED.step": "1c97ad93c15db2492d8bef9fece126aca5b3bffef1587fdb663903945fb52573",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_END_X_FRONT_2_INTEGRATED.step": "d7d86b61f06d29839a11b528cc5825ff881ede246f2c0dbd380a242085b11dff",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_END_X_REAR_1_INTEGRATED.step": "7e0c9ccab4f92cde68d24f0a14742748e64aa1a4b787557c0665883b2d07a47a",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_END_X_REAR_2_INTEGRATED.step": "e4ee7df10870d67e9c73937eb1a61d686ecb68e132dc8b364c0aa99abb5291f0",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_DRY_ARM_L_2_INTEGRATED.step": "5edfafa33d453683dceec4bec64c86a3579e9b573007db68d983616710a035fb",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_DRY_ARM_L_3_INTEGRATED.step": "283d0188e6eef5b3e286b089c8de3e426a8583b86f87505e5b6b108cb2db0aa9",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_DRY_ARM_R_2_INTEGRATED.step": "36c9dc1939bdf7377a6dd704d2cbb5f48f039f2514daffde1606ee14e97be001",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_DRY_ARM_R_3_INTEGRATED.step": "f18a009874fc7c774d3d54513a644ffd484c76c0c08d09bfa283a6df79be4043",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_L_HEADER_INTEGRATED.step": "7938c76eb15bec352c89fedc11a861198404856c11737d5a7da80cc28b23c8dd",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_L_POST_1_INTEGRATED.step": "17891c75b645b1ebf387a8f700fe626acb4596b424370fb1e0970bec5afebfaa",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_L_POST_2_INTEGRATED.step": "7f844d3f0c9880b900b71810af8a687c2a48cbecdbe97b0e9d3575097d91cc7d",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_L_POST_3_INTEGRATED.step": "c4dd2ef880ef2b41ad3e7e720abf7d1df9d1338ccd6e0924b569f053c6317c51",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_L_REAR_FOOTBASE_INTEGRATED.step": "ab8b51026758b177a46c0563c2ad64e0953ce9b488d7f074cf7f60852a7357d7",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_PAN_X_2_INTEGRATED.step": "1264f5d1de1ec9ac7fbc30f355ff9d12a4db5f485265adce2f6b292aa402e804",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_PAN_X_3_INTEGRATED.step": "3b319749320acbf0f8d01f1c013c1ca2330b6a5099c19956c59193880118a7d0",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_R_HEADER_INTEGRATED.step": "292976862aa20aa5962fce0dc349d2654a4ab8dca737d0dce616eea48f7ffd9b",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_R_POST_1_INTEGRATED.step": "d5e7e0db54130df39cfb8f8de8ea3e10b09be0c45714c0b897d22ac600ace69e",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_R_POST_2_INTEGRATED.step": "893b43e7e6a00e4062c9220b903ab2bd3ba38a9edcb3a71f2c99c4f0e616dd0a",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_R_POST_3_INTEGRATED.step": "b3f09b946bcda70087b761546f408af5b1cf150f9f59dc5da4176f1dfc663c88",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_EX_R_REAR_FOOTBASE_INTEGRATED.step": "8b8d557298cdf611d996f47b9e650680a8a53d876af5f2e99078dc059f968fc4",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_FOOT_PLATE_L_1_INTEGRATED.step": "3954f00fcf9c6b17b637172dd68965d02685eb86f32ae2a301bb9d2692d47238",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_FOOT_PLATE_L_2_INTEGRATED.step": "7f4435afe5901f66c47185dea1f7206e4ec4c94cea51884287cae70bf967e57b",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_FOOT_PLATE_L_3A_INTEGRATED.step": "4d8a1a7ab3637bbd14834603688d6a853155fc392b4cb5600949bfd1813fdcf2",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_FOOT_PLATE_L_3B_INTEGRATED.step": "5831ffbe86a2923b93764db7a291aa94e6bad70571a8f17f8b189edcb07bc248",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_FOOT_PLATE_R_1_INTEGRATED.step": "da6f53e4beb27f5eec725deae639a3ff9bf66e9fe2697381d0faf408a46166c4",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_FOOT_PLATE_R_2_INTEGRATED.step": "77eb6c43c08c9912635b12641e8a2da05b5d7b368544b348b618f440ecd3976f",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_FOOT_PLATE_R_3A_INTEGRATED.step": "33d25f3187c859ffa55ccd0f0c55fd2385ce4c2a9d605342b208775e7e1a0a55",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_FOOT_PLATE_R_3B_INTEGRATED.step": "15db0f1f641c2fae6bc5701447a37dfeca1e661c5779db26fde29009720a2a04",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_PAN_BEARING_ANGLE_L_2_INTEGRATED.step": "66f1c8025ab0fcbd311bc0ce29478d0f290c166d5be59e69eab4549f42056413",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_PAN_BEARING_ANGLE_L_3_INTEGRATED.step": "e0148997d77a7ace41b4bfcd9830d3254425ebec6fabcec793ef8e1455c10752",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_PAN_BEARING_ANGLE_R_2_INTEGRATED.step": "b1f9a13fc09fb3ad56cdfe4b7ca144496e46a0d40d15423469c507ad32e0bdaf",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_PAN_BEARING_ANGLE_R_3_INTEGRATED.step": "a6ad7639d2b3024904b9fffc711d8dca1064b848675f1d75df7dc9823e50d40c",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_PLASMA_DROP_148_INTEGRATED.step": "38bcc7919b42d18073f6f2c5674b1bf36e4d63b5461a0ac1869a50c4404a89cb",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_REAR_BASE_FISHPLATE_L_IN_INTEGRATED.step": "596ad7ef4805e9599d6445d80e9227c41e4bd589948a4e551c4bb0c4d39eea80",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_REAR_BASE_FISHPLATE_L_OUT_INTEGRATED.step": "0c5b7339f3159c3617421fe316900e4e2eb7e909f639ca9478900e8eaccc82f5",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_REAR_BASE_FISHPLATE_R_IN_INTEGRATED.step": "02e1c51e731ebb64fa4f131050079ab7c938b6b0c455bec183e0bc842b49598a",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_REAR_BASE_FISHPLATE_R_OUT_INTEGRATED.step": "8f9af5caecbeedb3ee34b2c6d69ad62cb6ecf20d5f085c6291cb17a159a66d66",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_1_PAD_70x60x12p7_INTEGRATED.step": "707d3d57c914facb83747f0990d24da6f7e2aa11bee9c2730d86dfab0aeb122e",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_1_SIDE_60x80x9p525_INTEGRATED.step": "8d7ba8f1ae7d7f9c3409778e5534c04e91c76ef07e05483f06583b92b1516e26",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_1_SPACER_6p4_1_1_INTEGRATED.step": "f66e770ed44b3293723642385fb16cf7f21580cf087633ba9cb56fc43580f987",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_1_SPACER_6p4_1_2_INTEGRATED.step": "ebd0bb56d9c814f508622a76c946de24075548a3008060287c8cd9f3e2d22837",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_1_SPACER_6p4_2_1_INTEGRATED.step": "69f8280a78707de0dd7ce5365c9be32effe7f2631c79d13f514c988f72417553",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_1_SPACER_6p4_2_2_INTEGRATED.step": "fa45da14f1b347bc68d97e086ebce082f6df069901ea1f92ff5a5747e7fc2a72",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_2_PAD_70x60x12p7_INTEGRATED.step": "4eb23de3069926556678afd41d0403057bf15080615f27b07a458aeee941d43e",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_2_SIDE_60x80x9p525_INTEGRATED.step": "210fb5ccc7f7ce192926a394b1e6a16652363a7ec0dd81fc8462d8e180e6fc70",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_2_SPACER_6p4_1_1_INTEGRATED.step": "cbe038396c91289bab7a7c71693ca10373473e8353bdaaf8957a290c81536ae4",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_2_SPACER_6p4_1_2_INTEGRATED.step": "d12638aabde06a0d31d962a3d384a988adfd6b4946a095eb8395124e8bc89f57",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_2_SPACER_6p4_2_1_INTEGRATED.step": "81866148d930387f7e9776b6f73bff5e39028995363b0c71b550cd84217456e0",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_2_SPACER_6p4_2_2_INTEGRATED.step": "a6f2baf1cac9879dd7aaa21bde1c074362f9c81dfb1c075a5f18972df7b992fc",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_3_PAD_70x60x12p7_INTEGRATED.step": "b538107325f7116da5beeb680f8c1da3f4bd49e811fea210e28dfa5bc15a4f1d",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_3_SIDE_60x80x9p525_INTEGRATED.step": "19b633ab9c3b349d85adca6e42e4c1fbf07274619208b750e99127644dae051e",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_3_SPACER_6p4_1_1_INTEGRATED.step": "34bb76556e75ae33d62c758271432c287bfd880fabd3638bf4ec8ce96d1ba6c0",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_3_SPACER_6p4_1_2_INTEGRATED.step": "590a3363628afa07d9f74603e05865ae1714f9e08a44111da33d1804955b5733",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_3_SPACER_6p4_2_1_INTEGRATED.step": "ab073001c3d3aacbc1ee3d4947b92b63bcccf04953d6a9dd03f202accaa6f534",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_L_3_SPACER_6p4_2_2_INTEGRATED.step": "7fff965e8d81c9b3fbe480e1e99e20cd03e769f75d1e5a8f42069b7edb1d0119",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_1_PAD_70x60x12p7_INTEGRATED.step": "a6137f3e223b3d3b24d235e0f6749065781f671f30861dd985789e445ffc4536",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_1_SIDE_60x80x9p525_INTEGRATED.step": "4ba60df8cc61d6d295084cb62f6e2ffcec099dd015fe566e95e1731da261bdb9",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_1_SPACER_6p4_1_1_INTEGRATED.step": "dbddad675ce15eaa0ef8e18c11dd7e9320184ed3d6ea78639a15919b3da9eea1",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_1_SPACER_6p4_1_2_INTEGRATED.step": "765d71b21ddceeb706474a339a1bd8df009a7abd9d0377891714ced72d153d57",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_1_SPACER_6p4_2_1_INTEGRATED.step": "3486d71625161e59ab60c0ebbe9a7b1c49e3e36b4920efbf269c84b8a9151bd7",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_1_SPACER_6p4_2_2_INTEGRATED.step": "ac0e3a914d9e17ab00d0597054b2c218596431449434786a67cb82a3f5f0be81",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_2_PAD_70x60x12p7_INTEGRATED.step": "c4ab55815a60c4b0046d7f0a4894b698230feec4672d836ab98b19dd91a97f0e",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_2_SIDE_60x80x9p525_INTEGRATED.step": "5b375772d44704b502b96a556150b461d14091b890c49cc6ee443ee61a011a5e",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_2_SPACER_6p4_1_1_INTEGRATED.step": "3c47654564d256ca463bd8815536ecd6e8ae0053d1fdd99cafac425e0ed0210a",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_2_SPACER_6p4_1_2_INTEGRATED.step": "b19c558aa2d7d4ebcff37d8f9abea7e6ef8fbe68ae06a4eab3b503165de28d13",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_2_SPACER_6p4_2_1_INTEGRATED.step": "256e3d538493d48a3c75ec281310fe92b665eef8e0b69a424693339bb2bfea63",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_2_SPACER_6p4_2_2_INTEGRATED.step": "9029309fed49d489901ad1457fd66594dd8ead6772098713fb2121ff0471fb2b",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_3_PAD_70x60x12p7_INTEGRATED.step": "b0e252832274e5e6db140ea5148f87ec639deb76a70cb907fbff61358b058fde",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_3_SIDE_60x80x9p525_INTEGRATED.step": "4f78f8ca1a8f3d79ec84a60505a7517d4fd18a1976862bfc76530e7d3f3cb3a3",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_3_SPACER_6p4_1_1_INTEGRATED.step": "f0365b965e07cf0a2ed7f5ebed344fdd17e3a45bd97a224c6b0e391eb6e04a77",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_3_SPACER_6p4_1_2_INTEGRATED.step": "b9771f1db35fd4120c90e4f260ecb60a1faa5cd354f1ceacb4154fc44f3c1cb5",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_3_SPACER_6p4_2_1_INTEGRATED.step": "bd6798a55524c1b3cfb762d31b12a3177d6afa099c2a13d4c487b81e71970431",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SADDLE_R_3_SPACER_6p4_2_2_INTEGRATED.step": "b29a6defa723170918d727876bb4d0809daf907f30b75db460b7822c2e9458c4",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_SPACER_L_1_1_INTEGRATED.step": "5f82587695bae0a86b61c46e3ba53911a2c2408c7c618330bf36b058a1690577",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_SPACER_L_1_2_INTEGRATED.step": "ef248efbd5201a150a5c1c246d0679e4a086420d197257bde39d26837eb75039",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_SPACER_L_2_1_INTEGRATED.step": "5b27b2250e88a3178029846f3f23df32c889a68ad8cee131b205abad449fdb21",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_SPACER_L_2_2_INTEGRATED.step": "ce1e717d6ad7fbf08af313cec49f8fa8b566fc2e96a801efa421d587cae122b0",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_SPACER_R_1_1_INTEGRATED.step": "50ca82ea88cde421c797f1883975c413602d4a0074be7e07ecc3d442219aae82",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_SPACER_R_1_2_INTEGRATED.step": "3e6cbadab850e8f0c754241fb5a712f1b64d26eb9795026a229364a850864434",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_SPACER_R_2_1_INTEGRATED.step": "248cb582d15451ba551a02add323339d3aaba7bf00d967ad3070d90e434b23fa",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_SPACER_R_2_2_INTEGRATED.step": "3f26b6ea280daebc1b49e654bcf0f1bc4cb6c37f7ac9bde4629ac5f15f554d56",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_X_L_1_1_INTEGRATED.step": "0858828f41c4e3f1c664df531506cbb7a6e463e6ee53dd9b844fef3474279d8b",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_X_L_1_2_INTEGRATED.step": "be90546623452e6bec8bac6bb2c5cd8617df56135b0da9aba045e5b71cd669a9",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_X_L_2_1_INTEGRATED.step": "a89910f9167dcde87851b92128cca3dfa56b85379725d1d85ba6e2c62d7605ff",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_X_L_2_2_INTEGRATED.step": "ce6c762df76259237a48e50bd32b050db45da5fdd26d7caa480fb8f820faa1b7",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_X_R_1_1_INTEGRATED.step": "7aaebb294035710e49b2f4bdc39c5e317c23a789e098c95d22129f1c3b3b830f",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_X_R_1_2_INTEGRATED.step": "a77368fcb2782d07261c6061dd8d3e587be59ec3395c8f4f283969f1dc57321d",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_X_R_2_1_INTEGRATED.step": "824e7f4aa47f35e029ce41e7768a5ec7ed530c4cbed9f3efb5c325c2d3175f12",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_SIDE_X_R_2_2_INTEGRATED.step": "bbfa3c1f9c3ba4617d882c51ff46c761944edc848342210a9ac6d452116882b8",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_STOP_CARRIER_L_FRONT_INTEGRATED.step": "4ecb3624ae8310c2720b7d7aa84746d1648bbfd7fd169c9f47865546d3f35fee",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_STOP_CARRIER_L_REAR_INTEGRATED.step": "dc9daa9f1edf55c56905c5acc80a731ec80c304d0095292d34f94b16c09bfd40",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_STOP_CARRIER_R_FRONT_INTEGRATED.step": "276d8cb3b2728e96577664c6c4859943e0da40caf0f37e7444415a72cbcacae4",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_STOP_CARRIER_R_REAR_INTEGRATED.step": "4ec8617cb5ce89e9cd08e9cd110c56d76b339e8598f3f2e8c9bc8f5796c6b9cf",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_TOP_FISHPLATE_L_1_INTEGRATED.step": "7757eb8bfc2751ecf4e02abc11623a0b88225a5b786611308a0a7add611c7198",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_TOP_FISHPLATE_L_2_INTEGRATED.step": "5c1eddf206bcbb4a58499c2c62637424d8808052d0551a0587d57ecdfacba88c",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_TOP_FISHPLATE_L_3_INTEGRATED.step": "f2f9400fdff6bb1520f0d86fb43d642963d08189121bae540b109a19c262b407",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_TOP_FISHPLATE_R_1_INTEGRATED.step": "a82d38c9e64d3fbbd03269004933ff7d843fe7adfe66432b7a6663f6322e9cbc",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_TOP_FISHPLATE_R_2_INTEGRATED.step": "32273a60dd0c0909689bacfa16b45e5c0d3fcded21a18f64278d86ce2b19370f",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/XR_TOP_FISHPLATE_R_3_INTEGRATED.step": "2f8a0d475fc9c599dd636e5451f7025641eb7d3aa926ae023b210880046c65f5",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/X_HOME_CAM_INTEGRATED.step": "0782b73701ddb3fc325699d2d574a94076a5a55a2b2aac87b456e9b41b5117ea",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/X_LINK_A_CLEVIS_INTEGRATED.step": "070aab9440d8de0d6d997dde2b4bc8b2ed15e0e48f7472cf191cd0767686cd7f",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/X_LINK_B_CLEVIS_INTEGRATED.step": "52cb13398f6b13d86945882551eab8c5a7635cc6dfb3bbbb8909d86cd68554ee",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/X_LINK_COUPLER_INTEGRATED.step": "663cf5952163080b945bceab46ed82afb128b952980c157b6a309be3c64b9cae",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/X_LINK_SUPPORT_INTEGRATED.step": "61ddddba8d29ff8d3f927bdb69bd26976ac012cdfe5f518c2d7b6c3e6721593e",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/X_STOP_LEFT_BODY_INTEGRATED.step": "4432cdd22df85bc242f225228dc48178e7374a0b1b6319128a72b96ca83a9c93",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/X_STOP_LEFT_BUFFER_INTEGRATED.step": "30c25b45cc4e1bc22e58e39a13e4cf852bd0dd804c81660ef26278c10100b5e7",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/X_STOP_RIGHT_BODY_INTEGRATED.step": "3581f7b8baeb61bb0a20a052a4079cf48f02ee928df0afed7544f1cd1c832a4d",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/X_STOP_RIGHT_BUFFER_INTEGRATED.step": "fcda859c5aed424938d419fd263120fe1ec64ddb4a17a9b72904ab366175e6aa",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_CAM_L_FRONT_INTEGRATED.step": "0210526ba4530a44939cfa849976b2c347e0a2fb58eaa875a8b9180bdbaacbf2",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_CAM_R_FRONT_INTEGRATED.step": "b28e7a6fc641f657091bd199ab02d771dcc43b3da62828205bbb1e93cc1082b4",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_LINK_L_A_CLEVIS_INTEGRATED.step": "7fb37cc3ae02cf363be6c2166d207fe306294324f509ec2077c3d39a6105141a",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_LINK_L_B_CLEVIS_INTEGRATED.step": "d560f7fbbcbd378a25d512a1ede72011b6ec98023325fa9807b5d457b9d8a83f",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_LINK_L_COUPLER_INTEGRATED.step": "e5d916cd04295db29519267723a5b940dc1b3e17e178fff8dbaf0432ab1bc608",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_LINK_R_A_CLEVIS_INTEGRATED.step": "a4604db9a8429b6cd0f5f3d1014dc10ae8ede50faced6ac45d9a5e6842178412",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_LINK_R_B_CLEVIS_INTEGRATED.step": "c75de449484146b47018fe7728a9d79648766ed533eb6c8de2e0b268b4e460f1",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_LINK_R_COUPLER_INTEGRATED.step": "eb0a645319b2c00331d4c151abfe68fc4f7d929ac441fe0eb9581a27119680b4",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_LINK_SUPPORT_FLANGE_L_INTEGRATED.step": "44ddf11816b1c83a8bde069e21f527f15791c0c1ac1b9737c16f9ad25c3bf03d",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_LINK_SUPPORT_FLANGE_R_INTEGRATED.step": "3b4855570829ed7e26c941e0464008dbada9a978a3efea610dcb9b9016e25577",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_LINK_SUPPORT_WEB_L_INTEGRATED.step": "49b66d6f0d78b976dffc33cada597e6734665c6a708c7024cd191eb4f643d53c",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_LINK_SUPPORT_WEB_R_INTEGRATED.step": "b854297074cda6343ee31248da31c58a917917a75e8a796174786b49c1f5b9d7",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_SHOE_L_INTEGRATED.step": "4c4da6bc0558293fba0daeeec07df503f405c3446bc4ece315deae399f49c4aa",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_SHOE_R_INTEGRATED.step": "479d4528c5c3bc4b68b40926789f8acd0335dc8c5ab312502e4773c85bf04322",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_STOP_L_FRONT_BRACKET_INTEGRATED.step": "f641711d8d576a12153429efeaba61284e2ff7d2aac80f81fc13ac6181c1a3a9",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_STOP_L_FRONT_BUFFER_INTEGRATED.step": "6219281faf191cf636b70062acb02829c57e168a0be007f4997459a846d41298",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_STOP_L_REAR_BRACKET_INTEGRATED.step": "4d7ba2281218a7869619464a117e39e7f433a9a55bd3d68dd5a9d2b43cf5c5a3",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_STOP_L_REAR_BUFFER_INTEGRATED.step": "a8dc02ff4cc3a6f0372cb66b5a75d592c1ffed15284a30d098ea8bbc3dca1104",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_STOP_R_FRONT_BRACKET_INTEGRATED.step": "2cf8f3926289ecdc35d9e78b81aa9d87897077121e3767151dbac26d229aec8e",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_STOP_R_FRONT_BUFFER_INTEGRATED.step": "403fb257c1f69fc6a40ad0433e970e877e8f81f06bb105a456cf09c374aae7e3",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_STOP_R_REAR_BRACKET_INTEGRATED.step": "63d1fe293dbc036cc6daa86e143a2aaad86e678227d6532366a2013e0d35786d",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Y_STOP_R_REAR_BUFFER_INTEGRATED.step": "f1562d3159199ddaa9f0ab65ddb5e6ba80b3f8e20fb6365bc7a5d7f97cf087e4",
-    "variants/integrated-4080-small/manufacturing/current-custom-step/Z_CARRIER_INTEGRATED.step": "7faee0a86f45983fe96137206734105734867f0fbd1a871ed021294526ac6388"
+    "variants/integrated-4080-small/manufacturing/current-drawing-index.csv": "0d08071fa56c463b8f0c72b374de9e32e568b6bf6c4dd09b93769015e7a01777",
+    "variants/integrated-4080-small/manufacturing/4080-cut-stock-options.json": "212e3a80105c37fa0ed6b330872476eba767a7d93e6cbc2fe0067374456dcabd",
+    "variants/integrated-4080-small/manufacturing/source-manifest-binding-checks.json": "b46f81efcf3de40301cb03e417bb9c9f0210a2d00cb7d9148735c5e9d049bacc"
   },
   "complete_delivered_price_USD": null,
   "budget_gate": "FAIL",

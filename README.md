@@ -10,7 +10,10 @@ Read the [current status](variants/integrated-4080-small/STATUS.md) and
 [stock, ownership and cost register](variants/integrated-4080-small/manufacturing/README.md).
 Known owned motion, guides, drives, spindle/VFD and working head are excluded
 from new costs. The currently sourced tracks, HDPE and Basic ATC alone extend
-to $1060.35 before the frame, pan, hardware and delivery charges.
+to $1025.70 before the frame, pan, hardware and delivery charges. The exact
+AliExpress hardware additions are recorded separately in the current
+[cart evidence](variants/integrated-4080-small/manufacturing/selected-cart-evidence.json);
+that partial cart is not a full-build quote.
 
 - [Wood-mode STEP](variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_WOOD.step)
 - [Plasma-mode STEP](variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_PLASMA.step)

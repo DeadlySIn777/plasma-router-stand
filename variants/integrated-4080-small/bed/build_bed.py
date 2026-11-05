@@ -154,7 +154,7 @@ def run():
  #Rigid deck path, continuous bounding-box rotation plus exact-distance
  #Lipschitz certificates when boxes alone are insufficient.
  moving=[p for p in closed if p['moving_bed']]
- fixed=external+[(p['id'],p['shape'],p['color'])for p in closed if p['id'].startswith(('BED_RECEIVER_','BED_FRONT_SEAT','BED_HINGE_FIXED','BED_HINGE_PIN','BED_GAS_ROOT_','BED_CAPTURE_ROOT_'))]
+ fixed=external+[(p['id'],p['shape'],p['color'])for p in closed if not p['moving_bed']and p['id'].startswith(('BED_RECEIVER_','BED_FRONT_SEAT','BED_HINGE_FIXED','BED_HINGE_PIN','BED_HINGE_RETAINER_','BED_HINGE_AXIAL_SHIM_','BED_GAS_ROOT_','BED_CAPTURE_ROOT_','BED_STAY_PIVOT_'))]
  partitions=[];partitioned=[]
  for n,s,c in fixed:
   if not n.startswith('BED_RECEIVER_ANGLE_'):partitioned.append((n,s,c));continue
@@ -187,14 +187,14 @@ def run():
  assist_rows=[]
  for angle in range(0,91,10):
   parts=B.bed_parts(float(angle));assist=[p for p in parts if p['id'].startswith(('BED_GAS','BED_CAPTURE','BED_FULL_OPEN'))]
-  rigid=[(p['id'],p['shape'],p['color'])for p in parts if p['moving_bed']or p['id'].startswith(('BED_RECEIVER','BED_FRONT_SEAT','BED_HINGE_FIXED','BED_HINGE_PIN'))]
+  rigid=[(p['id'],p['shape'],p['color'])for p in parts if p['moving_bed']or p['id'].startswith(('BED_RECEIVER','BED_FRONT_SEAT','BED_HINGE_FIXED','BED_HINGE_PIN','BED_HINGE_RETAINER_','BED_HINGE_AXIAL_SHIM_','BED_STAY_PIVOT_'))]
   result=exact_pairs(assist,external+rigid)
   assist_rows.append(dict(angle_deg=angle,**result))
   print('ASSIST',angle,result['passed'],result['unexpected'],flush=True)
  exports={name:export_step(parts,OUT/('FULL_BED_'+name.upper()+'.step'))for name,parts in(('wood',closed),('upright',opened))}
  custom={}
- for p in closed:
-  if p['id'].startswith(('BED_HINGE_','BED_ASSIST_','BED_RECEIVER','BED_FRONT_SEAT','BED_REAR_END_CAP','BED_GAS_ROOT_MOUNT','BED_CAPTURE_ROOT_MOUNT'))and not p['id'].startswith(('BED_HINGE_PIN','BED_HINGE_M8x35_BUTTON')):
+ for p in[*closed,*[q for q in opened if q['id'].startswith('BED_FULL_OPEN_POSITIVE_PIN_')]]:
+  if p['id'].startswith(('BED_HINGE_FIXED_','BED_HINGE_MOVING_SIDEPLATE_','BED_HINGE_SPACER_','BED_HINGE_PIN_','BED_HINGE_AXIAL_SHIM_','BED_HINGE_RETAINER_WASHER_','BED_ASSIST_','BED_RECEIVER','BED_FRONT_SEAT','BED_REAR_END_CAP','BED_GAS_ROOT_MOUNT','BED_CAPTURE_ROOT_MOUNT','BED_STAY_PIVOT_PIN_','BED_FULL_OPEN_POSITIVE_PIN_')):
    b=B.bounds(p['shape']);local=p['shape'].translate(tuple(-v for v in b[:3]));path=OUT/(p['id']+'.step')
    cq.exporters.export(local,str(path));back=cq.importers.importStep(str(path)).val()
    custom[p['id']]=dict(file=path.relative_to(HERE).as_posix(),sha256=sha(path),world_min_mm=b[:3],valid=back.isValid()and len(back.Solids())==1)

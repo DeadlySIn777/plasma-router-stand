@@ -96,12 +96,16 @@ def run():
  import actual_atc as A
  import assembly as I
  OUT.mkdir(parents=True,exist_ok=True)
+ sources=list(dict.fromkeys([Path(p)for p in(__file__,M.__file__,B.__file__,U.__file__,A.__file__,I.__file__,
+   I.Q.__file__,I.P.__file__,I.Q.D.__file__,U.O.__file__,U.SH.__file__,M.X.__file__,M.X.P.__file__,U.O.P.__file__,
+   A.VENDOR_HOUSING_SOURCE,*I.H.sources())]))
+ hashes=lambda:{p.relative_to(HERE.parents[1]).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()for p in sources}
+ start=hashes()
  raw=[p for p in I.integrated_motion(False,1275,975,250,module_removed=True,spindle_context=False)if not p[0].startswith('INT_STOP_DATUM_')and not is_front_module(p[0])]
  raw +=[p for p in M.motion_parts(False,1275,975,250)if is_front_module(p[0])]
  fixed=M.frame_parts()+U.utility_parts(guards_fitted=False)
  fixed+=A.actual_atc_parts(200,hood='fitted',include_allocations=True)+[p for p in raw if not is_front_module(p[0])]+list(datum_parts())
- hashes=lambda:{str(p.relative_to(HERE.parents[1])):hashlib.sha256(p.read_bytes()).hexdigest()for p in map(Path,(__file__,M.__file__,B.__file__,U.__file__,A.__file__,I.__file__))}
- start=hashes();hits=[];coverage={};bounds_all=[];count=0
+ hits=[];coverage={};bounds_all=[];count=0
  def overlaps(a,b):return all(min(a[i+3],b[i+3])-max(a[i],b[i])>1e-6 for i in range(3))
  # Transfer left then right. The other complete module stays physical in
  # its operating or parked pose; only four explicitly removed header screws

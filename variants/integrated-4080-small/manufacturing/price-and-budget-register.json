@@ -2,7 +2,8 @@
   "observed_date": "2026-11-01",
   "currency": "USD",
   "delivery_price_region": "30510",
-  "basis": "Root agent verified public product facts during this session. Unit-price extensions are not a saved cart, availability reservation, order or a complete delivered quote.",
+  "last_reconciled_date": "2026-11-05",
+  "basis": "Public product observations; per-row dates override the general observation date. AliExpress cart evidence is separate and does not make these core goods a saved cart or a complete delivered quote. No unavailable or short teaser variant is extended as full-length stock.",
   "rows": [
     {
       "id": "20100_BED",
@@ -11,20 +12,22 @@
       "unit_USD": "79.99",
       "url": "https://www.amazon.com/dp/B0BXNWK99C",
       "shipping": "Observed freePrime to30510",
-      "scope": "Observed silver1220x2; only2silverpacks available. Black displayed79.99/in stock; required5pack stock quantity and final cart not confirmed.",
+      "scope": "2026-11-05: silver1220x2 has only1pack available; black79.99/in stock. Five-pack quantity is not reserved. A separate listing titled4Pack actually selects2 and is not credited as4.",
       "selected_case": "required",
+      "observed_date": "2026-11-05",
       "extended_USD": "399.95"
     },
     {
       "id": "HDPE_RAW",
       "quantity": 1,
-      "unit": "48x96x1/2inrawsheet",
-      "unit_USD": "260.40",
-      "url": "https://shop.flexpipeinc.com/us_en/d-hdpew-481-2-white-hdpe-plastic-1-2",
+      "unit": "48x96x1/2inblackrawsheet",
+      "unit_USD": "225.75",
+      "url": "https://shop.flexpipeinc.com/us_en/d-hdpeb-481-2-black-hdpe-plastic-1-2",
       "shipping": "UNKNOWN_NOT_ZERO",
-      "scope": "One rawsheet cuts both full layers; shipping/cutting/tax not quoted.",
+      "scope": "Same12.7mm thickness and1219.2x2438.4mm rawsize; black replaceswhite with34.65goods saving. One sheet cuts both full layers. Freight/cutting/tax not quoted.",
       "selected_case": "required",
-      "extended_USD": "260.40"
+      "observed_date": "2026-11-05",
+      "extended_USD": "225.75"
     },
     {
       "id": "RAPIDCHANGE_BASIC4",
@@ -61,14 +64,14 @@
     },
     {
       "id": "RAPIDCHANGE_MOUNT_SET",
-      "quantity": 1,
+      "quantity": 0,
       "unit": "4screwpackage",
       "unit_USD": "5.00",
       "url": "https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/",
-      "shipping": "UNKNOWN_NOT_ZERO",
-      "scope": "Official package is separate; kit body price does not include these screws.",
-      "selected_case": "required",
-      "extended_USD": "5.00"
+      "shipping": "NOT_PURCHASED",
+      "scope": "Nonpurchased reference: custom matched mounting uses4M6x55 fromthehardwaretakeoff. Do not buy a second vendor mounting package.",
+      "selected_case": "nonpurchased_reference",
+      "extended_USD": "0.00"
     },
     {
       "id": "RAPIDCHANGE_PRO_IR_UPGRADE",
@@ -93,17 +96,17 @@
       "extended_USD": "50.42"
     }
   ],
-  "three_core_goods_basis_USD": "1060.35",
-  "known_basic_goods_subset_USD": "1148.59",
-  "known_preferred_ProIR_goods_subset_USD": "1248.59",
-  "known_basic_with_drain_valve_goods_subset_USD": "1199.01",
+  "three_core_goods_basis_USD": "1025.70",
+  "known_basic_goods_subset_USD": "1108.94",
+  "known_preferred_ProIR_goods_subset_USD": "1208.94",
+  "known_basic_with_drain_valve_goods_subset_USD": "1159.36",
   "gas_pair_typical_price_USD": "36.97",
   "gas_typical_price_addition_USD": "3.73",
   "complete_delivered_total_USD": null,
   "shipping_tax_total_USD": null,
   "budget_cap_USD": "1000.00",
   "budget_gate": "FAIL",
-  "minimum_three_item_goods_over_cap_USD": "60.35",
+  "minimum_three_item_goods_over_cap_USD": "25.70",
   "missing_costs": [
     "All4080profile stock and shipping, including one-piece long headers that cannot come from1500mmbars",
     "Pan, slats, receiver/drain fittings/hose, guards/thermal covers and all associated material",

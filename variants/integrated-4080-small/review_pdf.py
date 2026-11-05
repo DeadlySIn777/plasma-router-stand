@@ -25,7 +25,7 @@ def header(c,title,subtitle,page):
     para(c,subtitle,40,547,712,10,14,MUTED)
     c.setStrokeColor(colors.HexColor('#c8d5dc'));c.line(40,43,752,43)
     c.setFont('Helvetica',8);c.setFillColor(MUTED)
-    c.drawString(40,29,'1 November 2026 | Review only - fabrication, CAM and operating releases remain open')
+    c.drawString(40,29,'5 November 2026 | Review only - fabrication, CAM and operating releases remain open')
     c.drawRightString(752,29,f'{page} / 3')
 
 def photo(c,path,x,y,w,h):
@@ -48,7 +48,7 @@ def main():
         caption=('Ten uncut tracks, full drill-only HDPE layers and a removable billet head.'if mode=='WOOD'else
                  'Bed parks in the front bay; covered magazine parks in the rear bay.')
         para(c,caption,x+14,171,314,9,12)
-    para(c,'The pictures are rendered from the exported solid assemblies. Purple spindle/magazine volumes are capacity context. The owner boot solid is exact supplied geometry at an unregistered reference pose.',40,120,712,10,14)
+    para(c,'Rendered from the exported solid assemblies, including the original manufacturer magazine housing. Purple tool/spindle volumes are capacity context. The original owner boot remains at an unregistered reference pose.',40,120,712,10,14)
     para(c,'The current source replaces earlier cassette beds and generic heads. It does not qualify the separate 4x8 design or steel machining.',40,77,712,9,12,MUTED)
     c.showPage()
 
@@ -85,8 +85,8 @@ def main():
         'Bed: 1000 x1220 mm; surface Z967.8. Ten uncut 1220 mm 20100 profiles over two 12.7 mm HDPE layers.',
         'Hinge: Y-100, Z967.8. Upright bed Y-100 to -14.6; highest point approximately Z2247.8.',
         'Frame: six posts and paired 1250 mm 4080 gantry beams. Pan supports at Y300 /630 /1180.',
-        'Head: original clamp/boot solids; 146 x175 x12.7 mm removable plate and 146 x132 x12.7 mm shared receiver.',
-        'ATC: selected 200 mm slide; working tool row Y1100, parked row Y1300. Endpoint pins are manual; actual vendor body/pocket geometry and automatic release remain open.',
+        'Head: original clamp/boot; removable billet dock plus one owned-stock side rib. Ideal hole-aware local bending: 0.093 mm at100 N; joints/torsion remain unqualified.',
+        'ATC: 200 mm slide; tool rows Y1100 /1300. Original manufacturer housing and pocket XY axes; slide-driven passive capture docks replace manual endpoint fasteners.',
         'Front stops: cutting contact geometry is unchanged. Complete modules park 400 mm rearward, with guides stored and head removed, before bed tilt.'
     ]:top=para(c,text,390,top,358,10,14)-9
     top-=2;top=para(c,'<b>Analysis limits</b>',390,top,358,13,17)-9
@@ -103,7 +103,7 @@ def main():
     c.setFillColor(INK);c.setFont('Helvetica-Bold',11)
     c.drawString(51,y-17,'Currently sourced required goods');c.drawRightString(739,y-17,'USD, before unknown charges')
     rows=[('Ten 1220 mm 20100 tracks - five two-profile packs','$399.95','https://www.amazon.com/dp/B0BXNWK99C'),
-          ('One 48 x96 x1/2-inch HDPE sheet - supplies both layers','$260.40','https://shop.flexpipeinc.com/us_en/d-hdpew-481-2-white-hdpe-plastic-1-2'),
+          ('One black 48 x96 x1/2-inch HDPE sheet - both layers','$225.75','https://shop.flexpipeinc.com/us_en/d-hdpeb-481-2-black-hdpe-plastic-1-2'),
           ('RapidChange four-pocket ER11 Basic magazine','$400.00','https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/')]
     y-=51
     for label,amount,url in rows:
@@ -112,13 +112,13 @@ def main():
         c.setFillColor(INK);c.drawRightString(739,y,amount)
         c.setStrokeColor(colors.HexColor('#d9e2e6'));c.line(40,y-12,752,y-12);y-=31
     c.setFillColor(RED);c.setFont('Helvetica-Bold',13)
-    c.drawString(51,y,'Core goods extension');c.drawRightString(739,y,'$1,060.35')
-    top=para(c,'That is already $60.35 above the entire $1000 cap, before the 4080 frame, pan/slats, other custom stock, gas supports, reservoir/valve, hardware, tool setter, freight or tax. The complete delivered total remains unquoted. Required five-pack availability is not reserved.',40,y-24,712,9.5,12,RED)-12
+    c.drawString(51,y,'Core goods extension');c.drawRightString(739,y,'$1,025.70')
+    top=para(c,'Already $25.70 above the $1000 cap, before frame, pan/slats, custom stock, gas supports, reservoir/valve, hardware, tool setter, freight or tax. AliExpress hardware cart additions are separately recorded; they are not a full-build quote. Required five-pack track availability is not reserved.',40,y-24,712,9.5,12,RED)-12
     top=para(c,'<b>Excluded owned equipment and stock</b>',40,top,712,12,16)-6
     top=para(c,'Motion modules, extra guides, drives/controller, spindle/VFD, existing working clamp/boot/actuator, electronics enclosure, cutter/torch, compressor and CV15HS are excluded from new equipment cost. The one half-inch and one three-eighth-inch aluminum squares have exclusive stock nests. No full-bed HDPE, tracks or RapidChange ownership credit is established.',40,top,712,9.5,12)-12
     top=para(c,'<b>Gates that prevent a final release</b>',40,top,712,12,16)-7
     gates=[
-        'Register the existing working boot home/moving joint, spindle nose datum, selected ATC nut/IR/pocket map and exact vendor mating patterns.',
+        'Register the working boot home/moving joint, spindle nose datum, selected ATC nut engagement, state sensing, received kit revision and exact vendor mating patterns.',
         'Qualify received extrusion sections, slot nuts, modified members, joints, full rigidity, power-loss Z support and controlled bed handling.',
         'Verify water capacity/temperature/overflow, actual strut and valve/fittings, module wipers/bellows, controller interlocks, VFD reverse/stop and isolated plasma control.',
         'Resolve the new-parts delivered budget before ordering. Valid STEP solids and nominal clearance results do not close these requirements.'

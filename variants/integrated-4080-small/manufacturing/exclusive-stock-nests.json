@@ -121,6 +121,14 @@
           "w": 30,
           "h": 12.7,
           "finish_t": 9.525
+        },
+        {
+          "id": "OWNER_ROUTER_SIDE_RIB",
+          "x": 276,
+          "y": 2,
+          "w": 20,
+          "h": 110,
+          "finish_t": 9.525
         }
       ]
     }
@@ -520,6 +528,12 @@
       "passed": true
     },
     {
+      "kind": "bounds_and_thickness",
+      "sheet": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
+      "a": "OWNER_ROUTER_SIDE_RIB",
+      "passed": true
+    },
+    {
       "kind": "four_mm_separation",
       "sheet": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
       "a": "BED_HINGE_MOVING_SIDEPLATE_L",
@@ -536,8 +550,29 @@
     {
       "kind": "four_mm_separation",
       "sheet": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
+      "a": "BED_HINGE_MOVING_SIDEPLATE_L",
+      "b": "OWNER_ROUTER_SIDE_RIB",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
       "a": "BED_HINGE_MOVING_SIDEPLATE_R",
       "b": "CD_GRAVITY_LEDGE",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
+      "a": "BED_HINGE_MOVING_SIDEPLATE_R",
+      "b": "OWNER_ROUTER_SIDE_RIB",
+      "passed": true
+    },
+    {
+      "kind": "four_mm_separation",
+      "sheet": "EXCLUSIVE_OWNER_THREE_EIGHTHS",
+      "a": "CD_GRAVITY_LEDGE",
+      "b": "OWNER_ROUTER_SIDE_RIB",
       "passed": true
     }
   ],

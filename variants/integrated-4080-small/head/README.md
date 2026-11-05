@@ -6,6 +6,21 @@ in both modes. The matching plasma plate is146 x110 x12.7 mm, joined to the
 existing drop by a110 x114 x12.7 mm U-splice. The direct110 mm adapter below
 is an **unselected comparison**; do not purchase both architectures.
 
+The router plate now carries one9.525 x20 x110 mm side rib, cut from the unused
+right strip of the owned3/8-inch sheet at raw coordinates276,2. Three recessed
+M4x25 socket screws attach it; two ground4 x20 mm dowels carry longitudinal
+shear by positive bearing. The owner clamp and boot remain unchanged. The
+rib and all its fasteners lie beyond the complete boot's X envelope by at
+least7.75 mm, independent of its unknown vertical home and50 mm travel.
+
+The ideal fully composite plate/rib calculation includes unsymmetric bending:
+effective I rises from24,922 to69,128 mm4. The100 N/50 mm projection case
+falls from0.250 to0.090 mm in that ideal model. This requires a qualified
+connection: the screen shows3.35 N/mm longitudinal shear flow and877 N maximum
+rib axial force. Bolt preload, actual aluminum alloy, matched dowel fit,
+bearing capacity, microslip and torsion remain unqualified. The computed
+improvement does not establish complete-machine stiffness or steel machining.
+
 Use `plasma_quick_dock.integrate_motion(plasma, gantry_y, head_x, z_lift, **kwargs)`
 for the entire selected motion group. Assessment coordinates are X175..975,
 guide Y275..1275 and Zlift0..250 mm within the nominal owned300 mm module.

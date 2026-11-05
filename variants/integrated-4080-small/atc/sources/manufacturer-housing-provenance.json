@@ -1,0 +1,53 @@
+{
+  "observed_date": "2026-11-05",
+  "download_source": "https://discord.com/channels/1077383334080032898/1191144591840268318",
+  "authoritative_relationship_source": "https://rapidchangeatc.com/faq/",
+  "file": "ER20_4_Standard_20240204.step",
+  "sha256": "e15fe7e41ed1bfba54a0d2203c92355fa509f06b4ed8c3b588b37d9589fee572",
+  "original_post_date": "2024-02-12",
+  "source_model_date": "2024-02-04",
+  "retrieval": "Parent used existing authorized logged-in browser session and downloaded the manufacturer-posted STEP. No vendor contact or server join.",
+  "facts": {
+    "unmodified_source_solids": 4,
+    "overall_XYZ_mm": [
+      271.2,
+      60.0,
+      80.8
+    ],
+    "body_XYZ_mm": [
+      212.0,
+      60.0,
+      51.2
+    ],
+    "pocket_centres_source_X_mm": [
+      -67.5,
+      -22.5,
+      22.5,
+      67.5
+    ],
+    "pocket_centres_source_Y_mm": 0.0,
+    "mounting_source_X_mm": [
+      -94.0,
+      94.0
+    ],
+    "mounting_source_Y_mm": [
+      -20.0,
+      20.0
+    ],
+    "mount_through_diameter_mm": 6.35,
+    "mount_counterbore_diameter_mm": 11.0,
+    "mount_counterbore_depth_mm": 7.0
+  },
+  "ER11_applicability": "Manufacturer FAQ states ER11, ER16 and ER20 share the external geometry, with sockets differing. The downloaded source is already 60mm wide; it was not scaled from an older54mm model.",
+  "limits": [
+    "Dated manufacturer installation housing, not inspection of the currently delivered kit",
+    "Internal ER11 socket mechanisms, moving nut engagement plane, actual IR optics/cable exits are absent",
+    "Received kit revision must match this installation pattern before machining supplier-specific faces"
+  ],
+  "export_placement": {
+    "method": "Original local solid with explicit cq.Assembly.add loc; do not bake translation of original topcap before STEP serialization",
+    "reason": "The original local topcap passes BRep validity, but baking a ~1m translation then exporting makes its small corner trim wire self-intersect on readback. Keeping the local definition and using an assembly placement preserves valid unmodified geometry.",
+    "translation_geometry_volume_change_mm3": 0.0,
+    "roundtrip_requires_valid_solids_and_matching_count_volume_bounds": true
+  }
+}

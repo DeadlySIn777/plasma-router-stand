@@ -1,11 +1,13 @@
 {
-  "study": "SELECTED311_SLIDE_REMOVABLE_REACTION_DOCK_AND_COVER_INTEGRATION",
+  "study": "SELECTED311_SLIDE_PASSIVE_CAPTURE_AND_MANUFACTURER_HOUSING_INTEGRATION",
   "source_sha256": {
-    "variants/integrated-4080-small/atc/build_atc.py": "0942d3d28728987e68754db30f01602f66173349057e253d5c7d7f62dc8c9abf",
-    "variants/integrated-4080-small/atc/actual_atc.py": "5e79642b4b3245989232c6aae8a73374efc266fda06057f41afc509fee8e55ff",
+    "variants/integrated-4080-small/atc/build_atc.py": "74898725f9a03885ac0269e8c8e6c40afa013da39fd0e8800a26705d8e89351a",
+    "variants/integrated-4080-small/atc/actual_atc.py": "2c142e73e10ea4308d85040e2ebcbba13ee1aa19800ce7c75506e353a8916c83",
     "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
     "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
-    "variants/integrated-4080-small/atc/sources/current-primary-evidence.json": "15e67c2c41273f14f27eed48227f5895ec89a2bbda41ecf0776c2b1f14ee09fa",
+    "variants/integrated-4080-small/atc/sources/current-primary-evidence.json": "cba7f5a8690cd1187d946ff7970693a96421bbd0688d58202ea2171bd8421ba8",
+    "variants/integrated-4080-small/atc/sources/ER20_4_Standard_20240204.step": "e15fe7e41ed1bfba54a0d2203c92355fa509f06b4ed8c3b588b37d9589fee572",
+    "variants/integrated-4080-small/atc/sources/manufacturer-housing-provenance.json": "7fc9022d6a8c698768dcce6333cabff1d33c6e83f77d42f4ce0bad9c3b45d951",
     "variants/integrated-4080-small/atc/sources/owner-selected-slide.json": "34495fe6be7b810d5a9ed95ee9ddeba1e19d24e4c9ec4a546f0af48d07c49b4e",
     "variants/integrated-4080-small/atc/sources/prior-hardware-evidence.json": "dda7f3e92b88019f1604e27ba42192a27ef8db6b746ca42fbb4c628a45dddb14",
     "variants/integrated-4080-small/atc/sources/RapidChange-prior-public-evidence.json": "6bf697bd7ab84e22e34d69d233abcb417f2ff1af0d85ce7a56718201007a3934",
@@ -23,15 +25,50 @@
     ],
     "frame_depth_mm": 1600.0,
     "stroke_mm": 200,
-    "magazine_base_Z_mm": 1039.15,
+    "magazine_base_Z_mm": 1051.85,
     "kit_capacity_XYZ_mm": [
       520,
       60,
       120
     ],
     "selected_kit": "RapidChange4pocketER11; exact tier/interfaces unverified",
-    "pocket_centres": null,
-    "actual_kit_mount_pattern": null,
+    "pocket_centres": [
+      [
+        507.5,
+        1100.0,
+        1051.85
+      ],
+      [
+        552.5,
+        1100.0,
+        1051.85
+      ],
+      [
+        597.5,
+        1100.0,
+        1051.85
+      ],
+      [
+        642.5,
+        1100.0,
+        1051.85
+      ]
+    ],
+    "pocket_plane_note": "XYaxes fromdatedmanufacturerhousing; Zisbodybottomreference,notnutengagementplane",
+    "actual_kit_mount_pattern": {
+      "source": "ER20_4_Standard_20240204.step",
+      "world_X_mm": [
+        481.0,
+        669.0
+      ],
+      "world_Y_mm": [
+        1080.0,
+        1120.0
+      ],
+      "through_diameter_mm": 6.35,
+      "counterbore_diameter_mm": 11.0,
+      "counterbore_depth_mm": 7.0
+    },
     "nominal_pocket_row_Y_mm": 1100.0,
     "pocket_centre_acceptance_X_mm": [
       347.5,
@@ -58,10 +95,39 @@
     "actual_carriage_height_verified": false,
     "slide_base_channel_nut_fit_verified": false,
     "carriage4M6_pattern_verified": false,
-    "RapidChange_vendor_CAD_available": false,
+    "RapidChange_vendor_CAD_available": true,
+    "manufacturer_external_housing_source_width_mm": 60.0,
+    "manufacturer_external_housing_source_size_XYZ_mm": [
+      271.2,
+      60.0,
+      80.8
+    ],
+    "source_housing_and_pocket_mount_axes_verified": true,
+    "received_current_kit_revision_verified": false,
     "actual_pockets_nut_IR_servo_datums_verified": false,
-    "automatic_deploy_pin_release": false,
-    "manual_endpoint_clamping": true,
+    "automatic_deploy_pin_release": "NOT_APPLICABLE_PASSIVE_CAPTURE_KEYS",
+    "manual_endpoint_clamping": false,
+    "passive_endpoint_capture_keys": true,
+    "endpoint_nominal_vertical_gap_mm": 0.15,
+    "left_key_nominal_total_X_gap_mm": 0.15,
+    "finish_fit_gap_range_mm": [
+      0.1,
+      0.2
+    ],
+    "right_key_outer_X_float_mm": 1.2,
+    "requires_energized_axis_axial_preload": true,
+    "axis_holding_force_qualified": false,
+    "power_loss_axial_lock": false,
+    "operating_interlocks": [
+      "spindle_zero_speed_before_magazine_motion",
+      "head_flyover_clearance",
+      "wood_mode_and_hood_stored",
+      "deployed_endpoint_confirmed",
+      "both_capture_seats_confirmed",
+      "selected_slide_energized_and_holding",
+      "abort_tool_change_on_sensor_or_energy_loss",
+      "tool_loaded_unloaded_and_toolsetter_confirmed"
+    ],
     "selected_slide_ownership": "Owned motion reported; contents/revision/motor still uninspected",
     "kit_owned": false,
     "classified_parts": {
@@ -96,29 +162,27 @@
       "ATC_END_M6x25_EXTERNAL_GRIP_R_1288": "carrier",
       "ATC_CROSSCARRIER_END_PLATE_R": "carrier",
       "ATC_FORWARD_ARM_L": "carrier",
-      "ATC_KIT_ENDCAP_TRANSFER_PAD_L": "carrier",
-      "ATC_ARM_M6_FINISHED19_L_1085": "carrier",
-      "ATC_ARM_M6_FINISHED19_L_1120": "carrier",
-      "ATC_ARM_M6_FINISHED19_L_1255": "carrier",
-      "ATC_ARM_M6_FINISHED19_L_1280": "carrier",
+      "ATC_KIT_MOUNT_PAD_L": "carrier",
+      "ATC_ARM_M6x30_L_1100": "carrier",
+      "ATC_ARM_M6x30_L_1248": "carrier",
+      "ATC_ARM_M6x30_L_1288": "carrier",
+      "ATC_VENDOR_M6x55_L_1080": "carrier",
+      "ATC_VENDOR_M6x55_L_1120": "carrier",
       "ATC_FORWARD_ARM_R": "carrier",
-      "ATC_KIT_ENDCAP_TRANSFER_PAD_R": "carrier",
-      "ATC_ARM_M6_FINISHED19_R_1085": "carrier",
-      "ATC_ARM_M6_FINISHED19_R_1120": "carrier",
-      "ATC_ARM_M6_FINISHED19_R_1255": "carrier",
-      "ATC_ARM_M6_FINISHED19_R_1280": "carrier",
+      "ATC_KIT_MOUNT_PAD_R": "carrier",
+      "ATC_ARM_M6x30_R_1100": "carrier",
+      "ATC_ARM_M6x30_R_1248": "carrier",
+      "ATC_ARM_M6x30_R_1288": "carrier",
+      "ATC_VENDOR_M6x55_R_1080": "carrier",
+      "ATC_VENDOR_M6x55_R_1120": "carrier",
+      "ATC_VENDOR_RAPIDCHANGE_4_HOUSING_1": "carrier",
+      "ATC_VENDOR_RAPIDCHANGE_4_HOUSING_2": "carrier",
+      "ATC_VENDOR_RAPIDCHANGE_4_HOUSING_3": "carrier",
+      "ATC_VENDOR_RAPIDCHANGE_4_HOUSING_4": "carrier",
       "ATC_DOCK_DEPLOYED_L": "fixed",
       "ATC_DOCK_DEPLOYED_R": "fixed",
       "ATC_DOCK_PARKED_L": "fixed",
       "ATC_DOCK_PARKED_R": "fixed",
-      "ATC_HARD_STOP_DEPLOYED": "fixed",
-      "ATC_HARD_STOP_PARKED": "fixed",
-      "ATC_ENDPOINT_SHOULDER_BOLT_L": "fixed",
-      "ATC_PIN_WASHER_L": "fixed",
-      "ATC_PIN_NUT_L": "fixed",
-      "ATC_ENDPOINT_SHOULDER_BOLT_R": "fixed",
-      "ATC_PIN_WASHER_R": "fixed",
-      "ATC_PIN_NUT_R": "fixed",
       "ATC_COVER_STORAGE_HANGER": "fixed",
       "ATC_COVER_KEEPER_1393": "fixed",
       "ATC_COVER_KEEPER_1413": "fixed",
@@ -129,10 +193,8 @@
       "ATC_COVER_REAR_WITH_ARM_RELIEFS": "hood",
       "ATC_COVER_FOLDED_HANDLE_L": "hood",
       "ATC_COVER_FOLDED_HANDLE_R": "hood",
-      "ATC_COVER_WELDED_CLAMP_SPACER_L": "hood",
-      "ATC_COVER_M4x25_THUMB_L": "hood",
-      "ATC_COVER_WELDED_CLAMP_SPACER_R": "hood",
-      "ATC_COVER_M4x25_THUMB_R": "hood"
+      "ATC_COVER_SEAT_TAB_L": "hood",
+      "ATC_COVER_SEAT_TAB_R": "hood"
     },
     "manufacturing_specs": {
       "ATC_4080_CROSSBEARER_1": {
@@ -196,9 +258,9 @@
         "notes": "60mm axial length/4-M6 source known. Width90/height47.3 are retained unmeasured envelope allocations; no manufactured OEM-hole pattern invented."
       },
       "ATC_4080_MOVING_CROSSCARRIER": {
-        "stock": "4080 x600mm laid80Yx40Z;2xD18vertical pin/head-accessbores",
+        "stock": "4080 x600mm laid80Yx40Z; obsolete pin/head-access bores removed",
         "ownership": "new",
-        "notes": "Conditional Iweak>=134000mm4 before local machining; modified section, slot and bolt joint capacities unqualified. Do not replace with a flat unsupported bar."
+        "notes": "Conditional Iweak>=134000mm4; actual die, slot and bolt joint capacities unqualified. Do not replace with a flat unsupported bar."
       },
       "ATC_CENTRE_M6x20_BUTTON_EXTERNAL_GRIP_1248": {
         "stock": "M6x20button screw; externalgrip9.3, threadprojection10.7 held",
@@ -246,9 +308,9 @@
         "notes": "Actual received slot nut, lip and9.1mm inner projection require fit verification; no slot thread geometry invented."
       },
       "ATC_CROSSCARRIER_END_PLATE_L": {
-        "stock": "60x60x12.7mm6061-T6",
+        "stock": "80x60x25.4mm6061-T6 raw billet; integral lower tongue and40mm-wide underside seat land",
         "ownership": "new",
-        "notes": "Nominal8mmreamed locatorhole,2M6arm taps,2M6slotfixingclearanceholes. Specify compatible ground pin/H7 bore as actual fit."
+        "notes": "No endpoint bolt or locator bore. Mainplate12.7mm, integral25.4mm thick bearingland; lowered20mm tongue with3x5mm chamfers. Finish totalleftXguide/verticalgaps .10-.20mm afterwelding/fit. Rightfloats. Newstock; noownedsheetcredit."
       },
       "ATC_END_M6_WASHER_R_1248_1": {
         "stock": "M6washer12ODx1.6;8total",
@@ -281,129 +343,119 @@
         "notes": "Actual received slot nut, lip and9.1mm inner projection require fit verification; no slot thread geometry invented."
       },
       "ATC_CROSSCARRIER_END_PLATE_R": {
-        "stock": "60x60x12.7mm6061-T6",
+        "stock": "80x60x25.4mm6061-T6 raw billet; integral lower tongue and40mm-wide underside seat land",
         "ownership": "new",
-        "notes": "Nominal8mmreamed locatorhole,2M6arm taps,2M6slotfixingclearanceholes. Specify compatible ground pin/H7 bore as actual fit."
+        "notes": "No endpoint bolt or locator bore. Mainplate12.7mm, integral25.4mm thick bearingland; lowered20mm tongue with3x5mm chamfers. Finish totalleftXguide/verticalgaps .10-.20mm afterwelding/fit. Rightfloats. Newstock; noownedsheetcredit."
       },
       "ATC_FORWARD_ARM_L": {
-        "stock": "40x242x12.7mm6061-T6",
+        "stock": "28x242x25.4mm6061-T6billet",
         "ownership": "new",
-        "notes": "Underside M6 head recesses6.1deep; standardM6x20 finished underhead19mm. Final lowest head1013.85, above1012.8 travel plane."
+        "notes": "Manufacturer mount axes481/669. ThreeM6bores with6.1mm undersideheadrecess. M6x30rear to4080andcentralfrontpad. Deepbilletstrengthensbendingwithoutnewprofile. Noobsoletehoodtap;hoodretainsdirectlyonfixedcapture-rooftabs."
       },
-      "ATC_KIT_ENDCAP_TRANSFER_PAD_L": {
-        "stock": "30x60x12.7mm6061-T6 transfer pad",
+      "ATC_KIT_MOUNT_PAD_L": {
+        "stock": "28x60x12.7mm6061-T6;threeM6tapsinlineat10/30/50mmY",
         "ownership": "new",
-        "notes": "OEM top mounting pattern deliberately blank. Not a claimed RapidChange flange/pocket drawing. Fit supplied kit/endcap drawing before drill release."
+        "notes": "Bodymounts atmanufacturerX+/-94/Y+/-20. Centretap attachespadfrombelow;outertapsacceptM6x55fromOEMcounterbores. Distinctaxespreventopposingscrewoverlap. Bodyengagement10.8mm/tipreserve1.9mm."
       },
-      "ATC_ARM_M6_FINISHED19_L_1085": {
-        "stock": "M6x20 socket screw, finish19mm underhead;8total",
+      "ATC_ARM_M6x30_L_1100": {
+        "stock": "M6x30socket screw;6total",
         "ownership": "new",
-        "notes": "Web6.6mm, nominal engagement12.4mm, top reserve0.3mm. Thread/pilot strength still material/process qualification."
+        "notes": "Underside6.1recess leaves19.3grip:10.7mmengagement/projection. Rearbolts render only19.3externalgrip; actual4080Tnut/cavityfitheld. Frontbolts renderfull30and12.7padleaves2.0mmtipreserve."
       },
-      "ATC_ARM_M6_FINISHED19_L_1120": {
-        "stock": "M6x20 socket screw, finish19mm underhead;8total",
+      "ATC_ARM_M6x30_L_1248": {
+        "stock": "M6x30socket screw;6total",
         "ownership": "new",
-        "notes": "Web6.6mm, nominal engagement12.4mm, top reserve0.3mm. Thread/pilot strength still material/process qualification."
+        "notes": "Underside6.1recess leaves19.3grip:10.7mmengagement/projection. Rearbolts render only19.3externalgrip; actual4080Tnut/cavityfitheld. Frontbolts renderfull30and12.7padleaves2.0mmtipreserve."
       },
-      "ATC_ARM_M6_FINISHED19_L_1255": {
-        "stock": "M6x20 socket screw, finish19mm underhead;8total",
+      "ATC_ARM_M6x30_L_1288": {
+        "stock": "M6x30socket screw;6total",
         "ownership": "new",
-        "notes": "Web6.6mm, nominal engagement12.4mm, top reserve0.3mm. Thread/pilot strength still material/process qualification."
+        "notes": "Underside6.1recess leaves19.3grip:10.7mmengagement/projection. Rearbolts render only19.3externalgrip; actual4080Tnut/cavityfitheld. Frontbolts renderfull30and12.7padleaves2.0mmtipreserve."
       },
-      "ATC_ARM_M6_FINISHED19_L_1280": {
-        "stock": "M6x20 socket screw, finish19mm underhead;8total",
+      "ATC_VENDOR_M6x55_L_1080": {
+        "stock": "M6x55socket screw;4total",
         "ownership": "new",
-        "notes": "Web6.6mm, nominal engagement12.4mm, top reserve0.3mm. Thread/pilot strength still material/process qualification."
+        "notes": "ManufacturerSTEPD6.35through/D11counterbore7deep;head10ODx6. Bodygrip44.2leaves10.8padengagement/1.9tipreserve. Verifyreceivedrevision/templatebeforecut."
+      },
+      "ATC_VENDOR_M6x55_L_1120": {
+        "stock": "M6x55socket screw;4total",
+        "ownership": "new",
+        "notes": "ManufacturerSTEPD6.35through/D11counterbore7deep;head10ODx6. Bodygrip44.2leaves10.8padengagement/1.9tipreserve. Verifyreceivedrevision/templatebeforecut."
       },
       "ATC_FORWARD_ARM_R": {
-        "stock": "40x242x12.7mm6061-T6",
+        "stock": "28x242x25.4mm6061-T6billet",
         "ownership": "new",
-        "notes": "Underside M6 head recesses6.1deep; standardM6x20 finished underhead19mm. Final lowest head1013.85, above1012.8 travel plane."
+        "notes": "Manufacturer mount axes481/669. ThreeM6bores with6.1mm undersideheadrecess. M6x30rear to4080andcentralfrontpad. Deepbilletstrengthensbendingwithoutnewprofile. Noobsoletehoodtap;hoodretainsdirectlyonfixedcapture-rooftabs."
       },
-      "ATC_KIT_ENDCAP_TRANSFER_PAD_R": {
-        "stock": "30x60x12.7mm6061-T6 transfer pad",
+      "ATC_KIT_MOUNT_PAD_R": {
+        "stock": "28x60x12.7mm6061-T6;threeM6tapsinlineat10/30/50mmY",
         "ownership": "new",
-        "notes": "OEM top mounting pattern deliberately blank. Not a claimed RapidChange flange/pocket drawing. Fit supplied kit/endcap drawing before drill release."
+        "notes": "Bodymounts atmanufacturerX+/-94/Y+/-20. Centretap attachespadfrombelow;outertapsacceptM6x55fromOEMcounterbores. Distinctaxespreventopposingscrewoverlap. Bodyengagement10.8mm/tipreserve1.9mm."
       },
-      "ATC_ARM_M6_FINISHED19_R_1085": {
-        "stock": "M6x20 socket screw, finish19mm underhead;8total",
+      "ATC_ARM_M6x30_R_1100": {
+        "stock": "M6x30socket screw;6total",
         "ownership": "new",
-        "notes": "Web6.6mm, nominal engagement12.4mm, top reserve0.3mm. Thread/pilot strength still material/process qualification."
+        "notes": "Underside6.1recess leaves19.3grip:10.7mmengagement/projection. Rearbolts render only19.3externalgrip; actual4080Tnut/cavityfitheld. Frontbolts renderfull30and12.7padleaves2.0mmtipreserve."
       },
-      "ATC_ARM_M6_FINISHED19_R_1120": {
-        "stock": "M6x20 socket screw, finish19mm underhead;8total",
+      "ATC_ARM_M6x30_R_1248": {
+        "stock": "M6x30socket screw;6total",
         "ownership": "new",
-        "notes": "Web6.6mm, nominal engagement12.4mm, top reserve0.3mm. Thread/pilot strength still material/process qualification."
+        "notes": "Underside6.1recess leaves19.3grip:10.7mmengagement/projection. Rearbolts render only19.3externalgrip; actual4080Tnut/cavityfitheld. Frontbolts renderfull30and12.7padleaves2.0mmtipreserve."
       },
-      "ATC_ARM_M6_FINISHED19_R_1255": {
-        "stock": "M6x20 socket screw, finish19mm underhead;8total",
+      "ATC_ARM_M6x30_R_1288": {
+        "stock": "M6x30socket screw;6total",
         "ownership": "new",
-        "notes": "Web6.6mm, nominal engagement12.4mm, top reserve0.3mm. Thread/pilot strength still material/process qualification."
+        "notes": "Underside6.1recess leaves19.3grip:10.7mmengagement/projection. Rearbolts render only19.3externalgrip; actual4080Tnut/cavityfitheld. Frontbolts renderfull30and12.7padleaves2.0mmtipreserve."
       },
-      "ATC_ARM_M6_FINISHED19_R_1280": {
-        "stock": "M6x20 socket screw, finish19mm underhead;8total",
+      "ATC_VENDOR_M6x55_R_1080": {
+        "stock": "M6x55socket screw;4total",
         "ownership": "new",
-        "notes": "Web6.6mm, nominal engagement12.4mm, top reserve0.3mm. Thread/pilot strength still material/process qualification."
+        "notes": "ManufacturerSTEPD6.35through/D11counterbore7deep;head10ODx6. Bodygrip44.2leaves10.8padengagement/1.9tipreserve. Verifyreceivedrevision/templatebeforecut."
+      },
+      "ATC_VENDOR_M6x55_R_1120": {
+        "stock": "M6x55socket screw;4total",
+        "ownership": "new",
+        "notes": "ManufacturerSTEPD6.35through/D11counterbore7deep;head10ODx6. Bodygrip44.2leaves10.8padengagement/1.9tipreserve. Verifyreceivedrevision/templatebeforecut."
+      },
+      "ATC_VENDOR_RAPIDCHANGE_4_HOUSING_1": {
+        "stock": "Datedmanufacturerfourpocket60mmfamilyinstallationgeometryreference;notaseparatepurchase",
+        "ownership": "new-kit-family-geometry-reference",
+        "notes": "OriginalunscaledmanufacturerSTEP;FAQsharesER11/16/20externalgeometryexceptsockets. EndcaphousingsmaynotbesuppliedwithBasic. Actualtier/boxcontents,IR/internalnutplanes/receivedrevisionremainheld. Thisgeometryreferenceisnonadditive,newquantity0;onechosenkitiscountedseparately."
+      },
+      "ATC_VENDOR_RAPIDCHANGE_4_HOUSING_2": {
+        "stock": "Datedmanufacturerfourpocket60mmfamilyinstallationgeometryreference;notaseparatepurchase",
+        "ownership": "new-kit-family-geometry-reference",
+        "notes": "OriginalunscaledmanufacturerSTEP;FAQsharesER11/16/20externalgeometryexceptsockets. EndcaphousingsmaynotbesuppliedwithBasic. Actualtier/boxcontents,IR/internalnutplanes/receivedrevisionremainheld. Thisgeometryreferenceisnonadditive,newquantity0;onechosenkitiscountedseparately."
+      },
+      "ATC_VENDOR_RAPIDCHANGE_4_HOUSING_3": {
+        "stock": "Datedmanufacturerfourpocket60mmfamilyinstallationgeometryreference;notaseparatepurchase",
+        "ownership": "new-kit-family-geometry-reference",
+        "notes": "OriginalunscaledmanufacturerSTEP;FAQsharesER11/16/20externalgeometryexceptsockets. EndcaphousingsmaynotbesuppliedwithBasic. Actualtier/boxcontents,IR/internalnutplanes/receivedrevisionremainheld. Thisgeometryreferenceisnonadditive,newquantity0;onechosenkitiscountedseparately."
+      },
+      "ATC_VENDOR_RAPIDCHANGE_4_HOUSING_4": {
+        "stock": "Datedmanufacturerfourpocket60mmfamilyinstallationgeometryreference;notaseparatepurchase",
+        "ownership": "new-kit-family-geometry-reference",
+        "notes": "OriginalunscaledmanufacturerSTEP;FAQsharesER11/16/20externalgeometryexceptsockets. EndcaphousingsmaynotbesuppliedwithBasic. Actualtier/boxcontents,IR/internalnutplanes/receivedrevisionremainheld. Thisgeometryreferenceisnonadditive,newquantity0;onechosenkitiscountedseparately."
       },
       "ATC_DOCK_DEPLOYED_L": {
-        "stock": "Welded6.35mm steelU:2x50x72 +2x48.25x72;ream after weld",
+        "stock": "Welded6.35mm steel:2x86.325x72 base/top;3x48.25x72 legs;1x60x25.55 outerwall;1x26.225x60 roof;1x19.8x31.9 endpointstop;plus6.35mm steel1x60x12.55 innerguide",
         "ownership": "new",
-        "notes": "Finaltop1013.75,bottom952.8. Deployedlefttop includes6.35x6.35frontstopoverhang. Left nominal8mmH7 locator/6.6thread clearance; right8mmY-width with1mm extraX relief. Match source steel grade/weld capacity and actual shim/seat preload."
+        "notes": "Finish seats/guides after welding. Nominal vertical and lower-tongue gap.15mm; left totalXgap.15mm. Fit .10-.20mm gap with indexed thin shims and verify fullstroke. Right key has1.2mm outerXfloat. Front stops deployed/rear stops parked. GeometricZcapture; axial preload depends on energized selectedslide/controller. No selflocking friction or powerloss axial retention claimed."
       },
       "ATC_DOCK_DEPLOYED_R": {
-        "stock": "Welded6.35mm steelU:2x50x72 +2x48.25x72;ream after weld",
+        "stock": "Welded6.35mm steel:2x87.45x72 base/top;3x48.25x72 legs;1x60x25.55 outerwall;1x27.35x60 roof;1x19.8x31.9 endpointstop",
         "ownership": "new",
-        "notes": "Finaltop1013.75,bottom952.8. Deployedlefttop includes6.35x6.35frontstopoverhang. Left nominal8mmH7 locator/6.6thread clearance; right8mmY-width with1mm extraX relief. Match source steel grade/weld capacity and actual shim/seat preload."
+        "notes": "Finish seats/guides after welding. Nominal vertical and lower-tongue gap.15mm; left totalXgap.15mm. Fit .10-.20mm gap with indexed thin shims and verify fullstroke. Right key has1.2mm outerXfloat. Front stops deployed/rear stops parked. GeometricZcapture; axial preload depends on energized selectedslide/controller. No selflocking friction or powerloss axial retention claimed."
       },
       "ATC_DOCK_PARKED_L": {
-        "stock": "Welded6.35mm steelU:2x50x72 +2x48.25x72;ream after weld",
+        "stock": "Welded6.35mm steel:2x86.325x72 base/top;3x48.25x72 legs;1x60x25.55 outerwall;1x26.225x60 roof;1x19.8x31.9 endpointstop;plus6.35mm steel1x60x12.55 innerguide",
         "ownership": "new",
-        "notes": "Finaltop1013.75,bottom952.8. Deployedlefttop includes6.35x6.35frontstopoverhang. Left nominal8mmH7 locator/6.6thread clearance; right8mmY-width with1mm extraX relief. Match source steel grade/weld capacity and actual shim/seat preload."
+        "notes": "Finish seats/guides after welding. Nominal vertical and lower-tongue gap.15mm; left totalXgap.15mm. Fit .10-.20mm gap with indexed thin shims and verify fullstroke. Right key has1.2mm outerXfloat. Front stops deployed/rear stops parked. GeometricZcapture; axial preload depends on energized selectedslide/controller. No selflocking friction or powerloss axial retention claimed."
       },
       "ATC_DOCK_PARKED_R": {
-        "stock": "Welded6.35mm steelU:2x50x72 +2x48.25x72;ream after weld",
+        "stock": "Welded6.35mm steel:2x87.45x72 base/top;3x48.25x72 legs;1x60x25.55 outerwall;1x27.35x60 roof;1x19.8x31.9 endpointstop",
         "ownership": "new",
-        "notes": "Finaltop1013.75,bottom952.8. Deployedlefttop includes6.35x6.35frontstopoverhang. Left nominal8mmH7 locator/6.6thread clearance; right8mmY-width with1mm extraX relief. Match source steel grade/weld capacity and actual shim/seat preload."
-      },
-      "ATC_HARD_STOP_DEPLOYED": {
-        "stock": "6.35x6.35x25.4 steel stop, welded to matching receiver",
-        "ownership": "new",
-        "notes": "Not the locating pin. Fit contact face/shim after alignment; motor approaches at reduced speed."
-      },
-      "ATC_HARD_STOP_PARKED": {
-        "stock": "6.35x6.35x25.4 steel stop, welded to matching receiver",
-        "ownership": "new",
-        "notes": "Not the locating pin. Fit contact face/shim after alignment; motor approaches at reduced speed."
-      },
-      "ATC_ENDPOINT_SHOULDER_BOLT_L": {
-        "stock": "ISO7379 shoulder8x30/M6x11;actual dimensions to match",
-        "ownership": "new",
-        "notes": "30mm locating shoulder; receiver bearing4.6mm. M6 nut+washer retain against uplift; manual setup, not an automatic pin release."
-      },
-      "ATC_PIN_WASHER_L": {
-        "stock": "M6washer12ODx1.6",
-        "ownership": "new",
-        "notes": ""
-      },
-      "ATC_PIN_NUT_L": {
-        "stock": "M6nut5high;actualgrade/threadretentionqualification",
-        "ownership": "new",
-        "notes": ""
-      },
-      "ATC_ENDPOINT_SHOULDER_BOLT_R": {
-        "stock": "ISO7379 shoulder8x30/M6x11;actual dimensions to match",
-        "ownership": "new",
-        "notes": "30mm locating shoulder; receiver bearing4.6mm. M6 nut+washer retain against uplift; manual setup, not an automatic pin release."
-      },
-      "ATC_PIN_WASHER_R": {
-        "stock": "M6washer12ODx1.6",
-        "ownership": "new",
-        "notes": ""
-      },
-      "ATC_PIN_NUT_R": {
-        "stock": "M6nut5high;actualgrade/threadretentionqualification",
-        "ownership": "new",
-        "notes": ""
+        "notes": "Finish seats/guides after welding. Nominal vertical and lower-tongue gap.15mm; left totalXgap.15mm. Fit .10-.20mm gap with indexed thin shims and verify fullstroke. Right key has1.2mm outerXfloat. Front stops deployed/rear stops parked. GeometricZcapture; axial preload depends on energized selectedslide/controller. No selflocking friction or powerloss axial retention claimed."
       },
       "ATC_COVER_STORAGE_HANGER": {
         "stock": "Welded4mmsteel40mmwideattachment+arm;two4x8x202.8verticalprongs;two16x8x4shelves",
@@ -423,93 +475,147 @@
       "ATC_COVER_ROOF": {
         "stock": "1.9mmsteelcover;exactfinishedpanelinindexedSTEP",
         "ownership": "new",
-        "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+        "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
       },
       "ATC_COVER_FRONT": {
         "stock": "1.9mmsteelcover;exactfinishedpanelinindexedSTEP",
         "ownership": "new",
-        "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+        "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
       },
       "ATC_COVER_SIDE_L": {
         "stock": "1.9mmsteelcover;exactfinishedpanelinindexedSTEP",
         "ownership": "new",
-        "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+        "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
       },
       "ATC_COVER_SIDE_R": {
         "stock": "1.9mmsteelcover;exactfinishedpanelinindexedSTEP",
         "ownership": "new",
-        "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+        "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
       },
       "ATC_COVER_REAR_WITH_ARM_RELIEFS": {
         "stock": "1.9mmsteelcover;exactfinishedpanelinindexedSTEP",
         "ownership": "new",
-        "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+        "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
       },
       "ATC_COVER_FOLDED_HANDLE_L": {
         "stock": "Welded6mmgrip40long +two6mmlegs;twohandles",
         "ownership": "new",
-        "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+        "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
       },
       "ATC_COVER_FOLDED_HANDLE_R": {
         "stock": "Welded6mmgrip40long +two6mmlegs;twohandles",
         "ownership": "new",
-        "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+        "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
       },
-      "ATC_COVER_WELDED_CLAMP_SPACER_L": {
-        "stock": "Steel10ODx4.5IDx18.1weldedspacer;drillroundstock",
+      "ATC_COVER_SEAT_TAB_L": {
+        "stock": "Welded20x20x1.9steelhoodtab;D4.5clearance;2total",
         "ownership": "new",
-        "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+        "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
       },
-      "ATC_COVER_M4x25_THUMB_L": {
-        "stock": "M4x25thumbscrew,12ODx4head;retract6mmforswapping",
+      "ATC_COVER_SEAT_TAB_R": {
+        "stock": "Welded20x20x1.9steelhoodtab;D4.5clearance;2total",
         "ownership": "new",
-        "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
-      },
-      "ATC_COVER_WELDED_CLAMP_SPACER_R": {
-        "stock": "Steel10ODx4.5IDx18.1weldedspacer;drillroundstock",
-        "ownership": "new",
-        "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
-      },
-      "ATC_COVER_M4x25_THUMB_R": {
-        "stock": "M4x25thumbscrew,12ODx4head;retract6mmforswapping",
-        "ownership": "new",
-        "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+        "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
       }
     },
     "fabrication_release": false,
-    "operating_release": false
+    "operating_release": false,
+    "kit_contents_selected_and_verified": false,
+    "installation_geometry_is_exact_basic_kit_contents": false
   },
   "static_checks": {
     "WOOD_DEPLOYED": {
-      "exact_pairs": 58,
+      "exact_pairs": 66,
       "unexpected": [],
       "invalid": [],
       "passed": true
     },
     "PLASMA_PARKED": {
-      "exact_pairs": 58,
+      "exact_pairs": 70,
       "unexpected": [],
       "invalid": [],
       "passed": true
     },
     "TRANSIT": {
-      "exact_pairs": 42,
+      "exact_pairs": 50,
       "unexpected": [],
       "invalid": [],
       "passed": true
     }
   },
   "continuous200_translation": {
-    "enclosure_count": 33,
-    "candidate_pairs": 1023,
-    "exact_pairs": 0,
+    "enclosure_count": 46,
+    "candidate_pairs": 1242,
+    "exact_pairs": 40,
     "unexpected": [],
-    "passed": true
+    "passed": true,
+    "source_material_cover": {
+      "ATC_CROSSCARRIER_END_PLATE_L": {
+        "missing_material_mm3": 0.0,
+        "passed": true,
+        "cells": [
+          [
+            255.1,
+            1238.0,
+            1013.9,
+            275.1,
+            1298.0,
+            1026.45
+          ],
+          [
+            295.0,
+            1238.0,
+            1013.75,
+            335.0,
+            1298.0,
+            1026.45
+          ],
+          [
+            255.1,
+            1238.0,
+            1026.45,
+            335.0,
+            1298.0,
+            1039.15
+          ]
+        ]
+      },
+      "ATC_CROSSCARRIER_END_PLATE_R": {
+        "missing_material_mm3": 0.0,
+        "passed": true,
+        "cells": [
+          [
+            815.0,
+            1238.0,
+            1013.75,
+            855.0,
+            1298.0,
+            1026.45
+          ],
+          [
+            874.9,
+            1238.0,
+            1013.9,
+            894.9,
+            1298.0,
+            1026.45
+          ],
+          [
+            815.0,
+            1238.0,
+            1026.45,
+            894.9,
+            1298.0,
+            1039.15
+          ]
+        ]
+      }
+    }
   },
   "full_cover_changeover": {
-    "enclosure_count": 506,
-    "candidate_pairs": 28842,
-    "exact_pairs": 5,
+    "enclosure_count": 484,
+    "candidate_pairs": 28072,
+    "exact_pairs": 11,
     "unexpected": [],
     "passed": true,
     "source_cell_containment": {
@@ -541,19 +647,11 @@
         "missing_material_outside_cells_mm3": 0.0,
         "passed": true
       },
-      "ATC_COVER_WELDED_CLAMP_SPACER_L": {
+      "ATC_COVER_SEAT_TAB_L": {
         "missing_material_outside_cells_mm3": 0.0,
         "passed": true
       },
-      "ATC_COVER_M4x25_THUMB_L": {
-        "missing_material_outside_cells_mm3": 0.0,
-        "passed": true
-      },
-      "ATC_COVER_WELDED_CLAMP_SPACER_R": {
-        "missing_material_outside_cells_mm3": 0.0,
-        "passed": true
-      },
-      "ATC_COVER_M4x25_THUMB_R": {
+      "ATC_COVER_SEAT_TAB_R": {
         "missing_material_outside_cells_mm3": 0.0,
         "passed": true
       }
@@ -572,21 +670,24 @@
     ],
     "manually_removed_and_refitted_parts": [
       "ATC_COVER_KEEPER_1393",
-      "ATC_COVER_KEEPER_1413"
+      "ATC_COVER_KEEPER_1413",
+      "ATC_COVER_REMOVABLE_M4x6_L",
+      "ATC_COVER_REMOVABLE_M4x6_R"
     ],
+    "removed_fastener_stow_scope": "Removedkeepers/twoshortM4bolts heldinownedtoolstorage; nofullrouteinsideanunmodeledstorageboxclaimed",
     "paths": [
-      "Remove both retained storage L keepers into owned tool storage",
-      "Retract two captive M4 clamps6mm",
+      "Remove both retainedstorageLkeepers intoownedtoolstorage",
+      "Remove twoM4x6hoodtabbolts with8mmverticalrelease; keepinownedtoolstorage",
       "Lift cover500mm",
       "Rotate90deg aboutY",
       "Shift390mmleft/70mmrear",
       "Lower1182.35mm",
-      "Insert90mmright onto hooks, then refit both L keepers and R clips"
+      "Insert90mmright ontohooks,then refitbothLkeepers/Rclips"
     ],
     "whole_path_bounds_mm": [
       100.55000000000018,
       1265.0,
-      97.99999999999955,
+      87.99999999999977,
       897.1564875957025,
       1426.0,
       1912.5064875957023
@@ -594,47 +695,120 @@
     "in_plan_footprint": true
   },
   "bed_tilt_contract": {
-    "continuous_bed_max_Y_mm": 1223.12,
-    "minimum_ATC_parked_Y_gap_mm": 6.880000000000109,
+    "continuous_bed_max_Y_mm": 1182.8457,
+    "minimum_ATC_parked_Y_gap_mm": 47.15429999999992,
     "all_ATC_fixed_and_parked_material_behind_bed": true,
-    "scope": "Uses bedmax1223.12 input from parallel bed design; integrated root assembly must bind/check actualbedfactory."
+    "scope": "Uses current integratedbed1182.8457 input; rootassembly must bind/check actualbedfactory."
   },
   "ideal_stiffness_screen": {
     "force_N": 100.0,
     "crossbeam_support_span_mm": 520.0,
     "profile_I_weak_min_mm4": 134000.0,
     "profile_only_bending_mm": 0.031682168865815846,
-    "each_loaded_arm_tip_mm": 0.16476280014068648,
-    "scalar_sum_mm": 0.19644496900650232,
-    "arm_cantilever_mm": 167.0,
+    "each_loaded_arm_tip_mm": 0.029953637449212596,
+    "scalar_sum_mm": 0.06163580631502844,
+    "arm_cantilever_mm": 168.0,
     "qualified": false,
     "excluded": "Actualprofilemodifiedholes, pad/endcap/socket, joints,seats,screw/rail/module, thermal and dynamic compliance"
   },
-  "cover_finished_reference_mass_kg": 4.201222320551223,
+  "passive_capture_fit": {
+    "no_removable_endpoint_bolts": true,
+    "nominal_vertical_gap_mm": 0.15,
+    "left_nominal_total_X_clearance_mm": 0.15,
+    "finished_gap_acceptance_mm": [
+      0.1,
+      0.2
+    ],
+    "right_outer_float_mm": 1.2,
+    "finish_after_welding": true,
+    "full_translation_and_material_containment_checked": true,
+    "powered_axial_hold_required": true,
+    "selected_axis_axial_force_verified": false,
+    "powerloss_axial_lock": false
+  },
+  "conditional_guide_wall_screen": {
+    "torque_case_Nm": 20.0,
+    "effective_yaw_contact_lever_mm": 50.0,
+    "contact_force_N": 400.0,
+    "assumed_loaded_wall_width_mm": 20,
+    "wall_thickness_mm": 6.35,
+    "wall_height_mm": 12.55,
+    "E_MPa": 200000.0,
+    "wall_only_elastic_deflection_mm": 0.0030879481034552627,
+    "nominal_wall_bending_stress_MPa": 37.3488746977494,
+    "qualified": false,
+    "excludes": "Impacttransients/contact/welds/slip, actualmaterials/finish and poweredaxialhold. A chosen20Nm case is not measured vendorreactiondata."
+  },
+  "manufacturer_housing": {
+    "file": "sources/ER20_4_Standard_20240204.step",
+    "sha256": "e15fe7e41ed1bfba54a0d2203c92355fa509f06b4ed8c3b588b37d9589fee572",
+    "unscaled_original_solids": 4,
+    "source_XYZ_mm": [
+      271.2,
+      60,
+      80.8
+    ],
+    "world_pocket_X_mm": [
+      507.5,
+      552.5,
+      597.5,
+      642.5
+    ],
+    "world_pocket_Y_mm": 1100.0,
+    "world_body_bottom_Z_mm": 1051.85,
+    "mounting_X_mm": [
+      481.0,
+      669.0
+    ],
+    "mounting_Y_mm": [
+      1080.0,
+      1120.0
+    ],
+    "through_mm": 6.35,
+    "counterbore_mm": 11,
+    "counterbore_depth_mm": 7,
+    "source_geometry_recovered": true,
+    "actual_received_revision_verified": false,
+    "internal_ER11_socket_nut_IR_datums_in_source": false,
+    "exact_Basic_kit_contents_asserted": false,
+    "export_method": "Original local definitions with explicit assemblylocations; no bakedtranslationofmanufacturertrimcurves"
+  },
+  "new_joint_dimensions": {
+    "body_M6x55_engagement_mm": 10.8,
+    "body_tip_reserve_mm": 1.9,
+    "body_head_recess_mm": 1.0,
+    "front_pad_M6x30_engagement_mm": 10.7,
+    "front_pad_tip_reserve_mm": 2.0,
+    "rear_arm_M6x30_internal_projection_mm": 10.7,
+    "rear_actual_Tnut_fit_verified": false,
+    "cover_M4x6_engagement_mm": 4.1,
+    "cover_tip_reserve_mm": 2.25
+  },
+  "cover_finished_reference_mass_kg": 4.161351052590742,
   "exported_assemblies": {
     "WOOD_DEPLOYED": {
       "file": "output/WOOD_DEPLOYED.step",
-      "sha256": "7864b6abf76c1458273e2aa805fc7ce701fef6310cfb961b6573e25981030fe6",
-      "components": 70,
+      "sha256": "a3b5839c6119a4e44d0091a1331da75b2aef748046b4d274106d687289c7f585",
+      "components": 68,
       "valid": true,
-      "solids": 70,
-      "volume_error_mm3": 4.470348358154297e-08,
+      "solids": 68,
+      "volume_error_mm3": 9.126961231231689e-07,
       "bounds_mm": [
         25.8,
         1070.0,
-        98.0,
+        88.0,
         1124.2,
         1597.0,
-        1159.15
+        1132.6499999999999
       ]
     },
     "PLASMA_PARKED": {
       "file": "output/PLASMA_PARKED.step",
-      "sha256": "33d4157430ce37195e33e79a0a206fa01aa9e761d6ae119f857dc98f247de9c7",
+      "sha256": "1603ce34abfe3674f54f5975c4b6339d581e7f7b667a2c25ffd281fe1410504b",
       "components": 70,
       "valid": true,
       "solids": 70,
-      "volume_error_mm3": 1.8812716007232666e-07,
+      "volume_error_mm3": 4.898756742477417e-07,
       "bounds_mm": [
         25.8,
         1230.0,
@@ -649,7 +823,7 @@
     {
       "id": "ATC_4080_CROSSBEARER_1",
       "step": "output/custom-step/ATC_4080_CROSSBEARER_1.step",
-      "sha256": "7cc88d6e9d8ad6c664fff496eb19e9779080def4d40cfbb5944066983da1eb75",
+      "sha256": "d1f2138aaed13f8e5a4432ec366f58e20483f2e567e2b954f5fda3763cecc4c0",
       "source_world_min_corner_mm": [
         32.15,
         1239.9999999999998,
@@ -670,7 +844,7 @@
     {
       "id": "ATC_DROP_PLATE_L_1",
       "step": "output/custom-step/ATC_DROP_PLATE_L_1.step",
-      "sha256": "5bac2f19bc413d282093a6310ff5b0db30e6c334f3815c9c3911c0b48b809a93",
+      "sha256": "0f15f892d73344b5967835beaa1006d88e08a06a7241bfe1d8cf9ae8e274f5a9",
       "source_world_min_corner_mm": [
         25.8,
         1240.0,
@@ -691,7 +865,7 @@
     {
       "id": "ATC_DROP_PLATE_R_1",
       "step": "output/custom-step/ATC_DROP_PLATE_R_1.step",
-      "sha256": "2d45e953e0c79f2ef67add204ef31c0a0d23873e40ebc2ece3e699f148bc936f",
+      "sha256": "80cbc3cd60423ad363c69c0876ee144d93f89f2bbd4c638bdf6cde27a32362b6",
       "source_world_min_corner_mm": [
         1117.85,
         1240.0,
@@ -712,7 +886,7 @@
     {
       "id": "ATC_4080_CROSSBEARER_2",
       "step": "output/custom-step/ATC_4080_CROSSBEARER_2.step",
-      "sha256": "fc20612e3430ebc38226eeb1448babfe2dd7c548e554d08d0d9b8d3e789e2a18",
+      "sha256": "58ad871cedc3c782a1cfb474b7c9a119fb2683428b4de3119ac9b8f948ab66af",
       "source_world_min_corner_mm": [
         32.15,
         1459.9999999999998,
@@ -733,7 +907,7 @@
     {
       "id": "ATC_DROP_PLATE_L_2",
       "step": "output/custom-step/ATC_DROP_PLATE_L_2.step",
-      "sha256": "dd95f59dacc5d62bbd0ae08ea7ba5b34e8e75b117312edcc6c365cb161f687ef",
+      "sha256": "219a360ad2446155cebd7231193d270b38d81a9db5ce8ffb602aa39aa1b9fa04",
       "source_world_min_corner_mm": [
         25.8,
         1460.0,
@@ -754,7 +928,7 @@
     {
       "id": "ATC_DROP_PLATE_R_2",
       "step": "output/custom-step/ATC_DROP_PLATE_R_2.step",
-      "sha256": "22f05a9ce2e662ddfadc40f599b29556aa0331767f87fe06287bcfed2d136bde",
+      "sha256": "04deb2a7ac1d6da850e07d3d4eff596dd61fb5f313d246b265902f03cb54d822",
       "source_world_min_corner_mm": [
         1117.85,
         1460.0,
@@ -775,7 +949,7 @@
     {
       "id": "ATC_SELECTED_SLIDE_BASE_PLATE",
       "step": "output/custom-step/ATC_SELECTED_SLIDE_BASE_PLATE.step",
-      "sha256": "b998e586f76856946efdf8f6af43ee7e70a9b8235ac8113216b1cb88786c41b1",
+      "sha256": "2ffbf7aebd8d189d63d87362683233153fc760f2f9d173fc884c70faada69f9e",
       "source_world_min_corner_mm": [
         535.0,
         1238.0,
@@ -796,7 +970,7 @@
     {
       "id": "ATC_4080_MOVING_CROSSCARRIER",
       "step": "output/custom-step/ATC_4080_MOVING_CROSSCARRIER.step",
-      "sha256": "4935583346da3f8e6e3e9e399c99c13c0612462c47c0137ab9f5caee9f2b6a00",
+      "sha256": "aee3063cf3c4b8fa0b854d9988b36a298339670da942acf1310610154fbf7b8c",
       "source_world_min_corner_mm": [
         275.0,
         1428.0,
@@ -811,13 +985,13 @@
         80.0,
         40.000000000000064
       ],
-      "stock": "4080 x600mm laid80Yx40Z;2xD18vertical pin/head-accessbores",
-      "notes": "Conditional Iweak>=134000mm4 before local machining; modified section, slot and bolt joint capacities unqualified. Do not replace with a flat unsupported bar."
+      "stock": "4080 x600mm laid80Yx40Z; obsolete pin/head-access bores removed",
+      "notes": "Conditional Iweak>=134000mm4; actual die, slot and bolt joint capacities unqualified. Do not replace with a flat unsupported bar."
     },
     {
       "id": "ATC_CARRIAGE_TRANSFER_PLATE",
       "step": "output/custom-step/ATC_CARRIAGE_TRANSFER_PLATE.step",
-      "sha256": "426b480762d24442f0fd18dac9ee098e1937eaed59fdc1503aa39a2e902f8c29",
+      "sha256": "7259c34b52464ca123b14fd59b0268d93153e2ec7943ccfede0fad7dc018d958",
       "source_world_min_corner_mm": [
         530.0,
         1438.0,
@@ -838,51 +1012,51 @@
     {
       "id": "ATC_CROSSCARRIER_END_PLATE_L",
       "step": "output/custom-step/ATC_CROSSCARRIER_END_PLATE_L.step",
-      "sha256": "f2e4f94c63484a7077a5c554b48f717224985bb93a9c16d8de74846477aa7621",
+      "sha256": "90d7d773a0d262a3c0f1173bb59cd6c4a6c67ebc976d32906dd0f70b390a7755",
       "source_world_min_corner_mm": [
-        275.0,
+        255.1,
         1438.0,
-        1026.45
+        1013.75
       ],
       "valid": true,
       "local_bounds_mm": [
         0.0,
         0.0,
         0.0,
+        79.9,
         60.0,
-        60.0,
-        12.700000000000045
+        25.40000000000009
       ],
-      "stock": "60x60x12.7mm6061-T6",
-      "notes": "Nominal8mmreamed locatorhole,2M6arm taps,2M6slotfixingclearanceholes. Specify compatible ground pin/H7 bore as actual fit."
+      "stock": "80x60x25.4mm6061-T6 raw billet; integral lower tongue and40mm-wide underside seat land",
+      "notes": "No endpoint bolt or locator bore. Mainplate12.7mm, integral25.4mm thick bearingland; lowered20mm tongue with3x5mm chamfers. Finish totalleftXguide/verticalgaps .10-.20mm afterwelding/fit. Rightfloats. Newstock; noownedsheetcredit."
     },
     {
       "id": "ATC_CROSSCARRIER_END_PLATE_R",
       "step": "output/custom-step/ATC_CROSSCARRIER_END_PLATE_R.step",
-      "sha256": "6ab216dde1772b4610f2a29196a170cdbfac73720ef37bfa40a7b51f948d44c4",
+      "sha256": "6ca2dff3ed18ddbfc9750e4a3dfcc081a97a8069c921c99981b1aed63636d604",
       "source_world_min_corner_mm": [
         815.0,
         1438.0,
-        1026.45
+        1013.75
       ],
       "valid": true,
       "local_bounds_mm": [
         0.0,
         0.0,
         0.0,
+        79.89999999999998,
         60.0,
-        60.0,
-        12.700000000000045
+        25.40000000000009
       ],
-      "stock": "60x60x12.7mm6061-T6",
-      "notes": "Nominal8mmreamed locatorhole,2M6arm taps,2M6slotfixingclearanceholes. Specify compatible ground pin/H7 bore as actual fit."
+      "stock": "80x60x25.4mm6061-T6 raw billet; integral lower tongue and40mm-wide underside seat land",
+      "notes": "No endpoint bolt or locator bore. Mainplate12.7mm, integral25.4mm thick bearingland; lowered20mm tongue with3x5mm chamfers. Finish totalleftXguide/verticalgaps .10-.20mm afterwelding/fit. Rightfloats. Newstock; noownedsheetcredit."
     },
     {
       "id": "ATC_FORWARD_ARM_L",
       "step": "output/custom-step/ATC_FORWARD_ARM_L.step",
-      "sha256": "e5d37198c9c38b81b100bb990afab3ff5514885d346c00ae955c0920f58fd43a",
+      "sha256": "8be3f06a06c4157e31080be7d96199a101bfa6700304869732256f53422f3453",
       "source_world_min_corner_mm": [
-        295.0,
+        467.0,
         1270.0,
         1013.75
       ],
@@ -891,40 +1065,40 @@
         0.0,
         0.0,
         0.0,
-        40.0,
+        28.0,
         242.0,
-        12.700000000000045
+        25.40000000000009
       ],
-      "stock": "40x242x12.7mm6061-T6",
-      "notes": "Underside M6 head recesses6.1deep; standardM6x20 finished underhead19mm. Final lowest head1013.85, above1012.8 travel plane."
+      "stock": "28x242x25.4mm6061-T6billet",
+      "notes": "Manufacturer mount axes481/669. ThreeM6bores with6.1mm undersideheadrecess. M6x30rear to4080andcentralfrontpad. Deepbilletstrengthensbendingwithoutnewprofile. Noobsoletehoodtap;hoodretainsdirectlyonfixedcapture-rooftabs."
     },
     {
-      "id": "ATC_KIT_ENDCAP_TRANSFER_PAD_L",
-      "step": "output/custom-step/ATC_KIT_ENDCAP_TRANSFER_PAD_L.step",
-      "sha256": "7702f25b893f474fba6693aad601c8ca36f7ba2ce578792e203a108a6f1fe6d9",
+      "id": "ATC_KIT_MOUNT_PAD_L",
+      "step": "output/custom-step/ATC_KIT_MOUNT_PAD_L.step",
+      "sha256": "b608c28c8300705fa27272754a8ce95c75188df4e5b2c0fd9d8e22944277fdaa",
       "source_world_min_corner_mm": [
-        305.0,
+        467.0,
         1270.0,
-        1026.45
+        1039.15
       ],
       "valid": true,
       "local_bounds_mm": [
         0.0,
         0.0,
         0.0,
-        30.0,
+        28.0,
         60.0,
         12.700000000000045
       ],
-      "stock": "30x60x12.7mm6061-T6 transfer pad",
-      "notes": "OEM top mounting pattern deliberately blank. Not a claimed RapidChange flange/pocket drawing. Fit supplied kit/endcap drawing before drill release."
+      "stock": "28x60x12.7mm6061-T6;threeM6tapsinlineat10/30/50mmY",
+      "notes": "Bodymounts atmanufacturerX+/-94/Y+/-20. Centretap attachespadfrombelow;outertapsacceptM6x55fromOEMcounterbores. Distinctaxespreventopposingscrewoverlap. Bodyengagement10.8mm/tipreserve1.9mm."
     },
     {
       "id": "ATC_FORWARD_ARM_R",
       "step": "output/custom-step/ATC_FORWARD_ARM_R.step",
-      "sha256": "8b93c9efe672c9374fc303b0b26a26689a99013abde71fad45dfc75fc837803c",
+      "sha256": "dd4720b37792cbab3b825520459b47ccabdf9418d40ee514e2d31156674ecfe6",
       "source_world_min_corner_mm": [
-        815.0,
+        655.0,
         1270.0,
         1013.75
       ],
@@ -933,40 +1107,40 @@
         0.0,
         0.0,
         0.0,
-        40.0,
+        28.0,
         242.0,
-        12.700000000000045
+        25.40000000000009
       ],
-      "stock": "40x242x12.7mm6061-T6",
-      "notes": "Underside M6 head recesses6.1deep; standardM6x20 finished underhead19mm. Final lowest head1013.85, above1012.8 travel plane."
+      "stock": "28x242x25.4mm6061-T6billet",
+      "notes": "Manufacturer mount axes481/669. ThreeM6bores with6.1mm undersideheadrecess. M6x30rear to4080andcentralfrontpad. Deepbilletstrengthensbendingwithoutnewprofile. Noobsoletehoodtap;hoodretainsdirectlyonfixedcapture-rooftabs."
     },
     {
-      "id": "ATC_KIT_ENDCAP_TRANSFER_PAD_R",
-      "step": "output/custom-step/ATC_KIT_ENDCAP_TRANSFER_PAD_R.step",
-      "sha256": "fa8bb7f92970d92c7a448b08bf39777280f46f33205ee84b02a0641063385940",
+      "id": "ATC_KIT_MOUNT_PAD_R",
+      "step": "output/custom-step/ATC_KIT_MOUNT_PAD_R.step",
+      "sha256": "2819f4071b18d03910e006290d73298b63955bb5874db6d76cc9a4bf9739b551",
       "source_world_min_corner_mm": [
-        815.0,
+        655.0,
         1270.0,
-        1026.45
+        1039.15
       ],
       "valid": true,
       "local_bounds_mm": [
         0.0,
         0.0,
         0.0,
-        30.0,
+        28.0,
         60.0,
         12.700000000000045
       ],
-      "stock": "30x60x12.7mm6061-T6 transfer pad",
-      "notes": "OEM top mounting pattern deliberately blank. Not a claimed RapidChange flange/pocket drawing. Fit supplied kit/endcap drawing before drill release."
+      "stock": "28x60x12.7mm6061-T6;threeM6tapsinlineat10/30/50mmY",
+      "notes": "Bodymounts atmanufacturerX+/-94/Y+/-20. Centretap attachespadfrombelow;outertapsacceptM6x55fromOEMcounterbores. Distinctaxespreventopposingscrewoverlap. Bodyengagement10.8mm/tipreserve1.9mm."
     },
     {
       "id": "ATC_DOCK_DEPLOYED_L",
       "step": "output/custom-step/ATC_DOCK_DEPLOYED_L.step",
-      "sha256": "1e30177d52662a8c45ee48d91d04919f79221c71ce0447f99e98d2ce09d53b19",
+      "sha256": "77d77f2c9e8f06befa5ded617e3dd9f6ca63e123882807e42f6ffd47660f38cd",
       "source_world_min_corner_mm": [
-        285.0,
+        248.675,
         1231.65,
         952.8
       ],
@@ -975,20 +1149,20 @@
         0.0,
         0.0,
         0.0,
-        50.0,
+        86.32499999999999,
         78.34999999999991,
-        60.950000000000045
+        92.85000000000014
       ],
-      "stock": "Welded6.35mm steelU:2x50x72 +2x48.25x72;ream after weld",
-      "notes": "Finaltop1013.75,bottom952.8. Deployedlefttop includes6.35x6.35frontstopoverhang. Left nominal8mmH7 locator/6.6thread clearance; right8mmY-width with1mm extraX relief. Match source steel grade/weld capacity and actual shim/seat preload."
+      "stock": "Welded6.35mm steel:2x86.325x72 base/top;3x48.25x72 legs;1x60x25.55 outerwall;1x26.225x60 roof;1x19.8x31.9 endpointstop;plus6.35mm steel1x60x12.55 innerguide",
+      "notes": "Finish seats/guides after welding. Nominal vertical and lower-tongue gap.15mm; left totalXgap.15mm. Fit .10-.20mm gap with indexed thin shims and verify fullstroke. Right key has1.2mm outerXfloat. Front stops deployed/rear stops parked. GeometricZcapture; axial preload depends on energized selectedslide/controller. No selflocking friction or powerloss axial retention claimed."
     },
     {
       "id": "ATC_DOCK_DEPLOYED_R",
       "step": "output/custom-step/ATC_DOCK_DEPLOYED_R.step",
-      "sha256": "f1b62e2f81144a201e962eb1cf5d4ec9bc4059c19a7acd8a980ceb7c29f843af",
+      "sha256": "6b4aa54c850425ca7d0c4418352e8f3e09e1dfd1674014cee12cb93c32200a8c",
       "source_world_min_corner_mm": [
         815.0,
-        1238.0,
+        1231.65,
         952.8
       ],
       "valid": true,
@@ -996,19 +1170,19 @@
         0.0,
         0.0,
         0.0,
-        50.0,
-        72.0,
-        60.950000000000045
+        87.45000000000005,
+        78.34999999999991,
+        92.85000000000014
       ],
-      "stock": "Welded6.35mm steelU:2x50x72 +2x48.25x72;ream after weld",
-      "notes": "Finaltop1013.75,bottom952.8. Deployedlefttop includes6.35x6.35frontstopoverhang. Left nominal8mmH7 locator/6.6thread clearance; right8mmY-width with1mm extraX relief. Match source steel grade/weld capacity and actual shim/seat preload."
+      "stock": "Welded6.35mm steel:2x87.45x72 base/top;3x48.25x72 legs;1x60x25.55 outerwall;1x27.35x60 roof;1x19.8x31.9 endpointstop",
+      "notes": "Finish seats/guides after welding. Nominal vertical and lower-tongue gap.15mm; left totalXgap.15mm. Fit .10-.20mm gap with indexed thin shims and verify fullstroke. Right key has1.2mm outerXfloat. Front stops deployed/rear stops parked. GeometricZcapture; axial preload depends on energized selectedslide/controller. No selflocking friction or powerloss axial retention claimed."
     },
     {
       "id": "ATC_DOCK_PARKED_L",
       "step": "output/custom-step/ATC_DOCK_PARKED_L.step",
-      "sha256": "8fa4ba72ec5f0772b8b432a45a9561d96950f29251bd1bdf1cd14ed1ef7bced2",
+      "sha256": "fa95418a60d082172449b2a19e63e9baf7d84aff62a376bcee815599550b171a",
       "source_world_min_corner_mm": [
-        285.0,
+        248.675,
         1438.0,
         952.8
       ],
@@ -1017,17 +1191,17 @@
         0.0,
         0.0,
         0.0,
-        50.0,
+        86.32499999999999,
         72.0,
-        60.950000000000045
+        92.85000000000014
       ],
-      "stock": "Welded6.35mm steelU:2x50x72 +2x48.25x72;ream after weld",
-      "notes": "Finaltop1013.75,bottom952.8. Deployedlefttop includes6.35x6.35frontstopoverhang. Left nominal8mmH7 locator/6.6thread clearance; right8mmY-width with1mm extraX relief. Match source steel grade/weld capacity and actual shim/seat preload."
+      "stock": "Welded6.35mm steel:2x86.325x72 base/top;3x48.25x72 legs;1x60x25.55 outerwall;1x26.225x60 roof;1x19.8x31.9 endpointstop;plus6.35mm steel1x60x12.55 innerguide",
+      "notes": "Finish seats/guides after welding. Nominal vertical and lower-tongue gap.15mm; left totalXgap.15mm. Fit .10-.20mm gap with indexed thin shims and verify fullstroke. Right key has1.2mm outerXfloat. Front stops deployed/rear stops parked. GeometricZcapture; axial preload depends on energized selectedslide/controller. No selflocking friction or powerloss axial retention claimed."
     },
     {
       "id": "ATC_DOCK_PARKED_R",
       "step": "output/custom-step/ATC_DOCK_PARKED_R.step",
-      "sha256": "d2eeed33b7ebca53e1b948a16340a3510c3d32b782e7949a20e45b378d92603e",
+      "sha256": "95f2c2e85fb66145ade63b0bb4e23cce803e5a4b10883da5cfc1e0af75000d1f",
       "source_world_min_corner_mm": [
         815.0,
         1438.0,
@@ -1038,59 +1212,17 @@
         0.0,
         0.0,
         0.0,
-        50.0,
+        87.45000000000005,
         72.0,
-        60.950000000000045
+        92.85000000000014
       ],
-      "stock": "Welded6.35mm steelU:2x50x72 +2x48.25x72;ream after weld",
-      "notes": "Finaltop1013.75,bottom952.8. Deployedlefttop includes6.35x6.35frontstopoverhang. Left nominal8mmH7 locator/6.6thread clearance; right8mmY-width with1mm extraX relief. Match source steel grade/weld capacity and actual shim/seat preload."
-    },
-    {
-      "id": "ATC_HARD_STOP_DEPLOYED",
-      "step": "output/custom-step/ATC_HARD_STOP_DEPLOYED.step",
-      "sha256": "cab53b56a5f3cb8d33ce35e72bd2e15b722c25c16fe3324ca35b1ebde263439c",
-      "source_world_min_corner_mm": [
-        285.0,
-        1231.65,
-        1013.75
-      ],
-      "valid": true,
-      "local_bounds_mm": [
-        0.0,
-        0.0,
-        0.0,
-        6.350000000000023,
-        6.349999999999909,
-        25.40000000000009
-      ],
-      "stock": "6.35x6.35x25.4 steel stop, welded to matching receiver",
-      "notes": "Not the locating pin. Fit contact face/shim after alignment; motor approaches at reduced speed."
-    },
-    {
-      "id": "ATC_HARD_STOP_PARKED",
-      "step": "output/custom-step/ATC_HARD_STOP_PARKED.step",
-      "sha256": "a618f8c93758fe7d9e9bf6be78b1efe248a7fdc9cf51d3ae103808a2277a8cdc",
-      "source_world_min_corner_mm": [
-        858.65,
-        1498.0,
-        1013.75
-      ],
-      "valid": true,
-      "local_bounds_mm": [
-        0.0,
-        0.0,
-        0.0,
-        6.350000000000023,
-        6.349999999999909,
-        25.40000000000009
-      ],
-      "stock": "6.35x6.35x25.4 steel stop, welded to matching receiver",
-      "notes": "Not the locating pin. Fit contact face/shim after alignment; motor approaches at reduced speed."
+      "stock": "Welded6.35mm steel:2x87.45x72 base/top;3x48.25x72 legs;1x60x25.55 outerwall;1x27.35x60 roof;1x19.8x31.9 endpointstop",
+      "notes": "Finish seats/guides after welding. Nominal vertical and lower-tongue gap.15mm; left totalXgap.15mm. Fit .10-.20mm gap with indexed thin shims and verify fullstroke. Right key has1.2mm outerXfloat. Front stops deployed/rear stops parked. GeometricZcapture; axial preload depends on energized selectedslide/controller. No selflocking friction or powerloss axial retention claimed."
     },
     {
       "id": "ATC_COVER_STORAGE_HANGER",
       "step": "output/custom-step/ATC_COVER_STORAGE_HANGER.step",
-      "sha256": "d9e21561ed5fe2293868396a81af22ae6a82cdca46cf345c827b5149ea3e3633",
+      "sha256": "e5ffc4fabddb6fd32713b405aa349242531b89a5e1dac7249207f06556acddac",
       "source_world_min_corner_mm": [
         342.0,
         1320.0,
@@ -1111,7 +1243,7 @@
     {
       "id": "ATC_COVER_ROOF",
       "step": "output/custom-step/ATC_COVER_ROOF.step",
-      "sha256": "b99a3f1e13be8eab1628b8a0b75281705f708042225f6f7871fb344e53930683",
+      "sha256": "f6ed45d4fd7ef7dbc2e844424b04601d8ebbfbbea0822937fcb648e1bbd5f710",
       "source_world_min_corner_mm": [
         275.0,
         1265.0,
@@ -1127,12 +1259,12 @@
         1.900000000000091
       ],
       "stock": "1.9mmsteelcover;exactfinishedpanelinindexedSTEP",
-      "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+      "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
     },
     {
       "id": "ATC_COVER_FRONT",
       "step": "output/custom-step/ATC_COVER_FRONT.step",
-      "sha256": "7c21ad5a60b74f9afa8439c8adca01be8280f60a44c2ce29aa8e800a6f9a0028",
+      "sha256": "4eb8409f39186a17b69c06408c664cf58113af8b5346693c095e238add772cc4",
       "source_world_min_corner_mm": [
         275.0,
         1265.0,
@@ -1148,12 +1280,12 @@
         165.10000000000002
       ],
       "stock": "1.9mmsteelcover;exactfinishedpanelinindexedSTEP",
-      "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+      "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
     },
     {
       "id": "ATC_COVER_SIDE_L",
       "step": "output/custom-step/ATC_COVER_SIDE_L.step",
-      "sha256": "4f65102a129b132a94564900b35782e92d4b16db53c63bd1b79e2ece11dd58cc",
+      "sha256": "6979f1736823144e361ec7f415a79bcb6b110907a7cb33d3dedd603dda2666eb",
       "source_world_min_corner_mm": [
         275.0,
         1266.9,
@@ -1169,12 +1301,12 @@
         165.10000000000002
       ],
       "stock": "1.9mmsteelcover;exactfinishedpanelinindexedSTEP",
-      "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+      "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
     },
     {
       "id": "ATC_COVER_SIDE_R",
       "step": "output/custom-step/ATC_COVER_SIDE_R.step",
-      "sha256": "17fa894e2578faf9ab055cb346d6496d2e7d84be350f6b25ec36f34790de111d",
+      "sha256": "b605fdbc10dadf6f9af748c29470b8f0430499e17b45ceab3c2f8e73caae3a73",
       "source_world_min_corner_mm": [
         873.1,
         1266.9,
@@ -1190,12 +1322,12 @@
         165.10000000000002
       ],
       "stock": "1.9mmsteelcover;exactfinishedpanelinindexedSTEP",
-      "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+      "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
     },
     {
       "id": "ATC_COVER_REAR_WITH_ARM_RELIEFS",
       "step": "output/custom-step/ATC_COVER_REAR_WITH_ARM_RELIEFS.step",
-      "sha256": "9ce9b2b1a9b40f541b89da74fade62d3ffffb14d343e84e5c6a43fcc569e46e0",
+      "sha256": "ed60386b8b94bf89010ee05190306cc6c5a26d1e7ea4287ed14d16d9df25be66",
       "source_world_min_corner_mm": [
         275.0,
         1354.1,
@@ -1211,12 +1343,12 @@
         165.10000000000002
       ],
       "stock": "1.9mmsteelcover;exactfinishedpanelinindexedSTEP",
-      "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+      "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
     },
     {
       "id": "ATC_COVER_FOLDED_HANDLE_L",
       "step": "output/custom-step/ATC_COVER_FOLDED_HANDLE_L.step",
-      "sha256": "258ba16c362edbad536b0b7eaa7a95a584a5eab03a282bf9fdec49b079a2dbb0",
+      "sha256": "e6a4aa1f3d92712bd97ffd6fa8ab038acf5ed41b43b46454fe51abb676b2d4dd",
       "source_world_min_corner_mm": [
         267.0,
         1308.0,
@@ -1232,12 +1364,12 @@
         11.900000000000091
       ],
       "stock": "Welded6mmgrip40long +two6mmlegs;twohandles",
-      "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+      "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
     },
     {
       "id": "ATC_COVER_FOLDED_HANDLE_R",
       "step": "output/custom-step/ATC_COVER_FOLDED_HANDLE_R.step",
-      "sha256": "41cad6ac81e835316f9eb9346c9f4bc64f64dc7ebe1bf2f87d71c5391fe0fd5a",
+      "sha256": "1f630d389e2557c4c63ec4e1a42fbc525e2094bc197dc92551f324c72bf0c240",
       "source_world_min_corner_mm": [
         872.0,
         1308.0,
@@ -1253,54 +1385,54 @@
         11.900000000000091
       ],
       "stock": "Welded6mmgrip40long +two6mmlegs;twohandles",
-      "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+      "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
     },
     {
-      "id": "ATC_COVER_WELDED_CLAMP_SPACER_L",
-      "step": "output/custom-step/ATC_COVER_WELDED_CLAMP_SPACER_L.step",
-      "sha256": "8ac6289d5e78cc6c8a516fd5ef56b8f421d2df6d41fc72d3408efc7646231a44",
+      "id": "ATC_COVER_SEAT_TAB_L",
+      "step": "output/custom-step/ATC_COVER_SEAT_TAB_L.step",
+      "sha256": "5c58068c71a9d7e706ebd5d0a94748117f41952e8a3a2142fc9b9e1c69b863bf",
       "source_world_min_corner_mm": [
-        276.9,
-        1305.0,
-        1015.1
+        255.0,
+        1278.0,
+        1045.65
       ],
       "valid": true,
       "local_bounds_mm": [
         0.0,
         0.0,
         0.0,
-        18.100000000000023,
-        10.0,
-        10.0
+        20.0,
+        20.0,
+        1.900000000000091
       ],
-      "stock": "Steel10ODx4.5IDx18.1weldedspacer;drillroundstock",
-      "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+      "stock": "Welded20x20x1.9steelhoodtab;D4.5clearance;2total",
+      "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
     },
     {
-      "id": "ATC_COVER_WELDED_CLAMP_SPACER_R",
-      "step": "output/custom-step/ATC_COVER_WELDED_CLAMP_SPACER_R.step",
-      "sha256": "1e0e9f3a915fa796412eaf3427692d5263d499650575ccb58354b9c6ac1e5e3a",
+      "id": "ATC_COVER_SEAT_TAB_R",
+      "step": "output/custom-step/ATC_COVER_SEAT_TAB_R.step",
+      "sha256": "8aab0f172c6e019fb4910787428bc8f0e2581903be15cbcb9c28b8adc299d33d",
       "source_world_min_corner_mm": [
-        855.0,
-        1305.0,
-        1015.1
+        875.0,
+        1278.0,
+        1045.65
       ],
       "valid": true,
       "local_bounds_mm": [
         0.0,
         0.0,
         0.0,
-        18.100000000000023,
-        10.0,
-        10.0
+        20.0,
+        20.0,
+        1.900000000000091
       ],
-      "stock": "Steel10ODx4.5IDx18.1weldedspacer;drillroundstock",
-      "notes": "Removable thermal/splash cover;not sealed or thermally qualified. TwoM4clamps engage5mm into arms; withdraw beforelifting."
+      "stock": "Welded20x20x1.9steelhoodtab;D4.5clearance;2total",
+      "notes": "Thermal/splashcover,notsealed/thermallyqualified. TwoM4x6bolts through1.9tab into6.35fixedroof:4.1mmengagement/2.25mmreserve. Removebothboltsintoownedtoolstoragebeforelifting. No longspacersorarmclamps."
     }
   ],
   "output_sha256": {
-    "output/atc-takeoff.csv": "5bd563a0c6794c7cc160b1ce7645ea1205d6154c643e4425aaed1aac96fc9421",
-    "output/custom-part-index.json": "da9a687ec7a1d849a54f1c59776a0d607529f90c4cb78b8091967175c8abeffc"
+    "output/atc-takeoff.csv": "26aa4e1668dfc8bf32c5cb16afe3fc04884f05712a090508bce3665ba8710451",
+    "output/custom-part-index.json": "eece49d04bb68742dfc8b8fffa0f061b528be396da99fef0ba5e0f71f4420e71"
   },
   "actual_vendor_interfaces_completed": false,
   "physical_slide_carriage_height_measured": false,
@@ -1309,7 +1441,7 @@
   "actual_head_boot_registration_verified": false,
   "final_automatic_M6_sequence_generated": false,
   "complete_delivered_budget_verified": false,
-  "scope": "Nominal mechanical carrier and cover integration. No actualRapidChangehousing/pocketholes or selectedslide4-M6pattern hasbeenfabricatedfromguesses. It remains explicit source-fitting/CADgate. Noenergizedtest/firmware/configuration or fullmachine release.",
+  "scope": "Nominalmechanicalcarrier,passivecapture/coverandunscaledmanufacturerhousingintegration. Recoveredexternalmount/pocketaxesareactualsourcegeometry;internalER11socket/nut/IR/receivedrevisionandselectedslide4-M6sourcefitremainheld. Noenergizedtest/firmware/configuration/fullmachinerelease.",
   "fabrication_release": false,
   "operating_release": false,
   "source_consistent_during_build": true,

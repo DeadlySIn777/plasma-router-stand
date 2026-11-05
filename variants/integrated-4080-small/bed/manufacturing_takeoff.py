@@ -13,12 +13,13 @@ def run():
     specification=spec,ownership=owned,requirement_role=role,covered_by=covered,notes=notes))
  add('BED_UNCUT_20100',10,'each','Uncut1220mm100x20supplier section, fivebroad-face slots6.2openings. Actualdie/nut/lipfitacceptance.','extrusion','20100',1220,100,20)
  add('BED_HDPE_FULL_LAYERS',2,'each','1000x1219.2x12.7fullrectangles;profiles0.4mmendoverhang.80roundholes only.','sheet','HDPE',1219.2,1000,0,12.7,covered='BED_HDPE_RAW_OPTION')
- add('BED_HDPE_RAW_OPTION',1,'sheet','48x96inx1/2 nominalHDPE canyieldtwo1000x1219.2pieces;~438.4mmremainingwidth strip.','raw-stock-option','HDPE',2438.4,1219.2,0,12.7,role='raw-option-not-add-on',covered='BED_HDPE_FULL_LAYERS')
+ add('BED_HDPE_RAW_OPTION',1,'sheet','48x96inx1/2 nominalHDPE canyieldtwo1000x1219.2pieces;432.4mmremaininglengthaftertwo3mmsawkerfs.','raw-stock-option','HDPE',2438.4,1219.2,0,12.7,role='raw-option-not-add-on',covered='BED_HDPE_FULL_LAYERS')
  add('BED_CROSS_4080',4,'each','Flat4080crossmember,20D13.1verticalsleevebores;front/rearcores6.8pilot/M8tap22deep.','extrusion','4080',980,80,40)
  add('BED_COLUMNS',80,'each','12.7OD6.35IDAlcompressiontube;65.4nominalsquare-cut, fitactualtwo-sheetstack.','tube','Al_round_tube',65.4,12.7,6.35)
- add('BED_M5X70',80,'each','M5x70sockethead;head8.5x5,directsquarecolumnseat;2.7nutengagement+.6tipnominal.')
+ add('BED_M5X75_FINISH72',80,'each','M5x75socketheadstockfinished72.0+/-0.1underhead,enddeburr/chamfer<=0.4. Head8.5x5on18ODbridgewasher;full2.7nominalnutengagement+1.0tip/1.1cavityreserve. Neverinstalluncut75.')
+ add('BED_CROSS_BRIDGE_WASHERS',80,'each','SteelM6DIN9021/ISO7093largewasher18OD6.4IDx1.6bridges13.1crossbarboreandseatsbothbarundersideandsquarecolumnend;positivelycapturesthebar. VerifyactualreceivedOD/ID/thickness/flatness/grade;notasmallM5washer.')
  add('BED_BOTTOM_SLOT_NUT_M5',80,'each','Compatible20100bottom-slotM5nut;recoveredCAD8x8x2.7envelope, selectedactualnutfitstillrequired.')
- add('BED_RECEIVER_ANGLE',2,'each','Formed/trimmedsteelangle54horizontalx31.75upwebx3.175, localassistwindow;16flushM5CSfixings toremainingmiddle/reararms.','angle','steel_angle',1050,54,31.75,3.175)
+ add('BED_RECEIVER_ANGLE',2,'each','Formed/trimmedsteelangle54horizontalx31.75upwebx3.175,localassistwindow;22mmlocalwasheraccessholesatX105left/mirror;16flushM5CSfixingstoremainingmiddle/reararms.','angle','steel_angle',1050,54,31.75,3.175)
  add('BED_RECEIVER_PATCH',2,'each','120x35x3.175lowerreinforcementweb atassistnotch;newstock/noautomaticoffcutcredit.','plate-blank','steel',120,35,0,3.175)
  add('BED_RECEIVER_FIXING',16,'set','M5x10countersunk+actual40seriesM5Tnut;flushD10x2.75head. Grade,slotfitandprojectionqualified onreceiveddie.')
  add('BED_FIXED_HINGE_ASSEMBLIES',2,'assembly','SeeBED_HINGE_FIXED_L/RSTEP;welded3blankdecompositionbelow.','fabricated-reference',role='nonadditive-assembly-reference')
@@ -30,12 +31,17 @@ def run():
  add('BED_HINGE_MOVING_SIDEPLATE_R',1,'each','Mirrorofleft270x120x9.525arm.','plate-blank','aluminum',270,120,0,9.525,owned='owned3/8sheet-global-unique-allocation-required')
  add('BED_HINGE_SPACERS',2,'each','80x40x10newAlspacer,2D8.5bores.9.525sheetdoesnotprovide10mm.','plate-blank','aluminum',80,40,0,10)
  add('BED_HINGE_BUTTON_FASTENERS',4,'each','M8x35ISO7380buttonhead14OD4.4high;counterbored4.6;20.075endcoreengagementnominal.')
- add('BED_HINGE_PINS',2,'each','12mmgroundretainedsteelpin;24.2runninglength plus18x3head. Appropriatebushing/pinfitandaxialleftdatum/rightthermalfloatacceptance.')
+ add('BED_HINGE_PINS',2,'each','Turnedplainsteel12mmpin:inboard18headx3,24.05smoothshaft;27.05overall,D2.2throughcrosshole23.85fromouterheadface. Removeoutsidewasher/cotterthenpull26mminboard;frontpostblocksoldoutboard-fedpin.','turned-component','steel',27.05,18,12,covered='BED_RETAINED_PIN_RAW_OPTION')
+ add('BED_HINGE_RETAINER_WASHERS',2,'each','Customsteel18OD12.2IDx1.6;slipontoplain12mmshaftoutsidefixedcheek,retainedby2x16cotter. Samepinbarsecondaryblank,noseparatewasherstock.','machined-ring','steel',1.6,18,12.2,covered='BED_RETAINED_PIN_RAW_OPTION')
+ add('BED_HINGE_RETAINER_COTTERS',2,'each','DIN94/ISO1234splitpin2x16,formedinstalledtails;replaceafterremoval.')
+ add('BED_HINGE_AXIAL_SHIM_L',1,'each','Steel18OD12.2IDx1.85nominalaxialshimbetweenfixedclevisandmovingarm;0.125nominalleftgap,fitactualbedassembly. Samepinbarsecondaryblank,noseparatestock.','machined-ring','steel',1.85,18,12.2,covered='BED_RETAINED_PIN_RAW_OPTION')
+ add('BED_HINGE_AXIAL_SHIM_R',1,'each','Steel18OD12.2IDx1.35nominalaxialshim;0.625nominalrightgapforthermalfloat,fitactualassembly. Samepinbarsecondaryblank,noseparatestock.','machined-ring','steel',1.35,18,12.2,covered='BED_RETAINED_PIN_RAW_OPTION')
  add('BED_ASSIST_C_ASSEMBLIES',2,'assembly','Gas/stayendbracketSTEP, weldedconstituentsbelow.','fabricated-reference',role='nonadditive-assembly-reference')
  add('BED_ASSIST_END_WEB_BLANK',2,'each','60x30x6.35steelweb,2D8.5corefixings.','plate-blank','steel',60,30,0,6.35)
  add('BED_ASSIST_UPPER_BLANK',2,'each','60x34.2x6.35steelupperbridgewithbodyclearanceUcut;actualSTEPoutlinecontrols.','plate-blank','steel',60,34.2,0,6.35)
  add('BED_ASSIST_GAS_EAR_BLANK',2,'each','40x20x3.175steel,8.5studbore.','plate-blank','steel',40,20,0,3.175)
- add('BED_ASSIST_CAPTURE_EAR_BLANK',4,'each','Planarring+rearstrapfits32.4x65.65x3.175;exactSTEPoutlinecontrols.','plate-blank','steel',65.65,32.4,0,3.175)
+ add('BED_ASSIST_CAPTURE_EAR_BLANK',2,'each','Innerplanarring+rearstrapfits32.4x65.65x3.175;exactSTEPoutlinecontrols.','plate-blank','steel',65.65,32.4,0,3.175)
+ add('BED_ASSIST_CAPTURE_OUTER_EAR_BLANK',2,'each','Outerplanarring+rearstrap32.4x65.65x5;10.2throughborewith14.2x2.6outboardcounterbore. Recessedpivotheadflush0.1belowface.','plate-blank','steel',65.65,32.4,0,5.)
  add('BED_ASSIST_END_FIXINGS',4,'each','M8x25endcorefixings;6.35grip18.65engagementnominal.')
  add('BED_GAS_PAIR',1,'pair','ARANA28IN200LBST280M200ASINB08CNGT5Z7;889Neachconditionalon200lblabel. Exactcompressedunpublished:verify≤450mm/expanded≥700mm, body≤24/rod≤10/socketfit. Noassumedliftingrating.')
  add('BED_GAS_INCLUDED_BALLS',4,'each','10mmballstudslistedasincludedwithgaspackage;verifythread/neck/quantity.','included-package-reference',owned='new-with-gas-pair',role='nonadditive-package-reference',covered='BED_GAS_PAIR')
@@ -45,13 +51,21 @@ def run():
  add('BED_CAPTURE_ROOT_ASSEMBLIES',2,'assembly','120x80backplatewithclevisfloor/earsandgascolumn/studclearancebores;seeSTEP.','fabricated-reference',role='nonadditive-assembly-reference')
  add('BED_CAPTURE_ROOT_BASE',2,'each','120x80x6.35steelpostplate,4M6fixings,4D13.1gascolclearanceandD8.5gasstudclearance.','plate-blank','steel',120,80,0,6.35)
  add('BED_CAPTURE_ROOT_FLOOR',2,'each','40x33.85x6.35steelfloor.','plate-blank','steel',40,33.85,0,6.35)
- add('BED_CAPTURE_ROOT_EARS',4,'each','24x32x3.175steelring+stem,10.2pivotbore.','plate-blank','steel',32,24,0,3.175)
+ add('BED_CAPTURE_ROOT_EARS',2,'each','Inner24x32x3.175steelring+stem,10.2pivotbore.','plate-blank','steel',32,24,0,3.175)
+ add('BED_CAPTURE_ROOT_OUTER_EARS',2,'each','Outer24x32x5steelring+stem,10.2pivotbore/14.2x2.6outboardcounterbore;2.4remainingbearingweb.','plate-blank','steel',32,24,0,5.)
  add('BED_ASSIST_ROOT_FASTENERS',16,'set','4M6postTnutjointspergas/captureanchor;gasmount21.25metalstack,capture6.35;selectscrew/engagementactualdie.')
  add('BED_CAPTURE_OUTER',2,'each','20x20x2steelRHS390mm;12mmeyestandoff,10.2fullopenpinbore.','tube','steel_square_tube',390,20,20,2)
  add('BED_CAPTURE_INNER',2,'each','15x15x1.5steelRHS375mm;8.5indexrowand10.2fullopenbore,exactpositioninmodel.','tube','steel_square_tube',375,15,15,1.5)
  add('BED_CAPTURE_END_EYES',4,'each','24OD10.2IDx6.35steelweldedeye;qualifiedtube/eyeweldtransitionrequired.','machined-ring','steel',6.35,24,10.2)
- add('BED_CAPTURE_PIVOT_PINS',4,'set','10mmretainedsteelpinwithfittedmetalspacers/clevisretention. Fulljointwidth,heads/clipclearancearefitacceptance.')
- add('BED_CAPTURE_OPEN_PINS',2,'each','10mmx40retainedsteelthroughpin at90deg, passesbothwallsofbothtubes. Noadropimpactratinginferred.')
+ add('BED_CAPTURE_PIVOT_PINS',4,'each','CustomturnedC45/4140steelpin:14ODx2.5recessedhead,10smoothland19.15,M6x1x9.2retentionend;30.85overall,D1.8crosshole27.85fromouterheadface. SeeSTAY_PIVOT_PIN drawing/STEP. Separatewasher/nut/cotterrowsbelow.','turned-component','steel',30.85,14,10,covered='BED_RETAINED_PIN_RAW_OPTION')
+ add('BED_RETAINED_PIN_RAW_OPTION',1,'bar','3/4inchx12inchC45/4140steelroundbar(19.05x304.8):4stayrough33+2openrough35+2hingepacks40+7x3kerfs=303mm. Each40packsubcuts28.5hingepin+3kerf+2.5washer+3kerf+3axialshim=40. All8pins+4ringsfromsamebar. Receivedusablelength>=303andOD>=18.5. Nonadditiverawoption,notextrafinishedparts.','raw-stock-option','steel_round_bar',304.8,19.05,19.05,role='raw-option-not-add-on',covered='BED_CAPTURE_PIVOT_PINS;BED_HINGE_PINS;BED_CAPTURE_OPEN_PINS;BED_HINGE_RETAINER_WASHERS;BED_HINGE_AXIAL_SHIM_L;BED_HINGE_AXIAL_SHIM_R')
+ add('BED_CAPTURE_PIVOT_WASHERS',4,'each','M6DIN125washer12OD6.4IDx1.6;seatsonthepinshoulder,notonthemovingclevis.')
+ add('BED_CAPTURE_PIVOT_CASTLE_NUTS',4,'each','M6x1DIN937slottedhexnut,AF10/h6/body3.5/slot2min;lockwith1.6mmsplitpin. PublishedAspenFastenersDIN937dimensions.')
+ add('BED_CAPTURE_PIVOT_COTTERS',4,'each','DIN94/ISO1234splitpin1.6x14;replaceaftereveryremoval. BothlegsformedinboardwithintheCADinstalledenvelope.')
+ add('BED_CAPTURE_OPEN_PINS',2,'each','Turnedsteel10mmfull-openlockpin:16headx3,20.3smoothland,M6x1x9.2retentionend;32.5overall,D1.8crosshole29.5fromouterheadface. Passesbothwallsofbothtubes;separatenut/washer/cotterbelow. Noimpactratinginferred.','turned-component','steel',32.5,16,10,covered='BED_RETAINED_PIN_RAW_OPTION')
+ add('BED_CAPTURE_OPEN_PIN_WASHERS',2,'each','M6DIN125washer12OD6.4IDx1.6.')
+ add('BED_CAPTURE_OPEN_PIN_CASTLE_NUTS',2,'each','M6x1DIN937AF10/h6/body3.5/slots2min.')
+ add('BED_CAPTURE_OPEN_PIN_COTTERS',2,'each','DIN94/ISO1234splitpin1.6x14,formbothlegsafterlockingnut;replaceaftereverymodechange/removal.')
  add('BED_CAPTURE_INDEX_INTERFACE',2,'interface','8mmnormallyengagingindexpinIFselected;proposedindexrowisNOTaqualifiedfallarrest. Actualimpact-ratedcontrolorvalidatedsupportedtransitionremainsopen.','held-interface',role='held-not-purchase-ready')
  add('BED_REAR_END_CAP',2,'each','80x40x6.35steelrearendplate,2D8.5bores;clampedthroughfixedwebandmetalspacers.','plate-blank','steel',80,40,0,6.35)
  add('BED_REAR_CLOSED_BOLTS',4,'each','M8x35sockethead;20.4nominalrearcoreengagement. Removedbeforetilt.')
@@ -61,8 +75,24 @@ def run():
  with path.open('w',newline='',encoding='utf-8')as f:w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
  reportpath=OUT/'bed-local-check.json';report=json.loads(reportpath.read_text(encoding='utf-8'))
  index={k:dict(v,category='fabricated-reference'if k.startswith(('BED_ASSIST','BED_HINGE_FIXED','BED_CAPTURE_ROOT'))else'finished-part')for k,v in report['custom_parts'].items()}
- result=dict(source_sha256={p.relative_to(B.ROOT).as_posix():sha(p)for p in[Path(__file__),Path(B.__file__),reportpath]},
+ pinproof=OUT/'stay-pivot-retention-check.json';retention=json.loads(pinproof.read_text(encoding='utf-8'))
+ assert retention['passed']and retention['source_consistent']
+ for n,h in retention['source_sha256'].items():assert sha(B.ROOT/n)==h,n
+ drawings={r['file']:r for r in retention['exports']if r['file'].endswith('.dxf')}
+ for n,r in drawings.items():assert sha(OUT/n)==r['sha256'],n
+ for name,r in index.items():
+  drawing=('STAY_PIVOT_PIN_DRAWING.dxf'if name.startswith('BED_STAY_PIVOT_PIN_')else
+           'FRONT_HINGE_PIN_DRAWING.dxf'if name.startswith('BED_HINGE_PIN_')else
+           'FULL_OPEN_LOCK_PIN_DRAWING.dxf'if name.startswith('BED_FULL_OPEN_POSITIVE_PIN_')else None)
+  if drawing:r.update(drawing='output/'+drawing,drawing_sha256=drawings[drawing]['sha256'])
+ profileproof=OUT/'profile-fastener-retention-check.json';profile=json.loads(profileproof.read_text(encoding='utf-8'))
+ assert profile['passed']and profile['source_consistent']
+ for n,h in profile['source_sha256'].items():assert sha(B.ROOT/n)==h,n
+ profile_drawing=OUT/profile['export']['file'];assert sha(profile_drawing)==profile['export']['sha256']
+ paths=[Path(__file__),Path(B.__file__),reportpath,pinproof,profileproof,profile_drawing,*[OUT/n for n in drawings]]
+ result=dict(source_sha256={p.relative_to(B.ROOT).as_posix():sha(p)for p in paths},
    takeoff=dict(file=path.relative_to(HERE).as_posix(),sha256=sha(path),rows=len(rows)),parts=index,
+   additional_manufacturing_drawings=[dict(id='BED_PROFILE_FASTENER_FINISHING',file=profile_drawing.relative_to(HERE).as_posix(),sha256=sha(profile_drawing),role='PURCHASED_SCREW_FINISHING_AND_BRIDGE_WASHER_INSTRUCTIONS')],
    ownership_credit_authority='Rootglobalnestonly;noautomatic83blankorwholebedstockcredit',pricing_performed=False,
    current_geometry_report_passed=report['passed'],fabrication_release=False)
  (OUT/'custom-part-index.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')

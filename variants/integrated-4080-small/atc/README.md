@@ -1,76 +1,112 @@
-# Selected-slide ATC carrier
+# Actual manufacturer housing and passive ATC docks
 
-This replaces the separate guide/belt axis with the owner's selected **311 mm
-overall, 200 mm travel SFU1605 module**. Both original supplied drawings are
-preserved in `sources`. The module's nominal underside slot positions and
-4-M6 carriage count are known. Its actual nut profile, complete carriage-hole
-coordinates/depth and exact carriage height are not supplied by those drawings.
-The custom supplier-side faces remain clearly identified transfer-drill faces.
+The selected owned motion module remains the 311 mm overall / 200 mm travel
+SFU1605 unit. Its published outer dimensions and underside channel axes are
+preserved. The carriage's unpublished four-M6 pattern/depth and actual channel
+nut/cavity fit remain supplier-side transfer-fit interfaces.
 
-`actual_atc_parts(deployment, pins_withdrawn=False, hood='stored')` returns
-physical component tuples for the integrated root assembly. Deployment is
-0 mm at the working row and 200 mm parked. `acceptance_parts()` returns separate
-purple capacity volumes; these are not manufacturer solids or hole templates.
-The 520 × 60 × 120 mm capacity is an engineering acceptance requirement. The
-60 mm body width comes from the FAQ; it does not establish complete endcap,
-IR sensor or cable clearance. The shop's generic 52 × 12 × 12 cm family entry
-is not an exact installed-kit drawing or proof that the complete kit fits this
-60 mm longitudinal field. Complete-kit dimensions remain a release hold.
-The working row is temporary: park the magazine again before full-bed cutting.
+## Recovered manufacturer geometry
 
-The horizontal module lies at Y1230–1541, with a separate motor reservation
-ending Y1597. It fits the 1600 mm table. Its 600 mm 4080 crosscarrier is supported
-at both endpoints by fixed reaction docks. Two standard ground-shoulder bolts
-locate and clamp the chosen endpoint. They are manual setup fasteners, removed
-before stage travel, not an automatic pin release. Right receiver bores have
-1 mm extra relief along X to avoid forcing two round locators into a rigid
-thermal-spacing constraint. This does not eliminate thermal pocket calibration.
+`sources/ER20_4_Standard_20240204.step` is the original four-solid manufacturer
+installation model, downloaded from the manufacturer's existing Discord channel.
+It is already **60 mm wide**, not a scaled 54 mm model. The official FAQ says
+ER11, ER16 and ER20 share the external geometry and differ in their sockets.
+The provenance, file hash, dated source and limits are in
+`sources/manufacturer-housing-provenance.json`.
 
-The nominal tool row is Y1100. The raised bed is Z967.8; magazine base is
-Z1039.15. A 40 mm workpiece/clamp envelope and 26.35 mm maximum below-base tool
-projection retain 5 mm clearance. A conservative **120 mm kit-height capacity**
-requires 244.15 mm lift for a P50 loaded tool and a 5 mm flyover gap. The owned
-300 mm axis is assessed by the root design over 250 mm; no replacement Z is
-inferred. The actual spindle/nut and existing boot registration are separate
-source-fitting gates.
+The unscaled housing is 271.2 x 60 x 80.8 mm overall. Its body is
+212 x 60 x 51.2 mm. Four pocket axes are X507.5 / 552.5 / 597.5 / 642.5,
+Y1100 when deployed. Four actual mounting axes are X481 / 669 and
+Y1080 / 1120, with D6.35 through bores and D11 x 7 mm counterbores.
+The model is a dated installation shell; internal ER11 sockets, nut engagement
+planes, IR optics and cable exits are not represented. Confirm the supplied
+kit revision/template and calibrate the loaded nut engagement height.
 
-The 1.9 mm steel cover is removable for wood mode and fitted over the parked
-magazine for plasma. It weighs approximately 4.20 kg as finished modeled parts,
-excluding weld and coating additions. Two captive M4 clamps retain it; welded
-spacers prevent loose spacer handling. Its entire manual changeover remains
-inside the table plan: remove the two storage keepers, retract the cover clamps,
-lift 500 mm, rotate 90 degrees about Y, move 390 mm left/70 mm rear, lower onto
-the storage level, then insert 90 mm right onto the hooks and refit both keepers.
-The continuous enclosure check covers these movements, not only the stored pose.
-Actual grip, weight, tolerance and operator handling still need commissioning.
+The housing now sits at Z1051.85 on two 28 x 60 x 12.7 mm pads. Four M6x55
+socket screws have 10.8 mm nominal pad engagement, 1.9 mm tip reserve and
+1 mm head recess in the source counterbores. Separate central M6x30 screws
+attach the pads from below, so opposing fasteners do not share the same holes.
+The existing 600 mm 4080 rear carrier is reused. Two 28 x 242 x 25.4 mm
+billet arms now lie directly under the actual mounting X axes and bolt to that
+carrier. This avoids buying another 4080 member and increases the arm bending
+section substantially. No additional owned-sheet credit is assumed.
 
-The included two 1085.7 mm flat 4080 crossbearers, four drop plates and cover
-hanger belong to this takeoff. Do not count them again in the chassis schedule.
-Their nominal extrusion core fixing is **M8**, not M6 in a 6.8 mm core. Ordinary
-M6/T-nut fixings on the profile faces remain distinct. Exact received extrusion
-slots, nuts, cavity depth and modified-section capacity require fitting checks.
+Four retained-tool capacity cylinders use D21 mm, including allowance around
+the manufacturer-listed 19.5 mm ER11 nut OD; the maximum cutting-tool diameter
+is 15 mm. Their 26.35 mm below-base projection leaves 2 mm nominal lateral
+clearance to the arms. These are capacity envelopes, not actual ER11 socket or
+tool solids. The whole-kit conservative capacity is 520 x 60 x 107.3 mm above
+the revised base, retaining the previous Z1159.15 ceiling. A P50 loaded tool
+retains 10.85 mm nominal flyover clearance at 250 mm lift; minimum lift with a
+5 mm gap remains 244.15 mm. The actual existing boot's registered moving joint
+and spindle/nut reference still require installation binding.
 
-Run `build_atc.py` with the project CadQuery interpreter. It exports the two
-assemblies, 31 custom part STEPs, a takeoff, source hashes, static/continuous
-motion checks, cover handling proof and a conditional stiffness screen under
-`output`. The current source proves nominal geometry; it does not qualify
-strength, joints, actual suppliers, complete machine compliance or operation.
+## Automatic straight-line docking
 
-## Current supplier boundary
+The old manual endpoint shoulder bolts, nuts, washers and their access bores
+are removed. The moving end plates now have integral lowered horizontal tongues
+and bearing lands machined from two 80 x 60 x 25.4 mm billets. Steel roofs and
+cheeks capture the tongues at both deployed and parked endpoints. Chamfered
+entries allow the existing slide to drive directly in and out. The two-sided
+left guide constrains lateral motion/yaw; the right receiver floats laterally
+for thermal spacing. Opposite front/rear stops define the two endpoint datums.
 
-The [official FAQ](https://rapidchangeatc.com/faq/) still routes mounting/pocket
-CAD through Discord; the public channel result provides no attachment. It
-reports a 60 mm body, ER11 tool diameter limit of 15 mm, and alignment sensitivity
-around 0.2 mm. Reverse spindle control, a calibrated engage height and actual
-nut compatibility remain necessary. IR detection monitors the real nut state.
+Nominal roof/lower-tongue clearances and total left X free play are 0.15 mm.
+Finish guides/seats **after welding**, fit indexed shims as needed and accept
+0.10-0.20 mm measured clearances over the full stroke. The right outer X float
+is 1.2 mm. These are explicit fitted metal interfaces, not assumed as-welded
+accuracy or a claim of friction self-locking. The selected slide must maintain
+qualified axial holding/preload while changing tools. No power-loss axial lock
+is claimed. Both endpoint/capture confirmations, energized-axis state, zero
+spindle speed before magazine motion, boot clearance, wood mode and stored hood
+must participate in the actual controller interlocks. A fault inhibits tool
+change and latches an alarm.
 
-The [current product form](https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/)
-lists four-pocket Basic at $400, Pro with IR at $500, and Premium with IR/cover
-at $600, before shipping/tax. Tool setters and mounting packages are additional.
-The generic family dimension block is not a selected-variant mounting drawing.
-No kit is assumed owned or free. See `sources/current-primary-evidence.json`.
+The ideal 100 N arm-plus-beam bending screen is approximately **0.06164 mm**.
+A separate conditional wall screen records a chosen 20 Nm torque case.
+Neither calculation includes impact transients, actual profile/rail joints,
+contact/weld qualification, thermal behavior or measured motor holding force.
+They are scoped engineering screens, not complete operating qualification.
 
-The actual magazine/endcaps, nut/IR planes, pockets, cable exits and slide mating
-pattern are still required to replace the capacity volumes with exact vendor
-geometry. No drilling pattern, executable M6 routine or verified kit fit has
-been invented. All fabrication/operating release flags remain false.
+## Removable plasma cover
+
+The 1.9 mm steel hood now weighs approximately 4.161 kg as finished modeled
+parts, excluding weld/coating. Rear openings follow the relocated deeper arms;
+lower local reliefs clear the fixed capture guides. Two small welded side tabs
+seat on the deployed receiver roofs, retained by **two short M4x6 screws**.
+Their nominal steel engagement is 4.1 mm with 2.25 mm tip reserve. The old long
+compression spacers and arm-mounted cover clamps are eliminated.
+
+Remove the two M4 screws into owned tool storage before lifting the cover.
+Then lift 500 mm, rotate 90 degrees about Y, shift 390 mm left/70 mm rear,
+lower onto the storage level and insert 90 mm right onto its hooks. Refit the
+storage keepers/R clips. The continuous route and 8 mm screw release are
+checked inside the machine footprint. The route inside an unspecified owned
+tool-storage box is not modeled. The hood is a direct-spatter barrier, not a
+sealed extraction enclosure or a thermally qualified cover.
+
+## Outputs and export requirement
+
+Run `build_atc.py` with the project CadQuery interpreter. The current output
+contains two read-back-checked assemblies, 29 current custom STEP parts,
+`atc-takeoff.csv`, source hashes and full subsystem geometry checks. New
+hardware includes six M6x30, four M6x55 and two M4x6 screws. Ten compatible
+carrier M6 slot nuts are required (four end, two centre, four arm). The four
+manufacturer solids are nonpurchased family installation references. Basic
+excludes IR/dust cover and may omit the family endcaps; their display does not
+assert exact Basic box contents. One chosen kit is counted separately. The separate vendor mounting-screw package is not
+purchased in addition to these custom M6x55 mounts.
+
+**Use `actual_atc.add_assembly_part(asm, name, shape, color)` when exporting the
+manufacturer housing in a larger assembly.** The original topcap is valid in
+its local definition, but baking its roughly one-metre translation into its
+small trim curves causes an OCC STEP reimport failure. An explicit assembly
+location preserves the unmodified source geometry and passes readback. This
+is a placement/export correction, not a simplification of the housing.
+
+The four-pocket Basic kit remains $400 before freight/tax on the direct
+manufacturer form. Its absent IR must be supplied through a selected Pro
+upgrade or qualified external detection/controller interface before unattended
+operation; that interface remains an explicitly unpriced selection hold. Cheaper AliExpress-compatible retrofit ATC has not been
+verified; see `budget-options.json`. No whole-machine delivered-budget or
+fabrication/operating release is asserted by this subsystem report.

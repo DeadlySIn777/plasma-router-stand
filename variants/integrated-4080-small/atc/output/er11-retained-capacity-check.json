@@ -1,0 +1,45 @@
+{
+  "source_sha256": {
+    "variants/integrated-4080-small/atc/check_retained_tool_capacity.py": "aaf4cf68e2164b0274dd5495254d37c0451d536cebdd44f664a99f4138632804",
+    "variants/integrated-4080-small/atc/actual_atc.py": "2c142e73e10ea4308d85040e2ebcbba13ee1aa19800ce7c75506e353a8916c83",
+    "variants/integrated-4080-small/atc/build_atc.py": "74898725f9a03885ac0269e8c8e6c40afa013da39fd0e8800a26705d8e89351a",
+    "variants/integrated-4080-small/atc/sources/ER20_4_Standard_20240204.step": "e15fe7e41ed1bfba54a0d2203c92355fa509f06b4ed8c3b588b37d9589fee572"
+  },
+  "checks": {
+    "DEPLOYED": {
+      "exact_pairs": 66,
+      "unexpected": [],
+      "invalid": [],
+      "passed": true
+    },
+    "TRANSIT": {
+      "exact_pairs": 50,
+      "unexpected": [],
+      "invalid": [],
+      "passed": true
+    },
+    "PARKED": {
+      "exact_pairs": 70,
+      "unexpected": [],
+      "invalid": [],
+      "passed": true
+    }
+  },
+  "capacity": {
+    "tool_nut_envelope_diameter_mm": 21,
+    "manufacturer_ER11_nut_max_OD_mm": 19.5,
+    "manufacturer_ER11_cutting_tool_max_diameter_mm": 15,
+    "radial_allowance_mm": 0.75,
+    "below_body_base_projection_mm": 26.35,
+    "left_right_arm_lateral_gaps_mm": [
+      2.0,
+      2.0
+    ]
+  },
+  "source_consistent": true,
+  "actual_ER11_socket_or_loaded_tool_geometry_verified": false,
+  "scope": "ExactBRepstaticcheckswithfourexplicitcapacitycylinders;whole-kitpurpleboxexcludedbecauseitduplicatesactualhousing. Physicalsocket/IR,nutengagementandreceivedrevisionremaincalibration/fitgates.",
+  "fabrication_release": false,
+  "operating_release": false,
+  "passed": true
+}

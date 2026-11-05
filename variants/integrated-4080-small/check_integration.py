@@ -47,7 +47,8 @@ def run():
     sources=list(dict.fromkeys([Path(__file__),Path(E.__file__),Path(E.M.__file__),
         Path(E.Q.__file__),Path(E.P.__file__),Path(E.A.__file__),Path(E.B.__file__),
         Path(E.Q.D.__file__),Path(E.T.__file__),Path(U.__file__),Path(U.O.__file__),Path(U.SH.__file__),
-        Path(E.M.X.__file__),*E.H.sources()]))
+        Path(E.M.X.__file__),Path(E.M.X.P.__file__),Path(U.O.P.__file__),
+        Path(E.A.VENDOR_HOUSING_SOURCE),*E.H.sources()]))
     hashes=lambda:{str(p.relative_to(E.ROOT)).replace('\\','/'):E.sha(p)for p in sources}
     start=hashes();cases={}
     frame=E.M.frame_parts();wet=E.wet_parts()
@@ -71,7 +72,7 @@ def run():
         cases=cases,source_consistent_during_check=start==hashes(),
         exclusions=['Internal joints within each subsystem remain governed by its own current manifest.',
                     'ATC deployment and manual cover/bed changeover are separate interlocked paths.',
-                    'Unregistered working boot, spindle nose and actual vendor magazine geometry are not certified by nominal envelopes.',
+                    'Unregistered working boot/spindle nose, internalER11socket/nut/IR and receivedkitrevision are not certified; originalmanufacturerexternalhousing/pocketXY is included.',
                     'No stiffness, safe-stop, thread, lifting, EMC or delivered-price qualification.'],
         fabrication_release=False,operating_release=False)
     data['passed']=data['source_consistent_during_check']and all(q['passed']for case in cases.values()for q in case.values())

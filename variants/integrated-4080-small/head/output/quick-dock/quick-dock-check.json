@@ -110,10 +110,45 @@
     "release_withdrawn_tip_clearance_mm": 0.5,
     "cage_internal_front_Y_mm": 44.2,
     "cage_screw_retention_qualified": false,
-    "spindle_and_boot_mating_registration_not_measured": true
+    "spindle_and_boot_mating_registration_not_measured": true,
+    "one_sided_stiffener": {
+      "id": "OWNER_ROUTER_SIDE_RIB",
+      "section_XY_mm": [
+        9.525,
+        20.0
+      ],
+      "local_bounds_mm": [
+        60.0,
+        25.4,
+        -60.0,
+        69.525,
+        45.4,
+        50.0
+      ],
+      "raw_3p8_sheet_plane_mm": [
+        276,
+        2,
+        20,
+        110
+      ],
+      "fixings": "3M4x25DIN912",
+      "positive_shear_locators": "2groundsteel4x20dowels;Z-35,+25;rearflush;7.3ribembed",
+      "head_plate_clearance_bore_mm": 4.5,
+      "rear_counterbore_mm": [
+        7.6,
+        4.1
+      ],
+      "head_recess_mm": 0.1,
+      "nominal_rib_thread_engagement_mm": 16.4,
+      "thread_tip_to_front_reserve_mm": 3.6,
+      "boot_X_gap_mm": 7.749999999999972,
+      "clamp_X_gap_mm": 12.249999999999922,
+      "clearance_scope": "Complete boot and clamp X bounding boxes are left of the rib and its screw heads. Independent of every boot Z home and the full50mm vertical stroke; does not qualify hoses or unknown actuator accessories.",
+      "load_capacity_or_bolted_composite_action_qualified": false
+    }
   },
   "source_sha256": {
-    "variants/integrated-4080-small/head/quick_dock.py": "1f5d3ce7552837d78868108fc564956f613e5d4e67d0cac2741cd68b67e72d18",
+    "variants/integrated-4080-small/head/quick_dock.py": "59dbb2ea09bdf47605f41a11309294bcd160e2c97605d17b52b82a3144a2b83a",
     "variants/integrated-4080-small/head/common_dock_source.py": "b335af2c8b5505812259e5ee0ce723d2064fd0a05f70a1e0df757474f1b0ef9f",
     "variants/integrated-4080-small/head/owner_head.py": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
     "variants/integrated-4080-small/head/build_head.py": "72b2cde101afdab443c28c8a1a2dc01c76c230f565013c993289141095de7e7e",
@@ -223,6 +258,36 @@
       "solids": 1
     },
     {
+      "id": "OWNER_ROUTER_SIDE_RIB",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "OWNER_ROUTER_SIDE_RIB_SCREW_-50",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "OWNER_ROUTER_SIDE_RIB_SCREW_-5",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "OWNER_ROUTER_SIDE_RIB_SCREW_40",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "OWNER_ROUTER_SIDE_RIB_DOWEL_-35",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "id": "OWNER_ROUTER_SIDE_RIB_DOWEL_25",
+      "valid": true,
+      "solids": 1
+    },
+    {
       "id": "OWNER_65MM_CLAMP",
       "valid": true,
       "solids": 1
@@ -314,7 +379,7 @@
   ],
   "continuous_removal_proof": {
     "passed": true,
-    "broad_pairs_clear": 169,
+    "broad_pairs_clear": 217,
     "exact_cover_pairs": 7,
     "proofs": [
       {
@@ -470,30 +535,30 @@
   "known_clamp_dock_full_relative_travel": {
     "passed": true,
     "working_Z_travel_mm": 250,
-    "broad_pairs_clear": 12150,
+    "broad_pairs_clear": 14580,
     "exact_cover_pairs": 0,
     "results": []
   },
   "exports": {
     "OWNER_ROUTER_QUICK_DOCK_REFERENCE": {
       "file": "output/quick-dock/OWNER_ROUTER_QUICK_DOCK_REFERENCE.step",
-      "sha256": "5e3239f762d6ef99e79e619183847cf6c8f9c784e5524d68e87496d383fe5055",
+      "sha256": "4faa06476bc0a099cff7ec04555610fb46cbb7649d244a7d3120effe368786fb",
       "valid": true,
-      "solids": 31,
-      "expected_solids": 31,
-      "volume_error_mm3": 253.5560624882346
+      "solids": 37,
+      "expected_solids": 37,
+      "volume_error_mm3": 374.615487286821
     },
     "OWNER_ROUTER_QUICK_DOCK_KNOWN_CLAMP": {
       "file": "output/quick-dock/OWNER_ROUTER_QUICK_DOCK_KNOWN_CLAMP.step",
-      "sha256": "92b7e313dbe2d58faf132f2f035b3501bb07b2fbc836a32f90c324d9f0da0e38",
+      "sha256": "edb7187a60d0936f29892734b49f7d61ee53e8d99bda5433e2138c4e0c083a1a",
       "valid": true,
-      "solids": 30,
-      "expected_solids": 30,
-      "volume_error_mm3": 0.7862868501106277
+      "solids": 36,
+      "expected_solids": 36,
+      "volume_error_mm3": 0.9114205269142985
     },
     "CD_RECEIVER": {
       "file": "output/quick-dock/CD_RECEIVER.step",
-      "sha256": "5357f1aedd69253fbff9301d196e15e2ec7cb9bca05cc6da92ee0740242c6bc3",
+      "sha256": "f0ee6452a6bff61ad4bf7ab1b876b47771c6df6b1d8f624097b69aa428868a4a",
       "local_source_bounds_mm": [
         -73.0,
         -3.3306690738754696e-16,
@@ -505,7 +570,7 @@
     },
     "OWNER_ROUTER_HEAD_PLATE": {
       "file": "output/quick-dock/OWNER_ROUTER_HEAD_PLATE.step",
-      "sha256": "9e8feeaaca0b58d9fd59edb382fe2e28bc2029260372e42e5415f9a0bdf40f39",
+      "sha256": "1a2e74159d384e4d661bf42a23130034af69893cfbb4c6f23407ebd30a16c99e",
       "local_source_bounds_mm": [
         -73.0,
         12.7,
@@ -513,6 +578,18 @@
         73.0,
         25.4,
         110.0
+      ]
+    },
+    "OWNER_ROUTER_SIDE_RIB": {
+      "file": "output/quick-dock/OWNER_ROUTER_SIDE_RIB.step",
+      "sha256": "c316430b1a4831dcb1eaa9cc0ef6b76dad4759118e00c6ea26258c8727905f94",
+      "local_source_bounds_mm": [
+        60.0,
+        25.4,
+        -60.0,
+        69.525,
+        45.4,
+        50.0
       ]
     }
   },

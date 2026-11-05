@@ -68,7 +68,7 @@ def machine_parts(mode='WOOD',*,pose=None):
 
 def run():
     OUT.mkdir(exist_ok=True)
-    paths=[Path(__file__),Path(M.__file__),Path(T.__file__),Path(Q.__file__),Path(P.__file__),Path(H.__file__),Path(A.__file__),Path(B.__file__)]
+    paths=[Path(__file__),Path(M.__file__),Path(T.__file__),Path(Q.__file__),Path(P.__file__),Path(H.__file__),Path(A.__file__),Path(B.__file__),A.VENDOR_HOUSING_SOURCE]
     try:
         import integrated_utilities as U
         paths.append(Path(U.__file__))
@@ -80,7 +80,10 @@ def run():
         frame_header_length_mm=M.FRAME_LENGTH,frame_header_Y_mm=[M.FRAME_FRONT,M.FRAME_REAR],Y_side_shift_each_mm=25,gantry_rise_mm=40,
         workplane_Z_mm=B.metadata()['workplane_Z_mm'],
         owner_clamp_boot_geometry_modified=False,actual_boot_working_registration_encoded=False,
-        actual_vendor_spindle_or_magazine_model=False,
+        actual_vendor_spindle_model=False,
+        manufacturer_magazine_external_housing_model=True,
+        magazine_housing_model_source=A.VENDOR_HOUSING_SOURCE.relative_to(ROOT).as_posix(),
+        actual_received_magazine_revision_or_functional_socket_geometry_verified=False,
         budget_cap_usd=1000,delivered_budget_verified=False,
         fabrication_release=False,operating_release=False,assemblies={})
     scenes={}
@@ -89,7 +92,7 @@ def run():
         invalid=[n for n,s,c in parts if not s.isValid()or not s.Solids()or s.Volume()<=0]
         assert not invalid,(mode,invalid)
         a=cq.Assembly(name='INTEGRATED_4080_SMALL_'+mode)
-        for n,s,c in parts:a.add(s,name=n,color=cq.Color(*c))
+        for n,s,c in parts:A.add_assembly_part(a,n,s,c)
         path=OUT/('INTEGRATED_4080_SMALL_'+mode+'.step');a.save(str(path))
         back=cq.importers.importStep(str(path)).val()
         vol=sum(s.Volume()for n,s,c in parts);err=abs(back.Volume()-vol)

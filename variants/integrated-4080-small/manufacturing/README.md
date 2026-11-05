@@ -47,13 +47,40 @@ thread-major cylinders in STEP are not tap-drill diameters.
 `exclusive-stock-nests.json` allocates the one owned 12-inch half-inch sheet
 only to four main head plates and six small head blanks. The one owned
 three-eighth-inch sheet is separately allocated to the two full-thickness
-270 × 120 mm bed hinge arms and the shared gravity ledge. The four ATC drop
+270 × 120 mm bed hinge arms, the shared gravity ledge and the router side rib.
+These are 14 exclusive blanks in total: ten half-inch and four three-eighth-inch.
+The rib's 20 × 110 mm footprint at sheet coordinates276,2 lies in the unused
+right strip,4 mm beyond the hinge-arm blanks. Its three M4x25 screws and two
+ground4 × 20 mm dowels are new hardware. The supplied clamp and boot remain
+unchanged; the rib clears the known boot body by7.75 mm across its full
+vertical stroke, independent of vertical home. Actual dowel fits, material,
+preload, slip and torsion still require qualification. The four ATC drop
 plates and the slide base are new 6.35 mm material. The two 10 mm hinge spacers
 are also new: 9.525 mm stock does not satisfy 10 mm. The two owned raw sheets are not new
 purchases. No other carrier, gantry, clevis, ATC arm or plasma part gets those
 same credits. Nominal nests require actual size/alloy/temper/flatness and
 machining allowance verification; chips, split thickness and unused strips
 do not become additional free stock.
+
+Eight retained bed pins have current drawings and explicit hardware. The four
+stay pivots and two full-open locks use six M6 DIN937 low nuts and six1.6 × 14 mm
+split pins. Two plain12 mm hinge pins face inward and use outside18OD/12.2ID
+custom washers and2 × 16 mm split pins; there are no M8 hinge nuts. A new
+19.05 × 304.8 mm C45/4140 bar supplies all eight pins and four hinge rings:
+four33 mm blanks, two35 mm blanks, two40 mm hinge packs and seven3 mm kerfs
+use303 mm. Each hinge pack includes its pin, washer, shim and two internal
+kerfs. Finished parts and this raw-stock option are nonadditive; the bar is
+not owned stock. Capacity and actual fits remain physical qualifications.
+
+The bed fasteners use eighty M6 DIN9021 bridge washers, 18 OD/6.4 ID by
+1.6 mm, below the crossmembers. They bear across the 13.1 mm sleeve bores;
+the 65.4 mm metal columns bypass HDPE preload. Purchase eighty M5x75 socket
+screws and finish each to 72.0 +/-0.1 mm under the head, with an end chamfer
+no longer than 0.4 mm. The nominal slot-nut engagement is 2.7 mm, with 1.0 mm
+tip projection and 1.1 mm cavity reserve. Received extrusion, washer bearing,
+screw finish and nut capacity still need acceptance. The receiving ledgers
+use 22 mm clearance holes for the washers; dry-arm screw access remains
+12.5 mm. Hole positions and the work surface stay at their existing datums.
 
 The two full 1000 × 1219.2 × 12.7 mm HDPE layers cut across the full factory
 48-inch width of one 48 × 96-inch sheet. Two 1000 mm crosscuts plus saw kerfs
@@ -88,28 +115,38 @@ Observed public unit prices extended for the required quantities already give:
 | Required core goods | Goods basis |
 | --- | ---: |
 | Five 1220 mm two-profile 20100 packs | $399.95 |
-| One 48 × 96 × ½-inch HDPE sheet, both layers | $260.40 |
+| One black 48 × 96 × ½-inch HDPE sheet, both layers | $225.75 |
 | RapidChange four-pocket ER11 Basic magazine | $400.00 |
-| **Core goods alone** | **$1,060.35** |
+| **Core goods alone** | **$1,025.70** |
 
-That is $60.35 over the cap before the frame, pan, slats, feet, hardware,
+That is $25.70 over the cap before the frame, pan, slats, feet, hardware,
 receiver, freight or tax. The known Basic goods subset including the gas
-strut pair, tool setter and mounting package is $1,148.59. The preferred Pro
-IR upgrade makes that subset $1,248.59. Adding the separately verified
-motorized drain valve makes the Basic subset $1,199.01. These remain incomplete goods
+strut pair and tool setter is $1,108.94. The separately sold $5 mounting
+package is not purchased: four matched M6x55 screws are already in the actual
+hardware takeoff. The preferred Pro IR upgrade makes that subset $1,208.94.
+Adding the separately verified motorized drain valve makes the Basic subset
+$1,159.36. These remain incomplete goods
 subtotals, **not a complete shipped quote**. The selected gas pair uses a
 dated $33.24 sale price; its $36.97 typical price adds $3.73. Its compressed
 length is unpublished and a force-rating bullet contradicts the selected
 variant, so physical fit/force acceptance remains a real purchase gate.
 Four ball studs are included with that pair and are not added again.
 Five packs are a required-price
-extension, not confirmed available cart quantity; observed silver stock was
-only two packs. HDPE/ATC freight and all tax remain unknown.
+extension, not confirmed available cart quantity. HDPE/ATC freight and all
+tax remain unknown. The black sheet saves$34.65 against the earlier white
+sheet at the same nominal thickness and size; no HDPE layer was deleted.
 
 The product URLs, observed variant/shipping limits and every unpriced cost
 category are in `price-and-budget-register.json`. No order, account-history
 screen, private delivery address or fabricated shipping figure is published.
 `budget_gate=FAIL` stays explicit even if reconciliation tests pass.
+
+[selected-cart-evidence.json](selected-cart-evidence.json) records the dated,
+selected AliExpress project fastener packs and their actual variant/pack
+quantities. The cart is partial and remains subject to the final BOM and
+received grade/fit checks. Other hardware, structural stock, HDPE, ATC and wet
+materials are not established as staged by that evidence. Use its current
+contents rather than copying a cart subtotal into the build total.
 
 Regenerate current custom parts with the CAD Python runtime using
 `export_current_custom.py`; after all subsystem takeoffs/indexes are final,

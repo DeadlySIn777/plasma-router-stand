@@ -1,0 +1,74 @@
+{
+  "source_bindings": {
+    "master": {
+      "file": "variants/integrated-4080-small/manufacturing/detailed-requirements.csv",
+      "sha256": "4ec1d7c2ac33a1fd698229a29d02c277b1fe2855a61ffae6c70fd42896dadff4"
+    },
+    "master_families": {
+      "file": "variants/integrated-4080-small/manufacturing/stock-and-hardware-families.csv",
+      "sha256": "13e89b1ab1b8a6897317c4dadfa765a95ccfade26108823408b219668979acf9"
+    },
+    "profile_stock_plan": {
+      "file": "variants/integrated-4080-small/manufacturing/4080-cut-stock-options.json",
+      "sha256": "212e3a80105c37fa0ed6b330872476eba767a7d93e6cbc2fe0067374456dcabd"
+    },
+    "exclusive_stock_nests": {
+      "file": "variants/integrated-4080-small/manufacturing/exclusive-stock-nests.json",
+      "sha256": "55c3c7b739c9418d8083c00a889c8597d6fc1e94aabfd9ac922a061ab31a79b0"
+    },
+    "motion_hardware_geometry": {
+      "file": "variants/extrusion-reengineered/motion.py",
+      "sha256": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50"
+    },
+    "gantry_hardware_geometry": {
+      "file": "variants/integrated-4080-small/mechanical.py",
+      "sha256": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4"
+    },
+    "atc_hardware_geometry": {
+      "file": "variants/integrated-4080-small/atc/actual_atc.py",
+      "sha256": "2c142e73e10ea4308d85040e2ebcbba13ee1aa19800ce7c75506e353a8916c83"
+    },
+    "selected_head_geometry": {
+      "file": "variants/integrated-4080-small/head/quick_dock.py",
+      "sha256": "59dbb2ea09bdf47605f41a11309294bcd160e2c97605d17b52b82a3144a2b83a"
+    },
+    "front_stop_geometry": {
+      "file": "variants/integrated-4080-small/front_stop_bed_clearance.py",
+      "sha256": "a7f0e99f587d352e0234885d42b97ca660a6606c8c28060b44fe326d77bd1a5c"
+    },
+    "helper": {
+      "file": "variants/integrated-4080-small/manufacturing/build_procurement_requirements.py",
+      "sha256": "421ddd3c05acda602b42d8a41e447f5f3c93c8c146b870a985c928cdbdacad7e"
+    }
+  },
+  "source_files_current": {
+    "master": true,
+    "master_families": true,
+    "profile_stock_plan": true,
+    "exclusive_stock_nests": true,
+    "motion_hardware_geometry": true,
+    "gantry_hardware_geometry": true,
+    "atc_hardware_geometry": true,
+    "selected_head_geometry": true,
+    "front_stop_geometry": true,
+    "helper": true
+  },
+  "source_coverage_once": true,
+  "explicit_atoms_reconcile": true,
+  "no_owned_purchase": true,
+  "pack_arithmetic": true,
+  "all_current_4080_cut_requirements_reconcile": true,
+  "thirty_two_M5x18_instances_consolidated": true,
+  "four_datum_joint_sets_expand_to_four_each_screw_washer_slotnut": true,
+  "held_counts_preserved": true,
+  "artifact_sha256": {
+    "procurement-requirements.csv": "503d5c5fb2319522e4d293ffdb180e873250426f4830801aed9ee4a618955673",
+    "procurement-requirements.json": "0b4dd291353bfeedd601b684ef04e86036c66b6a185fffc4f59d5588ab2d9513"
+  },
+  "requirements_reconciled": true,
+  "supplier_selections_complete": false,
+  "complete_shipped_total_USD": null,
+  "budget_pass": false,
+  "fabrication_release": false,
+  "CAM_release": false
+}

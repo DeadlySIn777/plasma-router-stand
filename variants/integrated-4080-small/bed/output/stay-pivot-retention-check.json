@@ -1,0 +1,283 @@
+{
+  "study": "MODELED_EIGHT_BED_PIN_RETENTION_JOINTS",
+  "source_sha256": {
+    "variants/integrated-4080-small/bed/export_stay_pivot.py": "e100e9e9afdaa79782ce0d23b8bc087890c9e28090f4ff4daba829de7236a698",
+    "variants/integrated-4080-small/bed/integrated_bed.py": "d0f35b5c1ec0618280516fa6edb730bcb6238ffb0a2cf41288cfb27110a15d81",
+    "variants/integrated-4080-small/bed/output/bed-local-check.json": "9868aabf97f5fccd23b99b81ead498df5fd616b798e00fd242b38fe4d1a36a76"
+  },
+  "source_consistent": true,
+  "quantity": 8,
+  "stay_pivot_quantity": 4,
+  "front_hinge_quantity": 2,
+  "full_open_lock_quantity": 2,
+  "parts_per_stay_pivot": 4,
+  "joints": [
+    {
+      "side": "L",
+      "tag": "LOWER",
+      "components": [
+        "BED_STAY_PIVOT_PIN_LOWER_L",
+        "BED_STAY_PIVOT_WASHER_LOWER_L",
+        "BED_STAY_PIVOT_CASTLE_NUT_LOWER_L",
+        "BED_STAY_PIVOT_COTTER_LOWER_L"
+      ],
+      "valid": true,
+      "canonical_bounds_mm": [
+        44.55,
+        -50.5000001,
+        736.0,
+        75.4000001,
+        -33.0,
+        750.0
+      ],
+      "outer_face_to_rail_end_gap_mm": 1.25,
+      "rail_gap_after_maximum_accepted_outboard_float_mm": 0.75,
+      "inboard_pin_end_to_receiver_web_gap_mm": 0.7999999000000031,
+      "inboard_pin_end_to_modified_flange_window_gap_mm": 0.5999999000000003,
+      "head_recess_mm": 0.09999999999999432
+    },
+    {
+      "side": "L",
+      "tag": "UPPER",
+      "components": [
+        "BED_STAY_PIVOT_PIN_UPPER_L",
+        "BED_STAY_PIVOT_WASHER_UPPER_L",
+        "BED_STAY_PIVOT_CASTLE_NUT_UPPER_L",
+        "BED_STAY_PIVOT_COTTER_UPPER_L"
+      ],
+      "valid": true,
+      "canonical_bounds_mm": [
+        44.55,
+        384.4999999,
+        848.4,
+        75.4000001,
+        402.0,
+        862.4
+      ],
+      "outer_face_to_rail_end_gap_mm": 1.25,
+      "rail_gap_after_maximum_accepted_outboard_float_mm": 0.75,
+      "inboard_pin_end_to_receiver_web_gap_mm": 0.7999999000000031,
+      "inboard_pin_end_to_modified_flange_window_gap_mm": 0.5999999000000003,
+      "head_recess_mm": 0.09999999999999432
+    },
+    {
+      "side": "R",
+      "tag": "LOWER",
+      "components": [
+        "BED_STAY_PIVOT_PIN_LOWER_R",
+        "BED_STAY_PIVOT_WASHER_LOWER_R",
+        "BED_STAY_PIVOT_CASTLE_NUT_LOWER_R",
+        "BED_STAY_PIVOT_COTTER_LOWER_R"
+      ],
+      "valid": true,
+      "canonical_bounds_mm": [
+        44.549999999999955,
+        -50.5000001,
+        736.0,
+        75.40000010000009,
+        -33.0,
+        750.0
+      ],
+      "outer_face_to_rail_end_gap_mm": 1.2499999999999574,
+      "rail_gap_after_maximum_accepted_outboard_float_mm": 0.7499999999999574,
+      "inboard_pin_end_to_receiver_web_gap_mm": 0.7999998999999178,
+      "inboard_pin_end_to_modified_flange_window_gap_mm": 0.599999899999915,
+      "head_recess_mm": 0.09999999999999432
+    },
+    {
+      "side": "R",
+      "tag": "UPPER",
+      "components": [
+        "BED_STAY_PIVOT_PIN_UPPER_R",
+        "BED_STAY_PIVOT_WASHER_UPPER_R",
+        "BED_STAY_PIVOT_CASTLE_NUT_UPPER_R",
+        "BED_STAY_PIVOT_COTTER_UPPER_R"
+      ],
+      "valid": true,
+      "canonical_bounds_mm": [
+        44.549999999999955,
+        384.4999999,
+        848.4,
+        75.40000010000009,
+        402.0,
+        862.4
+      ],
+      "outer_face_to_rail_end_gap_mm": 1.2499999999999574,
+      "rail_gap_after_maximum_accepted_outboard_float_mm": 0.7499999999999574,
+      "inboard_pin_end_to_receiver_web_gap_mm": 0.7999998999999178,
+      "inboard_pin_end_to_modified_flange_window_gap_mm": 0.599999899999915,
+      "head_recess_mm": 0.09999999999999432
+    }
+  ],
+  "outer_ear_thickness_mm": 5,
+  "outer_ear_counterbore_mm": [
+    14.2,
+    2.6
+  ],
+  "remaining_ear_shaft_bearing_thickness_mm": 2.4,
+  "pin": {
+    "overall_mm": 30.85000000000001,
+    "head_diameter_mm": 14,
+    "head_thickness_mm": 2.5,
+    "smooth_bearing_diameter_mm": 10,
+    "smooth_bearing_length_mm": 19.15,
+    "thread": "M6x1x9.2",
+    "crosshole_diameter_mm": 1.8,
+    "crosshole_from_outer_head_face_mm": 27.85000000000001
+  },
+  "axial_float_nominal_mm": 0.2,
+  "final_axial_float_acceptance_mm": [
+    0.15,
+    0.5
+  ],
+  "nut_alignment_backoff_max_deg": 60,
+  "rail_float_bound_scope": "A maximum0.5mmoutboardpinfloatleaves0.75mmfromthepinheadtotheX43.3railend. AxialtranslationandrotationaboutXcommute,sothisXseparationholdsforallbedangles. Thecounterborefloorsandinnerwashersphysicallystopinboard/outboardmotion;finalreceivedfloatandtherailendsmustbemeasured.",
+  "published_dimension_source": {
+    "manufacturer": "Aspen Fasteners",
+    "url": "https://www.aspenfasteners.com/content/pdf/Metric_DIN_937_spec.pdf",
+    "M6": {
+      "AF_mm": 10,
+      "height_mm": 6,
+      "full_body_mm": 3.5,
+      "slot_min_mm": 2,
+      "recommended_DIN94_cotter": "1.6x14"
+    }
+  },
+  "front_hinge_pin": {
+    "quantity": 2,
+    "head_mm": [
+      18,
+      3
+    ],
+    "smooth_shaft_mm": [
+      12,
+      24.05
+    ],
+    "thread": null,
+    "overall_mm": 27.05,
+    "crossdrill_mm": 2.2,
+    "crossdrill_from_outer_head_face_mm": 23.85,
+    "washer": "Customsteel18OD12.2IDx1.6",
+    "nut": null,
+    "cotter": "DIN94,2x16",
+    "head_faces": "inboard",
+    "service_withdrawal_mm": 26,
+    "service_side": "inboardintoemptyfrontbedbay;cotterandwasherremovedfirst",
+    "axial_shims_mm": {
+      "left": 1.85,
+      "right": 1.35
+    },
+    "nominal_cheek_gap_mm": {
+      "left": 0.125,
+      "right": 0.625
+    },
+    "load_capacity_qualified": false
+  },
+  "full_open_pin": {
+    "quantity": 2,
+    "head_mm": [
+      16,
+      3
+    ],
+    "bearing_mm": [
+      10,
+      20.3
+    ],
+    "thread": "M6x1x9.2",
+    "overall_mm": 32.5,
+    "crossdrill_mm": 1.8,
+    "washer": "M6DIN125,12OD6.4IDx1.6",
+    "nut": "M6DIN937,AF10,height6",
+    "cotter": "DIN94,1.6x14",
+    "installed_at_angle_deg": 90,
+    "load_capacity_qualified": false
+  },
+  "raw_pin_stock_nest": {
+    "raw_diameter_mm": 19.05,
+    "raw_length_mm": 304.8,
+    "primary_rough_blanks_mm": [
+      33,
+      33,
+      33,
+      33,
+      35,
+      35,
+      40,
+      40
+    ],
+    "saw_kerfs": 7,
+    "kerf_mm": 3,
+    "used_length_mm": 303,
+    "remainder_mm": 1.8,
+    "finished_pin_length_each_mm": [
+      30.85,
+      30.85,
+      30.85,
+      30.85,
+      32.5,
+      32.5,
+      27.05,
+      27.05
+    ],
+    "minimum_received_OD_mm": 18.5,
+    "secondary_hinge_pack": {
+      "quantity": 2,
+      "raw_length_each_mm": 40,
+      "pin_rough_mm": 28.5,
+      "washer_rough_mm": 2.5,
+      "shim_rough_mm": 3,
+      "internal_kerfs": 2,
+      "kerf_mm": 3,
+      "finished_pin_mm": 27.05,
+      "finished_washer_mm": 1.6,
+      "finished_shim_mm": [
+        1.85,
+        1.35
+      ],
+      "used_length_each_mm": 40
+    },
+    "meaning": "One new3/4x12inch steel bar yields all8pins and4hingerings. The two40mmhingepacks each subcut into pin+retainingwasher+axialshim. Everykerf andfacingallowance isallocated; finishedparts/rawoptionarenonadditive. Noownedstockcredit."
+  },
+  "exports": [
+    {
+      "file": "STAY_PIVOT_PIN.step",
+      "sha256": "c3e6a1731a35a52f627bf6cc8efc16b1368e89b81852c29f5e4687ad8dce41ed",
+      "readback_passed": true
+    },
+    {
+      "file": "STAY_PIVOT_PIN_DRAWING.dxf",
+      "sha256": "610052580803c110c73839851a5e0ee440067d3c16e7c60b13a1610254abbf2b",
+      "readback_passed": true
+    },
+    {
+      "file": "FRONT_HINGE_PIN.step",
+      "sha256": "ea5363a1094ef942526822c01cc4aad521fdff7bc5c4c2fcf4f17271894576f7",
+      "readback_passed": true
+    },
+    {
+      "file": "FRONT_HINGE_PIN_DRAWING.dxf",
+      "sha256": "8b265f6f3a731cceefa4a4cb5ee187d669de4d3b6b2f4a7ba415632200356337",
+      "readback_passed": true
+    },
+    {
+      "file": "FULL_OPEN_LOCK_PIN.step",
+      "sha256": "15436147580ee352debc0ca9aa7b91b8c6bac29d06bb2db67cc22fdbca8e84c1",
+      "readback_passed": true
+    },
+    {
+      "file": "FULL_OPEN_LOCK_PIN_DRAWING.dxf",
+      "sha256": "7353c01f32d502d1b16c5efcf594a1722b16f9000a439de771166a0dc19bc4dc",
+      "readback_passed": true
+    }
+  ],
+  "nominal_local_geometry_passed": true,
+  "passed": true,
+  "scope": "All4staypivots,2front12mmhinges and2full-open10mmlockpins include actualpin/washer/slottednut/formedcottergeometry. Frontshimsaremodeled. Dedicatedpairwisechecksareinheritedfromcurrentlocalreport. Noexternalclipoccupiesthe1.15mmrailgap.",
+  "outstanding": [
+    "Actual steel/weld/eye/pin load capacity and impact qualification",
+    "Received nut/washer/cotter dimensions; assembled float and cotter forming within the checked envelope",
+    "Actual gas dimensions/force and controlled transition/handling"
+  ],
+  "fabrication_release": false,
+  "lift_operation_release": false
+}

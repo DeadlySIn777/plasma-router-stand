@@ -29,7 +29,7 @@ def reference_module():
     source={n:(s,c)for n,s,c in prior}
     source_drop=next((n,s,c)for n,s,c in prior if n.startswith('XR_PLASMA_DROP_'))
     retained=[(n,s,c)for n,s,c in prior if n.startswith(('I_HEAD_','XR_DROP_M6x16_LOWER_'))]
-    local,meta=Q.local_parts()
+    local,meta=Q.local_parts(stiffener=False)
     head=next(p['shape']for p in local if p['id']=='OWNER_ROUTER_HEAD_PLATE')
     head=head.intersect(D.box(Q.PLATE_WIDTH,14.7,110,(-Q.PLATE_WIDTH/2,11.7,0)))
     head=host_holes(world(head),HIGH_Z)

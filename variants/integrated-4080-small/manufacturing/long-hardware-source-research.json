@@ -1,0 +1,242 @@
+{
+  "schema": "long-hardware-primary-source-research/v1",
+  "observed_date": "2026-11-05",
+  "currency": "USD",
+  "delivery_destination": "Alto, GA 30510, USA",
+  "scope": "Read-only public catalogue research. No browser/cart actions, purchases, CAD changes or ownership credits.",
+  "result": "Historical source research, superseded for the bed bearing/hinge revisions. Current stock is M5x75 finished to72mm; M5x70 is too short, and M8 hinge nuts are removed. See current_design_supersession and selected-cart-evidence.json for current design/selected-cart facts. No complete delivered quote is established here.",
+  "requirement_basis": {
+    "bed_takeoff": "variants/integrated-4080-small/bed/output/bed-takeoff.csv",
+    "master": "variants/integrated-4080-small/manufacturing/detailed-requirements.csv",
+    "requirements": [
+      {
+        "key": "BED:BED_M5X70",
+        "quantity_each": 80,
+        "specification": "M5x0.8x70 socket cap screw, head diameter 8.5mm x height 5mm; actual slot-nut engagement acceptance retained."
+      },
+      {
+        "key": "GANTRY:M6X100_COUPLERS",
+        "quantity_each": 10,
+        "specification": "M6x1x100 socket cap screw; actual sleeve, hole and die qualification retained."
+      },
+      {
+        "key": "BED_CAPTURE_PIVOT_CASTLE_NUTS+BED_CAPTURE_OPEN_PIN_CASTLE_NUTS",
+        "quantity_each": 6,
+        "specification": "M6x1 DIN937 low slotted nut; AF10, height6, body3.5, slot minimum2mm."
+      },
+      {
+        "key": "BED_HINGE_RETAINER_CASTLE_NUTS",
+        "quantity_each": 2,
+        "specification": "M8x1.25 DIN937 low slotted nut; AF13, height8, body4.5, slot minimum2.5mm."
+      },
+      {
+        "key": "BED_CAPTURE_PIVOT_COTTERS+BED_CAPTURE_OPEN_PIN_COTTERS",
+        "quantity_each": 6,
+        "specification": "DIN94/ISO1234 split cotter pin diameter1.6 x length14mm; replace after removal."
+      },
+      {
+        "key": "BED_HINGE_RETAINER_COTTERS",
+        "quantity_each": 2,
+        "specification": "DIN94/ISO1234 split cotter pin diameter2 x length16mm; replace after removal. Current takeoff specifies16mm, not20mm."
+      }
+    ],
+    "note": "These counts were re-read from the current bed takeoff. Master/procurement outputs may require regeneration by their owner after the bed revision. This source report does not change them.",
+    "status": "HISTORICAL_PRE_PLAIN_HINGE_AND_BED_BEARING_REVISION"
+  },
+  "preferred_marketplace_candidates": [
+    {
+      "supplier": "AliExpress HZYUEGOU",
+      "url": "https://www.aliexpress.com/item/1005012810261231.html",
+      "discovery_description": "Long socket-screw family advertised with lengths up to200mm; candidate supplied by parent.",
+      "status": "HOLD_UNVERIFIED_SELECTED_VARIANTS",
+      "primary_access_result": "Web fetch failed. M5x70/M6x100 selectable lengths, actual pack counts, grade, head dimensions, selected goods price and shipping were not verified.",
+      "unit_pack_quantity_each": null,
+      "selected_goods_price_usd": null,
+      "shipping_to_30510_usd": null,
+      "tax_usd": null,
+      "instruction": "Root may inspect the actual primary listing in its shopping browser. Do not apply a headline introductory price to the required sizes or quantities."
+    },
+    {
+      "supplier": "Amazon / uxcell",
+      "url": "https://www.amazon.com/dp/B015A36PPU",
+      "asin": "B015A36PPU",
+      "status": "EXACT_DIMENSIONS_VERIFIED_NO_FEATURED_OFFER",
+      "specification": "M5x70 socket cap screw, class12.9 alloy steel, pitch0.8, head8.5x5mm, 4mm hex, partial thread23mm, underhead length70mm, overall75mm.",
+      "unit_pack_quantity_each": 8,
+      "required_pack_count": 10,
+      "coverage_each": 80,
+      "selected_goods_price_usd": null,
+      "shipping_to_30510_usd": null,
+      "tax_usd": null,
+      "availability_observation": "Primary page's product summary said no featured offers available. Other sellers/30510 availability not verified.",
+      "current_design_compatible": false,
+      "current_design_reason": "70mm stock is too short for the revised bridge-washer stack; purchase75mm stock and finish72mm."
+    }
+  ],
+  "consolidated_primary_catalogue_alternative": {
+    "supplier": "BelMetric",
+    "status": "CATALOGUE_MATCHES_SELECTED_PRICES_AND_REGIONAL_STOCK_UNVERIFIED",
+    "method": "Public product-page options, included SKUs and public product variant metadata; no account/cart/private-state access.",
+    "items": [
+      {
+        "url": "https://belmetric.com/m5x0-8-socket-head-cap-screw-din-912-class-12-9/",
+        "sku": "BSH5X70",
+        "quantity_each": 80,
+        "selection": "Partial Thread;70mm;M5X0.8;Black Oxide",
+        "verified_catalogue_specification": "Class12.9 steel, DIN912, 4mm Allen socket.",
+        "goods_price_usd": null,
+        "caution": "Family starts-at$0.12 is not a verified selected70mm price.",
+        "current_design_compatible": false,
+        "current_design_reason": "Revised bed purchases75mm stock and finishes72mm."
+      },
+      {
+        "url": "https://belmetric.com/m6x1-0-socket-head-cap-screw-din-912-class-12-9/",
+        "sku": "BSH6X100P",
+        "quantity_each": 10,
+        "selection": "Partial Thread;100mm;M6X1.0;Black Oxide",
+        "verified_catalogue_specification": "Class12.9 steel, DIN912, 5mm Allen socket.",
+        "goods_price_usd": null,
+        "caution": "Family starts-at$0.17 is not a verified100mm price. Full-thread sibling BSH6X100F has a DIN921 description typo; verify its drawing rather than treating it as an automatic substitute."
+      },
+      {
+        "url": "https://belmetric.com/castle-nut-low-17h-steel-plain-din-937/",
+        "sku": "CN6LOWPLN",
+        "quantity_each": 6,
+        "selection": "Plain;M6X1.0",
+        "verified_catalogue_specification": "DIN937 low nut,17H carbon steel,10mm wrench,6mm overall height.",
+        "goods_price_usd": null,
+        "caution": "Family starts-at$0.65 is not a selectedM6 price. Use actual drawing for body/slot tolerance acceptance."
+      },
+      {
+        "url": "https://belmetric.com/castle-nut-low-17h-steel-plain-din-937/",
+        "sku": "CN8LOWPLN",
+        "quantity_each": 2,
+        "selection": "Plain;M8X1.25",
+        "verified_catalogue_specification": "DIN937 low nut,17H carbon steel,13mm wrench,8mm overall height.",
+        "goods_price_usd": null,
+        "caution": "Do not substitute the taller DIN935 family. Actual drawing/retention stack acceptance remains required.",
+        "current_design_quantity_each": 0,
+        "superseded_reason": "Plain front 12 mm hinge pins use custom washers and cotters instead of M8 nuts."
+      }
+    ],
+    "shipping_to_30510_usd": null,
+    "tax_usd": null,
+    "total_delivered_usd": null,
+    "budget_use": "No family headline or unknown freight is included as a firm price."
+  },
+  "primary_cotter_pack_alternative": {
+    "supplier": "Fastener Mart",
+    "items": [
+      {
+        "url": "https://www.fastenermart.com/PBJ548-604.html",
+        "sku": "PBJ548-604",
+        "specification": "DIN94 extended-prong cotter pin, zinc-plated steel,1.6x14mm",
+        "unit_pack_quantity_each": 100,
+        "pack_count": 1,
+        "required_each": 6,
+        "spare_each": 94,
+        "goods_price_usd": 3.88,
+        "price_source": "Primary individual product/category package100pcs, not5000pcs carton."
+      },
+      {
+        "url": "https://www.fastenermart.com/PBJ560-606.html",
+        "sku": "PBJ560-606",
+        "specification": "DIN94 extended-prong cotter pin, zinc-plated steel,2x16mm",
+        "unit_pack_quantity_each": 100,
+        "pack_count": 1,
+        "required_each": 2,
+        "spare_each": 98,
+        "goods_price_usd": 4.74,
+        "price_source": "Primary individual product package100pcs."
+      }
+    ],
+    "goods_subtotal_usd": 8.62,
+    "shipping_to_30510_usd": null,
+    "tax_usd": null,
+    "total_delivered_usd": null,
+    "stock_caution": "Published package prices observed; regional fulfillment/stock not established by a checkout quote."
+  },
+  "expensive_fallback_not_selected": [
+    {
+      "supplier": "Walmart Business / UXCELL / Tasharina Corp",
+      "url": "https://business.walmart.com/ip/Uxcell-Hex-Socket-Head-Cap-Screws-Bolts-12-9-Grade-Carbon-Steel-Socket-Drive-Screws-Black-Oxide-Full-Threads-M5-x-70-mm-25/16617859617",
+      "specification": "Class12.9 black-oxide carbon-steel M5x70 socket screw, full thread, head8.5x5mm, pitch0.8",
+      "unit_pack_quantity_each": 25,
+      "pack_count": 4,
+      "required_each": 80,
+      "coverage_each": 100,
+      "goods_price_per_pack_usd": 16.49,
+      "goods_subtotal_usd": 65.96,
+      "shipping_to_30510_usd": null,
+      "tax_usd": null,
+      "caution": "Free shipping observation applied to Sacramento95829, not30510. Not selected because of cost; do not present as Ali/Amazon cart item.",
+      "current_design_compatible": false,
+      "current_design_reason": "Historical70mm source is too short for revised72mm finished requirement."
+    },
+    {
+      "supplier": "Walmart Business / UXCELL",
+      "url": "https://business.walmart.com/ip/Uxcell-Hex-Socket-Head-Cap-Screws-Bolts-12-9-Grade-Carbon-Steel-Socket-Drive-Screws-Black-Oxide-Full-Threads-M6-x-100-mm-10/16660915543",
+      "specification": "Title identifies10pcs M6x100 class12.9 carbon-steel full-thread socket screws.",
+      "unit_pack_quantity_each": 10,
+      "pack_count": 1,
+      "goods_subtotal_usd": null,
+      "shipping_to_30510_usd": null,
+      "tax_usd": null,
+      "caution": "Primary page had no readable selected price. Catalogue candidate only."
+    }
+  ],
+  "rejections": [
+    {
+      "url": "https://www.aliexpress.com/item/1005008309449437.html",
+      "reason": "Parent's selected DIN912 family stops at60mm; cannot supply70mm/100mm by reusing its short-screw price."
+    },
+    {
+      "url": "https://www.lowes.com/pd/Unique-Bargains-M6-x-100mm-Hex-Socket-Head-Cap-Machine-Screw-Bolt-5PCS/105926157",
+      "reason": "Title100mm conflicts with M6x25mm bullet and grade is not established; no substitution or budget price adopted."
+    },
+    {
+      "url": "https://www.amazon.com/dp/B07JQ7427B",
+      "reason": "External hex-head M6x100, not the required socket cap head."
+    },
+    {
+      "url": "https://fastenerwholesale.com/m1-6-x-14mm-din-94-iso-1234-metric-standard-cotter-pins-steel-zinc-plated/",
+      "reason": "Exact cotter size but displayed$183.38 did not establish a small required pack; not treated as six-pin cost."
+    },
+    {
+      "reason": "Long furniture bolts with barrel nuts/low heads, shoulder-bearing bolts, standoffs, stainless substitutions, tall DIN935 nuts and20mm cotters were not adopted as unqualified replacements."
+    }
+  ],
+  "cart_actions_by_this_report": [],
+  "release_effect": "None. Catalogue sources do not establish received grade, fit, stock, shipped budget pass, structural qualification or fabrication release.",
+  "current_design_supersession": {
+    "date": "2026-11-05",
+    "status": "HISTORICAL_SOURCE_RESEARCH_NOT_CURRENT_PURCHASE_TAKEOFF",
+    "current_sources": [
+      "../bed/output/bed-takeoff.csv",
+      "selected-cart-evidence.json",
+      "procurement-requirements.json"
+    ],
+    "plain_hinge_revision": "Two plain 12 mm hinge pins, 27.05 mm overall, have inboard heads and use custom 18 OD/12.2 ID x1.6 mm washers with DIN94 2x16 mm cotters. The former M8 hinge nuts and M8 hinge DIN125 washers are not required.",
+    "M6_DIN937_current_quantity": 6,
+    "M8_DIN937_current_quantity": 0,
+    "cotter_current_quantities": {
+      "1.6x14": 6,
+      "2x16": 2
+    },
+    "new_pin_bar": "One new 3/4x12-inch C45/4140 bar: 303 mm nested use supplies eight pins and four hinge rings, including all primary and secondary kerfs. There is no owned-bar credit.",
+    "bed_bearing_fastener_revision": "Current bed row BED_M5X75_FINISH72 requires 80 purchased M5x75 socket screws, each finished to 72.0 +/-0.1 mm under the head with an end chamfer no longer than 0.4 mm, plus 80 M6 DIN9021 bridge washers (18 OD/6.4 ID x1.6 mm). Historical M5x70 sources and counts below are not current purchase instructions. Use the current bed takeoff and selected-cart evidence.",
+    "current_long_socket_requirements": [
+      {
+        "thread": "M5",
+        "stock_underhead_mm": 75,
+        "finished_underhead_mm": 72,
+        "quantity_each": 80
+      },
+      {
+        "thread": "M6",
+        "stock_underhead_mm": 100,
+        "quantity_each": 10
+      }
+    ]
+  }
+}

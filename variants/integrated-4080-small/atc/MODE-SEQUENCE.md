@@ -1,45 +1,59 @@
-# Manual mode setup and automatic tool-change boundary
+# Mode sequence - passive captured ATC
 
-These are functional interlocks for later controller implementation. They are
-not firmware, operating G-code or evidence of an energized machine test.
+Use the current integrated 4080 small-machine assemblies. The bed's current
+continuous rigid-body maximum Y is 1182.8457 mm; it remains ahead of the fixed
+ATC/parked assembly. The actual root bed/guard/stop checks govern the combined
+changeover, rather than an old cassette envelope.
 
-1. Isolate cutting power and positively retain Z. Remove the complete torch or
-   owner spindle/boot module using its common quick dock. Do not dismantle the
-   owner's working boot/clamp or use the dust actuator for another purpose.
-2. Park the common gantry toward the front at guideY275 while handling the
-   cover. Remove the two storage L keepers. Withdraw both captive cover M4
-   screws6 mm, then follow the proven cover route to storage. Refit both L
-   keepers and R clips. Reverse this route when preparing plasma mode.
-3. The stage may move only with the cover stored, both endpoint clamp bolts
-   removed, the head in its checked bypass pose and the kit/tool/stock envelopes
-   within the accepted limits. The actual limit inputs and pin/clamp sensing
-   must agree with the physical state; do not derive seated status from motor
-   step count. The slide is horizontal; no self-locking claim is made.
-4. Approach the selected end stop slowly, insert the left round/right relieved
-   locator bolts and apply the verified clamping process. The motor does not
-   provide the locked tool-change reaction path. Fit both nuts/washers before
-   any tool change. Pin and clamp capacity remain actual hardware qualification.
-5. Wood cutting requires the full bed down, all retention engaged, water below
-   the dry-work threshold, cover stored and magazine **parked/locked**. Deploy
-   the magazine only for a tool change with the tool at the verified bypass/
-   clearance pose. Park and lock it again before machining the full field.
-   The existing owner boot needs its calibrated clearance position. Spindle
-   reverse/speed and real tool setter/nut-sensing operation must follow the
-   manufacturer's implementation with the actual pocket coordinates.
-6. Plasma mode requires the bed fully raised on both positive stays, magazine
-   parked/locked, cover installed/clamped and spindle cutting power inhibited.
-   The actual plasma start/THC circuit, isolation and EMI controls are separate
-   commissioning requirements. A pilot-arc label alone does not identify them.
-7. Bed movement occurs with the entire tool module removed, all guide sections
-   stored, complete front stops parked400mm rearward and the common gantry at
-   guideY1275/X975/Zlift250. The ATC is parked with its cover fitted. Its fixed
-   and parked material is behind the current moving bed's continuous
-   Y1182.8457 bound. Restore the stops before restoring guides, using the
-   checked route for the actual bed angle, and verify retention/state inputs
-   before permitting motion. Fixed bed receivers are checked separately in the
-   combined machine changeover report.
+## Wood mode
 
-Current actuator identity, slide travel, clamp geometry and whole-boot moving
-scope were already supplied. These are not new questions for the owner. Actual
-machine registration, exact supplier CAD, load/retention/thermal tests and
-complete delivered cost remain explicit verification work.
+1. Bed closed on its fitted support/locator system, with positive retention.
+2. Front motion stops on their operating datums; home/square the machine.
+3. Splash screens in their internal storage racks; plasma start inhibited.
+4. Plasma hood on its storage hooks with keepers/R clips fitted. Its two M4x6
+   service screws are held in owned tool storage.
+5. Owner router head docked; actual boot/spindle registrations calibrated.
+6. Magazine normally parked 200 mm. For a tool change, confirm zero spindle
+   speed and head/boot flyover clearance, then move the existing slide to 0.
+   Its integral tongues enter the passive capture roofs/guides; no endpoint
+   bolt or separate unlock actuator is required.
+7. Require deployed endpoint and both seated capture confirmations, energized
+   axis and qualified axial holding/preload before the spindle approaches a
+   pocket. Use the actual calibrated manufacturer engagement routine and
+   tool setter. Source pocket XY axes are 507.5/552.5/597.5/642.5, Y1100;
+   the source body's bottom Z1051.85 is not a nut engagement plane.
+8. Raise the loaded tool/boot to confirmed clearance, stop the spindle, then
+   park the magazine 200 mm before returning to full-bed cutting.
+9. Any capture/endpoint/energy/tool-state fault inhibits continuation and
+   requires recovery. There is no claim of a power-loss axial lock.
+
+## Plasma changeover
+
+1. Stop/isolate both cutting sources. Remove the router head module, retain
+   the shared receiver, and lock the common carriage at the prescribed rear
+   service pose before the integrated bed/stop/guard handling sequence.
+2. Keep the magazine at 200 mm. Automatic deployment is inhibited in plasma
+   mode and whenever the plasma hood is fitted.
+3. Fit the hood from its hooks by the reversed checked path. Seat its two
+   outboard tabs on the deployed receiver roofs and insert two M4x6 screws.
+   No long spacers cross beneath the housing.
+4. Follow the current integrated front-stop parking/refit and splash-screen
+   handling sequences. Positive stop state, bed state, guards, tool dock and
+   plasma isolation remain controller commissioning requirements.
+5. Verify the gravity water/overflow system and actual torch interfaces before
+   enabling plasma; the ATC source model does not qualify those systems.
+
+## Return to wood
+
+After plasma isolation and cleanup, remove the two M4x6 cover screws and keep
+both in owned tool storage. Remove both storage keepers as needed. Lift the
+cover 500 mm, rotate it 90 degrees about Y, shift 390 mm left/70 mm rear,
+lower 1182.35 mm and insert 90 mm right onto its hooks. Refit keepers/R clips.
+The continuous cover route and 8 mm screw-release sweeps pass the subsystem
+check. Reinstall and verify the actual router head and calibrated boot joint.
+
+Automatic mode logic is controller-independent at this stage. Pin assignments,
+sensor part numbers/placements, RPM/engagement calibration, force qualification
+and the actual executable controller M6 routine require binding to the received
+hardware and vendor integration package. No guessed G-code is authorized by
+this sequence document.

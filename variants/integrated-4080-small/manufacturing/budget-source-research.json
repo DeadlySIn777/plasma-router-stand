@@ -1,0 +1,319 @@
+{
+  "observed_date": "2026-11-05",
+  "currency": "USD",
+  "delivery_region": "Alto GA 30510",
+  "scope": "Read-only frame/bed source research. No cart mutations or orders. This report does not change the engineering requirements or the authoritative price register.",
+  "current_geometry": {
+    "finished_4080_mm": 22495.7,
+    "cut_count": 26,
+    "longest_members_mm": [
+      1760,
+      1760
+    ],
+    "all_2000_plan_bars": 13,
+    "all_2000_plan_raw_mm": 26000,
+    "all_2000_two_piece_pack_purchase_quantity": 7,
+    "pack_rounding_extra_bars": 1,
+    "source_sha256": "212e3a80105c37fa0ed6b330872476eba767a7d93e6cbc2fe0067374456dcabd"
+  },
+  "primary_price_observations": [
+    {
+      "id": "HDPE_BLACK_HALF_FLEXPIPE",
+      "url": "https://shop.flexpipeinc.com/us_en/d-hdpeb-481-2-black-hdpe-plastic-1-2",
+      "sku": "D-HDPEB-4812",
+      "variant": "black 1/2 inch x48x96 inch sheet",
+      "required_quantity": 1,
+      "unit_goods_USD": "225.75",
+      "reported_stock_units": 175,
+      "shipping_USD": null,
+      "tax_USD": null,
+      "delivered_USD": null,
+      "geometry_effect": "Color substitution only; same nominal raw dimensions/thickness as current white sheet. Actual tolerances remain subject to receipt.",
+      "goods_saving_vs_existing_white_260_40_USD": "34.65"
+    },
+    {
+      "id": "HDPE_BLACK_QUARTER_FLEXPIPE_VALUE_ENGINEERING_ONLY",
+      "url": "https://shop.flexpipeinc.com/us_en/d-hdpeb-481-4-black-hdpe-plastic-1-4",
+      "sku": "D-HDPEB-4814",
+      "variant": "black 1/4 inch x48x96 inch sheet",
+      "required_quantity_if_redesigned": 1,
+      "unit_goods_USD": "108.80",
+      "reported_stock_units": 282,
+      "shipping_USD": null,
+      "tax_USD": null,
+      "delivered_USD": null,
+      "geometry_effect": "Not a drop-in replacement. Two quarter-inch layers reduce current plastic stack by12.7mm. Crossbearer/sleeve/hinge geometry, bed mass/handling and stiffness require new checks. Not adopted by this report.",
+      "goods_saving_vs_existing_white_half_260_40_USD": "151.60"
+    },
+    {
+      "id": "HDPE_RECYCLED_QUARTER_USPLASTIC_VALUE_ENGINEERING_ONLY",
+      "url": "https://www.usplastic.com/catalog/item.aspx?itemid=126537",
+      "sku": "42700",
+      "variant": "recycled black1/4inch x48x48inch sheet",
+      "unit_goods_USD": "95.92",
+      "shipping_USD": null,
+      "tax_USD": null,
+      "delivered_USD": null,
+      "geometry_effect": "One sheet provides one full current bed layer only, not two. Nominal cut tolerance plus/minus1/4inch means exact1219.2 dimension is not guaranteed. Not adopted."
+    },
+    {
+      "id": "4080_STANDARD_AUTOMATIONDIRECT_BENCHMARK",
+      "url": "https://cdn.automationdirect.com/static/Full_pl.pdf",
+      "sku": "40-4080C",
+      "variant": "40x80mm 8mm slot standard6063-T6 cut-to-length",
+      "unit_basis": "centimetre per manufacturer product specification, not whole member",
+      "unit_goods_USD": "0.54",
+      "shipping_USD": null,
+      "tax_USD": null,
+      "delivered_USD": null,
+      "geometry_effect": "Actual die differs from nominal current CAD. Published direct pricing is a benchmark, not a 26-piece checkout quote.",
+      "scope": "Full public price list0.54/cm conflicts with separately published specification sheet0.59/cm; current checkout quote needed. Neither is a delivered quote.",
+      "alternate_primary_spec_url": "https://cdn.automationdirect.com/static/specs/sureframe40series.pdf"
+    },
+    {
+      "id": "4080_VEVOR_SHORT_ONLY",
+      "url": "https://www.vevor.com/s/4080-t%2Bnut%2B-aluminium%2B-extrusion-1000-mm",
+      "variant": "2pcs4080x500mm black",
+      "unit_goods_USD": "33.90",
+      "shipping_USD": null,
+      "tax_USD": null,
+      "delivered_USD": null,
+      "geometry_effect": "500mm members cannot supply1760headers,1250gantry or1085.7crossers. Reject as a complete frame stock plan."
+    },
+    {
+      "id": "ALUFAB_650036",
+      "url": "https://www.alufabinc.com/product/40mm-x-80mm-t-slotted-aluminum-framing-extrusion/",
+      "sku": "650036",
+      "variant": "40x80mm cut to length; standard/lite/very-lite respectively",
+      "unit_goods_USD": "1.94",
+      "unit_basis": "inch, visible readonly Price Per Inch form input and JSON-LD Offer",
+      "max_online_length_inches": 84,
+      "shipping_USD": null,
+      "tax_USD": null,
+      "delivered_USD": null,
+      "status": "Primary product is InStock.2000mm fits online length range. Actualdie/jointsrequirequalification; no checkout/cart mutated."
+    },
+    {
+      "id": "ALUFAB_650037",
+      "url": "https://www.alufabinc.com/product/40mm-x-80mm-lite-t-slotted-aluminum-framing-extrusion/",
+      "sku": "650037",
+      "variant": "40x80mm cut to length; standard/lite/very-lite respectively",
+      "unit_goods_USD": "1.64",
+      "unit_basis": "inch, visible readonly Price Per Inch form input and JSON-LD Offer",
+      "max_online_length_inches": 84,
+      "shipping_USD": null,
+      "tax_USD": null,
+      "delivered_USD": null,
+      "status": "Primary product is InStock.2000mm fits online length range. Actualdie/jointsrequirequalification; no checkout/cart mutated."
+    },
+    {
+      "id": "ALUFAB_650038",
+      "url": "https://www.alufabinc.com/product/40mm-x-80mm-very-lite-t-slotted-aluminum-framing-extrusion/",
+      "sku": "650038",
+      "variant": "40x80mm cut to length; standard/lite/very-lite respectively",
+      "unit_goods_USD": "1.53",
+      "unit_basis": "inch, visible readonly Price Per Inch form input and JSON-LD Offer",
+      "max_online_length_inches": 84,
+      "shipping_USD": null,
+      "tax_USD": null,
+      "delivered_USD": null,
+      "status": "Primary product is InStock.2000mm fits online length range. Actualdie/jointsrequirequalification; no checkout/cart mutated."
+    }
+  ],
+  "primary_amazon_variant_candidates_needing_30510_browser_quote": [
+    {
+      "url": "https://www.amazon.com/dp/B0CM8GJLV5",
+      "description": "IXGNIJ4080 silver2000mm two-piece pack",
+      "goods_USD": null,
+      "shipping_USD": null,
+      "status": "Exact variant recovered from primary Amazon variation data. Web source marked unavailable outside user30510 session."
+    },
+    {
+      "url": "https://www.amazon.com/dp/B0CP1XKDYZ",
+      "description": "SeekLiny4080 silver2000mm two-piece pack",
+      "goods_USD": null,
+      "shipping_USD": null,
+      "status": "Exact variant recovered from primary Amazon variation data. Web source marked unavailable outside user30510 session."
+    },
+    {
+      "url": "https://www.amazon.com/dp/B0F83RQ9Y9",
+      "description": "SeekLiny4080 black1830mm two-piece pack",
+      "goods_USD": null,
+      "shipping_USD": null,
+      "status": "Exact variant recovered from primary Amazon variation data. Needs regional offer, stock and actual section verification."
+    },
+    {
+      "url": "https://www.amazon.com/dp/B0F83RRLNM",
+      "description": "SeekLiny4080 silver1830mm two-piece pack",
+      "goods_USD": null,
+      "shipping_USD": null,
+      "status": "Exact variant recovered from primary Amazon variation data. Needs regional offer, stock and actual section verification."
+    },
+    {
+      "url": "https://www.amazon.com/dp/B0F9NTMDTC",
+      "description": "SeekLiny4080 silver2440mm two-piece pack",
+      "goods_USD": null,
+      "shipping_USD": null,
+      "status": "Exact variant recovered from primary Amazon variation data. Needs a new stock cut plan and regional offer verification."
+    }
+  ],
+  "aliexpress_candidates_unverified_primary": [
+    {
+      "url": "https://www.aliexpress.com/item/1005004126617280.html",
+      "description": "4080 extrusion family",
+      "goods_USD": null,
+      "shipping_USD": null,
+      "reason": "Primary page not available through web tool. Cheapest-variant third-party history is not a2000mm quote."
+    },
+    {
+      "url": "https://www.aliexpress.com/item/1005003300669659.html",
+      "description": "20100 extrusion100-1000mm family",
+      "goods_USD": null,
+      "shipping_USD": null,
+      "reason": "Primary page not available through web tool. Current1220mm uncut requirement not supplied by listed max1000mm without redesign."
+    }
+  ],
+  "rejected_shortcuts": [
+    {
+      "url": "https://www.ebay.com/itm/377355766701",
+      "description": "Uimoso2-10PCS4080aluminum500-2000mm catchall title",
+      "reason": "The67.99 observation was selected10pcs2020x1220, not4080. The listed4080option was2pcs500mm; no4080x2000 baseline obtained. No67.99long4080 price used."
+    },
+    {
+      "url": "https://www.amazon.com/dp/B0CM8D9TJV",
+      "description": "Historical IXGNIJ black2000x2 ASIN",
+      "reason": "Primary variation data shows historical landing deleted and redirected to400mmblack; do not use the small current offer as2000mm price."
+    },
+    {
+      "url": "https://www.amazon.com/dp/B0CP1X4XHG",
+      "description": "Historical SeekLiny black2000x2 ASIN",
+      "reason": "Primary variation data shows historical landing deleted and redirected to200mmblack; do not use small current offer as2000mm price."
+    },
+    {
+      "url": "https://www.rovercnc.com/products/4080-hd-aluminum-extrusion?variant=34298170566",
+      "description": "RoverCNC4080HD",
+      "reason": "Public38.00 price belongs to smallest option; all displayed500/1000/1500/1700/2800 variants sold out. Not a long stock quote."
+    },
+    {
+      "url": "https://valuehobby.com/1500mm-4080-extrusion-2pcs.html",
+      "description": "ValueHobby4080Cbeam",
+      "reason": "Different C-section from six-slot rectangular4080 and max1500 too short for1760headers. Not a drop-in stock plan."
+    },
+    {
+      "url": "https://www.zyltech.com/aluminum-extrusion/2080-and-20100-t-slot/",
+      "description": "Zyltech20100precut1000mm",
+      "reason": "83.94 observation,out of stock,and length too short for current1220requirement. Not budget improvement."
+    },
+    {
+      "url": "https://www.tnutz.com/product-category/40-series/",
+      "description": "TNutz40series category",
+      "reason": "Category supplies40serieshardware. Its extrusionmenuonlylists10/15series. No4080profile product found; guessedEXM-4080URLfails. Imperial1.5x3extrusionisnot40x80geometry."
+    }
+  ],
+  "shipping_evidence": {
+    "url": "https://www.flexpipeinc.com/us_en/faq/",
+    "shipping_policy_url": "https://www.flexpipeinc.com/us_en/shipping/",
+    "finding": "Flexpipe explicitly excludes shipping from listed pricing; cart weight and ZIP are required for rate. No free freight assumed. This agent did not mutate cart."
+  },
+  "value_engineering_not_adopted": [
+    "One or two thinner HDPE layers need a new mechanical stack and handling screen.",
+    "Hybrid spaced20100withflushHDPEinfill could reduce ten profiles while preserving clamping tracks, but requires new supporting geometry and load paths; not represented by existing ten-profile proofs.",
+    "A shorter/cheaper raw bar cannot be joined into a qualified1760header merely by arithmetic."
+  ],
+  "budget_reconciliation": {
+    "with_black_half_sheet_plus_existing_399_95_tracks_and_400_basic_atc_goods_USD": "1025.70",
+    "with_black_quarter_sheet_plus_existing_tracks_and_basic_atc_goods_USD": "908.75",
+    "quarter_case_is_unadopted_geometry_change": true,
+    "both_cases_exclude_frame_pan_slats_hardware_shipping_tax": true,
+    "complete_delivered_total_USD": null,
+    "under_1000_delivered_verified": false
+  },
+  "conclusion": "No verified complete shipped4080/HDPE/20100/ATC plan below1000 obtained. The primary HDPE color substitution saves34.65goods; much larger savings require geometry changes and/or an independently verified cheaper20100/ATC source. No third-party teaser counted as a selected variant quote.",
+  "followup_20100_pack_audit": {
+    "observed_date": "2026-11-05",
+    "method": "Read primary Amazon public product content and publicly served variant data only; no account data, private state or cart mutation.",
+    "canonical_parent": "B0FH272B2T",
+    "children": [
+      {
+        "asin": "B0DY7GCFRV",
+        "url": "https://www.amazon.com/dp/B0DY7GCFRV",
+        "nominal_length_mm": 1220,
+        "title_claims_pack_count": 4,
+        "selected_UI_Number_of_Items": 2,
+        "About_this_item_package_include_count": 2,
+        "public_variant_count": 2,
+        "goods_USD": null,
+        "shipping_USD": null,
+        "conclusion": "No verified1220x4offer. Title conflicts with selected number-of-items and package contents. Do not cost this as four profiles."
+      },
+      {
+        "asin": "B0GV3DMN2D",
+        "url": "https://www.amazon.com/dp/B0GV3DMN2D",
+        "nominal_length_mm": 1000,
+        "title_claims_pack_count": 4,
+        "selected_UI_Number_of_Items": 2,
+        "About_this_item_package_include_count": 2,
+        "public_variant_count": 2,
+        "goods_USD": null,
+        "shipping_USD": null,
+        "conclusion": "No verified1000x4offer; title conflicts with actual selected pack contents. Also too short for current uncut1220bed."
+      },
+      {
+        "asin": "B0DY7JYQCJ",
+        "url": "https://www.amazon.com/dp/B0DY7JYQCJ",
+        "nominal_length_mm": 1500,
+        "title_claims_pack_count": 4,
+        "About_this_item_package_include_count": 4,
+        "public_variant_count": 4,
+        "goods_USD": null,
+        "shipping_USD": null,
+        "conclusion": "This is a realfour-profile1500variant. Selecting NumberofItems4 from1220changes length to1500. Currentuncut1220requirement not met withoutexplicitraw-stock/end-cut revision."
+      },
+      {
+        "asin": "B0FVX4CWLC",
+        "url": "https://www.amazon.com/dp/B0FVX4CWLC",
+        "nominal_length_mm": 1830,
+        "public_variant_count": 4,
+        "goods_USD": null,
+        "shipping_USD": null,
+        "conclusion": "Four-profile1830variant discovered; no30510offer verified."
+      },
+      {
+        "asin": "B0DY7HL9NL",
+        "url": "https://www.amazon.com/dp/B0DY7HL9NL",
+        "nominal_length_mm": 2000,
+        "public_variant_count": 4,
+        "goods_USD": null,
+        "shipping_USD": null,
+        "conclusion": "Four-profile2000variant discovered; no30510offer verified."
+      }
+    ],
+    "no_cart_budget_saving_claimed": true
+  },
+  "followup_primary_long4080_listings": [
+    {
+      "url": "https://www.ebay.com/itm/366516081121",
+      "variant": "SeekLinyblack4080x2000mm,two profiles",
+      "observed_goods_USD": "206.99",
+      "status": "ENDED_OCT19_OUT_OF_STOCK",
+      "conclusion": "Search/shop teaser196.64/206.99 is not an orderable current source. Reject."
+    },
+    {
+      "url": "https://www.ebay.com/itm/366677659294",
+      "variant": "SeekLiny silver4080x2000mm,two profiles",
+      "observed_goods_USD": "279.29",
+      "observed_available_pack_count": 2,
+      "shipping_to_30510_USD": null,
+      "conclusion": "More expensive than root-observed Amazon source. Web shipping was quoted for foreign destination10115, so do not use it for30510."
+    },
+    {
+      "url": "https://www.ebay.com/itm/224452540589",
+      "variant": "FramingTech40x80-08,4profilesx72in(1828.8mm)",
+      "observed_goods_USD": "376.04",
+      "observed_shipping_USD": "179.85",
+      "observed_shipping_region": "30349",
+      "shipping_to_30510_USD": null,
+      "conclusion": "Lengths can cover1760headers,but no target-region delivered quote and not a lowbudget source."
+    }
+  ]
+}
