@@ -15,16 +15,20 @@ spec=importlib.util.spec_from_file_location('integrated_bed_frame',BASE/'frame.p
 if str(BASE)not in sys.path:sys.path.insert(0,str(BASE))
 F=importlib.util.module_from_spec(spec);spec.loader.exec_module(F)
 X0,Y0,W,L=75.,-40.,1000.,1220.
-TOP=960.8;PROFILE_BOTTOM=TOP-20.;HDPE_BOTTOM=PROFILE_BOTTOM-25.4
+TOP=960.8;PROFILE_BOTTOM=TOP-20.;HDPE_LAYER_COUNT=1;HDPE_THICKNESS=12.7
+HDPE_BOTTOM=PROFILE_BOTTOM-HDPE_LAYER_COUNT*HDPE_THICKNESS
+HDPE_LENGTH=1200.
 ASSEMBLY_Z_SHIFT=7.;WORK_TOP=TOP+ASSEMBLY_Z_SHIFT
-CROSS_BOTTOM=HDPE_BOTTOM-40.;CROSS_CENTRES=(100.,395.,780.,1140.)
+CROSS_HEIGHT=80.;CROSS_WIDTH=40.;CROSS_BOTTOM=HDPE_BOTTOM-CROSS_HEIGHT;CROSS_CENTRES=(110.,395.,780.,1140.)
 CROSS_X0,CROSS_LENGTH=85.,980.
+PAN_LOWERING_MM=26.
+COLUMN_LENGTH=CROSS_HEIGHT+HDPE_LAYER_COUNT*HDPE_THICKNESS
 PROFILE_BRIDGE_WASHER_OD=18.;PROFILE_BRIDGE_WASHER_ID=6.4;PROFILE_BRIDGE_WASHER_T=1.6
-PROFILE_SCREW_STOCK_LENGTH=75.;PROFILE_SCREW_FINISHED_LENGTH=72.
+PROFILE_SCREW_STOCK_LENGTH=100.;PROFILE_SCREW_FINISHED_LENGTH=99.3
 PIVOT=(-100.,TOP)
-GAS_ROOT=(-70.,768.);GAS_MOVING=(395.,905.4)
-STAY_ROOT=(-40.,743.);STAY_MOVING=(395.,855.4)
-GAS_FORCE=889.;GAS_MIN,GAS_MAX=450.,700.
+GAS_ROOT=(-70.,768.);GAS_MOVING=(365.,905.4)
+STAY_ROOT=(-40.,743.);STAY_MOVING=(395.,852.4)
+GAS_FORCE=667.;GAS_MIN,GAS_MAX=445.,700.
 GAS_AXES=(59.15,1090.85)
 STAY_AXES=(54.,1096.)
 STAY_PIN_HEAD_X=44.55;STAY_PIN_HEAD_LENGTH=2.5
@@ -73,36 +77,42 @@ def profile_section(length=1220.):
  return s.cut(cq.Compound.makeCompound(voids)).clean()
 
 def anchor_rows():
- return[(cy,x)for cy in CROSS_CENTRES for i in range(10)for x in(X0+100*i+30,X0+100*i+70)]
+ # First/last anchors move inward so the vertical sleeve bores do not
+ # intersect either upright4080end-core fixing/tap. All remain real slots.
+ return[(cy,X0+100*i+dx)for cy in CROSS_CENTRES for i in range(10)for dx in((50,90)if i==0 else(10,50)if i==9 else(30,70))]
 
 @lru_cache(None)
 def deck_local_parts():
  p=[];anchors=anchor_rows();ref=(395.,545.)
- for i,zz in enumerate((HDPE_BOTTOM,HDPE_BOTTOM+12.7),1):
-  s=box(X0,Y0+.4,zz,W,1219.2,12.7)
+ for i,zz in enumerate([HDPE_BOTTOM+k*HDPE_THICKNESS for k in range(HDPE_LAYER_COUNT)],1):
+  s=box(X0,Y0+.4,zz,W,HDPE_LENGTH,HDPE_THICKNESS)
   cuts=[cyl(13.2 if(cy,x)==ref else 22.,14.7,(x,cy,zz-1))for cy,x in anchors]
   s=s.cut(cq.Compound.makeCompound(cuts)).clean()
-  p.append(item(f'FULL_HDPE_{i}',s,'HDPE',True,'1000x1219.2x12.7 full rectangle from48in-wide sheet;80 circular through holes only. Profiles overhang0.4mm each end. No pockets, slots, counterbores or surfacing.'))
+  p.append(item(f'FULL_HDPE_{i}',s,'HDPE',True,'One1000x1200x12.7fullcut-area-coveringrectanglefrom48x48insheet;80roundthroughholesonly.19.6rearprofileoverhang,metalcolumnpreloadbypassesplastic.'))
  prof=profile_section(L).rotate((0,0,0),(1,0,0),90).translate((0,L,0))
  for i in range(10):p.append(item(f'UNCUT_20100_{i+1:02}',prof.translate((X0+100*i,Y0,PROFILE_BOTTOM)),'aluminum',True,'Uncut1220 length, profile axis Y. End-load compatible M5 nuts before assembly.'))
  for j,cy in enumerate(CROSS_CENTRES,1):
-  s=F.bar(CROSS_X0,cy-40,CROSS_BOTTOM,'X',CROSS_LENGTH,flat=True)
-  s=s.cut(cq.Compound.makeCompound([cyl(13.1,42,(x,cy,CROSS_BOTTOM-1))for c,x in anchors if c==cy])).clean()
-  if j in(1,4):
+  s=F.bar(CROSS_X0,cy-CROSS_WIDTH/2,CROSS_BOTTOM,'X',CROSS_LENGTH,flat=False)
+  s=s.cut(cq.Compound.makeCompound([cyl(13.1,CROSS_HEIGHT+2,(x,cy,CROSS_BOTTOM-1))for c,x in anchors if c==cy])).clean()
+  if j in(1,2,4):
    for xx,d in((85.,(1,0,0)),(1065.,(-1,0,0))):
-    for yy in(cy-20,cy+20):s=s.cut(cyl(8.,22,(xx,yy,895.4),d))
-  p.append(item(f'BED_4080_CROSS_{j}',s,'aluminum',True,'980mm4080 laid80Yx40Z;20 sleeve bores13.1 through. Final actual section/lip fit and modified-section capacity require acceptance.'))
+    for zz in(CROSS_BOTTOM+20,CROSS_BOTTOM+60):s=s.cut(cyl(8.,22,(xx,cy,zz),d))
+  p.append(item(f'BED_4080_CROSS_{j}',s,'aluminum',True,'980mm4080upright40Yx80Z;20D13.1verticalsleevebores. First/lastanchorsshifted40mmfromends;actualsupplierstrong-axis/modifiedligamentpropertiesrequirequalification.'))
  for side in('L','R'):
-  cap=box(78.65,1100,875.4,6.35,80,40.)
-  for yy in(1120.,1160.):cap=cap.cut(cyl(8.5,8.35,(77.65,yy,895.4),(1,0,0)))
+  cap=box(78.65,1120,CROSS_BOTTOM,6.35,40,80.)
+  for zz in(CROSS_BOTTOM+20,CROSS_BOTTOM+60):cap=cap.cut(cyl(8.5,8.35,(77.65,1140,zz),(1,0,0)))
   p.append(item('BED_REAR_END_CAP_'+side,_mirror(cap.clean(),side),'steel',True,'6.35endplate, two8.5through fixingholes into rear4080end cores. Carries closed-mode side drawdowns through metal only.'))
+  zz=CROSS_BOTTOM+60
+  washer=ring(16,8.5,1.6,(77.05,1140,zz),(1,0,0))
+  bolt=cyl(8,20,(77.05,1140,zz),(1,0,0)).fuse(cyl(13,8,(69.05,1140,zz),(1,0,0))).clean()
+  p.extend([item('BED_REAR_UPPER_WASHER_'+side,_mirror(washer,side),'steel',True,'PermanentupperendcapM8washer;12.05nominalcoreengagementwithM8x20.'),item('BED_REAR_UPPER_M8x20_'+side,_mirror(bolt,side),'steel',True,'Permanentupperendcapbolt;lowersidedrawdownremovedfortilt,butthisboltremainswithbed.')])
  for k,(cy,x)in enumerate(anchors,1):
-  p.append(item(f'BED_COLUMN_{k:02}',ring(12.7,6.35,65.4,(x,cy,CROSS_BOTTOM)),'aluminum',True,'Straight compression tube:12.7ODx6.35ID,65.4 long nominal. Fit length to actual HDPE stack; metal supports profile and bypasses plastic preload.'))
+  p.append(item(f'BED_COLUMN_{k:02}',ring(12.7,6.35,COLUMN_LENGTH,(x,cy,CROSS_BOTTOM)),'aluminum',True,'Straightcompressiontube12.7OD6.35IDx92.7nominal;fitactualsingleHDPEstack. Metalcolumnbypassesplasticpreload.'))
   washer_bottom=CROSS_BOTTOM-PROFILE_BRIDGE_WASHER_T
   washer=ring(PROFILE_BRIDGE_WASHER_OD,PROFILE_BRIDGE_WASHER_ID,PROFILE_BRIDGE_WASHER_T,(x,cy,washer_bottom))
   p.append(item(f'BED_CROSS_BRIDGE_WASHER_{k:02}',washer,'steel',True,'SteelM6DIN9021/ISO7093largewasher18OD6.4IDx1.6bridges13.1crossbarbore. Seatsbothsquarecolumnendandcrossbarunderside;positivelycapturesthecrossbar. Keepwashercentredandverifybothseats.'))
   screw=cyl(5,PROFILE_SCREW_FINISHED_LENGTH,(x,cy,washer_bottom)).fuse(cyl(8.5,5,(x,cy,washer_bottom-5))).clean()
-  p.append(item(f'BED_M5x72_FINISHED_{k:02}',screw,'steel',True,'M5x75stocktrimmedto72.0+/-0.1underhead,deburr/endchamfer<=0.4. Underheadon18ODbridgewasher;2.7nominalslot-nutengagementplus1.0tipand1.1cavityceilingreserve. Neverinstalluncut75;actualdie/nut/torqueacceptance.'))
+  p.append(item(f'BED_M5_FINISHED_{k:02}',screw,'steel',True,'M5x100stockfinished99.3+/-0.1underhead,endchamfer<=0.4. Underheadon18ODbridgewasher;full2.7nominalnutengagement,1.0tip/1.1cavityreserve. Fitactualdie/nut/preload.'))
   nut=box(x-4,cy-4,PROFILE_BOTTOM+1.3,8,8,2.7).cut(cyl(5,4.7,(x,cy,PROFILE_BOTTOM+.3))).clean()
   p.append(item(f'BED_M5_BOTTOM_NUT_{k:02}',nut,'steel',True,'Recovered8x8x2.7 nominal slot-nut envelope, end-loaded. Actual selected nut and lip capacity remain a supplier fit acceptance item.'))
  return tuple(p)
@@ -212,18 +222,18 @@ def fixed_receiver_parts():
   # Widen the existing assist notch to X76.0, leaving0.6mm to its X75.4 tip;
   # the reinforced lower web starts at76.2 and the crossbar bearing atX85.
   flange=flange.cut(box(71.,355,CROSS_BOTTOM-t-1,5.,100,t+2))
-  reinforcement=box(76.2,345,840.4,t,120,35.)
+  reinforcement=box(76.2,345,CROSS_BOTTOM-35,t,120,35.)
   s=flange.fuse(web,reinforcement).clean()
   # Closed-mode bridge washers project below the crossbar. These22mm holes
   # clear their18mmOD, including reasonable lateral assembly float; the
   # receiver bearing remains around each local access hole.
-  for cy in CROSS_CENTRES:s=s.cut(cyl(22.,t+2,(105.,cy,CROSS_BOTTOM-t-1)))
+  for cy in CROSS_CENTRES:s=s.cut(cyl(22.,t+2,(125.,cy,CROSS_BOTTOM-t-1)))
   for cy in(100.,630.,1180.):
    for xx in(96.,116.):
      for yy in(cy-20,cy+20):
       s=s.cut(cyl(5.5,t+2,(xx,yy,CROSS_BOTTOM-t-1)))
       s=s.cut(cq.Solid.makeCone(2.75,5.,2.75,cq.Vector(xx,yy,CROSS_BOTTOM-2.75)))
-  for yy in(1120.,1160.):s=s.cut(cyl(8.5,5.175,(71.,yy,895.4),(1,0,0)))
+  s=s.cut(cyl(8.5,5.175,(71.,1140,CROSS_BOTTOM+20),(1,0,0)))
   p.append(item(f'BED_RECEIVER_ANGLE_{side}',_mirror(s.clean(),side),'steel',False,'1050mm formed/trimmed angle54horizontalx31.75verticalx3.175. Downward loads bear on lowered4080 dry arms; seatZ882.4world. Actual flatness fitted with metal shims only.'))
   pad=box(76.2,60,CROSS_BOTTOM-t,49.8,80,t)
   pad=pad.cut(cyl(12.5,t+2,(105.,100.,CROSS_BOTTOM-t-1)))
@@ -271,49 +281,63 @@ def fixed_receiver_parts():
 def closed_drawdowns():
  p=[]
  for side in('L','R'):
-  for i,yy in enumerate((1120.,1160.),1):
-   washer=ring(16,8.5,1.6,(70.4,yy,895.4),(1,0,0))
-   spacer=ring(12.7,8.5,3.475,(75.175,yy,895.4),(1,0,0))
-   screw=cyl(8,35,(70.4,yy,895.4),(1,0,0)).fuse(cyl(13,8,(62.4,yy,895.4),(1,0,0)))
+  for i,yy in enumerate((1140.,),1):
+   zz=CROSS_BOTTOM+20
+   washer=ring(16,8.5,1.6,(70.4,yy,zz),(1,0,0))
+   spacer=ring(12.7,8.5,3.475,(75.175,yy,zz),(1,0,0))
+   screw=cyl(8,35,(70.4,yy,zz),(1,0,0)).fuse(cyl(13,8,(62.4,yy,zz),(1,0,0)))
    for tag,shape in(('WASHER',washer),('SPACER',spacer),('M8x35',screw)):
-    p.append(item(f'BED_CLOSED_{tag}_{side}_{i}',_mirror(shape.clean(),side),'steel',False,'Closed-mode retained hardware; withdraw both screws per side and store before tilting. M8nominal major thread bore,20.4mm engagement in rear4080core; actual tap/slot/core capacity held.'))
+    p.append(item(f'BED_CLOSED_{tag}_{side}_{i}',_mirror(shape.clean(),side),'steel',False,'Closed-modelowercorelock:oneM8drawdownpersideplusfronttwohinges. Removebothrearlocksetsfortilt. Upperendcapboltstayswithbed;20.4nominalcoreengagement,actualjointcapacityheld.'))
  return p
 
 def deck_brackets():
  p=[]
  for side in('L','R'):
   # Hinge arm connects front crossbar to the top-plane pivot without HDPE cuts.
-  plate=plane_plate([(0,0),(270,0),(270,120),(0,120)],9.525,
-      origin=(65.475,-125,860.8),normal=(1,0,0),xdir=(0,1,0))
+  plate=plane_plate([(0,0),(270,0),(270,128),(0,128)],9.525,
+      origin=(65.475,-127,852.8),normal=(1,0,0),xdir=(0,1,0))
   plate=plate.cut(cyl(12.1,11.525,(64.475,-100,TOP),(1,0,0)))
-  spacer=box(75.,60,875.4,10.,80,40.)
-  for yy in(80.,120.):
-   plate=plate.cut(cyl(8.5,11.525,(64.475,yy,895.4),(1,0,0))).cut(cyl(14.2,4.6,(65.475,yy,895.4),(1,0,0)))
-   spacer=spacer.cut(cyl(8.5,12,(74.,yy,895.4),(1,0,0)))
-   bolt=cyl(8,35,(70.075,yy,895.4),(1,0,0)).fuse(cyl(14,4.4,(65.675,yy,895.4),(1,0,0)))
-   p.append(item(f'BED_HINGE_M8x35_BUTTON_{side}_{int(yy)}',_mirror(bolt.clean(),side),'steel',True,'Recessed14ODx4.4buttonhead;35underhead,20.075mmnominalend-core engagement. Actual ISO7380head/drive and core tap fit verified before use.'))
-  p.append(item(f'BED_HINGE_MOVING_SIDEPLATE_{side}',_mirror(plate.clean(),side),'aluminum',True,'270x120x9.525full-thickness sidearm, pivot150mmforwardofearlierlayout. Two14.2x4.6counterbores and8.5through;12.1pivot bore. No HDPE/profile relief. Owned3/8blank allocation only if globally unique.'))
-  p.append(item(f'BED_HINGE_SPACER_{side}',_mirror(spacer.clean(),side),'aluminum',True,'80x40x10new spacer,2D8.5through; not supplied by9.525sheet without machining/newstock.'))
+  spacer=box(75.,90,CROSS_BOTTOM,10.,40,80.)
+  for k,zz in enumerate((CROSS_BOTTOM+20,CROSS_BOTTOM+60),1):
+   plate=plate.cut(cyl(8.5,11.525,(64.475,110,zz),(1,0,0))).cut(cyl(14.2,4.6,(65.475,110,zz),(1,0,0)))
+   spacer=spacer.cut(cyl(8.5,12,(74.,110,zz),(1,0,0)))
+   bolt=cyl(8,35,(70.075,110,zz),(1,0,0)).fuse(cyl(14,4.4,(65.675,110,zz),(1,0,0)))
+   p.append(item(f'BED_HINGE_M8x35_BUTTON_{side}_{k}',_mirror(bolt.clean(),side),'steel',True,'Recessed14ODx4.4buttonhead;35underhead,20.075nominalend-coreengagement. Inwardshiftedcolumnborescleartheseaxes.'))
+  p.append(item(f'BED_HINGE_MOVING_SIDEPLATE_{side}',_mirror(plate.clean(),side),'aluminum',True,'270x128x9.525sidearm;existinghingeaxisretained. EndboltsY110/Z868.1,908.1local. Owned3/8blankrequiresupdateduniqueglobalnest.'))
+  p.append(item(f'BED_HINGE_SPACER_{side}',_mirror(spacer.clean(),side),'aluminum',True,'Existing80x40x10blankrotated40Yx80Z;2D8.5corebores.Noowned9.525stockcredit.'))
   # Shared gas/stay mounting bracket on the395mm crossbar end.
-  web=box(78.65,365,885.4,6.35,60,30.)
-  upper=box(44.45,365,909.05,34.2,60,6.35).cut(box(46.15,364,906.5,26,46,12))
-  top_ear=box(75.2,375,895.4,3.175,40,20.)
-  lower_ear=ring(24,10.2,3.175,(62.825,395,855.4),(1,0,0)).fuse(box(62.825,405.4,855.4,3.175,10,53.65))
-  far_ear=ring(24,10.2,5.,(44.45,395,855.4),(1,0,0)).fuse(box(44.45,405.4,855.4,5.,10,53.65))
+  web=box(78.65,380,CROSS_BOTTOM+10,6.35,50,60.)
+  upper=box(44.45,355,909.05,34.2,75,6.35).cut(box(46.15,354,906.5,26,56,12))
+  top_ear=box(72.3,355,895.4,6.35,20,20.)
+  sz=STAY_MOVING[1]
+  lower_ear=ring(24,10.2,3.175,(62.825,395,sz),(1,0,0)).fuse(box(62.825,405.4,sz,3.175,10,909.05-sz))
+  far_ear=ring(24,10.2,5.,(44.45,395,sz),(1,0,0)).fuse(box(44.45,405.4,sz,5.,10,909.05-sz))
   s=web.fuse(upper,top_ear,lower_ear,far_ear).clean()
-  for yy in(375.,415.):s=s.cut(cyl(8.5,8.35,(77.65,yy,895.4),(1,0,0)))
-  s=s.cut(cyl(8.5,5.175,(74.2,395,905.4),(1,0,0)))
-  s=s.cut(cyl(10.2,24.,(43.45,395,855.4),(1,0,0)))
-  s=s.cut(cyl(14.2,2.6,(44.45,395,855.4),(1,0,0))).clean()
+  for zz in(CROSS_BOTTOM+20,CROSS_BOTTOM+60):
+   s=s.cut(cyl(8.5,8.35,(77.65,395,zz),(1,0,0)))
+   s=s.cut(cyl(14.,9.,(69.65,395,zz),(1,0,0)))
+   bolt=cyl(8,25,(78.65,395,zz),(1,0,0)).fuse(cyl(13,8,(70.65,395,zz),(1,0,0))).clean()
+   p.append(item(f'BED_ASSIST_M8x25_{side}_{zz:g}',_mirror(bolt,side),'steel',True,'Actualendcoreboltgeometry;18.65nominalengagement. Gasandstayconnectionsmovedclearofsocketheads.'))
+  s=s.cut(cyl(8.5,21.,(71.25,*GAS_MOVING),(1,0,0)))
+  s=s.cut(cyl(13.2,1.15,(71.15,*GAS_MOVING),(1,0,0)))
+  s=s.cut(cyl(10.2,24.,(43.45,395,sz),(1,0,0)))
+  s=s.cut(cyl(14.2,2.6,(44.45,395,sz),(1,0,0))).clean()
   p.append(item(f'BED_ASSIST_C_BRACKET_{side}',_mirror(s,side),'steel',True,'Fabricated6.35steel bracket;2M8x25end-core bolts, top10mmgasballstud and lowerstayclevis. Ballstud axesX preserve spherical articulation inYZ. Ordinary welded stock; weld capacity acceptance required.'))
   p.extend(stay_pivot_parts('UPPER',STAY_MOVING,side,True))
+  stud=cyl(8,27.1,(64.15,*GAS_MOVING),(1,0,0))
+  spacer=ring(12.7,8.5,1.05,(71.25,*GAS_MOVING),(1,0,0))
+  washer=ring(16,8.4,1.6,(78.65,*GAS_MOVING),(1,0,0))
+  pts=[(13/math.sqrt(3)*math.cos(math.radians(30+60*k)),13/math.sqrt(3)*math.sin(math.radians(30+60*k)))for k in range(6)]
+  nut=plane_plate(pts,8,origin=(80.25,*GAS_MOVING),normal=(1,0,0),xdir=(0,1,0)).cut(cyl(8,10,(79.25,*GAS_MOVING),(1,0,0))).clean()
+  for tag,shape,note in(('UPPER_STUD',stud,'IncludedM8x20/7.1neck10mmballstudreference;actualsupplierfitheld.'),('UPPER_SPACER',spacer,'1.05metalspacerfits6.35gasearandnominal12.1face-to-ballstudgeometry.'),('UPPER_WASHER',washer,'M8flatwasher16OD8.4IDx1.6.'),('UPPER_NUT',nut,'M8DIN985nylocnutAF13/h8nominal;actualstudthread/lockengagementheld.')):
+   p.append(item(f'BED_GAS_{tag}_{side}',_mirror(shape,side),'steel',True,note))
  return p
 
 def gas_and_stays(angle=0.):
  p=[];t=math.radians(angle)
  for side,x in zip(('L','R'),GAS_AXES):
   gm=yzpoint(GAS_MOVING,angle);a=(x,*GAS_ROOT);b=(x,*gm);v=cq.Vector(*b)-cq.Vector(*a);u=v.normalized();ln=v.Length
-  p.append(item(f'BED_GAS_ROD_{side}',line_cylinder(10,a,tuple(cq.Vector(*a)+u*(ln-220))),'steel',False,'ARANA28in200lb candidate reference only. Exactcompressedlengthand889Nlabelrequireverification;10rod/24body are acceptance envelopes, not OEMCAD.'))
+  p.append(item(f'BED_GAS_ROD_{side}',line_cylinder(10,a,tuple(cq.Vector(*a)+u*(ln-220))),'steel',False,'28in150lb/667Ncandidatepair;compressed<=445/expanded>=700required.10rod/24bodyacceptanceenvelopes,notOEMCAD.'))
   start=cq.Vector(*b)-u*220
   p.append(item(f'BED_GAS_BODY_{side}',line_cylinder(24,start.toTuple(),tuple(cq.Vector(*b)-u*15)),'steel',False,'Conservative24mm body envelope, not manufacturer-certified CAD. Cylinder toward moving bed; rod down.'))
   for tag,pt in(('LOWER',a),('UPPER',b)):
@@ -350,22 +374,24 @@ def bed_parts(angle=0.,include_assist=True):
  return[dict(p,shape=p['shape'].translate((0,0,ASSEMBLY_Z_SHIFT)))for p in parts]
 
 def metadata():
- return dict(bed_footprint_mm=[X0,Y0,W,L],workplane_Z_mm=WORK_TOP,layer_thicknesses_mm=[12.7,12.7],
-  profile_quantity=10,uncut_profile_length_mm=1220,HDPE_operations='80 ordinary circular through holes per full1000x1219.2 sheet only; profile overhang0.4each end',
+ return dict(bed_footprint_mm=[X0,Y0,W,L],workplane_Z_mm=WORK_TOP,layer_thicknesses_mm=[HDPE_THICKNESS]*HDPE_LAYER_COUNT,
+  profile_quantity=10,uncut_profile_length_mm=1220,HDPE_finished_size_mm=[1000,HDPE_LENGTH,HDPE_THICKNESS],
+  HDPE_operations='One1000x1200x12.7layer,80roundthroughholesonly;front0.4/rear19.6profileoverhang.Coversfullcuttingarea,nocompositestiffnesscredit.',
   support_crossmember_centres_Y_mm=list(CROSS_CENTRES),crossmember_quantity=4,crossmember_4080_cut_mm=CROSS_LENGTH,
-  sleeve_quantity=80,sleeve_dimensions_mm=dict(OD=12.7,ID=6.35,length=65.4),
-  profile_fasteners='80M5x75stockfinished72underhead+80steelM6DIN9021bridgewashers18OD6.4IDx1.6+compatiblebottomslotnuts',
+  crossmember_orientation='40Yx80Zstrong-axisupright;actualsupplieranddrilled-sectionpropertiesunqualified',
+  sleeve_quantity=80,sleeve_dimensions_mm=dict(OD=12.7,ID=6.35,length=COLUMN_LENGTH),
+  profile_fasteners='80M5x100stockfinished99.3underhead+80steelM6DIN9021bridgewashers18OD6.4IDx1.6+M5thinbottomslotnuts',
   profile_fastener_retention=dict(crossbar_bore_mm=13.1,bridge_washer_mm=[18,6.4,1.6],
-   screw_stock_length_mm=75,screw_finished_underhead_length_mm=72,screw_finish_tolerance_mm=.1,
+   screw_stock_length_mm=PROFILE_SCREW_STOCK_LENGTH,screw_finished_underhead_length_mm=PROFILE_SCREW_FINISHED_LENGTH,screw_finish_tolerance_mm=.1,
    nominal_nut_thread_engagement_mm=2.7,nominal_tip_beyond_nut_mm=1.,nominal_tip_to_cavity_ceiling_mm=1.1,
    receiver_washer_access_hole_mm=22,nominal_washer_radial_bore_bridge_mm=2.45,
    lower_slot_ceiling_is_nominal_supplier_section=True,preload_or_slot_capacity_qualified=False),
   hinge_axis_Y_Z_mm=[PIVOT[0],PIVOT[1]+ASSEMBLY_Z_SHIFT],assembly_Z_shift_mm=ASSEMBLY_Z_SHIFT,operating_angle_deg=[0,90],gas_force_nominal_N_each=GAS_FORCE,
-  gas_required_eye_acceptance_mm=dict(maximum_compressed=GAS_MIN,minimum_expanded=GAS_MAX),gas_product_ASIN='B08CNGT5Z7',
-  gas_selected_listing='ARANA ST280M20028in200lb,4x10mmballstuds; exactcompressed length unconfirmed and force bullet contradictory. Verify200lb889Neach label and dimensions before installation.',
+  gas_required_eye_acceptance_mm=dict(maximum_compressed=GAS_MIN,minimum_expanded=GAS_MAX),gas_product_ASIN=None,
+  gas_selected_listing='28in150lb/667Neachnewpaircandidate;rootprocurementmustselectactualvariant/length/force. Do notsubstituteold200lbpair.',
   receiver_material='formed/trimmedsteel angle54x31.75x3.175,L1050x2,Y170..1220,localassistwindow/reinforcement;16flushM5CSmountsets atmid/reararms. Frontsupport is thehinge.',
-  closed_retention='4M8x35 side drawdowns,4washers,4spacers,2rearendcaps; front12mmhinges provide repeatable geometry, left axial datum/right thermal float must be fitted.',
-  frame_change_required='Frame/Y assemblies±25outboard;1760headers Y−160..1600/frontposts Y−100. Omit oldfirstpanXbearer/frontdryarms andangles; lowerfourremainingdryarms/seats2.425mm. Reararms D12.5headaccess X105/1045,Y1140. Hinge fronts carrywoodbed; pan supports300/630/1180 separatelyscreened. Repack complete frontstop assemblies clear of hinge/assist paths.',
+  closed_retention='2M8x35lowercorelocks+2washers+2spacers;2permanentupperM8x20endcapbolts/washers. Front2hinges+rear2locksfourcornerrestraint;actualcapacityqualifiedseparately.',
+  frame_change_required='Pan/slats/bearerslower26;dryreceiverseatsandarmslower27.3frompreviousflatstack. Workplane967.8unchanged. FrontbarY110;hingearms270x128requireupdatedowned3/8nest. GasupperY365/stayupperZ852.4local;actualgas/handlingqualificationrequired.',
   permanent_machine_plan_bounds_mm=[-50.,-160.,1200.,1600.],
   head_prerequisite='Remove entire installed removable head/tool assembly, retain commonZ, park gantryY1275/Zmax; ATC fullyparked.',
   gas_is_anti_drop_device=False,transition_fall_control_qualified=False,full_open_uses_independent_positive_pins=True,

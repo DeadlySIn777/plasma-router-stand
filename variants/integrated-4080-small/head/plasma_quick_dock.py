@@ -1,8 +1,8 @@
 """Matching plasma module for the same fixed owner-head gravity receiver.
 
-The existing drop/float/breakaway stack and nozzle allocation keep their exact
-reference-world pose. Only the custom upper drop fixing bores change, with a
-new front U-splice joining it to the removable common head plate.
+The existing drop/float/breakaway stack retains its relative geometry and
+moves down with the water pan. The longer front U-splice joins it to the
+unchanged removable common head plate and preserves the wood/ATC interface.
 """
 from functools import lru_cache
 import csv,json,os,sys
@@ -13,7 +13,11 @@ import common_dock_source as D
 import build_head as B
 
 HERE=H.HERE;OUT=HERE/'output/plasma-quick-dock'
-UPPER_X=(530.,620.);LOW_Z=(1092.,1118.);HIGH_Z=(1160.,1186.)
+sys.path.insert(0,str(HERE.parent))
+import mechanical as M
+PLASMA_DROP_MM=M.PAN_LOWERING_MM
+UPPER_X=(530.,620.);LOW_Z=(1092.-PLASMA_DROP_MM,1118.-PLASMA_DROP_MM);HIGH_Z=(1160.,1186.)
+SPLICE_HEIGHT=114.+PLASMA_DROP_MM
 
 def world(s):return s.rotate((0,0,0),(0,0,1),180).translate((575,Q.RECEIVER_REAR_Y,Q.BASE_Z))
 def host_holes(s,zrows):
@@ -28,13 +32,13 @@ def reference_module():
     prior=H.C.motion_parts(True,775,575,0)
     source={n:(s,c)for n,s,c in prior}
     source_drop=next((n,s,c)for n,s,c in prior if n.startswith('XR_PLASMA_DROP_'))
-    retained=[(n,s,c)for n,s,c in prior if n.startswith(('I_HEAD_','XR_DROP_M6x16_LOWER_'))]
+    retained=[(n,s.translate((0,0,-PLASMA_DROP_MM)),c)for n,s,c in prior if n.startswith(('I_HEAD_','XR_DROP_M6x16_LOWER_'))]
     local,meta=Q.local_parts(stiffener=False)
     head=next(p['shape']for p in local if p['id']=='OWNER_ROUTER_HEAD_PLATE')
     head=head.intersect(D.box(Q.PLATE_WIDTH,14.7,110,(-Q.PLATE_WIDTH/2,11.7,0)))
     head=host_holes(world(head),HIGH_Z)
-    drop=host_holes(source_drop[1],LOW_Z)
-    splice=D.box(110,12.7,114,(520,641.5,1082))
+    drop=host_holes(source_drop[1].translate((0,0,-PLASMA_DROP_MM)),LOW_Z)
+    splice=D.box(110,12.7,SPLICE_HEIGHT,(520,641.5,1082-PLASMA_DROP_MM))
     notch=D.box(70,14.7,31,(540,640.5,1166)).fuse(D.box(76,14.7,28,(537,640.5,1169)))
     for x in(540,610):notch=notch.fuse(H.cyl(6,14.7,(x,640.5,1169)))
     splice=splice.cut(notch)
@@ -68,7 +72,7 @@ def integrate_motion(plasma,gantry_y=775.,head_x=575.,z_lift=0.,**kwargs):
 
 def run():
     OUT.mkdir(exist_ok=True)
-    paths=[__file__,Q.__file__,D.__file__,*H.sources()]
+    paths=[__file__,M.__file__,Q.__file__,D.__file__,*H.sources()]
     hashes=lambda:{str(H.Path(p).relative_to(H.ROOT)).replace('\\','/'):H.sha(p)for p in paths}
     start=hashes();parts=plasma_head_dock_parts();lookup={n:s for n,s,c in parts}
     prior=H.C.motion_parts(True,775,575,0);old={n:s for n,s,c in prior}
@@ -80,8 +84,9 @@ def run():
             if not H.S.overlap(H.bounds(s),H.bounds(sf)):continue
             v=abs(s.intersect(sf).Volume())
             if v>.02:pairs.append(dict(a=n,b=nf,volume_mm3=v))
-    exact_unchanged={n:dict(symdiff_mm3=s.cut(old[n]).Volume()+old[n].cut(s).Volume(),
-        bbox_error_mm=max(abs(a-b)for a,b in zip(H.bounds(s),H.bounds(old[n]))))for n,s,c in retained}
+    expected_retained={n:old[n].translate((0,0,-PLASMA_DROP_MM))for n,s,c in retained}
+    exact_unchanged={n:dict(symdiff_mm3=s.cut(expected_retained[n]).Volume()+expected_retained[n].cut(s).Volume(),
+        bbox_error_mm=max(abs(a-b)for a,b in zip(H.bounds(s),H.bounds(expected_retained[n]))))for n,s,c in retained}
     mount=[]
     for x in UPPER_X:
         for z in(*LOW_Z,*HIGH_Z):
@@ -131,11 +136,11 @@ def run():
     drop_id=next(n for n in lookup if n.startswith('XR_PLASMA_DROP_'));s=lookup[drop_id];b=H.bounds(s)
     path=OUT/'XR_PLASMA_DROP_SHARED_DOCK_CLEARANCE_BORES.step';cq.exporters.export(s.translate(tuple(-x for x in b[:3])),str(path))
     exports[drop_id]=dict(file=path.relative_to(HERE).as_posix(),sha256=H.sha(path),source_world_min_corner_mm=b[:3],
-        added_material_mm3=s.cut(old[drop_id]).Volume(),removed_material_mm3=old[drop_id].cut(s).Volume())
+        added_material_mm3=s.cut(old[drop_id].translate((0,0,-PLASMA_DROP_MM))).Volume(),removed_material_mm3=old[drop_id].translate((0,0,-PLASMA_DROP_MM)).cut(s).Volume())
     report=dict(study='COMMON_FIXED_RECEIVER_WITH_REMOVABLE_PLASMA_MODULE',source_sha256=start,
         shared_receiver_world_geometry_identical_to_router=True,
-        source_stack_preserved_world_pose=exact_unchanged,
-        old_drop_change='Only four upper customM6attachmentbores become6.6clearance and10.5rear counterbores6.1deep; all otherdrop/float/headgeometryandtorchheightunchanged.',
+        source_stack_preserved_relative_geometry=exact_unchanged,retained_stack_translation_Z_mm=-PLASMA_DROP_MM,
+        old_drop_change='Retaineddrop/float/torchstack is rigidlylowered26mm tomatchlowerpan. Customupperattachmentboresremain6.6clearance/10.5rearCB6.1deep. A140mmUsplice joinsunchangedcommonreceiverdatums; inspectactualtorchadjustmentbeforeoperation.',
         new_part_intersections=pairs,matched_eight_M6_mount_checks=mount,
         removal=dict(broad_pairs_clear=broad,proofs=proof,passed=all(p['passed']for p in proof)),
         working250_relative_proof=relative,exports=exports,

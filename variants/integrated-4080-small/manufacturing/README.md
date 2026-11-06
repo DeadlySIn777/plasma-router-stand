@@ -1,157 +1,171 @@
-# Current integrated 4080 small machine — manufacturing and budget
+# Current integrated 4080 small machine - manufacturing and budget
 
-This folder belongs to the **integrated** 800 × 1000 machine with owned
-300 mm catalog-travel Z, assessed working Z250, original owner router head,
-full drill-only HDPE/20100 bed and selected 200 mm magazine slide. It does
-not apply the old four-cassette takeoff or the old 83-blank stock credits.
+This is the current 800 x 1000 mm wood/carving and plasma table with the
+owned 300 mm catalogue-travel Z, a 250 mm assessed working domain, original
+owner head, HDPE/20100 bed and selected 200 mm magazine slide. The separate
+4x8 studies and steel-machining qualification are outside this package.
 
-Use `stock-and-hardware-families.csv` for the concise stock/hardware view,
-`detailed-requirements.csv` for the component-to-source crosswalk, and
-`current-drawing-index.csv` for actual current custom-part STEP references.
-Both CSV views describe the same requirements: do not add their quantities
-together. Wood/plasma display assemblies are alternative modes of one machine.
-`NONADDITIVE_REFERENCE` rows are included parts or assembly references, not
-extra purchases. Empty new quantity means a held count or selection, never zero.
+Use `stock-and-hardware-families.csv` for the compact stock view,
+`detailed-requirements.csv` for the source crosswalk and
+`current-drawing-index.csv` for current STEP/DXF references. These describe
+the same requirements; their quantities are not additive. Wood and plasma
+assemblies are alternative modes of one machine. `NONADDITIVE_REFERENCE`
+rows identify included parts, raw-stock options or assembly references.
+An empty new quantity is an unresolved count or selection, never zero.
 
-The frame/motion custom STEPs are regenerated from the current assembly
-factory and reimported individually. They include the widened frame, raised
-fixed gantry, paired 4080 beams, actual repaired Z-link joint and front stops.
-Removed front bearer/arm/angle parts are excluded from the current index and
-their fastener station counts are reduced. Old frozen world poses are not
-silently reused. Subsystem indexes retain the bed, selected head and selected
-magazine slide exports from their own final manifests.
+## Current frame and gantry
 
-The new front pan beam is at Y300. Its two stepped steel hangers each use
-one 160 × 325.85 × 6.35 mm flat blank plus an 80 × 80 × 6.35 mm bearing seat.
-The current-custom report proves four 22 × 22 mm raw datum blanks fit the
-unused side band of the left new hanger blank; finish them to 20 × 20 mm.
-They are four new parts, with no extra raw-stock purchase and no owned-stock
-credit. Their row is explicitly nonadditive to the already counted hanger
-material. The exact remaining metal distance and separate blank gaps are
-recorded in the nest proof.
+The six-post 4080 frame has continuous 1760 mm headers and two 1250 mm
+4080 gantry beams. Ten sleeved couplers and the existing lower brackets
+remain. A 1200 x 112 x 6.35 mm steel rail face with fitted rear lands replaces
+the two aluminum rail strips; four 32 x 80 x 6.35 mm steel top bridges tie
+the upper faces. Transfer the actual owned rail pattern after datum fitting.
+The current STEP specifies the counterbores, retained mounting axes and
+coupler-head access. Actual section properties, welds, preload, joint slip
+and full tool-to-work stiffness remain qualification gates.
 
-The front stop modules use separate operating and parked datum blocks.
-The four datum anchor sets are new. Four additional M6 slot nuts remain at
-the parked module axes; the original operating nuts stay in place. The four
-original module bolts/washers are reused during the transfer. Connector,
-lead slack and positive state-interlock selections remain held requirements.
+The front pan beam is at Y300 and is 26 mm lower. Each stepped hanger uses
+one 160 x 351.85 x 6.35 mm new steel bounding blank plus an 80 x 80 x 6.35 mm
+bearing seat. Four stop-datum blanks, four gantry caps and ten rear lands
+fit the unused side bands of these already-required new hanger blanks,
+with explicit separation and cleanup allowances. Those small parts do not
+require another hanger blank and receive no owned-material credit. The
+long rail face is a separate new purchase; its minimum cleanup blank is
+1202 x 114 x 6.35 mm.
 
-Finished bounding blanks do not include saw/facing cleanup allowance. Keep
-integral billets and one-piece angles integral. A welded assembly's bounding
-box is not an instruction to buy that whole box as solid billet; use its
-specified constituent stock set and current finished STEP. Supplier profile
-slot/core cavities, rail patterns, thread engagement, clamp/torch interfaces
-and actual material properties remain physical qualification gates. Nominal
-thread-major cylinders in STEP are not tap-drill diameters.
+The front stops keep their operating contact geometry and park 400 mm
+rearward before bed tilt. Four datum anchor sets and four parked M6 slot nuts
+are new; the operating bolts/washers are reused. Complete guide sections
+are stored before stop transfer. Gantry motion stays disabled until the
+operating stops are restored. Connectors, cable slack and state interlocks
+remain held selections.
 
-`exclusive-stock-nests.json` allocates the one owned 12-inch half-inch sheet
-only to four main head plates and six small head blanks. The one owned
-three-eighth-inch sheet is separately allocated to the two full-thickness
-270 × 120 mm bed hinge arms, the shared gravity ledge and the router side rib.
-These are 14 exclusive blanks in total: ten half-inch and four three-eighth-inch.
-The rib's 20 × 110 mm footprint at sheet coordinates276,2 lies in the unused
-right strip,4 mm beyond the hinge-arm blanks. Its three M4x25 screws and two
-ground4 × 20 mm dowels are new hardware. The supplied clamp and boot remain
-unchanged; the rib clears the known boot body by7.75 mm across its full
-vertical stroke, independent of vertical home. Actual dowel fits, material,
-preload, slip and torsion still require qualification. The four ATC drop
-plates and the slide base are new 6.35 mm material. The two 10 mm hinge spacers
-are also new: 9.525 mm stock does not satisfy 10 mm. The two owned raw sheets are not new
-purchases. No other carrier, gantry, clevis, ATC arm or plasma part gets those
-same credits. Nominal nests require actual size/alloy/temper/flatness and
-machining allowance verification; chips, split thickness and unused strips
-do not become additional free stock.
+## Bed and retained hardware
 
-Eight retained bed pins have current drawings and explicit hardware. The four
-stay pivots and two full-open locks use six M6 DIN937 low nuts and six1.6 × 14 mm
-split pins. Two plain12 mm hinge pins face inward and use outside18OD/12.2ID
-custom washers and2 × 16 mm split pins; there are no M8 hinge nuts. A new
-19.05 × 304.8 mm C45/4140 bar supplies all eight pins and four hinge rings:
-four33 mm blanks, two35 mm blanks, two40 mm hinge packs and seven3 mm kerfs
-use303 mm. Each hinge pack includes its pin, washer, shim and two internal
-kerfs. Finished parts and this raw-stock option are nonadditive; the bar is
-not owned stock. Capacity and actual fits remain physical qualifications.
+Ten 20100 profiles finish at 1220 mm. Eight are cut from two genuine
+four-profile 1500 mm packs; two come from a factory 1220 mm two-pack. Allow
+3 mm saw kerf on each of the eight cuts, leaving 277 mm nominal tails.
+Actual profile die, straightness, slot-nut fit and lip capacity need acceptance.
 
-The bed fasteners use eighty M6 DIN9021 bridge washers, 18 OD/6.4 ID by
-1.6 mm, below the crossmembers. They bear across the 13.1 mm sleeve bores;
-the 65.4 mm metal columns bypass HDPE preload. Purchase eighty M5x75 socket
-screws and finish each to 72.0 +/-0.1 mm under the head, with an end chamfer
-no longer than 0.4 mm. The nominal slot-nut engagement is 2.7 mm, with 1.0 mm
-tip projection and 1.1 mm cavity reserve. Received extrusion, washer bearing,
-screw finish and nut capacity still need acceptance. The receiving ledgers
-use 22 mm clearance holes for the washers; dry-arm screw access remains
-12.5 mm. Hole positions and the work surface stay at their existing datums.
+One 1000 x 1200 x 12.7 mm HDPE rectangle comes from one nominal 48 x 48 x
+half-inch sheet. It covers the cutting area, with 0.4 mm front and 19.6 mm
+rear track overhang. The supplier's +/-6.35 mm sheet cut tolerance still
+nominally allows this rectangle, but actual thickness, squareness and
+flatness need inspection. No routed pockets, slots, notches, counterbores
+or facing are authorized. The current single HDPE drill DXF and
+`HDPE-DRILL.csv` specify 80 round through holes: one 13.2 mm datum and
+79 clearance holes of 22 mm. The sheet origin is world X75/Y-39.6.
 
-The two full 1000 × 1219.2 × 12.7 mm HDPE layers cut across the full factory
-48-inch width of one 48 × 96-inch sheet. Two 1000 mm crosscuts plus saw kerfs
-fit the 96-inch dimension. No routed HDPE pockets, counterbores, slots,
-notches or facing are authorized. Ten 20100 profiles stay uncut at 1220 mm.
-The HDPE and bed profiles are new costs because no purchase receipt or
-physical ownership was established.
-The indexed `HDPE-DRILL.csv` and two round-drill DXFs provide 80 holes per
-layer: one 13.2 mm datum hole and 79 × 22 mm clearance holes. Their origin is
-the sheet's left/front corner (world X75/Y−39.6). These are circular through
-drills only. The four 980 mm metal crossmembers have their own distinct
-sleeve-bore and end-core operations; do not confuse those with HDPE drilling.
+Four 980 mm 4080 crossmembers stand 80 mm high by 40 mm along Y, at
+Y110/395/780/1140. Their metal columns are 92.7 mm long. Eighty steel
+M6 DIN9021 bridge washers, 18 OD / 6.4 ID x 1.6 mm, bridge the 13.1 mm
+crossmember bores. Purchase eighty M5x100 socket screws and finish them to
+99.3 +/-0.1 mm under the head, with an end chamfer no longer than 0.4 mm.
+Nominal nut engagement is 2.7 mm, tip projection 1.0 mm and cavity reserve
+1.1 mm. The lower nuts are DIN562 M5 thin square nuts, nominal 8 mm across
+flats and 2.7 mm high; they are distinct from 4080 M6 slot nuts. Actual
+washer seats, stack thickness, thread fit and capacity remain acceptance items.
 
-`owned-equipment-register.json` excludes already owned motion modules,
-guide rails/blocks, drives/controller, spindle/VFD, original working clamp/
-boot/actuator, electronics enclosure, cutter/torch and compressor from new
-equipment cost. Inspect actual supplied fasteners and interfaces; assembly
-ownership does not prove every new custom screw, slot nut or spare channel.
-The selected magazine slide is counted once as owner-reported motion, with
-its component envelopes nonadditive. The RapidChange kit is not proven owned.
+The workplane stays Z967.8. Steel receiver angles and remaining dry arms
+are 27.3 mm lower than the former two-layer/flat-crossbar stack. The receiver
+bearing level is Z855.1. The hinge arms are now 270 x 128 x 9.525 mm. Rear dry-arm access is
+D12.5 through the profile at X125/1025, Y1140. These are open front/outboard
+corner notches, clearing the outer screw heads during initial tilt; no thin
+1.1 mm end ligament is retained. Use the current profile-operation STEP. Actual
+drilled-section properties remain unqualified.
 
-`4080-cut-stock-options.json` is a nonadditive raw-bar planning view. Choose
-one compatible supplier stock plan. The two long headers cannot come from
-1500 mm bars. Raw bar packs are not extra stock on top of the cut requirements.
-The actual supplier die, section properties, kerf and end cleanup govern the
-final cut plan; no cheap bar price is extrapolated into an invalid header.
+Eight retained pins have current drawings: four stay pivots, two full-open
+locks and two plain 12 mm front hinges. The first six use six M6 DIN937 low
+nuts and six 1.6 x 14 mm cotters. The two inward-headed hinges use custom
+18 OD / 12.2 ID x 1.6 mm washers and two 2 x 16 mm cotters, with no M8 hinge
+nuts. A new 19.05 x 304.8 mm C45/4140 bar supplies all eight pins and four
+hinge rings in a 303 mm nested plan including the stated kerfs. Finished
+parts and this raw option are nonadditive. Material, weld, bearing, fit,
+handling and pin capacity still require physical qualification.
 
-## The $1,000 budget does not pass
+The gas candidates are now a pair rated 150 lb / 667 N each. Require
+compressed eye length <=445 mm and expanded length >=700 mm; the modeled
+operating range is 456.18-658.29 mm. No old 200 lb offer, price or force curve
+is retained. Gas springs assist handling; separate positive pins retain the
+open stays. Controlled transition and actual fall protection are unqualified.
 
-Observed public unit prices extended for the required quantities already give:
+## Exclusive owned stock and wet fabrication
+
+The owned 12-inch half-inch aluminum square supplies four main head plates
+and six smaller head blanks. The owned three-eighth-inch square supplies
+two 270 x 128 mm hinge arms, the gravity ledge and the router rib: 14 exclusive
+blanks in total, ten plus four. `exclusive-stock-nests.json` controls the
+actual placements and cleanup gaps. The rib footprint is 20 x 110 mm at
+sheet coordinates 276,2; its three M4x25 screws and two ground 4 x 20 mm
+dowels are new. No other custom billet receives the same stock credit.
+Actual alloy, temper, condition and dimensions still require acceptance.
+
+The pan, slats, keeper stations and upstream drain are 26 mm lower. Plasma
+slat tops are Z852. The upper overflow is three flat welded strips: one
+44 x 383 x 1.9 mm back and two 18.1 x 383 x 1.9 mm sides. It has no separate
+bottom cap. The lower gutter has a corrected 44 mm floor width, two cheeks
+and an exit deflector; its Z410 outlet preserves the 19 mm receiver air gap.
+Current utility stock replaces the obsolete legacy overflow schedule.
+
+Six guide panels, eighteen clip plates and fourteen rack plates have current
+flat cutting profiles and exact assembled-union proofs. Their assembly rows
+are nonadditive. The two unchanged curved overflow brackets retain a forming
+coupon/calibration gate. Valve fit, pipe supports, receiver usable liquid
+capacity, water-tightness, thermal behavior and control interlocks remain open.
+
+`owned-equipment-register.json` excludes the owned motion, extra guides,
+drives/controller, spindle/VFD, original clamp/boot/actuator, enclosure,
+cutter/torch, compressor and owner-reported magazine slide. The RapidChange
+kit, tracks, HDPE and unallocated custom stock are new requirements.
+
+## Cost and staged carts
+
+Dated selected-source observations on 5 November 2026 give:
 
 | Required core goods | Goods basis |
 | --- | ---: |
-| Five 1220 mm two-profile 20100 packs | $399.95 |
-| One black 48 × 96 × ½-inch HDPE sheet, both layers | $225.75 |
+| Two four-profile 1500 mm SeekLiny packs at $129.99 | $259.98 |
+| One two-profile 1220 mm SeekLiny pack | $82.99 |
+| One US Plastic 42707 recycled black 48 x 48 x half-inch sheet | $191.86 |
 | RapidChange four-pocket ER11 Basic magazine | $400.00 |
-| **Core goods alone** | **$1,025.70** |
+| **Core goods** | **$934.83** |
 
-That is $25.70 over the cap before the frame, pan, slats, feet, hardware,
-receiver, freight or tax. The known Basic goods subset including the gas
-strut pair and tool setter is $1,108.94. The separately sold $5 mounting
-package is not purchased: four matched M6x55 screws are already in the actual
-hardware takeoff. The preferred Pro IR upgrade makes that subset $1,208.94.
-Adding the separately verified motorized drain valve makes the Basic subset
-$1,159.36. These remain incomplete goods
-subtotals, **not a complete shipped quote**. The selected gas pair uses a
-dated $33.24 sale price; its $36.97 typical price adds $3.73. Its compressed
-length is unpublished and a force-rating bullet contradicts the selected
-variant, so physical fit/force acceptance remains a real purchase gate.
-Four ball studs are included with that pair and are not added again.
-Five packs are a required-price
-extension, not confirmed available cart quantity. HDPE/ATC freight and all
-tax remain unknown. The black sheet saves$34.65 against the earlier white
-sheet at the same nominal thickness and size; no HDPE layer was deleted.
+The core is $90.87 below the previous selected-source $1025.70 case. It
+leaves $65.17 before every other required item. The partial carts contain
+16 variants / 33 packs / 538 pieces, at $455.05 goods: AliExpress 13 variants /
+26 packs at $78.32, plus Amazon 3 variants / 7 packs at $376.73. The Amazon
+portion includes the same $342.97 tracks and eighty M5x100 screws at $33.76.
+Included BNUOK nuts/washers are unallocated extras; they do not replace the
+specified bridge washers or profile slot nuts.
 
-The product URLs, observed variant/shipping limits and every unpriced cost
-category are in `price-and-budget-register.json`. No order, account-history
-screen, private delivery address or fabricated shipping figure is published.
-`budget_gate=FAIL` stays explicit even if reconciliation tests pass.
+Counting the shared tracks once gives **$1046.91 core plus staged hardware**.
+The required $50 tool setter makes that subset **$1096.91**, before any 4080
+frame, pan, remaining parts, freight or tax. The separately sold vendor
+mounting package is not bought; four M6x55 custom-mount screws are already
+requirements. Basic lacks tool detection; the selected state interface and
+conflicting Pro upgrade prices remain unresolved.
 
-[selected-cart-evidence.json](selected-cart-evidence.json) records the dated,
-selected AliExpress project fastener packs and their actual variant/pack
-quantities. The cart is partial and remains subject to the final BOM and
-received grade/fit checks. Other hardware, structural stock, HDPE, ATC and wet
-materials are not established as staged by that evidence. Use its current
-contents rather than copying a cart subtotal into the build total.
+The 1500 mm stock's final Amazon cart estimate is **December 9-24**, superseding
+an earlier November detail-page estimate. The 1220 mm pack and M5 screws
+show November 9. These selected Amazon lines show free Prime to 30510.
+AliExpress displays free shipping, but the exact Alto address is unconfirmed.
+HDPE/ATC freight and sales tax remain unknown. No order has been placed.
 
-Regenerate current custom parts with the CAD Python runtime using
-`export_current_custom.py`; after all subsystem takeoffs/indexes are final,
-run `build_pack.py` with plain Python. `manufacturing-check.json` binds input
-and output hashes, quantity/nest/index checks and budget arithmetic. A passed
-reconciliation report is not a fabrication/operating release or a claim that
-supplier interfaces and the existing boot's installed home registration were
-physically measured. See the machine-level status for those remaining gates.
+`price-and-budget-register.json`, `selected-cart-evidence.json` and
+`cart-coverage-check.json` identify prices, selected variants, delivery limits
+and remaining unstaged requirements. The **$1000 delivered budget fails**;
+no unavailable long-profile teaser or unquoted charge is treated as a saving.
+The frame stock, pan/slats, new billets, remaining hardware/slot nuts/feet,
+matched gas springs, drain fittings, ATC sensing/tool contents and delivery
+costs remain outside this partial priced set.
+
+## Rebuild and review
+
+The custom-parts exporter reimports each current STEP. After final subsystem
+indexes and takeoffs, run `build_pack.py`; it binds source/output hashes,
+quantities, stock nests, drawings and budget arithmetic. Run the procurement
+and cart-coverage helpers after the master BOM is current. For the whole
+machine, regenerate the assembly and adaptive STEP readback/previews before
+the printable review. Nominal geometry and passed reconciliation do not
+qualify actual supplier interfaces, machining, full rigidity or operation.
+All fabrication, CAM and operating release flags remain false.

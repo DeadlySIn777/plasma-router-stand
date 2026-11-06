@@ -1,6 +1,6 @@
 {
   "revision": "INTEGRATED_4080_SMALL",
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "scope": "Current small wood/carving and plasma table. Separate 4x8 and steel-machining studies are not qualified by this package.",
   "owned_equipment_excluded_from_new_cost": [
     "X/Y/Z motion and stock motors",
@@ -21,7 +21,7 @@
   "new_parts_not_credited_owned": [
     "4080 chassis stock",
     "ten 1220mm 20100 profiles",
-    "two full HDPE layers",
+    "one full1000x1200x12.7mm HDPE layer",
     "RapidChange magazine",
     "pan and slat stock",
     "unallocated custom billets and hardware"
@@ -33,7 +33,7 @@
     "assessed_working_Z": 250,
     "magazine_slide": 200
   },
-  "primary_frame": "4080 extrusion, six posts, paired 4080 gantry; steel tension straps, local hangers, pan/slats and thermal screens remain functional metal parts.",
+  "primary_frame": "4080 six-post frame with paired4080 gantry, continuous6.35mm steel rail face with fitted lands, four steel top bridges and retained lower brackets. Steel braces, hangers, pan/slats and thermal screens remain functional parts.",
   "bed": {
     "size_mm": [
       1000,
@@ -44,9 +44,9 @@
       1180
     ],
     "rear_crossbearer_Y_mm": 1140,
-    "profiles": "10 uncut 20100 x1220mm",
-    "HDPE": "2 full 1000x1219.2x12.7mm layers, saw cuts and round drilling only",
-    "crossbearers": "4 x980mm 4080",
+    "profiles": "Ten finished20100x1220mm: eight cut from1500mm raw stock and two factory1220mm profiles.",
+    "HDPE": "One1000x1200x12.7mm full cut-area-covering layer, saw cuts and80round through drills only; no composite stiffness credit.",
+    "crossbearers": "Four980mm4080, upright80Zx40Y, atY110/395/780/1140.",
     "workplane_Z_mm": 967.8,
     "storage": "front top-plane hinge inside permanent frame plan",
     "pin_retention": {
@@ -78,23 +78,55 @@
       "stock_socket_screws": {
         "quantity": 80,
         "thread": "M5x0.8",
-        "purchased_underhead_length_mm": 75,
-        "finished_underhead_length_mm": 72,
+        "purchased_underhead_length_mm": 100,
+        "finished_underhead_length_mm": 99.3,
         "finish_tolerance_mm": 0.1,
         "end_chamfer_max_mm": 0.4
       },
-      "metal_column_length_mm": 65.4,
+      "metal_column_length_mm": 92.7,
       "nominal_slot_nut_engagement_mm": 2.7,
       "nominal_tip_projection_mm": 1,
       "nominal_cavity_reserve_mm": 1.1,
       "receiver_clearance_holes_mm": 22,
       "dry_arm_head_access_mm": 12.5,
       "received_fit_and_capacity_qualified": false
+    },
+    "HDPE_face_Y_mm": [
+      -39.6,
+      1160.4
+    ],
+    "crossbearer_centres_Y_mm": [
+      110,
+      395,
+      780,
+      1140
+    ],
+    "gas_assist": {
+      "nominal_force_N_each": 667,
+      "nominal_rating_lb_each": 150,
+      "required_max_compressed_eye_length_mm": 445,
+      "required_min_expanded_eye_length_mm": 700,
+      "nominal_operating_eye_length_range_mm": [
+        456.1839102818073,
+        658.29
+      ],
+      "selected_pair_received_fit_or_force_curve_qualified": false,
+      "old_200lb_candidate_superseded": true,
+      "transition_fall_control_qualified": false
+    },
+    "ideal_component_screen": {
+      "force_N": 100,
+      "assumed4080_I_strong_mm4": 536000,
+      "nominal_displacement_mm": 0.15632661263481168,
+      "at_half_retained_I_displacement_mm": 0.20296479958727762,
+      "prior_weak_axis_displacement_mm": 0.29624117349220946,
+      "HDPE_composite_action_credited": false,
+      "drilled_section_joints_and_full_machine_qualified": false
     }
   },
   "head": "Unchanged owner clamp and boot source solids on a removable 146x175x12.7 mm billet plate; shared fixed dock retained for plasma. One bolted/doweled side rib from the unused owned 3/8-inch sheet strengthens the router plate without changing the owner solids.",
   "ATC": "Selected 311 mm overall / 200 mm travel SFU1605 module, rear parking bay, passive captured endpoint tongues/guides and removable plasma cover; no manual endpoint bolts. The dated original manufacturer 271.2x60x80.8 mm installation model, pocket XY and mounting axes are integrated without scaling. Two 28x242x25.4 mm billet arms use the existing 600 mm 4080 carrier. Family installation reference bodies have zero new quantity; purchase one Basic $400 kit. Actual internal ER11 socket/nut planes, IR/cables, supplied tier/revision, powered axial holding and state interlocks remain qualification gates; Basic does not include IR detection.",
-  "wet_system": "Vented red receiver, gravity drain with supported motorized valve and independent overflow. No compressed-air pressure applied to consumer tote. CV15HS is not a liquid pump.",
+  "wet_system": "Pan/slats/bearers/retainers/drain26mm lower; slat top852mm, woodworkplane967.8mm unchanged. Atmospheric red receiver, supported gravity valve and independent overflow. Upper C-channel uses three1.9mm flat strips, height383mm; lower gutter/outlet410mm and19mm receiver air gap unchanged. No air pressure applied to tote; CV15HS is not assigned liquid pumping.",
   "budget": {
     "currency": "USD",
     "complete_new_delivered_cap": 1000,
@@ -102,12 +134,22 @@
     "complete_delivered_quote": null,
     "tax_or_unknown_shipping_assumed_zero": false,
     "last_reconciled_date": "2026-11-05",
-    "black_HDPE_raw_sheet_goods_USD": "225.75",
-    "three_core_goods_basis_USD": "1025.70",
-    "known_basic_goods_subset_USD": "1108.94",
+    "black_HDPE_raw_sheet_goods_USD": "191.86",
+    "three_core_goods_basis_USD": "934.83",
+    "known_basic_goods_subset_USD": "1096.91",
     "separate_vendor_mount_package_quantity": 0,
     "partial_cart_evidence": "manufacturing/selected-cart-evidence.json",
-    "all_required_parts_in_cart": false
+    "all_required_parts_in_cart": false,
+    "HDPE_raw_sheet": "USPlastic42707,recycledblack48x48x1/2in,one sheet; freight unknown",
+    "tracks_goods_USD": "342.97",
+    "core_plus_staged_hardware_goods_USD": "1046.91",
+    "core_plus_staged_hardware_plus_required_toolsetter_USD": "1096.91",
+    "partial_cart_goods_USD": "455.05",
+    "partial_cart_variant_count": 16,
+    "partial_cart_pack_count": 33,
+    "partial_cart_pieces": 538,
+    "long_track_cart_delivery": "December9-24,2026; finalcart supersedes earlier November detail estimate",
+    "budget_arithmetic": "Core934.83 + partialcart455.05 - alreadyincludedtracks342.97 =1046.91. Frame/pan/remainingmaterials/freight/tax excluded."
   },
   "release": {
     "fabrication": false,
@@ -128,7 +170,7 @@
     "half_inch_sheet_blanks": 10,
     "three_eighth_sheet_blanks": 4,
     "three_eighth_contents": [
-      "two 270x120x9.525 mm bed hinge arms",
+      "two270x128x9.525mm bed hinge arms",
       "one 30x12.7 mm gravity ledge footprint",
       "one 20x110 mm router rib footprint at sheet coordinates 276,2"
     ],

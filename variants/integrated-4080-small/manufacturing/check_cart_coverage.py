@@ -24,6 +24,9 @@ def run():
         elif row['category']=='WASHER' and row['specification']=='Flat washer OD18 ID6.4 t1.6':
             matches=[(i,c)for i,c in enumerate(cart['rows'])if c.get('category')=='WASHER'
                 and c.get('required_dimensions_mm')==dict(OD=18,ID=6.4,thickness=1.6)]
+        elif row['category']=='20100_PROFILE':
+            matches=[(i,c)for i,c in enumerate(cart['rows'])if c.get('category')=='20100_PROFILE'
+                and c.get('finished_length_mm')==1220 and c.get('raw_length_mm',0)>=1220]
         quantity=sum(c['pieces']for i,c in matches)
         required=float(row['new_required_quantity'])if row['new_required_quantity']else None
         if matches:

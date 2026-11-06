@@ -1,35 +1,37 @@
 # Plasma / router CNC stand
 
 **Current small machine: [integrated 4080 design](variants/integrated-4080-small/README.md).**
-It now combines the owner's original head geometry, full HDPE/20100 bed,
-owned 300 mm Z and selected retractable magazine slide in one source assembly.
-It replaces the earlier provisional head and cassette-bed candidates.
+It combines the original owner head, one drill-only HDPE layer, ten 20100 bed
+tracks, owned 300 mm Z and a retractable automatic magazine in one assembly.
+The latest revision uses upright 4080 bed crossmembers, a continuous steel
+gantry rail face with upper ties, and a pan lowered 26 mm while preserving
+the Z967.8 wood workplane.
 
-**Review CAD only: fabrication/CAM release and the USD 1000 delivered budget do not pass.**
-Read the [current status](variants/integrated-4080-small/STATUS.md) and
-[stock, ownership and cost register](variants/integrated-4080-small/manufacturing/README.md).
-Known owned motion, guides, drives, spindle/VFD and working head are excluded
-from new costs. The currently sourced tracks, HDPE and Basic ATC alone extend
-to $1025.70 before the frame, pan, hardware and delivery charges. The exact
-AliExpress hardware additions are recorded separately in the current
-[cart evidence](variants/integrated-4080-small/manufacturing/selected-cart-evidence.json);
-that partial cart is not a full-build quote.
+**Current review CAD: fabrication/CAM release and the USD1000 delivered budget
+remain open.** Core tracks, HDPE and Basic ATC goods are $934.83. Including
+already-staged hardware, with shared tracks counted once, gives $1046.91
+before the frame, pan, remaining parts, freight and tax. Owned equipment and
+the two exclusively allocated aluminum squares are excluded from new costs.
 
+- [Current status](variants/integrated-4080-small/STATUS.md)
+- [Manufacturing, ownership and cost](variants/integrated-4080-small/manufacturing/README.md)
 - [Wood-mode STEP](variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_WOOD.step)
 - [Plasma-mode STEP](variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_PLASMA.step)
-- [Assembly and STEP readback](variants/integrated-4080-small/output/assembly-check.json)
-- [Current subsystem clearance evidence](variants/integrated-4080-small/output/integration-clearance-check.json)
+- [Assembly and adaptive STEP readback](variants/integrated-4080-small/output/assembly-check.json)
+- [Current clearance evidence](variants/integrated-4080-small/output/integration-clearance-check.json)
 - [Printable current review](output/pdf/plasma-router-stand-integrated-4080-review.pdf)
+- [Partial Amazon/AliExpress cart evidence](variants/integrated-4080-small/manufacturing/selected-cart-evidence.json)
 - [Variant index and separate 4x8 studies](variants/README.md)
 
 ![Current integrated wood mode](variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_WOOD.png)
 
-The full 1000 x1220 mm bed tilts into a permanent front parking bay; the ATC
-parks in the rear bay. The six-post 4080 frame uses a paired-4080 gantry and a
-third pan bearer. Source geometry checks are distinct from actual supplier
-interfaces, physical rigidity, safe handling, controls and a delivered quote.
-Purple spindle/boot/magazine context must not be used as verified installed
-vendor geometry. The complete machine is not qualified for steel milling.
+The 1000 x 1220 mm track bed tilts into the permanent front bay; the ATC
+parks in the rear bay. The single HDPE rectangle is 1000 x 1200 x 12.7 mm.
+Six-post 4080 framing and the paired gantry remain. Source geometry checks
+are distinct from actual supplier interfaces, physical rigidity, handling,
+controls and a complete delivered quote. Purple family/tool volumes and the
+unregistered boot pose are clearance context. The complete machine and the
+separate 4x8 study are not qualified for steel milling.
 
 <details>
 <summary>Historical packages and prior design notes</summary>

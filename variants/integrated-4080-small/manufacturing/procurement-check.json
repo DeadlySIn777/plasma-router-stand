@@ -2,11 +2,11 @@
   "source_bindings": {
     "master": {
       "file": "variants/integrated-4080-small/manufacturing/detailed-requirements.csv",
-      "sha256": "4ec1d7c2ac33a1fd698229a29d02c277b1fe2855a61ffae6c70fd42896dadff4"
+      "sha256": "55f3a390673dd76e5f694169dd57db5d37730b1569b09c8e433fe38e112394ff"
     },
     "master_families": {
       "file": "variants/integrated-4080-small/manufacturing/stock-and-hardware-families.csv",
-      "sha256": "13e89b1ab1b8a6897317c4dadfa765a95ccfade26108823408b219668979acf9"
+      "sha256": "422008cf9ecae06b2b8995f2a987fae8c385a92295f8561f77ad189d66ba21bc"
     },
     "profile_stock_plan": {
       "file": "variants/integrated-4080-small/manufacturing/4080-cut-stock-options.json",
@@ -14,7 +14,7 @@
     },
     "exclusive_stock_nests": {
       "file": "variants/integrated-4080-small/manufacturing/exclusive-stock-nests.json",
-      "sha256": "55c3c7b739c9418d8083c00a889c8597d6fc1e94aabfd9ac922a061ab31a79b0"
+      "sha256": "8f3c29f72ad202f12ee1ea7d499c689aa88a2efe27cf49a7be528d92fcd802c5"
     },
     "motion_hardware_geometry": {
       "file": "variants/extrusion-reengineered/motion.py",
@@ -22,7 +22,15 @@
     },
     "gantry_hardware_geometry": {
       "file": "variants/integrated-4080-small/mechanical.py",
-      "sha256": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4"
+      "sha256": "009a8ab210f9df3cadc667b966d3f9e50e5438870590e075b44b7a36dbd1e04d"
+    },
+    "gantry_joint_geometry": {
+      "file": "variants/integrated-4080-small/gantry_joint.py",
+      "sha256": "f90a190f5cd5321d574943d1bc37eff31c4d0d502fcc0b2c0761b1bd510aef18"
+    },
+    "gantry_joint_report": {
+      "file": "variants/integrated-4080-small/output/gantry-joint/gantry-joint-check.json",
+      "sha256": "931054d3cfd946952bb6290ec8eb15ac42d0ec667170bdcbcf7b1f1d64be3e16"
     },
     "atc_hardware_geometry": {
       "file": "variants/integrated-4080-small/atc/actual_atc.py",
@@ -34,11 +42,11 @@
     },
     "front_stop_geometry": {
       "file": "variants/integrated-4080-small/front_stop_bed_clearance.py",
-      "sha256": "a7f0e99f587d352e0234885d42b97ca660a6606c8c28060b44fe326d77bd1a5c"
+      "sha256": "043179a867791000a290a4493fea0c351a368466e43cf5c36842ead8d0ce0439"
     },
     "helper": {
       "file": "variants/integrated-4080-small/manufacturing/build_procurement_requirements.py",
-      "sha256": "421ddd3c05acda602b42d8a41e447f5f3c93c8c146b870a985c928cdbdacad7e"
+      "sha256": "a2ce063b498cceee1727e1d11f976ec78b70086b9e0e9af40b806cb2977333b9"
     }
   },
   "source_files_current": {
@@ -48,6 +56,8 @@
     "exclusive_stock_nests": true,
     "motion_hardware_geometry": true,
     "gantry_hardware_geometry": true,
+    "gantry_joint_geometry": true,
+    "gantry_joint_report": true,
     "atc_hardware_geometry": true,
     "selected_head_geometry": true,
     "front_stop_geometry": true,
@@ -60,10 +70,11 @@
   "all_current_4080_cut_requirements_reconcile": true,
   "thirty_two_M5x18_instances_consolidated": true,
   "four_datum_joint_sets_expand_to_four_each_screw_washer_slotnut": true,
+  "current_single_layer_bed_and_gantry_reconcile": true,
   "held_counts_preserved": true,
   "artifact_sha256": {
-    "procurement-requirements.csv": "503d5c5fb2319522e4d293ffdb180e873250426f4830801aed9ee4a618955673",
-    "procurement-requirements.json": "0b4dd291353bfeedd601b684ef04e86036c66b6a185fffc4f59d5588ab2d9513"
+    "procurement-requirements.csv": "7c691af440f735ab96512f5212f295d4143a1f624ba3e401526ad3a3bf1c16ac",
+    "procurement-requirements.json": "247c0c30febe0a77fb9d1b6b4899237c2fe94f40b2d0fc378bb41302422dbe19"
   },
   "requirements_reconciled": true,
   "supplier_selections_complete": false,

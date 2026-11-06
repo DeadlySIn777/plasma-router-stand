@@ -1,0 +1,853 @@
+{
+  "study": "FITTED_STEEL_FACE_AND_END_CLOSURES",
+  "source_sha256": {
+    "variants/integrated-4080-small/check_gantry_joint.py": "bb46585d5de8bc26a2640539bbe86bc4524df446efb8145c047ea8e463f4aadd",
+    "variants/integrated-4080-small/gantry_joint.py": "f90a190f5cd5321d574943d1bc37eff31c4d0d502fcc0b2c0761b1bd510aef18",
+    "variants/integrated-4080-small/assembly.py": "8b094f99170f660b3f187761836ae46cfb058ba2c2ed9e39f9a03b636a0ed54a",
+    "variants/integrated-4080-small/mechanical.py": "009a8ab210f9df3cadc667b966d3f9e50e5438870590e075b44b7a36dbd1e04d",
+    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/integrated-4080-small/head/quick_dock.py": "59dbb2ea09bdf47605f41a11309294bcd160e2c97605d17b52b82a3144a2b83a",
+    "variants/integrated-4080-small/head/plasma_quick_dock.py": "f1ed5ab9d573d28c04e0dea779748c827e4a381062468130ff4e89ad8e21abe1",
+    "variants/integrated-4080-small/head/common_dock_source.py": "b335af2c8b5505812259e5ee0ce723d2064fd0a05f70a1e0df757474f1b0ef9f",
+    "variants/integrated-4080-small/head/owner_head.py": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
+    "variants/integrated-4080-small/head/build_head.py": "72b2cde101afdab443c28c8a1a2dc01c76c230f565013c993289141095de7e7e",
+    "variants/integrated-4080-small/head/spindle-reference-evidence.json": "f149cd1308af05333ec4e9ecf931fdae19650a22a75641fff32c21039d15ddc4",
+    "variants/owned-z300-assessment/sources/owned-head/R10 - original uncut 65 mm spindle clamp.step": "506d12b3f749db3eeec03e133b519fd93e45ff1b6cb80bd8fa568d3fb0dba1cb",
+    "variants/owned-z300-assessment/sources/owned-head/Spindle dust boot.step": "3716855cf25a308de3db696ae827578d7803bfe4665fd1a6535f311a5246a044",
+    "variants/owned-z300-assessment/sources/owned-head/prior-mating-inspection.json": "e96a990b591ceaa0f1277c0af2d6654d29b563310cb813afe967c389a3438cb6",
+    "variants/owned-z300-assessment/sources/owned-head/owner-working-boot.json": "69503af028789fa48e38c1b5d2451c04ac0e752b5195f948e4af9daaa644a6aa",
+    "variants/owned-z300-assessment/sources/owned-head/owner-decisions.json": "f996fbf6aac86a0ce1c32cf2530c33b8f4c005ac4e21132c8e6a417b7f541b25",
+    "variants/owned-z300-assessment/sources/owned-head/owner-actuator-selection.json": "4441da633745fa5c1170706454fa6991e24695a599bf4765743022d10fc8b66f",
+    "variants/owned-z300-assessment/candidate_motion_factory.py": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
+    "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
+    "variants/owned-z300-assessment/front_stop_repair.py": "5006c52b713dd58a1f73f98e1075e5e4fc76ecdb9c82711a20ae66e9742278c0",
+    "variants/owned-z300-assessment/custom_joint_repair.py": "27a2e7870022b0242c96c517170d9cb4ee906bfa8cadc25b3b2b871af2164785",
+    "variants/extrusion-reengineered/motion.py": "761eb068d911ab4f44cd7a196e7619989a1a8bc007b08c72994c29dc808c8c50",
+    "variants/extrusion-wood-plasma/motion_context.py": "657175c35072a56bd7dc50b7730d000260ddc8c5e8da0680371e9e8e106d9c13",
+    "output/release-review/RevE-ENGINEERING/motion_details.py": "df63857031d2276dca4ea7f7b65ea2353c6181e06cde04d191d437db5469970d",
+    "output/release-review/RevE-ENGINEERING/motion_completion.py": "a2086f87094bee35674176f78786c3f70333842fd4916ac4bfaf99394efc0878",
+    "output/release-review/RevE-ENGINEERING/motion_finish.py": "3f3555a24bf84ce7444d3f5f516fe8c414e56689671d662310edddc4df16da3f",
+    "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
+  },
+  "metadata": {
+    "replaces": [
+      "INT_GANTRY_GUIDE_BAR_LOWER",
+      "INT_GANTRY_GUIDE_BAR_UPPER"
+    ],
+    "front_datum_Y_mm": 802.3,
+    "preserved_face_stack_mm": 12.7,
+    "face_X_Z_thickness_mm": [
+      1200,
+      112,
+      6.35
+    ],
+    "rear_M8_lands": {
+      "quantity": 8,
+      "finished_X_Z_thickness_mm": [
+        25,
+        25,
+        6.35
+      ]
+    },
+    "upper_M6_lands": {
+      "quantity": 2,
+      "finished_X_Z_thickness_mm": [
+        30,
+        20,
+        6.35
+      ]
+    },
+    "retained_M8_axes_X_Z_mm": [
+      [
+        50.0,
+        1215.0
+      ],
+      [
+        50.0,
+        1255.0
+      ],
+      [
+        350.0,
+        1215.0
+      ],
+      [
+        350.0,
+        1255.0
+      ],
+      [
+        650.0,
+        1215.0
+      ],
+      [
+        650.0,
+        1255.0
+      ],
+      [
+        1100.0,
+        1215.0
+      ],
+      [
+        1100.0,
+        1255.0
+      ]
+    ],
+    "M8_counterbore_diameter_depth_mm": [
+      13.5,
+      8
+    ],
+    "M8_remaining_bearing_web_mm": 4.7,
+    "retained_M6_axes_X_Z_mm": [
+      [
+        15.0,
+        1285.0
+      ],
+      [
+        25.0,
+        1285.0
+      ],
+      [
+        1125.0,
+        1285.0
+      ],
+      [
+        1135.0,
+        1285.0
+      ]
+    ],
+    "M6_tap": "5.0pilot through;M6x1through12.7totalstack",
+    "existing_coupler_head_access": {
+      "diameter_mm": 12.5,
+      "axes_X_Z_mm": [
+        [
+          -25.0,
+          1235.0
+        ],
+        [
+          75.0,
+          1235.0
+        ],
+        [
+          225.0,
+          1235.0
+        ],
+        [
+          375.0,
+          1235.0
+        ],
+        [
+          525.0,
+          1235.0
+        ],
+        [
+          675.0,
+          1235.0
+        ],
+        [
+          825.0,
+          1235.0
+        ],
+        [
+          975.0,
+          1235.0
+        ],
+        [
+          1125.0,
+          1235.0
+        ],
+        [
+          1175.0,
+          1235.0
+        ]
+      ],
+      "end_axes_make_intentional_half_round_edge_notches": true
+    },
+    "source_M6_edge_seat_repaired": true,
+    "minimum_M6_axis_to_upper_edge_mm": 12,
+    "actual_HGR20_rail_M5_pattern_known": false,
+    "rail_process": "Transferactualownedrails;4.2pilot/tapM5x.8through6.35steelafterpatternverification. No guessedpitch/phase.",
+    "top_bridges": {
+      "quantity": 4,
+      "finished_X_Y_thickness_mm": [
+        32,
+        80,
+        6.35
+      ],
+      "X_mm": [
+        -25.0,
+        15.0,
+        1100.0,
+        1175.0
+      ],
+      "hole_Y_from_front_mm": [
+        20,
+        60
+      ],
+      "hole_diameter_mm": 6.6,
+      "screws": "8M6x20socket+8M6washers+8actualdie-compatibleTnuts",
+      "external_grip_mm": 7.95,
+      "internal_projection_mm": 12.05,
+      "required_actual_cavity_depth_min_mm": 13.05,
+      "actual_nut_thread_engagement_acceptance_mm": 5.9
+    },
+    "existing_bottom_brackets_retained": true,
+    "load_path": "Front/rearbeamupperfaces -> topbridges/axialbolts -> oppositeupperface; originalmonolithicbottombrackets tiebothlowerfaces. Continuoussteelwebtiesrailrows;originalsleevecouplersretained.",
+    "weld_and_fit": "Rearlandsattachedbeforefinalbore/counterbore/tapoperations;fixturestraight,alternatewelds;finishfrontdatumsandcoplanarbacklands. Hardshimsallowedforactualprofilefit;requireflatness/railalignmentinspection.",
+    "weld_detail": "Minimum2mmfilletsonoppositesidesofeachrearland;actualmaterial/weldprocess/capacityunqualified.",
+    "rail_datum_flatness_acceptance_mm": 0.05,
+    "rear_land_coplanarity_acceptance_mm": 0.05,
+    "offcut_is_owned": false,
+    "offcut_parent_material_already_new_purchase": true,
+    "purchased_profile_section_or_Tnut_fit_verified": false,
+    "bolted_composite_action_qualified": false,
+    "whole_machine_rigidity_qualified": false,
+    "fabrication_release": false,
+    "operating_release": false
+  },
+  "invalid_new_solids": [],
+  "new_self_intersections": [],
+  "relative_motion_proofs": [
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_FACE_BOLT_1",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_FACE_BOLT_2",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_FACE_BOLT_3",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_FACE_BOLT_4",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_FACE_BOLT_5",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_FACE_BOLT_6",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_FACE_BOLT_7",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_FACE_BOLT_8",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_STOP_LEFT_BOLT_1",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_STOP_LEFT_BOLT_2",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_STOP_RIGHT_BOLT_1",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_STOP_RIGHT_BOLT_2",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6_WASHER_FRONT_1",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6x100_1",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6_WASHER_FRONT_2",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6x100_2",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6_WASHER_FRONT_3",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6x100_3",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6_WASHER_FRONT_4",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6x100_4",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6_WASHER_FRONT_5",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6x100_5",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6_WASHER_FRONT_6",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6x100_6",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6_WASHER_FRONT_7",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6x100_7",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6_WASHER_FRONT_8",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6x100_8",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6_WASHER_FRONT_9",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6x100_9",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6_WASHER_FRONT_10",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    },
+    {
+      "part": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "INT_GANTRY_M6x100_10",
+      "passed": true,
+      "overlap_mm3": 0.0,
+      "method": "Exactstatic;contacttangencyallowed"
+    }
+  ],
+  "global_tool_loop_or_whole_machine_proved": false,
+  "offcut_nesting": {
+    "parent_material": "TwoalreadyrequiredNEW160x325.85x6.35steppedhangerblanks,or taller",
+    "actual_owned_material_credit": 0,
+    "additional_raw_hanger_blank_purchase_quantity": 0,
+    "allocation_count": 14,
+    "existing_datum_allocations": 4,
+    "placements": [
+      {
+        "id": "EXISTING_STOP_DATUM_1",
+        "hanger": "L",
+        "u": 2.0,
+        "v": 2.0,
+        "w": 22.0,
+        "h": 22.0,
+        "new_allocation": false,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "EXISTING_STOP_DATUM_2",
+        "hanger": "L",
+        "u": 2.0,
+        "v": 28.0,
+        "w": 22.0,
+        "h": 22.0,
+        "new_allocation": false,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "EXISTING_STOP_DATUM_3",
+        "hanger": "L",
+        "u": 2.0,
+        "v": 54.0,
+        "w": 22.0,
+        "h": 22.0,
+        "new_allocation": false,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "EXISTING_STOP_DATUM_4",
+        "hanger": "L",
+        "u": 2.0,
+        "v": 80.0,
+        "w": 22.0,
+        "h": 22.0,
+        "new_allocation": false,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "INT_GANTRY_JOINT_TOP_BRIDGE_1",
+        "hanger": "L",
+        "u": 2.0,
+        "v": 110.0,
+        "w": 34.0,
+        "h": 82.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "INT_GANTRY_JOINT_TOP_BRIDGE_2",
+        "hanger": "L",
+        "u": 2.0,
+        "v": 196.0,
+        "w": 34.0,
+        "h": 82.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "INT_GANTRY_JOINT_TOP_BRIDGE_3",
+        "hanger": "L",
+        "u": 124.0,
+        "v": 2.0,
+        "w": 34.0,
+        "h": 82.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "INT_GANTRY_JOINT_TOP_BRIDGE_4",
+        "hanger": "L",
+        "u": 124.0,
+        "v": 88.0,
+        "w": 34.0,
+        "h": 82.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "GJ_M8_REAR_LAND_1",
+        "hanger": "R",
+        "u": 2.0,
+        "v": 2.0,
+        "w": 27.0,
+        "h": 27.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "GJ_M8_REAR_LAND_2",
+        "hanger": "R",
+        "u": 2.0,
+        "v": 33.0,
+        "w": 27.0,
+        "h": 27.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "GJ_M8_REAR_LAND_3",
+        "hanger": "R",
+        "u": 2.0,
+        "v": 64.0,
+        "w": 27.0,
+        "h": 27.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "GJ_M8_REAR_LAND_4",
+        "hanger": "R",
+        "u": 2.0,
+        "v": 95.0,
+        "w": 27.0,
+        "h": 27.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "GJ_M8_REAR_LAND_5",
+        "hanger": "R",
+        "u": 2.0,
+        "v": 126.0,
+        "w": 27.0,
+        "h": 27.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "GJ_M8_REAR_LAND_6",
+        "hanger": "R",
+        "u": 2.0,
+        "v": 157.0,
+        "w": 27.0,
+        "h": 27.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "GJ_M8_REAR_LAND_7",
+        "hanger": "R",
+        "u": 2.0,
+        "v": 188.0,
+        "w": 27.0,
+        "h": 27.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "GJ_M8_REAR_LAND_8",
+        "hanger": "R",
+        "u": 2.0,
+        "v": 219.0,
+        "w": 27.0,
+        "h": 27.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "GJ_M6_UPPER_LAND_1",
+        "hanger": "R",
+        "u": 124.0,
+        "v": 2.0,
+        "w": 32.0,
+        "h": 22.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      },
+      {
+        "id": "GJ_M6_UPPER_LAND_2",
+        "hanger": "R",
+        "u": 124.0,
+        "v": 28.0,
+        "w": 32.0,
+        "h": 22.0,
+        "new_allocation": true,
+        "hanger_material_overlap_mm3": 0.0,
+        "within_original_minimum_blank": true,
+        "passed": true
+      }
+    ],
+    "new_blank_cleanup_each_edge_mm": 1.0,
+    "minimum_blank_separation_mm": 4.0,
+    "passed": true,
+    "scope": "Sidebandsareallocatedonce;frontsteelfaceisaseparatenewlongstockpurchase. Machining/welds/hardwarearenotfree."
+  },
+  "custom_parts": [
+    {
+      "id": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "step": "output/gantry-joint/custom-step/INT_GANTRY_JOINT_STEEL_RAIL_FACE.step",
+      "sha256": "d30315115e9265512102b53e4891ac6503caf61d46b4f39ed6bdd55302f5dd85",
+      "valid": true,
+      "source_world_min_corner_mm": [
+        -25.000000000000004,
+        802.3,
+        1185.0
+      ],
+      "finished_dimensions_mm": [
+        1200.0,
+        12.700000000000045,
+        112.0
+      ],
+      "roundtrip_volume_error_mm3": 3.841705620288849e-09,
+      "raw_stock": "Newlong6.35nominalsteelfaceplusattachedoffcutlands",
+      "fabrication_release": false
+    },
+    {
+      "id": "INT_GANTRY_JOINT_TOP_BRIDGE_1",
+      "step": "output/gantry-joint/custom-step/INT_GANTRY_JOINT_TOP_BRIDGE_1.step",
+      "sha256": "738902a7b0415dd3ea1d072314d9e13bb709da3613449334208cd5f60a4a39bd",
+      "valid": true,
+      "source_world_min_corner_mm": [
+        -41.0,
+        815.0,
+        1275.0000000000002
+      ],
+      "finished_dimensions_mm": [
+        32.0,
+        80.0,
+        6.349999999999909
+      ],
+      "roundtrip_volume_error_mm3": 2.1464074961841106e-10,
+      "raw_stock": "Raw34x82x6.35allocatednewhanger-sidebandblank",
+      "fabrication_release": false
+    },
+    {
+      "id": "INT_GANTRY_JOINT_TOP_BRIDGE_2",
+      "step": "output/gantry-joint/custom-step/INT_GANTRY_JOINT_TOP_BRIDGE_2.step",
+      "sha256": "93307850f54b287488ab84f57c9698e174adfe6828c96cf85b62e3d8d6ee254b",
+      "valid": true,
+      "source_world_min_corner_mm": [
+        -1.0,
+        815.0,
+        1275.0000000000002
+      ],
+      "finished_dimensions_mm": [
+        32.0,
+        80.0,
+        6.349999999999909
+      ],
+      "roundtrip_volume_error_mm3": 2.1464074961841106e-10,
+      "raw_stock": "Raw34x82x6.35allocatednewhanger-sidebandblank",
+      "fabrication_release": false
+    },
+    {
+      "id": "INT_GANTRY_JOINT_TOP_BRIDGE_3",
+      "step": "output/gantry-joint/custom-step/INT_GANTRY_JOINT_TOP_BRIDGE_3.step",
+      "sha256": "4aa6ffcf530409a465bcdad634ed83761b2ec36407ef9ab0ff4d3bf352452efc",
+      "valid": true,
+      "source_world_min_corner_mm": [
+        1084.0,
+        815.0,
+        1275.0000000000002
+      ],
+      "finished_dimensions_mm": [
+        32.0,
+        80.0,
+        6.349999999999909
+      ],
+      "roundtrip_volume_error_mm3": 2.1464074961841106e-10,
+      "raw_stock": "Raw34x82x6.35allocatednewhanger-sidebandblank",
+      "fabrication_release": false
+    },
+    {
+      "id": "INT_GANTRY_JOINT_TOP_BRIDGE_4",
+      "step": "output/gantry-joint/custom-step/INT_GANTRY_JOINT_TOP_BRIDGE_4.step",
+      "sha256": "a49aa08842edb84ca3be1742c42087da3c583bd7e6b06962e43ff57cc1c2cfaf",
+      "valid": true,
+      "source_world_min_corner_mm": [
+        1159.0,
+        815.0,
+        1275.0000000000002
+      ],
+      "finished_dimensions_mm": [
+        32.0,
+        80.0,
+        6.349999999999909
+      ],
+      "roundtrip_volume_error_mm3": 2.1464074961841106e-10,
+      "raw_stock": "Raw34x82x6.35allocatednewhanger-sidebandblank",
+      "fabrication_release": false
+    }
+  ],
+  "drawing_readbacks": [
+    {
+      "file": "output/gantry-joint/GJ_FACE_FRONT.dxf",
+      "units_mm": true,
+      "entities": 42,
+      "audit_errors": 0,
+      "audit_repairs": 0,
+      "circles": 30,
+      "passed": true
+    },
+    {
+      "file": "output/gantry-joint/GJ_HANGER_OFFCUT_LAYOUT.dxf",
+      "units_mm": true,
+      "entities": 46,
+      "audit_errors": 0,
+      "audit_repairs": 0,
+      "circles": 0,
+      "passed": true
+    },
+    {
+      "file": "output/gantry-joint/GJ_M6_UPPER_LAND.dxf",
+      "units_mm": true,
+      "entities": 8,
+      "audit_errors": 0,
+      "audit_repairs": 0,
+      "circles": 2,
+      "passed": true
+    },
+    {
+      "file": "output/gantry-joint/GJ_M8_REAR_LAND.dxf",
+      "units_mm": true,
+      "entities": 9,
+      "audit_errors": 0,
+      "audit_repairs": 0,
+      "circles": 2,
+      "passed": true
+    },
+    {
+      "file": "output/gantry-joint/GJ_TOP_BRIDGE.dxf",
+      "units_mm": true,
+      "entities": 9,
+      "audit_errors": 0,
+      "audit_repairs": 0,
+      "circles": 2,
+      "passed": true
+    }
+  ],
+  "mass": {
+    "removed_Al_guidebars_kg": 3.259818044533266,
+    "new_custom_steel_face_caps_kg": 7.35036194472956,
+    "custom_part_moving_mass_increase_kg": 4.090543900196294,
+    "complete_hardware_mass_added_not_in_this_number": true,
+    "axis_acceleration_or_motor_capacity_verified": false
+  },
+  "conditional_cap_component_screen": {
+    "assumed_tool_force_N": 100,
+    "assumed_lever_mm": 250,
+    "torque_Nm": 25,
+    "onecap_per_end_takes_all_end_reaction": true,
+    "force_per_cap_N": 312.5,
+    "span_mm": 40.0,
+    "minimum_screen_thickness_mm": 6.15,
+    "assumed_E_MPa": 200000,
+    "conservative_cantilever_deflection_mm": 0.053738391835633594,
+    "nominal_bending_stress_MPa": 61.96708308546499,
+    "scope": "Component-onlycantileverscreen;nojointpreload/actualprofile/weld/counterborebearing/contact/impact/compositetorsionqualification."
+  },
+  "rail_holes_not_invented": true,
+  "actual_profile_Tnut_and_lip_capacity_qualified": false,
+  "long_steel_and_new_fasteners_delivered_price_verified": false,
+  "fabrication_release": false,
+  "operating_release": false,
+  "source_consistent_during_check": true,
+  "output_sha256": {
+    "output/gantry-joint/custom-part-index.json": "afea6c32050d5c73512cd9d13dbaf25b482378ac02738e3b5c229ebffa1d1112",
+    "output/gantry-joint/gantry-joint-takeoff.csv": "812766c2e34a4cff5e60e6546b478761d8e1ae487002c6b7b24125fd81c77023",
+    "output/gantry-joint/GJ_FACE_DRILL_SCHEDULE.csv": "37acb2c2e65a0b2a226ff5d5bf3ad1bb53806c660d73f7e0a229a0e06b85c4a0",
+    "output/gantry-joint/GJ_FACE_FRONT.dxf": "5c3bfd7d86bbd8db742baaa81708623d8b05391fea2f9dab65f8c211a94ad575",
+    "output/gantry-joint/GJ_HANGER_OFFCUT_LAYOUT.dxf": "74a841cc5afc4e0aa3092fc6877e2a28bb7aab723a9865e5032ac7da5da11ea9",
+    "output/gantry-joint/GJ_M6_UPPER_LAND.dxf": "b7f927cd095b511748f660acc4b950b4ad62520f605b7932b60e87832267e752",
+    "output/gantry-joint/GJ_M8_REAR_LAND.dxf": "1e6c9f10c52adc9fa5b6d72acf5d8bcb2ebb196667c1fb0216439f8192815d3a",
+    "output/gantry-joint/GJ_TOP_BRIDGE.dxf": "17435277a9c25f9a6e4fc8419e8799a9cc017c5927b11e81d3514d4cea783ea3",
+    "output/gantry-joint/hanger-offcut-nest.json": "f636054e770b63e1035a484ca3fc8b534b2cce71814cabe73954fb0968f23e47",
+    "output/gantry-joint/README.md": "40ee677c2b62524cf365419da222431d7f4a232f84c994e763ba98291a4e9b6a",
+    "output/gantry-joint/custom-step/INT_GANTRY_JOINT_STEEL_RAIL_FACE.step": "d30315115e9265512102b53e4891ac6503caf61d46b4f39ed6bdd55302f5dd85",
+    "output/gantry-joint/custom-step/INT_GANTRY_JOINT_TOP_BRIDGE_1.step": "738902a7b0415dd3ea1d072314d9e13bb709da3613449334208cd5f60a4a39bd",
+    "output/gantry-joint/custom-step/INT_GANTRY_JOINT_TOP_BRIDGE_2.step": "93307850f54b287488ab84f57c9698e174adfe6828c96cf85b62e3d8d6ee254b",
+    "output/gantry-joint/custom-step/INT_GANTRY_JOINT_TOP_BRIDGE_3.step": "4aa6ffcf530409a465bcdad634ed83761b2ec36407ef9ab0ff4d3bf352452efc",
+    "output/gantry-joint/custom-step/INT_GANTRY_JOINT_TOP_BRIDGE_4.step": "a49aa08842edb84ca3be1742c42087da3c583bd7e6b06962e43ff57cc1c2cfaf"
+  },
+  "passed": true
+}

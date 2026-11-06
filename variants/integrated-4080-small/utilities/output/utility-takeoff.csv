@@ -1,13 +1,26 @@
 id,quantity,unit,specification,ownership,procure
-U_NEW_1P9_STEEL_GUIDE_STOCK,6,screens,"472x94.3x1.9mmsteel vertical screen, one welded offsetclip each; 2mmseams; exact finishedSTEPbounds control; sheetdevelopmentsunissued.",new,True
-U_NEW_GUIDE_CLIP_STOCK,6,clips,1.9mmsteel formed/welded detachable-with-screen cantileverclips; exactsupplierfitsheld.,new,True
+U_NEW_1P9_STEEL_GUIDE_STOCK,6,panel blanks,472x94.3x1.9mmsteel vertical screenpanel ONLY; current mm flatDXFissued; three separatelyscheduledflatclipplatesweldtoeachpanel; 2mmseams.,new,True
+U_NEW_GUIDE_CLIP_STOCK,6,nonadditive clip assemblies,"Reference ONLY: eachclipisone60x30mount,one47.3x60offset,one60x32.85upright,all1.9mmsteel; threeexplicitU_GUIDE_CLIP_*_FLAT_STOCKrowscontrolpurchases. Welded, no bends.",new,False
 U_GUIDE_FRAME_M6_SETS,12,sets,M6x12retainedframe/rackscrews with actual4080slot nuts; externalgrip1.9mmshown inframe; actualnutprojectionheld.,new,True
-U_GUIDE_RACK_STOCK,2,racks,"New1.9steel channelweb160x656.5, two18.1returns,40x40anchorflange and three72.3x40ledges each. WeldedfinishedSTEPcontrolsnominalgeometry.",new,True
+U_GUIDE_RACK_STOCK,2,nonadditive rack assemblies,"Reference ONLY: eachrackhas1.9steel web160x630.5, two18.1returns of same height,40x40anchorflange atZ698.6 and three72.3x40ledges. FourexplicitU_GUIDE_RACK_*_FLAT_STOCKrowscontrolpurchases. Welded, no bends.",new,False
 U_GUIDE_RACK_M6_NUTS,12,nuts,"M6steelnuts weldedtoactualrackbores,5mmthickallocation.",new,True
 U_GUIDE_RACK_ANCHOR_SETS,4,sets,M6anchorboltandactualslotnuttofrontpanbeamundersideY300; externalsheetgrip1.9mmshown.,new,True
 USS_MSV00009,1,valve,1inNPTstainlessfullport9–24VAC/DC2wireauto-returnNC; supplierdimensions3.2×3×4.3in; unit$50.42shippingunquoted.,new,True
 U_DRAIN_PIPE_AND_UNIONS,1,lot,OD28ID24weldedfront/downrouting; received1inNPTvalveunions andindependentpipeclamps required; no direct borrowedsolenoidcredit.,new,True
 U_DRAIN_25ID_HOSE,2.0,metres allocation,"25IDflexhoseOD34,maxminimumcenterlinebend100mm; finalfittingsandlengthmeasureaftervalveacceptance.",new,True
-U_FRONT_PAN_SHIM_PACKS,3,packs,"25x20fitpacks atY300; bottom806.5,top811.3nominal, slopeactualpan. Newmaterial.",new,True
-U_PAN_KEEPER_STATION_CHANGE,2,stations,"Frontkeeperpairrelocated530mmrear tobearer630; bossesheight18.18,shouldercap/weldear/bolt+3.18Z; customearmanufacturingincludedinpanstock.",new,False
+U_FRONT_PAN_SHIM_PACKS,3,packs,"25x20fitpacks atY300; bottom780.5,top785.3nominal atcenter; actualslopedpanundersidecontrols. Newmaterial.",new,True
+U_PAN_KEEPER_STATION_CHANGE,2,stations,"Frontkeeperpairrelocated530mmrear tobearer630; bossesheight18.18,shouldercap/weldear/bolt+3.18localZ. Allmiddleandrearretainerslowered26mmwithpan; customearmanufacturingincludedinpanstock.",new,False
 U_RETAINED_WET_BASE,1,assembly,"Retainedsteelpan/slats/combsoverflow,tote/lid/hatchandthermalroof; entirelyincludeinthewholemachineBOM, notfreeorownedbythisreference.",unproven,False
+U_OVERFLOW_COLLECTOR_BACK_STOCK,1,pieces,"44x383x1.9mm plain steel flat strip; upper C-channel back; butt weld, no bends.",new,True
+U_OVERFLOW_COLLECTOR_SIDE_STOCK,2,pieces,"18.1x383x1.9mm plain steel flat strips; upper C-channel sides; butt weld, no bends.",new,True
+U_OVERFLOW_GUTTER_FLOOR_STOCK,1,pieces,176.1x44x1.9mm plain steel rough blank; finish sloped gutter to current STEP. Installed rise3 over176; end bevel0.976543deg; nominal normal thickness1.899724mm. Replaces undersize legacy40.2mm-width floor blank.,new,True
+U_OVERFLOW_GUTTER_SIDE_STOCK,2,pieces,"176x15x1.9mm plain steel blank; finish polygon(0,0),(176,3),(176,15),(0,12); weld both cheeks.",new,True
+U_OVERFLOW_DEFLECTOR_STOCK,1,pieces,53.9x44x1.9mm plain steel flat; exit deflector to Z410; no bends.,new,True
+U_OVERFLOW_SUPPORT_BRACKET_STOCK,2,pieces,"Unchanged formed1.9mm steel bracket: outer legs53/20, width12, inside radius2; D4.4 hole; use unchanged calibrated-development reference and current STEP installed26mm lower. Actual K-factor/forming coupon qualification held.",new,True
+U_GUIDE_CLIP_MOUNT_FLAT_STOCK,6,pieces,"60x30x1.9mm plain steel; two D6.6 through holes atlocal(10,20),(50,20); weld to offset foot.",new,True
+U_GUIDE_CLIP_OFFSET_FLAT_STOCK,6,pieces,"47.3x60x1.9mm plain steel offset-foot flats; welded, no bends.",new,True
+U_GUIDE_CLIP_SCREEN_FLAT_STOCK,6,pieces,60x32.85x1.9mm plain steel upright flats; weld between offset foot and screen edge; no bends.,new,True
+U_GUIDE_RACK_WEB_FLAT_STOCK,2,pieces,160x630.5x1.9mm plain steel rack webs; six D6.6 holes from current mm DXF.,new,True
+U_GUIDE_RACK_RETURN_FLAT_STOCK,4,pieces,18.1x630.5x1.9mm plain steel edge-return flats; weld to web; no bends.,new,True
+U_GUIDE_RACK_ANCHOR_FLAT_STOCK,2,pieces,"40x40x1.9mm plain steel anchor flats; two D6.6 holes atlocal(12.3,20),(32.3,20); weld, no bends.",new,True
+U_GUIDE_RACK_LEDGE_FLAT_STOCK,6,pieces,72.3x40x1.9mm plain steel storage ledges; weld to rack web; no bends.,new,True

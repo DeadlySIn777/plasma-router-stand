@@ -23,7 +23,7 @@ def arc_bounds(s,cx,cy,a,b):
    xx.append(cx+dx*math.cos(t)-dy*math.sin(t));yy.append(cy+dx*math.sin(t)+dy*math.cos(t))
  z=U.bb(s);return[min(xx),min(yy),z[2],max(xx),max(yy),z[5]]
 def run():
- sources=list(dict.fromkeys([Path(p)for p in(__file__,HERE/'build_utilities.py',U.__file__,U.B.__file__,I.M.__file__,A.__file__,I.__file__,T.__file__,
+ sources=list(dict.fromkeys([Path(p)for p in(__file__,HERE/'build_utilities.py',U.__file__,U.B.__file__,I.M.__file__,I.GJ.__file__,HERE.parent/'check_gantry_joint.py',HERE.parent/'output/gantry-joint/gantry-joint-check.json',A.__file__,I.__file__,T.__file__,
   I.Q.__file__,I.P.__file__,I.Q.D.__file__,U.O.__file__,U.SH.__file__,I.M.X.__file__,I.M.X.P.__file__,U.O.P.__file__,
   A.VENDOR_HOUSING_SOURCE,*I.H.sources())]))
  hashes=lambda:{p.relative_to(ROOT).as_posix():sha(p)for p in sources}

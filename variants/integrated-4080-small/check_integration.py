@@ -44,7 +44,7 @@ def is_tool(n):
 def run():
     OUT.mkdir(exist_ok=True)
     import integrated_utilities as U
-    sources=list(dict.fromkeys([Path(__file__),Path(E.__file__),Path(E.M.__file__),
+    sources=list(dict.fromkeys([Path(__file__),Path(E.__file__),Path(E.M.__file__),Path(E.GJ.__file__),
         Path(E.Q.__file__),Path(E.P.__file__),Path(E.A.__file__),Path(E.B.__file__),
         Path(E.Q.D.__file__),Path(E.T.__file__),Path(U.__file__),Path(U.O.__file__),Path(U.SH.__file__),
         Path(E.M.X.__file__),Path(E.M.X.P.__file__),Path(U.O.P.__file__),

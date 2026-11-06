@@ -1,16 +1,17 @@
 {
   "study": "CURRENT_INTEGRATED_SUBSYSTEM_BOUNDARIES",
   "source_sha256": {
-    "variants/integrated-4080-small/check_integration.py": "317702678f8ba6e591eaa5017d5036ece9ae17d1e90aae745f88d3cd2698ff9f",
-    "variants/integrated-4080-small/assembly.py": "26a21090c052b3d4d07e5e60c82ecfd1bea71f899a4ce25dfc58aa2e0a687a60",
-    "variants/integrated-4080-small/mechanical.py": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "variants/integrated-4080-small/check_integration.py": "f597c315bea8722474280910b04f18cc0a4a811f8bc0e1cbe20d5d8e3e532da2",
+    "variants/integrated-4080-small/assembly.py": "8b094f99170f660b3f187761836ae46cfb058ba2c2ed9e39f9a03b636a0ed54a",
+    "variants/integrated-4080-small/mechanical.py": "009a8ab210f9df3cadc667b966d3f9e50e5438870590e075b44b7a36dbd1e04d",
+    "variants/integrated-4080-small/gantry_joint.py": "f90a190f5cd5321d574943d1bc37eff31c4d0d502fcc0b2c0761b1bd510aef18",
     "variants/integrated-4080-small/head/quick_dock.py": "59dbb2ea09bdf47605f41a11309294bcd160e2c97605d17b52b82a3144a2b83a",
-    "variants/integrated-4080-small/head/plasma_quick_dock.py": "0aa25c8a4c75cc7148ab5ae1f3520814be392c0abf26624f5c9305f1c14a1713",
+    "variants/integrated-4080-small/head/plasma_quick_dock.py": "f1ed5ab9d573d28c04e0dea779748c827e4a381062468130ff4e89ad8e21abe1",
     "variants/integrated-4080-small/atc/actual_atc.py": "2c142e73e10ea4308d85040e2ebcbba13ee1aa19800ce7c75506e353a8916c83",
-    "variants/integrated-4080-small/bed/integrated_bed.py": "d0f35b5c1ec0618280516fa6edb730bcb6238ffb0a2cf41288cfb27110a15d81",
+    "variants/integrated-4080-small/bed/integrated_bed.py": "d424f813511d6b21a2b525d600520971aae95a140bbdccb3f84daa69d84ced9b",
     "variants/integrated-4080-small/head/common_dock_source.py": "b335af2c8b5505812259e5ee0ce723d2064fd0a05f70a1e0df757474f1b0ef9f",
-    "variants/integrated-4080-small/front_stop_bed_clearance.py": "a7f0e99f587d352e0234885d42b97ca660a6606c8c28060b44fe326d77bd1a5c",
-    "variants/integrated-4080-small/utilities/integrated_utilities.py": "8fcbe7ea06a6610c5ce22936c6f363c0c21da910297fb21e403e835c3f0dd98a",
+    "variants/integrated-4080-small/front_stop_bed_clearance.py": "043179a867791000a290a4493fea0c351a368466e43cf5c36842ead8d0ce0439",
+    "variants/integrated-4080-small/utilities/integrated_utilities.py": "8a21c69b6409c037de766631a165c6ed2994e30c3ac7c770170b4befac956d81",
     "variants/extrusion-reengineered/bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
     "variants/extrusion-reengineered/shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe",
     "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
@@ -54,19 +55,19 @@
     "WOOD": {
       "tool_against_rest_of_motion": {
         "passed": true,
-        "broad_phase_separated": 17822,
+        "broad_phase_separated": 18544,
         "candidate_pairs": 0,
         "proofs": []
       },
       "stop_datums_against_motion": {
         "passed": true,
-        "broad_phase_separated": 5940,
+        "broad_phase_separated": 6168,
         "candidate_pairs": 0,
         "proofs": []
       },
       "motion_against_fixed_subsystems": {
         "passed": true,
-        "broad_phase_separated": 370499,
+        "broad_phase_separated": 389122,
         "candidate_pairs": 118,
         "proofs": [
           {
@@ -1825,19 +1826,19 @@
     "PLASMA": {
       "tool_against_rest_of_motion": {
         "passed": true,
-        "broad_phase_separated": 62846,
+        "broad_phase_separated": 65392,
         "candidate_pairs": 0,
         "proofs": []
       },
       "stop_datums_against_motion": {
         "passed": true,
-        "broad_phase_separated": 7092,
+        "broad_phase_separated": 7320,
         "candidate_pairs": 0,
         "proofs": []
       },
       "motion_against_fixed_subsystems": {
         "passed": true,
-        "broad_phase_separated": 439469,
+        "broad_phase_separated": 462650,
         "candidate_pairs": 118,
         "proofs": [
           {

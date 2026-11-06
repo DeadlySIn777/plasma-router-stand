@@ -3,6 +3,7 @@ from pathlib import Path
 import csv,hashlib,json,math,os,sys
 import cadquery as cq
 import integrated_utilities as U
+import export_lowered_wet as W
 HERE=Path(__file__).resolve().parent;OUT=HERE/'output';ROOT=HERE.parents[2]
 sys.path.insert(0,str(HERE.parent));import mechanical as M
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
@@ -18,10 +19,21 @@ def clashes(parts,obstacles):
  return hits
 def run():
  OUT.mkdir(exist_ok=True);custom=OUT/'custom-step';custom.mkdir(exist_ok=True)
+ src=[Path(__file__),Path(W.__file__),Path(U.__file__),Path(U.B.__file__),Path(M.__file__),Path(U.O.__file__),Path(U.O.P.__file__),Path(U.SH.__file__)]
+ source_start={str(x.relative_to(ROOT)):sha(x)for x in src}
  p=U.utility_parts();new=[x for x in p if x[0].startswith('U_')]
- src=[Path(U.__file__),Path(U.B.__file__),Path(M.__file__),Path(U.O.__file__),Path(U.SH.__file__)]
- report=dict(metadata=U.metadata(),source_sha256={str(x.relative_to(ROOT)):sha(x)for x in src},
+ lowered=W.export_all()
+ metadata=dict(U.metadata(),overflow_upper_channel_height_mm=lowered['upper_channel_height_mm'],
+  overflow_upper_channel_three_flat_strips=True,overflow_upper_channel_bottom_cap=False,
+  guide_rack_web_height_mm=656.5-U.PAN_DROP,guide_rack_anchor_flange_bottom_Z_mm=724.6-U.PAN_DROP,
+  lower_overflow_floor_width_mm=44.,guide_welded_flat_piece_count=38,guide_flat_stock_drawing_count=8)
+ report=dict(metadata=metadata,source_sha256=source_start,
   component_count=len(p),new_component_count=len(new),invalid=[n for n,s,c in p if not s.isValid()or not s.Solids()or s.Volume()<=0],checks={},holds=[])
+ report['lowered_wet_fabrication']=dict(report='output/lowered-wet-fabrication-check.json',
+  sha256=sha(OUT/'lowered-wet-fabrication-check.json'),passed=lowered['passed_local_fabrication_geometry'],
+  upper_channel_union_error_mm3=lowered['upper_channel_three_strip_union_error_mm3'],
+  complete_overflow_union_error_mm3=lowered['complete_overflow_piece_union_error_mm3'],
+  superseded_retained_flat_ids=lowered['superseded_retained_flat_ids'])
  # Most old pan contacts are existing welds/keepers. Check new material against
  # all frozen wet parts as well as the actual root frame/common motion.
  for mode,angle in(('WOOD',0.),('PLASMA',90.)):
@@ -47,34 +59,45 @@ def run():
  'All six screen sections must be transferred to the under-pan racks before bed tilt and refitted before cutting. The9stagehandlingroute requires actual-source finite/continuous checks before conversion release.',
  'Guide screens are spatter/dust barriers, not a sealed extraction enclosure or tested thermal barrier. Rail block shoes prevent a continuous fixed wall atX44throughrailheight.',
  'Valve NC power-off return requires at least60s energized charging per manufacturer. Drain closure, receiver-present/level and mode interlocks require actual controller I/O qualification.',
- 'New formed/welded screen parts require developed bend/weld fabrication drawings and actual slot fastener fit/engagement; the nominal solids are not final sheet flat patterns.']
+ 'Guide screens, three-piece clips and seven-piece racks now have source-bound flat cutting profiles and zero-error assembled-union proofs. Actual weld distortion, fastener/slot fit and engagement remain acceptance items. The two unchanged curved overflow brackets still require bend-coupon calibration.']
  index=[]
- changed_keepers=[x for x in U.pan_retainers()if any(t in x[0]for t in('_ML','_MR'))]
+ # Rear stations also moved down with the pan; every installed keeper is current.
+ changed_keepers=list(U.pan_retainers())
  for n,s,c in new+changed_keepers:
   if any(t in n for t in('M6x20','WELDNUT','VALVE_'))or(n.startswith('U_')and any(t in n for t in('M4_','M6_'))):continue
   path=custom/(n+'.step');cq.exporters.export(s,str(path))
   back=cq.importers.importStep(str(path)).val();assert back.isValid()and abs(back.Volume()-s.Volume())<.1
   index.append(dict(id=n,file=path.relative_to(HERE).as_posix(),sha256=sha(path),bounds_mm=U.bb(s)))
- (OUT/'custom-part-index.json').write_text(json.dumps(index,indent=2),encoding='utf-8')
- rows=[dict(id='U_NEW_1P9_STEEL_GUIDE_STOCK',quantity=6,unit='screens',specification='472x94.3x1.9mmsteel vertical screen, one welded offsetclip each; 2mmseams; exact finishedSTEPbounds control; sheetdevelopmentsunissued.',ownership='new',procure=True),
- dict(id='U_NEW_GUIDE_CLIP_STOCK',quantity=6,unit='clips',specification='1.9mmsteel formed/welded detachable-with-screen cantileverclips; exactsupplierfitsheld.',ownership='new',procure=True),
+ index+=lowered['parts']
+ assert len({r['id']for r in index})==len(index)
+ (OUT/'custom-part-index.json').write_text(json.dumps(dict(parts=index,
+  source_sha256=report['source_sha256'],additional_manufacturing_drawings=lowered['additional_manufacturing_drawings'],
+  superseded_retained_flat_ids=lowered['superseded_retained_flat_ids'],
+  lowered_wet_fabrication_report='output/lowered-wet-fabrication-check.json'),indent=2),encoding='utf-8')
+ rows=[dict(id='U_NEW_1P9_STEEL_GUIDE_STOCK',quantity=6,unit='panel blanks',specification='472x94.3x1.9mmsteel vertical screenpanel ONLY; current mm flatDXFissued; three separatelyscheduledflatclipplatesweldtoeachpanel; 2mmseams.',ownership='new',procure=True),
+ dict(id='U_NEW_GUIDE_CLIP_STOCK',quantity=6,unit='nonadditive clip assemblies',specification='Reference ONLY: eachclipisone60x30mount,one47.3x60offset,one60x32.85upright,all1.9mmsteel; threeexplicitU_GUIDE_CLIP_*_FLAT_STOCKrowscontrolpurchases. Welded, no bends.',ownership='new',procure=False),
  dict(id='U_GUIDE_FRAME_M6_SETS',quantity=12,unit='sets',specification='M6x12retainedframe/rackscrews with actual4080slot nuts; externalgrip1.9mmshown inframe; actualnutprojectionheld.',ownership='new',procure=True),
- dict(id='U_GUIDE_RACK_STOCK',quantity=2,unit='racks',specification='New1.9steel channelweb160x656.5, two18.1returns,40x40anchorflange and three72.3x40ledges each. WeldedfinishedSTEPcontrolsnominalgeometry.',ownership='new',procure=True),
+ dict(id='U_GUIDE_RACK_STOCK',quantity=2,unit='nonadditive rack assemblies',specification=f'Reference ONLY: eachrackhas1.9steel web160x{656.5-U.PAN_DROP:g}, two18.1returns of same height,40x40anchorflange atZ{724.6-U.PAN_DROP:g} and three72.3x40ledges. FourexplicitU_GUIDE_RACK_*_FLAT_STOCKrowscontrolpurchases. Welded, no bends.',ownership='new',procure=False),
  dict(id='U_GUIDE_RACK_M6_NUTS',quantity=12,unit='nuts',specification='M6steelnuts weldedtoactualrackbores,5mmthickallocation.',ownership='new',procure=True),
  dict(id='U_GUIDE_RACK_ANCHOR_SETS',quantity=4,unit='sets',specification='M6anchorboltandactualslotnuttofrontpanbeamundersideY300; externalsheetgrip1.9mmshown.',ownership='new',procure=True),
  dict(id='USS_MSV00009',quantity=1,unit='valve',specification='1inNPTstainlessfullport9–24VAC/DC2wireauto-returnNC; supplierdimensions3.2×3×4.3in; unit$50.42shippingunquoted.',ownership='new',procure=True),
  dict(id='U_DRAIN_PIPE_AND_UNIONS',quantity=1,unit='lot',specification='OD28ID24weldedfront/downrouting; received1inNPTvalveunions andindependentpipeclamps required; no direct borrowedsolenoidcredit.',ownership='new',procure=True),
  dict(id='U_DRAIN_25ID_HOSE',quantity=2.,unit='metres allocation',specification='25IDflexhoseOD34,maxminimumcenterlinebend100mm; finalfittingsandlengthmeasureaftervalveacceptance.',ownership='new',procure=True),
- dict(id='U_FRONT_PAN_SHIM_PACKS',quantity=3,unit='packs',specification='25x20fitpacks atY300; bottom806.5,top811.3nominal, slopeactualpan. Newmaterial.',ownership='new',procure=True),
- dict(id='U_PAN_KEEPER_STATION_CHANGE',quantity=2,unit='stations',specification='Frontkeeperpairrelocated530mmrear tobearer630; bossesheight18.18,shouldercap/weldear/bolt+3.18Z; customearmanufacturingincludedinpanstock.',ownership='new',procure=False),
+ dict(id='U_FRONT_PAN_SHIM_PACKS',quantity=3,unit='packs',specification=f'25x20fitpacks atY300; bottom{806.5-U.PAN_DROP:g},top{U.O.pan_floor_z(300)-1.9-U.PAN_DROP:g}nominal atcenter; actualslopedpanundersidecontrols. Newmaterial.',ownership='new',procure=True),
+ dict(id='U_PAN_KEEPER_STATION_CHANGE',quantity=2,unit='stations',specification=f'Frontkeeperpairrelocated530mmrear tobearer630; bossesheight18.18,shouldercap/weldear/bolt+3.18localZ. Allmiddleandrearretainerslowered{U.PAN_DROP:g}mmwithpan; customearmanufacturingincludedinpanstock.',ownership='new',procure=False),
  dict(id='U_RETAINED_WET_BASE',quantity=1,unit='assembly',specification='Retainedsteelpan/slats/combsoverflow,tote/lid/hatchandthermalroof; entirelyincludeinthewholemachineBOM, notfreeorownedbythisreference.',ownership='unproven',procure=False)]
+ rows+=W.takeoff_rows()+W.guide_stock_rows()
  with(OUT/'utility-takeoff.csv').open('w',newline='',encoding='utf-8')as f:
   w=csv.DictWriter(f,fieldnames=rows[0].keys());w.writeheader();w.writerows(rows)
  assembly=cq.Assembly(name='INTEGRATED_UTILITIES')
  for n,s,c in p:assembly.add(s,name=n,color=cq.Color(*c))
  assembly.save(str(OUT/'INTEGRATED_UTILITIES.step'))
- report['passed_static_geometry']=not report['invalid']and all(not h for k,v in report['checks'].items()if isinstance(v,dict)for h in v.values())and not check
+ report['source_consistent_during_build']=source_start=={str(x.relative_to(ROOT)):sha(x)for x in src}
+ report['passed_static_geometry']=report['source_consistent_during_build']and lowered['passed_local_fabrication_geometry']and not report['invalid']and all(not h for k,v in report['checks'].items()if isinstance(v,dict)for h in v.values())and not check
  report['fabrication_release']=False;report['operating_release']=False
+ report['output_sha256']={f.relative_to(HERE).as_posix():sha(f)for f in(
+  OUT/'custom-part-index.json',OUT/'utility-takeoff.csv',OUT/'INTEGRATED_UTILITIES.step',
+  OUT/'lowered-wet-fabrication-check.json')}
  (OUT/'utility-check.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
  print('utilities exported; static',report['passed_static_geometry'],flush=True)
  for k,v in report['checks'].items():

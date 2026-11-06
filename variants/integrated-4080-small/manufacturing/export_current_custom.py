@@ -18,7 +18,7 @@ def run():
     source_paths=[Path(__file__),Path(A.__file__),Path(A.M.__file__),
         ROOT/'variants/extrusion-reengineered/review/frame-fabrication.csv',
         ROOT/'variants/extrusion-reengineered/motion-fabrication.csv']
-    source_paths += [Path(A.M.C.__file__),Path(A.Q.__file__),Path(A.P.__file__),Path(A.H.__file__),Path(A.T.__file__)]
+    source_paths += [Path(A.M.C.__file__),Path(A.Q.__file__),Path(A.P.__file__),Path(A.H.__file__),Path(A.T.__file__),Path(A.GJ.__file__)]
     snapshot=lambda:{relative(p):sha(p)for p in source_paths}
     start=snapshot()
     frames=readcsv(source_paths[3]);motion=readcsv(source_paths[4])
@@ -32,7 +32,7 @@ def run():
         if n not in selected and not n.endswith('_ALLOWANCE'):
             if n.startswith('INT_PAN_FRONT_HEADER_HANGER_'):
                 selected[n]=dict(category='Integrated welded hanger',material='Uncoatedplainsteel6.35mm',
-                    notes='Welded stock set: one stepped160x325.85x6.35boundingflatblank (80mmverticalweb with integral160mmtop), plusbearingseat80x80x6.35mm. Not a solid bounding billet. Header4M6facefixings perhanger atY240/280/320/360,Z1033;2M8endcorebeamfixings perhanger. Actual weld/capacity/profile-nut/fastener qualification held.',source='integrated_frame_new_custom')
+                    notes='Welded stock set: one stepped160x351.85x6.35boundingflatblank (80mmverticalweb with integral160mmtop), plusbearingseat80x80x6.35mm. Not a solid bounding billet. Header4M6facefixings perhanger atY240/280/320/360,Z1033;2M8endcorebeamfixings perhanger atZ720.5/760.5. Actual weld/capacity/profile-nut/fastener qualification held.',source='integrated_frame_new_custom')
             else:
                 selected[n]=dict(category='Profile envelope operation reference',material='Purchased4080,actualdie/core/slotsheld',
                     notes='Current source-defined profile envelope and machining/interface allocations. Not actual supplier section CAD; never purchase the bounding box as solid billet.',source='integrated_frame_profile')
@@ -67,6 +67,8 @@ def run():
         if n in('Y_STOP_L_FRONT_BRACKET','Y_STOP_R_FRONT_BRACKET','XR_STOP_CARRIER_L_FRONT','XR_STOP_CARRIER_R_FRONT'):
             notes='Integrated revised front-stop geometry; front fixingY105,rearY140, inherited supplier motor relief. Header side shift and rise are included in this current STEP; use actual axes here. New part, not oldY90 hole-plug repair. Joint capacity remains held.'
         if n.startswith('INT_GANTRY_GUIDE_BAR_'):notes='1200x40x12.7 finished rail datum bar. Current holes/counterbores retained; transfer actual rail fixing pattern. New long aluminum stock, no owned-sheet credit.'
+        if n in('XR_EX_DRY_ARM_L_3','XR_EX_DRY_ARM_R_3'):
+            notes='Rear4080drysupportarm: machineoneD12.5verticalthroughopen-front-and-outboardcorneraccessnotchatworldX125(left)or1025(right),Y1140. CurrentSTEPcontains42mmthroughcutterover40mmprofileheight. Thisreplacesold105/1045axis,notasecondnotch. Supportsinitialbed-screwheadtiltclearance; actualdie,remainingligamentsandbearingcapacitymustbequalified.'
         rows.append(dict(id=n,category=meta['category'],material=meta['material'],step=relative(path),sha256=sha(path),
             source_world_min_corner_mm=origin,finished_world_aligned_dimensions_mm=size,
             volume_mm3=local.Volume(),solid_count=len(back.Solids()),valid=valid,
@@ -93,7 +95,7 @@ def run():
         placements.append(dict(id=n,raw_sheet_U_V_mm=[u,v],raw_blank_mm=[22,22,6.35],finished_blank_mm=[20,20,6.35],
             hanger_material_overlap_mm3=intersect,distance_to_finished_hanger_mm=distance,passed=passed))
     assert len(placements)==4 and all(r['passed']for r in placements)
-    report['new_hanger_blank_nesting']=dict(parent_material='NEW160x325.85x6.35leftsteppedhangerblank',
+    report['new_hanger_blank_nesting']=dict(parent_material='NEW160x351.85x6.35leftsteppedhangerblank',
         stock_is_owned=False,extra_raw_material_purchase_quantity=0,placements=placements,
         outline_cleanup_allowance_each_edge_mm=1.,separation_mm=4.,passed=True,
         rule='Cutthefour22x22rawblocksfromtheunusedsidebandbeforecuttingthehangeroutline;finish20x20. Do not buyfouradditionalplateblanks. Noowned-stockcreditorsecondhangerblankisclaimed.')

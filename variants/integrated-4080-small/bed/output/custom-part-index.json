@@ -1,149 +1,149 @@
 {
   "source_sha256": {
-    "variants/integrated-4080-small/bed/manufacturing_takeoff.py": "ed5faa53516995c1caf6025cc3de17996dc4b0e4cdf940dc2472770d4f287c22",
-    "variants/integrated-4080-small/bed/integrated_bed.py": "d0f35b5c1ec0618280516fa6edb730bcb6238ffb0a2cf41288cfb27110a15d81",
-    "variants/integrated-4080-small/bed/output/bed-local-check.json": "9868aabf97f5fccd23b99b81ead498df5fd616b798e00fd242b38fe4d1a36a76",
-    "variants/integrated-4080-small/bed/output/stay-pivot-retention-check.json": "becd7cd867c11d6937b00142f62b200e2af6b301c92f10d3d30710a0ad99ab29",
-    "variants/integrated-4080-small/bed/output/profile-fastener-retention-check.json": "bc07d8acf3c7bd3fad21e9c55a2836d3089c7e9545d0e056a3bc60a6624e857b",
-    "variants/integrated-4080-small/bed/output/BED_PROFILE_FASTENER_FINISHING.dxf": "a2a976a66d43f9bac2622b4b1c9041010e6c0f943bddd3b94659bb0cda98de1b",
-    "variants/integrated-4080-small/bed/output/STAY_PIVOT_PIN_DRAWING.dxf": "610052580803c110c73839851a5e0ee440067d3c16e7c60b13a1610254abbf2b",
-    "variants/integrated-4080-small/bed/output/FRONT_HINGE_PIN_DRAWING.dxf": "8b265f6f3a731cceefa4a4cb5ee187d669de4d3b6b2f4a7ba415632200356337",
-    "variants/integrated-4080-small/bed/output/FULL_OPEN_LOCK_PIN_DRAWING.dxf": "7353c01f32d502d1b16c5efcf594a1722b16f9000a439de771166a0dc19bc4dc"
+    "variants/integrated-4080-small/bed/manufacturing_takeoff.py": "186e526873c94479e31e1ef9897cfb1ab34642658acbdba712054ce45ba66703",
+    "variants/integrated-4080-small/bed/integrated_bed.py": "d424f813511d6b21a2b525d600520971aae95a140bbdccb3f84daa69d84ced9b",
+    "variants/integrated-4080-small/bed/output/bed-local-check.json": "ffa10165af8534362ad2f1196bd51863226c844f4a9333eeb9c2481cf83af375",
+    "variants/integrated-4080-small/bed/output/stay-pivot-retention-check.json": "d0ca5a811ffde41e7d4f2736ebbe922205c2991f68dbd9074118f8e980c3fd95",
+    "variants/integrated-4080-small/bed/output/profile-fastener-retention-check.json": "7d5ac5b5e08c750ce1395017941b6f7bd4b7b5265418c2600cdf5a677435421c",
+    "variants/integrated-4080-small/bed/output/BED_PROFILE_FASTENER_FINISHING.dxf": "abb55bbab42e831253c24d18de8569b6f6b3b7e9686f8c8b022a3e4f0a64b9c7",
+    "variants/integrated-4080-small/bed/output/STAY_PIVOT_PIN_DRAWING.dxf": "500252e1d6f51139991c168d131771983190d9a3173ef0f257b858c6d75ea1c8",
+    "variants/integrated-4080-small/bed/output/FRONT_HINGE_PIN_DRAWING.dxf": "2733eabb2ff8cbe77e11a2ed4b3cb57027f362e3109d183ba2cadb82015f7a55",
+    "variants/integrated-4080-small/bed/output/FULL_OPEN_LOCK_PIN_DRAWING.dxf": "9035605d4c345423608aeb8f17d2493d9fc02695700dfa8193401a2e92ca782c"
   },
   "takeoff": {
     "file": "output/bed-takeoff.csv",
-    "sha256": "5b0067af2772a3eb8b561e372a4a777bf1df801a0ddb208880a3636ab34722ba",
-    "rows": 60
+    "sha256": "93ab2f7d374e6fcc9f6b658cbbfd878b3c68d391a27f571cd6fe5dea98629a38",
+    "rows": 64
   },
   "parts": {
     "BED_REAR_END_CAP_L": {
       "file": "output/BED_REAR_END_CAP_L.step",
-      "sha256": "5b96f0c4f6075daa0d4c8d3c6341be363672b5210018ffe8bb356ae2ff524423",
+      "sha256": "2d135ce6cf9f226bf650327ae2db4c58ea6d118ae54b93ec9c211c20379d43f0",
       "world_min_mm": [
         78.65,
-        1100.0,
-        882.4
+        1120.0,
+        855.0999999999999
       ],
       "valid": true,
       "category": "finished-part"
     },
     "BED_REAR_END_CAP_R": {
       "file": "output/BED_REAR_END_CAP_R.step",
-      "sha256": "793c45ffa96e4410711ed7385c55a1c39ec0a6f790eb0323bdd30c90c47c8499",
+      "sha256": "ffd311d675801ced5d71c7a96d5c3a69ae42afb8a0e9818386111ee54a2d1c9b",
       "world_min_mm": [
         1065.0,
-        1100.0,
-        882.4
+        1120.0,
+        855.0999999999999
       ],
       "valid": true,
       "category": "finished-part"
     },
     "BED_HINGE_MOVING_SIDEPLATE_L": {
       "file": "output/BED_HINGE_MOVING_SIDEPLATE_L.step",
-      "sha256": "68e4c2879a1cbadbff38426f5886247c3499458073bdf7dc9e98fa6b3719219a",
+      "sha256": "8698cc646a72344bf38eacdc62d9c85dfaa70cee74474658c0a18ffe5510bb8e",
       "world_min_mm": [
         65.475,
-        -125.0,
-        867.8
+        -127.0,
+        859.8
       ],
       "valid": true,
       "category": "finished-part"
     },
     "BED_HINGE_SPACER_L": {
       "file": "output/BED_HINGE_SPACER_L.step",
-      "sha256": "8fcbaa52d0592c3565fe315e08173a900fb2ca9597d2f422b2d719789d187ba3",
+      "sha256": "5a95f8376fd89e736bb0d377dba31d33bb1c912a9cb3e1eb3b0fd2a9a0244e8b",
       "world_min_mm": [
         75.0,
-        60.0,
-        882.4
+        90.0,
+        855.0999999999999
       ],
       "valid": true,
       "category": "finished-part"
     },
     "BED_ASSIST_C_BRACKET_L": {
       "file": "output/BED_ASSIST_C_BRACKET_L.step",
-      "sha256": "ab9eee223108b84cada513ab4d99d50affd287caa330a77dc838a6c8e34f2465",
+      "sha256": "08104d17e1d23c6a27d19ac24735fbe6cb844c3f73206cf053bfbf0b601b4889",
       "world_min_mm": [
         44.45,
-        365.0,
-        850.4
+        355.0,
+        847.4
       ],
       "valid": true,
       "category": "fabricated-reference"
     },
     "BED_STAY_PIVOT_PIN_UPPER_L": {
       "file": "output/BED_STAY_PIVOT_PIN_UPPER_L.step",
-      "sha256": "5d7bd9641af02a193366b1d1ff8c888c405078ece7006bb7b063579c36a74952",
+      "sha256": "ed5b49e4cf0ac882325b613d93dbd6b946a5769bd14c29c8abef4da08251680f",
       "world_min_mm": [
         44.55,
         388.0,
-        855.4
+        852.4
       ],
       "valid": true,
       "category": "finished-part",
       "drawing": "output/STAY_PIVOT_PIN_DRAWING.dxf",
-      "drawing_sha256": "610052580803c110c73839851a5e0ee440067d3c16e7c60b13a1610254abbf2b"
+      "drawing_sha256": "500252e1d6f51139991c168d131771983190d9a3173ef0f257b858c6d75ea1c8"
     },
     "BED_HINGE_MOVING_SIDEPLATE_R": {
       "file": "output/BED_HINGE_MOVING_SIDEPLATE_R.step",
-      "sha256": "56e19020716c7b75d8e28ce7b648e9e336de80b8e8786db05033c8c43fd1796f",
+      "sha256": "4e471b5a374949bda9215edd8ea5c43f62169b16820b861d79a24771b1efdb74",
       "world_min_mm": [
         1075.0,
-        -125.0,
-        867.8
+        -127.0,
+        859.8
       ],
       "valid": true,
       "category": "finished-part"
     },
     "BED_HINGE_SPACER_R": {
       "file": "output/BED_HINGE_SPACER_R.step",
-      "sha256": "d4a23ca04cc5a3b6cbfd8dcfb2742bcaac0f6ff4646bef2973513ec2e677bd77",
+      "sha256": "97e6aa1aceabee1e4f4d940f8259901a40d7f70057d284f1948fff6b24ce49f0",
       "world_min_mm": [
         1065.0,
-        60.0,
-        882.4
+        90.0,
+        855.0999999999999
       ],
       "valid": true,
       "category": "finished-part"
     },
     "BED_ASSIST_C_BRACKET_R": {
       "file": "output/BED_ASSIST_C_BRACKET_R.step",
-      "sha256": "199f1f39e54136c86851b1b73ca27684e3b543d329b3b584101e93fdfe5c0ff6",
+      "sha256": "b96aa767df4ce84b6be1433b8a842f6b801de9598f63e0ea5ddc723f606150bf",
       "world_min_mm": [
         1065.0,
-        365.0,
-        850.4
+        355.0,
+        847.4
       ],
       "valid": true,
       "category": "fabricated-reference"
     },
     "BED_STAY_PIVOT_PIN_UPPER_R": {
       "file": "output/BED_STAY_PIVOT_PIN_UPPER_R.step",
-      "sha256": "796fdbe3eeeda90875dcf7d01a5dcb85cd2067942b65f717ba910eedee0d070e",
+      "sha256": "f98dccd1d20471cb021b797335c521e04a158ca5c00b08705f99bce0a216176a",
       "world_min_mm": [
         1074.5999998999998,
         388.0,
-        855.4
+        852.4
       ],
       "valid": true,
       "category": "finished-part",
       "drawing": "output/STAY_PIVOT_PIN_DRAWING.dxf",
-      "drawing_sha256": "610052580803c110c73839851a5e0ee440067d3c16e7c60b13a1610254abbf2b"
+      "drawing_sha256": "500252e1d6f51139991c168d131771983190d9a3173ef0f257b858c6d75ea1c8"
     },
     "BED_RECEIVER_ANGLE_L": {
       "file": "output/BED_RECEIVER_ANGLE_L.step",
-      "sha256": "e243a4f78477bbf291932523e581c6617223e5d42cbf3f150bb3fbf92f8a33bb",
+      "sha256": "e72f3b8638931ad8fc96e28fbf30e5f05fa9b2fbcbbb74c00943bd86eb443b42",
       "world_min_mm": [
         72.0,
         170.0,
-        847.4
+        820.0999999999999
       ],
       "valid": true,
       "category": "finished-part"
     },
     "BED_HINGE_FIXED_L": {
       "file": "output/BED_HINGE_FIXED_L.step",
-      "sha256": "c73f12e4ed824eea0e8a3e5502c5f60a2f8c237f0d888089eaf2556b21dc3e1c",
+      "sha256": "d32266b43464c1380503e9884020093d9dc9cd76449dab71f2e68260845715ef",
       "world_min_mm": [
         25.8,
         -140.0,
@@ -154,7 +154,7 @@
     },
     "BED_HINGE_PIN_L": {
       "file": "output/BED_HINGE_PIN_L.step",
-      "sha256": "86ce4bce2a846261b989cf6a4c322d09d3391c8e7555fc61c7d99fcbaa102f6a",
+      "sha256": "ff7ffde5eca85eac0e2418b967b8d12a4f79b6e33e4523d71bbbd584a2b1d9b5",
       "world_min_mm": [
         51.1499999,
         -109.0,
@@ -163,11 +163,11 @@
       "valid": true,
       "category": "finished-part",
       "drawing": "output/FRONT_HINGE_PIN_DRAWING.dxf",
-      "drawing_sha256": "8b265f6f3a731cceefa4a4cb5ee187d669de4d3b6b2f4a7ba415632200356337"
+      "drawing_sha256": "2733eabb2ff8cbe77e11a2ed4b3cb57027f362e3109d183ba2cadb82015f7a55"
     },
     "BED_HINGE_RETAINER_WASHER_L": {
       "file": "output/BED_HINGE_RETAINER_WASHER_L.step",
-      "sha256": "4a8a34f3586e66ddafb0f2396343fc70dba1b52e024d4ced1197ba3b5d046a2e",
+      "sha256": "95a7498a8df15649dea3ddaaa65b9cb088c6d819960913f9e0dbf1295dd9e5af",
       "world_min_mm": [
         55.45,
         -109.0,
@@ -178,7 +178,7 @@
     },
     "BED_HINGE_AXIAL_SHIM_L": {
       "file": "output/BED_HINGE_AXIAL_SHIM_L.step",
-      "sha256": "d7fa47541ee9af546862439623e138586843c61c2298be33239a146a9a86d143",
+      "sha256": "22f5ee759d462d35f514408442961f802f950c5b2d1a7c336280518b0b66a149",
       "world_min_mm": [
         63.5,
         -109.0,
@@ -189,7 +189,7 @@
     },
     "BED_GAS_ROOT_MOUNT_L": {
       "file": "output/BED_GAS_ROOT_MOUNT_L.step",
-      "sha256": "9c9a6d2e3febe9346ce9e43f0ecce5ff8144243ecda36cfbc303a538f2d21a82",
+      "sha256": "7a82134d4667b2a3ed53b86436b3c898d0155d2ec79d46ced6eb446fe5595dbc",
       "world_min_mm": [
         40.7,
         -140.0,
@@ -200,7 +200,7 @@
     },
     "BED_CAPTURE_ROOT_MOUNT_L": {
       "file": "output/BED_CAPTURE_ROOT_MOUNT_L.step",
-      "sha256": "6bccc3dd3df8d4e090349ac853b9ae7b3adaaed7af33d1d44ad5b08747b83813",
+      "sha256": "dce3ff274283e0d3c9e1ce24d87acfbe5e448adc23c7d44b22009e70944c0b4b",
       "world_min_mm": [
         25.8,
         -140.0,
@@ -211,7 +211,7 @@
     },
     "BED_STAY_PIVOT_PIN_LOWER_L": {
       "file": "output/BED_STAY_PIVOT_PIN_LOWER_L.step",
-      "sha256": "6ef89c8def6d2bedcbbb33fe3f09874ab6c144f3c848b034d70a39f06ec2fe25",
+      "sha256": "a43a95fc6c8cc4f866e2b99fe1bf4b3fdbbe8699741d8bfdf001f3e36991bcc6",
       "world_min_mm": [
         44.55,
         -47.0,
@@ -220,22 +220,22 @@
       "valid": true,
       "category": "finished-part",
       "drawing": "output/STAY_PIVOT_PIN_DRAWING.dxf",
-      "drawing_sha256": "610052580803c110c73839851a5e0ee440067d3c16e7c60b13a1610254abbf2b"
+      "drawing_sha256": "500252e1d6f51139991c168d131771983190d9a3173ef0f257b858c6d75ea1c8"
     },
     "BED_RECEIVER_ANGLE_R": {
       "file": "output/BED_RECEIVER_ANGLE_R.step",
-      "sha256": "bc7a1d770250093f34c289abad54ddea3711a8f45021608b126ef472424f9250",
+      "sha256": "ccf635330202d6fe294a88f0d7c36f83eb742e02b0d319b38102c4d896cd20c4",
       "world_min_mm": [
         1024.0,
         170.0,
-        847.4
+        820.0999999999999
       ],
       "valid": true,
       "category": "finished-part"
     },
     "BED_HINGE_FIXED_R": {
       "file": "output/BED_HINGE_FIXED_R.step",
-      "sha256": "8e095f5454722c0a2ad8f9609fc07a19b19630bb694335f53b2e9dc35908903f",
+      "sha256": "3bcc37f32cbbf4e5c358494d5e547b42a487520b64208d47cb99210fde24ee50",
       "world_min_mm": [
         1086.5,
         -140.0,
@@ -246,7 +246,7 @@
     },
     "BED_HINGE_PIN_R": {
       "file": "output/BED_HINGE_PIN_R.step",
-      "sha256": "81fe81620de71f7f1c29bc0af77859e133bea27693464e66a1fe9fe1abd32148",
+      "sha256": "e4094ad1a8a10a8ee506be3408facd6d53f65347996de8e9aa5661971b0495a2",
       "world_min_mm": [
         1071.8,
         -109.0,
@@ -255,11 +255,11 @@
       "valid": true,
       "category": "finished-part",
       "drawing": "output/FRONT_HINGE_PIN_DRAWING.dxf",
-      "drawing_sha256": "8b265f6f3a731cceefa4a4cb5ee187d669de4d3b6b2f4a7ba415632200356337"
+      "drawing_sha256": "2733eabb2ff8cbe77e11a2ed4b3cb57027f362e3109d183ba2cadb82015f7a55"
     },
     "BED_HINGE_RETAINER_WASHER_R": {
       "file": "output/BED_HINGE_RETAINER_WASHER_R.step",
-      "sha256": "b82113cc1a2a38b2701380db88737e60813e71c4047699ee894b68dc8a12abb5",
+      "sha256": "44b6e3675ae0b8dcf22611f2dc4d452cd51e3587bc9e94c5ebfc8365b8e1ca42",
       "world_min_mm": [
         1092.95,
         -109.0,
@@ -270,7 +270,7 @@
     },
     "BED_HINGE_AXIAL_SHIM_R": {
       "file": "output/BED_HINGE_AXIAL_SHIM_R.step",
-      "sha256": "273d935a9d5279d93d0e4784915fe6aeee0297643ab7e4bd7e301e0863131d0b",
+      "sha256": "8cc6141bb9a5630adb802112e3021ff1cd3c17608a5068648b3f6cc1b3e8d99c",
       "world_min_mm": [
         1085.15,
         -109.0,
@@ -281,7 +281,7 @@
     },
     "BED_GAS_ROOT_MOUNT_R": {
       "file": "output/BED_GAS_ROOT_MOUNT_R.step",
-      "sha256": "2d41fdb85493fe09717e1155a3f77c1f923c1a3ded280f993936bbb27031f18a",
+      "sha256": "a45ad4276a9afcd7133186e37a7ffaa7354dab7e045ac3154fc4e8cd85fbd007",
       "world_min_mm": [
         1102.95,
         -140.0,
@@ -292,7 +292,7 @@
     },
     "BED_CAPTURE_ROOT_MOUNT_R": {
       "file": "output/BED_CAPTURE_ROOT_MOUNT_R.step",
-      "sha256": "b68a470b5130b6bd7b31eb5f132dd4185ab64382d3ef42422543dce1bc7e0941",
+      "sha256": "6131497fcc7de0c82213344d77c48e5210a074d4ee970eb06cf4176246a52b73",
       "world_min_mm": [
         1084.0,
         -140.0,
@@ -303,7 +303,7 @@
     },
     "BED_STAY_PIVOT_PIN_LOWER_R": {
       "file": "output/BED_STAY_PIVOT_PIN_LOWER_R.step",
-      "sha256": "a6de5b2bb926622d473499b14c8e678ae97a4abe2f3029844a4271f35c2f4080",
+      "sha256": "4cd1609ff3d486f6012d0ffe23d7e1bc7e9eff03c43d745a41a7b5ba1876580b",
       "world_min_mm": [
         1074.5999998999998,
         -47.0,
@@ -312,40 +312,40 @@
       "valid": true,
       "category": "finished-part",
       "drawing": "output/STAY_PIVOT_PIN_DRAWING.dxf",
-      "drawing_sha256": "610052580803c110c73839851a5e0ee440067d3c16e7c60b13a1610254abbf2b"
+      "drawing_sha256": "500252e1d6f51139991c168d131771983190d9a3173ef0f257b858c6d75ea1c8"
     },
     "BED_FULL_OPEN_POSITIVE_PIN_L": {
       "file": "output/BED_FULL_OPEN_POSITIVE_PIN_L.step",
-      "sha256": "a242daf632d46a378438e0b0c9493919353e37e0496fbc53b51e1334339f9e8e",
+      "sha256": "bc8709294e6675480e4d78202433b967ce3c570375589b0ca8e7e4171f9a9c1e",
       "world_min_mm": [
         46.0,
-        -35.07944319150665,
-        1125.4049405753515
+        -33.476749178934895,
+        1125.2464372124298
       ],
       "valid": true,
       "category": "finished-part",
       "drawing": "output/FULL_OPEN_LOCK_PIN_DRAWING.dxf",
-      "drawing_sha256": "7353c01f32d502d1b16c5efcf594a1722b16f9000a439de771166a0dc19bc4dc"
+      "drawing_sha256": "9035605d4c345423608aeb8f17d2493d9fc02695700dfa8193401a2e92ca782c"
     },
     "BED_FULL_OPEN_POSITIVE_PIN_R": {
       "file": "output/BED_FULL_OPEN_POSITIVE_PIN_R.step",
-      "sha256": "0497b0d7b8440465691658304cfecc6feb3b3b165f654fa3bce06beb6a853552",
+      "sha256": "bb5b55976bcbeb4781f88e2ad2ce763d683ae293bd4b36327202e68fac9481cc",
       "world_min_mm": [
         1088.0,
-        -35.07944319150665,
-        1125.4049405753515
+        -33.476749178934895,
+        1125.2464372124298
       ],
       "valid": true,
       "category": "finished-part",
       "drawing": "output/FULL_OPEN_LOCK_PIN_DRAWING.dxf",
-      "drawing_sha256": "7353c01f32d502d1b16c5efcf594a1722b16f9000a439de771166a0dc19bc4dc"
+      "drawing_sha256": "9035605d4c345423608aeb8f17d2493d9fc02695700dfa8193401a2e92ca782c"
     }
   },
   "additional_manufacturing_drawings": [
     {
       "id": "BED_PROFILE_FASTENER_FINISHING",
       "file": "output/BED_PROFILE_FASTENER_FINISHING.dxf",
-      "sha256": "a2a976a66d43f9bac2622b4b1c9041010e6c0f943bddd3b94659bb0cda98de1b",
+      "sha256": "abb55bbab42e831253c24d18de8569b6f6b3b7e9686f8c8b022a3e4f0a64b9c7",
       "role": "PURCHASED_SCREW_FINISHING_AND_BRIDGE_WASHER_INSTRUCTIONS"
     }
   ],

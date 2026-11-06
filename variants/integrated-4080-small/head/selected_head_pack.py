@@ -136,10 +136,10 @@ def run():
         dict(id='OWNER_ROUTER_HEAD_PLATE',raw_plane=[2,2,146,175],sheet_thickness_axis='partY',finished_thickness_mm=12.7),
         dict(id='CD_RECEIVER',raw_plane=[152,2,146,132],sheet_thickness_axis='partY',finished_thickness_mm=12.7),
         dict(id='PLASMA_REMOVABLE_HEAD_PLATE',raw_plane=[2,188,146,110],sheet_thickness_axis='partY',finished_thickness_mm=12.7),
-        dict(id='PLASMA_U_SPLICE_PLATE',raw_plane=[152,188,110,114],sheet_thickness_axis='partY',finished_thickness_mm=12.7),
-        dict(id='CD_CAPTIVE_CAGE_L',raw_plane=[266,188,20.8,28],sheet_thickness_axis='partX',finished_thickness_mm=12.7),
-        dict(id='CD_CAPTIVE_CAGE_R',raw_plane=[266,220,20.8,28],sheet_thickness_axis='partX',finished_thickness_mm=12.7),
-        *[dict(id=f'OWNER_CLAMP_SPACER_{i}_{j}',raw_plane=[266+(i-1)*16,252+(j-1)*16,12,12],
+        dict(id='PLASMA_U_SPLICE_PLATE',raw_plane=[152,138,110,P.SPLICE_HEIGHT],sheet_thickness_axis='partY',finished_thickness_mm=12.7),
+        dict(id='CD_CAPTIVE_CAGE_L',raw_plane=[266,138,20.8,28],sheet_thickness_axis='partX',finished_thickness_mm=12.7),
+        dict(id='CD_CAPTIVE_CAGE_R',raw_plane=[266,170,20.8,28],sheet_thickness_axis='partX',finished_thickness_mm=12.7),
+        *[dict(id=f'OWNER_CLAMP_SPACER_{i}_{j}',raw_plane=[266+(i-1)*16,204+(j-1)*16,12,12],
             sheet_thickness_axis='partY',finished_thickness_mm=6.,face_down_from_owned12p7=True)for i in(1,2)for j in(1,2)]]
     nest=[]
     for a in placements:
@@ -174,7 +174,7 @@ def run():
         ('Router rib M4x25 screws',3,'NEW_UNLESS_VERIFIED_OWNED','M4x25DIN912sockethead7ODx4;16.4nominalribengagement/3.6tipreserve;rear7.6x4.1counterbore',3,'New actual rated screws; composite joint stiffness/preload/received aluminum alloy require qualification'),
         ('Router rib ground dowels',2,'NEW_UNLESS_VERIFIED_OWNED','Groundsteel4x20dowel;rearflush;12.7head/7.3ribembed;matchedlightpresshead/0..0.005mmribclearance',2,'Positive longitudinal shear transfer; actual steel grade, fit, bearing capacity and loaded slip must be verified'),
         ('Plasma removable plate',1,'OWNED_HALF_SHEET','146x110x12.7 common seat and four upper splice bores',0,'Included exact nest'),
-        ('Plasma U-splice',1,'OWNED_HALF_SHEET','110x114x12.7; R3 internal bottom corners',0,'Included exact nest;8M6through-taps'),
+        ('Plasma U-splice',1,'OWNED_HALF_SHEET',f'110x{P.SPLICE_HEIGHT:g}x12.7; R3 internal corners',0,'Repacked sameownedhalf-sheet;8M6through-taps;lowerplasmastack26mm withunchangedsharedreceiver'),
         ('Captive screw cages',2,'OWNED_HALF_SHEET','20.8x28 footprint;12.7 through-width blank',0,'Included exact nest;retain only released screws, not head load'),
         ('Equal owner clamp spacers',4,'OWNED_HALF_SHEET','10OD5.5ID6long; face from allocated12x12x12.7blanks',0,'Included exact nest; actual parallel/square faces verified on fabrication'),
         ('Positive gravity ledge',1,'OWNER_3P8_ALLOCATION_REQUIRED','30x12.7footprint x9.525thick',None,'Requires parent combined3/8sheet nest; no duplicate credit'),
@@ -187,7 +187,7 @@ def run():
         ('Owner clamp M5 spreader washers',4,'NEW_UNLESS_VERIFIED_OWNED','10OD5.3ID1thicksteel',4,'Full head bearing; exact partial original seat coverage retained, strength/preload unqualified'),
         ('Plasma splice M6x16 screws',8,'NEW_UNLESS_VERIFIED_OWNED','6.6hostweb+9.4spliceengagement;3.3tipreserve;headsflush.1',8,'Replaces4old upperdrop bolts with8new matched interface bolts; do not add both sets'),
         ('Existing custom plasma drop plate',1,'NOT_PROVEN_OWNED','110x218x12.7; only upper fixing holes revised',1,'NOT included in owned-half nest; purchase raw plate unless actual ownedstock is separately allocated'),
-        ('Retained plasma float/breakaway stack',1,'SOURCE_TAKEOFF_NOT_PROVEN_OWNED','107 unchanged modeled components plus actual torch/tether interfaces',None,'Use retained-plasma-source-requirements.csv; this reference is not an additive new assembly price')]
+        ('Retained plasma float/breakaway stack',1,'SOURCE_TAKEOFF_NOT_PROVEN_OWNED','107relative-geometry-preservedcomponents,assemblylowered26mm,plusactualtorch/tetherinterfaces',None,'Use retained-plasma-source-requirements.csv; this reference is not an additive new assembly price')]
     bom=OUT/'selected-head-requirements.csv'
     with bom.open('w',newline='',encoding='utf-8')as f:
         w=csv.writer(f);w.writerow(['item','quantity','ownership','specification','new_requirement_quantity','qualification']);w.writerows(rows)
@@ -195,7 +195,7 @@ def run():
     with takeoff.open(encoding='utf-8-sig',newline='')as f:source_rows=list(csv.DictReader(f))
     stack=[r for r in source_rows if r['id'].startswith(('I_HEAD_','XR_DROP_M6x16_LOWER_'))]
     stack_ids={r['id']for r in stack}
-    retained_ids=set(p['source_stack_preserved_world_pose'])
+    retained_ids=set(p['source_stack_preserved_relative_geometry'])
     plunger_crosswalk={n:n.removesuffix('_PIN')+'_CASE'for n in sorted(retained_ids-stack_ids)}
     assert len(plunger_crosswalk)==4 and all(n.endswith('_PIN')and case in stack_ids for n,case in plunger_crosswalk.items())
     path=OUT/'retained-plasma-source-requirements.csv'

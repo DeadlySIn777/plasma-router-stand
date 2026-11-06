@@ -11,8 +11,8 @@
     "bed_two10mmspacers_new": true,
     "bed_gas_ballstuds_not_doublepurchased": true,
     "HDPE_rawsheet_not_additional_to_layers": true,
-    "new_ten_uncut_tracks": true,
-    "new_two_HDPE_layers": true,
+    "new_ten_finished1220_tracks": true,
+    "new_one_HDPE_layer": true,
     "RapidChange_kit_not_owned": true,
     "ownedZ300_once": true,
     "no_new200Z": true,
@@ -21,7 +21,13 @@
     "parked_nuts_are_four_additional": true,
     "datum_four_anchor_sets_separate": true,
     "pan_nine_shims_once": true,
-    "HDPE_drill_only_160coordinates": true,
+    "HDPE_drill_only_80coordinates": true,
+    "gantry_joint_passed": true,
+    "gantry_new_hanger_offcut_nest_passed": true,
+    "gantry_replacement_once": true,
+    "gantry_hanger_offcuts_nonadditive": true,
+    "gantry_eight_top_fixing_sets": true,
+    "lowered_wet_replacements_only": true,
     "current_drawings_hash_match": true,
     "current_source_manifest_bindings": true,
     "all1500stock_explicitly_rejected": true,
@@ -29,29 +35,61 @@
     "bed_and_utilities_takeoffs_present": true
   },
   "passed": true,
-  "detailed_requirement_rows": 820,
-  "compact_family_rows": 416,
-  "current_drawing_rows": 329,
+  "detailed_requirement_rows": 835,
+  "compact_family_rows": 432,
+  "current_drawing_rows": 367,
   "source_sha256": {
     "pack_builder": {
       "file": "variants/integrated-4080-small/manufacturing/build_pack.py",
-      "sha256": "5bb8f92cf5a383f9fb1db4a12bac1e7fddd3ffc0393eba1cd8bda7bd56dd1df6"
+      "sha256": "41e8ab0fa450249d9b86eec8162e6692a83ca361976a247fbcb2e10f376de3d7"
+    },
+    "budget_model": {
+      "file": "variants/integrated-4080-small/manufacturing/budget_model.py",
+      "sha256": "f0ea1f7514fbe115c3819eb50abadb6534abed9b7818dc3f6830c72bdeff2e87"
+    },
+    "selected_cart_evidence": {
+      "file": "variants/integrated-4080-small/manufacturing/selected-cart-evidence.json",
+      "sha256": "fef2141ee82baa515988495294f40705f5f63019717a33e406d6ac0b8abda335"
+    },
+    "budget_source_research_v2": {
+      "file": "variants/integrated-4080-small/manufacturing/budget-source-research-v2.json",
+      "sha256": "04288981d6575c93e44234eb020ea4835c08b11efb6d4b3b30c56aacf2df0f8a"
     },
     "frame_geometry": {
       "file": "variants/integrated-4080-small/mechanical.py",
-      "sha256": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4"
+      "sha256": "009a8ab210f9df3cadc667b966d3f9e50e5438870590e075b44b7a36dbd1e04d"
     },
     "assembly_factory": {
       "file": "variants/integrated-4080-small/assembly.py",
-      "sha256": "26a21090c052b3d4d07e5e60c82ecfd1bea71f899a4ce25dfc58aa2e0a687a60"
+      "sha256": "8b094f99170f660b3f187761836ae46cfb058ba2c2ed9e39f9a03b636a0ed54a"
+    },
+    "gantry_joint_geometry": {
+      "file": "variants/integrated-4080-small/gantry_joint.py",
+      "sha256": "f90a190f5cd5321d574943d1bc37eff31c4d0d502fcc0b2c0761b1bd510aef18"
+    },
+    "gantry_joint_manifest": {
+      "file": "variants/integrated-4080-small/output/gantry-joint/gantry-joint-check.json",
+      "sha256": "931054d3cfd946952bb6290ec8eb15ac42d0ec667170bdcbcf7b1f1d64be3e16"
+    },
+    "gantry_joint_index": {
+      "file": "variants/integrated-4080-small/output/gantry-joint/custom-part-index.json",
+      "sha256": "afea6c32050d5c73512cd9d13dbaf25b482378ac02738e3b5c229ebffa1d1112"
+    },
+    "gantry_joint_takeoff": {
+      "file": "variants/integrated-4080-small/output/gantry-joint/gantry-joint-takeoff.csv",
+      "sha256": "812766c2e34a4cff5e60e6546b478761d8e1ae487002c6b7b24125fd81c77023"
+    },
+    "gantry_joint_nest": {
+      "file": "variants/integrated-4080-small/output/gantry-joint/hanger-offcut-nest.json",
+      "sha256": "f636054e770b63e1035a484ca3fc8b534b2cce71814cabe73954fb0968f23e47"
     },
     "current_custom_manifest": {
       "file": "variants/integrated-4080-small/manufacturing/current-custom-check.json",
-      "sha256": "b34f559b9ac2584cd5ad3d0a558f0721f356624cd1ec022a7d8553ac2bde6102"
+      "sha256": "5b5c8238d56aed615f09a691263c8d35ab82d7cf09dc0c4920a43f1902aa6507"
     },
     "current_custom_index": {
       "file": "variants/integrated-4080-small/manufacturing/current-custom-index.json",
-      "sha256": "49eb405f9840d4353dc32a20b56312f9b15329d1f929ac017866ed1461828e83"
+      "sha256": "b02746a1afff54f0c3a175560cf8770d9bb29fd7547fab56b184fd59e3851298"
     },
     "frame_source_takeoff": {
       "file": "variants/extrusion-reengineered/review/frame-fabrication.csv",
@@ -63,11 +101,11 @@
     },
     "head_takeoff": {
       "file": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-requirements.csv",
-      "sha256": "297203386b20c5643bac69fcdb132afc01657561f7d7949b7f8d3596b5f84035"
+      "sha256": "44e1e5d67a98f1a09cf808f6c8d3321a70b4709fc82aefd871310653882386c5"
     },
     "head_manifest": {
       "file": "variants/integrated-4080-small/head/output/selected-head-pack/selected-head-pack-check.json",
-      "sha256": "13c0703f77e49cd06a96f134ed4aeaaea1fb515d129d3d8fc52bf0267ec3b46c"
+      "sha256": "83a21147e896eaa10c65e5a302d2048574fff66527ae6206681ee99cea40e498"
     },
     "plasma_takeoff": {
       "file": "variants/integrated-4080-small/head/output/selected-head-pack/retained-plasma-source-requirements.csv",
@@ -111,11 +149,11 @@
     },
     "front_stop_transfer_source": {
       "file": "variants/integrated-4080-small/front_stop_bed_clearance.py",
-      "sha256": "a7f0e99f587d352e0234885d42b97ca660a6606c8c28060b44fe326d77bd1a5c"
+      "sha256": "043179a867791000a290a4493fea0c351a368466e43cf5c36842ead8d0ce0439"
     },
     "front_stop_transfer_report": {
       "file": "variants/integrated-4080-small/output/front-stop-bed-clearance/front-stop-bed-clearance-check.json",
-      "sha256": "dddb13bfb8a0e2d1abeef30e3a1b6d84d3f1f7742b0b969e34b716a03884654c"
+      "sha256": "e5e3c4e9af5249aea3d5df05d3987db6ef189db7d72bcda566159fdced010fe8"
     },
     "front_stop_additive_takeoff": {
       "file": "variants/integrated-4080-small/output/front-stop-bed-clearance/front-stop-additive-takeoff.csv",
@@ -127,55 +165,55 @@
     },
     "bed_takeoff": {
       "file": "variants/integrated-4080-small/bed/output/bed-takeoff.csv",
-      "sha256": "5b0067af2772a3eb8b561e372a4a777bf1df801a0ddb208880a3636ab34722ba"
+      "sha256": "93ab2f7d374e6fcc9f6b658cbbfd878b3c68d391a27f571cd6fe5dea98629a38"
     },
     "utilities_takeoff": {
       "file": "variants/integrated-4080-small/utilities/output/utility-takeoff.csv",
-      "sha256": "8a3f2f28b204eab09e5ff5b91e11112055acbcd07a86246b685764a44bbf1935"
+      "sha256": "0a0621d367faeaae86b167a2827cd4c5af7a4236c1289690f6547bc558066f1b"
     },
     "bed_custom_index": {
       "file": "variants/integrated-4080-small/bed/output/custom-part-index.json",
-      "sha256": "6ad8a8d9d492b418b4c0a4f02b5920c38160569f3c48e1c721923fa134253377"
+      "sha256": "241d5b18e2cb3c35ccb91097eb680c97e34b69f85a5fbe9415644054fe35883e"
     },
     "utilities_custom_index": {
       "file": "variants/integrated-4080-small/utilities/output/custom-part-index.json",
-      "sha256": "b99d8338a1e481dd2d3ee924f0db5c2c4505c4f5b1467650c1118ea2c198551a"
+      "sha256": "a40d292072c0cdd5937abf55bc7aacb693227db1dfcf66305e79755216b6709f"
     },
     "bed_geometry": {
       "file": "variants/integrated-4080-small/bed/integrated_bed.py",
-      "sha256": "d0f35b5c1ec0618280516fa6edb730bcb6238ffb0a2cf41288cfb27110a15d81"
+      "sha256": "d424f813511d6b21a2b525d600520971aae95a140bbdccb3f84daa69d84ced9b"
     },
     "utilities_geometry": {
       "file": "variants/integrated-4080-small/utilities/integrated_utilities.py",
-      "sha256": "8fcbe7ea06a6610c5ce22936c6f363c0c21da910297fb21e403e835c3f0dd98a"
+      "sha256": "8a21c69b6409c037de766631a165c6ed2994e30c3ac7c770170b4befac956d81"
     },
     "bed_geometry_report": {
       "file": "variants/integrated-4080-small/bed/output/bed-local-check.json",
-      "sha256": "9868aabf97f5fccd23b99b81ead498df5fd616b798e00fd242b38fe4d1a36a76"
+      "sha256": "ffa10165af8534362ad2f1196bd51863226c844f4a9333eeb9c2481cf83af375"
     },
     "utilities_geometry_report": {
       "file": "variants/integrated-4080-small/utilities/output/utility-check.json",
-      "sha256": "7d50e9b892106e85db5c046bccc8bdb1a5a704ca7419943b6779559b1df9768d"
+      "sha256": "8212a93dd8921ba9615896981ecce235a596ff7251bfb60b613604e9b23ec995"
     },
     "HDPE_drill_coordinates": {
       "file": "variants/integrated-4080-small/bed/output/HDPE-DRILL.csv",
-      "sha256": "ae96aaac8b8f936a43554d718698a7b136584447d051b68697aaaae9e4bd818b"
+      "sha256": "080ca7ddd5312772faf73188d94eb213a75d808c5590f071bcd60d654dee9647"
     },
     "HDPE_drill_DXF_manifest": {
       "file": "variants/integrated-4080-small/bed/output/HDPE-drill-dxf-check.json",
-      "sha256": "beae3586bc656ef648ef8e68d14404cac158de1cf863b01d79dea33d1482aff7"
+      "sha256": "f9e9a33920746c259129a0affc6067c53984ed8bede6f6f223b772bdf88858ef"
     }
   },
   "output_sha256": {
-    "variants/integrated-4080-small/manufacturing/exclusive-stock-nests.json": "55c3c7b739c9418d8083c00a889c8597d6fc1e94aabfd9ac922a061ab31a79b0",
-    "variants/integrated-4080-small/manufacturing/detailed-requirements.csv": "4ec1d7c2ac33a1fd698229a29d02c277b1fe2855a61ffae6c70fd42896dadff4",
-    "variants/integrated-4080-small/manufacturing/stock-and-hardware-families.csv": "13e89b1ab1b8a6897317c4dadfa765a95ccfade26108823408b219668979acf9",
-    "variants/integrated-4080-small/manufacturing/subsystem-source-snapshots.json": "d71998d96632e9f97d4b5dd7a365ca249b9eb78ba458c521552d445f8263af18",
-    "variants/integrated-4080-small/manufacturing/price-and-budget-register.json": "5fdd565dc682f6fde8eb37ed8eb43dccfeb8bdaf8e78baaa59d61dc9a75617cc",
+    "variants/integrated-4080-small/manufacturing/exclusive-stock-nests.json": "8f3c29f72ad202f12ee1ea7d499c689aa88a2efe27cf49a7be528d92fcd802c5",
+    "variants/integrated-4080-small/manufacturing/detailed-requirements.csv": "55f3a390673dd76e5f694169dd57db5d37730b1569b09c8e433fe38e112394ff",
+    "variants/integrated-4080-small/manufacturing/stock-and-hardware-families.csv": "422008cf9ecae06b2b8995f2a987fae8c385a92295f8561f77ad189d66ba21bc",
+    "variants/integrated-4080-small/manufacturing/subsystem-source-snapshots.json": "0b841fbeb3af813cc88e147f03de2dd789ed98939110ce7bf068b714bd07d019",
+    "variants/integrated-4080-small/manufacturing/price-and-budget-register.json": "0d5ca8634fc8bb77dc4f78acb032b07d6d4b1ff5e9e33c9bc7a1fac5f6748f86",
     "variants/integrated-4080-small/manufacturing/owned-equipment-register.json": "e5f917ca1ac9a3e0b51c1951c924753ef791ea15483da3d3dcee555f42814f80",
-    "variants/integrated-4080-small/manufacturing/current-drawing-index.csv": "0d08071fa56c463b8f0c72b374de9e32e568b6bf6c4dd09b93769015e7a01777",
+    "variants/integrated-4080-small/manufacturing/current-drawing-index.csv": "f9ce401660bc2257b053e80c2811fe69d3efe56c01375e1c132d715a5085a7ea",
     "variants/integrated-4080-small/manufacturing/4080-cut-stock-options.json": "212e3a80105c37fa0ed6b330872476eba767a7d93e6cbc2fe0067374456dcabd",
-    "variants/integrated-4080-small/manufacturing/source-manifest-binding-checks.json": "b46f81efcf3de40301cb03e417bb9c9f0210a2d00cb7d9148735c5e9d049bacc"
+    "variants/integrated-4080-small/manufacturing/source-manifest-binding-checks.json": "c287ab79730e2f1b005357e8c2bc41d92f8788a86ab9c8b82c1f6285762fd7b5"
   },
   "complete_delivered_price_USD": null,
   "budget_gate": "FAIL",

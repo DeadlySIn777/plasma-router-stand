@@ -1,16 +1,17 @@
 {
   "revision": "INTEGRATED_4080_SMALL",
   "source_sha256": {
-    "variants/integrated-4080-small/assembly.py": "26a21090c052b3d4d07e5e60c82ecfd1bea71f899a4ce25dfc58aa2e0a687a60",
-    "variants/integrated-4080-small/mechanical.py": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
-    "variants/integrated-4080-small/front_stop_bed_clearance.py": "a7f0e99f587d352e0234885d42b97ca660a6606c8c28060b44fe326d77bd1a5c",
+    "variants/integrated-4080-small/assembly.py": "8b094f99170f660b3f187761836ae46cfb058ba2c2ed9e39f9a03b636a0ed54a",
+    "variants/integrated-4080-small/mechanical.py": "009a8ab210f9df3cadc667b966d3f9e50e5438870590e075b44b7a36dbd1e04d",
+    "variants/integrated-4080-small/gantry_joint.py": "f90a190f5cd5321d574943d1bc37eff31c4d0d502fcc0b2c0761b1bd510aef18",
+    "variants/integrated-4080-small/front_stop_bed_clearance.py": "043179a867791000a290a4493fea0c351a368466e43cf5c36842ead8d0ce0439",
     "variants/integrated-4080-small/head/quick_dock.py": "59dbb2ea09bdf47605f41a11309294bcd160e2c97605d17b52b82a3144a2b83a",
-    "variants/integrated-4080-small/head/plasma_quick_dock.py": "0aa25c8a4c75cc7148ab5ae1f3520814be392c0abf26624f5c9305f1c14a1713",
+    "variants/integrated-4080-small/head/plasma_quick_dock.py": "f1ed5ab9d573d28c04e0dea779748c827e4a381062468130ff4e89ad8e21abe1",
     "variants/integrated-4080-small/head/owner_head.py": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
     "variants/integrated-4080-small/atc/actual_atc.py": "2c142e73e10ea4308d85040e2ebcbba13ee1aa19800ce7c75506e353a8916c83",
-    "variants/integrated-4080-small/bed/integrated_bed.py": "d0f35b5c1ec0618280516fa6edb730bcb6238ffb0a2cf41288cfb27110a15d81",
+    "variants/integrated-4080-small/bed/integrated_bed.py": "d424f813511d6b21a2b525d600520971aae95a140bbdccb3f84daa69d84ced9b",
     "variants/integrated-4080-small/atc/sources/ER20_4_Standard_20240204.step": "e15fe7e41ed1bfba54a0d2203c92355fa509f06b4ed8c3b588b37d9589fee572",
-    "variants/integrated-4080-small/utilities/integrated_utilities.py": "8fcbe7ea06a6610c5ce22936c6f363c0c21da910297fb21e403e835c3f0dd98a",
+    "variants/integrated-4080-small/utilities/integrated_utilities.py": "8a21c69b6409c037de766631a165c6ed2994e30c3ac7c770170b4befac956d81",
     "variants/integrated-4080-small/verify_assembly_outputs.py": "8566e80a222beece8cd87da20ffeb5569c773f88616d2a19854029ea9622afc2",
     "variants/integrated-4080-small/render_preview.py": "9a6def157d23313a92ad60d419c2b5e9ee7c961186afb04f7f7e45448dc55675"
   },
@@ -41,12 +42,12 @@
   "assemblies": {
     "WOOD": {
       "file": "output/INTEGRATED_4080_SMALL_WOOD.step",
-      "sha256": "28cbb36f5602c7d78c83c8c55d11a17128ae209e59faddccab40cab0dc8b9c90",
-      "components": 1238,
-      "solids": 1240,
-      "native_solids": 1240,
+      "sha256": "7070a45c4cc40d12cf540f6ffb9a3581e16f60f2d725325474cc62730011281c",
+      "components": 1266,
+      "solids": 1268,
+      "native_solids": 1268,
       "valid": true,
-      "volume_error_mm3": 0.713199257850647,
+      "volume_error_mm3": 0.726179763674736,
       "bounds_mm": [
         -50.00000000000001,
         -160.0,
@@ -59,24 +60,24 @@
       "passed": true,
       "preview": {
         "file": "output/INTEGRATED_4080_SMALL_WOOD.png",
-        "sha256": "df2de26b6065cd6d6c88fab7716d77729b0780cc8195a9668b33eefef22664e0",
+        "sha256": "b934406777741be81cef241ed0547fa098e21a0af706400a900b3329b613f643",
         "camera_fitted_to_actual_visible_bounds": true,
         "viewport_edge_check_passed": true
       },
-      "initial_nonadaptive_volume_error_mm3": 561.5315420031548,
+      "initial_nonadaptive_volume_error_mm3": 538.7056610435247,
       "adaptive_volume_tolerance": 1e-08,
-      "adaptive_expected_volume_mm3": 148701176.7053055,
-      "adaptive_readback_volume_mm3": 148701177.41850474,
+      "adaptive_expected_volume_mm3": 133079609.830047,
+      "adaptive_readback_volume_mm3": 133079610.55622676,
       "maximum_bbox_error_mm": 7.105427357601002e-15
     },
     "PLASMA": {
       "file": "output/INTEGRATED_4080_SMALL_PLASMA.step",
-      "sha256": "1c8c95e2ee8b9278428e2195e68d2f6cac89fe73d138d20f6b7d6f21d7728add",
-      "components": 1332,
-      "solids": 1334,
-      "native_solids": 1334,
+      "sha256": "e5c3d4c00bb94fd9b3974200744c6a42e97aab333e58036383cdfd5ef32a6cb1",
+      "components": 1366,
+      "solids": 1368,
+      "native_solids": 1368,
       "valid": true,
-      "volume_error_mm3": 0.0029836297035217285,
+      "volume_error_mm3": 0.0025965124368667603,
       "bounds_mm": [
         -50.00000000000001,
         -160.0,
@@ -89,24 +90,24 @@
       "passed": true,
       "preview": {
         "file": "output/INTEGRATED_4080_SMALL_PLASMA.png",
-        "sha256": "83dacb20fe39847bf78b864bc480a3dca71ba6d1cea66af66ecc9538f05a3d14",
+        "sha256": "44f3007c075fd8e2a4a03f33e964d77f88e6975614606daa07ebd666ec0ada52",
         "camera_fitted_to_actual_visible_bounds": true,
         "viewport_edge_check_passed": true
       },
-      "initial_nonadaptive_volume_error_mm3": 0.5040172636508942,
+      "initial_nonadaptive_volume_error_mm3": 189.58136169612408,
       "adaptive_volume_tolerance": 1e-08,
-      "adaptive_expected_volume_mm3": 148376451.7231249,
-      "adaptive_readback_volume_mm3": 148376451.72014126,
+      "adaptive_expected_volume_mm3": 132797594.83345091,
+      "adaptive_readback_volume_mm3": 132797594.8308544,
       "maximum_bbox_error_mm": 1.0000012710574864e-07
     },
     "CHANGEOVER": {
       "file": "output/INTEGRATED_4080_SMALL_CHANGEOVER.step",
-      "sha256": "b684bdeb55407030a82f807fda3d6c91486b36f7ab999749e7cc999238922db5",
-      "components": 1198,
-      "solids": 1200,
-      "native_solids": 1200,
+      "sha256": "4c605714b6215f683219e9368d8ff317ebc3dc6e15d59929d31aaefc87bc967b",
+      "components": 1232,
+      "solids": 1234,
+      "native_solids": 1234,
       "valid": true,
-      "volume_error_mm3": 0.004333585500717163,
+      "volume_error_mm3": 0.0031518787145614624,
       "bounds_mm": [
         -50.00000000000001,
         -160.0,
@@ -119,14 +120,14 @@
       "passed": true,
       "preview": {
         "file": "output/INTEGRATED_4080_SMALL_CHANGEOVER.png",
-        "sha256": "52a39b6d4bd41adb9eccd335c5a454148d85887545b2bb4d64ccc86f18792dd7",
+        "sha256": "1919e9db6199fdb6ff3429de6d8b41b44507fab053ddbfcf58e13b80ee345026",
         "camera_fitted_to_actual_visible_bounds": true,
         "viewport_edge_check_passed": true
       },
-      "initial_nonadaptive_volume_error_mm3": 0.09546959400177002,
+      "initial_nonadaptive_volume_error_mm3": 13.191904678940773,
       "adaptive_volume_tolerance": 1e-08,
-      "adaptive_expected_volume_mm3": 147019079.11541644,
-      "adaptive_readback_volume_mm3": 147019079.11975002,
+      "adaptive_expected_volume_mm3": 131403964.82527114,
+      "adaptive_readback_volume_mm3": 131403964.82842302,
       "maximum_bbox_error_mm": 1.0000012710574864e-07
     }
   },

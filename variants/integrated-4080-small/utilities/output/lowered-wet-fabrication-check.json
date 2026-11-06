@@ -1,0 +1,653 @@
+{
+  "source_sha256": {
+    "variants\\integrated-4080-small\\utilities\\export_lowered_wet.py": "5d140b281c6c47157aa9fc12df4e192fd4555cf71649a05c429201836924ccfd",
+    "variants\\integrated-4080-small\\utilities\\integrated_utilities.py": "8a21c69b6409c037de766631a165c6ed2994e30c3ac7c770170b4befac956d81",
+    "variants\\integrated-4080-small\\mechanical.py": "009a8ab210f9df3cadc667b966d3f9e50e5438870590e075b44b7a36dbd1e04d",
+    "variants\\extrusion-reengineered\\bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants\\extrusion-reengineered\\params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780"
+  },
+  "pan_lowering_mm": 26.0,
+  "upper_channel_three_strip_union_error_mm3": 0.0,
+  "complete_overflow_piece_union_error_mm3": 0.0,
+  "upper_channel_strip_count": 3,
+  "upper_channel_has_bottom_cap": false,
+  "upper_channel_height_mm": 383.0,
+  "lower_floor_finished_envelope_mm": [
+    900.0,
+    878.0,
+    462.0,
+    1076.0,
+    922.0,
+    466.9
+  ],
+  "lower_floor_rough_blank_mm": [
+    176.1,
+    44,
+    1.9
+  ],
+  "lower_floor_normal_thickness_mm": 1.899724039988539,
+  "lower_floor_pitch_deg": 0.9765380357615641,
+  "lower_floor_outside_rough_blank_mm3": 0.0,
+  "lower_floor_width_replaces_legacy_mm": [
+    40.2,
+    44
+  ],
+  "receiver_outlet_Z_mm": 410,
+  "receiver_lid_Z_mm": 391,
+  "airgap_mm": 19,
+  "receiver_pose_unchanged": true,
+  "rear_retainer_translation_checks": [
+    {
+      "id": "PAN_FRAME_EAR_RL_M6_FACE_FIX_HOLD",
+      "symmetric_difference_from_original_lowered_mm3": 0.0
+    },
+    {
+      "id": "PAN_KEEPER_RL_BOSS",
+      "symmetric_difference_from_original_lowered_mm3": 0.0
+    },
+    {
+      "id": "PAN_KEEPER_RL_SHOULDER",
+      "symmetric_difference_from_original_lowered_mm3": 0.0
+    },
+    {
+      "id": "PAN_KEEPER_RL_CAP_1MM_UPLIFT",
+      "symmetric_difference_from_original_lowered_mm3": 0.0
+    },
+    {
+      "id": "PAN_WELDED_EAR_RL",
+      "symmetric_difference_from_original_lowered_mm3": 0.0
+    },
+    {
+      "id": "PAN_KEEPER_RL_M6x20_VERIFY_THREAD",
+      "symmetric_difference_from_original_lowered_mm3": 0.0
+    },
+    {
+      "id": "PAN_FRAME_EAR_RR_M6_FACE_FIX_HOLD",
+      "symmetric_difference_from_original_lowered_mm3": 0.0
+    },
+    {
+      "id": "PAN_KEEPER_RR_BOSS",
+      "symmetric_difference_from_original_lowered_mm3": 0.0
+    },
+    {
+      "id": "PAN_KEEPER_RR_SHOULDER",
+      "symmetric_difference_from_original_lowered_mm3": 0.0
+    },
+    {
+      "id": "PAN_KEEPER_RR_CAP_1MM_UPLIFT",
+      "symmetric_difference_from_original_lowered_mm3": 0.0
+    },
+    {
+      "id": "PAN_WELDED_EAR_RR",
+      "symmetric_difference_from_original_lowered_mm3": 0.0
+    },
+    {
+      "id": "PAN_KEEPER_RR_M6x20_VERIFY_THREAD",
+      "symmetric_difference_from_original_lowered_mm3": 0.0
+    }
+  ],
+  "flat_profile_checks": [
+    {
+      "id": "U_OVERFLOW_COLLECTOR_BACK_44x383",
+      "quantity": 1,
+      "length_mm": 44.0,
+      "width_mm": 383.0,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 3.637978807091713e-12,
+      "notes": "Back strip; world X1074.1..1076,Y878..922,Z465..848. Butt-weld sides; no upper-channel floor cap."
+    },
+    {
+      "id": "U_OVERFLOW_COLLECTOR_SIDES_18p1x383",
+      "quantity": 2,
+      "length_mm": 18.1,
+      "width_mm": 383.0,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 1.8189894035458565e-12,
+      "notes": "Two side strips; world X1056..1074.1; Y878..879.9 and920.1..922. No bends."
+    },
+    {
+      "id": "U_OVERFLOW_GUTTER_FLOOR_ROUGH_BLANK_176p1x44",
+      "quantity": 1,
+      "length_mm": 176.1,
+      "width_mm": 44.0,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 0.0,
+      "notes": "Rough blank only. Finish0.976543deg end bevel/installed slope to current STEP; no bend allowance. Source floor has1.9mm vertical rather than normal thickness."
+    },
+    {
+      "id": "U_OVERFLOW_GUTTER_SIDE_POLYGON",
+      "quantity": 2,
+      "length_mm": 176.0,
+      "width_mm": 15.0,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 9.094947017729282e-13,
+      "notes": "Two flat cheeks, coordinates in local world-X/world-Z plane. No bends."
+    },
+    {
+      "id": "U_OVERFLOW_DEFLECTOR_53p9x44",
+      "quantity": 1,
+      "length_mm": 53.9,
+      "width_mm": 44.0,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 9.094947017729282e-13,
+      "notes": "One flat exit deflector; installed Z410..463.9. No bends."
+    },
+    {
+      "id": "U_GUIDE_SCREEN_PANEL_472x94p3",
+      "quantity": 6,
+      "length_mm": 472.0,
+      "width_mm": 94.3,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 0.0,
+      "notes": "Screen plate only; three clip plates are separately scheduled. No bends."
+    },
+    {
+      "id": "U_GUIDE_CLIP_MOUNT_60x30_D6p6",
+      "quantity": 6,
+      "length_mm": 60.0,
+      "width_mm": 30.0,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 0.0,
+      "notes": "Clip mount face; local horizontal=world Y, vertical=world Z. Two D6.6 through holes."
+    },
+    {
+      "id": "U_GUIDE_CLIP_OFFSET_47p3x60",
+      "quantity": 6,
+      "length_mm": 47.3,
+      "width_mm": 60.0,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 9.094947017729282e-13,
+      "notes": "Offset foot; weld to mount plate and upright. No bends."
+    },
+    {
+      "id": "U_GUIDE_CLIP_UPRIGHT_60x32p85",
+      "quantity": 6,
+      "length_mm": 60.0,
+      "width_mm": 32.85,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 0.0,
+      "notes": "Screen upright; weld to offset foot and panel. No bends."
+    },
+    {
+      "id": "U_GUIDE_RACK_WEB_160x630p5_D6p6",
+      "quantity": 2,
+      "length_mm": 160.0,
+      "width_mm": 630.5,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 2.9103830456733704e-11,
+      "notes": "Rack web; local horizontal=world Y-200, vertical=world Z-70; six D6.6 holes. Twelve welded nuts are separate hardware."
+    },
+    {
+      "id": "U_GUIDE_RACK_RETURN_18p1x630p5",
+      "quantity": 4,
+      "length_mm": 18.1,
+      "width_mm": 630.5,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 0.0,
+      "notes": "Two edge-return flats per rack, welded. No bends."
+    },
+    {
+      "id": "U_GUIDE_RACK_ANCHOR_40x40_D6p6",
+      "quantity": 2,
+      "length_mm": 40.0,
+      "width_mm": 40.0,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 4.547473508864641e-13,
+      "notes": "Anchor flange; local X=world X-127.7 and local Y=world Y-280 on left; mirror right. No bends."
+    },
+    {
+      "id": "U_GUIDE_RACK_LEDGE_72p3x40",
+      "quantity": 6,
+      "length_mm": 72.3,
+      "width_mm": 40.0,
+      "thickness_mm": 1.9,
+      "units": "mm",
+      "roundtrip_volume_error_mm3": 9.094947017729282e-13,
+      "notes": "Three ledges per rack; install topZ80/280/480. Welded, no bends."
+    }
+  ],
+  "guide_flat_plate_union_checks": [
+    {
+      "id": "U_GUIDE_REMOVABLE_SCREEN_L_1",
+      "flat_plate_count": 4,
+      "union_error_mm3": 0.0
+    },
+    {
+      "id": "U_GUIDE_REMOVABLE_SCREEN_L_2",
+      "flat_plate_count": 4,
+      "union_error_mm3": 0.0
+    },
+    {
+      "id": "U_GUIDE_REMOVABLE_SCREEN_L_3",
+      "flat_plate_count": 4,
+      "union_error_mm3": 0.0
+    },
+    {
+      "id": "U_GUIDE_REMOVABLE_SCREEN_R_1",
+      "flat_plate_count": 4,
+      "union_error_mm3": 0.0
+    },
+    {
+      "id": "U_GUIDE_REMOVABLE_SCREEN_R_2",
+      "flat_plate_count": 4,
+      "union_error_mm3": 0.0
+    },
+    {
+      "id": "U_GUIDE_REMOVABLE_SCREEN_R_3",
+      "flat_plate_count": 4,
+      "union_error_mm3": 0.0
+    },
+    {
+      "id": "U_GUIDE_FIXED_UNDER_PAN_RACK_L",
+      "flat_plate_count": 7,
+      "union_error_mm3": 0.0
+    },
+    {
+      "id": "U_GUIDE_FIXED_UNDER_PAN_RACK_R",
+      "flat_plate_count": 7,
+      "union_error_mm3": 0.0
+    }
+  ],
+  "guide_all_plate_union_errors_zero": true,
+  "superseded_retained_flat_ids": [
+    "OVERFLOW_COLLECTOR_BACK",
+    "OVERFLOW_COLLECTOR_SIDES",
+    "OVERFLOW_COLLECTOR_FLOOR",
+    "OVERFLOW_GUTTER_FLOOR",
+    "OVERFLOW_GUTTER_SIDES",
+    "OVERFLOW_DEFLECTOR",
+    "OVERFLOW_SUPPORT_BRACKET_FLAT"
+  ],
+  "parts": [
+    {
+      "id": "U_OVERFLOW_COLLECTOR_BACK_CURRENT",
+      "file": "output/lowered-wet-step/U_OVERFLOW_COLLECTOR_BACK_CURRENT.step",
+      "sha256": "26b2200f58b3de6512df90494942bcf5d61d52ac9f598e882055ee8188707b35",
+      "bounds_mm": [
+        1074.1,
+        878.0,
+        465.0,
+        1076.0,
+        922.0,
+        848.0
+      ],
+      "roundtrip_symmetric_difference_mm3": 0.0,
+      "notes": "Installed pose; stock is listed once in current utility takeoff, not an additional purchase."
+    },
+    {
+      "id": "U_OVERFLOW_COLLECTOR_SIDE_A_CURRENT",
+      "file": "output/lowered-wet-step/U_OVERFLOW_COLLECTOR_SIDE_A_CURRENT.step",
+      "sha256": "47d73308e7f7243ea64f03c1019ee9db95910b395fd38a414917d7d99626474d",
+      "bounds_mm": [
+        1056.0,
+        878.0,
+        465.0,
+        1074.1,
+        879.9,
+        848.0
+      ],
+      "roundtrip_symmetric_difference_mm3": 0.0,
+      "notes": "Installed pose; stock is listed once in current utility takeoff, not an additional purchase."
+    },
+    {
+      "id": "U_OVERFLOW_COLLECTOR_SIDE_B_CURRENT",
+      "file": "output/lowered-wet-step/U_OVERFLOW_COLLECTOR_SIDE_B_CURRENT.step",
+      "sha256": "30b7e779b254471ae0119a0dbd76292caf82f5f2189f80d78b8f6666bf8aa476",
+      "bounds_mm": [
+        1056.0,
+        920.1,
+        465.0,
+        1074.1,
+        922.0,
+        848.0
+      ],
+      "roundtrip_symmetric_difference_mm3": 0.0,
+      "notes": "Installed pose; stock is listed once in current utility takeoff, not an additional purchase."
+    },
+    {
+      "id": "U_OVERFLOW_GUTTER_FLOOR_CURRENT",
+      "file": "output/lowered-wet-step/U_OVERFLOW_GUTTER_FLOOR_CURRENT.step",
+      "sha256": "466662affc5e4581a2710cca28715663e242316609271968a10fbfc41015f60b",
+      "bounds_mm": [
+        900.0,
+        878.0,
+        462.0,
+        1076.0,
+        922.0,
+        466.9
+      ],
+      "roundtrip_symmetric_difference_mm3": 0.0,
+      "notes": "Installed pose; stock is listed once in current utility takeoff, not an additional purchase."
+    },
+    {
+      "id": "U_OVERFLOW_DEFLECTOR_CURRENT",
+      "file": "output/lowered-wet-step/U_OVERFLOW_DEFLECTOR_CURRENT.step",
+      "sha256": "173b31258a6f4852287cc6ba349ce3ceb3e45190381aa4563bf17aa0205450ab",
+      "bounds_mm": [
+        898.1,
+        878.0,
+        410.0,
+        900.0,
+        922.0,
+        463.9
+      ],
+      "roundtrip_symmetric_difference_mm3": 0.0,
+      "notes": "Installed pose; stock is listed once in current utility takeoff, not an additional purchase."
+    },
+    {
+      "id": "U_OVERFLOW_GUTTER_SIDE_A_CURRENT",
+      "file": "output/lowered-wet-step/U_OVERFLOW_GUTTER_SIDE_A_CURRENT.step",
+      "sha256": "3129652218c42c3ef4e125d314a89d0725667ba451de19fcec2390f224213d20",
+      "bounds_mm": [
+        900.0,
+        878.0,
+        462.0,
+        1076.0,
+        879.9,
+        477.0
+      ],
+      "roundtrip_symmetric_difference_mm3": 0.0,
+      "notes": "Installed pose; stock is listed once in current utility takeoff, not an additional purchase."
+    },
+    {
+      "id": "U_OVERFLOW_GUTTER_SIDE_B_CURRENT",
+      "file": "output/lowered-wet-step/U_OVERFLOW_GUTTER_SIDE_B_CURRENT.step",
+      "sha256": "90620a38b3548ea0a9ca9d26aa2572fed6c1f7c71ef949b143718b4d563a7bd4",
+      "bounds_mm": [
+        900.0,
+        920.1,
+        462.0,
+        1076.0,
+        922.0,
+        477.0
+      ],
+      "roundtrip_symmetric_difference_mm3": 0.0,
+      "notes": "Installed pose; stock is listed once in current utility takeoff, not an additional purchase."
+    },
+    {
+      "id": "U_OVERFLOW_SUPPORT_BRACKET_866_CURRENT",
+      "file": "output/lowered-wet-step/U_OVERFLOW_SUPPORT_BRACKET_866_CURRENT.step",
+      "sha256": "d7b6308b9e9549b35e2c46d5b6ebafe7cc8cee333d370654b0c89b40cf9d74cb",
+      "bounds_mm": [
+        1023.0,
+        866.0,
+        800.9,
+        1076.0,
+        878.0,
+        820.9
+      ],
+      "roundtrip_symmetric_difference_mm3": 0.0,
+      "notes": "Installed pose; stock is listed once in current utility takeoff, not an additional purchase."
+    },
+    {
+      "id": "U_OVERFLOW_SUPPORT_BRACKET_922_CURRENT",
+      "file": "output/lowered-wet-step/U_OVERFLOW_SUPPORT_BRACKET_922_CURRENT.step",
+      "sha256": "89ad257251425eea720f0bb7dc5dea9b692a258f2f40f7d5ce82c9d73ef25735",
+      "bounds_mm": [
+        1023.0,
+        922.0,
+        800.9,
+        1076.0,
+        934.0,
+        820.9
+      ],
+      "roundtrip_symmetric_difference_mm3": 0.0,
+      "notes": "Installed pose; stock is listed once in current utility takeoff, not an additional purchase."
+    },
+    {
+      "id": "OVERFLOW_WELDED_OPEN_RETURN_AIRGAP19",
+      "file": "output/lowered-wet-step/OVERFLOW_WELDED_OPEN_RETURN_AIRGAP19.step",
+      "sha256": "9f5ad88e29f00e455fbc46c14655eb921a3f4b26a4981ff558274cfb4a3884b9",
+      "bounds_mm": [
+        898.1,
+        866.0,
+        410.0,
+        1076.0,
+        934.0,
+        848.0
+      ],
+      "roundtrip_symmetric_difference_mm3": 0.0,
+      "notes": "Current complete overflow, with383mm open upper channel and lower gutter/deflector unchanged in height."
+    },
+    {
+      "id": "LOWERED_WET_INSTALLED_POSE",
+      "file": "output/LOWERED_WET_INSTALLED_POSE.step",
+      "sha256": "a785d18349025b9a558ff4baaea06d21be8a03e722f326108e060d916e252b44",
+      "notes": "Installed-pose assembly reference only. No additional stock purchase."
+    }
+  ],
+  "additional_manufacturing_drawings": [
+    {
+      "id": "U_OVERFLOW_COLLECTOR_BACK_44x383",
+      "file": "output/lowered-wet-drawings/U_OVERFLOW_COLLECTOR_BACK_44x383.dxf",
+      "sha256": "c7eaa1b33b3b3702a7f63e6e04c96e8b10d799ee35f19062ee30e1353bb6092d",
+      "role": "CURRENT_WELDED_STEEL_FLAT_CUT_PROFILE",
+      "notes": "Back strip; world X1074.1..1076,Y878..922,Z465..848. Butt-weld sides; no upper-channel floor cap."
+    },
+    {
+      "id": "U_OVERFLOW_COLLECTOR_SIDES_18p1x383",
+      "file": "output/lowered-wet-drawings/U_OVERFLOW_COLLECTOR_SIDES_18p1x383.dxf",
+      "sha256": "2f2f3c0978900f9a83e1b6f84744c31f77bd43e47aa62e315813a9ac63ac1c2d",
+      "role": "CURRENT_WELDED_STEEL_FLAT_CUT_PROFILE",
+      "notes": "Two side strips; world X1056..1074.1; Y878..879.9 and920.1..922. No bends."
+    },
+    {
+      "id": "U_OVERFLOW_GUTTER_FLOOR_ROUGH_BLANK_176p1x44",
+      "file": "output/lowered-wet-drawings/U_OVERFLOW_GUTTER_FLOOR_ROUGH_BLANK_176p1x44.dxf",
+      "sha256": "ffb9ac51bbc524ce693202bd58f86597a4313d4371b2c101c71a779010724914",
+      "role": "ROUGH_FLAT_BLANK_FINISH_TO_CURRENT_STEP",
+      "notes": "Rough blank only. Finish0.976543deg end bevel/installed slope to current STEP; no bend allowance. Source floor has1.9mm vertical rather than normal thickness."
+    },
+    {
+      "id": "U_OVERFLOW_GUTTER_SIDE_POLYGON",
+      "file": "output/lowered-wet-drawings/U_OVERFLOW_GUTTER_SIDE_POLYGON.dxf",
+      "sha256": "9af6872a4f209bc225226f32ca8e349d7b478acd4af4e7e389a68c2fe68c7fde",
+      "role": "CURRENT_WELDED_STEEL_FLAT_CUT_PROFILE",
+      "notes": "Two flat cheeks, coordinates in local world-X/world-Z plane. No bends."
+    },
+    {
+      "id": "U_OVERFLOW_DEFLECTOR_53p9x44",
+      "file": "output/lowered-wet-drawings/U_OVERFLOW_DEFLECTOR_53p9x44.dxf",
+      "sha256": "11519d8cac9be29eb4fb134758397bee062fcc718db89b542dfca7840b6c10d8",
+      "role": "CURRENT_WELDED_STEEL_FLAT_CUT_PROFILE",
+      "notes": "One flat exit deflector; installed Z410..463.9. No bends."
+    },
+    {
+      "id": "U_GUIDE_SCREEN_PANEL_472x94p3",
+      "file": "output/lowered-wet-drawings/U_GUIDE_SCREEN_PANEL_472x94p3.dxf",
+      "sha256": "459953ddc6442a4e74114e190d541ddb19adcb19b68a89d1ddc211fad6ec2e5d",
+      "role": "CURRENT_WELDED_STEEL_FLAT_CUT_PROFILE",
+      "notes": "Screen plate only; three clip plates are separately scheduled. No bends."
+    },
+    {
+      "id": "U_GUIDE_CLIP_MOUNT_60x30_D6p6",
+      "file": "output/lowered-wet-drawings/U_GUIDE_CLIP_MOUNT_60x30_D6p6.dxf",
+      "sha256": "57bad7b21c9293a4b56097985ec25d94c77e588783a0d10b29eb6491c91b58bc",
+      "role": "CURRENT_WELDED_STEEL_FLAT_CUT_PROFILE",
+      "notes": "Clip mount face; local horizontal=world Y, vertical=world Z. Two D6.6 through holes."
+    },
+    {
+      "id": "U_GUIDE_CLIP_OFFSET_47p3x60",
+      "file": "output/lowered-wet-drawings/U_GUIDE_CLIP_OFFSET_47p3x60.dxf",
+      "sha256": "a590e3d5775471685e622c5c292e0fc6f2cc88cb962d2951ea60e4841ac6a4bc",
+      "role": "CURRENT_WELDED_STEEL_FLAT_CUT_PROFILE",
+      "notes": "Offset foot; weld to mount plate and upright. No bends."
+    },
+    {
+      "id": "U_GUIDE_CLIP_UPRIGHT_60x32p85",
+      "file": "output/lowered-wet-drawings/U_GUIDE_CLIP_UPRIGHT_60x32p85.dxf",
+      "sha256": "e3bc069fd33f5f8e831b6998e7f3e1ea4d4a9c1eea18c6c80406554565a46f36",
+      "role": "CURRENT_WELDED_STEEL_FLAT_CUT_PROFILE",
+      "notes": "Screen upright; weld to offset foot and panel. No bends."
+    },
+    {
+      "id": "U_GUIDE_RACK_WEB_160x630p5_D6p6",
+      "file": "output/lowered-wet-drawings/U_GUIDE_RACK_WEB_160x630p5_D6p6.dxf",
+      "sha256": "c8cf5b3349195ffb0b4e8f2d71efea45d3a207261e32e6ae84d184f40e97cec1",
+      "role": "CURRENT_WELDED_STEEL_FLAT_CUT_PROFILE",
+      "notes": "Rack web; local horizontal=world Y-200, vertical=world Z-70; six D6.6 holes. Twelve welded nuts are separate hardware."
+    },
+    {
+      "id": "U_GUIDE_RACK_RETURN_18p1x630p5",
+      "file": "output/lowered-wet-drawings/U_GUIDE_RACK_RETURN_18p1x630p5.dxf",
+      "sha256": "2bb08caef25e5f984cb5cd0c107fafa866ba078cdecd3fbdb2df259441f5b9b0",
+      "role": "CURRENT_WELDED_STEEL_FLAT_CUT_PROFILE",
+      "notes": "Two edge-return flats per rack, welded. No bends."
+    },
+    {
+      "id": "U_GUIDE_RACK_ANCHOR_40x40_D6p6",
+      "file": "output/lowered-wet-drawings/U_GUIDE_RACK_ANCHOR_40x40_D6p6.dxf",
+      "sha256": "34f6c5bde921123dbc557f8b2c7d4484b1a12f9dbe66aa3daa43c2ff5ebf7be1",
+      "role": "CURRENT_WELDED_STEEL_FLAT_CUT_PROFILE",
+      "notes": "Anchor flange; local X=world X-127.7 and local Y=world Y-280 on left; mirror right. No bends."
+    },
+    {
+      "id": "U_GUIDE_RACK_LEDGE_72p3x40",
+      "file": "output/lowered-wet-drawings/U_GUIDE_RACK_LEDGE_72p3x40.dxf",
+      "sha256": "f6324a6f0838221f94386aaf66e0e6b49d650be5ce9586c3c7efd43dcf9692b3",
+      "role": "CURRENT_WELDED_STEEL_FLAT_CUT_PROFILE",
+      "notes": "Three ledges per rack; install topZ80/280/480. Welded, no bends."
+    },
+    {
+      "id": "U_OVERFLOW_SUPPORT_BRACKET_UNCHANGED_FORMING_REFERENCE",
+      "file": "../../extrusion-reengineered/review/fabrication/OVERFLOW_SUPPORT_BRACKET_FLAT.dxf",
+      "sha256": "fcc9f1d2b6f08d7a978a80455c58eb20d602243acdb3c28b0f7aff800abbe3aa",
+      "role": "UNCHANGED_FORMING_REFERENCE_COUPON_CALIBRATION_REQUIRED",
+      "notes": "Existing R2/K0.4 nominal development is unchanged. Forming coupon/received-steel calibration remains required; current installed bracket STEP is26mm lower."
+    },
+    {
+      "id": "LOWERED_PAN_YZ_POSE_REFERENCE",
+      "file": "output/lowered-wet-drawings/LOWERED_PAN_YZ_POSE_REFERENCE.dxf",
+      "sha256": "6f4c2e42a16f714712bae2da9e86eee60753805852d78681e27ec1eec8d69dea",
+      "role": "INSTALLED_YZ_POSE_REFERENCE_NOT_CUT_PROFILE",
+      "notes": "Automatic source-coordinate overlay of current pan/slat envelope and previous wet pose. Not a cut template."
+    }
+  ],
+  "stock_rows": [
+    {
+      "id": "U_OVERFLOW_COLLECTOR_BACK_STOCK",
+      "quantity": 1,
+      "unit": "pieces",
+      "specification": "44x383x1.9mm plain steel flat strip; upper C-channel back; butt weld, no bends.",
+      "ownership": "new",
+      "procure": true
+    },
+    {
+      "id": "U_OVERFLOW_COLLECTOR_SIDE_STOCK",
+      "quantity": 2,
+      "unit": "pieces",
+      "specification": "18.1x383x1.9mm plain steel flat strips; upper C-channel sides; butt weld, no bends.",
+      "ownership": "new",
+      "procure": true
+    },
+    {
+      "id": "U_OVERFLOW_GUTTER_FLOOR_STOCK",
+      "quantity": 1,
+      "unit": "pieces",
+      "specification": "176.1x44x1.9mm plain steel rough blank; finish sloped gutter to current STEP. Installed rise3 over176; end bevel0.976543deg; nominal normal thickness1.899724mm. Replaces undersize legacy40.2mm-width floor blank.",
+      "ownership": "new",
+      "procure": true
+    },
+    {
+      "id": "U_OVERFLOW_GUTTER_SIDE_STOCK",
+      "quantity": 2,
+      "unit": "pieces",
+      "specification": "176x15x1.9mm plain steel blank; finish polygon(0,0),(176,3),(176,15),(0,12); weld both cheeks.",
+      "ownership": "new",
+      "procure": true
+    },
+    {
+      "id": "U_OVERFLOW_DEFLECTOR_STOCK",
+      "quantity": 1,
+      "unit": "pieces",
+      "specification": "53.9x44x1.9mm plain steel flat; exit deflector to Z410; no bends.",
+      "ownership": "new",
+      "procure": true
+    },
+    {
+      "id": "U_OVERFLOW_SUPPORT_BRACKET_STOCK",
+      "quantity": 2,
+      "unit": "pieces",
+      "specification": "Unchanged formed1.9mm steel bracket: outer legs53/20, width12, inside radius2; D4.4 hole; use unchanged calibrated-development reference and current STEP installed26mm lower. Actual K-factor/forming coupon qualification held.",
+      "ownership": "new",
+      "procure": true
+    },
+    {
+      "id": "U_GUIDE_CLIP_MOUNT_FLAT_STOCK",
+      "quantity": 6,
+      "unit": "pieces",
+      "specification": "60x30x1.9mm plain steel; two D6.6 through holes atlocal(10,20),(50,20); weld to offset foot.",
+      "ownership": "new",
+      "procure": true
+    },
+    {
+      "id": "U_GUIDE_CLIP_OFFSET_FLAT_STOCK",
+      "quantity": 6,
+      "unit": "pieces",
+      "specification": "47.3x60x1.9mm plain steel offset-foot flats; welded, no bends.",
+      "ownership": "new",
+      "procure": true
+    },
+    {
+      "id": "U_GUIDE_CLIP_SCREEN_FLAT_STOCK",
+      "quantity": 6,
+      "unit": "pieces",
+      "specification": "60x32.85x1.9mm plain steel upright flats; weld between offset foot and screen edge; no bends.",
+      "ownership": "new",
+      "procure": true
+    },
+    {
+      "id": "U_GUIDE_RACK_WEB_FLAT_STOCK",
+      "quantity": 2,
+      "unit": "pieces",
+      "specification": "160x630.5x1.9mm plain steel rack webs; six D6.6 holes from current mm DXF.",
+      "ownership": "new",
+      "procure": true
+    },
+    {
+      "id": "U_GUIDE_RACK_RETURN_FLAT_STOCK",
+      "quantity": 4,
+      "unit": "pieces",
+      "specification": "18.1x630.5x1.9mm plain steel edge-return flats; weld to web; no bends.",
+      "ownership": "new",
+      "procure": true
+    },
+    {
+      "id": "U_GUIDE_RACK_ANCHOR_FLAT_STOCK",
+      "quantity": 2,
+      "unit": "pieces",
+      "specification": "40x40x1.9mm plain steel anchor flats; two D6.6 holes atlocal(12.3,20),(32.3,20); weld, no bends.",
+      "ownership": "new",
+      "procure": true
+    },
+    {
+      "id": "U_GUIDE_RACK_LEDGE_FLAT_STOCK",
+      "quantity": 6,
+      "unit": "pieces",
+      "specification": "72.3x40x1.9mm plain steel storage ledges; weld to rack web; no bends.",
+      "ownership": "new",
+      "procure": true
+    }
+  ],
+  "passed_local_fabrication_geometry": true,
+  "fabrication_release": false,
+  "operating_release": false,
+  "holds": [
+    "Existing formed support-bracket development needs received-material bend-coupon calibration.",
+    "Weld sequence, guide/rack distortion and fit, water-tightness, received steel thickness/corrosion finish and floor end fitting need fabrication acceptance.",
+    "Supplier valve/union/thread support, receiver usable liquid capacity and interlocks remain unqualified.",
+    "Whole-machine collision and screen-handling proofs must be regenerated after the current bed geometry freezes."
+  ]
+}

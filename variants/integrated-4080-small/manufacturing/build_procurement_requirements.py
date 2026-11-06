@@ -22,6 +22,8 @@ INPUTS = {
     'exclusive_stock_nests': HERE / 'exclusive-stock-nests.json',
     'motion_hardware_geometry': ROOT / 'variants/extrusion-reengineered/motion.py',
     'gantry_hardware_geometry': MACHINE / 'mechanical.py',
+    'gantry_joint_geometry': MACHINE / 'gantry_joint.py',
+    'gantry_joint_report': MACHINE / 'output/gantry-joint/gantry-joint-check.json',
     'atc_hardware_geometry': MACHINE / 'atc/actual_atc.py',
     'selected_head_geometry': MACHINE / 'head/quick_dock.py',
     'front_stop_geometry': MACHINE / 'front_stop_bed_clearance.py',
@@ -105,6 +107,9 @@ def explicit_joint(row):
         'RECEIVER_ROOF:M4_ROOF_SETS': [screw(4, 12, 'button head'), washer(4), nut(4)],
         'GANTRY:M6_WASHERS': [washer(6, 12, 6.6, 1.6)],
         'GANTRY:M6_NUTS': [nut(6, detail='5mm nominal height', hold='Actual grade and retention held.')],
+        'GANTRY:GJ_TOP_M6x20': [screw(6, 20, 'socket head')],
+        'GANTRY:GJ_TOP_M6_WASHER': [washer(6, 12, 6.6, 1.6)],
+        'GANTRY:GJ_TOP_M6_TNUT': [slotnut(6, 'actual4080slot; nominal5.9mmthreadengagement and at least13.05mmcavityfor20mmbolt')],
         'HEAD:Captive release screws M6x25': [screw(6, 25, 'socket head')],
         'HEAD:Cage fixing screws M3x10': [screw(3, 10, 'socket head')],
         'HEAD:Gravity ledge M4x20 screws': [screw(4, 20, 'socket head')],
@@ -121,6 +126,11 @@ def explicit_joint(row):
         'BED:BED_REAR_CLOSED_BOLTS': [screw(8, 35, 'socket head')],
         'BED:BED_ASSIST_END_FIXINGS': [screw(8, 25)],
         'BED:BED_REAR_CLOSED_WASHERS': [washer(8, 16, 8.5, 1.6)],
+        'BED:BED_REAR_UPPER_CAP_BOLTS': [screw(8, 20, 'socket head')],
+        'BED:BED_REAR_UPPER_CAP_WASHERS': [washer(8, 16, 8.5, 1.6)],
+        'BED:BED_GAS_UPPER_WASHERS': [washer(8, 16, 8.4, 1.6)],
+        'BED:BED_GAS_UPPER_NYLOC_NUTS': [nut(8, 'nyloc nut', 'DIN985AF13/h8nominal', 'Verifyactualballstudthread/nylonengagement.')],
+        'BED:BED_GAS_UPPER_STUD_SPACER': [simple('SPACER', 'OD12.7 ID8.5 x1.05mm steel spacer', 'Actualballstudneckandmountstackfitheld.')],
         'BED:BED_CROSS_BRIDGE_WASHERS': [washer(6, 18, 6.4, 1.6)],
         'MOTION:XR_MODULE_BOTTOM_M4_SLIDING_NUTS': [slotnut(4, 'owned HMS40 bottom channel; exact supplied contour held')],
         'MOTION:XR_FRAME_M6_SLOT_NUTS': [slotnut(6)],
@@ -128,10 +138,10 @@ def explicit_joint(row):
     }
     if key in exact:
         return exact[key]
-    if key=='BED:BED_M5X75_FINISH72':
-        assert '75'in spec and '72'in spec,'Bed finished72mm screw requires explicitly sourced75mm raw stock.'
-        return [screw(5,75,'socket head',
-            'Machine each purchased M5x75 socket screw to72mm finished underhead length; deburr/chamfer and verify complete usable thread, washer stack, slot-nut engagement and tip reserve.72mm is a finished part, not an assumed catalogue length.')]
+    if key=='BED:BED_M5X100_FINISH99P3':
+        assert '100'in spec and '99.3'in spec,'Bed finished99.3mm screw requires explicitly sourced100mm raw stock.'
+        return [screw(5,100,'socket head',
+            'Machine each purchased M5x100 socket screw to99.3+/-0.1mm finished underhead length; enddeburr/chamfer<=0.4mm and verify complete usable thread, 18ODbridgewasher stack, full2.7mm nominalslotnutengagement,1.0mmtipreserve and1.1mmcavityreserve.99.3mm is a finished part, not an assumed catalogue length.')]
     # These opaque component IDs are recovered from the bound motion.py factory.
     if re.match(r'MOTION:Y_LINK_SUPPORT_TOP_M5x20_', key):
         return [screw(5, 20, 'countersunk head')]
@@ -187,7 +197,7 @@ def classify(row):
     if profile is not None:
         return profile
     if key=='BED:BED_HDPE_FULL_LAYERS':
-        return [simple('HDPE_FINISHED_LAYER_REQUIREMENT', spec, 'Two finished layers derive from one raw48x96inch sheet in the bound exclusive-stock nest; do not buy two full raw sheets.')]
+        return [simple('HDPE_FINISHED_LAYER_REQUIREMENT', spec, 'ONE1000x1200x12.7finishedlayer derives from one nominal48x48inch halfsheet in the bound exclusive-stock nest; rawsheet is nonadditive.80roundthroughholesonly.')]
     # Source-modeled custom blanks are never parsed as bolts merely because
     # their machining notes contain an M6/M8 hole designation.
     if row['artifacts']:
@@ -234,7 +244,7 @@ def classify(row):
     if re.search(r'(?i)4080.*finished', spec) or key in ('BED:BED_CROSS_4080', 'ATC:ATC_FIXED_CROSSBEARERS_4080', 'ATC:ATC_MOVING_CARRIER_4080'):
         return [simple('4080_FINISHED_CUT_REQUIREMENT', spec, 'Choose one compatible raw-stock plan; do not also order finished cuts and raw-bar plan.')]
     if key == 'BED:BED_UNCUT_20100':
-        return [simple('20100_PROFILE', spec, 'Exact slot die/nut/lip fit and1220mm variant required.')]
+        return [simple('20100_PROFILE', spec, 'Tenfinished1220mmtracks. Selectedrawplan8x1500+2x1220issamefamilyandnonadditive;trim8barsby280mmnominalanddeburr. Exactslotdie/nut/lipfit and actualusable1220length required.')]
     return [simple('SOURCE_REQUIREMENT_UNMAPPED', spec, 'Count and specification preserved. Select supplier/stock from source drawing or resolve actual interface before ordering.')]
 
 
@@ -351,9 +361,12 @@ def run():
                     unmapped_source_families=sum(f['category']=='SOURCE_REQUIREMENT_UNMAPPED' for f in families)),
         raw_4080_stock_plan=stock_plan,
         HDPE_source_raw_stock_nonadditive=nests['HDPE_new_stock'],
-        HDPE_raw_order_scenario=dict(role='NONADDITIVE_RAW_STOCK_ALTERNATIVE',quantity=1,unit='48x96inch x1/2inch raw sheet',
-            finished_layers=2,master_row='BED:BED_HDPE_FULL_LAYERS',actual_supplier_selected=False,
-            note='One sheet supplies both layers; raw stock is an alternative purchase representation, not extra material.'),
+        HDPE_raw_order_scenario=dict(role='NONADDITIVE_RAW_STOCK_ALTERNATIVE',quantity=1,unit='48x48inch x1/2inch raw halfsheet',
+            finished_layers=1,finished_layer_mm=[1000,1200,12.7],master_row='BED:BED_HDPE_FULL_LAYERS',actual_supplier_selected=False,
+            note='One halfsheet supplies ONEfinishedlayer; ordinarycutsand80roundholes. Raw stock is an alternative purchase representation, not extra material.'),
+        tracks_raw_order_scenario=dict(role='NONADDITIVE_RAW_STOCK_ALTERNATIVE',finished_quantity=10,finished_length_mm=1220,
+            raw_packs=[dict(ASIN='B0DY7JYQCJ',packs=2,pieces_per_pack=4,length_mm=1500),dict(ASIN='B0DY7GCFRV',packs=1,pieces_per_pack=2,length_mm=1220)],
+            master_row='BED:BED_UNCUT_20100',note='SameSeekfamilyselectedrawpackplan;8trimmedplus2uncuttracks. Not20tracksandnotadditionaltothe10finishedrequirements. Pricesanddeliveryfollowboundbudget/cartregister.'),
         families=families, source_coverage=coverage, excluded=excluded,
         complete_shipped_cost_USD=None, under_1000_shipped_verified=False,
         fabrication_release=False, CAM_release=False, operating_release=False)
@@ -391,15 +404,25 @@ def run():
     size_consolidated = len(source_family_ids)==1 and sum(number(r['new_quantity']) for r in m5_rows)==32
     datum = source_actions['FRONT_STOP:DATUM_M6X16_ANCHOR_SETS']
     explicit_set_three_atoms = len(datum['procurement_ids'])==3 and number(next(r for r in rows if r['id']==datum['source_id'])['new_quantity'])==4
+    by_source={r['id']:r for r in rows}
+    newbed_screws=by_source['BED:BED_M5X100_FINISH99P3']
+    current_bed_and_gantry=(number(newbed_screws['new_quantity'])==80 and
+        all(index[p]['length_mm']==100 for p in source_actions[newbed_screws['id']]['procurement_ids'])and
+        number(by_source['BED:BED_HDPE_FULL_LAYERS']['new_quantity'])==1 and
+        len(nests['HDPE_new_stock']['parts'])==1 and
+        all(number(by_source['GANTRY:'+i]['new_quantity'])==8 for i in('GJ_TOP_M6x20','GJ_TOP_M6_WASHER','GJ_TOP_M6_TNUT'))and
+        all(by_source['GANTRY:'+i]['additive']=='False'for i in('GJ_OFFCUT_TOP_BRIDGES','GJ_OFFCUT_M8_REAR_LANDS','GJ_OFFCUT_M6_UPPER_LANDS'))and
+        not any('INT_GANTRY_GUIDE_BAR_'in r['id']for r in rows))
     check = dict(source_bindings=result['source_bindings'], source_files_current=sources_current,
         source_coverage_once=coverage_once, explicit_atoms_reconcile=atoms_reconcile,
         no_owned_purchase=no_owned_purchase, pack_arithmetic=pack_math,
         all_current_4080_cut_requirements_reconcile=profile_allocation_reconciles,
         thirty_two_M5x18_instances_consolidated=size_consolidated,
         four_datum_joint_sets_expand_to_four_each_screw_washer_slotnut=explicit_set_three_atoms,
+        current_single_layer_bed_and_gantry_reconcile=current_bed_and_gantry,
         held_counts_preserved=all(f['new_required_quantity'] is None for f in families if f['unresolved_quantity_source_ids']),
         artifact_sha256={csvpath.name:sha(csvpath),jsonpath.name:sha(jsonpath)},
-        requirements_reconciled=all(sources_current.values()) and coverage_once and atoms_reconcile and no_owned_purchase and pack_math and size_consolidated and explicit_set_three_atoms and profile_allocation_reconciles,
+        requirements_reconciled=all(sources_current.values()) and coverage_once and atoms_reconcile and no_owned_purchase and pack_math and size_consolidated and explicit_set_three_atoms and profile_allocation_reconciles and current_bed_and_gantry,
         supplier_selections_complete=False, complete_shipped_total_USD=None, budget_pass=False,
         fabrication_release=False, CAM_release=False)
     (HERE/'procurement-check.json').write_text(json.dumps(check,indent=2)+'\n',encoding='utf-8')

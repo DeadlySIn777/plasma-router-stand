@@ -3,24 +3,31 @@
   "reports": [
     {
       "report": "output/assembly-check.json",
-      "sha256": "ed15d32e24d15383f744b4b79d9187e5a2d0d055f3ccd7cc765a3905b17ab7b2",
+      "sha256": "bb0cab509fb7a9fdf588816f4552fbad26f77ddd99b78d187526ef1da62ff8a5",
       "status_key": "passed",
       "passed": true,
-      "source_checks": 12
+      "source_checks": 13
     },
     {
       "report": "output/integration-clearance-check.json",
-      "sha256": "55776a31579084d349ec77f951fe395e8659af02026badf2108694e546eed18f",
+      "sha256": "3741332e62f3fc1388a6b9b028b3a71bb6991588a3b6fb5791ac9441aeca80b8",
       "status_key": "passed",
       "passed": true,
-      "source_checks": 34
+      "source_checks": 35
     },
     {
       "report": "output/frame-gantry-check.json",
-      "sha256": "aca3f41e1321b7538c896aca7626b98d356ccb9998d0d1c7efa8c9a3a80d7a02",
+      "sha256": "5910c4e0b7a0f3312eb3ca719716798880efef4e694874d1d47466bebb6ebf7f",
       "status_key": "passed",
       "passed": true,
-      "source_checks": 4
+      "source_checks": 7
+    },
+    {
+      "report": "output/gantry-joint/gantry-joint-check.json",
+      "sha256": "931054d3cfd946952bb6290ec8eb15ac42d0ec667170bdcbcf7b1f1d64be3e16",
+      "status_key": "passed",
+      "passed": true,
+      "source_checks": 43
     },
     {
       "report": "head/output/quick-dock/quick-dock-check.json",
@@ -31,14 +38,14 @@
     },
     {
       "report": "head/output/plasma-quick-dock/plasma-dock-check.json",
-      "sha256": "d454e88008022984a7d1a5a6cb1a9145fe2691c8d9fa1a1a715f108d156c660a",
+      "sha256": "763087e0e80355da6a7da101317398f094b8e9b16027891ae1b5aee514545897",
       "status_key": "known_shared_plasma_interface_passed",
       "passed": true,
-      "source_checks": 23
+      "source_checks": 24
     },
     {
       "report": "head/output/selected-head-pack/selected-head-pack-check.json",
-      "sha256": "13c0703f77e49cd06a96f134ed4aeaaea1fb515d129d3d8fc52bf0267ec3b46c",
+      "sha256": "83a21147e896eaa10c65e5a302d2048574fff66527ae6206681ee99cea40e498",
       "status_key": "stock_nest_and_takeoff_passed",
       "passed": true,
       "source_checks": 25
@@ -59,127 +66,148 @@
     },
     {
       "report": "bed/output/stay-pivot-retention-check.json",
-      "sha256": "becd7cd867c11d6937b00142f62b200e2af6b301c92f10d3d30710a0ad99ab29",
+      "sha256": "d0ca5a811ffde41e7d4f2736ebbe922205c2991f68dbd9074118f8e980c3fd95",
       "status_key": "passed",
       "passed": true,
       "source_checks": 3
     },
     {
       "report": "bed/output/profile-fastener-retention-check.json",
-      "sha256": "bc07d8acf3c7bd3fad21e9c55a2836d3089c7e9545d0e056a3bc60a6624e857b",
+      "sha256": "7d5ac5b5e08c750ce1395017941b6f7bd4b7b5265418c2600cdf5a677435421c",
       "status_key": "passed",
       "passed": true,
       "source_checks": 3
     },
     {
       "report": "bed/output/bed-handling-reach-screen.json",
-      "sha256": "4e77ad6cfb044d5c8959f66861c71d7dd35fa91d3f42ce28c4d8070028250dd8",
+      "sha256": "d324e791bf00c1012ec2995dac433e51d7bfa0681fc48d25e0d0cedf9878ff8b",
       "status_key": "source_consistent",
       "passed": true,
       "source_checks": 2
     },
     {
       "report": "bed/output/bed-local-check.json",
-      "sha256": "9868aabf97f5fccd23b99b81ead498df5fd616b798e00fd242b38fe4d1a36a76",
+      "sha256": "ffa10165af8534362ad2f1196bd51863226c844f4a9333eeb9c2481cf83af375",
       "status_key": "passed",
       "passed": true,
-      "source_checks": 4
+      "source_checks": 6
     },
     {
       "report": "bed/output/bed-machine-changeover-check.json",
-      "sha256": "40a4fa14ef1f4dce83a219c03a3573be4152a45915fce3b86672861b4bf500bc",
+      "sha256": "2df0e27479e3c478795fc8135f7dd25cf3e63abd48e4005d2e8a61fd6958dc3f",
       "status_key": "passed",
       "passed": true,
-      "source_checks": 33
+      "source_checks": 34
     },
     {
       "report": "bed/output/pan-front-structure-screen.json",
-      "sha256": "f937b69f5a3ae04f2222179bcde52eac108d2ea9d6d29522a8a0b0e8b7e6b94d",
+      "sha256": "d04afbad1f24e28466a0ea7a36fa24048294e373e4eb461848ca8362083bb10b",
       "status_key": "passed_without_composite_credit",
       "passed": true,
-      "source_checks": 2
+      "source_checks": 3
     },
     {
       "report": "utilities/output/utility-check.json",
-      "sha256": "7d50e9b892106e85db5c046bccc8bdb1a5a704ca7419943b6779559b1df9768d",
+      "sha256": "8212a93dd8921ba9615896981ecce235a596ff7251bfb60b613604e9b23ec995",
       "status_key": "passed_static_geometry",
+      "passed": true,
+      "source_checks": 12
+    },
+    {
+      "report": "utilities/output/lowered-wet-fabrication-check.json",
+      "sha256": "f594043c817ce1d51640cc17131faf3d79845939cf2ab5ae40319fae4a08d94e",
+      "status_key": "passed_local_fabrication_geometry",
       "passed": true,
       "source_checks": 5
     },
     {
       "report": "utilities/output/guide-handling-check.json",
-      "sha256": "0fa3dfc3f31d98eff0202d82860c84ae714bfda7afed0c6273cf5213845eda45",
+      "sha256": "c9971e26a50c88bdd710ff6dad09c89ec91255bf7ff171a11914278408d91214",
       "status_key": "passed",
       "passed": true,
-      "source_checks": 35
+      "source_checks": 38
     },
     {
       "report": "output/front-stop-bed-clearance/front-stop-bed-clearance-check.json",
-      "sha256": "dddb13bfb8a0e2d1abeef30e3a1b6d84d3f1f7742b0b969e34b716a03884654c",
+      "sha256": "e5e3c4e9af5249aea3d5df05d3987db6ef189db7d72bcda566159fdced010fe8",
       "status_key": "passed",
       "passed": true,
-      "source_checks": 33
+      "source_checks": 34
     },
     {
       "report": "manufacturing/manufacturing-check.json",
-      "sha256": "c29fa8e61075c4a2353e07253c2abdeab5c264e610a6deedd00e0ae62715b0d3",
+      "sha256": "4a25786d211b9aecf695660b9acd00029f109dbb4d1093b783c42aa7b9dc194c",
       "status_key": "passed",
       "passed": true,
-      "source_checks": 42
+      "source_checks": 50
     },
     {
       "report": "manufacturing/procurement-check.json",
-      "sha256": "8eb7c6b30e48ba7a1599a4d6c6c2a5bfc4191caaef56bc3517839518531bc934",
+      "sha256": "e5f5e4867c27bcafeddb8da62df70a7fffdea4bbccaedeb9bbadc2b49eeba45f",
       "status_key": "requirements_reconciled",
       "passed": true,
-      "source_checks": 12
+      "source_checks": 14
     },
     {
       "report": "manufacturing/cart-coverage-check.json",
-      "sha256": "06eb16d7a32c013e63a4fbd301fbf592ec91bfb4234b6a7003b7646667142414",
+      "sha256": "639ba11b62293b953f1666f21eb58bbf07f6dbfd2a54e6a51be6b2279847d09d",
       "status_key": "source_and_cart_arithmetic_passed",
       "passed": true,
       "source_checks": 3
+    },
+    {
+      "report": "optimization/comparison.json",
+      "sha256": "d44cd1040775c86e460767eba7ff4f75ab9ce4cdb05f6383512fffb78590f93c",
+      "status_key": "passed",
+      "passed": true,
+      "source_checks": 6
+    },
+    {
+      "report": "../../output/pdf/integrated-4080-review-qa.json",
+      "sha256": "82bab79c37149a8c4f9f3cc59fa688f8a181693f2265d5c93711ecaa7bb340ea",
+      "status_key": "visual_layout_passed",
+      "passed": true,
+      "source_checks": 17
     }
   ],
   "stale_sources": [],
   "artifacts": {
     "variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_WOOD.step": {
-      "sha256": "28cbb36f5602c7d78c83c8c55d11a17128ae209e59faddccab40cab0dc8b9c90",
-      "bytes": 42510165
+      "sha256": "7070a45c4cc40d12cf540f6ffb9a3581e16f60f2d725325474cc62730011281c",
+      "bytes": 55276063
     },
     "variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_WOOD.png": {
-      "sha256": "df2de26b6065cd6d6c88fab7716d77729b0780cc8195a9668b33eefef22664e0",
-      "bytes": 173015
+      "sha256": "b934406777741be81cef241ed0547fa098e21a0af706400a900b3329b613f643",
+      "bytes": 173326
     },
     "variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_PLASMA.step": {
-      "sha256": "1c8c95e2ee8b9278428e2195e68d2f6cac89fe73d138d20f6b7d6f21d7728add",
-      "bytes": 43146644
+      "sha256": "e5c3d4c00bb94fd9b3974200744c6a42e97aab333e58036383cdfd5ef32a6cb1",
+      "bytes": 56134979
     },
     "variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_PLASMA.png": {
-      "sha256": "83dacb20fe39847bf78b864bc480a3dca71ba6d1cea66af66ecc9538f05a3d14",
-      "bytes": 164673
+      "sha256": "44f3007c075fd8e2a4a03f33e964d77f88e6975614606daa07ebd666ec0ada52",
+      "bytes": 170034
     },
     "variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_CHANGEOVER.step": {
-      "sha256": "b684bdeb55407030a82f807fda3d6c91486b36f7ab999749e7cc999238922db5",
-      "bytes": 40068478
+      "sha256": "4c605714b6215f683219e9368d8ff317ebc3dc6e15d59929d31aaefc87bc967b",
+      "bytes": 53211977
     },
     "variants/integrated-4080-small/output/INTEGRATED_4080_SMALL_CHANGEOVER.png": {
-      "sha256": "52a39b6d4bd41adb9eccd335c5a454148d85887545b2bb4d64ccc86f18792dd7",
-      "bytes": 190784
+      "sha256": "1919e9db6199fdb6ff3429de6d8b41b44507fab053ddbfcf58e13b80ee345026",
+      "bytes": 189938
     },
     "output/pdf/plasma-router-stand-integrated-4080-review.pdf": {
-      "sha256": "be0fa05da71f2cada95a1b54291de29251b5b50ef9de6136e7712e8bb96daf91",
-      "bytes": 315561
+      "sha256": "1874f85167a3d772a8840fa37fefc25747626f105c40be2286011d266c70570e",
+      "bytes": 320140
     }
   },
   "source_sha256": {
-    "variants/integrated-4080-small/check_review_pack.py": "93e9299738b3d89b3d66c3d1841a78437c72b7a9945d3a00c9747c2081a313c5"
+    "variants/integrated-4080-small/check_review_pack.py": "0640306c9a5ebd9feb4edde513a480ef40f8bfcd1905dbed3a51918b3ee4c248"
   },
   "requirements_complete": false,
   "budget_cap_USD": 1000,
   "delivered_budget_verified": false,
-  "current_three_core_goods_basis_USD": 1025.7,
+  "current_three_core_goods_basis_USD": 934.83,
   "complete_delivered_total_USD": null,
   "fabrication_release": false,
   "CAM_release": false,

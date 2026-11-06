@@ -3,6 +3,12 @@
     "valve_model": "USS-MSV00009 / JFMSV00009",
     "valve_unit_price_USD": 50.42,
     "shipping_USD": null,
+    "pan_lowering_mm": 26.0,
+    "plasma_slat_top_Z_mm": 852.0,
+    "wood_workplane_Z_unchanged_mm": 967.8,
+    "receiver_outlet_Z_mm": 410,
+    "receiver_lid_Z_mm": 391,
+    "overflow_airgap_mm": 19,
     "valve_package_published_in": {
       "port_length": 3.2,
       "motor_width": 3.0,
@@ -55,13 +61,24 @@
     "pan_retention_local_floor_delta_mm": 3.18,
     "old_cassette_cabinet_included": false,
     "fabrication_release": false,
-    "operating_release": false
+    "operating_release": false,
+    "overflow_upper_channel_height_mm": 383.0,
+    "overflow_upper_channel_three_flat_strips": true,
+    "overflow_upper_channel_bottom_cap": false,
+    "guide_rack_web_height_mm": 630.5,
+    "guide_rack_anchor_flange_bottom_Z_mm": 698.6,
+    "lower_overflow_floor_width_mm": 44.0,
+    "guide_welded_flat_piece_count": 38,
+    "guide_flat_stock_drawing_count": 8
   },
   "source_sha256": {
-    "variants\\integrated-4080-small\\utilities\\integrated_utilities.py": "8fcbe7ea06a6610c5ce22936c6f363c0c21da910297fb21e403e835c3f0dd98a",
-    "variants\\integrated-4080-small\\bed\\integrated_bed.py": "d0f35b5c1ec0618280516fa6edb730bcb6238ffb0a2cf41288cfb27110a15d81",
-    "variants\\integrated-4080-small\\mechanical.py": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "variants\\integrated-4080-small\\utilities\\build_utilities.py": "3d2c03fd1a1868b18fa359cc13214a8e5cb478c9f9f59c937dd8151455db1ceb",
+    "variants\\integrated-4080-small\\utilities\\export_lowered_wet.py": "5d140b281c6c47157aa9fc12df4e192fd4555cf71649a05c429201836924ccfd",
+    "variants\\integrated-4080-small\\utilities\\integrated_utilities.py": "8a21c69b6409c037de766631a165c6ed2994e30c3ac7c770170b4befac956d81",
+    "variants\\integrated-4080-small\\bed\\integrated_bed.py": "d424f813511d6b21a2b525d600520971aae95a140bbdccb3f84daa69d84ced9b",
+    "variants\\integrated-4080-small\\mechanical.py": "009a8ab210f9df3cadc667b966d3f9e50e5438870590e075b44b7a36dbd1e04d",
     "variants\\extrusion-reengineered\\bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants\\extrusion-reengineered\\params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
     "variants\\extrusion-reengineered\\shields.py": "132b91c4b7b0b6014dcac088b3a86ecf5526f3e10085307bf7f5981e942330fe"
   },
   "component_count": 159,
@@ -86,10 +103,33 @@
     "All six screen sections must be transferred to the under-pan racks before bed tilt and refitted before cutting. The9stagehandlingroute requires actual-source finite/continuous checks before conversion release.",
     "Guide screens are spatter/dust barriers, not a sealed extraction enclosure or tested thermal barrier. Rail block shoes prevent a continuous fixed wall atX44throughrailheight.",
     "Valve NC power-off return requires at least60s energized charging per manufacturer. Drain closure, receiver-present/level and mode interlocks require actual controller I/O qualification.",
-    "New formed/welded screen parts require developed bend/weld fabrication drawings and actual slot fastener fit/engagement; the nominal solids are not final sheet flat patterns."
+    "Guide screens, three-piece clips and seven-piece racks now have source-bound flat cutting profiles and zero-error assembled-union proofs. Actual weld distortion, fastener/slot fit and engagement remain acceptance items. The two unchanged curved overflow brackets still require bend-coupon calibration."
   ],
+  "lowered_wet_fabrication": {
+    "report": "output/lowered-wet-fabrication-check.json",
+    "sha256": "f594043c817ce1d51640cc17131faf3d79845939cf2ab5ae40319fae4a08d94e",
+    "passed": true,
+    "upper_channel_union_error_mm3": 0.0,
+    "complete_overflow_union_error_mm3": 0.0,
+    "superseded_retained_flat_ids": [
+      "OVERFLOW_COLLECTOR_BACK",
+      "OVERFLOW_COLLECTOR_SIDES",
+      "OVERFLOW_COLLECTOR_FLOOR",
+      "OVERFLOW_GUTTER_FLOOR",
+      "OVERFLOW_GUTTER_SIDES",
+      "OVERFLOW_DEFLECTOR",
+      "OVERFLOW_SUPPORT_BRACKET_FLAT"
+    ]
+  },
   "transition_is_continuously_proved": false,
+  "source_consistent_during_build": true,
   "passed_static_geometry": true,
   "fabrication_release": false,
-  "operating_release": false
+  "operating_release": false,
+  "output_sha256": {
+    "output/custom-part-index.json": "a40d292072c0cdd5937abf55bc7aacb693227db1dfcf66305e79755216b6709f",
+    "output/utility-takeoff.csv": "0a0621d367faeaae86b167a2827cd4c5af7a4236c1289690f6547bc558066f1b",
+    "output/INTEGRATED_UTILITIES.step": "fab098ffadbc221dde8c274526625722e009d633fa4a51bbaa394a2606ba7204",
+    "output/lowered-wet-fabrication-check.json": "f594043c817ce1d51640cc17131faf3d79845939cf2ab5ae40319fae4a08d94e"
+  }
 }

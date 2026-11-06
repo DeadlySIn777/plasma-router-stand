@@ -18,6 +18,8 @@ FRONT_POST_SHIFT=-200.
 SIDE_SHIFT=25.
 GANTRY_RISE=40.
 WORKING_Z=250.
+PAN_LOWERING_MM=26.
+DRY_SUPPORT_LOWERING_MM=27.3
 COUPLER_X=(-25.,75.,225.,375.,525.,675.,825.,975.,1125.,1175.)
 
 def side_of(n):
@@ -52,19 +54,20 @@ def frame_parts():
             if n.endswith('_1'):s=s.translate((0,FRONT_POST_SHIFT,0))
         elif n.startswith('XR_EX_PAN_X_'):
             b=S.bounds(s);s=X.bar(X.P.INNER_LEFT-SIDE_SHIFT,b[1],b[2],'X',X.P.CROSS_LENGTH+2*SIDE_SHIFT)
+            s=s.translate((0,0,-PAN_LOWERING_MM))
         elif n.startswith('XR_PAN_BEARING_ANGLE_'):
             i=int(n.rsplit('_',1)[1])-1
             s=X.bearing_angle(X.P.INNER_LEFT-SIDE_SHIFT if left else X.P.INNER_RIGHT+SIDE_SHIFT,
-                X.P.POST_CENTRES_Y[i],X.P.PAN_BEARER_BOTTOM,80.,80.,left)
+                X.P.POST_CENTRES_Y[i],X.P.PAN_BEARER_BOTTOM-PAN_LOWERING_MM,80.,80.,left)
         elif n.startswith('XR_EX_DRY_ARM_'):
             i=int(n.rsplit('_',1)[1])-1
             arm_length=X.ARM_LENGTH+SIDE_SHIFT
             ax=X.P.INNER_LEFT-SIDE_SHIFT if left else X.P.INNER_RIGHT+SIDE_SHIFT-arm_length
-            s=X.bar(ax,X.P.POST_CENTRES_Y[i]-40,X.ARM_BOTTOM-2.425,'X',arm_length,flat=True)
+            s=X.bar(ax,X.P.POST_CENTRES_Y[i]-40,X.ARM_BOTTOM-2.425-DRY_SUPPORT_LOWERING_MM,'X',arm_length,flat=True)
         elif n.startswith('XR_DRY_ARM_ANGLE_'):
             i=int(n.rsplit('_',1)[1])-1
             s=X.bearing_angle(X.P.INNER_LEFT-SIDE_SHIFT if left else X.P.INNER_RIGHT+SIDE_SHIFT,
-                X.P.POST_CENTRES_Y[i],X.ARM_BOTTOM-2.425,40.,X.ARM_ANGLE_LEG,left)
+                X.P.POST_CENTRES_Y[i],X.ARM_BOTTOM-2.425-DRY_SUPPORT_LOWERING_MM,40.,X.ARM_ANGLE_LEG,left)
         elif n.startswith('XR_SIDE_X_'):
             bay,j=map(int,n.split('_')[-2:])
             if bay==1:
@@ -90,12 +93,15 @@ def frame_parts():
         if n.startswith('XR_EX_DRY_ARM_'):
             i=int(n.rsplit('_',1)[1])
             if i in(1,3):
-                xx=105. if left else 1045.
+                # Rear outer bed columns shifted inward to clear the upright
+                # crossmember end-core fixings. Follow their actual axes so
+                # the screw heads clear the arm during the initial tilt.
+                xx=(125. if left else 1025.)if i==3 else(105. if left else 1045.)
                 # The full faces move40mm forward to clear the retained
                 # long-Z lower end during tilt; rear bed bearer follows.
                 # AtY1140 this access bore is open at the arm's front edge.
                 yy=1140. if i==3 else X.P.POST_CENTRES_Y[i-1]
-                s=s.cut(cq.Solid.makeCylinder(6.25,42,cq.Vector(xx,yy,X.ARM_BOTTOM-3.425),cq.Vector(0,0,1))).clean()
+                s=s.cut(cq.Solid.makeCylinder(6.25,42,cq.Vector(xx,yy,X.ARM_BOTTOM-3.425-DRY_SUPPORT_LOWERING_MM),cq.Vector(0,0,1))).clean()
         parts.append((n,s,c))
     # A front pan bearer is hung from both continuous headers. Vertical steel
     # cheeks transfer gravity in their own plane; welded lower seats support
@@ -104,18 +110,18 @@ def frame_parts():
     for side in('L','R'):
         # The inner-face guide blocks sweepZ1051..1095. Keep the hanger
         # below1046 and spread four bolts along the lower header slot.
-        plate=X.box(25.8,260.,720.15,6.35,80.,325.85).fuse(
+        plate=X.box(25.8,260.,720.15-PAN_LOWERING_MM,6.35,80.,325.85+PAN_LOWERING_MM).fuse(
             X.box(25.8,220.,1013.,6.35,160.,33.)).clean()
         for yy in(240.,280.,320.,360.):
             plate=plate.cut(cyl(6.6,8.35,(24.8,yy,1033.),(1,0,0)))
-        for zz in(746.5,786.5):plate=plate.cut(cyl(8.5,8.35,(24.8,300.,zz),(1,0,0)))
-        seat=X.box(32.15,260.,720.15,80.,80.,6.35)
+        for zz in(746.5-PAN_LOWERING_MM,786.5-PAN_LOWERING_MM):plate=plate.cut(cyl(8.5,8.35,(24.8,300.,zz),(1,0,0)))
+        seat=X.box(32.15,260.,720.15-PAN_LOWERING_MM,80.,80.,6.35)
         bracket=plate.fuse(seat).clean()
         if side=='R':bracket=bracket.mirror('YZ',(575,0,0))
         parts.append(('INT_PAN_FRONT_HEADER_HANGER_'+side,bracket,(.25,.31,.34)))
-    beam=X.bar(32.15,280.,726.5,'X',1085.7)
+    beam=X.bar(32.15,280.,726.5-PAN_LOWERING_MM,'X',1085.7)
     for x,d in((32.15,(1,0,0)),(1117.85,(-1,0,0))):
-        for zz in(746.5,786.5):beam=beam.cut(cyl(8.,25.,(x,300.,zz),d))
+        for zz in(746.5-PAN_LOWERING_MM,786.5-PAN_LOWERING_MM):beam=beam.cut(cyl(8.,25.,(x,300.,zz),d))
     parts.append(('INT_EX_PAN_FRONT_300',beam.clean(),(.16,.20,.23)))
     return parts
 
@@ -160,7 +166,8 @@ def paired_gantry(parts):
         result.append((f'INT_GANTRY_M6x100_{i}',bolt.clean(),hardware))
         nut=cyl(11.6,5,(xx,y+81.6,z+40)).cut(cyl(6,7,(xx,y+80.6,z+40)))
         result.append((f'INT_GANTRY_M6_NUT_{i}',nut.clean(),hardware))
-    return result
+    import gantry_joint as GJ
+    return GJ.apply_joint(result)
 
 def configure_motion(parts,preserve_tool_ids=()):
     """Raise purchased fixed hardware; preserve actual tool working datums."""
@@ -196,6 +203,10 @@ def frame_cutlist():
 
 def verify():
     out=HERE/'output';out.mkdir(exist_ok=True)
+    joint_source=HERE/'gantry_joint.py'
+    joint_report_path=out/'gantry-joint/gantry-joint-check.json'
+    joint_report=json.loads(joint_report_path.read_text(encoding='utf-8'))
+    joint_sources_current=all((ROOT/n).is_file()and S.sha(ROOT/n)==h for n,h in joint_report['source_sha256'].items())
     parts=motion_parts();old=[]
     for n,s,c in shift_y_side(C.motion_parts(False,775,575,100)):
         if S.cls(n)!='Y_X_Z_tool'or n=='ZBX80_OUTPUT_HOLD':s=s.translate((0,0,GANTRY_RISE))
@@ -233,12 +244,16 @@ def verify():
             bolt_intersection_mm3=tube.intersect(lookup[f'INT_GANTRY_M6x100_{i}']).Volume()))
     data=dict(study='PAIRED4080_GANTRY_AND_FRONT_PARKING_BAY_CHASSIS',
         frame_cutlist=frame_cutlist(),gantry_cross_section_mm=[80,80],gantry_4080_quantity=2,
-        guide_datum_bars=dict(quantity=2,finished_mm=[1200,40,12.7],
-            source='Two exact material subsets of the former full-width face; retained source holes/counterbores. New/unowned long stock unless evidenced.',
-            new_supplier_HGR_holes='Transfer from the actual supplied1200mm rails; original phase/pitch is not silently changed.'),
+        guide_datum_face=dict(quantity=1,finished_face_mm=[1200,112,6.35],total_datum_stack_mm=12.7,
+            material='Plainsteelwithattached6.35rearlands;twooldnewAlguidebarsremoved',
+            retained_M8_counterbores='8sourceaxes;D13.5depth8,remaining4.7bearingweb',
+            retained_M6_upper_holes='4sourceaxes;fullsteeledge-supportrestored;pilottapM6x1through',
+            actual_supplier_HGR_M5_holes='Transferactualownedrails;pitch/phaseareheld,notinvented'),
+        gantry_joint=joint_report['metadata'],gantry_joint_report_current=joint_sources_current,
+        gantry_joint_custom_moving_mass_increase_kg=joint_report['mass']['custom_part_moving_mass_increase_kg'],
         profile_interface_representation='Outer mounting model with minimum T-slot cavity clearance allocations. Not supplier die geometry. No machining of those purchased-profile cavity allocations is instructed.',
         required_Tnut_cavity=dict(opening_min_mm=8.2,nut_envelope_mm=[22,13.7,5.9],nut_inset_mm=4.32,screw_projection_mm=11.3),
-        beam_section_properties_basis='Two independently qualified4080profiles. No parallel-axis/composite stiffness credit or torsional capacity is asserted for the unqualified coupler joints.',
+        beam_section_properties_basis='Two4080profileswithoriginalbottombrackets,fournewtopbridgesandcontinuoussteelface. Noqualifiedparallel-axis/compositetorsionalcapacityasserted;actualsections,joints/preloadandmass/driveacceptanceremainheld.',
         Y_side_translation_mm=dict(L=-SIDE_SHIFT,R=SIDE_SHIFT),
         gantry_and_header_rise_mm=GANTRY_RISE,
         owned_module_catalogue_stroke_mm=300,assessed_working_Z_mm=WORKING_Z,
@@ -247,9 +262,12 @@ def verify():
         fixed_frame_header_Y_mm=[FRAME_FRONT,FRAME_REAR],
         front_post_centre_Y_mm=FRONT_POST_Y,
         pan_bearer_centres_Y_mm=[300.,630.,1180.],
-        front_pan_hangers=dict(quantity=2,stepped_plate_bounding_blank_mm=[160,325.85,6.35],
-            plate_profile='80mm-wide vertical stem Y260..340,Z720.15..1046; integral160mm-wide top Y220..380,Z1013..1046',
+        front_pan_hangers=dict(quantity=2,stepped_plate_bounding_blank_mm=[160,325.85+PAN_LOWERING_MM,6.35],
+            plate_profile=f'80mmverticalstemY260..340,Z{720.15-PAN_LOWERING_MM:g}..1046;integral160mmtopY220..380,Z1013..1046',
             welded_seat_mm=[80,80,6.35],header_bolt_Y_mm=[240,280,320,360],header_bolt_Z_mm=1033,
+            lowered_pan_beam_bottom_Z_mm=726.5-PAN_LOWERING_MM,
+            lowered_welded_seat_bottom_Z_mm=720.15-PAN_LOWERING_MM,
+            pan_lowering_mm=PAN_LOWERING_MM,dry_support_lowering_mm=DRY_SUPPORT_LOWERING_MM,
             header_fixings='8 M6 profile-face sets total, actual compatible nuts/screw lengths and joint capacity held',
             beam_end_fixings='4 M8 end-core sets total; nominal thread-major CAD bores are not tap drills',
             load_path='Pan -> fitted shims -> 4080 beam -> welded bearing seats -> steel hanger cheeks -> continuous 4080 headers -> six posts.'),
@@ -259,9 +277,9 @@ def verify():
             qualification='Actual profile flat land, drilled webs, preload, sleeve length tolerance, slip, thread and load sharing require inspection/qualification.'),
         display_pairs=pairs,relative_continuous=relative,new_self_intersections=new_self,tube_checks=tube_pairs,
         frame_finished4080_length_mm=sum(p['length_mm']for p in frame_cutlist()),
-        source_sha256={p.relative_to(ROOT).as_posix():S.sha(p)for p in[Path(__file__),Path(C.__file__),Path(S.__file__),Path(X.__file__)]},
+        source_sha256={p.relative_to(ROOT).as_posix():S.sha(p)for p in[Path(__file__),Path(C.__file__),Path(S.__file__),Path(X.__file__),Path(X.P.__file__),joint_source,joint_report_path]},
         fabrication_release=False,physical_rigidity_qualified=False)
-    data['passed']=not pairs['unexpected']and not new_self and all(q['passed']for q in relative)and all(q['beam_intersection_mm3']<1e-7 and q['bolt_intersection_mm3']<1e-7 for q in tube_pairs)
+    data['passed']=joint_sources_current and joint_report['passed']and not pairs['unexpected']and not new_self and all(q['passed']for q in relative)and all(q['beam_intersection_mm3']<1e-7 and q['bolt_intersection_mm3']<1e-7 for q in tube_pairs)
     (out/'frame-gantry-check.json').write_text(json.dumps(data,indent=2)+'\n')
     print(json.dumps(dict(passed=data['passed'],display_hits=pairs['unexpected'],relative_count=len(relative),relative_failed=[(q['moving'],q['obstacle'])for q in relative if not q['passed']],frame_m=data['frame_finished4080_length_mm']/1000)),flush=True)
     return 0 if data['passed']else 1

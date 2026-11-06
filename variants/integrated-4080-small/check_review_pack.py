@@ -8,6 +8,7 @@ SPECS=[
  ('output/assembly-check.json','passed'),
  ('output/integration-clearance-check.json','passed'),
  ('output/frame-gantry-check.json','passed'),
+ ('output/gantry-joint/gantry-joint-check.json','passed'),
  ('head/output/quick-dock/quick-dock-check.json','known_dock_static_and_removal_checkpoints_passed'),
  ('head/output/plasma-quick-dock/plasma-dock-check.json','known_shared_plasma_interface_passed'),
  ('head/output/selected-head-pack/selected-head-pack-check.json','stock_nest_and_takeoff_passed'),
@@ -20,11 +21,15 @@ SPECS=[
  ('bed/output/bed-machine-changeover-check.json','passed'),
  ('bed/output/pan-front-structure-screen.json','passed_without_composite_credit'),
  ('utilities/output/utility-check.json','passed_static_geometry'),
+ ('utilities/output/lowered-wet-fabrication-check.json','passed_local_fabrication_geometry'),
  ('utilities/output/guide-handling-check.json','passed'),
  ('output/front-stop-bed-clearance/front-stop-bed-clearance-check.json','passed'),
  ('manufacturing/manufacturing-check.json','passed'),
  ('manufacturing/procurement-check.json','requirements_reconciled'),
  ('manufacturing/cart-coverage-check.json','source_and_cart_arithmetic_passed')]
+
+SPECS.append(('optimization/comparison.json','passed'))
+SPECS.append(('../../output/pdf/integrated-4080-review-qa.json','visual_layout_passed'))
 
 def run():
  records=[];stale=[]
@@ -37,8 +42,12 @@ def run():
    passed=source is not None and sha(source)==h
    row=dict(source=n,passed=passed);current.append(row)
    if not passed:stale.append(dict(report=name,source=n))
-  for n,h in j.get('output_sha256',j.get('artifact_sha256',{})).items():
-   candidates=[ROOT/Path(n),p.parent/Path(n),p.parent.parent/Path(n)]
+  output_hashes=dict(j.get('output_sha256',j.get('artifact_sha256',{})))
+  if 'pdf_sha256'in j:
+   output_hashes[j['pdf']]=j['pdf_sha256']
+   output_hashes.update(j['render_sha256'])
+  for n,h in output_hashes.items():
+   candidates=[ROOT/Path(n),HERE/Path(n),p.parent/Path(n),p.parent.parent/Path(n)]
    artifact=next((x for x in candidates if x.is_file()),None)
    passed=artifact is not None and sha(artifact)==h
    current.append(dict(artifact=n,passed=passed))

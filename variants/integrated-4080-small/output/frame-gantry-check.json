@@ -102,16 +102,195 @@
     80
   ],
   "gantry_4080_quantity": 2,
-  "guide_datum_bars": {
-    "quantity": 2,
-    "finished_mm": [
+  "guide_datum_face": {
+    "quantity": 1,
+    "finished_face_mm": [
       1200,
-      40,
-      12.7
+      112,
+      6.35
     ],
-    "source": "Two exact material subsets of the former full-width face; retained source holes/counterbores. New/unowned long stock unless evidenced.",
-    "new_supplier_HGR_holes": "Transfer from the actual supplied1200mm rails; original phase/pitch is not silently changed."
+    "total_datum_stack_mm": 12.7,
+    "material": "Plainsteelwithattached6.35rearlands;twooldnewAlguidebarsremoved",
+    "retained_M8_counterbores": "8sourceaxes;D13.5depth8,remaining4.7bearingweb",
+    "retained_M6_upper_holes": "4sourceaxes;fullsteeledge-supportrestored;pilottapM6x1through",
+    "actual_supplier_HGR_M5_holes": "Transferactualownedrails;pitch/phaseareheld,notinvented"
   },
+  "gantry_joint": {
+    "replaces": [
+      "INT_GANTRY_GUIDE_BAR_LOWER",
+      "INT_GANTRY_GUIDE_BAR_UPPER"
+    ],
+    "front_datum_Y_mm": 802.3,
+    "preserved_face_stack_mm": 12.7,
+    "face_X_Z_thickness_mm": [
+      1200,
+      112,
+      6.35
+    ],
+    "rear_M8_lands": {
+      "quantity": 8,
+      "finished_X_Z_thickness_mm": [
+        25,
+        25,
+        6.35
+      ]
+    },
+    "upper_M6_lands": {
+      "quantity": 2,
+      "finished_X_Z_thickness_mm": [
+        30,
+        20,
+        6.35
+      ]
+    },
+    "retained_M8_axes_X_Z_mm": [
+      [
+        50.0,
+        1215.0
+      ],
+      [
+        50.0,
+        1255.0
+      ],
+      [
+        350.0,
+        1215.0
+      ],
+      [
+        350.0,
+        1255.0
+      ],
+      [
+        650.0,
+        1215.0
+      ],
+      [
+        650.0,
+        1255.0
+      ],
+      [
+        1100.0,
+        1215.0
+      ],
+      [
+        1100.0,
+        1255.0
+      ]
+    ],
+    "M8_counterbore_diameter_depth_mm": [
+      13.5,
+      8
+    ],
+    "M8_remaining_bearing_web_mm": 4.7,
+    "retained_M6_axes_X_Z_mm": [
+      [
+        15.0,
+        1285.0
+      ],
+      [
+        25.0,
+        1285.0
+      ],
+      [
+        1125.0,
+        1285.0
+      ],
+      [
+        1135.0,
+        1285.0
+      ]
+    ],
+    "M6_tap": "5.0pilot through;M6x1through12.7totalstack",
+    "existing_coupler_head_access": {
+      "diameter_mm": 12.5,
+      "axes_X_Z_mm": [
+        [
+          -25.0,
+          1235.0
+        ],
+        [
+          75.0,
+          1235.0
+        ],
+        [
+          225.0,
+          1235.0
+        ],
+        [
+          375.0,
+          1235.0
+        ],
+        [
+          525.0,
+          1235.0
+        ],
+        [
+          675.0,
+          1235.0
+        ],
+        [
+          825.0,
+          1235.0
+        ],
+        [
+          975.0,
+          1235.0
+        ],
+        [
+          1125.0,
+          1235.0
+        ],
+        [
+          1175.0,
+          1235.0
+        ]
+      ],
+      "end_axes_make_intentional_half_round_edge_notches": true
+    },
+    "source_M6_edge_seat_repaired": true,
+    "minimum_M6_axis_to_upper_edge_mm": 12,
+    "actual_HGR20_rail_M5_pattern_known": false,
+    "rail_process": "Transferactualownedrails;4.2pilot/tapM5x.8through6.35steelafterpatternverification. No guessedpitch/phase.",
+    "top_bridges": {
+      "quantity": 4,
+      "finished_X_Y_thickness_mm": [
+        32,
+        80,
+        6.35
+      ],
+      "X_mm": [
+        -25.0,
+        15.0,
+        1100.0,
+        1175.0
+      ],
+      "hole_Y_from_front_mm": [
+        20,
+        60
+      ],
+      "hole_diameter_mm": 6.6,
+      "screws": "8M6x20socket+8M6washers+8actualdie-compatibleTnuts",
+      "external_grip_mm": 7.95,
+      "internal_projection_mm": 12.05,
+      "required_actual_cavity_depth_min_mm": 13.05,
+      "actual_nut_thread_engagement_acceptance_mm": 5.9
+    },
+    "existing_bottom_brackets_retained": true,
+    "load_path": "Front/rearbeamupperfaces -> topbridges/axialbolts -> oppositeupperface; originalmonolithicbottombrackets tiebothlowerfaces. Continuoussteelwebtiesrailrows;originalsleevecouplersretained.",
+    "weld_and_fit": "Rearlandsattachedbeforefinalbore/counterbore/tapoperations;fixturestraight,alternatewelds;finishfrontdatumsandcoplanarbacklands. Hardshimsallowedforactualprofilefit;requireflatness/railalignmentinspection.",
+    "weld_detail": "Minimum2mmfilletsonoppositesidesofeachrearland;actualmaterial/weldprocess/capacityunqualified.",
+    "rail_datum_flatness_acceptance_mm": 0.05,
+    "rear_land_coplanarity_acceptance_mm": 0.05,
+    "offcut_is_owned": false,
+    "offcut_parent_material_already_new_purchase": true,
+    "purchased_profile_section_or_Tnut_fit_verified": false,
+    "bolted_composite_action_qualified": false,
+    "whole_machine_rigidity_qualified": false,
+    "fabrication_release": false,
+    "operating_release": false
+  },
+  "gantry_joint_report_current": true,
+  "gantry_joint_custom_moving_mass_increase_kg": 4.090543900196294,
   "profile_interface_representation": "Outer mounting model with minimum T-slot cavity clearance allocations. Not supplier die geometry. No machining of those purchased-profile cavity allocations is instructed.",
   "required_Tnut_cavity": {
     "opening_min_mm": 8.2,
@@ -123,7 +302,7 @@
     "nut_inset_mm": 4.32,
     "screw_projection_mm": 11.3
   },
-  "beam_section_properties_basis": "Two independently qualified4080profiles. No parallel-axis/composite stiffness credit or torsional capacity is asserted for the unqualified coupler joints.",
+  "beam_section_properties_basis": "Two4080profileswithoriginalbottombrackets,fournewtopbridgesandcontinuoussteelface. Noqualifiedparallel-axis/compositetorsionalcapacityasserted;actualsections,joints/preloadandmass/driveacceptanceremainheld.",
   "Y_side_translation_mm": {
     "L": -25.0,
     "R": 25.0
@@ -150,10 +329,10 @@
     "quantity": 2,
     "stepped_plate_bounding_blank_mm": [
       160,
-      325.85,
+      351.85,
       6.35
     ],
-    "plate_profile": "80mm-wide vertical stem Y260..340,Z720.15..1046; integral160mm-wide top Y220..380,Z1013..1046",
+    "plate_profile": "80mmverticalstemY260..340,Z694.15..1046;integral160mmtopY220..380,Z1013..1046",
     "welded_seat_mm": [
       80,
       80,
@@ -166,6 +345,10 @@
       360
     ],
     "header_bolt_Z_mm": 1033,
+    "lowered_pan_beam_bottom_Z_mm": 700.5,
+    "lowered_welded_seat_bottom_Z_mm": 694.15,
+    "pan_lowering_mm": 26.0,
+    "dry_support_lowering_mm": 27.3,
     "header_fixings": "8 M6 profile-face sets total, actual compatible nuts/screw lengths and joint capacity held",
     "beam_end_fixings": "4 M8 end-core sets total; nominal thread-major CAD bores are not tap drills",
     "load_path": "Pan -> fitted shims -> 4080 beam -> welded bearing seats -> steel hanger cheeks -> continuous 4080 headers -> six posts."
@@ -428,84 +611,84 @@
       "overlap_mm3": 0.0
     },
     {
-      "moving": "INT_GANTRY_GUIDE_BAR_LOWER",
+      "moving": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
       "obstacle": "X_FACE_BOLT_1",
       "passed": true,
       "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
       "overlap_mm3": 0.0
     },
     {
-      "moving": "INT_GANTRY_GUIDE_BAR_LOWER",
-      "obstacle": "X_FACE_BOLT_3",
-      "passed": true,
-      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
-      "overlap_mm3": 0.0
-    },
-    {
-      "moving": "INT_GANTRY_GUIDE_BAR_LOWER",
-      "obstacle": "X_FACE_BOLT_5",
-      "passed": true,
-      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
-      "overlap_mm3": 0.0
-    },
-    {
-      "moving": "INT_GANTRY_GUIDE_BAR_LOWER",
-      "obstacle": "X_FACE_BOLT_7",
-      "passed": true,
-      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
-      "overlap_mm3": 0.0
-    },
-    {
-      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "moving": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
       "obstacle": "X_FACE_BOLT_2",
       "passed": true,
       "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
       "overlap_mm3": 0.0
     },
     {
-      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "moving": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_FACE_BOLT_3",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
       "obstacle": "X_FACE_BOLT_4",
       "passed": true,
       "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
       "overlap_mm3": 0.0
     },
     {
-      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "moving": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_FACE_BOLT_5",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
       "obstacle": "X_FACE_BOLT_6",
       "passed": true,
       "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
       "overlap_mm3": 0.0
     },
     {
-      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "moving": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
+      "obstacle": "X_FACE_BOLT_7",
+      "passed": true,
+      "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
+      "overlap_mm3": 0.0
+    },
+    {
+      "moving": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
       "obstacle": "X_FACE_BOLT_8",
       "passed": true,
       "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
       "overlap_mm3": 0.0
     },
     {
-      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "moving": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
       "obstacle": "X_STOP_LEFT_BOLT_1",
       "passed": true,
       "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
       "overlap_mm3": 0.0
     },
     {
-      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "moving": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
       "obstacle": "X_STOP_LEFT_BOLT_2",
       "passed": true,
       "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
       "overlap_mm3": 0.0
     },
     {
-      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "moving": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
       "obstacle": "X_STOP_RIGHT_BOLT_1",
       "passed": true,
       "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
       "overlap_mm3": 0.0
     },
     {
-      "moving": "INT_GANTRY_GUIDE_BAR_UPPER",
+      "moving": "INT_GANTRY_JOINT_STEEL_RAIL_FACE",
       "obstacle": "X_STOP_RIGHT_BOLT_2",
       "passed": true,
       "method": "Zero-relative-motion exact volume; designed tangency need not have positive distance.",
@@ -567,10 +750,13 @@
   ],
   "frame_finished4080_length_mm": 15804.300000000001,
   "source_sha256": {
-    "variants/integrated-4080-small/mechanical.py": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "variants/integrated-4080-small/mechanical.py": "009a8ab210f9df3cadc667b966d3f9e50e5438870590e075b44b7a36dbd1e04d",
     "variants/owned-z300-assessment/candidate_motion_factory.py": "7a813c5b45c2a77baba05a9f7eba3d12101f51238e5b6ec8ed3df5bc3f1728c8",
     "variants/owned-z300-assessment/z300_fit_study.py": "74d48c77af7fcc5dc6b566e8d89640aa3f31f391ad1c584df8ee7c5338b008f4",
-    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e"
+    "variants/extrusion-reengineered/frame.py": "6856f92cd86e06478f8868012522a8ad366b29d5b53d5621e53ccead3de53d4e",
+    "variants/extrusion-reengineered/params.py": "83699a7c3710f5e7e63873d81b1e4ab340fc511e26428e786c65043975749780",
+    "variants/integrated-4080-small/gantry_joint.py": "f90a190f5cd5321d574943d1bc37eff31c4d0d502fcc0b2c0761b1bd510aef18",
+    "variants/integrated-4080-small/output/gantry-joint/gantry-joint-check.json": "931054d3cfd946952bb6290ec8eb15ac42d0ec667170bdcbcf7b1f1d64be3e16"
   },
   "fabrication_release": false,
   "physical_rigidity_qualified": false,

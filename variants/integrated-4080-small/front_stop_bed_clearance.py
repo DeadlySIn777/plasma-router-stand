@@ -96,7 +96,7 @@ def run():
  import actual_atc as A
  import assembly as I
  OUT.mkdir(parents=True,exist_ok=True)
- sources=list(dict.fromkeys([Path(p)for p in(__file__,M.__file__,B.__file__,U.__file__,A.__file__,I.__file__,
+ sources=list(dict.fromkeys([Path(p)for p in(__file__,M.__file__,I.GJ.__file__,B.__file__,U.__file__,A.__file__,I.__file__,
    I.Q.__file__,I.P.__file__,I.Q.D.__file__,U.O.__file__,U.SH.__file__,M.X.__file__,M.X.P.__file__,U.O.P.__file__,
    A.VENDOR_HOUSING_SOURCE,*I.H.sources())]))
  hashes=lambda:{p.relative_to(HERE.parents[1]).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()for p in sources}

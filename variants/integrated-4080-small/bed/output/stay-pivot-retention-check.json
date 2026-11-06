@@ -2,8 +2,8 @@
   "study": "MODELED_EIGHT_BED_PIN_RETENTION_JOINTS",
   "source_sha256": {
     "variants/integrated-4080-small/bed/export_stay_pivot.py": "e100e9e9afdaa79782ce0d23b8bc087890c9e28090f4ff4daba829de7236a698",
-    "variants/integrated-4080-small/bed/integrated_bed.py": "d0f35b5c1ec0618280516fa6edb730bcb6238ffb0a2cf41288cfb27110a15d81",
-    "variants/integrated-4080-small/bed/output/bed-local-check.json": "9868aabf97f5fccd23b99b81ead498df5fd616b798e00fd242b38fe4d1a36a76"
+    "variants/integrated-4080-small/bed/integrated_bed.py": "d424f813511d6b21a2b525d600520971aae95a140bbdccb3f84daa69d84ced9b",
+    "variants/integrated-4080-small/bed/output/bed-local-check.json": "ffa10165af8534362ad2f1196bd51863226c844f4a9333eeb9c2481cf83af375"
   },
   "source_consistent": true,
   "quantity": 8,
@@ -49,10 +49,10 @@
       "canonical_bounds_mm": [
         44.55,
         384.4999999,
-        848.4,
+        845.4,
         75.4000001,
         402.0,
-        862.4
+        859.4
       ],
       "outer_face_to_rail_end_gap_mm": 1.25,
       "rail_gap_after_maximum_accepted_outboard_float_mm": 0.75,
@@ -97,10 +97,10 @@
       "canonical_bounds_mm": [
         44.549999999999955,
         384.4999999,
-        848.4,
+        845.4,
         75.40000010000009,
         402.0,
-        862.4
+        859.4
       ],
       "outer_face_to_rail_end_gap_mm": 1.2499999999999574,
       "rail_gap_after_maximum_accepted_outboard_float_mm": 0.7499999999999574,
@@ -241,32 +241,32 @@
   "exports": [
     {
       "file": "STAY_PIVOT_PIN.step",
-      "sha256": "c3e6a1731a35a52f627bf6cc8efc16b1368e89b81852c29f5e4687ad8dce41ed",
+      "sha256": "f928d67a182aec258a119d50396f3c7d9794bd092ff404a744aba692ca977cb7",
       "readback_passed": true
     },
     {
       "file": "STAY_PIVOT_PIN_DRAWING.dxf",
-      "sha256": "610052580803c110c73839851a5e0ee440067d3c16e7c60b13a1610254abbf2b",
+      "sha256": "500252e1d6f51139991c168d131771983190d9a3173ef0f257b858c6d75ea1c8",
       "readback_passed": true
     },
     {
       "file": "FRONT_HINGE_PIN.step",
-      "sha256": "ea5363a1094ef942526822c01cc4aad521fdff7bc5c4c2fcf4f17271894576f7",
+      "sha256": "d7a6e00fe5e899e15a78ce6e9d706614210d2f92087f98117e41da784b6da141",
       "readback_passed": true
     },
     {
       "file": "FRONT_HINGE_PIN_DRAWING.dxf",
-      "sha256": "8b265f6f3a731cceefa4a4cb5ee187d669de4d3b6b2f4a7ba415632200356337",
+      "sha256": "2733eabb2ff8cbe77e11a2ed4b3cb57027f362e3109d183ba2cadb82015f7a55",
       "readback_passed": true
     },
     {
       "file": "FULL_OPEN_LOCK_PIN.step",
-      "sha256": "15436147580ee352debc0ca9aa7b91b8c6bac29d06bb2db67cc22fdbca8e84c1",
+      "sha256": "67e7c58e0c0de44b758271cc316b493d791b53ec0ef6e3905732e553c61ee2af",
       "readback_passed": true
     },
     {
       "file": "FULL_OPEN_LOCK_PIN_DRAWING.dxf",
-      "sha256": "7353c01f32d502d1b16c5efcf594a1722b16f9000a439de771166a0dc19bc4dc",
+      "sha256": "9035605d4c345423608aeb8f17d2493d9fc02695700dfa8193401a2e92ca782c",
       "readback_passed": true
     }
   ],

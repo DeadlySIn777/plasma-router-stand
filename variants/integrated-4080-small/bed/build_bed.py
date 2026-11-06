@@ -85,7 +85,7 @@ def analyze():
  rows=[]
  for secarea in(785.,1000.,1200.):
   cmass=4*.98*secarea*.0027;total=base_mass+cmass
-  cy=sum(B.CROSS_CENTRES)/4;cz=B.CROSS_BOTTOM+20+B.ASSEMBLY_Z_SHIFT
+  cy=sum(B.CROSS_CENTRES)/4;cz=B.CROSS_BOTTOM+B.CROSS_HEIGHT/2+B.ASSEMBLY_Z_SHIFT
   cg=[(weighted[k]+cmass*v)/total for k,v in enumerate((575.,cy,cz))]
   cases=[]
   for ratio in(0.,.5,1.,1.3):
@@ -109,7 +109,7 @@ def analyze():
        maximum_absolute_static_each_stay_force_N=max(abs(r['static_each_stay_force_N'])for r in samples),samples=samples))
   rows.append(dict(profile4080_material_area_assumption_mm2=secarea,moving_mass_kg=total,CG_world_mm=cg,cases=cases))
  #Ideal serial compliance screen, no HDPE/composite stiffness credit.
- E=69000.;Icross=134000.;F=100.;span=939.
+ E=69000.;Icross=536000.;F=100.;span=939.
  dprofile=F*400**3/(48*E*ix);dcross=F*span**3/(48*E*Icross)
  #Uniform formedsteel receiver section; localized patched zone is separate.
  w,t,h=54.,3.175,31.75;A1=w*t;A2=t*h;zc=(A1*t/2+A2*(t+h/2))/(A1+A2)
@@ -118,9 +118,12 @@ def analyze():
  return dict(section20100=dict(area_mm2=area,I_vertical_mm4=ix,profile_quantity=10,length_each_mm=1220),
   moving_known_mass_excluding4080_kg=base_mass,mass_and_force_cases=rows,
   gas_eyelength_range_mm=[min(r['gas_length_mm']for r in rows[0]['cases'][0]['samples']),max(r['gas_length_mm']for r in rows[0]['cases'][0]['samples'])],
-  gas_required_acceptance_mm=dict(compressed_max=450,extended_min=700),gas_compressed_published=False,gas_is_holding_device=False,force_model='889N nominal constant force conditional on200lblabel;0,0.5,1,1.3 factors are sensitivity assumptions, not manufacturer tolerance data.',
+  gas_required_acceptance_mm=dict(compressed_max=B.GAS_MIN,extended_min=B.GAS_MAX),gas_compressed_published=False,gas_is_holding_device=False,force_model='667Nnominalconstantforceconditionalon150lblabel;ratios0/.5/1/1.3aresensitivityassumptions,notOEMtolerances.',
   workbed_compliance_screen=dict(force_N=100,profile_span_mm=400,profile_deflection_mm=dprofile,cross_span_mm=span,
-    required4080_I_weak_mm4=Icross,cross_deflection_mm=dcross,ledger_I_mm4=Iledger,ledger_deflection_mm=dledger,
+    assumed4080_I_strong_mm4=Icross,supplier_property_qualified=False,drilled_section_qualified=False,
+    cross_deflection_mm=dcross,ledger_I_mm4=Iledger,ledger_deflection_mm=dledger,
+    drill_section_sensitivity=[dict(retained_nominal_I_fraction=f,assumed_effective_I_mm4=Icross*f,
+      cross_deflection_mm=dcross/f,total_ideal_mm=dprofile+dcross/f+dledger)for f in(.25,.5,.75,1.)],
     sum_ideal_components_mm=dprofile+dcross+dledger,target_mm=.3,passed=dprofile+dcross+dledger<.3,
     exclusions=['Actual profile section and drilled-ligament compliance','Joint slip/twist, slot lips and anchors','Formed angle patch/weld local behavior','Machine gantry/Z/tool loop','Dynamics and thermal creep']),
   stay_static_design_basis=dict(outer_mm=[20,20,2,390],inner_mm=[15,15,1.5,375],positive_pin_mm=10,
@@ -139,7 +142,7 @@ def run():
  closed=B.bed_parts(0);opened=B.bed_parts(90)
  selfchecks={name:exact_pairs(parts,allow_vendor=True)for name,parts in(('wood',closed),('open',opened))}
  print('SELF',[(k,v['passed'],v['unexpected'])for k,v in selfchecks.items()],flush=True)
- frame=[]if local_only else mech.frame_parts();pan=[p for p in legacy_bed.pan_parts()if not(p[0].startswith('PAN_FRAME_SHIM_PACK_')and p[0].endswith('_100_VERIFY_ACTUAL'))]
+ frame=[]if local_only else mech.frame_parts();pan=[(n,s.translate((0,0,-B.PAN_LOWERING_MM)),c)for n,s,c in legacy_bed.pan_parts()if not(n.startswith('PAN_FRAME_SHIM_PACK_')and n.endswith('_100_VERIFY_ACTUAL'))]
  retained=[]if local_only else[p for p in mech.motion_parts(False,1275,575,200)if not p[0].startswith(('TOOL_','I_HEAD_','XR_PLASMA_DROP_','XR_DROP_'))]
  accessories=[]if local_only else atc.actual_atc_parts(200,hood='stored',include_allocations=True)
  external=frame+pan+retained+accessories
@@ -186,7 +189,7 @@ def run():
  #checks, not mislabeled as a rigid continuous proof.
  assist_rows=[]
  for angle in range(0,91,10):
-  parts=B.bed_parts(float(angle));assist=[p for p in parts if p['id'].startswith(('BED_GAS','BED_CAPTURE','BED_FULL_OPEN'))]
+  parts=B.bed_parts(float(angle));assist=[p for p in parts if not p['moving_bed']and p['id'].startswith(('BED_GAS','BED_CAPTURE','BED_FULL_OPEN'))]
   rigid=[(p['id'],p['shape'],p['color'])for p in parts if p['moving_bed']or p['id'].startswith(('BED_RECEIVER','BED_FRONT_SEAT','BED_HINGE_FIXED','BED_HINGE_PIN','BED_HINGE_RETAINER_','BED_HINGE_AXIAL_SHIM_','BED_STAY_PIVOT_'))]
   result=exact_pairs(assist,external+rigid)
   assist_rows.append(dict(angle_deg=angle,**result))
@@ -194,12 +197,12 @@ def run():
  exports={name:export_step(parts,OUT/('FULL_BED_'+name.upper()+'.step'))for name,parts in(('wood',closed),('upright',opened))}
  custom={}
  for p in[*closed,*[q for q in opened if q['id'].startswith('BED_FULL_OPEN_POSITIVE_PIN_')]]:
-  if p['id'].startswith(('BED_HINGE_FIXED_','BED_HINGE_MOVING_SIDEPLATE_','BED_HINGE_SPACER_','BED_HINGE_PIN_','BED_HINGE_AXIAL_SHIM_','BED_HINGE_RETAINER_WASHER_','BED_ASSIST_','BED_RECEIVER','BED_FRONT_SEAT','BED_REAR_END_CAP','BED_GAS_ROOT_MOUNT','BED_CAPTURE_ROOT_MOUNT','BED_STAY_PIVOT_PIN_','BED_FULL_OPEN_POSITIVE_PIN_')):
+  if p['id'].startswith(('BED_HINGE_FIXED_','BED_HINGE_MOVING_SIDEPLATE_','BED_HINGE_SPACER_','BED_HINGE_PIN_','BED_HINGE_AXIAL_SHIM_','BED_HINGE_RETAINER_WASHER_','BED_ASSIST_C_BRACKET_','BED_RECEIVER','BED_FRONT_SEAT','BED_REAR_END_CAP','BED_GAS_ROOT_MOUNT','BED_CAPTURE_ROOT_MOUNT','BED_STAY_PIVOT_PIN_','BED_FULL_OPEN_POSITIVE_PIN_')):
    b=B.bounds(p['shape']);local=p['shape'].translate(tuple(-v for v in b[:3]));path=OUT/(p['id']+'.step')
    cq.exporters.export(local,str(path));back=cq.importers.importStep(str(path)).val()
    custom[p['id']]=dict(file=path.relative_to(HERE).as_posix(),sha256=sha(path),world_min_mm=b[:3],valid=back.isValid()and len(back.Solids())==1)
  drill=[]
- for layer in(1,2):
+ for layer in range(1,B.HDPE_LAYER_COUNT+1):
   for cy,x in B.anchor_rows():drill.append(dict(part=f'FULL_HDPE_{layer}',X_from_left_mm=x-B.X0,Y_from_front_mm=cy-(B.Y0+.4),diameter_mm=13.2 if(cy,x)==(395.,545.)else 22.,operation='Round through-drill only'))
  with(OUT/'HDPE-DRILL.csv').open('w',newline='')as f:w=csv.DictWriter(f,fieldnames=list(drill[0]));w.writeheader();w.writerows(drill)
  report=dict(study='INTEGRATED_FULL_HDPE_20100_BED',local_bed_and_pan_only=local_only,metadata=B.metadata(),source_sha256=start,

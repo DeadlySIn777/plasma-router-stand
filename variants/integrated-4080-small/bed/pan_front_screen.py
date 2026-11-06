@@ -4,7 +4,7 @@ No floor-flange credit in the first model. Conditional T action in the second
 requires the specified intact-floor twin welds and end transfer details.
 """
 from pathlib import Path
-import hashlib,json,math
+import hashlib,json,math,ast
 import numpy as np
 
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2];OUT=HERE/'output'
@@ -77,6 +77,9 @@ def floor_plate(a=435.,b=550.,depth=62.):
     support_assumption='Three comb lines, welded frontwall and three crossbearers form supported200/330/550mmYbays. Largest435x550mm considered. Rib movement is added; it is not silently clamped away.')
 
 def run():
+ bed_source=HERE/'integrated_bed.py'
+ tree=ast.parse(bed_source.read_text(encoding='utf-8'))
+ lowering=next(float(n.value.value)for n in ast.walk(tree)if isinstance(n,ast.Assign)and any(isinstance(t,ast.Name)and t.id=='PAN_LOWERING_MM'for t in n.targets))
  rows=[]
  for composite in(False,True):
   for central,width in((False,229.5),(True,435.)):
@@ -85,9 +88,11 @@ def run():
  coupled=max(r['max_abs_rib_deflection_mm']for r in rows if r['model'].startswith('Welded'))
  conditional=coupled+plate['relative_centre_deflection_mm']
  source=ROOT/'variants/extrusion-reengineered/bed.py'
- result=dict(study='PAN_FRONT_COMB_AND_FLOOR_SCREEN_THREE_BEARERS_300_630_1180',source_sha256={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()for p in[Path(__file__),source]},
+ result=dict(study='PAN_FRONT_COMB_AND_FLOOR_SCREEN_THREE_BEARERS_300_630_1180',source_sha256={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()for p in[Path(__file__),source,bed_source]},
+  pan_rigid_vertical_translation_mm=-lowering,global_floor_front_Z_mm=812-lowering,
+  translation_effect='Rigid26mmdownwardtranslationpreservessectiondepths/spans/watercapacity;internalanalysisusesoriginalZonlyasdifferencecoordinates.',
   floor_slope=.006,comb_material='Steel E200GPa;minyield250MParequired',floor_thickness_mm=1.9,comb_thickness_mm=3.175,
-  comb_slot_centres_Y_mm=SLAT,comb_slot_width_mm=2.2,outer_slot_bottom_Z_mm=838,centre_slot_bottom_Z_mm=841,
+  comb_slot_centres_Y_mm=SLAT,comb_slot_width_mm=2.2,outer_slot_bottom_Z_mm=838-lowering,centre_slot_bottom_Z_mm=841-lowering,
   bottom_drain_notches_Y_mm=[[y,y+20]for y in DRAINS],bottom_drain_notch_height_mm=8,
   ribs=rows,floor_plate=plate,
   no_composite_total_displacement_screen_mm=un+plate['relative_centre_deflection_mm'],

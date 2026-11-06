@@ -1,9 +1,13 @@
 {
   "study": "PAN_FRONT_COMB_AND_FLOOR_SCREEN_THREE_BEARERS_300_630_1180",
   "source_sha256": {
-    "variants/integrated-4080-small/bed/pan_front_screen.py": "562aab05d6aeb432b43a60584e7422ebe90618eebf2ed236d95bfac6419a2632",
-    "variants/extrusion-reengineered/bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6"
+    "variants/integrated-4080-small/bed/pan_front_screen.py": "b73b054a42ecea54a80a7b5eaa3d50eff46c7bbdc4c2a30491352b0c5371a25d",
+    "variants/extrusion-reengineered/bed.py": "c1d2e2a6f93d3444c1ccf7c5eff144d68c9a5f10f7c36801a255c85e8ff3dda6",
+    "variants/integrated-4080-small/bed/integrated_bed.py": "d424f813511d6b21a2b525d600520971aae95a140bbdccb3f84daa69d84ced9b"
   },
+  "pan_rigid_vertical_translation_mm": -26.0,
+  "global_floor_front_Z_mm": 786.0,
+  "translation_effect": "Rigid26mmdownwardtranslationpreservessectiondepths/spans/watercapacity;internalanalysisusesoriginalZonlyasdifferencecoordinates.",
   "floor_slope": 0.006,
   "comb_material": "Steel E200GPa;minyield250MParequired",
   "floor_thickness_mm": 1.9,
@@ -19,8 +23,8 @@
     1166.0
   ],
   "comb_slot_width_mm": 2.2,
-  "outer_slot_bottom_Z_mm": 838,
-  "centre_slot_bottom_Z_mm": 841,
+  "outer_slot_bottom_Z_mm": 812.0,
+  "centre_slot_bottom_Z_mm": 815.0,
   "bottom_drain_notches_Y_mm": [
     [
       140,

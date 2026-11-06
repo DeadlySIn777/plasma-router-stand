@@ -1,13 +1,13 @@
 {
   "source_sha256": {
-    "selected-cart-evidence.json": "e4eb9407d7c5ed76e01938e6173ba4b692438b5eae66730342e37465e8bee6b2",
-    "procurement-requirements.csv": "503d5c5fb2319522e4d293ffdb180e873250426f4830801aed9ee4a618955673",
-    "check_cart_coverage.py": "0656f88dd93a6704e9b79b300f3b99a1f7d75056c1b120db72576d2d1b9ee43d"
+    "selected-cart-evidence.json": "fef2141ee82baa515988495294f40705f5f63019717a33e406d6ac0b8abda335",
+    "procurement-requirements.csv": "7c691af440f735ab96512f5212f295d4143a1f624ba3e401526ad3a3bf1c16ac",
+    "check_cart_coverage.py": "aff31f8180566766616d56d22996c8643e8f48d8e5ff808fc150374f4bc3e66b"
   },
-  "selected_project_lines": 14,
-  "selected_project_packs": 28,
-  "selected_goods_USD": "117.26",
-  "cart_shipping_display": "Cart displays Shipping Free for selected project lines.",
+  "selected_project_lines": 16,
+  "selected_project_packs": 33,
+  "selected_goods_USD": "455.05",
+  "cart_shipping_display": "AliExpress selected13projectvariants displayShippingFree/$78.32; headerCornelia, exactAltoaddressnotconfirmed. Amazon3projectvariants7packs:$376.73, eachfreePrime toAlto30510. Tax unknown; othercartgoods excluded.",
   "sales_tax_USD": null,
   "exact_destination_shipping_confirmed": false,
   "all_required_parts_in_cart": false,
@@ -17,13 +17,16 @@
     {
       "procurement_id": "P001",
       "category": "20100_PROFILE",
-      "specification": "Uncut1220mm100x20supplier section, fivebroad-face slots6.2openings. Actualdie/nut/lipfitacceptance.",
+      "specification": "Ten20100finished1220mmtracks;selectedrawplan8x1500plus2x1220ofsameSeekfamily",
       "required_quantity": 10.0,
-      "cart_pieces": 0,
-      "status": "UNSTAGED",
+      "cart_pieces": 10,
+      "status": "NOMINAL_CANDIDATE_QUANTITY_COVERED",
       "operations": "",
-      "cart_variants": [],
-      "qualification": ""
+      "cart_variants": [
+        "SeekLiny Black1500mm / Number of Items4",
+        "SeekLiny Black1220mm / Number of Items2"
+      ],
+      "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
       "procurement_id": "P002",
@@ -204,7 +207,7 @@
     {
       "procurement_id": "P018",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
-      "specification": "1200x40x12.7mmfinishedrailbar",
+      "specification": "28x242x25.4mm6061-T6billet",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -215,7 +218,7 @@
     {
       "procurement_id": "P019",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
-      "specification": "28x242x25.4mm6061-T6billet",
+      "specification": "28x60x12.7mm6061-T6;threeM6tapsinlineat10/30/50mmY",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -226,17 +229,6 @@
     {
       "procurement_id": "P020",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
-      "specification": "28x60x12.7mm6061-T6;threeM6tapsinlineat10/30/50mmY",
-      "required_quantity": 2.0,
-      "cart_pieces": 0,
-      "status": "UNSTAGED",
-      "operations": "",
-      "cart_variants": [],
-      "qualification": ""
-    },
-    {
-      "procurement_id": "P021",
-      "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "80x133.2x6.35 6061-T6 candidate plate",
       "required_quantity": 4.0,
       "cart_pieces": 0,
@@ -246,7 +238,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P022",
+      "procurement_id": "P021",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "80x295x6.35mm6061-T6;4xD4.5 atX\u00b110 and indexedY",
       "required_quantity": 1.0,
@@ -257,7 +249,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P023",
+      "procurement_id": "P022",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "80x60x25.4mm6061-T6 raw billet; integral lower tongue and40mm-wide underside seat land",
       "required_quantity": 2.0,
@@ -268,7 +260,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P024",
+      "procurement_id": "P023",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "90x60x12.7mm6061-T6, custom centre2holes only",
       "required_quantity": 1.0,
@@ -279,7 +271,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P025",
+      "procurement_id": "P024",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Brace spacer; finished bounding [18.0, 18.0, 3.0]",
       "required_quantity": 12.0,
@@ -290,7 +282,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P026",
+      "procurement_id": "P025",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [10.0, 10.0, 1.5]",
       "required_quantity": 2.0,
@@ -301,7 +293,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P027",
+      "procurement_id": "P026",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [10.0, 10.0, 9.2426]",
       "required_quantity": 1.0,
@@ -312,7 +304,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P028",
+      "procurement_id": "P027",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [110.0, 22.0, 2.0]",
       "required_quantity": 2.0,
@@ -323,7 +315,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P029",
+      "procurement_id": "P028",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [110.0, 25.0, 12.0]",
       "required_quantity": 2.0,
@@ -334,7 +326,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P030",
+      "procurement_id": "P029",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [110.0, 60.5, 1.5]",
       "required_quantity": 1.0,
@@ -345,7 +337,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P031",
+      "procurement_id": "P030",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [110.0, 72.0, 22.0]",
       "required_quantity": 1.0,
@@ -356,7 +348,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P032",
+      "procurement_id": "P031",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [110.0, 97.0, 6.35]",
       "required_quantity": 1.0,
@@ -367,7 +359,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P033",
+      "procurement_id": "P032",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [118.0, 8.0, 8.0]",
       "required_quantity": 2.0,
@@ -378,7 +370,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P034",
+      "procurement_id": "P033",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [12.0, 10.0, 10.0]",
       "required_quantity": 1.0,
@@ -389,7 +381,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P035",
+      "procurement_id": "P034",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [12.0, 12.0, 6.4]",
       "required_quantity": 24.0,
@@ -400,7 +392,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P036",
+      "procurement_id": "P035",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [130.0, 110.0, 9.525]",
       "required_quantity": 1.0,
@@ -411,7 +403,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P037",
+      "procurement_id": "P036",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [150.0, 82.7, 80.0]",
       "required_quantity": 2.0,
@@ -422,7 +414,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P038",
+      "procurement_id": "P037",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [156.0, 120.8, 43.35]",
       "required_quantity": 1.0,
@@ -433,7 +425,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P039",
+      "procurement_id": "P038",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [16.0, 12.0, 12.0]",
       "required_quantity": 2.0,
@@ -444,7 +436,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P040",
+      "procurement_id": "P039",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [20.0, 12.0, 12.0]",
       "required_quantity": 1.0,
@@ -455,7 +447,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P041",
+      "procurement_id": "P040",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [20.0, 14.0, 8.0]",
       "required_quantity": 2.0,
@@ -466,7 +458,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P042",
+      "procurement_id": "P041",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [20.0, 15.475, 8.0]",
       "required_quantity": 1.0,
@@ -477,7 +469,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P043",
+      "procurement_id": "P042",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [20.5, 20.5, 3.8]",
       "required_quantity": 3.0,
@@ -488,7 +480,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P044",
+      "procurement_id": "P043",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [23.85, 14.8, 14.8]",
       "required_quantity": 2.0,
@@ -499,7 +491,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P045",
+      "procurement_id": "P044",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [26.0, 14.0, 8.0]",
       "required_quantity": 3.0,
@@ -510,7 +502,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P046",
+      "procurement_id": "P045",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [270.2, 260.0, 12.7]",
       "required_quantity": 1.0,
@@ -521,7 +513,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P047",
+      "procurement_id": "P046",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [28.0, 13.8564, 12.0]",
       "required_quantity": 1.0,
@@ -532,7 +524,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P048",
+      "procurement_id": "P047",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [28.2984, 14.4698, 12.0]",
       "required_quantity": 2.0,
@@ -543,7 +535,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P049",
+      "procurement_id": "P048",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [280.0, 131.3, 12.7]",
       "required_quantity": 2.0,
@@ -554,7 +546,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P050",
+      "procurement_id": "P049",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [30.0, 15.8, 8.0]",
       "required_quantity": 4.0,
@@ -565,7 +557,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P051",
+      "procurement_id": "P050",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [30.0, 28.3, 20.0]",
       "required_quantity": 1.0,
@@ -576,7 +568,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P052",
+      "procurement_id": "P051",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [30.0, 28.3, 26.8]",
       "required_quantity": 2.0,
@@ -587,7 +579,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P053",
+      "procurement_id": "P052",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [32.0, 15.0, 12.0]",
       "required_quantity": 1.0,
@@ -598,7 +590,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P054",
+      "procurement_id": "P053",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [32.0, 22.0, 16.0]",
       "required_quantity": 1.0,
@@ -609,7 +601,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P055",
+      "procurement_id": "P054",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [36.0, 14.0, 8.0]",
       "required_quantity": 1.0,
@@ -620,7 +612,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P056",
+      "procurement_id": "P055",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [45.0, 26.0, 20.0]",
       "required_quantity": 1.0,
@@ -631,7 +623,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P057",
+      "procurement_id": "P056",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [47.9974, 40.0, 23.75]",
       "required_quantity": 2.0,
@@ -642,7 +634,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P058",
+      "procurement_id": "P057",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [48.0, 40.0, 12.7]",
       "required_quantity": 2.0,
@@ -653,7 +645,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P059",
+      "procurement_id": "P058",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [48.0, 40.0, 32.0]",
       "required_quantity": 6.0,
@@ -664,7 +656,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P060",
+      "procurement_id": "P059",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [6.0, 6.0, 0.775]",
       "required_quantity": 2.0,
@@ -675,7 +667,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P061",
+      "procurement_id": "P060",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [6.7574, 6.0, 6.0]",
       "required_quantity": 3.0,
@@ -686,7 +678,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P062",
+      "procurement_id": "P061",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [65.0, 48.0, 19.05]",
       "required_quantity": 1.0,
@@ -697,7 +689,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P063",
+      "procurement_id": "P062",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [65.0, 48.0, 6.35]",
       "required_quantity": 2.0,
@@ -708,7 +700,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P064",
+      "procurement_id": "P063",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [70.0, 60.0, 12.7]",
       "required_quantity": 6.0,
@@ -719,7 +711,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P065",
+      "procurement_id": "P064",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [80.0, 60.0, 9.525]",
       "required_quantity": 6.0,
@@ -730,7 +722,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P066",
+      "procurement_id": "P065",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [90.0, 40.0, 30.0]",
       "required_quantity": 2.0,
@@ -741,10 +733,21 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P067",
+      "procurement_id": "P066",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
       "specification": "Finished bounding [99.8, 48.0, 6.35]",
       "required_quantity": 2.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P067",
+      "category": "CUSTOM_STOCK_OR_FABRICATION",
+      "specification": "Finished1200x112x6.35nominalface;minimumraw1202x114plusactualthickness/flatnessallowance",
+      "required_quantity": 1.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -853,7 +856,7 @@
     {
       "procurement_id": "P077",
       "category": "CUSTOM_STOCK_OR_FABRICATION",
-      "specification": "Welded stock set: stepped160x325.85x6.35 flat blank +80x80x6.35 bearing seat",
+      "specification": "Welded stock set: stepped160x351.85x6.35 flat blank +80x80x6.35 bearing seat",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -974,8 +977,8 @@
     {
       "procurement_id": "P088",
       "category": "HDPE_FINISHED_LAYER_REQUIREMENT",
-      "specification": "1000x1219.2x12.7fullrectangles;profiles0.4mmendoverhang.80roundholes only.",
-      "required_quantity": 2.0,
+      "specification": "ONE1000x1200x12.7fullcut-area-coveringrectangle;80roundthroughholesonly.Front0.4/rear19.6profileoverhang.",
+      "required_quantity": 1.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -1007,7 +1010,7 @@
     {
       "procurement_id": "P091",
       "category": "INTERFACE_HOLD",
-      "specification": "Fused9\u201324Vpower/control/cable/interlockinterfaceforNCauto-returnvalve;verifyownedpowersupply/IOcapacityandmanufacturercharge/returntiming",
+      "specification": "Fused9\u00e2\u20ac\u201c24Vpower/control/cable/interlockinterfaceforNCauto-returnvalve;verifyownedpowersupply/IOcapacityandmanufacturercharge/returntiming",
       "required_quantity": null,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -1249,6 +1252,17 @@
     {
       "procurement_id": "P113",
       "category": "NUT",
+      "specification": "M6 slot nut; actual4080slot; nominal5.9mmthreadengagement and at least13.05mmcavityfor20mmbolt",
+      "required_quantity": 8.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P114",
+      "category": "NUT",
       "specification": "M6 weld nut; 5mm-high nominal steel nut",
       "required_quantity": 12.0,
       "cart_pieces": 0,
@@ -1258,7 +1272,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P114",
+      "procurement_id": "P115",
       "category": "NUT",
       "specification": "M8 hex nut; 6.8mm nominal height",
       "required_quantity": 8.0,
@@ -1269,7 +1283,18 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P115",
+      "procurement_id": "P116",
+      "category": "NUT",
+      "specification": "M8 nyloc nut; DIN985AF13/h8nominal",
+      "required_quantity": 2.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P117",
       "category": "NUT",
       "specification": "M8 slot nut; 80/20 40-3915;22x13.7x5.9 maximum",
       "required_quantity": 16.0,
@@ -1280,7 +1305,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P116",
+      "procurement_id": "P118",
       "category": "PIN_OR_RETAINER_SELECTION_HOLD",
       "specification": "4x9indexenvelope,.8crosshole/.7wireRclip",
       "required_quantity": 2.0,
@@ -1291,7 +1316,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P117",
+      "procurement_id": "P119",
       "category": "PIN_OR_RETAINER_SELECTION_HOLD",
       "specification": "Customsteel18OD12.2IDx1.6;slipontoplain12mmshaftoutsidefixedcheek,retainedby2x16cotter. Samepinbarsecondaryblank,noseparatewasherstock.",
       "required_quantity": 2.0,
@@ -1302,7 +1327,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P118",
+      "procurement_id": "P120",
       "category": "PIN_OR_RETAINER_SELECTION_HOLD",
       "specification": "CustomturnedC45/4140steelpin:14ODx2.5recessedhead,10smoothland19.15,M6x1x9.2retentionend;30.85overall,D1.8crosshole27.85fromouterheadface. SeeSTAY_PIVOT_PIN drawing/STEP. Separatewasher/nut/cotterrowsbelow.",
       "required_quantity": 4.0,
@@ -1313,7 +1338,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P119",
+      "procurement_id": "P121",
       "category": "PIN_OR_RETAINER_SELECTION_HOLD",
       "specification": "DIN94/ISO1234splitpin1.6x14,formbothlegsafterlockingnut;replaceaftereverymodechange/removal.",
       "required_quantity": 2.0,
@@ -1324,7 +1349,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P120",
+      "procurement_id": "P122",
       "category": "PIN_OR_RETAINER_SELECTION_HOLD",
       "specification": "DIN94/ISO1234splitpin2x16,formedinstalledtails;replaceafterremoval.",
       "required_quantity": 2.0,
@@ -1335,7 +1360,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P121",
+      "procurement_id": "P123",
       "category": "PIN_OR_RETAINER_SELECTION_HOLD",
       "specification": "Turnedplainsteel12mmpin:inboard18headx3,24.05smoothshaft;27.05overall,D2.2throughcrosshole23.85fromouterheadface. Removeoutsidewasher/cotterthenpull26mminboard;frontpostblocksoldoutboard-fedpin.",
       "required_quantity": 2.0,
@@ -1346,7 +1371,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P122",
+      "procurement_id": "P124",
       "category": "PIN_OR_RETAINER_SELECTION_HOLD",
       "specification": "Turnedsteel10mmfull-openlockpin:16headx3,20.3smoothland,M6x1x9.2retentionend;32.5overall,D1.8crosshole29.5fromouterheadface. Passesbothwallsofbothtubes;separatenut/washer/cotterbelow. Noimpactratinginferred.",
       "required_quantity": 2.0,
@@ -1357,7 +1382,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P123",
+      "procurement_id": "P125",
       "category": "PRECISION_SHIM",
       "specification": "ID6.1 OD10 t0.5 hardened bearing shim",
       "required_quantity": 12.0,
@@ -1368,7 +1393,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P124",
+      "procurement_id": "P126",
       "category": "RETAINER",
       "specification": "R-clip for 4mm keeper pin",
       "required_quantity": 2.0,
@@ -1379,7 +1404,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P125",
+      "procurement_id": "P127",
       "category": "SCREW",
       "specification": "M3 x 10 socket head",
       "required_quantity": 12.0,
@@ -1390,7 +1415,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P126",
+      "procurement_id": "P128",
       "category": "SCREW",
       "specification": "M3 x 14 socket head",
       "required_quantity": 6.0,
@@ -1403,7 +1428,7 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P127",
+      "procurement_id": "P129",
       "category": "SCREW",
       "specification": "M3 x 6 socket head",
       "required_quantity": 8.0,
@@ -1414,7 +1439,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P128",
+      "procurement_id": "P130",
       "category": "SCREW",
       "specification": "M3 x 7 socket head",
       "required_quantity": 3.0,
@@ -1425,7 +1450,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P129",
+      "procurement_id": "P131",
       "category": "SCREW",
       "specification": "M3 x 8 socket head",
       "required_quantity": 10.0,
@@ -1436,7 +1461,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P130",
+      "procurement_id": "P132",
       "category": "SCREW",
       "specification": "M4 x 10 socket head",
       "required_quantity": 16.0,
@@ -1447,7 +1472,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P131",
+      "procurement_id": "P133",
       "category": "SCREW",
       "specification": "M4 x 12 button head",
       "required_quantity": 4.0,
@@ -1458,7 +1483,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P132",
+      "procurement_id": "P134",
       "category": "SCREW",
       "specification": "M4 x 12 head selection held",
       "required_quantity": 4.0,
@@ -1469,7 +1494,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P133",
+      "procurement_id": "P135",
       "category": "SCREW",
       "specification": "M4 x 12 socket head",
       "required_quantity": 24.0,
@@ -1482,7 +1507,7 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P134",
+      "procurement_id": "P136",
       "category": "SCREW",
       "specification": "M4 x 14 socket head",
       "required_quantity": 4.0,
@@ -1493,7 +1518,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P135",
+      "procurement_id": "P137",
       "category": "SCREW",
       "specification": "M4 x 16 countersunk head",
       "required_quantity": 3.0,
@@ -1504,7 +1529,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P136",
+      "procurement_id": "P138",
       "category": "SCREW",
       "specification": "M4 x 16 hand knob",
       "required_quantity": 2.0,
@@ -1515,7 +1540,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P137",
+      "procurement_id": "P139",
       "category": "SCREW",
       "specification": "M4 x 16 head selection held",
       "required_quantity": 4.0,
@@ -1526,7 +1551,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P138",
+      "procurement_id": "P140",
       "category": "SCREW",
       "specification": "M4 x 16 socket head",
       "required_quantity": 20.0,
@@ -1537,7 +1562,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P139",
+      "procurement_id": "P141",
       "category": "SCREW",
       "specification": "M4 x 20 socket head",
       "required_quantity": 2.0,
@@ -1548,7 +1573,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P140",
+      "procurement_id": "P142",
       "category": "SCREW",
       "specification": "M4 x 25 socket head",
       "required_quantity": 3.0,
@@ -1561,7 +1586,7 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P141",
+      "procurement_id": "P143",
       "category": "SCREW",
       "specification": "M4 x 30 socket head",
       "required_quantity": 4.0,
@@ -1572,7 +1597,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P142",
+      "procurement_id": "P144",
       "category": "SCREW",
       "specification": "M4 x 40 socket head",
       "required_quantity": 2.0,
@@ -1583,7 +1608,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P143",
+      "procurement_id": "P145",
       "category": "SCREW",
       "specification": "M4 x 6 socket head",
       "required_quantity": 2.0,
@@ -1596,7 +1621,7 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P144",
+      "procurement_id": "P146",
       "category": "SCREW",
       "specification": "M4 x 8 button head",
       "required_quantity": 2.0,
@@ -1607,7 +1632,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P145",
+      "procurement_id": "P147",
       "category": "SCREW",
       "specification": "M5 x 10 countersunk head",
       "required_quantity": 16.0,
@@ -1618,7 +1643,20 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P146",
+      "procurement_id": "P148",
+      "category": "SCREW",
+      "specification": "M5 x 100 socket head",
+      "required_quantity": 80.0,
+      "cart_pieces": 80,
+      "status": "NOMINAL_CANDIDATE_QUANTITY_COVERED",
+      "operations": "[{\"source_id\": \"BED:BED_M5X100_FINISH99P3\", \"quantity\": 80, \"operation\": \"Machine each purchased M5x100 socket screw to99.3+/-0.1mm finished underhead length; enddeburr/chamfer<=0.4mm and verify complete usable thread, 18ODbridgewasher stack, full2.7mm nominalslotnutengagement,1.0mmtipreserve and1.1mmcavityreserve.99.3mm is a finished part, not an assumed catalogue length.\"}]",
+      "cart_variants": [
+        "BNUOK M5x100mm Black /20sets"
+      ],
+      "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
+    },
+    {
+      "procurement_id": "P149",
       "category": "SCREW",
       "specification": "M5 x 18 socket head",
       "required_quantity": 32.0,
@@ -1631,7 +1669,7 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P147",
+      "procurement_id": "P150",
       "category": "SCREW",
       "specification": "M5 x 20 countersunk head",
       "required_quantity": 4.0,
@@ -1642,7 +1680,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P148",
+      "procurement_id": "P151",
       "category": "SCREW",
       "specification": "M5 x 25 socket head",
       "required_quantity": 16.0,
@@ -1655,20 +1693,7 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P149",
-      "category": "SCREW",
-      "specification": "M5 x 75 socket head",
-      "required_quantity": 80.0,
-      "cart_pieces": 100,
-      "status": "NOMINAL_CANDIDATE_QUANTITY_COVERED",
-      "operations": "[{\"source_id\": \"BED:BED_M5X75_FINISH72\", \"quantity\": 80, \"operation\": \"Machine each purchased M5x75 socket screw to72mm finished underhead length; deburr/chamfer and verify complete usable thread, washer stack, slot-nut engagement and tip reserve.72mm is a finished part, not an assumed catalogue length.\"}]",
-      "cart_variants": [
-        "50pcs M5/75mm"
-      ],
-      "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
-    },
-    {
-      "procurement_id": "P150",
+      "procurement_id": "P152",
       "category": "SCREW",
       "specification": "M6 x 100 socket head",
       "required_quantity": 10.0,
@@ -1679,7 +1704,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P151",
+      "procurement_id": "P153",
       "category": "SCREW",
       "specification": "M6 x 12 head selection held",
       "required_quantity": 12.0,
@@ -1690,7 +1715,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P152",
+      "procurement_id": "P154",
       "category": "SCREW",
       "specification": "M6 x 12 socket head",
       "required_quantity": 8.0,
@@ -1701,7 +1726,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P153",
+      "procurement_id": "P155",
       "category": "SCREW",
       "specification": "M6 x 16 button head",
       "required_quantity": 8.0,
@@ -1712,7 +1737,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P154",
+      "procurement_id": "P156",
       "category": "SCREW",
       "specification": "M6 x 16 head selection held",
       "required_quantity": 8.0,
@@ -1723,7 +1748,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P155",
+      "procurement_id": "P157",
       "category": "SCREW",
       "specification": "M6 x 16 socket head",
       "required_quantity": 34.0,
@@ -1736,7 +1761,7 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P156",
+      "procurement_id": "P158",
       "category": "SCREW",
       "specification": "M6 x 20 button head",
       "required_quantity": 2.0,
@@ -1747,7 +1772,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P157",
+      "procurement_id": "P159",
       "category": "SCREW",
       "specification": "M6 x 20 head selection held",
       "required_quantity": 4.0,
@@ -1758,10 +1783,10 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P158",
+      "procurement_id": "P160",
       "category": "SCREW",
       "specification": "M6 x 20 socket head",
-      "required_quantity": 12.0,
+      "required_quantity": 20.0,
       "cart_pieces": 22,
       "status": "NOMINAL_CANDIDATE_QUANTITY_COVERED",
       "operations": "",
@@ -1771,7 +1796,7 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P159",
+      "procurement_id": "P161",
       "category": "SCREW",
       "specification": "M6 x 22 socket head",
       "required_quantity": 8.0,
@@ -1782,7 +1807,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P160",
+      "procurement_id": "P162",
       "category": "SCREW",
       "specification": "M6 x 25 socket head",
       "required_quantity": 30.0,
@@ -1795,7 +1820,7 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P161",
+      "procurement_id": "P163",
       "category": "SCREW",
       "specification": "M6 x 30 socket head",
       "required_quantity": 6.0,
@@ -1808,7 +1833,7 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P162",
+      "procurement_id": "P164",
       "category": "SCREW",
       "specification": "M6 x 55 socket head",
       "required_quantity": 8.0,
@@ -1821,7 +1846,7 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P163",
+      "procurement_id": "P165",
       "category": "SCREW",
       "specification": "M6 x LENGTH HELD head selection held",
       "required_quantity": 144.0,
@@ -1832,7 +1857,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P164",
+      "procurement_id": "P166",
       "category": "SCREW",
       "specification": "M8 x 16 socket head",
       "required_quantity": 16.0,
@@ -1845,10 +1870,10 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P165",
+      "procurement_id": "P167",
       "category": "SCREW",
       "specification": "M8 x 20 socket head",
-      "required_quantity": 12.0,
+      "required_quantity": 14.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -1856,7 +1881,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P166",
+      "procurement_id": "P168",
       "category": "SCREW",
       "specification": "M8 x 25 head selection held",
       "required_quantity": 4.0,
@@ -1867,7 +1892,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P167",
+      "procurement_id": "P169",
       "category": "SCREW",
       "specification": "M8 x 35 button head",
       "required_quantity": 4.0,
@@ -1878,10 +1903,10 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P168",
+      "procurement_id": "P170",
       "category": "SCREW",
       "specification": "M8 x 35 socket head",
-      "required_quantity": 4.0,
+      "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -1889,7 +1914,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P169",
+      "procurement_id": "P171",
       "category": "SCREW",
       "specification": "M8 x LENGTH HELD socket head",
       "required_quantity": 8.0,
@@ -1900,7 +1925,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P170",
+      "procurement_id": "P172",
       "category": "SHOULDER_SCREW",
       "specification": "ISO7379 shoulder D6 x20; M5 thread",
       "required_quantity": 6.0,
@@ -1911,18 +1936,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P171",
-      "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "1.9mmsteel formed/welded detachable-with-screen cantileverclips; exactsupplierfitsheld.",
-      "required_quantity": 6.0,
-      "cart_pieces": 0,
-      "status": "UNSTAGED",
-      "operations": "",
-      "cart_variants": [],
-      "qualification": ""
-    },
-    {
-      "procurement_id": "P172",
+      "procurement_id": "P173",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "10.0000 x10.0000 x1.9000",
       "required_quantity": 2.0,
@@ -1933,7 +1947,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P173",
+      "procurement_id": "P174",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "10.0000 x9.3301 x1.9000",
       "required_quantity": 2.0,
@@ -1944,7 +1958,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P174",
+      "procurement_id": "P175",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "1076.0000 x40.9400 x3.1750",
       "required_quantity": 3.0,
@@ -1955,7 +1969,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P175",
+      "procurement_id": "P176",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "1096.0000 x62.0000 x1.9000",
       "required_quantity": 2.0,
@@ -1966,7 +1980,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P176",
+      "procurement_id": "P177",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "110x218x12.7; only upper fixing holes revised",
       "required_quantity": 1.0,
@@ -1977,7 +1991,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P177",
+      "procurement_id": "P178",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "12.7OD6.35ID14.9Alstandoff,canusecolumn-tubepackremainderifexactnestallocated.",
       "required_quantity": 8.0,
@@ -1988,21 +2002,10 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P178",
-      "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "12.7OD6.35IDAlcompressiontube;65.4nominalsquare-cut, fitactualtwo-sheetstack.",
-      "required_quantity": 80.0,
-      "cart_pieces": 0,
-      "status": "UNSTAGED",
-      "operations": "",
-      "cart_variants": [],
-      "qualification": ""
-    },
-    {
       "procurement_id": "P179",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "12.7OD8.5IDx3.475metalspacer;remove/storewithboltsorfitcaptivemethod.",
-      "required_quantity": 4.0,
+      "specification": "12.7OD6.35IDAlcompressiontube;92.7nominalsquare-cut,fitactualsingleHDPEstack.",
+      "required_quantity": 80.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2012,7 +2015,7 @@
     {
       "procurement_id": "P180",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "120x35x3.175lowerreinforcementweb atassistnotch;newstock/noautomaticoffcutcredit.",
+      "specification": "12.7OD8.5IDx3.475metalspacer;remove/storewithlowerlockbolts.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2023,7 +2026,7 @@
     {
       "procurement_id": "P181",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "120x80x6.35steelpostplate,4M6fixings,4D13.1gascolclearanceandD8.5gasstudclearance.",
+      "specification": "120x35x3.175lowerreinforcementweb atassistnotch;newstock/noautomaticoffcutcredit.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2034,7 +2037,7 @@
     {
       "procurement_id": "P182",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "15x15x1.5steelRHS375mm;8.5indexrowand10.2fullopenbore,exactpositioninmodel.",
+      "specification": "120x80x6.35steelpostplate,4M6fixings,4D13.1gascolclearanceandD8.5gasstudclearance.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2045,7 +2048,7 @@
     {
       "procurement_id": "P183",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "176.0000 x15.0000 x1.9000",
+      "specification": "15x15x1.5steelRHS375mm;8.5indexrowand10.2fullopenbore,exactpositioninmodel.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2056,8 +2059,8 @@
     {
       "procurement_id": "P184",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "176.0256 x40.2000 x1.9000",
-      "required_quantity": 1.0,
+      "specification": "160x630.5x1.9mm plain steel rack webs; six D6.6 holes from current mm DXF.",
+      "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2067,7 +2070,7 @@
     {
       "procurement_id": "P185",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "18.1000 x40.2000 x1.9000",
+      "specification": "176.1x44x1.9mm plain steel rough blank; finish sloped gutter to current STEP. Installed rise3 over176; end bevel0.976543deg; nominal normal thickness1.899724mm. Replaces undersize legacy40.2mm-width floor blank.",
       "required_quantity": 1.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2078,7 +2081,7 @@
     {
       "procurement_id": "P186",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "18.1000 x409.0000 x1.9000",
+      "specification": "176x15x1.9mm plain steel blank; finish polygon(0,0),(176,3),(176,15),(0,12); weld both cheeks.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2089,8 +2092,8 @@
     {
       "procurement_id": "P187",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "1inNPTstainlessfullport9\u201324VAC/DC2wireauto-returnNC; supplierdimensions3.2\u00d73\u00d74.3in; unit$50.42shippingunquoted.",
-      "required_quantity": 1.0,
+      "specification": "18.1x383x1.9mm plain steel flat strips; upper C-channel sides; butt weld, no bends.",
+      "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2100,7 +2103,7 @@
     {
       "procurement_id": "P188",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "20.0000 x16.0000 x3.0000",
+      "specification": "18.1x630.5x1.9mm plain steel edge-return flats; weld to web; no bends.",
       "required_quantity": 4.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2111,8 +2114,8 @@
     {
       "procurement_id": "P189",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "20x20x2steelRHS390mm;12mmeyestandoff,10.2fullopenpinbore.",
-      "required_quantity": 2.0,
+      "specification": "1inNPTstainlessfullport9\u201324VAC/DC2wireauto-returnNC; supplierdimensions3.2\u00d73\u00d74.3in; unit$50.42shippingunquoted.",
+      "required_quantity": 1.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2122,7 +2125,7 @@
     {
       "procurement_id": "P190",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "24.0000 x30.0000 x1.9000",
+      "specification": "20.0000 x16.0000 x3.0000",
       "required_quantity": 4.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2133,8 +2136,8 @@
     {
       "procurement_id": "P191",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "24OD10.2IDx6.35steelweldedeye;qualifiedtube/eyeweldtransitionrequired.",
-      "required_quantity": 4.0,
+      "specification": "20x20x2steelRHS390mm;12mmeyestandoff,10.2fullopenpinbore.",
+      "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2144,8 +2147,8 @@
     {
       "procurement_id": "P192",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "24wide x6;70verticalbody +45/50horizontalreach",
-      "required_quantity": 4.0,
+      "specification": "20x20x6.35steelgasverticalear;M8studY365movedforwardtoclearuprightendcorebolts.",
+      "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2155,7 +2158,7 @@
     {
       "procurement_id": "P193",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "25.0000 x25.0000 x2.0000",
+      "specification": "24.0000 x30.0000 x1.9000",
       "required_quantity": 4.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2166,8 +2169,8 @@
     {
       "procurement_id": "P194",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "25IDflexhoseOD34,maxminimumcenterlinebend100mm; finalfittingsandlengthmeasureaftervalveacceptance.",
-      "required_quantity": 2.0,
+      "specification": "24OD10.2IDx6.35steelweldedeye;qualifiedtube/eyeweldtransitionrequired.",
+      "required_quantity": 4.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2177,8 +2180,8 @@
     {
       "procurement_id": "P195",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "25x20fitpacks atY300; bottom806.5,top811.3nominal, slopeactualpan. Newmaterial.",
-      "required_quantity": 3.0,
+      "specification": "24wide x6;70verticalbody +45/50horizontalreach",
+      "required_quantity": 4.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2188,8 +2191,8 @@
     {
       "procurement_id": "P196",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "25x25x3 L712",
-      "required_quantity": 2.0,
+      "specification": "25.0000 x25.0000 x2.0000",
+      "required_quantity": 4.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2199,7 +2202,7 @@
     {
       "procurement_id": "P197",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "25x50x6.35steelbridge;qualifiedweldloadpath.",
+      "specification": "25IDflexhoseOD34,maxminimumcenterlinebend100mm; finalfittingsandlengthmeasureaftervalveacceptance.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2210,8 +2213,8 @@
     {
       "procurement_id": "P198",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "318.1x18.1x1.9mmsteelblank",
-      "required_quantity": 2.0,
+      "specification": "25x20fitpacks atY300; bottom780.5,top785.3nominal atcenter; actualslopedpanundersidecontrols. Newmaterial.",
+      "required_quantity": 3.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2221,7 +2224,7 @@
     {
       "procurement_id": "P199",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "34.0000 x44.0000 x1.9000",
+      "specification": "25x25x3 L712",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2232,7 +2235,7 @@
     {
       "procurement_id": "P200",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "34.0000 x8.2000 x1.9000",
+      "specification": "25x50x6.35steelbridge;qualifiedweldloadpath.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2243,7 +2246,7 @@
     {
       "procurement_id": "P201",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "40.0000 x18.5000 x1.9000",
+      "specification": "318.1x18.1x1.9mmsteelblank",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2254,7 +2257,7 @@
     {
       "procurement_id": "P202",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "40x20x3.175steel,8.5studbore.",
+      "specification": "34.0000 x44.0000 x1.9000",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2265,7 +2268,7 @@
     {
       "procurement_id": "P203",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "40x33.85x6.35steelfloor.",
+      "specification": "34.0000 x8.2000 x1.9000",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2276,8 +2279,8 @@
     {
       "procurement_id": "P204",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "44.0000 x409.0000 x1.9000",
-      "required_quantity": 1.0,
+      "specification": "40.0000 x18.5000 x1.9000",
+      "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2287,7 +2290,7 @@
     {
       "procurement_id": "P205",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "4mm steelL keeper24x12;retainwithRclip",
+      "specification": "40x33.85x6.35steelfloor.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2298,7 +2301,7 @@
     {
       "procurement_id": "P206",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "4x30coreenvelope+head/cotterretention",
+      "specification": "40x40x1.9mm plain steel anchor flats; two D6.6 holes atlocal(12.3,20),(32.3,20); weld, no bends.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2309,8 +2312,8 @@
     {
       "procurement_id": "P207",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "50x32.2x6.35steel,12.1pivotbore.",
-      "required_quantity": 2.0,
+      "specification": "44x383x1.9mm plain steel flat strip; upper C-channel back; butt weld, no bends.",
+      "required_quantity": 1.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2320,8 +2323,8 @@
     {
       "procurement_id": "P208",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "53.9000 x44.0000 x1.9000",
-      "required_quantity": 1.0,
+      "specification": "47.3x60x1.9mm plain steel offset-foot flats; welded, no bends.",
+      "required_quantity": 6.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2331,7 +2334,7 @@
     {
       "procurement_id": "P209",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "60x30x6.35steelweb,2D8.5corefixings.",
+      "specification": "4mm steelL keeper24x12;retainwithRclip",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2342,7 +2345,7 @@
     {
       "procurement_id": "P210",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "60x34.2x6.35steelupperbridgewithbodyclearanceUcut;actualSTEPoutlinecontrols.",
+      "specification": "4x30coreenvelope+head/cotterretention",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2353,8 +2356,8 @@
     {
       "procurement_id": "P211",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "620.0000 x290.0000 x1.9000",
-      "required_quantity": 1.0,
+      "specification": "50x32.2x6.35steel,12.1pivotbore.",
+      "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2364,8 +2367,8 @@
     {
       "procurement_id": "P212",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "69.5354 x12.0000 x1.9000",
-      "required_quantity": 2.0,
+      "specification": "53.9x44x1.9mm plain steel flat; exit deflector to Z410; no bends.",
+      "required_quantity": 1.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2375,8 +2378,8 @@
     {
       "procurement_id": "P213",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "712x470x389clearance",
-      "required_quantity": 1.0,
+      "specification": "60Zx50Yx6.35steelweb;2D8.5corefixings,externalheadclearancesinupperbridgeonly.",
+      "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2386,8 +2389,8 @@
     {
       "procurement_id": "P214",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "730.2x18.1x1.9mmsteelblank",
-      "required_quantity": 1.0,
+      "specification": "60x30x1.9mm plain steel; two D6.6 through holes atlocal(10,20),(50,20); weld to offset foot.",
+      "required_quantity": 6.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2397,8 +2400,8 @@
     {
       "procurement_id": "P215",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "734x26.1x1.9mmsteelblank",
-      "required_quantity": 1.0,
+      "specification": "60x32.85x1.9mm plain steel upright flats; weld between offset foot and screen edge; no bends.",
+      "required_quantity": 6.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2408,7 +2411,7 @@
     {
       "procurement_id": "P216",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "734x320x1.9mmsteelblank",
+      "specification": "620.0000 x290.0000 x1.9000",
       "required_quantity": 1.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2419,8 +2422,8 @@
     {
       "procurement_id": "P217",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "80x40x10newAlspacer,2D8.5bores.9.525sheetdoesnotprovide10mm.",
-      "required_quantity": 2.0,
+      "specification": "712x470x389clearance",
+      "required_quantity": 1.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2429,6 +2432,72 @@
     },
     {
       "procurement_id": "P218",
+      "category": "SOURCE_REQUIREMENT_UNMAPPED",
+      "specification": "72.3x40x1.9mm plain steel storage ledges; weld to rack web; no bends.",
+      "required_quantity": 6.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P219",
+      "category": "SOURCE_REQUIREMENT_UNMAPPED",
+      "specification": "730.2x18.1x1.9mmsteelblank",
+      "required_quantity": 1.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P220",
+      "category": "SOURCE_REQUIREMENT_UNMAPPED",
+      "specification": "734x26.1x1.9mmsteelblank",
+      "required_quantity": 1.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P221",
+      "category": "SOURCE_REQUIREMENT_UNMAPPED",
+      "specification": "734x320x1.9mmsteelblank",
+      "required_quantity": 1.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P222",
+      "category": "SOURCE_REQUIREMENT_UNMAPPED",
+      "specification": "75Yx34.2Xx6.35steelupperbridge,extendedfront/rearUcutandgas-spacer/headclearances;exactSTEPcontrols.",
+      "required_quantity": 2.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P223",
+      "category": "SOURCE_REQUIREMENT_UNMAPPED",
+      "specification": "80x40x10newAlspacerrotated40Yx80Z,2D8.5bores.9.525sheetdoesnotprovide10mm.",
+      "required_quantity": 2.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P224",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "80x40x6.35steelrearendplate,2D8.5bores;clampedthroughfixedwebandmetalspacers.",
       "required_quantity": 2.0,
@@ -2439,7 +2508,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P219",
+      "procurement_id": "P225",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "80x70x6.35steelplate,4D6.6postholes.",
       "required_quantity": 2.0,
@@ -2450,7 +2519,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P220",
+      "procurement_id": "P226",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "80x80x6.35steelplate4M6holes,M8studhole;on14.9standoffs.",
       "required_quantity": 2.0,
@@ -2461,7 +2530,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P221",
+      "procurement_id": "P227",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "880.0000 x40.0000 x1.9000",
       "required_quantity": 8.0,
@@ -2472,7 +2541,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P222",
+      "procurement_id": "P228",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "890.2000 x55.4354 x1.9000",
       "required_quantity": 1.0,
@@ -2483,7 +2552,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P223",
+      "procurement_id": "P229",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "890.2000 x62.0000 x1.9000",
       "required_quantity": 1.0,
@@ -2494,7 +2563,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P224",
+      "procurement_id": "P230",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "894.0000 x1096.0197 x1.9000",
       "required_quantity": 1.0,
@@ -2505,7 +2574,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P225",
+      "procurement_id": "P231",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "98x40x6.0mmsteelblank",
       "required_quantity": 2.0,
@@ -2516,18 +2585,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P226",
-      "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "ARANA28IN200LBST280M200ASINB08CNGT5Z7;889Neachconditionalon200lblabel. Exactcompressedunpublished:verify\u2264450mm/expanded\u2265700mm, body\u226424/rod\u226410/socketfit. Noassumedliftingrating.",
-      "required_quantity": 1.0,
-      "cart_pieces": 0,
-      "status": "UNSTAGED",
-      "operations": "",
-      "cart_variants": [],
-      "qualification": ""
-    },
-    {
-      "procurement_id": "P227",
+      "procurement_id": "P232",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "AlOD14x15,M6tap",
       "required_quantity": 2.0,
@@ -2538,7 +2596,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P228",
+      "procurement_id": "P233",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "AlOD14x18.18,M6tap; no duplicate15mmboss purchase",
       "required_quantity": 2.0,
@@ -2549,7 +2607,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P229",
+      "procurement_id": "P234",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "Compatible hard retention adhesive for four rim feet",
       "required_quantity": 1.0,
@@ -2560,7 +2618,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P230",
+      "procurement_id": "P235",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "Controllercompatibleendpoint/bothcaptureseat/interlockset",
       "required_quantity": 1.0,
@@ -2571,7 +2629,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P231",
+      "procurement_id": "P236",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "DIN94/ISO1234splitpin1.6x14;replaceaftereveryremoval. BothlegsformedinboardwithintheCADinstalledenvelope.",
       "required_quantity": 4.0,
@@ -2582,64 +2640,9 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P232",
-      "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "Formed/trimmedsteelangle54horizontalx31.75upwebx3.175,localassistwindow;22mmlocalwasheraccessholesatX105left/mirror;16flushM5CSfixingstoremainingmiddle/reararms.",
-      "required_quantity": 2.0,
-      "cart_pieces": 0,
-      "status": "UNSTAGED",
-      "operations": "",
-      "cart_variants": [],
-      "qualification": ""
-    },
-    {
-      "procurement_id": "P233",
-      "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "IGUS_RJ4JP_01_08",
-      "required_quantity": 4.0,
-      "cart_pieces": 0,
-      "status": "UNSTAGED",
-      "operations": "",
-      "cart_variants": [],
-      "qualification": ""
-    },
-    {
-      "procurement_id": "P234",
-      "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "Inner24x32x3.175steelring+stem,10.2pivotbore.",
-      "required_quantity": 2.0,
-      "cart_pieces": 0,
-      "status": "UNSTAGED",
-      "operations": "",
-      "cart_variants": [],
-      "qualification": ""
-    },
-    {
-      "procurement_id": "P235",
-      "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "Innerplanarring+rearstrapfits32.4x65.65x3.175;exactSTEPoutlinecontrols.",
-      "required_quantity": 2.0,
-      "cart_pieces": 0,
-      "status": "UNSTAGED",
-      "operations": "",
-      "cart_variants": [],
-      "qualification": ""
-    },
-    {
-      "procurement_id": "P236",
-      "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "M4x16 atY872/928,Z838",
-      "required_quantity": 2.0,
-      "cart_pieces": 0,
-      "status": "UNSTAGED",
-      "operations": "",
-      "cart_variants": [],
-      "qualification": ""
-    },
-    {
       "procurement_id": "P237",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "M4x8 threaded anchor and5diameterx8shoulder",
+      "specification": "Formed/trimmedsteelangle54horizontalx31.75upwebx3.175;27.3lowerseat,22mmwasheraccessatX125/mirrorpartlyopensflangeedge;actualSTEPcontrols.16M5CSmid/rearfixings.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2650,8 +2653,8 @@
     {
       "procurement_id": "P238",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "M6DIN125washer12OD6.4IDx1.6.",
-      "required_quantity": 2.0,
+      "specification": "IGUS_RJ4JP_01_08",
+      "required_quantity": 4.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2661,8 +2664,8 @@
     {
       "procurement_id": "P239",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "M6DIN125washer12OD6.4IDx1.6;seatsonthepinshoulder,notonthemovingclevis.",
-      "required_quantity": 4.0,
+      "specification": "Inner24x32x3.175steelring+stem,10.2pivotbore.",
+      "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2672,7 +2675,7 @@
     {
       "procurement_id": "P240",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "M6x1DIN937AF10/h6/body3.5/slots2min.",
+      "specification": "Innerplanarring+rearstrap32.4x68.65x3.175;staypivot3mmlowertoclearlowercorehead.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2683,8 +2686,8 @@
     {
       "procurement_id": "P241",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "M6x1DIN937slottedhexnut,AF10/h6/body3.5/slot2min;lockwith1.6mmsplitpin. PublishedAspenFastenersDIN937dimensions.",
-      "required_quantity": 4.0,
+      "specification": "M4x16 atY872/928,Z838",
+      "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2694,7 +2697,7 @@
     {
       "procurement_id": "P242",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "New1.9steel channelweb160x656.5, two18.1returns,40x40anchorflange and three72.3x40ledges each. WeldedfinishedSTEPcontrolsnominalgeometry.",
+      "specification": "M4x8 threaded anchor and5diameterx8shoulder",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2705,7 +2708,7 @@
     {
       "procurement_id": "P243",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "Nominal3.95mmspacer,OD12.7ID8.5;fit16.05mmface-to-ballcentrefromactualstudneck.",
+      "specification": "M6DIN125washer12OD6.4IDx1.6.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2716,8 +2719,8 @@
     {
       "procurement_id": "P244",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "OD10ID7L80sleeve",
-      "required_quantity": 10.0,
+      "specification": "M6DIN125washer12OD6.4IDx1.6;seatsonthepinshoulder,notonthemovingclevis.",
+      "required_quantity": 4.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2727,8 +2730,8 @@
     {
       "procurement_id": "P245",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "OD28ID24weldedfront/downrouting; received1inNPTvalveunions andindependentpipeclamps required; no direct borrowedsolenoidcredit.",
-      "required_quantity": 1.0,
+      "specification": "M6x1DIN937AF10/h6/body3.5/slots2min.",
+      "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2738,7 +2741,7 @@
     {
       "procurement_id": "P246",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "OD6 ID4.4 L2nominal",
+      "specification": "M6x1DIN937slottedhexnut,AF10/h6/body3.5/slot2min;lockwith1.6mmsplitpin. PublishedAspenFastenersDIN937dimensions.",
       "required_quantity": 4.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2749,6 +2752,50 @@
     {
       "procurement_id": "P247",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
+      "specification": "New28in150lb/667Neachpaircandidate;actualeyelength456.184..658.290,requiredcompressed<=445/expanded>=700,body<=24/rod<=10/socketfit. RootselectsactualSKU;notold200lbpair.",
+      "required_quantity": 1.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P248",
+      "category": "SOURCE_REQUIREMENT_UNMAPPED",
+      "specification": "OD10ID7L80sleeve",
+      "required_quantity": 10.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P249",
+      "category": "SOURCE_REQUIREMENT_UNMAPPED",
+      "specification": "OD28ID24weldedfront/downrouting; received1inNPTvalveunions andindependentpipeclamps required; no direct borrowedsolenoidcredit.",
+      "required_quantity": 1.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P250",
+      "category": "SOURCE_REQUIREMENT_UNMAPPED",
+      "specification": "OD6 ID4.4 L2nominal",
+      "required_quantity": 4.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P251",
+      "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "OD8 ID6.3 L7",
       "required_quantity": 4.0,
       "cart_pieces": 0,
@@ -2758,7 +2805,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P248",
+      "procurement_id": "P252",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "OD8 x8;drill4.4axis",
       "required_quantity": 4.0,
@@ -2769,7 +2816,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P249",
+      "procurement_id": "P253",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "Outer24x32x5steelring+stem,10.2pivotbore/14.2x2.6outboardcounterbore;2.4remainingbearingweb.",
       "required_quantity": 2.0,
@@ -2780,9 +2827,9 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P250",
+      "procurement_id": "P254",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
-      "specification": "Outerplanarring+rearstrap32.4x65.65x5;10.2throughborewith14.2x2.6outboardcounterbore. Recessedpivotheadflush0.1belowface.",
+      "specification": "Outerplanarring+rearstrap32.4x68.65x5;10.2through/14.2x2.6headrecess;stay3mmlower.",
       "required_quantity": 2.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
@@ -2791,7 +2838,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P251",
+      "procurement_id": "P255",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "RapidChange4pocketER11kit;Basicbudgetcase",
       "required_quantity": 1.0,
@@ -2802,7 +2849,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P252",
+      "procurement_id": "P256",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "Rated M8 adjuster/steel pad | PadOD50.8 x9; studtipZ68.5",
       "required_quantity": 8.0,
@@ -2813,7 +2860,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P253",
+      "procurement_id": "P257",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "SUPERMAGNETE_CSN_20",
       "required_quantity": 3.0,
@@ -2824,7 +2871,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P254",
+      "procurement_id": "P258",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "Six25x20shim packs: threeY630,threeY1180; actual sloped pan underside",
       "required_quantity": 6.0,
@@ -2835,7 +2882,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P255",
+      "procurement_id": "P259",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "Six472x94.3x1.9steelpanelblanks ONLY; weldedclipstockisseparateU_NEW_GUIDE_CLIP_STOCK",
       "required_quantity": 6.0,
@@ -2846,7 +2893,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P256",
+      "procurement_id": "P260",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "Steel18OD12.2IDx1.35nominalaxialshim;0.625nominalrightgapforthermalfloat,fitactualassembly. Samepinbarsecondaryblank,noseparatestock.",
       "required_quantity": 1.0,
@@ -2857,7 +2904,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P257",
+      "procurement_id": "P261",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "Steel18OD12.2IDx1.85nominalaxialshimbetweenfixedclevisandmovingarm;0.125nominalleftgap,fitactualbedassembly. Samepinbarsecondaryblank,noseparatestock.",
       "required_quantity": 1.0,
@@ -2868,7 +2915,18 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P258",
+      "procurement_id": "P262",
+      "category": "SOURCE_REQUIREMENT_UNMAPPED",
+      "specification": "Unchanged formed1.9mm steel bracket: outer legs53/20, width12, inside radius2; D4.4 hole; use unchanged calibrated-development reference and current STEP installed26mm lower. Actual K-factor/forming coupon qualification held.",
+      "required_quantity": 2.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P263",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "XR_DROP_M6x16_LOWER_1",
       "required_quantity": 1.0,
@@ -2879,7 +2937,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P259",
+      "procurement_id": "P264",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "XR_DROP_M6x16_LOWER_2",
       "required_quantity": 1.0,
@@ -2890,7 +2948,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P260",
+      "procurement_id": "P265",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "XR_DROP_M6x16_LOWER_3",
       "required_quantity": 1.0,
@@ -2901,7 +2959,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P261",
+      "procurement_id": "P266",
       "category": "SOURCE_REQUIREMENT_UNMAPPED",
       "specification": "XR_DROP_M6x16_LOWER_4",
       "required_quantity": 1.0,
@@ -2912,7 +2970,18 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P262",
+      "procurement_id": "P267",
+      "category": "SPACER",
+      "specification": "OD12.7 ID8.5 x1.05mm steel spacer",
+      "required_quantity": 2.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P268",
       "category": "SPACER",
       "specification": "OD8 ID4.4 x1 steel spacer",
       "required_quantity": 2.0,
@@ -2923,7 +2992,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P263",
+      "procurement_id": "P269",
       "category": "WASHER",
       "specification": "Flat washer OD10 ID5.3 t1",
       "required_quantity": 10.0,
@@ -2934,7 +3003,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P264",
+      "procurement_id": "P270",
       "category": "WASHER",
       "specification": "Flat washer OD12 ID6.4 t1",
       "required_quantity": 6.0,
@@ -2945,10 +3014,10 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P265",
+      "procurement_id": "P271",
       "category": "WASHER",
       "specification": "Flat washer OD12 ID6.6 t1.6",
-      "required_quantity": 64.0,
+      "required_quantity": 72.0,
       "cart_pieces": 0,
       "status": "UNSTAGED",
       "operations": "",
@@ -2956,7 +3025,18 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P266",
+      "procurement_id": "P272",
+      "category": "WASHER",
+      "specification": "Flat washer OD16 ID8.4 t1.6",
+      "required_quantity": 2.0,
+      "cart_pieces": 0,
+      "status": "UNSTAGED",
+      "operations": "",
+      "cart_variants": [],
+      "qualification": ""
+    },
+    {
+      "procurement_id": "P273",
       "category": "WASHER",
       "specification": "Flat washer OD16 ID8.5 t1.6",
       "required_quantity": 4.0,
@@ -2967,7 +3047,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P267",
+      "procurement_id": "P274",
       "category": "WASHER",
       "specification": "Flat washer OD18 ID6.4 t1.6",
       "required_quantity": 80.0,
@@ -2980,7 +3060,7 @@
       "qualification": "Supplier size/quality and receipt fit acceptance remain. Washer dimensions are candidate requirements, not independently verified catalogue dimensions."
     },
     {
-      "procurement_id": "P268",
+      "procurement_id": "P275",
       "category": "WASHER",
       "specification": "Flat washer OD9 ID4.3 t1",
       "required_quantity": 2.0,
@@ -2991,7 +3071,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P269",
+      "procurement_id": "P276",
       "category": "WASHER",
       "specification": "M4 flat washer OD9 IDHELD t1.6",
       "required_quantity": 6.0,
@@ -3002,7 +3082,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P270",
+      "procurement_id": "P277",
       "category": "WASHER",
       "specification": "M4 flat washer ODHELD IDHELD tHELD",
       "required_quantity": 4.0,
@@ -3013,7 +3093,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P271",
+      "procurement_id": "P278",
       "category": "WASHER",
       "specification": "M6 flat washer ODHELD IDHELD tHELD",
       "required_quantity": 142.0,
@@ -3024,7 +3104,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P272",
+      "procurement_id": "P279",
       "category": "WASHER",
       "specification": "M8 flat washer ODHELD IDHELD t1.6",
       "required_quantity": 8.0,
@@ -3035,7 +3115,7 @@
       "qualification": ""
     },
     {
-      "procurement_id": "P273",
+      "procurement_id": "P280",
       "category": "WASHER",
       "specification": "M8 flat washer ODHELD IDHELD tHELD",
       "required_quantity": 12.0,

@@ -1,7 +1,8 @@
 {
   "study": "COMMON_FIXED_RECEIVER_WITH_REMOVABLE_PLASMA_MODULE",
   "source_sha256": {
-    "variants/integrated-4080-small/head/plasma_quick_dock.py": "0aa25c8a4c75cc7148ab5ae1f3520814be392c0abf26624f5c9305f1c14a1713",
+    "variants/integrated-4080-small/head/plasma_quick_dock.py": "f1ed5ab9d573d28c04e0dea779748c827e4a381062468130ff4e89ad8e21abe1",
+    "variants/integrated-4080-small/mechanical.py": "009a8ab210f9df3cadc667b966d3f9e50e5438870590e075b44b7a36dbd1e04d",
     "variants/integrated-4080-small/head/quick_dock.py": "59dbb2ea09bdf47605f41a11309294bcd160e2c97605d17b52b82a3144a2b83a",
     "variants/integrated-4080-small/head/common_dock_source.py": "b335af2c8b5505812259e5ee0ce723d2064fd0a05f70a1e0df757474f1b0ef9f",
     "variants/integrated-4080-small/head/owner_head.py": "c87ba1f27f5592294a25005b0ca946a38c91906c98bef2d9ee02c503d16f6a51",
@@ -26,7 +27,7 @@
     "output/release-review/RevE-ENGINEERING/cad_helpers.py": "a035cd95fa38cb3ecbe47b5463705b4f4febcfe912f1b3f97d675f8c462bb04a"
   },
   "shared_receiver_world_geometry_identical_to_router": true,
-  "source_stack_preserved_world_pose": {
+  "source_stack_preserved_relative_geometry": {
     "I_HEAD_BACKPLATE": {
       "symdiff_mm3": 0.0,
       "bbox_error_mm": 0.0
@@ -456,12 +457,13 @@
       "bbox_error_mm": 0.0
     }
   },
-  "old_drop_change": "Only four upper customM6attachmentbores become6.6clearance and10.5rear counterbores6.1deep; all otherdrop/float/headgeometryandtorchheightunchanged.",
+  "retained_stack_translation_Z_mm": -26.0,
+  "old_drop_change": "Retaineddrop/float/torchstack is rigidlylowered26mm tomatchlowerpan. Customupperattachmentboresremain6.6clearance/10.5rearCB6.1deep. A140mmUsplice joinsunchangedcommonreceiverdatums; inspectactualtorchadjustmentbeforeoperation.",
   "new_part_intersections": [],
   "matched_eight_M6_mount_checks": [
     {
       "X": 530.0,
-      "Z": 1092.0,
+      "Z": 1066.0,
       "full_head_seat_missing_mm3": 0.0,
       "D9_thread_landing_missing_mm3": 0.0,
       "thread_engagement_mm": 9.4,
@@ -472,7 +474,7 @@
     },
     {
       "X": 530.0,
-      "Z": 1118.0,
+      "Z": 1092.0,
       "full_head_seat_missing_mm3": 0.0,
       "D9_thread_landing_missing_mm3": 0.0,
       "thread_engagement_mm": 9.4,
@@ -505,7 +507,7 @@
     },
     {
       "X": 620.0,
-      "Z": 1092.0,
+      "Z": 1066.0,
       "full_head_seat_missing_mm3": 0.0,
       "D9_thread_landing_missing_mm3": 0.0,
       "thread_engagement_mm": 9.4,
@@ -516,7 +518,7 @@
     },
     {
       "X": 620.0,
-      "Z": 1118.0,
+      "Z": 1092.0,
       "full_head_seat_missing_mm3": 0.0,
       "D9_thread_landing_missing_mm3": 0.0,
       "thread_engagement_mm": 9.4,
@@ -697,15 +699,15 @@
   "exports": {
     "assembly": {
       "file": "output/plasma-quick-dock/SHARED_RECEIVER_COMPLETE_PLASMA_MODULE.step",
-      "sha256": "a8944c01cf8713bfe5d1345a5257e9e6b705f0b9672e20212abbf4bb2a8ddd78",
+      "sha256": "315baea2c75859e8b9a9146dd339b4d35204f460009b651f017c1a0081346d1a",
       "valid": true,
       "solids": 134,
       "expected_solids": 134,
-      "volume_error_mm3": 0.016176267992705107
+      "volume_error_mm3": 0.017662397818639874
     },
     "PLASMA_REMOVABLE_HEAD_PLATE": {
       "file": "output/plasma-quick-dock/PLASMA_REMOVABLE_HEAD_PLATE.step",
-      "sha256": "8672ec38e7338fdc8756c5acfb5d43566f6314bbea4be07f1ef27229d70f381f",
+      "sha256": "b2f7ed107de397c10aa7899548aad9f5526e321cdffa65ab7d5d22f7837ce86a",
       "source_world_min_corner_mm": [
         502.0,
         654.1999999999999,
@@ -722,16 +724,16 @@
     },
     "PLASMA_U_SPLICE_PLATE": {
       "file": "output/plasma-quick-dock/PLASMA_U_SPLICE_PLATE.step",
-      "sha256": "11ca062a8fc68cd9b9d518d92d54fe41f933c6797d0aefe5b2c9f31484bd8117",
+      "sha256": "b50e1093b38e498bb776a002a4c506b6f14ea812f419849d783217a8b3743351",
       "source_world_min_corner_mm": [
         520.0,
         641.5,
-        1082.0
+        1056.0
       ],
       "bounds_mm": [
         520.0,
         641.5,
-        1082.0,
+        1056.0,
         630.0,
         654.2,
         1196.0
@@ -739,11 +741,11 @@
     },
     "XR_PLASMA_DROP_148": {
       "file": "output/plasma-quick-dock/XR_PLASMA_DROP_SHARED_DOCK_CLEARANCE_BORES.step",
-      "sha256": "8793875c8ab2c76616c737b1047606fc506bc60102ee26a6c2a701019adaa72c",
+      "sha256": "c0eb3053cd5a542152ecce25f14f84f1df5440b38bd96e9406142e7943467761",
       "source_world_min_corner_mm": [
         520.0,
         654.1999999999998,
-        922.0
+        896.0
       ],
       "added_material_mm3": 0.0,
       "removed_material_mm3": 1579.6587596706895

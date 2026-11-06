@@ -1,0 +1,353 @@
+{
+  "schema_version": 2,
+  "observed_date": "2026-11-05",
+  "currency": "USD",
+  "delivery_region": "Alto GA 30510",
+  "scope": "Read-only targeted sourcing and budget feasibility. No cart mutations, messages to suppliers, order, CAD edits, or ownership credits. Proposals are not adopted requirements or a complete delivered quotation.",
+  "baseline_bindings": {
+    "4080-cut-stock-options.json": "212e3a80105c37fa0ed6b330872476eba767a7d93e6cbc2fe0067374456dcabd",
+    "price-and-budget-register.json": "5fdd565dc682f6fde8eb37ed8eb43dccfeb8bdaf8e78baaa59d61dc9a75617cc"
+  },
+  "baseline_warning": "These are input snapshot hashes, not a claim that later CAD or master BOM generations are bound. A one-full-12.7-mm-layer bed candidate is being developed independently by the bed agent.",
+  "physical_requirements": {
+    "frame_section": "4080 rectangular profile; actual slot/core/die interfaces and mechanical capacity require qualification",
+    "frame_cut_count": 26,
+    "frame_finished_length_mm": 22495.7,
+    "headers_one_piece_mm": [
+      1760,
+      1760
+    ],
+    "all_2000_mm_stock_bars": 13,
+    "all_2000_mm_two_bar_packs": 7,
+    "raw_pack_purchase_bars": 14,
+    "bed_tracks": "Ten 20100 profiles, 1220 mm finished each",
+    "proposed_hdpe": "One continuous 12.7 mm layer, 1000 x 1219.2 mm; not 24 x 48 inch stock",
+    "atc": "Automatic multi-tool ER11 changer on a reverse-capable owned spindle. Solo/manual single-pocket substitution is not equivalent."
+  },
+  "targeted_primary_candidates": [
+    {
+      "id": "AMAZON_SEEKLINY_FOUR_1500_CANDIDATE",
+      "url": "https://www.amazon.com/dp/B0DY7JYQCJ",
+      "selected_variant": "Black 20100, 1500 mm, four profiles",
+      "goods_USD": "129.99",
+      "shipping_to_30510_USD": null,
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "quantity": 2,
+      "pack_count_primary": 4,
+      "primary_quantity_evidence": [
+        "Title states four pack",
+        "Package contents state four profiles",
+        "Selected Number of Items and Unit Count are four"
+      ],
+      "conflicting_label": "Part number contains 1500-2Pcs; not ignored. Other primary package/quantity fields agree at four.",
+      "price_evidence": "Parent agent current Amazon UI observation on 2026-11-05; this child verified the primary public package/length fields, not the region-specific offer.",
+      "primary_public_offer_state": "No featured offer visible in child public response",
+      "regional_shipping_confirmed_by_child": false,
+      "fit_gate": "Explicitly revise raw stock to cut eight profiles from 1500 to 1220 mm; check both selected dies/slots and actual end-loading DIN562 M5 nut fit. Availability of two packages is not reserved.",
+      "adopted_by_this_report": false
+    },
+    {
+      "id": "AMAZON_20100_TWO_1220",
+      "url": "https://www.amazon.com/dp/B0BXNWK99C",
+      "selected_variant": "20100, 1220 mm, two profiles",
+      "goods_USD": "79.99",
+      "shipping_to_30510_USD": "0.00",
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "quantity": 1,
+      "pack_count": 2,
+      "price_evidence": "Parent agent current Amazon UI observation on 2026-11-05",
+      "shipping_basis": "Parent current primary UI observation: free Prime to 30510; not a universal carrier quote.",
+      "stock_note": "Silver: only one package; black in stock. Must select compatible die/color with proposed 1500 stock.",
+      "adopted_by_this_report": false
+    },
+    {
+      "id": "USPLASTIC_42707_RECYCLED_HALF_SHEET",
+      "url": "https://www.usplastic.com/catalog/item.aspx?itemid=127310",
+      "selected_variant": "One recycled black HDPE 48 x 48 x 1/2 inch sheet",
+      "goods_USD": "191.86",
+      "shipping_to_30510_USD": null,
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "quantity": 1,
+      "stock": "In stock on primary page",
+      "weight_lb": 42,
+      "published_thickness_tolerance": "+/-10%",
+      "published_cut_tolerance_inches": "+/-0.25",
+      "source_kind": "Primary public product page",
+      "fit_gate": "Nominally supplies one 1000 x 1219.2 mm bed layer only. Negative length tolerance can undersize the 1219.2 mm dimension. Require sufficient actual blank size and thickness; do not assume nominal dimensions are guaranteed.",
+      "adopted_by_this_report": false
+    },
+    {
+      "id": "FLEXPIPE_FULL_HALF_SHEET_BASELINE",
+      "url": "https://shop.flexpipeinc.com/us_en/d-hdpeb-481-2-black-hdpe-plastic-1-2",
+      "selected_variant": "One black HDPE 48 x 96 x 1/2 inch sheet",
+      "goods_USD": "225.75",
+      "shipping_to_30510_USD": null,
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "quantity": 1,
+      "source_kind": "Existing primary observation and current price register",
+      "fit_gate": "The full raw sheet price is payable even if the new bed uses only one layer. No half-sheet price inferred."
+    },
+    {
+      "id": "LIGHTOBJECT_4080_PER_FOOT",
+      "url": "https://lightobject.com/40x80mm-t-slotted-extrusion-aluminum-bar/",
+      "selected_variant": "HW-EAL4080, 40 x 80 mm, per foot",
+      "goods_USD": "9.00",
+      "shipping_to_30510_USD": null,
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "unit": "foot",
+      "minimum_feet": 2,
+      "source_kind": "Primary public product page",
+      "published_cut_variation_inches": "0.125",
+      "frame_finished_length_goods_extension_USD": "664.24",
+      "extension_is_order_total": false,
+      "fit_gate": "No published maximum stock length, exact die or full cut/freight quotation. Long headers require supplier-confirmed usable stock. Extension excludes raw allowance, rounding, cutting and shipping."
+    },
+    {
+      "id": "AMAZON_IXGNIJ_4080_AVAILABLE_BASELINE",
+      "url": "https://www.amazon.com/dp/B0CM8GJLV5",
+      "selected_variant": "Silver 4080, 2000 mm, two profiles",
+      "goods_USD": "219.99",
+      "shipping_to_30510_USD": null,
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "quantity_for_all_2000_plan": 7,
+      "goods_extension_USD": "1539.93",
+      "price_evidence": "Parent agent primary Amazon current UI observation 2026-11-05",
+      "stock": "Available",
+      "shipping_basis": "Prime advertised; parent must preserve exact 30510 offer evidence."
+    },
+    {
+      "id": "AMAZON_SEEKLINY_4080_OUT_OF_STOCK",
+      "url": "https://www.amazon.com/dp/B0CP1XKDYZ",
+      "selected_variant": "Silver 4080, 2000 mm, two profiles",
+      "goods_USD": "146.99",
+      "shipping_to_30510_USD": null,
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "quantity_for_all_2000_plan": 7,
+      "goods_extension_if_available_USD": "1028.93",
+      "price_evidence": "Parent agent primary Amazon current UI observation 2026-11-05",
+      "stock": "Temporarily out of stock",
+      "usable_as_current_budget_solution": false
+    },
+    {
+      "id": "USPLASTIC_VIRGIN_HALF_SHEET",
+      "url": "https://www.usplastic.com/catalog/item.aspx?itemid=136972",
+      "selected_variant": "Black virgin HDPE 48 x 48 x 1/2 inch sheet",
+      "goods_USD": "262.32",
+      "shipping_to_30510_USD": null,
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "quantity": 1,
+      "stock": "In stock",
+      "weight_lb": 40,
+      "conclusion": "More expensive goods than full Flexpipe sheet."
+    },
+    {
+      "id": "LUNDELL_HALF_OR_FULL",
+      "url": "https://lundellplastics.com/specialty-custom-plastics/polyethylene-sheets.asp",
+      "selected_variant": "1/2 inch HDPE, published partial-sheet and 4 x 8 sheet rates",
+      "goods_USD": null,
+      "shipping_to_30510_USD": null,
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "partial_sheet_rate_per_sqft_USD": "13.50",
+      "full_sheet_rate_per_sqft_USD": "6.75",
+      "partial_48x48_goods_extension_USD": "216.00",
+      "full_48x96_goods_extension_USD": "216.00",
+      "fit_gate": "Published area-rate extension is not a selected cut/freight quote. Full sheet can cost the same goods as half; do not prorate full-sheet price."
+    },
+    {
+      "id": "TUCSON_EXACT_HALF_SHEET_QUOTE_ONLY",
+      "url": "https://tucsonplastics.store/products/hdpe-black-textured-uv-resistant-sheet",
+      "selected_variant": "Black textured HDPE; 1/2 x 48 x 48 option is listed",
+      "goods_USD": null,
+      "shipping_to_30510_USD": null,
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "selected_price_verified": false,
+      "primary_shipping_policy": "36 x 48, 48 x 48 and 48 x 96 require freight quoted and billed separately.",
+      "conclusion": "Default 12 x 12 price is not the requested sheet price. Public JSON returned 429; no bypass attempted."
+    },
+    {
+      "id": "LEGACY_HDPE_BULK_NOT_SINGLE_SHEET",
+      "url": "https://legacyhdpe.com/hdpe-material/",
+      "selected_variant": "Published 1/2 x 4 x 8 price table with bulk minimum",
+      "goods_USD": "96.00",
+      "shipping_to_30510_USD": null,
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "published_minimum_weight_lb": 2000,
+      "source_kind": "Primary public material page",
+      "usable_as_single_sheet_quote": false,
+      "conclusion": "No verified exception to 2000 lb minimum, single-sheet availability or target-region freight. Quote lead only; not $96 delivered material."
+    },
+    {
+      "id": "RAPIDCHANGE_BASIC4",
+      "url": "https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/",
+      "selected_variant": "ER11 linear magazine, four pockets, Basic",
+      "goods_USD": "400.00",
+      "shipping_to_30510_USD": null,
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "quantity": 1,
+      "tool_setter_required": true,
+      "tool_setter_goods_USD": "50.00",
+      "basic_has_tool_detection": false,
+      "made_to_order_days": "5-7 business days",
+      "source_kind": "Primary public product page"
+    },
+    {
+      "id": "RAPIDCHANGE_TOWER_STARTING_PRICE_NOT_FOUR_POCKET",
+      "url": "https://rapidchangeatc.com/shop-2/",
+      "selected_variant": "Modular ER11/ER16/ER20 Control Tower, starting at one tower",
+      "goods_USD": "200.00",
+      "shipping_to_30510_USD": null,
+      "tax_USD": null,
+      "delivered_to_30510_USD": null,
+      "selected_four_tower_price_USD": null,
+      "source_kind": "Primary public shop page",
+      "conclusion": "One Control Tower with expansion towers is offered, but a complete four-pocket selected price and geometry were not verified. Do not replace the current four-pocket magazine with the $200 starting price."
+    }
+  ],
+  "current_atc_tier_price_conflict": {
+    "legacy_primary_url": "https://rapidchangeatc.com/shop/automatic-tool-changer/linear-magazines/",
+    "legacy_public_base_USD": "400.00",
+    "legacy_public_Pro_addition_USD": "100.00",
+    "legacy_public_Premium_addition_USD": "200.00",
+    "new_shop_url": "https://rapidchangeatc.com/shop-2/?tab=new-setup",
+    "parent_fresh_UI_basic4_USD": "400.00",
+    "parent_fresh_UI_pro4_USD": "550.00",
+    "parent_fresh_UI_premium4_USD": "700.00",
+    "accepted_current_Pro_upgrade_USD": null,
+    "conclusion": "Basic agrees. Preserve conflict; the old $100 Pro upgrade must not be treated as current selected checkout pricing without verification."
+  },
+  "unpriced_primary_candidates_for_parent_UI": [
+    {
+      "url": "https://www.aliexpress.com/item/1005008335783535.html",
+      "discovery_source": "https://kinnerbuilder.com/c/extrusion-tslot?vendor=aliexpress",
+      "discovery_claim": "Family includes 4080 and 1000/1500/2000/2500 mm options",
+      "primary_selected_variant_verified": false,
+      "goods_USD": null,
+      "shipping_to_30510_USD": null,
+      "conclusion": "Web could not open primary. Parent may inspect exact 4080 long variant. No teaser price credited."
+    },
+    {
+      "url": "https://www.aliexpress.com/item/1005007556643190.html",
+      "discovery_source": "https://kinnerbuilder.com/c/extrusion-tslot?vendor=aliexpress",
+      "discovery_claim": "4080 European anodized family, unspecified length",
+      "primary_selected_variant_verified": false,
+      "goods_USD": null,
+      "shipping_to_30510_USD": null,
+      "conclusion": "Web could not open primary. No known long-stock offer."
+    },
+    {
+      "url": "https://www.alibaba.com/product-detail/Industrial-Aluminium-Profil-40x80-1M-2M_1601608596357.html",
+      "discovery_claim": "1 m/2 m/custom profile family",
+      "primary_selected_variant_verified": false,
+      "goods_USD": null,
+      "shipping_to_30510_USD": null,
+      "conclusion": "No actual matching die/length/quantity plus freight quotation obtained. RFQ is not an accepted order."
+    }
+  ],
+  "rejected_cost_shortcuts": [
+    {
+      "reason": "500/1000/1500 mm 4080 cannot supply the two one-piece 1760 mm headers. Joining short stock changes the structure and is not an authorized price-only substitution.",
+      "examples": [
+        "https://www.aliexpress.com/item/1005004126617280.html",
+        "https://www.ebay.com/itm/377355766701"
+      ]
+    },
+    {
+      "reason": "The Uimoso eBay mixed listing has only two 500 mm 4080 bars; its 2000 mm selection is 2040, not 4080.",
+      "url": "https://www.ebay.com/itm/377355766701"
+    },
+    {
+      "reason": "4040 four-packs and 2020/2040/2080 long stock are not the retained 4080 section."
+    },
+    {
+      "reason": "20100 1220 and 1000 family titles claim four-pack while selected quantity/package fields say two. No four-profile saving credited.",
+      "urls": [
+        "https://www.amazon.com/dp/B0DY7GCFRV",
+        "https://www.amazon.com/dp/B0GV3DMN2D"
+      ]
+    },
+    {
+      "reason": "24 x 48 inch HDPE cannot provide the continuous 1000 mm width. Two pieces introduce an unqualified seam; default small-sheet prices are not full-bed prices.",
+      "examples": [
+        "https://www.vevor.com/s/48x48-hdpe",
+        "https://www.amazon.com/dp/B0DFBXMPQ8"
+      ]
+    },
+    {
+      "reason": "Fazzio HDPE values 40/80 are weight, not sheet price. No price supplied.",
+      "url": "https://metals.shopjfi.com/catalog.aspx?c=SolidSheet&d=Plastic&s=HDPE"
+    },
+    {
+      "reason": "Sold/ended local auctions and historical prices are not available delivered stock.",
+      "examples": [
+        "https://offerup.com/item/detail/ea24c6e8-b413-39c7-b525-90eeae666693",
+        "https://hibid.com/utah/lot/286681967/2pack-4080-t-slot-aluminum-extrusion-2000mm-black"
+      ]
+    },
+    {
+      "reason": "OpenATC/ImpactATC ER20 projects and CNC6040/XATC custom mechanisms are not priced, validated, directly compatible ER11 commercial kits. No automatic ATC saving is credited.",
+      "examples": [
+        "https://github.com/lethedream007/openatc",
+        "https://github.com/sn3ro/ImpactATC",
+        "https://github.com/xpix/XATC",
+        "https://github.com/Grunwalskii/CNC6040-Automatic-Tool-Changer"
+      ]
+    },
+    {
+      "reason": "BT30/ISO30 racks require an ATC spindle and do not convert the owned standard ER11 spindle. Solo requires manual intervention and is not a multi-tool automatic replacement."
+    }
+  ],
+  "nonadditive_budget_scenarios": [
+    {
+      "id": "existing_two_layer_core",
+      "tracks_goods_USD": "399.95",
+      "HDPE_goods_USD": "225.75",
+      "basic4_ATC_goods_USD": "400.00",
+      "core_goods_USD": "1025.70",
+      "remaining_to_1000_before_frame_and_all_other_costs_USD": "-25.70"
+    },
+    {
+      "id": "one_layer_half_sheet_only_candidate",
+      "tracks_goods_USD": "399.95",
+      "HDPE_goods_USD": "191.86",
+      "basic4_ATC_goods_USD": "400.00",
+      "core_goods_USD": "991.81",
+      "remaining_to_1000_before_frame_and_all_other_costs_USD": "8.19",
+      "adopted": false
+    },
+    {
+      "id": "mixed_20100_plus_one_layer_candidate",
+      "tracks_purchase": "2 x four-piece 1500 mm packages plus 1 x two-piece 1220 mm package; ten finished tracks",
+      "tracks_goods_USD": "339.97",
+      "HDPE_goods_USD": "191.86",
+      "basic4_ATC_goods_USD": "400.00",
+      "core_goods_USD": "931.83",
+      "remaining_to_1000_before_frame_and_all_other_costs_USD": "68.17",
+      "savings_vs_existing_core_USD": "93.87",
+      "adopted": false,
+      "holds": [
+        "Current regional offers/pack availability",
+        "Actual matching 20100 dies and DIN562 fit",
+        "Raw profile cutting revision",
+        "One-layer CAD and load/handling checks",
+        "HDPE tolerance acceptance",
+        "Every freight/tax amount"
+      ]
+    }
+  ],
+  "remaining_cost_scope": "All 4080 stock and allowance, pan/slats/guards, new billets/rod stock not allocated to owned sheets, feet/fasteners/nuts/pins/washers/braces, ATC tool setter and required state interface, drain/fittings/hose, thermal/electrical protection and non-owned consumables, freight/tax/cutting/pack rounding remain outside these three-item core totals.",
+  "complete_delivered_total_USD": null,
+  "under_1000_delivered_verified": false,
+  "conclusion": "No verified complete orderable shipped plan under $1000 was obtained. The mixed-track and one-layer candidates reduce the observed core by $93.87 goods, leaving $68.17 for the entire frame and every remaining item before freight/tax. No unavailable item, MOQ-ineligible price, short-profile teaser or unowned stock is counted as a solution."
+}

@@ -1,8 +1,8 @@
 {
   "source_sha256": {
-    "export_drill_patterns.py": "ddf82df7da304515f22d8741216a02eb1518678b16c3b53e18e557528d6d8304",
-    "HDPE-DRILL.csv": "ae96aaac8b8f936a43554d718698a7b136584447d051b68697aaaae9e4bd818b",
-    "bed-local-check.json": "9868aabf97f5fccd23b99b81ead498df5fd616b798e00fd242b38fe4d1a36a76"
+    "export_drill_patterns.py": "d5fa5de64ef8c6d3bf3f61773710aeb8cbc7df3dac2a0bbe9e2a562143b46ad4",
+    "HDPE-DRILL.csv": "080ca7ddd5312772faf73188d94eb213a75d808c5590f071bcd60d654dee9647",
+    "bed-local-check.json": "ffa10165af8534362ad2f1196bd51863226c844f4a9333eeb9c2481cf83af375"
   },
   "source_consistent": true,
   "passed": true,
@@ -10,24 +10,11 @@
     {
       "part": "FULL_HDPE_1",
       "file": "FULL_HDPE_1_ROUND_DRILL.dxf",
-      "sha256": "b09654b2cea263965cac62ea33a61aff05163e7a29f221a4b5248fa52d0e3bee",
+      "sha256": "490f8b398049c6181b0aed4dd6ba6a15e7a8dfbd8fe2b653f9fd59d43d20c174",
       "readback_valid": true,
       "outline_mm": [
         1000,
-        1219.2
-      ],
-      "drill_count": 80,
-      "datum_count": 1,
-      "ordinary_clearance_count": 79
-    },
-    {
-      "part": "FULL_HDPE_2",
-      "file": "FULL_HDPE_2_ROUND_DRILL.dxf",
-      "sha256": "6beebe64011672159d7a95bab911e73daba18093dde8d6c7081d93bc81158843",
-      "readback_valid": true,
-      "outline_mm": [
-        1000,
-        1219.2
+        1200.0
       ],
       "drill_count": 80,
       "datum_count": 1,

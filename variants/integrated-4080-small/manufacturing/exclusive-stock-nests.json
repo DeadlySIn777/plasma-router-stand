@@ -35,15 +35,15 @@
         {
           "id": "PLASMA_U_SPLICE_PLATE",
           "x": 152,
-          "y": 188,
+          "y": 138,
           "w": 110,
-          "h": 114,
+          "h": 140.0,
           "finish_t": 12.7
         },
         {
           "id": "CD_CAPTIVE_CAGE_L",
           "x": 266,
-          "y": 188,
+          "y": 138,
           "w": 20.8,
           "h": 28,
           "finish_t": 12.7
@@ -51,7 +51,7 @@
         {
           "id": "CD_CAPTIVE_CAGE_R",
           "x": 266,
-          "y": 220,
+          "y": 170,
           "w": 20.8,
           "h": 28,
           "finish_t": 12.7
@@ -59,7 +59,7 @@
         {
           "id": "OWNER_CLAMP_SPACER_1_1",
           "x": 266,
-          "y": 252,
+          "y": 204,
           "w": 12,
           "h": 12,
           "finish_t": 6.0
@@ -67,7 +67,7 @@
         {
           "id": "OWNER_CLAMP_SPACER_1_2",
           "x": 266,
-          "y": 268,
+          "y": 220,
           "w": 12,
           "h": 12,
           "finish_t": 6.0
@@ -75,7 +75,7 @@
         {
           "id": "OWNER_CLAMP_SPACER_2_1",
           "x": 282,
-          "y": 252,
+          "y": 204,
           "w": 12,
           "h": 12,
           "finish_t": 6.0
@@ -83,7 +83,7 @@
         {
           "id": "OWNER_CLAMP_SPACER_2_2",
           "x": 282,
-          "y": 268,
+          "y": 220,
           "w": 12,
           "h": 12,
           "finish_t": 6.0
@@ -103,21 +103,21 @@
           "x": 2,
           "y": 2,
           "w": 270,
-          "h": 120,
+          "h": 128,
           "finish_t": 9.525
         },
         {
           "id": "BED_HINGE_MOVING_SIDEPLATE_R",
           "x": 2,
-          "y": 126,
+          "y": 134,
           "w": 270,
-          "h": 120,
+          "h": 128,
           "finish_t": 9.525
         },
         {
           "id": "CD_GRAVITY_LEDGE",
           "x": 2,
-          "y": 250,
+          "y": 266,
           "w": 30,
           "h": 12.7,
           "finish_t": 9.525
@@ -581,30 +581,22 @@
   "qualification": "Exclusive new nominal allocations; actual alloy, thickness, dimensions, flatness, tool access and finished cleanup remain verification gates. Chips/split thickness/offcuts are never counted as extra owned stock.",
   "HDPE_new_stock": {
     "source_mm": [
-      2438.4,
+      1219.2,
       1219.2,
       12.7
     ],
     "parts": [
       {
         "id": "HDPE_LAYER_1",
-        "x": 0,
-        "y": 0,
+        "x": 2,
+        "y": 2,
         "w": 1000,
-        "h": 1219.2
-      },
-      {
-        "id": "HDPE_LAYER_2",
-        "x": 1003,
-        "y": 0,
-        "w": 1000,
-        "h": 1219.2
+        "h": 1200
       }
     ],
     "separation_kerf_mm": 3,
-    "crosscut_kerf_count": 2,
-    "remaining_nominal_length_mm": 432.4,
+    "perpendicular_finish_cut_count": 2,
     "owned": false,
-    "rule": "Two1000mmcrosscuts across full48in factory sheet width. Width/squareness must meet actual1219.2mm full-layer requirement; no extra long-edge trim allowance assumed. Saw cuts/circular drilling only."
+    "rule": "ONE1000x1200rectangle from one nominal48x48in halfsheet;2mm edge cleanup origin. Verify actual rawdimensions/squareness/cleanup and kerf beforecutting. Ordinarysawcuts and80roundthroughholes only; rawsheetisnonadditive to thefinishedlayer."
   }
 }

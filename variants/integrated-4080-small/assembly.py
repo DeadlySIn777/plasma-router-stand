@@ -8,6 +8,7 @@ from pathlib import Path
 import csv,hashlib,importlib.util,json,os,sys
 import cadquery as cq
 import mechanical as M
+import gantry_joint as GJ
 import front_stop_bed_clearance as T
 
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1];OUT=HERE/'output'
@@ -68,7 +69,7 @@ def machine_parts(mode='WOOD',*,pose=None):
 
 def run():
     OUT.mkdir(exist_ok=True)
-    paths=[Path(__file__),Path(M.__file__),Path(T.__file__),Path(Q.__file__),Path(P.__file__),Path(H.__file__),Path(A.__file__),Path(B.__file__),A.VENDOR_HOUSING_SOURCE]
+    paths=[Path(__file__),Path(M.__file__),Path(GJ.__file__),Path(T.__file__),Path(Q.__file__),Path(P.__file__),Path(H.__file__),Path(A.__file__),Path(B.__file__),A.VENDOR_HOUSING_SOURCE]
     try:
         import integrated_utilities as U
         paths.append(Path(U.__file__))

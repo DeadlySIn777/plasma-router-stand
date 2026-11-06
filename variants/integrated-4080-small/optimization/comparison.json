@@ -1,0 +1,95 @@
+{
+  "observed_date": "2026-11-05",
+  "revision_date": "2026-11-06",
+  "scope": "Saved nominal bed component screens and dated selected-source goods. Not full-machine FEA, a qualified supplier section, market minimum or delivered quotation.",
+  "source_sha256": {
+    "variants/integrated-4080-small/optimization/comparison.py": "5ffd845ea0eca7c8059349166dc9e280370581c906982ac5ec944e4b52b5aee2",
+    "variants/integrated-4080-small/manufacturing/budget_model.py": "f0ea1f7514fbe115c3819eb50abadb6534abed9b7818dc3f6830c72bdeff2e87",
+    "variants/integrated-4080-small/bed/output/bed-local-check-before-retained-pivot-window.json": "1e290d238d1ce707038e3c3f288d19ff07f2d5c7533d30b386bb7dad673b6b19",
+    "variants/integrated-4080-small/bed/output/bed-local-check.json": "ffa10165af8534362ad2f1196bd51863226c844f4a9333eeb9c2481cf83af375",
+    "variants/integrated-4080-small/output/gantry-joint/gantry-joint-check.json": "931054d3cfd946952bb6290ec8eb15ac42d0ec667170bdcbcf7b1f1d64be3e16",
+    "variants/integrated-4080-small/manufacturing/selected-cart-evidence.json": "fef2141ee82baa515988495294f40705f5f63019717a33e406d6ac0b8abda335"
+  },
+  "bed_component_comparison": {
+    "force_N": 100,
+    "prior_assumed_weak_axis_I_mm4": 134000,
+    "current_assumed_strong_axis_I_mm4": 536000.0,
+    "prior_component_sum_mm": 0.29624117349220946,
+    "current_component_sum_mm": 0.15632661263481168,
+    "ideal_component_displacement_reduction_percent": 47.22995092411665,
+    "current_drilled_section_sensitivity": [
+      {
+        "retained_nominal_I_fraction": 0.25,
+        "assumed_effective_I_mm4": 134000.0,
+        "cross_deflection_mm": 0.18655274780986372,
+        "total_ideal_mm": 0.29624117349220946
+      },
+      {
+        "retained_nominal_I_fraction": 0.5,
+        "assumed_effective_I_mm4": 268000.0,
+        "cross_deflection_mm": 0.09327637390493186,
+        "total_ideal_mm": 0.20296479958727762
+      },
+      {
+        "retained_nominal_I_fraction": 0.75,
+        "assumed_effective_I_mm4": 402000.0,
+        "cross_deflection_mm": 0.062184249269954577,
+        "total_ideal_mm": 0.17187267495230032
+      },
+      {
+        "retained_nominal_I_fraction": 1.0,
+        "assumed_effective_I_mm4": 536000.0,
+        "cross_deflection_mm": 0.04663818695246593,
+        "total_ideal_mm": 0.15632661263481168
+      }
+    ],
+    "section_property_supplier_or_drilled_ligaments_qualified": false,
+    "HDPE_composite_action_credited": false,
+    "full_tool_work_loop_qualified": false,
+    "baseline_scope": "Earlier saved two-layer/weak-crossbar case before retained-pivot-window changes; only the unchanged component formulas/spans are compared, not complete assembly mass or joint performance."
+  },
+  "current_nominal_moving_deck_mass_kg": [
+    49.24907650634636,
+    51.52463650634637,
+    53.641436506346366
+  ],
+  "gantry_revision": {
+    "continuous_steel_rail_face_mm": [
+      1200,
+      112,
+      6.35
+    ],
+    "upper_bridge_quantity": 4,
+    "replaced_Al_guidebars": true,
+    "custom_parts_moving_mass_increase_kg": 4.090543900196294,
+    "added_hardware_mass_excluded": true,
+    "axis_acceleration_or_motor_capacity_verified": false,
+    "cap_component_screen": {
+      "assumed_tool_force_N": 100,
+      "assumed_lever_mm": 250,
+      "torque_Nm": 25,
+      "onecap_per_end_takes_all_end_reaction": true,
+      "force_per_cap_N": 312.5,
+      "span_mm": 40.0,
+      "minimum_screen_thickness_mm": 6.15,
+      "assumed_E_MPa": 200000,
+      "conservative_cantilever_deflection_mm": 0.053738391835633594,
+      "nominal_bending_stress_MPa": 61.96708308546499,
+      "scope": "Component-onlycantileverscreen;nojointpreload/actualprofile/weld/counterborebearing/contact/impact/compositetorsionqualification."
+    },
+    "full_composite_torsion_qualified": false
+  },
+  "selected_source_cost_comparison": {
+    "prior_three_core_goods_USD": "1025.70",
+    "current_three_core_goods_USD": "934.83",
+    "core_goods_saving_USD": "90.87",
+    "core_plus_staged_hardware_goods_USD": "1046.91",
+    "core_plus_staged_hardware_plus_toolsetter_USD": "1096.91",
+    "tracks_in_core_and_cart_counted_once": true,
+    "complete_delivered_total_USD": null,
+    "budget_gate": "FAIL"
+  },
+  "passed": true,
+  "fabrication_release": false,
+  "operating_release": false
+}

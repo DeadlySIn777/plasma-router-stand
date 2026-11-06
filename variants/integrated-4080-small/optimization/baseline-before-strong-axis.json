@@ -1,0 +1,48 @@
+{
+  "published_baseline_commit": "8072ee2cd9838012f0293a4a2a5211c75c09fd7a",
+  "date": "2026-11-05",
+  "scope": "Snapshot taken before authorized strong-axis/joint optimization. Historical comparison only; not the new design or a measured test.",
+  "source_sha256": {
+    "mechanical.py": "bcf46159f1594d86d4ebffde7fd699d1fc7cc7561286dccb804be9286bf619f4",
+    "bed/integrated_bed.py": "d0f35b5c1ec0618280516fa6edb730bcb6238ffb0a2cf41288cfb27110a15d81",
+    "bed/output/bed-local-check.json": "9868aabf97f5fccd23b99b81ead498df5fd616b798e00fd242b38fe4d1a36a76",
+    "head/output/selected-head-pack/selected-head-pack-check.json": "13c0703f77e49cd06a96f134ed4aeaaea1fb515d129d3d8fc52bf0267ec3b46c",
+    "manufacturing/detailed-requirements.csv": "4ec1d7c2ac33a1fd698229a29d02c277b1fe2855a61ffae6c70fd42896dadff4",
+    "manufacturing/price-and-budget-register.json": "5fdd565dc682f6fde8eb37ed8eb43dccfeb8bdaf8e78baaa59d61dc9a75617cc",
+    "manufacturing/4080-cut-stock-options.json": "212e3a80105c37fa0ed6b330872476eba767a7d93e6cbc2fe0067374456dcabd",
+    "output/assembly-check.json": "ed15d32e24d15383f744b4b79d9187e5a2d0d055f3ccd7cc765a3905b17ab7b2"
+  },
+  "bed_compliance_screen": {
+    "force_N": 100,
+    "profile_span_mm": 400,
+    "profile_deflection_mm": 0.07102271834546942,
+    "cross_span_mm": 939.0,
+    "required4080_I_weak_mm4": 134000.0,
+    "cross_deflection_mm": 0.18655274780986372,
+    "ledger_I_mm4": 27970.252138692755,
+    "ledger_deflection_mm": 0.03866570733687633,
+    "sum_ideal_components_mm": 0.29624117349220946,
+    "target_mm": 0.3,
+    "passed": true,
+    "exclusions": [
+      "Actual profile section and drilled-ligament compliance",
+      "Joint slip/twist, slot lips and anchors",
+      "Formed angle patch/weld local behavior",
+      "Machine gantry/Z/tool loop",
+      "Dynamics and thermal creep"
+    ]
+  },
+  "bed_moving_masses_kg": [
+    62.53095821803757,
+    64.80651821803757,
+    66.92331821803756
+  ],
+  "bed_stack": "two12.7mmHDPElayers; four980mm4080crossbars80Yx40Z;worktop967.8mm",
+  "profile_cut_count": 26,
+  "finished_4080_mm": 22495.7,
+  "core_goods_USD": "1025.70",
+  "complete_delivered_total_USD": null,
+  "budget_cap_USD": 1000,
+  "budget_pass": false,
+  "physical_full_machine_rigidity_qualified": false
+}
